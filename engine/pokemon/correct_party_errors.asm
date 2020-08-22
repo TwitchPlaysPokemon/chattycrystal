@@ -15,21 +15,22 @@ Unreferenced_CorrectPartyErrors:
 	ld c, 0
 .loop1
 	ld a, [hl]
-	and a
-	jr z, .invalid_species
-	cp NUM_POKEMON + 1
-	jr z, .invalid_species
-	cp EGG + 1
-	jr c, .next_species
+	call IsAPokemon
+	jr nc, .next_species
 
-.invalid_species
-	ld [hl], SMEARGLE
+	push hl
+	ld hl, SMEARGLE
+	call GetPokemonIDFromIndex
+	pop hl
+	ld [hl], a
 	push hl
 	push bc
+	push af
 	ld a, c
 	ld hl, wPartyMon1Species
 	call GetPartyLocation
-	ld [hl], SMEARGLE
+	pop af
+	ld [hl], a
 	pop bc
 	pop hl
 
@@ -50,19 +51,19 @@ Unreferenced_CorrectPartyErrors:
 	ld b, h
 	ld c, l
 	ld a, [hl]
-	and a
-	jr z, .invalid_species_2
-	cp NUM_POKEMON + 1
-	jr c, .check_level
+	call IsAPokemon
+	jr nc, .check_level
 
-.invalid_species_2
-	ld [hl], SMEARGLE
+	push hl
+	ld hl, SMEARGLE
+	call GetPokemonIDFromIndex
+	pop hl
+	ld [hl], a
 	push de
 	ld d, 0
 	ld hl, wPartySpecies
 	add hl, de
 	pop de
-	ld a, SMEARGLE
 	ld [hl], a
 
 .check_level
@@ -168,16 +169,20 @@ Unreferenced_CorrectPartyErrors:
 	ld a, [hl]
 	and a
 	jr z, .invalid_move
-	cp NUM_ATTACKS + 1
+	cp MOVE_TABLE_ENTRIES + 1
 	jr c, .moves_loop
 .invalid_move
-	ld [hl], POUND
+	push hl
+	ld hl, POUND
+	call GetMoveIDFromIndex
+	pop hl
+	ld [hl], a
 
 .moves_loop
 	ld a, [hl]
 	and a
 	jr z, .fill_invalid_moves
-	cp NUM_ATTACKS + 1
+	cp MOVE_TABLE_ENTRIES + 1
 	jr c, .next_move
 
 .fill_invalid_moves

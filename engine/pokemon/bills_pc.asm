@@ -1114,11 +1114,12 @@ BillsPC_LoadMonStats:
 	ld hl, wBillsPC_ScrollPosition
 	add [hl]
 	ld e, a
-	ld d, $0
-	ld hl, wBillsPCPokemonList + 1 ; box number
-	add hl, de
-	add hl, de
-	add hl, de
+	add a, a
+	add a, a
+	ld c, a
+	ld b, 0
+	ld hl, wBillsPCPokemonList + 2 ; box number
+	add hl, bc
 	ld a, [hl]
 	and a
 	jr z, .party
@@ -1227,11 +1228,11 @@ BillsPC_RefreshTextboxes:
 	ld [hl], "┘"
 
 	ld a, [wBillsPC_ScrollPosition]
+	add a, a
+	add a, a
 	ld e, a
 	ld d, 0
 	ld hl, wBillsPCPokemonList
-	add hl, de
-	add hl, de
 	add hl, de
 	ld e, l
 	ld d, h
@@ -1249,6 +1250,7 @@ BillsPC_RefreshTextboxes:
 	inc de
 	inc de
 	inc de
+	inc de
 	pop af
 	dec a
 	jr nz, .loop
@@ -1259,6 +1261,12 @@ BillsPC_RefreshTextboxes:
 
 .PlaceNickname:
 	ld a, [de]
+	ld b, a
+	inc de
+	ld a, [de]
+	cp b
+	; both $0000 and $FFFF have two identical bytes, so this check works
+	jr nz, .get_nickname
 	and a
 	ret z
 	cp -1
@@ -1370,86 +1378,133 @@ BillsPC_RefreshTextboxes:
 .Placeholder:
 	db "-----@"
 
-copy_box_data: MACRO
-.loop\@
-	ld a, [hl]
-	cp -1
-	jr z, .done\@
-	and a
-	jr z, .done\@
-	ld [de], a
-	inc de
-	ld a, [wBillsPC_LoadedBox]
-	ld [de], a
-	inc de
-	ld a, [wd003]
-	ld [de], a
-	inc a
-	ld [wd003], a
-	inc de
-	inc hl
-	ld a, [wd004]
-	inc a
-	ld [wd004], a
-	jr .loop\@
-
-.done\@
-if \1
-	call CloseSRAM
-endc
-	ld a, -1
-	ld [de], a
-	ld a, [wd004]
-	inc a
-	ld [wBillsPC_NumMonsInBox], a
-ENDM
-
 CopyBoxmonSpecies:
 	xor a
 	ld hl, wBillsPCPokemonList
-	ld bc, 3 * 30
+	ld bc, 4 * 30
+	push hl
 	call ByteFill
-	ld de, wBillsPCPokemonList
-	xor a
-	ld [wd003], a
-	ld [wd004], a
+	pop hl
 	ld a, [wBillsPC_LoadedBox]
+	ld b, a
+	ld c, 0
 	and a
 	jr z, .party
 	cp NUM_BOXES + 1
 	jr z, .sBox
-	ld b, a
+
+	push bc
+	push hl
 	call GetBoxPointer
 	ld a, b
 	call GetSRAMBank
 	inc hl
-	copy_box_data 1
-	ret
+	ld d, h
+	ld e, l
+	pop hl
+	pop bc
+.box_loop
+	ld a, [de]
+	inc de
+	cp -1
+	jr z, .box_done
+	push hl
+	ld hl, EGG
+	cp l
+	call nz, BillsPC_GetSpeciesIndexForBoxSlot
+	ld a, h
+	ldh [hTemp], a
+	ld a, l
+	pop hl
+	ld [hli], a
+	ldh a, [hTemp]
+	ld [hli], a
+	ld a, b
+	ld [hli], a
+	ld a, c
+	ld [hli], a
+	inc c
+	jr .box_loop
 
-.party
-	ld hl, wPartySpecies
-	copy_box_data 0
+.box_done
+	call CloseSRAM ;preserves af
+.list_done
+	; expects a = $FF
+	ld [hli], a
+	ld [hl], a
+	ld a, c
+	inc a
+	ld [wBillsPC_NumMonsInBox], a
 	ret
 
 .sBox
 	ld a, BANK(sBox)
 	call GetSRAMBank
-	ld hl, sBoxSpecies
-	copy_box_data 1
+	ld de, sBoxSpecies
+	call .load_list
+	jp CloseSRAM
+
+.party
+	ld de, wPartySpecies
+.load_list
+	ld a, [de]
+	cp -1
+	jr z, .list_done
+	inc de
+	push hl
+	call GetPokemonIndexFromID
+	ld a, h
+	ldh [hTemp], a
+	ld a, l
+	pop hl
+	ld [hli], a
+	ldh a, [hTemp]
+	ld [hli], a
+	ld a, b
+	ld [hli], a
+	ld a, c
+	ld [hli], a
+	inc c
+	jr .load_list
+
+BillsPC_GetSpeciesIndexForBoxSlot:
+	; in: b: box, c: slot
+	; out: hl: species
+	; preserves bc, de
+	push bc
+	push de
+	dec b
+	ld a, c
+	ld c, b
+	ld b, a
+	farcall GetBoxMonPokemonIndexPointer
+	ldh a, [hSRAMBank]
+	ld c, a
+	ld a, b
+	call GetSRAMBank
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld a, c
+	call GetSRAMBank
+	pop de
+	pop bc
 	ret
 
 BillsPC_GetSelectedPokemonSpecies:
 	ld a, [wBillsPC_CursorPosition]
 	ld hl, wBillsPC_ScrollPosition
 	add [hl]
+	add a, a
+	add a, a
 	ld e, a
 	ld d, $0
 	ld hl, wBillsPCPokemonList
 	add hl, de
-	add hl, de
-	add hl, de
-	ld a, [hl]
-	ret
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jp GetPokemonIDFromIndex
 
 BillsPC_UpdateSelectionCursor:
 	ld a, [wBillsPC_NumMonsInBox]
@@ -1740,13 +1795,16 @@ BillsPC_CopyMon:
 
 .box
 	ld b, a
+	ld a, [wCurPartyMon]
+	ld c, a
+	call BillsPC_GetSpeciesIndexForBoxSlot
+	call GetPokemonIDFromIndex
+	ld [wCurPartySpecies], a
+	ld l, LOCKED_MON_ID_CURRENT_MENU
+	call LockPokemonID
 	call GetBoxPointer
 	ld a, b
 	call GetSRAMBank
-	push hl
-	inc hl
-	call CopySpeciesToTemp
-	pop hl
 	push hl
 	ld bc, sBoxMonNicknames - sBox
 	add hl, bc
@@ -1762,6 +1820,11 @@ BillsPC_CopyMon:
 	ld bc, BOXMON_STRUCT_LENGTH
 	call CopyMonToTemp
 	call CloseSRAM
+	ld a, LOCKED_MON_ID_CURRENT_MENU
+	call GetLockedPokemonID
+	ld [wBufferMonSpecies], a
+	ld hl, wBufferMon
+	call BillsPC_ConvertBoxMonToPartyMon
 	farcall CalcBufferMonStats
 	ret
 
@@ -2107,7 +2170,8 @@ CopySpeciesToTemp:
 	add hl, bc
 	ld a, [hl]
 	ld [wCurPartySpecies], a
-	ret
+	ld l, LOCKED_MON_ID_CURRENT_MENU
+	jp LockPokemonID
 
 CopyNicknameToTemp:
 	ld bc, MON_NAME_LENGTH
@@ -2526,4 +2590,130 @@ BillsPC_PlaceChangeBoxString:
 	call PlaceString
 	ld a, $1
 	ldh [hBGMapMode], a
+	ret
+
+BillsPC_ConvertBoxData::
+	; converts data in an entire box of mons from party to box or vice-versa
+	; in: b:de: box address (SRAM), c: conversion direction (0: party to box, 1: box to party)
+	; out: all clobbered
+	ld a, b
+	call GetSRAMBank
+	ld a, [de]
+	and a
+	jr z, .done
+	cp MONS_PER_BOX + 1
+	jr nc, .done ;don't corrupt the data any further
+	ld b, a
+	ld hl, MONS_PER_BOX + 2
+	add hl, de
+	ld de, BOXMON_STRUCT_LENGTH
+.loop
+	bit 0, c
+	call .convert
+	add hl, de
+	dec b
+	jr nz, .loop
+.done
+	jp CloseSRAM
+
+.convert
+	jr nz, BillsPC_ConvertBoxMonToPartyMon
+	; fallthrough
+
+BillsPC_ConvertPartyMonToBoxMon:
+	; converts 8-bit IDs in the party mon struct's moves into 14-bit indexes, storing the overflow bits in the PP count
+	; in: hl: struct pointer
+	; out: hl, bc, de: preserved
+	push hl
+	push de
+	push bc
+	call BillsPC_SetUpMoveAndPPPointers
+.loop
+	ld a, [bc]
+	call GetMoveIndexFromID
+	ld a, l
+	ld [bc], a
+	inc bc
+	ld a, [de]
+	and $c0
+	or h
+	ld [de], a
+	inc de
+	ld hl, hTemp
+	dec [hl]
+	jr nz, .loop
+	pop bc
+	pop de
+	pop hl
+	ret
+
+BillsPC_ConvertBoxMonToPartyMon:
+	; undoes the conversion from the previous function and fully restores the PP of the mon
+	push hl
+	push de
+	push bc
+	call BillsPC_SetUpMoveAndPPPointers
+.loop
+	ld a, [bc]
+	ld l, a
+	ld a, [de]
+	and $3f
+	ld h, a
+	cp $3f
+	jr nz, .ok
+	ld h, $ff
+.ok
+	call GetMoveIDFromIndex
+	ld [bc], a
+	inc bc
+	and a
+	jr z, .got_PP
+	ld l, a
+	ld a, MOVE_PP
+	call GetMoveAttribute
+	; max PP = base PP + min(7, base PP / 5) * PP Ups
+	ld h, a
+	ld l, -1
+.pp_up_size_loop
+	inc l
+	sub 5
+	jr nc, .pp_up_size_loop
+	ld a, l
+	cp 8
+	jr c, .pp_up_size_OK
+	ld l, 7
+.pp_up_size_OK
+	ld a, [de]
+	and $c0
+	or h
+	ld h, a
+	bit 6, h
+	jr z, .skip_add_one
+	add a, l
+.skip_add_one
+	add hl, hl ; if the top bit is set, it sets carry; it will also double l
+	jr nc, .got_PP
+	add a, l
+.got_PP
+	ld [de], a
+	inc de
+	ld hl, hTemp
+	dec [hl]
+	jr nz, .loop
+	pop bc
+	pop de
+	pop hl
+	ret
+
+BillsPC_SetUpMoveAndPPPointers:
+	ld de, MON_MOVES
+	add hl, de
+	ld b, h
+	ld c, l
+	ld e, MON_PP - MON_MOVES
+	add hl, de
+	ld d, h
+	ld e, l
+	ld a, NUM_MOVES
+	ldh [hTemp], a
 	ret

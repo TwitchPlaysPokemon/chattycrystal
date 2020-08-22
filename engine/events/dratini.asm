@@ -12,11 +12,16 @@ GiveDratini:
 	call .GetNthPartyMon
 	ld a, [bc]
 	ld c, a
+	push hl
+	ld hl, DRATINI
+	call GetPokemonIDFromIndex
+	pop hl
+	ld b, a
 	ld de, PARTYMON_STRUCT_LENGTH
 .CheckForDratini:
 ; start at the end of the party and search backwards for a Dratini
 	ld a, [hl]
-	cp DRATINI
+	cp b
 	jr z, .GiveMoveset
 	ld a, l
 	sub e
@@ -41,21 +46,22 @@ GiveDratini:
 	inc de
 
 .GiveMoves:
-	ld a, [hl]
-	and a ; is the move 00?
+	ld a, [hli]
+	or [hl] ; is the move 00?
 	ret z ; if so, we're done here
 
 	push hl
 	push de
+	ld a, [hld]
+	ld l, [hl]
+	ld h, a
+	call GetMoveIDFromIndex
 	ld [de], a ; give the Pokémon the new move
 
 	; get the PP of the new move
-	dec a
-	ld hl, Moves + MOVE_PP
-	ld bc, MOVE_LENGTH
-	call AddNTimes
-	ld a, BANK(Moves)
-	call GetFarByte
+	ld l, a
+	ld a, MOVE_PP
+	call GetMoveAttribute
 
 	; get the address of the move's PP and update the PP
 	ld hl, MON_PP - MON_MOVES
@@ -71,18 +77,18 @@ GiveDratini:
 .Movesets:
 .Moveset0:
 ; Dratini does not normally learn Extremespeed. This is a special gift.
-	db WRAP
-	db THUNDER_WAVE
-	db TWISTER
-	db EXTREMESPEED
-	db 0
+	dw WRAP
+	dw THUNDER_WAVE
+	dw TWISTER
+	dw EXTREMESPEED
+	dw 0
 .Moveset1:
 ; This is the normal moveset of a level 15 Dratini
-	db WRAP
-	db LEER
-	db THUNDER_WAVE
-	db TWISTER
-	db 0
+	dw WRAP
+	dw LEER
+	dw THUNDER_WAVE
+	dw TWISTER
+	dw 0
 
 .GetNthPartyMon:
 ; inputs:

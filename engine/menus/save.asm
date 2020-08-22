@@ -27,8 +27,10 @@ SaveAfterLinkTrade:
 	farcall StageRTCTimeForSave
 	farcall BackupMysteryGift
 	call SavePokemonData
+	call SaveIndexTables
 	call SaveChecksum
 	call SaveBackupPokemonData
+	call SaveBackupIndexTables
 	call SaveBackupChecksum
 	farcall BackupPartyMonMail
 	farcall SaveRTC
@@ -95,11 +97,13 @@ MoveMonWOMail_InsertMon_SaveGame:
 	call SaveOptions
 	call SavePlayerData
 	call SavePokemonData
+	call SaveIndexTables
 	call SaveChecksum
 	call ValidateBackupSave
 	call SaveBackupOptions
 	call SaveBackupPlayerData
 	call SaveBackupPokemonData
+	call SaveBackupIndexTables
 	call SaveBackupChecksum
 	farcall BackupPartyMonMail
 	farcall BackupMobileEventIndex
@@ -153,7 +157,7 @@ AddHallOfFameEntry:
 	jr nz, .loop
 	ld hl, wHallOfFamePokemonList
 	ld de, sHallOfFame
-	ld bc, wHallOfFamePokemonListEnd - wHallOfFamePokemonList + 1
+	ld bc, HOF_LENGTH
 	call CopyBytes
 	call CloseSRAM
 	ret
@@ -235,12 +239,14 @@ SaveGameData:
 	call SaveOptions
 	call SavePlayerData
 	call SavePokemonData
+	call SaveIndexTables
 	call SaveBox
 	call SaveChecksum
 	call ValidateBackupSave
 	call SaveBackupOptions
 	call SaveBackupPlayerData
 	call SaveBackupPokemonData
+	call SaveBackupIndexTables
 	call SaveBackupChecksum
 	call UpdateStackTop
 	farcall BackupPartyMonMail
@@ -455,16 +461,65 @@ SavePokemonData:
 	call CloseSRAM
 	ret
 
+SaveIndexTables:
+	; saving is already a long operation, so take the chance to GC the table
+	farcall ForceGarbageCollection
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK("16-bit WRAM tables")
+	ldh [rSVBK], a
+	ld a, BANK(sPokemonIndexTable)
+	call GetSRAMBank
+	ld hl, wPokemonIndexTable
+	ld de, sPokemonIndexTable
+	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
+	call CopyBytes
+	ld a, BANK(sMoveIndexTable)
+	call GetSRAMBank
+	ld hl, wMoveIndexTable
+	ld de, sMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call CopyBytes
+	pop af
+	ldh [rSVBK], a
+	jp CloseSRAM
+
 SaveBox:
 	call GetBoxAddress
+	push de
+	push af
 	call SaveBoxAddress
-	ret
+	pop af
+	call GetSRAMBank
+	pop hl
+	call ComputeSavedBoxIndexTable
+	call GetBoxPokemonIndexesAddress
+	call GetSRAMBank
+	ld d, h
+	ld e, l
+	ld hl, wBoxPartialData
+	ld bc, 2 * MONS_PER_BOX
+	call CopyBytes
+	call GetBoxAddress
+	ld b, a
+	ld c, 0
+	farcall BillsPC_ConvertBoxData
+	jp CloseSRAM
 
 SaveChecksum:
-	ld hl, sGameData
-	ld bc, sGameDataEnd - sGameData
-	ld a, BANK(sGameData)
+	ld a, BANK(sMoveIndexTable)
 	call GetSRAMBank
+	ld hl, sMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call Checksum
+	ld a, BANK(sSaveData)
+	call GetSRAMBank
+	ld hl, sConversionTableChecksum
+	ld a, e
+	ld [hli], a
+	ld [hl], d
+	ld hl, sSaveData
+	ld bc, sSaveDataEnd - sSaveData
 	call Checksum
 	ld a, e
 	ld [sChecksum + 0], a
@@ -517,11 +572,41 @@ SaveBackupPokemonData:
 	call CloseSRAM
 	ret
 
-SaveBackupChecksum:
-	ld hl, sBackupGameData
-	ld bc, sBackupGameDataEnd - sBackupGameData
-	ld a, BANK(sBackupGameData)
+SaveBackupIndexTables:
+	ld a, BANK(sBackupPokemonIndexTable)
 	call GetSRAMBank
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK("16-bit WRAM tables")
+	ldh [rSVBK], a
+	ld hl, wPokemonIndexTable
+	ld de, sBackupPokemonIndexTable
+	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
+	call CopyBytes
+	ld a, BANK(sBackupMoveIndexTable)
+	call GetSRAMBank
+	ld hl, wMoveIndexTable
+	ld de, sBackupMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call CopyBytes
+	pop af
+	ldh [rSVBK], a
+	jp CloseSRAM
+
+SaveBackupChecksum:
+	ld a, BANK(sBackupMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sBackupMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call Checksum
+	ld a, BANK(sBackupSaveData)
+	call GetSRAMBank
+	ld hl, sBackupConversionTableChecksum
+	ld a, e
+	ld [hli], a
+	ld [hl], d
+	ld hl, sBackupSaveData
+	ld bc, sBackupSaveDataEnd - sBackupSaveData
 	call Checksum
 	ld a, e
 	ld [sBackupChecksum + 0], a
@@ -535,6 +620,7 @@ TryLoadSaveFile:
 	jr nz, .backup
 	call LoadPlayerData
 	call LoadPokemonData
+	call LoadIndexTables
 	call LoadBox
 	farcall RestorePartyMonMail
 	farcall RestoreMobileEventIndex
@@ -543,6 +629,7 @@ TryLoadSaveFile:
 	call SaveBackupOptions
 	call SaveBackupPlayerData
 	call SaveBackupPokemonData
+	call SaveBackupIndexTables
 	call SaveBackupChecksum
 	and a
 	ret
@@ -552,6 +639,7 @@ TryLoadSaveFile:
 	jr nz, .corrupt
 	call LoadBackupPlayerData
 	call LoadBackupPokemonData
+	call LoadBackupIndexTables
 	call LoadBox
 	farcall RestorePartyMonMail
 	farcall RestoreMobileEventIndex
@@ -560,6 +648,7 @@ TryLoadSaveFile:
 	call SaveOptions
 	call SavePlayerData
 	call SavePokemonData
+	call SaveIndexTables
 	call SaveChecksum
 	and a
 	ret
@@ -700,15 +789,50 @@ LoadPokemonData:
 	call CloseSRAM
 	ret
 
+LoadIndexTables:
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK("16-bit WRAM tables")
+	ldh [rSVBK], a
+	ld a, BANK(sPokemonIndexTable)
+	call GetSRAMBank
+	ld hl, sPokemonIndexTable
+	ld de, wPokemonIndexTable
+	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
+	call CopyBytes
+	ld a, BANK(sMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sMoveIndexTable
+	ld de, wMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call CopyBytes
+	pop af
+	ldh [rSVBK], a
+	jp CloseSRAM
+
 LoadBox:
 	call GetBoxAddress
 	call LoadBoxAddress
-	ret
+	lb bc, BANK(sBox), 1
+	ld de, sBox
+	farcall BillsPC_ConvertBoxData
+	call GetBoxPokemonIndexesAddress
+	call GetSRAMBank
+	ld de, wBoxPartialData
+	ld bc, 2 * MONS_PER_BOX
+	call CopyBytes
+	ld a, BANK(sBox)
+	call GetSRAMBank
+	call ClearIndexesForLoadedBox
+	; GC the table now that lots of entries are free
+	farcall ForceGarbageCollection
+	call UpdateIndexesForLoadedBox
+	jp CloseSRAM
 
 VerifyChecksum:
-	ld hl, sGameData
-	ld bc, sGameDataEnd - sGameData
-	ld a, BANK(sGameData)
+	ld hl, sSaveData
+	ld bc, sSaveDataEnd - sSaveData
+	ld a, BANK(sSaveData)
 	call GetSRAMBank
 	call Checksum
 	ld a, [sChecksum + 0]
@@ -716,6 +840,23 @@ VerifyChecksum:
 	jr nz, .fail
 	ld a, [sChecksum + 1]
 	cp d
+	jr nz, .fail
+	ld hl, sConversionTableChecksum
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	push hl
+	ld a, BANK(sMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call Checksum
+	pop hl
+	ld a, d
+	cp h
+	jr nz, .fail
+	ld a, e
+	cp l
 .fail
 	push af
 	call CloseSRAM
@@ -746,10 +887,31 @@ LoadBackupPokemonData:
 	call CloseSRAM
 	ret
 
+LoadBackupIndexTables:
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK("16-bit WRAM tables")
+	ldh [rSVBK], a
+	ld a, BANK(sBackupPokemonIndexTable)
+	call GetSRAMBank
+	ld hl, sBackupPokemonIndexTable
+	ld de, wPokemonIndexTable
+	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
+	call CopyBytes
+	ld a, BANK(sBackupMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sBackupMoveIndexTable
+	ld de, wMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call CopyBytes
+	pop af
+	ldh [rSVBK], a
+	jp CloseSRAM
+
 VerifyBackupChecksum:
-	ld hl, sBackupGameData
-	ld bc, sBackupGameDataEnd - sBackupGameData
-	ld a, BANK(sBackupGameData)
+	ld hl, sBackupSaveData
+	ld bc, sBackupSaveDataEnd - sBackupSaveData
+	ld a, BANK(sBackupSaveData)
 	call GetSRAMBank
 	call Checksum
 	ld a, [sBackupChecksum + 0]
@@ -757,6 +919,23 @@ VerifyBackupChecksum:
 	jr nz, .fail
 	ld a, [sBackupChecksum + 1]
 	cp d
+	jr nz, .fail
+	ld hl, sBackupConversionTableChecksum
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	push hl
+	ld a, BANK(sBackupMoveIndexTable)
+	call GetSRAMBank
+	ld hl, sBackupMoveIndexTable
+	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	call Checksum
+	pop hl
+	ld a, d
+	cp h
+	jr nz, .fail
+	ld a, e
+	cp l
 .fail
 	push af
 	call CloseSRAM
@@ -834,6 +1013,23 @@ endr
 	pop af
 	ret
 
+GetBoxPokemonIndexesAddress:
+	ld a, [wCurBox]
+	ld e, a
+	ld d, 0
+	ld hl, BoxAddresses + 5 * NUM_BOXES
+	add hl, de
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	push af
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	pop af
+	ret
+	ret
+
 SaveBoxAddress:
 ; Save box via wBoxPartialData.
 ; We do this in three steps because the size of wBoxPartialData is less than
@@ -909,6 +1105,48 @@ SaveBoxAddress:
 	pop hl
 	ret
 
+ComputeSavedBoxIndexTable:
+	push hl
+	ld a, [hl]
+	ld de, wBoxPartialData
+	and a
+	jr z, .empty_box
+	cp MONS_PER_BOX
+	jr c, .valid_count
+	ld a, MONS_PER_BOX
+.valid_count
+	ld bc, sBoxMons - sBox
+	add hl, bc
+	ld [wTempLoopCounter], a
+	ld c, BOXMON_STRUCT_LENGTH
+.loop
+	ld a, [hl]
+	add hl, bc
+	push hl
+	call GetPokemonIndexFromID
+	ld a, l
+	ld [de], a
+	inc de
+	ld a, h
+	ld [de], a
+	inc de
+	ld hl, wTempLoopCounter
+	dec [hl]
+	pop hl
+	jr nz, .loop
+.empty_box
+	pop hl
+	ld a, MONS_PER_BOX
+	sub [hl]
+	ret c
+	add a, a
+	ld h, d
+	ld l, e
+	ld c, a
+	xor a
+	ld b, a
+	jp ByteFill
+
 LoadBoxAddress:
 ; Load box via wBoxPartialData.
 ; We do this in three steps because the size of wBoxPartialData is less than
@@ -972,6 +1210,59 @@ LoadBoxAddress:
 	pop hl
 	ret
 
+ClearIndexesForLoadedBox:
+	ld hl, sBoxMon1Species
+	ld bc, BOXMON_STRUCT_LENGTH
+	ld a, MONS_PER_BOX
+.loop
+	ld [hl], 0
+	add hl, bc
+	dec a
+	jr nz, .loop
+	ret
+
+UpdateIndexesForLoadedBox:
+	ld de, sBox
+	ld a, [de]
+	cp MONS_PER_BOX
+	jr c, .count_OK
+	ld a, MONS_PER_BOX
+	ld [de], a
+.count_OK
+	inc de
+	and a
+	jr z, .done
+	ld [wTempLoopCounter], a
+	ld bc, sBoxMon1Species
+	ld hl, wBoxPartialData - 1
+.loop
+	inc hl
+	ld a, [hli]
+	push hl
+	ld h, [hl]
+	ld l, a
+	call GetPokemonIDFromIndex
+	ld [bc], a
+	ld a, [de]
+	cp EGG
+	jr z, .is_egg
+	ld a, [bc]
+	ld [de], a
+.is_egg
+	ld hl, BOXMON_STRUCT_LENGTH
+	add hl, bc
+	ld b, h
+	ld c, l
+	inc de
+	ld hl, wTempLoopCounter
+	dec [hl]
+	pop hl
+	jr nz, .loop
+.done
+	ld a, -1
+	ld [de], a
+	ret
+
 EraseBoxes:
 	ld hl, BoxAddresses
 	ld c, NUM_BOXES
@@ -1011,6 +1302,22 @@ EraseBoxes:
 	pop bc
 	dec c
 	jr nz, .next
+	ld e, NUM_BOXES
+.index_loop
+	ld a, [hli]
+	call GetSRAMBank
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	push hl
+	ld h, a
+	ld l, b
+	xor a
+	ld bc, 2 * MONS_PER_BOX
+	call ByteFill
+	pop hl
+	dec e
+	jr nz, .index_loop
 	ret
 
 BoxAddresses:
@@ -1029,6 +1336,22 @@ BoxAddresses:
 	dbww BANK(sBox12), sBox12, sBox12End
 	dbww BANK(sBox13), sBox13, sBox13End
 	dbww BANK(sBox14), sBox14, sBox14End
+
+	; index addresses
+	dba sBox1PokemonIndexes
+	dba sBox2PokemonIndexes
+	dba sBox3PokemonIndexes
+	dba sBox4PokemonIndexes
+	dba sBox5PokemonIndexes
+	dba sBox6PokemonIndexes
+	dba sBox7PokemonIndexes
+	dba sBox8PokemonIndexes
+	dba sBox9PokemonIndexes
+	dba sBox10PokemonIndexes
+	dba sBox11PokemonIndexes
+	dba sBox12PokemonIndexes
+	dba sBox13PokemonIndexes
+	dba sBox14PokemonIndexes
 
 Checksum:
 	ld de, 0

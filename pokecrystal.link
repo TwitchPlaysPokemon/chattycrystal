@@ -47,7 +47,8 @@ ROMX $07
 ROMX $08
 	"Clock Reset"
 	"Tileset Data 3"
-	"Egg Moves"
+	"Egg Move Pointers"
+	"Egg Moves 1"
 ROMX $09
 	"bank9"
 ROMX $0a
@@ -60,16 +61,19 @@ ROMX $0d
 	"Effect Commands"
 ROMX $0e
 	"Enemy Trainers"
-	"Enemy Trainer Parties"
+	"Enemy Trainer Parties 2"
 ROMX $0f
 	"Battle Core"
 ROMX $10
 	"bank10"
-	"Evolutions and Attacks"
+	"Evolutions and Attacks Pointers"
+	"Evolutions and Attacks 1"
 ROMX $11
 	"bank11"
 ROMX $12
 	"Crystal Features 1"
+	"Egg Moves 2"
+	"Evolutions and Attacks 2"
 ROMX $13
 	"bank13"
 ROMX $14
@@ -174,6 +178,7 @@ ROMX $40
 	"bank40_3"
 ROMX $41
 	"bank41"
+	"Enemy Trainer Parties 1"
 ROMX $42
 	"Mobile 42"
 	"Intro Logo"
@@ -288,6 +293,8 @@ ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
 	"Pokedex Entries 193-251"
+ROMX $75
+	"16-bit ID stuff"
 ROMX $77
 	"bank77"
 	"Tileset Data 7"
@@ -316,20 +323,24 @@ WRAM0
 	"Miscellaneous"
 	"Overworld Map"
 	"Video"
+	align 5
+	"16-bit WRAM home data"
 WRAMX 1
 	"WRAM 1"
 	"Enemy Party"
 	"Party"
 WRAMX 2
 	"Pic Animations"
+	align 8
+	"16-bit WRAM tables"
 WRAMX 3
 	"Battle Tower RAM"
 WRAMX 5
 	"GBC Video"
 	org $d300
 	"Battle Animations"
-	org $d800
-	"Mobile RAM"
+	org $d500
+	"Mobile RAM and Pokedex Listings"
 WRAMX 6
 	"Scratch RAM"
 WRAMX 7
@@ -342,7 +353,8 @@ SRAM $00
 	"Scratch"
 	org $a600
 	"SRAM Bank 0"
-	org $b200
+	org $ae00
+	"Saved 16-bit conversion tables"
 	"Backup Save"
 SRAM $01
 	"Save"

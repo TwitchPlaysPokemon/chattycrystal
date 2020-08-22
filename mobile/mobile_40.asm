@@ -1552,9 +1552,19 @@ _LinkBattleSendReceiveAction:
 	and a ; BATTLEPLAYERACTION_USEMOVE?
 	jr nz, .switch
 	ld a, [wCurPlayerMove]
+	call GetMoveIndexFromID
 	ld b, BATTLEACTION_STRUGGLE
-	cp STRUGGLE
+	ld a, h
+	if HIGH(STRUGGLE)
+		cp HIGH(STRUGGLE)
+	else
+		and a
+	endc
+	jr nz, .not_struggle
+	ld a, l
+	cp LOW(STRUGGLE)
 	jr z, .struggle
+.not_struggle
 	ld b, BATTLEACTION_SKIPTURN
 	cp $ff
 	jr z, .struggle
@@ -6392,7 +6402,6 @@ Function102d48:
 	ld [wTempSpecies], a
 	cp EGG
 	jr z, .asm_102d6d
-	dec a
 	call SetSeenAndCaughtMon
 	ld a, [wcd4c]
 	dec a
@@ -6403,7 +6412,20 @@ Function102d48:
 
 .asm_102d6d
 	ld a, [wTempSpecies]
-	cp UNOWN
+	call GetPokemonIndexFromID
+	ld a, l
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
+		or h
+	else
+		jr nz, .asm_102d98
+		if HIGH(UNOWN) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(UNOWN)
+		endc
+	endc
 	jr nz, .asm_102d98
 	ld a, [wcd4c]
 	dec a

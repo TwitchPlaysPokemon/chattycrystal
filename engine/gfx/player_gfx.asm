@@ -206,10 +206,10 @@ DrawIntroPlayerPic:
 	predef PlaceGraphic
 	ret
 
-ChrisPic:
+ChrisPic::
 INCBIN "gfx/player/chris.2bpp"
 
-KrisPic:
+KrisPic::
 INCBIN "gfx/player/kris.2bpp"
 
 GetKrisBackpic:

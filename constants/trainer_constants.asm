@@ -682,6 +682,11 @@ KRIS EQU __enum__
 
 	trainerclass RED ; 3f
 	const RED1
+	const RED_RED
+	const AIIIAAB
+	const CCC_DUALRED
+	const KAY
+	const RED_GAUNTLETRED
 
 	trainerclass BLUE ; 40
 	const BLUE1
@@ -699,5 +704,109 @@ KRIS EQU __enum__
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
+
+	trainerclass AZURE ; 44
+	const AZURE1
+
+	trainerclass FC_LARRY ; 45
+	const LARRY_GREEN
+
+	trainerclass RBY_GREEN ; 46
+	const XXWWNN
+
+	trainerclass CY_ROBORED ; 47
+	const X_CHATTYYELLOW
+
+	trainerclass GSCHGSS_CHRIS ; 48
+	const AJDNNW
+	const AAEFFFF
+	const D_GAUNTLETCRYSTAL
+
+	trainerclass GSC_KRIS ; 49
+	const BABA
+	const EWWYPPP
+
+	trainerclass AC_CHRIS ; 4A
+	const EVAN
+
+	trainerclass FC_CHRIS ; 4B
+	const Y_FUSEDCRYSTAL
+
+	trainerclass RSEORAS_MAY ; 4C
+	const A_EMERALD
+	const QQ
+	const ACPPQ
+	const N_EMERALD
+	const PETRA
+	const URF
+
+	trainerclass RSEORAS_BLUE_MAY ; 4D
+	const HNV
+	const MARINA
+
+	trainerclass RSEORAS_BRENDAN ; 4E
+	const ORLANDO
+	const RTHASZS
+	const BBCBBHH
+	const EBNEERT
+
+	trainerclass FRLG_LEAF ; 4F
+	const A_FIRERED
+	const AATATAT
+	const PAULA_SWEET
+	const DOOT
+
+	trainerclass COLO_WES ; 50
+	const AAAAAAA
+	const ACCC
+
+	trainerclass XD_MICHAEL ; 51
+	const ABBBCC
+	const STARS
+
+	trainerclass PT_DAWN ; 52
+	const IECBW
+
+	trainerclass PT_LUCAS ; 53
+	const NQPPPNL
+	const PP
+
+	trainerclass HGSS_LYRA ; 54
+	const AOOOO
+
+	trainerclass BW_HILBERT ; 55
+	const GMYC
+
+	trainerclass BW_HILDA ; 56
+	const AAQ
+
+	trainerclass B2W2_ROSA ; 57
+	const CLY
+	
+	trainerclass B2W2_NATE ; 58
+	const AAAALK
+	const R_BLACK2
+
+	trainerclass XY_CALEM ; 59
+	const D_XY
+
+	trainerclass XY_SERENA ; 5A
+	const Y_266
+
+	trainerclass XY_SERENA2 ; 5B
+	const ETR
+
+	trainerclass SMUSUM_ELIO ; 5C
+	const L_SUN
+
+	trainerclass SMUSUM_ELIO2 ; 5D
+	const D76O6YTTR
+	const RRWQ
+
+	trainerclass SMUSUM_SELENE ; 5E
+	const VRG
+
+	trainerclass SWSH_GLORIA ; 5F
+	const RE_SWORD
 
 NUM_TRAINER_CLASSES EQU __enum__

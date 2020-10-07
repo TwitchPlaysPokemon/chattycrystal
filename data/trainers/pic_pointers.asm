@@ -69,3 +69,31 @@ TrainerPicPointers::
 	dba OfficerPic
 	dba GruntfPic
 	dba MysticalmanPic
+	dba AzurePic
+	dba LarryPic
+	dba GreenPic
+	dba RoboRedPic
+	dba CalPic
+	dba KrisPic
+	dba CalPic ; replace with EVAN pic
+	dba CalPic ; replace with Chris cold pic
+	dba MayPic
+	dba MayPic ; replace with Blue May
+	dba BrendanPic
+	dba LeafPic
+	dba WesPic
+	dba MichaelPic
+	dba DawnPic
+	dba LucasPic
+	dba LyraPic
+	dba HilbertPic
+	dba HildaPic
+	dba RosaPic
+	dba NatePic
+	dba CalemPic
+	dba SerenaPic
+	dba Serena2Pic
+	dba ElioPic
+	dba Elio2Pic
+	dba SelenePic
+	dba GloriaPic

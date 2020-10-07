@@ -104,6 +104,30 @@
 	const SPRITE_ENTEI ; 64
 	const SPRITE_RAIKOU ; 65
 	const SPRITE_STANDING_YOUNGSTER ; 66
+	const SPRITE_AZURE ; 67
+	const SPRITE_BRENDAN ; 68
+	const SPRITE_CALEM ; 69
+	const SPRITE_DAWN ; 6A
+	const SPRITE_ELIO ; 6B
+	const SPRITE_ELIO2 ; 6C
+	const SPRITE_GLORIA ; 6D
+	const SPRITE_GREEN ; 6E ; use AZURE sprite instead if out of space
+	const SPRITE_HILBERT ; 6F
+	const SPRITE_HILDA ; 70
+	const SPRITE_LEAF ; 71
+	const SPRITE_LUCAS ; 72
+	const SPRITE_LYRA ; 73
+	const SPRITE_MAY ; 74
+	const SPRITE_MICHAEL ; 75
+	const SPRITE_NATE ; 76
+	const SPRITE_ROBORED ; 77
+	const SPRITE_ROSA ; 78
+	const SPRITE_SELENE ; 79
+	const SPRITE_SERENA ; 7A
+	const SPRITE_SERENA2 ; 7B
+	const SPRITE_WES ; 7C
+	const SPRITE_BLUE_MAY ; 7D
+	const SPRITE_LARRY ; 7E
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

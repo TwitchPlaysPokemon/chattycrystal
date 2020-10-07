@@ -108,3 +108,28 @@ OverworldSprites:
 	overworld_sprite EnteiSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite RaikouSpriteGFX, 4, STILL_SPRITE, PAL_OW_RED
 	overworld_sprite StandingYoungsterSpriteGFX, 12, STANDING_SPRITE, PAL_OW_BLUE
+	overworld_sprite AzureSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite BrendanSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite CalemSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite DawnSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PINK
+	overworld_sprite ElioSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite Elio2SpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite GloriaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PINK
+	overworld_sprite GreenSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite HilbertSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite HildaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PINK
+	overworld_sprite LeafSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite LucasSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite LyraSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite MaySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite MichaelSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite NateSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite RoboRedSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite RosaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite SeleneSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
+	overworld_sprite SerenaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite Serena2SpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite WesSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite MaySpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite RedSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
+	

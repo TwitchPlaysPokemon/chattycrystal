@@ -716,12 +716,12 @@ SECTION "Pics 19", ROMX
 
 AzurePic:           INCBIN "gfx/trainers/azure.2bpp.lz"
 BrendanPic:         INCBIN "gfx/trainers/brendan.2bpp.lz"
-BronzePic:          INCBIN "gfx/trainers/kris.2bpp.lz" ; replace with Bronze Girl
+BronzePic:          INCBIN "gfx/trainers/dani.2bpp.lz" 
 BrownPic:           INCBIN "gfx/trainers/red.2bpp.lz" ; replace with Brown
 CalemPic:           INCBIN "gfx/trainers/calem.2bpp.lz"
 ChrisOrigPic:       INCBIN "gfx/trainers/chris.2bpp.lz"
 ChrisSnowPic:       INCBIN "gfx/trainers/chris-snow.2bpp.lz"
-CyanPic:            INCBIN "gfx/trainers/kris.2bpp.lz" ; replace with Cyan
+CyanPic:            INCBIN "gfx/trainers/cyan.2bpp.lz" 
 DawnPic:            INCBIN "gfx/trainers/dawn.2bpp.lz"
 ElioPic:            INCBIN "gfx/trainers/elio.2bpp.lz"
 Elio2Pic:           INCBIN "gfx/trainers/elio2.2bpp.lz"
@@ -735,7 +735,7 @@ LucasPic:           INCBIN "gfx/trainers/lucas.2bpp.lz"
 LarryPic:           INCBIN "gfx/trainers/larry.2bpp.lz"
 LyraPic:            INCBIN "gfx/trainers/lyra.2bpp.lz"
 MayPic:             INCBIN "gfx/trainers/may.2bpp.lz"
-BlueMayPic:         INCBIN "gfx/trainers/may.2bpp.lz" ; replace with Blue May
+BlueMayPic:         INCBIN "gfx/trainers/bluemay.2bpp.lz" 
 MichaelPic:         INCBIN "gfx/trainers/michael.2bpp.lz"
 NatePic:            INCBIN "gfx/trainers/nate.2bpp.lz"
 RoboRedPic:         INCBIN "gfx/trainers/robored.2bpp.lz"
@@ -744,3 +744,8 @@ SelenePic:          INCBIN "gfx/trainers/selene.2bpp.lz"
 SerenaPic:          INCBIN "gfx/trainers/serena.2bpp.lz"
 Serena2Pic:         INCBIN "gfx/trainers/serena2.2bpp.lz"
 WesPic:             INCBIN "gfx/trainers/wes.2bpp.lz"
+GlazedPic:             INCBIN "gfx/trainers/glazed.2bpp.lz"
+MaribelPic:             INCBIN "gfx/trainers/maribel.2bpp.lz"
+NuzlockePic:             INCBIN "gfx/trainers/nuzlocke.2bpp.lz"
+SiriusPic:             INCBIN "gfx/trainers/sirius.2bpp.lz"
+EvanPic:             INCBIN "gfx/trainers/evan.2bpp.lz"

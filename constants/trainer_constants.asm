@@ -747,7 +747,6 @@ KRIS EQU __enum__
 	trainerclass RSEORAS_BRENDAN ; 4E
 	const ORLANDO
 	const RTHASZS
-	const BBCBBHH
 	const EBNEERT
 
 	trainerclass FRLG_LEAF ; 4F
@@ -808,5 +807,20 @@ KRIS EQU __enum__
 
 	trainerclass SWSH_GLORIA ; 5F
 	const RE_SWORD
+	
+	trainerclass GLAZED ; 60
+	const AHUNIgg
+	
+	trainerclass MARIBEL ; 61
+	const AAABBHM
+	
+	trainerclass NUZLOCKE ; 62
+	const F48
+	
+	trainerclass SIRIUS ; 63
+	const BBCBBHH
+	
+	trainerclass P_CYAN ;64
+	const CYAN
 
 NUM_TRAINER_CLASSES EQU __enum__

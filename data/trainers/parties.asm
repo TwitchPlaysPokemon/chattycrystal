@@ -735,6 +735,417 @@ YoungsterGroup:
 	db -1 ; end
 
 	end_list_items
+	
+AzureGroup:
+	next_list_item ; AZURE1
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+FCLarryGroup:
+	next_list_item ; LARRY_GREEN
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+RBYGreenGroup:
+	next_list_item ; XXWWNN
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+CYRoboredGroup:
+	next_list_item ; X_CHATTYYELLOW
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+GSCHGSSChrisGroup:
+	next_list_item ; AJDNNW
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; AAEFFFF
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; D_GAUNTLETCRYSTAL
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+GSCKrisGroup:
+	next_list_item ; BABA
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; EWWYPPP
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+ACChrisGroup:
+	next_list_item ; EVAN
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+FCChrisGroup:
+	next_list_item ; Y_FUSEDCRYSTAL
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+RSEORASMayGroup:
+	next_list_item ; A_EMERALD
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; QQ
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; ACPPQ
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; N_EMERALD
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; PETRA
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; URF
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+RSEORASBlueMayGroup:
+	next_list_item ; HNV
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; MARINA
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+RSEORASBrendanGroup:
+	next_list_item ; ORLANDO
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; RTHASZS
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; EBNEERT
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+FRLGLeafGroup:
+	next_list_item ; A_FIRERED
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; AATATAT
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; PAULA_SWEET
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; DOOT
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+ColoWesGroup:
+	next_list_item ; AAAAAAA
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; ACCC
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+XDMichaelGroup:
+	next_list_item ; ABBBCC
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; STARS
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+PTDawnGroup:
+	next_list_item ; IECBW
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+PTLucasGroup:
+	next_list_item ; NQPPPNL
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; PP
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+HGSSLyraGroup:
+	next_list_item ; AOOOO
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+BWHilbertGroup:
+	next_list_item ; GMYC
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+BWHildaGroup:
+	next_list_item ; AAQ
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+B2W2RosaGroup:
+	next_list_item ; CLY
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+B2W2NateGroup:
+	next_list_item ; AAAALK
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; R_BLACK2
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+XYCalemGroup:
+	next_list_item ; D_XY
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+
+XYSerenaGroup:
+	next_list_item ; Y_266
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+XYSerena2Group:
+	next_list_item ; ETR
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+SMUSUMElioGroup:
+	next_list_item ; L_SUN
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+SMUSUMElio2Group:
+	next_list_item ; D76O6YTTR
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; RRWQ
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+SMUSUMSeleneGroup:
+	next_list_item ; VRG
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+SWSHGloriaGroup:
+	next_list_item ; RE_SWORD
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+GlazedGroup:
+	next_list_item ; AHUNIgg
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+MaribelGroup:
+	next_list_item ; AAABBHM
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+NuzlockeGroup:
+	next_list_item ; F48
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+SiriusGroup:
+	next_list_item ; BBCBBHH
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+PCyanGroup:
+	next_list_item ; CYAN
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
 
 SECTION "Enemy Trainer Parties 2", ROMX
 
@@ -5274,3 +5685,5 @@ MysticalmanGroup:
 	db -1 ; end
 
 	end_list_items
+
+

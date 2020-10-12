@@ -75,10 +75,10 @@ TrainerPicPointers::
 	dba RoboRedPic
 	dba CalPic
 	dba KrisPic
-	dba CalPic ; replace with EVAN pic
-	dba CalPic ; replace with Chris cold pic
+	dba EvanPic 
+	dba ChrisSnowPic 
 	dba MayPic
-	dba MayPic ; replace with Blue May
+	dba BlueMayPic 
 	dba BrendanPic
 	dba LeafPic
 	dba WesPic
@@ -97,3 +97,8 @@ TrainerPicPointers::
 	dba Elio2Pic
 	dba SelenePic
 	dba GloriaPic
+	dba GlazedPic
+	dba MaribelPic
+	dba NuzlockePic
+	dba SiriusPic
+	dba CyanPic

@@ -69,3 +69,36 @@ TrainerGroups:
 	dba OfficerGroup
 	dba GruntFGroup
 	dba MysticalmanGroup
+	dba AzureGroup
+	dba FCLarryGroup
+	dba RBYGreenGroup
+	dba CYRoboredGroup
+	dba GSCHGSSChrisGroup
+	dba GSCKrisGroup
+	dba ACChrisGroup
+	dba FCChrisGroup
+	dba RSEORASMayGroup
+	dba RSEORASBlueMayGroup
+	dba RSEORASBrendanGroup
+	dba FRLGLeafGroup
+	dba ColoWesGroup
+	dba XDMichaelGroup
+	dba PTDawnGroup
+	dba PTLucasGroup
+	dba HGSSLyraGroup
+	dba BWHilbertGroup
+	dba BWHildaGroup
+	dba B2W2RosaGroup
+	dba B2W2NateGroup
+	dba XYCalemGroup
+	dba XYSerenaGroup
+	dba XYSerena2Group
+	dba SMUSUMElioGroup
+	dba SMUSUMElio2Group
+	dba SMUSUMSeleneGroup
+	dba SWSHGloriaGroup
+	dba GlazedGroup
+	dba MaribelGroup
+	dba NuzlockeGroup
+	dba SiriusGroup
+	dba PCyanGroup

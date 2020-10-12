@@ -68,3 +68,36 @@ TrainerClassDVs:
 	dn  9,  8,  8,  8 ; OFFICER
 	dn  7, 14, 10,  8 ; GRUNTF
 	dn  9,  8,  8,  8 ; MYSTICALMAN
+	dn 15, 13, 13, 14 ; AZURE
+	dn 15, 13, 13, 14 ; FC_LARRY
+	dn 15, 13, 13, 14 ; RBY_GREEN
+	dn 15, 13, 13, 14 ; CY_ROBORED
+	dn 15, 13, 13, 14 ; GSCHGSS_CHRIS
+	dn 15, 13, 13, 14 ; GSC_KRIS
+	dn 15, 13, 13, 14 ; AC_CHRIS
+	dn 15, 13, 13, 14 ; FC_CHRIS
+	dn 15, 13, 13, 14 ; RSEORAS_MAY
+	dn 15, 13, 13, 14 ; RSEORAS_BLUE_MAY
+	dn 15, 13, 13, 14 ; RSEORAS_BRENDAN
+	dn 15, 13, 13, 14 ; FRLG_LEAF
+	dn 15, 13, 13, 14 ; COLO_WES
+	dn 15, 13, 13, 14 ; XD_MICHAEL
+	dn 15, 13, 13, 14 ; PT_DAWN
+	dn 15, 13, 13, 14 ; PT_LUCAS
+	dn 15, 13, 13, 14 ; HGSS_LYRA
+	dn 15, 13, 13, 14 ; BW_HILBERT
+	dn 15, 13, 13, 14 ; BW_HILDA
+	dn 15, 13, 13, 14 ; B2W2_ROSA
+	dn 15, 13, 13, 14 ; B2W2_NATE
+	dn 15, 13, 13, 14 ; XY_CALEM
+	dn 15, 13, 13, 14 ; XY_SERENA
+	dn 15, 13, 13, 14 ; XY_SERENA2
+	dn 15, 13, 13, 14 ; SMUSUM_ELIO
+	dn 15, 13, 13, 14 ; SMUSUM_ELIO2
+	dn 15, 13, 13, 14 ; SMUSUM_SELENE
+	dn 15, 13, 13, 14 ; SWSH_GLORIA
+	dn 15, 13, 13, 14 ; GLAZED
+	dn 15, 13, 13, 14 ; MARIBEL
+	dn 15, 13, 13, 14 ; NUZLOCKE
+	dn 15, 13, 13, 14 ; SIRIUS
+	dn 15, 13, 13, 14 ; P_CYAN

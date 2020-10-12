@@ -236,7 +236,6 @@ ROMX $59
 	"Pics 18"
 ROMX $5a
 	"Pics 19"
-	"Sprites 3"
 ROMX $5b
 	"bank5B"
 ROMX $5c
@@ -307,7 +306,7 @@ ROMX $7b
 ROMX $7c
 	"Battle Tower Trainer Data"
 ROMX $7d
-	"Mobile News Data"
+	"Sprites 3"
 ROMX $7e
 	"Crystal Events"
 ROMX $7f

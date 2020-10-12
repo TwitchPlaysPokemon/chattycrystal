@@ -1,5 +1,8 @@
 roms := pokecrystal.gbc
 
+# set to 0 when we're not replacing stuff to test anymore
+TESTMODE := 1
+
 crystal_obj := \
 audio.o \
 home.o \
@@ -53,7 +56,7 @@ tools:
 	$(MAKE) -C tools/
 
 
-$(crystal_obj): RGBASMFLAGS =
+$(crystal_obj): RGBASMFLAGS = -DTESTMODE=$(TESTMODE)
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.

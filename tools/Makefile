@@ -18,6 +18,7 @@ all: $(tools)
 
 clean:
 	rm -f $(tools)
+	$(MAKE) -C lz/ clean
 
 gfx md5: common.h
 
@@ -26,3 +27,7 @@ gfx md5: common.h
 
 bankends: bankends.c parsemap.c parsemap.h
 	$(CC) -O3 -o $@ $^
+
+lzcomp:
+	$(MAKE) -C lz/
+	cp lz/lzcomp .

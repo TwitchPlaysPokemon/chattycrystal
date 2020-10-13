@@ -1,6 +1,7 @@
 # generated
 *.tx
 *.o
+bank_ends.txt
 
 # precompiled python
 *.pyc

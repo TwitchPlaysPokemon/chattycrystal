@@ -11,7 +11,8 @@ tools := \
 	pokemon_animation \
 	pokemon_animation_graphics \
 	gfx \
-	md5
+	md5 \
+	bankends
 all: $(tools)
 	@:
 
@@ -22,3 +23,6 @@ gfx md5: common.h
 
 %: %.c
 	$(CC) $(CFLAGS) -o $@ $<
+
+bankends: bankends.c parsemap.c parsemap.h
+	$(CC) -O3 -o $@ $^

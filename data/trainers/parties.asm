@@ -5408,6 +5408,8 @@ KimonoGirlGroup:
 
 	end_list_items
 
+SECTION "Enemy Trainer Parties 3", ROMX
+
 TwinsGroup:
 	next_list_item ; TWINS (1)
 	db "AMY & MAY@", TRAINERTYPE_NORMAL
@@ -5685,5 +5687,3 @@ MysticalmanGroup:
 	db -1 ; end
 
 	end_list_items
-
-

@@ -105,6 +105,7 @@
 	const SPRITE_AZURE ; 65
 	const SPRITE_BRENDAN ; 66
 	const SPRITE_CALEM ; 67
+	const SPRITE_CYAN
 	const SPRITE_DAWN ; 68
 	const SPRITE_ELIO ; 69
 	const SPRITE_ELIO2 ; 6A
@@ -126,6 +127,10 @@
 	const SPRITE_WES ; 7A
 	const SPRITE_BLUE_MAY ; 7B
 	const SPRITE_LARRY ; 7C
+	const SPRITE_GLAZED
+	const SPRITE_MARIBEL 
+	const SPRITE_NUZLOCKE
+	const SPRITE_SIRIUS
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

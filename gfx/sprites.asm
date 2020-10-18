@@ -113,7 +113,7 @@ BrendanSpriteGFX::         INCBIN "gfx/sprites/brendan.2bpp"
 BronzeSpriteGFX::          INCBIN "gfx/sprites/kris.2bpp" ; replace with Bronze Girl
 BrownSpriteGFX::           INCBIN "gfx/sprites/red.2bpp"  ; replace with Brown
 CalemSpriteGFX::           INCBIN "gfx/sprites/calem.2bpp"
-CyanSpriteGFX::            INCBIN "gfx/sprites/kris.2bpp" ; replace with Cyan
+CyanSpriteGFX::            INCBIN "gfx/sprites/cyan.2bpp"
 DawnSpriteGFX::            INCBIN "gfx/sprites/dawn.2bpp"
 ElioSpriteGFX::            INCBIN "gfx/sprites/elio.2bpp"
 Elio2SpriteGFX::           INCBIN "gfx/sprites/elio2.2bpp"
@@ -133,3 +133,7 @@ SeleneSpriteGFX::          INCBIN "gfx/sprites/selene.2bpp"
 SerenaSpriteGFX::          INCBIN "gfx/sprites/serena.2bpp"
 Serena2SpriteGFX::         INCBIN "gfx/sprites/serena2.2bpp"
 WesSpriteGFX::             INCBIN "gfx/sprites/wes.2bpp"
+GlazedSpriteGFX::             INCBIN "gfx/sprites/glazed.2bpp"
+MaribelSpriteGFX::             INCBIN "gfx/sprites/maribel.2bpp"
+NuzlockeSpriteGFX::             INCBIN "gfx/sprites/nuzlocke.2bpp"
+SiriusSpriteGFX::             INCBIN "gfx/sprites/sirius.2bpp"

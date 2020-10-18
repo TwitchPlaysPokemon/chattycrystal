@@ -109,6 +109,7 @@ OverworldSprites:
 	overworld_sprite AzureSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite BrendanSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite CalemSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite CyanSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite DawnSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PINK
 	overworld_sprite ElioSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite Elio2SpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
@@ -130,4 +131,7 @@ OverworldSprites:
 	overworld_sprite WesSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite MaySpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite RedSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
-	
+	overworld_sprite GlazedSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
+	overworld_sprite MaribelSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite NuzlockeSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+	overworld_sprite SiriusSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN

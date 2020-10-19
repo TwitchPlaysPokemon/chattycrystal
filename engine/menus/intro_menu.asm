@@ -409,32 +409,6 @@ Continue_MobileAdapterMenu:
 	farcall Mobile_AlwaysReturnNotCarry ; mobile check
 	ret nc
 
-; the rest of this stuff is never reached because
-; the previous function returns with carry not set
-	ld hl, wd479
-	bit 1, [hl]
-	ret nz
-	ld a, 5
-	ld [wMusicFade], a
-	ld a, LOW(MUSIC_MOBILE_ADAPTER_MENU)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_MOBILE_ADAPTER_MENU)
-	ld [wMusicFadeID + 1], a
-	ld c, 20
-	call DelayFrames
-	ld c, $1
-	farcall InitMobileProfile ; mobile
-	farcall _SaveData
-	ld a, 8
-	ld [wMusicFade], a
-	ld a, LOW(MUSIC_NONE)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_NONE)
-	ld [wMusicFadeID + 1], a
-	ld c, 35
-	call DelayFrames
-	ret
-
 ConfirmContinue:
 .loop
 	call DelayFrame
@@ -1167,34 +1141,10 @@ TitleScreenMain:
 	cp  D_UP + B_BUTTON + SELECT
 	jr z, .delete_save_data
 
-; To bring up the clock reset dialog:
-
-; Hold Down + B + Select to initiate the sequence.
-	ldh a, [hClockResetTrigger]
-	cp $34
-	jr z, .check_clock_reset
-
+; Hold Down + B + Select to bring up the clock reset dialog:
 	ld a, [hl]
 	and D_DOWN + B_BUTTON + SELECT
 	cp  D_DOWN + B_BUTTON + SELECT
-	jr nz, .check_start
-
-	ld a, $34
-	ldh [hClockResetTrigger], a
-	jr .check_start
-
-; Keep Select pressed, and hold Left + Up.
-; Then let go of Select.
-.check_clock_reset
-	bit SELECT_F, [hl]
-	jr nz, .check_start
-
-	xor a
-	ldh [hClockResetTrigger], a
-
-	ld a, [hl]
-	and D_LEFT + D_UP
-	cp  D_LEFT + D_UP
 	jr z, .clock_reset
 
 ; Press Start or A to start the game.

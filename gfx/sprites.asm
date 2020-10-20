@@ -110,7 +110,7 @@ SECTION "Sprites 3", ROMX
 
 AzureSpriteGFX::           INCBIN "gfx/sprites/azure.2bpp"
 BrendanSpriteGFX::         INCBIN "gfx/sprites/brendan.2bpp"
-BronzeSpriteGFX::          INCBIN "gfx/sprites/kris.2bpp" ; replace with Bronze Girl
+BronzeSpriteGFX::          INCBIN "gfx/sprites/dani.2bpp" 
 BrownSpriteGFX::           INCBIN "gfx/sprites/red.2bpp"  ; replace with Brown
 CalemSpriteGFX::           INCBIN "gfx/sprites/calem.2bpp"
 CyanSpriteGFX::            INCBIN "gfx/sprites/cyan.2bpp"
@@ -137,3 +137,5 @@ GlazedSpriteGFX::             INCBIN "gfx/sprites/glazed.2bpp"
 MaribelSpriteGFX::             INCBIN "gfx/sprites/maribel.2bpp"
 NuzlockeSpriteGFX::             INCBIN "gfx/sprites/nuzlocke.2bpp"
 SiriusSpriteGFX::             INCBIN "gfx/sprites/sirius.2bpp"
+EvanSpriteGFX::             INCBIN "gfx/sprites/evan.2bpp"
+

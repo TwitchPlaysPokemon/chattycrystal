@@ -102,3 +102,6 @@ TrainerGroups:
 	dba NuzlockeGroup
 	dba SiriusGroup
 	dba PCyanGroup
+	dba BronzeGroup
+	dba RedLarryGroup
+	dba GreenMayGroup

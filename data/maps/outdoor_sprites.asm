@@ -155,6 +155,16 @@ VioletGroupSprites:
 ; Route32, Route35, Route36, Route37, VioletCity
 EcruteakGroupSprites:
 ; EcruteakCity
+if TESTMODE
+	db SPRITE_LUCAS
+	db SPRITE_LYRA
+	db SPRITE_HILBERT
+	db SPRITE_ROSA
+	db SPRITE_NATE
+	db SPRITE_DAWN
+	db SPRITE_HILDA
+	db SPRITE_CALEM
+else
 	db SPRITE_FISHER
 	db SPRITE_LASS
 	db SPRITE_OFFICER
@@ -162,6 +172,7 @@ EcruteakGroupSprites:
 	db SPRITE_YOUNGSTER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_BUG_CATCHER
+endc
 	db SPRITE_SUPER_NERD
 	; 8 of max 9 walking sprites
 	db SPRITE_WEIRD_TREE ; variable sprite: becomes SPRITE_SUDOWOODO and SPRITE_TWIN
@@ -178,6 +189,9 @@ AzaleaGroupSprites:
 	db SPRITE_TEACHER
 	db SPRITE_AZALEA_ROCKET ; variable sprite: becomes SPRITE_ROCKET and SPRITE_SILVER
 	db SPRITE_LASS
+if TESTMODE
+	db SPRITE_GLORIA
+endc
 	; 6 of max 9 walking sprites
 	db SPRITE_FRUIT_TREE
 	db SPRITE_SLOWPOKE

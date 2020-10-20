@@ -105,32 +105,34 @@
 	const SPRITE_AZURE ; 65
 	const SPRITE_BRENDAN ; 66
 	const SPRITE_CALEM ; 67
-	const SPRITE_CYAN
-	const SPRITE_DAWN ; 68
-	const SPRITE_ELIO ; 69
-	const SPRITE_ELIO2 ; 6A
-	const SPRITE_GLORIA ; 6B
-	const SPRITE_GREEN ; 6C ; use AZURE sprite instead if out of space
-	const SPRITE_HILBERT ; 6D
-	const SPRITE_HILDA ; 6E
-	const SPRITE_LEAF ; 6F
-	const SPRITE_LUCAS ; 70
-	const SPRITE_LYRA ; 71
-	const SPRITE_MAY ; 72
-	const SPRITE_MICHAEL ; 73
-	const SPRITE_NATE ; 74
-	const SPRITE_ROBORED ; 75
-	const SPRITE_ROSA ; 76
-	const SPRITE_SELENE ; 77
-	const SPRITE_SERENA ; 78
-	const SPRITE_SERENA2 ; 79
-	const SPRITE_WES ; 7A
-	const SPRITE_BLUE_MAY ; 7B
-	const SPRITE_LARRY ; 7C
-	const SPRITE_GLAZED
-	const SPRITE_MARIBEL 
-	const SPRITE_NUZLOCKE
-	const SPRITE_SIRIUS
+	const SPRITE_CYAN ;68
+	const SPRITE_DAWN ; 69
+	const SPRITE_ELIO ; 6A
+	const SPRITE_ELIO2 ; 6B
+	const SPRITE_GLORIA ; 6C
+	const SPRITE_GREEN ; 6D 
+	const SPRITE_HILBERT ; 6E
+	const SPRITE_HILDA ; 6F
+	const SPRITE_LEAF ; 70
+	const SPRITE_LUCAS ; 71
+	const SPRITE_LYRA ; 72
+	const SPRITE_MAY ; 73
+	const SPRITE_MICHAEL ; 74
+	const SPRITE_NATE ; 75
+	const SPRITE_ROBORED ; 76
+	const SPRITE_ROSA ; 77
+	const SPRITE_SELENE ; 78
+	const SPRITE_SERENA ; 79
+	const SPRITE_SERENA2 ; 7A
+	const SPRITE_WES ; 7B
+	const SPRITE_BLUE_MAY ; 7C
+	const SPRITE_LARRY ; 7D
+	const SPRITE_GLAZED ;7E
+	const SPRITE_MARIBEL  ;7F
+	const SPRITE_NUZLOCKE ;80
+	const SPRITE_SIRIUS ;81
+	const SPRITE_EVAN ;82
+	const SPRITE_BRONZE ;83
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $80

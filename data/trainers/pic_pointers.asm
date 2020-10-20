@@ -102,3 +102,6 @@ TrainerPicPointers::
 	dba NuzlockePic
 	dba SiriusPic
 	dba CyanPic
+	dba BronzePic
+	dba RedLarryPic
+	dba GreenMayPic

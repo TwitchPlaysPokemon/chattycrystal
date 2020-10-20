@@ -827,25 +827,8 @@ FCChrisGroup:
 	end_list_items
 	
 RSEORASMayGroup:
-	next_list_item ; A_EMERALD
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
 	
 	next_list_item ; QQ
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
-	
-	next_list_item ; ACPPQ
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
-	
-	next_list_item ; N_EMERALD
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
@@ -1146,6 +1129,46 @@ PCyanGroup:
 	db -1 ; end
 	
 	end_list_items
+	
+BronzeGroup:
+	next_list_item ; FEEFFRR
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+RedLarryGroup:
+	next_list_item ; LARRY_R
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+	
+GreenMayGroup:
+	next_list_item ; A_EMERALD
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; ACPPQ
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ; N_EMERALD
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items
+
 
 SECTION "Enemy Trainer Parties 2", ROMX
 

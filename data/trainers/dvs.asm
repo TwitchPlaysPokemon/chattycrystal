@@ -101,3 +101,6 @@ TrainerClassDVs:
 	dn 15, 13, 13, 14 ; NUZLOCKE
 	dn 15, 13, 13, 14 ; SIRIUS
 	dn 15, 13, 13, 14 ; P_CYAN
+	dn 15, 13, 13, 14 ; BRONZE
+	dn 15, 13, 13, 14 ; RED_LARRY
+	dn 15, 13, 13, 14 ; GREEN_MAY

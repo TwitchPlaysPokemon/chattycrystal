@@ -107,4 +107,7 @@ INCBIN "gfx/trainers/maribel.gbcpal", middle_colors
 INCBIN "gfx/trainers/nuzlocke.gbcpal", middle_colors
 INCBIN "gfx/trainers/sirius.gbcpal", middle_colors
 INCBIN "gfx/trainers/cyan.gbcpal", middle_colors
+INCBIN "gfx/trainers/dani.gbcpal", middle_colors
+INCBIN "gfx/trainers/red-snow.gbcpal", middle_colors
+INCBIN "gfx/trainers/greenmay.gbcpal", middle_colors
 

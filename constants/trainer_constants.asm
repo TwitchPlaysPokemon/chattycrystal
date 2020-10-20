@@ -733,10 +733,7 @@ KRIS EQU __enum__
 	const Y_FUSEDCRYSTAL
 
 	trainerclass RSEORAS_MAY ; 4C
-	const A_EMERALD
 	const QQ
-	const ACPPQ
-	const N_EMERALD
 	const PETRA
 	const URF
 
@@ -822,5 +819,17 @@ KRIS EQU __enum__
 	
 	trainerclass P_CYAN ;64
 	const CYAN
+	
+	trainerclass BRONZE ;65
+	const FEEFFRR
+	
+	trainerclass RED_LARRY ;65
+	const LARRY_R
+	
+	trainerclass GREEN_MAY ; 4C
+	const A_EMERALD
+	const ACPPQ
+	const N_EMERALD
+	
 
 NUM_TRAINER_CLASSES EQU __enum__

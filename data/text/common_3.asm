@@ -900,7 +900,7 @@ UnknownText_0x1c55d6::
 
 UnknownText_0x1c55db::
 	text "Select CONTINUE &"
-	line  "reset settings."
+	line "reset settings."
 	prompt
 
 UnknownText_0x1c561c::
@@ -921,8 +921,6 @@ UnknownText_0x1c5660::
 	sound_dex_fanfare_50_79
 	text_waitbutton
 	text_end
-
-	text_end ; unused
 
 UnknownText_0x1c5678::
 	text "Which move should"

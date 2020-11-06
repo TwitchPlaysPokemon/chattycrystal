@@ -74,10 +74,12 @@ NewBarkTownTeacherScript:
 	opentext
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
 	iftrue .CallMom
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue .TellMomYoureLeaving
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_UNOWN_HATCHED
 	iftrue .MonIsAdorable
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iftrue Text_ElmSentYouAlone
 	writetext Text_GearIsImpressive
 	waitbutton
 	closetext
@@ -220,6 +222,16 @@ Text_YourMonIsAdorable:
 	line "is adorable!"
 	cont "I wish I had one!"
 	done
+	
+Text_ElmSentYouAlone:
+	text "Oh! Professor ELM"
+	line "sent you out"
+	cont "without a #MON?"
+	
+	para "I guess it's OK"
+	line "if he says so<......>"
+	
+	done
 
 Text_TellMomIfLeaving:
 	text "Hi, <PLAY_G>!"
@@ -301,4 +313,3 @@ NewBarkTown_MapEvents:
 	db 3 ; object events
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	object_event  3,  2, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN

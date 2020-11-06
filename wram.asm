@@ -2624,7 +2624,7 @@ wGoldenrodGymSceneID::                            db ; d991
 wGoldenrodMagnetTrainStationSceneID::             db ; d992
 wGoldenrodPokecenter1FSceneID::                   db ; d993
 wOlivineCitySceneID::                             db ; d994
-wRoute34SceneID::                                 db ; d995
+wRoute30SceneID::                                 db ; d995
 wRoute34IlexForestGateSceneID::                   db ; d996
 wEcruteakTinTowerEntranceSceneID::                db ; d997
 wWiseTriosRoomSceneID::                           db ; d998

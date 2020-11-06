@@ -27,13 +27,8 @@ MrPokemonsHouse_MapScripts:
 	opentext
 	writetext MrPokemonIntroText2
 	buttonsound
-	waitsfx
-	giveitem MYSTERY_EGG
-	writetext MrPokemonsHouse_GotEggText
-	playsound SFX_KEY_ITEM
-	waitsfx
-	itemnotify
-	setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+	showemote EMOTE_SHOCK, MRPOKEMONSHOUSE_GENTLEMAN, 15
+	setevent EVENT_GOT_POKEDEX_FROM_OAK
 	blackoutmod CHERRYGROVE_CITY
 	writetext MrPokemonIntroText3
 	buttonsound
@@ -42,19 +37,57 @@ MrPokemonsHouse_MapScripts:
 	buttonsound
 	turnobject MRPOKEMONSHOUSE_GENTLEMAN, DOWN
 	turnobject MRPOKEMONSHOUSE_OAK, LEFT
-	writetext MrPokemonIntroText5
+	closetext
+	playmusic MUSIC_PROF_OAK
+	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakWalksToPlayer
+	turnobject PLAYER, RIGHT
+	opentext
+	writetext MrPokemonsHouse_OakText1
+	buttonsound
+	waitsfx
+	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	playmusic MUSIC_HEAL
+	special StubbedTrainerRankings_Healings
+	special HealParty
+	pause 60
+	special FadeInQuickly
+	playmusic MUSIC_PROF_OAK
+	writetext MrPokemonsHouse_OakText2
+	buttonsound
+	waitsfx
+	writetext MrPokemonsHouse_GetDexText
+	playsound SFX_ITEM
+	waitsfx
+	setflag ENGINE_POKEDEX
+	writetext MrPokemonsHouse_OakText3
 	waitbutton
 	closetext
-	sjump MrPokemonsHouse_OakScript
+	turnobject PLAYER, DOWN
+	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakExits
+	playsound SFX_EXIT_BUILDING
+	disappear MRPOKEMONSHOUSE_OAK
+	waitsfx
+	special RestartMapMusic
+	opentext
+	writetext MrPokemonText_GoBackToElm
+	waitbutton
+	closetext
+	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
+	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
+	setscene SCENE_FINISHED
+	setmapscene CHERRYGROVE_CITY, SCENE_CHERRYGROVECITY_MEET_RIVAL
+	end
 
 MrPokemonsHouse_MrPokemonScript:
 	faceplayer
 	opentext
 	checkitem RED_SCALE
 	iftrue .RedScale
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue .AlwaysNewDiscoveries
-	writetext MrPokemonText_ImDependingOnYou
+	writetext MrPokemonText_GoBackToElm
 	waitbutton
 	closetext
 	end
@@ -79,68 +112,6 @@ MrPokemonsHouse_MrPokemonScript:
 	waitbutton
 .full
 	closetext
-	end
-
-MrPokemonsHouse_OakScript:
-	playmusic MUSIC_PROF_OAK
-	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakWalksToPlayer
-	turnobject PLAYER, RIGHT
-	opentext
-	writetext MrPokemonsHouse_OakText1
-	buttonsound
-	waitsfx
-	writetext MrPokemonsHouse_GetDexText
-	playsound SFX_ITEM
-	waitsfx
-	setflag ENGINE_POKEDEX
-	writetext MrPokemonsHouse_OakText2
-	waitbutton
-	closetext
-	turnobject PLAYER, DOWN
-	applymovement MRPOKEMONSHOUSE_OAK, MrPokemonsHouse_OakExits
-	playsound SFX_EXIT_BUILDING
-	disappear MRPOKEMONSHOUSE_OAK
-	waitsfx
-	special RestartMapMusic
-	pause 15
-	turnobject PLAYER, UP
-	opentext
-	writetext MrPokemonsHouse_MrPokemonHealText
-	waitbutton
-	closetext
-	special FadeBlackQuickly
-	special ReloadSpritesNoPalettes
-	playmusic MUSIC_HEAL
-	special StubbedTrainerRankings_Healings
-	special HealParty
-	pause 60
-	special FadeInQuickly
-	special RestartMapMusic
-	opentext
-	writetext MrPokemonText_ImDependingOnYou
-	waitbutton
-	closetext
-	setevent EVENT_RIVAL_NEW_BARK_TOWN
-	setevent EVENT_PLAYERS_HOUSE_1F_NEIGHBOR
-	clearevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
-	setscene SCENE_FINISHED
-	setmapscene CHERRYGROVE_CITY, SCENE_CHERRYGROVECITY_MEET_RIVAL
-	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
-	specialphonecall SPECIALCALL_ROBBED
-	clearevent EVENT_COP_IN_ELMS_LAB
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .RivalTakesChikorita
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .RivalTakesCyndaquil
-	setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
-	end
-
-.RivalTakesChikorita:
-	setevent EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
-	end
-
-.RivalTakesCyndaquil:
-	setevent EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
 	end
 
 MrPokemonsHouse_ForeignMagazines:
@@ -179,56 +150,31 @@ MrPokemonIntroText1:
 	done
 
 MrPokemonIntroText2:
-	text "This is what I"
-	line "want PROF.ELM to"
-	cont "examine."
-	done
-
-MrPokemonsHouse_GotEggText:
-	text "<PLAYER> received"
-	line "MYSTERY EGG."
+	text "So this is the EGG"
+	line "PROF.ELM wanted"
+	cont "me to see?"
 	done
 
 MrPokemonIntroText3:
-	text "I know a couple"
-	line "who run a #MON"
-	cont "DAY-CARE service."
+	text "What! It hatched!?"
+	line "Without a #MON"
+	cont "to incubate it?!"
+	
+	para "and it's a rare,"
+	line " genderless #MON"
+	cont "as-well<......>"
 
-	para "They gave me that"
-	line "EGG."
-
-	para "I was intrigued,"
-	line "so I sent mail to"
-	cont "PROF.ELM."
-
-	para "For #MON evolu-"
-	line "tion, PROF.ELM is"
-	cont "the authority."
 	done
 
 MrPokemonIntroText4:
-	text "Even PROF.OAK here"
-	line "recognizes that."
+	text "Have you seen this"
+	line "OAK?"
 	done
 
-MrPokemonIntroText5:
-	text "If my assumption"
-	line "is correct, PROF."
-	cont "ELM will know it."
-	done
-
-MrPokemonsHouse_MrPokemonHealText:
-	text "You are returning"
-	line "to PROF.ELM?"
-
-	para "Here. Your #MON"
-	line "should have some"
-	cont "rest."
-	done
-
-MrPokemonText_ImDependingOnYou:
-	text "I'm depending on"
-	line "you!"
+MrPokemonText_GoBackToElm:
+	text "You should go back"
+	line "and show PROF.ELM"
+	cont "the baby #MON."
 	done
 
 MrPokemonText_AlwaysNewDiscoveries:
@@ -256,38 +202,42 @@ MrPokemonsHouse_OakText1:
 	para "for PROF.ELM, so I"
 	line "waited here."
 
-	para "Oh! What's this?"
-	line "A rare #MON!"
+	para "Can I see this"
+	line "rare #MON?"
 
 	para "Let's see…"
+	
+	para "<......>"
 
-	para "Hm, I see!"
-
-	para "I understand why"
-	line "PROF.ELM gave you"
-
-	para "a #MON for this"
-	line "errand."
-
-	para "To researchers"
-	line "like PROF.ELM and"
-
-	para "I, #MON are our"
-	line "friends."
-
-	para "He saw that you"
-	line "would treat your"
-
-	para "#MON with love"
-	line "and care."
-
-	para "…Ah!"
+	para "The #MON seems"
+	line "perfectly healthy."
+	
+	para "Let me collect"
+	line "some data<......>"
+	
+	done
+	
+MrPokemonsHouse_OakText2:
+	text "OK, that should"
+	line "be enough"
+	
+	para "The #MON is"
+	line "completly normal"
+	
+	para "While ELM had"
+	line "told me to keep a"
+	cont "#MON aside<......>"
+	
+	para "I think it is best"
+	line "for you to keep it"
+	cont "for yourself."
 
 	para "You seem to be"
 	line "dependable."
 
-	para "How would you like"
-	line "to help me out?"
+	para "How would you"
+	line "like to help me"
+	cont "gather data."
 
 	para "See? This is the"
 	line "latest version of"
@@ -302,13 +252,13 @@ MrPokemonsHouse_OakText1:
 	para "It's a hi-tech"
 	line "encyclopedia!"
 	done
-
+	
 MrPokemonsHouse_GetDexText:
 	text "<PLAYER> received"
 	line "#DEX!"
 	done
 
-MrPokemonsHouse_OakText2:
+MrPokemonsHouse_OakText3:
 	text "Go meet many kinds"
 	line "of #MON and"
 

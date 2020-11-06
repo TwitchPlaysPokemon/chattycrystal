@@ -235,6 +235,7 @@ ScriptCommandTable:
 	dw Script_checksave                  ; a9
 	dw Script_loadmonindex               ; aa
 	dw Script_checkmaplockedmons         ; ab
+	dw Script_givechattymon ;ac
 
 StartScript:
 	ld hl, wScriptFlags
@@ -2870,4 +2871,15 @@ LoadScriptPokemonID:
 	or l
 	jp nz, GetPokemonIDFromIndex
 	ld a, [wScriptVar]
+	ret
+	
+Script_givechattymon:
+; script command 0xac
+; if no room in the party, return 0 in wScriptVar; else, return 2
+; parameters Mon
+	call GetScriptByte
+	farcall GiveChattyMon
+	ret nc
+	ld a, 2
+	ld [wScriptVar], a
 	ret

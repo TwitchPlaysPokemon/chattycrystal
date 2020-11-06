@@ -1074,3 +1074,9 @@ ENDM
 checkmaplockedmons: MACRO
 	db checkmaplockedmons_command
 ENDM
+
+	enum givechattymon_command ; $ac
+givechattymon: MACRO
+	db givechattymon_command
+	db \1 ;mon
+ENDM

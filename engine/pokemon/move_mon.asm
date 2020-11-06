@@ -1845,3 +1845,136 @@ InitNickname:
 	ld hl, ExitAllMenus
 	rst FarCall
 	ret
+	
+GiveChattyMon::
+	;gives a mon with special precalculated stats based on the contents of 
+	;wCurPartySpecies, then go back and set the OTs properly while preserving 
+	;the chatty bytes
+	;check and increment party count
+	ld b, a
+	ld hl, wPartyCount
+	ld a, [hl]
+	cp PARTY_LENGTH
+	ret nc
+	push af ;store partycount for later
+	inc [hl]
+	;load table entry
+	ld hl, .specalmonstable
+	ld a, b
+	ld bc, $0006
+	call AddNTimes
+	ld a, [hli]
+	push hl
+	ld l, [hl]
+	ld h, a
+	ld de, wOddEgg
+	ld bc, NICKNAMED_MON_STRUCT_LENGTH + NAME_LENGTH
+	call CopyBytes
+	; Loads the actual species and overwrites the zero in wOddEggSpecies
+	pop hl
+	inc hl
+	ld a, [hli]
+	push hl
+	ld l, [hl]
+	ld h, a
+	call GetPokemonIDFromIndex
+	ld [wOddEggSpecies], a
+	; And likewise with moves
+	pop hl
+	inc hl
+	ld a, [hli]
+	ld l, [hl]
+	ld h, a
+	ld c, NUM_MOVES
+	ld de, wOddEggMoves
+.move_loop
+	ld a, [hli]
+	push hl
+	ld h, [hl]
+	ld l, a
+	call GetMoveIDFromIndex
+	pop hl
+	inc hl
+	ld [de], a
+	inc de
+	dec c
+	jr nz, .move_loop
+	;add the egg species to wPartySpecies
+	ld hl, wPartySpecies
+	pop af
+	add l
+	ld l, a
+	ld a, 0
+	adc h
+	ld h, a
+	ld [hl], HIGH(EGG)
+	inc hl
+	ld [hl], LOW(EGG)
+	ld hl, wPartyMon1Species
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	ld e, l
+	ld d, h
+	ld hl, wOddEgg
+	call CopyBytes
+	ld hl, wPartyMonNicknames
+	ld bc, MON_NAME_LENGTH
+	call AddNTimes
+	ld e, l
+	ld d, h
+	ld hl, wOddEggName
+	ld bc, MON_NAME_LENGTH - 1
+	call CopyBytes
+	ld a, "@"
+	ld [de], a
+	ld hl, wPartyMonOT
+	ld bc, NAME_LENGTH
+	call AddNTimes
+	ld e, l
+	ld d, h
+	ld hl, wTempOddEggNickname
+	ld bc, PLAYER_NAME_LENGTH
+	call CopyBytes
+	ld a, "@"
+	ld [de], a
+	inc de
+	ld a, $01
+	ld [de], a
+	inc de
+	ld [de], a
+	scf
+	ret
+	
+	
+.specalmonstable
+	dw .chattyunownegg, UNOWN, .chattyunownmoves
+	
+.chattyunownegg
+	db 0 ; Species, will be filled on load
+	db NO_ITEM
+	db 0, 0, 0, 0 ; Moves, will be filled on load
+	dw 00000 ; OT ID, will be filled on load
+	dt 125 ; Exp
+	; Stat exp
+	bigdw 0
+	bigdw 0
+	bigdw 0
+	bigdw 0
+	bigdw 0
+	dn 13, 15, 15, 15 ; DVs
+	db $C8, 0, 0, 0 ; PP, starts with 24 and 3 PP ups
+	db 20 ; Step cycles to hatch
+	db 0, 0, 0 ; Pokerus, Caught data
+	db 5 ; Level
+	db 0, 0 ; Status
+	bigdw 0 ; HP
+	bigdw 24 ; Max HP
+	bigdw 16 ; Atk
+	bigdw 14 ; Def
+	bigdw 14 ; Spd
+	bigdw 16 ; SAtk
+	bigdw 14 ; SDef
+	db "EGG@@@@@@@@"
+	
+.chattyunownmoves
+	dw HIDDEN_POWER, NO_MOVE, NO_MOVE, NO_MOVE

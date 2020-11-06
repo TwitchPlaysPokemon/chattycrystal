@@ -223,10 +223,10 @@ HatchEggs:
 	push de
 	push hl
 	cp EGG
-	jp nz, .next
+	jp nz, .next ;if not egg, check next mon
 	ld a, [hl]
 	and a
-	jp nz, .next
+	jp nz, .next ;if happiness not zero, next egg
 	ld [hl], $78
 
 	push de
@@ -244,24 +244,24 @@ HatchEggs:
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
 	ld a, l
-	sub LOW(TOGEPI)
-	if HIGH(TOGEPI) == 0
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
 		or h
 	else
-		jr nz, .nottogepi
-		if HIGH(TOGEPI) == 1
+		jr nz, .notunown
+		if HIGH(UNOWN) == 1
 			dec h
 		else
 			ld a, h
-			cp HIGH(TOGEPI)
+			cp HIGH(UNOWN)
 		endc
 	endc
-	jr nz, .nottogepi
-	; set the event flag for hatching togepi
-	ld de, EVENT_TOGEPI_HATCHED
+	jr nz, .notunown
+	; set the event flag for hatching unown
+	ld de, EVENT_UNOWN_HATCHED
 	ld b, SET_FLAG
 	call EventFlagAction
-.nottogepi
+.notunown
 
 	pop de
 

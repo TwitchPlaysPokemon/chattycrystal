@@ -277,10 +277,37 @@ ScriptReturnCarry:
 	ld [wScriptVar], a
 	ret
 
-UnusedCheckUnusedTwoDayTimer:
-	farcall CheckUnusedTwoDayTimer
-	ld a, [wUnusedTwoDayTimer]
-	ld [wScriptVar], a
+HatchUnownEgg:
+	ld hl, wPartySpecies
+.checkloop
+	ld a, [hli]
+	inc a
+	jr z, .nomons
+	cp EGG + 1
+	jr z, .checkloop
+	jr .disable
+
+.nomons
+	ld a, [wPartySpecies]
+	cp EGG
+	ret nz
+	ld a, [wPartyMon1Species]
+	call GetPokemonIndexFromID
+	ld a, l
+	cp LOW(UNOWN)
+	ret nz
+	ld a, h
+	assert HIGH(UNOWN) == 0
+	and a
+	ret nz
+	; you have an Unown
+	; set egg cycles to zero
+	ld hl, wPartyMon1Happiness
+	ld [hl], 0
+	; hatch it
+	farcall OverworldHatchEgg
+.disable
+	; disable the event
 	ret
 
 ActivateFishingSwarm:

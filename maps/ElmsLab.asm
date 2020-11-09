@@ -41,12 +41,13 @@ ElmsLab_MapScripts:
 	playsound SFX_ENTER_DOOR
 	waitsfx
 	applymovement ELMSLAB_EVAN, ElmsLab_EvanLeave
+	applymovement PLAYER, ElmsLab_WalkUpToElmMovement
 	showemote EMOTE_SHOCK, ELMSLAB_ELM, 15
 	opentext
 	writetext ElmText_Intro
 	waitbutton
 	closetext
-	playsound SFX_ITEM
+	playsound SFX_POTION
 	waitsfx
 	waitbutton
 	opentext
@@ -377,6 +378,8 @@ ElmsLabBookshelf:
 ElmsLab_WalkUpToElmMovement:
 	step UP
 	step UP
+	step UP
+	step UP
 	step_end
 	
 ElmsLab_MoveOutOfTheWay:
@@ -476,15 +479,16 @@ ElmsLab_MoveDown:
 ElmText_Intro:
 	text "ELM: <PLAY_G>!"
 	line "There you are!"
-	cont "You're Late!"
+	cont "You're late!"
 
 	para "You took so long I"
 	line "ran out of starter"
 	cont "#MON!"
 	
 	para "You won't be able"
-	line "to start your #MON"
-	cont "adventure like this<……>"
+	line "to start your"
+	cont "#MON adventure"
+	cont "like this<……>"
 	
 	para "Unless<……>"
 	line "I know!"
@@ -501,7 +505,7 @@ ElmText_Intro:
 	done
 	
 ElmText_Sprayed:
-	text "I Just sprayed you"
+	text "I just sprayed you"
 	line "with some REPEL."
 	
 	para "That should keep"
@@ -509,7 +513,7 @@ ElmText_Sprayed:
 	
 	para "While you're there"
 	line "you can deliver"
-	cont "this EGG to!"
+	cont "this EGG to"
 	cont "Mr #MON."
 	done
 

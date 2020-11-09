@@ -1847,43 +1847,43 @@ InitNickname:
 	ret
 	
 GiveChattyMon::
-	;gives a mon with special precalculated stats based on the contents of 
-	;wCurPartySpecies, then go back and set the OTs properly while preserving 
-	;the chatty bytes
+	;gives a mon with special precalculated stats based on the contents of a
+	;then go back and set the OTs properly while preserving the chatty bytes
 	;check and increment party count
 	ld b, a
 	ld hl, wPartyCount
 	ld a, [hl]
 	cp PARTY_LENGTH
-	ret nc
+	ret nc ;if party full, ret nc
 	push af ;store partycount for later
 	inc [hl]
 	;load table entry
 	ld hl, .specalmonstable
 	ld a, b
 	ld bc, $0006
-	call AddNTimes
+	call AddNTimes ;move to correct entry of the table
 	ld a, [hli]
-	push hl
+	push hl ;store position in table on stack while loading the first entry (the main poke data) into hl
 	ld l, [hl]
 	ld h, a
-	ld de, wOddEgg
+	ld de, wOddEgg ;load the bulk of the mon data into the odd egg slot
 	ld bc, NICKNAMED_MON_STRUCT_LENGTH + NAME_LENGTH
 	call CopyBytes
 	; Loads the actual species and overwrites the zero in wOddEggSpecies
-	pop hl
+	pop hl ;pop the table location, then inc it to line up with species
 	inc hl
 	ld a, [hli]
-	push hl
+	push hl ;push the table position back again
 	ld l, [hl]
 	ld h, a
-	call GetPokemonIDFromIndex
+	call GetPokemonIDFromIndex ;get species and load it in
 	ld [wOddEggSpecies], a
 	; And likewise with moves
 	pop hl
 	inc hl
 	ld a, [hli]
-	ld l, [hl]
+	push hl ;push the table position back again
+	ld l, [hl] 
 	ld h, a
 	ld c, NUM_MOVES
 	ld de, wOddEggMoves
@@ -1899,17 +1899,24 @@ GiveChattyMon::
 	inc de
 	dec c
 	jr nz, .move_loop
-	;add the egg species to wPartySpecies
+	
+	pop hl
+	inc hl
+	ld a, [hli]
+	ld l, [hl]
+	ld h, a
+	call GetPokemonIDFromIndex ;get species and place it in b
+	ld b, a
 	ld hl, wPartySpecies
-	pop af
+	pop af; pop the party slot and add it to wPartySpecies
+	ld c, a
 	add l
 	ld l, a
 	ld a, 0
 	adc h
 	ld h, a
-	ld [hl], HIGH(EGG)
-	inc hl
-	ld [hl], LOW(EGG)
+	ld [hl], b
+	ld a, c
 	ld hl, wPartyMon1Species
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
@@ -1925,29 +1932,30 @@ GiveChattyMon::
 	ld hl, wOddEggName
 	ld bc, MON_NAME_LENGTH - 1
 	call CopyBytes
+	push af
 	ld a, "@"
 	ld [de], a
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
+	pop af
 	call AddNTimes
 	ld e, l
 	ld d, h
 	ld hl, wTempOddEggNickname
 	ld bc, PLAYER_NAME_LENGTH
 	call CopyBytes
-	ld a, "@"
+	ld a, "@" ;e177
 	ld [de], a
 	inc de
 	ld a, $01
-	ld [de], a
+	ld [de], a ;e178
 	inc de
 	ld [de], a
 	scf
 	ret
 	
-	
-.specalmonstable
-	dw .chattyunownegg, UNOWN, .chattyunownmoves
+.specalmonstable ;pointer to table, mondata species, moves, PartySpecies species
+	dw .chattyunownegg, UNOWN, .chattyunownmoves, EGG
 	
 .chattyunownegg
 	db 0 ; Species, will be filled on load

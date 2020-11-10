@@ -74,7 +74,7 @@ TrainerPicPointers::
 	dba GreenPic
 	dba RoboRedPic
 	dba CalPic
-	dba KrisPic
+	dba KrisOrigPic
 	dba EvanPic 
 	dba ChrisSnowPic 
 	dba MayPic

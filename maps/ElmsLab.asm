@@ -41,7 +41,7 @@ ElmsLab_MapScripts:
 	playsound SFX_ENTER_DOOR
 	waitsfx
 	applymovement ELMSLAB_EVAN, ElmsLab_EvanLeave
-	applymovement PLAYER, ElmsLab_WalkUpToElmMovement
+	applymovement PLAYER, ElmsLab_WalkUpToElmMovementPart2
 	showemote EMOTE_SHOCK, ELMSLAB_ELM, 15
 	opentext
 	writetext ElmText_Intro
@@ -49,7 +49,6 @@ ElmsLab_MapScripts:
 	closetext
 	playsound SFX_POTION
 	waitsfx
-	waitbutton
 	opentext
 	writetext ElmText_Sprayed
 	waitbutton
@@ -374,17 +373,24 @@ ElmsLabTrashcan2:
 
 ElmsLabBookshelf:
 	jumpstd difficultbookshelf
-
-ElmsLab_WalkUpToElmMovement:
-	step UP
-	step UP
-	step UP
-	step UP
-	step_end
 	
 ElmsLab_MoveOutOfTheWay:
 	step RIGHT
 	turn_head LEFT
+	step_end
+	
+ElmsLab_WalkUpToElmMovementPart1:
+	step UP
+	step UP
+	step_end
+	
+ElmsLab_WalkUpToElmMovementPart2:
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
 	step_end
 	
 ElmsLab_EvanLeave:
@@ -393,6 +399,8 @@ ElmsLab_EvanLeave:
 	step DOWN
 	step DOWN
 	turn_head RIGHT
+	step_sleep 8
+	step_sleep 8
 	step DOWN
 	step DOWN
 	step_end
@@ -456,20 +464,6 @@ ElmsLab_ElmToDefaultPositionMovement2:
 	step RIGHT
 	step UP
 	turn_head DOWN
-	step_end
-	
-ElmsLab_WalkUpToElmMovementPart1:
-	step UP
-	step UP
-	step_end
-	
-ElmsLab_WalkUpToElmMovementPart2:
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
 	step_end
 
 ElmsLab_MoveDown:

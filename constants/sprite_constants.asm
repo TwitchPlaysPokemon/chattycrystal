@@ -135,7 +135,7 @@
 	const SPRITE_BRONZE ;83
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
-	const_def $80
+	const_def $90
 SPRITE_POKEMON EQU const_value
 	const SPRITE_UNOWN ; 80
 	const SPRITE_GEODUDE ; 81

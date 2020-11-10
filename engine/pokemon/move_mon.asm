@@ -1910,7 +1910,7 @@ GiveChattyMon::
 	ld c, a
 	add l
 	ld l, a
-	ld a, 0
+	xor a
 	adc h
 	ld h, a
 	ld [hl], b

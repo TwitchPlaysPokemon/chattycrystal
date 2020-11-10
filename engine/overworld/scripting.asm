@@ -2878,6 +2878,7 @@ Script_givechattymon:
 ; if no room in the party, return 0 in wScriptVar; else, return 2
 ; parameters Mon
 	call GetScriptByte
+	ld b, a
 	farcall GiveChattyMon
 	ret nc
 	ld a, 2

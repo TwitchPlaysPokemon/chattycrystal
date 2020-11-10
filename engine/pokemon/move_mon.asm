@@ -1847,13 +1847,12 @@ InitNickname:
 	ret
 	
 GiveChattyMon::
-	;gives a mon with special precalculated stats based on the contents of a
+	;gives a mon with special precalculated stats based on the contents of b
 	;then go back and set the OTs properly while preserving the chatty bytes
 	;check and increment party count
-	ld b, a
 	ld hl, wPartyCount
 	ld a, [hl]
-	cp PARTY_LENGTH
+	cp PARTY_LENGTH - 1
 	ret nc ;if party full, ret nc
 	push af ;store partycount for later
 	inc [hl]
@@ -1864,8 +1863,8 @@ GiveChattyMon::
 	call AddNTimes ;move to correct entry of the table
 	ld a, [hli]
 	push hl ;store position in table on stack while loading the first entry (the main poke data) into hl
-	ld l, [hl]
-	ld h, a
+	ld h, [hl]
+	ld l, a
 	ld de, wOddEgg ;load the bulk of the mon data into the odd egg slot
 	ld bc, NICKNAMED_MON_STRUCT_LENGTH + NAME_LENGTH
 	call CopyBytes
@@ -1874,8 +1873,8 @@ GiveChattyMon::
 	inc hl
 	ld a, [hli]
 	push hl ;push the table position back again
-	ld l, [hl]
-	ld h, a
+	ld h, [hl]
+	ld l, a
 	call GetPokemonIDFromIndex ;get species and load it in
 	ld [wOddEggSpecies], a
 	; And likewise with moves
@@ -1883,28 +1882,27 @@ GiveChattyMon::
 	inc hl
 	ld a, [hli]
 	push hl ;push the table position back again
-	ld l, [hl] 
-	ld h, a
+	ld h, [hl] 
+	ld l, a
 	ld c, NUM_MOVES
 	ld de, wOddEggMoves
 .move_loop
 	ld a, [hli]
-	push hl
-	ld h, [hl]
+	push hl ;push location in the moves tables
+	ld h, [hl] ;make hl the 16 bit move id
 	ld l, a
-	call GetMoveIDFromIndex
-	pop hl
+	call GetMoveIDFromIndex ;8 bit move id in a
+	pop hl  ;reset hl to the table
 	inc hl
-	ld [de], a
+	ld [de], a ;load 8 bit move id into wOddEggMoves slot
 	inc de
 	dec c
-	jr nz, .move_loop
-	
+	jr nz, .move_loop ;loop 4 times
 	pop hl
 	inc hl
 	ld a, [hli]
-	ld l, [hl]
-	ld h, a
+	ld h, [hl]
+	ld l, a
 	call GetPokemonIDFromIndex ;get species and place it in b
 	ld b, a
 	ld hl, wPartySpecies
@@ -1923,7 +1921,9 @@ GiveChattyMon::
 	ld e, l
 	ld d, h
 	ld hl, wOddEgg
+	push af ;store the mon slot again and copybytes stomps on a
 	call CopyBytes
+	pop af
 	ld hl, wPartyMonNicknames
 	ld bc, MON_NAME_LENGTH
 	call AddNTimes
@@ -1931,8 +1931,8 @@ GiveChattyMon::
 	ld d, h
 	ld hl, wOddEggName
 	ld bc, MON_NAME_LENGTH - 1
+	push af ;store the mon slot again
 	call CopyBytes
-	push af
 	ld a, "@"
 	ld [de], a
 	ld hl, wPartyMonOT

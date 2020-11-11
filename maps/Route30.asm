@@ -247,7 +247,7 @@ Route30HatchUnownEggScript:
 	end
 	
 .set_flag
-	wildoff
+	wildon
 	setscene SCENE_ROUTE30_AFTER_UNOWN_HATCH
 	opentext
 	farwritetext _RepelWoreOffText
@@ -446,7 +446,7 @@ Route30_MapEvents:
 	warp_event 17,  5, MR_POKEMONS_HOUSE, 1
 
 	db 1 ; coord events
-	coord_event 17,  6, SCENE_ROUTE30_AFTER_UNOWN_HATCH, Route30HatchUnownEggScript
+	coord_event 17,  6, SCENE_DEFAULT, Route30HatchUnownEggScript
 
 	db 5 ; bg events
 	bg_event  9, 43, BGEVENT_READ, Route30Sign

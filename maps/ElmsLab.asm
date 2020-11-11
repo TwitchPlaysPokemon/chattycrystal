@@ -120,6 +120,15 @@ ElmCheckUnownEgg:
 	checkevent EVENT_UNOWN_HATCHED
 	iftrue ElmEggHatchedScript
 ElmCheckGotEggAgain:
+	checkevent EVENT_UNOWN_HATCHED
+	iftrue ElmLetYourMonBattleIt
+	writetext ElmText_GoodLuck
+	waitbutton
+	closetext
+	end
+	
+	
+ElmLetYourMonBattleIt:
 	writetext ElmText_LetYourMonBattleIt
 	waitbutton
 	closetext
@@ -568,33 +577,6 @@ ElmsLabHealingMachineText2:
 	line "heal your #MON?"
 	done
 
-ElmAfterTheftText1:
-	text "ELM: <PLAY_G>, this"
-	line "is terrible…"
-
-	para "Oh, yes, what was"
-	line "MR.#MON's big"
-	cont "discovery?"
-	done
-
-ElmAfterTheftText2:
-	text "<PLAYER> handed"
-	line "the MYSTERY EGG to"
-	cont "PROF.ELM."
-	done
-
-ElmAfterTheftText3:
-	text "ELM: This?"
-	done
-
-ElmAfterTheftText4:
-	text "But… Is it a"
-	line "#MON EGG?"
-
-	para "If it is, it is a"
-	line "great discovery!"
-	done
-
 ElmAfterTheftText5:
 	text "ELM: What?!?"
 
@@ -736,20 +718,6 @@ ElmText_CallYou:
 	text "ELM: <PLAY_G>, I'll"
 	line "call you if any-"
 	cont "thing comes up."
-	done
-
-AideText_AfterTheft:
-	text "…sigh… That"
-	line "stolen #MON."
-
-	para "I wonder how it's"
-	line "doing."
-
-	para "They say a #MON"
-	line "raised by a bad"
-
-	para "person turns bad"
-	line "itself."
 	done
 
 ElmGiveMasterBallText1:

@@ -1972,7 +1972,7 @@ GiveChattyMon::
 	bigdw 0
 	bigdw 0
 	dn 13, 15, 15, 15 ; DVs
-	db $C8, 0, 0, 0 ; PP, starts with 24 and 3 PP ups
+	db $D8, 0, 0, 0 ; PP, starts with 24 and 3 PP ups
 	db 20 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level

@@ -161,8 +161,8 @@ MrPokemonIntroText3:
 	cont "to incubate it?!"
 	
 	para "and it's a rare,"
-	line " genderless #MON"
-	cont "as-well<......>"
+	line "genderless #MON"
+	cont "as-well<...>"
 
 	done
 
@@ -213,7 +213,7 @@ MrPokemonsHouse_OakText1:
 	line "perfectly healthy."
 	
 	para "Let me collect"
-	line "some data<......>"
+	line "some data<...>"
 	
 	done
 	
@@ -226,7 +226,7 @@ MrPokemonsHouse_OakText2:
 	
 	para "While ELM had"
 	line "told me to keep a"
-	cont "#MON aside<......>"
+	cont "#MON aside<...>"
 	
 	para "I think it is best"
 	line "for you to keep it"

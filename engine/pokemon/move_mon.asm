@@ -1914,6 +1914,8 @@ GiveChattyMon::
 	adc h
 	ld h, a
 	ld [hl], b
+	inc hl
+	ld [hl], $FF ;load in a terminator
 	ld a, c
 	ld hl, wPartyMon1Species
 	ld bc, PARTYMON_STRUCT_LENGTH

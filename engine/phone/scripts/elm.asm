@@ -49,7 +49,6 @@ ElmPhoneCalleeScript:
 ElmPhoneCallerScript:
 	readvar VAR_SPECIALPHONECALL
 	ifequal SPECIALCALL_WEIRDBROADCAST, .rocket
-	ifequal SPECIALCALL_SSTICKET, .gift
 	ifequal SPECIALCALL_MASTERBALL, .gift
 	farwritetext ElmPhonePokerusText
 	specialphonecall SPECIALCALL_NONE

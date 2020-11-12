@@ -129,7 +129,7 @@ NewBarkGroupSprites:
 ; Route26, Route27, Route29, NewBarkTown
 CherrygroveGroupSprites:
 ; Route30, Route31, CherrygroveCity
-	db SPRITE_SILVER
+	db SPRITE_KRIS
 	db SPRITE_TEACHER
 	db SPRITE_COOLTRAINER_M
 if TESTMODE

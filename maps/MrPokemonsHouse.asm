@@ -54,6 +54,7 @@ MrPokemonsHouse_MapScripts:
 	pause 60
 	special FadeInQuickly
 	playmusic MUSIC_PROF_OAK
+	opentext
 	writetext MrPokemonsHouse_OakText2
 	buttonsound
 	waitsfx

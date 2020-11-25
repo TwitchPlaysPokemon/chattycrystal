@@ -80,15 +80,6 @@ OlivinePortWalkUpToShipScript:
 	iftrue .skip
 	turnobject PLAYER, LEFT
 	opentext
-	checkevent EVENT_FAST_SHIP_FIRST_TIME
-	iffalse .FirstTime
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .NextShipMonday
-	ifequal SATURDAY, .NextShipMonday
-	ifequal TUESDAY, .NextShipFriday
-	ifequal WEDNESDAY, .NextShipFriday
-	ifequal THURSDAY, .NextShipFriday
-.FirstTime:
 	writetext UnknownText_0x74a9c
 	yesorno
 	iffalse OlivinePortNotRidingMoveAwayScript
@@ -105,20 +96,6 @@ OlivinePortWalkUpToShipScript:
 
 .NoTicket:
 	writetext UnknownText_0x74b41
-	waitbutton
-	closetext
-	applymovement PLAYER, MovementData_0x74a34
-	end
-
-.NextShipMonday:
-	writetext UnknownText_0x74ba8
-	waitbutton
-	closetext
-	applymovement PLAYER, MovementData_0x74a34
-	end
-
-.NextShipFriday:
-	writetext UnknownText_0x74bce
 	waitbutton
 	closetext
 	applymovement PLAYER, MovementData_0x74a34
@@ -146,14 +123,6 @@ OlivinePortSailorAfterHOFScript:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue OlivinePortAlreadyRodeScript
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
-	iffalse .FirstTime
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, .NextShipMonday
-	ifequal SATURDAY, .NextShipMonday
-	ifequal TUESDAY, .NextShipFriday
-	ifequal WEDNESDAY, .NextShipFriday
-	ifequal THURSDAY, .NextShipFriday
-.FirstTime:
 	writetext UnknownText_0x74a9c
 	yesorno
 	iffalse OlivinePortNotRidingScript
@@ -176,18 +145,6 @@ OlivinePortSailorAfterHOFScript:
 
 .NoTicket:
 	writetext UnknownText_0x74b41
-	waitbutton
-	closetext
-	end
-
-.NextShipMonday:
-	writetext UnknownText_0x74ba8
-	waitbutton
-	closetext
-	end
-
-.NextShipFriday:
-	writetext UnknownText_0x74bce
 	waitbutton
 	closetext
 	end
@@ -332,16 +289,6 @@ UnknownText_0x74b41:
 
 	para "if you have an"
 	line "S.S.TICKET."
-	done
-
-UnknownText_0x74ba8:
-	text "The FAST SHIP will"
-	line "sail next Monday."
-	done
-
-UnknownText_0x74bce:
-	text "The FAST SHIP will"
-	line "sail next Friday."
 	done
 
 OlivinePortFishingGuru1Text:

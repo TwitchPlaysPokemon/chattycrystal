@@ -15,7 +15,7 @@ OaksLab_MapScripts:
 Oak:
 	faceplayer
 	opentext
-	checkevent EVENT_OPENED_MT_SILVER
+	checkevent EVENT_OAK_MENTIONED_MT_SILVER
 	iftrue .CheckPokedex
 	checkevent EVENT_TALKED_TO_OAK_IN_KANTO
 	iftrue .CheckBadges
@@ -24,8 +24,9 @@ Oak:
 	setevent EVENT_TALKED_TO_OAK_IN_KANTO
 .CheckBadges:
 	readvar VAR_BADGES
-	ifequal NUM_BADGES, .OpenMtSilver
 	ifequal NUM_JOHTO_BADGES, .Complain
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .OpenMtSilver
 	sjump .AhGood
 
 .CheckPokedex:
@@ -40,7 +41,7 @@ Oak:
 .OpenMtSilver:
 	writetext OakOpenMtSilverText
 	buttonsound
-	setevent EVENT_OPENED_MT_SILVER
+	setevent EVENT_OAK_MENTIONED_MT_SILVER
 	sjump .CheckPokedex
 
 .Complain:

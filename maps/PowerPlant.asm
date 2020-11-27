@@ -167,14 +167,14 @@ PowerPlantManager:
 	setevent EVENT_RESTORED_POWER_TO_KANTO
 	clearevent EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
 .ReturnedMachinePart:
-	checkevent EVENT_GOT_TM07_ZAP_CANNON
+	checkevent EVENT_GOT_HM07_WATERFALL
 	iftrue .GotZapCannon
-	writetext PowerPlantManagerTakeThisTMText
+	writetext PowerPlantManagerTakeThisHMText
 	buttonsound
-	verbosegiveitem TM_ZAP_CANNON
+	verbosegiveitem HM_WATERFALL
 	iffalse .NoRoom
-	setevent EVENT_GOT_TM07_ZAP_CANNON
-	writetext PowerPlantManagerTM07IsZapCannonText
+	setevent EVENT_GOT_HM07_WATERFALL
+	writetext PowerPlantManagerHM07IsWaterfallText
 	waitbutton
 .NoRoom:
 	closetext
@@ -331,8 +331,8 @@ PowerPlantManagerWhoWouldRuinMyGeneratorText:
 	para "If I catch him,"
 	line "he's going to get"
 
-	para "a taste of my ZAP"
-	line "CANNON!"
+	para "tossed down the"
+	line "WATERFALL!"
 	done
 
 PowerPlantManagerIWontForgiveCulpritText:
@@ -357,25 +357,19 @@ PowerPlantManagerThatsThePartText:
 	cont "You found it?"
 	done
 
-PowerPlantManagerTakeThisTMText:
+PowerPlantManagerTakeThisHMText:
 	text "Wahah! Thanks!"
 
-	para "Here! Take this TM"
+	para "Here! Take this HM"
 	line "as a reward!"
 	done
 
-PowerPlantManagerTM07IsZapCannonText:
-	text "MANAGER: TM07 is"
-	line "my ZAP CANNON."
+PowerPlantManagerHM07IsWaterfallText:
+	text "MANAGER: HM07 is"
+	line "WATERFALL."
 
 	para "It's a powerful"
 	line "technique!"
-
-	para "It's not what any-"
-	line "one would consider"
-
-	para "accurate, but it"
-	line "packs a wallop!"
 	done
 
 PowerPlantManagerMyBelovedGeneratorText:

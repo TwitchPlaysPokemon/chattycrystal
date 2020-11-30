@@ -121,7 +121,10 @@ FuchsiaGroupSprites:
 
 IndigoGroupSprites:
 ; Route23
-	; 0 of max 9 walking sprites
+	db SPRITE_OFFICER
+	db SPRITE_SWIMMER_GUY
+	db SPRITE_SWIMMER_GIRL
+	; 3 of max 9 walking sprites
 	db 0 ; end
 
 ; Route29 and CherrygroveCity are connected

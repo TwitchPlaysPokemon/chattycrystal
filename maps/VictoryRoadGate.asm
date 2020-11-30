@@ -1,7 +1,10 @@
 	object_const_def ; object_event constants
-	const VICTORYROADGATE_OFFICER
+	const VICTORYROADGATE_OFFICER1
 	const VICTORYROADGATE_BLACK_BELT1
 	const VICTORYROADGATE_BLACK_BELT2
+	const VICTORYROADGATE_OFFICER2
+	const VICTORYROADGATE_OFFICER3
+	
 
 VictoryRoadGate_MapScripts:
 	db 2 ; scene scripts
@@ -16,29 +19,41 @@ VictoryRoadGate_MapScripts:
 .DummyScene1:
 	end
 
-VictoryRoadGateBadgeCheckScene:
+VictoryRoadGateBadgeCheckSceneLeft:
 	turnobject PLAYER, LEFT
 	sjump VictoryRoadGateBadgeCheckScript
-
-VictoryRoadGateOfficerScript:
-	faceplayer
+	
+VictoryRoadGateBadgeCheckSceneRight:
+	turnobject PLAYER, RIGHT
+;fallthrough
+	
 VictoryRoadGateBadgeCheckScript:
+	turnobject VICTORYROADGATE_OFFICER3, LEFT
+	turnobject VICTORYROADGATE_OFFICER2, RIGHT
 	opentext
-	writetext VictoryRoadGateOfficerText
-	buttonsound
-	readvar VAR_BADGES
-	ifgreater NUM_JOHTO_BADGES - 1, .AllEightBadges
-	writetext VictoryRoadGateNotEnoughBadgesText
-	waitbutton
-	closetext
-	applymovement PLAYER, VictoryRoadGateStepDownMovement
-	end
-
-.AllEightBadges:
-	writetext VictoryRoadGateEightBadgesText
+	writetext ZephyrBoulderBadgeCheckText
+	checkflag ENGINE_ZEPHYRBADGE
+	iffalse .DontHaveBadges
+	checkflag ENGINE_BOULDERBADGE
+	iffalse .DontHaveBadges
+	writetext HaveZephyrBoulderBadgeText
 	waitbutton
 	closetext
 	setscene SCENE_FINISHED
+	end
+	
+.DontHaveBadges:
+	writetext NoZephyrBoulderBadgeText
+	waitbutton
+	applymovement PLAYER, VictoryRoadGateStepDownMovement
+	end
+	
+VictoryRoadGateOfficerScript:
+	faceplayer
+	opentext
+	writetext VictoryRoadGateOfficerText
+	buttonsound	
+	closetext
 	end
 
 VictoryRoadGateLeftBlackBeltScript:
@@ -56,20 +71,29 @@ VictoryRoadGateOfficerText:
 	line "have proven them-"
 	cont "selves may pass."
 	done
-
-VictoryRoadGateNotEnoughBadgesText:
-	text "You don't have all"
-	line "the GYM BADGES of"
-	cont "JOHTO."
+	
+ZephyrBoulderBadgeCheckText:
+	text "Only trainers who"
+	line "who posses the"
+	
+	para "ZEPHYRBADGE and"
+	line "BOULDERBADGE"
+	cont "may pass."
+	done
+	
+NoZephyrBoulderBadgeText:
+	text "You don't those"
+	line "GYM BADGES."
 
 	para "I'm sorry, but I"
 	line "can't let you go"
 	cont "through."
 	done
 
-VictoryRoadGateEightBadgesText:
-	text "Oh! The eight"
-	line "BADGES of JOHTO!"
+HaveZephyrBoulderBadgeText:
+	text "Oh! You have the"
+	line "ZEPHYRBADGE and"
+	cont "BOULDERBADGE!"
 
 	para "Please, go right"
 	line "on through!"
@@ -103,17 +127,20 @@ VictoryRoadGate_MapEvents:
 	warp_event 18,  7, ROUTE_22, 1
 	warp_event  9, 17, ROUTE_26, 1
 	warp_event 10, 17, ROUTE_26, 1
-	warp_event  9,  0, VICTORY_ROAD, 1
-	warp_event 10,  0, VICTORY_ROAD, 1
+	warp_event  9,  0, ROUTE_23, 1
+	warp_event 10,  0, ROUTE_23, 2
 	warp_event  1,  7, ROUTE_28, 2
 	warp_event  2,  7, ROUTE_28, 2
 
-	db 1 ; coord events
-	coord_event 10, 11, SCENE_DEFAULT, VictoryRoadGateBadgeCheckScene
+	db 2 ; coord events
+	coord_event 9, 1, SCENE_DEFAULT, VictoryRoadGateBadgeCheckSceneLeft
+	coord_event 10, 1, SCENE_DEFAULT, VictoryRoadGateBadgeCheckSceneRight
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 5 ; object events
 	object_event  8, 11, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficerScript, -1
 	object_event  7,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateLeftBlackBeltScript, EVENT_BEAT_ELITE_FOUR
-	object_event 12,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateRightBlackBeltScript, EVENT_FOUGHT_SNORLAX
+	object_event 12,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateRightBlackBeltScript, EVENT_GOT_HM07_WATERFALL
+	object_event  8, 1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficerScript, -1
+	object_event  11, 1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficerScript, -1

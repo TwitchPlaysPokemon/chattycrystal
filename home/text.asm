@@ -139,15 +139,6 @@ PrintText::
 	call SetUpTextbox
 BuenaPrintText::
 	push hl
-	ld a, [wChattyOveride]
-	and a
-	jr nz, .skip
-IF TESTMODE
-	ld hl, FarChattyTextJump
-else
-	ld [wCurrentStackPointer], sp
-endc
-.skip
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
 	lb bc, TEXTBOX_INNERH - 1, TEXTBOX_INNERW
 	call ClearBox
@@ -157,14 +148,6 @@ PrintTextboxText::
 	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
 	call PlaceHLTextAtBC
 	ret
-	
-FarChattyTextJump:
-	text_far ChattyText
-	text_asm
-	ld hl, .end
-	ret
-.end
-	text_end
 
 SetUpTextbox::
 	push hl
@@ -573,11 +556,10 @@ PromptText::
 
 DoneText::
 	pop hl
-	ld de, .stop
-	dec de
+	ld de, TX_ENDText - 1 ;redirect text pointer to a 1 before a TX_END (so that after TX_START increments, the next command is TX_END
 	ret
 
-.stop:
+TX_ENDText::
 	text_end
 
 NullChar::
@@ -730,6 +712,15 @@ TextCommand_START::
 ; write text until "@"
 ; [$00]["...@"]
 
+	ld a, [wChattyOveride]
+	and a
+IF TESTMODE
+	jr z, .handleChatty
+	nop
+else
+	ld [wCurrentStackPointer], sp
+endc
+.skip
 	ld d, h
 	ld e, l
 	ld h, b
@@ -738,6 +729,25 @@ TextCommand_START::
 	ld h, d
 	ld l, e
 	inc hl
+	ret
+	
+.charLoop
+	inc hl
+.handleChatty ;move hl into the position it would be after passing it to PlaceString
+	ld a, [hl]
+	cp  "@"
+	jr z, .continue
+	cp "<DONE>" 
+	jr nz, .charLoop
+	scf ;redirection to TX_ENDText done in HandleChattyText if carry is set
+.continue
+	ldh a, [hROMBank]
+	push af
+	ld a, BANK(HandleChattyText)
+	rst Bankswitch
+	call HandleChattyText
+	pop af
+	rst Bankswitch
 	ret
 
 TextCommand_RAM::

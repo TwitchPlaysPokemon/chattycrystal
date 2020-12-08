@@ -1594,12 +1594,13 @@ wSecondsSince:: db
 wMinutesSince:: db
 wHoursSince:: db
 wDaysSince:: db
+wChattyOveride:: db
+wCurrentStackPointer:: ds 2
 
-	ds 7
+ds 4
 
 wTempLoopCounter:: db
-wChattyOveride:: ds 2
-wCurrentStackPointer:: ds 2
+
 
 
 SECTION "16-bit WRAM home data", WRAM0

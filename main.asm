@@ -661,6 +661,10 @@ INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
 
+SECTION "Chatty Handling", ROMX
+
+INCLUDE "engine/chattywritearea.asm"
+
 
 SECTION "bank77", ROMX
 

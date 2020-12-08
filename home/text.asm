@@ -139,6 +139,15 @@ PrintText::
 	call SetUpTextbox
 BuenaPrintText::
 	push hl
+	ld a, [wChattyOveride]
+	and a
+	jr nz, .skip
+IF TESTMODE
+	ld hl, FarChattyTextJump
+else
+	ld [wCurrentStackPointer], sp
+endc
+.skip
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
 	lb bc, TEXTBOX_INNERH - 1, TEXTBOX_INNERW
 	call ClearBox
@@ -148,6 +157,14 @@ PrintTextboxText::
 	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
 	call PlaceHLTextAtBC
 	ret
+	
+FarChattyTextJump:
+	text_far ChattyText
+	text_asm
+	ld hl, .end
+	ret
+.end
+	text_end
 
 SetUpTextbox::
 	push hl
@@ -171,24 +188,24 @@ FarPlaceString::
 	rst Bankswitch
 	ret
 
-PlaceString::
+PlaceString:: ;insert chars into hl from de until you reach a terminator, location of terminator in bc
 	push hl
 
 PlaceNextChar::
 	ld a, [de]
-	cp "@"
+	cp "@" ;loop until terminator
 	jr nz, CheckDict
 	ld b, h
-	ld c, l
-	pop hl
+	ld c, l ;store hl in bc
+	pop hl ;reset hl
 	ret
-	pop de
 
 NextChar::
 	inc de
 	jp PlaceNextChar
 
 CheckDict::
+
 dict: MACRO
 if \1 == "<NULL>"
 	and a
@@ -209,7 +226,7 @@ else
 endc
 ENDM
 
-	dict "<MOBILE>",  MobileScriptChar
+	dict "<MOBILE>",  MobileScriptChar ;check the various special characters
 	dict "<LINE>",    LineChar
 	dict "<NEXT>",    NextLineChar
 	dict "<CR>",      CarriageReturnChar
@@ -248,7 +265,7 @@ ENDM
 	dict "ﾟ",         .place
 	dict "ﾞ",         .place
 
-	cp FIRST_REGULAR_TEXT_CHAR
+	cp FIRST_REGULAR_TEXT_CHAR ;if a regular char, place it
 	jr nc, .place
 
 	cp "パ"
@@ -276,7 +293,7 @@ ENDM
 	ld b, "ﾟ" ; handakuten
 
 .place
-	ld [hli], a
+	ld [hli], a ;insert char
 	call PrintLetterDelay
 	jp NextChar
 
@@ -494,13 +511,13 @@ _ContText::
 	ld a, [wLinkMode]
 	or a
 	jr nz, .communication
-	call LoadBlinkingCursor
+	call LoadBlinkingCursor ;if not link mode, load the cursor
 
 .communication
 	call Text_WaitBGMap
 
 	push de
-	call ButtonSound
+	call ButtonSound ;wait for a button press
 	pop de
 
 	ld a, [wLinkMode]
@@ -518,11 +535,11 @@ _ContTextNoPause::
 
 ContText::
 	push de
-	ld de, .cont
-	ld b, h
+	ld de, .cont ;load the cont string
+	ld b, h ;store hl in bc
 	ld c, l
 	call PlaceString
-	ld h, b
+	ld h, b ;move it back and restore de
 	ld l, c
 	pop de
 	jp NextChar
@@ -648,7 +665,7 @@ PokeFluteTerminatorCharacter::
 PlaceHLTextAtBC::
 	ld a, [wTextboxFlags]
 	push af
-	set NO_TEXT_DELAY_F, a
+	set NO_TEXT_DELAY_F, a ;no text delay
 	ld [wTextboxFlags], a
 
 	call DoTextUntilTerminator
@@ -658,8 +675,8 @@ PlaceHLTextAtBC::
 	ret
 
 DoTextUntilTerminator::
-	ld a, [hli]
-	cp TX_END
+	ld a, [hli] ;load from hl
+	cp TX_END ;if a text end command, ret
 	ret z
 	call .TextCommand
 	jr DoTextUntilTerminator
@@ -674,11 +691,11 @@ DoTextUntilTerminator::
 	add hl, bc
 	ld e, [hl]
 	inc hl
-	ld d, [hl]
+	ld d, [hl] ;jump to the specific command
 	pop bc
 	pop hl
 
-	; jp de
+	; jp de 
 	push de
 	ret
 

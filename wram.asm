@@ -916,11 +916,6 @@ ENDU ; c7e8
 
 ENDU ; c7e8
 
-; This was a buffer for map-related pointers in the 1997 G/S prototype.
-; See wMapBuffer in pokegold-spaceworld's wram.asm.
-wUnusedMapBuffer:: ds 24
-wUnusedMapBufferEnd::
-
 
 SECTION "Overworld Map", WRAM0
 
@@ -1158,7 +1153,6 @@ wBGMapBufferEnd::
 NEXTU ; cd20
 ; credits
 wCreditsPos:: db
-wCreditsUnusedCD21:: db
 wCreditsTimer:: db
 
 NEXTU ; cd20
@@ -1604,13 +1598,14 @@ wDaysSince:: db
 	ds 7
 
 wTempLoopCounter:: db
+wChattyOveride:: ds 2
+wCurrentStackPointer:: ds 2
 
 
 SECTION "16-bit WRAM home data", WRAM0
 ; align to $20
 
 wConversionTableBitmap:: ds $20
-
 
 SECTION "WRAM 1", WRAMX
 
@@ -1701,8 +1696,6 @@ NEXTU ; d002
 ; movement buffer data
 wMovementBufferCount:: db
 wMovementBufferObject:: db
-wUnusedMovementBufferBank:: db
-wUnusedMovementBufferPointer:: dw
 wMovementBuffer:: ds 55
 
 NEXTU ; d002
@@ -1923,7 +1916,6 @@ wBallsPocketCursor::    db
 wTMHMPocketCursor::     db
 
 wPCItemsScrollPosition::        db
-wPartyMenuScrollPosition::      db ; unused
 wItemsPocketScrollPosition::    db
 wKeyItemsPocketScrollPosition:: db
 wBallsPocketScrollPosition::    db
@@ -1985,7 +1977,6 @@ wMailboxEnd:: ; d0fe
 ENDU ; d100
 
 wListPointer:: dw ; d100
-wUnusedD102:: dw ; d102
 wItemAttributesPtr:: dw ; d104
 
 wCurItem:: db ; d106
@@ -3143,7 +3134,6 @@ NEXTU ; d422
 wSurfWaveBGEffect:: ds $40
 wSurfWaveBGEffectEnd::
 ENDU ; d462
-
 
 SECTION "Mobile RAM and Pokedex Listings", WRAMX
 

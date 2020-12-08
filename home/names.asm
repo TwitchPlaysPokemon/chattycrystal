@@ -1,29 +1,29 @@
 NamesPointers::
 ; entries correspond to GetName constants (see constants/text_constants.asm); MON_NAME and MOVE_NAME are not handled by this table
-	dba ItemNames           ; ITEM_NAME
-	dbw 0, wPartyMonOT      ; PARTY_OT_NAME
-	dbw 0, wOTPartyMonOT    ; ENEMY_OT_NAME
-	dba TrainerClassNames   ; TRAINER_NAME
+	dba ItemNames           ; ITEM_NAME = 3
+	dbw 0, wPartyMonOT      ; PARTY_OT_NAME = 4
+	dbw 0, wOTPartyMonOT    ; ENEMY_OT_NAME = 5
+	dba TrainerClassNames   ; TRAINER_NAME = 6
 
 GetName::
 ; Return name wCurSpecies from name list wNamedObjectTypeBuffer in wStringBuffer1.
 
-	ldh a, [hROMBank]
+	ldh a, [hROMBank] ;load the old bank in a and thenput all registers in the stack
 	push af
 	push hl
 	push bc
 	push de
 
 	ld a, [wCurSpecies]
-	ld [wNamedObjectIndexBuffer], a
+	ld [wNamedObjectIndexBuffer], a ;load species into the index buffer
 
-	ld a, [wNamedObjectTypeBuffer]
+	ld a, [wNamedObjectTypeBuffer] ;get the type of name to get
 	dec a ; MON_NAME
 	ld hl, GetPokemonName
-	jr z, .go
+	jr z, .go ;if 1, pokemon name
 	dec a ; MOVE_NAME
 	ld hl, GetMoveName
-	jr z, .go
+	jr z, .go ;if 2 move name
 	dec a
 	ld hl, .generic_function
 .go
@@ -38,7 +38,7 @@ GetName::
 
 .generic_function
 	ld l, a
-	add a, a
+	add a, a ;multiply a by 3 to line up with the pointer table
 	add a, l
 	add a, LOW(NamesPointers)
 	ld l, a
@@ -47,16 +47,16 @@ GetName::
 	ld h, a
 	ld a, [hli]
 	rst Bankswitch
-	ld a, [hli]
+	ld a, [hli] ;switch to bank and load pointer into hl
 	ld h, [hl]
 	ld l, a
 
-	ld a, [wCurSpecies]
+	ld a, [wCurSpecies] ;go to entry matching species
 	dec a
 	call GetNthString
 
 	ld de, wStringBuffer1
-	ld bc, ITEM_NAME_LENGTH
+	ld bc, ITEM_NAME_LENGTH ;load it into the stream buffer
 	jp CopyBytes
 
 GetNthString16::

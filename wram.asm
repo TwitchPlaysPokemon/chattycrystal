@@ -1595,9 +1595,10 @@ wMinutesSince:: db
 wHoursSince:: db
 wDaysSince:: db
 wChattyOveride:: db
-wCurrentStackPointer:: ds 2
+wCurrentStackPointer:: dw
+wChattySpace:: db
 
-ds 4
+ds 3
 
 wTempLoopCounter:: db
 

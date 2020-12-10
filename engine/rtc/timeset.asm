@@ -74,8 +74,10 @@ InitClock:
 	ld a, [wInitHourBuffer]
 	ld [wStringBuffer2 + 1], a
 	call .ClearScreen
+	rst ChattyOff
 	ld hl, Text_WhatHrs
 	call PrintText
+	rst ChattyOn
 	call YesNoBox
 	jr nc, .HourIsSet
 	call .ClearScreen
@@ -104,8 +106,10 @@ InitClock:
 	ld a, [wInitMinuteBuffer]
 	ld [wStringBuffer2 + 2], a
 	call .ClearScreen
+	rst ChattyOff
 	ld hl, Text_WhoaMins
 	call PrintText
+	rst ChattyOn
 	call YesNoBox
 	jr nc, .MinutesAreSet
 	call .ClearScreen

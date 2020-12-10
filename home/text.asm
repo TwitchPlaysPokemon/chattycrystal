@@ -715,12 +715,12 @@ TextCommand_START::
 	ld a, [wChattyOveride]
 	and a
 IF TESTMODE
-	jr z, .handleChatty
+	jr z, HomeHandleChattyText
 	nop
 else
 	ld [wCurrentStackPointer], sp
 endc
-.skip
+SkipChattyInjection:
 	ld d, h
 	ld e, l
 	ld h, b
@@ -731,14 +731,27 @@ endc
 	inc hl
 	ret
 	
-.charLoop
+HomeHandleChattyText: ;move hl into the position it would be after passing it to PlaceString
+	push hl
+	ld hl, (-wTileMap) & $ffff
+	add hl, bc
+	ld a, h
+	and a
+	jr z, .skipChatty
+	ld a, l
+	cp FIRST_TEXTBOX_TILE - $100
+	jr c, .skipChatty
+	cp FIRST_TEXTBOX_TILE - ($100 + 38)
+	jr nc, .skipChatty
+	pop hl
+	dec hl
+.loop
 	inc hl
-.handleChatty ;move hl into the position it would be after passing it to PlaceString
 	ld a, [hl]
 	cp  "@"
 	jr z, .continue
 	cp "<DONE>" 
-	jr nz, .charLoop
+	jr nz, .loop
 	scf ;redirection to TX_ENDText done in HandleChattyText if carry is set
 .continue
 	ldh a, [hROMBank]
@@ -749,6 +762,10 @@ endc
 	pop af
 	rst Bankswitch
 	ret
+	
+.skipChatty
+	pop hl
+	jr SkipChattyInjection
 
 TextCommand_RAM::
 ; text_ram

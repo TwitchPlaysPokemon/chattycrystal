@@ -743,16 +743,21 @@ HomeHandleChattyText: ;move hl into the position it would be after passing it to
 	jr c, .skipChatty
 	cp FIRST_TEXTBOX_TILE - ($100 + 38)
 	jr nc, .skipChatty
+	ld a, [wOptions]
+	bit NO_TEXT_SCROLL, a
+	jr nz, .skipChatty
 	pop hl
 	dec hl
 .loop
 	inc hl
 	ld a, [hl]
-	cp  "@"
-	jr z, .continue
 	cp "<DONE>" 
+	jr z, .continue
+	cp "<PROMPT>"  
+	jr z, .continue
+	cp  "@"
+	scf ;no redirection to TX_ENDText done in HandleChattyText if carry is set
 	jr nz, .loop
-	scf ;redirection to TX_ENDText done in HandleChattyText if carry is set
 .continue
 	ldh a, [hROMBank]
 	push af

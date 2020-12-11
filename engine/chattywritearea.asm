@@ -7,9 +7,9 @@ IF TESTMODE
 endc
 ds $400
 
-HandleChattyText:: ;places the chatty string. if carry flag is set, redirect hl to a TX_END command.
-	jr nc, .noDone
-	ld hl, TX_ENDText - 1 ;if the terminator is a <DONE>, emulate <DONE>'s text redirection
+HandleChattyText:: ;places the chatty string. if carry flag is not set, redirect hl to a TX_END command.
+	jr c, .noDone
+	ld hl, TX_ENDText - 1 ;if the terminator is a <DONE> or <PROMPT>, emulate <DONE>'s text redirection
 .noDone
 	push hl
 	push bc ;store the text pointer

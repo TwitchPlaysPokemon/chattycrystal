@@ -741,7 +741,7 @@ HomeHandleChattyText: ;move hl into the position it would be after passing it to
 	ld a, l
 	cp FIRST_TEXTBOX_TILE - $100
 	jr c, .skipChatty
-	cp FIRST_TEXTBOX_TILE - ($100 + 38)
+	cp FIRST_TEXTBOX_TILE - $100 + 58
 	jr nc, .skipChatty
 	ld a, [wOptions] 
 	bit NO_TEXT_SCROLL, a

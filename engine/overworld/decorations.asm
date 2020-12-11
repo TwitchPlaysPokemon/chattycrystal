@@ -443,9 +443,11 @@ DoDecorationAction2:
 	call GetDecorationData
 	ld de, 2 ; function 2
 	add hl, de
+	rst ChattyOff
 	ld a, [hl]
 	ld hl, .DecoActions
 	rst JumpTable
+	rst ChattyOn
 	ret
 
 .DecoActions:

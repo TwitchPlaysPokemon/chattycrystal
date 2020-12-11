@@ -55,32 +55,9 @@ CharsAvalibleTable:
 	db 15
 	db 16
 	db 17
-if TESTMODE
-	db 19
-	db 19
-	db 19
-	db 20
-	db 21
-	db 22
-	db 23
-	db 24
-	db 25
-	db 26
-	db 27
-	db 28
-	db 29
-	db 30
-	db 31
-	db 32
-	db 33
-	db 34
-	db 35
-	db 36
-	db 37
-else
-	db 18 ;had to add an extra point to the test version as i have to skip a line
-	db 18; NOTE TO AISS 
-	db 18
+rept 22
+	db 18 ;18 tells the text to start a new line
+endr
 	db 19
 	db 20
 	db 21
@@ -99,5 +76,6 @@ else
 	db 34
 	db 35
 	db 36
-endc
+	db 36
+
 

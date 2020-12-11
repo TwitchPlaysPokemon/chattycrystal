@@ -4,6 +4,7 @@ HallOfFame::
 	call HallOfFame_FadeOutMusic
 	ld a, [wStatusFlags]
 	push af
+	rst ChattyOff
 	ld a, 1
 	ld [wGameLogicPaused], a
 	call DisableSpriteUpdates
@@ -28,6 +29,7 @@ HallOfFame::
 
 	xor a
 	ld [wGameLogicPaused], a
+	rst ChattyOn
 	call AnimateHallOfFame
 	pop af
 	ld b, a

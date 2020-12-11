@@ -2053,11 +2053,13 @@ MovePKMNWitoutMail_InsertMon:
 
 .PartyToBox:
 	call .CopyFromParty
+	rst ChattyOff
 	ld a, $1
 	ld [wGameLogicPaused], a
 	farcall SaveGameData
 	xor a
 	ld [wGameLogicPaused], a
+	rst ChattyOn
 	call .CopyToBox
 	ret
 

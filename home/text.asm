@@ -746,9 +746,6 @@ HomeHandleChattyText: ;move hl into the position it would be after passing it to
 	ld a, [wOptions] 
 	bit NO_TEXT_SCROLL, a
 	jr nz, .skipChatty
-	ld a, [wGameLogicPaused]
-	and a
-	jr nz, .skipChatty
 	pop hl
 	dec hl
 .loop

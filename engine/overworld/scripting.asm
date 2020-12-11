@@ -236,6 +236,8 @@ ScriptCommandTable:
 	dw Script_loadmonindex               ; aa
 	dw Script_checkmaplockedmons         ; ab
 	dw Script_givechattymon ;ac
+	dw Script_chattyoff ;ad
+	dw Script_chattyon ; ae
 
 StartScript:
 	ld hl, wScriptFlags
@@ -510,22 +512,21 @@ Script_verbosegiveitem:
 	ld de, GiveItemScript
 	jp ScriptCall
 
-ret_96f76:
-	ret
-
 GiveItemScript:
-	callasm ret_96f76
+	chattyoff
 	writetext ReceivedItemText
 	iffalse .Full
 	waitsfx
 	specialsound
 	waitbutton
 	itemnotify
+	chattyon
 	end
 
 .Full:
 	buttonsound
 	pocketisfull
+	chattyon
 	end
 
 ReceivedItemText:
@@ -2883,4 +2884,14 @@ Script_givechattymon:
 	ret nc
 	ld a, 2
 	ld [wScriptVar], a
+	ret
+	
+Script_chattyoff:
+; script command 0xad
+	rst ChattyOff
+	ret
+	
+Script_chattyon:
+; script command 0xad
+	rst ChattyOn
 	ret

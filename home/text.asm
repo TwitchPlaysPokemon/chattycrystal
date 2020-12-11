@@ -743,8 +743,11 @@ HomeHandleChattyText: ;move hl into the position it would be after passing it to
 	jr c, .skipChatty
 	cp FIRST_TEXTBOX_TILE - ($100 + 38)
 	jr nc, .skipChatty
-	ld a, [wOptions]
+	ld a, [wOptions] 
 	bit NO_TEXT_SCROLL, a
+	jr nz, .skipChatty
+	ld a, [wGameLogicPaused]
+	and a
 	jr nz, .skipChatty
 	pop hl
 	dec hl

@@ -20,10 +20,10 @@ FruitTreeScript::
 	iffalse .packisfull
 	buttonsound
 	writetext ObtainedFruitText
+	chattyon
 	callasm PickedFruitTree
 	specialsound
 	itemnotify
-	chattyon
 	sjump .end
 
 .packisfull

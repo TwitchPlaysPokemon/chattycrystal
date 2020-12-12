@@ -517,16 +517,16 @@ GiveItemScript:
 	writetext ReceivedItemText
 	iffalse .Full
 	waitsfx
+	chattyon
 	specialsound
 	waitbutton
 	itemnotify
-	chattyon
 	end
 
 .Full:
 	buttonsound
-	pocketisfull
 	chattyon
+	pocketisfull
 	end
 
 ReceivedItemText:
@@ -569,7 +569,9 @@ Script_itemnotify:
 	call CurItemName
 	ld b, BANK(PutItemInPocketText)
 	ld hl, PutItemInPocketText
+	rst ChattyOff
 	call MapTextbox
+	rst ChattyOn
 	ret
 
 Script_pocketisfull:
@@ -579,7 +581,9 @@ Script_pocketisfull:
 	call CurItemName
 	ld b, BANK(PocketIsFullText)
 	ld hl, PocketIsFullText
+	rst ChattyOff
 	call MapTextbox
+	rst ChattyOn
 	ret
 
 Script_specialsound:

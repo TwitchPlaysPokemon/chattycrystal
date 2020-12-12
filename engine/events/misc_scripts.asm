@@ -11,7 +11,9 @@ FindItemInBallScript::
 	iffalse .no_room
 	disappear LAST_TALKED
 	opentext
+	chattyoff
 	writetext .text_found
+	chattyon
 	playsound SFX_ITEM
 	pause 60
 	itemnotify
@@ -20,11 +22,13 @@ FindItemInBallScript::
 
 .no_room
 	opentext
+	chattyoff
 	writetext .text_found
 	waitbutton
 	writetext .text_bag_full
 	waitbutton
 	closetext
+	chattyon
 	end
 
 .text_found

@@ -509,7 +509,9 @@ StandardMartAskPurchaseQuantity:
 MartConfirmPurchase:
 	predef PartyMonItemName
 	ld a, MARTTEXT_COSTS_THIS_MUCH
+	rst ChattyOff
 	call LoadBuyMenuText
+	rst ChattyOn
 	call YesNoBox
 	ret
 

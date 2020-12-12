@@ -58,7 +58,9 @@ MrPokemonsHouse_MapScripts:
 	writetext MrPokemonsHouse_OakText2
 	buttonsound
 	waitsfx
+	chattyoff
 	writetext MrPokemonsHouse_GetDexText
+	chattyon
 	playsound SFX_ITEM
 	waitsfx
 	setflag ENGINE_POKEDEX

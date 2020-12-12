@@ -262,9 +262,7 @@ HatchEggs:
 	ld b, SET_FLAG
 	call EventFlagAction
 .notunown
-
 	pop de
-
 	ld a, [wCurPartySpecies]
 	dec de
 	ld [de], a
@@ -328,6 +326,7 @@ HatchEggs:
 	ld e, l
 	ld hl, wPlayerName
 	call CopyBytes
+	rst ChattyOff
 	ld hl, .Text_HatchEgg
 	call PrintText
 	ld a, [wCurPartyMon]
@@ -361,6 +360,7 @@ HatchEggs:
 	call CopyBytes
 
 .next
+	rst ChattyOn
 	ld hl, wCurPartyMon
 	inc [hl]
 	pop hl

@@ -249,9 +249,11 @@ Route30HatchUnownEggScript:
 .set_flag
 	wildon
 	setscene SCENE_ROUTE30_AFTER_UNOWN_HATCH
+	chattyoff
 	opentext
 	farwritetext _RepelWoreOffText
 	waitbutton
+	chattyon
 	closetext
 	end
 

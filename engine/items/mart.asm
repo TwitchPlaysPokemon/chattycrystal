@@ -485,14 +485,18 @@ BuyMenuLoop:
 
 .insufficient_bag_space
 	ld a, MARTTEXT_BAG_FULL
+	rst ChattyOff
 	call LoadBuyMenuText
+	rst ChattyOn
 	call JoyWaitAorB
 	and a
 	ret
 
 .insufficient_funds
 	ld a, MARTTEXT_NOT_ENOUGH_MONEY
+	rst ChattyOff
 	call LoadBuyMenuText
+	rst ChattyOn
 	call JoyWaitAorB
 	and a
 	ret
@@ -550,7 +554,9 @@ BargainShopAskPurchaseQuantity:
 
 .SoldOut:
 	ld a, MARTTEXT_SOLD_OUT
+	rst ChattyOff
 	call LoadBuyMenuText
+	rst ChattyOn
 	call JoyWaitAorB
 	scf
 	ret

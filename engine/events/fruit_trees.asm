@@ -13,6 +13,7 @@ FruitTreeScript::
 	sjump .end
 
 .fruit
+	chattyoff
 	writetext HeyItsFruitText
 	readmem wCurFruit
 	giveitem ITEM_FROM_MEM
@@ -22,11 +23,13 @@ FruitTreeScript::
 	callasm PickedFruitTree
 	specialsound
 	itemnotify
+	chattyon
 	sjump .end
 
 .packisfull
 	buttonsound
 	writetext FruitPackIsFullText
+	chattyon
 	waitbutton
 
 .end

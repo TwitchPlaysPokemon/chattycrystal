@@ -238,9 +238,9 @@ HatchEggs:
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
 	ld a, [hl]
+	push hl
 	ld [wCurPartySpecies], a
 	call SetSeenAndCaughtMon
-
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
 	ld a, l
@@ -256,7 +256,14 @@ HatchEggs:
 			cp HIGH(UNOWN)
 		endc
 	endc
+	pop hl
 	jr nz, .notunown
+	;set first seen unown letter to avoid a dex crash
+	ld de, wPartyMon1DVs - wPartyMon1Species
+	add hl, de
+	predef GetUnownLetter
+	ld a, [wUnownLetter]
+	ld [wFirstUnownSeen], a
 	; set the event flag for hatching unown
 	ld de, EVENT_UNOWN_HATCHED
 	ld b, SET_FLAG

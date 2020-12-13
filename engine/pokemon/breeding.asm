@@ -258,12 +258,15 @@ HatchEggs:
 	endc
 	pop hl
 	jr nz, .notunown
-	;set first seen unown letter to avoid a dex crash
 	ld de, wPartyMon1DVs - wPartyMon1Species
 	add hl, de
-	predef GetUnownLetter
-	ld a, [wUnownLetter]
+	predef GetUnownLetter ;get the UnownLetter for both the first seen check and the animation
 	ld [wFirstUnownSeen], a
+	and a
+	jr nz, .notFirst
+	ld a, [wUnownLetter] ;set first seen unown letter to avoid a dex crash
+	ld [wFirstUnownSeen], a
+.notFirst
 	; set the event flag for hatching unown
 	ld de, EVENT_UNOWN_HATCHED
 	ld b, SET_FLAG
@@ -675,8 +678,6 @@ GetEggFrontpic:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	call GetBaseData
-	ld hl, wBattleMonDVs
-	predef GetUnownLetter
 	pop de
 	predef_jump GetMonFrontpic
 
@@ -685,8 +686,6 @@ GetHatchlingFrontpic:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	call GetBaseData
-	ld hl, wBattleMonDVs
-	predef GetUnownLetter
 	pop de
 	predef_jump GetAnimatedFrontpic
 

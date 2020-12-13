@@ -261,7 +261,7 @@ HatchEggs:
 	ld de, wPartyMon1DVs - wPartyMon1Species
 	add hl, de
 	predef GetUnownLetter ;get the UnownLetter for both the first seen check and the animation
-	ld [wFirstUnownSeen], a
+	ld a, [wFirstUnownSeen]
 	and a
 	jr nz, .notFirst
 	ld a, [wUnownLetter] ;set first seen unown letter to avoid a dex crash

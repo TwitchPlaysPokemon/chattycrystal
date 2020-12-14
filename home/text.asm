@@ -340,15 +340,17 @@ PlaceEnemysName::
 
 	ld a, [wLinkMode]
 	and a
-	jr nz, .linkbattle
+	jr nz, PlaceEnemysNameRivalLinkBattle
 
 	ld a, [wTrainerClass]
 	cp RIVAL1
-	jr z, .rival
+	jr z, PlaceEnemysNameRival
 	cp RIVAL2
-	jr z, .rival
+	jr z, PlaceEnemysNameRival
 
 	ld de, wOTClassName
+AissInjectTrainerClassHere: ;place class wOtherTrainerClass in wOTClassName
+	nop
 	call PlaceString
 	ld h, b
 	ld l, c
@@ -360,11 +362,11 @@ PlaceEnemysName::
 	ld de, wStringBuffer1
 	jr PlaceCommandCharacter
 
-.rival
+PlaceEnemysNameRival:
 	ld de, wRivalName
 	jr PlaceCommandCharacter
 
-.linkbattle
+PlaceEnemysNameRivalLinkBattle:
 	ld de, wOTClassName
 	jr PlaceCommandCharacter
 
@@ -714,12 +716,7 @@ TextCommand_START::
 
 	ld a, [wChattyOveride]
 	and a
-IF TESTMODE
 	jr z, HomeHandleChattyText
-	nop
-else
-	ld [wCurrentStackPointer], sp
-endc
 SkipChattyInjection:
 	ld d, h
 	ld e, l

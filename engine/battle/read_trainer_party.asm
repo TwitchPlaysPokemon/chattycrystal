@@ -209,13 +209,13 @@ ComputeTrainerReward:
 	ld [hl], a
 	ret
 
-Battle_GetTrainerName::
+Battle_GetTrainerName:: ;copy trainers name into wStringBuffer1
 	ld a, [wInBattleTowerBattle]
 	bit 0, a
 	ld hl, wOTPlayerName
 	ld a, BANK(@)
 	ld [wTrainerGroupBank], a
-	jp nz, CopyTrainerName
+	jp nz, CopyTrainerName ;if in battle tower, skip this and get name directly
 
 	ld a, [wOtherTrainerID]
 	ld b, a
@@ -235,7 +235,7 @@ GetTrainerName::
 	call CloseSRAM
 	jr z, .not_cal2
 
-	ld a, BANK(sMysteryGiftPartnerName)
+	ld a, BANK(sMysteryGiftPartnerName) ;if trainer house has data, pull name from save data, then leave
 	call GetSRAMBank
 	ld hl, sMysteryGiftPartnerName
 	call CopyTrainerName
@@ -245,12 +245,12 @@ GetTrainerName::
 	dec c
 	push bc
 	ld b, 0
-	ld hl, TrainerGroups
+	ld hl, TrainerGroups ;go to 3 byte pointer
 	add hl, bc
 	add hl, bc
 	add hl, bc
 	ld a, [hli]
-	ld [wTrainerGroupBank], a
+	ld [wTrainerGroupBank], a ;store trainer bank here and pointer in hl
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -258,11 +258,11 @@ GetTrainerName::
 
 .loop
 	dec b
-	jr z, .done
+	jr z, .done ;if ID is 0, we're there already, otherwise loop ID times to get the correct party
 
-	ld a, [wTrainerGroupBank]
+	ld a, [wTrainerGroupBank] 
 	call GetFarByte
-	add a, l
+	add a, l ;otherwise, add the distance to the next party to hl
 	ld l, a
 	jr nc, .loop
 	inc h
@@ -278,6 +278,7 @@ CopyTrainerName:
 	ld bc, NAME_LENGTH
 	ld a, [wTrainerGroupBank]
 	call FarCopyBytes
+AissInjectTrainerNameHere: ;place name of ID wOtherTrainerID  in wStringBuffer1
 	pop de
 	ret
 

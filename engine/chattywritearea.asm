@@ -30,7 +30,7 @@ else
 	ld de, ChattyText
 endc
 	pop hl
-AissInjectTextHere:
+AissInjectTextHere: ;place text block WITHOUT A START CHARACTER in ChattyText, including any line or cont characters and end with a done character
 	call PlaceString
 	pop hl
 	inc hl

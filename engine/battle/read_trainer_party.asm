@@ -279,16 +279,20 @@ CopyTrainerName:
 	ld a, [wTrainerGroupBank]
 	call FarCopyBytes
 AissInjectTrainerNameHere: ;place name of ID wOtherTrainerID  in wStringBuffer1
-	pop de
-	ret
-
-Function39990:
-; This function is useless.
+if TESTMODE
+	ld hl, ChattyNameText
 	ld de, wStringBuffer1
-	push de
 	ld bc, NAME_LENGTH
+	ld a, BANK(ChattyNameText)
+	call FarCopyBytes
+endc
 	pop de
 	ret
+	
+if TESTMODE
+ChattyNameText:
+	db "ChattyT@"
+endc
 
 GetNextTrainerDataByte:
 	ld a, [wTrainerGroupBank]

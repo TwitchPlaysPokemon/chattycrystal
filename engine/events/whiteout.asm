@@ -7,8 +7,10 @@ Script_OverworldWhiteout::
 	callasm OverworldBGMap
 
 Script_Whiteout:
+	chattyoff
 	writetext .WhitedOutText
 	waitbutton
+	chattyon
 	special FadeOutPalettes
 	pause 40
 	special HealParty

@@ -350,7 +350,11 @@ PlaceEnemysName::
 
 	ld de, wOTClassName
 AissInjectTrainerClassHere: ;place class wOtherTrainerClass in wOTClassName
+if TESTMODE
+	ld de, ChattyClassText
+else
 	nop
+endc
 	call PlaceString
 	ld h, b
 	ld l, c
@@ -361,6 +365,11 @@ AissInjectTrainerClassHere: ;place class wOtherTrainerClass in wOTClassName
 	pop hl
 	ld de, wStringBuffer1
 	jr PlaceCommandCharacter
+	
+if TESTMODE
+ChattyClassText:
+	db "ChattyC@"
+endc
 
 PlaceEnemysNameRival:
 	ld de, wRivalName

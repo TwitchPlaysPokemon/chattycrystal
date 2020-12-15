@@ -239,6 +239,8 @@ PrintWinLossText::
 	ld h, [hl]
 	ld l, a
 	call GetMapScriptsBank
+	rst ChattyOn
 	call FarPrintText
+	rst ChattyOff
 	call WaitBGMap
 	jp WaitPressAorB_BlinkCursor

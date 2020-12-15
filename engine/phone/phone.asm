@@ -615,7 +615,7 @@ GetCallerTrainerClass:
 	pop hl
 	ret
 
-GetCallerName:
+GetCallerName: ;if c = 0 then get non-trainer name b, else get name from trainer class 
 	ld a, c
 	and a
 	jr z, .NotTrainer
@@ -623,6 +623,8 @@ GetCallerName:
 	call Phone_GetTrainerName
 	push hl
 	push bc
+	ld a, "@"
+	ld [wStringBuffer1 + 16], a ;cap at 16 chars to avoid overflow
 	call PlaceString
 	ld a, ":"
 	ld [bc], a

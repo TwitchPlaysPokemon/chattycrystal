@@ -223,7 +223,7 @@ Battle_GetTrainerName:: ;copy trainers name into wStringBuffer1
 	ld c, a
 	; fallthrough
 
-GetTrainerName::
+GetTrainerName:: ;copy trainer class c ID b's name into wStringBuffer1
 	ld a, c
 	cp CAL
 	jr nz, .not_cal2
@@ -278,11 +278,11 @@ CopyTrainerName:
 	ld bc, NAME_LENGTH
 	ld a, [wTrainerGroupBank]
 	call FarCopyBytes
-AissInjectTrainerNameHere: ;place name of ID wOtherTrainerID  in wStringBuffer1
+AissInjectTrainerNameHere: ;place name of ID wOtherTrainerID  in wStringBuffer1, ending with a @
 if TESTMODE
 	ld hl, ChattyNameText
 	ld de, wStringBuffer1
-	ld bc, NAME_LENGTH
+	ld bc, OTNAME_LENGTH
 	ld a, BANK(ChattyNameText)
 	call FarCopyBytes
 endc
@@ -291,7 +291,7 @@ endc
 	
 if TESTMODE
 ChattyNameText:
-	db "ChattyT@"
+	db "ChattyTrainerName!@"
 endc
 
 GetNextTrainerDataByte:

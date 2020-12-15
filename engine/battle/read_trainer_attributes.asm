@@ -1,22 +1,10 @@
-GetTrainerClassName:
-	ld hl, wRivalName
-	ld a, c
-	cp RIVAL1
-	jr z, .rival
+GetTrainerClassName: ;dummied out, returns a blank string
 
-	ld [wCurSpecies], a
-	ld a, TRAINER_NAME
-	ld [wNamedObjectTypeBuffer], a
-	call GetName
+	ld hl, ChattyClassText
 	ld de, wStringBuffer1
-	ret
-
-.rival
-	ld de, wStringBuffer1
-	push de
-	ld bc, NAME_LENGTH
+	ld bc, 1
 	call CopyBytes
-	pop de
+	ld de, wStringBuffer1
 	ret
 
 GetOTName:
@@ -25,24 +13,22 @@ GetOTName:
 	and a
 	jr nz, .ok
 
-	ld hl, wRivalName
-	ld a, c
-	cp RIVAL1
-	jr z, .ok
-
-	ld [wCurSpecies], a
-	ld a, TRAINER_NAME
-	ld [wNamedObjectTypeBuffer], a
-	call GetName
+	ld hl, ChattyClassText
+	ld de, wStringBuffer1
+	ld bc, 1
+	call CopyBytes
 	ld hl, wStringBuffer1
 
 .ok
-	ld bc, TRAINER_CLASS_NAME_LENGTH
+	ld bc, 1
 	ld de, wOTClassName
 	push de
 	call CopyBytes
 	pop de
 	ret
+
+ChattyClassText:
+	db "@"
 
 GetTrainerAttributes:
 	ld a, [wTrainerClass]

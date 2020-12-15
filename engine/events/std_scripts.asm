@@ -782,7 +782,9 @@ AskNumber2MScript:
 	end
 
 RegisteredNumberMScript:
+	chattyoff
 	farwritetext RegisteredNumber1Text
+	chattyon
 	playsound SFX_REGISTER_PHONE_NUMBER
 	waitsfx
 	buttonsound
@@ -1473,7 +1475,9 @@ AskNumber2FScript:
 	end
 
 RegisteredNumberFScript:
+	chattyoff
 	farwritetext RegisteredNumber2Text
+	chattyon
 	playsound SFX_REGISTER_PHONE_NUMBER
 	waitsfx
 	buttonsound

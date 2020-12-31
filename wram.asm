@@ -1594,11 +1594,11 @@ wSecondsSince:: db
 wMinutesSince:: db
 wHoursSince:: db
 wDaysSince:: db
-wChattyOveride:: db
-wCurrentStackPointer:: dw
-wChattySpace:: db
+wChattyOveride:: db 
+wScriptActive:: db ;set to 0 when done accepting script text, if it's still 0 when doing something else then the game assumes the script is dead
+wChattySpace:: db ;the amount of space being used up in this textbox
 
-ds 3
+ds 4
 
 wTempLoopCounter:: db
 

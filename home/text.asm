@@ -352,6 +352,15 @@ PlaceEnemysName::
 	call PlaceString
 	ld h, b
 	ld l, c
+if TESTMODE
+else
+	ld a, [wScriptActive]
+	and a
+	jr nz, .chatty
+	ld de, String_Space
+	call PlaceString
+.chatty
+endc
 	push bc
 	callfar Battle_GetTrainerName
 	pop hl
@@ -711,23 +720,33 @@ TextCommand_START::
 ; write text until "@"
 ; [$00]["...@"]
 
+	push hl
+	push bc
+	ld de, EVENT_UNOWN_HATCHED
+	ld b, CHECK_FLAG
+	call EventFlagAction
+	pop hl
+	pop de
+	jr z, SkipChattyTextInjection
+If TESTMODE
+else
+	ld a, [wScriptActive]
+	and a
+	jr z, SkipChattyTextInjection
+endc
 	ld a, [wChattyOveride]
 	and a
 	jr z, HomeHandleChattyText
-SkipChattyInjection:
-	ld d, h
-	ld e, l
-	ld h, b
-	ld l, c
+SkipChattyTextInjection:
 	call PlaceString
 	ld h, d
 	ld l, e
 	inc hl
 	ret
 	
-HomeHandleChattyText: ;move hl into the position it would be after passing it to PlaceString
+HomeHandleChattyText: ;move de into the position it would be after passing it to PlaceString
 	push hl
-	ld hl, (-wTileMap) & $ffff
+	ld bc, (-wTileMap) & $ffff
 	add hl, bc
 	ld a, h
 	and a
@@ -741,10 +760,10 @@ HomeHandleChattyText: ;move hl into the position it would be after passing it to
 	bit NO_TEXT_SCROLL, a
 	jr nz, .skipChatty
 	pop hl
-	dec hl
+	dec de
 .loop
-	inc hl
-	ld a, [hl]
+	inc de
+	ld a, [de]
 	cp "<DONE>" 
 	jr z, .continue
 	cp "<PROMPT>"  
@@ -764,7 +783,7 @@ HomeHandleChattyText: ;move hl into the position it would be after passing it to
 	
 .skipChatty
 	pop hl
-	jr SkipChattyInjection
+	jr SkipChattyTextInjection
 
 TextCommand_RAM::
 ; text_ram

@@ -174,24 +174,6 @@ UnknownText_0x6455b:
 	line "magic!"
 	done
 
-UnknownText_0x645ff:
-	text "I hear rumors"
-	line "about you all over"
-	cont "the place."
-
-	para "It just makes me"
-	line "sigh, <PLAY_G>."
-
-	para "How did you get so"
-	line "strong?"
-
-	para "Go for the world"
-	line "championship now!"
-
-	para "I'll always be"
-	line "cheering you on!"
-	done
-
 IrwinCalledRightAwayText:
 	text "Hehe, I called"
 	line "right away!"

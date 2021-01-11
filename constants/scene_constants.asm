@@ -36,12 +36,9 @@ SCENE_FINISHED EQU 1
 
 ; wElmsLabSceneID
 	const_def 1
-	const SCENE_ELMSLAB_CANT_LEAVE            ; 1
-	const SCENE_ELMSLAB_NOTHING               ; 2
-	const SCENE_ELMSLAB_MEET_OFFICER          ; 3
-	const SCENE_ELMSLAB_UNUSED                ; 4
-	const SCENE_ELMSLAB_AIDE_GIVES_POTION     ; 5
-	const SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS ; 6
+	const SCENE_ELMSLAB_NOTHING               ; 1
+	const SCENE_ELMSLAB_AIDE_GIVES_POTIONS ;2
+	const SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS ; 3
 
 ; wRoute29SceneID
 	const_def
@@ -52,6 +49,12 @@ SCENE_FINISHED EQU 1
 	const_def
 	const SCENE_CHERRYGROVECITY_NOTHING    ; 0
 	const SCENE_CHERRYGROVECITY_MEET_RIVAL ; 1
+	
+; wRoute30SceneID
+
+	const_def
+	const SCENE_ROUTE30_NOTHING    ; 0
+	const SCENE_ROUTE30_AFTER_UNOWN_HATCH ; 1
 
 ; wRoute32SceneID
 	const_def 1
@@ -155,3 +158,13 @@ SCENE_FINISHED EQU 1
 	const_def 1
 	const SCENE_FASTSHIP1F_ENTER_SHIP   ; 1
 	const SCENE_FASTSHIP1F_MEET_GRANDPA ; 2
+	
+; wRoute23SceneID
+	const_def 1
+	const SCENE_SHOWN_CASCADE   ; 1
+	const SCENE_SHOWN_THUNDER ; 2
+	const SCENE_SHOWN_RAINBOW   ; 3
+	const SCENE_SHOWN_MARSH ; 4
+	const SCENE_SHOWN_SOUL   ; 5
+	const SCENE_SHOWN_VOLCANO ; 6
+	const SCENE_SHOWN_EARTH ;7

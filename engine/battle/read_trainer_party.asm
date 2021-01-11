@@ -209,13 +209,13 @@ ComputeTrainerReward:
 	ld [hl], a
 	ret
 
-Battle_GetTrainerName::
+Battle_GetTrainerName:: ;copy trainers name into wStringBuffer1
 	ld a, [wInBattleTowerBattle]
 	bit 0, a
 	ld hl, wOTPlayerName
 	ld a, BANK(@)
 	ld [wTrainerGroupBank], a
-	jp nz, CopyTrainerName
+	jp nz, CopyTrainerName ;if in battle tower, skip this and get name directly
 
 	ld a, [wOtherTrainerID]
 	ld b, a
@@ -223,7 +223,7 @@ Battle_GetTrainerName::
 	ld c, a
 	; fallthrough
 
-GetTrainerName::
+GetTrainerName:: ;copy trainer class c ID b's name into wStringBuffer1
 	ld a, c
 	cp CAL
 	jr nz, .not_cal2
@@ -235,7 +235,7 @@ GetTrainerName::
 	call CloseSRAM
 	jr z, .not_cal2
 
-	ld a, BANK(sMysteryGiftPartnerName)
+	ld a, BANK(sMysteryGiftPartnerName) ;if trainer house has data, pull name from save data, then leave
 	call GetSRAMBank
 	ld hl, sMysteryGiftPartnerName
 	call CopyTrainerName
@@ -245,12 +245,12 @@ GetTrainerName::
 	dec c
 	push bc
 	ld b, 0
-	ld hl, TrainerGroups
+	ld hl, TrainerGroups ;go to 3 byte pointer
 	add hl, bc
 	add hl, bc
 	add hl, bc
 	ld a, [hli]
-	ld [wTrainerGroupBank], a
+	ld [wTrainerGroupBank], a ;store trainer bank here and pointer in hl
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -258,11 +258,11 @@ GetTrainerName::
 
 .loop
 	dec b
-	jr z, .done
+	jr z, .done ;if ID is 0, we're there already, otherwise loop ID times to get the correct party
 
-	ld a, [wTrainerGroupBank]
+	ld a, [wTrainerGroupBank] 
 	call GetFarByte
-	add a, l
+	add a, l ;otherwise, add the distance to the next party to hl
 	ld l, a
 	jr nc, .loop
 	inc h
@@ -278,16 +278,33 @@ CopyTrainerName:
 	ld bc, NAME_LENGTH
 	ld a, [wTrainerGroupBank]
 	call FarCopyBytes
-	pop de
-	ret
-
-Function39990:
-; This function is useless.
+	ld de, EVENT_UNOWN_HATCHED
+	ld b, CHECK_FLAG
+	call EventFlagAction
+	jr z, SkipChattyTrainerInjection
+if TESTMODE
+	ld hl, ChattyNameText
 	ld de, wStringBuffer1
-	push de
-	ld bc, NAME_LENGTH
+	ld bc, OTNAME_LENGTH
+	ld a, BANK(ChattyNameText)
+	call FarCopyBytes
+else
+	ld a, [wScriptActive]
+	and a
+	jr z, SkipChattyTrainerInjection
+	xor a
+	ld [wScriptActive], a
+AissInjectTrainerNameHere: ;place name of ID wOtherTrainerID in wStringBuffer1, ending with a @
+	nop
+endc
+SkipChattyTrainerInjection:
 	pop de
 	ret
+	
+if TESTMODE
+ChattyNameText:
+	db "ChattyTrainerName!@"
+endc
 
 GetNextTrainerDataByte:
 	ld a, [wTrainerGroupBank]

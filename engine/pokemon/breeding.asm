@@ -223,10 +223,10 @@ HatchEggs:
 	push de
 	push hl
 	cp EGG
-	jp nz, .next
+	jp nz, .next ;if not egg, check next mon
 	ld a, [hl]
 	and a
-	jp nz, .next
+	jp nz, .next ;if happiness not zero, next egg
 	ld [hl], $78
 
 	push de
@@ -238,33 +238,41 @@ HatchEggs:
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
 	ld a, [hl]
+	push hl
 	ld [wCurPartySpecies], a
 	call SetSeenAndCaughtMon
-
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
 	ld a, l
-	sub LOW(TOGEPI)
-	if HIGH(TOGEPI) == 0
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
 		or h
 	else
-		jr nz, .nottogepi
-		if HIGH(TOGEPI) == 1
+		jr nz, .notunown
+		if HIGH(UNOWN) == 1
 			dec h
 		else
 			ld a, h
-			cp HIGH(TOGEPI)
+			cp HIGH(UNOWN)
 		endc
 	endc
-	jr nz, .nottogepi
-	; set the event flag for hatching togepi
-	ld de, EVENT_TOGEPI_HATCHED
+	pop hl
+	jr nz, .notunown
+	ld de, wPartyMon1DVs - wPartyMon1Species
+	add hl, de
+	predef GetUnownLetter ;get the UnownLetter for both the first seen check and the animation
+	ld a, [wFirstUnownSeen]
+	and a
+	jr nz, .notFirst
+	ld a, [wUnownLetter] ;set first seen unown letter to avoid a dex crash
+	ld [wFirstUnownSeen], a
+.notFirst
+	; set the event flag for hatching unown
+	ld de, EVENT_UNOWN_HATCHED
 	ld b, SET_FLAG
 	call EventFlagAction
-.nottogepi
-
+.notunown
 	pop de
-
 	ld a, [wCurPartySpecies]
 	dec de
 	ld [de], a
@@ -328,6 +336,7 @@ HatchEggs:
 	ld e, l
 	ld hl, wPlayerName
 	call CopyBytes
+	rst ChattyOff
 	ld hl, .Text_HatchEgg
 	call PrintText
 	ld a, [wCurPartyMon]
@@ -361,6 +370,7 @@ HatchEggs:
 	call CopyBytes
 
 .next
+	rst ChattyOn
 	ld hl, wCurPartyMon
 	inc [hl]
 	pop hl
@@ -668,8 +678,6 @@ GetEggFrontpic:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	call GetBaseData
-	ld hl, wBattleMonDVs
-	predef GetUnownLetter
 	pop de
 	predef_jump GetMonFrontpic
 
@@ -678,8 +686,6 @@ GetHatchlingFrontpic:
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
 	call GetBaseData
-	ld hl, wBattleMonDVs
-	predef GetUnownLetter
 	pop de
 	predef_jump GetAnimatedFrontpic
 

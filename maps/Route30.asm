@@ -12,10 +12,15 @@
 	const ROUTE30_POKE_BALL
 
 Route30_MapScripts:
-	db 0 ; scene scripts
+	db 2 ; scene scripts
+	scene_script .DummyScene  ; SCENE_DEFAULT
+	scene_script .DummyScene ; SCENE_ROUTE30_AFTER_UNOWN_HATCH
 
 	db 0 ; callbacks
 
+.DummyScene 
+	end
+	
 YoungsterJoey_ImportantBattleScript:
 	waitsfx
 	playmusic MUSIC_JOHTO_TRAINER_BATTLE
@@ -220,7 +225,7 @@ endc
 Route30YoungsterScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue .CompletedEggQuest
 	writetext Route30YoungsterText_DirectionsToMrPokemonsHouse
 	waitbutton
@@ -230,6 +235,25 @@ Route30YoungsterScript:
 .CompletedEggQuest:
 	writetext Route30YoungsterText_EveryoneIsBattling
 	waitbutton
+	closetext
+	end
+	
+Route30HatchUnownEggScript:
+	checkevent EVENT_UNOWN_HATCHED
+	iftrue .set_flag
+	special HatchUnownEgg
+	checkevent EVENT_UNOWN_HATCHED
+	iftrue .set_flag
+	end
+	
+.set_flag
+	wildon
+	setscene SCENE_ROUTE30_AFTER_UNOWN_HATCH
+	chattyoff
+	opentext
+	farwritetext _RepelWoreOffText
+	waitbutton
+	chattyon
 	closetext
 	end
 
@@ -423,7 +447,8 @@ Route30_MapEvents:
 	warp_event  7, 39, ROUTE_30_BERRY_HOUSE, 1
 	warp_event 17,  5, MR_POKEMONS_HOUSE, 1
 
-	db 0 ; coord events
+	db 1 ; coord events
+	coord_event 17,  6, SCENE_DEFAULT, Route30HatchUnownEggScript
 
 	db 5 ; bg events
 	bg_event  9, 43, BGEVENT_READ, Route30Sign

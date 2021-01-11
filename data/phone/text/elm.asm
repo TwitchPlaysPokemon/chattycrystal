@@ -17,17 +17,6 @@ ElmPhoneSawMrPokemonText:
 	cont "Come back safely!"
 	done
 
-ElmPhonePokemonStolenText:
-	text "<PLAY_G>? I'm very"
-	line "upset now."
-
-	para "We had a #MON"
-	line "stolen from here."
-
-	para "How could anyone"
-	line "do that?"
-	done
-
 ElmPhoneCheckingEggText:
 	text "Hello, <PLAY_G>?"
 
@@ -38,15 +27,6 @@ ElmPhoneCheckingEggText:
 	line "#MON EGG."
 	done
 
-ElmPhoneAssistantText:
-	text "Hello, <PLAY_G>?"
-
-	para "Did you see my"
-	line "assistant? He's at"
-
-	para "the #MON CENTER"
-	line "in VIOLET CITY."
-	done
 
 ElmPhoneEggUnhatchedText:
 	text "Hello, <PLAY_G>?"
@@ -66,8 +46,21 @@ ElmPhoneEggHatchedText:
 	line "Wow! What kind of"
 	cont "#MON is it?"
 
-	para "Please come show"
-	line "me now!"
+	para "<......>"
+	
+	para "Wow, that's a rare"
+	line "#MON, you should"
+	cont "show Mr.#MON."
+	done
+	
+ElmPhoneEggHatched2Text:
+	text "Hello, <PLAY_G>?"
+	line "How is your "
+	cont "#MON?"
+
+	para "Remember to"
+	line "vist Mr.#MON"
+	cont "for me."
 	done
 
 ElmPhoneDiscovery1Text:
@@ -127,35 +120,6 @@ ElmPhonePokerusText:
 	para "I guess it's"
 	line "nothing to worry"
 	cont "about. Bye!"
-	done
-
-ElmPhoneDisasterText:
-	text "H-hello? <PLAY_G>?"
-	line "It's a disaster!"
-
-	para "Uh, um, it's just"
-	line "terrible!"
-
-	para "What should I do?"
-	line "It… Oh, no…"
-
-	para "Please get back"
-	line "here now!"
-	done
-
-ElmPhoneEggAssistantText:
-	text "Hello, <PLAY_G>? We"
-	line "discovered some-"
-
-	para "thing about the"
-	line "EGG!"
-
-	para "My assistant is at"
-	line "the #MON CENTER"
-
-	para "in VIOLET CITY. "
-	line "Could you talk to"
-	cont "him?"
 	done
 
 ElmPhoneRocketText:

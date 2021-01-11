@@ -494,7 +494,6 @@ InitializeEventsScript:
 	setevent EVENT_AZALEA_TOWN_SLOWPOKES
 	setevent EVENT_KURTS_HOUSE_SLOWPOKE
 	setevent EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
-	setevent EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
 	setevent EVENT_COP_IN_ELMS_LAB
 	setevent EVENT_RUINS_OF_ALPH_OUTSIDE_SCIENTIST
 	setevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
@@ -783,7 +782,9 @@ AskNumber2MScript:
 	end
 
 RegisteredNumberMScript:
+	chattyoff
 	farwritetext RegisteredNumber1Text
+	chattyon
 	playsound SFX_REGISTER_PHONE_NUMBER
 	waitsfx
 	buttonsound
@@ -1474,7 +1475,9 @@ AskNumber2FScript:
 	end
 
 RegisteredNumberFScript:
+	chattyoff
 	farwritetext RegisteredNumber2Text
+	chattyon
 	playsound SFX_REGISTER_PHONE_NUMBER
 	waitsfx
 	buttonsound
@@ -1770,7 +1773,9 @@ GymStatue2Script:
 
 ReceiveItemScript:
 	waitsfx
+	chattyoff
 	farwritetext ReceivedItemText
+	chattyon
 	playsound SFX_ITEM
 	waitsfx
 	end

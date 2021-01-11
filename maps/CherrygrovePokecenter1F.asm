@@ -21,7 +21,7 @@ CherrygrovePokecenter1FGentlemanScript:
 CherrygrovePokecenter1FTeacherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue .CommCenterOpen
 	writetext CherrygrovePokecenter1FTeacherText
 	waitbutton

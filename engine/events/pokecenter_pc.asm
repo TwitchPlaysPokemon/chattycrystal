@@ -313,7 +313,9 @@ PlayerWithdrawItemMenu:
 .loop
 	call PCItemsJoypad
 	jr c, .quit
+	rst ChattyOff
 	call .Submenu
+	rst ChattyOn
 	jr .loop
 
 .quit
@@ -390,7 +392,9 @@ PlayerTossItemMenu:
 	call PCItemsJoypad
 	jr c, .quit
 	ld de, wNumPCItems
+	rst ChattyOff
 	farcall TossItemFromPC
+	rst ChattyOn
 	jr .loop
 
 .quit
@@ -477,7 +481,9 @@ PlayerDepositItemMenu:
 	push af
 	ld a, [wBuffer2]
 	push af
+	rst ChattyOff
 	call .DepositItem
+	rst ChattyOn
 	pop af
 	ld [wBuffer2], a
 	pop af

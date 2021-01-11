@@ -84,12 +84,6 @@ VermilionPortWalkUpToShipScript:
 	iftrue .skip
 	turnobject PLAYER, LEFT
 	opentext
-	readvar VAR_WEEKDAY
-	ifequal MONDAY, .NextShipWednesday
-	ifequal TUESDAY, .NextShipWednesday
-	ifequal THURSDAY, .NextShipSunday
-	ifequal FRIDAY, .NextShipSunday
-	ifequal SATURDAY, .NextShipSunday
 	writetext UnknownText_0x74f4d
 	yesorno
 	iffalse VermilionPortNotRidingMoveAwayScript
@@ -106,20 +100,6 @@ VermilionPortWalkUpToShipScript:
 
 .NoTicket:
 	writetext UnknownText_0x74ff2
-	waitbutton
-	closetext
-	applymovement PLAYER, MovementData_0x74ef5
-	end
-
-.NextShipWednesday:
-	writetext UnknownText_0x75059
-	waitbutton
-	closetext
-	applymovement PLAYER, MovementData_0x74ef5
-	end
-
-.NextShipSunday:
-	writetext UnknownText_0x75080
 	waitbutton
 	closetext
 	applymovement PLAYER, MovementData_0x74ef5
@@ -146,12 +126,6 @@ VermilionPortSailorScript:
 	opentext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue VermilionPortAlreadyRodeScript
-	readvar VAR_WEEKDAY
-	ifequal MONDAY, .NextShipWednesday
-	ifequal TUESDAY, .NextShipWednesday
-	ifequal THURSDAY, .NextShipSunday
-	ifequal FRIDAY, .NextShipSunday
-	ifequal SATURDAY, .NextShipSunday
 	writetext UnknownText_0x74f4d
 	yesorno
 	iffalse VermilionPortNotRidingScript
@@ -168,18 +142,6 @@ VermilionPortSailorScript:
 
 .NoTicket:
 	writetext UnknownText_0x74ff2
-	waitbutton
-	closetext
-	end
-
-.NextShipWednesday:
-	writetext UnknownText_0x75059
-	waitbutton
-	closetext
-	end
-
-.NextShipSunday:
-	writetext UnknownText_0x75080
 	waitbutton
 	closetext
 	end
@@ -277,15 +239,6 @@ UnknownText_0x74ff2:
 	line "S.S.TICKET."
 	done
 
-UnknownText_0x75059:
-	text "The FAST SHIP will"
-	line "sail on Wednesday."
-	done
-
-UnknownText_0x75080:
-	text "The FAST SHIP will"
-	line "sail next Sunday."
-	done
 
 UnknownText_0x750a6:
 	text "You came from"

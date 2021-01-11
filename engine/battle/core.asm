@@ -8102,16 +8102,14 @@ StartBattle:
 
 	ld a, [wTimeOfDayPal]
 	push af
+	rst ChattyOff
 	call BattleIntro
 	call DoBattle
+	rst ChattyOn
 	call ExitBattle
 	pop af
 	ld [wTimeOfDayPal], a
 	scf
-	ret
-
-Unreferenced_DoBattle:
-	call DoBattle
 	ret
 
 BattleIntro:

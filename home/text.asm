@@ -171,24 +171,24 @@ FarPlaceString::
 	rst Bankswitch
 	ret
 
-PlaceString::
+PlaceString:: ;insert chars into hl from de until you reach a terminator, location of terminator in bc
 	push hl
 
 PlaceNextChar::
 	ld a, [de]
-	cp "@"
+	cp "@" ;loop until terminator
 	jr nz, CheckDict
 	ld b, h
-	ld c, l
-	pop hl
+	ld c, l ;store hl in bc
+	pop hl ;reset hl
 	ret
-	pop de
 
 NextChar::
 	inc de
 	jp PlaceNextChar
 
 CheckDict::
+
 dict: MACRO
 if \1 == "<NULL>"
 	and a
@@ -209,7 +209,7 @@ else
 endc
 ENDM
 
-	dict "<MOBILE>",  MobileScriptChar
+	dict "<MOBILE>",  MobileScriptChar ;check the various special characters
 	dict "<LINE>",    LineChar
 	dict "<NEXT>",    NextLineChar
 	dict "<CR>",      CarriageReturnChar
@@ -248,7 +248,7 @@ ENDM
 	dict "ﾟ",         .place
 	dict "ﾞ",         .place
 
-	cp FIRST_REGULAR_TEXT_CHAR
+	cp FIRST_REGULAR_TEXT_CHAR ;if a regular char, place it
 	jr nc, .place
 
 	cp "パ"
@@ -276,7 +276,7 @@ ENDM
 	ld b, "ﾟ" ; handakuten
 
 .place
-	ld [hli], a
+	ld [hli], a ;insert char
 	call PrintLetterDelay
 	jp NextChar
 
@@ -340,31 +340,39 @@ PlaceEnemysName::
 
 	ld a, [wLinkMode]
 	and a
-	jr nz, .linkbattle
+	jr nz, PlaceEnemysNameRivalLinkBattle
 
 	ld a, [wTrainerClass]
 	cp RIVAL1
-	jr z, .rival
+	jr z, PlaceEnemysNameRival
 	cp RIVAL2
-	jr z, .rival
+	jr z, PlaceEnemysNameRival
 
 	ld de, wOTClassName
 	call PlaceString
 	ld h, b
 	ld l, c
+if TESTMODE
+else
+	ld a, [wScriptActive]
+	and a
+	jr nz, .chatty
 	ld de, String_Space
 	call PlaceString
+.chatty
+endc
 	push bc
 	callfar Battle_GetTrainerName
 	pop hl
 	ld de, wStringBuffer1
 	jr PlaceCommandCharacter
+	
 
-.rival
+PlaceEnemysNameRival:
 	ld de, wRivalName
 	jr PlaceCommandCharacter
 
-.linkbattle
+PlaceEnemysNameRivalLinkBattle:
 	ld de, wOTClassName
 	jr PlaceCommandCharacter
 
@@ -494,13 +502,13 @@ _ContText::
 	ld a, [wLinkMode]
 	or a
 	jr nz, .communication
-	call LoadBlinkingCursor
+	call LoadBlinkingCursor ;if not link mode, load the cursor
 
 .communication
 	call Text_WaitBGMap
 
 	push de
-	call ButtonSound
+	call ButtonSound ;wait for a button press
 	pop de
 
 	ld a, [wLinkMode]
@@ -518,11 +526,11 @@ _ContTextNoPause::
 
 ContText::
 	push de
-	ld de, .cont
-	ld b, h
+	ld de, .cont ;load the cont string
+	ld b, h ;store hl in bc
 	ld c, l
 	call PlaceString
-	ld h, b
+	ld h, b ;move it back and restore de
 	ld l, c
 	pop de
 	jp NextChar
@@ -556,11 +564,10 @@ PromptText::
 
 DoneText::
 	pop hl
-	ld de, .stop
-	dec de
+	ld de, TX_ENDText - 1 ;redirect text pointer to a 1 before a TX_END (so that after TX_START increments, the next command is TX_END
 	ret
 
-.stop:
+TX_ENDText::
 	text_end
 
 NullChar::
@@ -648,7 +655,7 @@ PokeFluteTerminatorCharacter::
 PlaceHLTextAtBC::
 	ld a, [wTextboxFlags]
 	push af
-	set NO_TEXT_DELAY_F, a
+	set NO_TEXT_DELAY_F, a ;no text delay
 	ld [wTextboxFlags], a
 
 	call DoTextUntilTerminator
@@ -658,8 +665,8 @@ PlaceHLTextAtBC::
 	ret
 
 DoTextUntilTerminator::
-	ld a, [hli]
-	cp TX_END
+	ld a, [hli] ;load from hl
+	cp TX_END ;if a text end command, ret
 	ret z
 	call .TextCommand
 	jr DoTextUntilTerminator
@@ -674,11 +681,11 @@ DoTextUntilTerminator::
 	add hl, bc
 	ld e, [hl]
 	inc hl
-	ld d, [hl]
+	ld d, [hl] ;jump to the specific command
 	pop bc
 	pop hl
 
-	; jp de
+	; jp de 
 	push de
 	ret
 
@@ -713,15 +720,70 @@ TextCommand_START::
 ; write text until "@"
 ; [$00]["...@"]
 
-	ld d, h
-	ld e, l
-	ld h, b
-	ld l, c
+	push hl
+	push bc
+	ld de, EVENT_UNOWN_HATCHED
+	ld b, CHECK_FLAG
+	call EventFlagAction
+	pop hl
+	pop de
+	jr z, SkipChattyTextInjection
+If TESTMODE
+else
+	ld a, [wScriptActive]
+	and a
+	jr z, SkipChattyTextInjection
+endc
+	ld a, [wChattyOveride]
+	and a
+	jr z, HomeHandleChattyText
+SkipChattyTextInjection:
 	call PlaceString
 	ld h, d
 	ld l, e
 	inc hl
 	ret
+	
+HomeHandleChattyText: ;move de into the position it would be after passing it to PlaceString
+	push hl
+	ld bc, (-wTileMap) & $ffff
+	add hl, bc
+	ld a, h
+	and a
+	jr z, .skipChatty
+	ld a, l
+	cp FIRST_TEXTBOX_TILE - $100
+	jr c, .skipChatty
+	cp FIRST_TEXTBOX_TILE - $100 + 58
+	jr nc, .skipChatty
+	ld a, [wOptions] 
+	bit NO_TEXT_SCROLL, a
+	jr nz, .skipChatty
+	pop hl
+	dec de
+.loop
+	inc de
+	ld a, [de]
+	cp "<DONE>" 
+	jr z, .continue
+	cp "<PROMPT>"  
+	jr z, .continue
+	cp  "@"
+	scf ;no redirection to TX_ENDText done in HandleChattyText if carry is set
+	jr nz, .loop
+.continue
+	ldh a, [hROMBank]
+	push af
+	ld a, BANK(HandleChattyText)
+	rst Bankswitch
+	call HandleChattyText
+	pop af
+	rst Bankswitch
+	ret
+	
+.skipChatty
+	pop hl
+	jr SkipChattyTextInjection
 
 TextCommand_RAM::
 ; text_ram

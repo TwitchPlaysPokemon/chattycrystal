@@ -12,11 +12,19 @@ SECTION "rst10", ROM0 ; rst Bankswitch
 	ld [MBC3RomBank], a
 	ret
 
-SECTION "rst18", ROM0
-	rst $38
-
-SECTION "rst20", ROM0
-	rst $38
+SECTION "rst18", ROM0 ; rst ChattyOn
+	push af
+	xor a
+	ld [wChattyOveride], a
+	pop af
+	ret
+	
+SECTION "rst20", ROM0 ; rst ChattyOff
+	push af
+	ld a, 1
+	ld [wChattyOveride], a
+	pop af
+	ret
 
 SECTION "rst28", ROM0 ; rst JumpTable
 	push de

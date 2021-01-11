@@ -132,11 +132,13 @@ StartMoveMonWOMail_SaveGame:
 	ret
 
 PauseGameLogic:
+	rst ChattyOff
 	ld a, TRUE
 	ld [wGameLogicPaused], a
 	ret
 
 ResumeGameLogic:
+	rst ChattyOn
 	xor a ; FALSE
 	ld [wGameLogicPaused], a
 	ret

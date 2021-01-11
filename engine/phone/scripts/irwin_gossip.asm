@@ -1,6 +1,6 @@
 IrwinRumorScript:
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .MtSilver
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .EliteFour
 	checkevent EVENT_FOUGHT_SNORLAX
 	iftrue .Snorlax
 	checkevent EVENT_GOT_PASS_FROM_COPYCAT
@@ -9,8 +9,6 @@ IrwinRumorScript:
 	iftrue .MarshBadge
 	checkflag ENGINE_FLYPOINT_VERMILION
 	iftrue .VermilionCity
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .EliteFour
 	checkflag ENGINE_RISINGBADGE
 	iftrue .RisingBadge
 	checkevent EVENT_CLEARED_RADIO_TOWER
@@ -72,10 +70,6 @@ IrwinRumorScript:
 	buttonsound
 	sjump PhoneScript_HangupText_Male
 
-.MtSilver:
-	farwritetext UnknownText_0x645ff
-	buttonsound
-	sjump PhoneScript_HangupText_Male
 
 .FogBadge:
 	farwritetext UnknownText_0x646df

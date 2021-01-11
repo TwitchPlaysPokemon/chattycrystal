@@ -235,6 +235,9 @@ ScriptCommandTable:
 	dw Script_checksave                  ; a9
 	dw Script_loadmonindex               ; aa
 	dw Script_checkmaplockedmons         ; ab
+	dw Script_givechattymon ;ac
+	dw Script_chattyoff ;ad
+	dw Script_chattyon ; ae
 
 StartScript:
 	ld hl, wScriptFlags
@@ -509,14 +512,12 @@ Script_verbosegiveitem:
 	ld de, GiveItemScript
 	jp ScriptCall
 
-ret_96f76:
-	ret
-
 GiveItemScript:
-	callasm ret_96f76
+	chattyoff
 	writetext ReceivedItemText
 	iffalse .Full
 	waitsfx
+	chattyon
 	specialsound
 	waitbutton
 	itemnotify
@@ -524,6 +525,7 @@ GiveItemScript:
 
 .Full:
 	buttonsound
+	chattyon
 	pocketisfull
 	end
 
@@ -567,7 +569,9 @@ Script_itemnotify:
 	call CurItemName
 	ld b, BANK(PutItemInPocketText)
 	ld hl, PutItemInPocketText
+	rst ChattyOff
 	call MapTextbox
+	rst ChattyOn
 	ret
 
 Script_pocketisfull:
@@ -577,7 +581,9 @@ Script_pocketisfull:
 	call CurItemName
 	ld b, BANK(PocketIsFullText)
 	ld hl, PocketIsFullText
+	rst ChattyOff
 	call MapTextbox
+	rst ChattyOn
 	ret
 
 Script_specialsound:
@@ -2870,4 +2876,26 @@ LoadScriptPokemonID:
 	or l
 	jp nz, GetPokemonIDFromIndex
 	ld a, [wScriptVar]
+	ret
+	
+Script_givechattymon:
+; script command 0xac
+; if no room in the party, return 0 in wScriptVar; else, return 2
+; parameters Mon
+	call GetScriptByte
+	ld b, a
+	farcall GiveChattyMon
+	ret nc
+	ld a, 2
+	ld [wScriptVar], a
+	ret
+	
+Script_chattyoff:
+; script command 0xad
+	rst ChattyOff
+	ret
+	
+Script_chattyon:
+; script command 0xad
+	rst ChattyOn
 	ret

@@ -185,7 +185,16 @@ DragonShrine_MapScripts:
 	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairWalkOutMovement
 	playsound SFX_ENTER_DOOR
 	disappear DRAGONSHRINE_CLAIR
-	waitsfx
+	waitsfx 
+	opentext
+	writetext DragonShrineGiveTicket1
+	waitbutton
+	closetext
+	verbosegiveitem S_S_TICKET
+	opentext
+	writetext DragonShrineGiveTicket2
+	waitbutton
+	closetext
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	end
 
@@ -653,6 +662,37 @@ DragonShrineRisingBadgeExplanationText:
 
 DragonShrineSpeechlessText:
 	text "<……><……><……><……><……><……>"
+	done
+	
+DragonShrineGiveTicket1:
+	text "Oh! I nearly"
+	line "forgot!"
+	
+	para "LANCE sent this"
+	line "as a thank you"
+	cont "for helping with"
+	cont "TEAM ROCKET."
+	done
+	
+DragonShrineGiveTicket2:
+	text "It's a ticket for"
+	line "a ferry to KANTO."
+	
+	para "You need 16"
+	line "GYM BADGES to"
+	cont "challenge the"
+	cont "ELITE FOUR."
+	
+	para "Defeating one"
+	line "region's GYMs is"
+	cont "not enough!"
+	
+	para "It departs from"
+	line "OLIVINE CITY."
+	
+	para "May your bond"
+	line "with your #MON"
+	cont "grow strong."
 	done
 
 DragonShrine_MapEvents:

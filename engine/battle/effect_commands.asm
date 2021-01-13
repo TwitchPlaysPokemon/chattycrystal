@@ -5623,6 +5623,18 @@ BattleCommand_OHKO:
 	ld a, $1
 	ld [wAttackMissed], a
 	ret
+	
+BattleCommand_CheckChatty:
+; checkchatty
+
+	ld a, [wScriptActive]
+	and a
+	ret z
+	ld b, chattybranch_command
+	jp SkipToBattleCommand
+	
+BattleCommand_ChattyBranch: ;exists only as a stopping point for chatty branch
+	ret
 
 BattleCommand_CheckCharge:
 ; checkcharge

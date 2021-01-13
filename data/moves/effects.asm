@@ -1805,6 +1805,43 @@ HiddenPower:
 	buildopponentrage
 	kingsrock
 	endmove
+	
+ChattyHiddenPower:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	checkchatty
+	hiddenpower
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+	
+	chattybranch
+	chattyhp
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
 
 RainDance:
 	checkobedience

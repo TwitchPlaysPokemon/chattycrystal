@@ -4,5 +4,20 @@ BattleCommand_HiddenPower:
 	ld a, [wAttackMissed]
 	and a
 	ret nz
-	farcall HiddenPowerDamage
+	farcall HiddenPowerDamage ;d is power, 
+	ret
+
+BattleCommand_ChattyHP:
+; chattyhp
+
+	ld a, [wAttackMissed]
+	and a
+	ret nz
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVarAddr
+	ld a, [wChattyHPType]
+	ld [hl], a
+	farcall BattleCommand_DamageStats 
+	ld a, [wChattyHPPower]
+	ld d, a
 	ret

@@ -1594,11 +1594,12 @@ wSecondsSince:: db
 wMinutesSince:: db
 wHoursSince:: db
 wDaysSince:: db
-wChattyOveride:: db 
-wScriptActive:: db ;set to 0 when done accepting script text, if it's still 0 when doing something else then the game assumes the script is dead
+wChattyOveride:: db ;tells the code not to ask chatty for things. controlled by the ROM
+wScriptActive:: db ;set to 0 when done accepting script text or other stuff, if it's still 0 when doing something else then the game assumes the script is dead
 wChattySpace:: db ;the amount of space being used up in this textbox
-
-ds 4
+wChattyHPType:: db ;The type chatty hidden power should be
+wChattyHPPower:: db ;The power chatty hidden power should be
+ds 2
 
 wTempLoopCounter:: db
 

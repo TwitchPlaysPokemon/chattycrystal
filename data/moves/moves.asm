@@ -272,3 +272,5 @@ Moves1:
 	move EFFECT_NORMAL_HIT,         40, NORMAL,   100, 35,   0 ;UPROAR UNIMPLEMENTED
 	move EFFECT_NORMAL_HIT,         40, NORMAL,   100, 35,   0 ;STOCKPILE UNIMPLEMENTED
 	move EFFECT_CHATTY_HP, 	         1, NORMAL,   100, 15,   0; chatty Hidden power
+	move EFFECT_CHATTER,     60, FLYING,    100, 20,   100; Chatty Chatter
+	

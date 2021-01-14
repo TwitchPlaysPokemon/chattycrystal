@@ -180,4 +180,4 @@ BattleCommandPointers:
 	dw BattleCommand_StartLoop
 	dw BattleCommand_Curl
 	dw BattleCommand_ChattyHP
-	
+	dw BattleCommand_Chatter

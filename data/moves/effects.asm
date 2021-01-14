@@ -991,6 +991,32 @@ ConfuseHit:
 	buildopponentrage
 	confusetarget
 	endmove
+	
+Chatter:
+	checkobedience
+	usedmovetext
+	doturn
+	checkchatty
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	confusetarget
+	endmove
+	
+	chattybranch
+	chatter
+	endmove
 
 Heal:
 	checkobedience

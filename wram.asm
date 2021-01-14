@@ -1599,7 +1599,7 @@ wScriptActive:: db ;set to 0 when done accepting script text or other stuff, if 
 wChattySpace:: db ;the amount of space being used up in this textbox
 wChattyHPType:: db ;The type chatty hidden power should be
 wChattyHPPower:: db ;The power chatty hidden power should be
-ds 2
+wChattyChatterMove:: dw ;the move to call with chatter
 
 wTempLoopCounter:: db
 

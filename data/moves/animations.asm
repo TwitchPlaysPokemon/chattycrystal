@@ -276,6 +276,10 @@ BattleAnimations::
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
 	dw BattleAnim_SweetScent2
+	dw BattleAnim_SweetScent2
+	dw BattleAnim_SweetScent2
+	dw BattleAnim_HiddenPower
+	dw BattleAnim_Roar
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

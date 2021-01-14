@@ -181,6 +181,7 @@ ENDM
 	command startloop               ; ae
 	command curl                    ; af
 	command chattyhp           ;b0
+	command chatter           ;b1
 
 	enum_start $fe
 	command endturn                 ; fe

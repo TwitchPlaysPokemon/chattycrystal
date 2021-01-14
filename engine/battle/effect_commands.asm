@@ -5637,8 +5637,35 @@ endc
 	ld b, chattybranch_command
 	jp SkipToBattleCommand
 	
-BattleCommand_ChattyBranch: ;exists only as a stopping point for chatty branch
+BattleCommand_ChattyBranch: ;exists only as a stopping point for checkchatty
 	ret
+	
+BattleCommand_Chatter:
+	call ClearLastMove
+	call CheckUserIsCharging
+	jr nz, .charging
+
+	ld a, [wKickCounter]
+	push af
+	call BattleCommand_LowerSub
+	pop af
+	ld [wKickCounter], a
+
+.charging
+	call LoadMoveAnim
+if TESTMODE
+	ld hl, EXPLOSION
+else
+	ld h, [wChattyChatterMove]
+	ld l, [wChattyChatterMove+1]
+endc
+	call GetMoveIDFromIndex
+	ld b, a
+	ld a, BATTLE_VARS_MOVE
+	call GetBattleVarAddr
+	ld [hl], b
+	call UpdateMoveData
+	jp ResetTurn
 
 BattleCommand_CheckCharge:
 ; checkcharge

@@ -5626,10 +5626,14 @@ BattleCommand_OHKO:
 	
 BattleCommand_CheckChatty:
 ; checkchatty
-
+if TESTMODE
+else
 	ld a, [wScriptActive]
 	and a
 	ret z
+	xor a
+	ld [wScriptActive], a
+endc
 	ld b, chattybranch_command
 	jp SkipToBattleCommand
 	

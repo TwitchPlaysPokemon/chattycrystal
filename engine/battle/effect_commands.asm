@@ -5656,8 +5656,10 @@ BattleCommand_Chatter:
 if TESTMODE
 	ld hl, EXPLOSION
 else
-	ld h, [wChattyChatterMove]
-	ld l, [wChattyChatterMove+1]
+	ld a, [wChattyChatterMove]
+	ld h, a
+	ld a, [wChattyChatterMove+1]
+	ld l, a
 endc
 	call GetMoveIDFromIndex
 	ld b, a

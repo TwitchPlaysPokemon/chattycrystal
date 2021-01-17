@@ -222,7 +222,7 @@ MrPokemonsHouse_OakText1:
 	
 MrPokemonsHouse_OakText2:
 	text "OK, that should"
-	line "be enough"
+	line "be enough."
 	
 	para "The #MON is"
 	line "completly normal"

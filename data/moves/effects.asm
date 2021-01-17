@@ -1012,7 +1012,7 @@ Chatter:
 	checkfaint
 	buildopponentrage
 	confusetarget
-	endmove
+	endturn
 	
 	chattybranch
 	chatter
@@ -1851,7 +1851,7 @@ ChattyHiddenPower:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	endmove
+	endturn
 	
 	chattybranch
 	chattyhp

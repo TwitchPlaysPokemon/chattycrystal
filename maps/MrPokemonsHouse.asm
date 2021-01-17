@@ -165,7 +165,7 @@ MrPokemonIntroText3:
 	
 	para "and it's a rare,"
 	line "genderless #MON"
-	cont "as-well<...>"
+	cont "as-well<……>"
 
 	done
 
@@ -210,13 +210,13 @@ MrPokemonsHouse_OakText1:
 
 	para "Let's see…"
 	
-	para "<......>"
+	para "<……>"
 
 	para "The #MON seems"
 	line "perfectly healthy."
 	
 	para "Let me collect"
-	line "some data<...>"
+	line "some data<……>"
 	
 	done
 	
@@ -229,7 +229,7 @@ MrPokemonsHouse_OakText2:
 	
 	para "While ELM had"
 	line "told me to keep a"
-	cont "#MON aside<...>"
+	cont "#MON aside<……>"
 	
 	para "I think it is best"
 	line "for you to keep it"
@@ -320,7 +320,7 @@ MrPokemonsHouse_StrangeCoinsText:
 	line "strange coins!"
 
 	para "Maybe they're from"
-	line "another country…"
+	line "another country<……>"
 	done
 
 MrPokemonsHouse_MapEvents:

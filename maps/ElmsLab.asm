@@ -503,11 +503,11 @@ ElmText_Sprayed:
 	para "While you're there"
 	line "you can deliver"
 	cont "this EGG to"
-	cont "Mr #MON."
+	cont "Mr. #MON."
 	done
 
 ElmText_GotAnEgg:
-	text "You got a EGG!"
+	text "You got an EGG!"
 	done
 
 ElmDirectionsText:

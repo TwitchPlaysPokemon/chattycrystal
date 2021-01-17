@@ -1,7 +1,6 @@
 	object_const_def ; object_event constants
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
-	const NEWBARKTOWN_SILVER
 
 NewBarkTown_MapScripts:
 	db 2 ; scene scripts
@@ -79,7 +78,7 @@ NewBarkTownTeacherScript:
 	checkevent EVENT_UNOWN_HATCHED
 	iftrue .MonIsAdorable
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue Text_ElmSentYouAlone
+	iftrue .SentYouAlone
 	writetext Text_GearIsImpressive
 	waitbutton
 	closetext
@@ -102,30 +101,15 @@ NewBarkTownTeacherScript:
 	waitbutton
 	closetext
 	end
+	
+.SentYouAlone:
+	writetext Text_ElmSentYouAlone
+	waitbutton
+	closetext
+	end
 
 NewBarkTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
-
-NewBarkTownSilverScript:
-	opentext
-	writetext NewBarkTownRivalText1
-	waitbutton
-	closetext
-	turnobject NEWBARKTOWN_SILVER, LEFT
-	opentext
-	writetext NewBarkTownRivalText2
-	waitbutton
-	closetext
-	follow PLAYER, NEWBARKTOWN_SILVER
-	applymovement PLAYER, Movement_SilverPushesYouAway_NBT
-	stopfollow
-	pause 5
-	turnobject NEWBARKTOWN_SILVER, DOWN
-	pause 5
-	playsound SFX_TACKLE
-	applymovement PLAYER, Movement_SilverShovesYouOut_NBT
-	applymovement NEWBARKTOWN_SILVER, Movement_SilverReturnsToTheShadows_NBT
-	end
 
 NewBarkTownSign:
 	jumptext NewBarkTownSignText
@@ -229,7 +213,7 @@ Text_ElmSentYouAlone:
 	cont "without a #MON?"
 	
 	para "I guess it's OK"
-	line "if he says so<......>"
+	line "if he says so<……>"
 	
 	done
 
@@ -310,6 +294,6 @@ NewBarkTown_MapEvents:
 	bg_event  3,  3, BGEVENT_READ, NewBarkTownElmsLabSign
 	bg_event  9, 13, BGEVENT_READ, NewBarkTownElmsHouseSign
 
-	db 3 ; object events
+	db 2 ; object events
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1

@@ -32,7 +32,7 @@ endc
 	xor a
 	ld [wScriptActive], a
 	pop hl
-AissInjectTextHere: ;place text block WITHOUT A START CHARACTER in ChattyText, including any line or cont characters and end with a done character, aslo set wScriptActive
+AissInjectTextHere:: ;place text block WITHOUT A START CHARACTER in ChattyText, including any line or cont characters and end with a done character, aslo set wScriptActive
 	call PlaceString
 	pop hl
 	inc hl

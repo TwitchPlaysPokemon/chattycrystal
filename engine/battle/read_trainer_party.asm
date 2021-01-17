@@ -294,7 +294,7 @@ else
 	jr z, SkipChattyTrainerInjection
 	xor a
 	ld [wScriptActive], a
-AissInjectTrainerNameHere: ;place name of ID wOtherTrainerID in wStringBuffer1, ending with a @
+AissInjectTrainerNameHere:: ;place name of ID wOtherTrainerID in wStringBuffer1, ending with a @
 	nop
 endc
 SkipChattyTrainerInjection:

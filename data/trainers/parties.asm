@@ -1150,9 +1150,45 @@ RedLarryGroup:
 	
 GreenMayGroup:
 	next_list_item ; A_EMERALD
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME | TRAINERTYPE_DVS
+	db 8
+	dw ABRA
+	db POTION
+	dw TELEPORT, NO_MOVE, NO_MOVE, NO_MOVE
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1;TODO stats go here
+	db "ABRA@"
+	dw $1111 ;TODO DVs
+	
+	db 10
+	dw HOUNDOUR ;TODO add poochyena
+	db NO_ITEM
+	dw SAND_ATTACK, TACKLE, NO_MOVE, NO_MOVE ;todo add howl
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1;TODO stats go here
+	db "POOCHYENA@"
+	dw $1111 ;TODO DVs
+	
+	db 15
+	dw MARILL
+	db NO_ITEM
+	dw ROLLOUT, DEFENSE_CURL, TAIL_WHIP, TACKLE
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1;TODO stats go here
+	db "MARILL@"
+	dw $1111 ;TODO DVs
 	db -1 ; end
 	
 	next_list_item ; ACPPQ
@@ -2753,13 +2789,13 @@ BugCatcherGroup:
 
 	next_list_item ; BUG_CATCHER (4)
 	db "WADE@", TRAINERTYPE_NORMAL
-	db 2
+	db 6
 	dw CATERPIE
-	db 2
+	db 6
 	dw CATERPIE
-	db 3
+	db 7
 	dw WEEDLE
-	db 2
+	db 6
 	dw CATERPIE
 	db -1 ; end
 
@@ -5064,35 +5100,35 @@ ExecutiveFGroup:
 SageGroup:
 	next_list_item ; SAGE (1)
 	db "CHOW@", TRAINERTYPE_NORMAL
-	db 3
+	db 6
 	dw BELLSPROUT
-	db 3
+	db 6
 	dw BELLSPROUT
-	db 3
+	db 6
 	dw BELLSPROUT
 	db -1 ; end
 
 	next_list_item ; SAGE (2)
 	db "NICO@", TRAINERTYPE_NORMAL
-	db 3
+	db 6
 	dw BELLSPROUT
-	db 3
+	db 6
 	dw BELLSPROUT
-	db 3
+	db 6
 	dw BELLSPROUT
 	db -1 ; end
 
 	next_list_item ; SAGE (3)
 	db "JIN@", TRAINERTYPE_NORMAL
-	db 6
+	db 9
 	dw BELLSPROUT
 	db -1 ; end
 
 	next_list_item ; SAGE (4)
 	db "TROY@", TRAINERTYPE_NORMAL
-	db 7
+	db 10
 	dw BELLSPROUT
-	db 7
+	db 10
 	dw HOOTHOOT
 	db -1 ; end
 
@@ -5118,28 +5154,18 @@ SageGroup:
 
 	next_list_item ; SAGE (7)
 	db "EDMOND@", TRAINERTYPE_NORMAL
-	db 3
+	db 6
 	dw BELLSPROUT
-	db 3
+	db 6
 	dw BELLSPROUT
-	db 3
+	db 6
 	dw BELLSPROUT
 	db -1 ; end
 
 	next_list_item ; SAGE (8)
 	db "NEAL@", TRAINERTYPE_NORMAL
-	db 6
+	db 11
 	dw BELLSPROUT
-	db -1 ; end
-
-	next_list_item ; SAGE (9)
-	db "LI@", TRAINERTYPE_NORMAL
-	db 7
-	dw BELLSPROUT
-	db 7
-	dw BELLSPROUT
-	db 10
-	dw HOOTHOOT
 	db -1 ; end
 
 	next_list_item ; SAGE (10)

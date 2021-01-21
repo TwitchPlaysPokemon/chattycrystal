@@ -30,12 +30,12 @@ ReadTrainerParty:
 	dec a
 	ld c, a
 	ld b, 0
-	ld hl, TrainerGroups
+	ld hl, TrainerGroups ;go to correct trainer group pointer
 	add hl, bc
 	add hl, bc
 	add hl, bc
 	ld a, [hli]
-	ld [wTrainerGroupBank], a
+	ld [wTrainerGroupBank], a ;load in the bank
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -46,24 +46,24 @@ ReadTrainerParty:
 	dec b
 	jr z, .got_trainer
 .loop
-	ld a, [wTrainerGroupBank]
+	ld a, [wTrainerGroupBank] ;jump forward the number of bytes equal to the size of the struct
 	call GetFarByte
 	add a, l
 	ld l, a
 	jr nc, .skip_trainer
-	inc h
+	inc h ;if carry inc h
 	jr .skip_trainer
 .got_trainer
-	inc hl
+	inc hl ;move to next byte once found
 
 .skip_name
-	call GetNextTrainerDataByte
+	call GetNextTrainerDataByte ;go to the end of the name
 	cp "@"
 	jr nz, .skip_name
 
 	call GetNextTrainerDataByte
-	ld [wOtherTrainerType], a
-	ld d, h
+	ld [wOtherTrainerType], a ;holds what kind of data the trainer uses
+	ld d, h ;put the current pointer in de
 	ld e, l
 	call ReadTrainerPartyPieces
 
@@ -87,9 +87,9 @@ ReadTrainerPartyPieces:
 .loop
 	call GetNextTrainerDataByte
 	cp $ff
-	ret z
+	ret z ;if FF, done
 
-	ld [wCurPartyLevel], a
+	ld [wCurPartyLevel], a ;load in level
 	call GetNextTrainerDataByte
 	push hl
 	push af
@@ -98,7 +98,7 @@ ReadTrainerPartyPieces:
 	pop af
 	ld l, a
 	call GetPokemonIDFromIndex
-	ld [wCurPartySpecies], a
+	ld [wCurPartySpecies], a ;load in species ID
 
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -117,13 +117,13 @@ ReadTrainerPartyPieces:
 	ld d, h
 	ld e, l
 	pop hl
-	call GetNextTrainerDataByte
+	call GetNextTrainerDataByte ;load in item if TRAINERTYPE_ITEM is on
 	ld [de], a
 .no_item
 
 	ld a, [wOtherTrainerType]
-	rra ; TRAINERTYPE_MOVES_F == 0
-	jr nc, .no_moves
+	and TRAINERTYPE_MOVES
+	jr z, .no_moves
 	push hl
 	ld a, [wOTPartyCount]
 	dec a
@@ -185,7 +185,81 @@ ReadTrainerPartyPieces:
 .copied_pp
 
 	pop hl
-.no_moves
+.no_moves ;TODO find where default moves are handled, probably handle them here
+
+	ld a, [wOtherTrainerType]
+	and TRAINERTYPE_STATS
+	jr z, .no_stats
+	push hl
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1HP
+	call GetPartyLocation
+	ld d, h
+	ld e, l
+	pop hl
+	call GetNextTrainerDataByte
+	ld [de], a
+	inc de
+	inc de
+	ld [de], a
+	dec de
+	call GetNextTrainerDataByte
+	ld [de], a
+	inc de
+	inc de
+	ld [de], a
+	inc de
+	ld b, 10
+.loop_stats
+	call GetNextTrainerDataByte
+	ld [de], a
+	inc de
+	dec b
+	jr nz, .loop_stats
+.no_stats
+
+	ld a, [wOtherTrainerType]
+	and TRAINERTYPE_NICKNAME
+	jr z, .no_nickname
+	push hl
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMonNicknames
+	ld bc, MON_NAME_LENGTH
+	call AddNTimes
+	ld d, h
+	ld e, l
+	pop hl
+.loop_nickname
+	call GetNextTrainerDataByte
+	cp "@"
+	ld [de], a
+	jr z, .no_nickname
+	inc de
+	jr .loop_nickname
+.no_nickname
+
+	ld a, [wOtherTrainerType] ;TODO if skipped load in DVs via GetTrainerDVs instead
+	and TRAINERTYPE_DVS
+	jr z, .no_dvs
+	push hl
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1DVs
+	call GetPartyLocation
+	ld d, h
+	ld e, l
+	pop hl
+	call GetNextTrainerDataByte ;load in DVs if TRAINERTYPE_DVs is on
+	ld [de], a
+	inc de
+	call GetNextTrainerDataByte 
+	ld [de], a
+	inc de
+.no_dvs
+
+;TODO happiness flag
 
 	jp .loop
 

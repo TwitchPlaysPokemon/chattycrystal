@@ -617,7 +617,6 @@ KRIS EQU __enum__
 	const PING
 	const EDMOND
 	const NEAL
-	const LI
 	const GAKU
 	const MASA
 	const KOJI

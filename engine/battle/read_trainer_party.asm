@@ -185,9 +185,37 @@ ReadTrainerPartyPieces:
 .copied_pp
 
 	pop hl
-.no_moves ;TODO find where default moves are handled, probably handle them here
+.no_moves 
 
-	ld a, [wOtherTrainerType]
+	push hl ;we need to get DV location regardless of branch, so do that before the check
+	ld a, [wOTPartyCount]
+	dec a
+	ld hl, wOTPartyMon1DVs
+	call GetPartyLocation
+	ld d, h
+	ld e, l
+	pop hl
+	ld a, [wOtherTrainerType] ;TODO if skipped load in DVs via GetTrainerDVs instead
+	and TRAINERTYPE_DVS
+	jr z, .no_dvs ;if DVs not specified, load in defaults
+	call GetNextTrainerDataByte ;load in DVs if TRAINERTYPE_DVs is on
+	ld [de], a
+	inc de
+	call GetNextTrainerDataByte 
+	ld [de], a
+	jr .dvs_done
+.no_dvs ;TODO make sure wOtherTrainerClass is set correctly here
+	push hl
+	farcall GetTrainerDVs
+	ld a, b
+	ld [de], a
+	inc de
+	ld a, c
+	ld [de], a
+	pop hl
+.dvs_done
+
+	ld a, [wOtherTrainerType] 
 	and TRAINERTYPE_STATS
 	jr z, .no_stats
 	push hl
@@ -219,9 +247,6 @@ ReadTrainerPartyPieces:
 	jr nz, .loop_stats
 .no_stats
 
-	ld a, [wOtherTrainerType]
-	and TRAINERTYPE_NICKNAME
-	jr z, .no_nickname
 	push hl
 	ld a, [wOTPartyCount]
 	dec a
@@ -231,33 +256,29 @@ ReadTrainerPartyPieces:
 	ld d, h
 	ld e, l
 	pop hl
+	ld a, [wOtherTrainerType]
+	and TRAINERTYPE_NICKNAME
+	jr z, .no_nickname
 .loop_nickname
 	call GetNextTrainerDataByte
 	cp "@"
 	ld [de], a
-	jr z, .no_nickname
+	jr z, .nickname_done
 	inc de
 	jr .loop_nickname
 .no_nickname
-
-	ld a, [wOtherTrainerType] ;TODO if skipped load in DVs via GetTrainerDVs instead
-	and TRAINERTYPE_DVS
-	jr z, .no_dvs
+	ld a, [wCurPartySpecies]
+	ld [wNamedObjectIndexBuffer], a
+	push de
+	call GetPokemonName
+	pop de
 	push hl
-	ld a, [wOTPartyCount]
-	dec a
-	ld hl, wOTPartyMon1DVs
-	call GetPartyLocation
-	ld d, h
-	ld e, l
+	ld hl, wStringBuffer1
+	ld bc, MON_NAME_LENGTH
+	call CopyBytes
 	pop hl
-	call GetNextTrainerDataByte ;load in DVs if TRAINERTYPE_DVs is on
-	ld [de], a
-	inc de
-	call GetNextTrainerDataByte 
-	ld [de], a
-	inc de
-.no_dvs
+	
+.nickname_done
 
 ;TODO happiness flag
 

@@ -1150,45 +1150,45 @@ RedLarryGroup:
 	
 GreenMayGroup:
 	next_list_item ; A_EMERALD
-	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME | TRAINERTYPE_DVS
+	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 8
 	dw ABRA
 	db POTION
 	dw TELEPORT, NO_MOVE, NO_MOVE, NO_MOVE
-	bigdw 1
+		dw $1111 ;TODO DVs
+	bigdw 5
 	bigdw 1
 	bigdw 1
 	bigdw 1
 	bigdw 1
 	bigdw 1;TODO stats go here
 	db "ABRA@"
-	dw $1111 ;TODO DVs
 	
 	db 10
 	dw HOUNDOUR ;TODO add poochyena
 	db NO_ITEM
 	dw SAND_ATTACK, TACKLE, NO_MOVE, NO_MOVE ;todo add howl
-	bigdw 1
+	dw $1111 ;TODO DVs
+	bigdw 5
 	bigdw 1
 	bigdw 1
 	bigdw 1
 	bigdw 1
 	bigdw 1;TODO stats go here
 	db "POOCHYENA@"
-	dw $1111 ;TODO DVs
 	
 	db 15
 	dw MARILL
 	db NO_ITEM
 	dw ROLLOUT, DEFENSE_CURL, TAIL_WHIP, TACKLE
-	bigdw 1
+	dw $1111 ;TODO DVs
+	bigdw 5
 	bigdw 1
 	bigdw 1
 	bigdw 1
 	bigdw 1
 	bigdw 1;TODO stats go here
 	db "MARILL@"
-	dw $1111 ;TODO DVs
 	db -1 ; end
 	
 	next_list_item ; ACPPQ

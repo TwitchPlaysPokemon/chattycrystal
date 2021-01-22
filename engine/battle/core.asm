@@ -6020,6 +6020,7 @@ LoadEnemyMon:
 	bit 0, a
 	jp nz, InitEnemyMon
 
+
 ; Make sure everything knows what species we're working with
 	ld a, [wTempEnemyMonSpecies]
 	ld [wEnemyMonSpecies], a
@@ -6028,6 +6029,15 @@ LoadEnemyMon:
 
 ; Grab the BaseData for this species
 	call GetBaseData
+	
+;Sorting out Base Exp Now as it's needed for trainer mons
+	ld a, [wBaseExp]
+	ld [wEnemyMonBaseExp], a
+	
+; And in a new change, we're done if we are in a trainer battle
+	ld a, [wBattleMode]
+	dec a
+	jp nz, InitEnemyMon
 
 ; Let's get the item:
 
@@ -6456,9 +6466,6 @@ LoadEnemyMon:
 	ld a, [wBaseCatchRate]
 	ld [de], a
 	inc de
-
-	ld a, [wBaseExp]
-	ld [de], a
 
 	ld a, [wTempEnemyMonSpecies]
 	ld [wNamedObjectIndexBuffer], a
@@ -7725,12 +7732,12 @@ SendOutMonText:
 	ld hl, wEnemyMonMaxHP
 	ld a, [hli]
 	ld b, [hl]
-	srl a
+	srl a ;divide max HP by 4...
 	rr b
 	srl a
 	rr b
 	ld a, b
-	ld b, 4
+	ld b, 4 ;divide length 4
 	ldh [hDivisor], a
 	call Divide
 

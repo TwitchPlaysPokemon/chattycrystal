@@ -10,18 +10,6 @@
 SECTION "Enemy Trainer Parties 1", ROMX
 
 FalknerGroup:
-	next_list_item ; FALKNER (1)
-	db "FALKNER@", TRAINERTYPE_MOVES
-	db 7
-	dw PIDGEY
-	dw TACKLE, MUD_SLAP, NO_MOVE, NO_MOVE
-	db 9
-	dw PIDGEOTTO
-	dw TACKLE, MUD_SLAP, GUST, NO_MOVE
-	db -1 ; end
-
-	end_list_items
-
 WhitneyGroup:
 	next_list_item ; WHITNEY (1)
 	db "WHITNEY@", TRAINERTYPE_MOVES
@@ -647,15 +635,15 @@ YoungsterGroup:
 
 	next_list_item ; YOUNGSTER (3)
 	db "ALBERT@", TRAINERTYPE_NORMAL
-	db 6
+	db 14
 	dw RATTATA
-	db 8
+	db 16
 	dw ZUBAT
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (4)
 	db "GORDON@", TRAINERTYPE_NORMAL
-	db 10
+	db 17
 	dw WOOPER
 	db -1 ; end
 
@@ -865,10 +853,31 @@ RSEORASBlueMayGroup:
 	
 RSEORASBrendanGroup:
 	next_list_item ; ORLANDO
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
+	db "!12rtyhaszs@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 18
+	dw QUILAVA ;TODO add combusken
+	db POTION
+	dw SCRATCH, GROWL, PECK, EMBER
+	bigdw 54
+	bigdw 32
+	bigdw 30
+	bigdw 28
+	bigdw 29
+	bigdw 39
+	db "!sssssarfaa@" ;https://www.twitch.tv/videos/30248788?t=14h04m18s https://www.twitch.tv/videos/30248788?t=13h09m52s
+	
+	db 6
+	dw SENTRET ;TODO add whismur
+	db NO_ITEM
+	dw POUND, NO_MOVE, NO_MOVE, NO_MOVE ;add echoed voice
+	bigdw 24
+	bigdw 12
+	bigdw 8
+	bigdw 9
+	bigdw 11
+	bigdw 8
+	db "Yuukt22y!i@"; https://www.twitch.tv/videos/30248788?t=13h04m36s
+	db -1 ; end 
 	
 	next_list_item ; RTHASZS
 	db "?@", TRAINERTYPE_NORMAL
@@ -1434,15 +1443,15 @@ SchoolboyGroup:
 BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (1)
 	db "ROD@", TRAINERTYPE_NORMAL
-	db 7
+	db 13
 	dw PIDGEY
-	db 7
+	db 13
 	dw PIDGEY
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (2)
 	db "ABE@", TRAINERTYPE_NORMAL
-	db 9
+	db 15
 	dw SPEAROW
 	db -1 ; end
 
@@ -1536,11 +1545,11 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (13)
 	db "PETER@", TRAINERTYPE_NORMAL
-	db 6
+	db 13
 	dw PIDGEY
-	db 6
+	db 13
 	dw PIDGEY
-	db 8
+	db 15
 	dw SPEAROW
 	db -1 ; end
 
@@ -2936,19 +2945,19 @@ BugCatcherGroup:
 FisherGroup:
 	next_list_item ; FISHER (1)
 	db "JUSTIN@", TRAINERTYPE_NORMAL
-	db 5
-	dw MAGIKARP
-	db 5
+	db 15
 	dw MAGIKARP
 	db 15
 	dw MAGIKARP
-	db 5
+	db 19
+	dw MAGIKARP
+	db 15
 	dw MAGIKARP
 	db -1 ; end
 
 	next_list_item ; FISHER (2)
 	db "RALPH@", TRAINERTYPE_NORMAL
-	db 10
+	db 17
 	dw GOLDEEN
 	db -1 ; end
 
@@ -2970,9 +2979,9 @@ FisherGroup:
 
 	next_list_item ; FISHER (5)
 	db "HENRY@", TRAINERTYPE_NORMAL
-	db 8
+	db 15
 	dw POLIWAG
-	db 8
+	db 15
 	dw POLIWAG
 	db -1 ; end
 
@@ -4644,7 +4653,7 @@ PsychicGroup:
 PicnickerGroup:
 	next_list_item ; PICNICKER (1)
 	db "LIZ@", TRAINERTYPE_NORMAL
-	db 9
+	db 16
 	dw NIDORAN_F
 	db -1 ; end
 
@@ -4865,7 +4874,7 @@ PicnickerGroup:
 CamperGroup:
 	next_list_item ; CAMPER (1)
 	db "ROLAND@", TRAINERTYPE_NORMAL
-	db 9
+	db 16
 	dw NIDORAN_M
 	db -1 ; end
 

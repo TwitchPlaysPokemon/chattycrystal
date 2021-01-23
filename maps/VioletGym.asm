@@ -18,11 +18,7 @@ VioletGymFalknerScript:
 	waitbutton
 	closetext
 	winlosstext FalknerWinLossText, 0
-if TESTMODE
-	loadtrainer FRLG_LEAF, A_FIRERED
-else
-	loadtrainer FALKNER, FALKNER1
-endc
+	loadtrainer RSEORAS_BRENDAN, ORLANDO
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER
@@ -305,7 +301,7 @@ VioletGym_MapEvents:
 
 	db 4 ; object events
 if TESTMODE
-	object_event  5,  1, SPRITE_LEAF, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
+	object_event  5,  1, SPRITE_BRENDAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
 	object_event  7,  6, SPRITE_WES, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
 	object_event  2, 10, SPRITE_MICHAEL, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
 else

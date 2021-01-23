@@ -22,9 +22,9 @@ FishGroups:
 	fishgroup 50 percent + 1, .Qwilfish_NoSwarm_Old, .Qwilfish_NoSwarm_Good, .Qwilfish_NoSwarm_Super
 
 .Shore_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, KRABBY
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, KRABBY
 .Shore_Good:
 	dbbw  35 percent,     20, MAGIKARP
 	dbbw  70 percent,     20, KRABBY
@@ -37,9 +37,9 @@ FishGroups:
 	dbbw 100 percent,     40, KINGLER
 
 .Ocean_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, TENTACOOL
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, TENTACOOL
 .Ocean_Good:
 	dbbw  35 percent,     20, MAGIKARP
 	dbbw  70 percent,     20, TENTACOOL
@@ -52,9 +52,9 @@ FishGroups:
 	dbbw 100 percent,     40, LANTURN
 
 .Lake_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, GOLDEEN
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, GOLDEEN
 .Lake_Good:
 	dbbw  35 percent,     20, MAGIKARP
 	dbbw  70 percent,     20, GOLDEEN
@@ -67,9 +67,9 @@ FishGroups:
 	dbbw 100 percent,     40, SEAKING
 
 .Pond_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, POLIWAG
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, POLIWAG
 .Pond_Good:
 	dbbw  35 percent,     20, MAGIKARP
 	dbbw  70 percent,     20, POLIWAG
@@ -82,9 +82,9 @@ FishGroups:
 	dbbw 100 percent,     40, POLIWAG
 
 .Dratini_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, MAGIKARP
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, MAGIKARP
 .Dratini_Good:
 	dbbw  35 percent,     20, MAGIKARP
 	dbbw  70 percent,     20, MAGIKARP
@@ -97,9 +97,9 @@ FishGroups:
 	dbbw 100 percent,     40, DRAGONAIR
 
 .Qwilfish_Swarm_Old:
-	dbbw  70 percent + 1,  5, MAGIKARP
-	dbbw  85 percent + 1,  5, MAGIKARP
-	dbbw 100 percent,      5, QWILFISH
+	dbbw  70 percent + 1,  15, MAGIKARP
+	dbbw  85 percent + 1,  15, MAGIKARP
+	dbbw 100 percent,      15, QWILFISH
 .Qwilfish_Swarm_Good:
 	dbbw  35 percent,     20, MAGIKARP
 	dbbw  70 percent,     20, QWILFISH
@@ -112,9 +112,9 @@ FishGroups:
 	dbbw 100 percent,     40, QWILFISH
 
 .Remoraid_Swarm_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, REMORAID
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, REMORAID
 .Remoraid_Swarm_Good:
 	dbbw  35 percent,     20, MAGIKARP
 	dbbw  70 percent,     20, REMORAID
@@ -127,9 +127,9 @@ FishGroups:
 	dbbw 100 percent,     40, REMORAID
 
 .Gyarados_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, MAGIKARP
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, MAGIKARP
 .Gyarados_Good:
 	dbbw  35 percent,     20, MAGIKARP
 	dbbw  70 percent,     20, MAGIKARP
@@ -142,9 +142,9 @@ FishGroups:
 	dbbw 100 percent,     40, MAGIKARP
 
 .Dratini_2_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, MAGIKARP
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, MAGIKARP
 .Dratini_2_Good:
 	dbbw  35 percent,     10, MAGIKARP
 	dbbw  70 percent,     10, MAGIKARP
@@ -157,9 +157,9 @@ FishGroups:
 	dbbw 100 percent,     10, DRAGONAIR
 
 .WhirlIslands_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, KRABBY
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, KRABBY
 .WhirlIslands_Good:
 	dbbw  35 percent,     20, MAGIKARP
 	dbbw  70 percent,     20, KRABBY
@@ -173,9 +173,9 @@ FishGroups:
 
 .Qwilfish_NoSwarm_Old:
 .Qwilfish_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, TENTACOOL
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, TENTACOOL
 .Qwilfish_NoSwarm_Good:
 .Qwilfish_Good:
 	dbbw  35 percent,     20, MAGIKARP
@@ -190,9 +190,9 @@ FishGroups:
 	dbbw 100 percent,     40, QWILFISH
 
 .Remoraid_Old:
-	dbbw  70 percent + 1, 10, MAGIKARP
-	dbbw  85 percent + 1, 10, MAGIKARP
-	dbbw 100 percent,     10, POLIWAG
+	dbbw  70 percent + 1, 15, MAGIKARP
+	dbbw  85 percent + 1, 15, MAGIKARP
+	dbbw 100 percent,     15, POLIWAG
 .Remoraid_Good:
 	dbbw  35 percent,     20, MAGIKARP
 	dbbw  70 percent,     20, POLIWAG

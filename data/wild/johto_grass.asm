@@ -383,29 +383,29 @@ JohtoGrassWildMons:
 	map_id RUINS_OF_ALPH_INNER_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
 	; day
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
 	; nite
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
-	dbw 5, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
+	dbw 15, UNOWN
 
 	map_id UNION_CAVE_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -1220,29 +1220,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_30
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, LEDYBA
-	dbw 3, CATERPIE
-	dbw 4, CATERPIE
-	dbw 4, PIDGEY
-	dbw 3, WEEDLE
-	dbw 4, HOPPIP
-	dbw 4, HOPPIP
+	dbw 5, LEDYBA
+	dbw 5, CATERPIE
+	dbw 6, CATERPIE
+	dbw 6, PIDGEY
+	dbw 5, WEEDLE
+	dbw 6, HOPPIP
+	dbw 6, HOPPIP
 	; day
-	dbw 3, PIDGEY
-	dbw 3, CATERPIE
-	dbw 4, CATERPIE
-	dbw 4, PIDGEY
-	dbw 3, WEEDLE
-	dbw 4, HOPPIP
-	dbw 4, HOPPIP
+	dbw 5, PIDGEY
+	dbw 5, CATERPIE
+	dbw 6, CATERPIE
+	dbw 6, PIDGEY
+	dbw 5, WEEDLE
+	dbw 6, HOPPIP
+	dbw 6, HOPPIP
 	; nite
-	dbw 3, SPINARAK
-	dbw 3, HOOTHOOT
-	dbw 4, POLIWAG
-	dbw 4, HOOTHOOT
-	dbw 3, ZUBAT
-	dbw 4, HOOTHOOT
-	dbw 4, HOOTHOOT
+	dbw 5, SPINARAK
+	dbw 5, HOOTHOOT
+	dbw 5, POLIWAG
+	dbw 6, HOOTHOOT
+	dbw 5, ZUBAT
+	dbw 6, HOOTHOOT
+	dbw 6, HOOTHOOT
 
 	map_id ROUTE_31
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1274,29 +1274,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_32
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 4, EKANS
-	dbw 5, RATTATA
-	dbw 7, BELLSPROUT
-	dbw 6, HOPPIP
-	dbw 7, PIDGEY
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 9, EKANS
+	dbw 10, RATTATA
+	dbw 12, BELLSPROUT
+	dbw 11, HOPPIP
+	dbw 12, PIDGEY
+	dbw 12, HOPPIP
+	dbw 12, HOPPIP
 	; day
-	dbw 4, EKANS
-	dbw 5, RATTATA
-	dbw 7, BELLSPROUT
-	dbw 6, HOPPIP
-	dbw 7, PIDGEY
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 9, EKANS
+	dbw 10, RATTATA
+	dbw 12, BELLSPROUT
+	dbw 11, HOPPIP
+	dbw 12, PIDGEY
+	dbw 12, HOPPIP
+	dbw 12, HOPPIP
 	; nite
-	dbw 4, WOOPER
-	dbw 5, RATTATA
-	dbw 7, BELLSPROUT
-	dbw 6, ZUBAT
-	dbw 7, HOOTHOOT
-	dbw 7, GASTLY
-	dbw 7, GASTLY
+	dbw 9, WOOPER
+	dbw 10, RATTATA
+	dbw 12, BELLSPROUT
+	dbw 11, ZUBAT
+	dbw 12, HOOTHOOT
+	dbw 12, GASTLY
+	dbw 12, GASTLY
 
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1382,29 +1382,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_36
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 4, LEDYBA
-	dbw 4, PIDGEY
-	dbw 5, BELLSPROUT
-	dbw 5, GROWLITHE
-	dbw 5, PIDGEY
-	dbw 6, PIDGEY
-	dbw 6, PIDGEY
+	dbw 8, LEDYBA
+	dbw 8, PIDGEY
+	dbw 9, BELLSPROUT
+	dbw 9, GROWLITHE
+	dbw 9, PIDGEY
+	dbw 10, PIDGEY
+	dbw 10, PIDGEY
 	; day
-	dbw 4, PIDGEY
-	dbw 4, PIDGEY
-	dbw 5, BELLSPROUT
-	dbw 5, GROWLITHE
-	dbw 5, PIDGEY
-	dbw 6, PIDGEY
-	dbw 6, PIDGEY
+	dbw 8, PIDGEY
+	dbw 8, PIDGEY
+	dbw 9, BELLSPROUT
+	dbw 9, GROWLITHE
+	dbw 9, PIDGEY
+	dbw 10, PIDGEY
+	dbw 10, PIDGEY
 	; nite
-	dbw 4, SPINARAK
-	dbw 4, HOOTHOOT
-	dbw 5, BELLSPROUT
-	dbw 5, HOOTHOOT
-	dbw 5, HOOTHOOT
-	dbw 5, GASTLY
-	dbw 5, GASTLY
+	dbw 8, SPINARAK
+	dbw 8, HOOTHOOT
+	dbw 9, BELLSPROUT
+	dbw 9, HOOTHOOT
+	dbw 9, HOOTHOOT
+	dbw 9, GASTLY
+	dbw 9, GASTLY
 
 	map_id ROUTE_37
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

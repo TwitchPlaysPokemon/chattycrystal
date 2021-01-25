@@ -46,6 +46,9 @@ SproutTower3FRivalScene:
 	writetext SproutTowerRivalOnlyCareAboutStrongText
 	waitbutton
 	closetext
+	loadtrainer GSCHGSS_CHRIS, AJDNNW1
+	startbattle
+	reloadmapafterbattle
 	turnobject SPROUTTOWER3F_SILVER, UP
 	opentext
 	writetext SproutTowerRivalUsedEscapeRopeText
@@ -186,32 +189,10 @@ SproutTowerElderLecturesRivalText:
 
 SproutTowerRivalOnlyCareAboutStrongText:
 	text "…"
-	line "…Humph!"
-
-	para "He claims to be"
-	line "the ELDER but"
-	cont "he's weak."
-
-	para "It stands to"
-	line "reason."
-
-	para "I'd never lose to"
-	line "fools who babble"
-
-	para "about being nice"
-	line "to #MON."
-
-	para "I only care about"
-	line "strong #MON"
-	cont "that can win."
-
-	para "I really couldn't"
-	line "care less about"
-	cont "weak #MON."
 	done
 
 SproutTowerRivalUsedEscapeRopeText:
-	text "<RIVAL> used an"
+	text "AJDNNW used an"
 	line "ESCAPE ROPE!"
 	done
 
@@ -370,4 +351,4 @@ else
 endc
 	object_event  6, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTower3FPotion, EVENT_SPROUT_TOWER_3F_POTION
 	object_event 14,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTower3FEscapeRope, EVENT_SPROUT_TOWER_3F_ESCAPE_ROPE
-	object_event 10,  4, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_SPROUT_TOWER
+	object_event 10,  4, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_SPROUT_TOWER

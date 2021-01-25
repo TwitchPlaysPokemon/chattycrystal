@@ -115,7 +115,7 @@ CherrygroveBabaSceneNorth:
 	closetext
 	winlosstext CherrygroveRivalText, CherrygroveRivalText
 	setlasttalked CHERRYGROVECITY_SILVER
-	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
+	loadtrainer GSC_KRIS, BABA1
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic

@@ -10,7 +10,7 @@ SproutTower2F_MapScripts:
 
 TrainerSageNico:
 if TESTMODE
-	trainer GSC_KRIS, BABA, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText, 0, .Script
+	trainer GSC_KRIS, BABA1, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText, 0, .Script
 else
 	trainer SAGE, NICO, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText, 0, .Script
 endc

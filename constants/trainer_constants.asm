@@ -26,13 +26,11 @@ CHRIS EQU __enum__
 
 KRIS EQU __enum__
 	trainerclass FALKNER ; 1
-	const FALKNER1
 
 	trainerclass WHITNEY ; 2
 	const WHITNEY1
 
 	trainerclass BUGSY ; 3
-	const BUGSY1
 
 	trainerclass MORTY ; 4
 	const MORTY1
@@ -274,7 +272,6 @@ KRIS EQU __enum__
 	const MILLER
 
 	trainerclass GRUNTM ; 1f
-	const GRUNTM_1
 	const GRUNTM_2
 	const GRUNTM_3
 	const GRUNTM_4
@@ -717,12 +714,12 @@ KRIS EQU __enum__
 	const X_CHATTYYELLOW
 
 	trainerclass GSCHGSS_CHRIS ; 48
-	const AJDNNW
+	const AJDNNW1
 	const AAEFFFF
 	const D_GAUNTLETCRYSTAL
 
 	trainerclass GSC_KRIS ; 49
-	const BABA
+	const BABA1
 	const EWWYPPP
 
 	trainerclass AC_CHRIS ; 4A

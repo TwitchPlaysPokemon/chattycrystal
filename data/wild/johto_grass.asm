@@ -410,56 +410,56 @@ JohtoGrassWildMons:
 	map_id UNION_CAVE_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 6, GEODUDE
-	dbw 6, SANDSHREW
-	dbw 5, ZUBAT
-	dbw 4, RATTATA
-	dbw 7, ZUBAT
-	dbw 6, ONIX
-	dbw 6, ONIX
+	dbw 13, GEODUDE
+	dbw 13, SANDSHREW
+	dbw 12, ZUBAT
+	dbw 11, RATTATA
+	dbw 14, ZUBAT
+	dbw 13, ONIX
+	dbw 13, ONIX
 	; day
-	dbw 6, GEODUDE
-	dbw 6, SANDSHREW
-	dbw 5, ZUBAT
-	dbw 4, RATTATA
-	dbw 7, ZUBAT
-	dbw 6, ONIX
-	dbw 6, ONIX
+	dbw 13, GEODUDE
+	dbw 13, SANDSHREW
+	dbw 12, ZUBAT
+	dbw 11, RATTATA
+	dbw 14, ZUBAT
+	dbw 13, ONIX
+	dbw 13, ONIX
 	; nite
-	dbw 6, GEODUDE
-	dbw 6, RATTATA
-	dbw 5, WOOPER
-	dbw 4, RATTATA
-	dbw 7, ZUBAT
-	dbw 6, ONIX
-	dbw 6, ONIX
+	dbw 13, GEODUDE
+	dbw 13, RATTATA
+	dbw 12, WOOPER
+	dbw 11, RATTATA
+	dbw 14, ZUBAT
+	dbw 13, ONIX
+	dbw 13, ONIX
 
 	map_id UNION_CAVE_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 8, GEODUDE
-	dbw 6, ZUBAT
-	dbw 8, ZUBAT
-	dbw 8, ONIX
-	dbw 6, RATTATA
-	dbw 8, RATTATA
-	dbw 8, RATTATA
+	dbw 15, GEODUDE
+	dbw 13, ZUBAT
+	dbw 15, ZUBAT
+	dbw 15, ONIX
+	dbw 13, RATTATA
+	dbw 15, RATTATA
+	dbw 15, RATTATA
 	; day
-	dbw 8, GEODUDE
-	dbw 6, ZUBAT
-	dbw 8, ZUBAT
-	dbw 8, ONIX
-	dbw 6, RATTATA
-	dbw 8, RATTATA
-	dbw 8, RATTATA
+	dbw 15, GEODUDE
+	dbw 13, ZUBAT
+	dbw 15, ZUBAT
+	dbw 15, ONIX
+	dbw 13, RATTATA
+	dbw 15, RATTATA
+	dbw 15, RATTATA
 	; nite
-	dbw 8, GEODUDE
-	dbw 6, ZUBAT
-	dbw 8, WOOPER
-	dbw 8, ONIX
-	dbw 6, RATTATA
-	dbw 8, RATTATA
-	dbw 8, RATTATA
+	dbw 15, GEODUDE
+	dbw 13, ZUBAT
+	dbw 15, WOOPER
+	dbw 15, ONIX
+	dbw 13, RATTATA
+	dbw 15, RATTATA
+	dbw 15, RATTATA
 
 	map_id UNION_CAVE_B2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -491,29 +491,29 @@ JohtoGrassWildMons:
 	map_id SLOWPOKE_WELL_B1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 5, ZUBAT
-	dbw 6, ZUBAT
-	dbw 7, ZUBAT
-	dbw 6, SLOWPOKE
-	dbw 8, ZUBAT
-	dbw 8, SLOWPOKE
-	dbw 8, SLOWPOKE
+	dbw 13, ZUBAT
+	dbw 14, ZUBAT
+	dbw 15, ZUBAT
+	dbw 14, SLOWPOKE
+	dbw 16, ZUBAT
+	dbw 16, SLOWPOKE
+	dbw 16, SLOWPOKE
 	; day
-	dbw 5, ZUBAT
-	dbw 6, ZUBAT
-	dbw 7, ZUBAT
-	dbw 6, SLOWPOKE
-	dbw 8, ZUBAT
-	dbw 8, SLOWPOKE
-	dbw 8, SLOWPOKE
+	dbw 13, ZUBAT
+	dbw 14, ZUBAT
+	dbw 15, ZUBAT
+	dbw 14, SLOWPOKE
+	dbw 16, ZUBAT
+	dbw 16, SLOWPOKE
+	dbw 16, SLOWPOKE
 	; nite
-	dbw 5, ZUBAT
-	dbw 6, ZUBAT
-	dbw 7, ZUBAT
-	dbw 6, SLOWPOKE
-	dbw 8, ZUBAT
-	dbw 8, SLOWPOKE
-	dbw 8, SLOWPOKE
+	dbw 13, ZUBAT
+	dbw 14, ZUBAT
+	dbw 15, ZUBAT
+	dbw 14, SLOWPOKE
+	dbw 16, ZUBAT
+	dbw 16, SLOWPOKE
+	dbw 16, SLOWPOKE
 
 	map_id SLOWPOKE_WELL_B2F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
@@ -1301,29 +1301,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 6, RATTATA
-	dbw 6, SPEAROW
-	dbw 6, GEODUDE
-	dbw 6, HOPPIP
-	dbw 7, EKANS
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 14, RATTATA
+	dbw 14, SPEAROW
+	dbw 14, GEODUDE
+	dbw 14, HOPPIP
+	dbw 15, EKANS
+	dbw 15, HOPPIP
+	dbw 15, HOPPIP
 	; day
-	dbw 6, RATTATA
-	dbw 6, SPEAROW
-	dbw 6, GEODUDE
-	dbw 6, HOPPIP
-	dbw 7, EKANS
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 14, RATTATA
+	dbw 14, SPEAROW
+	dbw 14, GEODUDE
+	dbw 14, HOPPIP
+	dbw 15, EKANS
+	dbw 15, HOPPIP
+	dbw 15, HOPPIP
 	; nite
-	dbw 6, RATTATA
-	dbw 6, ZUBAT
-	dbw 6, GEODUDE
-	dbw 6, ZUBAT
-	dbw 7, RATTATA
-	dbw 7, RATTATA
-	dbw 7, RATTATA
+	dbw 14, RATTATA
+	dbw 14, ZUBAT
+	dbw 14, GEODUDE
+	dbw 14, ZUBAT
+	dbw 15, RATTATA
+	dbw 15, RATTATA
+	dbw 15, RATTATA
 
 	map_id ROUTE_34
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

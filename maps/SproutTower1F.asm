@@ -25,7 +25,7 @@ SproutTower1FTeacherScript:
 
 TrainerSageChow:
 if TESTMODE
-	trainer GSCHGSS_CHRIS, AJDNNW, EVENT_BEAT_SAGE_CHOW, SageChowSeenText, SageChowBeatenText, 0, .Script
+	trainer GSCHGSS_CHRIS, AJDNNW1, EVENT_BEAT_SAGE_CHOW, SageChowSeenText, SageChowBeatenText, 0, .Script
 else
 	trainer SAGE, CHOW, EVENT_BEAT_SAGE_CHOW, SageChowSeenText, SageChowBeatenText, 0, .Script
 endC

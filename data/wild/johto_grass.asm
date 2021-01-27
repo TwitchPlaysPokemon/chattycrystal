@@ -275,83 +275,83 @@ JohtoGrassWildMons:
 	map_id BURNED_TOWER_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 13, RATTATA
-	dbw 14, KOFFING
-	dbw 15, RATTATA
-	dbw 14, ZUBAT
-	dbw 15, RATTATA
-	dbw 15, RATICATE
-	dbw 15, RATICATE
+	dbw 25, RATTATA
+	dbw 26, KOFFING
+	dbw 27, RATTATA
+	dbw 26, ZUBAT
+	dbw 27, RATICATE
+	dbw 27, RATICATE
+	dbw 27, RATICATE
 	; day
-	dbw 13, RATTATA
-	dbw 14, KOFFING
-	dbw 15, RATTATA
-	dbw 14, ZUBAT
-	dbw 15, RATTATA
-	dbw 15, RATICATE
-	dbw 15, RATICATE
+	dbw 25, RATTATA
+	dbw 26, KOFFING
+	dbw 27, RATTATA
+	dbw 26, ZUBAT
+	dbw 27, RATICATE
+	dbw 27, RATICATE
+	dbw 27, RATICATE
 	; nite
-	dbw 13, RATTATA
-	dbw 14, KOFFING
-	dbw 15, RATTATA
-	dbw 14, ZUBAT
-	dbw 15, RATTATA
-	dbw 15, RATICATE
-	dbw 15, RATICATE
+	dbw 25, RATTATA
+	dbw 26, KOFFING
+	dbw 27, RATTATA
+	dbw 26, ZUBAT
+	dbw 27, RATICATE
+	dbw 27, RATICATE
+	dbw 27, RATICATE
 
 	map_id BURNED_TOWER_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 14, RATTATA
-	dbw 14, KOFFING
-	dbw 16, KOFFING
-	dbw 15, ZUBAT
-	dbw 12, KOFFING
-	dbw 16, KOFFING
-	dbw 16, WEEZING
+	dbw 26, RATTATA
+	dbw 26, KOFFING
+	dbw 28, KOFFING
+	dbw 27, ZUBAT
+	dbw 24, KOFFING
+	dbw 28, WEEZING
+	dbw 28, WEEZING
 	; day
-	dbw 14, RATTATA
-	dbw 14, KOFFING
-	dbw 16, KOFFING
-	dbw 15, ZUBAT
-	dbw 12, KOFFING
-	dbw 16, KOFFING
-	dbw 16, WEEZING
+	dbw 26, RATTATA
+	dbw 26, KOFFING
+	dbw 28, KOFFING
+	dbw 27, ZUBAT
+	dbw 24, KOFFING
+	dbw 28, WEEZING
+	dbw 28, WEEZING
 	; nite
-	dbw 14, RATTATA
-	dbw 14, KOFFING
-	dbw 16, KOFFING
-	dbw 15, ZUBAT
-	dbw 12, KOFFING
-	dbw 16, KOFFING
-	dbw 16, WEEZING
+	dbw 26, RATTATA
+	dbw 26, KOFFING
+	dbw 28, KOFFING
+	dbw 27, ZUBAT
+	dbw 24, KOFFING
+	dbw 28, WEEZING
+	dbw 28, WEEZING
 
 	map_id NATIONAL_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 12, NIDORAN_M
-	dbw 12, NIDORAN_F
-	dbw 14, LEDYBA
-	dbw 13, PIDGEY
-	dbw 10, CATERPIE
-	dbw 10, WEEDLE
-	dbw 10, WEEDLE
+	dbw 22, NIDORAN_M
+	dbw 22, NIDORAN_F
+	dbw 24, LEDIAN
+	dbw 23, PIDGEOTTO
+	dbw 20, BUTTERFREE
+	dbw 20, BEEDRILL
+	dbw 20, BEEDRILL
 	; day
-	dbw 12, NIDORAN_F
-	dbw 12, NIDORAN_M
-	dbw 14, SUNKERN
-	dbw 13, PIDGEY
-	dbw 10, CATERPIE
-	dbw 10, WEEDLE
-	dbw 10, WEEDLE
+	dbw 22, NIDORAN_F
+	dbw 22, NIDORAN_M
+	dbw 24, SUNKERN
+	dbw 23, PIDGEOTTO
+	dbw 20, BUTTERFREE
+	dbw 20, BEEDRILL
+	dbw 20, BEEDRILL
 	; nite
-	dbw 12, PSYDUCK
-	dbw 13, HOOTHOOT
-	dbw 14, SPINARAK
-	dbw 15, HOOTHOOT
-	dbw 10, VENONAT
-	dbw 12, VENONAT
-	dbw 12, VENONAT
+	dbw 22, PSYDUCK
+	dbw 23, NOCTOWL
+	dbw 24, ARIADOS
+	dbw 25, NOCTOWL
+	dbw 20, VENONAT
+	dbw 22, VENONAT
+	dbw 22, VENONAT
 
 	map_id RUINS_OF_ALPH_OUTSIDE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -545,29 +545,29 @@ JohtoGrassWildMons:
 	map_id ILEX_FOREST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 5, CATERPIE
-	dbw 5, WEEDLE
-	dbw 7, METAPOD
-	dbw 7, KAKUNA
-	dbw 7, PIDGEY
-	dbw 6, PARAS
-	dbw 6, PARAS
+	dbw 20, CATERPIE
+	dbw 20, WEEDLE
+	dbw 22, BUTTERFREE
+	dbw 22, BEEDRILL
+	dbw 22, PIDGEY
+	dbw 21, PARAS
+	dbw 21, PARAS
 	; day
-	dbw 5, CATERPIE
-	dbw 5, WEEDLE
-	dbw 7, METAPOD
-	dbw 7, KAKUNA
-	dbw 7, PIDGEY
-	dbw 6, PARAS
-	dbw 6, PARAS
+	dbw 20, CATERPIE
+	dbw 20, WEEDLE
+	dbw 22, BUTTERFREE
+	dbw 22, BEEDRILL
+	dbw 22, PIDGEY
+	dbw 21, PARAS
+	dbw 21, PARAS
 	; nite
-	dbw 5, ODDISH
-	dbw 5, VENONAT
-	dbw 7, ODDISH
-	dbw 7, PSYDUCK
-	dbw 7, HOOTHOOT
-	dbw 6, PARAS
-	dbw 6, PARAS
+	dbw 20, ODDISH
+	dbw 20, VENONAT
+	dbw 22, GLOOM
+	dbw 22, PSYDUCK
+	dbw 22, NOCTOWL
+	dbw 21, PARAS
+	dbw 21, PARAS
 
 	map_id MOUNT_MORTAR_1F_OUTSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -1301,83 +1301,83 @@ JohtoGrassWildMons:
 	map_id ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 14, RATTATA
-	dbw 14, SPEAROW
-	dbw 14, GEODUDE
-	dbw 14, HOPPIP
-	dbw 15, EKANS
-	dbw 15, HOPPIP
-	dbw 15, HOPPIP
+	dbw 19, CHANSEY
+	dbw 19, SPEAROW
+	dbw 19, GEODUDE
+	dbw 19, HOPPIP
+	dbw 20, EKANS
+	dbw 20, HOPPIP
+	dbw 20, HOPPIP
 	; day
-	dbw 14, RATTATA
-	dbw 14, SPEAROW
-	dbw 14, GEODUDE
-	dbw 14, HOPPIP
-	dbw 15, EKANS
-	dbw 15, HOPPIP
-	dbw 15, HOPPIP
+	dbw 19, CHANSEY
+	dbw 19, SPEAROW
+	dbw 19, GEODUDE
+	dbw 19, HOPPIP
+	dbw 20, EKANS
+	dbw 20, HOPPIP
+	dbw 20, HOPPIP
 	; nite
-	dbw 14, RATTATA
-	dbw 14, ZUBAT
-	dbw 14, GEODUDE
-	dbw 14, ZUBAT
-	dbw 15, RATTATA
-	dbw 15, RATTATA
-	dbw 15, RATTATA
+	dbw 19, CHANSEY
+	dbw 19, ZUBAT
+	dbw 19, GEODUDE
+	dbw 19, ZUBAT
+	dbw 20, RATICATE
+	dbw 20, RATICATE
+	dbw 20, RATICATE
 
 	map_id ROUTE_34
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 10, SNUBBULL
-	dbw 11, RATTATA
-	dbw 12, PIDGEY
-	dbw 10, ABRA
-	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
-	dbw 10, DITTO
+	dbw 20, SNUBBULL
+	dbw 21, RATTATA
+	dbw 22, PIDGEY
+	dbw 20, ABRA
+	dbw 22, JIGGLYPUFF
+	dbw 20, DITTO
+	dbw 20, DITTO
 	; day
-	dbw 10, SNUBBULL
-	dbw 11, RATTATA
-	dbw 12, PIDGEY
-	dbw 10, ABRA
-	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
-	dbw 10, DITTO
+	dbw 20, SNUBBULL
+	dbw 21, RATTATA
+	dbw 22, PIDGEY
+	dbw 20, ABRA
+	dbw 22, JIGGLYPUFF
+	dbw 20, DITTO
+	dbw 20, DITTO
 	; nite
-	dbw 12, DROWZEE
-	dbw 11, RATTATA
-	dbw 12, HOOTHOOT
-	dbw 10, ABRA
-	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
-	dbw 10, DITTO
+	dbw 22, DROWZEE
+	dbw 21, RATTATA
+	dbw 22, HOOTHOOT
+	dbw 20, ABRA
+	dbw 22, JIGGLYPUFF
+	dbw 20, DITTO
+	dbw 20, DITTO
 
 	map_id ROUTE_35
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 12, SNUBBULL
-	dbw 14, PIDGEY
-	dbw 13, GROWLITHE
-	dbw 10, ABRA
-	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
-	dbw 12, YANMA
+	dbw 22, SNUBBULL
+	dbw 24, PIDGEY
+	dbw 23, GROWLITHE
+	dbw 20, ABRA
+	dbw 22, JIGGLYPUFF
+	dbw 20, DITTO
+	dbw 22, YANMA
 	; day
-	dbw 12, SNUBBULL
-	dbw 14, PIDGEY
-	dbw 13, GROWLITHE
-	dbw 10, ABRA
-	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
-	dbw 12, YANMA
+	dbw 22, SNUBBULL
+	dbw 24, PIDGEY
+	dbw 23, GROWLITHE
+	dbw 20, ABRA
+	dbw 22, JIGGLYPUFF
+	dbw 20, DITTO
+	dbw 22, YANMA
 	; nite
-	dbw 12, DROWZEE
-	dbw 14, HOOTHOOT
-	dbw 13, PSYDUCK
-	dbw 10, ABRA
-	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
-	dbw 12, YANMA
+	dbw 22, DROWZEE
+	dbw 24, HOOTHOOT
+	dbw 23, PSYDUCK
+	dbw 20, ABRA
+	dbw 22, JIGGLYPUFF
+	dbw 20, DITTO
+	dbw 22, YANMA
 
 	map_id ROUTE_36
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1409,29 +1409,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_37
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 13, LEDYBA
-	dbw 14, GROWLITHE
-	dbw 15, PIDGEY
-	dbw 16, GROWLITHE
-	dbw 15, PIDGEOTTO
-	dbw 15, LEDIAN
-	dbw 15, LEDIAN
+	dbw 25, LEDYBA
+	dbw 26, GROWLITHE
+	dbw 27, PIDGEY
+	dbw 28, GROWLITHE
+	dbw 27, PIDGEOTTO
+	dbw 27, LEDIAN
+	dbw 27, LEDIAN
 	; day
-	dbw 13, PIDGEY
-	dbw 14, GROWLITHE
-	dbw 15, PIDGEY
-	dbw 16, GROWLITHE
-	dbw 15, PIDGEOTTO
-	dbw 15, PIDGEY
-	dbw 15, PIDGEY
+	dbw 25, PIDGEY
+	dbw 26, GROWLITHE
+	dbw 27, PIDGEY
+	dbw 28, GROWLITHE
+	dbw 27, PIDGEOTTO
+	dbw 27, PIDGEY
+	dbw 27, PIDGEY
 	; nite
-	dbw 13, SPINARAK
-	dbw 14, STANTLER
-	dbw 15, HOOTHOOT
-	dbw 16, STANTLER
-	dbw 15, NOCTOWL
-	dbw 15, ARIADOS
-	dbw 15, ARIADOS
+	dbw 25, SPINARAK
+	dbw 26, STANTLER
+	dbw 27, HOOTHOOT
+	dbw 28, STANTLER
+	dbw 27, NOCTOWL
+	dbw 27, ARIADOS
+	dbw 27, ARIADOS
 
 	map_id ROUTE_38
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

@@ -721,6 +721,7 @@ KRIS EQU __enum__
 	trainerclass GSC_KRIS ; 49
 	const BABA1
 	const EWWYPPP
+	const BABA2
 
 	trainerclass AC_CHRIS ; 4A
 	const EVAN

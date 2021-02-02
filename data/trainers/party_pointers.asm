@@ -105,3 +105,4 @@ TrainerGroups:
 	dba BronzeGroup
 	dba RedLarryGroup
 	dba GreenMayGroup
+	dba BrownGroup

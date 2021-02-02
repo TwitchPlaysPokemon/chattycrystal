@@ -36,6 +36,8 @@ OlivineCityRivalSceneTop:
 	writetext OlivineCityRivalText
 	waitbutton
 	closetext
+	loadtrainer GSCHGSS_CHRIS, AJDNNW3
+	startbattle
 	applymovement PLAYER, MovementData_0x1a88f4
 	turnobject PLAYER, RIGHT
 	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88db

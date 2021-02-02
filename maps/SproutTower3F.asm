@@ -46,7 +46,7 @@ SproutTower3FRivalScene:
 	writetext SproutTowerRivalOnlyCareAboutStrongText
 	waitbutton
 	closetext
-	loadtrainer GSCHGSS_CHRIS, AJDNNW1
+	loadtrainer GSC_KRIS, BABA1
 	startbattle
 	reloadmapafterbattle
 	turnobject SPROUTTOWER3F_SILVER, UP
@@ -351,4 +351,4 @@ else
 endc
 	object_event  6, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTower3FPotion, EVENT_SPROUT_TOWER_3F_POTION
 	object_event 14,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTower3FEscapeRope, EVENT_SPROUT_TOWER_3F_ESCAPE_ROPE
-	object_event 10,  4, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_SPROUT_TOWER
+	object_event 10,  4, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_SPROUT_TOWER

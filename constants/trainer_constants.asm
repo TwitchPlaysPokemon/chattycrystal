@@ -711,10 +711,11 @@ KRIS EQU __enum__
 	const XXWWNN
 
 	trainerclass CY_ROBORED ; 47
-	const X_CHATTYYELLOW
+	const X_CHATTYYELLOW2
 
 	trainerclass GSCHGSS_CHRIS ; 48
 	const AJDNNW1
+	const AJDNNW3
 	const AAEFFFF
 	const D_GAUNTLETCRYSTAL
 
@@ -725,6 +726,7 @@ KRIS EQU __enum__
 
 	trainerclass AC_CHRIS ; 4A
 	const EVAN
+	const EVAN1
 
 	trainerclass FC_CHRIS ; 4B
 	const Y_FUSEDCRYSTAL
@@ -825,8 +827,11 @@ KRIS EQU __enum__
 	
 	trainerclass GREEN_MAY ; 4C
 	const A_EMERALD
-	const ACPPQ
+	const ACCPPQ
 	const N_EMERALD
+	
+	trainerclass BROWN ; 4D
+	const PAUL_B
 	
 
 NUM_TRAINER_CLASSES EQU __enum__

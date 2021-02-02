@@ -110,4 +110,5 @@ INCBIN "gfx/trainers/cyan.gbcpal", middle_colors
 INCBIN "gfx/trainers/dani.gbcpal", middle_colors
 INCBIN "gfx/trainers/red-snow.gbcpal", middle_colors
 INCBIN "gfx/trainers/greenmay.gbcpal", middle_colors
+INCBIN "gfx/trainers/brown.gbcpal", middle_colors
 

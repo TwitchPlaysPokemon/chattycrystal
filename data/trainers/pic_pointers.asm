@@ -105,3 +105,4 @@ TrainerPicPointers::
 	dba BronzePic
 	dba RedLarryPic
 	dba GreenMayPic
+	dba BrownPic

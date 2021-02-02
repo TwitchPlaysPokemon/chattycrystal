@@ -142,9 +142,9 @@ JohtoWaterWildMons:
 
 	map_id ROUTE_40
 	db 6 percent ; encounter rate
-	dbw 20, TENTACOOL
-	dbw 15, TENTACOOL
-	dbw 20, TENTACRUEL
+	dbw 34, TENTACOOL
+	dbw 29, TENTACOOL
+	dbw 34, TENTACRUEL
 
 	map_id ROUTE_41
 	db 6 percent ; encounter rate
@@ -196,15 +196,15 @@ JohtoWaterWildMons:
 
 	map_id CIANWOOD_CITY
 	db 6 percent ; encounter rate
-	dbw 20, TENTACOOL
-	dbw 15, TENTACOOL
-	dbw 20, TENTACRUEL
+	dbw 36, TENTACOOL
+	dbw 31, TENTACOOL
+	dbw 36, TENTACRUEL
 
 	map_id OLIVINE_CITY
 	db 6 percent ; encounter rate
-	dbw 20, TENTACOOL
-	dbw 15, TENTACOOL
-	dbw 20, TENTACRUEL
+	dbw 33, TENTACOOL
+	dbw 28, TENTACOOL
+	dbw 33, TENTACRUEL
 
 	map_id ECRUTEAK_CITY
 	db 2 percent ; encounter rate

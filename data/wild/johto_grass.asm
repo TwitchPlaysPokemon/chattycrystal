@@ -1436,56 +1436,56 @@ JohtoGrassWildMons:
 	map_id ROUTE_38
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 16, RATTATA
-	dbw 16, RATICATE
-	dbw 16, MAGNEMITE
-	dbw 16, PIDGEOTTO
-	dbw 13, TAUROS
-	dbw 13, MILTANK
-	dbw 13, MILTANK
+	dbw 30, RATTATA
+	dbw 30, RATICATE
+	dbw 30, MAGNEMITE
+	dbw 30, PIDGEOTTO
+	dbw 27, TAUROS
+	dbw 27, MILTANK
+	dbw 27, MILTANK
 	; day
-	dbw 16, RATTATA
-	dbw 16, RATICATE
-	dbw 16, MAGNEMITE
-	dbw 16, PIDGEOTTO
-	dbw 13, TAUROS
-	dbw 13, MILTANK
-	dbw 13, MILTANK
+	dbw 30, RATTATA
+	dbw 30, RATICATE
+	dbw 30, MAGNEMITE
+	dbw 30, PIDGEOTTO
+	dbw 27, TAUROS
+	dbw 27, MILTANK
+	dbw 27, MILTANK
 	; nite
-	dbw 16, MEOWTH
-	dbw 16, RATICATE
-	dbw 16, MAGNEMITE
-	dbw 16, NOCTOWL
-	dbw 16, MEOWTH
-	dbw 16, MEOWTH
-	dbw 16, MEOWTH
+	dbw 30, MEOWTH
+	dbw 30, RATICATE
+	dbw 30, MAGNEMITE
+	dbw 30, NOCTOWL
+	dbw 30, MEOWTH
+	dbw 30, MEOWTH
+	dbw 30, MEOWTH
 
 	map_id ROUTE_39
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 16, RATTATA
-	dbw 16, RATICATE
-	dbw 16, MAGNEMITE
-	dbw 16, PIDGEOTTO
-	dbw 15, MILTANK
-	dbw 15, TAUROS
-	dbw 15, TAUROS
+	dbw 31, RATTATA
+	dbw 31, RATICATE
+	dbw 31, MAGNEMITE
+	dbw 31, PIDGEOTTO
+	dbw 30, MILTANK
+	dbw 30, TAUROS
+	dbw 30, TAUROS
 	; day
-	dbw 16, RATTATA
-	dbw 16, RATICATE
-	dbw 16, MAGNEMITE
-	dbw 16, PIDGEOTTO
-	dbw 15, MILTANK
-	dbw 15, TAUROS
-	dbw 15, TAUROS
+	dbw 31, RATTATA
+	dbw 31, RATICATE
+	dbw 31, MAGNEMITE
+	dbw 31, PIDGEOTTO
+	dbw 30, MILTANK
+	dbw 30, TAUROS
+	dbw 30, TAUROS
 	; nite
-	dbw 16, MEOWTH
-	dbw 16, RATICATE
-	dbw 16, MAGNEMITE
-	dbw 16, NOCTOWL
-	dbw 18, MEOWTH
-	dbw 18, MEOWTH
-	dbw 18, MEOWTH
+	dbw 31, MEOWTH
+	dbw 31, RATICATE
+	dbw 31, MAGNEMITE
+	dbw 31, NOCTOWL
+	dbw 33, MEOWTH
+	dbw 33, MEOWTH
+	dbw 33, MEOWTH
 
 	map_id ROUTE_42
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

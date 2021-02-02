@@ -24,7 +24,7 @@ Route31_MapScripts:
 
 TrainerBugCatcherWade1:
 if TESTMODE
-	trainer CY_ROBORED, X_CHATTYYELLOW, EVENT_BEAT_BUG_CATCHER_WADE, BugCatcherWade1SeenText, BugCatcherWade1BeatenText, 0, .Script
+	trainer CY_ROBORED, X_CHATTYYELLOW2, EVENT_BEAT_BUG_CATCHER_WADE, BugCatcherWade1SeenText, BugCatcherWade1BeatenText, 0, .Script
 else
 	trainer BUG_CATCHER, WADE1, EVENT_BEAT_BUG_CATCHER_WADE, BugCatcherWade1SeenText, BugCatcherWade1BeatenText, 0, .Script
 endc

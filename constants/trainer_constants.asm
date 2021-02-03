@@ -727,6 +727,7 @@ KRIS EQU __enum__
 	trainerclass AC_CHRIS ; 4A
 	const EVAN
 	const EVAN1
+	const EVAN2
 
 	trainerclass FC_CHRIS ; 4B
 	const Y_FUSEDCRYSTAL

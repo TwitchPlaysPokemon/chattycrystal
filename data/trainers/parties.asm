@@ -917,28 +917,28 @@ ACChrisGroup:
 	
 	db 25
 	dw OMANYTE 
-	db NO_ITEM
+	db METAL_POWDER
 	dw THIEF, WATER_GUN, LEER, BITE
 	dw $FFFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 60
+	bigdw 33
+	bigdw 62
+	bigdw 28
+	bigdw 58
+	bigdw 40
 	db " QH@" 
 	
 	db 17
 	dw VENONAT
-	db NO_ITEM
+	db BITTER_BERRY
 	dw FLASH, POISONPOWDER, CONFUSION, THIEF
 	dw $0FFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 50
+	bigdw 26
+	bigdw 22
+	bigdw 20
+	bigdw 23
+	bigdw 23
 	db "KJJKLLLLLL@" 
 	
 	db 19
@@ -946,25 +946,25 @@ ACChrisGroup:
 	db NO_ITEM
 	dw LEECH_LIFE, SCARY_FACE, SLUDGE, BATON_PASS
 	dw $FFFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 45
+	bigdw 31
+	bigdw 25
+	bigdw 20
+	bigdw 24
+	bigdw 24
 	db "BCCCCCCuB?@" 
 	
 	db 51
 	dw VENUSAUR
-	db NO_ITEM
+	db POKE_BALL
 	dw RAZOR_LEAF, CUT, LEECH_SEED, HEADBUTT
 	dw $FFFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 175
+	bigdw 118
+	bigdw 125
+	bigdw 108
+	bigdw 133
+	bigdw 133
 	db "ul:::utx@" 
 	
 	db 30
@@ -972,12 +972,12 @@ ACChrisGroup:
 	db FLOWER_MAIL
 	dw TAKE_DOWN, CONFUSION, WING_ATTACK, SWIFT
 	dw $FFFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 108
+	bigdw 50
+	bigdw 42
+	bigdw 54
+	bigdw 65
+	bigdw 71
 	db "KENYA@"
 	
 	db -1

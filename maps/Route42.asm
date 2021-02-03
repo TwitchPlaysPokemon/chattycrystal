@@ -11,15 +11,12 @@
 
 Route42_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_ROUTE42_NOTHING
-	scene_script .DummyScene1 ; SCENE_ROUTE42_SUICUNE
+	scene_script .DummyScene ; SCENE_ROUTE42_NOTHING
+	scene_script .DummyScene ; SCENE_ROUTE42_SUICUNE
 
 	db 0 ; callbacks
 
-.DummyScene0:
-	end
-
-.DummyScene1:
+.DummyScene:
 	end
 
 Route42SuicuneScript:

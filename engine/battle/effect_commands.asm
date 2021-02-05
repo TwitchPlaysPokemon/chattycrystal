@@ -5776,8 +5776,15 @@ BattleCommand_Charge:
 	ld c, l
 	ld de, 4
 	ld hl, .move_messages
-	call IsInHalfwordArray ; hl will point to the high byte of the found item, or to the -1 if not found
+	call IsInHalfwordArray ; hl will point to the low byte of the found item
+	jr c, .found_text
+	ld hl, .move_messages
+.found_text
 	inc hl
+	inc hl
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
 	pop bc
 	ret
 
@@ -5788,7 +5795,7 @@ BattleCommand_Charge:
 	dw SKY_ATTACK, .SkyAttack
 	dw FLY,        .Fly
 	dw DIG,        .Dig
-	dw -1,         .Dig
+	dw -1
 
 .RazorWind:
 ; 'made a whirlwind!'

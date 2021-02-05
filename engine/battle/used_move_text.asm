@@ -48,18 +48,14 @@ UsedMoveInsteadText:
 ; check obedience
 	ld a, [wAlreadyDisobeyed]
 	and a
-	jr z, .GetMoveNameText
+	ld hl, MoveNameText
+	ret z
 ; print "instead,"
 	ld hl, .UsedInsteadText
 	ret
 
 .UsedInsteadText:
 	text_far _UsedInsteadText
-	text_asm
-.GetMoveNameText:
-	ld hl, MoveNameText
-	ret
-
 MoveNameText:
 	text_far _MoveNameText
 	text_end

@@ -565,6 +565,7 @@ INCLUDE "engine/battle/link_result.asm"
 SECTION "Mobile 5C", ROMX
 
 INCLUDE "mobile/mobile_5c.asm"
+INCLUDE "data/moves/bootleg_names.asm"
 
 
 SECTION "Crystal Phone Text 2", ROMX

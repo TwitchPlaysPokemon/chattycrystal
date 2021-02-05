@@ -96,6 +96,15 @@ UsedMoveAlternateMessages:
 	text "!"
 	done
 
+.bootleg_message
+	text "FOE @"
+	text_ram wEnemyMonNick
+	text "'s"
+	line "@"
+	text_ram wStringBuffer2
+	text "!"
+	done
+
 UpdateUsedMoves:
 ; append move a to wPlayerUsedMoves unless it has already been used
 

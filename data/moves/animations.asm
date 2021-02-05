@@ -275,8 +275,8 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
-	dw BattleAnim_SweetScent2
-	dw BattleAnim_SweetScent2
+	dw BattleAnim_Roar
+	dw BattleAnim_Roar
 	dw BattleAnim_SweetScent2
 	dw BattleAnim_HiddenPower
 	dw BattleAnim_Roar

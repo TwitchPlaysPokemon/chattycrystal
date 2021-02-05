@@ -543,11 +543,13 @@ RSEORASBlueMayGroup:
 	
 RSEORASBrendanGroup:
 	next_list_item ; ORLANDO
-	db "!12rtyhasz@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db "!12rtyhasz@", , TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
 	db 18
 	dw QUILAVA ;TODO add combusken
 	db POTION
 	dw SCRATCH, GROWL, PECK, EMBER
+	dw $FFFF
 	bigdw 54
 	bigdw 32
 	bigdw 30
@@ -559,7 +561,8 @@ RSEORASBrendanGroup:
 	db 6
 	dw SENTRET ;TODO add whismur
 	db NO_ITEM
-	dw POUND, NO_MOVE, NO_MOVE, NO_MOVE ;add echoed voice
+	dw POUND, ECHOED_VOICE, NO_MOVE, NO_MOVE 
+	dw $FFFF
 	bigdw 24
 	bigdw 12
 	bigdw 8
@@ -1107,7 +1110,7 @@ SMUSUMElio2Group:
 	db 26
 	dw PIDGEOTTO ; add Trumbeak 
 	db STAR_PIECE
-	dw FURY_ATTACK, NO_MOVE, NO_MOVE, NO_MOVE ;add Roost, Echoed Voice, Pluck
+	dw FURY_ATTACK, ECHOED_VOICE, NO_MOVE, NO_MOVE ;add Roost, Pluck
 	bigdw $0FFF
 	bigdw 70
 	bigdw 53
@@ -1335,7 +1338,7 @@ SWSHGloriaGroup:
 	db 17
 	dw MAREEP ; add Electrike 
 	db NO_ITEM
-	dw LEER, QUICK_ATTACK, NO_MOVE, NO_MOVE ;add Howl, Shock Wave
+	dw LEER, QUICK_ATTACK, HOWL, NO_MOVE ;add Shock Wave
 	bigdw $0FFF
 	bigdw 42
 	bigdw 22
@@ -1412,7 +1415,7 @@ NuzlockeGroup:
 	db 52
 	dw RAICHU ;add manectric
 	db POKE_BALL
-	dw THUNDERBOLT, BITE, THUNDER, NO_MOVE ;add howl
+	dw THUNDERBOLT, BITE, THUNDER, HOWL
 	dw $0FFF
 	bigdw 149
 	bigdw 85
@@ -1556,9 +1559,9 @@ GreenMayGroup:
 	db "apf uojkyy@"
 	
 	db 10
-	dw HOUNDOUR ;TODO add poochyena
+	dw UMBREON ;TODO add poochyena
 	db NO_ITEM
-	dw SAND_ATTACK, TACKLE, NO_MOVE, NO_MOVE ;todo add howl
+	dw SAND_ATTACK, TACKLE, HOWL, NO_MOVE 
 	bigdw $0FFF
 	bigdw 28
 	bigdw 17

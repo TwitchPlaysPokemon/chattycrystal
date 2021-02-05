@@ -14,11 +14,11 @@ VioletGymFalknerScript:
 	opentext
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .FightDone
-	writetext FalknerIntroText
+	writetext FalknerText
 	waitbutton
 	closetext
-	winlosstext FalknerWinLossText, 0
-	loadtrainer GREEN_MAY, A_EMERALD
+	winlosstext FalknerText, FalknerText
+	loadtrainer RSEORAS_BRENDAN, ORLANDO
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER
@@ -35,18 +35,18 @@ VioletGymFalknerScript:
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD
 	setevent EVENT_BEAT_BIRD_KEEPER_ABE
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_NOTHING
-	writetext FalknerZephyrBadgeText
+	writetext FalknerText
 	buttonsound
 	verbosegiveitem TM_MUD_SLAP
 	iffalse .NoRoomForMudSlap
 	setevent EVENT_GOT_TM31_MUD_SLAP
-	writetext FalknerTMMudSlapText
+	writetext FalknerText
 	waitbutton
 	closetext
 	end
 
 .SpeechAfterTM:
-	writetext FalknerFightDoneText
+	writetext FalknerText
 	waitbutton
 .NoRoomForMudSlap:
 	closetext
@@ -114,104 +114,16 @@ VioletGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, GREEN_MAY, A_EMERALD
+	gettrainername STRING_BUFFER_4, RSEORAS_BRENDAN, ORLANDO
 	jumpstd gymstatue2
 
-FalknerIntroText:
-	text "I'm FALKNER, the"
-	line "VIOLET #MON GYM"
-	cont "leader!"
-
-	para "People say you can"
-	line "clip flying-type"
-
-	para "#MON's wings"
-	line "with a jolt of"
-	cont "electricity…"
-
-	para "I won't allow such"
-	line "insults to bird"
-	cont "#MON!"
-
-	para "I'll show you the"
-	line "real power of the"
-
-	para "magnificent bird"
-	line "#MON!"
-	done
-
-FalknerWinLossText:
-	text "…Darn! My dad's"
-	line "cherished bird"
-	cont "#MON…"
-
-	para "All right."
-	line "Take this."
-
-	para "It's the official"
-	line "#MON LEAGUE"
-	cont "ZEPHYRBADGE."
+FalknerText:
+	text "<......>"
 	done
 
 ReceivedZephyrBadgeText:
 	text "<PLAYER> received"
 	line "ZEPHYRBADGE."
-	done
-
-FalknerZephyrBadgeText:
-	text "ZEPHYRBADGE"
-	line "raises the attack"
-	cont "power of #MON."
-
-	para "It also enables"
-	line "#MON to use"
-
-	para "FLASH, if they"
-	line "have it, anytime."
-
-	para "Here--take this"
-	line "too."
-	done
-
-FalknerTMMudSlapText:
-	text "By using a TM, a"
-	line "#MON will"
-
-	para "instantly learn a"
-	line "new move."
-
-	para "Think before you"
-	line "act--a TM can be"
-	cont "used only once."
-
-	para "TM31 contains"
-	line "MUD-SLAP."
-
-	para "It reduces the"
-	line "enemy's accuracy"
-
-	para "while it causes"
-	line "damage."
-
-	para "In other words, it"
-	line "is both defensive"
-	cont "and offensive."
-	done
-
-FalknerFightDoneText:
-	text "There are #MON"
-	line "GYMS in cities and"
-	cont "towns ahead."
-
-	para "You should test"
-	line "your skills at"
-	cont "these GYMS."
-
-	para "I'm going to train"
-	line "harder to become"
-
-	para "the greatest bird"
-	line "master!"
 	done
 
 BirdKeeperRodSeenText:
@@ -232,7 +144,7 @@ BirdKeeperRodBeatenText:
 	done
 
 BirdKeeperRodAfterBattleText:
-	text "FALKNER's skills"
+	text "!12rtyhasz's skills"
 	line "are for real!"
 
 	para "Don't get cocky"
@@ -243,7 +155,7 @@ BirdKeeperRodAfterBattleText:
 BirdKeeperAbeSeenText:
 	text "Let me see if you"
 	line "are good enough to"
-	cont "face FALKNER!"
+	cont "face !12rtyhasz!"
 	done
 
 BirdKeeperAbeBeatenText:
@@ -305,7 +217,7 @@ if TESTMODE
 	object_event  7,  6, SPRITE_WES, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
 	object_event  2, 10, SPRITE_MICHAEL, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
 else
-	object_event  5,  1, SPRITE_MAY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
+	object_event  5,  1, SPRITE_BRENDAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletGymFalknerScript, -1
 	object_event  7,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperRod, -1
 	object_event  2, 10, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBirdKeeperAbe, -1
 endc

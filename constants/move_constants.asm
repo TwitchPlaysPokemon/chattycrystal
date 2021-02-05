@@ -257,8 +257,8 @@
 	const ROCK_SMASH   ;  f9
 	const WHIRLPOOL    ;  fa
 	const BEAT_UP      ;  fb
-	const FAKE_OUT     ;  fc
-	const UPROAR       ;  fd
+	const HOWL     ;  fc
+	const ECHOED_VOICE       ;  fd
 	const STOCKPILE    ;  fe
 	const CHATTY_HP    ;  ff
 	const CHATTER      ; 100

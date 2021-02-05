@@ -34,7 +34,7 @@ SproutTower3FRivalScene:
 	applymovement PLAYER, MovementData_0x184a1d
 	applymovement SPROUTTOWER3F_SILVER, MovementData_0x184a22
 	opentext
-	writetext SproutTowerElderLecturesRivalText
+	writetext SproutTowerRivalSageText
 	waitbutton
 	closetext
 	showemote EMOTE_SHOCK, SPROUTTOWER3F_SILVER, 15
@@ -43,10 +43,10 @@ SproutTower3FRivalScene:
 	applymovement SPROUTTOWER3F_SILVER, MovementData_0x184a24
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext SproutTowerRivalText
+	writetext SproutTowerRivalSageText
 	waitbutton
 	closetext
-	winlosstext SproutTowerRivalText, SproutTowerRivalText
+	winlosstext SproutTowerRivalSageText, SproutTowerRivalSageText
 	setlasttalked SPROUTTOWER3F_SILVER
 	loadtrainer GSC_KRIS, BABA1
 	startbattle
@@ -54,7 +54,7 @@ SproutTower3FRivalScene:
 	reloadmap
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
-	writetext SproutTowerRivalText
+	writetext SproutTowerRivalSageText
 	waitbutton
 	closetext
 	turnobject SPROUTTOWER3F_SILVER, UP
@@ -77,26 +77,26 @@ SageLiScript:
 	opentext
 	checkevent EVENT_GOT_HM05_FLASH
 	iftrue .GotFlash
-	writetext SageLiSeenText
+	writetext SproutTowerRivalSageText
 	waitbutton
 	closetext
-	winlosstext SageLiBeatenText, 0
+	winlosstext SproutTowerRivalSageText, SproutTowerRivalSageText
 	loadtrainer GREEN_MAY, A_EMERALD
 	startbattle
 	reloadmapafterbattle
 	opentext
-	writetext SageLiTakeThisFlashText
+	writetext SproutTowerRivalSageText
 	buttonsound
 	verbosegiveitem HM_FLASH
 	setevent EVENT_GOT_HM05_FLASH
 	setevent EVENT_BEAT_SAGE_LI
-	writetext SageLiFlashExplanationText
+	writetext SproutTowerRivalSageText
 	waitbutton
 	closetext
 	end
 
 .GotFlash:
-	writetext SageLiAfterBattleText
+	writetext SproutTowerRivalSageText
 	waitbutton
 	closetext
 	end
@@ -174,90 +174,13 @@ MovementData_0x184a24:
 	step DOWN
 	step_end
 
-SproutTowerElderLecturesRivalText:
-	text "ELDER: You are in-"
-	line "deed skilled as a"
-	cont "trainer."
-
-	para "As promised, here"
-	line "is your HM."
-
-	para "But let me say"
-	line "this: You should"
-
-	para "treat your"
-	line "#MON better."
-
-	para "The way you battle"
-	line "is far too harsh."
-
-	para "#MON are not"
-	line "tools of war…"
-	done
-
-SproutTowerRivalText:
+SproutTowerRivalSageText:
 	text "…"
 	done
 
 SproutTowerRivalUsedEscapeRopeText:
-	text "AJDNNW used an"
+	text "BABA used an"
 	line "ESCAPE ROPE!"
-	done
-
-SageLiSeenText:
-	text "So good of you to"
-	line "come here!"
-
-	para "SPROUT TOWER is a"
-	line "place of training."
-
-	para "People and #MON"
-	line "test their bonds"
-
-	para "to build a bright"
-	line "future together."
-
-	para "I am the final"
-	line "test."
-
-	para "Allow me to check"
-	line "the ties between"
-
-	para "your #MON and"
-	line "you!"
-	done
-
-SageLiBeatenText:
-	text "Ah, excellent!"
-	done
-
-SageLiTakeThisFlashText:
-	text "You and your #-"
-	line "MON should have"
-
-	para "no problem using"
-	line "this move."
-
-	para "Take this FLASH"
-	line "HM."
-	done
-
-SageLiFlashExplanationText:
-	text "FLASH illuminates"
-	line "even the darkest"
-	cont "of all places."
-
-	para "But to use it out"
-	line "of battle, you"
-
-	para "need the BADGE"
-	line "from VIOLET's GYM."
-	done
-
-SageLiAfterBattleText:
-	text "I hope you learn"
-	line "and grow from your"
-	cont "journey."
 	done
 
 SageJinSeenText:

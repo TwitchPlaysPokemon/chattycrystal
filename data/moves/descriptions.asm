@@ -256,6 +256,11 @@ MoveDescriptions1:
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
+	dw SharpenDescription
+	dw FuryCutterDescription
+	dw BeatUpDescription
+	dw HiddenPowerDescription
+	dw InvalidMoveDescription
 
 InvalidMoveDescription:
 	db "?@"

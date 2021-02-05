@@ -1990,19 +1990,18 @@ ScientistGroup:
 
 	next_list_item ; SCIENTIST (4)
 	db "MARC@", TRAINERTYPE_NORMAL
-	db 27
-	dw MAGNEMITE
-	db 27
-	dw MAGNEMITE
-	db 27
-	dw MAGNEMITE
+	db 49
+	dw MAGNETON
+	db 49
+	dw MAGNETON
+	db 49
+	dw MAGNETON
 	db -1 ; end
 
 	next_list_item ; SCIENTIST (5)
-	db "RICH@", TRAINERTYPE_MOVES
-	db 30
-	dw PORYGON
-	dw CONVERSION, CONVERSION2, RECOVER, TRI_ATTACK
+	db "RICH@", TRAINERTYPE_NORMAL
+	db 51
+	dw PORYGON2
 	db -1 ; end
 
 	end_list_items
@@ -3200,78 +3199,78 @@ GruntMGroup:
 
 	next_list_item ; GRUNTM (3)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 24
+	db 50
 	dw RATICATE
-	db 24
+	db 50
 	dw RATICATE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (4)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 23
+	db 49
 	dw GRIMER
-	db 23
-	dw GRIMER
-	db 25
+	db 49
+	dw MUK
+	db 49
 	dw MUK
 	db -1 ; end
 
 	next_list_item ; GRUNTM (5)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 21
+	db 47
 	dw RATTATA
-	db 21
+	db 47
 	dw RATTATA
-	db 23
-	dw RATTATA
-	db 23
-	dw RATTATA
-	db 23
-	dw RATTATA
+	db 49
+	dw RATICATE
+	db 49
+	dw RATICATE
+	db 49
+	dw RATICATE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (6)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
-	dw ZUBAT
-	db 26
-	dw ZUBAT
+	db 50
+	dw GOLBAT
+	db 50
+	dw CROBAT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (7)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 23
-	dw KOFFING
-	db 23
-	dw GRIMER
-	db 23
-	dw ZUBAT
-	db 23
-	dw RATTATA
+	db 48
+	dw WEEZING
+	db 48
+	dw MUK
+	db 48
+	dw GOLBAT
+	db 48
+	dw RATICATE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (8)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
+	db 51
 	dw WEEZING
 	db -1 ; end
 
 	next_list_item ; GRUNTM (9)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 24
+	db 48
 	dw RATICATE
-	db 26
-	dw KOFFING
+	db 50
+	dw WEEZING
 	db -1 ; end
 
 	next_list_item ; GRUNTM (10)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 22
-	dw ZUBAT
-	db 24
+	db 48
 	dw GOLBAT
-	db 22
-	dw GRIMER
+	db 50
+	dw CROBAT
+	db 48
+	dw MUK
 	db -1 ; end
 
 	next_list_item ; GRUNTM (11)
@@ -3456,13 +3455,13 @@ GentlemanGroup:
 SkierGroup:
 	next_list_item ; SKIER (1)
 	db "ROXANNE@", TRAINERTYPE_NORMAL
-	db 28
+	db 50
 	dw JYNX
 	db -1 ; end
 
 	next_list_item ; SKIER (2)
 	db "CLARISSA@", TRAINERTYPE_NORMAL
-	db 28
+	db 50
 	dw DEWGONG
 	db -1 ; end
 
@@ -5842,29 +5841,29 @@ MediumGroup:
 BoarderGroup:
 	next_list_item ; BOARDER (1)
 	db "RONALD@", TRAINERTYPE_NORMAL
-	db 24
+	db 48
 	dw SEEL
-	db 25
+	db 49
 	dw DEWGONG
-	db 24
+	db 48
 	dw SEEL
 	db -1 ; end
 
 	next_list_item ; BOARDER (2)
 	db "BRAD@", TRAINERTYPE_NORMAL
-	db 26
-	dw SWINUB
-	db 26
-	dw SWINUB
+	db 49
+	dw PILOSWINE
+	db 49
+	dw PILOSWINE
 	db -1 ; end
 
 	next_list_item ; BOARDER (3)
 	db "DOUGLAS@", TRAINERTYPE_NORMAL
-	db 24
+	db 48
 	dw SHELLDER
-	db 25
+	db 49
 	dw CLOYSTER
-	db 24
+	db 48
 	dw SHELLDER
 	db -1 ; end
 
@@ -6180,7 +6179,7 @@ GruntFGroup:
 
 	next_list_item ; GRUNTF (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 26
+	db 51
 	dw ARBOK
 	db -1 ; end
 
@@ -6194,14 +6193,14 @@ GruntFGroup:
 
 	next_list_item ; GRUNTF (4)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 21
-	dw EKANS
-	db 23
-	dw ODDISH
-	db 21
-	dw EKANS
-	db 24
-	dw GLOOM
+	db 47
+	dw ARBOK
+	db 49
+	dw VILEPLUME
+	db 47
+	dw ARBOK
+	db 50
+	dw BELLOSSOM
 	db -1 ; end
 
 	next_list_item ; GRUNTF (5)

@@ -811,222 +811,222 @@ JohtoGrassWildMons:
 	dbw 22, SNEASEL
 	dbw 24, SNEASEL
 	dbw 26, SNEASEL
-
+	
 	map_id WHIRL_ISLAND_NW
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, SEEL
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, SEEL
-	dbw 24, SEEL
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, SEEL
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, SEEL
+	dbw 48, SEEL
 	; day
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, SEEL
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, SEEL
-	dbw 24, SEEL
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, SEEL
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, SEEL
+	dbw 48, SEEL
 	; nite
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, KRABBY
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, GOLBAT
-	dbw 24, GOLBAT
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, KRABBY
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, GOLBAT
+	dbw 48, GOLBAT
 
 	map_id WHIRL_ISLAND_NE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, SEEL
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, SEEL
-	dbw 24, SEEL
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, SEEL
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, SEEL
+	dbw 48, SEEL
 	; day
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, SEEL
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, SEEL
-	dbw 24, SEEL
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, SEEL
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, SEEL
+	dbw 48, SEEL
 	; nite
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, KRABBY
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, GOLBAT
-	dbw 24, GOLBAT
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, KRABBY
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, GOLBAT
+	dbw 48, GOLBAT
 
 	map_id WHIRL_ISLAND_SW
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, SEEL
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, SEEL
-	dbw 24, SEEL
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, SEEL
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, SEEL
+	dbw 48, SEEL
 	; day
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, SEEL
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, SEEL
-	dbw 24, SEEL
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, SEEL
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, SEEL
+	dbw 48, SEEL
 	; nite
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, KRABBY
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, GOLBAT
-	dbw 24, GOLBAT
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, KRABBY
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, GOLBAT
+	dbw 48, GOLBAT
 
 	map_id WHIRL_ISLAND_CAVE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, SEEL
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, SEEL
-	dbw 24, SEEL
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, SEEL
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, SEEL
+	dbw 48, SEEL
 	; day
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, SEEL
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, SEEL
-	dbw 24, SEEL
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, SEEL
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, SEEL
+	dbw 48, SEEL
 	; nite
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, KRABBY
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, GOLBAT
-	dbw 24, GOLBAT
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, KRABBY
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, GOLBAT
+	dbw 48, GOLBAT
 
 	map_id WHIRL_ISLAND_SE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, SEEL
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, SEEL
-	dbw 24, SEEL
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, SEEL
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, SEEL
+	dbw 48, SEEL
 	; day
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, SEEL
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, SEEL
-	dbw 24, SEEL
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, SEEL
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, SEEL
+	dbw 48, SEEL
 	; nite
-	dbw 22, KRABBY
-	dbw 23, ZUBAT
-	dbw 22, KRABBY
-	dbw 24, KRABBY
-	dbw 25, GOLBAT
-	dbw 24, GOLBAT
-	dbw 24, GOLBAT
+	dbw 46, KRABBY
+	dbw 47, ZUBAT
+	dbw 46, KRABBY
+	dbw 48, KRABBY
+	dbw 49, GOLBAT
+	dbw 48, GOLBAT
+	dbw 48, GOLBAT
 
 	map_id WHIRL_ISLAND_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 23, KRABBY
-	dbw 24, ZUBAT
-	dbw 23, SEEL
-	dbw 25, KRABBY
-	dbw 26, GOLBAT
-	dbw 25, SEEL
-	dbw 25, SEEL
+	dbw 47, KRABBY
+	dbw 48, ZUBAT
+	dbw 47, SEEL
+	dbw 49, KRABBY
+	dbw 50, GOLBAT
+	dbw 49, SEEL
+	dbw 49, SEEL
 	; day
-	dbw 23, KRABBY
-	dbw 24, ZUBAT
-	dbw 23, SEEL
-	dbw 25, KRABBY
-	dbw 26, GOLBAT
-	dbw 25, SEEL
-	dbw 25, SEEL
+	dbw 47, KRABBY
+	dbw 48, ZUBAT
+	dbw 47, SEEL
+	dbw 49, KRABBY
+	dbw 50, GOLBAT
+	dbw 49, SEEL
+	dbw 49, SEEL
 	; nite
-	dbw 23, KRABBY
-	dbw 24, ZUBAT
-	dbw 23, KRABBY
-	dbw 25, KRABBY
-	dbw 26, GOLBAT
-	dbw 25, GOLBAT
-	dbw 25, GOLBAT
+	dbw 47, KRABBY
+	dbw 48, ZUBAT
+	dbw 47, KRABBY
+	dbw 49, KRABBY
+	dbw 50, GOLBAT
+	dbw 49, GOLBAT
+	dbw 49, GOLBAT
 
 	map_id WHIRL_ISLAND_B2F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 24, KRABBY
-	dbw 25, ZUBAT
-	dbw 24, SEEL
-	dbw 26, KRABBY
-	dbw 27, GOLBAT
-	dbw 26, SEEL
-	dbw 26, SEEL
+	dbw 48, KRABBY
+	dbw 49, ZUBAT
+	dbw 48, SEEL
+	dbw 50, KRABBY
+	dbw 51, GOLBAT
+	dbw 50, SEEL
+	dbw 50, SEEL
 	; day
-	dbw 24, KRABBY
-	dbw 25, ZUBAT
-	dbw 24, SEEL
-	dbw 26, KRABBY
-	dbw 27, GOLBAT
-	dbw 26, SEEL
-	dbw 26, SEEL
+	dbw 48, KRABBY
+	dbw 49, ZUBAT
+	dbw 48, SEEL
+	dbw 50, KRABBY
+	dbw 51, GOLBAT
+	dbw 50, SEEL
+	dbw 50, SEEL
 	; nite
-	dbw 24, KRABBY
-	dbw 25, ZUBAT
-	dbw 24, KRABBY
-	dbw 26, KRABBY
-	dbw 27, GOLBAT
-	dbw 26, GOLBAT
-	dbw 26, GOLBAT
+	dbw 48, KRABBY
+	dbw 49, ZUBAT
+	dbw 48, KRABBY
+	dbw 50, KRABBY
+	dbw 51, GOLBAT
+	dbw 50, GOLBAT
+	dbw 50, GOLBAT
 
 	map_id WHIRL_ISLAND_LUGIA_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 25, KRABBY
-	dbw 26, ZUBAT
-	dbw 25, SEEL
-	dbw 27, KRABBY
-	dbw 28, GOLBAT
-	dbw 27, SEEL
-	dbw 27, SEEL
+	dbw 49, KRABBY
+	dbw 50, ZUBAT
+	dbw 49, SEEL
+	dbw 51, KRABBY
+	dbw 52, GOLBAT
+	dbw 51, SEEL
+	dbw 51, SEEL
 	; day
-	dbw 25, KRABBY
-	dbw 26, ZUBAT
-	dbw 25, SEEL
-	dbw 27, KRABBY
-	dbw 28, GOLBAT
-	dbw 27, SEEL
-	dbw 27, SEEL
+	dbw 49, KRABBY
+	dbw 50, ZUBAT
+	dbw 49, SEEL
+	dbw 51, KRABBY
+	dbw 52, GOLBAT
+	dbw 51, SEEL
+	dbw 51, SEEL
 	; nite
-	dbw 25, KRABBY
-	dbw 26, ZUBAT
-	dbw 25, KRABBY
-	dbw 27, KRABBY
-	dbw 28, GOLBAT
-	dbw 27, GOLBAT
-	dbw 27, GOLBAT
+	dbw 49, KRABBY
+	dbw 50, ZUBAT
+	dbw 49, KRABBY
+	dbw 51, KRABBY
+	dbw 52, GOLBAT
+	dbw 51, GOLBAT
+	dbw 51, GOLBAT
 
 	map_id SILVER_CAVE_ROOM_1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

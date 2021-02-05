@@ -279,7 +279,7 @@ ACChrisGroup:
 	dw IVYSAUR
 	db POKE_BALL
 	dw RAZOR_LEAF, GROWTH, LEECH_SEED, HEADBUTT
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 87
 	bigdw 52
 	bigdw 57
@@ -292,7 +292,7 @@ ACChrisGroup:
 	dw RATTATA 
 	db NO_ITEM
 	dw TACKLE, GROWL, PURSUIT, NO_MOVE
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 20
 	bigdw 13
 	bigdw 11
@@ -305,7 +305,7 @@ ACChrisGroup:
 	dw MAGIKARP
 	db NO_ITEM
 	dw SPLASH, TACKLE, NO_MOVE, NO_MOVE
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 19
 	bigdw 7
 	bigdw 12
@@ -318,7 +318,7 @@ ACChrisGroup:
 	dw FARFETCH_D
 	db NO_ITEM
 	dw GUST, SAND_ATTACK, FURY_ATTACK, NO_MOVE
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 28
 	bigdw 17
 	bigdw 15
@@ -335,7 +335,7 @@ ACChrisGroup:
 	dw BULBASAUR
 	db NO_ITEM
 	dw TACKLE, GROWL, NO_MOVE, NO_MOVE
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 20
 	bigdw 10
 	bigdw 11
@@ -353,7 +353,7 @@ ACChrisGroup:
 	dw OMANYTE 
 	db METAL_POWDER
 	dw THIEF, WATER_GUN, LEER, BITE
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 60
 	bigdw 33
 	bigdw 62
@@ -366,7 +366,7 @@ ACChrisGroup:
 	dw VENONAT
 	db BITTER_BERRY
 	dw FLASH, POISONPOWDER, CONFUSION, THIEF
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 50
 	bigdw 26
 	bigdw 22
@@ -379,7 +379,7 @@ ACChrisGroup:
 	dw SPINARAK 
 	db NO_ITEM
 	dw LEECH_LIFE, SCARY_FACE, SLUDGE, BATON_PASS
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 45
 	bigdw 31
 	bigdw 25
@@ -392,7 +392,7 @@ ACChrisGroup:
 	dw VENUSAUR
 	db POKE_BALL
 	dw RAZOR_LEAF, CUT, LEECH_SEED, HEADBUTT
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 175
 	bigdw 118
 	bigdw 125
@@ -405,7 +405,7 @@ ACChrisGroup:
 	dw NOCTOWL
 	db FLOWER_MAIL
 	dw TAKE_DOWN, CONFUSION, WING_ATTACK, SWIFT
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 108
 	bigdw 50
 	bigdw 42
@@ -436,7 +436,7 @@ RSEORASMayGroup:
 	dw SPEAROW ;add rufflet 
 	db NO_ITEM
 	dw SKULL_BASH, SLASH, NO_MOVE, NO_MOVE ;add aqua jet and bulldoze
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 67
 	bigdw 49
 	bigdw 43
@@ -449,7 +449,7 @@ RSEORASMayGroup:
 	dw MEOWTH ;add glameow
 	db NO_ITEM
 	dw LICK, FISSURE, NO_MOVE, NO_MOVE ;add lands wrath, sky drop
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 70
 	bigdw 50
 	bigdw 36
@@ -462,7 +462,7 @@ RSEORASMayGroup:
 	dw HAUNTER ; add LAMPENT 
 	db NO_ITEM
 	dw DREAM_EATER, NO_MOVE, NO_MOVE, NO_MOVE ;add quiver dance, shadow punch
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 73
 	bigdw 46
 	bigdw 58
@@ -475,7 +475,7 @@ RSEORASMayGroup:
 	dw KINGLER
 	db NO_ITEM
 	dw MIST, NO_MOVE, NO_MOVE, NO_MOVE ;add Fairy wind, oblivion wing, night slash
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 61
 	bigdw 71
 	bigdw 82
@@ -488,7 +488,7 @@ RSEORASMayGroup:
 	dw CORSOLA
 	db NO_ITEM
 	dw SING, FURY_CUTTER, NO_MOVE, NO_MOVE ;add Head Charge, metal burst
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 64
 	bigdw 26
 	bigdw 42
@@ -501,7 +501,7 @@ RSEORASMayGroup:
 	dw CHIKORITA ;add shroomish
 	db NO_ITEM
 	dw NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE ;add uproar, defog, endeavor
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 52
 	bigdw 22
 	bigdw 29
@@ -549,7 +549,7 @@ RSEORASBrendanGroup:
 	dw QUILAVA ;TODO add combusken
 	db POTION
 	dw SCRATCH, GROWL, PECK, EMBER
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 54
 	bigdw 32
 	bigdw 30
@@ -562,7 +562,7 @@ RSEORASBrendanGroup:
 	dw SENTRET ;TODO add whismur
 	db NO_ITEM
 	dw POUND, ECHOED_VOICE, NO_MOVE, NO_MOVE 
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 24
 	bigdw 12
 	bigdw 8
@@ -599,7 +599,7 @@ FRLGLeafGroup:
 	dw BUTTERFREE
 	db POKE_BALL
 	dw TACKLE, STRING_SHOT, CONFUSION, HARDEN 
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 59
 	bigdw 48
 	bigdw 38
@@ -612,7 +612,7 @@ FRLGLeafGroup:
 	dw RATTATA
 	db NO_ITEM
 	dw TACKLE, TAIL_WHIP, QUICK_ATTACK, CUT
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 25
 	bigdw 17
 	bigdw 13
@@ -625,7 +625,7 @@ FRLGLeafGroup:
 	dw CHARMELEON
 	db POTION
 	dw EMBER, GROWL, SCRATCH, SMOKESCREEN
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 87
 	bigdw 56
 	bigdw 49
@@ -638,7 +638,7 @@ FRLGLeafGroup:
 	dw PIDGEOTTO
 	db NO_ITEM
 	dw TACKLE, WING_ATTACK, SAND_ATTACK, QUICK_ATTACK
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 82
 	bigdw 53
 	bigdw 41
@@ -651,7 +651,7 @@ FRLGLeafGroup:
 	dw ODDISH
 	db NO_ITEM
 	dw POISONPOWDER, SWEET_SCENT, ABSORB, NO_MOVE
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 39
 	bigdw 20
 	bigdw 21
@@ -664,7 +664,7 @@ FRLGLeafGroup:
 	dw PIDGEY 
 	db NO_ITEM
 	dw TACKLE, GUST, SAND_ATTACK, NO_MOVE 
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 32
 	bigdw 17
 	bigdw 15
@@ -695,7 +695,7 @@ ColoWesGroup:
 	dw MISDREAVUS
 	db BURN_HEAL
 	dw SHADOW_BALL, CONFUSE_RAY, PSYBEAM, MEAN_LOOK 
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 164
 	bigdw 123
 	bigdw 111
@@ -708,7 +708,7 @@ ColoWesGroup:
 	dw ESPEON
 	db POKE_BALL
 	dw CONFUSION, REFLECT, PSYBEAM, NO_MOVE
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 125
 	bigdw 81
 	bigdw 83
@@ -721,7 +721,7 @@ ColoWesGroup:
 	dw UMBREON
 	db NO_ITEM
 	dw MEAN_LOOK, NO_MOVE, NO_MOVE, NO_MOVE ;add snatch, taunt, secret power
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 118
 	bigdw 74
 	bigdw 89
@@ -734,7 +734,7 @@ ColoWesGroup:
 	dw JUMPLUFF
 	db NO_ITEM
 	dw MEGA_DRAIN, COTTON_SPORE, SLEEP_POWDER, SYNTHESIS 
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 140
 	bigdw 135
 	bigdw 151
@@ -747,7 +747,7 @@ ColoWesGroup:
 	dw BAYLEEF
 	db NO_ITEM
 	dw TOXIC, SYNTHESIS, RAZOR_LEAF, BODY_SLAM
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 133
 	bigdw 69
 	bigdw 144
@@ -787,7 +787,7 @@ PTDawnGroup:
 	dw VENUSAUR ;add torterra
 	db BLUESKY_MAIL
 	dw CURSE, RAZOR_LEAF, SYNTHESIS, NO_MOVE ;add rock climb 
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 164
 	bigdw 123
 	bigdw 111
@@ -800,7 +800,7 @@ PTDawnGroup:
 	dw SEAKING ;add luminion
 	db MYSTIC_WATER
 	dw SURF, ATTRACT, RAIN_DANCE, ICE_BEAM
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 125
 	bigdw 81
 	bigdw 83
@@ -813,7 +813,7 @@ PTDawnGroup:
 	dw DRAGONITE ;add altaria
 	db BLUESKY_MAIL
 	dw DRAGONBREATH, FIRE_BLAST, FLY, NO_MOVE ;add dragon dance
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 118
 	bigdw 74
 	bigdw 89
@@ -826,7 +826,7 @@ PTDawnGroup:
 	dw TANGELA ; add LEAFEON
 	db BLUESKY_MAIL
 	dw GIGA_DRAIN, STRENGTH, SYNTHESIS, NO_MOVE ;add bullet seed
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 140
 	bigdw 135
 	bigdw 151
@@ -839,7 +839,7 @@ PTDawnGroup:
 	dw GOLEM ;add probopass
 	db BLUESKY_MAIL
 	dw THUNDER_WAVE, ROCK_SMASH, NO_MOVE, NO_MOVE ;add power gem, flash cannon
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 133
 	bigdw 69
 	bigdw 144
@@ -852,7 +852,7 @@ PTDawnGroup:
 	dw SNEASEL ;add weavile 
 	db BLUESKY_MAIL
 	dw METAL_CLAW, SLASH, ICE_PUNCH, NO_MOVE  ;add brick break
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 133
 	bigdw 158
 	bigdw 65
@@ -887,7 +887,7 @@ HGSSLyraGroup:
 	dw SUDOWOODO ;add bonsly 
 	db DRAGON_FANG
 	dw ROCK_SLIDE, BARRAGE, MEGA_PUNCH, NIGHT_SHADE 
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 44
 	bigdw 33
 	bigdw 40
@@ -900,7 +900,7 @@ HGSSLyraGroup:
 	dw DIGLETT ;add trapinch 
 	db NO_ITEM
 	dw SWIFT, NO_MOVE, NO_MOVE, NO_MOVE ;add Hammer Arm, Trump card
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 73
 	bigdw 68
 	bigdw 38
@@ -913,7 +913,7 @@ HGSSLyraGroup:
 	dw DIGLETT
 	db NO_ITEM
 	dw MAGNITUDE, MUD_SLAP, STRENGTH, NO_MOVE ;add mud bomb
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 28
 	bigdw 22
 	bigdw 16
@@ -926,7 +926,7 @@ HGSSLyraGroup:
 	dw HO_OH ;add groudon
 	db TM_FURY_CUTTER
 	dw SURF, CUT, NO_MOVE, NO_MOVE ;add sand tomb, Focus blast
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 115
 	bigdw 113
 	bigdw 93
@@ -953,7 +953,7 @@ BWHildaGroup:
 	dw DRATINI ;todo add axew 
 	db EON_MAIL
 	dw FALSE_SWIPE, DRAGON_RAGE, SLASH, NO_MOVE ;add dual chop
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 59
 	bigdw 48
 	bigdw 38
@@ -966,7 +966,7 @@ BWHildaGroup:
 	dw DROWZEE ;add munna 
 	db EON_MAIL
 	dw PSYBEAM, NO_MOVE, NO_MOVE, NO_MOVE ;add zen headbutt, Yawn, Synchronise
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 83
 	bigdw 24
 	bigdw 31
@@ -979,7 +979,7 @@ BWHildaGroup:
 	dw RATTATA ;add zigzagoon
 	db EON_MAIL
 	dw TAIL_WHIP, TACKLE, CUT, NO_MOVE ;add work up
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 42
 	bigdw 18
 	bigdw 21
@@ -992,7 +992,7 @@ BWHildaGroup:
 	dw GEODUDE ;add aron
 	db NO_ITEM
 	dw TACKLE, METAL_CLAW, HEADBUTT, HARDEN
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 61
 	bigdw 34
 	bigdw 50
@@ -1005,7 +1005,7 @@ BWHildaGroup:
 	dw PIDGEOTTO ;add staravia
 	db PORTRAITMAIL
 	dw WHIRLWIND, WING_ATTACK, GROWL, QUICK_ATTACK
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 76
 	bigdw 45
 	bigdw 32
@@ -1018,7 +1018,7 @@ BWHildaGroup:
 	dw MACHOP ;add croagunk
 	db EON_MAIL
 	dw PURSUIT, MUD_SLAP, FAINT_ATTACK, NO_MOVE ;add revenge
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 55
 	bigdw 39
 	bigdw 30
@@ -1416,7 +1416,7 @@ NuzlockeGroup:
 	dw RAICHU ;add manectric
 	db POKE_BALL
 	dw THUNDERBOLT, BITE, THUNDER, HOWL
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 149
 	bigdw 85
 	bigdw 88
@@ -1429,7 +1429,7 @@ NuzlockeGroup:
 	dw CHARIZARD ;add blaziken
 	db RAGECANDYBAR
 	dw SLASH, DOUBLE_KICK, NO_MOVE, NO_MOVE ;add Rock tomb, Blaze Kick
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 158
 	bigdw 133
 	bigdw 85
@@ -1442,7 +1442,7 @@ NuzlockeGroup:
 	dw SEEL ;add spheal
 	db EXP_SHARE
 	dw BODY_SLAM, AURORA_BEAM, NO_MOVE, NO_MOVE ;add Encore, Ice Ball
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 90
 	bigdw 35
 	bigdw 35
@@ -1509,7 +1509,7 @@ PCyanGroup:
 	dw MARILL
 	db NO_ITEM
 	dw TACKLE, TAIL_WHIP, WATER_GUN, NO_MOVE
-	dw $1FD4
+	bigdw $1FD4
 	bigdw 28
 	bigdw 7
 	bigdw 14
@@ -1760,7 +1760,7 @@ BrownGroup:
 	dw BEEDRILL 
 	db NO_ITEM
 	dw HARDEN, TWINEEDLE, CUT, FOCUS_ENERGY 
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 59
 	bigdw 47
 	bigdw 23
@@ -1773,7 +1773,7 @@ BrownGroup:
 	dw PSYDUCK
 	db NO_ITEM
 	dw TAIL_WHIP, BUBBLE, DISABLE, CONFUSION 
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 51
 	bigdw 26
 	bigdw 24
@@ -1786,7 +1786,7 @@ BrownGroup:
 	dw IVYSAUR
 	db NO_ITEM
 	dw LEECH_SEED, CUT, POISONPOWDER, SWEET_SCENT
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 87
 	bigdw 52
 	bigdw 53
@@ -1799,7 +1799,7 @@ BrownGroup:
 	dw EEVEE
 	db NO_ITEM
 	dw TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE 
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 31
 	bigdw 16
 	bigdw 16
@@ -1812,7 +1812,7 @@ BrownGroup:
 	dw GRAVELER
 	db NO_ITEM
 	dw TACKLE, HARDEN, ROCK_THROW, MUD_SLAP
-	dw $0FFF
+	bigdw $0FFF
 	bigdw 86
 	bigdw 72
 	bigdw 85
@@ -1825,7 +1825,7 @@ BrownGroup:
 	dw GOLBAT
 	db NO_ITEM
 	dw WING_ATTACK, BITE, FLY, SWIFT 
-	dw $FFFF
+	bigdw $FFFF
 	bigdw 133
 	bigdw 90
 	bigdw 84

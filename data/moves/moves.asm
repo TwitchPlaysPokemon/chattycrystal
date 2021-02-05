@@ -269,8 +269,7 @@ Moves1:
 	move EFFECT_TRAP_TARGET,        15, WATER,     70, 15,   0 ;WHIRLPOOL
 	move EFFECT_BEAT_UP,            10, DARK,     100, 10,   0 ;BEAT_UP
 	move EFFECT_ATTACK_UP,           0, NORMAL,   100, 40,   0 ;HOWL
-	move EFFECT_FURY_CUTTER,         40, NORMAL,   100, 15,   0 ;ECHOED VOICE
-	move EFFECT_NORMAL_HIT,         40, NORMAL,   100, 35,   0 ;STOCKPILE UNIMPLEMENTED
-	move EFFECT_CHATTY_HP, 	         1, NORMAL,   100, 15,   0; chatty Hidden power
-	move EFFECT_CHATTER,     60, FLYING,    100, 20,   100; Chatty Chatter
-
+	move EFFECT_FURY_CUTTER,        40, NORMAL,   100, 15,   0 ;ECHOED VOICE
+	move EFFECT_NORMAL_HIT,         40, NORMAL,   100, 35,   0 ;STOCKPILE - unimplemented!!!
+	move EFFECT_CHATTY_HP, 	         1, NORMAL,   100, 15,   0 ;CHATTY_HP
+	move EFFECT_CHATTER,            60, FLYING,   100, 20, 100 ;CHATTER

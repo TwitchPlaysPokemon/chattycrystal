@@ -31,8 +31,8 @@ For further documentation, check out the [wiki].
   `master`.
 * `expand-mon-ID`: (status: **stable**, last update: **2020-08-03**) This branch implements 16-bit indexes for Pokémon
   species, thus allowing more than 253 species to be included in a single game.
-* `expand-move-ID`: (status: **testing**, last update: **2020-08-16**) This branch implements 16-bit indexes for
-  moves, on top of the existing 16-bit support for Pokémon species from the previous branch. (Interaction between the
+* `expand-move-ID`: (status: **stable**, last update: **2020-08-31**) This branch implements 16-bit indexes for moves,
+  on top of the existing 16-bit support for Pokémon species from the previous branch. (Interaction between the
   branches is kept to a minimum, though.)
 
 To view the differences between any two branches (or any two commits in the repository), you can use GitHub's [tree

@@ -5654,12 +5654,12 @@ BattleCommand_Chatter:
 .charging
 	call LoadMoveAnim
 if TESTMODE
-	ld hl, EXPLOSION
+	ld hl, POUND
 else
-	ld a, [wChattyChatterMove]
+	ld hl, wChattyChatterMove
+	ld a, [hli]
+	ld l, [hl]
 	ld h, a
-	ld a, [wChattyChatterMove+1]
-	ld l, a
 endc
 	call GetMoveIDFromIndex
 	ld b, a

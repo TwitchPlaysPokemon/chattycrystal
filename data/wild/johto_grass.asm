@@ -572,56 +572,56 @@ JohtoGrassWildMons:
 	map_id MOUNT_MORTAR_1F_OUTSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 14, RATTATA
-	dbw 13, ZUBAT
-	dbw 14, MACHOP
-	dbw 13, GOLBAT
-	dbw 14, GEODUDE
-	dbw 16, RATICATE
-	dbw 16, RATICATE
+	dbw 43, RATTATA
+	dbw 42, ZUBAT
+	dbw 43, MACHOP
+	dbw 42, GOLBAT
+	dbw 43, GEODUDE
+	dbw 45, RATICATE
+	dbw 45, RATICATE
 	; day
-	dbw 14, RATTATA
-	dbw 13, ZUBAT
-	dbw 14, MACHOP
-	dbw 13, GOLBAT
-	dbw 14, GEODUDE
-	dbw 16, RATICATE
-	dbw 16, RATICATE
+	dbw 43, RATTATA
+	dbw 42, ZUBAT
+	dbw 43, MACHOP
+	dbw 42, GOLBAT
+	dbw 43, GEODUDE
+	dbw 45, RATICATE
+	dbw 45, RATICATE
 	; nite
-	dbw 14, RATTATA
-	dbw 13, ZUBAT
-	dbw 14, MARILL
-	dbw 13, GOLBAT
-	dbw 14, GEODUDE
-	dbw 16, RATICATE
-	dbw 16, RATICATE
+	dbw 43, RATTATA
+	dbw 42, ZUBAT
+	dbw 43, MARILL
+	dbw 42, GOLBAT
+	dbw 43, GEODUDE
+	dbw 45, RATICATE
+	dbw 45, RATICATE
 
 	map_id MOUNT_MORTAR_1F_INSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 13, GEODUDE
-	dbw 14, RATTATA
-	dbw 15, MACHOP
-	dbw 14, RATICATE
-	dbw 15, ZUBAT
-	dbw 15, GOLBAT
-	dbw 15, GOLBAT
+	dbw 42, GEODUDE
+	dbw 43, RATTATA
+	dbw 44, MACHOP
+	dbw 43, RATICATE
+	dbw 44, ZUBAT
+	dbw 44, GOLBAT
+	dbw 44, GOLBAT
 	; day
-	dbw 13, GEODUDE
-	dbw 14, RATTATA
-	dbw 15, MACHOP
-	dbw 14, RATICATE
-	dbw 15, ZUBAT
-	dbw 15, GOLBAT
-	dbw 15, GOLBAT
+	dbw 42, GEODUDE
+	dbw 43, RATTATA
+	dbw 44, MACHOP
+	dbw 43, RATICATE
+	dbw 44, ZUBAT
+	dbw 44, GOLBAT
+	dbw 44, GOLBAT
 	; nite
-	dbw 13, GEODUDE
-	dbw 14, RATTATA
-	dbw 15, RATICATE
-	dbw 14, ZUBAT
-	dbw 15, MARILL
-	dbw 15, GOLBAT
-	dbw 15, GOLBAT
+	dbw 42, GEODUDE
+	dbw 43, RATTATA
+	dbw 44, RATICATE
+	dbw 43, ZUBAT
+	dbw 44, MARILL
+	dbw 44, GOLBAT
+	dbw 44, GOLBAT
 
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -653,29 +653,29 @@ JohtoGrassWildMons:
 	map_id MOUNT_MORTAR_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 15, ZUBAT
-	dbw 17, ZUBAT
-	dbw 17, GOLBAT
-	dbw 16, MACHOP
-	dbw 16, GEODUDE
-	dbw 18, RATICATE
-	dbw 18, RATICATE
+	dbw 44, ZUBAT
+	dbw 46, ZUBAT
+	dbw 46, GOLBAT
+	dbw 45, MACHOP
+	dbw 45, GEODUDE
+	dbw 47, RATICATE
+	dbw 47, RATICATE
 	; day
-	dbw 15, ZUBAT
-	dbw 17, ZUBAT
-	dbw 17, GOLBAT
-	dbw 16, MACHOP
-	dbw 16, GEODUDE
-	dbw 18, RATICATE
-	dbw 18, RATICATE
+	dbw 44, ZUBAT
+	dbw 46, ZUBAT
+	dbw 46, GOLBAT
+	dbw 45, MACHOP
+	dbw 45, GEODUDE
+	dbw 47, RATICATE
+	dbw 47, RATICATE
 	; nite
-	dbw 15, ZUBAT
-	dbw 17, ZUBAT
-	dbw 17, GOLBAT
-	dbw 16, MARILL
-	dbw 16, GEODUDE
-	dbw 18, RATICATE
-	dbw 18, RATICATE
+	dbw 44, ZUBAT
+	dbw 46, ZUBAT
+	dbw 46, GOLBAT
+	dbw 45, MARILL
+	dbw 45, GEODUDE
+	dbw 47, RATICATE
+	dbw 47, RATICATE
 
 	map_id ICE_PATH_1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
@@ -1490,56 +1490,56 @@ JohtoGrassWildMons:
 	map_id ROUTE_42
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 13, EKANS
-	dbw 14, SPEAROW
-	dbw 15, RATTATA
-	dbw 16, RATICATE
-	dbw 15, ARBOK
-	dbw 16, FEAROW
-	dbw 16, FEAROW
+	dbw 42, EKANS
+	dbw 43, SPEAROW
+	dbw 44, RATTATA
+	dbw 45, RATICATE
+	dbw 44, ARBOK
+	dbw 45, FEAROW
+	dbw 45, FEAROW
 	; day
-	dbw 13, EKANS
-	dbw 14, SPEAROW
-	dbw 15, RATTATA
-	dbw 16, RATICATE
-	dbw 15, ARBOK
-	dbw 16, FEAROW
-	dbw 16, FEAROW
+	dbw 42, EKANS
+	dbw 43, SPEAROW
+	dbw 44, RATTATA
+	dbw 45, RATICATE
+	dbw 44, ARBOK
+	dbw 45, FEAROW
+	dbw 45, FEAROW
 	; nite
-	dbw 13, RATTATA
-	dbw 14, ZUBAT
-	dbw 15, RATICATE
-	dbw 16, GOLBAT
-	dbw 15, MARILL
-	dbw 16, GOLBAT
-	dbw 16, GOLBAT
+	dbw 42, RATTATA
+	dbw 43, ZUBAT
+	dbw 44, RATICATE
+	dbw 45, GOLBAT
+	dbw 44, MARILL
+	dbw 45, GOLBAT
+	dbw 45, GOLBAT
 
 	map_id ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 15, SENTRET
-	dbw 16, PIDGEOTTO
-	dbw 16, FARFETCH_D
-	dbw 15, FURRET
-	dbw 17, RATICATE
-	dbw 17, FURRET
-	dbw 17, FURRET
+	dbw 43, SENTRET
+	dbw 44, PIDGEOTTO
+	dbw 44, FARFETCH_D
+	dbw 43, FURRET
+	dbw 45, RATICATE
+	dbw 45, FURRET
+	dbw 45, FURRET
 	; day
-	dbw 15, SENTRET
-	dbw 16, PIDGEOTTO
-	dbw 16, FARFETCH_D
-	dbw 15, FURRET
-	dbw 17, RATICATE
-	dbw 17, FURRET
-	dbw 17, FURRET
+	dbw 43, SENTRET
+	dbw 44, PIDGEOTTO
+	dbw 44, FARFETCH_D
+	dbw 43, FURRET
+	dbw 45, RATICATE
+	dbw 45, FURRET
+	dbw 45, FURRET
 	; nite
-	dbw 15, VENONAT
-	dbw 16, NOCTOWL
-	dbw 16, RATICATE
-	dbw 17, VENONAT
-	dbw 17, RATICATE
-	dbw 17, VENOMOTH
-	dbw 17, VENOMOTH
+	dbw 43, VENONAT
+	dbw 44, NOCTOWL
+	dbw 44, RATICATE
+	dbw 45, VENONAT
+	dbw 45, RATICATE
+	dbw 45, VENOMOTH
+	dbw 45, VENOMOTH
 
 	map_id ROUTE_44
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

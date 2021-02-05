@@ -46,9 +46,9 @@ JohtoWaterWildMons:
 
 	map_id MOUNT_MORTAR_1F_OUTSIDE
 	db 4 percent ; encounter rate
-	dbw 27, GOLDEEN
-	dbw 32, MARILL
-	dbw 32, SEAKING
+	dbw 44, GOLDEEN
+	dbw 46, MARILL
+	dbw 46, SEAKING
 
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 2 percent ; encounter rate
@@ -58,9 +58,9 @@ JohtoWaterWildMons:
 
 	map_id MOUNT_MORTAR_B1F
 	db 2 percent ; encounter rate
-	dbw 27, GOLDEEN
-	dbw 32, MARILL
-	dbw 32, SEAKING
+	dbw 45, GOLDEEN
+	dbw 47, MARILL
+	dbw 47, SEAKING
 
 	map_id WHIRL_ISLAND_SW
 	db 4 percent ; encounter rate
@@ -214,9 +214,9 @@ JohtoWaterWildMons:
 
 	map_id LAKE_OF_RAGE
 	db 6 percent ; encounter rate
-	dbw 15, MAGIKARP
-	dbw 10, MAGIKARP
-	dbw 15, GYARADOS
+	dbw 45, MAGIKARP
+	dbw 40, MAGIKARP
+	dbw 45, GYARADOS
 
 	map_id BLACKTHORN_CITY
 	db 4 percent ; encounter rate

@@ -282,7 +282,6 @@ KRIS EQU __enum__
 	const GRUNTM_9
 	const GRUNTM_10
 	const GRUNTM_11
-	const GRUNTM_12
 	const GRUNTM_13
 	const GRUNTM_14
 	const GRUNTM_15
@@ -292,12 +291,9 @@ KRIS EQU __enum__
 	const GRUNTM_19
 	const GRUNTM_20
 	const GRUNTM_21
-	const GRUNTM_22
-	const GRUNTM_23
 	const GRUNTM_24
 	const GRUNTM_25
 	const GRUNTM_26
-	const GRUNTM_27
 	const GRUNTM_28
 	const GRUNTM_29
 	const GRUNTM_30
@@ -533,7 +529,6 @@ KRIS EQU __enum__
 	const EXECUTIVEM_1
 	const EXECUTIVEM_2
 	const EXECUTIVEM_3
-	const EXECUTIVEM_4
 
 	trainerclass PSYCHIC_T ; 34
 	const NATHAN
@@ -603,7 +598,6 @@ KRIS EQU __enum__
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1
-	const EXECUTIVEF_2
 
 	trainerclass SAGE ; 38
 	const CHOW
@@ -649,12 +643,6 @@ KRIS EQU __enum__
 	const ALLAN
 
 	trainerclass KIMONO_GIRL ; 3c
-	const NAOKO1
-	const NAOKO2
-	const SAYO
-	const ZUKI
-	const KUNI
-	const MIKI
 
 	trainerclass TWINS ; 3d
 	const AMYANDMAY1
@@ -715,6 +703,7 @@ KRIS EQU __enum__
 
 	trainerclass GSCHGSS_CHRIS ; 48
 	const AJDNNW1
+	const AJDNNW2
 	const AJDNNW3
 	const AAEFFFF
 	const D_GAUNTLETCRYSTAL
@@ -723,6 +712,7 @@ KRIS EQU __enum__
 	const BABA1
 	const EWWYPPP
 	const BABA2
+	const BABA3
 
 	trainerclass AC_CHRIS ; 4A
 	const EVAN

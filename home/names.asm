@@ -261,17 +261,55 @@ INCLUDE "home/hm_moves.asm"
 GetMoveName::
 	push hl
 	push bc
-	ldh a, [hROMBank]
-	push af
-	ld a, BANK(MoveNames)
-	rst Bankswitch
+	; get the move index, store the index minus one in bc
 	ld a, [wNamedObjectIndexBuffer]
 	call GetMoveIndexFromID
-	dec hl
 	ld b, h
 	ld c, l
+	ldh a, [hROMBank]
+	push af
+	; if we're in battle and it's not our turn...
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .not_trainer
+	; ...and we're in battle with a trainer...
+	ld a, [wOtherTrainerClass]
+	and a
+	jr z, .not_trainer
+	; ...then check if that trainer has a special name for that move
+	ld e, a
+	ld hl, SpecialMoveNames
+.loop
+	ld a, [hli]
+	cp e
+	jr z, .check_type
+	inc hl
+	inc hl
+	inc hl
+	and a
+	jr nz, .loop
+.not_trainer
+	; get the move name as usual
+	dec bc
+	ld a, BANK(MoveNames)
+	rst Bankswitch
 	ld hl, MoveNames
 	call GetNthString16
+	jr .done
+
+.check_type
+	ld a, [hli]
+	ld d, a
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld a, d
+	push bc
+	call LoadIndirectPointer
+	pop bc
+	jr z, .not_trainer
+	rst Bankswitch
+.done
 	ld de, wStringBuffer1
 	push de
 	ld bc, MOVE_NAME_LENGTH
@@ -282,3 +320,8 @@ GetMoveName::
 	pop bc
 	pop hl
 	ret
+
+SpecialMoveNames:
+	; db <trainer class>
+	; dba <indirection table>
+	db 0

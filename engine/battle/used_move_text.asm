@@ -6,7 +6,6 @@ DisplayUsedMoveText:
 
 UsedMoveText:
 ; this is a stream of text and asm from 105db9 to 105ef6
-	text_far _ActorNameText
 	text_asm
 	ldh a, [hBattleTurn]
 	and a
@@ -39,10 +38,33 @@ UsedMoveText:
 	ld [de], a
 
 .ok
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .done
+	ld a, [wOtherTrainerClass]
+	and a
+	jr z, .done
+	ld hl, UsedMoveAlternateMessages
+	ld e, a
+.loop
+	ld a, [hli]
+	cp e
+	jr nz, .skip
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ret
+.skip
+	inc hl
+	inc hl
+	and a
+	jr nz, .loop
+.done
 	ld hl, .standard_text
 	ret
 
 .standard_text
+	text_far _ActorNameText
 	text_far _UsedMoveText
 	text_asm
 ; check obedience
@@ -55,10 +77,24 @@ UsedMoveText:
 	ret
 
 .UsedInsteadText:
+	text_far _ActorNameText
 	text_far _UsedInsteadText
 .MoveNameText:
 	text_far _MoveNameText
 	text_end
+
+UsedMoveAlternateMessages:
+	; db <trainer class>, <message pointer>
+	db 0
+
+.vc_message
+	text "EN'S@"
+	text_ram wEnemyMonNick
+	text ""
+	line "@"
+	text_ram wStringBuffer2
+	text "!"
+	done
 
 UpdateUsedMoves:
 ; append move a to wPlayerUsedMoves unless it has already been used

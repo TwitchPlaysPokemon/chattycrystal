@@ -660,6 +660,7 @@ INCLUDE "data/items/names.asm"
 INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
+INCLUDE "data/moves/vc_names.asm"
 
 SECTION "Chatty Handling", ROMX
 

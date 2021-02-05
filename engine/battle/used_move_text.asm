@@ -39,10 +39,10 @@ UsedMoveText:
 	ld [de], a
 
 .ok
-	ld hl, UsedMoveInsteadText
+	ld hl, .standard_text
 	ret
 
-UsedMoveInsteadText:
+.standard_text
 	text_far _UsedMoveText
 	text_asm
 ; check obedience

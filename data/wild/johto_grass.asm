@@ -1139,29 +1139,29 @@ JohtoGrassWildMons:
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 6, GEODUDE
-	dbw 5, ZUBAT
-	dbw 5, GEODUDE
-	dbw 7, GEODUDE
-	dbw 5, TEDDIURSA
+	dbw 8, GEODUDE
 	dbw 7, ZUBAT
-	dbw 7, DUNSPARCE
+	dbw 7, GEODUDE
+	dbw 9, GEODUDE
+	dbw 7, TEDDIURSA
+	dbw 9, ZUBAT
+	dbw 9, DUNSPARCE
 	; day
-	dbw 6, GEODUDE
-	dbw 5, ZUBAT
-	dbw 5, GEODUDE
-	dbw 7, GEODUDE
-	dbw 5, ZUBAT
+	dbw 8, GEODUDE
 	dbw 7, ZUBAT
-	dbw 7, DUNSPARCE
+	dbw 7, GEODUDE
+	dbw 9, GEODUDE
+	dbw 7, ZUBAT
+	dbw 9, ZUBAT
+	dbw 9, DUNSPARCE
 	; nite
+	dbw 9, GEODUDE
+	dbw 7, ZUBAT
 	dbw 7, GEODUDE
-	dbw 5, ZUBAT
-	dbw 5, GEODUDE
-	dbw 7, GEODUDE
-	dbw 5, ZUBAT
-	dbw 5, ZUBAT
-	dbw 7, DUNSPARCE
+	dbw 9, GEODUDE
+	dbw 7, ZUBAT
+	dbw 7, ZUBAT
+	dbw 9, DUNSPARCE
 
 	map_id DARK_CAVE_BLACKTHORN_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1196,26 +1196,26 @@ JohtoGrassWildMons:
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
 	dbw 3, PIDGEY
-	dbw 3, SENTRET
-	dbw 2, RATTATA
 	dbw 3, HOPPIP
-	dbw 3, HOPPIP
+	dbw 5, RATTATA
+	dbw 6, HOPPIP
+	dbw 6, SENTRET
 	; day
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
 	dbw 3, PIDGEY
-	dbw 3, SENTRET
-	dbw 2, RATTATA
 	dbw 3, HOPPIP
-	dbw 3, HOPPIP
+	dbw 5, RATTATA
+	dbw 6, HOPPIP
+	dbw 6, SENTRET
 	; nite
 	dbw 2, HOOTHOOT
 	dbw 2, RATTATA
 	dbw 3, HOOTHOOT
 	dbw 3, RATTATA
-	dbw 2, RATTATA
-	dbw 3, HOOTHOOT
-	dbw 3, HOOTHOOT
+	dbw 5, RATTATA
+	dbw 6, HOOTHOOT
+	dbw 6, HOOTHOOT
 
 	map_id ROUTE_30
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1598,29 +1598,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_46
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, GEODUDE
-	dbw 2, SPEAROW
-	dbw 3, GEODUDE
-	dbw 3, RATTATA
-	dbw 2, PHANPY
-	dbw 2, RATTATA
-	dbw 2, RATTATA
+	dbw 6, GEODUDE
+	dbw 6, SPEAROW
+	dbw 7, GEODUDE
+	dbw 7, RATTATA
+	dbw 6, PHANPY
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 	; day
-	dbw 2, GEODUDE
-	dbw 2, SPEAROW
-	dbw 3, GEODUDE
-	dbw 3, RATTATA
-	dbw 2, RATTATA
-	dbw 2, RATTATA
-	dbw 2, RATTATA
+	dbw 6, GEODUDE
+	dbw 6, SPEAROW
+	dbw 7, GEODUDE
+	dbw 7, RATTATA
+	dbw 6, RATTATA
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 	; nite
-	dbw 2, GEODUDE
-	dbw 2, RATTATA
-	dbw 3, GEODUDE
-	dbw 3, RATTATA
-	dbw 2, RATTATA
-	dbw 2, RATTATA
-	dbw 2, RATTATA
+	dbw 6, GEODUDE
+	dbw 6, RATTATA
+	dbw 7, GEODUDE
+	dbw 7, RATTATA
+	dbw 6, RATTATA
+	dbw 6, RATTATA
+	dbw 6, RATTATA
 
 	map_id SILVER_CAVE_OUTSIDE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

@@ -1860,15 +1860,15 @@ ErikaGroup:
 YoungsterGroup:
 	next_list_item ; YOUNGSTER (1)
 	db "JOEY@", TRAINERTYPE_NORMAL
-	db 4
+	db 6
 	dw RATTATA
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (2)
 	db "MIKEY@", TRAINERTYPE_NORMAL
-	db 2
-	dw PIDGEY
 	db 4
+	dw PIDGEY
+	db 6
 	dw RATTATA
 	db -1 ; end
 
@@ -3509,9 +3509,9 @@ SabrinaGroup:
 BugCatcherGroup:
 	next_list_item ; BUG_CATCHER (1)
 	db "DON@", TRAINERTYPE_NORMAL
-	db 3
+	db 5
 	dw CATERPIE
-	db 3
+	db 5
 	dw CATERPIE
 	db -1 ; end
 

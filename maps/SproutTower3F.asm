@@ -43,12 +43,20 @@ SproutTower3FRivalScene:
 	applymovement SPROUTTOWER3F_SILVER, MovementData_0x184a24
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext SproutTowerRivalOnlyCareAboutStrongText
+	writetext SproutTowerRivalText
 	waitbutton
 	closetext
+	winlosstext SproutTowerRivalText, SproutTowerRivalText
+	setlasttalked SPROUTTOWER3F_SILVER
 	loadtrainer GSC_KRIS, BABA1
 	startbattle
-	reloadmapafterbattle
+	dontrestartmapmusic
+	reloadmap
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext SproutTowerRivalText
+	waitbutton
+	closetext
 	turnobject SPROUTTOWER3F_SILVER, UP
 	opentext
 	writetext SproutTowerRivalUsedEscapeRopeText
@@ -187,7 +195,7 @@ SproutTowerElderLecturesRivalText:
 	line "tools of war…"
 	done
 
-SproutTowerRivalOnlyCareAboutStrongText:
+SproutTowerRivalText:
 	text "…"
 	done
 

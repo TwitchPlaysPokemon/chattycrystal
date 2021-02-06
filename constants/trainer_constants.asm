@@ -798,7 +798,8 @@ KRIS EQU __enum__
 	const AAABBHM
 	
 	trainerclass NUZLOCKE ; 62
-	const F48
+	const F481
+	const F482
 	
 	trainerclass SIRIUS ; 63
 	const BBCBBHH

@@ -252,6 +252,6 @@ MoveNames::
 	db "BEAT UP@"
 	db "HOWL@"
 	db "ECHOED VOICE@"
-	db "STOCKPILE@"
+	db "ARM THRUST@"
 	db "HIDDEN POWER@"
 	db "CHATTER@"

@@ -258,7 +258,7 @@ MoveDescriptions1:
 	dw BeatUpDescription
 	dw SharpenDescription
 	dw FuryCutterDescription
-	dw BeatUpDescription
+	dw DoubleslapDescription
 	dw HiddenPowerDescription
 	dw InvalidMoveDescription
 

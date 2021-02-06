@@ -1188,7 +1188,89 @@ MaribelGroup:
 	end_list_items
 	
 NuzlockeGroup:
-	next_list_item ; F48
+	next_list_item ; F481
+	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 21
+	dw MANTINE ; add wingull 
+	db NO_ITEM
+	dw WING_ATTACK, WATER_GUN, SUPERSONIC, GROWL
+	bigdw $FFFF
+	bigdw 54
+	bigdw 24
+	bigdw 20
+	bigdw 49
+	bigdw 29
+	bigdw 20
+	db "Wingull@"
+	
+	db 17
+	dw QUILAVA ;add combusken
+	db POKE_BALL
+	dw PECK, DOUBLE_KICK, SCRATCH, FOCUS_ENERGY
+	bigdw $FFFF
+	bigdw 49
+	bigdw 34
+	bigdw 26
+	bigdw 26
+	bigdw 37
+	bigdw 30
+	db "Zzzzzz mmg@"
+	
+	db 5
+	dw UMBREON ;TODO add Poochyna
+	db NO_ITEM
+	dw TACKLE, HOWL, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 19
+	bigdw 11
+	bigdw 8
+	bigdw 9
+	bigdw 8
+	bigdw 9
+	db "6@"
+	
+	db 17
+	dw MACHOP ;add Makuhita
+	db EXP_SHARE
+	dw VITAL_THROW, FOCUS_ENERGY, SAND_ATTACK, ARM_THRUST
+	bigdw $FFFF
+	bigdw 57
+	bigdw 28
+	bigdw 15
+	bigdw 19
+	bigdw 12
+	bigdw 17
+	db "Bbbt@"
+	
+	db 16
+	dw PIDGEY ;add Tailow
+	db EXP_SHARE
+	dw WING_ATTACK, GROWL, PECK, QUICK_ATTACK
+	bigdw $FFFF
+	bigdw 41
+	bigdw 24
+	bigdw 17
+	bigdw 36
+	bigdw 18
+	bigdw 16
+	db "Tailow@"
+	
+	db 11
+	dw GEODUDE ;add aron
+	db NO_ITEM
+	dw TACKLE, HARDEN, MUD_SLAP, HEADBUTT 
+	bigdw $0FFF
+	bigdw 33
+	bigdw 20
+	bigdw 27
+	bigdw 12
+	bigdw 16
+	bigdw 16
+	db "Mmmm@"
+	
+	db -1 ; end
+
+	next_list_item ; F482
 	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 47
 	dw SEAKING ; add wailord 
@@ -3200,11 +3282,11 @@ PokemaniacGroup:
 GruntMGroup:
 	next_list_item ; GRUNTM (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 17
+	db 18
 	dw RATTATA
-	db 19
+	db 20
 	dw ZUBAT
-	db 19
+	db 20
 	dw ZUBAT
 	db -1 ; end
 
@@ -3402,9 +3484,9 @@ GruntMGroup:
 
 	next_list_item ; GRUNTM (29)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 19
+	db 20
 	dw RATTATA
-	db 19
+	db 20
 	dw RATTATA
 	db -1 ; end
 
@@ -4537,16 +4619,16 @@ HikerGroup:
 	db 16
 	dw GEODUDE
 	db 18
-	dw MACHAMP
+	dw MACHOP
 	db -1 ; end
 
 	next_list_item ; HIKER (2)
 	db "RUSSELL@", TRAINERTYPE_NORMAL
-	db 4
+	db 13
 	dw GEODUDE
-	db 6
+	db 15
 	dw GEODUDE
-	db 8
+	db 17
 	dw GEODUDE
 	db -1 ; end
 
@@ -6182,9 +6264,9 @@ MysticalmanGroup:
 GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 17
+	db 18
 	dw ZUBAT
-	db 19
+	db 20
 	dw EKANS
 	db -1 ; end
 

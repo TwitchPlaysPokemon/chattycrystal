@@ -277,7 +277,7 @@ BattleAnimations::
 	dw BattleAnim_BeatUp
 	dw BattleAnim_Roar
 	dw BattleAnim_Roar
-	dw BattleAnim_SweetScent2
+	dw BattleAnim_Doubleslap
 	dw BattleAnim_HiddenPower
 	dw BattleAnim_Roar         ; 100
 

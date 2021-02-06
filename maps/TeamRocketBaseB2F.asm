@@ -95,7 +95,7 @@ RocketBaseBossFScript:
 	applymovement TEAMROCKETBASEB2F_ROCKET_GIRL, MovementData_0x6d248
 	winlosstext UnknownText_0x6d45c, 0
 	setlasttalked TEAMROCKETBASEB2F_ROCKET_GIRL
-	loadtrainer NUZLOCKE, F48
+	loadtrainer NUZLOCKE, F482
 	startbattle
 	disappear TEAMROCKETBASEB2F_DRAGON
 	setevent EVENT_TEAM_ROCKET_BASE_B2F_EXECUTIVE

@@ -259,7 +259,7 @@
 	const BEAT_UP      ;  fb
 	const HOWL         ;  fc
 	const ECHOED_VOICE ;  fd
-	const STOCKPILE    ;  fe
+	const ARM_THRUST   ;  fe
 	const CHATTY_HP    ;  ff
 	const CHATTER      ; 100
 NUM_ATTACKS EQU const_value + -1

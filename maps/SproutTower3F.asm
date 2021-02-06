@@ -50,8 +50,7 @@ SproutTower3FRivalScene:
 	setlasttalked SPROUTTOWER3F_SILVER
 	loadtrainer GSC_KRIS, BABA1
 	startbattle
-	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
 	writetext SproutTowerRivalSageText

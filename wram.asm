@@ -1603,6 +1603,8 @@ wChattyChatterMove:: dw ;the move to call with chatter
 
 wTempLoopCounter:: db
 
+wChattyChatterInProgress:: db ;if we're in chatter, this will be non-0
+
 
 
 SECTION "16-bit WRAM home data", WRAM0

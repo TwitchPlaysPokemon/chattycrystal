@@ -84,7 +84,9 @@ UsedMoveText:
 	text_end
 
 UsedMoveAlternateMessages:
-	; db <trainer class>, <message pointer>
+	dbw FC_LARRY, .bootleg_message
+	dbw RED_LARRY, .bootleg_message
+	dbw BABA, .vc_message
 	db 0
 
 .vc_message

@@ -322,6 +322,13 @@ GetMoveName::
 	ret
 
 SpecialMoveNames:
-	; db <trainer class>
-	; dba <indirection table>
+	db FC_LARRY
+	dba BootlegMoveNames
+
+	db RED_LARRY
+	dba BootlegMoveNames
+
+	db BABA
+	dba VCMoveNames
+
 	db 0

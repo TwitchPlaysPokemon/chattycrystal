@@ -5667,6 +5667,7 @@ endc
 	call GetBattleVarAddr
 	ld [hl], b
 	call UpdateMoveData
+.move_selected
 	jp ResetTurn
 
 BattleCommand_CheckCharge:

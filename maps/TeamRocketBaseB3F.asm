@@ -69,7 +69,7 @@ RocketBaseRival:
 	applymovement TEAMROCKETBASEB3F_SILVER, RocketBaseRivalEnterMovement
 	turnobject PLAYER, LEFT
 	winlosstext RocketBaseRivalText, RocketBaseRivalText
-	loadtrainer GSC_KRIS, BABA3
+	loadtrainer BABA, BABA3
 	startbattle
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_ENCOUNTER

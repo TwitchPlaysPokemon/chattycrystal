@@ -62,7 +62,7 @@ BurnedTowerRivalBattleScript:
 	closetext
 	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
 	setlasttalked BURNEDTOWER1F_SILVER
-	loadtrainer GSC_KRIS, BABA2
+	loadtrainer BABA, BABA2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

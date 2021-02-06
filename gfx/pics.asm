@@ -729,11 +729,13 @@ GloriaPic:          INCBIN "gfx/trainers/gloria.2bpp.lz"
 GreenPic:           INCBIN "gfx/trainers/green.2bpp.lz"
 HilbertPic:         INCBIN "gfx/trainers/hilbert.2bpp.lz"
 HildaPic:           INCBIN "gfx/trainers/hilda.2bpp.lz"
+BABAPic:
 KrisOrigPic:        INCBIN "gfx/trainers/kris.2bpp.lz"
 LeafPic:            INCBIN "gfx/trainers/leaf.2bpp.lz"
 LucasPic:           INCBIN "gfx/trainers/lucas.2bpp.lz"
 LarryPic:           INCBIN "gfx/trainers/larry.2bpp.lz"
 LyraPic:            INCBIN "gfx/trainers/lyra.2bpp.lz"
+URFPic:
 GreenMayPic:
 MayPic:
 BlueMayPic:         INCBIN "gfx/trainers/may.2bpp.lz" 

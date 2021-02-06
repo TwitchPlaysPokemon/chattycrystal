@@ -48,7 +48,7 @@ SproutTower3FRivalScene:
 	closetext
 	winlosstext SproutTowerRivalSageText, SproutTowerRivalSageText
 	setlasttalked SPROUTTOWER3F_SILVER
-	loadtrainer GSC_KRIS, BABA1
+	loadtrainer BABA, BABA1
 	startbattle
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER

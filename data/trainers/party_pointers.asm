@@ -106,3 +106,5 @@ TrainerGroups:
 	dba RedLarryGroup
 	dba GreenMayGroup
 	dba BrownGroup
+	dba BABAGroup
+	dba URFGroup

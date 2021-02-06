@@ -106,3 +106,5 @@ TrainerPicPointers::
 	dba RedLarryPic
 	dba GreenMayPic
 	dba BrownPic
+	dba BABAPic
+	dba URFPic

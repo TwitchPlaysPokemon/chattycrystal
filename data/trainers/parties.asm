@@ -10,47 +10,6 @@
 SECTION "Enemy Trainer Parties 1", ROMX
 	
 GSCKrisGroup:
-	next_list_item ; BABA1
-	db "BABA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	db 14
-	dw CYNDAQUIL
-	db NO_ITEM
-	dw TACKLE, LEER, EMBER, SMOKESCREEN
-	bigdw $FFFF
-	bigdw 39
-	bigdw 23
-	bigdw 19
-	bigdw 24
-	bigdw 26
-	bigdw 23
-	db "BEST@"
-	
-	db 6
-	dw POLIWAG
-	db NO_ITEM
-	dw BUBBLE, NO_MOVE, NO_MOVE, NO_MOVE
-	bigdw $0FFF
-	bigdw 21
-	bigdw 11
-	bigdw 11
-	bigdw 16
-	bigdw 11
-	bigdw 11
-	db "ORGY@"
-	
-	db 7
-	dw PIDGEY
-	db NO_ITEM
-	dw TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE
-	bigdw $0FFF
-	bigdw 22
-	bigdw 12
-	bigdw 11
-	bigdw 15
-	bigdw 11
-	bigdw 11
-	db "EVER@"
-	db -1 ; end
 	
 	next_list_item ; EWWYPPP
 	db "EWWYPPP@",  TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -132,142 +91,6 @@ GSCKrisGroup:
 	bigdw 29
 	db "TOTODILE@"
 	
-	db -1 ; end
-	
-	next_list_item ; BABA2
-	db "BABA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	db 32
-	dw QUILAVA
-	db NO_ITEM
-	dw FLAME_WHEEL, CUT, QUICK_ATTACK, TACKLE
-	bigdw $FFFF
-	bigdw 92
-	bigdw 58
-	bigdw 51
-	bigdw 64
-	bigdw 71
-	bigdw 64
-	db "BEST@"
-	
-	db 9
-	dw POLIWAG
-	db NO_ITEM
-	dw BUBBLE, HYPNOSIS, NO_MOVE, NO_MOVE
-	bigdw $0FFF
-	bigdw 26
-	bigdw 15
-	bigdw 14
-	bigdw 21
-	bigdw 14
-	bigdw 14
-	db "ORGY@"
-	
-	db 10
-	dw PIDGEY
-	db NO_ITEM
-	dw TACKLE, SAND_ATTACK, GUST, NO_MOVE
-	bigdw $0FFF
-	bigdw 28
-	bigdw 14
-	bigdw 19
-	bigdw 14
-	bigdw 14
-	bigdw 14
-	db "EVER@"
-	
-	db 20
-	dw SUDOWOODO
-	db NO_ITEM
-	dw ROCK_THROW, MIMIC, FLAIL, LOW_KICK
-	bigdw $0FFF
-	bigdw 63
-	bigdw 47
-	bigdw 51
-	bigdw 18
-	bigdw 17
-	bigdw 31
-	db "FAKE@"
-	db -1 ; end
-	
-	next_list_item ; BABA3
-	db "BABA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	db 50
-	dw TYPHLOSION
-	db AMULET_COIN
-	dw FIRE_PUNCH, CUT, THUNDERPUNCH, FLAME_WHEEL
-	bigdw $FFFF
-	bigdw 164
-	bigdw 115
-	bigdw 103
-	bigdw 123
-	bigdw 143
-	bigdw 119
-	db "BEST@"
-	
-	db 12
-	dw POLIWAG
-	db NO_ITEM
-	dw BUBBLE, HYPNOSIS, SURF, NO_MOVE
-	bigdw $0FFF
-	bigdw 32
-	bigdw 18
-	bigdw 18
-	bigdw 27
-	bigdw 17
-	bigdw 17
-	db "ORGY@"
-	
-	db 10
-	dw PIDGEY
-	db NO_ITEM
-	dw TACKLE, SAND_ATTACK, GUST, FLY
-	bigdw $0FFF
-	bigdw 28
-	bigdw 14
-	bigdw 19
-	bigdw 14
-	bigdw 14
-	bigdw 14
-	db "EVER@"
-	
-	db 20
-	dw SUDOWOODO
-	db NO_ITEM
-	dw ROCK_THROW, STRENGTH, FLAIL, LOW_KICK
-	bigdw $0FFF
-	bigdw 63
-	bigdw 47
-	bigdw 51
-	bigdw 18
-	bigdw 17
-	bigdw 31
-	db "FAKE@"
-	
-	db 20
-	dw TENTACRUEL
-	db NO_ITEM
-	dw POISON_STING, SUPERSONIC, CONSTRICT, ACID
-	bigdw $0FFF
-	bigdw 64
-	bigdw 33
-	bigdw 37
-	bigdw 46
-	bigdw 37
-	bigdw 53
-	db "GAY@"
-	
-	db 30
-	dw GYARADOS
-	db NO_ITEM
-	dw THRASH, BITE, DRAGON_RAGE, LEER
-	bigdw $0FFF
-	bigdw 97
-	bigdw 88
-	bigdw 58
-	bigdw 59
-	bigdw 47
-	bigdw 71
-	db "DADA@"
 	db -1 ; end
 	
 	end_list_items
@@ -513,12 +336,6 @@ RSEORASMayGroup:
 	db -1 ; end
 	
 	next_list_item ; PETRA
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
-	
-	next_list_item ; URF
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
@@ -1835,6 +1652,197 @@ BrownGroup:
 	db "-<PK><PK><PK><PK><PK><PK><PK>)(@" 
 	
 	db -1	
+	end_list_items
+	
+BABAGroup:
+	next_list_item ; BABA1
+	db "BABA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 14
+	dw CYNDAQUIL
+	db NO_ITEM
+	dw TACKLE, LEER, EMBER, SMOKESCREEN
+	bigdw $FFFF
+	bigdw 39
+	bigdw 23
+	bigdw 19
+	bigdw 24
+	bigdw 26
+	bigdw 23
+	db "BEST@"
+	
+	db 6
+	dw POLIWAG
+	db NO_ITEM
+	dw BUBBLE, NO_MOVE, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 21
+	bigdw 11
+	bigdw 11
+	bigdw 16
+	bigdw 11
+	bigdw 11
+	db "ORGY@"
+	
+	db 7
+	dw PIDGEY
+	db NO_ITEM
+	dw TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 22
+	bigdw 12
+	bigdw 11
+	bigdw 15
+	bigdw 11
+	bigdw 11
+	db "EVER@"
+	db -1 ; end
+	
+	next_list_item ; BABA2
+	db "BABA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 32
+	dw QUILAVA
+	db NO_ITEM
+	dw FLAME_WHEEL, CUT, QUICK_ATTACK, TACKLE
+	bigdw $FFFF
+	bigdw 92
+	bigdw 58
+	bigdw 51
+	bigdw 64
+	bigdw 71
+	bigdw 64
+	db "BEST@"
+	
+	db 9
+	dw POLIWAG
+	db NO_ITEM
+	dw BUBBLE, HYPNOSIS, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 26
+	bigdw 15
+	bigdw 14
+	bigdw 21
+	bigdw 14
+	bigdw 14
+	db "ORGY@"
+	
+	db 10
+	dw PIDGEY
+	db NO_ITEM
+	dw TACKLE, SAND_ATTACK, GUST, NO_MOVE
+	bigdw $0FFF
+	bigdw 28
+	bigdw 14
+	bigdw 19
+	bigdw 14
+	bigdw 14
+	bigdw 14
+	db "EVER@"
+	
+	db 20
+	dw SUDOWOODO
+	db NO_ITEM
+	dw ROCK_THROW, MIMIC, FLAIL, LOW_KICK
+	bigdw $0FFF
+	bigdw 63
+	bigdw 47
+	bigdw 51
+	bigdw 18
+	bigdw 17
+	bigdw 31
+	db "FAKE@"
+	db -1 ; end
+	
+	next_list_item ; BABA3
+	db "BABA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 50
+	dw TYPHLOSION
+	db AMULET_COIN
+	dw FIRE_PUNCH, CUT, THUNDERPUNCH, FLAME_WHEEL
+	bigdw $FFFF
+	bigdw 164
+	bigdw 115
+	bigdw 103
+	bigdw 123
+	bigdw 143
+	bigdw 119
+	db "BEST@"
+	
+	db 12
+	dw POLIWAG
+	db NO_ITEM
+	dw BUBBLE, HYPNOSIS, SURF, NO_MOVE
+	bigdw $0FFF
+	bigdw 32
+	bigdw 18
+	bigdw 18
+	bigdw 27
+	bigdw 17
+	bigdw 17
+	db "ORGY@"
+	
+	db 10
+	dw PIDGEY
+	db NO_ITEM
+	dw TACKLE, SAND_ATTACK, GUST, FLY
+	bigdw $0FFF
+	bigdw 28
+	bigdw 14
+	bigdw 19
+	bigdw 14
+	bigdw 14
+	bigdw 14
+	db "EVER@"
+	
+	db 20
+	dw SUDOWOODO
+	db NO_ITEM
+	dw ROCK_THROW, STRENGTH, FLAIL, LOW_KICK
+	bigdw $0FFF
+	bigdw 63
+	bigdw 47
+	bigdw 51
+	bigdw 18
+	bigdw 17
+	bigdw 31
+	db "FAKE@"
+	
+	db 20
+	dw TENTACRUEL
+	db NO_ITEM
+	dw POISON_STING, SUPERSONIC, CONSTRICT, ACID
+	bigdw $0FFF
+	bigdw 64
+	bigdw 33
+	bigdw 37
+	bigdw 46
+	bigdw 37
+	bigdw 53
+	db "GAY@"
+	
+	db 30
+	dw GYARADOS
+	db NO_ITEM
+	dw THRASH, BITE, DRAGON_RAGE, LEER
+	bigdw $0FFF
+	bigdw 97
+	bigdw 88
+	bigdw 58
+	bigdw 59
+	bigdw 47
+	bigdw 71
+	db "DADA@"
+	db -1 ; end
+	
+	end_list_items
+	
+URFGroup:
+	next_list_item ; URF1
+	db "URF@", TRAINERTYPE_MOVES
+	db 46
+	dw SLOWKING
+	dw CURSE, SURF, SWAGGER, STRENGTH
+	db -1 ; end
+
 	end_list_items
 
 

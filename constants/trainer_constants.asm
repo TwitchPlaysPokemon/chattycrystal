@@ -709,10 +709,7 @@ KRIS EQU __enum__
 	const D_GAUNTLETCRYSTAL
 
 	trainerclass GSC_KRIS ; 49
-	const BABA1
 	const EWWYPPP
-	const BABA2
-	const BABA3
 
 	trainerclass AC_CHRIS ; 4A
 	const EVAN
@@ -725,7 +722,6 @@ KRIS EQU __enum__
 	trainerclass RSEORAS_MAY ; 4C
 	const QQ
 	const PETRA
-	const URF
 
 	trainerclass RSEORAS_BLUE_MAY ; 4D
 	const HNV
@@ -823,6 +819,14 @@ KRIS EQU __enum__
 	
 	trainerclass BROWN ; 4D
 	const PAUL_B
+	
+	trainerclass BABA ; 4E
+	const BABA1
+	const BABA2
+	const BABA3
+	
+	trainerclass URF ; 4F
+	const URF1
 	
 
 NUM_TRAINER_CLASSES EQU __enum__

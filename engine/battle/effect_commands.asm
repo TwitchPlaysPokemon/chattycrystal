@@ -2573,8 +2573,6 @@ EndMoveEffect:
 	ld [hli], a
 	ld [hli], a
 	ld [hl], a
-	ld a, 0
-	ld [wChattyChatterInProgress], a
 	ret
 
 DittoMetalPowder:
@@ -5663,8 +5661,6 @@ else
 	ld l, [hl]
 	ld h, a
 endc
-	ld a, 1
-	ld [wChattyChatterInProgress], a
 	call GetMoveIDFromIndex
 	ld b, a
 	ld a, BATTLE_VARS_MOVE

@@ -851,8 +851,7 @@ BirdKeeperPeterSeenText:
 	text "That BADGE! It's"
 	line "from VIOLET CITY!"
 
-	para "You beat"
-	line "!12rtyhasz?"
+	para "You beat FALKNER?"
 	done
 
 BirdKeeperPeterBeatenText:

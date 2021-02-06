@@ -77,7 +77,7 @@ TrainerGruntM1:
 
 TrainerGruntM2:
 if TESTMODE
-	trainer NUZLOCKE, F48, EVENT_BEAT_ROCKET_GRUNTM_2, GruntM2SeenText, GruntM2BeatenText, 0, .Script
+	trainer NUZLOCKE, F481, EVENT_BEAT_ROCKET_GRUNTM_2, GruntM2SeenText, GruntM2BeatenText, 0, .Script
 else
 	trainer GRUNTM, GRUNTM_2, EVENT_BEAT_ROCKET_GRUNTM_2, GruntM2SeenText, GruntM2BeatenText, 0, .Script
 endc

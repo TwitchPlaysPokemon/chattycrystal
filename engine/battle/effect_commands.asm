@@ -4850,9 +4850,6 @@ CalcPlayerStats:
 	ld a, 5
 	call CalcBattleStats
 
-	ld hl, BadgeStatBoosts
-	call CallBattleCore
-
 	call BattleCommand_SwitchTurn
 
 	ld hl, ApplyPrzEffectOnSpeed

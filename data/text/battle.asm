@@ -1104,3 +1104,8 @@ BattleText_0x8188e:
 	text "There is no time"
 	line "left today!"
 	done
+	
+IsChargedText:
+	text "<USER>"
+	line "is charged up!"
+	prompt

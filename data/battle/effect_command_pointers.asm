@@ -181,3 +181,4 @@ BattleCommandPointers:
 	dw BattleCommand_Curl
 	dw BattleCommand_ChattyHP
 	dw BattleCommand_Chatter
+	dw BattleCommand_Chargem

@@ -173,8 +173,14 @@ ALL_STATUS EQU (1 << PSN) | (1 << BRN) | (1 << FRZ) | (1 << PAR) | SLP
 
 ; wPlayerSubStatus2 or wEnemySubStatus2 bit flags
 	enum_start 7, -1
-	enum SUBSTATUS_CURLED
+	enum SUBSTATUS_BLANK1
+	enum SUBSTATUS_BLANK2
+	enum SUBSTATUS_BLANK3
+	enum SUBSTATUS_BLANK4
+	enum SUBSTATUS_BLANK5
+	enum SUBSTATUS_CHARGE_THIS_TURN
 	enum SUBSTATUS_CHARGE
+	enum SUBSTATUS_CURLED
 
 
 ; wPlayerSubStatus3 or wEnemySubStatus3 bit flags

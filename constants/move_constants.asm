@@ -265,6 +265,7 @@
 	const NUZZLE       ; 101
 	const SHOCK_WAVE   ; 102
 	const CHARGE_BEAM  ; 103
+	const CHARGE       ; 104
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

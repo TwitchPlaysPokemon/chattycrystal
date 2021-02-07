@@ -258,3 +258,4 @@ MoveNames::
 	db "NUZZLE@"
 	db "SHOCK WAVE@"
 	db "CHARGE BEAM@"
+	db "CHARGE@"

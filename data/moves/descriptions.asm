@@ -264,6 +264,7 @@ MoveDescriptions1:
 	dw NuzzleDescription
 	dw SwiftDescription
 	dw ChargeBeamDescription
+	dw ChargeDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1279,3 +1280,7 @@ NuzzleDescription:
 ChargeBeamDescription:
 	db   "An attack that may"
 	next "up user's SPATK.@"
+	
+ChargeDescription:
+	db   "Double an ELECTRIC"
+	next "move's power.@"

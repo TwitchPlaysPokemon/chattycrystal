@@ -2165,6 +2165,11 @@ Charge:
 	checkobedience
 	usedmovetext
 	doturn
-	checkhit
-	charge_m
+	lowersub
+	chargem
+	specialdefenseup
+	statupanim
+	raisesub
+	statupmessage
+	statupfailtext
 	endmove

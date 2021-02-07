@@ -283,6 +283,7 @@ BattleAnimations::
 	dw BattleAnim_Spark
 	dw BattleAnim_ThunderWave
 	dw BattleAnim_HyperBeam
+	dw BattleAnim_Recover
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

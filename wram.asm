@@ -443,8 +443,8 @@ wPlayerSubStatus2:: ; c669
 ; 5
 ; 4
 ; 3
-; 2
-; 1
+; 2 charged last turn
+; 1 charged
 ; 0 curled
 	db
 wPlayerSubStatus3:: ; c66a

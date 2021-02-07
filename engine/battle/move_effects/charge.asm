@@ -1,10 +1,13 @@
-BattleCommand_Charge_M:
-;charge
+BattleCommand_Chargem:
+;chargem
 
 	ld a, BATTLE_VARS_SUBSTATUS2
 	call GetBattleVarAddr
 	set SUBSTATUS_CHARGE, [hl]
-	ret
+	set SUBSTATUS_CHARGE_THIS_TURN, [hl]
+	call AnimateCurrentMove
+	ld hl, IsChargedText
+	jp StdBattleTextbox
 	
 ApplyChargeModifier:
 	push hl

@@ -1603,6 +1603,8 @@ wChattyChatterMove:: dw ;the move to call with chatter
 
 wTempLoopCounter:: db
 
+wChattyTrainerClass:: db
+wChattyTrainerID:: db
 
 
 SECTION "16-bit WRAM home data", WRAM0

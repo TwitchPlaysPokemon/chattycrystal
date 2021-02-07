@@ -1,4 +1,4 @@
-BattleCommand_Charge
+BattleCommand_Charge_M:
 ;charge
 
 	ld a, BATTLE_VARS_SUBSTATUS2

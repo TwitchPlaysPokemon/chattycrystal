@@ -2166,5 +2166,5 @@ Charge:
 	usedmovetext
 	doturn
 	checkhit
-	charge
+	charge_m
 	endmove

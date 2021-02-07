@@ -204,7 +204,7 @@ ReadTrainerPartyPieces:
 	call GetNextTrainerDataByte 
 	ld [de], a
 	jr .dvs_done
-.no_dvs ;TODO make sure wOtherTrainerClass is set correctly here
+.no_dvs 
 	push hl
 	farcall GetTrainerDVs
 	ld a, b
@@ -319,6 +319,11 @@ Battle_GetTrainerName:: ;copy trainers name into wStringBuffer1
 	; fallthrough
 
 GetTrainerName:: ;copy trainer class c ID b's name into wStringBuffer1
+	ld hl, wChattyTrainerClass
+	ld [hl], c
+	ld hl, wChattyTrainerID
+	ld [hl], b
+.AissCollectClassAndID
 	ld a, c
 	cp CAL
 	jr nz, .not_cal2

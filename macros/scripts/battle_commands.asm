@@ -182,7 +182,7 @@ ENDM
 	command curl                    ; af
 	command chattyhp                ; b0
 	command chatter                 ; b1
-	command charge                  ; b2
+	command charge_m                ; b2
 
 	enum_start $fe
 	command endturn                 ; fe

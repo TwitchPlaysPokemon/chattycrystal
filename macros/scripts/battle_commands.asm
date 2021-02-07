@@ -97,7 +97,7 @@ ENDM
 	command endure                  ; 5a
 	command checkcurl               ; 5b
 	command rolloutpower            ; 5c
-	command chattybranch              ; 5d
+	command chattybranch             ; 5d
 	command furycutter              ; 5e
 	command attract                 ; 5f
 	command happinesspower          ; 60
@@ -183,6 +183,7 @@ ENDM
 	command chattyhp                ; b0
 	command chatter                 ; b1
 	command chargem                 ; b2
+	command storedpower             ; b3
 
 	enum_start $fe
 	command endturn                 ; fe

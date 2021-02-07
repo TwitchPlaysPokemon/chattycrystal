@@ -130,8 +130,8 @@ MoveEffectsPointers:
 	dw BatonPass
 	dw Pursuit
 	dw RapidSpin
-	dw NormalHit
-	dw NormalHit
+	dw HoneClaws
+	dw StoredPower
 	dw MorningSun
 	dw Synthesis
 	dw Moonlight

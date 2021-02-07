@@ -2173,3 +2173,38 @@ Charge:
 	statupmessage
 	statupfailtext
 	endmove
+	
+HoneClaws:
+	checkobedience
+	usedmovetext
+	doturn
+	accuracyup
+	lowersub
+	statupanim
+	statupmessage
+	statupfailtext
+	attackup
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+	
+StoredPower:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	storedpower
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

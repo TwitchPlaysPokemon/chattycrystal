@@ -364,7 +364,6 @@ HandleCharge:
 	ld [wPlayerSubStatus2], a
 	ret
 	
-
 .CheckEnemy:
 	ld a, [wEnemySubStatus2]
 	bit SUBSTATUS_CHARGE_THIS_TURN, a

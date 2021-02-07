@@ -5017,6 +5017,8 @@ BattleCommand_Rampage:
 
 INCLUDE "engine/battle/move_effects/teleport.asm"
 
+INCLUDE "engine/battle/move_effects/stored_power.asm"
+
 SetBattleDraw:
 	ld a, [wBattleResult]
 	and BATTLERESULT_BITMASK

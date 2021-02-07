@@ -284,6 +284,9 @@ BattleAnimations::
 	dw BattleAnim_ThunderWave
 	dw BattleAnim_HyperBeam
 	dw BattleAnim_Recover
+	dw BattleAnim_Screech
+	dw BattleAnim_Sharpen
+	dw BattleAnim_Submission
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

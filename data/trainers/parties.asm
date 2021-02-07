@@ -1103,7 +1103,7 @@ SWSHGloriaGroup:
 	db 15
 	dw MAGNEMITE ; add klink 
 	db TM_RAIN_DANCE
-	dw BIND, CHARGE_BEAM, NO_MOVE, NO_MOVE ;add Charge, Metal Sound
+	dw BIND, CHARGE_BEAM, CHARGE, METAL_SOUND
 	bigdw $FFFF
 	bigdw 44
 	bigdw 23
@@ -1116,7 +1116,7 @@ SWSHGloriaGroup:
 	db 21
 	dw UMBREON ; add Thievul 
 	db NO_ITEM
-	dw THIEF, TAIL_WHIP, BEAT_UP, NO_MOVE ;add Hone Claws
+	dw THIEF, TAIL_WHIP, BEAT_UP, HONE_CLAWS 
 	bigdw $FFFF
 	bigdw 62
 	bigdw 35
@@ -1129,7 +1129,7 @@ SWSHGloriaGroup:
 	db 21
 	dw PIDGEOTTO ; add Corvisquire 
 	db NO_ITEM
-	dw LEER, NO_MOVE, NO_MOVE, NO_MOVE ;add Hone Claws, taunt, Power Trip
+	dw LEER, HONE_CLAWS, POWER_TRIP, NO_MOVE ;taunt
 	bigdw $FFFF
 	bigdw 64
 	bigdw 42

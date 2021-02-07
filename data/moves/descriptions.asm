@@ -265,6 +265,9 @@ MoveDescriptions1:
 	dw SwiftDescription
 	dw ChargeBeamDescription
 	dw ChargeDescription
+	dw MetalSoundDescription
+	dw HoneClawsDescription
+	dw PowerTripDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1284,3 +1287,15 @@ ChargeBeamDescription:
 ChargeDescription:
 	db   "Double an ELECTRIC"
 	next "move's power.@"
+	
+MetalSoundDescription:
+	db   "Sharply reduces"
+	next "the foe's SPDEF.@"
+	
+HoneClawsDescription:
+	db   "Increases ATTACK"
+	next "and ACCURACY.@"
+	
+PowerTripDescription:
+	db   "Stat boosts"
+	next "increase power.@"

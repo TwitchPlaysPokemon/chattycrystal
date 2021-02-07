@@ -266,6 +266,10 @@
 	const SHOCK_WAVE   ; 102
 	const CHARGE_BEAM  ; 103
 	const CHARGE       ; 104
+	const METAL_SOUND  ; 105
+	const HONE_CLAWS   ; 106
+	const POWER_TRIP   ; 107
+	
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

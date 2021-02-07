@@ -1312,6 +1312,8 @@ BattleCommand_Stab:
 	pop bc
 	pop de
 	pop hl
+	
+	call ApplyChargeModifier
 
 	ld a, [wCurType]
 	cp b
@@ -6553,6 +6555,8 @@ INCLUDE "engine/battle/move_effects/baton_pass.asm"
 INCLUDE "engine/battle/move_effects/pursuit.asm"
 
 INCLUDE "engine/battle/move_effects/rapid_spin.asm"
+
+INCLUDE "engine/battle/move_effects/charge.asm"
 
 BattleCommand_HealMorn:
 ; healmorn

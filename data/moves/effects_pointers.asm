@@ -37,7 +37,7 @@ MoveEffectsPointers:
 	dw PayDay
 	dw LightScreen
 	dw TriAttack
-	dw NormalHit
+	dw SpAtkUpHit
 	dw OHKOHit
 	dw RazorWind
 	dw SuperFang
@@ -110,7 +110,7 @@ MoveEffectsPointers:
 	dw Nightmare
 	dw FlameWheel
 	dw Curse
-	dw NormalHit
+	dw Charge
 	dw Protect
 	dw Spikes
 	dw Foresight

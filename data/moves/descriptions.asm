@@ -261,6 +261,9 @@ MoveDescriptions1:
 	dw DoubleslapDescription
 	dw HiddenPowerDescription
 	dw InvalidMoveDescription
+	dw NuzzleDescription
+	dw SwiftDescription
+	dw ChargeBeamDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1268,3 +1271,11 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+	
+NuzzleDescription:
+	db   "An attack that"
+	next "causes paralysis.@"
+	
+ChargeBeamDescription:
+	db   "An attack that may"
+	next "up user's SPATK.@"

@@ -262,6 +262,9 @@
 	const ARM_THRUST   ;  fe
 	const CHATTY_HP    ;  ff
 	const CHATTER      ; 100
+	const NUZZLE       ; 101
+	const SHOCK_WAVE   ; 102
+	const CHARGE_BEAM  ; 103
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff

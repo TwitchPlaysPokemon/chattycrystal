@@ -393,7 +393,7 @@ AzaleaGym_MapEvents:
 	bg_event  6, 13, BGEVENT_READ, AzaleaGymStatue
 
 	db 7 ; object events
-	object_event  5,  7, SPRITE_BUGSY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
+	object_event  5,  7, SPRITE_GLORIA, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, AzaleaGymBugsyScript, -1
 if TESTMODE
 	object_event  5,  3, SPRITE_BRONZE, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherBenny, -1
 	object_event  8,  8, SPRITE_LARRY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherAl, -1

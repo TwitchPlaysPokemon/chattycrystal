@@ -1088,9 +1088,9 @@ SWSHGloriaGroup:
 	db ":::?89977r@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	
 	db 14
-	dw GROWLITHE ; add yamper 
+	dw PIKACHU ; add yamper 
 	db LOVE_BALL
-	dw TAIL_WHIP, BITE, TACKLE, NO_MOVE ;add nuzzle
+	dw TAIL_WHIP, BITE, TACKLE, NUZZLE
 	bigdw $FFFF
 	bigdw 43
 	bigdw 21
@@ -1103,7 +1103,7 @@ SWSHGloriaGroup:
 	db 15
 	dw MAGNEMITE ; add klink 
 	db TM_RAIN_DANCE
-	dw BIND, NO_MOVE, NO_MOVE, NO_MOVE ;add Chage. Charge Beam, Metal Sound
+	dw BIND, CHARGE_BEAM, NO_MOVE, NO_MOVE ;add Charge, Metal Sound
 	bigdw $FFFF
 	bigdw 44
 	bigdw 23
@@ -1114,7 +1114,7 @@ SWSHGloriaGroup:
 	db "Klink@"
 	
 	db 21
-	dw SNEASEL ; add Thievul 
+	dw UMBREON ; add Thievul 
 	db NO_ITEM
 	dw THIEF, TAIL_WHIP, BEAT_UP, NO_MOVE ;add Hone Claws
 	bigdw $FFFF
@@ -1155,7 +1155,7 @@ SWSHGloriaGroup:
 	db 17
 	dw MAREEP ; add Electrike 
 	db NO_ITEM
-	dw LEER, QUICK_ATTACK, HOWL, NO_MOVE ;add Shock Wave
+	dw LEER, QUICK_ATTACK, HOWL, SHOCK_WAVE
 	bigdw $0FFF
 	bigdw 42
 	bigdw 22
@@ -1340,7 +1340,7 @@ NuzlockeGroup:
 	db 31
 	dw SEEL ;add spheal
 	db EXP_SHARE
-	dw BODY_SLAM, AURORA_BEAM, NO_MOVE, NO_MOVE ;add Encore, Ice Ball
+	dw BODY_SLAM, AURORA_BEAM, ENCORE, NO_MOVE ;add Ice Ball
 	bigdw $FFFF
 	bigdw 90
 	bigdw 35
@@ -1542,7 +1542,7 @@ GreenMayGroup:
 	db 45
 	dw AMPHAROS 
 	db NO_ITEM
-	dw ROCK_SMASH, CONFUSE_RAY, NO_MOVE, NO_MOVE ;add shock wave, signal beam
+	dw ROCK_SMASH, CONFUSE_RAY, SHOCK_WAVE, NO_MOVE ;add signal beam
 	bigdw $0FFF
 	bigdw 144
 	bigdw 99

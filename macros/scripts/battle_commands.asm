@@ -180,8 +180,9 @@ ENDM
 	command supereffectivelooptext  ; ad
 	command startloop               ; ae
 	command curl                    ; af
-	command chattyhp           ;b0
-	command chatter           ;b1
+	command chattyhp                ; b0
+	command chatter                 ; b1
+	command charge                  ; b2
 
 	enum_start $fe
 	command endturn                 ; fe

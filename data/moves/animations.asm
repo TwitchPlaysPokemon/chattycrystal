@@ -280,6 +280,9 @@ BattleAnimations::
 	dw BattleAnim_Doubleslap
 	dw BattleAnim_HiddenPower
 	dw BattleAnim_Roar         ; 100
+	dw BattleAnim_Spark
+	dw BattleAnim_ThunderWave
+	dw BattleAnim_HyperBeam
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

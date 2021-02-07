@@ -2138,3 +2138,33 @@ DefenseCurl:
 	statupmessage
 	statupfailtext
 	endmove
+	
+SpAtkUpHit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	specialattackup
+	statupmessage
+	endmove
+	
+Charge:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	charge
+	endmove

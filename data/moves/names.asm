@@ -255,3 +255,6 @@ MoveNames::
 	db "ARM THRUST@"
 	db "HIDDEN POWER@"
 	db "CHATTER@"
+	db "NUZZLE@"
+	db "SHOCK WAVE@"
+	db "CHARGE BEAM@"

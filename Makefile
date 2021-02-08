@@ -1,4 +1,4 @@
-roms := pokecrystal.gbc
+roms := chattycrystal.gbc
 
 # set to 0 when we're not replacing stuff to test anymore
 TESTMODE := 1
@@ -42,7 +42,7 @@ RGBLINK ?= $(RGBDS)rgblink
 .PRECIOUS:
 .SECONDARY:
 
-all: pokecrystal.gbc
+all: chattycrystal.gbc
 
 clean: tidy
 	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" \) -delete
@@ -77,11 +77,11 @@ $(foreach obj, $(crystal_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
 endif
 
 
-pokecrystal.gbc: $(crystal_obj) pokecrystal.link
-	$(RGBLINK) -n pokecrystal.sym -m pokecrystal.map -l pokecrystal.link -o $@ $(crystal_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
-	tools/sort_symfile.sh pokecrystal.sym
-	tools/bankends pokecrystal.map > bank_ends.txt
+chattycrystal.gbc: $(crystal_obj) chattycrystal.link
+	$(RGBLINK) -n chattycrystal.sym -m chattycrystal.map -l chattycrystal.link -o $@ $(crystal_obj)
+	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t CHATTY_CRY $@
+	tools/sort_symfile.sh chattycrystal.sym
+	tools/bankends chattycrystal.map > bank_ends.txt
 
 %.lz: %
 	tools/lzcomp -- $< $@

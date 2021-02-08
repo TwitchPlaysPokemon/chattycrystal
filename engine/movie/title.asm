@@ -365,7 +365,7 @@ endr
 	ret
 
 TitleSuicuneGFX:
-INCBIN "gfx/title/suicune.2bpp.lz"
+INCBIN "gfx/title/chatot.2bpp.lz"
 
 TitleLogoGFX:
 INCBIN "gfx/title/logo.2bpp.lz"

@@ -2030,7 +2030,7 @@ Intro_PerspectiveScrollBG:
 	ret
 
 IntroSuicuneRunGFX:
-INCBIN "gfx/intro/suicune_run.2bpp.lz"
+INCBIN "gfx/intro/chatot_run.2bpp.lz"
 
 IntroPichuWooperGFX:
 INCBIN "gfx/intro/pichu_wooper.2bpp.lz"

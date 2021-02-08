@@ -259,5 +259,6 @@ MoveNames::
 	db "SHOCK WAVE@"
 	db "CHARGE BEAM@"
 	db "CHARGE@"
+	db "METAL SOUND@"
 	db "HONE CLAWS@"
 	db "POWER TRIP@"

@@ -50,7 +50,7 @@ clean: tidy
 
 tidy:
 	rm -f $(roms) $(crystal_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
-	$(MAKE) clean -C tools/
+	#$(MAKE) clean -C tools/
 
 tools:
 	$(MAKE) -C tools/

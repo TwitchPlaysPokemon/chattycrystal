@@ -2104,7 +2104,7 @@ SchoolboyGroup:
 	db "JACK@", TRAINERTYPE_NORMAL
 	db 24
 	dw GLOOM
-	db 26
+	db 25
 	dw VOLTORB
 	db -1 ; end
 
@@ -2516,7 +2516,7 @@ LassGroup:
 	db "KRISE@", TRAINERTYPE_NORMAL
 	db 24
 	dw GLOOM
-	db 26
+	db 25
 	dw CUBONE
 	db -1 ; end
 
@@ -5965,7 +5965,7 @@ BoarderGroup:
 PokefanMGroup:
 	next_list_item ; POKEFANM (1)
 	db "WILLIAM@", TRAINERTYPE_ITEM
-	db 27
+	db 26
 	dw RAICHU
 	db GOLD_BERRY
 	db -1 ; end
@@ -6187,7 +6187,7 @@ TwinsGroup:
 PokefanFGroup:
 	next_list_item ; POKEFANF (1)
 	db "BEVERLY@", TRAINERTYPE_ITEM
-	db 27
+	db 26
 	dw GRANBULL
 	db GOLD_BERRY
 	db -1 ; end

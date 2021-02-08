@@ -545,29 +545,29 @@ JohtoGrassWildMons:
 	map_id ILEX_FOREST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 20, CATERPIE
-	dbw 20, WEEDLE
-	dbw 22, BUTTERFREE
-	dbw 22, BEEDRILL
-	dbw 22, PIDGEY
-	dbw 21, PARAS
-	dbw 21, PARAS
+	dbw 19, CATERPIE
+	dbw 19, WEEDLE
+	dbw 21, BUTTERFREE
+	dbw 21, BEEDRILL
+	dbw 21, PIDGEY
+	dbw 20, PARAS
+	dbw 20, PARAS
 	; day
-	dbw 20, CATERPIE
-	dbw 20, WEEDLE
-	dbw 22, BUTTERFREE
-	dbw 22, BEEDRILL
-	dbw 22, PIDGEY
-	dbw 21, PARAS
-	dbw 21, PARAS
+	dbw 19, CATERPIE
+	dbw 19, WEEDLE
+	dbw 21, BUTTERFREE
+	dbw 21, BEEDRILL
+	dbw 21, PIDGEY
+	dbw 20, PARAS
+	dbw 20, PARAS
 	; nite
-	dbw 20, ODDISH
-	dbw 20, VENONAT
-	dbw 22, GLOOM
-	dbw 22, PSYDUCK
-	dbw 22, NOCTOWL
-	dbw 21, PARAS
-	dbw 21, PARAS
+	dbw 19, ODDISH
+	dbw 19, VENONAT
+	dbw 21, GLOOM
+	dbw 21, PSYDUCK
+	dbw 21, NOCTOWL
+	dbw 20, PARAS
+	dbw 20, PARAS
 
 	map_id MOUNT_MORTAR_1F_OUTSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

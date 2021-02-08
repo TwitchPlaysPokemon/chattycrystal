@@ -192,10 +192,11 @@ AzaleaGroupSprites:
 	db SPRITE_TEACHER
 	db SPRITE_AZALEA_ROCKET ; variable sprite: becomes SPRITE_ROCKET and SPRITE_SILVER
 	db SPRITE_LASS
+	db SPRITE_CHRIS
 if TESTMODE
 	db SPRITE_GLORIA
 endc
-	; 6 of max 9 walking sprites
+	; 7 of max 9 walking sprites
 	db SPRITE_FRUIT_TREE
 	db SPRITE_SLOWPOKE
 	db SPRITE_KURT

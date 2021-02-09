@@ -50,6 +50,7 @@ DoMove:
 	call GetFarHalfword
 
 	ld de, wBattleScriptBuffer
+	push de
 
 .GetMoveEffect:
 	ld a, BANK(MoveEffects)
@@ -61,18 +62,17 @@ DoMove:
 	jr nz, .GetMoveEffect
 
 ; Start at the first command.
-	ld hl, wBattleScriptBuffer
-	ld a, l
-	ld [wBattleScriptBufferAddress], a
-	ld a, h
-	ld [wBattleScriptBufferAddress + 1], a
+	pop de
+	ld hl, wBattleScriptBufferAddress
+	ld a, e
+	ld [hli], a
+	ld [hl], d
 
 .ReadMoveEffectCommand:
-; ld a, [wBattleScriptBufferAddress++]
-	ld a, [wBattleScriptBufferAddress]
+	ld hl, wBattleScriptBufferAddress
+	ld a, [hli]
+	ld h, [hl]
 	ld l, a
-	ld a, [wBattleScriptBufferAddress + 1]
-	ld h, a
 
 	ld a, [hli]
 
@@ -100,12 +100,9 @@ DoMove:
 	ld a, BANK(BattleCommandPointers)
 	call GetFarHalfword
 
-	call .DoMoveEffectCommand
+	call _hl_
 
 	jr .ReadMoveEffectCommand
-
-.DoMoveEffectCommand:
-	jp hl
 
 CheckTurn:
 BattleCommand_CheckTurn:
@@ -137,46 +134,22 @@ BattleCommand_CheckTurn:
 CheckPlayerTurn:
 	ld hl, wPlayerSubStatus4
 	bit SUBSTATUS_RECHARGE, [hl]
-	jr z, .no_recharge
-
 	res SUBSTATUS_RECHARGE, [hl]
 	ld hl, MustRechargeText
-	call StdBattleTextbox
-	call CantMove
-	jp EndTurn
-
-.no_recharge
+	jp nz, .std_text_cant_move
 
 	ld hl, wBattleMonStatus
 	ld a, [hl]
 	and SLP
 	jr z, .not_asleep
 
-	dec a
-	ld [wBattleMonStatus], a
-	and SLP
+	dec [hl]
 	jr z, .woke_up
 
 	xor a
 	ld [wNumHits], a
 	ld de, ANIM_SLP
 	call FarPlayBattleAnimation
-	jr .fast_asleep
-
-.woke_up
-	ld hl, WokeUpText
-	call StdBattleTextbox
-	call CantMove
-	call UpdateBattleMonInParty
-	ld hl, UpdatePlayerHUD
-	call CallBattleCore
-	ld a, $1
-	ldh [hBGMapMode], a
-	ld hl, wPlayerSubStatus1
-	res SUBSTATUS_NIGHTMARE, [hl]
-	jr .not_asleep
-
-.fast_asleep
 	ld hl, FastAsleepText
 	call StdBattleTextbox
 
@@ -185,13 +158,29 @@ CheckPlayerTurn:
 	ld hl, .sleep_bypass_moves
 	call CheckMoveInList
 	jr c, .not_asleep
-	call CantMove
-	jp EndTurn
+	jp .cant_move
 
 .sleep_bypass_moves
 	dw SNORE
 	dw SLEEP_TALK
 	dw -1
+
+.thawing_moves
+	dw FLAME_WHEEL
+	dw SACRED_FIRE
+	dw -1
+
+.woke_up
+	ld hl, WokeUpText
+	call StdBattleTextbox
+	call CantMove
+	call UpdateBattleMonInParty
+	ld hl, UpdatePlayerHUD
+	call CallBattleCore
+	ld a, 1
+	ldh [hBGMapMode], a
+	ld hl, wPlayerSubStatus1
+	res SUBSTATUS_NIGHTMARE, [hl]
 
 .not_asleep
 
@@ -203,33 +192,16 @@ CheckPlayerTurn:
 	ld a, [wCurPlayerMove]
 	ld hl, .thawing_moves
 	call CheckMoveInList
-	jr c, .not_frozen
-
 	ld hl, FrozenSolidText
-	call StdBattleTextbox
-
-	call CantMove
-	jp EndTurn
-
-.thawing_moves
-	dw FLAME_WHEEL
-	dw SACRED_FIRE
-	dw -1
+	jp nc, .std_text_cant_move
 
 .not_frozen
 
 	ld hl, wPlayerSubStatus3
 	bit SUBSTATUS_FLINCHED, [hl]
-	jr z, .not_flinched
-
 	res SUBSTATUS_FLINCHED, [hl]
 	ld hl, FlinchedText
-	call StdBattleTextbox
-
-	call CantMove
-	jp EndTurn
-
-.not_flinched
+	jp nz, .std_text_cant_move
 
 	ld hl, wPlayerDisableCount
 	ld a, [hl]
@@ -271,7 +243,7 @@ CheckPlayerTurn:
 
 	; 50% chance of hitting itself
 	call BattleRandom
-	cp 50 percent + 1
+	add a, a
 	jr nc, .not_confused
 
 	; clear confusion-dependent substatus
@@ -281,8 +253,7 @@ CheckPlayerTurn:
 	ld [hl], a
 
 	call HitConfusion
-	call CantMove
-	jp EndTurn
+	jr .cant_move
 
 .not_confused
 
@@ -299,13 +270,9 @@ CheckPlayerTurn:
 
 	; 50% chance of infatuation
 	call BattleRandom
-	cp 50 percent + 1
-	jr c, .not_infatuated
-
+	add a, a
 	ld hl, InfatuationText
-	call StdBattleTextbox
-	call CantMove
-	jp EndTurn
+	jp c, .std_text_cant_move
 
 .not_infatuated
 
@@ -320,8 +287,7 @@ CheckPlayerTurn:
 	jr nz, .no_disabled_move
 
 	call MoveDisabled
-	call CantMove
-	jp EndTurn
+	jp .cant_move
 
 .no_disabled_move
 
@@ -331,11 +297,12 @@ CheckPlayerTurn:
 
 	; 25% chance to be fully paralyzed
 	call BattleRandom
-	cp 25 percent
-	ret nc
-
+	and 3
+	ret nz
 	ld hl, FullyParalyzedText
+.std_text_cant_move
 	call StdBattleTextbox
+.cant_move
 	call CantMove
 	jp EndTurn
 
@@ -377,15 +344,9 @@ OpponentCantMove:
 CheckEnemyTurn:
 	ld hl, wEnemySubStatus4
 	bit SUBSTATUS_RECHARGE, [hl]
-	jr z, .no_recharge
-
 	res SUBSTATUS_RECHARGE, [hl]
 	ld hl, MustRechargeText
-	call StdBattleTextbox
-	call CantMove
-	jp EndTurn
-
-.no_recharge
+	jp nz, .std_text_cant_move
 
 	ld hl, wEnemyMonStatus
 	ld a, [hl]
@@ -403,7 +364,22 @@ CheckEnemyTurn:
 	ld [wNumHits], a
 	ld de, ANIM_SLP
 	call FarPlayBattleAnimation
-	jr .fast_asleep
+	; Snore and Sleep Talk bypass sleep.
+	ld a, [wCurEnemyMove]
+	ld hl, .sleep_bypass_moves
+	call CheckMoveInList
+	jr c, .not_asleep
+	jp .cant_move
+
+.sleep_bypass_moves
+	dw SNORE
+	dw SLEEP_TALK
+	dw -1
+
+.thawing_moves
+	dw FLAME_WHEEL
+	dw SACRED_FIRE
+	dw -1
 
 .woke_up
 	ld hl, WokeUpText
@@ -412,25 +388,10 @@ CheckEnemyTurn:
 	call UpdateEnemyMonInParty
 	ld hl, UpdateEnemyHUD
 	call CallBattleCore
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	ld hl, wEnemySubStatus1
 	res SUBSTATUS_NIGHTMARE, [hl]
-	jr .not_asleep
-
-.fast_asleep
-	; Snore and Sleep Talk bypass sleep.
-	ld a, [wCurEnemyMove]
-	ld hl, .sleep_bypass_moves
-	call CheckMoveInList
-	jr c, .not_asleep
-	call CantMove
-	jp EndTurn
-
-.sleep_bypass_moves
-	dw SNORE
-	dw SLEEP_TALK
-	dw -1
 
 .not_asleep
 
@@ -442,32 +403,16 @@ CheckEnemyTurn:
 	ld a, [wCurEnemyMove]
 	ld hl, .thawing_moves
 	call CheckMoveInList
-	jr c, .not_frozen
-
 	ld hl, FrozenSolidText
-	call StdBattleTextbox
-	call CantMove
-	jp EndTurn
-
-.thawing_moves
-	dw FLAME_WHEEL
-	dw SACRED_FIRE
-	dw -1
+	jp nc, .std_text_cant_move
 
 .not_frozen
 
 	ld hl, wEnemySubStatus3
 	bit SUBSTATUS_FLINCHED, [hl]
-	jr z, .not_flinched
-
 	res SUBSTATUS_FLINCHED, [hl]
 	ld hl, FlinchedText
-	call StdBattleTextbox
-
-	call CantMove
-	jp EndTurn
-
-.not_flinched
+	jp nz, .std_text_cant_move
 
 	ld hl, wEnemyDisableCount
 	ld a, [hl]
@@ -512,7 +457,7 @@ CheckEnemyTurn:
 
 	; 50% chance of hitting itself
 	call BattleRandom
-	cp 50 percent + 1
+	add a, a
 	jr nc, .not_confused
 
 	; clear confusion-dependent substatus
@@ -541,8 +486,7 @@ CheckEnemyTurn:
 	ld c, TRUE
 	call DoEnemyDamage
 	call BattleCommand_RaiseSub
-	call CantMove
-	jp EndTurn
+	jr .cant_move
 
 .not_confused
 
@@ -559,13 +503,9 @@ CheckEnemyTurn:
 
 	; 50% chance of infatuation
 	call BattleRandom
-	cp 50 percent + 1
-	jr c, .not_infatuated
-
+	add a, a
 	ld hl, InfatuationText
-	call StdBattleTextbox
-	call CantMove
-	jp EndTurn
+	jr nc, .std_text_cant_move
 
 .not_infatuated
 
@@ -580,9 +520,7 @@ CheckEnemyTurn:
 	jr nz, .no_disabled_move
 
 	call MoveDisabled
-
-	call CantMove
-	jp EndTurn
+	jr .cant_move
 
 .no_disabled_move
 
@@ -592,17 +530,17 @@ CheckEnemyTurn:
 
 	; 25% chance to be fully paralyzed
 	call BattleRandom
-	cp 25 percent
-	ret nc
-
+	and 3
+	ret nz
 	ld hl, FullyParalyzedText
+.std_text_cant_move
 	call StdBattleTextbox
+.cant_move
 	call CantMove
-
 	; fallthrough
 
 EndTurn:
-	ld a, $1
+	ld a, 1
 	ld [wTurnEnded], a
 	jp ResetDamage
 
@@ -5411,26 +5349,26 @@ BattleCommand_EndLoop:
 	ld [wBattleScriptBufferAddress], a
 	ret
 
-;BattleCommand_FakeOut:
-;	ld a, [wAttackMissed]
-;	and a
-;	ret nz
-;
-;	call CheckSubstituteOpp
-;	jr nz, .fail
-;
-;	ld a, BATTLE_VARS_STATUS_OPP
-;	call GetBattleVar
-;	and 1 << FRZ | SLP
-;	jr nz, .fail
-;
-;	call CheckOpponentWentFirst
-;	jr z, FlinchTarget
+BattleCommand_FakeOut:
+	ld a, [wAttackMissed]
+	and a
+	ret nz
 
-;.fail
-;	ld a, 1
-;	ld [wAttackMissed], a
-;	ret
+	call CheckSubstituteOpp
+	jr nz, .fail
+
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	and 1 << FRZ | SLP
+	jr nz, .fail
+
+	call CheckOpponentWentFirst
+	jr z, FlinchTarget
+
+.fail
+	ld a, 1
+	ld [wAttackMissed], a
+	ret
 
 BattleCommand_FlinchTarget:
 	call CheckSubstituteOpp

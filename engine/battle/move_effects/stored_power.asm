@@ -1,5 +1,4 @@
 BattleCommand_Stored_Power:
-	push bc
 	ld hl, wPlayerStatLevels
 	ldh a, [hBattleTurn]
 	and a

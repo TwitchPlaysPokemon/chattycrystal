@@ -331,4 +331,7 @@ SpecialMoveNames:
 	db BABA
 	dba VCMoveNames
 
+	db URF
+	dba LSMoveNames
+
 	db 0

@@ -1,3 +1,5 @@
+SECTION "Effect Commands", ROMX
+
 INCLUDE "engine/battle/effect_commands.asm"
 
 INCLUDE "data/battle/accuracy_multipliers.asm"

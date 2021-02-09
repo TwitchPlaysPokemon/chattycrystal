@@ -1,6 +1,5 @@
 INCLUDE "constants.asm"
 
-
 SECTION "bank1", ROMX
 
 INCLUDE "engine/link/place_waiting_text.asm"
@@ -149,12 +148,6 @@ INCLUDE "data/moves/descriptions.asm"
 INCLUDE "engine/events/pokerus/pokerus.asm"
 INCLUDE "engine/battle/start_battle.asm"
 INCLUDE "engine/gfx/place_graphic.asm"
-
-
-SECTION "Effect Commands", ROMX
-
-INCLUDE "engine/battle/effect_command_files.asm"
-
 
 SECTION "Enemy Trainers", ROMX
 
@@ -714,5 +707,6 @@ SECTION "16-bit ID stuff", ROMX
 
 INCLUDE "engine/16/table_functions.asm"
 
-; own section
+; own sections
 INCLUDE "data/trainers/parties.asm"
+INCLUDE "engine/battle/effect_command_files.asm"

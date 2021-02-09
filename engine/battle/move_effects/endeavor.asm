@@ -1,3 +1,4 @@
+
 BattleCommand_Endeavor:
 ; endeavor
 
@@ -27,15 +28,15 @@ BattleCommand_Endeavor:
 	ld b, [hl]
 	ld a, [de]
 	ld [wCurHPAnimNewHP + 1], a
-	dec de
+	dec de 
 	sub c
 	ld a, [de]
 	ld [wCurHPAnimNewHP], a
 	sbc b
-	jp nc, PrintDidntAffect2
+	jr nc, .failed
 	call AnimateCurrentMove
 	; otherwise copy HP, but first load in old HP
-	inc de
+	inc de 
 	ld a, [hli]
 	ld [wCurHPAnimOldHP], a
 	ld a, [hl]
@@ -43,7 +44,7 @@ BattleCommand_Endeavor:
 	;actually set HP
 	ld a, [de] 
 	ld [hld], a
-	dec d
+	dec de
 	ld a, [de]
 	ld [hli], a
 	;just load in max HP, as we have no better time to do it
@@ -57,3 +58,7 @@ BattleCommand_Endeavor:
 	call AnimateHPBar
 	farcall _UpdateBattleHUDs
 	ret
+
+.failed
+	pop bc
+	jp PrintDidntAffect2

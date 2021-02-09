@@ -927,7 +927,7 @@ SMUSUMElio2Group:
 	db 26
 	dw PIDGEOTTO ; add Trumbeak 
 	db STAR_PIECE
-	dw FURY_ATTACK, ECHOED_VOICE, ROOST, NO_MOVE ;add Pluck
+	dw FURY_ATTACK, ECHOED_VOICE, ROOST, WING_ATTACK ;add Pluck over wing attack
 	bigdw $0FFF
 	bigdw 70
 	bigdw 53
@@ -966,7 +966,7 @@ SMUSUMElio2Group:
 	db 27
 	dw PIDGEOT ; add Toucannon 
 	db NO_ITEM
-	dw FURY_ATTACK, GROWL, SUPERSONIC, NO_MOVE ;add Pluck, beak blast over supersonic if you are mad
+	dw FURY_ATTACK, GROWL, SUPERSONIC, WING_ATTACK ;add Pluck over wing attack, beak blast over supersonic if you are mad
 	bigdw $0FFF
 	bigdw 83
 	bigdw 72
@@ -979,7 +979,7 @@ SMUSUMElio2Group:
 	db 25
 	dw FURRET ; add Linoone 
 	db STAR_PIECE
-	dw TACKLE, TAIL_WHIP, SAND_ATTACK, NO_MOVE ;add Covet
+	dw TACKLE, TAIL_WHIP, SAND_ATTACK, COVET 
 	bigdw $0FFF
 	bigdw 74
 	bigdw 49

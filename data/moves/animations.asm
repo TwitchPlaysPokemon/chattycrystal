@@ -289,6 +289,7 @@ BattleAnimations::
 	dw BattleAnim_Submission
 	dw BattleAnim_PainSplit
 	dw BattleAnim_Recover
+	dw BattleAnim_Thief
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

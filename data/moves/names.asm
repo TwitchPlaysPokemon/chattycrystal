@@ -264,3 +264,4 @@ MoveNames::
 	db "POWER TRIP@"
 	db "ENDEAVOR@"
 	db "ROOST@"
+	db "COVET@"

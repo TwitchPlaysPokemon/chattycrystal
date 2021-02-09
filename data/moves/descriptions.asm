@@ -270,6 +270,7 @@ MoveDescriptions1:
 	dw PowerTripDescription
 	dw EndeavorDescription
 	dw RecoverDescription
+	dw ThiefDescription
 
 InvalidMoveDescription:
 	db "?@"

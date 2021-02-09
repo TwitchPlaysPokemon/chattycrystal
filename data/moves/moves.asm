@@ -282,3 +282,4 @@ Moves1:
 	move EFFECT_STORED_POWER,       20, DARK,     100, 10,   0 ;POWER_TRIP
 	move EFFECT_ENDEAVOR,            0, NORMAL,   100,  5,   0 ;ENDEAVOR
 	move EFFECT_ROOST,               0, FLYING,   100, 10,   0 ;ROOST
+	move EFFECT_THIEF,              60, NORMAL,   100, 25, 100 ;COVET

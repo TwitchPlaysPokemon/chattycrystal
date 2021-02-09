@@ -287,6 +287,7 @@ BattleAnimations::
 	dw BattleAnim_Screech
 	dw BattleAnim_Sharpen
 	dw BattleAnim_Submission
+	dw BattleAnim_PainSplit
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

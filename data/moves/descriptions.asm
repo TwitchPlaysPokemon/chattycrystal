@@ -268,6 +268,7 @@ MoveDescriptions1:
 	dw MetalSoundDescription
 	dw HoneClawsDescription
 	dw PowerTripDescription
+	dw EndeavorDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1299,3 +1300,7 @@ HoneClawsDescription:
 PowerTripDescription:
 	db   "Stat boosts"
 	next "increase power.@"
+
+EndeavorDescription:
+	db   "Sets foe's HP"
+	next "to yours.@"

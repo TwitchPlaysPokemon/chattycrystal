@@ -220,66 +220,19 @@ AzaleaTownPlayerLeavesKurtsHouseMovement:
 	step_end
 
 AzaleaTownRivalBeforeText:
-	text "…Tell me some-"
-	line "thing."
-
-	para "Is it true that"
-	line "TEAM ROCKET has"
-	cont "returned?"
-
-	para "What? You beat"
-	line "them? Hah! Quit"
-	cont "lying."
-
-	para "You're not joking?"
-	line "Then let's see how"
-	cont "good you are."
+	text "…"
 	done
 
 AzaleaTownRivalWinText:
-	text "… Humph! Useless"
-	line "#MON!"
-
-	para "Listen, you. You"
-	line "only won because"
-
-	para "my #MON were"
-	line "weak."
+	text "…"
 	done
 
 AzaleaTownRivalAfterText:
-	text "I hate the weak."
-
-	para "#MON, trainers."
-	line "It doesn't matter"
-	cont "who or what."
-
-	para "I'm going to be"
-	line "strong and wipe"
-	cont "out the weak."
-
-	para "That goes for TEAM"
-	line "ROCKET too."
-
-	para "They act big and"
-	line "tough in a group."
-
-	para "But get them"
-	line "alone, and they're"
-	cont "weak."
-
-	para "I hate them all."
-
-	para "You stay out of my"
-	line "way. A weakling"
-
-	para "like you is only a"
-	line "distraction."
+	text "…"
 	done
 
 AzaleaTownRivalLossText:
-	text "…Humph! I knew"
-	line "you were lying."
+	text "…"
 	done
 
 AzaleaTownRocket1Text:
@@ -393,7 +346,7 @@ KurtsHouseSignText:
 AzaleaGymSignText:
 	text "AZALEA TOWN"
 	line "#MON GYM"
-	cont "LEADER: BUGSY"
+	cont "LEADER: :::?89977r"
 
 	para "The Walking"
 	line "Bug #MON"

@@ -269,6 +269,7 @@
 	const METAL_SOUND  ; 105
 	const HONE_CLAWS   ; 106
 	const POWER_TRIP   ; 107
+	const ENDEAVOR     ; 108
 	
 NUM_ATTACKS EQU const_value + -1
 

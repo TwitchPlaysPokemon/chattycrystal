@@ -433,10 +433,8 @@ GoldenrodDeptStoreSignText:
 GoldenrodGymSignText:
 	text "GOLDENROD CITY"
 	line "#MON GYM"
-	cont "LEADER: WHITNEY"
+	cont "LEADER: d76o6yttr?"
 
-	para "The Incredibly"
-	line "Pretty Girl!"
 	done
 
 GoldenrodCitySignText:

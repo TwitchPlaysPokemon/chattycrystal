@@ -2208,3 +2208,11 @@ StoredPower:
 	buildopponentrage
 	kingsrock
 	endmove
+	
+Endeavor:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	endeavor
+	endmove

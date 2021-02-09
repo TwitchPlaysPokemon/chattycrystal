@@ -323,7 +323,7 @@ RSEORASMayGroup:
 	db 20
 	dw CHIKORITA ;add shroomish
 	db NO_ITEM
-	dw NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE ;add uproar, defog, endeavor
+	dw ENDEAVOR, NO_MOVE, NO_MOVE, NO_MOVE ;add uproar, defog
 	bigdw $FFFF
 	bigdw 52
 	bigdw 22
@@ -914,7 +914,7 @@ SMUSUMElio2Group:
 	db 25
 	dw PIDGEOTTO ; add staravia 
 	db STAR_PIECE
-	dw WHIRLWIND, GROWL, QUICK_ATTACK, NO_MOVE ;add endeavor
+	dw WHIRLWIND, GROWL, QUICK_ATTACK, ENDEAVOR
 	bigdw $FFFF
 	bigdw 65
 	bigdw 45
@@ -966,7 +966,7 @@ SMUSUMElio2Group:
 	db 27
 	dw PIDGEOT ; add Toucannon 
 	db NO_ITEM
-	dw FURY_ATTACK, GROWL, NO_MOVE, NO_MOVE ;add Beak Blast, Pluck
+	dw FURY_ATTACK, GROWL, SUPERSONIC, NO_MOVE ;add Pluck
 	bigdw $0FFF
 	bigdw 83
 	bigdw 72
@@ -2487,7 +2487,7 @@ BirdKeeperGroup:
 
 LassGroup:
 	next_list_item ; LASS (1)
-	db "CARRIE@", TRAINERTYPE_MOVES
+	db "CARRIE@", TRAINERTYPE_NORMAL
 	db 28
 	dw GRANBULL
 	db -1 ; end

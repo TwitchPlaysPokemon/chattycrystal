@@ -280,3 +280,4 @@ Moves1:
 	move EFFECT_SP_DEF_DOWN_2,       0, STEEL,     85, 40,   0 ;METAL_SOUND
 	move EFFECT_HONE_CLAWS,          0, DARK,     100, 15,   0 ;HONE_CLAWS
 	move EFFECT_STORED_POWER,       20, DARK,     100, 10,   0 ;POWER_TRIP
+	move EFFECT_ENDEAVOR,            0, NORMAL,   100,  5,   0 ;ENDEAVOR

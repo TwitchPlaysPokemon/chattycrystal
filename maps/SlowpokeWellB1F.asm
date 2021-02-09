@@ -235,31 +235,15 @@ GruntM29AfterBattleText:
 	done
 
 GruntM1SeenText:
-	text "What do you want?"
-
-	para "If you interrupt"
-	line "our work, don't"
-	cont "expect any mercy!"
+	text "…"
 	done
 
 GruntM1BeatenText:
-	text "You did OK today,"
-	line "but wait till next"
-	cont "time!"
+	text "…"
 	done
 
 TrainerGruntM1WhenTalkText:
-	text "Yeah, TEAM ROCKET"
-	line "was broken up"
-	cont "three years ago."
-
-	para "But we continued"
-	line "our activities"
-	cont "underground."
-
-	para "Now you can have"
-	line "fun watching us"
-	cont "stir up trouble!"
+	text "…"
 	done
 
 GruntM2SeenText:

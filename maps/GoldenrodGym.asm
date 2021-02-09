@@ -183,49 +183,19 @@ BridgetWalksAwayMovement:
 	step_end
 
 WhitneyBeforeText:
-	text "Hi! I'm WHITNEY!"
-
-	para "Everyone was into"
-	line "#MON, so I got"
-	cont "into it too!"
-
-	para "#MON are"
-	line "super-cute!"
-
-	para "You want to bat-"
-	line "tle? I'm warning"
-	cont "you--I'm good!"
+	text "…"
 	done
 
 WhitneyShouldntBeSoSeriousText:
-	text "Sob…"
-
-	para "…Waaaaaaah!"
-	line "You're mean!"
-
-	para "You shouldn't be"
-	line "so serious! You…"
-	cont "you child, you!"
+	text "…"
 	done
 
 WhitneyYouMeanieText:
-	text "Waaaaah!"
-
-	para "Waaaaah!"
-
-	para "…Snivel, hic…"
-	line "…You meanie!"
+	text "…"
 	done
 
 WhitneyWhatDoYouWantText:
-	text "…Sniff…"
-
-	para "What? What do you"
-	line "want? A BADGE?"
-
-	para "Oh, right."
-	line "I forgot. Here's"
-	cont "PLAINBADGE."
+	text "…"
 	done
 
 PlayerReceivedPlainBadgeText:
@@ -234,38 +204,15 @@ PlayerReceivedPlainBadgeText:
 	done
 
 WhitneyPlainBadgeText:
-	text "PLAINBADGE lets"
-	line "your #MON use"
-
-	para "STRENGTH outside"
-	line "of battle."
-
-	para "It also boosts"
-	line "your #MON's"
-	cont "SPEED."
-
-	para "Oh, you can have"
-	line "this too!"
+	text "…"
 	done
 
 WhitneyAttractText:
-	text "It's ATTRACT!"
-	line "It makes full use"
-
-	para "of a #MON's"
-	line "charm."
-
-	para "Isn't it just per-"
-	line "fect for a cutie"
-	cont "like me?"
+	text "…"
 	done
 
 WhitneyGoodCryText:
-	text "Ah, that was a"
-	line "good cry!"
-
-	para "Come for a visit"
-	line "again! Bye-bye!"
+	text "…"
 	done
 
 LassCarrieSeenText:
@@ -301,7 +248,7 @@ LassBridgetBeatenText:
 
 LassBridgetAfterBattleText:
 	text "I'm trying to beat"
-	line "WHITNEY, but…"
+	line "d76o6yttr?, but…"
 	cont "It's depressing."
 
 	para "I'm okay! If I"
@@ -313,7 +260,7 @@ LassBridgetAfterBattleText:
 
 BridgetWhitneyCriesText:
 	text "Oh, no. You made"
-	line "WHITNEY cry."
+	line "d76o6yttr? cry."
 
 	para "It's OK. She'll"
 	line "stop soon. She"
@@ -392,7 +339,7 @@ GoldenrodGym_MapEvents:
 	bg_event  4, 15, BGEVENT_READ, GoldenrodGymStatue
 
 	db 6 ; object events
-	object_event  8,  3, SPRITE_ELIO2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodGymWhitneyScript, -1
+	object_event  8,  3, SPRITE_ELIO2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodGymWhitneyScript, -1
 	object_event  9, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerLassCarrie, -1
 	object_event  9,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassBridget, -1
 	object_event  0,  2, SPRITE_BUENA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBeautyVictoria, -1

@@ -184,6 +184,7 @@ ENDM
 	command chatter                 ; b1
 	command chargem                 ; b2
 	command storedpower             ; b3
+	command endeavor                ; b4
 
 	enum_start $fe
 	command endturn                 ; fe

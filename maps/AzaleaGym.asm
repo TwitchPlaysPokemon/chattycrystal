@@ -168,33 +168,11 @@ AzaleaGymStatue:
 	jumpstd gymstatue2
 
 BugsyText_INeverLose:
-	text "I'm BUGSY!"
-	line "I never lose when"
-
-	para "it comes to bug"
-	line "#MON."
-
-	para "My research is"
-	line "going to make me"
-
-	para "the authority on"
-	line "bug #MON!"
-
-	para "Let me demonstrate"
-	line "what I've learned"
-	cont "from my studies."
+	text "<......>"
 	done
 
 BugsyText_ResearchIncomplete:
-	text "Whoa, amazing!"
-	line "You're an expert"
-	cont "on #MON!"
-
-	para "My research isn't"
-	line "complete yet."
-
-	para "OK, you win. Take"
-	line "this BADGE."
+	text "<......>"
 	done
 
 Text_ReceivedHiveBadge:
@@ -203,51 +181,15 @@ Text_ReceivedHiveBadge:
 	done
 
 BugsyText_HiveBadgeSpeech:
-	text "Do you know the"
-	line "benefits of HIVE-"
-	cont "BADGE?"
-
-	para "If you have it,"
-	line "#MON up to L30"
-
-	para "will obey you,"
-	line "even traded ones."
-
-	para "#MON that know"
-	line "CUT will be able"
-
-	para "to use it outside"
-	line "of battle too."
-
-	para "Here, I also want"
-	line "you to have this."
+	text "<......>"
 	done
 
 BugsyText_FuryCutterSpeech:
-	text "TM49 contains"
-	line "FURY CUTTER."
-
-	para "If you don't miss,"
-	line "it gets stronger"
-	cont "every turn."
-
-	para "The longer your"
-	line "battle goes, the"
-	cont "better it gets."
-
-	para "Isn't that great?"
-	line "I discovered it!"
+	text "<......>"
 	done
 
 BugsyText_BugMonsAreDeep:
-	text "Bug #MON are"
-	line "deep. There are"
-
-	para "many mysteries to"
-	line "be explored."
-
-	para "Study your favor-"
-	line "ites thoroughly."
+	text "<......>"
 	done
 
 BugCatcherBennySeenText:
@@ -348,23 +290,16 @@ TwinsAmyandmay2AfterBattleText:
 AzaleaGymGuyText:
 	text "Yo, challenger!"
 
-	para "BUGSY's young, but"
-	line "his knowledge of"
+	para ":::?89977r's young"
+	line "but her knowledge"
 
-	para "bug #MON is for"
+	para "of #MON is for"
 	line "real."
 
 	para "It's going to be"
 	line "tough without my"
 	cont "advice."
 
-	para "Let's see… Bug"
-	line "#MON don't like"
-	cont "fire."
-
-	para "Flying-type moves"
-	line "are super-effec-"
-	cont "tive too."
 	done
 
 AzaleaGymGuyWinText:

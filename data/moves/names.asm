@@ -262,3 +262,4 @@ MoveNames::
 	db "METAL SOUND@"
 	db "HONE CLAWS@"
 	db "POWER TRIP@"
+	db "ENDEAVOR@"

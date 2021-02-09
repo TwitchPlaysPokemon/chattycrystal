@@ -289,6 +289,7 @@ HandleBetweenTurnEffects:
 	call HandleSafeguard
 	call HandleScreens
 	call HandleCharge
+	call HandleRoost
 	call HandleStatBoostingHeldItems
 	call HandleHealingItems
 	call UpdateBattleMonInParty
@@ -341,6 +342,25 @@ CheckFaint_EnemyThenPlayer:
 
 .BattleIsOver:
 	scf
+	ret
+	
+HandleRoost:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .player1
+	call .CheckPlayer
+	jr .CheckEnemy
+
+.player1
+	call .CheckEnemy
+.CheckPlayer:
+	ld a, [wPlayerSubStatus2]
+	res SUBSTATUS_ROOSTING, a
+	ret
+	
+.CheckEnemy:
+	ld a, [wEnemySubStatus2]
+	res SUBSTATUS_ROOSTING, a
 	ret
 	
 HandleCharge:

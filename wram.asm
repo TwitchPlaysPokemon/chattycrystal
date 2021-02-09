@@ -442,7 +442,7 @@ wPlayerSubStatus2:: ; c669
 ; 6
 ; 5
 ; 4
-; 3
+; 3 roosting
 ; 2 charged last turn
 ; 1 charged
 ; 0 curled

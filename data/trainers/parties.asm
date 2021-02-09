@@ -927,7 +927,7 @@ SMUSUMElio2Group:
 	db 26
 	dw PIDGEOTTO ; add Trumbeak 
 	db STAR_PIECE
-	dw FURY_ATTACK, ECHOED_VOICE, NO_MOVE, NO_MOVE ;add Roost, Pluck
+	dw FURY_ATTACK, ECHOED_VOICE, ROOST, NO_MOVE ;add Pluck
 	bigdw $0FFF
 	bigdw 70
 	bigdw 53
@@ -966,7 +966,7 @@ SMUSUMElio2Group:
 	db 27
 	dw PIDGEOT ; add Toucannon 
 	db NO_ITEM
-	dw FURY_ATTACK, GROWL, SUPERSONIC, NO_MOVE ;add Pluck
+	dw FURY_ATTACK, GROWL, SUPERSONIC, NO_MOVE ;add Pluck, beak blast over supersonic if you are mad
 	bigdw $0FFF
 	bigdw 83
 	bigdw 72
@@ -6407,7 +6407,7 @@ CYRoboredGroup:
 	db 45
 	dw PIDGEY ;add chatot
 	db NO_ITEM
-	dw CHATTER, NO_MOVE, PECK, MIRROR_MOVE ;add roost
+	dw CHATTER, ROOST, PECK, MIRROR_MOVE
 	bigdw $19B5
 	bigdw 152
 	bigdw 79

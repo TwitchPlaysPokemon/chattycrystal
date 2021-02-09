@@ -2216,3 +2216,10 @@ Endeavor:
 	checkhit
 	endeavor
 	endmove
+	
+Roost:
+	checkobedience
+	usedmovetext
+	doturn
+	roost
+	endmove

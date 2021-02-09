@@ -185,6 +185,8 @@ ENDM
 	command chargem                 ; b2
 	command storedpower             ; b3
 	command endeavor                ; b4
+	command roost                   ; b5
+
 
 	enum_start $fe
 	command endturn                 ; fe

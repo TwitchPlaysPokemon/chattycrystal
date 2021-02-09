@@ -288,6 +288,7 @@ BattleAnimations::
 	dw BattleAnim_Sharpen
 	dw BattleAnim_Submission
 	dw BattleAnim_PainSplit
+	dw BattleAnim_Recover
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

@@ -184,3 +184,4 @@ BattleCommandPointers:
 	dw BattleCommand_Chargem
 	dw BattleCommand_Stored_Power
 	dw BattleCommand_Endeavor
+	dw BattleCommand_Roost

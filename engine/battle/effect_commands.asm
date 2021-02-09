@@ -1286,19 +1286,17 @@ BattleCommand_Stab:
 	ld a, [hli]
 	ld d, a
 	ld e, [hl]
+	
+	call ChangeTypeForRoost
 
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .go ; Who Attacks and who Defends
 
-	ld hl, wEnemyMonType1
-	ld a, [hli]
-	ld b, a
-	ld c, [hl]
-	ld hl, wBattleMonType1
-	ld a, [hli]
-	ld d, a
-	ld e, [hl]
+	push de ;changing this code to not have to run the roost check twice and so it can know which register is which side
+	ld d, b
+	ld e, c
+	pop bc
 
 .go
 	ld a, BATTLE_VARS_MOVE_TYPE
@@ -3453,6 +3451,8 @@ INCLUDE "engine/battle/move_effects/false_swipe.asm"
 
 INCLUDE "engine/battle/move_effects/heal_bell.asm"
 
+INCLUDE "engine/battle/move_effects/roost.asm"
+
 FarPlayBattleAnimation:
 ; play animation de
 
@@ -5411,26 +5411,26 @@ BattleCommand_EndLoop:
 	ld [wBattleScriptBufferAddress], a
 	ret
 
-BattleCommand_FakeOut:
-	ld a, [wAttackMissed]
-	and a
-	ret nz
+;BattleCommand_FakeOut:
+;	ld a, [wAttackMissed]
+;	and a
+;	ret nz
+;
+;	call CheckSubstituteOpp
+;	jr nz, .fail
+;
+;	ld a, BATTLE_VARS_STATUS_OPP
+;	call GetBattleVar
+;	and 1 << FRZ | SLP
+;	jr nz, .fail
+;
+;	call CheckOpponentWentFirst
+;	jr z, FlinchTarget
 
-	call CheckSubstituteOpp
-	jr nz, .fail
-
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVar
-	and 1 << FRZ | SLP
-	jr nz, .fail
-
-	call CheckOpponentWentFirst
-	jr z, FlinchTarget
-
-.fail
-	ld a, 1
-	ld [wAttackMissed], a
-	ret
+;.fail
+;	ld a, 1
+;	ld [wAttackMissed], a
+;	ret
 
 BattleCommand_FlinchTarget:
 	call CheckSubstituteOpp
@@ -5539,6 +5539,7 @@ BattleCommand_OHKO:
 	ld [wCriticalHit], a
 	ld a, $1
 	ld [wAttackMissed], a
+BattleCommand_ChattyBranch: ;exists only as a stopping point for checkchatty
 	ret
 	
 BattleCommand_CheckChatty:
@@ -5553,9 +5554,6 @@ else
 endc
 	ld b, chattybranch_command
 	jp SkipToBattleCommand
-	
-BattleCommand_ChattyBranch: ;exists only as a stopping point for checkchatty
-	ret
 	
 BattleCommand_Chatter:
 	call ClearLastMove
@@ -5745,9 +5743,6 @@ BattleCommand_Charge:
 	text_far UnknownText_0x1c0d6c
 	text_end
 
-BattleCommand3c:
-; unused
-	ret
 
 BattleCommand_TrapTarget:
 ; traptarget
@@ -6505,10 +6500,6 @@ INCLUDE "engine/battle/move_effects/perish_song.asm"
 INCLUDE "engine/battle/move_effects/sandstorm.asm"
 
 INCLUDE "engine/battle/move_effects/rollout.asm"
-
-BattleCommand5d:
-; unused
-	ret
 
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 

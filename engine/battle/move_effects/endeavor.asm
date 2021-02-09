@@ -9,7 +9,7 @@ BattleCommand_Endeavor:
 	
 	ld hl, wEnemyMonHP + 1
 	ld de, wBattleMonHP + 1
-	bccord 2, 2
+	bccoord 2, 2
 	ld a, [hBattleTurn]
 	and a
 	ld a, 1
@@ -17,7 +17,7 @@ BattleCommand_Endeavor:
 	xor a
 	ld hl, wBattleMonHP + 1
 	ld de, wEnemyMonHP + 1 
-	bccord 10, 9
+	bccoord 10, 9
 .player_used ;hp to copy in de, hp to modify in hl, coord of hp bar in bc
 	ld [wWhichHPBar], a
 	push bc

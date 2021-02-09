@@ -269,6 +269,7 @@ MoveDescriptions1:
 	dw HoneClawsDescription
 	dw PowerTripDescription
 	dw EndeavorDescription
+	dw RecoverDescription
 
 InvalidMoveDescription:
 	db "?@"

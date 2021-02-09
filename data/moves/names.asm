@@ -263,3 +263,4 @@ MoveNames::
 	db "HONE CLAWS@"
 	db "POWER TRIP@"
 	db "ENDEAVOR@"
+	db "ROOST@"

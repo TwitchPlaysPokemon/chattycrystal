@@ -2196,6 +2196,7 @@ StoredPower:
 	critical
 	damagestats
 	storedpower
+	damagecalc
 	stab
 	damagevariation
 	checkhit

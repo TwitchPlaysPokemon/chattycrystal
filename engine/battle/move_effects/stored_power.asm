@@ -38,8 +38,6 @@ BattleCommand_Stored_Power:
 	; make sure we're not left with zero defense
 	ld a, c
 	and a
-	jr nz, .done
+	ret nz
 	ld c, 1
-
-.done
-	jp BattleCommand_DamageCalc
+	ret

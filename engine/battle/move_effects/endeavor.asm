@@ -3,9 +3,9 @@ BattleCommand_Endeavor:
 
 	ld a, [wAttackMissed]
 	and a
-	jp nz, .ButItFailed
+	jp nz, PrintDidntAffect2
 	call CheckSubstituteOpp
-	jp nz, .ButItFailed
+	jp nz, PrintDidntAffect2
 	
 	ld hl, wEnemyMonHP + 1
 	ld de, wBattleMonHP + 1
@@ -32,7 +32,7 @@ BattleCommand_Endeavor:
 	ld a, [de]
 	ld [wCurHPAnimNewHP], a
 	sbc b
-	jp nc, .ButItFailed
+	jp nc, PrintDidntAffect2
 	call AnimateCurrentMove
 	; otherwise copy HP, but first load in old HP
 	inc de
@@ -57,6 +57,3 @@ BattleCommand_Endeavor:
 	call AnimateHPBar
 	farcall _UpdateBattleHUDs
 	ret
-	
-.ButItFailed:
-	jp PrintDidntAffect2

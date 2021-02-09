@@ -1,13 +1,13 @@
 BattleCommand_Roost:
-;roost
+; roost
 
 	ld a, BATTLE_VARS_SUBSTATUS2
 	call GetBattleVarAddr
 	set SUBSTATUS_ROOSTING, [hl]
-	call BattleCommand_Heal
-	ret
+	jp BattleCommand_Heal
 	
-ChangeTypeForRoost:;applies roost to enemy types in de and player types in bc
+ChangeTypeForRoost:
+; applies roost to enemy types in de and player types in bc
 	ld a, [wPlayerSubStatus2]
 	bit SUBSTATUS_ROOSTING, a
 	jr nz, .playerDone
@@ -21,7 +21,7 @@ ChangeTypeForRoost:;applies roost to enemy types in de and player types in bc
 	jr nz, .playerDone
 	ld c, CURSE_T ;typeless
 	ld a, c
-	add b
+	cp b
 	jr nz, .playerDone
 	ld b, NORMAL ;load in normal if would be typeless
 .playerDone
@@ -38,7 +38,7 @@ ChangeTypeForRoost:;applies roost to enemy types in de and player types in bc
 	ret nz
 	ld e, CURSE_T ;typeless
 	ld a, e
-	add d
+	cp d
 	ret nz
 	ld d, NORMAL ;load in normal if would be typeless
 	ret

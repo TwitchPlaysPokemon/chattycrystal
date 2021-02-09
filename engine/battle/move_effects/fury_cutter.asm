@@ -10,7 +10,7 @@ BattleCommand_FuryCutter:
 .go
 	ld a, [wAttackMissed]
 	and a
-	jp nz, ResetFuryCutterCount
+	jr nz, ResetFuryCutterCount
 
 	inc [hl]
 
@@ -48,8 +48,7 @@ ResetFuryCutterCount:
 	ld hl, wEnemyFuryCutterCount
 
 .reset
-	xor a
-	ld [hl], a
+	ld [hl], 0
 
 	pop hl
 	ret

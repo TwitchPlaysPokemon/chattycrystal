@@ -14,7 +14,6 @@ BattleCommand_BeatUp:
 	call DelayFrames
 	xor a
 	ld [wPlayerRolloutCount], a
-	ld [wd002], a
 	ld [wBeatUpHitAtLeastOnce], a
 	jr .got_mon
 
@@ -23,10 +22,9 @@ BattleCommand_BeatUp:
 	ld b, a
 	ld a, [wPartyCount]
 	sub b
-	ld [wd002], a
 
 .got_mon
-	ld a, [wd002]
+	ld [wd002], a
 	ld hl, wPartyMonNicknames
 	call GetNick
 	ld a, MON_HP
@@ -37,9 +35,7 @@ BattleCommand_BeatUp:
 	ld a, [wd002]
 	ld c, a
 	ld a, [wCurBattleMon]
-	; BUG: this can desynchronize link battles
-	; Change "cp [hl]" to "cp c" to fix
-	cp [hl]
+	cp c
 	ld hl, wBattleMonStatus
 	jr z, .active_mon
 	ld a, MON_STATUS
@@ -49,7 +45,7 @@ BattleCommand_BeatUp:
 	and a
 	jp nz, .beatup_fail
 
-	ld a, $1
+	ld a, 1
 	ld [wBeatUpHitAtLeastOnce], a
 	ld hl, BeatUpAttackText
 	call StdBattleTextbox
@@ -88,7 +84,6 @@ BattleCommand_BeatUp:
 
 	xor a
 	ld [wEnemyRolloutCount], a
-	ld [wd002], a
 	ld [wBeatUpHitAtLeastOnce], a
 	jr .enemy_got_mon
 
@@ -97,9 +92,9 @@ BattleCommand_BeatUp:
 	ld b, a
 	ld a, [wOTPartyCount]
 	sub b
-	ld [wd002], a
 
 .enemy_got_mon
+	ld [wd002], a
 	ld a, [wBattleMode]
 	dec a
 	jr z, .wild

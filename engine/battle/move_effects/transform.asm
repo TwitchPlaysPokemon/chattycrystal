@@ -10,7 +10,7 @@ BattleCommand_Transform:
 	jp nz, BattleEffect_ButItFailed
 	xor a
 	ld [wNumHits], a
-	ld a, $1
+	ld a, 1
 	ld [wKickCounter], a
 	ld a, BATTLE_VARS_SUBSTATUS4
 	call GetBattleVarAddr
@@ -131,7 +131,7 @@ BattleCommand_Transform:
 .after_anim
 	xor a
 	ld [wNumHits], a
-	ld a, $2
+	ld a, 2
 	ld [wKickCounter], a
 	pop af
 	jr z, .no_substitute

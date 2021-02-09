@@ -4,7 +4,7 @@ BattleCommand_HiddenPower:
 	ld a, [wAttackMissed]
 	and a
 	ret nz
-	farcall HiddenPowerDamage ;d is power, 
+	farcall HiddenPowerDamage
 	ret
 
 BattleCommand_ChattyHP:

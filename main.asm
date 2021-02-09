@@ -152,7 +152,7 @@ INCLUDE "engine/gfx/place_graphic.asm"
 
 SECTION "Effect Commands", ROMX
 
-INCLUDE "engine/battle/effect_commands.asm"
+INCLUDE "engine/battle/effect_command_files.asm"
 
 
 SECTION "Enemy Trainers", ROMX

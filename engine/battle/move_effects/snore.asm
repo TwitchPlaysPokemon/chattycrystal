@@ -5,7 +5,7 @@ BattleCommand_Snore:
 	and SLP
 	ret nz
 	call ResetDamage
-	ld a, $1
+	ld a, 1
 	ld [wAttackMissed], a
 	call FailMove
 	jp EndMoveEffect

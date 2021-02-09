@@ -59,7 +59,8 @@ BattleCommand_Present:
 	jr z, .got_hp_fn_pointer
 	ld hl, AICheckEnemyMaxHP
 .got_hp_fn_pointer
-	ld a, BANK(AICheckPlayerMaxHP) ; aka BANK(AICheckEnemyMaxHP)
+	assert BANK(AICheckPlayerMaxHP) == BANK(AICheckEnemyMaxHP)
+	ld a, BANK(AICheckPlayerMaxHP)
 	rst FarCall
 	jr c, .already_fully_healed
 

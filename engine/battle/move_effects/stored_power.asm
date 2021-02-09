@@ -6,36 +6,41 @@ BattleCommand_Stored_Power:
 	jr z, .got_stat_levels
 	ld hl, wEnemyStatLevels
 .got_stat_levels
-	ld b, 8 ;loop 7 times
-	ld c, 0
+	push bc
+
+	lb bc, 7, 1 ; 7 stats to check, start at a multiplier of 1
 .loop
+	ld a, [hli]
+	sub 7
+	jr c, .negative
+	add a, c
+	ld c, a
+.negative
 	dec b
-	jr z, .done
-	ld a, [hl]
-	sub 6
-	jr c, .loop
-	add c
-	ld c, a
-.done
-	sla a ;multiply by 10 while checking for overflow, defence is halved ala explosion to double the effective power cap
-	ld c, a
-	sla a
-	sla a
-	jr c, .capped
-	add c
-	jr c, .capped
-	sla d ;halve the moves's base power to adjust for the def halving
-	add d
-	jr c, .capped
-	ld d, a
-.returnFromCap
+	jr nz, .loop
+
+	; multiply by 5...
+	ld a, c
+	add a, a
+	add a, a
+	add a, c
 	pop bc
-	srl c ;halve opps def to double this moves effective cap
-	jp nz,BattleCommand_DamageCalc
-	inc c
+
+	; ...and double twice to end up with 20 * counter. This might overflow, so halve defense if it does
+	rept 2
+		add a, a
+		jr nc, .ok\@
+		rra
+		srl c
+.ok\@
+	endr
+	ld d, a
+
+	; make sure we're not left with zero defense
+	ld a, c
+	and a
+	jr nz, .done
+	ld c, 1
+
+.done
 	jp BattleCommand_DamageCalc
-	
-.capped
-	ld d, $ff
-	jr .returnFromCap
-	

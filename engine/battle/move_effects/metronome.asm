@@ -68,5 +68,3 @@ ChooseRandomMove:
 		ld b, 0
 	endc
 	ret
-
-INCLUDE "data/moves/metronome_exception_moves.asm"

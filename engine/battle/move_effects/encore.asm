@@ -13,10 +13,10 @@ BattleCommand_Encore:
 	call GetBattleVar
 	ld b, a
 	push hl
-	ld hl, .invalid_moves
+	ld hl, NoEncoreMoves
 	call CheckMoveInList
 	pop hl
-	jp c, .failed
+	jr c, .failed
 
 .got_move
 	ld a, [hli]
@@ -27,17 +27,17 @@ BattleCommand_Encore:
 	add hl, bc
 	ld a, [hl]
 	and PP_MASK
-	jp z, .failed
+	jr z, .failed
 	ld a, [wAttackMissed]
 	and a
-	jp nz, .failed
+	jr nz, .failed
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP
 	call GetBattleVarAddr
 	bit SUBSTATUS_ENCORED, [hl]
-	jp nz, .failed
+	jr nz, .failed
 	set SUBSTATUS_ENCORED, [hl]
 	call BattleRandom
-	and $3
+	and 3
 	inc a
 	inc a
 	inc a
@@ -65,7 +65,8 @@ BattleCommand_Encore:
 	res SUBSTATUS_ENCORED, [hl]
 	xor a
 	ld [de], a
-	jr .failed
+.failed
+	jp PrintDidntAffect2
 
 .got_player_move
 	pop hl
@@ -110,13 +111,3 @@ BattleCommand_Encore:
 	call AnimateCurrentMove
 	ld hl, GotAnEncoreText
 	jp StdBattleTextbox
-
-.failed
-	jp PrintDidntAffect2
-
-.invalid_moves
-	dw NO_MOVE
-	dw STRUGGLE
-	dw ENCORE
-	dw MIRROR_MOVE
-	dw -1

@@ -34,7 +34,7 @@ CheckOppositeGender:
 	ld [wMonType], a
 
 	farcall GetGender
-	jr c, .genderless_samegender
+	ret c
 
 	ld b, 1
 	jr nz, .got_gender
@@ -58,7 +58,7 @@ CheckOppositeGender:
 	ld [wMonType], a
 	farcall GetGender
 	pop bc
-	jr c, .genderless_samegender
+	ret c
 
 	ld a, 1
 	jr nz, .got_enemy_gender
@@ -66,11 +66,6 @@ CheckOppositeGender:
 
 .got_enemy_gender
 	xor b
-	jr z, .genderless_samegender
-
-	and a
-	ret
-
-.genderless_samegender
+	ret nz
 	scf
 	ret

@@ -23,16 +23,12 @@ ApplyChargeModifier:
 	ld a, [hld]
 	ld h, [hl]
 	ld l, a
-	
-	sla l
-	rl h
-	
+	add hl, hl
 	ld a, h
 	ld [wCurDamage], a
 	ld a, l
 	ld [wCurDamage + 1], a
-	
-	
+
 .not_charged
 	pop hl
 	ret

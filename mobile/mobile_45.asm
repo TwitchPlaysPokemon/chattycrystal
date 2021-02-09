@@ -63,7 +63,7 @@ String_114163:
 	popc
 
 Jumptable_114165:
-	dw Stubbed_Function114268
+	dw Function114268
 	dw Function114269
 	dw Function11433c
 	dw Function1143b7
@@ -152,9 +152,7 @@ Function11425c:
 	ldh [hSRAMBank], a
 	ldh [hSRAMBank], a
 	ld [MBC3SRamBank], a
-	ret
-
-Stubbed_Function114268:
+Function114268:
 	ret
 
 Function114269:

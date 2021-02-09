@@ -49,7 +49,6 @@ MrPokemonsHouse_MapScripts:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	playmusic MUSIC_HEAL
-	special StubbedTrainerRankings_Healings
 	special HealParty
 	pause 60
 	special FadeInQuickly

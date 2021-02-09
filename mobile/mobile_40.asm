@@ -39,7 +39,6 @@ Function100022:
 	ld a, b
 	ld [wcd24], a
 	farcall Function10127e
-	farcall Stubbed_Function106462
 	farcall Function106464 ; load broken gfx
 	farcall Function11615a ; init RAM
 	ld hl, wVramState
@@ -2929,7 +2928,6 @@ Function1013aa:
 
 Function1013c0:
 	farcall BlankScreen
-	farcall Stubbed_Function106462
 	farcall Function106464
 	call FinishExitMenu
 	ret
@@ -2940,28 +2938,6 @@ Function1013d6:
 
 Function1013dd:
 	call CGBOnly_CopyTilemapAtOnce
-	ret
-
-Unreferenced_Function1013e1:
-	push de
-	inc de
-	ld b, a
-	ld c, 0
-.asm_1013e6
-	inc c
-	ld a, [hli]
-	ld [de], a
-	inc de
-	and a
-	jr z, .asm_1013f1
-	dec b
-	jr nz, .asm_1013e6
-	scf
-
-.asm_1013f1
-	pop de
-	ld a, c
-	ld [de], a
 	ret
 
 Function1013f5:
@@ -2977,13 +2953,6 @@ Function1013f5:
 	jr nz, .asm_1013f9
 	ret
 
-Unreferenced_Function101400:
-	ld a, [de]
-	inc de
-	cp [hl]
-	jr nz, asm_101416
-	inc hl
-
 Function101406:
 	ld c, a
 	ld b, 0
@@ -2991,7 +2960,7 @@ Function101406:
 	ld a, [de]
 	inc de
 	cp [hl]
-	jr nz, asm_101416
+	jr nz, .asm_101416
 	inc hl
 	dec bc
 	ld a, b
@@ -3000,7 +2969,7 @@ Function101406:
 	and a
 	ret
 
-asm_101416:
+.asm_101416
 	scf
 	ret
 
@@ -3146,14 +3115,6 @@ Function101507:
 	ld hl, $40
 	ld bc, $40
 	ld a, $02
-	call Function3e32
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
-
-Unreferenced_Function10151d:
-	ld a, $34
 	call Function3e32
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
@@ -3327,12 +3288,6 @@ Function101663:
 	ld a, $05
 	ld de, w5_dc00
 	call Function10163f
-	ret
-
-Unreferenced_Function101674:
-	ld a, $05
-	ld hl, w5_dc00
-	call Function101635
 	ret
 
 Function10167d:
@@ -4169,11 +4124,6 @@ Function101cbc:
 	ld [wcd2b], a
 	ret
 
-Unreferenced_Function101cc2:
-	ld a, $02
-	ld [wcd2b], a
-	ret
-
 Function101cc8:
 	ld a, $01
 	ld [wc314], a
@@ -4428,20 +4378,6 @@ Function101e64:
 	set 5, [hl]
 	ld a, $02
 	ld [wcd2b], a
-	ret
-
-Unreferenced_Function101e82:
-	call Function101ecc
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
-
-Unreferenced_Function101e8d:
-	call Function101ed3
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
 	ret
 
 Function101e98:
@@ -5155,7 +5091,6 @@ Function102423:
 	call Function102921
 	ret nc
 	farcall SaveAfterLinkTrade
-	farcall StubbedTrainerRankings_Trades
 	farcall BackupMobileEventIndex
 	ld hl, wcd4b
 	set 1, [hl]
@@ -6144,13 +6079,6 @@ Function102b4e:
 	ld [wMenuCursorY], a
 	ld a, [wOTPartyCount]
 	ld [w2DMenuNumRows], a
-	ret
-
-Unreferenced_Function102b68:
-	xor a
-	ld hl, wWindowStackPointer
-	ld bc, $10
-	call ByteFill
 	ret
 
 Unknown_102b73:

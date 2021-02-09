@@ -170,15 +170,14 @@ SpecialsPointers::
 	add_special Mobile_SelectThreeMons
 	add_special Function1037eb
 	add_special Function10383c
-	add_special StubbedTrainerRankings_Healings
 	add_special RefreshSprites
 	add_special Function1037c2
-	add_special Mobile_DummyReturnFalse ; $a0
-	add_special Function103780
+	add_special Mobile_DummyReturnFalse
+	add_special Function103780 ; $a0
 	add_special Function10387b
 	add_special AskRememberPassword
 	add_special LoadMapPalettes
 	add_special UnusedFindItemInPCOrBag
 	add_special InitialSetDSTFlag
 	add_special InitialClearDSTFlag
-	add_special DummySpecial_c224 ; $a8
+	add_special DummySpecial_c224

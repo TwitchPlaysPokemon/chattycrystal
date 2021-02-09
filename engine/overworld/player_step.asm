@@ -52,34 +52,11 @@ HandlePlayerStep:
 	ld a, [hl]
 	and a
 	ret z
-	dec [hl]
-	ld a, [hl]
-	ld hl, .Jumptable
-	rst JumpTable
-	ret
-
-.Jumptable:
-	dw GetMovementPermissions
-	dw BufferScreen
-	dw .mobile
-	dw .fail2
-; The rest are never used.  Ever.
-	dw .fail1
-	dw .fail1
-	dw .fail1
-	dw .fail1
-	dw .fail1
-	dw .fail1
-	dw .fail1
-
-.fail1
-	ret
-
-.mobile
-	farcall StubbedTrainerRankings_StepCount
-	ret
-
-.fail2
+	dec a
+	ld [hl], a
+	jp z, GetMovementPermissions
+	dec a
+	jp z, BufferScreen
 	ret
 
 UpdatePlayerCoords:

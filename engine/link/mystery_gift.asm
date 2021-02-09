@@ -63,7 +63,6 @@ DoMysteryGift:
 	jr z, .skip_append_save
 	call .SaveMysteryGiftTrainerName
 	farcall RestoreMobileEventIndex
-	farcall StubbedTrainerRankings_MysteryGift
 	farcall BackupMobileEventIndex
 .skip_append_save
 	ld a, [wMysteryGiftPartnerSentDeco]

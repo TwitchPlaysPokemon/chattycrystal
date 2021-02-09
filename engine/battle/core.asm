@@ -158,9 +158,8 @@ WildFled_EnemyFled_LinkBattleCanceled:
 
 BattleTurn:
 .loop
-	call Stubbed_Function3c1bf
 	call CheckContestBattleOver
-	jp c, .quit
+	ret c
 
 	xor a
 	ld [wPlayerIsSwitching], a
@@ -180,26 +179,26 @@ BattleTurn:
 	farcall Function100da5
 	farcall StartMobileInactivityTimer
 	farcall Function100dd8
-	jp c, .quit
+	ret c
 .not_disconnected
 
 	call CheckPlayerLockedIn
 	jr c, .skip_iteration
 .loop1
 	call BattleMenu
-	jr c, .quit
+	ret c
 	ld a, [wBattleEnded]
 	and a
-	jr nz, .quit
+	ret nz
 	ld a, [wForcedSwitch] ; roared/whirlwinded/teleported
 	and a
-	jr nz, .quit
+	ret nz
 .skip_iteration
 	call ParsePlayerAction
 	jr nz, .loop1
 
 	call EnemyTriesToFlee
-	jr c, .quit
+	ret c
 
 	call DetermineMoveOrder
 	jr c, .false
@@ -209,41 +208,20 @@ BattleTurn:
 	call Battle_PlayerFirst
 .proceed
 	call CheckMobileBattleError
-	jr c, .quit
+	ret c
 
 	ld a, [wForcedSwitch]
 	and a
-	jr nz, .quit
+	ret nz
 
 	ld a, [wBattleEnded]
 	and a
-	jr nz, .quit
+	ret nz
 
 	call HandleBetweenTurnEffects
 	ld a, [wBattleEnded]
 	and a
-	jr nz, .quit
-	jp .loop
-
-.quit
-	ret
-
-Stubbed_Function3c1bf:
-	ret
-	ld a, 5 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	ld hl, $a89b ; address of MBC30 bank
-	inc [hl]
-	jr nz, .finish
-	dec hl
-	inc [hl]
-	jr nz, .finish
-	dec [hl]
-	inc hl
-	dec [hl]
-
-.finish
-	call CloseSRAM
+	jr z, .loop
 	ret
 
 HandleBetweenTurnEffects:
@@ -2609,7 +2587,6 @@ AddBattleMoneyToAccount:
 	push bc
 	ld b, h
 	ld c, l
-	farcall StubbedTrainerRankings_AddToBattlePayouts
 	pop bc
 	pop hl
 .loop
@@ -8087,7 +8064,6 @@ StartBattle:
 	ret
 
 BattleIntro:
-	farcall StubbedTrainerRankings_Battles ; mobile
 	call LoadTrainerOrWildMonPic
 	xor a
 	ld [wTempBattleMonSpecies], a
@@ -8168,7 +8144,6 @@ BackUpBGMap2:
 
 InitEnemyTrainer:
 	ld [wTrainerClass], a
-	farcall StubbedTrainerRankings_TrainerBattles
 	xor a
 	ld [wTempEnemyMonSpecies], a
 	callfar GetTrainerAttributes
@@ -8224,7 +8199,6 @@ InitEnemyTrainer:
 InitEnemyWildmon:
 	ld a, WILD_BATTLE
 	ld [wBattleMode], a
-	farcall StubbedTrainerRankings_WildBattles
 	call LoadEnemyMon
 	ld hl, wEnemyMonMoves
 	ld de, wWildMonMoves
@@ -8410,7 +8384,6 @@ CheckPayDay:
 	ret
 
 ShowLinkBattleParticipantsAfterEnd:
-	farcall StubbedTrainerRankings_LinkBattles
 	farcall BackupMobileEventIndex
 	ld a, [wCurOTMon]
 	ld hl, wOTPartyMon1Status
@@ -8440,17 +8413,14 @@ DisplayLinkBattleResult:
 	jr c, .victory ; WIN
 	jr z, .loss ; LOSE
 	; DRAW
-	farcall StubbedTrainerRankings_ColosseumDraws
 	ld de, .Draw
 	jr .store_result
 
 .victory
-	farcall StubbedTrainerRankings_ColosseumWins
 	ld de, .Win
 	jr .store_result
 
 .loss
-	farcall StubbedTrainerRankings_ColosseumLosses
 	ld de, .Lose
 	jr .store_result
 
@@ -9171,12 +9141,8 @@ BattleStartMessage:
 .skip_cry
 	ld a, [wBattleType]
 	cp BATTLETYPE_FISH
-	jr nz, .NotFishing
-
-	farcall StubbedTrainerRankings_HookedEncounters
-
 	ld hl, HookedPokemonAttackedText
-	jr .PlaceBattleStartText
+	jr z, .PlaceBattleStartText
 
 .NotFishing:
 	ld hl, PokemonFellFromTreeText

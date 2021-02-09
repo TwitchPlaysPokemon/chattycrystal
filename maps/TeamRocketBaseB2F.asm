@@ -25,14 +25,8 @@ TeamRocketBaseB2F_MapScripts:
 	callback MAPCALLBACK_TILES, .TransmitterDoorCallback
 
 .DummyScene0:
-	end
-
 .DummyScene1:
-	end
-
 .DummyScene2:
-	end
-
 .DummyScene3:
 	end
 
@@ -165,7 +159,6 @@ LanceHealsCommon:
 	waitbutton
 	closetext
 	special FadeOutPalettes
-	special StubbedTrainerRankings_Healings
 	playsound SFX_FULL_HEAL
 	special HealParty
 	special FadeInPalettes

@@ -87,7 +87,6 @@ _SlotMachine:
 	call PlaySFX
 	call WaitSFX
 	call ClearBGPalettes
-	farcall StubbedTrainerRankings_EndSlotsWinStreak
 	ld hl, wOptions
 	res NO_TEXT_SCROLL, [hl]
 	ld hl, rLCDC
@@ -185,29 +184,12 @@ SlotsLoop:
 	ld [wCurSpriteOAMAddr], a
 	callfar DoNextFrameForFirst16Sprites
 	call .PrintCoinsAndPayout
-	call .Stubbed_Function927d3
 	call DelayFrame
 	and a
 	ret
 
 .stop
 	scf
-	ret
-
-.Stubbed_Function927d3:
-; dummied out
-	ret
-	ld a, [wReel1ReelAction]
-	and a
-	ret nz
-	ld a, [wReel2ReelAction]
-	and a
-	ret nz
-	ld a, [wFirstTwoReelsMatchingSevens]
-	and a
-	jr nz, .matching_sevens
-	ld a, %11100100
-	call DmgToCgbBGPals
 	ret
 
 .matching_sevens
@@ -1827,7 +1809,6 @@ Slots_GetPayout:
 	ld a, [hl]
 	ld [wPayout], a
 	ld d, a
-	farcall StubbedTrainerRankings_AddToSlotsPayouts
 	ret
 
 .PayoutTable:
@@ -1850,9 +1831,7 @@ Slots_PayoutText:
 	cp SLOTS_NO_MATCH
 	jr nz, .MatchedSomething
 	ld hl, .Text_Darn
-	call PrintText
-	farcall StubbedTrainerRankings_EndSlotsWinStreak
-	ret
+	jp PrintText
 
 .MatchedSomething:
 	srl a
@@ -1874,9 +1853,7 @@ Slots_PayoutText:
 
 .return
 	ld hl, .Text_PrintPayout
-	call PrintText
-	farcall StubbedTrainerRankings_AddToSlotsWinStreak
-	ret
+	jp PrintText
 
 .PayoutStrings:
 	dbw "300@", .LinedUpSevens

@@ -437,9 +437,6 @@ UnknownScript_0x90261:
 
 RingTwice_StartCall:
 	call .Ring
-	call .Ring
-	farcall StubbedTrainerRankings_PhoneCalls
-	ret
 
 .Ring:
 	call Phone_StartRinging
@@ -448,14 +445,12 @@ RingTwice_StartCall:
 	call Phone_Wait20Frames
 	call Phone_CallerTextbox
 	call Phone_Wait20Frames
-	call Phone_CallerTextboxWithName
-	ret
+	jp Phone_CallerTextboxWithName
 
 Phone_CallerTextboxWithName:
 	ld a, [wCurCaller]
 	ld b, a
-	call Function90363
-	ret
+	jp Function90363
 
 PhoneCall::
 	ld a, b
@@ -465,9 +460,7 @@ PhoneCall::
 	ld a, d
 	ld [wPhoneCaller + 1], a
 	call Phone_FirstOfTwoRings
-	call Phone_FirstOfTwoRings
-	farcall StubbedTrainerRankings_PhoneCalls
-	ret
+	jp Phone_FirstOfTwoRings
 
 Phone_FirstOfTwoRings:
 	call Phone_StartRinging
@@ -476,8 +469,7 @@ Phone_FirstOfTwoRings:
 	call Phone_Wait20Frames
 	call Phone_CallerTextbox
 	call Phone_Wait20Frames
-	call Phone_CallerTextboxWithName2
-	ret
+	jp Phone_CallerTextboxWithName2
 
 Phone_CallerTextboxWithName2:
 	call Phone_CallerTextbox
@@ -503,29 +495,26 @@ HangUp::
 Phone_CallEnd:
 	call HangUp_BoopOn
 	call HangUp_Wait20Frames
-	call HangUp_BoopOff
+	call SpeechTextbox
 	call HangUp_Wait20Frames
 	call HangUp_BoopOn
 	call HangUp_Wait20Frames
-	call HangUp_BoopOff
+	call SpeechTextbox
 	call HangUp_Wait20Frames
 	call HangUp_BoopOn
 	call HangUp_Wait20Frames
-	call HangUp_BoopOff
-	call HangUp_Wait20Frames
-	ret
+	call SpeechTextbox
+	jp HangUp_Wait20Frames
 
 Function90316:
 	ld de, SFX_SHUT_DOWN_PC
-	call PlaySFX
-	ret
+	jp PlaySFX
 
 HangUp_Beep:
 	ld hl, UnknownText_0x9032a
 	call PrintText
 	ld de, SFX_HANG_UP
-	call PlaySFX
-	ret
+	jp PlaySFX
 
 UnknownText_0x9032a:
 	text_far UnknownText_0x1c5580
@@ -533,16 +522,11 @@ UnknownText_0x9032a:
 
 HangUp_BoopOn:
 	ld hl, UnknownText_0x90336
-	call PrintText
-	ret
+	jp PrintText
 
 UnknownText_0x90336:
 	text_far UnknownText_0x1c5588
 	text_end
-
-HangUp_BoopOff:
-	call SpeechTextbox
-	ret
 
 Phone_StartRinging:
 	call WaitSFX
@@ -579,16 +563,14 @@ Phone_CallerTextbox:
 	hlcoord 0, 0
 	ld b, 2
 	ld c, SCREEN_WIDTH - 2
-	call Textbox
-	ret
+	jp Textbox
 
 Function90380:
 	ld h, d
 	ld l, e
 	ld a, b
 	call GetCallerTrainerClass
-	call GetCallerName
-	ret
+	jp GetCallerName
 
 CheckCanDeletePhoneNumber:
 	ld a, c
@@ -647,8 +629,7 @@ GetCallerName: ;if c = 0 then get non-trainer name b, else get name from trainer
 	ld e, a
 	ld d, [hl]
 	pop hl
-	call PlaceString
-	ret
+	jp PlaceString
 
 INCLUDE "data/phone/non_trainer_names.asm"
 

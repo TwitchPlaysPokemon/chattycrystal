@@ -1,12 +1,11 @@
-
 BattleCommand_Endeavor:
 ; endeavor
 
 	ld a, [wAttackMissed]
 	and a
-	jp nz, PrintDidntAffect2
+	jr nz, .didnt_affect
 	call CheckSubstituteOpp
-	jp nz, PrintDidntAffect2
+	jr nz, .didnt_affect
 	
 	ld hl, wEnemyMonHP + 1
 	ld de, wBattleMonHP + 1
@@ -28,7 +27,7 @@ BattleCommand_Endeavor:
 	ld b, [hl]
 	ld a, [de]
 	ld [wCurHPAnimNewHP + 1], a
-	dec de 
+	dec de
 	sub c
 	ld a, [de]
 	ld [wCurHPAnimNewHP], a
@@ -36,7 +35,7 @@ BattleCommand_Endeavor:
 	jr nc, .failed
 	call AnimateCurrentMove
 	; otherwise copy HP, but first load in old HP
-	inc de 
+	inc de
 	ld a, [hli]
 	ld [wCurHPAnimOldHP], a
 	ld a, [hl]
@@ -61,4 +60,5 @@ BattleCommand_Endeavor:
 
 .failed
 	pop bc
+.didnt_affect
 	jp PrintDidntAffect2

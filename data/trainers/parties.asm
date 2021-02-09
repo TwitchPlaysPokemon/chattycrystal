@@ -3243,16 +3243,16 @@ PokemaniacGroup:
 
 	next_list_item ; POKEMANIAC (11)
 	db "ISSAC@", TRAINERTYPE_MOVES
-	db 26
+	db 25
 	dw LICKITUNG
 	dw WRAP, STOMP, CUT, LICK
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (12)
 	db "DONALD@", TRAINERTYPE_NORMAL
-	db 25
+	db 24
 	dw SLOWPOKE
-	db 25
+	db 24
 	dw SLOWPOKE
 	db -1 ; end
 
@@ -4482,9 +4482,9 @@ SuperNerdGroup:
 
 	next_list_item ; SUPER_NERD (2)
 	db "ERIC@", TRAINERTYPE_NORMAL
-	db 25
+	db 24
 	dw GRIMER
-	db 25
+	db 24
 	dw GRIMER
 	db -1 ; end
 
@@ -4548,13 +4548,13 @@ SuperNerdGroup:
 
 	next_list_item ; SUPER_NERD (10)
 	db "TERU@", TRAINERTYPE_NORMAL
-	db 20
+	db 19
 	dw MAGNEMITE
-	db 24
+	db 23
 	dw VOLTORB
-	db 20
+	db 19
 	dw MAGNEMITE
-	db 22
+	db 21
 	dw MAGNEMITE
 	db -1 ; end
 

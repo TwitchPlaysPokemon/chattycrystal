@@ -10,7 +10,7 @@ ChangeTypeForRoost:
 ; applies roost to enemy types in de and player types in bc
 	ld a, [wPlayerSubStatus2]
 	bit SUBSTATUS_ROOSTING, a
-	jr nz, .playerDone
+	jr z, .playerDone
 	ld a, b
 	cp FLYING
 	jr nz, .playerType1NotFly
@@ -27,7 +27,7 @@ ChangeTypeForRoost:
 .playerDone
 	ld a, [wEnemySubStatus2]
 	bit SUBSTATUS_ROOSTING, a
-	ret nz
+	ret z
 	ld a, d
 	cp FLYING
 	jr nz, .enemyType1NotFly

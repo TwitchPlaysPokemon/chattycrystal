@@ -711,28 +711,28 @@ KRIS EQU __enum__
 	trainerclass GSC_KRIS ; 49
 	const EWWYPPP
 
-	trainerclass AC_CHRIS ; 4A
+	trainerclass AC_CHRIS ; 4a
 	const EVAN
 	const EVAN1
 	const EVAN2
 
-	trainerclass FC_CHRIS ; 4B
+	trainerclass FC_CHRIS ; 4b
 	const Y_FUSEDCRYSTAL
 
-	trainerclass RSEORAS_MAY ; 4C
+	trainerclass RSEORAS_MAY ; 4c
 	const QQ
 	const PETRA
 
-	trainerclass RSEORAS_BLUE_MAY ; 4D
+	trainerclass RSEORAS_BLUE_MAY ; 4d
 	const HNV
 	const MARINA
 
-	trainerclass RSEORAS_BRENDAN ; 4E
+	trainerclass RSEORAS_BRENDAN ; 4e
 	const ORLANDO
 	const RTHASZS
 	const EBNEERT
 
-	trainerclass FRLG_LEAF ; 4F
+	trainerclass FRLG_LEAF ; 4f
 	const A_FIRERED
 	const AATATAT
 	const PAULA_SWEET
@@ -772,23 +772,23 @@ KRIS EQU __enum__
 	trainerclass XY_CALEM ; 59
 	const D_XY
 
-	trainerclass XY_SERENA ; 5A
+	trainerclass XY_SERENA ; 5a
 	const Y_266
 
-	trainerclass XY_SERENA2 ; 5B
+	trainerclass XY_SERENA2 ; 5b
 	const ETR
 
-	trainerclass SMUSUM_ELIO ; 5C
+	trainerclass SMUSUM_ELIO ; 5c
 	const L_SUN
 
-	trainerclass SMUSUM_ELIO2 ; 5D
+	trainerclass SMUSUM_ELIO2 ; 5d
 	const D76O6YTTR
 	const RRWQ
 
-	trainerclass SMUSUM_SELENE ; 5E
+	trainerclass SMUSUM_SELENE ; 5e
 	const VRG
 
-	trainerclass SWSH_GLORIA ; 5F
+	trainerclass SWSH_GLORIA ; 5f
 	const RE_SWORD
 	
 	trainerclass GLAZED ; 60
@@ -804,29 +804,29 @@ KRIS EQU __enum__
 	trainerclass SIRIUS ; 63
 	const BBCBBHH
 	
-	trainerclass P_CYAN ;64
+	trainerclass P_CYAN ; 64
 	const CYAN
 	
-	trainerclass BRONZE ;65
+	trainerclass BRONZE ; 65
 	const FEEFFRR
 	
-	trainerclass RED_LARRY ;65
+	trainerclass RED_LARRY ; 66
 	const LARRY_R
 	
-	trainerclass GREEN_MAY ; 4C
+	trainerclass GREEN_MAY ; 67
 	const A_EMERALD
 	const ACCPPQ
 	const N_EMERALD
 	
-	trainerclass BROWN ; 4D
+	trainerclass BROWN ; 68
 	const PAUL_B
 	
-	trainerclass BABA ; 4E
+	trainerclass BABA ; 69
 	const BABA1
 	const BABA2
 	const BABA3
 	
-	trainerclass URF ; 4F
+	trainerclass URF ; 6a
 	const URF1
 	
 

@@ -308,64 +308,8 @@ endr
 
 ; functions related to the cable club and various NPC scripts referencing communications
 
-Mobile_DummyReturnFalse:
-	xor a
-	ld [wScriptVar], a
-	ret
-
-Stubbed_Function106314:
-	ret
-	ld a, $4
-	call GetSRAMBank
-	ld a, c
-	cpl
-	ld [$b000], a
-	call CloseSRAM
-	ld a, $7
-	call GetSRAMBank
-	ld a, c
-	ld [$a800], a
-	call CloseSRAM
-	ret
-
 Mobile_AlwaysReturnNotCarry:
 	or a
-	ret
-
-Function106331:
-; called by Mobile_DummyReturnFalse in Crystal-J
-	; check ~[4:b000] == [7:a800]
-	ld a, $4
-	call GetSRAMBank
-	ld a, [$b000]
-	cpl
-	ld b, a
-	call CloseSRAM
-	ld a, $7
-	call GetSRAMBank
-	ld a, [$a800]
-	ld c, a
-	call CloseSRAM
-	ld a, c
-	cp b
-	jr nz, .nope
-
-	; check [7:a800] != 0
-	and a
-	jr z, .nope
-
-	; check !([7:a800] & %01110000)
-	and %10001111
-	cp c
-	jr nz, .nope
-
-	ld c, a
-	scf
-	ret
-
-.nope
-	xor a
-	ld c, a
 	ret
 
 Function10635c:
@@ -485,7 +429,6 @@ Function106403:
 	or c
 	inc a
 	ld c, a
-	call Stubbed_Function106314
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -503,7 +446,6 @@ Function106403:
 
 .asm_106435
 	ld c, $0
-	call Stubbed_Function106314
 	ld a, [wMobileCommsJumptableIndex]
 	inc a
 	ld [wMobileCommsJumptableIndex], a
@@ -526,10 +468,6 @@ Function106453:
 	nop
 	ld a, $4
 	ld [wcf64], a
-	ret
-
-Stubbed_Function106462:
-	ret
 	ret
 
 Function106464::

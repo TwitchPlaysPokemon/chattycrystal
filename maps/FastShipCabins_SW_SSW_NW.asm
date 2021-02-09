@@ -47,17 +47,8 @@ TrainerGuitaristClyde:
 
 .Script:
 	endifjustbattled
-	special Mobile_DummyReturnFalse
-	iftrue .mobile
 	opentext
 	writetext GuitaristClydeAfterBattleText
-	waitbutton
-	closetext
-	end
-
-.mobile
-	opentext
-	writetext GuitaristClydeAfterBattleMobileText
 	waitbutton
 	closetext
 	end
@@ -177,16 +168,6 @@ GuitaristClydeSeenText:
 GuitaristClydeBeatenText:
 	text "Yowza!"
 	line "Total distortion!"
-	done
-
-GuitaristClydeAfterBattleMobileText:
-	text "I was going to"
-	line "make my debut at"
-	cont "the BATTLE TOWER…"
-
-	para "I should go back"
-	line "to VERMILION and"
-	cont "redo my training…"
 	done
 
 GuitaristClydeAfterBattleText:

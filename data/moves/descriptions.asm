@@ -1290,7 +1290,7 @@ NuzzleDescription:
 	
 ChargeBeamDescription:
 	db   "An attack that may"
-	next "up user's SPATK.@"
+	next "up user's SP.ATK.@"
 	
 ChargeDescription:
 	db   "Double an ELECTRIC"
@@ -1298,7 +1298,7 @@ ChargeDescription:
 	
 MetalSoundDescription:
 	db   "Sharply reduces"
-	next "the foe's SPDEF.@"
+	next "the foe's SP.DEF.@"
 	
 HoneClawsDescription:
 	db   "Increases ATTACK"

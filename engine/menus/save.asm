@@ -29,9 +29,6 @@ SaveAfterLinkTrade:
 	call SavePokemonData
 	call SaveIndexTables
 	call SaveChecksum
-	call SaveBackupPokemonData
-	call SaveBackupIndexTables
-	call SaveBackupChecksum
 	farcall BackupPartyMonMail
 	farcall SaveRTC
 	call ResumeGameLogic
@@ -99,12 +96,6 @@ MoveMonWOMail_InsertMon_SaveGame:
 	call SavePokemonData
 	call SaveIndexTables
 	call SaveChecksum
-	call ValidateBackupSave
-	call SaveBackupOptions
-	call SaveBackupPlayerData
-	call SaveBackupPokemonData
-	call SaveBackupIndexTables
-	call SaveBackupChecksum
 	farcall BackupPartyMonMail
 	farcall BackupMobileEventIndex
 	farcall SaveRTC
@@ -244,13 +235,6 @@ SaveGameData:
 	call SaveIndexTables
 	call SaveBox
 	call SaveChecksum
-	call ValidateBackupSave
-	call SaveBackupOptions
-	call SaveBackupPlayerData
-	call SaveBackupPokemonData
-	call SaveBackupIndexTables
-	call SaveBackupChecksum
-	call UpdateStackTop
 	farcall BackupPartyMonMail
 	farcall BackupMobileEventIndex
 	farcall SaveRTC
@@ -265,45 +249,6 @@ SaveGameData:
 	call CloseSRAM
 	ret
 
-UpdateStackTop:
-; sStackTop appears to be unused.
-; It could have been used to debug stack overflow during saving.
-	call FindStackTop
-	ld a, BANK(sStackTop)
-	call GetSRAMBank
-	ld a, [sStackTop + 0]
-	ld e, a
-	ld a, [sStackTop + 1]
-	ld d, a
-	or e
-	jr z, .update
-	ld a, e
-	sub l
-	ld a, d
-	sbc h
-	jr c, .done
-
-.update
-	ld a, l
-	ld [sStackTop + 0], a
-	ld a, h
-	ld [sStackTop + 1], a
-
-.done
-	call CloseSRAM
-	ret
-
-FindStackTop:
-; Find the furthest point that sp has traversed to.
-; This is distinct from the current value of sp.
-	ld hl, wStack - $ff
-.loop
-	ld a, [hl]
-	or a
-	ret nz
-	inc hl
-	jr .loop
-
 ErasePreviousSave:
 	call EraseBoxes
 	call EraseHallOfFame
@@ -311,12 +256,6 @@ ErasePreviousSave:
 	call EraseMysteryGift
 	call SaveData
 	call EraseBattleTowerStatus
-	ld a, BANK(sStackTop)
-	call GetSRAMBank
-	xor a
-	ld [sStackTop + 0], a
-	ld [sStackTop + 1], a
-	call CloseSRAM
 	ld a, $1
 	ld [wSavedAtLeastOnce], a
 	ret
@@ -530,96 +469,9 @@ SaveChecksum:
 	call CloseSRAM
 	ret
 
-ValidateBackupSave:
-	ld a, BANK(sBackupCheckValue1) ; aka BANK(sBackupCheckValue2)
-	call GetSRAMBank
-	ld a, SAVE_CHECK_VALUE_1
-	ld [sBackupCheckValue1], a
-	ld a, SAVE_CHECK_VALUE_2
-	ld [sBackupCheckValue2], a
-	call CloseSRAM
-	ret
-
-SaveBackupOptions:
-	ld a, BANK(sBackupOptions)
-	call GetSRAMBank
-	ld hl, wOptions
-	ld de, sBackupOptions
-	ld bc, wOptionsEnd - wOptions
-	call CopyBytes
-	call CloseSRAM
-	ret
-
-SaveBackupPlayerData:
-	ld a, BANK(sBackupPlayerData)
-	call GetSRAMBank
-	ld hl, wPlayerData
-	ld de, sBackupPlayerData
-	ld bc, wPlayerDataEnd - wPlayerData
-	call CopyBytes
-	ld hl, wCurMapData
-	ld de, sBackupCurMapData
-	ld bc, wCurMapDataEnd - wCurMapData
-	call CopyBytes
-	call CloseSRAM
-	ret
-
-SaveBackupPokemonData:
-	ld a, BANK(sBackupPokemonData)
-	call GetSRAMBank
-	ld hl, wPokemonData
-	ld de, sBackupPokemonData
-	ld bc, wPokemonDataEnd - wPokemonData
-	call CopyBytes
-	call CloseSRAM
-	ret
-
-SaveBackupIndexTables:
-	ld a, BANK(sBackupPokemonIndexTable)
-	call GetSRAMBank
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK("16-bit WRAM tables")
-	ldh [rSVBK], a
-	ld hl, wPokemonIndexTable
-	ld de, sBackupPokemonIndexTable
-	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
-	call CopyBytes
-	ld a, BANK(sBackupMoveIndexTable)
-	call GetSRAMBank
-	ld hl, wMoveIndexTable
-	ld de, sBackupMoveIndexTable
-	ld bc, wMoveIndexTableEnd - wMoveIndexTable
-	call CopyBytes
-	pop af
-	ldh [rSVBK], a
-	jp CloseSRAM
-
-SaveBackupChecksum:
-	ld a, BANK(sBackupMoveIndexTable)
-	call GetSRAMBank
-	ld hl, sBackupMoveIndexTable
-	ld bc, wMoveIndexTableEnd - wMoveIndexTable
-	call Checksum
-	ld a, BANK(sBackupSaveData)
-	call GetSRAMBank
-	ld hl, sBackupConversionTableChecksum
-	ld a, e
-	ld [hli], a
-	ld [hl], d
-	ld hl, sBackupSaveData
-	ld bc, sBackupSaveDataEnd - sBackupSaveData
-	call Checksum
-	ld a, e
-	ld [sBackupChecksum + 0], a
-	ld a, d
-	ld [sBackupChecksum + 1], a
-	call CloseSRAM
-	ret
-
 TryLoadSaveFile:
 	call VerifyChecksum
-	jr nz, .backup
+	jr nz, .corrupt
 	call LoadPlayerData
 	call LoadPokemonData
 	call LoadIndexTables
@@ -627,31 +479,6 @@ TryLoadSaveFile:
 	farcall RestorePartyMonMail
 	farcall RestoreMobileEventIndex
 	farcall RestoreMysteryGift
-	call ValidateBackupSave
-	call SaveBackupOptions
-	call SaveBackupPlayerData
-	call SaveBackupPokemonData
-	call SaveBackupIndexTables
-	call SaveBackupChecksum
-	and a
-	ret
-
-.backup
-	call VerifyBackupChecksum
-	jr nz, .corrupt
-	call LoadBackupPlayerData
-	call LoadBackupPokemonData
-	call LoadBackupIndexTables
-	call LoadBox
-	farcall RestorePartyMonMail
-	farcall RestoreMobileEventIndex
-	farcall RestoreMysteryGift
-	call ValidateSave
-	call SaveOptions
-	call SavePlayerData
-	call SavePokemonData
-	call SaveIndexTables
-	call SaveChecksum
 	and a
 	ret
 
@@ -673,7 +500,7 @@ TryLoadSaveData:
 	call CheckPrimarySaveFile
 	ld a, [wSaveFileExists]
 	and a
-	jr z, .backup
+	jr z, .corrupt
 
 	ld a, BANK(sPlayerData)
 	call GetSRAMBank
@@ -682,25 +509,6 @@ TryLoadSaveData:
 	ld bc, 8
 	call CopyBytes
 	ld hl, sPlayerData + wStatusFlags - wPlayerData
-	ld de, wStatusFlags
-	ld a, [hl]
-	ld [de], a
-	call CloseSRAM
-	ret
-
-.backup
-	call CheckBackupSaveFile
-	ld a, [wSaveFileExists]
-	and a
-	jr z, .corrupt
-
-	ld a, BANK(sBackupPlayerData)
-	call GetSRAMBank
-	ld hl, sBackupPlayerData + wStartDay - wPlayerData
-	ld de, wStartDay
-	ld bc, 8
-	call CopyBytes
-	ld hl, sBackupPlayerData + wStatusFlags - wPlayerData
 	ld de, wStatusFlags
 	ld a, [hl]
 	ld [de], a
@@ -732,26 +540,6 @@ CheckPrimarySaveFile:
 	call CopyBytes
 	call CloseSRAM
 	ld a, TRUE
-	ld [wSaveFileExists], a
-
-.nope
-	call CloseSRAM
-	ret
-
-CheckBackupSaveFile:
-	ld a, BANK(sBackupCheckValue1) ; aka BANK(sBackupCheckValue2)
-	call GetSRAMBank
-	ld a, [sBackupCheckValue1]
-	cp SAVE_CHECK_VALUE_1
-	jr nz, .nope
-	ld a, [sBackupCheckValue2]
-	cp SAVE_CHECK_VALUE_2
-	jr nz, .nope
-	ld hl, sBackupOptions
-	ld de, wOptions
-	ld bc, wOptionsEnd - wOptions
-	call CopyBytes
-	ld a, $2
 	ld [wSaveFileExists], a
 
 .nope
@@ -851,85 +639,6 @@ VerifyChecksum:
 	ld a, BANK(sMoveIndexTable)
 	call GetSRAMBank
 	ld hl, sMoveIndexTable
-	ld bc, wMoveIndexTableEnd - wMoveIndexTable
-	call Checksum
-	pop hl
-	ld a, d
-	cp h
-	jr nz, .fail
-	ld a, e
-	cp l
-.fail
-	push af
-	call CloseSRAM
-	pop af
-	ret
-
-LoadBackupPlayerData:
-	ld a, BANK(sBackupPlayerData)
-	call GetSRAMBank
-	ld hl, sBackupPlayerData
-	ld de, wPlayerData
-	ld bc, wPlayerDataEnd - wPlayerData
-	call CopyBytes
-	ld hl, sBackupCurMapData
-	ld de, wCurMapData
-	ld bc, wCurMapDataEnd - wCurMapData
-	call CopyBytes
-	call CloseSRAM
-	ret
-
-LoadBackupPokemonData:
-	ld a, BANK(sBackupPokemonData)
-	call GetSRAMBank
-	ld hl, sBackupPokemonData
-	ld de, wPokemonData
-	ld bc, wPokemonDataEnd - wPokemonData
-	call CopyBytes
-	call CloseSRAM
-	ret
-
-LoadBackupIndexTables:
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK("16-bit WRAM tables")
-	ldh [rSVBK], a
-	ld a, BANK(sBackupPokemonIndexTable)
-	call GetSRAMBank
-	ld hl, sBackupPokemonIndexTable
-	ld de, wPokemonIndexTable
-	ld bc, wPokemonIndexTableEnd - wPokemonIndexTable
-	call CopyBytes
-	ld a, BANK(sBackupMoveIndexTable)
-	call GetSRAMBank
-	ld hl, sBackupMoveIndexTable
-	ld de, wMoveIndexTable
-	ld bc, wMoveIndexTableEnd - wMoveIndexTable
-	call CopyBytes
-	pop af
-	ldh [rSVBK], a
-	jp CloseSRAM
-
-VerifyBackupChecksum:
-	ld hl, sBackupSaveData
-	ld bc, sBackupSaveDataEnd - sBackupSaveData
-	ld a, BANK(sBackupSaveData)
-	call GetSRAMBank
-	call Checksum
-	ld a, [sBackupChecksum + 0]
-	cp e
-	jr nz, .fail
-	ld a, [sBackupChecksum + 1]
-	cp d
-	jr nz, .fail
-	ld hl, sBackupConversionTableChecksum
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	push hl
-	ld a, BANK(sBackupMoveIndexTable)
-	call GetSRAMBank
-	ld hl, sBackupMoveIndexTable
 	ld bc, wMoveIndexTableEnd - wMoveIndexTable
 	call Checksum
 	pop hl

@@ -78,37 +78,6 @@ SECTION "Saved 16-bit conversion tables", SRAM
 sMoveIndexTable:: ds wMoveIndexTableEnd - wMoveIndexTable
 sBackupMoveIndexTable:: ds wMoveIndexTableEnd - wMoveIndexTable
 
-SECTION "Backup Save", SRAM
-
-sBackupOptions:: ds wOptionsEnd - wOptions
-
-sBackupCheckValue1:: db ; loaded with SAVE_CHECK_VALUE_1, used to check save corruption
-
-sBackupSaveData::
-
-sBackupGameData:: ; b209
-sBackupPlayerData::  ds wPlayerDataEnd - wPlayerData
-sBackupCurMapData::  ds wCurMapDataEnd - wCurMapData
-sBackupPokemonData:: ds wPokemonDataEnd - wPokemonData
-sBackupGameDataEnd::
-
-sBackupPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable
-
-sBackupConversionTableChecksum:: dw
-
-sBackupSaveDataEnd::
-
-; bd85
-	ds $88
-; bf0d
-
-sBackupChecksum:: dw
-
-sBackupCheckValue2:: db ; loaded with SAVE_CHECK_VALUE_2, used to check save corruption
-
-sStackTop:: dw
-
-
 SECTION "Save", SRAM
 
 sOptions:: ds wOptionsEnd - wOptions

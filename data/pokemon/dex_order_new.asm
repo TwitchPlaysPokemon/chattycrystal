@@ -252,3 +252,4 @@ NewPokedexOrder:
 	dw MEWTWO
 	dw MEW
 	dw CELEBI
+	dw POOCHYENA

@@ -170,6 +170,7 @@ AlphabeticalPokedexOrder:
 	dw POLIWHIRL
 	dw POLIWRATH
 	dw PONYTA
+	dw POOCHYENA
 	dw PORYGON
 	dw PORYGON2
 	dw PRIMEAPE

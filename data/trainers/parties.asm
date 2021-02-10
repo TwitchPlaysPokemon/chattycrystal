@@ -1217,7 +1217,7 @@ NuzlockeGroup:
 	db "Zzzzzz mmg@"
 	
 	db 5
-	dw UMBREON ;TODO add Poochyna
+	dw POOCHYENA
 	db NO_ITEM
 	dw TACKLE, HOWL, NO_MOVE, NO_MOVE
 	bigdw $0FFF
@@ -1458,7 +1458,7 @@ GreenMayGroup:
 	db "apf uojkyy@"
 	
 	db 10
-	dw UMBREON ;TODO add poochyena
+	dw POOCHYENA
 	db NO_ITEM
 	dw SAND_ATTACK, TACKLE, HOWL, NO_MOVE 
 	bigdw $0FFF

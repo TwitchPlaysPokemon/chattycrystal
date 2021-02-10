@@ -357,6 +357,7 @@ VRAM $01
 SRAM $00
 	"Scratch"
 	"SRAM Bank 0"
+	"Boxes 15-18"
 	align 8
 	"Saved 16-bit conversion tables"
 SRAM $01
@@ -366,6 +367,7 @@ SRAM $01
 	"SRAM Hall of Fame"
 	"SRAM Crystal Data"
 	"SRAM Battle Tower"
+	"Boxes 19-20"
 SRAM $02
 	"Boxes 1-7"
 SRAM $03

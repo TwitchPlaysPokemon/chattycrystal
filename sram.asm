@@ -59,16 +59,15 @@ s0_ac09:: ds 1
 sMysteryGiftTrainer:: ds (1 + 1 + NUM_MOVES) * PARTY_LENGTH + 2
 sBackupMysteryGiftItemEnd::
 
-	ds $30
-
 sRTCStatusFlags:: ds 8
 sLuckyNumberDay:: db
 sLuckyIDNumber::  dw
 
 SECTION "Saved 16-bit conversion tables", SRAM
-; the Pokémon index table isn't stored here to improve save data packing
-	ds $100
+sConversionTables::
+sPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable
 sMoveIndexTable:: ds wMoveIndexTableEnd - wMoveIndexTable
+sConversionTablesEnd::
 
 SECTION "Save", SRAM
 
@@ -84,13 +83,9 @@ sCurMapData::  ds wCurMapDataEnd - wCurMapData
 sPokemonData:: ds wPokemonDataEnd - wPokemonData
 sGameDataEnd::
 
-sPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable
-
 sConversionTableChecksum:: dw
 
 sSaveDataEnd::
-
-	ds $88
 
 sChecksum:: dw
 
@@ -100,9 +95,6 @@ sCheckValue2:: db ; loaded with SAVE_CHECK_VALUE_2, used to check save corruptio
 SECTION "Active Box", SRAM
 
 sBox:: box sBox
-
-	ds $f4
-
 
 SECTION "Link Battle Data", SRAM
 
@@ -187,7 +179,6 @@ sBox5PokemonIndexes:: ds 2 * MONS_PER_BOX
 sBox6PokemonIndexes:: ds 2 * MONS_PER_BOX
 sBox7PokemonIndexes:: ds 2 * MONS_PER_BOX
 
-
 SECTION "Boxes 8-14", SRAM
 
 sBox8:: box sBox8
@@ -205,6 +196,27 @@ sBox11PokemonIndexes:: ds 2 * MONS_PER_BOX
 sBox12PokemonIndexes:: ds 2 * MONS_PER_BOX
 sBox13PokemonIndexes:: ds 2 * MONS_PER_BOX
 sBox14PokemonIndexes:: ds 2 * MONS_PER_BOX
+
+SECTION "Boxes 15-18", SRAM
+
+sBox15:: box sBox15
+sBox16:: box sBox16
+sBox17:: box sBox17
+sBox18:: box sBox18
+
+sBox15PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox16PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox17PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox18PokemonIndexes:: ds 2 * MONS_PER_BOX
+
+SECTION "Boxes 19-20", SRAM
+
+sBox19:: box sBox19
+sBox20:: box sBox20
+
+sBox19PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox20PokemonIndexes:: ds 2 * MONS_PER_BOX
+
 
 SECTION "SRAM Mobile 1", SRAM
 

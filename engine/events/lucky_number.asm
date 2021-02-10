@@ -50,7 +50,6 @@ CheckForLuckyNumberWinners:
 	ld c, $0
 .BoxesLoop:
 	ld a, [wCurBox]
-	and $f
 	cp c
 	jr z, .SkipBox
 	ld hl, .BoxBankAddresses
@@ -232,6 +231,12 @@ CheckForLuckyNumberWinners:
 	dba sBox12
 	dba sBox13
 	dba sBox14
+	dba sBox15
+	dba sBox16
+	dba sBox17
+	dba sBox18
+	dba sBox19
+	dba sBox20
 
 .BoxSpeciesBankAddresses:
 	dba sBox1PokemonIndexes
@@ -248,6 +253,12 @@ CheckForLuckyNumberWinners:
 	dba sBox12PokemonIndexes
 	dba sBox13PokemonIndexes
 	dba sBox14PokemonIndexes
+	dba sBox15PokemonIndexes
+	dba sBox16PokemonIndexes
+	dba sBox17PokemonIndexes
+	dba sBox18PokemonIndexes
+	dba sBox19PokemonIndexes
+	dba sBox20PokemonIndexes
 
 .FoundPartymonText:
 	; Congratulations! We have a match with the ID number of @  in your party.

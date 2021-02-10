@@ -448,10 +448,10 @@ SaveBox:
 	jp CloseSRAM
 
 SaveChecksum:
-	ld a, BANK(sMoveIndexTable)
+	ld a, BANK(sConversionTables)
 	call GetSRAMBank
-	ld hl, sMoveIndexTable
-	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	ld hl, sConversionTables
+	ld bc, sConversionTablesEnd - sConversionTables
 	call Checksum
 	ld a, BANK(sSaveData)
 	call GetSRAMBank
@@ -636,10 +636,10 @@ VerifyChecksum:
 	ld h, [hl]
 	ld l, a
 	push hl
-	ld a, BANK(sMoveIndexTable)
+	ld a, BANK(sConversionTables)
 	call GetSRAMBank
-	ld hl, sMoveIndexTable
-	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	ld hl, sConversionTables
+	ld bc, sConversionTablesEnd - sConversionTables
 	call Checksum
 	pop hl
 	ld a, d
@@ -1047,6 +1047,12 @@ BoxAddresses:
 	dbww BANK(sBox12), sBox12, sBox12End
 	dbww BANK(sBox13), sBox13, sBox13End
 	dbww BANK(sBox14), sBox14, sBox14End
+	dbww BANK(sBox15), sBox15, sBox15End
+	dbww BANK(sBox16), sBox16, sBox16End
+	dbww BANK(sBox17), sBox17, sBox17End
+	dbww BANK(sBox18), sBox18, sBox18End
+	dbww BANK(sBox19), sBox19, sBox19End
+	dbww BANK(sBox20), sBox20, sBox20End
 
 	; index addresses
 	dba sBox1PokemonIndexes
@@ -1063,6 +1069,12 @@ BoxAddresses:
 	dba sBox12PokemonIndexes
 	dba sBox13PokemonIndexes
 	dba sBox14PokemonIndexes
+	dba sBox15PokemonIndexes
+	dba sBox16PokemonIndexes
+	dba sBox17PokemonIndexes
+	dba sBox18PokemonIndexes
+	dba sBox19PokemonIndexes
+	dba sBox20PokemonIndexes
 
 Checksum:
 	ld de, 0

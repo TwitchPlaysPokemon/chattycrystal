@@ -2424,8 +2424,6 @@ wStartSecond:: db ; d4b9
 
 wRTC:: ds 4 ; d4ba
 	
-	ds 4
-
 wDST:: ; d4c2
 ; bit 7: dst
 	db
@@ -2437,11 +2435,7 @@ wGameTimeMinutes:: db ; d4c6
 wGameTimeSeconds:: db ; d4c7
 wGameTimeFrames::  db ; d4c8
 
-	ds 2
-
 wCurDay:: db ; d4cb
-
-	ds 1
 
 wObjectFollow_Leader:: db
 wObjectFollow_Follower:: db
@@ -2466,8 +2460,6 @@ wObject12Struct:: object_struct wObject12
 wObjectStructsEnd:: ; d6de
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
-
-	ds 40
 
 wMapObjects:: ; d71e
 wPlayerObject:: map_object wPlayer
@@ -2499,8 +2491,6 @@ wTimeOfDayPal:: db ; d841
 wTimeOfDayPalFlags:: db ; d846
 wTimeOfDayPalset:: db
 wCurTimeOfDay:: db ; d848
-
-	ds 1
 
 wSecretID:: dw
 wStatusFlags:: ; d84c
@@ -2582,8 +2572,6 @@ wMooMooBerries:: db ; d962
 wUndergroundSwitchPositions:: db ; d963
 wFarfetchdPosition:: db ; d964
 
-	ds 13
-
 ; map scene ids
 wPokecenter2FSceneID::                            db ; d972
 wTradeCenterSceneID::                             db ; d973
@@ -2621,7 +2609,7 @@ wGoldenrodMagnetTrainStationSceneID::             db ; d992
 wGoldenrodPokecenter1FSceneID::                   db ; d993
 wOlivineCitySceneID::                             db ; d994
 wRoute30SceneID::                                 db ; d995
-wRoute23SceneID::                   db ; d996
+wRoute23SceneID::                                 db ; d996
 wEcruteakTinTowerEntranceSceneID::                db ; d997
 wWiseTriosRoomSceneID::                           db ; d998
 wEcruteakPokecenter1FSceneID::                    db ; d999
@@ -2633,7 +2621,7 @@ wBattleTower1FSceneID::                           db ; d99e
 wBattleTowerBattleRoomSceneID::                   db ; d99f
 wBattleTowerElevatorSceneID::                     db ; d9a0
 wBattleTowerHallwaySceneID::                      db ; d9a1
-wRoute42EcruteakGateSceneID::                      db ; d9a2
+wRoute42EcruteakGateSceneID::                     db ; d9a2
 wRoute43GateSceneID::                             db ; d9a3
 wMountMoonSceneID::                               db ; d9a4
 wSproutTower3FSceneID::                           db ; d9a5
@@ -2703,11 +2691,7 @@ wErinFightCount::    db
 wEventFlags:: flag_array NUM_EVENTS ; da72
 ; db6c
 
-	ds 6
-
 wCurBox:: db ; db72
-
-	ds 2
 
 ; 8 chars + $50
 wBoxNames:: ds BOX_NAME_LENGTH * NUM_BOXES ; db75

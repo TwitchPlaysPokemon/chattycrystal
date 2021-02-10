@@ -52,7 +52,6 @@ MobileCheckOwnMonAnywhere:
 	ld e, l
 .asm_4a88d
 	ld a, [wCurBox]
-	and $f
 	cp c
 	jr z, .asm_4a8d1
 	ld hl, .BoxAddrs
@@ -131,6 +130,12 @@ MobileCheckOwnMonAnywhere:
 	dba sBox12PokemonIndexes
 	dba sBox13PokemonIndexes
 	dba sBox14PokemonIndexes
+	dba sBox15PokemonIndexes
+	dba sBox16PokemonIndexes
+	dba sBox17PokemonIndexes
+	dba sBox18PokemonIndexes
+	dba sBox19PokemonIndexes
+	dba sBox20PokemonIndexes
 
 .CopyName:
 	push hl

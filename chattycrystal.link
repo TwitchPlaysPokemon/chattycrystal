@@ -287,6 +287,7 @@ ROMX $70
 	"Text 2"
 ROMX $71
 	"Text 3"
+	"Effect Commands Extra"
 ROMX $72
 	"Miscellaneous Text"
 ROMX $73

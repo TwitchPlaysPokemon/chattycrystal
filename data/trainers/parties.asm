@@ -769,7 +769,7 @@ BWHildaGroup:
 	db 24
 	dw DRATINI ;todo add axew 
 	db EON_MAIL
-	dw FALSE_SWIPE, DRAGON_RAGE, SLASH, NO_MOVE ;add dual chop
+	dw FALSE_SWIPE, DRAGON_RAGE, SLASH, DUAL_CHOP
 	bigdw $0FFF
 	bigdw 59
 	bigdw 48
@@ -782,7 +782,7 @@ BWHildaGroup:
 	db 28
 	dw DROWZEE ;add munna 
 	db EON_MAIL
-	dw PSYBEAM, NO_MOVE, NO_MOVE, NO_MOVE ;add zen headbutt, Yawn, Synchronise
+	dw PSYBEAM, ZEN_HEADBUTT, NO_MOVE, NO_MOVE ;add Yawn, Synchronise
 	bigdw $FFFF
 	bigdw 83
 	bigdw 24
@@ -795,7 +795,7 @@ BWHildaGroup:
 	db 18
 	dw RATTATA ;add zigzagoon
 	db EON_MAIL
-	dw TAIL_WHIP, TACKLE, CUT, NO_MOVE ;add work up
+	dw TAIL_WHIP, TACKLE, CUT, WORK_UP
 	bigdw $FFFF
 	bigdw 42
 	bigdw 18
@@ -834,7 +834,7 @@ BWHildaGroup:
 	db 23
 	dw MACHOP ;add croagunk
 	db EON_MAIL
-	dw PURSUIT, MUD_SLAP, FAINT_ATTACK, NO_MOVE ;add revenge
+	dw PURSUIT, MUD_SLAP, FAINT_ATTACK, REVENGE
 	bigdw $FFFF
 	bigdw 55
 	bigdw 39
@@ -1572,7 +1572,7 @@ GreenMayGroup:
 	db 23
 	dw MISDREAVUS ; add SABLEYE
 	db NO_ITEM
-	dw NIGHT_SHADE, SCRATCH, NO_MOVE, NO_MOVE ;add fake out, astonish
+	dw NIGHT_SHADE, SCRATCH, ASTONISH, NO_MOVE ;add fake out
 	bigdw $FFFF
 	bigdw 58
 	bigdw 40
@@ -4708,16 +4708,16 @@ HikerGroup:
 
 	next_list_item ; HIKER (11)
 	db "BAILEY@", TRAINERTYPE_NORMAL
-	db 13
-	dw GEODUDE
-	db 13
-	dw GEODUDE
-	db 13
-	dw GEODUDE
-	db 13
-	dw GEODUDE
-	db 13
-	dw GEODUDE
+	db 25
+	dw GRAVELER
+	db 25
+	dw GRAVELER
+	db 25
+	dw GRAVELER
+	db 25
+	dw GRAVELER
+	db 25
+	dw GRAVELER
 	db -1 ; end
 
 	next_list_item ; HIKER (12)
@@ -5407,9 +5407,9 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (10)
 	db "ERIN@", TRAINERTYPE_NORMAL
-	db 16
+	db 29
 	dw PONYTA
-	db 16
+	db 29
 	dw PONYTA
 	db -1 ; end
 
@@ -5635,8 +5635,8 @@ CamperGroup:
 
 	next_list_item ; CAMPER (11)
 	db "TED@", TRAINERTYPE_NORMAL
-	db 17
-	dw MANKEY
+	db 30
+	dw PRIMEAPE
 	db -1 ; end
 
 	next_list_item ; CAMPER (12)

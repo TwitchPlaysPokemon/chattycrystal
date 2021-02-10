@@ -271,6 +271,11 @@ MoveDescriptions1:
 	dw EndeavorDescription
 	dw RecoverDescription
 	dw ThiefDescription
+	dw StompDescription
+	dw DualChopDescription
+	dw HeadbuttDescription
+	dw WorkUpDescription
+	dw RevengeDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1306,3 +1311,15 @@ PowerTripDescription:
 EndeavorDescription:
 	db   "Sets foe's HP"
 	next "to yours.@"
+
+DualChopDescription:
+	db   "A double"
+	next "chopping attack.@"
+
+RevengeDescription:
+	db   "Hit last, but gets"
+	next "stronger when hit.@"
+
+WorkUpDescription:
+	db   "Boosts both ATTACK"
+	next "and SP.ATTACK.@"

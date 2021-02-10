@@ -272,6 +272,11 @@
 	const ENDEAVOR     ; 108
 	const ROOST        ; 109
 	const COVET        ; 10a
+	const ASTONISH     ; 10b
+	const DUAL_CHOP    ; 10c
+	const ZEN_HEADBUTT ; 10d
+	const WORK_UP      ; 10e
+	const REVENGE      ; 10f
 	
 NUM_ATTACKS EQU const_value + -1
 

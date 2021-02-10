@@ -2224,3 +2224,39 @@ Roost:
 	doturn
 	roost
 	endmove
+
+WorkUp:
+	checkobedience
+	usedmovetext
+	doturn
+	attackup
+	lowersub
+	statupanim
+	statupmessage
+	statupfailtext
+	specialattackup
+	raisesub
+	statupmessage
+	statupfailtext
+	endmove
+
+Revenge:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	revenge
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

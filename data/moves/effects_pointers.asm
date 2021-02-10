@@ -159,3 +159,6 @@ MoveEffectsPointers:
 	dw DefenseCurl
 	dw Endeavor
 	dw Roost
+	dw WorkUp
+	dw Revenge
+	dw NormalHit

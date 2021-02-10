@@ -186,6 +186,7 @@ ENDM
 	command storedpower             ; b3
 	command endeavor                ; b4
 	command roost                   ; b5
+	command revenge                 ; b6
 
 
 	enum_start $fe

@@ -186,3 +186,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_Stored_Power
 	effectfn BattleCommand_Endeavor
 	effectfn BattleCommand_Roost
+	effectfn BattleCommand_Revenge

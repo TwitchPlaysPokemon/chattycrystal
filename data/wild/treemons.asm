@@ -124,6 +124,6 @@ TreeMonSet_Forest:
 	db -1
 
 TreeMonSet_Rock:
-	dbbw 90, 30, KRABBY
-	dbbw 10, 30, SHUCKLE
+	dbbw 90, 25, KRABBY
+	dbbw 10, 25, SHUCKLE
 	db -1

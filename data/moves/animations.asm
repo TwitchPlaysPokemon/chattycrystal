@@ -290,6 +290,11 @@ BattleAnimations::
 	dw BattleAnim_PainSplit
 	dw BattleAnim_Recover
 	dw BattleAnim_Thief
+	dw BattleAnim_FaintAttack
+	dw BattleAnim_CrossChop
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Meditate
+	dw BattleAnim_Counter
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

@@ -265,3 +265,8 @@ MoveNames::
 	db "ENDEAVOR@"
 	db "ROOST@"
 	db "COVET@"
+	db "ASTONISH@"
+	db "DUAL CHOP@"
+	db "ZEN HEADBUTT@"
+	db "WORK UP@"
+	db "REVENGE@"

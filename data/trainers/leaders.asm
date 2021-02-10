@@ -5,8 +5,8 @@
 ; accounted for prior to the list check.
 
 GymLeaders:
-	db ORLANDO
-	db SMUSUM_ELIO2
+	db RSEORAS_BRENDAN_LEADER
+	db SMUSUM_ELIO2_LEADER
 	db SWSH_GLORIA
 	db HGSS_LYRA
 	db PRYCE

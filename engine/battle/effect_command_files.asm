@@ -67,9 +67,11 @@ INCLUDE "engine/battle/move_effects/spite.asm"
 INCLUDE "engine/battle/move_effects/splash.asm"
 INCLUDE "engine/battle/move_effects/substitute.asm"
 INCLUDE "engine/battle/move_effects/sunny_day.asm"
-INCLUDE "engine/battle/move_effects/stored_power.asm"
 INCLUDE "engine/battle/move_effects/teleport.asm"
 INCLUDE "engine/battle/move_effects/thief.asm"
 INCLUDE "engine/battle/move_effects/thunder.asm"
 INCLUDE "engine/battle/move_effects/transform.asm"
 INCLUDE "engine/battle/move_effects/triple_kick.asm"
+
+SECTION "Effect Commands Extra", ROMX
+INCLUDE "engine/battle/move_effects/stored_power.asm"

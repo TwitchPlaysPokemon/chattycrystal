@@ -99,10 +99,15 @@ DoMove:
 
 	ld a, BANK(BattleCommandPointers)
 	call GetFarHalfword
-
-	call _hl_
-
+	call .execute_command
 	jr .ReadMoveEffectCommand
+
+.execute_command
+	bit 7, h
+	res 7, h
+	ld a, BANK("Effect Commands Extra")
+	jp nz, FarCall
+	jp hl
 
 CheckTurn:
 BattleCommand_CheckTurn:

@@ -303,7 +303,7 @@ EcruteakGymGuyWinText:
 	done
 
 EcruteakGymClosedText:
-	text "MORTY, the GYM"
+	text "aoooo, the GYM"
 	line "LEADER, is absent."
 
 	para "Sorry, but you'll"

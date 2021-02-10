@@ -166,84 +166,41 @@ MovementData_0x60c79:
 	step_end
 
 JasmineCianwoodPharmacyText:
-	text "JASMINE: … This"
-	line "#MON always"
-
-	para "kept the sea lit"
-	line "at night."
-
-	para "…But it suddenly"
-	line "got sick… It's"
-	cont "gasping for air…"
-
-	para "…I understand"
-	line "that there is a"
-
-	para "wonderful PHARMACY"
-	line "in CIANWOOD…"
-
-	para "But that's across"
-	line "the sea…"
-
-	para "And I can't leave"
-	line "AMPHY unattended…"
+	text "…"
 	done
 
 JasmineGetSomeMedicineText:
-	text "…May I ask you to"
-	line "get some medicine"
-	cont "for me? Please?"
+	text "…"
 	done
 
 JasmineCureAmphyText:
-	text "JASMINE: …Will"
-	line "that medicine cure"
-	cont "AMPHY?"
+	text "…"
 	done
 
 PlayerHandedSecretpotionText:
 	text "<PLAYER> handed the"
 	line "SECRETPOTION to"
-	cont "JASMINE."
+	cont "ACCPPQ."
 	done
 
 JasmineDontBeOffendedText:
-	text "JASMINE: …Um,"
-	line "please don't be"
-	cont "offended…"
-
-	para "…AMPHY will not"
-	line "take anything from"
-	cont "anyone but me…"
+	text "…"
 	done
 
 JasmineAmphyHowAreYouFeelingText:
-	text "JASMINE: …"
-
-	para "AMPHY, how are you"
-	line "feeling?"
+	text "…"
 	done
 
 JasmineThankYouText:
-	text "JASMINE: …Oh, I'm"
-	line "so relieved…"
-
-	para "This is just so"
-	line "wonderful…"
-
-	para "Thank you so very,"
-	line "very much."
-
-	para "…I will return to"
-	line "the GYM…"
+	text "…"
 	done
 
 JasmineISeeText:
-	text "JASMINE: …I see…"
+	text "…"
 	done
 
 JasmineAmphyHangOnText:
-	text "…AMPHY, hang on!"
+	text "…"
 	done
 
 AmphyPalPalooText:
@@ -274,6 +231,6 @@ OlivineLighthouse6F_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  8,  8, SPRITE_JASMINE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineLighthouseJasmine, EVENT_OLIVINE_LIGHTHOUSE_JASMINE
+	object_event  8,  8, SPRITE_MAY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, OlivineLighthouseJasmine, EVENT_OLIVINE_LIGHTHOUSE_JASMINE
 	object_event  9,  8, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, OlivineLighthouseAmphy, -1
 	object_event  3,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, OlivineLighthouse6FSuperPotion, EVENT_OLIVINE_LIGHTHOUSE_6F_SUPER_POTION

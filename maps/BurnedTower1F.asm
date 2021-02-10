@@ -153,55 +153,15 @@ BurnedTowerSilver_AfterText2:
 	done
 
 BurnedTower1FEusineIntroText:
-	text "EUSINE: My name's"
-	line "EUSINE."
-
-	para "I'm on the trail"
-	line "of a #MON named"
-	cont "SUICUNE."
-
-	para "And you are…?"
-
-	para "<PLAYER>? Glad to"
-	line "meet you!"
-
-	para "I heard rumors"
-	line "that SUICUNE is in"
-
-	para "this BURNED TOWER,"
-	line "so I came to look."
-
-	para "But where exactly"
-	line "could it be?"
+	text "…"
 	done
 
 BurnedTower1FEusineText:
-	text "EUSINE: I heard"
-	line "that SUICUNE is in"
-
-	para "this BURNED TOWER,"
-	line "so I came to look."
-
-	para "But where exactly"
-	line "could it be?"
+	text "…"
 	done
 
 BurnedTower1FMortyText:
-	text "MORTY: ECRUTEAK's"
-	line "GYM LEADER has to"
-
-	para "study what are"
-	line "said to be the"
-
-	para "legendary #MON"
-	line "--SUICUNE, ENTEI"
-	cont "and RAIKOU."
-
-	para "EUSINE is here, so"
-	line "I've decided to"
-
-	para "investigate the"
-	line "TOWER with him."
+	text "…"
 	done
 
 BurnedTower1F_MapEvents:
@@ -232,7 +192,7 @@ BurnedTower1F_MapEvents:
 
 	db 5 ; object events
 	object_event 15,  4, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BurnedTower1FRock, -1
-	object_event 12, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BurnedTower1FEusineScript, EVENT_BURNED_TOWER_1F_EUSINE
+	object_event 12, 12, SPRITE_ROBORED, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BurnedTower1FEusineScript, EVENT_BURNED_TOWER_1F_EUSINE
 	object_event  8,  9, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, ObjectEvent, EVENT_RIVAL_BURNED_TOWER
-	object_event 14, 14, SPRITE_MORTY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BurnedTower1FMortyScript, EVENT_BURNED_TOWER_MORTY
+	object_event 14, 14, SPRITE_LYRA, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BurnedTower1FMortyScript, EVENT_BURNED_TOWER_MORTY
 	object_event 14,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BurnedTower1FHPUp, EVENT_BURNED_TOWER_1F_HP_UP

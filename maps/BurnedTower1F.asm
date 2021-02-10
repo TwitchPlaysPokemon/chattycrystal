@@ -133,69 +133,23 @@ BurnedTower1FEusineMovement:
 	step_end
 
 BurnedTowerSilver_BeforeText:
-	text "<……> <……> <……>"
-
-	para "…Oh, it's you."
-
-	para "I came looking for"
-	line "some legendary"
-
-	para "#MON that they"
-	line "say roosts here."
-
-	para "But there's"
-	line "nothing here!"
-
-	para "Nothing after all"
-	line "the trouble of"
-
-	para "coming to this"
-	line "dump? No way!"
-
-	para "It's all your"
-	line "fault!"
+	text "…"
 	done
 
 BurnedTowerSilver_WinText:
-	text "…Humph!"
-
-	para "This is why I hate"
-	line "battling wimps."
-
-	para "There's no"
-	line "challenge in it."
+	text "…"
 	done
 
 BurnedTowerSilver_AfterText1:
-	text "…Aw, whatever."
-
-	para "You would never be"
-	line "able to catch a"
-
-	para "legendary #MON"
-	line "anyway."
+	text "…"
 	done
 
 BurnedTowerSilver_LossText:
-	text "…Humph!"
-
-	para "This is why I hate"
-	line "battling wimps."
-
-	para "It's just a waste"
-	line "of my time."
+	text "…"
 	done
 
 BurnedTowerSilver_AfterText2:
-	text "Humph!"
-
-	para "What are you doing"
-	line "falling into a"
-
-	para "hole? Some genius"
-	line "you are!"
-
-	para "Serves you right!"
+	text "…"
 	done
 
 BurnedTower1FEusineIntroText:

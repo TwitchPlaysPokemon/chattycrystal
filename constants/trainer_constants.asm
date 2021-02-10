@@ -728,7 +728,6 @@ KRIS EQU __enum__
 	const MARINA
 
 	trainerclass RSEORAS_BRENDAN ; 4e
-	const ORLANDO
 	const RTHASZS
 	const EBNEERT
 
@@ -781,9 +780,8 @@ KRIS EQU __enum__
 	trainerclass SMUSUM_ELIO ; 5c
 	const L_SUN
 
-	trainerclass SMUSUM_ELIO2 ; 5d
+	trainerclass SMUSUM_ELIO2_LEADER ; 5d (split from rrwq to allow leader definition)
 	const D76O6YTTR
-	const RRWQ
 
 	trainerclass SMUSUM_SELENE ; 5e
 	const VRG
@@ -828,6 +826,11 @@ KRIS EQU __enum__
 	
 	trainerclass URF ; 6a
 	const URF1
+
+	trainerclass SMUSUM_ELIO2 ; 6b
+	const RRWQ
 	
+	trainerclass RSEORAS_BRENDAN_LEADER ; 6c
+	const ORLANDO
 
 NUM_TRAINER_CLASSES EQU __enum__

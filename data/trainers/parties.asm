@@ -359,36 +359,6 @@ RSEORASBlueMayGroup:
 	end_list_items
 	
 RSEORASBrendanGroup:
-	next_list_item ; ORLANDO
-	db "!12rtyhasz@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-
-	db 18
-	dw QUILAVA ;TODO add combusken
-	db POTION
-	dw SCRATCH, GROWL, PECK, EMBER
-	bigdw $FFFF
-	bigdw 54
-	bigdw 32
-	bigdw 30
-	bigdw 28
-	bigdw 29
-	bigdw 39
-	db "!sssssarfa@" ;https://www.twitch.tv/videos/30248788?t=14h04m18s https://www.twitch.tv/videos/30248788?t=13h09m52s
-	
-	db 6
-	dw SENTRET ;TODO add whismur
-	db NO_ITEM
-	dw POUND, ECHOED_VOICE, NO_MOVE, NO_MOVE 
-	bigdw $FFFF
-	bigdw 24
-	bigdw 12
-	bigdw 8
-	bigdw 9
-	bigdw 11
-	bigdw 8
-	db "Yuukt22y!i@"; https://www.twitch.tv/videos/30248788?t=13h04m36s
-	db -1 ; end 
-	
 	next_list_item ; RTHASZS
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
@@ -724,7 +694,7 @@ HGSSLyraGroup:
 	bigdw 18
 	bigdw 32
 	bigdw 36
-	db "TRAPINCH" 
+	db "TRAPINCH@" 
 	
 	db 14
 	dw DIGLETT
@@ -907,7 +877,7 @@ SMUSUMElioGroup:
 	
 	end_list_items
 	
-SMUSUMElio2Group:
+SMUSUMElio2LeaderGroup:
 	next_list_item ; D76O6YTTR
 	db "d76o6yttr?@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	
@@ -990,14 +960,6 @@ SMUSUMElio2Group:
 	db "k6'~ MMCMQ@"
 	db -1 ; end
 	
-	next_list_item ; RRWQ
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
-	
-	end_list_items
-	
 SMUSUMSeleneGroup:
 	next_list_item ; VRG
 	db "VRG@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -1018,7 +980,7 @@ SMUSUMSeleneGroup:
 	db 22
 	dw MAREEP ; add Electrike 
 	db THICK_CLUB
-	dw NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE ;add Rock wrecker, Attack order, Thousond waves (electric terrain is not worth it)
+	dw POUND, NO_MOVE, NO_MOVE, NO_MOVE ;add Rock wrecker, Attack order, Thousond waves (electric terrain is not worth it), Pound added to prevent crashes.
 	bigdw $0FFF
 	bigdw 58
 	bigdw 33
@@ -1593,7 +1555,7 @@ GreenMayGroup:
 	bigdw 28
 	bigdw 32
 	bigdw 35
-	db "ATTMG555<......>@"
+	db "ATTMG555……@"
 	
 	db 11
 	dw GEODUDE ;TODO add aron
@@ -6615,3 +6577,45 @@ GSCHGSSChrisGroup:
 	
 	end_list_items
 	
+RSEORASBrendanLeaderGroup:
+	next_list_item ; ORLANDO
+	db "!12rtyhasz@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 18
+	dw QUILAVA ;TODO add combusken
+	db POTION
+	dw SCRATCH, GROWL, PECK, EMBER
+	bigdw $FFFF
+	bigdw 54
+	bigdw 32
+	bigdw 30
+	bigdw 28
+	bigdw 29
+	bigdw 39
+	db "!sssssarfa@" ;https://www.twitch.tv/videos/30248788?t=14h04m18s https://www.twitch.tv/videos/30248788?t=13h09m52s
+	
+	db 6
+	dw SENTRET ;TODO add whismur
+	db NO_ITEM
+	dw POUND, ECHOED_VOICE, NO_MOVE, NO_MOVE 
+	bigdw $FFFF
+	bigdw 24
+	bigdw 12
+	bigdw 8
+	bigdw 9
+	bigdw 11
+	bigdw 8
+	db "Yuukt22y!i@"; https://www.twitch.tv/videos/30248788?t=13h04m36s
+	db -1 ; end 
+	
+	end_list_items
+
+SMUSUMElio2Group:
+	next_list_item ; RRWQ
+	db "?@", TRAINERTYPE_NORMAL
+	
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items

@@ -1,19 +1,16 @@
 SECTION "Scratch", SRAM
 
-UNION ; a000
-sScratch:: ds $600 ; a000
-; a600
+UNION
+sScratch:: ds $600
 
-NEXTU ; a000
-sEnemyFrontPicTileCount:: db ; a000
-sPaddedEnemyFrontPic:: ds 7 * 7 tiles ; a001
-; a311
+NEXTU
+sEnemyFrontPicTileCount:: db
+sPaddedEnemyFrontPic:: ds 7 * 7 tiles
 
-ENDU ; a600
+ENDU
 
 SECTION "SRAM Bank 0", SRAM
 
-; a600
 sPartyMail::
 sPartyMon1Mail:: mailmsg sPartyMon1Mail
 sPartyMon2Mail:: mailmsg sPartyMon2Mail
@@ -22,7 +19,6 @@ sPartyMon4Mail:: mailmsg sPartyMon4Mail
 sPartyMon5Mail:: mailmsg sPartyMon5Mail
 sPartyMon6Mail:: mailmsg sPartyMon6Mail
 
-; a71a
 sPartyMailBackup::
 sPartyMon1MailBackup:: mailmsg sPartyMon1MailBackup
 sPartyMon2MailBackup:: mailmsg sPartyMon2MailBackup
@@ -31,7 +27,6 @@ sPartyMon4MailBackup:: mailmsg sPartyMon4MailBackup
 sPartyMon5MailBackup:: mailmsg sPartyMon5MailBackup
 sPartyMon6MailBackup:: mailmsg sPartyMon6MailBackup
 
-; a834
 sMailboxCount:: db
 sMailbox::
 ___count = 0
@@ -40,7 +35,6 @@ ___count = ___count + 1
 sMailbox{d:___count}::  mailmsg sMailbox{d:___count}
 endr
 
-; aa0b
 sMailboxCountBackup:: db
 sMailboxBackup::
 ___count = 0
@@ -49,7 +43,6 @@ ___count = ___count + 1
 sMailbox{d:___count}Backup::  mailmsg sMailbox{d:___count}Backup
 endr
 
-; abe2
 sMysteryGiftItem:: db
 sMysteryGiftUnlocked:: db
 sBackupMysteryGiftItem:: db
@@ -63,7 +56,7 @@ sMysteryGiftTimerStartDay:: db
 sMysteryGiftTrainerHouseFlag:: db
 sMysteryGiftPartnerName:: ds NAME_LENGTH
 s0_ac09:: ds 1
-sMysteryGiftTrainer:: ds (1 + 1 + NUM_MOVES) * PARTY_LENGTH + 2 ; ac0a
+sMysteryGiftTrainer:: ds (1 + 1 + NUM_MOVES) * PARTY_LENGTH + 2
 sBackupMysteryGiftItemEnd::
 
 	ds $30
@@ -85,7 +78,7 @@ sCheckValue1:: db ; loaded with SAVE_CHECK_VALUE_1, used to check save corruptio
 
 sSaveData::
 
-sGameData:: ; a009
+sGameData::
 sPlayerData::  ds wPlayerDataEnd - wPlayerData
 sCurMapData::  ds wCurMapDataEnd - wCurMapData
 sPokemonData:: ds wPokemonDataEnd - wPokemonData
@@ -97,9 +90,7 @@ sConversionTableChecksum:: dw
 
 sSaveDataEnd::
 
-; ab85
 	ds $88
-; ad0d
 
 sChecksum:: dw
 
@@ -108,9 +99,7 @@ sCheckValue2:: db ; loaded with SAVE_CHECK_VALUE_2, used to check save corruptio
 
 SECTION "Active Box", SRAM
 
-; ad10
 sBox:: box sBox
-; b160
 
 	ds $f4
 
@@ -120,9 +109,9 @@ SECTION "Link Battle Data", SRAM
 sLinkBattleResults:: ds $c
 
 sLinkBattleStats::
-sLinkBattleWins::   dw ; b260
-sLinkBattleLosses:: dw ; b262
-sLinkBattleDraws::  dw ; b264
+sLinkBattleWins::   dw
+sLinkBattleLosses:: dw
+sLinkBattleDraws::  dw
 
 sLinkBattleRecord::
 sLinkBattleRecord1:: link_battle_record sLinkBattleRecord1
@@ -135,7 +124,7 @@ sLinkBattleStatsEnd::
 
 SECTION "SRAM Hall of Fame", SRAM
 
-sHallOfFame:: ; b2c0
+sHallOfFame::
 ___count = 0
 rept NUM_HOF_TEAMS
 ___count = ___count + 1
@@ -146,11 +135,11 @@ sHallOfFameEnd::
 
 SECTION "SRAM Crystal Data", SRAM
 
-sMobileEventIndex:: db ; bf0e
+sMobileEventIndex:: db
 
 sCrystalData:: ds wCrystalDataEnd - wCrystalData
 
-sMobileEventIndexBackup:: db ; bf16
+sMobileEventIndexBackup:: db
 
 
 SECTION "SRAM Battle Tower", SRAM
@@ -161,16 +150,16 @@ sBattleTowerChallengeState::
 ; 2: battle tower
 	db
 
-sBattleTower:: ; bf18
+sBattleTower::
 sNrOfBeatenBattleTowerTrainers:: db
 sBTChoiceOfLevelGroup:: db
 ; Battle Tower trainers are saved here, so nobody appears more than once
-sBTTrainers:: ds BATTLETOWER_STREAK_LENGTH ; bf1a
+sBTTrainers:: ds BATTLETOWER_STREAK_LENGTH
 sBattleTowerSaveFileFlags:: db
 sBattleTowerReward:: db
 
 ; team of previous trainer
-sBTMonOfTrainers:: ; bf23
+sBTMonOfTrainers::
 sBTMonPrevTrainer1:: dw
 sBTMonPrevTrainer2:: dw
 sBTMonPrevTrainer3:: dw

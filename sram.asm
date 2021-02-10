@@ -34,30 +34,20 @@ sPartyMon6MailBackup:: mailmsg sPartyMon6MailBackup
 ; a834
 sMailboxCount:: db
 sMailbox::
-sMailbox1::  mailmsg sMailbox1
-sMailbox2::  mailmsg sMailbox2
-sMailbox3::  mailmsg sMailbox3
-sMailbox4::  mailmsg sMailbox4
-sMailbox5::  mailmsg sMailbox5
-sMailbox6::  mailmsg sMailbox6
-sMailbox7::  mailmsg sMailbox7
-sMailbox8::  mailmsg sMailbox8
-sMailbox9::  mailmsg sMailbox9
-sMailbox10:: mailmsg sMailbox10
+___count = 0
+rept MAILBOX_CAPACITY
+___count = ___count + 1
+sMailbox{d:___count}::  mailmsg sMailbox{d:___count}
+endr
 
 ; aa0b
 sMailboxCountBackup:: db
 sMailboxBackup::
-sMailbox1Backup::  mailmsg sMailbox1Backup
-sMailbox2Backup::  mailmsg sMailbox2Backup
-sMailbox3Backup::  mailmsg sMailbox3Backup
-sMailbox4Backup::  mailmsg sMailbox4Backup
-sMailbox5Backup::  mailmsg sMailbox5Backup
-sMailbox6Backup::  mailmsg sMailbox6Backup
-sMailbox7Backup::  mailmsg sMailbox7Backup
-sMailbox8Backup::  mailmsg sMailbox8Backup
-sMailbox9Backup::  mailmsg sMailbox9Backup
-sMailbox10Backup:: mailmsg sMailbox10Backup
+___count = 0
+rept MAILBOX_CAPACITY
+___count = ___count + 1
+sMailbox{d:___count}Backup::  mailmsg sMailbox{d:___count}Backup
+endr
 
 ; abe2
 sMysteryGiftItem:: db
@@ -84,6 +74,7 @@ sLuckyIDNumber::  dw
 
 SECTION "Saved 16-bit conversion tables", SRAM
 ; the Pokémon index table isn't stored here to improve save data packing
+	ds $100
 sMoveIndexTable:: ds wMoveIndexTableEnd - wMoveIndexTable
 sBackupMoveIndexTable:: ds wMoveIndexTableEnd - wMoveIndexTable
 
@@ -177,36 +168,11 @@ sLinkBattleStatsEnd::
 SECTION "SRAM Hall of Fame", SRAM
 
 sHallOfFame:: ; b2c0
-sHallOfFame01:: hall_of_fame sHallOfFame01
-sHallOfFame02:: hall_of_fame sHallOfFame02
-sHallOfFame03:: hall_of_fame sHallOfFame03
-sHallOfFame04:: hall_of_fame sHallOfFame04
-sHallOfFame05:: hall_of_fame sHallOfFame05
-sHallOfFame06:: hall_of_fame sHallOfFame06
-sHallOfFame07:: hall_of_fame sHallOfFame07
-sHallOfFame08:: hall_of_fame sHallOfFame08
-sHallOfFame09:: hall_of_fame sHallOfFame09
-sHallOfFame10:: hall_of_fame sHallOfFame10
-sHallOfFame11:: hall_of_fame sHallOfFame11
-sHallOfFame12:: hall_of_fame sHallOfFame12
-sHallOfFame13:: hall_of_fame sHallOfFame13
-sHallOfFame14:: hall_of_fame sHallOfFame14
-sHallOfFame15:: hall_of_fame sHallOfFame15
-sHallOfFame16:: hall_of_fame sHallOfFame16
-sHallOfFame17:: hall_of_fame sHallOfFame17
-sHallOfFame18:: hall_of_fame sHallOfFame18
-sHallOfFame19:: hall_of_fame sHallOfFame19
-sHallOfFame20:: hall_of_fame sHallOfFame20
-sHallOfFame21:: hall_of_fame sHallOfFame21
-sHallOfFame22:: hall_of_fame sHallOfFame22
-sHallOfFame23:: hall_of_fame sHallOfFame23
-sHallOfFame24:: hall_of_fame sHallOfFame24
-sHallOfFame25:: hall_of_fame sHallOfFame25
-sHallOfFame26:: hall_of_fame sHallOfFame26
-sHallOfFame27:: hall_of_fame sHallOfFame27
-sHallOfFame28:: hall_of_fame sHallOfFame28
-sHallOfFame29:: hall_of_fame sHallOfFame29
-sHallOfFame30:: hall_of_fame sHallOfFame30
+___count = 0
+rept NUM_HOF_TEAMS
+___count = ___count + 1
+sHallOfFame{d:___count}:: hall_of_fame sHallOfFame{d:___count}
+endr
 sHallOfFameEnd::
 
 
@@ -246,37 +212,37 @@ sBTMonPrevPrevTrainer2:: dw
 sBTMonPrevPrevTrainer3:: dw
 
 
-SECTION "Boxes 1-7",  SRAM, BANK [2]
+SECTION "Boxes 1-7", SRAM
 
-sBox1::  box sBox1
-sBox2::  box sBox2
-sBox3::  box sBox3
-sBox4::  box sBox4
-sBox5::  box sBox5
-sBox6::  box sBox6
-sBox7::  box sBox7
+sBox1:: box sBox1
+sBox2:: box sBox2
+sBox3:: box sBox3
+sBox4:: box sBox4
+sBox5:: box sBox5
+sBox6:: box sBox6
+sBox7:: box sBox7
 
-sBox1PokemonIndexes::  ds 2 * MONS_PER_BOX
-sBox2PokemonIndexes::  ds 2 * MONS_PER_BOX
-sBox3PokemonIndexes::  ds 2 * MONS_PER_BOX
-sBox4PokemonIndexes::  ds 2 * MONS_PER_BOX
-sBox5PokemonIndexes::  ds 2 * MONS_PER_BOX
-sBox6PokemonIndexes::  ds 2 * MONS_PER_BOX
-sBox7PokemonIndexes::  ds 2 * MONS_PER_BOX
+sBox1PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox2PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox3PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox4PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox5PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox6PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox7PokemonIndexes:: ds 2 * MONS_PER_BOX
 
 
 SECTION "Boxes 8-14", SRAM
 
-sBox8::  box sBox8
-sBox9::  box sBox9
+sBox8:: box sBox8
+sBox9:: box sBox9
 sBox10:: box sBox10
 sBox11:: box sBox11
 sBox12:: box sBox12
 sBox13:: box sBox13
 sBox14:: box sBox14
 
-sBox8PokemonIndexes::  ds 2 * MONS_PER_BOX
-sBox9PokemonIndexes::  ds 2 * MONS_PER_BOX
+sBox8PokemonIndexes:: ds 2 * MONS_PER_BOX
+sBox9PokemonIndexes:: ds 2 * MONS_PER_BOX
 sBox10PokemonIndexes:: ds 2 * MONS_PER_BOX
 sBox11PokemonIndexes:: ds 2 * MONS_PER_BOX
 sBox12PokemonIndexes:: ds 2 * MONS_PER_BOX

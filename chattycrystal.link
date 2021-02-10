@@ -356,9 +356,8 @@ VRAM $01
 	"VRAM1"
 SRAM $00
 	"Scratch"
-	org $a600
 	"SRAM Bank 0"
-	org $ae00
+	align 8
 	"Saved 16-bit conversion tables"
 	"Backup Save"
 SRAM $01

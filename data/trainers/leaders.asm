@@ -10,8 +10,8 @@ GymLeaders:
 	db SWSH_GLORIA
 	db HGSS_LYRA
 	db PRYCE
-	db JASMINE
-	db CHUCK
+	db GREEN_MAY_LEADER
+	db BROWN
 	db CLAIR
 	db WILL
 	db BRUNO

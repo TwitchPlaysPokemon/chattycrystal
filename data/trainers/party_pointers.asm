@@ -110,3 +110,4 @@ TrainerGroups:
 	dba URFGroup
 	dba SMUSUMElio2Group
 	dba RSEORASBrendanLeaderGroup
+	dba GreenMayLeaderGroup

@@ -108,3 +108,6 @@ TrainerPicPointers::
 	dba BrownPic
 	dba BABAPic
 	dba URFPic
+	dba Elio2Pic
+	dba BrendanPic
+	dba GreenMayPic

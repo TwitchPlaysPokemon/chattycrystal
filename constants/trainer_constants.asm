@@ -813,7 +813,6 @@ KRIS EQU __enum__
 	
 	trainerclass GREEN_MAY ; 67
 	const A_EMERALD
-	const ACCPPQ
 	const N_EMERALD
 	
 	trainerclass BROWN ; 68
@@ -833,4 +832,6 @@ KRIS EQU __enum__
 	trainerclass RSEORAS_BRENDAN_LEADER ; 6c
 	const ORLANDO
 
+	trainerclass GREEN_MAY_LEADER
+	const ACCPPQ
 NUM_TRAINER_CLASSES EQU __enum__

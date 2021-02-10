@@ -2380,8 +2380,6 @@ BattleCommand_DamageStats:
 PlayerAttackDamage:
 ; Return move power d, player level e, enemy defense c and player attack b.
 
-	call ResetDamage
-
 	ld hl, wPlayerMoveStructPower
 	ld a, [hli]
 	and a
@@ -2632,7 +2630,6 @@ DoubleStatIfSpeciesHoldingItem:
 	ret
 
 EnemyAttackDamage:
-	call ResetDamage
 
 ; No damage dealt with 0 power.
 	ld hl, wEnemyMoveStructPower
@@ -2751,6 +2748,8 @@ BattleCommand_DamageCalc:
 ; Return a damage value for move power d, player level e, enemy defense c and player attack b.
 
 ; Return 1 if successful, else 0.
+
+	call ResetDamage ;moving this here so revenge can see the damage taken
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar

@@ -258,7 +258,7 @@ PokemonCries::
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
 	mon_cry CRY_TREECKO,    -$010,  $0b0 ; TREECKO
 	mon_cry CRY_TREECKO,    -$022,  $120 ; GROVYLE
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SCEPTILE - PLACEHOLDER
+	mon_cry CRY_TREECKO,    -$0b7,  $200 ; SCEPTILE
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TORCHIC - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; COMBUSKEN - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BLAZIKEN - PLACEHOLDER

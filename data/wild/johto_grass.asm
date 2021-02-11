@@ -1211,10 +1211,10 @@ JohtoGrassWildMons:
 	; nite
 	dbw 2, HOOTHOOT
 	dbw 2, RATTATA
-	dbw 3, HOOTHOOT
+	dbw 3, POOCHYENA
 	dbw 3, RATTATA
 	dbw 5, RATTATA
-	dbw 6, HOOTHOOT
+	dbw 6, POOCHYENA
 	dbw 6, HOOTHOOT
 
 	map_id ROUTE_30
@@ -1239,9 +1239,9 @@ JohtoGrassWildMons:
 	dbw 5, SPINARAK
 	dbw 5, HOOTHOOT
 	dbw 5, POLIWAG
-	dbw 6, HOOTHOOT
+	dbw 6, POOCHYENA
 	dbw 5, ZUBAT
-	dbw 6, HOOTHOOT
+	dbw 6, POOCHYENA
 	dbw 6, HOOTHOOT
 
 	map_id ROUTE_31

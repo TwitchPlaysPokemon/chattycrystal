@@ -269,3 +269,4 @@ CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
 
 SECTION "New Pokedex Entries", ROMX
 PoochyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/poochyena.asm"
+MightyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mightyena.asm"

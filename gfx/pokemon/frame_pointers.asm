@@ -251,3 +251,4 @@ FramesPointers:
 	dba HoOhFrames
 	dba CelebiFrames
 	dba PoochyenaFrames
+	dba MightyenaFrames

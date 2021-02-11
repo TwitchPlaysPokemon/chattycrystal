@@ -517,3 +517,5 @@ PokemonPicPointers::
 	dba CelebiBackpic
 	dba PoochyenaFrontpic
 	dba PoochyenaBackpic
+	dba MightyenaFrontpic
+	dba MightyenaBackpic

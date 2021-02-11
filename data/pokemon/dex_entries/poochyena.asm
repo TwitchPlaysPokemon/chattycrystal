@@ -1,5 +1,5 @@
 	db "BITE@" ; species name
-	dw 108, 5 ; height, weight
+	dw 108, 300 ; height, weight
 
 	db   "It chases its prey"
 	next "until the victim"

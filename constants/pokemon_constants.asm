@@ -271,17 +271,17 @@ JOHTO_POKEMON EQU const_value
 	const LUGIA      ;  f9
 	const HO_OH      ;  fa
 	const CELEBI     ;  fb
-	const CHATOT     ;  fc
-	const POOCHYENA  ;  fd
-	const MIGHTYENA  ;  fe
-	const JUMPANIUM  ;  ff
-	const MEGASTOISE ; 100
-	const NOCTDRIO   ; 101
-	const QUAGYNX    ; 102
-	const STEELURRET ; 103
-	const TOGETAPE   ; 104
-	const ZIGZAGOON  ; 105
-	const LINOONE    ; 106
+	const POOCHYENA  ;  fc
+	const MIGHTYENA  ;  fd
+	const ZIGZAGOON  ;  fe
+	const LINOONE    ;  ff
+	const CHATOT     ; 100
+	const JUMPANIUM  ; 101
+	const MEGASTOISE ; 102
+	const NOCTDRIO   ; 103
+	const QUAGYNX    ; 104
+	const STEELURRET ; 105
+	const TOGETAPE   ; 106
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

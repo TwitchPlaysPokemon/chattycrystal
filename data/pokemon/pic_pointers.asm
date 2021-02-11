@@ -515,12 +515,16 @@ PokemonPicPointers::
 	dba HoOhBackpic
 	dba CelebiFrontpic
 	dba CelebiBackpic
-	dba ChatotFrontpic
-	dba ChatotBackpic
 	dba PoochyenaFrontpic
 	dba PoochyenaBackpic
 	dba MightyenaFrontpic
 	dba MightyenaBackpic
+	dba ZigzagoonFrontpic
+	dba ZigzagoonBackpic
+	dba LinooneFrontpic
+	dba LinooneBackpic
+	dba ChatotFrontpic
+	dba ChatotBackpic
 	dba JumpaniumFrontpic
 	dba JumpaniumBackpic
 	dba MegastoiseFrontpic
@@ -533,7 +537,3 @@ PokemonPicPointers::
 	dba SteelurretBackpic
 	dba TogetapeFrontpic
 	dba TogetapeBackpic
-	dba ZigzagoonFrontpic
-	dba ZigzagoonBackpic
-	dba LinooneFrontpic
-	dba LinooneBackpic

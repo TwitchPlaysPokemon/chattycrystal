@@ -250,14 +250,14 @@ AnimationIdlePointers:
 	dw LugiaAnimationIdle
 	dw HoOhAnimationIdle
 	dw CelebiAnimationIdle
-	dw ChatotAnimationIdle
 	dw PoochyenaAnimationIdle
 	dw MightyenaAnimationIdle
+	dw ZigzagoonAnimationIdle
+	dw LinooneAnimationIdle
+	dw ChatotAnimationIdle
 	dw JumpaniumAnimationIdle
 	dw MegastoiseAnimationIdle
 	dw NoctdrioAnimationIdle
 	dw QuagynxAnimationIdle
 	dw SteelurretAnimationIdle
 	dw TogetapeAnimationIdle
-	dw ZigzagoonAnimationIdle
-	dw LinooneAnimationIdle

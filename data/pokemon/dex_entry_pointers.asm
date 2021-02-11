@@ -251,14 +251,14 @@ PokedexDataPointerTable:
 	dba LugiaPokedexEntry
 	dba HoOhPokedexEntry
 	dba CelebiPokedexEntry
-	dba ChatotPokedexEntry
 	dba PoochyenaPokedexEntry
 	dba MightyenaPokedexEntry
+	dba ZigzagoonPokedexEntry
+	dba LinoonePokedexEntry
+	dba ChatotPokedexEntry
 	dba JumpluffPokedexEntry
 	dba MeganiumPokedexEntry
 	dba NoctowlPokedexEntry
 	dba QuagsirePokedexEntry
 	dba SteelixPokedexEntry
 	dba TogeticPokedexEntry
-	dba ZigzagoonPokedexEntry
-	dba LinoonePokedexEntry

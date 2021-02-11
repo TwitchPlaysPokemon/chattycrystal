@@ -250,14 +250,14 @@ BitmasksPointers:
 	dw LugiaBitmasks
 	dw HoOhBitmasks
 	dw CelebiBitmasks
-	dw ChatotBitmasks
 	dw PoochyenaBitmasks
 	dw MightyenaBitmasks
+	dw ZigzagoonBitmasks
+	dw LinooneBitmasks
+	dw ChatotBitmasks
 	dw JumpaniumBitmasks
 	dw MegastoiseBitmasks
 	dw NoctdrioBitmasks
 	dw QuagynxBitmasks
 	dw SteelurretBitmasks
 	dw TogetapeBitmasks
-	dw ZigzagoonBitmasks
-	dw LinooneBitmasks

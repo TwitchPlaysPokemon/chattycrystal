@@ -250,14 +250,14 @@ AnimationPointers:
 	dw LugiaAnimation
 	dw HoOhAnimation
 	dw CelebiAnimation
-	dw ChatotAnimation
 	dw PoochyenaAnimation
 	dw MightyenaAnimation
+	dw ZigzagoonAnimation
+	dw LinooneAnimation
+	dw ChatotAnimation
 	dw JumpluffAnimation
 	dw MeganiumAnimation
 	dw NoctowlAnimation
 	dw QuagsireAnimation
 	dw SteelixAnimation
 	dw TogeticAnimation
-	dw ZigzagoonAnimation
-	dw LinooneAnimation

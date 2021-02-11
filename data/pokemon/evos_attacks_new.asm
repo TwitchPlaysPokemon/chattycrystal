@@ -1,17 +1,17 @@
 SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
-	dw ChatotEvosAttacks
 	dw PoochyenaEvosAttacks
 	dw MightyenaEvosAttacks
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; TODO: learnset
 	dw ZigzagoonEvosAttacks
 	dw LinooneEvosAttacks
+	dw ChatotEvosAttacks
+	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; TODO: learnset
 
 DummyEvosAttacks:
 	; remove when no longer in used

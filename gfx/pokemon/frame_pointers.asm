@@ -250,14 +250,14 @@ FramesPointers:
 	dba LugiaFrames
 	dba HoOhFrames
 	dba CelebiFrames
-	dba ChatotFrames
 	dba PoochyenaFrames
 	dba MightyenaFrames
+	dba ZigzagoonFrames
+	dba LinooneFrames
+	dba ChatotFrames
 	dba JumpaniumFrames
 	dba MegastoiseFrames
 	dba NoctdrioFrames
 	dba QuagynxFrames
 	dba SteelurretFrames
 	dba TogetapeFrames
-	dba ZigzagoonFrames
-	dba LinooneFrames

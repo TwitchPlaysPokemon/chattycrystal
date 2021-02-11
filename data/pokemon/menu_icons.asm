@@ -252,14 +252,14 @@ MonMenuIcons:
 	db ICON_LUGIA       ; LUGIA
 	db ICON_HO_OH       ; HO_OH
 	db ICON_HUMANSHAPE  ; CELEBI
-	db ICON_BIRD        ; CHATOT
 	db ICON_FOX         ; POOCHYENA
 	db ICON_FOX         ; MIGHTYENA
+	db ICON_FOX         ; ZIGZAGOON
+	db ICON_FOX         ; LINOONE
+	db ICON_BIRD        ; CHATOT
 	db ICON_ODDISH      ; JUMPANIUM
 	db ICON_ODDISH      ; MEGASTOISE
 	db ICON_BIRD        ; NOCTDRIO
 	db ICON_MONSTER     ; QUAGYNX
 	db ICON_SERPENT     ; STEELURRET
 	db ICON_BIRD        ; TOGETAPE
-	db ICON_FOX         ; ZIGZAGOON
-	db ICON_FOX         ; LINOONE

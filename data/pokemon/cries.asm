@@ -256,14 +256,14 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
-	mon_cry CRY_ENTEI,       $000,  $1a0 ; CHATOT - TODO: port chatot cry (not that important as it's played by the controller)
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; POOCHYENA - TODO: adjust
 	mon_cry CRY_MAGCARGO,   -$20d,  $1c0 ; MIGHTYENA - TODO: adjust
+	mon_cry CRY_SENTRET,     $08a,  $0b8 ; ZIGZAGOON
+	mon_cry CRY_SENTRET,     $06b,  $102 ; LINOONE
+	mon_cry CRY_ENTEI,       $000,  $1a0 ; CHATOT - TODO: port chatot cry (not that important as it's played by the controller)
 	mon_cry CRY_CLEFFA,      $000,  $180 ; JUMPANIUM
 	mon_cry CRY_CHIKORITA,  -$0b7,  $200 ; MEGASTOISE
 	mon_cry CRY_HOOTHOOT,    $000,  $1a0 ; NOCTDRIO
 	mon_cry CRY_WOOPER,     -$0c6,  $140 ; QUAGYNX
 	mon_cry CRY_TYPHLOSION,  $0ef,  $0f7 ; STEELURRET
 	mon_cry CRY_TOGETIC,     $03b,  $038 ; TOGETAPE
-	mon_cry CRY_SENTRET,     $08a,  $0b8 ; ZIGZAGOON
-	mon_cry CRY_SENTRET,     $06b,  $102 ; LINOONE

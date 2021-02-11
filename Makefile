@@ -1,7 +1,8 @@
 roms := chattycrystal.gbc
 
-# set to 0 when we're not replacing stuff to test anymore
-TESTMODE := 1
+# TESTMODE replaces some trainers and functionality with easy stubs for testing
+# This should be disabled unless you're testing those things specifically
+TESTMODE := 0
 
 crystal_obj := \
 audio.o \

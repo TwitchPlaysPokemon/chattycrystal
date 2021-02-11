@@ -76,3 +76,4 @@
 ; gen 3
 	const CRY_TREECKO
 	const CRY_POOCHYENA
+	const CRY_ZIGZAGOON

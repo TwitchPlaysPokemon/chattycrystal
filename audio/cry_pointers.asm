@@ -69,3 +69,4 @@ Cries:
 	dba Cry_Donphan
 	dba Cry_Treecko
 	dba Cry_Poochyena
+	dba Cry_Zigzagoon

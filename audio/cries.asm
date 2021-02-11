@@ -2054,6 +2054,10 @@ Cry_Poochyena:
 	musicheader 1, 6, Cry_Poochyena_Ch6
 	musicheader 1, 8, Cry_Poochyena_Ch8
 
+Cry_Zigzagoon:
+	musicheader 2, 5, Cry_Zigzagoon_Ch5
+	musicheader 1, 6, Cry_Zigzagoon_Ch6
+
 Cry_Treecko_Ch5:
 	tone $0020
 Cry_Treecko_Ch6:
@@ -2091,4 +2095,21 @@ Cry_Poochyena_Ch8:
 	noise __,  8, $b5, $29
 	noise __,  2, $a2, $39
 	noise __,  9, $91, $49
+	endchannel
+
+Cry_Zigzagoon_Ch5:
+	tone $0020
+	dutycycle $0
+	jumpchannel Cry_Zigzagoon_branch_f312b
+
+Cry_Zigzagoon_Ch6:
+	sound_duty 3, 2, 1, 0
+Cry_Zigzagoon_branch_f312b:
+	sound __,  9, $39, $072d
+	sound __,  9, $f1, $0720
+	endchannel
+
+Cry_Zigzagoon_Ch8:
+	noise __,  9, $3b, $0
+	noise __,  9, $92, $0
 	endchannel

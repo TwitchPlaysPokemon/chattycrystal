@@ -267,8 +267,8 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SWAMPERT - PLACEHOLDER
 	mon_cry CRY_POOCHYENA,   $000,  $100 ; POOCHYENA
 	mon_cry CRY_POOCHYENA,   $020,  $17f ; MIGHTYENA
-	mon_cry CRY_SENTRET,     $08a,  $0b8 ; ZIGZAGOON - TODO: port cry
-	mon_cry CRY_SENTRET,     $06b,  $102 ; LINOONE - TODO: port cry
+	mon_cry CRY_ZIGZAGOON,   $08a,  $0b8 ; ZIGZAGOON
+	mon_cry CRY_ZIGZAGOON,   $06b,  $102 ; LINOONE
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LOTAD - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LOMBRE - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LUDICOLO - PLACEHOLDER

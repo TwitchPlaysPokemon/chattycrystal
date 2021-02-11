@@ -259,3 +259,5 @@ AnimationPointers:
 	dw QuagsireAnimation
 	dw SteelixAnimation
 	dw TogeticAnimation
+	dw ZigzagoonAnimation
+	dw LinooneAnimation

@@ -10,6 +10,8 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; TODO: learnset
 	dw DummyEvosAttacks ; TODO: learnset
 	dw DummyEvosAttacks ; TODO: learnset
+	dw ZigzagoonEvosAttacks
+	dw LinooneEvosAttacks
 
 DummyEvosAttacks:
 	; remove when no longer in used
@@ -69,3 +71,37 @@ MightyenaEvosAttacks:
 	dbw 52, THIEF
 	db 0 ; no more level-up moves
 
+ZigzagoonEvosAttacks:
+	db EVOLVE_LEVEL, 20, LINOONE
+	db 0
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 5, TAIL_WHIP
+	dbw 9, HEADBUTT
+	dbw 13, SAND_ATTACK
+;	dbw 19, ODOR_SLEUTH ; TODO: add when odor sleuth has been added
+	dbw 21, MUD_SLAP
+	dbw 25, PIN_MISSILE
+	dbw 29, COVET
+	dbw 33, FLAIL
+	dbw 37, REST
+	dbw 41, BELLY_DRUM
+	db 0 ; no more level-up moves
+
+LinooneEvosAttacks:
+	db 0
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, TAIL_WHIP
+	dbw 1, HEADBUTT
+	dbw 5, TAIL_WHIP
+	dbw 9, HEADBUTT
+	dbw 13, SAND_ATTACK
+;	dbw 17, ODOR_SLEUTH ; TODO: add when odor sleuth has been added
+	dbw 22, MUD_SLAP
+	dbw 29, FURY_SWIPES
+	dbw 35, COVET
+	dbw 41, SLASH
+	dbw 47, REST
+	dbw 53, BELLY_DRUM
+	db 0 ; no more level-up moves

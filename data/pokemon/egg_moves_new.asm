@@ -10,6 +10,8 @@ EggMovePointers3::
 	dw NoEggMoves3
 	dw NoEggMoves3
 	dw NoEggMoves3
+	dw ZigzagoonEggMoves
+	dw NoEggMoves3
 
 ChatotEggMoves:
 	dw AGILITY
@@ -25,6 +27,14 @@ PoochyenaEggMoves:
 	dw LEER
 ;	dw POISON_FANG ;TODO: add when poison fang is added
 ;	dw YAWN ;TODO: add when yawn is added
+	dw -1 ; end
+
+ZigzagoonEggMoves:
+	dw CHARM
+	dw PURSUIT
+	dw SUBSTITUTE
+;	dw TICKLE ;TODO: add when tickle is added
+	dw THIEF
 	dw -1 ; end
 
 NoEggMoves3:

@@ -550,3 +550,7 @@ INCBIN "gfx/pokemon/steelurret/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/steelurret/shiny.pal"
 INCBIN "gfx/pokemon/togetape/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/togetape/shiny.pal"
+INCBIN "gfx/pokemon/zigzagoon/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/zigzagoon/shiny.pal"
+INCBIN "gfx/pokemon/linoone/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/linoone/shiny.pal"

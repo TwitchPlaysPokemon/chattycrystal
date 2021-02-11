@@ -265,3 +265,5 @@ PokemonCries::
 	mon_cry CRY_WOOPER,     -$0c6,  $140 ; QUAGYNX
 	mon_cry CRY_TYPHLOSION,  $0ef,  $0f7 ; STEELURRET
 	mon_cry CRY_TOGETIC,     $03b,  $038 ; TOGETAPE
+	mon_cry CRY_SENTRET,     $08a,  $0b8 ; ZIGZAGOON
+	mon_cry CRY_SENTRET,     $06b,  $102 ; LINOONE

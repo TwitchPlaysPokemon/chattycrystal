@@ -115,6 +115,7 @@ AlphabeticalPokedexOrder:
 	dw LEDIAN
 	dw LEDYBA
 	dw LICKITUNG
+	dw LINOONE
 	dw LUGIA
 	dw MACHAMP
 	dw MACHOKE
@@ -260,4 +261,5 @@ AlphabeticalPokedexOrder:
 	dw XATU
 	dw YANMA
 	dw ZAPDOS
+	dw ZIGZAGOON
 	dw ZUBAT

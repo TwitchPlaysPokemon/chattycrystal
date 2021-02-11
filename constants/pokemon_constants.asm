@@ -280,6 +280,8 @@ JOHTO_POKEMON EQU const_value
 	const QUAGYNX    ; 102
 	const STEELURRET ; 103
 	const TOGETAPE   ; 104
+	const ZIGZAGOON  ; 105
+	const LINOONE    ; 106
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

@@ -763,7 +763,7 @@ BWHildaGroup:
 	db ",,,,,((((%@" 
 	
 	db 18
-	dw RATTATA ; TODO: add zigzagoon
+	dw ZIGZAGOON
 	db EON_MAIL
 	dw TAIL_WHIP, TACKLE, CUT, WORK_UP
 	bigdw $FFFF
@@ -947,7 +947,7 @@ SMUSUMElio2LeaderGroup:
 	db "Toucannon@"
 	
 	db 25
-	dw FURRET ; TODO: add Linoone 
+	dw LINOONE
 	db STAR_PIECE
 	dw TACKLE, TAIL_WHIP, SAND_ATTACK, COVET 
 	bigdw $0FFF

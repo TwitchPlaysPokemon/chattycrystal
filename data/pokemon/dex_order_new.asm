@@ -261,3 +261,5 @@ NewPokedexOrder:
 	dw QUAGYNX
 	dw STEELURRET
 	dw TOGETAPE
+	dw ZIGZAGOON
+	dw LINOONE

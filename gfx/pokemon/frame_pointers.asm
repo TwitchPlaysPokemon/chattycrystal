@@ -259,3 +259,5 @@ FramesPointers:
 	dba QuagynxFrames
 	dba SteelurretFrames
 	dba TogetapeFrames
+	dba ZigzagoonFrames
+	dba LinooneFrames

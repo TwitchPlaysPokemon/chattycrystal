@@ -277,6 +277,35 @@ MoveDescriptions1:
 	dw WorkUpDescription
 	dw RevengeDescription
 	dw GrowthDescription
+	dw SwiftDescription
+	dw SlashDescription
+	dw HeadbuttDescription
+	dw QuickAttackDescription
+	dw SlashDescription
+	dw SwiftDescription
+	dw BlazeKickDescription
+	dw FlamethrowerDescription
+	dw DoubleEdgeDescription
+	dw PsychicMDescription
+	dw IcyWindDescription
+	dw MachPunchDescription
+	dw ThunderboltDescription
+	dw ScratchDescription
+	dw DragonPulseDescription
+	dw AbsorbDescription
+	dw PsychicMDescription
+	dw HeadbuttDescription
+	dw PsychicMDescription
+	dw PsychicMDescription
+	dw AbsorbDescription
+	dw QuickAttackDescription
+	dw HardenDescription
+	dw HeadbuttDescription
+	dw MetalClawDescription
+	dw OctazookaDescription
+	dw OctazookaDescription
+	dw SlashDescription
+	dw ForesightDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -492,7 +521,11 @@ EmberDescription:
 FlamethrowerDescription:
 	db   "An attack that may"
 	next "inflict a burn.@"
-
+	
+BlazeKickDescription:
+	db   "High crit and may"
+	next "inflict a burn.@"
+	
 MistDescription:
 	db   "Prevents stat"
 	next "reduction.@"
@@ -1324,3 +1357,7 @@ RevengeDescription:
 WorkUpDescription:
 	db   "Boosts both ATTACK"
 	next "and SP.ATTACK.@"
+	
+DragonPulseDescription:
+	db   "Fires a ball of"
+	next "pure energy.@"

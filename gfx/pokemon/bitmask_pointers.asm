@@ -259,3 +259,5 @@ BitmasksPointers:
 	dw QuagynxBitmasks
 	dw SteelurretBitmasks
 	dw TogetapeBitmasks
+	dw ZigzagoonBitmasks
+	dw LinooneBitmasks

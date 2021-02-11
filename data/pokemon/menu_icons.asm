@@ -261,3 +261,5 @@ MonMenuIcons:
 	db ICON_MONSTER     ; QUAGYNX
 	db ICON_SERPENT     ; STEELURRET
 	db ICON_BIRD        ; TOGETAPE
+	db ICON_FOX         ; ZIGZAGOON
+	db ICON_FOX         ; LINOONE

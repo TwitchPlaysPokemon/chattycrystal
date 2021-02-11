@@ -259,3 +259,5 @@ AnimationIdlePointers:
 	dw QuagsireAnimationIdle
 	dw SteelixAnimationIdle
 	dw TogeticAnimationIdle
+	dw ZigzagoonAnimationIdle
+	dw LinooneAnimationIdle

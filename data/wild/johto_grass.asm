@@ -1199,10 +1199,10 @@ JohtoGrassWildMons:
 	dbw 3, HOPPIP
 	dbw 5, RATTATA
 	dbw 6, HOPPIP
-	dbw 6, SENTRET
+	dbw 6, ZIGZAGOON
 	; day
 	dbw 2, PIDGEY
-	dbw 2, SENTRET
+	dbw 2, ZIGZAGOON
 	dbw 3, PIDGEY
 	dbw 3, HOPPIP
 	dbw 5, RATTATA
@@ -1225,7 +1225,7 @@ JohtoGrassWildMons:
 	dbw 6, CATERPIE
 	dbw 6, PIDGEY
 	dbw 5, WEEDLE
-	dbw 6, HOPPIP
+	dbw 6, ZIGZAGOON
 	dbw 6, HOPPIP
 	; day
 	dbw 5, PIDGEY
@@ -1233,7 +1233,7 @@ JohtoGrassWildMons:
 	dbw 6, CATERPIE
 	dbw 6, PIDGEY
 	dbw 5, WEEDLE
-	dbw 6, HOPPIP
+	dbw 6, ZIGZAGOON
 	dbw 6, HOPPIP
 	; nite
 	dbw 5, SPINARAK

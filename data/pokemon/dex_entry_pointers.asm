@@ -260,3 +260,5 @@ PokedexDataPointerTable:
 	dba QuagsirePokedexEntry
 	dba SteelixPokedexEntry
 	dba TogeticPokedexEntry
+	dba ZigzagoonPokedexEntry
+	dba LinoonePokedexEntry

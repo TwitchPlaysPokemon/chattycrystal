@@ -263,3 +263,5 @@ PokemonNames::
 	db "QUAGYNX@@@"
 	db "STEELURRET"
 	db "TOGETAPE@@"
+	db "ZIGZAGOON@"
+	db "LINOONE@@@"

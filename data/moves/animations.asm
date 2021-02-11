@@ -296,6 +296,36 @@ BattleAnimations::
 	dw BattleAnim_Meditate
 	dw BattleAnim_Counter
 	dw BattleAnim_PsychUp
+	dw BattleAnim_WingAttack
+	dw BattleAnim_Cut
+	dw BattleAnim_Slash
+	dw BattleAnim_Waterfall
+	dw BattleAnim_SweetScent
+	dw BattleAnim_ShadowBall
+	dw BattleAnim_HiJumpKick
+	dw BattleAnim_SacredFire
+	dw BattleAnim_WingAttack
+	dw BattleAnim_Roar
+	dw BattleAnim_Earthquake
+	dw BattleAnim_MachPunch
+	dw BattleAnim_ThunderWave
+	dw BattleAnim_Slash
+	dw BattleAnim_ShadowBall
+	dw BattleAnim_Dynamicpunch
+	dw BattleAnim_Earthquake
+	dw BattleAnim_Psywave
+	dw BattleAnim_ShadowBall
+	dw BattleAnim_ShadowBall
+	dw BattleAnim_GigaDrain
+	dw BattleAnim_PowderSnow
+	dw BattleAnim_Harden
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Dynamicpunch
+	dw BattleAnim_SludgeBomb
+	dw BattleAnim_Surf
+	dw BattleAnim_Slash
+	dw BattleAnim_Detect
+	
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

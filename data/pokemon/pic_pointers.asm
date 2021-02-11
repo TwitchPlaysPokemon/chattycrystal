@@ -533,3 +533,7 @@ PokemonPicPointers::
 	dba SteelurretBackpic
 	dba TogetapeFrontpic
 	dba TogetapeBackpic
+	dba ZigzagoonFrontpic
+	dba ZigzagoonBackpic
+	dba LinooneFrontpic
+	dba LinooneBackpic

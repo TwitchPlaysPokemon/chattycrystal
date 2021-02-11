@@ -1,13 +1,7 @@
 TrainerClassNames::
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
-	db "LEADER@"
-	db "LEADER@"
-	db "LEADER@"
-	db "LEADER@"
-	db "LEADER@"
-	db "LEADER@"
-	db "LEADER@"
-	db "LEADER@"
+	db "LEADER@" ; Kept only as padding
+	db "LEADER@" ; Kept only as padding
 	db "RIVAL@"
 	db "#MON PROF.@"
 	db "ELITE FOUR@"
@@ -109,4 +103,4 @@ TrainerClassNames::
 	db "<PKMN> TRAINER@"
 	db "LEADER@"
 	db "LEADER@"
-	db "LEADER@"
+	db "<PKMN> TRAINER@"

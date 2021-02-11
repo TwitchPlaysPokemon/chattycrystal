@@ -1234,9 +1234,85 @@ SWSHGloriaGroup:
 	
 GlazedGroup:
 	next_list_item ; AHUNIgg
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+	db "AHUNIgg@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	
+	db 14
+	dw BAYLEEF ; TODO: add grotle
+	db POKE_BALL
+	dw RAZOR_LEAF, BITE, ABSORB, CURSE
+	bigdw $FFFF
+	bigdw 73
+	bigdw 45
+	bigdw 53
+	bigdw 24
+	bigdw 36
+	bigdw 37
+	db "Grotle@"
+	
+	db 12
+	dw POOCHYENA
+	db NO_ITEM
+	dw SAND_ATTACK, HOWL, TACKLE, NO_MOVE
+	bigdw $0FFF
+	bigdw 31
+	bigdw 18
+	bigdw 12
+	bigdw 15
+	bigdw 13
+	bigdw 15
+	db "BBBC Hbvvv@"
+	
+	db 10
+	dw CATERPIE
+	db NO_ITEM
+	dw TACKLE, STRING_SHOT, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 32
+	bigdw 13
+	bigdw 13
+	bigdw 16
+	bigdw 11
+	bigdw 9
+	db "BBHHCEQ@"
+	
+	db 8
+	dw EKANS
+	db NO_ITEM
+	dw WRAP, LEER, POISON_STING, NO_MOVE
+	bigdw $0FFF
+	bigdw 25
+	bigdw 15
+	bigdw 13
+	bigdw 16
+	bigdw 11
+	bigdw 14
+	db "Ekans@"
+	
+	db 10
+	dw MACHOP ; TODO: add Croagunk
+	db NO_ITEM
+	dw POISON_STING, MUD_SLAP, ASTONISH, NO_MOVE ; TODO: add taunt
+	bigdw $0FFF
+	bigdw 30
+	bigdw 18
+	bigdw 13
+	bigdw 18
+	bigdw 19
+	bigdw 11
+	db "BBBBBBAAA@"
+	
+	db 11
+	dw BULBASAUR ; TODO: add Budew
+	db NO_ITEM
+	dw ABSORB, GROWTH, STUN_SPORE, NO_MOVE
+	bigdw $0FFF
+	bigdw 30
+	bigdw 12
+	bigdw 12
+	bigdw 20
+	bigdw 18
+	bigdw 21
+	db "HA@"
 	db -1 ; end
 	
 	end_list_items
@@ -1992,15 +2068,174 @@ GreenMayLeaderGroup:
 	db -1 ; end
 	end_list_items
 
+GSCHGSSChrisRivalGroup:	
+	next_list_item
+	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW2
+	db 9
+	dw TOGEPI
+	db NO_ITEM
+	dw GROWL, CHARM, METRONOME, NO_MOVE
+	bigdw $FFFF
+	bigdw 29
+	bigdw 11
+	bigdw 18
+	bigdw 9
+	bigdw 13
+	bigdw 18
+	db "TOGEPI@"
+	
+	db 8
+	dw PIDGEY
+	db NO_ITEM
+	dw TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE
+	bigdw $FFFF
+	bigdw 25
+	bigdw 14
+	bigdw 12
+	bigdw 15
+	bigdw 10
+	bigdw 10
+	db "PIDGEY@"
+	
+	db 6
+	dw SENTRET
+	db NO_ITEM
+	dw TACKLE, DEFENSE_CURL, NO_MOVE, NO_MOVE
+	bigdw $FFFF
+	bigdw 22
+	bigdw 11
+	bigdw 10
+	bigdw 8
+	bigdw 9
+	bigdw 10
+	db "ADiiiiihhh@"
+	
+	db 5
+	dw CATERPIE
+	db NO_ITEM
+	dw TACKLE, STRING_SHOT, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 19
+	bigdw 8
+	bigdw 8
+	bigdw 9
+	bigdw 8
+	bigdw 8
+	db "OXXOZZ-:@"
+	
+	db 6
+	dw WOOPER
+	db NO_ITEM
+	dw TAIL_WHIP, WATER_GUN, NO_MOVE, NO_MOVE
+	bigdw $FFFF
+	bigdw 24
+	bigdw 11
+	bigdw 12
+	bigdw 8
+	bigdw 8
+	bigdw 8
+	db "WOOPER@"
+	
+	db 24
+	dw TOTODILE
+	db NO_ITEM
+	dw SCRATCH, BITE, RAGE, WATER_GUN
+	bigdw $FFFF
+	bigdw 71
+	bigdw 51
+	bigdw 46
+	bigdw 35
+	bigdw 39
+	bigdw 41
+	db "TOTODILE@"	
+	db -1 ; end
+
+	next_list_item
+	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW3
+	db 14
+	dw KOFFING
+	db NO_ITEM
+	dw POISON_GAS, SMOG, TACKLE, NO_MOVE
+	bigdw $FFFF
+	bigdw 38
+	bigdw 27
+	bigdw 34
+	bigdw 18
+	bigdw 23
+	bigdw 18
+	db "WWWEEE@"
+	
+	db 38
+	dw FERALIGATR
+	db NO_ITEM
+	dw SURF, SCRATCH, RAGE, WATER_GUN
+	bigdw $FFFF
+	bigdw 134
+	bigdw 109
+	bigdw 98
+	bigdw 82
+	bigdw 90
+	bigdw 87
+	db "FERALIGATR@"
+	
+	db 7
+	dw METAPOD
+	db POKE_BALL
+	dw TACKLE, STRING_SHOT, HARDEN, NO_MOVE
+	bigdw $0FFF
+	bigdw 24
+	bigdw 8
+	bigdw 13
+	bigdw 9
+	bigdw 10
+	bigdw 10
+	db "OXXOZZ-:@"
+	
+	db 21
+	dw EEVEE
+	db NO_ITEM
+	dw TACKLE, TAIL_WHIP, SAND_ATTACK, GROWL
+	bigdw $FFFF
+	bigdw 54
+	bigdw 32
+	bigdw 31
+	bigdw 34
+	bigdw 26
+	bigdw 35
+	db "EEVEE@"
+	
+	db 11
+	dw TOGEPI
+	db ANTIDOTE
+	dw METRONOME, CHARM, FLASH, GROWL
+	bigdw $FFFF
+	bigdw 30
+	bigdw 12
+	bigdw 21
+	bigdw 11
+	bigdw 16
+	bigdw 21
+	db "TOGEPI@"
+	
+	db 16
+	dw RATICATE
+	db POKE_BALL
+	dw TACKLE, TAIL_WHIP, QUICK_ATTACK, HYPER_FANG
+	bigdw $0FFF
+	bigdw 44
+	bigdw 31
+	bigdw 26
+	bigdw 39
+	bigdw 24
+	bigdw 30
+	db "ABBBDDDDDD@"
+	
+	db -1 ; end
+	end_list_items
+
 SECTION "Enemy Trainer Parties 2", ROMX
 
-FalknerGroup:
-WhitneyGroup:
-BugsyGroup:
-MortyGroup:
 PryceGroup:
-JasmineGroup:
-ChuckGroup:
 ClairGroup:
 Rival1Group:
 PokemonProfGroup:
@@ -6499,170 +6734,6 @@ GSCHGSSChrisGroup:
 	bigdw 21
 	bigdw 22
 	db "TOTODILE@"
-	db -1 ; end
-	
-	next_list_item
-	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW2
-	db 9
-	dw TOGEPI
-	db NO_ITEM
-	dw GROWL, CHARM, METRONOME, NO_MOVE
-	bigdw $FFFF
-	bigdw 29
-	bigdw 11
-	bigdw 18
-	bigdw 9
-	bigdw 13
-	bigdw 18
-	db "TOGEPI@"
-	
-	db 8
-	dw PIDGEY
-	db NO_ITEM
-	dw TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE
-	bigdw $FFFF
-	bigdw 25
-	bigdw 14
-	bigdw 12
-	bigdw 15
-	bigdw 10
-	bigdw 10
-	db "PIDGEY@"
-	
-	db 6
-	dw SENTRET
-	db NO_ITEM
-	dw TACKLE, DEFENSE_CURL, NO_MOVE, NO_MOVE
-	bigdw $FFFF
-	bigdw 22
-	bigdw 11
-	bigdw 10
-	bigdw 8
-	bigdw 9
-	bigdw 10
-	db "ADiiiiihhh@"
-	
-	db 5
-	dw CATERPIE
-	db NO_ITEM
-	dw TACKLE, STRING_SHOT, NO_MOVE, NO_MOVE
-	bigdw $0FFF
-	bigdw 19
-	bigdw 8
-	bigdw 8
-	bigdw 9
-	bigdw 8
-	bigdw 8
-	db "OXXOZZ-:@"
-	
-	db 6
-	dw WOOPER
-	db NO_ITEM
-	dw TAIL_WHIP, WATER_GUN, NO_MOVE, NO_MOVE
-	bigdw $FFFF
-	bigdw 24
-	bigdw 11
-	bigdw 12
-	bigdw 8
-	bigdw 8
-	bigdw 8
-	db "WOOPER@"
-	
-	db 24
-	dw TOTODILE
-	db NO_ITEM
-	dw SCRATCH, BITE, RAGE, WATER_GUN
-	bigdw $FFFF
-	bigdw 71
-	bigdw 51
-	bigdw 46
-	bigdw 35
-	bigdw 39
-	bigdw 41
-	db "TOTODILE@"
-	
-	db -1 ; end
-	
-	next_list_item
-	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW3
-	db 14
-	dw KOFFING
-	db NO_ITEM
-	dw POISON_GAS, SMOG, TACKLE, NO_MOVE
-	bigdw $FFFF
-	bigdw 38
-	bigdw 27
-	bigdw 34
-	bigdw 18
-	bigdw 23
-	bigdw 18
-	db "WWWEEE@"
-	
-	db 38
-	dw FERALIGATR
-	db NO_ITEM
-	dw SURF, SCRATCH, RAGE, WATER_GUN
-	bigdw $FFFF
-	bigdw 134
-	bigdw 109
-	bigdw 98
-	bigdw 82
-	bigdw 90
-	bigdw 87
-	db "FERALIGATR@"
-	
-	db 7
-	dw METAPOD
-	db POKE_BALL
-	dw TACKLE, STRING_SHOT, HARDEN, NO_MOVE
-	bigdw $0FFF
-	bigdw 24
-	bigdw 8
-	bigdw 13
-	bigdw 9
-	bigdw 10
-	bigdw 10
-	db "OXXOZZ-:@"
-	
-	db 21
-	dw EEVEE
-	db NO_ITEM
-	dw TACKLE, TAIL_WHIP, SAND_ATTACK, GROWL
-	bigdw $FFFF
-	bigdw 54
-	bigdw 32
-	bigdw 31
-	bigdw 34
-	bigdw 26
-	bigdw 35
-	db "EEVEE@"
-	
-	db 11
-	dw TOGEPI
-	db ANTIDOTE
-	dw METRONOME, CHARM, FLASH, GROWL
-	bigdw $FFFF
-	bigdw 30
-	bigdw 12
-	bigdw 21
-	bigdw 11
-	bigdw 16
-	bigdw 21
-	db "TOGEPI@"
-	
-	db 16
-	dw RATICATE
-	db POKE_BALL
-	dw TACKLE, TAIL_WHIP, QUICK_ATTACK, HYPER_FANG
-	bigdw $0FFF
-	bigdw 44
-	bigdw 31
-	bigdw 26
-	bigdw 39
-	bigdw 24
-	bigdw 30
-	db "ABBBDDDDDD@"
-	
 	db -1 ; end
 	
 	next_list_item ; AAEFFFF

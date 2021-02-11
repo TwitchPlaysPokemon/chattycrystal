@@ -28,6 +28,7 @@ TypeNames:
 	dw Ice
 	dw Dragon
 	dw Dark
+	dw Fairy
 
 Normal:    db "NORMAL@"
 Fighting:  db "FIGHTING@"
@@ -48,3 +49,4 @@ Ghost:     db "GHOST@"
 Steel:     db "STEEL@"
 Dragon:    db "DRAGON@"
 Dark:      db "DARK@"
+Fairy:     db "FAIRY@"

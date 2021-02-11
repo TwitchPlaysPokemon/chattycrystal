@@ -37,6 +37,7 @@ AlphabeticalPokedexOrder:
 	dw BUTTERFREE
 	dw CATERPIE
 	dw CELEBI
+	dw CHANDELURE
 	dw CHANSEY
 	dw CHARIZARD
 	dw CHARMANDER
@@ -68,12 +69,16 @@ AlphabeticalPokedexOrder:
 	dw DRAGONAIR
 	dw DRAGONITE
 	dw DRATINI
+	dw DRILLBUR
 	dw DROWZEE
+	dw DUCKLETT
 	dw DUGTRIO
 	dw DUNSPARCE
 	dw DUSCLOPS
 	dw DUSKNOIR
 	dw DUSKULL
+	dw EELEKTRIK
+	dw EELEKTROSS
 	dw EEVEE
 	dw EKANS
 	dw ELECTABUZZ
@@ -82,6 +87,7 @@ AlphabeticalPokedexOrder:
 	dw ELEKID
 	dw ENTEI
 	dw ESPEON
+	dw EXCADRILL
 	dw EXEGGCUTE
 	dw EXEGGUTOR
 	dw EXPLOUD
@@ -147,7 +153,10 @@ AlphabeticalPokedexOrder:
 	dw KIRLIA
 	dw KOFFING
 	dw KRABBY
+	dw KROKOROK
+	dw KROOKODILE
 	dw LAIRON
+	dw LAMPENT
 	dw LANTURN
 	dw LAPRAS
 	dw LARVITAR
@@ -158,6 +167,7 @@ AlphabeticalPokedexOrder:
 	dw LICKITUNG
 	dw LILEEP
 	dw LINOONE
+	dw LITWICK
 	dw LOMBRE
 	dw LOPUNNY
 	dw LOTAD
@@ -216,6 +226,7 @@ AlphabeticalPokedexOrder:
 	dw OMANYTE
 	dw OMASTAR
 	dw ONIX
+	dw PANSAGE
 	dw PARAS
 	dw PARASECT
 	dw PELIPPER
@@ -258,6 +269,7 @@ AlphabeticalPokedexOrder:
 	dw ROSERADE
 	dw SABLEYE
 	dw SALAMENCE
+	dw SANDILE
 	dw SANDSHREW
 	dw SANDSLASH
 	dw SCEPTILE
@@ -273,6 +285,7 @@ AlphabeticalPokedexOrder:
 	dw SHELLOS
 	dw SHINX
 	dw SHUCKLE
+	dw SIMISAGE
 	dw SKARMORY
 	dw SKIPLOOM
 	dw SKITTY
@@ -304,6 +317,7 @@ AlphabeticalPokedexOrder:
 	dw SURSKIT
 	dw SWAMPERT
 	dw SWELLOW
+	dw SWANNA
 	dw SWINUB
 	dw TAILLOW
 	dw TANGELA
@@ -321,6 +335,7 @@ AlphabeticalPokedexOrder:
 	dw TRAPINCH
 	dw TREECKO
 	dw TURTWIG
+	dw TYNAMO
 	dw TYPHLOSION
 	dw TYRANITAR
 	dw TYROGUE

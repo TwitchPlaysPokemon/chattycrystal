@@ -346,6 +346,21 @@ AnimationIdlePointers:
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw JumpaniumAnimationIdle
 	dw MegastoiseAnimationIdle
 	dw NoctdrioAnimationIdle

@@ -367,12 +367,27 @@ JOHTO_POKEMON EQU const_value
 	const DUSKNOIR   ; 159
 	const FROSLASS   ; 15a
 	const DARKRAI    ; 15b
-	const JUMPANIUM  ; 15c
-	const MEGASTOISE ; 15d
-	const NOCTDRIO   ; 15e
-	const QUAGYNX    ; 15f
-	const STEELURRET ; 160
-	const TOGETAPE   ; 161
+	const PANSAGE    ; 15c
+	const SIMISAGE   ; 15d
+	const DRILLBUR   ; 15e
+	const EXCADRILL  ; 15f
+	const SANDILE    ; 160
+	const KROKOROK   ; 161
+	const KROOKODILE ; 162
+	const DUCKLETT   ; 163
+	const SWANNA     ; 164
+	const TYNAMO     ; 165
+	const EELEKTRIK  ; 166
+	const EELEKTROSS ; 167
+	const LITWICK    ; 168
+	const LAMPENT    ; 169
+	const CHANDELURE ; 16a
+	const JUMPANIUM  ; 16b
+	const MEGASTOISE ; 16c
+	const NOCTDRIO   ; 16d
+	const QUAGYNX    ; 16e
+	const STEELURRET ; 16f
+	const TOGETAPE   ; 170
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

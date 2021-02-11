@@ -707,6 +707,36 @@ PokemonPicPointers::
 	dba PikachuBackpic ; PLACEHOLDER
 	dba PikachuFrontpic ; PLACEHOLDER
 	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
 	dba JumpaniumFrontpic
 	dba JumpaniumBackpic
 	dba MegastoiseFrontpic

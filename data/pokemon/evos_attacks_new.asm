@@ -1,6 +1,15 @@
 SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
 	dw PoochyenaEvosAttacks
 	dw MightyenaEvosAttacks
 	dw ZigzagoonEvosAttacks

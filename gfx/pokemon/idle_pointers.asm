@@ -250,6 +250,15 @@ AnimationIdlePointers:
 	dw LugiaAnimationIdle
 	dw HoOhAnimationIdle
 	dw CelebiAnimationIdle
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PoochyenaAnimationIdle
 	dw MightyenaAnimationIdle
 	dw ZigzagoonAnimationIdle

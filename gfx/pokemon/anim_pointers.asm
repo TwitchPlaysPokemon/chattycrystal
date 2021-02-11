@@ -250,6 +250,15 @@ AnimationPointers:
 	dw LugiaAnimation
 	dw HoOhAnimation
 	dw CelebiAnimation
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
 	dw PoochyenaAnimation
 	dw MightyenaAnimation
 	dw ZigzagoonAnimation

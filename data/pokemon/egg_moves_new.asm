@@ -1,6 +1,15 @@
 SECTION "Egg Moves 3", ROMX
 
 EggMovePointers3::
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
 	dw PoochyenaEggMoves
 	dw NoEggMoves3
 	dw ZigzagoonEggMoves

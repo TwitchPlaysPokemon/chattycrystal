@@ -249,6 +249,15 @@ INCBIN "gfx/footprints/tyranitar.1bpp"
 INCBIN "gfx/footprints/lugia.1bpp"
 INCBIN "gfx/footprints/ho_oh.1bpp"
 INCBIN "gfx/footprints/celebi.1bpp"
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/poochyena.1bpp"
 INCBIN "gfx/footprints/mightyena.1bpp"
 INCBIN "gfx/footprints/zigzagoon.1bpp"

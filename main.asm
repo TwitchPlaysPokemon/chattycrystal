@@ -470,6 +470,10 @@ INCLUDE "gfx/pokemon/johto_frames.asm"
 INCLUDE "gfx/pokemon/unown_frame_pointers.asm"
 INCLUDE "gfx/pokemon/unown_frames.asm"
 
+SECTION "Pic Animations 4", ROMX
+
+INCLUDE "gfx/pokemon/new_frames.asm"
+
 
 SECTION "bank38", ROMX
 

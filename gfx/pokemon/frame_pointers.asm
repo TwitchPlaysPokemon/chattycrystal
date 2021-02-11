@@ -252,9 +252,9 @@ FramesPointers:
 	dba CelebiFrames
 	dba PoochyenaFrames
 	dba MightyenaFrames
-	dba JumpluffFrames
-	dba MeganiumFrames
-	dba NoctowlFrames
-	dba QuagsireFrames
-	dba SteelixFrames
-	dba TogeticFrames
+	dba JumpaniumFrames
+	dba MegastoiseFrames
+	dba NoctdrioFrames
+	dba QuagynxFrames
+	dba SteelurretFrames
+	dba TogetapeFrames

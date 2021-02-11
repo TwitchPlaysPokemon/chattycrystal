@@ -3,16 +3,17 @@ SECTION "Evolutions and Attacks 3", ROMX
 EvosAttacksPointers3::
 	dw PoochyenaEvosAttacks
 	dw MightyenaEvosAttacks
-	dw UnobtainableEvosAttacks3
-	dw UnobtainableEvosAttacks3
-	dw UnobtainableEvosAttacks3
-	dw UnobtainableEvosAttacks3
-	dw UnobtainableEvosAttacks3
-	dw UnobtainableEvosAttacks3
+	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; TODO: learnset
 
-UnobtainableEvosAttacks3:
-	db 0 ; no evos
-	dbw 1, SKETCH ; here, have a move just in case
+DummyEvosAttacks:
+	; remove when no longer in used
+	db 0
+	dbw 1, POUND ; usual filler move
 	db 0 ; no more level-up moves
 
 PoochyenaEvosAttacks:

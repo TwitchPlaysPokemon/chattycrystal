@@ -270,9 +270,9 @@ CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
 SECTION "New Pokedex Entries", ROMX
 PoochyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/poochyena.asm"
 MightyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mightyena.asm"
-; JumpaniumPokedexEntry::  INCLUDE "data/pokemon/dex_entries/jumpluff.asm"
-; MegastoisePokedexEntry:: INCLUDE "data/pokemon/dex_entries/meganium.asm"
-; NoctdrioPokedexEntry::   INCLUDE "data/pokemon/dex_entries/noctowl.asm"
-; QuagynxPokedexEntry::    INCLUDE "data/pokemon/dex_entries/quagsire.asm"
-; SteelurretPokedexEntry:: INCLUDE "data/pokemon/dex_entries/steelix.asm"
-; TogetapePokedexEntry::   INCLUDE "data/pokemon/dex_entries/togetic.asm"
+JumpaniumPokedexEntry::  INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
+MegastoisePokedexEntry:: INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
+NoctdrioPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
+QuagynxPokedexEntry::    INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
+SteelurretPokedexEntry:: INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
+TogetapePokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry

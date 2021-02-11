@@ -273,12 +273,12 @@ JOHTO_POKEMON EQU const_value
 	const CELEBI     ;  fb
 	const POOCHYENA  ;  fc
 	const MIGHTYENA  ;  fd
-	const JUMPANIUM
-	const MEGASTOISE
-	const NOCTDRIO
-	const QUAGYNX
-	const STEELURRET
-	const TOGETAPE
+	const JUMPANIUM  ;  fe
+	const MEGASTOISE ;  ff
+	const NOCTDRIO   ; 100
+	const QUAGYNX    ; 101
+	const STEELURRET ; 102
+	const TOGETAPE   ; 103
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

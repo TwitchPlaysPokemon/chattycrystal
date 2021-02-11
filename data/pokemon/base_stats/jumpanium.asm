@@ -12,7 +12,7 @@
 	db 100 ; unknown
 	db 20 ; step cycles to hatch
 	db 5 ; unknown
-	INCBIN "gfx/pokemon/fused/jumpanium/front.dimensions"
+	INCBIN "gfx/pokemon/jumpanium/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_FAIRY, EGG_MONSTER ; egg groups

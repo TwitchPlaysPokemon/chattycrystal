@@ -12,7 +12,7 @@
 	db 100 ; unknown
 	db 17 ; step cycles to hatch
 	db 5 ; unknown
-	INCBIN "gfx/pokemon/fused/noctdrio/front.dimensions"
+	INCBIN "gfx/pokemon/noctdrio/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups

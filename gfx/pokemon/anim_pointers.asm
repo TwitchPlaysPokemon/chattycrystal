@@ -252,7 +252,7 @@ AnimationPointers:
 	dw CelebiAnimation
 	dw TreeckoAnimation
 	dw GrovyleAnimation
-	dw PikachuAnimation ; PLACEHOLDER
+	dw SceptileAnimation
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER

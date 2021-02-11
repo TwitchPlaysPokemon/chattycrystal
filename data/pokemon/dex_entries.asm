@@ -268,6 +268,9 @@ HoOhPokedexEntry::       INCLUDE "data/pokemon/dex_entries/ho_oh.asm"
 CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
 
 SECTION "New Pokedex Entries", ROMX
+TreeckoPokedexEntry::    INCLUDE "data/pokemon/dex_entries/treecko.asm"
+GrovylePokedexEntry::    INCLUDE "data/pokemon/dex_entries/grovyle.asm"
+SceptilePokedexEntry::   INCLUDE "data/pokemon/dex_entries/sceptile.asm"
 PoochyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/poochyena.asm"
 MightyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mightyena.asm"
 ZigzagoonPokedexEntry::  INCLUDE "data/pokemon/dex_entries/zigzagoon.asm"
@@ -279,5 +282,3 @@ NoctdrioPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: 
 QuagynxPokedexEntry::    INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
 SteelurretPokedexEntry:: INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
 TogetapePokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
-TreeckoPokedexEntry::    INCLUDE "data/pokemon/dex_entries/treecko.asm"
-GrovylePokedexEntry::    INCLUDE "data/pokemon/dex_entries/grovyle.asm"

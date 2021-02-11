@@ -253,7 +253,7 @@ PokedexDataPointerTable:
 	dba CelebiPokedexEntry
 	dba TreeckoPokedexEntry
 	dba GrovylePokedexEntry
-	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba SceptilePokedexEntry
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER

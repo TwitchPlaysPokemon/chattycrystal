@@ -263,6 +263,57 @@ AnimationIdlePointers:
 	dw MightyenaAnimationIdle
 	dw ZigzagoonAnimationIdle
 	dw LinooneAnimationIdle
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw ChatotAnimationIdle
 	dw JumpaniumAnimationIdle
 	dw MegastoiseAnimationIdle

@@ -263,6 +263,57 @@ FramesPointers:
 	dba MightyenaFrames
 	dba ZigzagoonFrames
 	dba LinooneFrames
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
 	dba ChatotFrames
 	dba JumpaniumFrames
 	dba MegastoiseFrames

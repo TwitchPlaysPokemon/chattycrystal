@@ -12,6 +12,57 @@ INCLUDE "data/pokemon/base_stats/poochyena.asm"
 INCLUDE "data/pokemon/base_stats/mightyena.asm"
 INCLUDE "data/pokemon/base_stats/zigzagoon.asm"
 INCLUDE "data/pokemon/base_stats/linoone.asm"
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/chatot.asm"
 INCLUDE "data/pokemon/base_stats/jumpanium.asm"
 INCLUDE "data/pokemon/base_stats/megastoise.asm"

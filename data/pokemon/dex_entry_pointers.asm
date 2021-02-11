@@ -264,6 +264,57 @@ PokedexDataPointerTable:
 	dba MightyenaPokedexEntry
 	dba ZigzagoonPokedexEntry
 	dba LinoonePokedexEntry
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba ChatotPokedexEntry
 	dba JumpluffPokedexEntry
 	dba MeganiumPokedexEntry

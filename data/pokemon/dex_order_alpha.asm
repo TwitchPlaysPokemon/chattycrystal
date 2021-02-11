@@ -2,17 +2,23 @@
 
 AlphabeticalPokedexOrder:
 	dw ABRA
+	dw ABSOL
 	dw AERODACTYL
+	dw AGGRON
 	dw AIPOM
 	dw ALAKAZAM
 	dw AMPHAROS
 	dw ARBOK
 	dw ARCANINE
 	dw ARIADOS
+	dw ARON
 	dw ARTICUNO
 	dw AZUMARILL
+	dw AZURILL
+	dw BAGON
 	dw BAYLEEF
 	dw BEEDRILL
+	dw BELDUM
 	dw BELLOSSOM
 	dw BELLSPROUT
 	dw BLASTOISE
@@ -35,10 +41,12 @@ AlphabeticalPokedexOrder:
 	dw CLOYSTER
 	dw COMBUSKEN
 	dw CORSOLA
+	dw CRADILY
 	dw CROBAT
 	dw CROCONAW
 	dw CUBONE
 	dw CYNDAQUIL
+	dw DELCATTY
 	dw DELIBIRD
 	dw DEWGONG
 	dw DIGLETT
@@ -52,22 +60,29 @@ AlphabeticalPokedexOrder:
 	dw DROWZEE
 	dw DUGTRIO
 	dw DUNSPARCE
+	dw DUSCLOPS
+	dw DUSKULL
 	dw EEVEE
 	dw EKANS
 	dw ELECTABUZZ
+	dw ELECTRIKE
 	dw ELECTRODE
 	dw ELEKID
 	dw ENTEI
 	dw ESPEON
 	dw EXEGGCUTE
 	dw EXEGGUTOR
+	dw EXPLOUD
 	dw FARFETCH_D
 	dw FEAROW
+	dw FEEBAS
 	dw FERALIGATR
 	dw FLAAFFY
 	dw FLAREON
+	dw FLYGON
 	dw FORRETRESS
 	dw FURRET
+	dw GARDEVOIR
 	dw GASTLY
 	dw GENGAR
 	dw GEODUDE
@@ -81,9 +96,11 @@ AlphabeticalPokedexOrder:
 	dw GRANBULL
 	dw GRAVELER
 	dw GRIMER
+	dw GROUDON
 	dw GROVYLE
 	dw GROWLITHE
 	dw GYARADOS
+	dw HARIYAMA
 	dw HAUNTER
 	dw HERACROSS
 	dw HITMONCHAN
@@ -110,15 +127,23 @@ AlphabeticalPokedexOrder:
 	dw KANGASKHAN
 	dw KINGDRA
 	dw KINGLER
+	dw KIRLIA
 	dw KOFFING
 	dw KRABBY
+	dw LAIRON
 	dw LANTURN
 	dw LAPRAS
 	dw LARVITAR
+	dw LATIOS
 	dw LEDIAN
 	dw LEDYBA
 	dw LICKITUNG
+	dw LILEEP
 	dw LINOONE
+	dw LOMBRE
+	dw LOTAD
+	dw LOUDRED
+	dw LUDICOLO
 	dw LUGIA
 	dw MACHAMP
 	dw MACHOKE
@@ -129,19 +154,25 @@ AlphabeticalPokedexOrder:
 	dw MAGMAR
 	dw MAGNEMITE
 	dw MAGNETON
+	dw MAKUHITA
+	dw MANECTRIC
 	dw MANKEY
 	dw MANTINE
 	dw MAREEP
 	dw MARILL
 	dw MAROWAK
 	dw MARSHTOMP
+	dw MASQUERAIN
 	dw MEGANIUM
 	dw MEGASTOISE
 	dw MEOWTH
+	dw METAGROSS
+	dw METANG
 	dw METAPOD
 	dw MEW
 	dw MEWTWO
 	dw MIGHTYENA
+	dw MILOTIC
 	dw MILTANK
 	dw MISDREAVUS
 	dw MOLTRES
@@ -166,6 +197,7 @@ AlphabeticalPokedexOrder:
 	dw ONIX
 	dw PARAS
 	dw PARASECT
+	dw PELIPPER
 	dw PERSIAN
 	dw PHANPY
 	dw PICHU
@@ -193,25 +225,32 @@ AlphabeticalPokedexOrder:
 	dw QWILFISH
 	dw RAICHU
 	dw RAIKOU
+	dw RALTS
 	dw RAPIDASH
 	dw RATICATE
 	dw RATTATA
 	dw REMORAID
 	dw RHYDON
 	dw RHYHORN
+	dw ROSELIA
+	dw SABLEYE
+	dw SALAMENCE
 	dw SANDSHREW
 	dw SANDSLASH
 	dw SCEPTILE
 	dw SCIZOR
 	dw SCYTHER
 	dw SEADRA
+	dw SEALEO
 	dw SEAKING
 	dw SEEL
 	dw SENTRET
+	dw SHELGON
 	dw SHELLDER
 	dw SHUCKLE
 	dw SKARMORY
 	dw SKIPLOOM
+	dw SKITTY
 	dw SLOWBRO
 	dw SLOWKING
 	dw SLOWPOKE
@@ -220,8 +259,10 @@ AlphabeticalPokedexOrder:
 	dw SMOOCHUM
 	dw SNEASEL
 	dw SNORLAX
+	dw SNORUNT
 	dw SNUBBULL
 	dw SPEAROW
+	dw SPHEAL
 	dw SPINARAK
 	dw SQUIRTLE
 	dw STANTLER
@@ -233,8 +274,11 @@ AlphabeticalPokedexOrder:
 	dw SUICUNE
 	dw SUNFLORA
 	dw SUNKERN
+	dw SURSKIT
 	dw SWAMPERT
+	dw SWELLOW
 	dw SWINUB
+	dw TAILLOW
 	dw TANGELA
 	dw TAUROS
 	dw TEDDIURSA
@@ -245,6 +289,7 @@ AlphabeticalPokedexOrder:
 	dw TOGETIC
 	dw TORCHIC
 	dw TOTODILE
+	dw TRAPINCH
 	dw TREECKO
 	dw TYPHLOSION
 	dw TYRANITAR
@@ -256,15 +301,21 @@ AlphabeticalPokedexOrder:
 	dw VENOMOTH
 	dw VENONAT
 	dw VENUSAUR
+	dw VIBRAVA
 	dw VICTREEBEL
 	dw VILEPLUME
 	dw VOLTORB
 	dw VULPIX
+	dw WAILMER
+	dw WAILORD
+	dw WALREIN
 	dw WARTORTLE
 	dw WEEDLE
 	dw WEEPINBELL
 	dw WEEZING
+	dw WHISMUR
 	dw WIGGLYTUFF
+	dw WINGULL
 	dw WOBBUFFET
 	dw WOOPER
 	dw XATU

@@ -263,6 +263,57 @@ AnimationPointers:
 	dw MightyenaAnimation
 	dw ZigzagoonAnimation
 	dw LinooneAnimation
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
 	dw ChatotAnimation
 	dw JumpluffAnimation
 	dw MeganiumAnimation

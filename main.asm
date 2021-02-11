@@ -88,6 +88,14 @@ INCLUDE "engine/events/print_unown.asm"
 INCLUDE "engine/events/print_photo.asm"
 INCLUDE "engine/pokemon/breeding.asm"
 INCLUDE "gfx/tilesets.asm"
+INCLUDE "engine/link/time_capsule.asm"
+INCLUDE "engine/events/name_rater.asm"
+INCLUDE "engine/events/play_slow_cry.asm"
+INCLUDE "engine/pokedex/new_pokedex_entry.asm"
+INCLUDE "engine/pokedex/unown_dex.asm"
+INCLUDE "engine/events/magikarp.asm"
+INCLUDE "engine/battle/hidden_power.asm"
+INCLUDE "engine/battle/misc.asm"
 
 
 SECTION "Roofs", ROMX
@@ -496,23 +504,12 @@ INCLUDE "engine/movie/crystal_intro.asm"
 SECTION "bank3E", ROMX
 
 INCLUDE "engine/gfx/load_font.asm"
-INCLUDE "engine/link/time_capsule.asm"
-INCLUDE "engine/events/name_rater.asm"
-INCLUDE "engine/events/play_slow_cry.asm"
-INCLUDE "engine/pokedex/new_pokedex_entry.asm"
-INCLUDE "engine/link/time_capsule_2.asm"
-INCLUDE "engine/pokedex/unown_dex.asm"
-INCLUDE "engine/events/magikarp.asm"
-INCLUDE "engine/battle/hidden_power.asm"
-INCLUDE "engine/battle/misc.asm"
-
 
 SECTION "bank3F", ROMX
 
 INCLUDE "engine/tilesets/tileset_anims.asm"
 INCLUDE "engine/events/npc_trade.asm"
 INCLUDE "engine/events/mom_phone.asm"
-
 
 INCLUDE "mobile/mobile_40.asm"
 

@@ -263,6 +263,57 @@ BitmasksPointers:
 	dw MightyenaBitmasks
 	dw ZigzagoonBitmasks
 	dw LinooneBitmasks
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
 	dw ChatotBitmasks
 	dw JumpaniumBitmasks
 	dw MegastoiseBitmasks

@@ -14,6 +14,57 @@ EggMovePointers3::
 	dw NoEggMoves3
 	dw ZigzagoonEggMoves
 	dw NoEggMoves3
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3 ; PLACEHOLDER
 	dw ChatotEggMoves
 	dw NoEggMoves3
 	dw NoEggMoves3

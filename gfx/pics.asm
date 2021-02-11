@@ -34,8 +34,6 @@ TaurosFrontpic:      INCBIN "gfx/pokemon/tauros/front.animated.2bpp.lz"
 VenusaurFrontpic:    INCBIN "gfx/pokemon/venusaur/front.animated.2bpp.lz"
 EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
-TyphlosionFrontpic:  INCBIN "gfx/pokemon/typhlosion/front.animated.2bpp.lz"
-
 
 SECTION "Pics 2", ROMX
 
@@ -778,3 +776,4 @@ ZigzagoonFrontpic:  INCBIN "gfx/pokemon/zigzagoon/front.animated.2bpp.lz"
 ZigzagoonBackpic:   INCBIN "gfx/pokemon/zigzagoon/back.2bpp.lz"
 LinooneFrontpic:    INCBIN "gfx/pokemon/linoone/front.animated.2bpp.lz"
 LinooneBackpic:     INCBIN "gfx/pokemon/linoone/back.2bpp.lz"
+TyphlosionFrontpic: INCBIN "gfx/pokemon/typhlosion/front.animated.2bpp.lz"

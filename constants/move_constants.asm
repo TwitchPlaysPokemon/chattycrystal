@@ -278,6 +278,35 @@
 	const WORK_UP      ; 10e
 	const REVENGE      ; 10f
 	const NASTY_PLOT   ; 110
+	const AERIAL_ACE
+	const AIR_CUTTER
+	const AIR_SLASH
+	const AQUA_JET
+	const ATTACK_ORDER
+	const AURA_SPHERE
+	const BLAZE_KICK
+	const BLUE_FLARE
+	const BRAVE_BIRD
+	const BUG_BUZZ
+	const BULLDOZE
+	const BULLET_PUNCH
+	const DISCHARGE
+	const DRAGON_CLAW
+	const DRAGON_PULSE
+	const DRAIN_PUNCH
+	const EARTH_POWER
+	const EXTRASENSORY
+	const FLASH_CANNON
+	const FOCUS_BLAST
+	const HORN_LEECH
+	const ICE_SHARD
+	const IRON_DEFENSE
+	const IRON_HEAD
+	const METEOR_MASH
+	const MUD_BOMB
+	const MUDDY_WATER
+	const NIGHT_SLASH
+	const ODOR_SLEUTH
 	
 NUM_ATTACKS EQU const_value + -1
 

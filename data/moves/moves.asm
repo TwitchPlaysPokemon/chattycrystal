@@ -289,3 +289,40 @@ Moves1:
 	move EFFECT_WORK_UP,             0, NORMAL,   100, 30, 100 ;WORK_UP
 	move EFFECT_REVENGE,            60, FIGHTING, 100, 10, 100 ;REVENGE
 	move EFFECT_SP_ATK_UP_2,         0, DARK,     100, 20, 100 ;NASTY PLOT
+	move EFFECT_ALWAYS_HIT,         60, FLYING,   100, 20,   0 ;AERIAL_ACE
+	move EFFECT_NORMAL_HIT,         60, FLYING,    95, 25,   0 ;AIR_CUTTER
+	move EFFECT_FLINCH_HIT,         75, FLYING,    95, 15,  30 ;AIR_SLASH
+	move EFFECT_PRIORITY_HIT,       40, WATER,    100, 20,   0 ;AQUA_JET
+	move EFFECT_NORMAL_HIT,         90, BUG,      100, 15,   0 ;ATTACK_ORDER
+	move EFFECT_ALWAYS_HIT,         80, FIGHTING, 100, 20,   0 ;AURA_SPHERE
+	move EFFECT_BURN_HIT,           85, FIRE,      90, 10,  10 ;BLAZE_KICK
+	move EFFECT_BURN_HIT,          120, FIRE,      85, 5,   20 ;BLUE_FLARE
+	move EFFECT_RECOIL_HIT,        120, FLYING,   100, 15,   0 ;BRAVE_BIRD
+	move EFFECT_SP_DEF_DOWN_HIT,    90, BUG,      100, 10,  10 ;BUG_BUZZ
+	move EFFECT_SPEED_DOWN,         60, GROUND,   100, 20, 100 ;BULLDOZE
+	move EFFECT_PRIORITY_HIT,       40, FIGHTING, 100, 30,   0 ;BULLET_PUNCH
+	move EFFECT_PARALYZE_HIT,       80, ELECTRIC, 100, 15,  30 ;DISCHARGE
+	move EFFECT_NORMAL_HIT,         80, DRAGON,   100, 15,   0 ;DRAGON_CLAW
+	move EFFECT_NORMAL_HIT,         85, DRAGON,   100, 10,   0 ;DRAGON_PULSE
+	move EFFECT_LEECH_HIT,          75, FIGHTING, 100, 10,   0 ;DRAIN_PUNCH
+	move EFFECT_SP_DEF_DOWN_HIT,    90, GROUND,   100, 10,  10 ;EARTH_POWER
+	move EFFECT_FLINCH_HIT,         80, PSYCHIC,  100, 20,  10 ;EXTRASENSORY
+	move EFFECT_SP_DEF_DOWN_HIT,    80, STEEL,    100, 10,  10 ;FLASH_CANNON
+	move EFFECT_SP_DEF_DOWN_HIT,   120, FIGHTING,  70,  5,  10 ;FOCUS_BLAST
+	move EFFECT_LEECH_HIT,          75, GRASS,    100, 10,   0 ;HORN_LEECH
+	move EFFECT_PRIORITY_HIT,       40, ICE,      100, 30,   0 ;ICE_SHARD
+	move EFFECT_DEFENSE_UP_2,        0, STEEL,    100, 16,   0 ;IRON_DEFENSE
+	move EFFECT_FLINCH_HIT,         80, STEEL,    100, 15,  30 ;IRON_HEAD
+	move EFFECT_ATTACK_UP_HIT,      90, STEEL,     90, 10,  20 ;METEOR_MASH
+	move EFFECT_ACCURACY_DOWN,      65, GROUND,    85, 10,  30 ;MUD_BOMB
+	move EFFECT_ACCURACY_DOWN,      90, WATER,     85, 10,  30 ;MUDDY_WATER
+	move EFFECT_NORMAL_HIT,         70, DARK,     100, 15,   0 ;NIGHT_SLASH
+	move EFFECT_FORESIGHT,           0, NORMAL,   100, 40,   0 ;ODOR_SLEUTH
+	
+;	move EFFECT_LEECH_HIT,          50, FAIRY,    100, 10,   0 ;DRAININGKISS TODO: does not drain 75%
+;	move EFFECT_NORMAL_HIT,         80, FAIRY,    100, 10,   0 ;DAZZLINGLEAM TODO: Add fairy type
+;	move EFFECT_FLY,                80, WATER,    100, 10,   0 ;DIVE TODO add the special accomidations for 2 turn moves
+; 	move EFFECT_SPEED_DOWN,        100, FIGHTING,  90, 10, 100 ;HAMMER_ARM TODO add new effect
+;	move EFFECT_ROLLOUT,            30, ICE,       90, 20,   0 ;ICE_BALL needs special checks
+;	move EFFECT_SPEED_DOWN,        100, ICE,       90, 10, 100 ;ICE_HAMMER needs new effect
+;	move EFFECT_BURN_HIT,           65, FIRE,     95,  15,  10 ;FIRE_FANG needs a new effect as it also has a flinch chance

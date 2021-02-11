@@ -375,9 +375,20 @@ RSEORASBrendanGroup:
 	
 FRLGLeafGroup:
 	next_list_item ; A_FIRERED
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 22
+	dw BUTTERFREE ;TODO surskit
+	db THUNDERSTONE
+	dw HYDRO_PUMP, MEGAHORN, HYPER_BEAM, LEECH_LIFE 
+	bigdw $FFFF
+	bigdw 53
+	bigdw 27
+	bigdw 20
+	bigdw 38
+	bigdw 27
+	bigdw 33
+	db "Surskit@" 
+	
 	db -1 ; end
 	
 	next_list_item ; AATATAT
@@ -834,9 +845,71 @@ B2W2NateGroup:
 	db -1 ; end
 	
 	next_list_item ; R_BLACK2
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+	db "♀♀R@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 7
+	dw MEOWTH
+	db NO_ITEM
+	dw SCRATCH, GROWL, BITE, NO_MOVE
+	bigdw $FFFF
+	bigdw 24
+	bigdw 13
+	bigdw 10
+	bigdw 16
+	bigdw 11
+	bigdw 13
+	db "aaaaaaakw@" 
+	
+	db 15
+	dw WOOPER ;add lombre 
+	db NO_ITEM
+	dw GROWL, ABSORB, TRI_ATTACK, NO_MOVE 
+	bigdw $0FFF
+	bigdw 44
+	bigdw 23
+	bigdw 23
+	bigdw 18
+	bigdw 24
+	bigdw 29
+	db "Lotad00 R@" 
+	
+	db 10
+	dw HOOTHOOT 
+	db NO_ITEM
+	dw TACKLE, FORESIGHT, PECK, HYPNOSIS
+	bigdw $0FFF
+	bigdw 34
+	bigdw 13
+	bigdw 12
+	bigdw 18
+	bigdw 14
+	bigdw 19
+	db "Hoothootww@"
+	
+	db 8
+	dw SWINUB
+	db NO_ITEM
+	dw TACKLE, POWDER_SNOW, NO_MOVE, NO_MOVE ;add oder sleuth
+	bigdw $0FFF
+	bigdw 27
+	bigdw 15
+	bigdw 12
+	bigdw 15
+	bigdw 11
+	bigdw 10
+	db "Swinub@" 
+	
+	db 7
+	dw TYROGUE
+	db NO_ITEM
+	dw TACKLE, FORESIGHT, NO_MOVE, NO_MOVE ;add fake out
+	bigdw $FFFF
+	bigdw 22
+	bigdw 10
+	bigdw 11
+	bigdw 9
+	bigdw 9
+	bigdw 10
+	db "Tyrogue@" 
 	db -1 ; end
 	
 	end_list_items

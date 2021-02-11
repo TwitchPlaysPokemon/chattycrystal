@@ -8,6 +8,10 @@ CriticalHitMoves:
 	dw SLASH
 	dw AEROBLAST
 	dw CROSS_CHOP
+	dw AIR_CUTTER
+	dw ATTACK_ORDER
+	dw BLAZE_KICK
+	dw NIGHT_SLASH
 	dw -1
 
 MetronomeExcepts:

@@ -2,13 +2,7 @@
 
 TrainerGroups:
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
-	dba FalknerGroup        ;00
-	dba WhitneyGroup
-	dba BugsyGroup
-	dba MortyGroup
 	dba PryceGroup
-	dba JasmineGroup
-	dba ChuckGroup
 	dba ClairGroup
 	dba Rival1Group         ;08
 	dba PokemonProfGroup

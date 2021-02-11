@@ -2235,13 +2235,7 @@ GSCHGSSChrisRivalGroup:
 
 SECTION "Enemy Trainer Parties 2", ROMX
 
-FalknerGroup:
-WhitneyGroup:
-BugsyGroup:
-MortyGroup:
 PryceGroup:
-JasmineGroup:
-ChuckGroup:
 ClairGroup:
 Rival1Group:
 PokemonProfGroup:

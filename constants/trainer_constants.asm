@@ -25,24 +25,9 @@ CHRIS EQU __enum__
 	const PHONECONTACT_BUENA
 
 KRIS EQU __enum__
-	trainerclass FALKNER ; 1
-
-	trainerclass WHITNEY ; 2
-	const WHITNEY1
-
-	trainerclass BUGSY ; 3
-
-	trainerclass MORTY ; 4
-	const MORTY1
 
 	trainerclass PRYCE ; 5
 	const PRYCE1
-
-	trainerclass JASMINE ; 6
-	const JASMINE1
-
-	trainerclass CHUCK ; 7
-	const CHUCK1
 
 	trainerclass CLAIR ; 8
 	const CLAIR1

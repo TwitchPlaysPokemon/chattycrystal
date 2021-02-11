@@ -26,7 +26,7 @@ PoochyenaEggMoves:
 	dw COVET
 	dw LEER
 ;	dw POISON_FANG ;TODO: add when poison fang is added
-;	dw YAWN ;TODO: add when yawn is added
+	dw HYPNOSIS
 	dw -1 ; end
 
 ZigzagoonEggMoves:

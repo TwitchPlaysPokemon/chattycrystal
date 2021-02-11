@@ -30,7 +30,7 @@ ChatotEvosAttacks:
 ;	dbw 25, TAUNT ; TODO: add when taunt has been added
 	dbw 29, MIMIC
 	dbw 33, ROOST
-;	dbw 37, BRAVE_BIRD ; TODO: add when brave bird has been added
+	dbw 37, BRAVE_BIRD
 	dbw 41, CHARM
 	dbw 45, RETURN
 	db 0 ; no more level-up moves
@@ -79,7 +79,7 @@ ZigzagoonEvosAttacks:
 	dbw 5, TAIL_WHIP
 	dbw 9, HEADBUTT
 	dbw 13, SAND_ATTACK
-;	dbw 19, ODOR_SLEUTH ; TODO: add when odor sleuth has been added
+	dbw 19, ODOR_SLEUTH
 	dbw 21, MUD_SLAP
 	dbw 25, PIN_MISSILE
 	dbw 29, COVET
@@ -97,7 +97,7 @@ LinooneEvosAttacks:
 	dbw 5, TAIL_WHIP
 	dbw 9, HEADBUTT
 	dbw 13, SAND_ATTACK
-;	dbw 17, ODOR_SLEUTH ; TODO: add when odor sleuth has been added
+	dbw 17, ODOR_SLEUTH
 	dbw 22, MUD_SLAP
 	dbw 29, FURY_SWIPES
 	dbw 35, COVET

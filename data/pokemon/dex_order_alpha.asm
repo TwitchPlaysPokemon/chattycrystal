@@ -51,10 +51,12 @@ AlphabeticalPokedexOrder:
 	dw COMBUSKEN
 	dw CORSOLA
 	dw CRADILY
+	dw CROAGUNK
 	dw CROBAT
 	dw CROCONAW
 	dw CUBONE
 	dw CYNDAQUIL
+	dw DARKRAI
 	dw DELCATTY
 	dw DELIBIRD
 	dw DEWGONG
@@ -70,6 +72,7 @@ AlphabeticalPokedexOrder:
 	dw DUGTRIO
 	dw DUNSPARCE
 	dw DUSCLOPS
+	dw DUSKNOIR
 	dw DUSKULL
 	dw EEVEE
 	dw EKANS
@@ -91,6 +94,7 @@ AlphabeticalPokedexOrder:
 	dw FLOATZEL
 	dw FLYGON
 	dw FORRETRESS
+	dw FROSLASS
 	dw FURRET
 	dw GARDEVOIR
 	dw GASTLY
@@ -98,6 +102,7 @@ AlphabeticalPokedexOrder:
 	dw GENGAR
 	dw GEODUDE
 	dw GIRAFARIG
+	dw GLACEON
 	dw GLIGAR
 	dw GLOOM
 	dw GOLBAT
@@ -147,6 +152,7 @@ AlphabeticalPokedexOrder:
 	dw LAPRAS
 	dw LARVITAR
 	dw LATIOS
+	dw LEAFEON
 	dw LEDIAN
 	dw LEDYBA
 	dw LICKITUNG
@@ -231,6 +237,7 @@ AlphabeticalPokedexOrder:
 	dw POOCHYENA
 	dw PORYGON
 	dw PORYGON2
+	dw PORYGON_Z
 	dw PRIMEAPE
 	dw PSYDUCK
 	dw PUPITAR
@@ -310,6 +317,7 @@ AlphabeticalPokedexOrder:
 	dw TORCHIC
 	dw TORTERRA
 	dw TOTODILE
+	dw TOXICROAK
 	dw TRAPINCH
 	dw TREECKO
 	dw TURTWIG

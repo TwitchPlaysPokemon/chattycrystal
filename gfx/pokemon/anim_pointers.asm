@@ -338,6 +338,14 @@ AnimationPointers:
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
 	dw ChatotAnimation
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
 	dw JumpluffAnimation
 	dw MeganiumAnimation
 	dw NoctowlAnimation

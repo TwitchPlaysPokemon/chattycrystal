@@ -691,6 +691,22 @@ PokemonPicPointers::
 	dba PikachuBackpic ; PLACEHOLDER
 	dba ChatotFrontpic
 	dba ChatotBackpic
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
 	dba JumpaniumFrontpic
 	dba JumpaniumBackpic
 	dba MegastoiseFrontpic

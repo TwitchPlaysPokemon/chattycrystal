@@ -359,12 +359,20 @@ JOHTO_POKEMON EQU const_value
 	const BRONZONG   ; 151
 	const BONSLY     ; 152
 	const CHATOT     ; 153
-	const JUMPANIUM  ; 154
-	const MEGASTOISE ; 155
-	const NOCTDRIO   ; 156
-	const QUAGYNX    ; 157
-	const STEELURRET ; 158
-	const TOGETAPE   ; 159
+	const CROAGUNK   ; 154
+	const TOXICROAK  ; 155
+	const LEAFEON    ; 156
+	const GLACEON    ; 157
+	const PORYGON_Z  ; 158
+	const DUSKNOIR   ; 159
+	const FROSLASS   ; 15a
+	const DARKRAI    ; 15b
+	const JUMPANIUM  ; 15c
+	const MEGASTOISE ; 15d
+	const NOCTDRIO   ; 15e
+	const QUAGYNX    ; 15f
+	const STEELURRET ; 160
+	const TOGETAPE   ; 161
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

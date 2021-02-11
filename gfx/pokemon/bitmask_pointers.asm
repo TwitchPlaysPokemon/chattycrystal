@@ -338,6 +338,14 @@ BitmasksPointers:
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw ChatotBitmasks
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
+	dw PikachuBitmasks ; PLACEHOLDER
 	dw JumpaniumBitmasks
 	dw MegastoiseBitmasks
 	dw NoctdrioBitmasks

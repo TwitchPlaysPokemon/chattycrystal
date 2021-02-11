@@ -344,6 +344,14 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BRONZONG - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BONSLY - PLACEHOLDER
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; CHATOT - TODO: port chatot cry (not that important as it's played by the controller)
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CROAGUNK - PLACEHOLDER
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TOXICROAK - PLACEHOLDER
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LEAFEON - PLACEHOLDER
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GLACEON - PLACEHOLDER
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; PORYGON_Z - PLACEHOLDER
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DUSKNOIR - PLACEHOLDER
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; FROSLASS - PLACEHOLDER
+	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DARKRAI - PLACEHOLDER
 	mon_cry CRY_CLEFFA,      $000,  $180 ; JUMPANIUM
 	mon_cry CRY_CHIKORITA,  -$0b7,  $200 ; MEGASTOISE
 	mon_cry CRY_HOOTHOOT,    $000,  $1a0 ; NOCTDRIO

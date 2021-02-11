@@ -187,6 +187,8 @@ NewPokedexOrder:
 	dw FLAREON
 	dw ESPEON
 	dw UMBREON
+	dw LEAFEON
+	dw GLACEON
 	dw HORSEA
 	dw SEADRA
 	dw KINGDRA
@@ -218,6 +220,7 @@ NewPokedexOrder:
 	dw MISDREAVUS
 	dw PORYGON
 	dw PORYGON2
+	dw PORYGON_Z
 	dw CHANSEY
 	dw BLISSEY
 	dw LAPRAS
@@ -307,8 +310,10 @@ NewPokedexOrder:
 	dw MILOTIC
 	dw DUSKULL
 	dw DUSCLOPS
+	dw DUSKNOIR
 	dw ABSOL
 	dw SNORUNT
+	dw FROSLASS
 	dw SPHEAL
 	dw SEALEO
 	dw WALREIN
@@ -340,6 +345,9 @@ NewPokedexOrder:
 	dw SKUNTANK
 	dw BRONZOR
 	dw BRONZONG
+	dw CROAGUNK
+	dw TOXICROAK
+	dw DARKRAI
 	dw JUMPANIUM
 	dw MEGASTOISE
 	dw NOCTDRIO

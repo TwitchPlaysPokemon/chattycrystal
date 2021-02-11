@@ -36,7 +36,7 @@ ChatotEvosAttacks:
 	db 0 ; no more level-up moves
 
 PoochyenaEvosAttacks:
-	db EVOLVE_LEVEL, 18, MIGHTYENA
+	dbbw EVOLVE_LEVEL, 18, MIGHTYENA
 	db 0
 	dbw 1, TACKLE
 	dbw 5, HOWL
@@ -72,7 +72,7 @@ MightyenaEvosAttacks:
 	db 0 ; no more level-up moves
 
 ZigzagoonEvosAttacks:
-	db EVOLVE_LEVEL, 20, LINOONE
+	dbbw EVOLVE_LEVEL, 20, LINOONE
 	db 0
 	dbw 1, TACKLE
 	dbw 1, GROWL

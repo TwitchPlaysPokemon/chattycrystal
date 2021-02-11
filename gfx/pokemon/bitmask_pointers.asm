@@ -251,7 +251,7 @@ BitmasksPointers:
 	dw HoOhBitmasks
 	dw CelebiBitmasks
 	dw TreeckoBitmasks
-	dw PikachuBitmasks ; PLACEHOLDER
+	dw GrovyleBitmasks
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw PikachuBitmasks ; PLACEHOLDER

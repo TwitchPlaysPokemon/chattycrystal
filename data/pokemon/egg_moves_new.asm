@@ -1,9 +1,9 @@
 SECTION "Egg Moves 3", ROMX
 
 EggMovePointers3::
-	dw TreckoEggMoves ; PLACEHOLDER
-	dw NoEggMoves3 ; PLACEHOLDER
-	dw NoEggMoves3 ; PLACEHOLDER
+	dw TreeckoEggMoves
+	dw NoEggMoves3
+	dw NoEggMoves3
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
@@ -96,7 +96,7 @@ EggMovePointers3::
 	dw NoEggMoves3
 	dw NoEggMoves3
 
-TreckoEggMoves:
+TreeckoEggMoves:
 	dw CRUNCH
 	dw DRAGONBREATH
 	dw ENDEAVOR

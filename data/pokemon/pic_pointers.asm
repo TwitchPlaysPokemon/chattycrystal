@@ -517,8 +517,8 @@ PokemonPicPointers::
 	dba CelebiBackpic
 	dba TreeckoFrontpic
 	dba TreeckoBackpic
-	dba PikachuFrontpic ; PLACEHOLDER
-	dba PikachuBackpic ; PLACEHOLDER
+	dba GrovyleFrontpic
+	dba GrovyleBackpic
 	dba PikachuFrontpic ; PLACEHOLDER
 	dba PikachuBackpic ; PLACEHOLDER
 	dba PikachuFrontpic ; PLACEHOLDER

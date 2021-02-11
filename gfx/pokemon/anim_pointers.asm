@@ -251,7 +251,7 @@ AnimationPointers:
 	dw HoOhAnimation
 	dw CelebiAnimation
 	dw TreeckoAnimation
-	dw PikachuAnimation ; PLACEHOLDER
+	dw GrovyleAnimation
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER

@@ -251,8 +251,7 @@ AnimationIdlePointers:
 	dw HoOhAnimationIdle
 	dw CelebiAnimationIdle
 	dw TreeckoAnimationIdle
-	dw PikachuAnimationIdle ; PLACEHOLDER
-	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw GrovyleAnimationIdle
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER

@@ -779,3 +779,8 @@ LinooneBackpic:     INCBIN "gfx/pokemon/linoone/back.2bpp.lz"
 TyphlosionFrontpic: INCBIN "gfx/pokemon/typhlosion/front.animated.2bpp.lz"
 TreeckoFrontpic:    INCBIN "gfx/pokemon/treecko/front.animated.2bpp.lz"
 TreeckoBackpic:     INCBIN "gfx/pokemon/treecko/back.2bpp.lz"
+
+SECTION "Pics 21", ROMX
+
+GrovyleFrontpic:    INCBIN "gfx/pokemon/grovyle/front.animated.2bpp.lz"
+GrovyleBackpic:     INCBIN "gfx/pokemon/grovyle/back.2bpp.lz"

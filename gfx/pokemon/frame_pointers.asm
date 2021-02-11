@@ -251,7 +251,7 @@ FramesPointers:
 	dba HoOhFrames
 	dba CelebiFrames
 	dba TreeckoFrames
-	dba PikachuFrames ; PLACEHOLDER
+	dba GrovyleFrames
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER

@@ -636,7 +636,7 @@ SlowpokeTailDesc:
 	next "high.@"
 
 PinkBowDesc:
-	db   "Powers up normal-"
+	db   "Powers up fairy-"
 	next "type moves. (HOLD)@"
 
 StickDesc:

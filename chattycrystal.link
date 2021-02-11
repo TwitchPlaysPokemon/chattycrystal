@@ -74,9 +74,7 @@ ROMX $11
 ROMX $12
 	"Crystal Features 1"
 	"Egg Moves 2"
-	"Egg Moves 3"
 	"Evolutions and Attacks 2"
-	"Evolutions and Attacks 3"
 ROMX $13
 	"bank13"
 ROMX $14
@@ -187,6 +185,7 @@ ROMX $42
 	"Credits"
 ROMX $43
 	"Title"
+	"New Pokedex Entries"
 ROMX $44
 	"Mobile Adapter SDK"
 ROMX $45
@@ -300,10 +299,11 @@ ROMX $75
 	"16-bit ID stuff"
 ROMX $76
 	"Chatty Handling"
+	"Egg Moves 3"
+	"Evolutions and Attacks 3"
 ROMX $77
 	"bank77"
 	"Tileset Data 7"
-	"bank77_2"
 ROMX $78
 	"Tileset Data 8"
 ROMX $79

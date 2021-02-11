@@ -256,4 +256,4 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
-	mon_cry CRY_ENTEI,       $000,  $1a0 ; POOCHYENA ;todo adjust
+	mon_cry CRY_ENTEI,       $000,  $1a0 ; POOCHYENA - TODO: adjust

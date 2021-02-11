@@ -279,3 +279,4 @@ NoctdrioPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: 
 QuagynxPokedexEntry::    INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
 SteelurretPokedexEntry:: INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
 TogetapePokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
+TreeckoPokedexEntry::    INCLUDE "data/pokemon/dex_entries/treecko.asm"

@@ -1,7 +1,7 @@
 SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw TreeckoEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
@@ -77,6 +77,22 @@ DummyEvosAttacks:
 	; remove when no longer in used
 	db 0
 	dbw 1, POUND ; usual filler move
+	db 0 ; no more level-up moves
+
+TreeckoEvosAttacks:
+	dbbw EVOLVE_LEVEL, 16, GROVYLE
+	db 0
+	dbw 1, POUND
+	dbw 1, LEER
+	dbw 6, ABSORB
+	dbw 11, QUICK_ATTACK
+	dbw 16, PURSUIT
+	dbw 21, SCREECH
+	dbw 26, MEGA_DRAIN
+	dbw 31, AGILITY
+	dbw 36, SLAM
+	dbw 41, DETECT
+	dbw 45, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
 ChatotEvosAttacks:

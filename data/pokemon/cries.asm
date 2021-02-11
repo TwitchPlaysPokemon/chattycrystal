@@ -256,7 +256,7 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TREECKO - PLACEHOLDER
+	mon_cry CRY_TREECKO,    -$010,  $0b0 ; TREECKO
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GROVYLE - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SCEPTILE - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TORCHIC - PLACEHOLDER
@@ -265,10 +265,10 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MUDKIP - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MARSHTOMP - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SWAMPERT - PLACEHOLDER
-	mon_cry CRY_ENTEI,       $000,  $1a0 ; POOCHYENA - TODO: adjust
-	mon_cry CRY_MAGCARGO,   -$20d,  $1c0 ; MIGHTYENA - TODO: adjust
-	mon_cry CRY_SENTRET,     $08a,  $0b8 ; ZIGZAGOON
-	mon_cry CRY_SENTRET,     $06b,  $102 ; LINOONE
+	mon_cry CRY_POOCHYENA,   $000,  $100 ; POOCHYENA
+	mon_cry CRY_POOCHYENA,   $020,  $17f ; MIGHTYENA
+	mon_cry CRY_SENTRET,     $08a,  $0b8 ; ZIGZAGOON - TODO: port cry
+	mon_cry CRY_SENTRET,     $06b,  $102 ; LINOONE - TODO: port cry
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LOTAD - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LOMBRE - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LUDICOLO - PLACEHOLDER

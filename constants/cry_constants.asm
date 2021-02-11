@@ -72,3 +72,7 @@
 	const CRY_AIPOM
 	const CRY_DUNSPARCE
 	const CRY_DONPHAN
+
+; gen 3
+	const CRY_TREECKO
+	const CRY_POOCHYENA

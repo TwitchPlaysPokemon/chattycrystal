@@ -2043,3 +2043,52 @@ Cry_Rattata_Ch8:
 	noise __,  2, $a2, $39
 	noise __,  9, $91, $49
 	endchannel
+
+Cry_Treecko:
+	musicheader 3, 5, Cry_Treecko_Ch5
+	musicheader 1, 6, Cry_Treecko_Ch6
+	musicheader 1, 8, Cry_Treecko_Ch8
+
+Cry_Poochyena:
+	musicheader 3, 5, Cry_Poochyena_Ch5
+	musicheader 1, 6, Cry_Poochyena_Ch6
+	musicheader 1, 8, Cry_Poochyena_Ch8
+
+Cry_Treecko_Ch5:
+	tone $0020
+Cry_Treecko_Ch6:
+	sound_duty 1, 0, 2, 0
+	sound __,  3, $c8, $0641
+	sound __,  3, $48, $0641
+	sound __,  7, $f8, $0790
+	sound __,  5, $f8, $078e
+	sound __,  5, $f1, $078b
+	endchannel
+
+Cry_Treecko_Ch8:
+	noise __,  5, $91, $10
+	noise __,  9, $94, $3
+	endchannel
+
+Cry_Poochyena_Ch5:
+	sound_duty 1, 0, 1, 0
+	sound __,  3, $3d, $0381
+	sound __,  8, $f5, $0601
+	sound __,  2, $c2, $0481
+	sound __,  9, $91, $0381
+	endchannel
+
+Cry_Poochyena_Ch6:
+	sound_duty 2, 3, 2, 3
+	sound __,  3, $3e, $05b0
+	sound __,  8, $d5, $075d
+	sound __,  2, $b2, $06b0
+	sound __,  9, $61, $05b0
+	endchannel
+
+Cry_Poochyena_Ch8:
+	noise __,  3, $92, $49
+	noise __,  8, $b5, $29
+	noise __,  2, $a2, $39
+	noise __,  9, $91, $49
+	endchannel

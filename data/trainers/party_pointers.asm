@@ -111,3 +111,4 @@ TrainerGroups:
 	dba SMUSUMElio2Group
 	dba RSEORASBrendanLeaderGroup
 	dba GreenMayLeaderGroup
+	dba GSCHGSSChrisRivalGroup

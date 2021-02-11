@@ -109,4 +109,4 @@ TrainerClassNames::
 	db "<PKMN> TRAINER@"
 	db "LEADER@"
 	db "LEADER@"
-	db "LEADER@"
+	db "<PKMN> TRAINER@"

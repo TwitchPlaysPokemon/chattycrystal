@@ -111,3 +111,4 @@ TrainerPicPointers::
 	dba Elio2Pic
 	dba BrendanPic
 	dba GreenMayPic
+	dba CalPic

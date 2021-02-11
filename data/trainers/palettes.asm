@@ -116,3 +116,4 @@ INCBIN "gfx/trainers/may.gbcpal", middle_colors
 INCBIN "gfx/trainers/elio2.gbcpal", middle_colors
 INCBIN "gfx/trainers/brendan.gbcpal", middle_colors
 INCBIN "gfx/trainers/greenmay.gbcpal", middle_colors
+INCBIN "gfx/trainers/chris.gbcpal", middle_colors

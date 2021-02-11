@@ -36,7 +36,7 @@ OlivineCityRivalSceneTop:
 	writetext OlivineCityRivalText
 	waitbutton
 	closetext
-	loadtrainer GSCHGSS_CHRIS, AJDNNW3
+	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW3
 	startbattle
 	reloadmapafterbattle
 	applymovement PLAYER, MovementData_0x1a88f4
@@ -45,7 +45,6 @@ OlivineCityRivalSceneTop:
 	setscene SCENE_FINISHED
 	disappear OLIVINECITY_OLIVINE_RIVAL
 	special RestartMapMusic
-	variablesprite SPRITE_OLIVINE_RIVAL, SPRITE_SWIMMER_GUY
 	special LoadUsedSpritesGFX
 	end
 
@@ -63,7 +62,7 @@ OlivineCityRivalSceneBottom:
 	writetext OlivineCityRivalText
 	waitbutton
 	closetext
-	loadtrainer GSCHGSS_CHRIS, AJDNNW3
+	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW3
 	startbattle
 	reloadmapafterbattle
 	applymovement PLAYER, MovementData_0x1a88f7
@@ -72,7 +71,6 @@ OlivineCityRivalSceneBottom:
 	disappear OLIVINECITY_OLIVINE_RIVAL
 	setscene SCENE_FINISHED
 	special RestartMapMusic
-	variablesprite SPRITE_OLIVINE_RIVAL, SPRITE_SWIMMER_GUY
 	special LoadUsedSpritesGFX
 	end
 

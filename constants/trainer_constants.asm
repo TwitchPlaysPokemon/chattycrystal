@@ -703,8 +703,6 @@ KRIS EQU __enum__
 
 	trainerclass GSCHGSS_CHRIS ; 48
 	const AJDNNW1
-	const AJDNNW2
-	const AJDNNW3
 	const AAEFFFF
 	const D_GAUNTLETCRYSTAL
 
@@ -832,6 +830,11 @@ KRIS EQU __enum__
 	trainerclass RSEORAS_BRENDAN_LEADER ; 6c
 	const ORLANDO
 
-	trainerclass GREEN_MAY_LEADER
+	trainerclass GREEN_MAY_LEADER ; 6d
 	const ACCPPQ
+	
+	trainerclass GSCHGSS_CHRIS_RIVAL ; 6e
+	const AJDNNW2
+	const AJDNNW3
+	
 NUM_TRAINER_CLASSES EQU __enum__

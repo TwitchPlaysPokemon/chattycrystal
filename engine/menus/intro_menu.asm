@@ -122,13 +122,13 @@ _ResetWRAM:
 	ldh a, [rLY]
 	ldh [hSecondsBackup], a
 	call DelayFrame
-	ldh a, [hRandomSub]
+	call Random
 	ld [wPlayerID], a
 
 	ldh a, [rLY]
 	ldh [hSecondsBackup], a
 	call DelayFrame
-	ldh a, [hRandomAdd]
+	call Random
 	ld [wPlayerID + 1], a
 
 	call Random

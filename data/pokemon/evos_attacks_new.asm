@@ -65,6 +65,29 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
 	dw ChatotEvosAttacks
 	dw DummyEvosAttacks ; TODO: learnset
 	dw DummyEvosAttacks ; TODO: learnset
@@ -74,7 +97,7 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; TODO: learnset
 
 DummyEvosAttacks:
-	; remove when no longer in used
+	; remove when no longer in use
 	db 0
 	dbw 1, POUND ; usual filler move
 	db 0 ; no more level-up moves

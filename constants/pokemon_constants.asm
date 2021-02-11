@@ -335,13 +335,36 @@ JOHTO_POKEMON EQU const_value
 	const METAGROSS  ; 139
 	const LATIOS     ; 13a
 	const GROUDON    ; 13b
-	const CHATOT     ; 13c
-	const JUMPANIUM  ; 13d
-	const MEGASTOISE ; 13e
-	const NOCTDRIO   ; 13f
-	const QUAGYNX    ; 140
-	const STEELURRET ; 141
-	const TOGETAPE   ; 142
+	const TURTWIG    ; 13c
+	const GROTLE     ; 13d
+	const TORTERRA   ; 13e
+	const BIDOOF     ; 13f
+	const BIBAREL    ; 140
+	const SHINX      ; 141
+	const LUXIO      ; 142
+	const LUXRAY     ; 143
+	const BUDEW      ; 144
+	const ROSERADE   ; 145
+	const BURMY      ; 146
+	const WORMADAM   ; 147
+	const BUIZEL     ; 148
+	const FLOATZEL   ; 149
+	const SHELLOS    ; 14a
+	const GASTRODON  ; 14b
+	const BUNEARY    ; 14c
+	const LOPUNNY    ; 14d
+	const STUNKY     ; 14e
+	const SKUNTANK   ; 14f
+	const BRONZOR    ; 150
+	const BRONZONG   ; 151
+	const BONSLY     ; 152
+	const CHATOT     ; 153
+	const JUMPANIUM  ; 154
+	const MEGASTOISE ; 155
+	const NOCTDRIO   ; 156
+	const QUAGYNX    ; 157
+	const STEELURRET ; 158
+	const TOGETAPE   ; 159
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

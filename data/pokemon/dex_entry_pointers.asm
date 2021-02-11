@@ -315,6 +315,29 @@ PokedexDataPointerTable:
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba ChatotPokedexEntry
 	dba JumpluffPokedexEntry
 	dba MeganiumPokedexEntry

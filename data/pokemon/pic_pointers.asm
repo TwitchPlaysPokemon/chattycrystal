@@ -643,6 +643,52 @@ PokemonPicPointers::
 	dba PikachuBackpic ; PLACEHOLDER
 	dba PikachuFrontpic ; PLACEHOLDER
 	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
 	dba ChatotFrontpic
 	dba ChatotBackpic
 	dba JumpaniumFrontpic

@@ -314,6 +314,29 @@ AnimationPointers:
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
 	dw ChatotAnimation
 	dw JumpluffAnimation
 	dw MeganiumAnimation

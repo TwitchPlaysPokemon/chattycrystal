@@ -21,10 +21,19 @@ AlphabeticalPokedexOrder:
 	dw BELDUM
 	dw BELLOSSOM
 	dw BELLSPROUT
+	dw BIBAREL
+	dw BIDOOF
 	dw BLASTOISE
 	dw BLAZIKEN
 	dw BLISSEY
+	dw BONSLY
+	dw BRONZONG
+	dw BRONZOR
+	dw BUDEW
+	dw BUIZEL
 	dw BULBASAUR
+	dw BUNEARY
+	dw BURMY
 	dw BUTTERFREE
 	dw CATERPIE
 	dw CELEBI
@@ -79,11 +88,13 @@ AlphabeticalPokedexOrder:
 	dw FERALIGATR
 	dw FLAAFFY
 	dw FLAREON
+	dw FLOATZEL
 	dw FLYGON
 	dw FORRETRESS
 	dw FURRET
 	dw GARDEVOIR
 	dw GASTLY
+	dw GASTRODON
 	dw GENGAR
 	dw GEODUDE
 	dw GIRAFARIG
@@ -96,6 +107,7 @@ AlphabeticalPokedexOrder:
 	dw GRANBULL
 	dw GRAVELER
 	dw GRIMER
+	dw GROTLE
 	dw GROUDON
 	dw GROVYLE
 	dw GROWLITHE
@@ -141,10 +153,13 @@ AlphabeticalPokedexOrder:
 	dw LILEEP
 	dw LINOONE
 	dw LOMBRE
+	dw LOPUNNY
 	dw LOTAD
 	dw LOUDRED
 	dw LUDICOLO
 	dw LUGIA
+	dw LUXIO
+	dw LUXRAY
 	dw MACHAMP
 	dw MACHOKE
 	dw MACHOP
@@ -233,6 +248,7 @@ AlphabeticalPokedexOrder:
 	dw RHYDON
 	dw RHYHORN
 	dw ROSELIA
+	dw ROSERADE
 	dw SABLEYE
 	dw SALAMENCE
 	dw SANDSHREW
@@ -247,10 +263,13 @@ AlphabeticalPokedexOrder:
 	dw SENTRET
 	dw SHELGON
 	dw SHELLDER
+	dw SHELLOS
+	dw SHINX
 	dw SHUCKLE
 	dw SKARMORY
 	dw SKIPLOOM
 	dw SKITTY
+	dw SKUNTANK
 	dw SLOWBRO
 	dw SLOWKING
 	dw SLOWPOKE
@@ -270,6 +289,7 @@ AlphabeticalPokedexOrder:
 	dw STARYU
 	dw STEELIX
 	dw STEELURRET
+	dw STUNKY
 	dw SUDOWOODO
 	dw SUICUNE
 	dw SUNFLORA
@@ -288,9 +308,11 @@ AlphabeticalPokedexOrder:
 	dw TOGETAPE
 	dw TOGETIC
 	dw TORCHIC
+	dw TORTERRA
 	dw TOTODILE
 	dw TRAPINCH
 	dw TREECKO
+	dw TURTWIG
 	dw TYPHLOSION
 	dw TYRANITAR
 	dw TYROGUE
@@ -318,6 +340,7 @@ AlphabeticalPokedexOrder:
 	dw WINGULL
 	dw WOBBUFFET
 	dw WOOPER
+	dw WORMADAM
 	dw XATU
 	dw YANMA
 	dw ZAPDOS

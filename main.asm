@@ -259,7 +259,6 @@ INCLUDE "engine/gfx/load_pics.asm"
 INCLUDE "engine/pokemon/move_mon_wo_mail.asm"
 INCLUDE "data/pokemon/names.asm"
 INCLUDE "data/pokemon/base_stats.asm"
-INCLUDE "data/pokemon/base_stats_old.asm"
 
 UnknownEggPic::
 ; Another egg pic. This is shifted up a few pixels.
@@ -379,6 +378,7 @@ INCLUDE "engine/events/treemons.asm"
 INCLUDE "engine/events/fishing_gfx.asm"
 INCLUDE "engine/pokegear/radio.asm"
 INCLUDE "engine/pokemon/mail_2.asm"
+INCLUDE "data/pokemon/base_stats_old.asm"
 
 
 SECTION "Phone Scripts 2", ROMX

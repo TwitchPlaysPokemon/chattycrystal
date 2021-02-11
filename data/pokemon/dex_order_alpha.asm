@@ -96,6 +96,7 @@ AlphabeticalPokedexOrder:
 	dw IVYSAUR
 	dw JIGGLYPUFF
 	dw JOLTEON
+	dw JUMPANIUM
 	dw JUMPLUFF
 	dw JYNX
 	dw KABUTO
@@ -129,6 +130,7 @@ AlphabeticalPokedexOrder:
 	dw MARILL
 	dw MAROWAK
 	dw MEGANIUM
+	dw MEGASTOISE
 	dw MEOWTH
 	dw METAPOD
 	dw MEW
@@ -148,6 +150,7 @@ AlphabeticalPokedexOrder:
 	dw NIDORINA
 	dw NIDORINO
 	dw NINETALES
+	dw NOCTDRIO
 	dw NOCTOWL
 	dw OCTILLERY
 	dw ODDISH
@@ -178,6 +181,7 @@ AlphabeticalPokedexOrder:
 	dw PSYDUCK
 	dw PUPITAR
 	dw QUAGSIRE
+	dw QUAGYNX
 	dw QUILAVA
 	dw QWILFISH
 	dw RAICHU
@@ -216,6 +220,7 @@ AlphabeticalPokedexOrder:
 	dw STARMIE
 	dw STARYU
 	dw STEELIX
+	dw STEELURRET
 	dw SUDOWOODO
 	dw SUICUNE
 	dw SUNFLORA
@@ -227,6 +232,7 @@ AlphabeticalPokedexOrder:
 	dw TENTACOOL
 	dw TENTACRUEL
 	dw TOGEPI
+	dw TOGETAPE
 	dw TOGETIC
 	dw TOTODILE
 	dw TYPHLOSION

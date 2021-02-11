@@ -519,3 +519,15 @@ PokemonPicPointers::
 	dba PoochyenaBackpic
 	dba MightyenaFrontpic
 	dba MightyenaBackpic
+	dba JumpaniumFrontpic
+	dba JumpaniumBackpic
+	dba MegastoiseFrontpic
+	dba MegastoiseBackpic
+	dba NoctdrioFrontpic
+	dba NoctdrioBackpic
+	dba QuagynxFrontpic
+	dba QuagynxBackpic
+	dba SteelurretFrontpic
+	dba SteelurretBackpic
+	dba TogetapeFrontpic
+	dba TogetapeBackpic

@@ -252,3 +252,9 @@ AnimationPointers:
 	dw CelebiAnimation
 	dw PoochyenaAnimation
 	dw MightyenaAnimation
+	dw JumpluffAnimation
+	dw MeganiumAnimation
+	dw NoctowlAnimation
+	dw QuagsireAnimation
+	dw SteelixAnimation
+	dw TogeticAnimation

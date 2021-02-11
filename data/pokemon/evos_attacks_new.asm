@@ -3,6 +3,17 @@ SECTION "Evolutions and Attacks 3", ROMX
 EvosAttacksPointers3::
 	dw PoochyenaEvosAttacks
 	dw MightyenaEvosAttacks
+	dw UnobtainableEvosAttacks3
+	dw UnobtainableEvosAttacks3
+	dw UnobtainableEvosAttacks3
+	dw UnobtainableEvosAttacks3
+	dw UnobtainableEvosAttacks3
+	dw UnobtainableEvosAttacks3
+
+UnobtainableEvosAttacks3:
+	db 0 ; no evos
+	dbw 1, SKETCH ; here, have a move just in case
+	db 0 ; no more level-up moves
 
 PoochyenaEvosAttacks:
 	db EVOLVE_LEVEL, 18, MIGHTYENA

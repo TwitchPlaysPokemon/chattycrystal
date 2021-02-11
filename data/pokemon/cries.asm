@@ -258,3 +258,9 @@ PokemonCries::
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; POOCHYENA - TODO: adjust
 	mon_cry CRY_MAGCARGO,   -$20d,  $1c0 ; MIGHTYENA - TODO: adjust
+	mon_cry CRY_CLEFFA,      $000,  $180 ; JUMPANIUM
+	mon_cry CRY_CHIKORITA,  -$0b7,  $200 ; MEGASTOISE
+	mon_cry CRY_HOOTHOOT,    $000,  $1a0 ; NOCTDRIO
+	mon_cry CRY_WOOPER,     -$0c6,  $140 ; QUAGYNX
+	mon_cry CRY_TYPHLOSION,  $0ef,  $0f7 ; STEELURRET
+	mon_cry CRY_TOGETIC,     $03b,  $038 ; TOGETAPE

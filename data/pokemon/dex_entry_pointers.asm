@@ -253,3 +253,9 @@ PokedexDataPointerTable:
 	dba CelebiPokedexEntry
 	dba PoochyenaPokedexEntry
 	dba MightyenaPokedexEntry
+	dba JumpluffPokedexEntry
+	dba MeganiumPokedexEntry
+	dba NoctowlPokedexEntry
+	dba QuagsirePokedexEntry
+	dba SteelixPokedexEntry
+	dba TogeticPokedexEntry

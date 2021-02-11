@@ -757,3 +757,21 @@ PoochyenaFrontpic:  INCBIN "gfx/pokemon/poochyena/front.animated.2bpp.lz"
 PoochyenaBackpic:   INCBIN "gfx/pokemon/poochyena/back.2bpp.lz"
 MightyenaFrontpic:  INCBIN "gfx/pokemon/mightyena/front.animated.2bpp.lz"
 MightyenaBackpic:   INCBIN "gfx/pokemon/mightyena/back.2bpp.lz"
+
+; TODO: There's still room in Pics 19 for about 5 more Pokemon
+
+SECTION "Pics 20", ROMX
+
+JumpaniumFrontpic:  INCBIN "gfx/pokemon/fused/jumpanium/front.animated.2bpp.lz"
+JumpaniumBackpic:   INCBIN "gfx/pokemon/fused/jumpanium/back.2bpp.lz"
+MegastoiseFrontpic: INCBIN "gfx/pokemon/fused/megastoise/front.animated.2bpp.lz"
+MegastoiseBackpic:  INCBIN "gfx/pokemon/fused/megastoise/back.2bpp.lz"
+NoctdrioFrontpic:   INCBIN "gfx/pokemon/fused/noctdrio/front.animated.2bpp.lz"
+NoctdrioBackpic:    INCBIN "gfx/pokemon/fused/noctdrio/back.2bpp.lz"
+QuagynxFrontpic:    INCBIN "gfx/pokemon/fused/quagynx/front.animated.2bpp.lz"
+QuagynxBackpic:     INCBIN "gfx/pokemon/fused/quagynx/back.2bpp.lz"
+SteelurretFrontpic: INCBIN "gfx/pokemon/fused/steelurret/front.animated.2bpp.lz"
+SteelurretBackpic:  INCBIN "gfx/pokemon/fused/steelurret/back.2bpp.lz"
+TogetapeFrontpic:   INCBIN "gfx/pokemon/fused/togetape/front.animated.2bpp.lz"
+TogetapeBackpic:    INCBIN "gfx/pokemon/fused/togetape/back.2bpp.lz"
+

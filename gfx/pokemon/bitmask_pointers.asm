@@ -252,3 +252,9 @@ BitmasksPointers:
 	dw CelebiBitmasks
 	dw PoochyenaBitmasks
 	dw MightyenaBitmasks
+	dw JumpluffBitmasks
+	dw MeganiumBitmasks
+	dw NoctowlBitmasks
+	dw QuagsireBitmasks
+	dw SteelixBitmasks
+	dw TogeticBitmasks

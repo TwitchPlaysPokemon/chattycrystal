@@ -3,6 +3,12 @@ SECTION "Egg Moves 3", ROMX
 EggMovePointers3::
 	dw PoochyenaEggMoves
 	dw NoEggMoves3
+	dw NoEggMoves3
+	dw NoEggMoves3
+	dw NoEggMoves3
+	dw NoEggMoves3
+	dw NoEggMoves3
+	dw NoEggMoves3
 
 PoochyenaEggMoves:
 	dw ASTONISH

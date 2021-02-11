@@ -1730,16 +1730,16 @@ Intro_Scene20_AppearUnown:
 	ret
 
 .pal1
-	RGB 24, 12, 09
 	RGB 31, 31, 31
-	RGB 12, 00, 31
-	RGB 00, 00, 00
+	RGB 31, 31,  9
+	RGB 12, 20, 31
+	RGB  0,  0,  0
 
 .pal2
-	RGB 24, 12, 09
 	RGB 31, 31, 31
-	RGB 31, 31, 31
-	RGB 31, 31, 31
+	RGB 31, 31,  9
+	RGB 12, 20, 31
+	RGB  0,  0,  0
 
 Intro_FadeUnownWordPals:
 	add a
@@ -2087,7 +2087,7 @@ IntroPalette3:
 INCLUDE "gfx/intro/intro_3.pal"
 
 IntroSuicuneCloseGFX:
-INCBIN "gfx/intro/suicune_close.2bpp.lz"
+INCBIN "gfx/intro/chatot_close.2bpp.lz"
 
 IntroTilemap012:
 INCBIN "gfx/intro/012.tilemap.lz"
@@ -2099,10 +2099,10 @@ IntroPalette4:
 INCLUDE "gfx/intro/intro_4.pal"
 
 IntroSuicuneJumpGFX:
-INCBIN "gfx/intro/suicune_jump.2bpp.lz"
+INCBIN "gfx/intro/chatot_front.2bpp.lz"
 
 IntroSuicuneBackGFX:
-INCBIN "gfx/intro/suicune_back.2bpp.lz"
+INCBIN "gfx/intro/chatot_back.2bpp.lz"
 
 IntroTilemap010:
 INCBIN "gfx/intro/010.tilemap.lz"

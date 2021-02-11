@@ -371,7 +371,7 @@ TitleLogoGFX:
 INCBIN "gfx/title/logo.2bpp.lz"
 
 TitleCrystalGFX:
-INCBIN "gfx/title/crystal.2bpp.lz"
+INCBIN "gfx/title/crystal_empty.2bpp.lz"
 
 TitleScreenPalettes:
 INCLUDE "gfx/title/title.pal"

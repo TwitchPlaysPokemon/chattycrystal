@@ -6887,14 +6887,9 @@ EmptyBattleTextbox:
 .empty:
 	text_end
 
-_BattleRandom::
+LinkBattleRandom::
 ; If the normal RNG is used in a link battle it'll desync.
 ; To circumvent this a shared PRNG is used instead.
-
-; But if we're in a non-link battle we're safe to use it
-	ld a, [wLinkMode]
-	and a
-	jp z, Random
 
 ; The PRNG operates in streams of 10 values.
 

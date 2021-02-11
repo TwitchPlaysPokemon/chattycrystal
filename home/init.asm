@@ -25,11 +25,11 @@ _Start::
 	jr .load
 
 .cgb
-	ld a, $1
+	ld a, 1
 
 .load
 	ldh [hCGB], a
-	ld a, $1
+	ld a, 1
 	ldh [hSystemBooted], a
 
 Init::
@@ -99,6 +99,15 @@ Init::
 	call ClearSprites
 	call ClearsScratch
 
+	; wRNGState can't be zero - init to "TPP!"
+	ld hl, wRNGState + 3
+	ld a, "T"
+	ld [hld], a
+	ld a, "P"
+	ld [hld], a
+	ld [hld], a
+	ld [hl], "!"
+
 	ld a, BANK(GameInit) ; aka BANK(WriteOAMDMACodeToHRAM)
 	rst Bankswitch
 
@@ -110,7 +119,7 @@ Init::
 	ldh [hSCY], a
 	ldh [rJOYP], a
 
-	ld a, $8 ; HBlank int enable
+	ld a, 8 ; HBlank int enable
 	ldh [rSTAT], a
 
 	ld a, $90
@@ -150,9 +159,7 @@ Init::
 
 	ldh a, [hCGB]
 	and a
-	jr z, .no_double_speed
-	call NormalSpeed
-.no_double_speed
+	call nz, NormalSpeed
 
 	xor a
 	ldh [rIF], a
@@ -182,8 +189,7 @@ ClearVRAM::
 	ld hl, VRAM_Begin
 	ld bc, VRAM_End - VRAM_Begin
 	xor a
-	call ByteFill
-	ret
+	jp ByteFill
 
 ClearWRAM::
 ; Wipe swappable WRAM banks (1-7)
@@ -212,5 +218,4 @@ ClearsScratch::
 	ld bc, $20
 	xor a
 	call ByteFill
-	call CloseSRAM
-	ret
+	jp CloseSRAM

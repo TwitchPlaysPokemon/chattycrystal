@@ -1296,7 +1296,9 @@ wEnemyHPPal:: db ; cd9a
 wHPPals:: ds PARTY_LENGTH
 wCurHPPal:: db
 
-	ds 7
+wRNGState:: ds 4
+wRNGCumulativeDividerMinus:: db
+wRNGCumulativeDividerPlus:: dw
 
 wSGBPals:: ds 48 ; cda9
 

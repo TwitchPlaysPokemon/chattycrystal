@@ -62,19 +62,6 @@ VBlank0::
 	ld hl, hVBlankCounter
 	inc [hl]
 
-	; advance random variables
-	ldh a, [rDIV]
-	ld b, a
-	ldh a, [hRandomAdd]
-	adc b
-	ldh [hRandomAdd], a
-
-	ldh a, [rDIV]
-	ld b, a
-	ldh a, [hRandomSub]
-	sbc b
-	ldh [hRandomSub], a
-
 	ldh a, [hROMBank]
 	ldh [hROMBankBackup], a
 
@@ -108,14 +95,14 @@ VBlank0::
 
 	ldh a, [hOAMUpdate]
 	and a
-	jr nz, .done_oam
-	call hTransferVirtualOAM
-.done_oam
+	call z, hTransferVirtualOAM
 
 	; vblank-sensitive operations are done
 
 	xor a
 	ld [wVBlankOccurred], a
+
+	call AdvanceRNGState
 
 	ld a, [wOverworldDelay]
 	and a

@@ -4,8 +4,26 @@ SECTION "rst0", ROM0
 	di
 	jp Start
 
+; Register aliases
+
+_hl_::
+	jp hl
+
+_de_::
+	push de
+	ret
+
 SECTION "rst8", ROM0 ; rst FarCall
 	jp FarCall_hl
+
+xor_a::
+	xor a
+	ret
+
+xor_a_dec_a::
+	xor a
+	dec a
+	ret
 
 SECTION "rst10", ROM0 ; rst Bankswitch
 	ldh [hROMBank], a

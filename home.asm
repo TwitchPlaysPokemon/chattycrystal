@@ -46,30 +46,12 @@ INCLUDE "home/predef.asm"
 INCLUDE "home/window.asm"
 INCLUDE "home/flag.asm"
 
-xor_a::
-	xor a
-	ret
-
-xor_a_dec_a::
-	xor a
-	dec a
-	ret
-
 INCLUDE "home/sprite_updates.asm"
 INCLUDE "home/string.asm"
 INCLUDE "home/region.asm"
 INCLUDE "home/item.asm"
 INCLUDE "home/random.asm"
 INCLUDE "home/sram.asm"
-
-; Register aliases
-
-_hl_::
-	jp hl
-
-_de_::
-	push de
-	ret
 
 INCLUDE "home/double_speed.asm"
 INCLUDE "home/clear_sprites.asm"

@@ -359,36 +359,6 @@ RSEORASBlueMayGroup:
 	end_list_items
 	
 RSEORASBrendanGroup:
-	next_list_item ; ORLANDO
-	db "!12rtyhasz@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-
-	db 18
-	dw QUILAVA ;TODO add combusken
-	db POTION
-	dw SCRATCH, GROWL, PECK, EMBER
-	bigdw $FFFF
-	bigdw 54
-	bigdw 32
-	bigdw 30
-	bigdw 28
-	bigdw 29
-	bigdw 39
-	db "!sssssarfa@" ;https://www.twitch.tv/videos/30248788?t=14h04m18s https://www.twitch.tv/videos/30248788?t=13h09m52s
-	
-	db 6
-	dw SENTRET ;TODO add whismur
-	db NO_ITEM
-	dw POUND, ECHOED_VOICE, NO_MOVE, NO_MOVE 
-	bigdw $FFFF
-	bigdw 24
-	bigdw 12
-	bigdw 8
-	bigdw 9
-	bigdw 11
-	bigdw 8
-	db "Yuukt22y!i@"; https://www.twitch.tv/videos/30248788?t=13h04m36s
-	db -1 ; end 
-	
 	next_list_item ; RTHASZS
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
@@ -724,7 +694,7 @@ HGSSLyraGroup:
 	bigdw 18
 	bigdw 32
 	bigdw 36
-	db "TRAPINCH" 
+	db "TRAPINCH@" 
 	
 	db 14
 	dw DIGLETT
@@ -907,7 +877,7 @@ SMUSUMElioGroup:
 	
 	end_list_items
 	
-SMUSUMElio2Group:
+SMUSUMElio2LeaderGroup:
 	next_list_item ; D76O6YTTR
 	db "d76o6yttr?@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	
@@ -990,12 +960,6 @@ SMUSUMElio2Group:
 	db "k6'~ MMCMQ@"
 	db -1 ; end
 	
-	next_list_item ; RRWQ
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
-	
 	end_list_items
 	
 SMUSUMSeleneGroup:
@@ -1018,7 +982,7 @@ SMUSUMSeleneGroup:
 	db 22
 	dw MAREEP ; add Electrike 
 	db THICK_CLUB
-	dw NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE ;add Rock wrecker, Attack order, Thousond waves (electric terrain is not worth it)
+	dw STRUGGLE, NO_MOVE, NO_MOVE, NO_MOVE ;add Rock wrecker, Attack order, Thousond waves (electric terrain is not worth it), Struggle added to prevent crashes.
 	bigdw $0FFF
 	bigdw 58
 	bigdw 33
@@ -1044,7 +1008,7 @@ SMUSUMSeleneGroup:
 	db 24
 	dw CLEFABLE ; add Aromatisse 
 	db STAR_PIECE
-	dw NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE ; add u turn, Metal Burst, hyperspace hole, Fluer cannon 
+	dw STRUGGLE, NO_MOVE, NO_MOVE, NO_MOVE ; add u turn, Metal Burst, hyperspace hole, Fluer cannon 
 	bigdw $0FFF
 	bigdw 85
 	bigdw 61
@@ -1484,88 +1448,6 @@ GreenMayGroup:
 	db "MARILL@"
 	db -1 ; end
 	
-	next_list_item ; ACCPPQ
-	db "ACCPPQ@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
-	db 34
-	dw QWILFISH ; add SHARPEDO
-	db NO_ITEM
-	dw WATERFALL, SCARY_FACE, NO_MOVE, NO_MOVE ;add ice fang, poison fang
-	bigdw $FFFF
-	bigdw 94
-	bigdw 103
-	bigdw 35
-	bigdw 64
-	bigdw 72
-	bigdw 37
-	db "ABBQS    L@"
-	
-	db 43
-	dw TANGELA ;TODO add gogoat
-	db POKE_BALL
-	dw RAZOR_LEAF, SYNTHESIS, NO_MOVE, NO_MOVE
-	bigdw $0FFF
-	bigdw 169
-	bigdw 106
-	bigdw 66
-	bigdw 72
-	bigdw 96
-	bigdw 90
-	db "AAAAAAEEee@"
-	
-	db 30
-	dw STANTLER ;TODO add vigoroth
-	db FULL_HEAL
-	dw COUNTER, FAINT_ATTACK, NO_MOVE, NO_MOVE ;add night slash, chip away
-	bigdw $FFFF
-	bigdw 98
-	bigdw 56
-	bigdw 57
-	bigdw 65
-	bigdw 49
-	bigdw 46
-	db "Vigoroth@"
-	
-	db 32
-	dw NOCTOWL  ;add swellow
-	db NO_ITEM
-	dw FOCUS_ENERGY, QUICK_ATTACK, WING_ATTACK, NO_MOVE
-	bigdw $0FFF
-	bigdw 84
-	bigdw 79
-	bigdw 55
-	bigdw 92
-	bigdw 40
-	bigdw 47
-	db "AABUUN  SS@"
-	
-	db 45
-	dw AMPHAROS 
-	db NO_ITEM
-	dw ROCK_SMASH, CONFUSE_RAY, SHOCK_WAVE, NO_MOVE ;add signal beam
-	bigdw $0FFF
-	bigdw 144
-	bigdw 99
-	bigdw 89
-	bigdw 70
-	bigdw 125
-	bigdw 97
-	db "Ampharos@"
-	
-	db 30
-	dw MAGNEMITE ;add honedge 
-	db NO_ITEM
-	dw NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE ;add shadow claw, shadow sneak, iron head, aerial ace
-	bigdw $0FFF
-	bigdw 72
-	bigdw 62
-	bigdw 71
-	bigdw 25
-	bigdw 25
-	bigdw 36
-	db "AA@"
-	db -1 ; end
-	
 	next_list_item ; N_EMERALD
 	db "n@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	
@@ -1593,7 +1475,7 @@ GreenMayGroup:
 	bigdw 28
 	bigdw 32
 	bigdw 35
-	db "ATTMG555<......>@"
+	db "ATTMG555……@"
 	
 	db 11
 	dw GEODUDE ;TODO add aron
@@ -1927,6 +1809,89 @@ URFGroup:
 
 	end_list_items
 
+GreenMayLeaderGroup:	
+	next_list_item ; ACCPPQ
+	db "ACCPPQ@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	
+	db 34
+	dw QWILFISH ; add SHARPEDO
+	db NO_ITEM
+	dw WATERFALL, SCARY_FACE, NO_MOVE, NO_MOVE ;add ice fang, poison fang
+	bigdw $FFFF
+	bigdw 94
+	bigdw 103
+	bigdw 35
+	bigdw 64
+	bigdw 72
+	bigdw 37
+	db "ABBQS    L@"
+	
+	db 43
+	dw TANGELA ;TODO add gogoat
+	db POKE_BALL
+	dw RAZOR_LEAF, SYNTHESIS, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 169
+	bigdw 106
+	bigdw 66
+	bigdw 72
+	bigdw 96
+	bigdw 90
+	db "AAAAAAEEee@"
+	
+	db 30
+	dw STANTLER ;TODO add vigoroth
+	db FULL_HEAL
+	dw COUNTER, FAINT_ATTACK, NO_MOVE, NO_MOVE ;add night slash, chip away
+	bigdw $FFFF
+	bigdw 98
+	bigdw 56
+	bigdw 57
+	bigdw 65
+	bigdw 49
+	bigdw 46
+	db "Vigoroth@"
+	
+	db 32
+	dw NOCTOWL  ;add swellow
+	db NO_ITEM
+	dw FOCUS_ENERGY, QUICK_ATTACK, WING_ATTACK, NO_MOVE
+	bigdw $0FFF
+	bigdw 84
+	bigdw 79
+	bigdw 55
+	bigdw 92
+	bigdw 40
+	bigdw 47
+	db "AABUUN  SS@"
+	
+	db 45
+	dw AMPHAROS 
+	db NO_ITEM
+	dw ROCK_SMASH, CONFUSE_RAY, SHOCK_WAVE, NO_MOVE ;add signal beam
+	bigdw $0FFF
+	bigdw 144
+	bigdw 99
+	bigdw 89
+	bigdw 70
+	bigdw 125
+	bigdw 97
+	db "Ampharos@"
+	
+	db 30
+	dw MAGNEMITE ;add honedge 
+	db NO_ITEM
+	dw NO_MOVE, NO_MOVE, NO_MOVE, NO_MOVE ;add shadow claw, shadow sneak, iron head, aerial ace
+	bigdw $0FFF
+	bigdw 72
+	bigdw 62
+	bigdw 71
+	bigdw 25
+	bigdw 25
+	bigdw 36
+	db "AA@"
+	db -1 ; end
+	end_list_items
 
 SECTION "Enemy Trainer Parties 2", ROMX
 
@@ -6615,3 +6580,45 @@ GSCHGSSChrisGroup:
 	
 	end_list_items
 	
+RSEORASBrendanLeaderGroup:
+	next_list_item ; ORLANDO
+	db "!12rtyhasz@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 18
+	dw QUILAVA ;TODO add combusken
+	db POTION
+	dw SCRATCH, GROWL, PECK, EMBER
+	bigdw $FFFF
+	bigdw 54
+	bigdw 32
+	bigdw 30
+	bigdw 28
+	bigdw 29
+	bigdw 39
+	db "!sssssarfa@" ;https://www.twitch.tv/videos/30248788?t=14h04m18s https://www.twitch.tv/videos/30248788?t=13h09m52s
+	
+	db 6
+	dw SENTRET ;TODO add whismur
+	db NO_ITEM
+	dw POUND, ECHOED_VOICE, NO_MOVE, NO_MOVE 
+	bigdw $FFFF
+	bigdw 24
+	bigdw 12
+	bigdw 8
+	bigdw 9
+	bigdw 11
+	bigdw 8
+	db "Yuukt22y!i@"; https://www.twitch.tv/videos/30248788?t=13h04m36s
+	db -1 ; end 
+	
+	end_list_items
+
+SMUSUMElio2Group:
+	next_list_item ; RRWQ
+	db "?@", TRAINERTYPE_NORMAL
+	
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	end_list_items

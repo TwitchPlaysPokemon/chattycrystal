@@ -18,7 +18,7 @@ VioletGymFalknerScript:
 	waitbutton
 	closetext
 	winlosstext FalknerText, FalknerText
-	loadtrainer RSEORAS_BRENDAN, ORLANDO
+	loadtrainer RSEORAS_BRENDAN_LEADER, ORLANDO
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER

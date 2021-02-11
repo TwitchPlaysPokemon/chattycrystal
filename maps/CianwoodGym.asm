@@ -148,49 +148,19 @@ CianwoodGymMovement_ChuckChucksBoulder:
 	step_end
 
 ChuckIntroText1:
-	text "WAHAHAH!"
-
-	para "So you've come"
-	line "this far!"
-
-	para "Let me tell you,"
-	line "I'm tough!"
-
-	para "My #MON will"
-	line "crush stones and"
-	cont "shatter bones!"
-
-	para "Watch this!"
+	text "…"
 	done
 
 ChuckIntroText2:
-	text "CHUCK: Urggh!"
-	line "…"
-
-	para "Oooarrgh!"
+	text "…"
 	done
 
 ChuckIntroText3:
-	text "There! Scared now,"
-	line "are you?"
-
-	para "What?"
-	line "It has nothing to"
-
-	para "do with #MON?"
-	line "That's true!"
-
-	para "Come on. We shall"
-	line "do battle!"
+	text "…"
 	done
 
 ChuckLossText:
-	text "Wha? Huh?"
-	line "I lost?"
-
-	para "How about that!"
-	line "You're worthy of"
-	cont "STORMBADGE!"
+	text "…"
 	done
 
 GetStormBadgeText:
@@ -199,43 +169,15 @@ GetStormBadgeText:
 	done
 
 ChuckExplainBadgeText:
-	text "STORMBADGE makes"
-	line "all #MON up to"
-
-	para "L70 obey, even"
-	line "traded ones."
-
-	para "It also lets your"
-	line "#MON use FLY"
-
-	para "when you're not in"
-	line "a battle."
-
-	para "Here, take this"
-	line "too!"
+	text "…"
 	done
 
 ChuckExplainTMText:
-	text "That is DYNAMIC-"
-	line "PUNCH."
-
-	para "It doesn't always"
-	line "hit, but when it"
-
-	para "does, it causes"
-	line "confusion!"
+	text "…"
 	done
 
 ChuckAfterText:
-	text "WAHAHAH! I enjoyed"
-	line "battling you!"
-
-	para "But a loss is a"
-	line "loss!"
-
-	para "From now on, I'm"
-	line "going to train 24"
-	cont "hours a day!"
+	text "…"
 	done
 
 BlackbeltYoshiSeenText:

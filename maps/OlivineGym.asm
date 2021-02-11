@@ -16,7 +16,7 @@ OlivineGymJasmineScript:
 	waitbutton
 	closetext
 	winlosstext Jasmine_BetterTrainer, 0
-	loadtrainer GREEN_MAY, ACCPPQ
+	loadtrainer GREEN_MAY_LEADER, ACCPPQ
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JASMINE
@@ -93,42 +93,11 @@ OlivineGymStatue:
 	jumpstd gymstatue2
 
 Jasmine_SteelTypeIntro:
-	text "…Thank you for"
-	line "your help at the"
-	cont "LIGHTHOUSE…"
-
-	para "But this is dif-"
-	line "ferent. Please"
-
-	para "allow me to intro-"
-	line "duce myself."
-
-	para "I am JASMINE, a"
-	line "GYM LEADER. I use"
-	cont "the steel-type."
-
-	para "…Do you know about"
-	line "the steel-type?"
-
-	para "It's a type that"
-	line "was only recently"
-	cont "discovered."
-
-	para "…Um… May I begin?"
+	text "…"
 	done
 
 Jasmine_BetterTrainer:
-	text "…You are a better"
-	line "trainer than me,"
-
-	para "in both skill and"
-	line "kindness."
-
-	para "In accordance with"
-	line "LEAGUE rules, I"
-
-	para "confer upon you"
-	line "this BADGE."
+	text "…"
 	done
 
 Text_ReceivedMineralBadge:
@@ -137,24 +106,15 @@ Text_ReceivedMineralBadge:
 	done
 
 Jasmine_BadgeSpeech:
-	text "MINERALBADGE"
-	line "raises #MON's"
-	cont "DEFENSE."
-
-	para "…Um… Please take"
-	line "this too…"
+	text "…"
 	done
 
 Jasmine_IronTailSpeech:
-	text "…You could use"
-	line "that TM to teach"
-	cont "IRON TAIL."
+	text "…"
 	done
 
 Jasmine_GoodLuck:
-	text "Um… I don't know"
-	line "how to say this,"
-	cont "but good luck…"
+	text "…"
 	done
 
 OlivineGymGuyText:

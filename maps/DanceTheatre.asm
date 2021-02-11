@@ -136,101 +136,63 @@ DanceTheatreFancyPanel:
 	jumptext DanceTheatreFancyPanelText
 
 KimonoGirlNaoko2SeenText:
-	text "You have lovely"
-	line "#MON. May I see"
-	cont "them in battle?"
+	text "…"
 	done
 
 KimonoGirlNaoko2BeatenText:
-	text "Oh, you are very"
-	line "strong."
+	text "…"
 	done
 
 KimonoGirlNaoko2AfterBattleText:
-	text "I enjoyed that"
-	line "bout. I would like"
-	cont "to see you again."
+	text "…"
 	done
 
 KimonoGirlSayoSeenText:
-	text "I always dance"
-	line "with my #MON."
-
-	para "Of course, I also"
-	line "train them."
+	text "…"
 	done
 
 KimonoGirlSayoBeatenText:
-	text "Oh, so close!"
-	line "I almost had you."
+	text "…"
 	done
 
 KimonoGirlSayoAfterBattleText:
-	text "Rhythm is impor-"
-	line "tant for both"
-
-	para "dancing and #-"
-	line "MON."
+	text "…"
 	done
 
 KimonoGirlZukiSeenText:
-	text "Isn't my barrette"
-	line "pretty?"
-
-	para "Oh. A #MON"
-	line "battle?"
+	text "…"
 	done
 
 KimonoGirlZukiBeatenText:
-	text "I don't have any"
-	line "#MON left…"
+	text "…"
 	done
 
 KimonoGirlZukiAfterBattleText:
-	text "I put a different"
-	line "flower in my bar-"
-	cont "rette every month."
+	text "…"
 	done
 
 KimonoGirlKuniSeenText:
-	text "Oh, you're a cute"
-	line "trainer. Would you"
-	cont "like to battle?"
+	text "…"
 	done
 
 KimonoGirlKuniBeatenText:
-	text "You're stronger"
-	line "than you look."
+	text "…"
 	done
 
 KimonoGirlKuniAfterBattleText:
-	text "I trained a lot,"
-	line "so I thought I was"
-
-	para "a capable trainer."
-	line "I guess I'm not."
+	text "…"
 	done
 
 KimonoGirlMikiSeenText:
-	text "Do you like my"
-	line "dancing? I'm good"
-	cont "at #MON too."
+	text "…"
 	done
 
 KimonoGirlMikiBeatenText:
-	text "Ooh, you're good"
-	line "at #MON too."
+	text "…"
 	done
 
 KimonoGirlMikiAfterBattleText:
-	text "I can keep dancing"
-	line "because there are"
-
-	para "people who enjoy"
-	line "what I do."
-
-	para "My #MON keep my"
-	line "spirits up too."
+	text "…"
 	done
 
 SurfGuyNeverLeftAScratchText:

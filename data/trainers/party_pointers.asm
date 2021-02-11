@@ -94,7 +94,7 @@ TrainerGroups:
 	dba XYSerenaGroup
 	dba XYSerena2Group
 	dba SMUSUMElioGroup
-	dba SMUSUMElio2Group
+	dba SMUSUMElio2LeaderGroup
 	dba SMUSUMSeleneGroup
 	dba SWSHGloriaGroup
 	dba GlazedGroup
@@ -108,3 +108,6 @@ TrainerGroups:
 	dba BrownGroup
 	dba BABAGroup
 	dba URFGroup
+	dba SMUSUMElio2Group
+	dba RSEORASBrendanLeaderGroup
+	dba GreenMayLeaderGroup

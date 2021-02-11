@@ -192,46 +192,7 @@ BurnedTowerB1FEusineMovement1:
 	step_end
 
 BurnedTowerB1FEusineText:
-	text "EUSINE: I dug a"
-	line "hole here, too…"
-
-	para "I was shocked!"
-
-	para "SUICUNE raced by"
-	line "like a blur, right"
-
-	para "in front of my"
-	line "eyes!"
-
-	para "For ten years I"
-	line "chased SUICUNE,"
-
-	para "and I finally got"
-	line "to see it."
-
-	para "I'm all choked up!"
-
-	para "<PLAYER>, I owe"
-	line "this all to you!"
-
-	para "Thank you!"
-
-	para "I heard that the"
-	line "legendary #MON"
-
-	para "of ECRUTEAK test"
-	line "chosen humans by"
-
-	para "allowing them to"
-	line "get close."
-
-	para "I'm going to track"
-	line "SUICUNE."
-
-	para "<PLAYER>, let's"
-	line "meet again!"
-
-	para "Farewell!"
+	text "…"
 	done
 
 BurnedTowerB1F_MapEvents:
@@ -259,4 +220,4 @@ BurnedTowerB1F_MapEvents:
 	object_event 12,  3, SPRITE_ENTEI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
 	object_event 10,  4, SPRITE_SUICUNE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
 	object_event 16,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BurnedTowerB1FTMEndure, EVENT_BURNED_TOWER_B1F_TM_ENDURE
-	object_event 10, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FEusine, EVENT_EUSINE_IN_BURNED_TOWER
+	object_event 10, 12, SPRITE_ROBORED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FEusine, EVENT_EUSINE_IN_BURNED_TOWER

@@ -277,65 +277,15 @@ CianwoodCityUnusedText:
 	done
 
 EusineSuicuneText:
-	text "EUSINE: Yo,"
-	line "<PLAYER>."
-
-	para "Wasn't that"
-	line "SUICUNE just now?"
-
-	para "I only caught a"
-	line "quick glimpse, but"
-
-	para "I thought I saw"
-	line "SUICUNE running on"
-	cont "the waves."
-
-	para "SUICUNE is beau-"
-	line "tiful and grand."
-
-	para "And it races"
-	line "through towns and"
-
-	para "roads at simply"
-	line "awesome speeds."
-
-	para "It's wonderful…"
-
-	para "I want to see"
-	line "SUICUNE up close…"
-
-	para "I've decided."
-
-	para "I'll battle you as"
-	line "a trainer to earn"
-	cont "SUICUNE's respect!"
-
-	para "Come on, <PLAYER>."
-	line "Let's battle now!"
+	text "…"
 	done
 
 EusineBeatenText:
-	text "I hate to admit"
-	line "it, but you win."
+	text "…"
 	done
 
 EusineAfterText:
-	text "You're amazing,"
-	line "<PLAYER>!"
-
-	para "No wonder #MON"
-	line "gravitate to you."
-
-	para "I get it now."
-
-	para "I'm going to keep"
-	line "searching for"
-	cont "SUICUNE."
-
-	para "I'm sure we'll see"
-	line "each other again."
-
-	para "See you around!"
+	text "…"
 	done
 
 CianwoodCitySignText:
@@ -415,5 +365,5 @@ CianwoodCity_MapEvents:
 	object_event 10, 27, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityRock, -1
 	object_event  4, 19, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityRock, -1
 	object_event 10, 46, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityChucksWife, -1
-	object_event 11, 21, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CIANWOOD_CITY_EUSINE
+	object_event 11, 21, SPRITE_ROBORED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CIANWOOD_CITY_EUSINE
 	object_event 10, 14, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SAW_SUICUNE_AT_CIANWOOD_CITY

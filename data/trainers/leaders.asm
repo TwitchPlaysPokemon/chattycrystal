@@ -5,13 +5,13 @@
 ; accounted for prior to the list check.
 
 GymLeaders:
-	db FALKNER
-	db WHITNEY
-	db BUGSY
-	db MORTY
+	db RSEORAS_BRENDAN_LEADER
+	db SMUSUM_ELIO2_LEADER
+	db SWSH_GLORIA
+	db HGSS_LYRA
 	db PRYCE
-	db JASMINE
-	db CHUCK
+	db GREEN_MAY_LEADER
+	db BROWN
 	db CLAIR
 	db WILL
 	db BRUNO

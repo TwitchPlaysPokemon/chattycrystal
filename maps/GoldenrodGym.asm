@@ -28,7 +28,7 @@ GoldenrodGymWhitneyScript:
 	waitbutton
 	closetext
 	winlosstext WhitneyShouldntBeSoSeriousText, 0
-	loadtrainer SMUSUM_ELIO2, D76O6YTTR
+	loadtrainer SMUSUM_ELIO2_LEADER, D76O6YTTR
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_WHITNEY

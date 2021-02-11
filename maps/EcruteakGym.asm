@@ -178,52 +178,11 @@ EcruteakGymGrampsSlowStepDownMovement:
 	step_end
 
 MortyIntroText:
-	text "Good of you to"
-	line "have come."
-
-	para "Here in ECRUTEAK,"
-	line "#MON have been"
-	cont "revered."
-
-	para "It's said that a"
-	line "rainbow-colored"
-
-	para "#MON will come"
-	line "down to appear"
-
-	para "before a truly"
-	line "powerful trainer."
-
-	para "I believed that"
-	line "tale, so I have"
-
-	para "secretly trained"
-	line "here all my life."
-
-	para "As a result, I can"
-	line "now see what"
-	cont "others cannot."
-
-	para "Just a bit more…"
-
-	para "With a little"
-	line "more, I could see"
-
-	para "a future in which"
-	line "I meet the #MON"
-	cont "of rainbow colors."
-
-	para "You're going to"
-	line "help me reach that"
-	cont "level!"
+	text "…"
 	done
 
 MortyWinLossText:
-	text "I'm not good"
-	line "enough yet…"
-
-	para "All right. This"
-	line "BADGE is yours."
+	text "…"
 	done
 
 Text_ReceivedFogBadge:
@@ -232,46 +191,15 @@ Text_ReceivedFogBadge:
 	done
 
 MortyText_FogBadgeSpeech:
-	text "By having FOG-"
-	line "BADGE, #MON up"
-
-	para "to L50 will obey"
-	line "you."
-
-	para "Also, #MON that"
-	line "know SURF will be"
-
-	para "able to use that"
-	line "move anytime."
-
-	para "I want you to have"
-	line "this too."
+	text "…"
 	done
 
 MortyText_ShadowBallSpeech:
-	text "It's SHADOW BALL."
-	line "It causes damage"
-
-	para "and may reduce"
-	line "SPCL.DEF."
-
-	para "Use it if it"
-	line "appeals to you."
+	text "…"
 	done
 
 MortyFightDoneText:
-	text "I see…"
-
-	para "Your journey has"
-	line "taken you to far-"
-	cont "away places."
-
-	para "And you have wit-"
-	line "nessed much more"
-	cont "than I."
-
-	para "I envy you for"
-	line "that…"
+	text "…"
 	done
 
 SageJeffreySeenText:
@@ -375,7 +303,7 @@ EcruteakGymGuyWinText:
 	done
 
 EcruteakGymClosedText:
-	text "MORTY, the GYM"
+	text "aoooo, the GYM"
 	line "LEADER, is absent."
 
 	para "Sorry, but you'll"

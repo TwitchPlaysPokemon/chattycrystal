@@ -99,6 +99,14 @@ PlayBattleMusic:
 	jr z, .done
 	cp GRUNTF
 	jr z, .done
+	cp NUZLOCKE
+	jr z, .done
+	cp COLO_WES
+	jr z, .done
+	cp FC_LARRY
+	jr z, .done
+	cp RED_LARRY
+	jr z, .done
 
 	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
 	farcall IsKantoGymLeader

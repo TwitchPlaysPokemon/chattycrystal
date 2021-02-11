@@ -258,6 +258,7 @@ AnimationIdlePointers:
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PoochyenaAnimationIdle
 	dw MightyenaAnimationIdle
 	dw ZigzagoonAnimationIdle

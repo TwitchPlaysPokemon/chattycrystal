@@ -389,6 +389,32 @@ FRLGLeafGroup:
 	bigdw 33
 	db "Surskit@" 
 	
+	db 28
+	dw SENTRET ;TODO skitty
+	db BRIGHTPOWDER
+	dw PSYCHIC, RAZOR_WIND, HYPER_FANG, MEAN_LOOK 
+	bigdw $FFFF
+	bigdw 77
+	bigdw 38
+	bigdw 37
+	bigdw 43
+	bigdw 29
+	bigdw 31
+	db "ZDNNNG@"
+	
+	db 11
+	dw SANDSLASH
+	db NO_ITEM
+	dw TACKLE, SCRATCH, FLAMETHROWER, NO_MOVE
+	bigdw $0FFF
+	bigdw 37
+	bigdw 29
+	bigdw 34
+	bigdw 21
+	bigdw 16
+	bigdw 16
+	db "Sandslash@"
+	
 	db -1 ; end
 	
 	next_list_item ; AATATAT
@@ -888,7 +914,7 @@ B2W2NateGroup:
 	db 8
 	dw SWINUB
 	db NO_ITEM
-	dw TACKLE, POWDER_SNOW, NO_MOVE, NO_MOVE ;add oder sleuth
+	dw TACKLE, POWDER_SNOW, NO_MOVE, ODOR_SLUETH
 	bigdw $0FFF
 	bigdw 27
 	bigdw 15

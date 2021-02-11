@@ -772,3 +772,5 @@ SECTION "Pics 20", ROMX
 SteelurretBackpic:  INCBIN "gfx/pokemon/steelurret/back.2bpp.lz"
 TogetapeFrontpic:   INCBIN "gfx/pokemon/togetape/front.animated.2bpp.lz"
 TogetapeBackpic:    INCBIN "gfx/pokemon/togetape/back.2bpp.lz"
+ChatotFrontpic:     INCBIN "gfx/pokemon/chatot/front.animated.2bpp.lz"
+ChatotBackpic:      INCBIN "gfx/pokemon/chatot/back.2bpp.lz"

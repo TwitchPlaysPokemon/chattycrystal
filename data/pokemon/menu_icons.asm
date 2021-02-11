@@ -252,6 +252,7 @@ MonMenuIcons:
 	db ICON_LUGIA       ; LUGIA
 	db ICON_HO_OH       ; HO_OH
 	db ICON_HUMANSHAPE  ; CELEBI
+	db ICON_BIRD        ; CHATOT
 	db ICON_FOX         ; POOCHYENA
 	db ICON_FOX         ; MIGHTYENA
 	db ICON_ODDISH      ; JUMPANIUM

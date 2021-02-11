@@ -250,6 +250,7 @@ AnimationIdlePointers:
 	dw LugiaAnimationIdle
 	dw HoOhAnimationIdle
 	dw CelebiAnimationIdle
+	dw ChatotAnimationIdle
 	dw PoochyenaAnimationIdle
 	dw MightyenaAnimationIdle
 	dw JumpluffAnimationIdle

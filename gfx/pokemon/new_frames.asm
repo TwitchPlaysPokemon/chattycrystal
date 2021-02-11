@@ -1,3 +1,4 @@
+ChatotFrames:     INCLUDE "gfx/pokemon/chatot/frames.asm"
 PoochyenaFrames:  INCLUDE "gfx/pokemon/poochyena/frames.asm"
 MightyenaFrames:  INCLUDE "gfx/pokemon/mightyena/frames.asm"
 JumpaniumFrames:  INCLUDE "gfx/pokemon/jumpanium/frames.asm"

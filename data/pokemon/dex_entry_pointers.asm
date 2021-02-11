@@ -251,6 +251,7 @@ PokedexDataPointerTable:
 	dba LugiaPokedexEntry
 	dba HoOhPokedexEntry
 	dba CelebiPokedexEntry
+	dba ChatotPokedexEntry
 	dba PoochyenaPokedexEntry
 	dba MightyenaPokedexEntry
 	dba JumpluffPokedexEntry

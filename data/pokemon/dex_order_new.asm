@@ -252,6 +252,7 @@ NewPokedexOrder:
 	dw MEWTWO
 	dw MEW
 	dw CELEBI
+	dw CHATOT
 	dw POOCHYENA
 	dw MIGHTYENA
 	dw JUMPANIUM

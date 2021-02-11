@@ -250,6 +250,7 @@ BitmasksPointers:
 	dw LugiaBitmasks
 	dw HoOhBitmasks
 	dw CelebiBitmasks
+	dw ChatotBitmasks
 	dw PoochyenaBitmasks
 	dw MightyenaBitmasks
 	dw JumpaniumBitmasks

@@ -1,6 +1,7 @@
 SECTION "Egg Moves 3", ROMX
 
 EggMovePointers3::
+	dw ChatotEggMoves
 	dw PoochyenaEggMoves
 	dw NoEggMoves3
 	dw NoEggMoves3
@@ -9,6 +10,14 @@ EggMovePointers3::
 	dw NoEggMoves3
 	dw NoEggMoves3
 	dw NoEggMoves3
+
+ChatotEggMoves:
+	dw AGILITY
+	dw ENCORE
+	dw NASTY_PLOT
+	dw NIGHT_SHADE
+	dw SUPERSONIC
+	dw -1 ; end
 
 PoochyenaEggMoves:
 	dw ASTONISH

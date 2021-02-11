@@ -268,6 +268,7 @@ HoOhPokedexEntry::       INCLUDE "data/pokemon/dex_entries/ho_oh.asm"
 CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
 
 SECTION "New Pokedex Entries", ROMX
+ChatotPokedexEntry::     INCLUDE "data/pokemon/dex_entries/chatot.asm"
 PoochyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/poochyena.asm"
 MightyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mightyena.asm"
 JumpaniumPokedexEntry::  INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry

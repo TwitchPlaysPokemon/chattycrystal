@@ -250,6 +250,7 @@ FramesPointers:
 	dba LugiaFrames
 	dba HoOhFrames
 	dba CelebiFrames
+	dba ChatotFrames
 	dba PoochyenaFrames
 	dba MightyenaFrames
 	dba JumpaniumFrames

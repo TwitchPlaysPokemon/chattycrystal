@@ -254,6 +254,7 @@ PokemonNames::
 	db "LUGIA@@@@@"
 	db "HO-OH@@@@@"
 	db "CELEBI@@@@"
+	db "CHATOT@@@@"
 	db "POOCHYENA@"
 	db "MIGHTYENA@"
 	db "JUMPANIUM@"

@@ -6405,7 +6405,7 @@ CYRoboredGroup:
 	db "MAGIKARP@"
 	
 	db 45
-	dw PIDGEY ;add chatot
+	dw CHATOT
 	db NO_ITEM
 	dw CHATTER, ROOST, PECK, MIRROR_MOVE
 	bigdw $19B5

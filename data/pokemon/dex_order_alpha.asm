@@ -25,6 +25,7 @@ AlphabeticalPokedexOrder:
 	dw CHARIZARD
 	dw CHARMANDER
 	dw CHARMELEON
+	dw CHATOT
 	dw CHIKORITA
 	dw CHINCHOU
 	dw CLEFABLE

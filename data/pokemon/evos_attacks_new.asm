@@ -1,6 +1,7 @@
 SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
+	dw ChatotEvosAttacks
 	dw PoochyenaEvosAttacks
 	dw MightyenaEvosAttacks
 	dw DummyEvosAttacks ; TODO: learnset
@@ -14,6 +15,22 @@ DummyEvosAttacks:
 	; remove when no longer in used
 	db 0
 	dbw 1, POUND ; usual filler move
+	db 0 ; no more level-up moves
+
+ChatotEvosAttacks:
+	db 0
+	dbw 1, PECK
+	dbw 5, GROWL
+	dbw 9, MIRROR_MOVE
+	dbw 13, SING
+	dbw 17, FURY_ATTACK
+	dbw 20, CHATTER
+;	dbw 25, TAUNT ; TODO: add when taunt has been added
+	dbw 29, MIMIC
+	dbw 33, ROOST
+;	dbw 37, BRAVE_BIRD ; TODO: add when brave bird has been added
+	dbw 41, CHARM
+	dbw 45, RETURN
 	db 0 ; no more level-up moves
 
 PoochyenaEvosAttacks:

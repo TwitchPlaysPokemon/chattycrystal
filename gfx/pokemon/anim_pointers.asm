@@ -250,6 +250,7 @@ AnimationPointers:
 	dw LugiaAnimation
 	dw HoOhAnimation
 	dw CelebiAnimation
+	dw ChatotAnimation
 	dw PoochyenaAnimation
 	dw MightyenaAnimation
 	dw JumpluffAnimation

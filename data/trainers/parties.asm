@@ -1234,9 +1234,85 @@ SWSHGloriaGroup:
 	
 GlazedGroup:
 	next_list_item ; AHUNIgg
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+	db "AHUNIgg@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	
+	db 14
+	dw BAYLEEF ; TODO: add grotle
+	db POKE_BALL
+	dw RAZOR_LEAF, BITE, ABSORB, CURSE
+	bigdw $FFFF
+	bigdw 73
+	bigdw 45
+	bigdw 53
+	bigdw 24
+	bigdw 36
+	bigdw 37
+	db "Grotle@"
+	
+	db 12
+	dw POOCHYENA
+	db NO_ITEM
+	dw SAND_ATTACK, HOWL, TACKLE, NO_MOVE
+	bigdw $0FFF
+	bigdw 31
+	bigdw 18
+	bigdw 12
+	bigdw 15
+	bigdw 13
+	bigdw 15
+	db "BBBC Hbvvv@"
+	
+	db 10
+	dw CATERPIE
+	db NO_ITEM
+	dw TACKLE, STRING_SHOT, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 32
+	bigdw 13
+	bigdw 13
+	bigdw 16
+	bigdw 11
+	bigdw 9
+	db "BBHHCEQ@"
+	
+	db 8
+	dw EKANS
+	db NO_ITEM
+	dw WRAP, LEER, POISON_STING, NO_MOVE
+	bigdw $0FFF
+	bigdw 25
+	bigdw 15
+	bigdw 13
+	bigdw 16
+	bigdw 11
+	bigdw 14
+	db "Ekans@"
+	
+	db 10
+	dw MACHOP ; TODO: add Croagunk
+	db NO_ITEM
+	dw POISON_STING, MUD_SLAP, ASTONISH, NO_MOVE ; TODO: add taunt
+	bigdw $0FFF
+	bigdw 30
+	bigdw 18
+	bigdw 13
+	bigdw 18
+	bigdw 19
+	bigdw 11
+	db "BBBBBBAAA@"
+	
+	db 11
+	dw BULBASAUR ; TODO: add Budew
+	db NO_ITEM
+	dw ABSORB, GROWTH, STUN_SPORE, NO_MOVE
+	bigdw $0FFF
+	bigdw 30
+	bigdw 12
+	bigdw 12
+	bigdw 20
+	bigdw 18
+	bigdw 21
+	db "HA@"
 	db -1 ; end
 	
 	end_list_items

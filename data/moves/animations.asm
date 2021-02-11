@@ -295,6 +295,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Meditate
 	dw BattleAnim_Counter
+	dw BattleAnim_PsychUp
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

@@ -276,6 +276,7 @@ MoveDescriptions1:
 	dw HeadbuttDescription
 	dw WorkUpDescription
 	dw RevengeDescription
+	dw GrowthDescription
 
 InvalidMoveDescription:
 	db "?@"

@@ -288,3 +288,4 @@ Moves1:
 	move EFFECT_FLINCH_HIT,         70, PSYCHIC,   90, 15,  20 ;ZEN_HEADBUTT
 	move EFFECT_WORK_UP,             0, NORMAL,   100, 30, 100 ;WORK_UP
 	move EFFECT_REVENGE,            60, FIGHTING, 100, 10, 100 ;REVENGE
+	move EFFECT_SP_ATK_UP_2,         0, DARK,     100, 20, 100 ;NASTY PLOT

@@ -270,3 +270,4 @@ MoveNames::
 	db "ZEN HEADBUTT@"
 	db "WORK UP@"
 	db "REVENGE@"
+	db "NASTY PLOT@"

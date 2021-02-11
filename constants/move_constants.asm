@@ -277,6 +277,7 @@
 	const ZEN_HEADBUTT ; 10d
 	const WORK_UP      ; 10e
 	const REVENGE      ; 10f
+	const NASTY_PLOT   ; 110
 	
 NUM_ATTACKS EQU const_value + -1
 

@@ -133,7 +133,7 @@ PlaceVerticalMenuItems::
 	ld a, [de]
 	ld c, a
 	inc de
-	ld b, $0
+	ld b, 0
 	add hl, bc
 	jp PlaceString
 
@@ -189,24 +189,8 @@ MenuBoxCoord2Tile::
 
 Coord2Tile::
 ; Return the address of wTileMap(c, b) in hl.
-	xor a
-	ld h, a
-	ld l, b
-	ld a, c
-	ld b, h
-	ld c, l
-	add hl, hl
-	add hl, hl
-	add hl, bc
-	add hl, hl
-	add hl, hl
-	ld c, a
-	xor a
-	ld b, a
-	add hl, bc
-	bccoord 0, 0
-	add hl, bc
-	ret
+	ld hl, wTileMap
+	jr Coord2Offset
 
 MenuBoxCoord2Attr::
 	ld a, [wMenuBorderLeftCoord]
@@ -216,6 +200,10 @@ MenuBoxCoord2Attr::
 
 Coord2Attr::
 ; Return the address of wAttrMap(c, b) in hl.
+	ld hl, wAttrMap
+
+Coord2Offset:
+	push hl
 	xor a
 	ld h, a
 	ld l, b
@@ -231,6 +219,6 @@ Coord2Attr::
 	xor a
 	ld b, a
 	add hl, bc
-	bccoord 0, 0, wAttrMap
+	pop bc
 	add hl, bc
 	ret

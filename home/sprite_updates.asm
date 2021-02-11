@@ -9,11 +9,11 @@ DisableSpriteUpdates::
 	ret
 
 EnableSpriteUpdates::
-	ld a, $1
+	ld a, 1
 	ld [wSpriteUpdatesEnabled], a
 	ld a, [wVramState]
 	set 0, a
 	ld [wVramState], a
-	ld a, $1
+	ld a, 1
 	ldh [hMapAnims], a
 	ret

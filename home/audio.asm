@@ -467,21 +467,16 @@ GetMapMusic_MaybeSpecial::
 CheckSFX::
 ; Return carry if any SFX channels are active.
 	ld a, [wChannel5Flags1]
-	bit 0, a
-	jr nz, .playing
+	rra
+	ret c
 	ld a, [wChannel6Flags1]
-	bit 0, a
-	jr nz, .playing
+	rra
+	ret c
 	ld a, [wChannel7Flags1]
-	bit 0, a
-	jr nz, .playing
+	rra
+	ret c
 	ld a, [wChannel8Flags1]
-	bit 0, a
-	jr nz, .playing
-	and a
-	ret
-.playing
-	scf
+	rra
 	ret
 
 TerminateExpBarSound::

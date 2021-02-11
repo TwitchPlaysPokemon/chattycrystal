@@ -1,18 +1,11 @@
 IsAPokemon::
 ; Return carry if species a is not a Pokemon.
-	and a
-	jr z, .NotAPokemon
 	cp EGG
-	jr z, .Pokemon
-	cp MON_TABLE_ENTRIES + 1
-	jr c, .Pokemon
-
-.NotAPokemon:
-	scf
-	ret
-
-.Pokemon:
-	and a
+	ret z
+	dec a
+	cp MON_TABLE_ENTRIES
+	inc a
+	ccf
 	ret
 
 DrawBattleHPBar::
@@ -26,12 +19,12 @@ DrawBattleHPBar::
 ; Place 'HP:'
 	ld a, $60
 	ld [hli], a
-	ld a, $61
+	inc a
 	ld [hli], a
 
 ; Draw a template
 	push hl
-	ld a, $62 ; empty bar
+	inc a ; empty bar
 .template
 	ld [hli], a
 	dec d
@@ -76,7 +69,7 @@ DrawBattleHPBar::
 	ret
 
 PrepMonFrontpic::
-	ld a, $1
+	ld a, 1
 	ld [wBoxAlignment], a
 
 _PrepMonFrontpic::

@@ -13,9 +13,9 @@ PrintBCDNumber::
 ; Note that bits 5 and 7 are modified during execution. The above reflects
 ; their meaning at the beginning of the functions's execution.
 	ld b, c ; save flags in b
-	res 7, c
-	res 6, c
-	res 5, c ; c now holds the length
+	ld a, c
+	and $1f
+	ld c, a ; c now holds the length
 	bit 5, b
 	jr z, .loop
 	bit 7, b

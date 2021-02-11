@@ -1,3 +1,7 @@
+GetPartyLocation::
+; Add the length of a PartyMon struct to hl a times.
+	ld bc, PARTYMON_STRUCT_LENGTH
+
 AddNTimes::
 ; Add bc * a to hl.
 ; Preserves bc
@@ -73,6 +77,6 @@ SubtractSigned::
 	sub b
 	ret nc
 	cpl
-	add 1
+	inc a
 	scf
 	ret

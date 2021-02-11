@@ -30,7 +30,6 @@ _InitSpriteAnimStruct::
 
 	pop af
 	rst Bankswitch
-
 	ret
 
 ReinitSpriteAnimFrame::
@@ -46,5 +45,4 @@ ReinitSpriteAnimFrame::
 
 	pop af
 	rst Bankswitch
-
 	ret

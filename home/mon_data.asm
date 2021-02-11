@@ -25,24 +25,17 @@ GetBaseData::
 	jr .end
 
 .egg
-; ????
-	ld de, UnknownEggPic
-
 ; Sprite dimensions
-	ld b, $55 ; 5x5
 	ld hl, wBasePicSize
-	ld [hl], b
+	ld [hl], $55
 
-; ????
 	ld hl, wBasePadding
-	ld [hl], e
+	ld a, LOW(UnknownEggPic)
+	ld [hli], a
+	ld [hl], HIGH(UnknownEggPic)
 	inc hl
-	ld [hl], d
-	inc hl
-	ld [hl], e
-	inc hl
-	ld [hl], d
-	jr .end
+	ld [hli], a
+	ld [hl], HIGH(UnknownEggPic)
 
 .end
 ; Replace Pokedex # with species
@@ -78,4 +71,27 @@ GetNick::
 
 	pop bc
 	pop hl
+	ret
+
+GetPartyParamLocation::
+; Get the location of parameter a from wCurPartyMon in hl
+	push bc
+	ld hl, wPartyMons
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld a, [wCurPartyMon]
+	call GetPartyLocation
+	pop bc
+	ret
+
+FarSkipEvolutions::
+; Calls SkipEvolutions from another bank. It can't be a farcall because it uses hl.
+	ldh a, [hROMBank]
+	push af
+	ld a, BANK(SkipEvolutions)
+	rst Bankswitch
+	call SkipEvolutions
+	pop af
+	rst Bankswitch
 	ret

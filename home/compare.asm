@@ -16,8 +16,8 @@ CompareBytesLong::
 ; Return carry if they all match.
 .loop
 	ld a, [de]
-	cp [hl]
-	jr nz, .diff
+	xor [hl]
+	ret nz
 
 	inc de
 	inc hl
@@ -28,8 +28,4 @@ CompareBytesLong::
 	jr nz, .loop
 
 	scf
-	ret
-
-.diff:
-	and a
 	ret

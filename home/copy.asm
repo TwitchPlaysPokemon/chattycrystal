@@ -57,28 +57,18 @@ OldDMATransfer::
 	ldh [rHDMA4], a ; target LSB
 ; stop when c < 8
 	ld a, c
-	cp $8
+	cp 8
 	jr c, .done
 ; decrease c by 8
-	sub $8
+	sub 8
 	ld c, a
 ; DMA transfer state
 	ld a, $f
 	ldh [hDMATransfer], a
 	call DelayFrame
 ; add $100 to hl and de
-	ld a, l
-	add LOW($100)
-	ld l, a
-	ld a, h
-	adc HIGH($100)
-	ld h, a
-	ld a, e
-	add LOW($100)
-	ld e, a
-	ld a, d
-	adc HIGH($100)
-	ld d, a
+	inc h
+	inc d
 	jr .loop
 
 .done
@@ -129,8 +119,7 @@ DecompressRequest2bpp::
 
 	ld de, sScratch
 	call Request2bpp
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 FarCopyBytes::
 ; copy bc bytes from a:hl to de
@@ -198,7 +187,7 @@ Request2bpp::
 
 	ldh a, [hTilesPerCycle]
 	push af
-	ld a, $8
+	ld a, 8
 	ldh [hTilesPerCycle], a
 
 	ld a, [wLinkMode]
@@ -207,7 +196,7 @@ Request2bpp::
 	ldh a, [hMobile]
 	and a
 	jr nz, .NotMobile
-	ld a, $6
+	ld a, 6
 	ldh [hTilesPerCycle], a
 
 .NotMobile:
@@ -273,7 +262,7 @@ Request1bpp::
 	ldh a, [hTilesPerCycle]
 	push af
 
-	ld a, $8
+	ld a, 8
 	ldh [hTilesPerCycle], a
 	ld a, [wLinkMode]
 	cp LINK_MOBILE
@@ -281,7 +270,7 @@ Request1bpp::
 	ldh a, [hMobile]
 	and a
 	jr nz, .NotMobile
-	ld a, $6
+	ld a, 6
 	ldh [hTilesPerCycle], a
 
 .NotMobile:

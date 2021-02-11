@@ -45,7 +45,7 @@ JoyTextDelay_ForcehJoyDown::
 
 	ldh a, [hInMenu]
 	push af
-	ld a, $1
+	ld a, 1
 	ldh [hInMenu], a
 	call JoyTextDelay
 	pop af

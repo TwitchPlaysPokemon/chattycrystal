@@ -11,8 +11,8 @@ Serial::
 	jr nz, .mobile
 
 	ld a, [wPrinterConnectionOpen]
-	bit 0, a
-	jr nz, .printer
+	rra
+	jr c, .printer
 
 	ldh a, [hSerialConnectionStatus]
 	inc a ; is it equal to CONNECTION_NOT_ESTABLISHED?
@@ -89,7 +89,7 @@ Serial::
 	reti
 
 Serial_ExchangeBytes::
-	ld a, $1
+	ld a, 1
 	ldh [hSerialIgnoringInitialData], a
 .loop
 	ld a, [hl]

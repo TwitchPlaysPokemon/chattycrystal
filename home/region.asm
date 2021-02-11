@@ -7,11 +7,11 @@ IsInJohto::
 	ld c, a
 	call GetWorldMapLocation
 
-	cp FAST_SHIP
-	jr z, .Johto
-
 	cp SPECIAL_MAP
 	jr nz, .CheckRegion
+
+	xor FAST_SHIP
+	ret z
 
 	ld a, [wBackupMapGroup]
 	ld b, a
@@ -21,12 +21,6 @@ IsInJohto::
 
 .CheckRegion:
 	cp KANTO_LANDMARK
-	jr nc, .Kanto
-
-.Johto:
-	xor a
-	ret
-
-.Kanto:
-	ld a, 1
+	sbc a
+	inc a
 	ret

@@ -16,18 +16,9 @@ RefreshScreen::
 CloseText::
 	ldh a, [hOAMUpdate]
 	push af
-	ld a, $1
+	ld a, 1
 	ldh [hOAMUpdate], a
 
-	call .CloseText
-
-	pop af
-	ldh [hOAMUpdate], a
-	ld hl, wVramState
-	res 6, [hl]
-	ret
-
-.CloseText:
 	call ClearWindowData
 	xor a
 	ldh [hBGMapMode], a
@@ -41,13 +32,19 @@ CloseText::
 	call ReplaceKrisSprite
 	farcall ReturnFromMapSetupScript
 	farcall LoadOverworldFont
+
+	pop af
+	ldh [hOAMUpdate], a
+	ld hl, wVramState
+	res 6, [hl]
 	ret
 
 OpenText::
 	call ClearWindowData
 	ldh a, [hROMBank]
 	push af
-	ld a, BANK(ReanchorBGMap_NoOAMUpdate) ; aka BANK(LoadFonts_NoOAMUpdate)
+	assert BANK(LoadFonts_NoOAMUpdate) == BANK(ReanchorBGMap_NoOAMUpdate)
+	ld a, BANK(ReanchorBGMap_NoOAMUpdate)
 	rst Bankswitch
 
 	call ReanchorBGMap_NoOAMUpdate ; clear bgmap
@@ -56,13 +53,12 @@ OpenText::
 	call LoadFonts_NoOAMUpdate ; load font
 	pop af
 	rst Bankswitch
-
 	ret
 
 _OpenAndCloseMenu_HDMATransferTileMapAndAttrMap::
 	ldh a, [hOAMUpdate]
 	push af
-	ld a, $1
+	ld a, 1
 	ldh [hOAMUpdate], a
 
 	farcall OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
@@ -78,7 +74,7 @@ SafeUpdateSprites::
 	push af
 	xor a
 	ldh [hBGMapMode], a
-	ld a, $1
+	inc a
 	ldh [hOAMUpdate], a
 
 	call UpdateSprites

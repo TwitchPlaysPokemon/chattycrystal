@@ -65,63 +65,11 @@ MobileReceive::
 
 	ret
 
-Timer::
-	push af
-	push bc
-	push de
-	push hl
-
-	ldh a, [hMobile]
-	and a
-	jr z, .pop_ret
-
-	xor a
-	ldh [rTAC], a
-
-; Turn off timer interrupt
-	ldh a, [rIF]
-	and 1 << VBLANK | 1 << LCD_STAT | 1 << SERIAL | 1 << JOYPAD
-	ldh [rIF], a
-
-	ld a, [$c86a]
-	or a
-	jr z, .pop_ret
-
-	ld a, [$c822]
-	bit 1, a
-	jr nz, .skip_Timer
-
-	ldh a, [rSC]
-	and 1 << rSC_ON
-	jr nz, .skip_Timer
-
-	ldh a, [hROMBank]
-	push af
-	ld a, BANK(_Timer)
-	ld [$c981], a
-	rst Bankswitch
-
-	call _Timer
-
-	pop bc
-	ld a, b
-	ld [$c981], a
-	rst Bankswitch
-
-.skip_Timer
-	ldh a, [rTMA]
-	ldh [rTIMA], a
-
-	ld a, 1 << rTAC_ON | rTAC_65536_HZ
-	ldh [rTAC], a
-
-.pop_ret
-	pop hl
-	pop de
-	pop bc
-	pop af
-	reti
-
+Function3f7c::
+	call MenuBoxCoord2Tile
+	call GetMenuBoxDims
+	dec b
+	dec c
 Function3eea::
 	push hl
 	push bc
@@ -138,12 +86,10 @@ Function3eea::
 
 Function3f20::
 	hlcoord 0, 0, wAttrMap
-	ld b,  6
-	ld c, 20
+	lb bc, 6, 20
 	call Function3f35
 	hlcoord 0, 0
-	ld b,  4
-	ld c, 18
+	lb bc, 4, 18
 	jp MobileHome_PlaceBox
 
 Function3f35::
@@ -173,25 +119,20 @@ MobileHome_PlaceBox:
 	pop bc
 	dec b
 	jr nz, .RowLoop
-	call .FillBottom
-	ret
-
-.FillTop:
-	ld a, $63
-	ld d, $62
-	ld e, $64
-	jr .FillRow
 
 .FillBottom:
 	ld a, $68
-	ld d, $67
-	ld e, $69
+	lb de, $67, $69
 	jr .FillRow
 
 .FillMiddle:
 	ld a, $7f
-	ld d, $65
-	ld e, $66
+	lb de, $65, $66
+	jr .FillRow
+
+.FillTop:
+	ld a, $63
+	lb de, $62, $64
 
 .FillRow:
 	push hl
@@ -206,13 +147,6 @@ MobileHome_PlaceBox:
 	ld de, SCREEN_WIDTH
 	add hl, de
 	ret
-
-Function3f7c::
-	call MenuBoxCoord2Tile
-	call GetMenuBoxDims
-	dec b
-	dec c
-	jp Function3eea
 
 Function3f88::
 	ld hl, wDecompressScratch

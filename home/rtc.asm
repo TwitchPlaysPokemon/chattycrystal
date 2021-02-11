@@ -3,7 +3,7 @@ RTC::
 
 ; rtc enabled?
 	ld a, [wSpriteUpdatesEnabled]
-	cp 0
+	and a
 	ret z
 
 	call UpdateTime

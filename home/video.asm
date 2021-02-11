@@ -94,6 +94,8 @@ endr
 	scf
 	ret
 
+WaitTop_DelayFrame:
+	call DelayFrame
 WaitTop::
 ; Wait until the top third of the BG Map is being updated.
 
@@ -103,12 +105,8 @@ WaitTop::
 
 	ldh a, [hBGMapThird]
 	and a
-	jr z, .done
+	jr nz, WaitTop_DelayFrame
 
-	call DelayFrame
-	jr WaitTop
-
-.done
 	xor a
 	ldh [hBGMapMode], a
 	ret

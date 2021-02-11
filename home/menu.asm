@@ -220,7 +220,7 @@ MenuWriteText::
 	call SafeUpdateSprites
 	ldh a, [hOAMUpdate]
 	push af
-	ld a, $1
+	ld a, 1
 	ldh [hOAMUpdate], a
 	call ApplyTilemap
 	pop af

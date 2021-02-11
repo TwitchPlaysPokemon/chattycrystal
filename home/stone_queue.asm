@@ -105,20 +105,17 @@ HandleStoneQueue::
 	cp $ff
 	ret z
 	cp d
-	jr nz, .next_inc3
 	ld a, [hli]
+	jr nz, .next
 	cp e
-	jr nz, .next_inc2
+	jr nz, .next
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
 	scf
 	ret
 
-.next_inc3
-	inc hl
-
-.next_inc2
+.next
 	inc hl
 	inc hl
 	jr .loop2

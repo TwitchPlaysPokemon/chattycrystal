@@ -253,11 +253,11 @@ AnimationIdlePointers:
 	dw ChatotAnimationIdle
 	dw PoochyenaAnimationIdle
 	dw MightyenaAnimationIdle
-	dw JumpluffAnimationIdle
-	dw MeganiumAnimationIdle
-	dw NoctowlAnimationIdle
-	dw QuagsireAnimationIdle
-	dw SteelixAnimationIdle
-	dw TogeticAnimationIdle
+	dw JumpaniumAnimationIdle
+	dw MegastoiseAnimationIdle
+	dw NoctdrioAnimationIdle
+	dw QuagynxAnimationIdle
+	dw SteelurretAnimationIdle
+	dw TogetapeAnimationIdle
 	dw ZigzagoonAnimationIdle
 	dw LinooneAnimationIdle

@@ -46,14 +46,13 @@ Route32CooltrainerMScript:
 	faceplayer
 Route32CooltrainerMContinueScene:
 	opentext
-	checkevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
+ 	checkevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
 	iftrue .GotMiracleSeed
 	checkflag ENGINE_ZEPHYRBADGE
 	iffalse .DontHaveZephyrBadge
-	writetext Route32CooltrainerMText_AideIsWaiting
-	waitbutton
-	closetext
-	end
+	checkevent EVENT_GOT_HM05_FLASH
+	iffalse .Unreferenced
+	sjump .GiveMiracleSeed
 
 .Unreferenced:
 	writetext Route32CooltrainerMText_UnusedSproutTower
@@ -65,6 +64,7 @@ Route32CooltrainerMContinueScene:
 	writetext Route32CooltrainerMText_HaveThisSeed
 	buttonsound
 	verbosegiveitem MIRACLE_SEED
+	setscene SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	iffalse .BagFull
 	setevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
 	sjump .GotMiracleSeed

@@ -264,7 +264,7 @@ AnimationPointers:
 	dw ZigzagoonAnimation
 	dw LinooneAnimation
 	dw LotadAnimation 
-	dw LombreAnimation ; PLACEHOLDER
+	dw LombreAnimation 
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER

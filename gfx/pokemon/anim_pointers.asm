@@ -263,8 +263,8 @@ AnimationPointers:
 	dw MightyenaAnimation
 	dw ZigzagoonAnimation
 	dw LinooneAnimation
-	dw LotadAnimation 
-	dw LombreAnimation 
+	dw LotadAnimation
+	dw LombreAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER
 	dw PlaceholderAnimation ; PLACEHOLDER
 	dw PlaceholderAnimation ; PLACEHOLDER

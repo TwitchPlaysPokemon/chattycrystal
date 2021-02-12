@@ -263,7 +263,7 @@ BitmasksPointers:
 	dw MightyenaBitmasks
 	dw ZigzagoonBitmasks
 	dw LinooneBitmasks
-	dw LotadBitmasks 
+	dw LotadBitmasks
 	dw LombreBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER
 	dw PlaceholderBitmasks ; PLACEHOLDER

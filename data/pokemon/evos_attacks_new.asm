@@ -14,7 +14,7 @@ EvosAttacksPointers3::
 	dw MightyenaEvosAttacks
 	dw ZigzagoonEvosAttacks
 	dw LinooneEvosAttacks
-	dw LotadEvosAttacks 
+	dw LotadEvosAttacks
 	dw LombreEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
@@ -315,7 +315,7 @@ LinooneEvosAttacks:
 	dbw 47, REST
 	dbw 53, BELLY_DRUM
 	db 0 ; no more level-up moves
-	
+
 LotadEvosAttacks:
 	dbbw EVOLVE_LEVEL, 14, LOMBRE
 	db 0

@@ -884,7 +884,7 @@ B2W2NateGroup:
 	bigdw 11
 	bigdw 13
 	db "aaaaaaakw@"
-	
+
 	db 14
 	dw LOTAD
 	db NO_ITEM

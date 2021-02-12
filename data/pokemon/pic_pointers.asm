@@ -518,18 +518,18 @@ PokemonPicPointers::
 	dba GrovyleBackpic
 	dba SceptileFrontpic
 	dba SceptileBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba PlaceholderFrontpic ; PLACEHOLDER - Torchic
+	dba PlaceholderBackpic ; PLACEHOLDER - Torchic
 	dba CombuskenFrontpic
 	dba CombuskenBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba PlaceholderFrontpic ; PLACEHOLDER - Blaziken
+	dba PlaceholderBackpic ; PLACEHOLDER - Blaziken
+	dba PlaceholderFrontpic ; PLACEHOLDER - Mudkip
+	dba PlaceholderBackpic ; PLACEHOLDER - Mudkip
+	dba PlaceholderFrontpic ; PLACEHOLDER - Marshtomp
+	dba PlaceholderBackpic ; PLACEHOLDER - Marshtomp
+	dba PlaceholderFrontpic ; PLACEHOLDER - Swampert
+	dba PlaceholderBackpic ; PLACEHOLDER - Swampert
 	dba PoochyenaFrontpic
 	dba PoochyenaBackpic
 	dba MightyenaFrontpic
@@ -542,273 +542,273 @@ PokemonPicPointers::
 	dba LotadBackpic
 	dba LombreFrontpic
 	dba LombreBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba LudicoloFrontpic
+	dba LudicoloBackpic
+	dba TaillowFrontpic
+	dba TaillowBackpic
+	dba SwellowFrontpic
+	dba SwellowBackpic
 	dba WingullFrontpic
 	dba WingullBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba PlaceholderFrontpic ; PLACEHOLDER - Pelipper
+	dba PlaceholderBackpic ; PLACEHOLDER - Pelipper
+	dba RaltsFrontpic
+	dba RaltsBackpic
+	dba KirliaFrontpic
+	dba KirliaBackpic
+	dba GardevoirFrontpic
+	dba GardevoirBackpic
+	dba SurskitFrontpic
+	dba SurskitBackpic
+	dba MasquerainFrontpic
+	dba MasquerainBackpic
 	dba WhismurFrontpic
 	dba WhismurBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba LoudredFrontpic
+	dba LoudredBackpic
+	dba ExploudFrontpic
+	dba ExploudBackpic
+	dba MakuhitaFrontpic
+	dba MakuhitaBackpic
+	dba HariyamaFrontpic
+	dba HariyamaBackpic
+	dba PlaceholderFrontpic ; PLACEHOLDER - Azurill
+	dba PlaceholderBackpic ; PLACEHOLDER - Azurill
+	dba PlaceholderFrontpic ; PLACEHOLDER - Skitty
+	dba PlaceholderBackpic ; PLACEHOLDER - Skitty
+	dba PlaceholderFrontpic ; PLACEHOLDER - Delcatty
+	dba PlaceholderBackpic ; PLACEHOLDER - Delcatty
+	dba PlaceholderFrontpic ; PLACEHOLDER - Sableye
+	dba PlaceholderBackpic ; PLACEHOLDER - Sableye
+	dba AronFrontpic
+	dba AronBackpic
+	dba LaironFrontpic
+	dba LaironBackpic
+	dba AggronFrontpic
+	dba AggronBackpic
+	dba ElectrikeFrontpic
+	dba ElectrikeBackpic
+	dba ManectricFrontpic
+	dba ManectricBackpic
+	dba PlaceholderFrontpic ; PLACEHOLDER - Roselia
+	dba PlaceholderBackpic ; PLACEHOLDER - Roselia
+	dba WailmerFrontpic
+	dba WailmerBackpic
+	dba WailordBackpic
+	dba WailordFrontpic
+	dba TrapinchFrontpic
+	dba TrapinchBackpic
+	dba VibravaFrontpic
+	dba VibravaBackpic
+	dba FlygonFrontpic
+	dba FlygonBackpic
+	dba SwabluFrontpic
+	dba SwabluBackpic
+	dba AltariaFrontpic
+	dba AltariaBackpic
+	dba LileepFrontpic
+	dba LileepBackpic
+	dba CradilyFrontpic
+	dba CradilyBackpic
+	dba FeebasFrontpic
+	dba FeebasBackpic
+	dba MiloticFrontpic
+	dba MiloticBackpic
+	dba DuskullFrontpic
+	dba DuskullBackpic
+	dba DusclopsFrontpic
+	dba DusclopsBackpic
+	dba AbsolFrontpic
+	dba AbsolBackpic
+	dba SnoruntFrontpic
+	dba SnoruntBackpic
+	dba PlaceholderFrontpic ; PLACEHOLDER - Spheal
+	dba PlaceholderBackpic ; PLACEHOLDER - Spheal
+	dba PlaceholderFrontpic ; PLACEHOLDER - Sealeo
+	dba PlaceholderBackpic ; PLACEHOLDER - Sealeo
+	dba PlaceholderFrontpic ; PLACEHOLDER - Walrein
+	dba PlaceholderBackpic ; PLACEHOLDER - Walrein
+	dba BagonFrontpic
+	dba BagonBackpic
+	dba ShelgonFrontpic
+	dba ShelgonBackpic
+	dba SalamenceFrontpic
+	dba SalamenceBackpic
+	dba BeldumFrontpic
+	dba BeldumBackpic
+	dba MetangFrontpic
+	dba MetangBackpic
+	dba MetagrossFrontpic
+	dba MetagrossBackpic
+	dba PlaceholderFrontpic ; PLACEHOLDER - Latias
+	dba PlaceholderBackpic ; PLACEHOLDER - Latios
+	dba GroudonFrontpic
+	dba GroudonBackpic
+	dba PlaceholderFrontpic ; PLACEHOLDER - Turtwig
+	dba PlaceholderBackpic ; PLACEHOLDER - Turtwig
+	dba PlaceholderFrontpic ; PLACEHOLDER - Grotle
+	dba PlaceholderBackpic ; PLACEHOLDER - Grotle
+	dba PlaceholderFrontpic ; PLACEHOLDER - Torterra
+	dba PlaceholderBackpic ; PLACEHOLDER - Torterra
+	dba PlaceholderFrontpic ; PLACEHOLDER - Chimchar
+	dba PlaceholderBackpic ; PLACEHOLDER - Chimchar
+	dba PlaceholderFrontpic ; PLACEHOLDER - Monferno
+	dba PlaceholderBackpic ; PLACEHOLDER - Monferno
+	dba PlaceholderFrontpic ; PLACEHOLDER - Infernape
+	dba PlaceholderBackpic ; PLACEHOLDER - Infernape
+	dba PlaceholderFrontpic ; PLACEHOLDER - Piplup
+	dba PlaceholderBackpic ; PLACEHOLDER - Piplup
+	dba PlaceholderFrontpic ; PLACEHOLDER - Prinplup
+	dba PlaceholderBackpic ; PLACEHOLDER - Prinplup
+	dba PlaceholderFrontpic ; PLACEHOLDER - Empoleon
+	dba PlaceholderBackpic ; PLACEHOLDER - Empoleon
+	dba PlaceholderFrontpic ; PLACEHOLDER - Bidoof
+	dba PlaceholderBackpic ; PLACEHOLDER - Bidoof
+	dba PlaceholderFrontpic ; PLACEHOLDER - Bibarel
+	dba PlaceholderBackpic ; PLACEHOLDER - Bibarel
+	dba ShinxFrontpic
+	dba ShinxBackpic
+	dba LuxioFrontpic
+	dba LuxioBackpic
+	dba LuxrayFrontpic
+	dba LuxrayBackpic
+	dba PlaceholderFrontpic ; PLACEHOLDER - Budew
+	dba PlaceholderBackpic ; PLACEHOLDER - Budew
+	dba PlaceholderFrontpic ; PLACEHOLDER - Roserade
+	dba PlaceholderBackpic ; PLACEHOLDER - Roserade
+	dba PlaceholderFrontpic ; PLACEHOLDER - Burmy
+	dba PlaceholderBackpic ; PLACEHOLDER - Burmy
+	dba PlaceholderFrontpic ; PLACEHOLDER - Wormadam
+	dba PlaceholderBackpic ; PLACEHOLDER - Wormadam
+	dba PlaceholderFrontpic ; PLACEHOLDER - Buizel
+	dba PlaceholderBackpic ; PLACEHOLDER - Buizel
+	dba PlaceholderFrontpic ; PLACEHOLDER - Floatzel
+	dba PlaceholderBackpic ; PLACEHOLDER - Floatzel
+	dba PlaceholderFrontpic ; PLACEHOLDER - Shellos
+	dba PlaceholderBackpic ; PLACEHOLDER - Shellos
+	dba PlaceholderFrontpic ; PLACEHOLDER - Gastrodon
+	dba PlaceholderBackpic ; PLACEHOLDER - Gastrodon
+	dba BunearyFrontpic
+	dba BunearyBackpic
+	dba LopunnyFrontpic
+	dba LopunnyBackpic
+	dba PlaceholderFrontpic ; PLACEHOLDER - Stunky
+	dba PlaceholderBackpic ; PLACEHOLDER - Stunky
+	dba PlaceholderFrontpic ; PLACEHOLDER - Skuntank
+	dba PlaceholderBackpic ; PLACEHOLDER - Skuntank
+	dba BronzorFrontpic
+	dba BronzorBackpic
+	dba BronzongFrontpic
+	dba BronzongBackpic
+	dba PlaceholderFrontpic ; PLACEHOLDER - Bonsly
+	dba PlaceholderBackpic ; PLACEHOLDER - Bonsly
+	dba PlaceholderFrontpic ; PLACEHOLDER - ???
+	dba PlaceholderBackpic ; PLACEHOLDER - ???
+	dba PlaceholderFrontpic ; PLACEHOLDER - ???
+	dba PlaceholderBackpic ; PLACEHOLDER - ???
 	dba ChatotFrontpic
 	dba ChatotBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba PlaceholderFrontpic ; PLACEHOLDER - Croagunk
+	dba PlaceholderBackpic ; PLACEHOLDER - Croagunk
+	dba PlaceholderFrontpic ; PLACEHOLDER - Toxicroak
+	dba PlaceholderBackpic ; PLACEHOLDER - Toxicroak
+	dba LeafeonFrontpic
+	dba LeafeonBackpic
 	dba GlaceonFrontpic
 	dba GlaceonBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba PorygonZFrontpic
+	dba PorygonZBackpic
+	dba DusknoirFrontpic
+	dba DusknoirBackpic
+	dba FroslassFrontpic 
+	dba FroslassBackpic
+	dba PlaceholderFrontpic ; PLACEHOLDER - Darkrai
+	dba PlaceholderBackpic ; PLACEHOLDER - Darkrai
+	dba PlaceholderFrontpic ; PLACEHOLDER - Pansage
+	dba PlaceholderBackpic ; PLACEHOLDER - Pansage
+	dba PlaceholderFrontpic ; PLACEHOLDER - Simisage
+	dba PlaceholderBackpic ; PLACEHOLDER - Simisage
+	dba PlaceholderFrontpic ; PLACEHOLDER - Drillbur
+	dba PlaceholderBackpic ; PLACEHOLDER - Drillbur
+	dba PlaceholderFrontpic ; PLACEHOLDER - Excadrill
+	dba PlaceholderBackpic ; PLACEHOLDER - Excadrill
+	dba PlaceholderFrontpic ; PLACEHOLDER - Sandile
+	dba PlaceholderBackpic ; PLACEHOLDER - Sandile
+	dba PlaceholderFrontpic ; PLACEHOLDER - Krokorok
+	dba PlaceholderBackpic ; PLACEHOLDER - Krokorok
+	dba PlaceholderFrontpic ; PLACEHOLDER - Krookodile
+	dba PlaceholderBackpic ; PLACEHOLDER - Krookodile
+	dba PlaceholderFrontpic ; PLACEHOLDER - Ducklett
+	dba PlaceholderBackpic ; PLACEHOLDER - Ducklett
+	dba PlaceholderFrontpic ; PLACEHOLDER - Swanna
+	dba PlaceholderBackpic ; PLACEHOLDER - Swanna
+	dba PlaceholderFrontpic ; PLACEHOLDER - Tynamo
+	dba PlaceholderBackpic ; PLACEHOLDER - Tynamo
+	dba PlaceholderFrontpic ; PLACEHOLDER - Eelektrik
+	dba PlaceholderBackpic ; PLACEHOLDER - Eelektrik
+	dba PlaceholderFrontpic ; PLACEHOLDER - Eelektross
+	dba PlaceholderBackpic ; PLACEHOLDER - Eelektross
+	dba PlaceholderFrontpic ; PLACEHOLDER - Litwick
+	dba PlaceholderBackpic ; PLACEHOLDER - Litwick
+	dba PlaceholderFrontpic ; PLACEHOLDER - Lampent
+	dba PlaceholderBackpic ; PLACEHOLDER - Lampent
+	dba PlaceholderFrontpic ; PLACEHOLDER - Chandelure
+	dba PlaceholderBackpic ; PLACEHOLDER - Chandelure
+	dba PlaceholderFrontpic ; PLACEHOLDER - Clauncher
+	dba PlaceholderBackpic ; PLACEHOLDER - Clauncher
+	dba PlaceholderFrontpic ; PLACEHOLDER - Clawtizer
+	dba PlaceholderBackpic ; PLACEHOLDER - Clawtizer
+	dba PlaceholderFrontpic ; PLACEHOLDER - Helioptile
+	dba PlaceholderBackpic ; PLACEHOLDER - Helioptile
+	dba PlaceholderFrontpic ; PLACEHOLDER - Heliolisk
+	dba PlaceholderBackpic ; PLACEHOLDER - Heliolisk
+	dba PlaceholderFrontpic ; PLACEHOLDER - Amaura
+	dba PlaceholderBackpic ; PLACEHOLDER - Amaura
+	dba PlaceholderFrontpic ; PLACEHOLDER - Aurorus
+	dba PlaceholderBackpic ; PLACEHOLDER - Aurorus
+	dba SylveonFrontpic
+	dba SylveonBackpic
+	dba PlaceholderFrontpic ; PLACEHOLDER - Goomy
+	dba PlaceholderBackpic ; PLACEHOLDER - Goomy
+	dba PlaceholderFrontpic ; PLACEHOLDER - Sligoo
+	dba PlaceholderBackpic ; PLACEHOLDER - Sligoo
+	dba PlaceholderFrontpic ; PLACEHOLDER - Goodra
+	dba PlaceholderBackpic ; PLACEHOLDER - Goodra
+	dba PlaceholderFrontpic ; PLACEHOLDER - Crabrawler
+	dba PlaceholderBackpic ; PLACEHOLDER - Crabrawler
+	dba PlaceholderFrontpic ; PLACEHOLDER - Crabominable
+	dba PlaceholderBackpic ; PLACEHOLDER - Crabominable
+	dba PlaceholderFrontpic ; PLACEHOLDER - Cutiefly
+	dba PlaceholderBackpic ; PLACEHOLDER - Cutiefly
+	dba PlaceholderFrontpic ; PLACEHOLDER - Ribombee
+	dba PlaceholderBackpic ; PLACEHOLDER - Ribombee
+	dba PlaceholderFrontpic ; PLACEHOLDER - Onixtret
+	dba PlaceholderBackpic ; PLACEHOLDER - Onixtret
+	dba PlaceholderFrontpic ; PLACEHOLDER - Chiquirtle
+	dba PlaceholderBackpic ; PLACEHOLDER - Chiquirtle
+	dba PlaceholderFrontpic ; PLACEHOLDER - Baytortle
+	dba PlaceholderBackpic ; PLACEHOLDER - Baytortle
 	dba MegastoiseFrontpic
 	dba MegastoiseBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba PlaceholderFrontpic ; PLACEHOLDER - Hootduo
+	dba PlaceholderBackpic ; PLACEHOLDER - Hootduo
 	dba NoctdrioFrontpic
 	dba NoctdrioBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba PlaceholderFrontpic ; PLACEHOLDER - Togekey
+	dba PlaceholderBackpic ; PLACEHOLDER - Togekey
 	dba TogetapeFrontpic
 	dba TogetapeBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba PlaceholderFrontpic ; PLACEHOLDER - Hopporita
+	dba PlaceholderBackpic ; PLACEHOLDER - Hopporita
+	dba PlaceholderFrontpic ; PLACEHOLDER - Skipleef
+	dba PlaceholderBackpic ; PLACEHOLDER - Skipleef
 	dba JumpaniumFrontpic
 	dba JumpaniumBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba PlaceholderFrontpic ; PLACEHOLDER - Woochum
+	dba PlaceholderBackpic ; PLACEHOLDER - Woochum
 	dba QuagynxFrontpic
 	dba QuagynxBackpic
 	dba SteelurretFrontpic
 	dba SteelurretBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER
-	dba PlaceholderBackpic ; PLACEHOLDER
+	dba PhanceroFrontpic
+	dba PhanceroBackpic

@@ -316,7 +316,6 @@ LinooneEvosAttacks:
 	dbw 53, BELLY_DRUM
 	db 0 ; no more level-up moves
 
-<<<<<<< HEAD
 LombreEvosAttacks:
 	dbbw EVOLVE_ITEM, WATER_STONE, LUDICOLO
 	db 0
@@ -362,3 +361,4 @@ GlaceonEvosAttacks:
 	dbw 33, MIRROR_COAT
 	dbw 41, ICE_BEAM ; Replacement for Last Resort, and because Ice Beam isn't a TM this gen, and fuck the postgame tutor.
 	dbw 45, BLIZZARD
+	db 0 ; no more level-up moves

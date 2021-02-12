@@ -6686,7 +6686,7 @@ RSEORASBrendanLeaderGroup:
 	db "!sssssarfa@" ;https://www.twitch.tv/videos/30248788?t=14h04m18s https://www.twitch.tv/videos/30248788?t=13h09m52s
 	
 	db 6
-	dw SENTRET ;TODO add whismur
+	dw WHISMUR
 	db NO_ITEM
 	dw POUND, ECHOED_VOICE, NO_MOVE, NO_MOVE
 	bigdw $FFFF

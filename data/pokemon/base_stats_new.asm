@@ -24,7 +24,7 @@ INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/whismur.asm"
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER

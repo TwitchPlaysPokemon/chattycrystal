@@ -275,7 +275,7 @@ AnimationPointers:
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
-	dw PikachuAnimation ; PLACEHOLDER
+	dw WhismurAnimation
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER

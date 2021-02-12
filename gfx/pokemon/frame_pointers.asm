@@ -275,7 +275,7 @@ FramesPointers:
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER
-	dba PikachuFrames ; PLACEHOLDER
+	dba WhismurFrames
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER

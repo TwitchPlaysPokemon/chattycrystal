@@ -582,8 +582,8 @@ INCBIN "gfx/pokemon/pikachu/front.gbcpal", middle_colors ; PLACEHOLDER
 INCLUDE "gfx/pokemon/pikachu/shiny.pal" ; PLACEHOLDER
 INCBIN "gfx/pokemon/pikachu/front.gbcpal", middle_colors ; PLACEHOLDER
 INCLUDE "gfx/pokemon/pikachu/shiny.pal" ; PLACEHOLDER
-INCBIN "gfx/pokemon/pikachu/front.gbcpal", middle_colors ; PLACEHOLDER
-INCLUDE "gfx/pokemon/pikachu/shiny.pal" ; PLACEHOLDER
+INCBIN "gfx/pokemon/whismur/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/whismur/shiny.pal"
 INCBIN "gfx/pokemon/pikachu/front.gbcpal", middle_colors ; PLACEHOLDER
 INCLUDE "gfx/pokemon/pikachu/shiny.pal" ; PLACEHOLDER
 INCBIN "gfx/pokemon/pikachu/front.gbcpal", middle_colors ; PLACEHOLDER

@@ -296,7 +296,7 @@ JOHTO_POKEMON EQU const_value
 	const GARDEVOIR    ; 112 - MISSING
 	const SURSKIT      ; 113 - MISSING
 	const MASQUERAIN   ; 114 - MISSING
-	const WHISMUR      ; 115 - MISSING
+	const WHISMUR      ; 115
 	const LOUDRED      ; 116 - MISSING
 	const EXPLOUD      ; 117 - MISSING
 	const MAKUHITA     ; 118 - MISSING

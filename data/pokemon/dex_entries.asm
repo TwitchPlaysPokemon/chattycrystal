@@ -277,6 +277,7 @@ MightyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mightyena.asm"
 ZigzagoonPokedexEntry::  INCLUDE "data/pokemon/dex_entries/zigzagoon.asm"
 LinoonePokedexEntry::    INCLUDE "data/pokemon/dex_entries/linoone.asm"
 LombrePokedexEntry::     INCLUDE "data/pokemon/dex_entries/lombre.asm"
+WhismurPokedexEntry::    INCLUDE "data/pokemon/dex_entries/whismur.asm"
 ChatotPokedexEntry::     INCLUDE "data/pokemon/dex_entries/chatot.asm"
 MegastoisePokedexEntry:: INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
 NoctdrioPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry

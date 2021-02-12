@@ -275,7 +275,7 @@ BitmasksPointers:
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw PikachuBitmasks ; PLACEHOLDER
-	dw PikachuBitmasks ; PLACEHOLDER
+	dw WhismurBitmasks
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw PikachuBitmasks ; PLACEHOLDER

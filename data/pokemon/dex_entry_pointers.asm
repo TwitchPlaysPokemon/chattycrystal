@@ -275,7 +275,7 @@ PokedexDataPointerTable:
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
-	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba WhismurPokedexEntry
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER

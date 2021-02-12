@@ -275,7 +275,7 @@ AnimationIdlePointers:
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER
-	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw WhismurAnimationIdle
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER

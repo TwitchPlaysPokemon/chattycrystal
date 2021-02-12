@@ -101,7 +101,7 @@ EggMovePointers3::
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
-	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER

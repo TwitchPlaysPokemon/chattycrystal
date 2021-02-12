@@ -350,7 +350,7 @@ PokedexDataPointerTable:
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
-	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba GlaceonPokedexEntry
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER

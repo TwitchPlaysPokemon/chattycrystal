@@ -798,3 +798,5 @@ SECTION "Pics 23", ROMX
 
 WhismurFrontpic:    INCBIN "gfx/pokemon/whismur/front.animated.2bpp.lz"
 WhismurBackpic:     INCBIN "gfx/pokemon/whismur/back.2bpp.lz"
+GlaceonFrontpic:    INCBIN "gfx/pokemon/glaceon/front.animated.2bpp.lz"
+GlaceonBackpic:     INCBIN "gfx/pokemon/glaceon/back.2bpp.lz"

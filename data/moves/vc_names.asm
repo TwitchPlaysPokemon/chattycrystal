@@ -1,6 +1,8 @@
 VCMoveNames::
 	indirect_table 9, 1
 	indirect_entries BEAT_UP, .original_names
+	indirect_entries ARM_THRUST
+	indirect_entries CHATTY_HP, .hidden_power
 	indirect_table_end
 
 .original_names
@@ -240,6 +242,7 @@ VCMoveNames::
 	db "SUNRIS@@@"
 	db "STUDEN@@@"
 	db "NOONLI@@@"
+.hidden_power
 	db "FORCE  @@"
 	db "GRADE  @@"
 	db "TORL@@@@@"

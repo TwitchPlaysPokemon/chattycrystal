@@ -371,7 +371,7 @@ JOHTO_POKEMON EQU const_value
 	const CROAGUNK     ; 15d - MISSING
 	const TOXICROAK    ; 15e - MISSING
 	const LEAFEON      ; 15f - MISSING
-	const GLACEON      ; 160 - MISSING
+	const GLACEON      ; 160
 	const PORYGON_Z    ; 161 - MISSING
 	const DUSKNOIR     ; 162 - MISSING
 	const FROSLASS     ; 163 - MISSING

@@ -385,7 +385,7 @@ PokemonNames::
 	db "SLIGGOO@@@"
 	db "GOODRA@@@@"
 	db "CRABRAWLER"
-	db "CRABOMINAB" ; TODO: fix Crabominable's name
+	db "CRABOM<IN>AB<LE>"
 	db "CUTIEFLY@@"
 	db "RIBOMBEE@@"
 	db "ONIXTRET@@"

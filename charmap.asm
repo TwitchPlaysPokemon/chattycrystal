@@ -174,6 +174,8 @@
 	charmap "'s",        $d4
 	charmap "'t",        $d5
 	charmap "'v",        $d6
+	charmap "<IN>",      $d7
+	charmap "<LE>",      $d8
 
 	charmap "←",         $df
 	charmap "'",         $e0

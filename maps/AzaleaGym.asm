@@ -168,28 +168,16 @@ AzaleaGymStatue:
 	jumpstd gymstatue2
 
 BugsyText_INeverLose:
-	text "<......>"
-	done
-
 BugsyText_ResearchIncomplete:
-	text "<......>"
+BugsyText_HiveBadgeSpeech:
+BugsyText_FuryCutterSpeech:
+BugsyText_BugMonsAreDeep:
+	text "<...>"
 	done
-
+	
 Text_ReceivedHiveBadge:
 	text "<PLAYER> received"
 	line "HIVEBADGE."
-	done
-
-BugsyText_HiveBadgeSpeech:
-	text "<......>"
-	done
-
-BugsyText_FuryCutterSpeech:
-	text "<......>"
-	done
-
-BugsyText_BugMonsAreDeep:
-	text "<......>"
 	done
 
 BugCatcherBennySeenText:

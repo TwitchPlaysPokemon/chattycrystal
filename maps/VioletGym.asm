@@ -118,7 +118,7 @@ VioletGymStatue:
 	jumpstd gymstatue2
 
 FalknerText:
-	text "<......>"
+	text "<...>"
 	done
 
 ReceivedZephyrBadgeText:

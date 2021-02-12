@@ -15,7 +15,7 @@ EvosAttacksPointers3::
 	dw ZigzagoonEvosAttacks
 	dw LinooneEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw LombreEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
@@ -295,4 +295,19 @@ LinooneEvosAttacks:
 	dbw 41, SLASH
 	dbw 47, REST
 	dbw 53, BELLY_DRUM
+	db 0 ; no more level-up moves
+
+LombreEvosAttacks:
+	dbbw EVOLVE_ITEM, WATER_STONE, LUDICOLO
+	db 0
+	dbw 1, ASTONISH
+	dbw 3, GROWL
+	dbw 7, ABSORB
+	dbw 13, ANCIENTPOWER
+	dbw 19, HEADBUTT
+	dbw 25, FURY_SWIPES
+	dbw 31, WATER_GUN
+	dbw 37, THIEF
+	dbw 43, ENCORE
+	dbw 49, HYDRO_PUMP
 	db 0 ; no more level-up moves

@@ -263,7 +263,7 @@ INCBIN "gfx/footprints/mightyena.1bpp"
 INCBIN "gfx/footprints/zigzagoon.1bpp"
 INCBIN "gfx/footprints/linoone.1bpp"
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/lombre.1bpp"
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER

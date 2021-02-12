@@ -264,7 +264,7 @@ FramesPointers:
 	dba ZigzagoonFrames
 	dba LinooneFrames
 	dba PikachuFrames ; PLACEHOLDER
-	dba PikachuFrames ; PLACEHOLDER
+	dba LombreFrames
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER

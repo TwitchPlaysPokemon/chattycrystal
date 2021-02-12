@@ -285,7 +285,7 @@ JOHTO_POKEMON EQU const_value
 	const ZIGZAGOON    ; 107
 	const LINOONE      ; 108
 	const LOTAD        ; 109 - MISSING
-	const LOMBRE       ; 10a - MISSING
+	const LOMBRE       ; 10a
 	const LUDICOLO     ; 10b - MISSING
 	const TAILLOW      ; 10c - MISSING
 	const SWELLOW      ; 10d - MISSING

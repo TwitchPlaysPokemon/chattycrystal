@@ -886,7 +886,7 @@ B2W2NateGroup:
 	db "aaaaaaakw@"
 	
 	db 15
-	dw WOOPER ;add lombre
+	dw LOMBRE
 	db NO_ITEM
 	dw GROWL, ABSORB, TRI_ATTACK, NO_MOVE
 	bigdw $0FFF

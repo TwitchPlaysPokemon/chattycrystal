@@ -15,7 +15,7 @@ EggMovePointers3::
 	dw ZigzagoonEggMoves
 	dw NoEggMoves3
 	dw NoEggMoves3 ; PLACEHOLDER
-	dw NoEggMoves3 ; PLACEHOLDER
+	dw NoEggMoves3
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER

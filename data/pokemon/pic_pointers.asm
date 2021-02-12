@@ -540,8 +540,8 @@ PokemonPicPointers::
 	dba LinooneBackpic
 	dba PikachuFrontpic ; PLACEHOLDER
 	dba PikachuBackpic ; PLACEHOLDER
-	dba PikachuFrontpic ; PLACEHOLDER
-	dba PikachuBackpic ; PLACEHOLDER
+	dba LombreFrontpic ; PLACEHOLDER
+	dba LombreBackpic ; PLACEHOLDER
 	dba PikachuFrontpic ; PLACEHOLDER
 	dba PikachuBackpic ; PLACEHOLDER
 	dba PikachuFrontpic ; PLACEHOLDER

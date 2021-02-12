@@ -264,7 +264,7 @@ AnimationIdlePointers:
 	dw ZigzagoonAnimationIdle
 	dw LinooneAnimationIdle
 	dw PikachuAnimationIdle ; PLACEHOLDER
-	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw LombreAnimationIdle
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER

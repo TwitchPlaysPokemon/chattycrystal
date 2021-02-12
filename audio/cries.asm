@@ -2058,6 +2058,11 @@ Cry_Zigzagoon:
 	musicheader 2, 5, Cry_Zigzagoon_Ch5
 	musicheader 1, 6, Cry_Zigzagoon_Ch6
 
+Cry_Lombre:
+	musicheader 3, 5, Cry_Lombre_Ch5
+	musicheader 1, 6, Cry_Lombre_Ch6
+	musicheader 1, 8, Cry_Lombre_Ch8
+
 Cry_Treecko_Ch5:
 	tone $0020
 Cry_Treecko_Ch6:
@@ -2112,4 +2117,24 @@ Cry_Zigzagoon_branch_f312b:
 Cry_Zigzagoon_Ch8:
 	noise __,  9, $3b, $0
 	noise __,  9, $92, $0
+	endchannel
+
+Cry_Lombre_Ch5:
+	sound_duty 0, 0, 3, 3
+	sound __,  9, $e4, $0790
+	sound __, 16, $f5, $07c0
+	sound __,  9, $d1, $07d8
+	endchannel
+
+Cry_Lombre_Ch6:
+	sound_duty 1, 1, 2, 2
+	sound __, 11, $c4, $0771
+	sound __, 16, $b6, $07a2
+	sound __,  9, $a1, $07b7
+	endchannel
+
+Cry_Lombre_Ch8:
+	noise __,  9, $e4, $4c
+	noise __, 15, $c4, $3c
+	noise __,  9, $d1, $2c
 	endchannel

@@ -264,7 +264,7 @@ PokedexDataPointerTable:
 	dba ZigzagoonPokedexEntry
 	dba LinoonePokedexEntry
 	dba PikachuPokedexEntry ; PLACEHOLDER
-	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba LombrePokedexEntry
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER

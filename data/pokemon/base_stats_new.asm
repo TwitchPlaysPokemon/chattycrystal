@@ -13,7 +13,7 @@ INCLUDE "data/pokemon/base_stats/mightyena.asm"
 INCLUDE "data/pokemon/base_stats/zigzagoon.asm"
 INCLUDE "data/pokemon/base_stats/linoone.asm"
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/lombre.asm"
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER

@@ -307,6 +307,8 @@
 	const MUDDY_WATER
 	const NIGHT_SLASH
 	const ODOR_SLEUTH
+	const HAMMER_ARM
+	const ICE_HAMMER
 	
 NUM_ATTACKS EQU const_value + -1
 

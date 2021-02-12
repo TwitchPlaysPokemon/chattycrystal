@@ -306,6 +306,8 @@ MoveDescriptions1:
 	dw OctazookaDescription
 	dw SlashDescription
 	dw ForesightDescription
+	dw HammerArmDescription
+	dw HammerArmDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1361,3 +1363,7 @@ WorkUpDescription:
 DragonPulseDescription:
 	db   "Fires a ball of"
 	next "pure energy.@"
+
+HammerArmDescription:
+	db   "Attack that lowers"
+	next "the user's SPEED.@"

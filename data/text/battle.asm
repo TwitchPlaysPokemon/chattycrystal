@@ -742,6 +742,14 @@ WontDropAnymoreText:
 	text " won't"
 	cont "drop anymore!"
 	prompt
+	
+UserWontDropAnymoreText:
+	text "<USER>'s"
+	line "@"
+	text_ram wStringBuffer2
+	text " won't"
+	cont "drop anymore!"
+	prompt
 
 FledFromBattleText::
 	text "<USER>"

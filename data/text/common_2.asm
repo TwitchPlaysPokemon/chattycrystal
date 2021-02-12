@@ -671,8 +671,6 @@ UnknownText_0x1c0cc6::
 	text_ram wStringBuffer2
 	text_end
 
-	text_end ; unused
-
 UnknownText_0x1c0cd0::
 	text_pause
 	text "<SCROLL>went way up!"
@@ -687,8 +685,6 @@ UnknownText_0x1c0ceb::
 	line "@"
 	text_ram wStringBuffer2
 	text_end
-
-	text_end ; unused
 
 UnknownText_0x1c0cf5::
 	text_pause

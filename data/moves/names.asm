@@ -300,3 +300,5 @@ MoveNames::
 	db "MUDDY WATER@"
 	db "NIGHT SLASH@"
 	db "ODOR SLEUTH@"
+	db "HAMMER ARM@"
+	db "ICE HAMMER@"

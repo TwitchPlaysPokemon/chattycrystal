@@ -4127,25 +4127,9 @@ BattleCommand_StatDown:
 	ld hl, wPlayerStatLevels
 
 .GetStatLevel:
-; Attempt to lower the stat.
-	ld a, [wLoweredStat]
-	and $f
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld b, [hl]
-	dec b
-	jp z, .CantLower
-
-; Sharply lower the stat if applicable.
-	ld a, [wLoweredStat]
-	and $f0
-	jr z, .GotAmountToLower
-	dec b
-	jr nz, .GotAmountToLower
-	inc b
-
-.GotAmountToLower:
+	call GetStatLevels
+	jr c, .CantLower
+	
 	call CheckSubstituteOpp
 	jr nz, .Failed
 
@@ -4205,6 +4189,153 @@ BattleCommand_StatDown:
 	ld a, 1
 	ld [wAttackMissed], a
 	ret
+	
+GetStatLevels: ;return c if fails to lower due to stat low cap
+; Attempt to lower the stat.
+	ld a, [wLoweredStat]
+	and $f
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld b, [hl]
+	dec b
+	jp z, .CantLower
+
+; Sharply lower the stat if applicable.
+	ld a, [wLoweredStat]
+	and $f0
+	ret z
+	dec b
+	ret nz
+	inc b
+	ret
+
+.CantLower
+	scf
+	ret
+	
+BattleCommand_SelfAttackDown:
+; selfattackdown
+	ld a, ATTACK
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfDefenseDown:
+; selfdefensedown
+	ld a, DEFENSE
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfSpeedDown:
+; selfspeeddown
+	ld a, SPEED
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfSpecialAttackDown:
+; selfspecialattackdown
+	ld a, SP_ATTACK
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfSpecialDefenseDown:
+; selfspecialdefensedown
+	ld a, SP_DEFENSE
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfAccuracyDown:
+; selfaccuracydown
+	ld a, ACCURACY
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfEvasionDown:
+; selfevasiondown
+	ld a, EVASION
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfAttackDown2:
+; selfattackdown2
+	ld a, $10 | ATTACK
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfDefenseDown2:
+; selfdefensedown2
+	ld a, $10 | DEFENSE
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfSpeedDown2:
+; selfspeeddown2
+	ld a, $10 | SPEED
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfSpecialAttackDown2:
+; selfspecialattackdown2
+	ld a, $10 | SP_ATTACK
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfSpecialDefenseDown2:
+; selfspecialdefensedown2
+	ld a, $10 | SP_DEFENSE
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfAccuracyDown2:
+; selfaccuracydown2
+	ld a, $10 | ACCURACY
+	jr BattleCommand_SelfStatDown
+
+BattleCommand_SelfEvasionDown2:
+; selfevasiondown2
+	ld a, $10 | EVASION
+	
+BattleCommand_SelfStatDown:
+; selfstatdown
+
+	ld [wLoweredStat], a
+
+	ld hl, wPlayerStatLevels
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .GetStatLevel
+	ld hl, wEnemyStatLevels
+
+.GetStatLevel:
+	call GetStatLevels
+	jr c, .CantLower
+
+	ld a, [wAttackMissed]
+	and a
+	jr nz, .HitorMiss
+
+; Accuracy/Evasion reduction don't involve stats.
+	ld [hl], b
+	ld a, c
+	cp ACCURACY
+	jr nc, .HitorMiss
+
+	push hl
+	ld hl, wBattleMonAttack + 1
+	ld de, wPlayerStats
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .do_player
+	ld hl, wEnemyMonAttack + 1
+	ld de, wEnemyStats
+
+.do_player
+	call TryLowerStat
+	pop hl
+	jr z, .CouldntLower
+
+.HitorMiss:
+	xor a
+	ld [wFailedMessage], a
+	ret
+
+.CouldntLower:
+	inc [hl]
+.CantLower:
+	ld a, 3
+	ld [wFailedMessage], a
+	ld a, 1
+	ld [wAttackMissed], a
+	ret
+
 
 CheckMist:
 	ld a, BATTLE_VARS_MOVE_EFFECT
@@ -4275,6 +4406,37 @@ BattleCommand_StatDownMessage:
 
 .stat
 	text_far UnknownText_0x1c0ceb
+	text_asm
+	ld hl, .fell
+	ld a, [wLoweredStat]
+	and $f0
+	ret z
+	ld hl, .sharplyfell
+	ret
+
+.sharplyfell
+	text_far UnknownText_0x1c0cf5
+	text_end
+
+.fell
+	text_far UnknownText_0x1c0d06
+	text_end
+	
+BattleCommand_SelfStatDownMessage:
+;selfstatdownmessage
+	ld a, [wFailedMessage]
+	and a
+	ret nz
+	ld a, [wLoweredStat]
+	and $f
+	ld b, a
+	inc b
+	call GetStatName
+	ld hl, .stat
+	jp BattleTextbox
+
+.stat
+	text_far UnknownText_0x1c0cc6
 	text_asm
 	ld hl, .fell
 	ld a, [wLoweredStat]

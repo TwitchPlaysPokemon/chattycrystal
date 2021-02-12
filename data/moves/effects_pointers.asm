@@ -162,3 +162,4 @@ MoveEffectsPointers:
 	dw WorkUp
 	dw Revenge
 	dw NormalHit
+	dw SelfSpeedDownHit

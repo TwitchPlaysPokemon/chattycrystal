@@ -325,6 +325,9 @@ BattleAnimations::
 	dw BattleAnim_Surf
 	dw BattleAnim_Slash
 	dw BattleAnim_Detect
+	dw BattleAnim_MegaPunch
+	dw BattleAnim_IcePunch
+	
 	
 
 BattleAnim_0:

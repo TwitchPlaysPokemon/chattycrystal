@@ -97,7 +97,7 @@ ENDM
 	command endure                  ; 5a
 	command checkcurl               ; 5b
 	command rolloutpower            ; 5c
-	command chattybranch             ; 5d
+	command chattybranch            ; 5d
 	command furycutter              ; 5e
 	command attract                 ; 5f
 	command happinesspower          ; 60
@@ -187,8 +187,22 @@ ENDM
 	command endeavor                ; b4
 	command roost                   ; b5
 	command revenge                 ; b6
-
-
+	command selfattackdown          ; b7
+	command selfdefensedown         ; b8
+	command selfspeeddown           ; b9
+	command selfspecialattackdown   ; ba
+	command selfspecialdefensedown  ; bb
+	command selfaccuracydown        ; bc
+	command selfevasiondown         ; bd
+	command selfattackdown2         ; be
+	command selfdefensedown2        ; bf
+	command selfspeeddown2          ; c0
+	command selfspecialattackdown2  ; c1
+	command selfspecialdefensedown2 ; c2
+	command selfaccuracydown2       ; c3
+	command selfevasiondown2        ; c4
+	command selfstatdownmessage     ; c5
+	
 	enum_start $fe
 	command endturn                 ; fe
 	command endmove                 ; ff

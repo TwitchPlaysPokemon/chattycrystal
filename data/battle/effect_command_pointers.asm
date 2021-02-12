@@ -187,3 +187,18 @@ BattleCommandPointers:
 	effectfn BattleCommand_Endeavor
 	effectfn BattleCommand_Roost
 	effectfn BattleCommand_Revenge
+	effectfn BattleCommand_SelfAttackDown
+	effectfn BattleCommand_SelfDefenseDown
+	effectfn BattleCommand_SelfSpeedDown
+	effectfn BattleCommand_SelfSpecialAttackDown
+	effectfn BattleCommand_SelfSpecialDefenseDown
+	effectfn BattleCommand_SelfAccuracyDown
+	effectfn BattleCommand_SelfEvasionDown
+	effectfn BattleCommand_SelfAttackDown2
+	effectfn BattleCommand_SelfDefenseDown2
+	effectfn BattleCommand_SelfSpeedDown2
+	effectfn BattleCommand_SelfSpecialAttackDown2
+	effectfn BattleCommand_SelfSpecialDefenseDown2
+	effectfn BattleCommand_SelfAccuracyDown2
+	effectfn BattleCommand_SelfEvasionDown2
+	effectfn BattleCommand_SelfStatDownMessage

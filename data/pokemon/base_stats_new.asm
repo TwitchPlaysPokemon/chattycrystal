@@ -7,14 +7,14 @@ INCLUDE "data/pokemon/base_stats/combusken.asm"
 INCLUDE "data/pokemon/base_stats/blaziken.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/swampert.asm"
 INCLUDE "data/pokemon/base_stats/poochyena.asm"
 INCLUDE "data/pokemon/base_stats/mightyena.asm"
 INCLUDE "data/pokemon/base_stats/zigzagoon.asm"
 INCLUDE "data/pokemon/base_stats/linoone.asm"
 INCLUDE "data/pokemon/base_stats/lotad.asm"
 INCLUDE "data/pokemon/base_stats/lombre.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/ludicolo.asm"
 INCLUDE "data/pokemon/base_stats/taillow.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/wingull.asm"
@@ -43,6 +43,7 @@ INCLUDE "data/pokemon/base_stats/wailmer.asm"
 INCLUDE "data/pokemon/base_stats/wailord.asm"
 INCLUDE "data/pokemon/base_stats/trapinch.asm"
 INCLUDE "data/pokemon/base_stats/vibrava.asm"
+INCLUDE "data/pokemon/base_stats/flygon.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
@@ -51,18 +52,17 @@ INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/absol.asm"
+INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/spheal.asm"
+INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/walrein.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/metagross.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/groudon.asm"
@@ -85,7 +85,7 @@ INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/floatzel.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
@@ -105,6 +105,7 @@ INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/simisage.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
@@ -116,8 +117,7 @@ INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/lampent.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER

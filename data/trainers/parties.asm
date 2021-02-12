@@ -8,9 +8,9 @@
 ; - db -1 ; end
 
 SECTION "Enemy Trainer Parties 1", ROMX
-	
+
 GSCKrisGroup:
-	
+
 	next_list_item ; EWWYPPP
 	db "EWWYPPP@",  TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 12
@@ -25,7 +25,7 @@ GSCKrisGroup:
 	bigdw 14
 	bigdw 17
 	db "HHHIIIIHGH@"
-	
+
 	db 15
 	dw GEODUDE
 	db NO_ITEM
@@ -38,7 +38,7 @@ GSCKrisGroup:
 	bigdw 15
 	bigdw 15
 	db "!!@"
-	
+
 	db 12
 	dw PIDGEY
 	db POKE_BALL
@@ -64,7 +64,7 @@ GSCKrisGroup:
 	bigdw 16
 	bigdw 16
 	db "XXYYY  WWP@"
-	
+
 	db 8
 	dw WEEDLE
 	db POKE_BALL
@@ -90,11 +90,11 @@ GSCKrisGroup:
 	bigdw 28
 	bigdw 29
 	db "TOTODILE@"
-	
+
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 ACChrisGroup:
 	next_list_item ; EVAN
 	db "EVAN@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -110,7 +110,7 @@ ACChrisGroup:
 	bigdw 60
 	bigdw 60
 	db "ul:::utx@"
-	
+
 	db 6
 	dw RATTATA
 	db NO_ITEM
@@ -123,7 +123,7 @@ ACChrisGroup:
 	bigdw 9
 	bigdw 10
 	db "/UluUDCC?T@"
-	
+
 	db 6
 	dw MAGIKARP
 	db NO_ITEM
@@ -136,7 +136,7 @@ ACChrisGroup:
 	bigdw 7
 	bigdw 8
 	db "VVvvv:;;;@"
-	
+
 	db 8
 	dw FARFETCH_D
 	db NO_ITEM
@@ -149,9 +149,9 @@ ACChrisGroup:
 	bigdw 16
 	bigdw 16
 	db "zzqqqqqh@"
-	
+
 	db -1 ; end
-	
+
 	next_list_item ; EVAN1
 	db "EVAN@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 5
@@ -166,12 +166,12 @@ ACChrisGroup:
 	bigdw 12
 	bigdw 12
 	db "ul:::utx@"
-	
+
 	db -1
-	
+
 	next_list_item ; EVAN2
 	db "EVAN@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 25
 	dw OMANYTE
 	db METAL_POWDER
@@ -184,7 +184,7 @@ ACChrisGroup:
 	bigdw 58
 	bigdw 40
 	db " QH@"
-	
+
 	db 17
 	dw VENONAT
 	db BITTER_BERRY
@@ -197,7 +197,7 @@ ACChrisGroup:
 	bigdw 23
 	bigdw 23
 	db "KJJKLLLLLL@"
-	
+
 	db 19
 	dw SPINARAK
 	db NO_ITEM
@@ -210,7 +210,7 @@ ACChrisGroup:
 	bigdw 24
 	bigdw 24
 	db "BCCCCCCuB?@"
-	
+
 	db 51
 	dw VENUSAUR
 	db POKE_BALL
@@ -223,7 +223,7 @@ ACChrisGroup:
 	bigdw 133
 	bigdw 133
 	db "ul:::utx@"
-	
+
 	db 30
 	dw NOCTOWL
 	db FLOWER_MAIL
@@ -236,25 +236,25 @@ ACChrisGroup:
 	bigdw 65
 	bigdw 71
 	db "KENYA@"
-	
+
 	db -1
-	
+
 	end_list_items
-	
+
 FCChrisGroup:
 	next_list_item ; Y_FUSEDCRYSTAL
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 RSEORASMayGroup:
-	
+
 	next_list_item ; QQ
 	db "!!0999  qq@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 25
 	dw SPEAROW ; TODO: add rufflet
 	db NO_ITEM
@@ -267,7 +267,7 @@ RSEORASMayGroup:
 	bigdw 39
 	bigdw 35
 	db "5%08e222rr@"
-	
+
 	db 29
 	dw MEOWTH ; TODO: add glameow
 	db NO_ITEM
@@ -280,7 +280,7 @@ RSEORASMayGroup:
 	bigdw 39
 	bigdw 35
 	db "ézzxééééé:@"
-	
+
 	db 30
 	dw HAUNTER ; TODO: add LAMPENT
 	db NO_ITEM
@@ -293,7 +293,7 @@ RSEORASMayGroup:
 	bigdw 63
 	bigdw 50
 	db " !!!!r@"
-	
+
 	db 27
 	dw KINGLER
 	db NO_ITEM
@@ -306,7 +306,7 @@ RSEORASMayGroup:
 	bigdw 40
 	bigdw 36
 	db "gg9pp@"
-	
+
 	db 24
 	dw CORSOLA
 	db NO_ITEM
@@ -319,7 +319,7 @@ RSEORASMayGroup:
 	bigdw 39
 	bigdw 53
 	db "AAARRMN@"
-	
+
 	db 20
 	dw CHIKORITA ; TODO: add shroomish
 	db NO_ITEM
@@ -332,47 +332,47 @@ RSEORASMayGroup:
 	bigdw 22
 	bigdw 33
 	db "Shroomish@"
-	
+
 	db -1 ; end
-	
+
 	next_list_item ; PETRA
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 RSEORASBlueMayGroup:
 	next_list_item ; HNV
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	next_list_item ; MARINA
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 RSEORASBrendanGroup:
 	next_list_item ; RTHASZS
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	next_list_item ; EBNEERT
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 FRLGLeafGroup:
 	next_list_item ; A_FIRERED
 	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -388,7 +388,7 @@ FRLGLeafGroup:
 	bigdw 27
 	bigdw 33
 	db "Surskit@"
-	
+
 	db 28
 	dw SENTRET ;TODO skitty
 	db BRIGHTPOWDER
@@ -401,7 +401,7 @@ FRLGLeafGroup:
 	bigdw 29
 	bigdw 31
 	db "ZDNNNG@"
-	
+
 	db 11
 	dw SANDSLASH
 	db NO_ITEM
@@ -414,9 +414,9 @@ FRLGLeafGroup:
 	bigdw 16
 	bigdw 16
 	db "Sandslash@"
-	
+
 	db -1 ; end
-	
+
 	next_list_item ; AATATAT
 	db "AAtatat@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 14
@@ -431,7 +431,7 @@ FRLGLeafGroup:
 	bigdw 21
 	bigdw 29
 	db "BUTTERFREE@"
-	
+
 	db 9
 	dw RATTATA
 	db NO_ITEM
@@ -444,7 +444,7 @@ FRLGLeafGroup:
 	bigdw 9
 	bigdw 11
 	db "TTUUVVVVC@"
-	
+
 	db 32
 	dw CHARMELEON
 	db POTION
@@ -457,7 +457,7 @@ FRLGLeafGroup:
 	bigdw 57
 	bigdw 49
 	db "FFF@"
-	
+
 	db 30
 	dw PIDGEOTTO
 	db NO_ITEM
@@ -470,7 +470,7 @@ FRLGLeafGroup:
 	bigdw 38
 	bigdw 33
 	db "T@"
-	
+
 	db 14
 	dw ODDISH
 	db NO_ITEM
@@ -483,7 +483,7 @@ FRLGLeafGroup:
 	bigdw 29
 	bigdw 23
 	db "AAACCCVV@"
-	
+
 	db 11
 	dw PIDGEY
 	db NO_ITEM
@@ -497,21 +497,21 @@ FRLGLeafGroup:
 	bigdw 13
 	db "AAAAATTTTT@"
 	db -1 ; end
-	
+
 	next_list_item ; PAULA_SWEET
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	next_list_item ; DOOT
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 ColoWesGroup:
 	next_list_item ; AAAAAAA
 	db "AAAAAAA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -527,7 +527,7 @@ ColoWesGroup:
 	bigdw 95
 	bigdw 94
 	db "AAAAAAAAAA@"
-	
+
 	db 37
 	dw ESPEON
 	db POKE_BALL
@@ -540,7 +540,7 @@ ColoWesGroup:
 	bigdw 77
 	bigdw 89
 	db "ESPEON@"
-	
+
 	db 44
 	dw UMBREON
 	db NO_ITEM
@@ -553,7 +553,7 @@ ColoWesGroup:
 	bigdw 67
 	bigdw 111
 	db "UMBREON@"
-	
+
 	db 44
 	dw JUMPLUFF
 	db NO_ITEM
@@ -566,7 +566,7 @@ ColoWesGroup:
 	bigdw 84
 	bigdw 77
 	db "AAAAKLV"
-	
+
 	db 44
 	dw BAYLEEF
 	db NO_ITEM
@@ -580,30 +580,30 @@ ColoWesGroup:
 	bigdw 165
 	db "BAYLEEF@"
 	db -1 ; end
-	
+
 	next_list_item ; ACCC
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 XDMichaelGroup:
 	next_list_item ; ABBBCC
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	next_list_item ; STARS
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 PTDawnGroup:
 	next_list_item ; IECBW
 	db ".iecbw@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -619,7 +619,7 @@ PTDawnGroup:
 	bigdw 95
 	bigdw 94
 	db "BFG@"
-	
+
 	db 43
 	dw SEAKING ; TODO: add luminion
 	db MYSTIC_WATER
@@ -632,7 +632,7 @@ PTDawnGroup:
 	bigdw 77
 	bigdw 89
 	db "AACm  neg@"
-	
+
 	db 42
 	dw DRAGONITE ; TODO: add altaria
 	db BLUESKY_MAIL
@@ -645,7 +645,7 @@ PTDawnGroup:
 	bigdw 67
 	bigdw 111
 	db "!!@"
-	
+
 	db 49
 	dw TANGELA ; TODO: add LEAFEON
 	db BLUESKY_MAIL
@@ -658,7 +658,7 @@ PTDawnGroup:
 	bigdw 84
 	bigdw 77
 	db "???')!@"
-	
+
 	db 49
 	dw GOLEM ; TODO: add probopass
 	db BLUESKY_MAIL
@@ -671,7 +671,7 @@ PTDawnGroup:
 	bigdw 96
 	bigdw 165
 	db "GUUEEEEFFn@"
-	
+
 	db 51
 	dw SNEASEL ; TODO: add weavile
 	db BLUESKY_MAIL
@@ -685,28 +685,28 @@ PTDawnGroup:
 	bigdw 103
 	db "AAAL@"
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 PTLucasGroup:
 	next_list_item ; NQPPPNL
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	next_list_item ; PP
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 HGSSLyraGroup:
 	next_list_item ; AOOOO
 	db "aoooo@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 16
 	dw SUDOWOODO ; TODO: add bonsly
 	db DRAGON_FANG
@@ -719,7 +719,7 @@ HGSSLyraGroup:
 	bigdw 12
 	bigdw 18
 	db "A@"
-	
+
 	db 28
 	dw DIGLETT ; TODO: add trapinch
 	db NO_ITEM
@@ -732,7 +732,7 @@ HGSSLyraGroup:
 	bigdw 32
 	bigdw 36
 	db "TRAPINCH@"
-	
+
 	db 14
 	dw DIGLETT
 	db NO_ITEM
@@ -745,7 +745,7 @@ HGSSLyraGroup:
 	bigdw 15
 	bigdw 25
 	db "?? ((GG6W@"
-	
+
 	db 33
 	dw HO_OH ; TODO: add groudon
 	db TM_FURY_CUTTER
@@ -758,18 +758,18 @@ HGSSLyraGroup:
 	bigdw 78
 	bigdw 72
 	db "Kenya@"
-	db -1	
+	db -1
 	end_list_items
-	
+
 BWHilbertGroup:
 	next_list_item ; GMYC
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 BWHildaGroup:
 	next_list_item ; AAQ
 	db "AAQ@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -785,7 +785,7 @@ BWHildaGroup:
 	bigdw 21
 	bigdw 29
 	db "q--------l@"
-	
+
 	db 28
 	dw DROWZEE ; TODO: add munna
 	db EON_MAIL
@@ -798,7 +798,7 @@ BWHildaGroup:
 	bigdw 47
 	bigdw 40
 	db ",,,,,((((%@"
-	
+
 	db 18
 	dw ZIGZAGOON
 	db EON_MAIL
@@ -811,7 +811,7 @@ BWHildaGroup:
 	bigdw 20
 	bigdw 18
 	db "Zigzagoony@"
-	
+
 	db 22
 	dw GEODUDE ; TODO: add aron
 	db NO_ITEM
@@ -824,7 +824,7 @@ BWHildaGroup:
 	bigdw 30
 	bigdw 29
 	db "Aron@"
-	
+
 	db 27
 	dw PIDGEOTTO ; TODO: add staravia
 	db PORTRAITMAIL
@@ -837,7 +837,7 @@ BWHildaGroup:
 	bigdw 27
 	bigdw 29
 	db "Staravia@"
-	
+
 	db 23
 	dw MACHOP ; TODO: add croagunk
 	db EON_MAIL
@@ -851,25 +851,25 @@ BWHildaGroup:
 	bigdw 27
 	db "qwriowy@"
 	db -1
-	
+
 	end_list_items
-	
+
 B2W2RosaGroup:
 	next_list_item ; CLY
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 B2W2NateGroup:
 	next_list_item ; AAAALK
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	next_list_item ; R_BLACK2
 	db "♀♀R@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 7
@@ -884,7 +884,7 @@ B2W2NateGroup:
 	bigdw 11
 	bigdw 13
 	db "aaaaaaakw@"
-	
+
 	db 15
 	dw LOMBRE
 	db NO_ITEM
@@ -897,7 +897,7 @@ B2W2NateGroup:
 	bigdw 24
 	bigdw 29
 	db "Lotad00 R@"
-	
+
 	db 10
 	dw HOOTHOOT
 	db NO_ITEM
@@ -910,7 +910,7 @@ B2W2NateGroup:
 	bigdw 14
 	bigdw 19
 	db "Hoothootww@"
-	
+
 	db 8
 	dw SWINUB
 	db NO_ITEM
@@ -923,7 +923,7 @@ B2W2NateGroup:
 	bigdw 11
 	bigdw 10
 	db "Swinub@"
-	
+
 	db 7
 	dw TYROGUE
 	db NO_ITEM
@@ -937,16 +937,16 @@ B2W2NateGroup:
 	bigdw 10
 	db "Tyrogue@"
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 XYCalemGroup:
 	next_list_item ; D_XY
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
 
 XYSerenaGroup:
@@ -955,31 +955,31 @@ XYSerenaGroup:
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 XYSerena2Group:
 	next_list_item ; ETR
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 SMUSUMElioGroup:
 	next_list_item ; L_SUN
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 SMUSUMElio2LeaderGroup:
 	next_list_item ; D76O6YTTR
 	db "d76o6yttr?@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 25
 	dw PIDGEOTTO ; TODO: add staravia
 	db STAR_PIECE
@@ -992,7 +992,7 @@ SMUSUMElio2LeaderGroup:
 	bigdw 28
 	bigdw 32
 	db "Staravia@"
-	
+
 	db 26
 	dw PIDGEOTTO ; TODO: add Trumbeak
 	db STAR_PIECE
@@ -1005,7 +1005,7 @@ SMUSUMElio2LeaderGroup:
 	bigdw 32
 	bigdw 42
 	db "AAAAAAAAMM@"
-	
+
 	db 28
 	dw QUILAVA ; TODO: add Torracat
 	db STAR_PIECE
@@ -1018,7 +1018,7 @@ SMUSUMElio2LeaderGroup:
 	bigdw 55
 	bigdw 137
 	db "Qs3333eess@"
-	
+
 	db 26
 	dw FURRET ; TODO: add Gumshoos
 	db STAR_PIECE
@@ -1031,7 +1031,7 @@ SMUSUMElio2LeaderGroup:
 	bigdw 38
 	bigdw 42
 	db "AANNmmmnnn@"
-	
+
 	db 27
 	dw PIDGEOT ; TODO: add Toucannon
 	db NO_ITEM
@@ -1044,7 +1044,7 @@ SMUSUMElio2LeaderGroup:
 	bigdw 49
 	bigdw 55
 	db "Toucannon@"
-	
+
 	db 25
 	dw LINOONE
 	db STAR_PIECE
@@ -1058,13 +1058,13 @@ SMUSUMElio2LeaderGroup:
 	bigdw 37
 	db "k6'~ MMCMQ@"
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 SMUSUMSeleneGroup:
 	next_list_item ; VRG
 	db "VRG@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 31
 	dw XATU ; TODO: add sigilyph
 	db STAR_PIECE
@@ -1077,7 +1077,7 @@ SMUSUMSeleneGroup:
 	bigdw 77
 	bigdw 53
 	db "Sigilyph@"
-	
+
 	db 22
 	dw MAREEP ; TODO: add Electrike
 	db THICK_CLUB
@@ -1090,7 +1090,7 @@ SMUSUMSeleneGroup:
 	bigdw 43
 	bigdw 29
 	db "Electrike@"
-	
+
 	db 24
 	dw SUDOWOODO ; TODO: add Rockruff
 	db NO_ITEM
@@ -1103,7 +1103,7 @@ SMUSUMSeleneGroup:
 	bigdw 21
 	bigdw 25
 	db "RockruffIN@"
-	
+
 	db 24
 	dw CLEFABLE ; TODO: add Aromatisse
 	db STAR_PIECE
@@ -1116,7 +1116,7 @@ SMUSUMSeleneGroup:
 	bigdw 54
 	bigdw 51
 	db "Aromatisse@"
-	
+
 	db 25
 	dw CHIKORITA ; TODO: add pansage
 	db NO_ITEM
@@ -1129,7 +1129,7 @@ SMUSUMSeleneGroup:
 	bigdw 40
 	bigdw 30
 	db "PansagY4@"
-	
+
 	db 25
 	dw BAYLEEF ; TODO: add Steenee
 	db NO_ITEM
@@ -1143,13 +1143,13 @@ SMUSUMSeleneGroup:
 	bigdw 31
 	db "Steenee@"
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 SWSHGloriaGroup:
 	next_list_item ; RE_SWORD
 	db ":::?89977r@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 14
 	dw PIKACHU ; TODO: add yamper
 	db LOVE_BALL
@@ -1162,7 +1162,7 @@ SWSHGloriaGroup:
 	bigdw 17
 	bigdw 19
 	db "Yamper@"
-	
+
 	db 15
 	dw MAGNEMITE ; TODO: add klink
 	db TM_RAIN_DANCE
@@ -1175,7 +1175,7 @@ SWSHGloriaGroup:
 	bigdw 21
 	bigdw 29
 	db "Klink@"
-	
+
 	db 21
 	dw UMBREON ; TODO: add Thievul
 	db NO_ITEM
@@ -1188,7 +1188,7 @@ SWSHGloriaGroup:
 	bigdw 33
 	bigdw 49
 	db "Thievul@"
-	
+
 	db 21
 	dw PIDGEOTTO ; TODO: add Corvisquire
 	db NO_ITEM
@@ -1201,7 +1201,7 @@ SWSHGloriaGroup:
 	bigdw 20
 	bigdw 33
 	db "z@"
-	
+
 	db 18
 	dw SENTRET ; TODO: add wooloo
 	db NO_ITEM
@@ -1214,7 +1214,7 @@ SWSHGloriaGroup:
 	bigdw 22
 	bigdw 26
 	db "Wooloo@"
-	
+
 	db 17
 	dw MAREEP ; TODO: add Electrike
 	db NO_ITEM
@@ -1227,15 +1227,15 @@ SWSHGloriaGroup:
 	bigdw 21
 	bigdw 35
 	db "Electrike@"
-	
+
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 GlazedGroup:
 	next_list_item ; AHUNIgg
 	db "AHUNIgg@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 14
 	dw BAYLEEF ; TODO: add grotle
 	db POKE_BALL
@@ -1248,7 +1248,7 @@ GlazedGroup:
 	bigdw 36
 	bigdw 37
 	db "Grotle@"
-	
+
 	db 12
 	dw POOCHYENA
 	db NO_ITEM
@@ -1261,7 +1261,7 @@ GlazedGroup:
 	bigdw 13
 	bigdw 15
 	db "BBBC Hbvvv@"
-	
+
 	db 10
 	dw CATERPIE
 	db NO_ITEM
@@ -1274,7 +1274,7 @@ GlazedGroup:
 	bigdw 11
 	bigdw 9
 	db "BBHHCEQ@"
-	
+
 	db 8
 	dw EKANS
 	db NO_ITEM
@@ -1287,7 +1287,7 @@ GlazedGroup:
 	bigdw 11
 	bigdw 14
 	db "Ekans@"
-	
+
 	db 10
 	dw MACHOP ; TODO: add Croagunk
 	db NO_ITEM
@@ -1300,7 +1300,7 @@ GlazedGroup:
 	bigdw 19
 	bigdw 11
 	db "BBBBBBAAA@"
-	
+
 	db 11
 	dw BULBASAUR ; TODO: add Budew
 	db NO_ITEM
@@ -1314,27 +1314,27 @@ GlazedGroup:
 	bigdw 21
 	db "HA@"
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 MaribelGroup:
 	next_list_item ; AAABBHM
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 SiriusGroup:
 	next_list_item ; BBCBBHH
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 PCyanGroup:
 	next_list_item ; CYAN
 	db "CYAN@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -1350,7 +1350,7 @@ PCyanGroup:
 	bigdw 21
 	bigdw 22
 	db "Larvitar@"
-	
+
 	db 4
 	dw PIDGEY ;TODO add tailow
 	db NO_ITEM
@@ -1363,7 +1363,7 @@ PCyanGroup:
 	bigdw 7
 	bigdw 7
 	db "QYXXWWWVVV@"
-	
+
 	db 6
 	dw ABRA ;TODO add ralts
 	db NO_ITEM
@@ -1376,7 +1376,7 @@ PCyanGroup:
 	bigdw 10
 	bigdw 9
 	db "IMmMMLLIR@"
-	
+
 	db 7
 	dw MARILL
 	db NO_ITEM
@@ -1389,31 +1389,31 @@ PCyanGroup:
 	bigdw 8
 	bigdw 12
 	db "YYYYXOOOOO@"
-	
+
 	; ralts https://www.twitch.tv/videos/93664624?t=42h33m53s
 	; marill https://www.twitch.tv/videos/93664624?t=43h54m07s
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 BronzeGroup:
 	next_list_item ; FEEFFRR
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 RedLarryGroup:
 	next_list_item ; LARRY_R
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 GreenMayGroup:
 	next_list_item ; A_EMERALD
 	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -1429,7 +1429,7 @@ GreenMayGroup:
 	bigdw 19
 	bigdw 14
 	db "apf uojkyy@"
-	
+
 	db 10
 	dw POOCHYENA
 	db NO_ITEM
@@ -1442,7 +1442,7 @@ GreenMayGroup:
 	bigdw 13
 	bigdw 11
 	db "POOCHYENA@"
-	
+
 	db 15
 	dw MARILL
 	db NO_ITEM
@@ -1456,10 +1456,10 @@ GreenMayGroup:
 	bigdw 26
 	db "MARILL@"
 	db -1 ; end
-	
+
 	next_list_item ; N_EMERALD
 	db "n@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 23
 	dw MISDREAVUS ; TODO: add SABLEYE
 	db NO_ITEM
@@ -1472,7 +1472,7 @@ GreenMayGroup:
 	bigdw 36
 	bigdw 41
 	db "aabaaa66@"
-	
+
 	db 30
 	dw GEODUDE ;TODO add aron
 	db NO_ITEM
@@ -1485,7 +1485,7 @@ GreenMayGroup:
 	bigdw 32
 	bigdw 35
 	db "ATTMG555……@"
-	
+
 	db 11
 	dw GEODUDE ;TODO add aron
 	db HARD_STONE
@@ -1498,7 +1498,7 @@ GreenMayGroup:
 	bigdw 17
 	bigdw 15
 	db "ARON@"
-	
+
 	db 25
 	dw BEEDRILL ; TODO: add dustox
 	db NO_ITEM
@@ -1511,7 +1511,7 @@ GreenMayGroup:
 	bigdw 32
 	bigdw 53
 	db "BBJPzztttz@"
-	
+
 	db 29
 	dw GLOOM
 	db NO_ITEM
@@ -1524,7 +1524,7 @@ GreenMayGroup:
 	bigdw 52
 	bigdw 61
 	db "AAAMMNgavy@"
-	
+
 	db 11
 	dw ABRA
 	db NO_ITEM
@@ -1537,15 +1537,15 @@ GreenMayGroup:
 	bigdw 30
 	bigdw 15
 	db "000VVV@"
-	
+
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 BrownGroup:
 	next_list_item ; PAUL_B
 	db "PAUL@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 20
 	dw BEEDRILL
 	db NO_ITEM
@@ -1558,7 +1558,7 @@ BrownGroup:
 	bigdw 28
 	bigdw 28
 	db "[[@"
-	
+
 	db 18
 	dw PSYDUCK
 	db NO_ITEM
@@ -1571,7 +1571,7 @@ BrownGroup:
 	bigdw 28
 	bigdw 28
 	db "AAAAAAAAFF"
-	
+
 	db 32
 	dw IVYSAUR
 	db NO_ITEM
@@ -1584,7 +1584,7 @@ BrownGroup:
 	bigdw 66
 	bigdw 66
 	db "----------@"
-	
+
 	db 10
 	dw EEVEE
 	db NO_ITEM
@@ -1597,7 +1597,7 @@ BrownGroup:
 	bigdw 20
 	bigdw 20
 	db "BBbkkkkk@"
-	
+
 	db 32
 	dw GRAVELER
 	db NO_ITEM
@@ -1610,7 +1610,7 @@ BrownGroup:
 	bigdw 42
 	bigdw 42
 	db "aJJJJJJaaa@"
-	
+
 	db 41
 	dw GOLBAT
 	db NO_ITEM
@@ -1623,10 +1623,10 @@ BrownGroup:
 	bigdw 80
 	bigdw 80
 	db "-<PK><PK><PK><PK><PK><PK><PK>)(@"
-	
-	db -1	
+
+	db -1
 	end_list_items
-	
+
 BABAGroup:
 	next_list_item ; BABA1
 	db "BABA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -1642,7 +1642,7 @@ BABAGroup:
 	bigdw 26
 	bigdw 23
 	db "BEST@"
-	
+
 	db 6
 	dw POLIWAG
 	db NO_ITEM
@@ -1655,7 +1655,7 @@ BABAGroup:
 	bigdw 11
 	bigdw 11
 	db "ORGY@"
-	
+
 	db 7
 	dw PIDGEY
 	db NO_ITEM
@@ -1669,7 +1669,7 @@ BABAGroup:
 	bigdw 11
 	db "EVER@"
 	db -1 ; end
-	
+
 	next_list_item ; BABA2
 	db "BABA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 32
@@ -1684,7 +1684,7 @@ BABAGroup:
 	bigdw 71
 	bigdw 64
 	db "BEST@"
-	
+
 	db 9
 	dw POLIWAG
 	db NO_ITEM
@@ -1697,7 +1697,7 @@ BABAGroup:
 	bigdw 14
 	bigdw 14
 	db "ORGY@"
-	
+
 	db 10
 	dw PIDGEY
 	db NO_ITEM
@@ -1710,7 +1710,7 @@ BABAGroup:
 	bigdw 14
 	bigdw 14
 	db "EVER@"
-	
+
 	db 20
 	dw SUDOWOODO
 	db NO_ITEM
@@ -1724,7 +1724,7 @@ BABAGroup:
 	bigdw 31
 	db "FAKE@"
 	db -1 ; end
-	
+
 	next_list_item ; BABA3
 	db "BABA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 50
@@ -1739,7 +1739,7 @@ BABAGroup:
 	bigdw 143
 	bigdw 119
 	db "BEST@"
-	
+
 	db 12
 	dw POLIWAG
 	db NO_ITEM
@@ -1752,7 +1752,7 @@ BABAGroup:
 	bigdw 17
 	bigdw 17
 	db "ORGY@"
-	
+
 	db 10
 	dw PIDGEY
 	db NO_ITEM
@@ -1765,7 +1765,7 @@ BABAGroup:
 	bigdw 14
 	bigdw 14
 	db "EVER@"
-	
+
 	db 20
 	dw SUDOWOODO
 	db NO_ITEM
@@ -1778,7 +1778,7 @@ BABAGroup:
 	bigdw 17
 	bigdw 31
 	db "FAKE@"
-	
+
 	db 20
 	dw TENTACRUEL
 	db NO_ITEM
@@ -1791,7 +1791,7 @@ BABAGroup:
 	bigdw 37
 	bigdw 53
 	db "GAY@"
-	
+
 	db 30
 	dw GYARADOS
 	db NO_ITEM
@@ -1805,9 +1805,9 @@ BABAGroup:
 	bigdw 71
 	db "DADA@"
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 URFGroup:
 	next_list_item ; URF1
 	db "URF@", TRAINERTYPE_MOVES
@@ -1818,10 +1818,10 @@ URFGroup:
 
 	end_list_items
 
-GreenMayLeaderGroup:	
+GreenMayLeaderGroup:
 	next_list_item ; ACCPPQ
 	db "ACCPPQ@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 34
 	dw QWILFISH ; TODO: add SHARPEDO
 	db NO_ITEM
@@ -1834,7 +1834,7 @@ GreenMayLeaderGroup:
 	bigdw 72
 	bigdw 37
 	db "ABBQS    L@"
-	
+
 	db 43
 	dw TANGELA ;TODO add gogoat
 	db POKE_BALL
@@ -1847,7 +1847,7 @@ GreenMayLeaderGroup:
 	bigdw 96
 	bigdw 90
 	db "AAAAAAEEee@"
-	
+
 	db 30
 	dw STANTLER ;TODO add vigoroth
 	db FULL_HEAL
@@ -1860,7 +1860,7 @@ GreenMayLeaderGroup:
 	bigdw 49
 	bigdw 46
 	db "Vigoroth@"
-	
+
 	db 32
 	dw NOCTOWL  ; TODO: add swellow
 	db NO_ITEM
@@ -1873,7 +1873,7 @@ GreenMayLeaderGroup:
 	bigdw 40
 	bigdw 47
 	db "AABUUN  SS@"
-	
+
 	db 45
 	dw AMPHAROS
 	db NO_ITEM
@@ -1886,7 +1886,7 @@ GreenMayLeaderGroup:
 	bigdw 125
 	bigdw 97
 	db "Ampharos@"
-	
+
 	db 30
 	dw MAGNEMITE ; TODO: add honedge
 	db NO_ITEM
@@ -1902,7 +1902,7 @@ GreenMayLeaderGroup:
 	db -1 ; end
 	end_list_items
 
-GSCHGSSChrisRivalGroup:	
+GSCHGSSChrisRivalGroup:
 	next_list_item
 	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW2
 	db 9
@@ -1917,7 +1917,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 13
 	bigdw 18
 	db "TOGEPI@"
-	
+
 	db 8
 	dw PIDGEY
 	db NO_ITEM
@@ -1930,7 +1930,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 10
 	bigdw 10
 	db "PIDGEY@"
-	
+
 	db 6
 	dw SENTRET
 	db NO_ITEM
@@ -1943,7 +1943,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 9
 	bigdw 10
 	db "ADiiiiihhh@"
-	
+
 	db 5
 	dw CATERPIE
 	db NO_ITEM
@@ -1956,7 +1956,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 8
 	bigdw 8
 	db "OXXOZZ-:@"
-	
+
 	db 6
 	dw WOOPER
 	db NO_ITEM
@@ -1969,7 +1969,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 8
 	bigdw 8
 	db "WOOPER@"
-	
+
 	db 24
 	dw TOTODILE
 	db NO_ITEM
@@ -1981,7 +1981,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 35
 	bigdw 39
 	bigdw 41
-	db "TOTODILE@"	
+	db "TOTODILE@"
 	db -1 ; end
 
 	next_list_item
@@ -1998,7 +1998,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 23
 	bigdw 18
 	db "WWWEEE@"
-	
+
 	db 38
 	dw FERALIGATR
 	db NO_ITEM
@@ -2011,7 +2011,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 90
 	bigdw 87
 	db "FERALIGATR@"
-	
+
 	db 7
 	dw METAPOD
 	db POKE_BALL
@@ -2024,7 +2024,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 10
 	bigdw 10
 	db "OXXOZZ-:@"
-	
+
 	db 21
 	dw EEVEE
 	db NO_ITEM
@@ -2037,7 +2037,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 26
 	bigdw 35
 	db "EEVEE@"
-	
+
 	db 11
 	dw TOGEPI
 	db ANTIDOTE
@@ -2050,7 +2050,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 16
 	bigdw 21
 	db "TOGEPI@"
-	
+
 	db 16
 	dw RATICATE
 	db POKE_BALL
@@ -2063,7 +2063,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 24
 	bigdw 30
 	db "ABBBDDDDDD@"
-	
+
 	db -1 ; end
 	end_list_items
 
@@ -6228,7 +6228,7 @@ PokefanMGroup:
 	db -1 ; end
 
 	end_list_items
-	
+
 KimonoGirlGroup:
 TwinsGroup:
 	next_list_item ; TWINS (1)
@@ -6447,22 +6447,22 @@ AzureGroup:
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 FCLarryGroup:
 	next_list_item ; LARRY_GREEN
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 RedGroup:
 	next_list_item ; AIIIAAB
 	db "AIIIAAB@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 46
 	dw CHARIZARD
 	db NO_ITEM
@@ -6475,7 +6475,7 @@ RedGroup:
 	bigdw 104
 	bigdw 104
 	db "CHARIZARD@"
-	
+
 	db 12
 	dw MAGIKARP
 	db NO_ITEM
@@ -6488,7 +6488,7 @@ RedGroup:
 	bigdw 11
 	bigdw 11
 	db "BBAABaaaa@"
-	
+
 	db 19
 	dw POLIWAG
 	db NO_ITEM
@@ -6501,7 +6501,7 @@ RedGroup:
 	bigdw 24
 	bigdw 24
 	db "POLIWAG@"
-	
+
 	db 15
 	dw KRABBY
 	db NO_ITEM
@@ -6514,7 +6514,7 @@ RedGroup:
 	bigdw 13
 	bigdw 13
 	db "z(( r yyz@"
-	
+
 	db 15
 	dw KAKUNA
 	db NO_ITEM
@@ -6527,7 +6527,7 @@ RedGroup:
 	bigdw 16
 	bigdw 16
 	db "KAKUNA@"
-	
+
 	db 30
 	dw ONIX
 	db NO_ITEM
@@ -6540,19 +6540,19 @@ RedGroup:
 	bigdw 35
 	bigdw 35
 	db "ONIX@"
-	
+
 	db -1 ; end
 	end_list_items
-	
+
 RBYGreenGroup:
 	next_list_item ; XXWWNN
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 CYRoboredGroup:
 	next_list_item ; X_CHATTYYELLOW2
 	db "x<MN>(?@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -6568,7 +6568,7 @@ CYRoboredGroup:
 	bigdw 20
 	bigdw 20
 	db "XACC@"
-	
+
 	db 12
 	dw PIKACHU
 	db NO_ITEM
@@ -6581,7 +6581,7 @@ CYRoboredGroup:
 	bigdw 18
 	bigdw 18
 	db "AJ<MN><MN><MN><MN><MN><PK><PK><PK>@"
-	
+
 	db 23
 	dw DIGLETT
 	db NO_ITEM
@@ -6594,7 +6594,7 @@ CYRoboredGroup:
 	bigdw 30
 	bigdw 30
 	db "IGGGGGGFCC@"
-	
+
 	db 15
 	dw BULBASAUR
 	db NO_ITEM
@@ -6607,7 +6607,7 @@ CYRoboredGroup:
 	bigdw 28
 	bigdw 28
 	db "RJKKCCCDDF@"
-	
+
 	db 10
 	dw MAGIKARP
 	db NO_ITEM
@@ -6620,7 +6620,7 @@ CYRoboredGroup:
 	bigdw 12
 	bigdw 12
 	db "MAGIKARP@"
-	
+
 	db 45
 	dw CHATOT
 	db NO_ITEM
@@ -6633,10 +6633,10 @@ CYRoboredGroup:
 	bigdw 106
 	bigdw 106
 	db "IIAAAIig--@"
-	
+
 	db -1 ; end
 	end_list_items
-	
+
 GSCHGSSChrisGroup:
 	next_list_item ; AJDNNW1 https://youtu.be/AU084AvsMNo?t=15753
 	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -6653,21 +6653,21 @@ GSCHGSSChrisGroup:
 	bigdw 22
 	db "TOTODILE@"
 	db -1 ; end
-	
+
 	next_list_item ; AAEFFFF
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	next_list_item ; D_GAUNTLETCRYSTAL
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 RSEORASBrendanLeaderGroup:
 	next_list_item ; ORLANDO
 	db "!12rtyhasz@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -6684,7 +6684,7 @@ RSEORASBrendanLeaderGroup:
 	bigdw 29
 	bigdw 39
 	db "!sssssarfa@" ;https://www.twitch.tv/videos/30248788?t=14h04m18s https://www.twitch.tv/videos/30248788?t=13h09m52s
-	
+
 	db 6
 	dw WHISMUR
 	db NO_ITEM
@@ -6698,19 +6698,19 @@ RSEORASBrendanLeaderGroup:
 	bigdw 8
 	db "Yuukt22y!i@"; https://www.twitch.tv/videos/30248788?t=13h04m36s
 	db -1 ; end
-	
+
 	end_list_items
 
 SMUSUMElio2Group:
 	next_list_item ; RRWQ
 	db "?@", TRAINERTYPE_NORMAL
-	
+
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 
 NuzlockeGroup:
 	next_list_item ; F481
@@ -6727,7 +6727,7 @@ NuzlockeGroup:
 	bigdw 29
 	bigdw 20
 	db "Wingull@"
-	
+
 	db 17
 	dw COMBUSKEN
 	db POKE_BALL
@@ -6740,7 +6740,7 @@ NuzlockeGroup:
 	bigdw 37
 	bigdw 30
 	db "Zzzzzz mmg@"
-	
+
 	db 5
 	dw POOCHYENA
 	db NO_ITEM
@@ -6753,7 +6753,7 @@ NuzlockeGroup:
 	bigdw 8
 	bigdw 9
 	db "6@"
-	
+
 	db 17
 	dw MACHOP ; TODO: add Makuhita
 	db EXP_SHARE
@@ -6766,7 +6766,7 @@ NuzlockeGroup:
 	bigdw 12
 	bigdw 17
 	db "Bbbt@"
-	
+
 	db 16
 	dw PIDGEY ; TODO: add Tailow
 	db EXP_SHARE
@@ -6779,7 +6779,7 @@ NuzlockeGroup:
 	bigdw 18
 	bigdw 16
 	db "Tailow@"
-	
+
 	db 11
 	dw GEODUDE ; TODO: add aron
 	db NO_ITEM
@@ -6792,12 +6792,12 @@ NuzlockeGroup:
 	bigdw 16
 	bigdw 16
 	db "Mmmm@"
-	
+
 	db -1 ; end
-	
+
 	next_list_item ; F482
 	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 42
 	dw RAICHU ; TODO: add manectric
 	db POKE_BALL
@@ -6810,7 +6810,7 @@ NuzlockeGroup:
 	bigdw 111
 	bigdw 66
 	db "b syro .9@"
-	
+
 	db 49
 	dw CHARIZARD ; TODO: add blaziken
 	db RAGECANDYBAR
@@ -6823,7 +6823,7 @@ NuzlockeGroup:
 	bigdw 138
 	bigdw 96
 	db "Zzzzzz mmg@"
-	
+
 	db 49
 	dw DRAGONITE ;TODO add Vibrava
 	db AMULET_COIN
@@ -6836,7 +6836,7 @@ NuzlockeGroup:
 	bigdw 51
 	bigdw 56
 	db "Piiiv@"
-	
+
 	db 47
 	dw SEAKING ; TODO: add wailmer
 	db EXP_SHARE
@@ -6849,7 +6849,7 @@ NuzlockeGroup:
 	bigdw 54
 	bigdw 33
 	db "Wu''''2@"
-	
+
 	db 19
 	dw MISDREAVUS ;TODO add sableye
 	db EXP_SHARE
@@ -6862,7 +6862,7 @@ NuzlockeGroup:
 	bigdw 32
 	bigdw 37
 	db "Eeedjjllfn@"
-	
+
 	db -1 ; end
 
 	next_list_item ; F483
@@ -6879,7 +6879,7 @@ NuzlockeGroup:
 	bigdw 107
 	bigdw 63
 	db "Wu''''2@"
-	
+
 	db 49
 	dw DRAGONITE ;TODO add flygon
 	db AMULET_COIN
@@ -6892,7 +6892,7 @@ NuzlockeGroup:
 	bigdw 90
 	bigdw 96
 	db "Piiiv@"
-	
+
 	db 36
 	dw QWILFISH ;TODO add sharpedo
 	db FULL_HEAL
@@ -6905,7 +6905,7 @@ NuzlockeGroup:
 	bigdw 81
 	bigdw 45
 	db "Sharpedo@"
-	
+
 	db 52
 	dw RAICHU ; TODO: add manectric
 	db POKE_BALL
@@ -6918,7 +6918,7 @@ NuzlockeGroup:
 	bigdw 136
 	bigdw 80
 	db "b syro .9@"
-	
+
 	db 51
 	dw CHARIZARD ; TODO: add blaziken
 	db RAGECANDYBAR
@@ -6931,7 +6931,7 @@ NuzlockeGroup:
 	bigdw 143
 	bigdw 100
 	db "Zzzzzz mmg@"
-	
+
 	db 31
 	dw SEEL ; TODO: add spheal
 	db EXP_SHARE
@@ -6944,8 +6944,6 @@ NuzlockeGroup:
 	bigdw 47
 	bigdw 45
 	db "Zzzzzz mmg@"
-	
+
 	db -1 ; end
 	end_list_items
-	
-

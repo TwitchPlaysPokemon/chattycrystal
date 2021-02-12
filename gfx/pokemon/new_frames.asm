@@ -1,6 +1,7 @@
 TreeckoFrames:    INCLUDE "gfx/pokemon/treecko/frames.asm"
 GrovyleFrames:    INCLUDE "gfx/pokemon/grovyle/frames.asm"
 SceptileFrames:   INCLUDE "gfx/pokemon/sceptile/frames.asm"
+CombuskenFrames:  INCLUDE "gfx/pokemon/combusken/frames.asm"
 PoochyenaFrames:  INCLUDE "gfx/pokemon/poochyena/frames.asm"
 MightyenaFrames:  INCLUDE "gfx/pokemon/mightyena/frames.asm"
 ZigzagoonFrames:  INCLUDE "gfx/pokemon/zigzagoon/frames.asm"

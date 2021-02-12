@@ -254,7 +254,7 @@ AnimationPointers:
 	dw GrovyleAnimation
 	dw SceptileAnimation
 	dw PikachuAnimation ; PLACEHOLDER
-	dw PikachuAnimation ; PLACEHOLDER
+	dw CombuskenAnimation
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER

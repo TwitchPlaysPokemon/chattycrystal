@@ -271,6 +271,7 @@ SECTION "New Pokedex Entries", ROMX
 TreeckoPokedexEntry::    INCLUDE "data/pokemon/dex_entries/treecko.asm"
 GrovylePokedexEntry::    INCLUDE "data/pokemon/dex_entries/grovyle.asm"
 SceptilePokedexEntry::   INCLUDE "data/pokemon/dex_entries/sceptile.asm"
+CombuskenPokedexEntry::  INCLUDE "data/pokemon/dex_entries/combusken.asm"
 PoochyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/poochyena.asm"
 MightyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mightyena.asm"
 ZigzagoonPokedexEntry::  INCLUDE "data/pokemon/dex_entries/zigzagoon.asm"

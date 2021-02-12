@@ -6673,7 +6673,7 @@ RSEORASBrendanLeaderGroup:
 	db "!12rtyhasz@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
 	db 18
-	dw QUILAVA ;TODO add combusken
+	dw COMBUSKEN
 	db POTION
 	dw SCRATCH, GROWL, PECK, EMBER
 	bigdw $FFFF
@@ -6729,7 +6729,7 @@ NuzlockeGroup:
 	db "Wingull@"
 	
 	db 17
-	dw QUILAVA ; TODO: add combusken
+	dw COMBUSKEN
 	db POKE_BALL
 	dw PECK, DOUBLE_KICK, SCRATCH, FOCUS_ENERGY
 	bigdw $FFFF

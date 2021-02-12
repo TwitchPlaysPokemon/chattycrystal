@@ -254,7 +254,7 @@ BitmasksPointers:
 	dw GrovyleBitmasks
 	dw SceptileBitmasks
 	dw PikachuBitmasks ; PLACEHOLDER
-	dw PikachuBitmasks ; PLACEHOLDER
+	dw CombuskenBitmasks
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw PikachuBitmasks ; PLACEHOLDER

@@ -791,3 +791,5 @@ SECTION "Pics 22", ROMX
 
 LombreFrontpic:     INCBIN "gfx/pokemon/lombre/front.animated.2bpp.lz"
 LombreBackpic:      INCBIN "gfx/pokemon/lombre/back.2bpp.lz"
+CombuskenFrontpic:  INCBIN "gfx/pokemon/combusken/front.animated.2bpp.lz"
+CombuskenBackpic:   INCBIN "gfx/pokemon/combusken/back.2bpp.lz"

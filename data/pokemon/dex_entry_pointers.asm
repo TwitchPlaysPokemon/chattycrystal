@@ -254,7 +254,7 @@ PokedexDataPointerTable:
 	dba GrovylePokedexEntry
 	dba SceptilePokedexEntry
 	dba PikachuPokedexEntry ; PLACEHOLDER
-	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba CombuskenPokedexEntry
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER

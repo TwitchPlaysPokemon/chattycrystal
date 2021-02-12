@@ -2049,6 +2049,11 @@ Cry_Treecko:
 	musicheader 1, 6, Cry_Treecko_Ch6
 	musicheader 1, 8, Cry_Treecko_Ch8
 
+Cry_Torchic:
+	musicheader 3, 5, Cry_Torchic_Ch5
+	musicheader 1, 6, Cry_Torchic_Ch6
+	musicheader 1, 8, Cry_Torchic_Ch8
+
 Cry_Poochyena:
 	musicheader 3, 5, Cry_Poochyena_Ch5
 	musicheader 1, 6, Cry_Poochyena_Ch6
@@ -2077,6 +2082,26 @@ Cry_Treecko_Ch6:
 Cry_Treecko_Ch8:
 	noise __,  5, $91, $10
 	noise __,  9, $94, $3
+	endchannel
+
+Cry_Torchic_Ch5:
+	tone $0020
+Cry_Torchic_Ch6:
+	dutycycle $2
+	sound __,  9, $2f, $0107
+.loop1
+	sound __,  1, $e1, $0483
+	sound __,  1, $51, $044e
+	loopchannel 4, .loop1
+.loop2
+	sound __,  1, $e1, $03da
+	sound __,  2, $51, $0312
+	loopchannel 4, .loop2
+	endchannel
+
+Cry_Torchic_Ch8:
+	noise __,  9, $3f, $52
+	noise C#,  1, $93, $4f
 	endchannel
 
 Cry_Poochyena_Ch5:

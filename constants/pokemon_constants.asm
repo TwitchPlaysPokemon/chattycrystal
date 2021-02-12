@@ -275,7 +275,7 @@ JOHTO_POKEMON EQU const_value
 	const GROVYLE      ;  fd
 	const SCEPTILE     ;  fe
 	const TORCHIC      ;  ff - MISSING
-	const COMBUSKEN    ; 100 - MISSING
+	const COMBUSKEN    ; 100
 	const BLAZIKEN     ; 101 - MISSING
 	const MUDKIP       ; 102 - MISSING
 	const MARSHTOMP    ; 103 - MISSING

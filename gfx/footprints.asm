@@ -253,7 +253,7 @@ INCBIN "gfx/footprints/treecko.1bpp"
 INCBIN "gfx/footprints/grovyle.1bpp"
 INCBIN "gfx/footprints/sceptile.1bpp"
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/combusken.1bpp"
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER

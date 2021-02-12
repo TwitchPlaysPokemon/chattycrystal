@@ -254,7 +254,7 @@ AnimationIdlePointers:
 	dw GrovyleAnimationIdle
 	dw SceptileAnimationIdle
 	dw PikachuAnimationIdle ; PLACEHOLDER
-	dw PikachuAnimationIdle ; PLACEHOLDER
+	dw CombuskenAnimationIdle
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER
 	dw PikachuAnimationIdle ; PLACEHOLDER

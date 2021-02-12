@@ -254,7 +254,7 @@ FramesPointers:
 	dba GrovyleFrames
 	dba SceptileFrames
 	dba PikachuFrames ; PLACEHOLDER
-	dba PikachuFrames ; PLACEHOLDER
+	dba CombuskenFrames
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER

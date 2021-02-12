@@ -5,7 +5,7 @@ EvosAttacksPointers3::
 	dw GrovyleEvosAttacks
 	dw SceptileEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw CombuskenEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
@@ -208,6 +208,25 @@ SceptileEvosAttacks:
 	dbw 43, SLAM
 	dbw 51, DETECT
 	dbw 59, FALSE_SWIPE
+	db 0 ; no more level-up moves
+
+CombuskenEvosAttacks:
+	dbbw EVOLVE_LEVEL, 36, BLAZIKEN
+	db 0
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 1, FOCUS_ENERGY
+	dbw 1, EMBER
+	dbw 7, FOCUS_ENERGY
+	dbw 13, EMBER
+	dbw 16, DOUBLE_KICK
+	dbw 17, PECK
+	dbw 21, SAND_ATTACK
+	dbw 28, SWORDS_DANCE
+	dbw 32, QUICK_ATTACK
+	dbw 39, SLASH
+	dbw 43, MIRROR_MOVE
+	dbw 59, CROSS_CHOP
 	db 0 ; no more level-up moves
 
 ChatotEvosAttacks:

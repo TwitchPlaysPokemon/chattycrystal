@@ -4199,7 +4199,7 @@ GetStatLevels: ;return c if fails to lower due to stat low cap
 	add hl, bc
 	ld b, [hl]
 	dec b
-	jp z, .CantLower
+	jr z, .CantLower
 
 ; Sharply lower the stat if applicable.
 	ld a, [wLoweredStat]

@@ -723,7 +723,7 @@ HGSSLyraGroup:
 	db 28
 	dw DIGLETT ; TODO: add trapinch
 	db NO_ITEM
-	dw SWIFT, NO_MOVE, NO_MOVE, NO_MOVE ; TODO: add Hammer Arm, Trump card
+	dw SWIFT, HAMMER_ARM, NO_MOVE, NO_MOVE ; TODO: Trump card
 	bigdw $0FFF
 	bigdw 73
 	bigdw 68

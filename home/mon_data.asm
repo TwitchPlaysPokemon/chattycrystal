@@ -95,3 +95,28 @@ FarSkipEvolutions::
 	pop af
 	rst Bankswitch
 	ret
+
+GetFormeIndex::
+; Returns an index from 0 to 5 based on the DVs given at hl.
+; forme = ((attack ^ speed) * 5 + (defense ^ special)) % 6
+	push hl
+	ld a, [hli]
+	xor [hl]
+	ld l, a
+	and $f
+	ld h, a
+	xor l
+	swap a
+	ld l, a
+	add a, a
+	add a, a
+	add a, l
+	add a, h
+	pop hl
+.loop
+	sub 12
+	jr nc, .loop
+	add a, 6
+	ret c
+	add a, 6
+	ret

@@ -17,7 +17,7 @@ EvosAttacksPointers3::
 	dw LotadEvosAttacks
 	dw LombreEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
-	dw TailowEvosAttacks
+	dw TaillowEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw WingullEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
@@ -343,7 +343,7 @@ LombreEvosAttacks:
 	dbw 49, HYDRO_PUMP
 	db 0 ; no more level-up moves
 	
-TailowEvosAttacks:
+TaillowEvosAttacks:
 	dbbw EVOLVE_LEVEL, 22, SWELLOW
 	db 0
 	dbw 1, PECK

@@ -266,7 +266,7 @@ PokedexDataPointerTable:
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba LombrePokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba TailowPokedexEntry
+	dba TaillowPokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba WingullPokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER

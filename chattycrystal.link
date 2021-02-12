@@ -301,6 +301,7 @@ ROMX $74
 	"Pokedex Entries 193-251"
 ROMX $75
 	"16-bit ID stuff"
+	"Pics 27"
 ROMX $76
 	"Chatty Handling"
 	"Egg Moves 3"
@@ -324,6 +325,14 @@ ROMX $7e
 ROMX $7f
 	org $7de0
 	"Mobile Stadium 2"
+ROMX $80
+	"Pics 24"
+ROMX $81
+	"Pics 25"
+ROMX $82
+	"Pics 26"
+ROMX $83
+	"Pics 28"
 WRAM0
 	"Stack"
 	"Audio RAM"

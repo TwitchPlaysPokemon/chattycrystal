@@ -641,6 +641,8 @@ PokemonPicPointers::
 	dba MetagrossFrontpic
 	dba MetagrossBackpic
 	dba PlaceholderFrontpic ; PLACEHOLDER - Latias
+	dba PlaceholderBackpic ; PLACEHOLDER - Latias
+	dba PlaceholderFrontpic ; PLACEHOLDER - Latios
 	dba PlaceholderBackpic ; PLACEHOLDER - Latios
 	dba GroudonFrontpic
 	dba GroudonBackpic
@@ -702,10 +704,6 @@ PokemonPicPointers::
 	dba BronzongBackpic
 	dba PlaceholderFrontpic ; PLACEHOLDER - Bonsly
 	dba PlaceholderBackpic ; PLACEHOLDER - Bonsly
-	dba PlaceholderFrontpic ; PLACEHOLDER - ???
-	dba PlaceholderBackpic ; PLACEHOLDER - ???
-	dba PlaceholderFrontpic ; PLACEHOLDER - ???
-	dba PlaceholderBackpic ; PLACEHOLDER - ???
 	dba ChatotFrontpic
 	dba ChatotBackpic
 	dba PlaceholderFrontpic ; PLACEHOLDER - Croagunk
@@ -720,7 +718,7 @@ PokemonPicPointers::
 	dba PorygonZBackpic
 	dba DusknoirFrontpic
 	dba DusknoirBackpic
-	dba FroslassFrontpic 
+	dba FroslassFrontpic
 	dba FroslassBackpic
 	dba PlaceholderFrontpic ; PLACEHOLDER - Darkrai
 	dba PlaceholderBackpic ; PLACEHOLDER - Darkrai

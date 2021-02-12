@@ -70,6 +70,7 @@ ROMX $10
 	"Evolutions and Attacks 1"
 ROMX $11
 	"bank11"
+	"Pics 30"
 ROMX $12
 	"Crystal Features 1"
 	"Egg Moves 2"
@@ -312,27 +313,24 @@ ROMX $77
 	"Enemy Trainer Parties 3"
 ROMX $78
 	"Tileset Data 8"
+	"Pics 29"
 ROMX $79
 	"Events"
+ROMX $7a
+	"Pics 26"
 ROMX $7b
 	"Battle Tower Text"
+	"Pics 28"
 ROMX $7c
 	"Battle Tower Trainer Data"
+	"Pics 25"
 ROMX $7d
 	"Sprites 3"
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
-	org $7de0
 	"Mobile Stadium 2"
-ROMX $80
 	"Pics 24"
-ROMX $81
-	"Pics 25"
-ROMX $82
-	"Pics 26"
-ROMX $83
-	"Pics 28"
 WRAM0
 	"Stack"
 	"Audio RAM"

@@ -276,9 +276,9 @@ MightyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mightyena.asm"
 ZigzagoonPokedexEntry::  INCLUDE "data/pokemon/dex_entries/zigzagoon.asm"
 LinoonePokedexEntry::    INCLUDE "data/pokemon/dex_entries/linoone.asm"
 ChatotPokedexEntry::     INCLUDE "data/pokemon/dex_entries/chatot.asm"
-JumpaniumPokedexEntry::  INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
 MegastoisePokedexEntry:: INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
 NoctdrioPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
+TogetapePokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
+JumpaniumPokedexEntry::  INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
 QuagynxPokedexEntry::    INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
 SteelurretPokedexEntry:: INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
-TogetapePokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry

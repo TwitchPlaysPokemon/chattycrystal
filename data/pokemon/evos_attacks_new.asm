@@ -19,7 +19,7 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw WingullEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
@@ -341,6 +341,19 @@ LombreEvosAttacks:
 	dbw 37, THIEF
 	dbw 43, ENCORE
 	dbw 49, HYDRO_PUMP
+	db 0 ; no more level-up moves
+
+WingullEvosAttacks:
+	dbbw EVOLVE_LEVEL, 25, PELIPPER
+	db 0
+	dbw 1, GROWL
+	dbw 1, WATER_GUN
+	dbw 7, SUPERSONIC
+	dbw 13, WING_ATTACK
+	dbw 21, MIST
+	dbw 31, QUICK_ATTACK
+	dbw 43, PURSUIT
+	dbw 55, AGILITY
 	db 0 ; no more level-up moves
 
 WhismurEvosAttacks:

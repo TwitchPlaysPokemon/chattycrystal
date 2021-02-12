@@ -72,3 +72,4 @@ Cries:
 	dba Cry_Poochyena
 	dba Cry_Zigzagoon
 	dba Cry_Lombre
+	dba Cry_Swellow

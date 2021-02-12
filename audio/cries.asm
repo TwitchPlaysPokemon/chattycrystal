@@ -2068,6 +2068,11 @@ Cry_Lombre:
 	musicheader 1, 6, Cry_Lombre_Ch6
 	musicheader 1, 8, Cry_Lombre_Ch8
 
+Cry_Swellow:
+	musicheader 3, 5, Cry_Swellow_Ch5
+	musicheader 1, 6, Cry_Swellow_Ch6
+	musicheader 1, 8, Cry_Swellow_Ch8
+
 Cry_Treecko_Ch5:
 	tone $0020
 Cry_Treecko_Ch6:
@@ -2162,4 +2167,37 @@ Cry_Lombre_Ch8:
 	noise __,  9, $e4, $4c
 	noise __, 15, $c4, $3c
 	noise __,  9, $d1, $2c
+	endchannel
+
+Cry_Swellow_Ch5:
+	sound_duty 0, 0, 1, 1
+	sound __, 11, $f5, $0680
+	sound __,  4, $e2, $06a0
+	sound __,  4, $f2, $06c0
+	sound __,  4, $e2, $06e0
+	sound __,  4, $d2, $0700
+	sound __,  4, $c2, $06e0
+	sound __,  4, $d2, $06c0
+	sound __,  9, $c1, $06a0
+	endchannel
+
+Cry_Swellow_Ch6:
+	sound_duty 3, 3, 0, 0
+	sound __, 10, $d5, $0631
+	sound __,  4, $d2, $0652
+	sound __,  4, $e2, $0671
+	sound __,  4, $b2, $0691
+	sound __,  4, $c2, $06b2
+	sound __,  4, $b2, $0691
+	sound __,  4, $c2, $0671
+	sound __,  9, $b1, $0651
+	endchannel
+
+Cry_Swellow_Ch8:
+	noise __,  7, $e3, $4c
+	noise __,  5, $c3, $3c
+	noise __,  6, $d4, $3c
+	noise __,  5, $c4, $2c
+	noise __,  7, $b4, $3c
+	noise __,  9, $c1, $2c
 	endchannel

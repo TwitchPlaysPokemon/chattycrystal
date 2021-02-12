@@ -289,7 +289,7 @@ JOHTO_POKEMON EQU const_value
 	const LUDICOLO     ; 10b - MISSING
 	const TAILLOW      ; 10c - MISSING
 	const SWELLOW      ; 10d - MISSING
-	const WINGULL      ; 10e - MISSING
+	const WINGULL      ; 10e
 	const PELIPPER     ; 10f - MISSING
 	const RALTS        ; 110 - MISSING
 	const KIRLIA       ; 111 - MISSING

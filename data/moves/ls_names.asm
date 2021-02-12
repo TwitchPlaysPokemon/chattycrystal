@@ -1,9 +1,13 @@
 LSMoveNames::
 	indirect_table 8, 1
-	indirect_entries BEAT_UP, .original_names
+	indirect_entries HOWL, .first_names
+	indirect_entries ECHOED_VOICE
+	indirect_entries CHATTY_HP, .L2
+	indirect_entries CHATTER
+	; TODO: add more moves
 	indirect_table_end
 
-.original_names
+.first_names
 	db "fihgt@@@"
 	db "strike@@"
 	db "fro@@@@@"
@@ -255,3 +259,8 @@ LSMoveNames::
 	db "Brok@@@@"
 	db "Eddy@@@@"
 	db "Hit@@@@@"
+	db "Call@@@@"
+
+.L2
+	db "Support@"
+	db "Power@@@"

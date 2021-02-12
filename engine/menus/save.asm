@@ -9,7 +9,25 @@ SaveMenu:
 	jr nz, .refused
 	call AskOverwriteSaveFile
 	jr c, .refused
+	call CheckNextFreeBox
+	ld a, [wRequestedBoxSwitch]
+	cp NUM_BOXES
+	jr nc, .got_box
+	ld hl, Text_BoxIsFullWantToSwitch
+	call SaveTheGame_yesorno
+	jr z, .got_box
+	ld a, -1
+	ld [wRequestedBoxSwitch], a
+.got_box
 	call PauseGameLogic
+	ld a, [wRequestedBoxSwitch]
+	cp NUM_BOXES
+	jr nc, .no_switch
+	call SaveBox
+	ld a, [wRequestedBoxSwitch]
+	ld [wCurBox], a
+	call LoadBox
+.no_switch
 	call SavedTheGame
 	call ResumeGameLogic
 	call ExitMenu
@@ -178,8 +196,6 @@ SaveTheGame_yesorno:
 	ld a, [wMenuCursorY]
 	dec a
 	call CloseWindow
-	push af
-	pop af
 	and a
 	ret
 
@@ -197,6 +213,70 @@ CompareLoadedAndSavedPlayerID:
 	ld a, [wPlayerID + 1]
 	cp c
 	ret
+
+CheckNextFreeBox:
+	ld a, BANK(sBox)
+	call GetSRAMBank
+	ld c, -1
+	ld a, [sBoxCount]
+	cp MONS_PER_BOX
+	jr c, .found
+	ld a, [wSaveFileExists]
+	and a
+	; if there's no savefile, the current box is always box 1, so we just switch to box 2
+	ld c, 1
+	jr z, .found
+	ld a, [wCurBox]
+	ld c, a
+	ld b, 0
+	ld hl, BoxAddresses + 5
+	rept 5
+		add hl, bc
+	endr
+	ld b, c
+	jr .first_check
+.first_loop
+	ld a, [hli]
+	call GetSRAMBank
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
+	inc hl
+	inc hl
+	ld a, [de]
+	cp MONS_PER_BOX
+	jr c, .found
+.first_check
+	inc c
+	ld a, c
+	cp NUM_BOXES
+	jr c, .first_loop
+	ld hl, BoxAddresses
+	ld c, 0
+	jr .second_check
+.second_loop
+	ld a, [hli]
+	call GetSRAMBank
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
+	inc hl
+	inc hl
+	ld a, [de]
+	cp MONS_PER_BOX
+	jr c, .found
+	inc c
+.second_check
+	ld a, c
+	cp b
+	jr c, .second_loop
+	ld c, -1
+.found
+	ld a, c
+	ld [wRequestedBoxSwitch], a
+	jp CloseSRAM
 
 SavedTheGame:
 	ld hl, wOptions
@@ -1034,3 +1114,11 @@ Text_SaveOnMoveMonWOMail:
 	; Each time you move a #MON, data will be saved. OK?
 	text_far UnknownText_0x1c465f
 	text_end
+
+Text_BoxIsFullWantToSwitch:
+	text "The current PC BOX"
+	line "is full. Would you"
+	para "like to switch to"
+	line "the next BOX with"
+	cont "available space?"
+	done

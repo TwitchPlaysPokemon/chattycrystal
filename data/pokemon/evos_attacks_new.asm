@@ -17,7 +17,7 @@ EvosAttacksPointers3::
 	dw LotadEvosAttacks
 	dw LombreEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw TailowEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw WingullEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
@@ -29,13 +29,13 @@ EvosAttacksPointers3::
 	dw WhismurEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
+	dw MakuhitaEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw AronEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
@@ -342,6 +342,20 @@ LombreEvosAttacks:
 	dbw 43, ENCORE
 	dbw 49, HYDRO_PUMP
 	db 0 ; no more level-up moves
+	
+TailowEvosAttacks:
+	dbbw EVOLVE_LEVEL, 22, SWELLOW
+	db 0
+	dbw 1, PECK
+	dbw 1, GROWL
+	dbw 4, FOCUS_ENERGY
+	dbw 8, QUICK_ATTACK
+	dbw 13, WING_ATTACK
+	dbw 19, DOUBLE_TEAM
+	dbw 26, ENDEAVOR
+	dbw 34, AERIAL_ACE
+	dbw 43, AGILITY
+	db 0 ; no more level-up moves
 
 WingullEvosAttacks:
 	dbbw EVOLVE_LEVEL, 25, PELIPPER
@@ -371,6 +385,39 @@ WhismurEvosAttacks:
 	dbw 41, SLEEP_TALK
 	dbw 45, PERISH_SONG
 	db 0 ; no more level-up moves
+	
+MakuhitaEvosAttacks:
+	dbbw EVOLVE_LEVEL, 24, HARIYAMA
+	db 0
+	dbw 1, TACKLE
+	dbw 1, FOCUS_ENERGY
+	dbw 4, SAND_ATTACK
+	dbw 10, ARM_THRUST
+	dbw 13, VITAL_THROW
+	;dbw 19, FAKE_OUT TODO: add this
+	dbw 22, WHIRLWIND
+	;dbw 31, SECRET_POWER TODO: add this
+	dbw 37, BELLY_DRUM
+	dbw 40, ENDURE
+	dbw 46, SEISMIC_TOSS
+	dbw 49, REVERSAL
+	db 0 ; no more level-up moves
+	
+AronEvosAttacks:
+	dbbw EVOLVE_LEVEL, 24, LAIRON
+	db 0
+	dbw 1, TACKLE
+	dbw 4, HARDEN
+	dbw 7, MUD_SLAP
+	dbw 13, METAL_CLAW
+	dbw 17, IRON_DEFENSE
+	dbw 21, ROAR
+	dbw 25, TAKE_DOWN
+	dbw 34, PROTECT
+	dbw 39, METAL_SOUND
+	dbw 44, DOUBLE_EDGE
+	db 0 ; no more level-up moves
+
 
 GlaceonEvosAttacks:
 	db 0 ; no more evolutions

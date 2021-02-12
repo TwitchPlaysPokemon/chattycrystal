@@ -266,7 +266,7 @@ PokedexDataPointerTable:
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba LombrePokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba TailowPokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba WingullPokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
@@ -278,13 +278,13 @@ PokedexDataPointerTable:
 	dba WhismurPokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba MakuhitaPokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba AronPokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba PlaceholderPokedexEntry ; PLACEHOLDER
 	dba PlaceholderPokedexEntry ; PLACEHOLDER

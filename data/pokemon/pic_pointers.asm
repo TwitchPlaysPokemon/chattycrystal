@@ -410,11 +410,8 @@ PokemonPicPointers::
 	dba SlowkingBackpic
 	dba MisdreavusFrontpic
 	dba MisdreavusBackpic
-
-	; Unown pics have their own table. See UnownPicPointers
+	dbw -1, -1 ; Unown pics have their own table. See UnownPicPointers
 	dbw -1, -1
-	dbw -1, -1
-
 	dba WobbuffetFrontpic
 	dba WobbuffetBackpic
 	dba GirafarigFrontpic
@@ -689,6 +686,24 @@ PokemonPicPointers::
 	dba PikachuBackpic ; PLACEHOLDER
 	dba PikachuFrontpic ; PLACEHOLDER
 	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER
 	dba ChatotFrontpic
 	dba ChatotBackpic
 	dba PikachuFrontpic ; PLACEHOLDER
@@ -793,3 +808,5 @@ PokemonPicPointers::
 	dba QuagynxBackpic
 	dba SteelurretFrontpic
 	dba SteelurretBackpic
+	dba PikachuFrontpic ; PLACEHOLDER
+	dba PikachuBackpic ; PLACEHOLDER

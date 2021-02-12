@@ -336,6 +336,15 @@ INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/chatot.1bpp"
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
@@ -388,3 +397,4 @@ INCBIN "gfx/footprints/jumpluff.1bpp"
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER
 INCBIN "gfx/footprints/quagsire.1bpp"
 INCBIN "gfx/footprints/steelix.1bpp"
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER

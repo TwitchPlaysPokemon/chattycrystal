@@ -337,6 +337,15 @@ AnimationPointers:
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
+	dw PikachuAnimation ; PLACEHOLDER
 	dw ChatotAnimation
 	dw PikachuAnimation ; PLACEHOLDER
 	dw PikachuAnimation ; PLACEHOLDER
@@ -389,3 +398,4 @@ AnimationPointers:
 	dw WooperAnimation
 	dw QuagsireAnimation
 	dw SteelixAnimation
+	dw PikachuAnimation ; PLACEHOLDER

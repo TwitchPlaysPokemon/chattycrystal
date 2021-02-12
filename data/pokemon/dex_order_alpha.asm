@@ -1,5 +1,3 @@
-; Every Pokémon sorted alphabetically by name.
-
 AlphabeticalPokedexOrder:
 	dw ABRA
 	dw ABSOL
@@ -7,6 +5,7 @@ AlphabeticalPokedexOrder:
 	dw AGGRON
 	dw AIPOM
 	dw ALAKAZAM
+	dw ALTARIA
 	dw AMAURA
 	dw AMPHAROS
 	dw ARBOK
@@ -47,6 +46,7 @@ AlphabeticalPokedexOrder:
 	dw CHARMELEON
 	dw CHATOT
 	dw CHIKORITA
+	dw CHIMCHAR
 	dw CHINCHOU
 	dw CHIQUIRTLE
 	dw CLAUNCHER
@@ -94,6 +94,7 @@ AlphabeticalPokedexOrder:
 	dw ELECTRIKE
 	dw ELECTRODE
 	dw ELEKID
+	dw EMPOLEON
 	dw ENTEI
 	dw ESPEON
 	dw EXCADRILL
@@ -152,6 +153,7 @@ AlphabeticalPokedexOrder:
 	dw HOUNDOUR
 	dw HYPNO
 	dw IGGLYBUFF
+	dw INFERNAPE
 	dw IVYSAUR
 	dw JIGGLYPUFF
 	dw JOLTEON
@@ -175,6 +177,7 @@ AlphabeticalPokedexOrder:
 	dw LANTURN
 	dw LAPRAS
 	dw LARVITAR
+	dw LATIAS
 	dw LATIOS
 	dw LEAFEON
 	dw LEDIAN
@@ -222,6 +225,7 @@ AlphabeticalPokedexOrder:
 	dw MILTANK
 	dw MISDREAVUS
 	dw MOLTRES
+	dw MONFERNO
 	dw MR__MIME
 	dw MUDKIP
 	dw MUK
@@ -247,6 +251,7 @@ AlphabeticalPokedexOrder:
 	dw PARASECT
 	dw PELIPPER
 	dw PERSIAN
+	dw PHANCERO
 	dw PHANPY
 	dw PICHU
 	dw PIDGEOT
@@ -256,6 +261,7 @@ AlphabeticalPokedexOrder:
 	dw PILOSWINE
 	dw PINECO
 	dw PINSIR
+	dw PIPLUP
 	dw POLITOED
 	dw POLIWAG
 	dw POLIWHIRL
@@ -266,6 +272,7 @@ AlphabeticalPokedexOrder:
 	dw PORYGON2
 	dw PORYGON_Z
 	dw PRIMEAPE
+	dw PRINPLUP
 	dw PSYDUCK
 	dw PUPITAR
 	dw QUAGSIRE
@@ -334,9 +341,10 @@ AlphabeticalPokedexOrder:
 	dw SUNFLORA
 	dw SUNKERN
 	dw SURSKIT
+	dw SWABLU
 	dw SWAMPERT
-	dw SWELLOW
 	dw SWANNA
+	dw SWELLOW
 	dw SWINUB
 	dw SYLVEON
 	dw TAILLOW

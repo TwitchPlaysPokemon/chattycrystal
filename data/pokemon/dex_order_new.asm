@@ -1,5 +1,3 @@
-; Every Pokémon sorted in New Pokédex Order.
-
 NewPokedexOrder:
 	dw CHIKORITA
 	dw BAYLEEF
@@ -305,6 +303,8 @@ NewPokedexOrder:
 	dw TRAPINCH
 	dw VIBRAVA
 	dw FLYGON
+	dw SWABLU
+	dw ALTARIA
 	dw LILEEP
 	dw CRADILY
 	dw FEEBAS
@@ -324,11 +324,18 @@ NewPokedexOrder:
 	dw BELDUM
 	dw METANG
 	dw METAGROSS
+	dw LATIAS
 	dw LATIOS
 	dw GROUDON
 	dw TURTWIG
 	dw GROTLE
 	dw TORTERRA
+	dw CHIMCHAR
+	dw MONFERNO
+	dw INFERNAPE
+	dw PIPLUP
+	dw PRINPLUP
+	dw EMPOLEON
 	dw BIDOOF
 	dw BIBAREL
 	dw SHINX
@@ -391,3 +398,4 @@ NewPokedexOrder:
 	dw JUMPANIUM
 	dw ONIXTRET
 	dw STEELURRET
+	dw PHANCERO

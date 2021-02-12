@@ -1,5 +1,4 @@
 PokedexDataPointerTable:
-; entries correspond to constants/pokemon_constants.asm
 	dba BulbasaurPokedexEntry
 	dba IvysaurPokedexEntry
 	dba VenusaurPokedexEntry
@@ -338,6 +337,15 @@ PokedexDataPointerTable:
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba ChatotPokedexEntry
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
@@ -390,3 +398,4 @@ PokedexDataPointerTable:
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba QuagynxPokedexEntry
 	dba SteelurretPokedexEntry
+	dba PikachuPokedexEntry ; PLACEHOLDER

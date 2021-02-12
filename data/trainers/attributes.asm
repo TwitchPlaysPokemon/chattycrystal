@@ -1,44 +1,8 @@
 TrainerClassAttributes:
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
 
-; Falkner
-	db NO_ITEM, NO_ITEM ; items
-	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
-	dw CONTEXT_USE | SWITCH_SOMETIMES
-
-; Whitney
-	db NO_ITEM, NO_ITEM ; items
-	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
-	dw CONTEXT_USE | SWITCH_SOMETIMES
-
-; Bugsy
-	db NO_ITEM, NO_ITEM ; items
-	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
-	dw CONTEXT_USE | SWITCH_SOMETIMES
-
-; Morty
-	db NO_ITEM, NO_ITEM ; items
-	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
-	dw CONTEXT_USE | SWITCH_SOMETIMES
-
 ; Pryce
 	db HYPER_POTION, NO_ITEM ; items
-	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
-	dw CONTEXT_USE | SWITCH_SOMETIMES
-
-; Jasmine
-	db HYPER_POTION, NO_ITEM ; items
-	db 25 ; base reward
-	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
-	dw CONTEXT_USE | SWITCH_SOMETIMES
-
-; Chuck
-	db FULL_HEAL, NO_ITEM ; items
 	db 25 ; base reward
 	dw AI_BASIC | AI_SETUP | AI_SMART | AI_AGGRESSIVE | AI_CAUTIOUS | AI_STATUS | AI_RISKY
 	dw CONTEXT_USE | SWITCH_SOMETIMES

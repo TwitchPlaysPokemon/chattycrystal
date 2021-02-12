@@ -274,154 +274,154 @@ JOHTO_POKEMON EQU const_value
 	const TREECKO      ;  fc
 	const GROVYLE      ;  fd
 	const SCEPTILE     ;  fe
-	const TORCHIC      ;  ff
-	const COMBUSKEN    ; 100
-	const BLAZIKEN     ; 101
-	const MUDKIP       ; 102
-	const MARSHTOMP    ; 103
-	const SWAMPERT     ; 104
+	const TORCHIC      ;  ff - MISSING
+	const COMBUSKEN    ; 100 - MISSING
+	const BLAZIKEN     ; 101 - MISSING
+	const MUDKIP       ; 102 - MISSING
+	const MARSHTOMP    ; 103 - MISSING
+	const SWAMPERT     ; 104 - MISSING
 	const POOCHYENA    ; 105
 	const MIGHTYENA    ; 106
 	const ZIGZAGOON    ; 107
 	const LINOONE      ; 108
-	const LOTAD        ; 109
-	const LOMBRE       ; 10a
-	const LUDICOLO     ; 10b
-	const TAILLOW      ; 10c
-	const SWELLOW      ; 10d
-	const WINGULL      ; 10e
-	const PELIPPER     ; 10f
-	const RALTS        ; 110
-	const KIRLIA       ; 111
-	const GARDEVOIR    ; 112
-	const SURSKIT      ; 113
-	const MASQUERAIN   ; 114
-	const WHISMUR      ; 115
-	const LOUDRED      ; 116
-	const EXPLOUD      ; 117
-	const MAKUHITA     ; 118
-	const HARIYAMA     ; 119
-	const AZURILL      ; 11a
-	const SKITTY       ; 11b
-	const DELCATTY     ; 11c
-	const SABLEYE      ; 11d
-	const ARON         ; 11e
-	const LAIRON       ; 11f
-	const AGGRON       ; 120
-	const ELECTRIKE    ; 121
-	const MANECTRIC    ; 122
-	const ROSELIA      ; 123
-	const WAILMER      ; 124
-	const WAILORD      ; 125
-	const TRAPINCH     ; 126
-	const VIBRAVA      ; 127
-	const FLYGON       ; 128
-	const SWABLU       ; 129
-	const ALTARIA      ; 12a
-	const LILEEP       ; 12b
-	const CRADILY      ; 12c
-	const FEEBAS       ; 12d
-	const MILOTIC      ; 12e
-	const DUSKULL      ; 12f
-	const DUSCLOPS     ; 130
-	const ABSOL        ; 131
-	const SNORUNT      ; 132
-	const SPHEAL       ; 133
-	const SEALEO       ; 134
-	const WALREIN      ; 135
-	const BAGON        ; 136
-	const SHELGON      ; 137
-	const SALAMENCE    ; 138
-	const BELDUM       ; 139
-	const METANG       ; 13a
-	const METAGROSS    ; 13b
-	const LATIAS       ; 13c
-	const LATIOS       ; 13d
-	const GROUDON      ; 13e
-	const TURTWIG      ; 13f
-	const GROTLE       ; 140
-	const TORTERRA     ; 141
-	const CHIMCHAR     ; 142
-	const MONFERNO     ; 143
-	const INFERNAPE    ; 144
-	const PIPLUP       ; 145
-	const PRINPLUP     ; 146
-	const EMPOLEON     ; 147
-	const BIDOOF       ; 148
-	const BIBAREL      ; 149
-	const SHINX        ; 14a
-	const LUXIO        ; 14b
-	const LUXRAY       ; 14c
-	const BUDEW        ; 14d
-	const ROSERADE     ; 14e
-	const BURMY        ; 14f
-	const WORMADAM     ; 150
-	const BUIZEL       ; 151
-	const FLOATZEL     ; 152
-	const SHELLOS      ; 153
-	const GASTRODON    ; 154
-	const BUNEARY      ; 155
-	const LOPUNNY      ; 156
-	const STUNKY       ; 157
-	const SKUNTANK     ; 158
-	const BRONZOR      ; 159
-	const BRONZONG     ; 15a
-	const BONSLY       ; 15b
+	const LOTAD        ; 109 - MISSING
+	const LOMBRE       ; 10a - MISSING
+	const LUDICOLO     ; 10b - MISSING
+	const TAILLOW      ; 10c - MISSING
+	const SWELLOW      ; 10d - MISSING
+	const WINGULL      ; 10e - MISSING
+	const PELIPPER     ; 10f - MISSING
+	const RALTS        ; 110 - MISSING
+	const KIRLIA       ; 111 - MISSING
+	const GARDEVOIR    ; 112 - MISSING
+	const SURSKIT      ; 113 - MISSING
+	const MASQUERAIN   ; 114 - MISSING
+	const WHISMUR      ; 115 - MISSING
+	const LOUDRED      ; 116 - MISSING
+	const EXPLOUD      ; 117 - MISSING
+	const MAKUHITA     ; 118 - MISSING
+	const HARIYAMA     ; 119 - MISSING
+	const AZURILL      ; 11a - MISSING
+	const SKITTY       ; 11b - MISSING
+	const DELCATTY     ; 11c - MISSING
+	const SABLEYE      ; 11d - MISSING
+	const ARON         ; 11e - MISSING
+	const LAIRON       ; 11f - MISSING
+	const AGGRON       ; 120 - MISSING
+	const ELECTRIKE    ; 121 - MISSING
+	const MANECTRIC    ; 122 - MISSING
+	const ROSELIA      ; 123 - MISSING
+	const WAILMER      ; 124 - MISSING
+	const WAILORD      ; 125 - MISSING
+	const TRAPINCH     ; 126 - MISSING
+	const VIBRAVA      ; 127 - MISSING
+	const FLYGON       ; 128 - MISSING
+	const SWABLU       ; 129 - MISSING
+	const ALTARIA      ; 12a - MISSING
+	const LILEEP       ; 12b - MISSING
+	const CRADILY      ; 12c - MISSING
+	const FEEBAS       ; 12d - MISSING
+	const MILOTIC      ; 12e - MISSING
+	const DUSKULL      ; 12f - MISSING
+	const DUSCLOPS     ; 130 - MISSING
+	const ABSOL        ; 131 - MISSING
+	const SNORUNT      ; 132 - MISSING
+	const SPHEAL       ; 133 - MISSING
+	const SEALEO       ; 134 - MISSING
+	const WALREIN      ; 135 - MISSING
+	const BAGON        ; 136 - MISSING
+	const SHELGON      ; 137 - MISSING
+	const SALAMENCE    ; 138 - MISSING
+	const BELDUM       ; 139 - MISSING
+	const METANG       ; 13a - MISSING
+	const METAGROSS    ; 13b - MISSING
+	const LATIAS       ; 13c - MISSING
+	const LATIOS       ; 13d - MISSING
+	const GROUDON      ; 13e - MISSING
+	const TURTWIG      ; 13f - MISSING
+	const GROTLE       ; 140 - MISSING
+	const TORTERRA     ; 141 - MISSING
+	const CHIMCHAR     ; 142 - MISSING
+	const MONFERNO     ; 143 - MISSING
+	const INFERNAPE    ; 144 - MISSING
+	const PIPLUP       ; 145 - MISSING
+	const PRINPLUP     ; 146 - MISSING
+	const EMPOLEON     ; 147 - MISSING
+	const BIDOOF       ; 148 - MISSING
+	const BIBAREL      ; 149 - MISSING
+	const SHINX        ; 14a - MISSING
+	const LUXIO        ; 14b - MISSING
+	const LUXRAY       ; 14c - MISSING
+	const BUDEW        ; 14d - MISSING
+	const ROSERADE     ; 14e - MISSING
+	const BURMY        ; 14f - MISSING
+	const WORMADAM     ; 150 - MISSING
+	const BUIZEL       ; 151 - MISSING
+	const FLOATZEL     ; 152 - MISSING
+	const SHELLOS      ; 153 - MISSING
+	const GASTRODON    ; 154 - MISSING
+	const BUNEARY      ; 155 - MISSING
+	const LOPUNNY      ; 156 - MISSING
+	const STUNKY       ; 157 - MISSING
+	const SKUNTANK     ; 158 - MISSING
+	const BRONZOR      ; 159 - MISSING
+	const BRONZONG     ; 15a - MISSING
+	const BONSLY       ; 15b - MISSING
 	const CHATOT       ; 15c
-	const CROAGUNK     ; 15d
-	const TOXICROAK    ; 15e
-	const LEAFEON      ; 15f
-	const GLACEON      ; 160
-	const PORYGON_Z    ; 161
-	const DUSKNOIR     ; 162
-	const FROSLASS     ; 163
-	const DARKRAI      ; 164
-	const PANSAGE      ; 165
-	const SIMISAGE     ; 166
-	const DRILLBUR     ; 167
-	const EXCADRILL    ; 168
-	const SANDILE      ; 169
-	const KROKOROK     ; 16a
-	const KROOKODILE   ; 16b
-	const DUCKLETT     ; 16c
-	const SWANNA       ; 16d
-	const TYNAMO       ; 16e
-	const EELEKTRIK    ; 16f
-	const EELEKTROSS   ; 170
-	const LITWICK      ; 171
-	const LAMPENT      ; 172
-	const CHANDELURE   ; 173
-	const CLAUNCHER    ; 174
-	const CLAWITZER    ; 175
-	const HELIOPTILE   ; 176
-	const HELIOLISK    ; 177
-	const AMAURA       ; 178
-	const AURORUS      ; 179
-	const SYLVEON      ; 17a
-	const GOOMY        ; 17b
-	const SLIGGOO      ; 17c
-	const GOODRA       ; 17d
-	const CRABRAWLER   ; 17e
-	const CRABOMINABLE ; 17f
-	const CUTIEFLY     ; 180
-	const RIBOMBEE     ; 181
+	const CROAGUNK     ; 15d - MISSING
+	const TOXICROAK    ; 15e - MISSING
+	const LEAFEON      ; 15f - MISSING
+	const GLACEON      ; 160 - MISSING
+	const PORYGON_Z    ; 161 - MISSING
+	const DUSKNOIR     ; 162 - MISSING
+	const FROSLASS     ; 163 - MISSING
+	const DARKRAI      ; 164 - MISSING
+	const PANSAGE      ; 165 - MISSING
+	const SIMISAGE     ; 166 - MISSING
+	const DRILLBUR     ; 167 - MISSING
+	const EXCADRILL    ; 168 - MISSING
+	const SANDILE      ; 169 - MISSING
+	const KROKOROK     ; 16a - MISSING
+	const KROOKODILE   ; 16b - MISSING
+	const DUCKLETT     ; 16c - MISSING
+	const SWANNA       ; 16d - MISSING
+	const TYNAMO       ; 16e - MISSING
+	const EELEKTRIK    ; 16f - MISSING
+	const EELEKTROSS   ; 170 - MISSING
+	const LITWICK      ; 171 - MISSING
+	const LAMPENT      ; 172 - MISSING
+	const CHANDELURE   ; 173 - MISSING
+	const CLAUNCHER    ; 174 - MISSING
+	const CLAWITZER    ; 175 - MISSING
+	const HELIOPTILE   ; 176 - MISSING
+	const HELIOLISK    ; 177 - MISSING
+	const AMAURA       ; 178 - MISSING
+	const AURORUS      ; 179 - MISSING
+	const SYLVEON      ; 17a - MISSING
+	const GOOMY        ; 17b - MISSING
+	const SLIGGOO      ; 17c - MISSING
+	const GOODRA       ; 17d - MISSING
+	const CRABRAWLER   ; 17e - MISSING
+	const CRABOMINABLE ; 17f - MISSING
+	const CUTIEFLY     ; 180 - MISSING
+	const RIBOMBEE     ; 181 - MISSING
 ; Fused Crystal mons
-	const ONIXTRET     ; 182
-	const CHIQUIRTLE   ; 183
-	const BAYTORTLE    ; 184
+	const ONIXTRET     ; 182 - MISSING
+	const CHIQUIRTLE   ; 183 - MISSING
+	const BAYTORTLE    ; 184 - MISSING
 	const MEGASTOISE   ; 185
-	const HOOTDUO      ; 186
+	const HOOTDUO      ; 186 - MISSING
 	const NOCTDRIO     ; 187
-	const TOGEKEY      ; 188
+	const TOGEKEY      ; 188 - MISSING
 	const TOGETAPE     ; 189
-	const HOPPORITA    ; 18a
-	const SKIPLEEF     ; 18b
+	const HOPPORITA    ; 18a - MISSING
+	const SKIPLEEF     ; 18b - MISSING
 	const JUMPANIUM    ; 18c
-	const WOOCHUM      ; 18d
+	const WOOCHUM      ; 18d - MISSING
 	const QUAGYNX      ; 18e
 	const STEELURRET   ; 18f
 ; TPP's signature fakemon
-	const PHANCERO     ; 190
+	const PHANCERO     ; 190 - MISSING
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

@@ -499,17 +499,7 @@ DisplayHOFMon:
 	ld [hl], "<DOT>"
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
-	ld a, l
-	ld l, h
-	ld h, a
-	push hl
-	ld hl, sp + 0
-	ld d, h
-	ld e, l
-	hlcoord 3, 13
-	lb bc, PRINTNUM_LEADINGZEROS | 2, 3
-	call PrintNum
-	pop hl
+	call .print_dex_number
 	ld a, [wCurPartySpecies]
 	ld [wNamedObjectIndexBuffer], a
 	call GetBasePokemonName
@@ -545,7 +535,34 @@ DisplayHOFMon:
 	hlcoord 10, 16
 	ld de, wTempMonID
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
+	jp PrintNum
+
+.print_dex_number
+	ld bc, HOFNationalDexNumbers - 2
+	add hl, hl
+	add hl, bc
+	; note: little-endian, but we need to byte-swap it for the push
+	ld a, [hli]
+	ld l, [hl]
+	bit 7, l
+	jr nz, .no_dex_number
+	ld h, a
+	push hl
+	ld hl, sp + 0
+	ld d, h
+	ld e, l
+	hlcoord 3, 13
+	lb bc, PRINTNUM_LEADINGZEROS | 2, 3
 	call PrintNum
+	pop hl
+	ret
+
+.no_dex_number
+	ld a, "?"
+	hlcoord 3, 13
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
 	ret
 
 HOF_AnimatePlayerPic:
@@ -634,3 +651,5 @@ HOF_AnimatePlayerPic:
 
 .PlayTime:
 	db "PLAY TIME@"
+
+INCLUDE "data/pokemon/national_dex_numbers.asm"

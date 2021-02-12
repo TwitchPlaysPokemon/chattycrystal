@@ -31,8 +31,7 @@ SaveAfterLinkTrade:
 	call SaveChecksum
 	farcall BackupPartyMonMail
 	farcall SaveRTC
-	call ResumeGameLogic
-	ret
+	jp ResumeGameLogic
 
 ChangeBoxSaveGame:
 	push de
@@ -59,13 +58,11 @@ ChangeBoxSaveGame:
 
 Link_SaveGame:
 	call AskOverwriteSaveFile
-	jr c, .refused
+	ret c
 	call PauseGameLogic
 	call SavedTheGame
 	call ResumeGameLogic
 	and a
-
-.refused
 	ret
 
 MoveMonWOMail_SaveGame:
@@ -76,8 +73,7 @@ MoveMonWOMail_SaveGame:
 	ld a, e
 	ld [wCurBox], a
 	call LoadBox
-	call ResumeGameLogic
-	ret
+	jp ResumeGameLogic
 
 MoveMonWOMail_InsertMon_SaveGame:
 	call PauseGameLogic
@@ -152,8 +148,7 @@ AddHallOfFameEntry:
 	ld de, sHallOfFame
 	ld bc, HOF_LENGTH
 	call CopyBytes
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 AskOverwriteSaveFile:
 	ld a, [wSaveFileExists]
@@ -246,8 +241,7 @@ SaveGameData:
 	xor a
 	ld [sBattleTowerChallengeState], a
 .ok
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 ErasePreviousSave:
 	call EraseBoxes
@@ -287,27 +281,6 @@ EraseHallOfFame:
 	call ByteFill
 	jp CloseSRAM
 
-Unreferenced_Function14d18:
-; copy .Data to SRA4:a007
-	ld a, 4 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	ld hl, .Data
-	ld de, $a007 ; address of MBC30 bank
-	ld bc, .DataEnd - .Data
-	call CopyBytes
-	jp CloseSRAM
-
-.Data:
-	db $0d, $02, $00, $05, $00, $00
-	db $22, $02, $01, $05, $00, $00
-	db $03, $04, $05, $08, $03, $05
-	db $0e, $06, $03, $02, $00, $00
-	db $39, $07, $07, $04, $00, $05
-	db $04, $07, $01, $05, $00, $00
-	db $0f, $05, $14, $07, $05, $05
-	db $11, $0c, $0c, $06, $06, $04
-.DataEnd
-
 EraseBattleTowerStatus:
 	ld a, BANK(sBattleTowerChallengeState)
 	call GetSRAMBank
@@ -315,48 +288,11 @@ EraseBattleTowerStatus:
 	ld [sBattleTowerChallengeState], a
 	jp CloseSRAM
 
-SaveData:
-	call _SaveData
-	ret
-
-Unreferenced_Function14d6c:
-	ld a, 4 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	ld a, [$a60b] ; address of MBC30 bank
-	ld b, $0
-	and a
-	jr z, .ok
-	ld b, $2
-
-.ok
-	ld a, b
-	ld [$a60b], a ; address of MBC30 bank
-	call CloseSRAM
-	ret
-
-Unreferenced_Function14d83:
-	ld a, 4 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	xor a
-	ld [$a60c], a ; address of MBC30 bank
-	ld [$a60d], a ; address of MBC30 bank
-	call CloseSRAM
-	ret
-
-Unreferenced_Function14d93:
-	ld a, 7 ; MBC30 bank used by JP Crystal; inaccessible by MBC3
-	call GetSRAMBank
-	xor a
-	ld [$a000], a ; address of MBC30 bank
-	call CloseSRAM
-	ret
-
 HallOfFame_InitSaveIfNeeded:
 	ld a, [wSavedAtLeastOnce]
 	and a
 	ret nz
-	call ErasePreviousSave
-	ret
+	jp ErasePreviousSave
 
 ValidateSave:
 	ld a, BANK(sCheckValue1) ; aka BANK(sCheckValue2)
@@ -653,7 +589,7 @@ VerifyChecksum:
 	pop af
 	ret
 
-_SaveData:
+SaveData:
 	; This is called within two scenarios:
 	;   a) ErasePreviousSave (the process of erasing the save from a previous game file)
 	;   b) unused mobile functionality
@@ -665,18 +601,6 @@ _SaveData:
 	ld de, sCrystalData
 	ld bc, wCrystalDataEnd - wCrystalData
 	call CopyBytes
-
-	; This block originally had some mobile functionality, but since we're still in
-	; BANK(sCrystalData), it instead overwrites the sixteen wEventFlags starting at 1:a603 with
-	; garbage from wd479. This isn't an issue, since ErasePreviousSave is followed by a regular
-	; save that unwrites the garbage.
-
-	ld hl, wd479
-	ld a, [hli]
-	ld [$a60e + 0], a
-	ld a, [hli]
-	ld [$a60e + 1], a
-
 	jp CloseSRAM
 
 _LoadData:
@@ -686,16 +610,6 @@ _LoadData:
 	ld de, wCrystalData
 	ld bc, wCrystalDataEnd - wCrystalData
 	call CopyBytes
-
-	; This block originally had some mobile functionality to mirror _SaveData above, but instead it
-	; (harmlessly) writes the aforementioned wEventFlags to the unused wd479.
-
-	ld hl, wd479
-	ld a, [$a60e + 0]
-	ld [hli], a
-	ld a, [$a60e + 1]
-	ld [hli], a
-
 	jp CloseSRAM
 
 GetBoxAddress:

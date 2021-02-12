@@ -196,7 +196,7 @@ Function4a0c2:
 	pop af
 	and a
 	jr nz, .skip_save
-	farcall _SaveData
+	farcall SaveData
 .skip_save
 	ld c, 5
 	call DelayFrames

@@ -166,8 +166,7 @@ BillsPCDepositFuncDeposit:
 
 .box_full
 	ld de, PCString_WhatsUp
-	call BillsPC_PlaceString
-	ret
+	jp BillsPC_PlaceString
 
 BillsPCDepositFuncStats:
 	call LoadStandardMenuHeader
@@ -356,11 +355,6 @@ _WithdrawPKMN:
 	jr z, .b_button
 	ld a, $2
 	ld [wJumptableIndex], a
-	ret
-
-.unused
-	ld hl, wJumptableIndex
-	dec [hl]
 	ret
 
 .b_button
@@ -564,8 +558,7 @@ _MovePKMNWithoutMail:
 	call BillsPC_ApplyPalettes
 	call WaitBGMap
 	call BillsPC_UpdateSelectionCursor
-	call BillsPC_IncrementJumptableIndex
-	ret
+	jp BillsPC_IncrementJumptableIndex
 
 .Joypad:
 	ld hl, hJoyPressed
@@ -584,17 +577,15 @@ _MovePKMNWithoutMail:
 	ldh [hBGMapMode], a
 	call BillsPC_RefreshTextboxes
 	call PCMonInfo
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	call DelayFrame
-	call DelayFrame
-	ret
+	jp DelayFrame
 
 .d_pad
 	xor a
 	ld [wBillsPC_CursorPosition], a
 	ld [wBillsPC_ScrollPosition], a
-	ld a, $0
 	ld [wJumptableIndex], a
 	ret
 
@@ -604,7 +595,7 @@ _MovePKMNWithoutMail:
 	ret z
 	cp -1
 	jr z, .b_button
-	ld a, $2
+	ld a, 2
 	ld [wJumptableIndex], a
 	ret
 
@@ -614,7 +605,7 @@ _MovePKMNWithoutMail:
 	ret
 
 .b_button
-	ld a, $6
+	ld a, 6
 	ld [wJumptableIndex], a
 	ret
 
@@ -628,7 +619,7 @@ _MovePKMNWithoutMail:
 	call BillsPC_ApplyPalettes
 	ld de, PCString_WhatsUp
 	call BillsPC_PlaceString
-	ld a, $1
+	ld a, 1
 	ld [wMenuCursorY], a
 	call BillsPC_IncrementJumptableIndex
 	ret
@@ -667,7 +658,7 @@ _MovePKMNWithoutMail:
 	ld [wBillsPC_BackupCursorPosition], a
 	ld a, [wBillsPC_LoadedBox]
 	ld [wBillsPC_BackupLoadedBox], a
-	ld a, $4
+	ld a, 4
 	ld [wJumptableIndex], a
 	ret
 
@@ -679,11 +670,10 @@ _MovePKMNWithoutMail:
 	call BillsPC_GetSelectedPokemonSpecies
 	ld [wCurPartySpecies], a
 	ld a, SCGB_BILLS_PC
-	call BillsPC_ApplyPalettes
-	ret
+	jp BillsPC_ApplyPalettes
 
 .Cancel:
-	ld a, $0
+	xor a
 	ld [wJumptableIndex], a
 	ret
 
@@ -713,8 +703,7 @@ _MovePKMNWithoutMail:
 	call ClearSprites
 	call BillsPC_UpdateInsertCursor
 	call WaitBGMap
-	call BillsPC_IncrementJumptableIndex
-	ret
+	jp BillsPC_IncrementJumptableIndex
 
 .Joypad2:
 	ld hl, hJoyPressed
@@ -732,17 +721,16 @@ _MovePKMNWithoutMail:
 	xor a
 	ldh [hBGMapMode], a
 	call BillsPC_RefreshTextboxes
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	call DelayFrame
-	call DelayFrame
-	ret
+	jp DelayFrame
 
 .dpad_2
 	xor a
 	ld [wBillsPC_CursorPosition], a
 	ld [wBillsPC_ScrollPosition], a
-	ld a, $4
+	ld a, 4
 	ld [wJumptableIndex], a
 	ret
 
@@ -750,7 +738,7 @@ _MovePKMNWithoutMail:
 	call BillsPC_CheckSpaceInDestination
 	jr c, .no_space
 	call MovePKMNWitoutMail_InsertMon
-	ld a, $0
+	xor a
 	ld [wJumptableIndex], a
 	ret
 
@@ -766,7 +754,7 @@ _MovePKMNWithoutMail:
 	ld [wBillsPC_CursorPosition], a
 	ld a, [wBillsPC_BackupLoadedBox]
 	ld [wBillsPC_LoadedBox], a
-	ld a, $0
+	xor a
 	ld [wJumptableIndex], a
 	ret
 
@@ -805,7 +793,7 @@ _StatsScreenDPad:
 	and a
 	jr z, .empty
 	dec a
-	cp $1
+	cp 1
 	jr z, .empty
 	ld e, a
 	ld a, [hl]
@@ -1322,7 +1310,7 @@ BillsPC_RefreshTextboxes:
 .party
 	push hl
 	ld hl, wPartySpecies
-	ld d, $0
+	ld d, 0
 	add hl, de
 	ld a, [hl]
 	and a
@@ -1348,7 +1336,7 @@ BillsPC_RefreshTextboxes:
 	ld a, BANK(sBox)
 	call GetSRAMBank
 	ld hl, sBoxSpecies
-	ld d, $0
+	ld d, 0
 	add hl, de
 	ld a, [hl]
 	and a
@@ -1497,7 +1485,7 @@ BillsPC_GetSelectedPokemonSpecies:
 	add a, a
 	add a, a
 	ld e, a
-	ld d, $0
+	ld d, 0
 	ld hl, wBillsPCPokemonList
 	add hl, de
 	ld a, [hli]
@@ -1520,7 +1508,7 @@ BillsPC_UpdateSelectionCursor:
 	cp -1
 	ret z
 	ld a, [wBillsPC_CursorPosition]
-	and $7
+	and 7
 	swap a
 	add [hl]
 	inc hl
@@ -1650,7 +1638,7 @@ BillsPC_CheckMail_PreventBlackout:
 	and a
 	jr nz, .Okay
 	ld a, [wBillsPC_NumMonsInBox]
-	cp $3
+	cp 3
 	jr c, .ItsYourLastPokemon
 	ld a, [wBillsPC_CursorPosition]
 	ld hl, wBillsPC_ScrollPosition
@@ -1706,7 +1694,7 @@ BillsPC_IsMonAnEgg:
 BillsPC_StatsScreen:
 	call LowVolume
 	call BillsPC_CopyMon
-	ld a, $3
+	ld a, 3
 	ld [wMonType], a
 	predef StatsScreenInit
 	call BillsPC_InitGFX
@@ -2167,7 +2155,7 @@ MovePKMNWitoutMail_InsertMon:
 CopySpeciesToTemp:
 	ld a, [wCurPartyMon]
 	ld c, a
-	ld b, $0
+	ld b, 0
 	add hl, bc
 	ld a, [hl]
 	ld [wCurPartySpecies], a

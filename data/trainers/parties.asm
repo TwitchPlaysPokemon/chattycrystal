@@ -3415,11 +3415,11 @@ PokemaniacGroup:
 GruntMGroup:
 	next_list_item ; GRUNTM (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 17
+	db 16
 	dw RATTATA
-	db 19
+	db 18
 	dw ZUBAT
-	db 19
+	db 18
 	dw ZUBAT
 	db -1 ; end
 
@@ -3617,9 +3617,9 @@ GruntMGroup:
 
 	next_list_item ; GRUNTM (29)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 19
+	db 18
 	dw RATTATA
-	db 19
+	db 18
 	dw RATTATA
 	db -1 ; end
 
@@ -6396,9 +6396,9 @@ MysticalmanGroup:
 GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 17
+	db 16
 	dw ZUBAT
-	db 19
+	db 18
 	dw EKANS
 	db -1 ; end
 

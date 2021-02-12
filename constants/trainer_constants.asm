@@ -24,8 +24,6 @@ CHRIS EQU __enum__
 	const PHONECONTACT_ELM
 	const PHONECONTACT_BUENA
 
-KRIS EQU __enum__
-
 	trainerclass PRYCE ; 5
 	const PRYCE1
 
@@ -821,5 +819,7 @@ KRIS EQU __enum__
 	trainerclass GSCHGSS_CHRIS_RIVAL ; 6e
 	const AJDNNW2
 	const AJDNNW3
-	
+
+KRIS EQU __enum__
+
 NUM_TRAINER_CLASSES EQU __enum__

@@ -101,7 +101,7 @@ EggMovePointers3::
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
-	dw NoEggMoves3 ; PLACEHOLDER
+	dw GlaceonEggMoves
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
@@ -180,6 +180,16 @@ ZigzagoonEggMoves:
 	dw SUBSTITUTE
 ;	dw TICKLE ;TODO: add when tickle is added
 	dw THIEF
+	dw -1 ; end
+
+GlaceonEggMoves:
+	dw CHARM
+	dw CURSE
+	dw DETECT
+	dw COVET
+	dw ENDURE
+	dw FLAIL
+;	dw TICKLE ; TODO: add when Tickle is implemented.
 	dw -1 ; end
 
 NoEggMoves3:

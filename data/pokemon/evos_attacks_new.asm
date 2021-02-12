@@ -101,7 +101,7 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw GlaceonEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
@@ -295,4 +295,20 @@ LinooneEvosAttacks:
 	dbw 41, SLASH
 	dbw 47, REST
 	dbw 53, BELLY_DRUM
+	db 0 ; no more level-up moves
+
+GlaceonEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, TAIL_WHIP
+	dbw 5, SAND_ATTACK
+	dbw 9, ICY_WIND
+	dbw 13, QUICK_ATTACK
+	dbw 17, BITE
+	dbw 17, AURORA_BEAM ; No Ice Fang, no PSS either so doesn't matter.
+	dbw 25, ICE_SHARD
+	dbw 29, BARRIER
+	dbw 33, MIRROR_COAT
+	dbw 41, ICE_BEAM ; Replacement for Last Resort, and because Ice Beam isn't a TM this gen, and fuck the postgame tutor.
+	dbw 45, BLIZZARD
 	db 0 ; no more level-up moves

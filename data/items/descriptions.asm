@@ -24,7 +24,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw QuestionMarkDesc
+	dw IceStoneDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -345,6 +345,10 @@ ThunderStoneDesc:
 	next "kinds of #MON.@"
 
 WaterStoneDesc:
+	db   "Evolves certain"
+	next "kinds of #MON.@"
+
+IceStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 

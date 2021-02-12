@@ -786,3 +786,9 @@ GrovyleFrontpic:    INCBIN "gfx/pokemon/grovyle/front.animated.2bpp.lz"
 GrovyleBackpic:     INCBIN "gfx/pokemon/grovyle/back.2bpp.lz"
 SceptileFrontpic:   INCBIN "gfx/pokemon/sceptile/front.animated.2bpp.lz"
 SceptileBackpic:    INCBIN "gfx/pokemon/sceptile/back.2bpp.lz"
+
+
+SECTION "Pics 22", ROMX
+
+GlaceonFrontpic:    INCBIN "gfx/pokemon/glaceon/front.animated.2bpp.lz"
+GlaceonBackpic:     INCBIN "gfx/pokemon/glaceon/back.2bpp.lz"

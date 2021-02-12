@@ -99,7 +99,7 @@ INCLUDE "data/pokemon/base_stats/chatot.asm"
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/glaceon.asm"
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/pikachu.asm" ; PLACEHOLDER

@@ -46,7 +46,7 @@ Route32CooltrainerMScript:
 	faceplayer
 Route32CooltrainerMContinueScene:
 	opentext
- 	checkevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
+	checkevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
 	iftrue .GotMiracleSeed
 	checkflag ENGINE_ZEPHYRBADGE
 	iffalse .DontHaveZephyrBadge

@@ -558,9 +558,9 @@ FlyFunction:
 	ret
 
 .Jumptable:
- 	dw .TryFly
- 	dw .DoFly
- 	dw .FailFly
+	dw .TryFly
+	dw .DoFly
+	dw .FailFly
 
 .TryFly:
 ; Fly

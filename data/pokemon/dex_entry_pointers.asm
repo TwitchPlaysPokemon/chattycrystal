@@ -362,9 +362,31 @@ PokedexDataPointerTable:
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
 	dba PikachuPokedexEntry ; PLACEHOLDER
-	dba JumpluffPokedexEntry
-	dba MeganiumPokedexEntry
-	dba NoctowlPokedexEntry
-	dba QuagsirePokedexEntry
-	dba SteelixPokedexEntry
-	dba TogeticPokedexEntry
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba MegastoisePokedexEntry
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba NoctdrioPokedexEntry
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba TogetapePokedexEntry
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba JumpaniumPokedexEntry
+	dba PikachuPokedexEntry ; PLACEHOLDER
+	dba QuagynxPokedexEntry
+	dba SteelurretPokedexEntry

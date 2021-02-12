@@ -2856,13 +2856,15 @@ wPartyMonOT:: ds NAME_LENGTH * PARTY_LENGTH ; ddff
 wPartyMonNicknames:: ds MON_NAME_LENGTH * PARTY_LENGTH ; de41
 wPartyMonNicknamesEnd::
 
-	ds 22
-
 wPokedexCaught:: flag_array NUM_POKEMON ; de99
 wEndPokedexCaught::
 
+	ds 4
+
 wPokedexSeen:: flag_array NUM_POKEMON ; deb9
 wEndPokedexSeen::
+
+	ds 4
 
 wUnownDex:: ds NUM_UNOWN ; ded9
 wUnlockedUnowns:: db ; def3

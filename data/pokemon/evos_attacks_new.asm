@@ -112,10 +112,32 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; TODO: learnset
+	dw DummyEvosAttacks ; PLACEHOLDER
 	dw DummyEvosAttacks ; TODO: learnset
 	dw DummyEvosAttacks ; TODO: learnset
 

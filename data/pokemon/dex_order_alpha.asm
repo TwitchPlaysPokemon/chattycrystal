@@ -7,16 +7,19 @@ AlphabeticalPokedexOrder:
 	dw AGGRON
 	dw AIPOM
 	dw ALAKAZAM
+	dw AMAURA
 	dw AMPHAROS
 	dw ARBOK
 	dw ARCANINE
 	dw ARIADOS
 	dw ARON
 	dw ARTICUNO
+	dw AURORUS
 	dw AZUMARILL
 	dw AZURILL
 	dw BAGON
 	dw BAYLEEF
+	dw BAYTORTLE
 	dw BEEDRILL
 	dw BELDUM
 	dw BELLOSSOM
@@ -45,17 +48,23 @@ AlphabeticalPokedexOrder:
 	dw CHATOT
 	dw CHIKORITA
 	dw CHINCHOU
+	dw CHIQUIRTLE
+	dw CLAUNCHER
+	dw CLAWITZER
 	dw CLEFABLE
 	dw CLEFAIRY
 	dw CLEFFA
 	dw CLOYSTER
 	dw COMBUSKEN
 	dw CORSOLA
+	dw CRABOMINABLE
+	dw CRABRAWLER
 	dw CRADILY
 	dw CROAGUNK
 	dw CROBAT
 	dw CROCONAW
 	dw CUBONE
+	dw CUTIEFLY
 	dw CYNDAQUIL
 	dw DARKRAI
 	dw DELCATTY
@@ -115,6 +124,8 @@ AlphabeticalPokedexOrder:
 	dw GOLDEEN
 	dw GOLDUCK
 	dw GOLEM
+	dw GOODRA
+	dw GOOMY
 	dw GRANBULL
 	dw GRAVELER
 	dw GRIMER
@@ -125,13 +136,17 @@ AlphabeticalPokedexOrder:
 	dw GYARADOS
 	dw HARIYAMA
 	dw HAUNTER
+	dw HELIOLISK
+	dw HELIOPTILE
 	dw HERACROSS
 	dw HITMONCHAN
 	dw HITMONLEE
 	dw HITMONTOP
 	dw HO_OH
+	dw HOOTDUO
 	dw HOOTHOOT
 	dw HOPPIP
+	dw HOPPORITA
 	dw HORSEA
 	dw HOUNDOOM
 	dw HOUNDOUR
@@ -226,6 +241,7 @@ AlphabeticalPokedexOrder:
 	dw OMANYTE
 	dw OMASTAR
 	dw ONIX
+	dw ONIXTRET
 	dw PANSAGE
 	dw PARAS
 	dw PARASECT
@@ -265,6 +281,7 @@ AlphabeticalPokedexOrder:
 	dw REMORAID
 	dw RHYDON
 	dw RHYHORN
+	dw RIBOMBEE
 	dw ROSELIA
 	dw ROSERADE
 	dw SABLEYE
@@ -287,9 +304,11 @@ AlphabeticalPokedexOrder:
 	dw SHUCKLE
 	dw SIMISAGE
 	dw SKARMORY
+	dw SKIPLEEF
 	dw SKIPLOOM
 	dw SKITTY
 	dw SKUNTANK
+	dw SLIGGOO
 	dw SLOWBRO
 	dw SLOWKING
 	dw SLOWPOKE
@@ -319,12 +338,14 @@ AlphabeticalPokedexOrder:
 	dw SWELLOW
 	dw SWANNA
 	dw SWINUB
+	dw SYLVEON
 	dw TAILLOW
 	dw TANGELA
 	dw TAUROS
 	dw TEDDIURSA
 	dw TENTACOOL
 	dw TENTACRUEL
+	dw TOGEKEY
 	dw TOGEPI
 	dw TOGETAPE
 	dw TOGETIC
@@ -362,6 +383,7 @@ AlphabeticalPokedexOrder:
 	dw WIGGLYTUFF
 	dw WINGULL
 	dw WOBBUFFET
+	dw WOOCHUM
 	dw WOOPER
 	dw WORMADAM
 	dw XATU

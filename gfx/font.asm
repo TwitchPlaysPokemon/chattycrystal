@@ -32,9 +32,6 @@ INCBIN "gfx/battle/hp_exp_bar_border.1bpp"
 ExpBarGFX:
 INCBIN "gfx/battle/expbar.2bpp"
 
-TownMapGFX:
-INCBIN "gfx/pokegear/town_map.2bpp.lz"
-
 PokegearPhoneIconGFX:
 INCBIN "gfx/font/phone_icon.2bpp"
 
@@ -43,9 +40,6 @@ INCBIN "gfx/frames/space.1bpp"
 
 FontsExtra_SolidBlackGFX:
 INCBIN "gfx/font/black.1bpp"
-
-MobilePhoneTilesGFX:
-INCBIN "gfx/mobile/phone_tiles.2bpp"
 
 MapEntryFrameGFX:
 INCBIN "gfx/frames/map_entry_sign.2bpp"

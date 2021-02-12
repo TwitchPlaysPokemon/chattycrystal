@@ -361,9 +361,31 @@ FramesPointers:
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER
-	dba JumpaniumFrames
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
 	dba MegastoiseFrames
+	dba PikachuFrames ; PLACEHOLDER
 	dba NoctdrioFrames
+	dba PikachuFrames ; PLACEHOLDER
+	dba TogetapeFrames
+	dba PikachuFrames ; PLACEHOLDER
+	dba PikachuFrames ; PLACEHOLDER
+	dba JumpaniumFrames
+	dba PikachuFrames ; PLACEHOLDER
 	dba QuagynxFrames
 	dba SteelurretFrames
-	dba TogetapeFrames

@@ -2859,12 +2859,8 @@ wPartyMonNicknamesEnd::
 wPokedexCaught:: flag_array NUM_POKEMON ; de99
 wEndPokedexCaught::
 
-	ds 4
-
 wPokedexSeen:: flag_array NUM_POKEMON ; deb9
 wEndPokedexSeen::
-
-	ds 4
 
 wUnownDex:: ds NUM_UNOWN ; ded9
 wUnlockedUnowns:: db ; def3

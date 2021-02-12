@@ -25,7 +25,7 @@ BattleCommand_PainSplit:
 	ld [wBuffer1], a
 	call .EnemyShareHP ;load hp the enemy mon with have into buffer 5-6
 	xor a
-	ld [wWhichHPBar], a 
+	ld [wWhichHPBar], a
 	call ResetDamage
 	hlcoord 2, 2
 	predef AnimateHPBar

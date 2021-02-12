@@ -10,7 +10,7 @@ ds $400
 HandleChattyText:: ;places the chatty string. if carry flag is not set, redirect de to a TX_END command.
 	jr c, .noDone
 	ld de, TX_ENDText - 1 ;if the terminator is a <DONE> or <PROMPT>, emulate <DONE>'s text redirection
-.noDone	
+.noDone
 	push de
 	push hl ;store the text pointer
 	ld bc, (-(FIRST_TEXTBOX_TILE + wTileMap)) & $ffff
@@ -37,7 +37,7 @@ AissInjectTextHere:: ;place text block WITHOUT A START CHARACTER in ChattyText, 
 	pop hl
 	inc hl
 	ret
-	
+
 CharsAvalibleTable:
 	db 0
 	db 1
@@ -79,5 +79,3 @@ endr
 	db 35
 	db 36
 	db 36
-
-

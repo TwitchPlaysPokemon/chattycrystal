@@ -185,7 +185,7 @@ ReadTrainerPartyPieces:
 .copied_pp
 
 	pop hl
-.no_moves 
+.no_moves
 
 	push hl ;we need to get DV location regardless of branch, so do that before the check
 	ld a, [wOTPartyCount]
@@ -201,10 +201,10 @@ ReadTrainerPartyPieces:
 	call GetNextTrainerDataByte ;load in DVs if TRAINERTYPE_DVs is on
 	ld [de], a
 	inc de
-	call GetNextTrainerDataByte 
+	call GetNextTrainerDataByte
 	ld [de], a
 	jr .dvs_done
-.no_dvs 
+.no_dvs
 	push hl
 	farcall GetTrainerDVs
 	ld a, b
@@ -215,7 +215,7 @@ ReadTrainerPartyPieces:
 	pop hl
 .dvs_done
 
-	ld a, [wOtherTrainerType] 
+	ld a, [wOtherTrainerType]
 	and TRAINERTYPE_STATS
 	jr z, .no_stats
 	push hl
@@ -277,7 +277,7 @@ ReadTrainerPartyPieces:
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
 	pop hl
-	
+
 .nickname_done
 
 ;TODO happiness flag
@@ -360,7 +360,7 @@ GetTrainerName:: ;copy trainer class c ID b's name into wStringBuffer1
 	dec b
 	jr z, .done ;if ID is 0, we're there already, otherwise loop ID times to get the correct party
 
-	ld a, [wTrainerGroupBank] 
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	add a, l ;otherwise, add the distance to the next party to hl
 	ld l, a
@@ -400,7 +400,7 @@ endc
 SkipChattyTrainerInjection:
 	pop de
 	ret
-	
+
 if TESTMODE
 ChattyNameText:
 	db "ChattyTrainerName!@"

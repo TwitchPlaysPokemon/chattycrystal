@@ -11,7 +11,7 @@ Route42EcruteakGate_MapScripts:
 
 .DummyScene:
 	end
-	
+
 Route42EvanUp:
 	applymovement ROUTE42ECRUTEAKGATE_EVAN, ROUTE42EVANMoveDown
 Route42EvanDown:
@@ -40,11 +40,11 @@ Route42EvanDown:
 
 Route42EcruteakGateOfficerScript:
 	jumptextfaceplayer Route42EcruteakGateOfficerText
-	
+
 ROUTE42EVANMoveDown:
 	step DOWN
 	step_end
-	
+
 ROUTE42EVANMoveLeft:
 	step LEFT
 	step LEFT
@@ -69,7 +69,7 @@ Route42EcruteakGateOfficerText:
 	para "Be careful. Don't"
 	line "get lost in there."
 	done
-	
+
 Route42EcruteakGateEvanText:
 	text "<......>"
 	done

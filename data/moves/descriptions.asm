@@ -523,11 +523,11 @@ EmberDescription:
 FlamethrowerDescription:
 	db   "An attack that may"
 	next "inflict a burn.@"
-	
+
 BlazeKickDescription:
 	db   "High crit and may"
 	next "inflict a burn.@"
-	
+
 MistDescription:
 	db   "Prevents stat"
 	next "reduction.@"
@@ -1319,27 +1319,27 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
-	
+
 NuzzleDescription:
 	db   "An attack that"
 	next "causes paralysis.@"
-	
+
 ChargeBeamDescription:
 	db   "An attack that may"
 	next "up user's SP.ATK.@"
-	
+
 ChargeDescription:
 	db   "Double an ELECTRIC"
 	next "move's power.@"
-	
+
 MetalSoundDescription:
 	db   "Sharply reduces"
 	next "the foe's SP.DEF.@"
-	
+
 HoneClawsDescription:
 	db   "Increases ATTACK"
 	next "and ACCURACY.@"
-	
+
 PowerTripDescription:
 	db   "Stat boosts"
 	next "increase power.@"
@@ -1359,7 +1359,7 @@ RevengeDescription:
 WorkUpDescription:
 	db   "Boosts both ATTACK"
 	next "and SP.ATTACK.@"
-	
+
 DragonPulseDescription:
 	db   "Fires a ball of"
 	next "pure energy.@"

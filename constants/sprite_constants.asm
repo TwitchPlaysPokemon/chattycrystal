@@ -110,7 +110,7 @@
 	const SPRITE_ELIO ; 6A
 	const SPRITE_ELIO2 ; 6B
 	const SPRITE_GLORIA ; 6C
-	const SPRITE_GREEN ; 6D 
+	const SPRITE_GREEN ; 6D
 	const SPRITE_HILBERT ; 6E
 	const SPRITE_HILDA ; 6F
 	const SPRITE_LEAF ; 70

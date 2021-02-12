@@ -597,7 +597,7 @@ GetCallerTrainerClass:
 	pop hl
 	ret
 
-GetCallerName: ;if c = 0 then get non-trainer name b, else get name from trainer class 
+GetCallerName: ;if c = 0 then get non-trainer name b, else get name from trainer class
 	ld a, c
 	and a
 	jr z, .NotTrainer

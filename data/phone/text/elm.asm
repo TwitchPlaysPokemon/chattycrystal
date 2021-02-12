@@ -27,7 +27,6 @@ ElmPhoneCheckingEggText:
 	line "#MON EGG."
 	done
 
-
 ElmPhoneEggUnhatchedText:
 	text "Hello, <PLAY_G>?"
 
@@ -47,12 +46,12 @@ ElmPhoneEggHatchedText:
 	cont "#MON is it?"
 
 	para "<......>"
-	
+
 	para "Wow, that's a rare"
 	line "#MON, you should"
 	cont "show Mr.#MON."
 	done
-	
+
 ElmPhoneEggHatched2Text:
 	text "Hello, <PLAY_G>?"
 	line "How is your "

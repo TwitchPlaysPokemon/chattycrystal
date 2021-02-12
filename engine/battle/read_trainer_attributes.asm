@@ -1,11 +1,11 @@
-GetTrainerClassName: 
+GetTrainerClassName:
 if TESTMODE
 else
 	ld hl, wRivalName
 	ld a, c
 	cp RIVAL1
 	jr z, .rival
-	
+
 	ld [wCurSpecies], a
 	ld a, [wScriptActive]
 	and a
@@ -23,7 +23,7 @@ endc
 	call CopyBytes
 	ld de, wStringBuffer1
 	ret
-	
+
 if TESTMODE
 else
 .rival
@@ -47,12 +47,12 @@ else
 	ld a, [wScriptActive]
 	and a
 	jr nz, .chatty
-	
+
 	ld hl, wRivalName
 	ld a, c
 	cp RIVAL1
 	jr z, .ok
-	
+
 	ld [wCurSpecies], a
 	ld a, TRAINER_NAME
 	ld [wNamedObjectTypeBuffer], a

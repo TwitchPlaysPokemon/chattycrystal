@@ -69,7 +69,7 @@ if TESTMODE
 else
 	trainer BIRD_KEEPER, ROD, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
 endc
-	
+
 .Script:
 	endifjustbattled
 	opentext

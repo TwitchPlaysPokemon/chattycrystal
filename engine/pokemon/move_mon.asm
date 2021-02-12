@@ -1845,7 +1845,7 @@ InitNickname:
 	ld hl, ExitAllMenus
 	rst FarCall
 	ret
-	
+
 GiveChattyMon::
 	;gives a mon with special precalculated stats based on the contents of b
 	;then go back and set the OTs properly while preserving the chatty bytes
@@ -1882,7 +1882,7 @@ GiveChattyMon::
 	inc hl
 	ld a, [hli]
 	push hl ;push the table position back again
-	ld h, [hl] 
+	ld h, [hl]
 	ld l, a
 	ld c, NUM_MOVES
 	ld de, wOddEggMoves
@@ -1955,10 +1955,10 @@ GiveChattyMon::
 	ld [de], a
 	scf
 	ret
-	
+
 .specalmonstable ;pointer to table, mondata species, moves, PartySpecies species
 	dw .chattyunownegg, UNOWN, .chattyunownmoves, EGG
-	
+
 .chattyunownegg
 	db 0 ; Species, will be filled on load
 	db NO_ITEM
@@ -1985,7 +1985,7 @@ GiveChattyMon::
 	bigdw 16 ; SAtk
 	bigdw 14 ; SDef
 	db "EGG@@@@@@@@"
-	
+
 .chattyunownmoves
 if TESTMODE
 	dw CHATTY_HP, CHATTER, NO_MOVE, NO_MOVE

@@ -5,7 +5,7 @@ BattleCommand_Roost:
 	call GetBattleVarAddr
 	set SUBSTATUS_ROOSTING, [hl]
 	jp BattleCommand_Heal
-	
+
 ChangeTypeForRoost:
 ; applies roost to enemy types in de and player types in bc
 	ld a, [wPlayerSubStatus2]

@@ -811,7 +811,7 @@ JohtoGrassWildMons:
 	dbw 22, SNEASEL
 	dbw 24, SNEASEL
 	dbw 26, SNEASEL
-	
+
 	map_id WHIRL_ISLAND_NW
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn

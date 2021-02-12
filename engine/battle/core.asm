@@ -321,7 +321,7 @@ CheckFaint_EnemyThenPlayer:
 .BattleIsOver:
 	scf
 	ret
-	
+
 HandleRoost:
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -335,12 +335,12 @@ HandleRoost:
 	ld a, [wPlayerSubStatus2]
 	res SUBSTATUS_ROOSTING, a
 	ret
-	
+
 .CheckEnemy:
 	ld a, [wEnemySubStatus2]
 	res SUBSTATUS_ROOSTING, a
 	ret
-	
+
 HandleCharge:
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -361,7 +361,7 @@ HandleCharge:
 	res SUBSTATUS_CHARGE, a
 	ld [wPlayerSubStatus2], a
 	ret
-	
+
 .CheckEnemy:
 	ld a, [wEnemySubStatus2]
 	bit SUBSTATUS_CHARGE_THIS_TURN, a
@@ -6044,11 +6044,11 @@ LoadEnemyMon:
 
 ; Grab the BaseData for this species
 	call GetBaseData
-	
+
 ;Sorting out Base Exp Now as it's needed for trainer mons
 	ld a, [wBaseExp]
 	ld [wEnemyMonBaseExp], a
-	
+
 ; And in a new change, we're done if we are in a trainer battle
 	ld a, [wBattleMode]
 	dec a

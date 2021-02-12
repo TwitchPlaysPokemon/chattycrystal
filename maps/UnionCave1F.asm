@@ -50,7 +50,7 @@ if TESTMODE
 else
 	trainer HIKER, DANIEL, EVENT_BEAT_HIKER_DANIEL, HikerDanielSeenText, HikerDanielBeatenText, 0, .Script
 endc
-	
+
 .Script:
 	endifjustbattled
 	opentext

@@ -104,6 +104,6 @@ TrainerClassDVs:
 	dn 15, 13, 13, 14 ; BRONZE
 	dn 15, 13, 13, 14 ; RED_LARRY
 	dn 15, 13, 13, 14 ; GREEN_MAY
-	dn 15, 13, 13, 14 ; BROWN	
+	dn 15, 13, 13, 14 ; BROWN
 	dn 15, 13, 13, 14 ; BABA
 	dn 15, 13, 13, 14 ; URF

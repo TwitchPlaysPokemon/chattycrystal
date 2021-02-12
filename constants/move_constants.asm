@@ -278,38 +278,38 @@
 	const WORK_UP      ; 10e
 	const REVENGE      ; 10f
 	const NASTY_PLOT   ; 110
-	const AERIAL_ACE
-	const AIR_CUTTER
-	const AIR_SLASH
-	const AQUA_JET
-	const ATTACK_ORDER
-	const AURA_SPHERE
-	const BLAZE_KICK
-	const BLUE_FLARE
-	const BRAVE_BIRD
-	const BUG_BUZZ
-	const BULLDOZE
-	const BULLET_PUNCH
-	const DISCHARGE
-	const DRAGON_CLAW
-	const DRAGON_PULSE
-	const DRAIN_PUNCH
-	const EARTH_POWER
-	const EXTRASENSORY
-	const FLASH_CANNON
-	const FOCUS_BLAST
-	const HORN_LEECH
-	const ICE_SHARD
-	const IRON_DEFENSE
-	const IRON_HEAD
-	const METEOR_MASH
-	const MUD_BOMB
-	const MUDDY_WATER
-	const NIGHT_SLASH
-	const ODOR_SLEUTH
-	const HAMMER_ARM
-	const ICE_HAMMER
-	
+	const AERIAL_ACE   ; 111
+	const AIR_CUTTER   ; 112
+	const AIR_SLASH    ; 113
+	const AQUA_JET     ; 114
+	const ATTACK_ORDER ; 115
+	const AURA_SPHERE  ; 116
+	const BLAZE_KICK   ; 117
+	const BLUE_FLARE   ; 118
+	const BRAVE_BIRD   ; 119
+	const BUG_BUZZ     ; 11a
+	const BULLDOZE     ; 11b
+	const BULLET_PUNCH ; 11c
+	const DISCHARGE    ; 11d
+	const DRAGON_CLAW  ; 11e
+	const DRAGON_PULSE ; 11f
+	const DRAIN_PUNCH  ; 120
+	const EARTH_POWER  ; 121
+	const EXTRASENSORY ; 122
+	const FLASH_CANNON ; 123
+	const FOCUS_BLAST  ; 124
+	const HORN_LEECH   ; 125
+	const ICE_SHARD    ; 126
+	const IRON_DEFENSE ; 127
+	const IRON_HEAD    ; 128
+	const METEOR_MASH  ; 129
+	const MUD_BOMB     ; 12a
+	const MUDDY_WATER  ; 12b
+	const NIGHT_SLASH  ; 12c
+	const ODOR_SLEUTH  ; 12d
+	const HAMMER_ARM   ; 12e
+	const ICE_HAMMER   ; 12f
+
 NUM_ATTACKS EQU const_value + -1
 
 	if NUM_ATTACKS > $3fff
@@ -317,7 +317,7 @@ NUM_ATTACKS EQU const_value + -1
 	endc
 
 ; Battle animations use the same constants as the moves
-	const ANIM_SWEET_SCENT_2     ; 101
+	const ANIM_SWEET_SCENT_2     ; 130
 ; Animations with negative IDs will play even when animations are disabled
 const_value = -$16 ;fix if more negative values are added
 	const ANIM_THROW_POKE_BALL   ; -16 (ffea)

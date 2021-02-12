@@ -49,7 +49,7 @@ SCENE_FINISHED EQU 1
 	const_def
 	const SCENE_CHERRYGROVECITY_NOTHING    ; 0
 	const SCENE_CHERRYGROVECITY_MEET_RIVAL ; 1
-	
+
 ; wRoute30SceneID
 
 	const_def
@@ -158,7 +158,7 @@ SCENE_FINISHED EQU 1
 	const_def 1
 	const SCENE_FASTSHIP1F_ENTER_SHIP   ; 1
 	const SCENE_FASTSHIP1F_MEET_GRANDPA ; 2
-	
+
 ; wRoute23SceneID
 	const_def 1
 	const SCENE_SHOWN_CASCADE   ; 1

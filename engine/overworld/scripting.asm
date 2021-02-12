@@ -2875,7 +2875,7 @@ LoadScriptPokemonID:
 	jp nz, GetPokemonIDFromIndex
 	ld a, [wScriptVar]
 	ret
-	
+
 Script_givechattymon:
 ; script command 0xac
 ; if no room in the party, return 0 in wScriptVar; else, return 2
@@ -2887,12 +2887,12 @@ Script_givechattymon:
 	ld a, 2
 	ld [wScriptVar], a
 	ret
-	
+
 Script_chattyoff:
 ; script command 0xad
 	rst ChattyOff
 	ret
-	
+
 Script_chattyon:
 ; script command 0xad
 	rst ChattyOn

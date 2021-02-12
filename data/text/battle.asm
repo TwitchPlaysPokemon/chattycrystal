@@ -742,7 +742,7 @@ WontDropAnymoreText:
 	text " won't"
 	cont "drop anymore!"
 	prompt
-	
+
 UserWontDropAnymoreText:
 	text "<USER>'s"
 	line "@"
@@ -1112,7 +1112,7 @@ BattleText_0x8188e:
 	text "There is no time"
 	line "left today!"
 	done
-	
+
 IsChargedText:
 	text "<USER>"
 	line "is charged up!"

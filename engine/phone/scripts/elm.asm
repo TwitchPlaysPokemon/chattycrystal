@@ -26,7 +26,7 @@ ElmPhoneCalleeScript:
 	farwritetext ElmPhoneEggHatchedText
 	setevent EVENT_TOLD_ELM_ABOUT_UNOWN_OVER_THE_PHONE
 	end
-	
+
 .egghatched2
 	farwritetext ElmPhoneEggHatched2Text
 	end

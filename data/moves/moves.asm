@@ -320,7 +320,7 @@ Moves1:
 	move EFFECT_FORESIGHT,            0, NORMAL,   100, 40,   0 ;ODOR_SLEUTH
 	move EFFECT_SELF_SPEED_DOWN_HIT,100, FIGHTING,  90, 10, 100 ;HAMMER_ARM
 	move EFFECT_SELF_SPEED_DOWN_HIT,100, ICE,       90, 10, 100 ;ICE_HAMMER
-	
+
 ;	move EFFECT_LEECH_HIT,          50, FAIRY,    100, 10,   0 ;DRAININGKISS TODO: does not drain 75%
 ;	move EFFECT_NORMAL_HIT,         80, FAIRY,    100, 10,   0 ;DAZZLINGLEAM TODO: Add fairy type
 ;	move EFFECT_FLY,                80, WATER,    100, 10,   0 ;DIVE TODO add the special accomidations for 2 turn moves

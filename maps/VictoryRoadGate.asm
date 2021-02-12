@@ -4,7 +4,7 @@
 	const VICTORYROADGATE_BLACK_BELT2
 	const VICTORYROADGATE_OFFICER2
 	const VICTORYROADGATE_OFFICER3
-	
+
 
 VictoryRoadGate_MapScripts:
 	db 2 ; scene scripts
@@ -22,11 +22,11 @@ VictoryRoadGate_MapScripts:
 VictoryRoadGateBadgeCheckSceneLeft:
 	turnobject PLAYER, LEFT
 	sjump VictoryRoadGateBadgeCheckScript
-	
+
 VictoryRoadGateBadgeCheckSceneRight:
 	turnobject PLAYER, RIGHT
 ;fallthrough
-	
+
 VictoryRoadGateBadgeCheckScript:
 	turnobject VICTORYROADGATE_OFFICER3, LEFT
 	turnobject VICTORYROADGATE_OFFICER2, RIGHT
@@ -41,18 +41,18 @@ VictoryRoadGateBadgeCheckScript:
 	closetext
 	setscene SCENE_FINISHED
 	end
-	
+
 .DontHaveBadges:
 	writetext NoZephyrBoulderBadgeText
 	waitbutton
 	applymovement PLAYER, VictoryRoadGateStepDownMovement
 	end
-	
+
 VictoryRoadGateOfficerScript:
 	faceplayer
 	opentext
 	writetext VictoryRoadGateOfficerText
-	buttonsound	
+	buttonsound
 	closetext
 	end
 
@@ -71,16 +71,16 @@ VictoryRoadGateOfficerText:
 	line "have proven them-"
 	cont "selves may pass."
 	done
-	
+
 ZephyrBoulderBadgeCheckText:
 	text "Only trainers who"
 	line "who posses the"
-	
+
 	para "ZEPHYRBADGE and"
 	line "BOULDERBADGE"
 	cont "may pass."
 	done
-	
+
 NoZephyrBoulderBadgeText:
 	text "You don't those"
 	line "GYM BADGES."

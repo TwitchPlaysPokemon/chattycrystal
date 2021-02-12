@@ -53,7 +53,7 @@ ElmsLab_MapScripts:
 	writetext ElmText_Sprayed
 	waitbutton
 	closetext
-	givechattymon 0 
+	givechattymon 0
 	opentext
 	writetext ElmText_GotAnEgg
 	playsound SFX_CAUGHT_MON
@@ -80,7 +80,7 @@ ElmsLab_MapScripts:
 	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
 	wildoff
 	end
-	
+
 ProfElmScript:
 	faceplayer
 	opentext
@@ -120,14 +120,14 @@ ElmCheckGotEggAgain:
 	waitbutton
 	closetext
 	end
-	
-	
+
+
 ElmLetYourMonBattleIt:
 	writetext ElmText_LetYourMonBattleIt
 	waitbutton
 	closetext
 	end
-	
+
 ElmDescribesMrPokemonScript:
 	writetext ElmDescribesMrPokemonText
 	waitbutton
@@ -263,7 +263,7 @@ ElmJumpRightScript:
 	applymovement ELMSLAB_ELM, ElmJumpRightMovement
 	opentext
 	end
-	
+
 AideScript_WalkPotion1:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
 	turnobject PLAYER, DOWN
@@ -366,17 +366,17 @@ ElmsLabTrashcan2:
 
 ElmsLabBookshelf:
 	jumpstd difficultbookshelf
-	
+
 ElmsLab_MoveOutOfTheWay:
 	step RIGHT
 	turn_head LEFT
 	step_end
-	
+
 ElmsLab_WalkUpToElmMovementPart1:
 	step UP
 	step UP
 	step_end
-	
+
 ElmsLab_WalkUpToElmMovementPart2:
 	step UP
 	step UP
@@ -385,7 +385,7 @@ ElmsLab_WalkUpToElmMovementPart2:
 	step UP
 	step UP
 	step_end
-	
+
 ElmsLab_EvanLeave:
 	step DOWN
 	step DOWN
@@ -471,33 +471,33 @@ ElmText_Intro:
 	para "You took so long I"
 	line "ran out of starter"
 	cont "#MON!"
-	
+
 	para "You won't be able"
 	line "to start your"
 	cont "#MON adventure"
 	cont "like this<……>"
-	
+
 	para "Unless<……>"
 	line "I know!"
-	
+
 	para "I'll send you to"
 	line "PROFESSOR OAK!"
-	
+
 	para "He's visiting a"
 	line "friend nearby and"
 	cont "will have a spare"
 	cont "#MON."
-	
+
 	para "Now hold still<……>"
 	done
-	
+
 ElmText_Sprayed:
 	text "I just sprayed you"
 	line "with some REPEL."
-	
+
 	para "That should keep"
 	line "wild #MON away."
-	
+
 	para "While you're there"
 	line "you can deliver"
 	cont "this EGG to"
@@ -527,12 +527,12 @@ ElmDirectionsText:
 	para "number. Call me if"
 	line "anything comes up!"
 	done
-	
+
 ElmText_GoodLuck:
 	text "Good luck on your"
 	line "#MON adventure!"
 	done
-	
+
 ElmText_LetYourMonBattleIt:
 	text "If a wild #MON"
 	line "appears, let your"
@@ -796,7 +796,7 @@ AideText_ExplainBalls:
 	line "at wild #MON"
 	cont "to get them."
 	done
-	
+
 ElmDescribesMrPokemonText:
 	text "MR.#MON goes"
 	line "everywhere and"

@@ -991,7 +991,7 @@ ConfuseHit:
 	buildopponentrage
 	confusetarget
 	endmove
-	
+
 Chatter:
 	checkobedience
 	usedmovetext
@@ -1013,7 +1013,7 @@ Chatter:
 	buildopponentrage
 	confusetarget
 	endturn
-	
+
 	chattybranch
 	chatter
 	endmove
@@ -1831,7 +1831,7 @@ HiddenPower:
 	buildopponentrage
 	kingsrock
 	endmove
-	
+
 ChattyHiddenPower:
 	checkobedience
 	usedmovetext
@@ -1852,7 +1852,7 @@ ChattyHiddenPower:
 	buildopponentrage
 	kingsrock
 	endturn
-	
+
 	chattybranch
 	chattyhp
 	damagecalc
@@ -2138,7 +2138,7 @@ DefenseCurl:
 	statupmessage
 	statupfailtext
 	endmove
-	
+
 SpAtkUpHit:
 	checkobedience
 	usedmovetext
@@ -2160,7 +2160,7 @@ SpAtkUpHit:
 	specialattackup
 	statupmessage
 	endmove
-	
+
 Charge:
 	checkobedience
 	usedmovetext
@@ -2173,7 +2173,7 @@ Charge:
 	statupmessage
 	statupfailtext
 	endmove
-	
+
 HoneClaws:
 	checkobedience
 	usedmovetext
@@ -2188,7 +2188,7 @@ HoneClaws:
 	statupmessage
 	statupfailtext
 	endmove
-	
+
 StoredPower:
 	checkobedience
 	usedmovetext
@@ -2209,7 +2209,7 @@ StoredPower:
 	buildopponentrage
 	kingsrock
 	endmove
-	
+
 Endeavor:
 	checkobedience
 	usedmovetext
@@ -2217,7 +2217,7 @@ Endeavor:
 	checkhit
 	endeavor
 	endmove
-	
+
 Roost:
 	checkobedience
 	usedmovetext
@@ -2260,7 +2260,7 @@ Revenge:
 	buildopponentrage
 	kingsrock
 	endmove
-	
+
 SelfSpeedDownHit:
 	checkobedience
 	usedmovetext
@@ -2282,4 +2282,4 @@ SelfSpeedDownHit:
 	selfstatdownmessage
 	endmove
 
-	
+

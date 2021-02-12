@@ -8,7 +8,7 @@ BattleCommand_Chargem:
 	call AnimateCurrentMove
 	ld hl, IsChargedText
 	jp StdBattleTextbox
-	
+
 ApplyChargeModifier:
 	push hl
 	ld a, BATTLE_VARS_SUBSTATUS2

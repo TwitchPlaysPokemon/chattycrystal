@@ -161,7 +161,7 @@ MrPokemonIntroText3:
 	text "What! It hatched!?"
 	line "Without a #MON"
 	cont "to incubate it?!"
-	
+
 	para "and it's a rare,"
 	line "genderless #MON"
 	cont "as-well<……>"
@@ -208,28 +208,28 @@ MrPokemonsHouse_OakText1:
 	line "rare #MON?"
 
 	para "Let's see…"
-	
+
 	para "<……>"
 
 	para "The #MON seems"
 	line "perfectly healthy."
-	
+
 	para "Let me collect"
 	line "some data<……>"
-	
+
 	done
-	
+
 MrPokemonsHouse_OakText2:
 	text "OK, that should"
 	line "be enough."
-	
+
 	para "The #MON is"
 	line "completly normal"
-	
+
 	para "While ELM had"
 	line "told me to keep a"
 	cont "#MON aside<……>"
-	
+
 	para "I think it is best"
 	line "for you to keep it"
 	cont "for yourself."
@@ -254,7 +254,7 @@ MrPokemonsHouse_OakText2:
 	para "It's a hi-tech"
 	line "encyclopedia!"
 	done
-	
+
 MrPokemonsHouse_GetDexText:
 	text "<PLAYER> received"
 	line "#DEX!"

@@ -2427,7 +2427,7 @@ wStartMinute:: db ; d4b8
 wStartSecond:: db ; d4b9
 
 wRTC:: ds 4 ; d4ba
-	
+
 wDST:: ; d4c2
 ; bit 7: dst
 	db

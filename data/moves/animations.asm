@@ -287,7 +287,7 @@ BattleAnimations::
 	dw BattleAnim_Screech
 	dw BattleAnim_Sharpen
 	dw BattleAnim_Submission
-	dw BattleAnim_PainSplit
+	dw BattleAnim_PainSplit    ; 108
 	dw BattleAnim_Recover
 	dw BattleAnim_Thief
 	dw BattleAnim_FaintAttack
@@ -295,7 +295,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Meditate
 	dw BattleAnim_Counter
-	dw BattleAnim_PsychUp
+	dw BattleAnim_PsychUp      ; 110
 	dw BattleAnim_WingAttack
 	dw BattleAnim_Cut
 	dw BattleAnim_Slash
@@ -303,7 +303,7 @@ BattleAnimations::
 	dw BattleAnim_SweetScent
 	dw BattleAnim_ShadowBall
 	dw BattleAnim_HiJumpKick
-	dw BattleAnim_SacredFire
+	dw BattleAnim_SacredFire   ; 118
 	dw BattleAnim_WingAttack
 	dw BattleAnim_Roar
 	dw BattleAnim_Earthquake
@@ -311,7 +311,7 @@ BattleAnimations::
 	dw BattleAnim_ThunderWave
 	dw BattleAnim_Slash
 	dw BattleAnim_ShadowBall
-	dw BattleAnim_Dynamicpunch
+	dw BattleAnim_Dynamicpunch ; 120
 	dw BattleAnim_Earthquake
 	dw BattleAnim_Psywave
 	dw BattleAnim_ShadowBall
@@ -319,7 +319,7 @@ BattleAnimations::
 	dw BattleAnim_GigaDrain
 	dw BattleAnim_PowderSnow
 	dw BattleAnim_Harden
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt     ; 128
 	dw BattleAnim_Dynamicpunch
 	dw BattleAnim_SludgeBomb
 	dw BattleAnim_Surf
@@ -327,8 +327,7 @@ BattleAnimations::
 	dw BattleAnim_Detect
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_IcePunch
-	
-	
+
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

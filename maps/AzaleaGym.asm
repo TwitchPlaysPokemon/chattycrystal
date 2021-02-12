@@ -103,7 +103,7 @@ if TESTMODE
 else
 	trainer BUG_CATCHER, BUG_CATCHER_BENNY, EVENT_BEAT_BUG_CATCHER_BENNY, BugCatcherBennySeenText, BugCatcherBennyBeatenText, 0, .AfterScript
 endc
-	
+
 .AfterScript:
 	endifjustbattled
 	opentext
@@ -174,7 +174,7 @@ BugsyText_FuryCutterSpeech:
 BugsyText_BugMonsAreDeep:
 	text "<...>"
 	done
-	
+
 Text_ReceivedHiveBadge:
 	text "<PLAYER> received"
 	line "HIVEBADGE."

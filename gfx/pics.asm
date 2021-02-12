@@ -715,11 +715,11 @@ SECTION "Pics 19", ROMX
 
 AzurePic:           INCBIN "gfx/trainers/azure.2bpp.lz"
 BrendanPic:         INCBIN "gfx/trainers/brendan.2bpp.lz"
-BronzePic:          INCBIN "gfx/trainers/dani.2bpp.lz" 
+BronzePic:          INCBIN "gfx/trainers/dani.2bpp.lz"
 CalemPic:           INCBIN "gfx/trainers/calem.2bpp.lz"
 ChrisOrigPic:       INCBIN "gfx/trainers/chris.2bpp.lz"
 ChrisSnowPic:       INCBIN "gfx/trainers/chris-snow.2bpp.lz"
-CyanPic:            INCBIN "gfx/trainers/cyan.2bpp.lz" 
+CyanPic:            INCBIN "gfx/trainers/cyan.2bpp.lz"
 DawnPic:            INCBIN "gfx/trainers/dawn.2bpp.lz"
 ElioPic:            INCBIN "gfx/trainers/elio.2bpp.lz"
 Elio2Pic:           INCBIN "gfx/trainers/elio2.2bpp.lz"
@@ -736,7 +736,7 @@ LyraPic:            INCBIN "gfx/trainers/lyra.2bpp.lz"
 URFPic:
 GreenMayPic:
 MayPic:
-BlueMayPic:         INCBIN "gfx/trainers/may.2bpp.lz" 
+BlueMayPic:         INCBIN "gfx/trainers/may.2bpp.lz"
 MichaelPic:         INCBIN "gfx/trainers/michael.2bpp.lz"
 NatePic:            INCBIN "gfx/trainers/nate.2bpp.lz"
 RoboRedPic:         INCBIN "gfx/trainers/robored.2bpp.lz"

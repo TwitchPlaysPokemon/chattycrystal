@@ -1699,7 +1699,7 @@ SECTION "tetsuji", ROMX
 
 Unknown_100b0a:
 	db "tetsuji", 0
-	
+
 	popc
 
 

@@ -160,7 +160,7 @@ if TESTMODE
 else
 	trainer FISHER, JUSTIN, EVENT_BEAT_FISHER_JUSTIN, FisherJustinSeenText, FisherJustinBeatenText, 0, .Script
 endc
-	
+
 .Script:
 	endifjustbattled
 	opentext
@@ -304,7 +304,7 @@ if TESTMODE
 else
 	trainer FISHER, HENRY, EVENT_BEAT_FISHER_HENRY, FisherHenrySeenText, FisherHenryBeatenText, 0, .Script
 endc
-	
+
 .Script:
 	endifjustbattled
 	opentext
@@ -455,7 +455,7 @@ if TESTMODE
 else
 	trainer YOUNGSTER, GORDON, EVENT_BEAT_YOUNGSTER_GORDON, YoungsterGordonSeenText, YoungsterGordonBeatenText, 0, .Script
 endc
-	
+
 .Script:
 	endifjustbattled
 	opentext

@@ -101,7 +101,7 @@ NewBarkTownTeacherScript:
 	waitbutton
 	closetext
 	end
-	
+
 .SentYouAlone:
 	writetext Text_ElmSentYouAlone
 	waitbutton
@@ -206,15 +206,15 @@ Text_YourMonIsAdorable:
 	line "is adorable!"
 	cont "I wish I had one!"
 	done
-	
+
 Text_ElmSentYouAlone:
 	text "Oh! Professor ELM"
 	line "sent you out"
 	cont "without a #MON?"
-	
+
 	para "I guess it's OK"
 	line "if he says so<……>"
-	
+
 	done
 
 Text_TellMomIfLeaving:

@@ -343,7 +343,7 @@ endc
 	pop hl
 	ld de, wStringBuffer1
 	jr PlaceCommandCharacter
-	
+
 
 PlaceEnemysNameRival:
 	ld de, wRivalName
@@ -662,7 +662,7 @@ DoTextUntilTerminator::
 	pop bc
 	pop hl
 
-	; jp de 
+	; jp de
 	push de
 	ret
 
@@ -720,7 +720,7 @@ SkipChattyTextInjection:
 	ld l, e
 	inc hl
 	ret
-	
+
 HomeHandleChattyText: ;move de into the position it would be after passing it to PlaceString
 	push hl
 	ld bc, (-wTileMap) & $ffff
@@ -733,7 +733,7 @@ HomeHandleChattyText: ;move de into the position it would be after passing it to
 	jr c, .skipChatty
 	cp FIRST_TEXTBOX_TILE - $100 + 58
 	jr nc, .skipChatty
-	ld a, [wOptions] 
+	ld a, [wOptions]
 	bit NO_TEXT_SCROLL, a
 	jr nz, .skipChatty
 	pop hl
@@ -741,9 +741,9 @@ HomeHandleChattyText: ;move de into the position it would be after passing it to
 .loop
 	inc de
 	ld a, [de]
-	cp "<DONE>" 
+	cp "<DONE>"
 	jr z, .continue
-	cp "<PROMPT>"  
+	cp "<PROMPT>"
 	jr z, .continue
 	cp  "@"
 	scf ;no redirection to TX_ENDText done in HandleChattyText if carry is set
@@ -757,7 +757,7 @@ HomeHandleChattyText: ;move de into the position it would be after passing it to
 	pop af
 	rst Bankswitch
 	ret
-	
+
 .skipChatty
 	pop hl
 	jr SkipChattyTextInjection

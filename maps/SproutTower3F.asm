@@ -106,7 +106,7 @@ if TESTMODE
 else
 	trainer SAGE, JIN, EVENT_BEAT_SAGE_JIN, SageJinSeenText, SageJinBeatenText, 0, .Script
 endc
-	
+
 .Script:
 	endifjustbattled
 	opentext
@@ -121,7 +121,7 @@ if TESTMODE
 else
 	trainer SAGE, TROY, EVENT_BEAT_SAGE_TROY, SageTroySeenText, SageTroyBeatenText, 0, .Script
 endc
-	
+
 .Script:
 	endifjustbattled
 	opentext
@@ -136,7 +136,7 @@ if TESTMODE
 else
 	trainer SAGE, NEAL, EVENT_BEAT_SAGE_NEAL, SageNealSeenText, SageNealBeatenText, 0, .Script
 endc
-	
+
 .Script:
 	endifjustbattled
 	opentext

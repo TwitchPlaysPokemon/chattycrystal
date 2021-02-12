@@ -22,15 +22,15 @@ Route23_MapScripts:
 	scene_script .DummyScene ; SCENE_SHOWN_EARTH
 
 	db 0 ; callbacks
-	
+
 .DummyScene:
 	end
-	
+
 BadgeCheckNPCScript:
 	faceplayer
 	opentext
 	writetext BadgeCheckNPCText
-	buttonsound	
+	buttonsound
 	closetext
 	end
 
@@ -48,7 +48,7 @@ CascadeHiveBadgeCheckScript:
 	closetext
 	setscene SCENE_SHOWN_CASCADE
 	end
-	
+
 ThunderPlainBadgeCheckScript:
 	turnobject PLAYER, LEFT
 	turnobject ROUTE_23_THUNDER_OFFICER, RIGHT
@@ -63,7 +63,7 @@ ThunderPlainBadgeCheckScript:
 	closetext
 	setscene SCENE_SHOWN_THUNDER
 	end
-	
+
 RainbowFogBadgeCheckScript:
 	turnobject PLAYER, RIGHT
 	turnobject ROUTE_23_RAINBOW_OFFICER1, LEFT
@@ -79,7 +79,7 @@ RainbowFogBadgeCheckScript:
 	closetext
 	setscene SCENE_SHOWN_RAINBOW
 	end
-	
+
 MarshGlacierBadgeCheckScript1:
 	turnobject PLAYER, LEFT
 	sjump _MarshGlacierBadgeCheckScript
@@ -87,7 +87,7 @@ MarshGlacierBadgeCheckScript1:
 MarshGlacierBadgeCheckScript2:
 	turnobject PLAYER, RIGHT
 	;fallthrough
-	
+
 _MarshGlacierBadgeCheckScript:
 	turnobject ROUTE_23_MARSH_SWIMMER1, RIGHT
 	turnobject ROUTE_23_MARSH_SWIMMER2, LEFT
@@ -102,7 +102,7 @@ _MarshGlacierBadgeCheckScript:
 	closetext
 	setscene SCENE_SHOWN_MARSH
 	end
-	
+
 SoulStormBadgeCheckScript:
 	turnobject PLAYER, RIGHT
 	turnobject ROUTE_23_SOUL_OFFICER, LEFT
@@ -117,7 +117,7 @@ SoulStormBadgeCheckScript:
 	closetext
 	setscene SCENE_SHOWN_SOUL
 	end
-	
+
 VolcanoMineralBadgeCheckScript:
 	turnobject PLAYER, RIGHT
 	turnobject ROUTE_23_VOLCANO_OFFICER, LEFT
@@ -132,7 +132,7 @@ VolcanoMineralBadgeCheckScript:
 	closetext
 	setscene SCENE_SHOWN_VOLCANO
 	end
-	
+
 EarthRisingBadgeCheckScript:
 	turnobject PLAYER, RIGHT
 	turnobject ROUTE_23_EARTH_OFFICER1, RIGHT
@@ -148,13 +148,13 @@ EarthRisingBadgeCheckScript:
 	closetext
 	setscene SCENE_SHOWN_EARTH
 	end
-	
+
 DontHaveBadges:
 	writetext NoBadgeText
 	waitbutton
 	applymovement PLAYER, Route23StepDownMovement
 	end
-	
+
 Route23StepDownMovement:
 	step DOWN
 	step_end
@@ -166,7 +166,7 @@ Route23SignText:
 	text "VICTORY ROAD GATE"
 	line "- #MON LEAGUE"
 	done
-	
+
 NoBadgeText:
 	text "You don't those"
 	line "GYM BADGES."
@@ -175,22 +175,22 @@ NoBadgeText:
 	line "can't let you go"
 	cont "through."
 	done
-	
+
 BadgeCheckNPCText:
 	text "Only trainers who"
 	line "have proven them-"
 	cont "selves may pass."
 	done
-	
+
 CascadeHiveBadgeCheckText:
 	text "Only trainers who"
 	line "who posses the"
-	
+
 	para "CASCADEBADGE"
 	line "and HIVEBADGE"
 	cont "may pass."
 	done
-	
+
 HaveCascadeHiveBadgeText:
 	text "Oh! You have the"
 	line "CASCADEBADGE"
@@ -199,16 +199,16 @@ HaveCascadeHiveBadgeText:
 	para "Please, go right"
 	line "on through!"
 	done
-	
+
 ThunderPlainBadgeCheckText:
 	text "Only trainers who"
 	line "who posses the"
-	
+
 	para "THUNDERBADGE"
 	line "and PLAINBADGE"
 	cont "may pass."
 	done
-	
+
 HaveThunderPlainBadgeText:
 	text "Oh! You have the"
 	line "THUNDERBADGE"
@@ -221,12 +221,12 @@ HaveThunderPlainBadgeText:
 RainbowFogBadgeCheckText:
 	text "Only trainers who"
 	line "who posses the"
-	
+
 	para "RAINBOWBADGE"
 	line "and FOGBADGE"
 	cont "may pass."
 	done
-	
+
 HaveRainbowFogBadgeText:
 	text "Oh! You have the"
 	line "RAINBOWBADGE"
@@ -235,16 +235,16 @@ HaveRainbowFogBadgeText:
 	para "Please, go right"
 	line "on through!"
 	done
-	
+
 MarshGlacierBadgeCheckText:
 	text "Only trainers who"
 	line "who posses the"
-	
+
 	para "MARSHBADGE"
 	line "and GLACIERBADGE"
 	cont "may pass."
 	done
-	
+
 HaveMarshGlacierBadgeText:
 	text "Oh! You have the"
 	line "MARSHBADGE"
@@ -253,16 +253,16 @@ HaveMarshGlacierBadgeText:
 	para "Please, go right"
 	line "on through!"
 	done
-	
+
 SoulStormBadgeCheckText:
 	text "Only trainers who"
 	line "who posses the"
-	
+
 	para "SOULBADGE and"
 	line "STORMBADGE"
 	cont "may pass."
 	done
-	
+
 HaveSoulStormBadgeText:
 	text "Oh! You have the"
 	line "SOULBADGE and"
@@ -271,16 +271,16 @@ HaveSoulStormBadgeText:
 	para "Please, go right"
 	line "on through!"
 	done
-	
+
 VolcanoMineralBadgeCheckText:
 	text "Only trainers who"
 	line "who posses the"
-	
+
 	para "VOLCANOBADGE"
 	line "and MINERALBADGE"
 	cont "may pass."
 	done
-	
+
 HaveVolcanoMineralBadgeText:
 	text "Oh! You have the"
 	line "VOLCANOBADGE"
@@ -289,16 +289,16 @@ HaveVolcanoMineralBadgeText:
 	para "Please, go right"
 	line "on through!"
 	done
-	
+
 EarthRisingBadgeCheckText:
 	text "Only trainers who"
 	line "who posses the"
-	
+
 	para "EARTHBADGE and"
 	line "RISINGBADGE"
 	cont "may pass."
 	done
-	
+
 HaveEarthRisingBadgeText:
 	text "Oh! You have the"
 	line "EARTHBADGE and"

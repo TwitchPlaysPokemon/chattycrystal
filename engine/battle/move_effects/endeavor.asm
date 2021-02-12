@@ -6,7 +6,7 @@ BattleCommand_Endeavor:
 	jr nz, .didnt_affect
 	call CheckSubstituteOpp
 	jr nz, .didnt_affect
-	
+
 	ld hl, wEnemyMonHP + 1
 	ld de, wBattleMonHP + 1
 	bccoord 2, 2
@@ -16,7 +16,7 @@ BattleCommand_Endeavor:
 	jr z, .player_used
 	xor a
 	ld hl, wBattleMonHP + 1
-	ld de, wEnemyMonHP + 1 
+	ld de, wEnemyMonHP + 1
 	bccoord 10, 9
 .player_used ;hp to copy in de, hp to modify in hl, coord of hp bar in bc
 	ld [wWhichHPBar], a
@@ -41,7 +41,7 @@ BattleCommand_Endeavor:
 	ld a, [hl]
 	ld [wCurHPAnimOldHP + 1], a
 	;actually set HP
-	ld a, [de] 
+	ld a, [de]
 	ld [hld], a
 	dec de
 	ld a, [de]

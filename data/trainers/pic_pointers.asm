@@ -69,10 +69,10 @@ TrainerPicPointers::
 	dba RoboRedPic
 	dba CalPic
 	dba KrisOrigPic
-	dba EvanPic 
-	dba ChrisSnowPic 
+	dba EvanPic
+	dba ChrisSnowPic
 	dba MayPic
-	dba BlueMayPic 
+	dba BlueMayPic
 	dba BrendanPic
 	dba LeafPic
 	dba WesPic

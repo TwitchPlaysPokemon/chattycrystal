@@ -202,7 +202,7 @@ ENDM
 	command selfaccuracydown2       ; c3
 	command selfevasiondown2        ; c4
 	command selfstatdownmessage     ; c5
-	
+
 	enum_start $fe
 	command endturn                 ; fe
 	command endmove                 ; ff

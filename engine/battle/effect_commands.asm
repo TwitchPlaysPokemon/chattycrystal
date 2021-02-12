@@ -1200,7 +1200,7 @@ BattleCommand_Stab:
 	pop bc
 	pop de
 	pop hl
-	
+
 	call ApplyChargeModifier
 
 	ld a, [wCurType]
@@ -4129,7 +4129,7 @@ BattleCommand_StatDown:
 .GetStatLevel:
 	call GetStatLevels
 	jr c, .CantLower
-	
+
 	call CheckSubstituteOpp
 	jr nz, .Failed
 
@@ -4189,7 +4189,7 @@ BattleCommand_StatDown:
 	ld a, 1
 	ld [wAttackMissed], a
 	ret
-	
+
 GetStatLevels: ;return c if fails to lower due to stat low cap
 ; Attempt to lower the stat.
 	ld a, [wLoweredStat]
@@ -4213,7 +4213,7 @@ GetStatLevels: ;return c if fails to lower due to stat low cap
 .CantLower
 	scf
 	ret
-	
+
 BattleCommand_SelfAttackDown:
 ; selfattackdown
 	ld a, ATTACK
@@ -4282,7 +4282,7 @@ BattleCommand_SelfAccuracyDown2:
 BattleCommand_SelfEvasionDown2:
 ; selfevasiondown2
 	ld a, $10 | EVASION
-	
+
 BattleCommand_SelfStatDown:
 ; selfstatdown
 
@@ -4421,7 +4421,7 @@ BattleCommand_StatDownMessage:
 .fell
 	text_far UnknownText_0x1c0d06
 	text_end
-	
+
 BattleCommand_SelfStatDownMessage:
 ;selfstatdownmessage
 	ld a, [wFailedMessage]
@@ -5390,7 +5390,7 @@ BattleCommand_OHKO:
 	ld [wAttackMissed], a
 BattleCommand_ChattyBranch: ;exists only as a stopping point for checkchatty
 	ret
-	
+
 BattleCommand_CheckChatty:
 ; checkchatty
 if TESTMODE
@@ -5403,7 +5403,7 @@ else
 endc
 	ld b, chattybranch_command
 	jp SkipToBattleCommand
-	
+
 BattleCommand_Chatter:
 	call ClearLastMove
 	call CheckUserIsCharging

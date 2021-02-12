@@ -17,12 +17,12 @@ BattleCommand_ChattyHP:
 if TESTMODE
 	ld a, DRAGON
 	ld [hl], a
-	farcall BattleCommand_DamageStats 
+	farcall BattleCommand_DamageStats
 	ld a, $ff
 else
 	ld a, [wChattyHPType]
 	ld [hl], a
-	farcall BattleCommand_DamageStats 
+	farcall BattleCommand_DamageStats
 	ld a, [wChattyHPPower]
 endc
 	ld d, a

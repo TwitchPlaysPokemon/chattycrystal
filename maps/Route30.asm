@@ -18,9 +18,9 @@ Route30_MapScripts:
 
 	db 0 ; callbacks
 
-.DummyScene 
+.DummyScene
 	end
-	
+
 YoungsterJoey_ImportantBattleScript:
 	waitsfx
 	playmusic MUSIC_JOHTO_TRAINER_BATTLE
@@ -237,7 +237,7 @@ Route30YoungsterScript:
 	waitbutton
 	closetext
 	end
-	
+
 Route30HatchUnownEggScript:
 	checkevent EVENT_UNOWN_HATCHED
 	iftrue .set_flag
@@ -245,7 +245,7 @@ Route30HatchUnownEggScript:
 	checkevent EVENT_UNOWN_HATCHED
 	iftrue .set_flag
 	end
-	
+
 .set_flag
 	wildon
 	setscene SCENE_ROUTE30_AFTER_UNOWN_HATCH

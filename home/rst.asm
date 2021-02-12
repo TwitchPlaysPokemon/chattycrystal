@@ -36,7 +36,7 @@ SECTION "rst18", ROM0 ; rst ChattyOn
 	ld [wChattyOveride], a
 	pop af
 	ret
-	
+
 SECTION "rst20", ROM0 ; rst ChattyOff
 	push af
 	ld a, 1

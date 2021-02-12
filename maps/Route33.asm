@@ -204,7 +204,7 @@ Route33_MapEvents:
 	bg_event 11, 11, BGEVENT_READ, Route33Sign
 
 	db 3 ; object events
-if TESTMODE 
+if TESTMODE
 	object_event  6, 13, SPRITE_GLORIA, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerHikerAnthony, -1
 else
 	object_event  6, 13, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerHikerAnthony, -1

@@ -30,7 +30,6 @@ ROM0
 	"Home"
 ROMX $01
 	"bank1"
-	"Enemy Trainer Parties 3"
 ROMX $02
 	"bank2"
 ROMX $03
@@ -311,6 +310,8 @@ ROMX $78
 	"Tileset Data 8"
 ROMX $79
 	"Events"
+ROMX $7a
+	"Enemy Trainer Parties 3"
 ROMX $7b
 	"Battle Tower Text"
 ROMX $7c

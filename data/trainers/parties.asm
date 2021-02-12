@@ -736,7 +736,7 @@ HGSSLyraGroup:
 	db 14
 	dw DIGLETT
 	db NO_ITEM
-	dw MAGNITUDE, MUD_SLAP, STRENGTH, NO_MOVE ; TODO: add mud bomb
+	dw MAGNITUDE, MUD_SLAP, STRENGTH, MUD_BOMB
 	bigdw $FFFF
 	bigdw 28
 	bigdw 22
@@ -749,7 +749,7 @@ HGSSLyraGroup:
 	db 33
 	dw HO_OH ; TODO: add groudon
 	db TM_FURY_CUTTER
-	dw SURF, CUT, NO_MOVE, NO_MOVE ; TODO: add sand tomb, Focus blast
+	dw SURF, CUT, FOCUS_BLAST, NO_MOVE ; TODO: add sand tomb
 	bigdw $0FFF
 	bigdw 115
 	bigdw 113
@@ -1324,172 +1324,6 @@ MaribelGroup:
 	dw CHIKORITA
 	db -1 ; end
 	
-	end_list_items
-	
-NuzlockeGroup:
-	next_list_item ; F481
-	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	db 21
-	dw MANTINE ; TODO: add wingull
-	db NO_ITEM
-	dw WING_ATTACK, WATER_GUN, SUPERSONIC, GROWL
-	bigdw $FFFF
-	bigdw 54
-	bigdw 24
-	bigdw 20
-	bigdw 49
-	bigdw 29
-	bigdw 20
-	db "Wingull@"
-	
-	db 17
-	dw QUILAVA ; TODO: add combusken
-	db POKE_BALL
-	dw PECK, DOUBLE_KICK, SCRATCH, FOCUS_ENERGY
-	bigdw $FFFF
-	bigdw 49
-	bigdw 34
-	bigdw 26
-	bigdw 26
-	bigdw 37
-	bigdw 30
-	db "Zzzzzz mmg@"
-	
-	db 5
-	dw POOCHYENA
-	db NO_ITEM
-	dw TACKLE, HOWL, NO_MOVE, NO_MOVE
-	bigdw $0FFF
-	bigdw 19
-	bigdw 11
-	bigdw 8
-	bigdw 9
-	bigdw 8
-	bigdw 9
-	db "6@"
-	
-	db 17
-	dw MACHOP ; TODO: add Makuhita
-	db EXP_SHARE
-	dw VITAL_THROW, FOCUS_ENERGY, SAND_ATTACK, ARM_THRUST
-	bigdw $FFFF
-	bigdw 57
-	bigdw 28
-	bigdw 15
-	bigdw 19
-	bigdw 12
-	bigdw 17
-	db "Bbbt@"
-	
-	db 16
-	dw PIDGEY ; TODO: add Tailow
-	db EXP_SHARE
-	dw WING_ATTACK, GROWL, PECK, QUICK_ATTACK
-	bigdw $FFFF
-	bigdw 41
-	bigdw 24
-	bigdw 17
-	bigdw 36
-	bigdw 18
-	bigdw 16
-	db "Tailow@"
-	
-	db 11
-	dw GEODUDE ; TODO: add aron
-	db NO_ITEM
-	dw TACKLE, HARDEN, MUD_SLAP, HEADBUTT
-	bigdw $0FFF
-	bigdw 33
-	bigdw 20
-	bigdw 27
-	bigdw 12
-	bigdw 16
-	bigdw 16
-	db "Mmmm@"
-	
-	db -1 ; end
-
-	next_list_item ; F482
-	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	db 47
-	dw SEAKING ; TODO: add wailord
-	db EXP_SHARE
-	dw REST, ROLLOUT, SURF, NO_MOVE ; TODO: add water spout
-	bigdw $FFFF
-	bigdw 240
-	bigdw 117
-	bigdw 49
-	bigdw 81
-	bigdw 107
-	bigdw 63
-	db "Wu''''2@"
-	
-	db 49
-	dw DRAGONITE ;TODO add flygon
-	db AMULET_COIN
-	dw BITE, FAINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
-	bigdw $FFFF
-	bigdw 159
-	bigdw 127
-	bigdw 88
-	bigdw 130
-	bigdw 90
-	bigdw 96
-	db "Piiiv@"
-	
-	db 36
-	dw QWILFISH ;TODO add sharpedo
-	db FULL_HEAL
-	dw CRUNCH, SCREECH, SLASH, NO_MOVE ; TODO: add taunt
-	bigdw $0FFF
-	bigdw 108
-	bigdw 92
-	bigdw 38
-	bigdw 83
-	bigdw 81
-	bigdw 45
-	db "Sharpedo@"
-	
-	db 52
-	dw RAICHU ; TODO: add manectric
-	db POKE_BALL
-	dw THUNDERBOLT, BITE, THUNDER, HOWL
-	bigdw $0FFF
-	bigdw 149
-	bigdw 85
-	bigdw 88
-	bigdw 143
-	bigdw 136
-	bigdw 80
-	db "b syro .9@"
-	
-	db 51
-	dw CHARIZARD ; TODO: add blaziken
-	db RAGECANDYBAR
-	dw SLASH, DOUBLE_KICK, NO_MOVE, NO_MOVE ; TODO: add Rock tomb, Blaze Kick
-	bigdw $FFFF
-	bigdw 158
-	bigdw 133
-	bigdw 85
-	bigdw 105
-	bigdw 143
-	bigdw 100
-	db "Zzzzzz mmg@"
-	
-	db 31
-	dw SEEL ; TODO: add spheal
-	db EXP_SHARE
-	dw BODY_SLAM, AURORA_BEAM, ENCORE, NO_MOVE ; TODO: add Ice Ball
-	bigdw $FFFF
-	bigdw 90
-	bigdw 35
-	bigdw 35
-	bigdw 27
-	bigdw 47
-	bigdw 45
-	db "Zzzzzz mmg@"
-	
-	db -1 ; end
 	end_list_items
 	
 SiriusGroup:
@@ -6540,7 +6374,6 @@ PokefanFGroup:
 
 	end_list_items
 
-RedGroup:
 BlueGroup:
 OfficerGroup:
 	next_list_item ; OFFICER (1)
@@ -6624,6 +6457,91 @@ FCLarryGroup:
 	dw CHIKORITA
 	db -1 ; end
 	
+	end_list_items
+	
+RedGroup:
+	next_list_item ; AIIIAAB
+	db "AIIIAAB@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	
+	db 46
+	dw CHARIZARD
+	db NO_ITEM
+	dw FLAMETHROWER, GROWL, LEER, EMBER
+	bigdw $FFFF
+	bigdw 149
+	bigdw 101
+	bigdw 103
+	bigdw 121
+	bigdw 104
+	bigdw 104
+	db "CHARIZARD@"
+	
+	db 12
+	dw MAGIKARP
+	db NO_ITEM
+	dw SPLASH, NO_MOVE, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 28
+	bigdw 9
+	bigdw 19
+	bigdw 24
+	bigdw 11
+	bigdw 11
+	db "BBAABaaaa@"
+	
+	db 19
+	dw POLIWAG
+	db NO_ITEM
+	dw BUBBLE, TAKE_DOWN, HYPNOSIS, WATER_GUN
+	bigdw $0FFF
+	bigdw 48
+	bigdw 25
+	bigdw 26
+	bigdw 46
+	bigdw 24
+	bigdw 24
+	db "POLIWAG@"
+	
+	db 15
+	dw KRABBY
+	db NO_ITEM
+	dw BUBBLE, LEER, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 37
+	bigdw 39
+	bigdw 34
+	bigdw 23
+	bigdw 13
+	bigdw 13
+	db "z(( r yyz@"
+	
+	db 15
+	dw KAKUNA
+	db NO_ITEM
+	dw HARDEN, NO_MOVE, NO_MOVE, NO_MOVE
+	bigdw $FFFF
+	bigdw 41
+	bigdw 17
+	bigdw 25
+	bigdw 18
+	bigdw 16
+	bigdw 16
+	db "KAKUNA@"
+	
+	db 30
+	dw ONIX
+	db NO_ITEM
+	dw RAGE, SCREECH, BIND, ROCK_THROW
+	bigdw $FFFF
+	bigdw 69
+	bigdw 42
+	bigdw 114
+	bigdw 54
+	bigdw 35
+	bigdw 35
+	db "ONIX@"
+	
+	db -1 ; end
 	end_list_items
 	
 RBYGreenGroup:
@@ -6792,3 +6710,242 @@ SMUSUMElio2Group:
 	db -1 ; end
 	
 	end_list_items
+	
+
+NuzlockeGroup:
+	next_list_item ; F481
+	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 21
+	dw MANTINE ; TODO: add wingull
+	db NO_ITEM
+	dw WING_ATTACK, WATER_GUN, SUPERSONIC, GROWL
+	bigdw $FFFF
+	bigdw 54
+	bigdw 24
+	bigdw 20
+	bigdw 49
+	bigdw 29
+	bigdw 20
+	db "Wingull@"
+	
+	db 17
+	dw QUILAVA ; TODO: add combusken
+	db POKE_BALL
+	dw PECK, DOUBLE_KICK, SCRATCH, FOCUS_ENERGY
+	bigdw $FFFF
+	bigdw 49
+	bigdw 34
+	bigdw 26
+	bigdw 26
+	bigdw 37
+	bigdw 30
+	db "Zzzzzz mmg@"
+	
+	db 5
+	dw POOCHYENA
+	db NO_ITEM
+	dw TACKLE, HOWL, NO_MOVE, NO_MOVE
+	bigdw $0FFF
+	bigdw 19
+	bigdw 11
+	bigdw 8
+	bigdw 9
+	bigdw 8
+	bigdw 9
+	db "6@"
+	
+	db 17
+	dw MACHOP ; TODO: add Makuhita
+	db EXP_SHARE
+	dw VITAL_THROW, FOCUS_ENERGY, SAND_ATTACK, ARM_THRUST
+	bigdw $FFFF
+	bigdw 57
+	bigdw 28
+	bigdw 15
+	bigdw 19
+	bigdw 12
+	bigdw 17
+	db "Bbbt@"
+	
+	db 16
+	dw PIDGEY ; TODO: add Tailow
+	db EXP_SHARE
+	dw WING_ATTACK, GROWL, PECK, QUICK_ATTACK
+	bigdw $FFFF
+	bigdw 41
+	bigdw 24
+	bigdw 17
+	bigdw 36
+	bigdw 18
+	bigdw 16
+	db "Tailow@"
+	
+	db 11
+	dw GEODUDE ; TODO: add aron
+	db NO_ITEM
+	dw TACKLE, HARDEN, MUD_SLAP, HEADBUTT
+	bigdw $0FFF
+	bigdw 33
+	bigdw 20
+	bigdw 27
+	bigdw 12
+	bigdw 16
+	bigdw 16
+	db "Mmmm@"
+	
+	db -1 ; end
+	
+	next_list_item ; F482
+	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	
+	db 42
+	dw RAICHU ; TODO: add manectric
+	db POKE_BALL
+	dw THUNDERBOLT, BITE, SPARK, HOWL
+	bigdw $0FFF
+	bigdw 122
+	bigdw 70
+	bigdw 72
+	bigdw 115
+	bigdw 111
+	bigdw 66
+	db "b syro .9@"
+	
+	db 49
+	dw CHARIZARD ; TODO: add blaziken
+	db RAGECANDYBAR
+	dw SLASH, DOUBLE_KICK, BLAZE_KICK, NO_MOVE ; TODO: add Rock tomb
+	bigdw $FFFF
+	bigdw 153
+	bigdw 127
+	bigdw 82
+	bigdw 102
+	bigdw 138
+	bigdw 96
+	db "Zzzzzz mmg@"
+	
+	db 49
+	dw DRAGONITE ;TODO add Vibrava
+	db AMULET_COIN
+	dw BITE, FAINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
+	bigdw $FFFF
+	bigdw 110
+	bigdw 78
+	bigdw 51
+	bigdw 82
+	bigdw 51
+	bigdw 56
+	db "Piiiv@"
+	
+	db 47
+	dw SEAKING ; TODO: add wailmer
+	db EXP_SHARE
+	dw ASTONISH, ROLLOUT, WATER_GUN, NO_MOVE ; TODO: add water Pulse
+	bigdw $FFFF
+	bigdw 126
+	bigdw 56
+	bigdw 25
+	bigdw 47
+	bigdw 54
+	bigdw 33
+	db "Wu''''2@"
+	
+	db 19
+	dw MISDREAVUS ;TODO add sableye
+	db EXP_SHARE
+	dw FORESIGHT, SCRATCH, FURY_SWIPES, NIGHT_SHADE
+	bigdw $0FFF
+	bigdw 54
+	bigdw 34
+	bigdw 34
+	bigdw 26
+	bigdw 32
+	bigdw 37
+	db "Eeedjjllfn@"
+	
+	db -1 ; end
+
+	next_list_item ; F483
+	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 47
+	dw SEAKING ; TODO: add wailord
+	db EXP_SHARE
+	dw REST, ROLLOUT, SURF, NO_MOVE ; TODO: add water spout
+	bigdw $FFFF
+	bigdw 240
+	bigdw 117
+	bigdw 49
+	bigdw 81
+	bigdw 107
+	bigdw 63
+	db "Wu''''2@"
+	
+	db 49
+	dw DRAGONITE ;TODO add flygon
+	db AMULET_COIN
+	dw BITE, FAINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
+	bigdw $FFFF
+	bigdw 159
+	bigdw 127
+	bigdw 88
+	bigdw 130
+	bigdw 90
+	bigdw 96
+	db "Piiiv@"
+	
+	db 36
+	dw QWILFISH ;TODO add sharpedo
+	db FULL_HEAL
+	dw CRUNCH, SCREECH, SLASH, NO_MOVE ; TODO: add taunt
+	bigdw $0FFF
+	bigdw 108
+	bigdw 92
+	bigdw 38
+	bigdw 83
+	bigdw 81
+	bigdw 45
+	db "Sharpedo@"
+	
+	db 52
+	dw RAICHU ; TODO: add manectric
+	db POKE_BALL
+	dw THUNDERBOLT, BITE, THUNDER, HOWL
+	bigdw $0FFF
+	bigdw 149
+	bigdw 85
+	bigdw 88
+	bigdw 143
+	bigdw 136
+	bigdw 80
+	db "b syro .9@"
+	
+	db 51
+	dw CHARIZARD ; TODO: add blaziken
+	db RAGECANDYBAR
+	dw SLASH, DOUBLE_KICK, NO_MOVE, NO_MOVE ; TODO: add Rock tomb, Blaze Kick
+	bigdw $FFFF
+	bigdw 158
+	bigdw 133
+	bigdw 85
+	bigdw 105
+	bigdw 143
+	bigdw 100
+	db "Zzzzzz mmg@"
+	
+	db 31
+	dw SEEL ; TODO: add spheal
+	db EXP_SHARE
+	dw BODY_SLAM, AURORA_BEAM, ENCORE, NO_MOVE ; TODO: add Ice Ball
+	bigdw $FFFF
+	bigdw 90
+	bigdw 35
+	bigdw 35
+	bigdw 27
+	bigdw 47
+	bigdw 45
+	db "Zzzzzz mmg@"
+	
+	db -1 ; end
+	end_list_items
+	
+

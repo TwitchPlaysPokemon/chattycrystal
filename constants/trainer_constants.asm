@@ -650,9 +650,9 @@ KRIS EQU __enum__
 	const JAIME
 
 	trainerclass RED ; 3f
+	const AIIIAAB
 	const RED1
 	const RED_RED
-	const AIIIAAB
 	const CCC_DUALRED
 	const KAY
 	const RED_GAUNTLETRED
@@ -781,6 +781,7 @@ KRIS EQU __enum__
 	trainerclass NUZLOCKE ; 62
 	const F481
 	const F482
+	const F483
 	
 	trainerclass SIRIUS ; 63
 	const BBCBBHH

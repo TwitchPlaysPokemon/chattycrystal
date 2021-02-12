@@ -538,10 +538,12 @@ PokemonPicPointers::
 	dba ZigzagoonBackpic
 	dba LinooneFrontpic
 	dba LinooneBackpic
+	dba LotadFrontpic 
+	dba LotadBackpic 
+	dba LombreFrontpic
+	dba LombreBackpic 
 	dba PikachuFrontpic ; PLACEHOLDER
 	dba PikachuBackpic ; PLACEHOLDER
-	dba LombreFrontpic
-	dba LombreBackpic
 	dba PikachuFrontpic ; PLACEHOLDER
 	dba PikachuBackpic ; PLACEHOLDER
 	dba PikachuFrontpic ; PLACEHOLDER

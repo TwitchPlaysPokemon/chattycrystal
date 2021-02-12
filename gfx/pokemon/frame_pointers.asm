@@ -263,7 +263,7 @@ FramesPointers:
 	dba MightyenaFrames
 	dba ZigzagoonFrames
 	dba LinooneFrames
-	dba PikachuFrames ; PLACEHOLDER
+	dba LotadFrames
 	dba LombreFrames
 	dba PikachuFrames ; PLACEHOLDER
 	dba PikachuFrames ; PLACEHOLDER

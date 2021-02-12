@@ -884,18 +884,18 @@ B2W2NateGroup:
 	bigdw 11
 	bigdw 13
 	db "aaaaaaakw@"
-
-	db 15
-	dw LOMBRE
+	
+	db 14
+	dw LOTAD
 	db NO_ITEM
 	dw GROWL, ABSORB, TRI_ATTACK, NO_MOVE
 	bigdw $0FFF
-	bigdw 44
-	bigdw 23
-	bigdw 23
-	bigdw 18
-	bigdw 24
-	bigdw 29
+	bigdw 37
+	bigdw 15
+	bigdw 16
+	bigdw 12
+	bigdw 17
+	bigdw 22
 	db "Lotad00 R@"
 
 	db 10

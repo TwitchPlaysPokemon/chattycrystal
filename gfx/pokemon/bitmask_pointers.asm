@@ -263,7 +263,7 @@ BitmasksPointers:
 	dw MightyenaBitmasks
 	dw ZigzagoonBitmasks
 	dw LinooneBitmasks
-	dw PikachuBitmasks ; PLACEHOLDER
+	dw LotadBitmasks 
 	dw LombreBitmasks
 	dw PikachuBitmasks ; PLACEHOLDER
 	dw PikachuBitmasks ; PLACEHOLDER

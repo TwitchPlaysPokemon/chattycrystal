@@ -548,8 +548,6 @@ PokemonPicPointers::
 	dba PikachuBackpic ; PLACEHOLDER
 	dba PikachuFrontpic ; PLACEHOLDER
 	dba PikachuBackpic ; PLACEHOLDER
-	dba PikachuFrontpic ; PLACEHOLDER
-	dba PikachuBackpic ; PLACEHOLDER
 	dba WingullFrontpic
 	dba WingullBackpic
 	dba PikachuFrontpic ; PLACEHOLDER

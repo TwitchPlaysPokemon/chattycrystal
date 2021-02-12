@@ -71,5 +71,6 @@ Cries:
 	dba Cry_Torchic
 	dba Cry_Poochyena
 	dba Cry_Zigzagoon
+	dba Cry_Lotad
 	dba Cry_Lombre
 	dba Cry_Swellow

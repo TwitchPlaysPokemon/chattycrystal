@@ -317,7 +317,7 @@ LinooneEvosAttacks:
 	db 0 ; no more level-up moves
 	
 LotadEvosAttacks:
-	dbbw EVOLVE_LEVEL, 14, LOTAD
+	dbbw EVOLVE_LEVEL, 14, LOMBRE
 	db 0
 	dbw 1, ASTONISH
 	dbw 3, GROWL

@@ -5,5 +5,5 @@
 	next "aquatic plant and"
 	next "serves as a ferry"
 
-	page "to <POKE>MON that"
+	page "to #MON that"
 	next "can't swim.@"

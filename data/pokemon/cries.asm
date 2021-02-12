@@ -269,7 +269,7 @@ PokemonCries::
 	mon_cry CRY_POOCHYENA,   $020,  $17f ; MIGHTYENA
 	mon_cry CRY_ZIGZAGOON,   $08a,  $0b8 ; ZIGZAGOON
 	mon_cry CRY_ZIGZAGOON,   $06b,  $102 ; LINOONE
-	mon_cry CRY_LOMBRE,      $000,  $100 ; LOTAD - TODO: someone who knows what they are doing fix this
+	mon_cry CRY_LOTAD,       $0df,  $084 ; LOTAD
 	mon_cry CRY_LOMBRE,      $028,  $140 ; LOMBRE
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LUDICOLO - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TAILLOW - PLACEHOLDER

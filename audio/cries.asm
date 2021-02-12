@@ -2063,6 +2063,11 @@ Cry_Zigzagoon:
 	musicheader 2, 5, Cry_Zigzagoon_Ch5
 	musicheader 1, 6, Cry_Zigzagoon_Ch6
 
+Cry_Lotad:
+	musicheader 3, 5, Cry_Lotad_Ch5
+	musicheader 1, 6, Cry_Lotad_Ch6
+	musicheader 1, 8, Cry_Lotad_Ch8
+
 Cry_Lombre:
 	musicheader 3, 5, Cry_Lombre_Ch5
 	musicheader 1, 6, Cry_Lombre_Ch6
@@ -2147,6 +2152,28 @@ Cry_Zigzagoon_branch_f312b:
 Cry_Zigzagoon_Ch8:
 	noise __,  9, $3b, $0
 	noise __,  9, $92, $0
+	endchannel
+
+Cry_Lotad_Ch5:
+	sound_duty 1, 1, 2, 2
+	sound __,  5, $e1, $0700
+	sound __,  5, $f2, $0780
+	sound __,  3, $92, $0740
+	sound __,  9, $e1, $0600
+	endchannel
+
+Cry_Lotad_Ch6:
+	sound_duty 2, 2, 0, 0
+	sound __,  5, $b1, $06e1
+	sound __,  4, $c2, $06e1
+	sound __,  4, $62, $0681
+	sound __,  9, $b1, $05e1
+	endchannel
+
+Cry_Lotad_Ch8:
+	noise __,  3, $61, $32
+	noise __,  3, $61, $21
+	noise __,  9, $61, $11
 	endchannel
 
 Cry_Lombre_Ch5:

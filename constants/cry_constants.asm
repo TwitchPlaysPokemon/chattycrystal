@@ -78,5 +78,6 @@
 	const CRY_TORCHIC
 	const CRY_POOCHYENA
 	const CRY_ZIGZAGOON
+	const CRY_LOTAD
 	const CRY_LOMBRE
 	const CRY_SWELLOW

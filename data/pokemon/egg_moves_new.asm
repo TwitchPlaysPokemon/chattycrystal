@@ -101,7 +101,7 @@ EggMovePointers3::
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
-	dw NoEggMoves3
+	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
 	dw NoEggMoves3 ; PLACEHOLDER
@@ -183,9 +183,9 @@ ZigzagoonEggMoves:
 	dw -1 ; end
 
 WingullEggMoves:
-	dw EXTRASENSORY
-	dw SNORE
-	dw SWAGGER
+	dw AGILITY
+	dw GUST
+	dw MIST
 	dw TAKE_DOWN
 	dw -1 ; end
 

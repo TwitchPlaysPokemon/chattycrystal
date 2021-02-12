@@ -76,7 +76,6 @@ ElmsLab_MapScripts:
 	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTIONS
-	setmapscene ROUTE_32, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	setevent EVENT_GOT_A_POKEMON_FROM_ELM
 	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
 	wildoff

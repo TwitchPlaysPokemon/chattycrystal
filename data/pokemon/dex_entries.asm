@@ -268,6 +268,7 @@ HoOhPokedexEntry::       INCLUDE "data/pokemon/dex_entries/ho_oh.asm"
 CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
 
 SECTION "New Pokedex Entries", ROMX
+PlaceholderPokedexEntry::INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; PLACEHOLDER, REMOVE WHEN NOT NEEDED
 TreeckoPokedexEntry::    INCLUDE "data/pokemon/dex_entries/treecko.asm"
 GrovylePokedexEntry::    INCLUDE "data/pokemon/dex_entries/grovyle.asm"
 SceptilePokedexEntry::   INCLUDE "data/pokemon/dex_entries/sceptile.asm"
@@ -282,9 +283,9 @@ WingullPokedexEntry::    INCLUDE "data/pokemon/dex_entries/wingull.asm"
 WhismurPokedexEntry::    INCLUDE "data/pokemon/dex_entries/whismur.asm"
 ChatotPokedexEntry::     INCLUDE "data/pokemon/dex_entries/chatot.asm"
 GlaceonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/glaceon.asm"
-MegastoisePokedexEntry:: INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
-NoctdrioPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
-TogetapePokedexEntry::   INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
-JumpaniumPokedexEntry::  INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
-QuagynxPokedexEntry::    INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
-SteelurretPokedexEntry:: INCLUDE "data/pokemon/dex_entries/pikachu.asm" ; TODO: add dex entry
+MegastoisePokedexEntry:: INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry
+NoctdrioPokedexEntry::   INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry
+TogetapePokedexEntry::   INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry
+JumpaniumPokedexEntry::  INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry
+QuagynxPokedexEntry::    INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry
+SteelurretPokedexEntry:: INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry

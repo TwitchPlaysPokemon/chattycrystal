@@ -347,7 +347,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bronzong
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bonsly
 	dw ChatotAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Croagunk
+	dw CroagunkAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Toxicroak
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Leafeon
 	dw GlaceonAnimationIdle

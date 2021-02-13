@@ -726,7 +726,7 @@ INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Bon
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Bonsly
 INCBIN "gfx/pokemon/chatot/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/chatot/shiny.pal"
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Croagunk
+INCBIN "gfx/pokemon/croagunk/front.gbcpal", middle_colors 
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Croagunk
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Toxicroak
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Toxicroak

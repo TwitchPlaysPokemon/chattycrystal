@@ -621,6 +621,7 @@ JigglypuffBackpic:   INCBIN "gfx/pokemon/jigglypuff/back.2bpp.lz"
 OddishBackpic:       INCBIN "gfx/pokemon/oddish/back.2bpp.lz"
 UnownDBackpic:       INCBIN "gfx/pokemon/unown_d/back.2bpp.lz"
 MudkipFrontpic:      INCBIN "gfx/pokemon/mudkip/front.animated.2bpp.lz"
+CroagunkFrontpic:    INCBIN "gfx/pokemon/croagunk/front.animated.2bpp.lz"
 
 SECTION "Pics 18", ROMX
 

@@ -347,7 +347,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Bronzong
 	dba PlaceholderFrames ; PLACEHOLDER - Bonsly
 	dba ChatotFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Croagunk
+	dba CroagunkFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Toxicroak
 	dba PlaceholderFrames ; PLACEHOLDER - Leafeon
 	dba GlaceonFrames

@@ -706,7 +706,7 @@ PokemonPicPointers::
 	dba PlaceholderBackpic ; PLACEHOLDER - Bonsly
 	dba ChatotFrontpic
 	dba ChatotBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Croagunk
+	dba CroagunkFrontpic
 	dba PlaceholderBackpic ; PLACEHOLDER - Croagunk
 	dba PlaceholderFrontpic ; PLACEHOLDER - Toxicroak
 	dba PlaceholderBackpic ; PLACEHOLDER - Toxicroak

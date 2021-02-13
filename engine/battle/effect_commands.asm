@@ -5431,7 +5431,6 @@ endc
 	call GetBattleVarAddr
 	ld [hl], b
 	call UpdateMoveData
-	nop
 AissLoadMoveNameHere::
 	jp ResetTurn
 

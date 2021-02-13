@@ -4,152 +4,154 @@ EvosAttacksPointers3::
 	dw TreeckoEvosAttacks
 	dw GrovyleEvosAttacks
 	dw SceptileEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER - Torchic
 	dw CombuskenEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER - Blaziken
+	dw DummyEvosAttacks ; PLACEHOLDER - Mudkip
+	dw DummyEvosAttacks ; PLACEHOLDER - Marshtomp
+	dw DummyEvosAttacks ; PLACEHOLDER - Swampert
 	dw PoochyenaEvosAttacks
 	dw MightyenaEvosAttacks
 	dw ZigzagoonEvosAttacks
 	dw LinooneEvosAttacks
 	dw LotadEvosAttacks
 	dw LombreEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER - Ludicolo
 	dw TaillowEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER - Swellow
 	dw WingullEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER - Pelipper
+	dw DummyEvosAttacks ; PLACEHOLDER - Ralts
+	dw DummyEvosAttacks ; PLACEHOLDER - Kirlia
+	dw DummyEvosAttacks ; PLACEHOLDER - Gardevoir
+	dw DummyEvosAttacks ; PLACEHOLDER - Surskit
+	dw DummyEvosAttacks ; PLACEHOLDER - Masquerain
 	dw WhismurEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER - Loudred
+	dw DummyEvosAttacks ; PLACEHOLDER - Exploud
 	dw MakuhitaEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER - Hariyama
+	dw DummyEvosAttacks ; PLACEHOLDER - Azurill
+	dw DummyEvosAttacks ; PLACEHOLDER - Skitty
+	dw DummyEvosAttacks ; PLACEHOLDER - Delcatty
+	dw DummyEvosAttacks ; PLACEHOLDER - Sableye
 	dw AronEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER - Lairon
+	dw DummyEvosAttacks ; PLACEHOLDER - Aggron
+	dw DummyEvosAttacks ; PLACEHOLDER - Electrike
+	dw DummyEvosAttacks ; PLACEHOLDER - Manectric
+	dw DummyEvosAttacks ; PLACEHOLDER - Roselia
+	dw DummyEvosAttacks ; PLACEHOLDER - Wailmer
+	dw DummyEvosAttacks ; PLACEHOLDER - Wailord
+	dw DummyEvosAttacks ; PLACEHOLDER - Trapinch
+	dw DummyEvosAttacks ; PLACEHOLDER - Vibrava
+	dw DummyEvosAttacks ; PLACEHOLDER - Flygon
+	dw DummyEvosAttacks ; PLACEHOLDER - Swablu
+	dw DummyEvosAttacks ; PLACEHOLDER - Altaria
+	dw DummyEvosAttacks ; PLACEHOLDER - Lileep
+	dw DummyEvosAttacks ; PLACEHOLDER - Cradily
+	dw DummyEvosAttacks ; PLACEHOLDER - Feebas
+	dw DummyEvosAttacks ; PLACEHOLDER - Milotic
+	dw DummyEvosAttacks ; PLACEHOLDER - Duskull
+	dw DummyEvosAttacks ; PLACEHOLDER - Dusclops
+	dw DummyEvosAttacks ; PLACEHOLDER - Absol
+	dw DummyEvosAttacks ; PLACEHOLDER - Snorunt
+	dw DummyEvosAttacks ; PLACEHOLDER - Spheal
+	dw DummyEvosAttacks ; PLACEHOLDER - Sealeo
+	dw DummyEvosAttacks ; PLACEHOLDER - Walrein
+	dw DummyEvosAttacks ; PLACEHOLDER - Bagon
+	dw DummyEvosAttacks ; PLACEHOLDER - Shelgon
+	dw DummyEvosAttacks ; PLACEHOLDER - Salamence
+	dw DummyEvosAttacks ; PLACEHOLDER - Beldum
+	dw DummyEvosAttacks ; PLACEHOLDER - Metang
+	dw DummyEvosAttacks ; PLACEHOLDER - Metagross
+	dw DummyEvosAttacks ; PLACEHOLDER - Latias
+	dw DummyEvosAttacks ; PLACEHOLDER - Latios
+	dw DummyEvosAttacks ; PLACEHOLDER - Groudon
+	dw DummyEvosAttacks ; PLACEHOLDER - Turtwig
+	dw DummyEvosAttacks ; PLACEHOLDER - Grotle
+	dw DummyEvosAttacks ; PLACEHOLDER - Torterra
+	dw DummyEvosAttacks ; PLACEHOLDER - Chimchar
+	dw DummyEvosAttacks ; PLACEHOLDER - Monferno
+	dw DummyEvosAttacks ; PLACEHOLDER - Infernape
+	dw DummyEvosAttacks ; PLACEHOLDER - Piplup
+	dw DummyEvosAttacks ; PLACEHOLDER - Prinplup
+	dw DummyEvosAttacks ; PLACEHOLDER - Empoleon
+	dw DummyEvosAttacks ; PLACEHOLDER - Bidoof
+	dw DummyEvosAttacks ; PLACEHOLDER - Bibarel
+	dw DummyEvosAttacks ; PLACEHOLDER - Shinx
+	dw DummyEvosAttacks ; PLACEHOLDER - Luxio
+	dw DummyEvosAttacks ; PLACEHOLDER - Luxray
+	dw DummyEvosAttacks ; PLACEHOLDER - Budew
+	dw DummyEvosAttacks ; PLACEHOLDER - Roserade
+	dw DummyEvosAttacks ; PLACEHOLDER - Burmy
+	dw DummyEvosAttacks ; PLACEHOLDER - Wormadam
+	dw DummyEvosAttacks ; PLACEHOLDER - Buizel
+	dw DummyEvosAttacks ; PLACEHOLDER - Floatzel
+	dw DummyEvosAttacks ; PLACEHOLDER - Shellos
+	dw DummyEvosAttacks ; PLACEHOLDER - Gastrodon
+	dw DummyEvosAttacks ; PLACEHOLDER - Buneary
+	dw DummyEvosAttacks ; PLACEHOLDER - Lopunny
+	dw DummyEvosAttacks ; PLACEHOLDER - Stunky
+	dw DummyEvosAttacks ; PLACEHOLDER - Skuntank
+	dw DummyEvosAttacks ; PLACEHOLDER - Bronzor
+	dw DummyEvosAttacks ; PLACEHOLDER - Bronzong
+	dw DummyEvosAttacks ; PLACEHOLDER - Bonsly
 	dw ChatotEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER - Croagunk
+	dw DummyEvosAttacks ; PLACEHOLDER - Toxicroak
+	dw DummyEvosAttacks ; PLACEHOLDER - Leafeon
 	dw GlaceonEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; PLACEHOLDER
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; TODO: learnset
-	dw DummyEvosAttacks ; PLACEHOLDER
+	dw DummyEvosAttacks ; PLACEHOLDER - Porygon Z
+	dw DummyEvosAttacks ; PLACEHOLDER - Dusknoir
+	dw DummyEvosAttacks ; PLACEHOLDER - Froslass
+	dw DummyEvosAttacks ; PLACEHOLDER - Darkrai
+	dw DummyEvosAttacks ; PLACEHOLDER - Pansage
+	dw DummyEvosAttacks ; PLACEHOLDER - Simisage
+	dw DummyEvosAttacks ; PLACEHOLDER - Drillbur
+	dw DummyEvosAttacks ; PLACEHOLDER - Excadrill
+	dw DummyEvosAttacks ; PLACEHOLDER - Sandile
+	dw DummyEvosAttacks ; PLACEHOLDER - Krokorok
+	dw DummyEvosAttacks ; PLACEHOLDER - Krookodile
+	dw DummyEvosAttacks ; PLACEHOLDER - Ducklett
+	dw DummyEvosAttacks ; PLACEHOLDER - Swanna
+	dw DummyEvosAttacks ; PLACEHOLDER - Tynamo
+	dw DummyEvosAttacks ; PLACEHOLDER - Eelektrik
+	dw DummyEvosAttacks ; PLACEHOLDER - Eelektross
+	dw DummyEvosAttacks ; PLACEHOLDER - Litwick
+	dw DummyEvosAttacks ; PLACEHOLDER - Lampent
+	dw DummyEvosAttacks ; PLACEHOLDER - Chandelure
+	dw DummyEvosAttacks ; PLACEHOLDER - Clauncher
+	dw DummyEvosAttacks ; PLACEHOLDER - Clawitzer
+	dw DummyEvosAttacks ; PLACEHOLDER - Heloptile
+	dw DummyEvosAttacks ; PLACEHOLDER - Heliolisk
+	dw DummyEvosAttacks ; PLACEHOLDER - Amaura
+	dw DummyEvosAttacks ; PLACEHOLDER - Aurorus
+	dw DummyEvosAttacks ; PLACEHOLDER - Sylveon
+	dw DummyEvosAttacks ; PLACEHOLDER - Goomy
+	dw DummyEvosAttacks ; PLACEHOLDER - Sliggoo
+	dw DummyEvosAttacks ; PLACEHOLDER - Goodra
+	dw DummyEvosAttacks ; PLACEHOLDER - Crabrawler
+	dw DummyEvosAttacks ; PLACEHOLDER - Crabominable
+	dw DummyEvosAttacks ; PLACEHOLDER - Cutiefly
+	dw DummyEvosAttacks ; PLACEHOLDER - Ribombee
+    ; Fused Crystal mons
+	dw DummyEvosAttacks ; PLACEHOLDER - Onixtret
+	dw DummyEvosAttacks ; PLACEHOLDER - Chiquirtle
+	dw DummyEvosAttacks ; PLACEHOLDER - Baytortle
+	dw DummyEvosAttacks ; PLACEHOLDER - Megastoise
+	dw DummyEvosAttacks ; PLACEHOLDER - Hootduo
+	dw DummyEvosAttacks ; PLACEHOLDER - Noctdrio
+	dw DummyEvosAttacks ; PLACEHOLDER - Togekey
+	dw DummyEvosAttacks ; PLACEHOLDER - Togetape
+	dw DummyEvosAttacks ; PLACEHOLDER - Hopporita
+	dw DummyEvosAttacks ; PLACEHOLDER - Skipleef
+	dw DummyEvosAttacks ; PLACEHOLDER - Jumpanium
+	dw DummyEvosAttacks ; PLACEHOLDER - Woochum
+	dw DummyEvosAttacks ; PLACEHOLDER - Quagynx
+	dw DummyEvosAttacks ; PLACEHOLDER - Steelurret
+    ; TPP's signature fakemon
+	dw DummyEvosAttacks ; PLACEHOLDER - Phancero
 
 DummyEvosAttacks:
 	; remove when no longer in use

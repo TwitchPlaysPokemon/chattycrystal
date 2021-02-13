@@ -285,12 +285,12 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Delcatty
 	dba PlaceholderFrames ; PLACEHOLDER - Sableye
 	dba AronFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Lairon
-	dba PlaceholderFrames ; PLACEHOLDER - Aggron
-	dba PlaceholderFrames ; PLACEHOLDER - Electrike
-	dba PlaceholderFrames ; PLACEHOLDER - Manectric
+	dba LaironFrames
+	dba AggronFrames
+	dba ElectrikeFrames
+	dba ManectricFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Roselia
-	dba PlaceholderFrames ; PLACEHOLDER - Wailmer
+	dba WailmerFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Wailord
 	dba PlaceholderFrames ; PLACEHOLDER - Trapinch
 	dba PlaceholderFrames ; PLACEHOLDER - Vibrava

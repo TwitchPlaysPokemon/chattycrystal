@@ -318,7 +318,7 @@ CelebiBackpic:       INCBIN "gfx/pokemon/celebi/back.2bpp.lz"
 KrabbyBackpic:       INCBIN "gfx/pokemon/krabby/back.2bpp.lz"
 BugCatcherPic:       INCBIN "gfx/trainers/bug_catcher.2bpp.lz"
 SnorlaxBackpic:      INCBIN "gfx/pokemon/snorlax/back.2bpp.lz"
-PhanceroBackpic:    INCBIN "gfx/pokemon/phancero/back.2bpp.lz"
+PhanceroBackpic:     INCBIN "gfx/pokemon/phancero/back.2bpp.lz"
 
 SECTION "Pics 12", ROMX
 
@@ -364,7 +364,6 @@ GoldeenBackpic:      INCBIN "gfx/pokemon/goldeen/back.2bpp.lz"
 BulbasaurFrontpic:   INCBIN "gfx/pokemon/bulbasaur/front.animated.2bpp.lz"
 StarmieBackpic:      INCBIN "gfx/pokemon/starmie/back.2bpp.lz"
 
-
 SECTION "Pics 13", ROMX
 
 OmanyteBackpic:      INCBIN "gfx/pokemon/omanyte/back.2bpp.lz"
@@ -405,7 +404,7 @@ SunkernFrontpic:     INCBIN "gfx/pokemon/sunkern/front.animated.2bpp.lz"
 NidorinoBackpic:     INCBIN "gfx/pokemon/nidorino/back.2bpp.lz"
 CooltrainerfPic:     INCBIN "gfx/trainers/cooltrainer_f.2bpp.lz"
 ElectrodeFrontpic:   INCBIN "gfx/pokemon/electrode/front.animated.2bpp.lz"
-
+ZigzagoonFrontpic:   INCBIN "gfx/pokemon/zigzagoon/front.animated.2bpp.lz"
 
 SECTION "Pics 14", ROMX
 
@@ -731,7 +730,6 @@ TogetapeFrontpic:   INCBIN "gfx/pokemon/togetape/front.animated.2bpp.lz"
 TogetapeBackpic:    INCBIN "gfx/pokemon/togetape/back.2bpp.lz"
 ChatotFrontpic:     INCBIN "gfx/pokemon/chatot/front.animated.2bpp.lz"
 ChatotBackpic:      INCBIN "gfx/pokemon/chatot/back.2bpp.lz"
-ZigzagoonFrontpic:  INCBIN "gfx/pokemon/zigzagoon/front.animated.2bpp.lz"
 ZigzagoonBackpic:   INCBIN "gfx/pokemon/zigzagoon/back.2bpp.lz"
 LinooneFrontpic:    INCBIN "gfx/pokemon/linoone/front.animated.2bpp.lz"
 LinooneBackpic:     INCBIN "gfx/pokemon/linoone/back.2bpp.lz"

@@ -285,12 +285,12 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Delcatty
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sableye
 	dw AronAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Lairon
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Aggron
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Electrike
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Manectric
+	dw LaironAnimationIdle
+	dw AggronAnimationIdle
+	dw ElectrikeAnimationIdle
+	dw ManectricAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Roselia
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Wailmer
+	dw WailmerAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Wailord
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Trapinch
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Vibrava

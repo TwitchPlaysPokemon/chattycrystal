@@ -285,12 +285,12 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Delcatty
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sableye
 	dw AronBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Lairon
-	dw PlaceholderBitmasks ; PLACEHOLDER - Aggron
-	dw PlaceholderBitmasks ; PLACEHOLDER - Electrike
-	dw PlaceholderBitmasks ; PLACEHOLDER - Manectric
+	dw LaironBitmasks
+	dw AggronBitmasks
+	dw ElectrikeBitmasks
+	dw ManectricBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Roselia
-	dw PlaceholderBitmasks ; PLACEHOLDER - Wailmer
+	dw WailmerBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Wailord
 	dw PlaceholderBitmasks ; PLACEHOLDER - Trapinch
 	dw PlaceholderBitmasks ; PLACEHOLDER - Vibrava

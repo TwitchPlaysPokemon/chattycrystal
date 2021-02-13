@@ -35,7 +35,7 @@ INCLUDE "data/pokemon/base_stats/delcatty.asm"
 INCLUDE "data/pokemon/base_stats/sableye.asm"
 INCLUDE "data/pokemon/base_stats/aron.asm"
 INCLUDE "data/pokemon/base_stats/lairon.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Aggron
+INCLUDE "data/pokemon/base_stats/aggron.asm"
 INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Electrike
 INCLUDE "data/pokemon/base_stats/manectric.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Roselia

@@ -524,8 +524,8 @@ PokemonPicPointers::
 	dba CombuskenBackpic
 	dba BlazikenFrontpic
 	dba BlazikenBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Mudkip
-	dba PlaceholderBackpic ; PLACEHOLDER - Mudkip
+	dba MudkipFrontpic
+	dba MudkipBackpic
 	dba PlaceholderFrontpic ; PLACEHOLDER - Marshtomp
 	dba PlaceholderBackpic ; PLACEHOLDER - Marshtomp
 	dba PlaceholderFrontpic ; PLACEHOLDER - Swampert
@@ -648,7 +648,7 @@ PokemonPicPointers::
 	dba GroudonBackpic
 	dba PlaceholderFrontpic ; PLACEHOLDER - Turtwig
 	dba PlaceholderBackpic ; PLACEHOLDER - Turtwig
-	dba PlaceholderFrontpic ; PLACEHOLDER - Grotle
+	dba GrotleFrontpic 
 	dba PlaceholderBackpic ; PLACEHOLDER - Grotle
 	dba PlaceholderFrontpic ; PLACEHOLDER - Torterra
 	dba PlaceholderBackpic ; PLACEHOLDER - Torterra
@@ -680,8 +680,8 @@ PokemonPicPointers::
 	dba PlaceholderBackpic ; PLACEHOLDER - Roserade
 	dba PlaceholderFrontpic ; PLACEHOLDER - Burmy
 	dba PlaceholderBackpic ; PLACEHOLDER - Burmy
-	dba PlaceholderFrontpic ; PLACEHOLDER - Wormadam
-	dba PlaceholderBackpic ; PLACEHOLDER - Wormadam
+	dba PlaceholderFrontpic ; PLACEHOLDER - Mothim
+	dba PlaceholderBackpic ; PLACEHOLDER - Mothim
 	dba PlaceholderFrontpic ; PLACEHOLDER - Buizel
 	dba PlaceholderBackpic ; PLACEHOLDER - Buizel
 	dba PlaceholderFrontpic ; PLACEHOLDER - Floatzel
@@ -706,7 +706,7 @@ PokemonPicPointers::
 	dba PlaceholderBackpic ; PLACEHOLDER - Bonsly
 	dba ChatotFrontpic
 	dba ChatotBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Croagunk
+	dba CroagunkFrontpic
 	dba PlaceholderBackpic ; PLACEHOLDER - Croagunk
 	dba PlaceholderFrontpic ; PLACEHOLDER - Toxicroak
 	dba PlaceholderBackpic ; PLACEHOLDER - Toxicroak

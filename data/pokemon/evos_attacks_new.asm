@@ -85,7 +85,7 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Budew
 	dw DummyEvosAttacks ; PLACEHOLDER - Roserade
 	dw DummyEvosAttacks ; PLACEHOLDER - Burmy
-	dw DummyEvosAttacks ; PLACEHOLDER - Wormadam
+	dw DummyEvosAttacks ; PLACEHOLDER - Mothim
 	dw DummyEvosAttacks ; PLACEHOLDER - Buizel
 	dw DummyEvosAttacks ; PLACEHOLDER - Floatzel
 	dw DummyEvosAttacks ; PLACEHOLDER - Shellos

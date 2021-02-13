@@ -256,7 +256,7 @@ BitmasksPointers:
 	dw TorchicBitmasks
 	dw CombuskenBitmasks
 	dw BlazikenBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Mudkip
+	dw MudkipBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Marshtomp
 	dw PlaceholderBitmasks ; PLACEHOLDER - Swampert
 	dw PoochyenaBitmasks
@@ -298,27 +298,27 @@ BitmasksPointers:
 	dw SwabluBitmasks
 	dw AltariaBitmasks
 	dw LileepBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Cradily
-	dw PlaceholderBitmasks ; PLACEHOLDER - Feebas
-	dw PlaceholderBitmasks ; PLACEHOLDER - Milotic
-	dw PlaceholderBitmasks ; PLACEHOLDER - Duskull
-	dw PlaceholderBitmasks ; PLACEHOLDER - Dusclops
-	dw PlaceholderBitmasks ; PLACEHOLDER - Absol
-	dw PlaceholderBitmasks ; PLACEHOLDER - Snorunt
+	dw CradilyBitmasks
+	dw FeebasBitmasks
+	dw MiloticBitmasks
+	dw DuskullBitmasks
+	dw DusclopsBitmasks
+	dw AbsolBitmasks
+	dw SnoruntBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Spheal
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sealeo
 	dw PlaceholderBitmasks ; PLACEHOLDER - Walrein
-	dw PlaceholderBitmasks ; PLACEHOLDER - Bagon
-	dw PlaceholderBitmasks ; PLACEHOLDER - Shelgon
-	dw PlaceholderBitmasks ; PLACEHOLDER - Salamence
-	dw PlaceholderBitmasks ; PLACEHOLDER - Beldum
-	dw PlaceholderBitmasks ; PLACEHOLDER - Metang
+	dw BagonBitmasks
+	dw ShelgonBitmasks
+	dw SalamenceBitmasks
+	dw BeldumBitmasks
+	dw MetangBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Metagross
 	dw PlaceholderBitmasks ; PLACEHOLDER - Latias
 	dw PlaceholderBitmasks ; PLACEHOLDER - Latios
 	dw PlaceholderBitmasks ; PLACEHOLDER - Groudon
 	dw PlaceholderBitmasks ; PLACEHOLDER - Turtwig
-	dw PlaceholderBitmasks ; PLACEHOLDER - Grotle
+	dw GrotleBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Torterra
 	dw PlaceholderBitmasks ; PLACEHOLDER - Chimchar
 	dw PlaceholderBitmasks ; PLACEHOLDER - Monferno
@@ -334,7 +334,7 @@ BitmasksPointers:
 	dw BudewBitmasks 
 	dw PlaceholderBitmasks ; PLACEHOLDER - Roserade
 	dw PlaceholderBitmasks ; PLACEHOLDER - Burmy
-	dw PlaceholderBitmasks ; PLACEHOLDER - Wormadam
+	dw PlaceholderBitmasks ; PLACEHOLDER - Mothim
 	dw PlaceholderBitmasks ; PLACEHOLDER - Buizel
 	dw PlaceholderBitmasks ; PLACEHOLDER - Floatzel
 	dw PlaceholderBitmasks ; PLACEHOLDER - Shellos
@@ -347,7 +347,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Bronzong
 	dw PlaceholderBitmasks ; PLACEHOLDER - Bonsly
 	dw ChatotBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Croagunk
+	dw CroagunkBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Toxicroak
 	dw PlaceholderBitmasks ; PLACEHOLDER - Leafeon
 	dw GlaceonBitmasks

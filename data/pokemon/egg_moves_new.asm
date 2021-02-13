@@ -85,7 +85,7 @@ EggMovePointers3::
 	dw NoEggMoves3         ; PLACEHOLDER - Budew
 	dw NoEggMoves3         ; Roserade
 	dw NoEggMoves3         ; PLACEHOLDER - Burmy
-	dw NoEggMoves3         ; Wormadam
+	dw NoEggMoves3         ; Mothim
 	dw NoEggMoves3         ; PLACEHOLDER - Buizel
 	dw NoEggMoves3         ; Floatzel
 	dw NoEggMoves3         ; PLACEHOLDER - Shellos

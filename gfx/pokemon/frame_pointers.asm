@@ -256,7 +256,7 @@ FramesPointers:
 	dba TorchicFrames
 	dba CombuskenFrames
 	dba BlazikenFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Mudkip
+	dba MudkipFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Marshtomp
 	dba PlaceholderFrames ; PLACEHOLDER - Swampert
 	dba PoochyenaFrames
@@ -298,27 +298,27 @@ FramesPointers:
 	dba SwabluFrames
 	dba AltariaFrames
 	dba LileepFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Cradily
-	dba PlaceholderFrames ; PLACEHOLDER - Feebas
-	dba PlaceholderFrames ; PLACEHOLDER - Milotic
-	dba PlaceholderFrames ; PLACEHOLDER - Duskull
-	dba PlaceholderFrames ; PLACEHOLDER - Dusclops
-	dba PlaceholderFrames ; PLACEHOLDER - Absol
-	dba PlaceholderFrames ; PLACEHOLDER - Snorunt
+	dba CradilyFrames
+	dba FeebasFrames
+	dba MiloticFrames
+	dba DuskullFrames
+	dba DusclopsFrames
+	dba AbsolFrames
+	dba SnoruntFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Spheal
 	dba PlaceholderFrames ; PLACEHOLDER - Sealeo
 	dba PlaceholderFrames ; PLACEHOLDER - Walrein
-	dba PlaceholderFrames ; PLACEHOLDER - Bagon
-	dba PlaceholderFrames ; PLACEHOLDER - Shelgon
-	dba PlaceholderFrames ; PLACEHOLDER - Salamence
-	dba PlaceholderFrames ; PLACEHOLDER - Beldum
-	dba PlaceholderFrames ; PLACEHOLDER - Metang
+	dba BagonFrames
+	dba ShelgonFrames
+	dba SalamenceFrames
+	dba BeldumFrames
+	dba MetangFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Metagross
 	dba PlaceholderFrames ; PLACEHOLDER - Latias
 	dba PlaceholderFrames ; PLACEHOLDER - Latios
 	dba PlaceholderFrames ; PLACEHOLDER - Groudon
 	dba PlaceholderFrames ; PLACEHOLDER - Turtwig
-	dba PlaceholderFrames ; PLACEHOLDER - Grotle
+	dba GrotleFrames 
 	dba PlaceholderFrames ; PLACEHOLDER - Torterra
 	dba PlaceholderFrames ; PLACEHOLDER - Chimchar
 	dba PlaceholderFrames ; PLACEHOLDER - Monferno
@@ -334,7 +334,7 @@ FramesPointers:
 	dba BudewFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Roserade
 	dba PlaceholderFrames ; PLACEHOLDER - Burmy
-	dba PlaceholderFrames ; PLACEHOLDER - Wormadam
+	dba PlaceholderFrames ; PLACEHOLDER - Mothim
 	dba PlaceholderFrames ; PLACEHOLDER - Buizel
 	dba PlaceholderFrames ; PLACEHOLDER - Floatzel
 	dba PlaceholderFrames ; PLACEHOLDER - Shellos
@@ -347,7 +347,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Bronzong
 	dba PlaceholderFrames ; PLACEHOLDER - Bonsly
 	dba ChatotFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Croagunk
+	dba CroagunkFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Toxicroak
 	dba PlaceholderFrames ; PLACEHOLDER - Leafeon
 	dba GlaceonFrames

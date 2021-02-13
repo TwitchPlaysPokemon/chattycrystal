@@ -160,6 +160,8 @@
 	charmap "y",         $b8
 	charmap "z",         $b9
 
+	charmap "_",         $ba
+
 	charmap "Ä",         $c0
 	charmap "Ö",         $c1
 	charmap "Ü",         $c2

@@ -256,7 +256,7 @@ AnimationPointers:
 	dw TorchicAnimation
 	dw CombuskenAnimation
 	dw BlazikenAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Mudkip
+	dw MudkipAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Marshtomp
 	dw PlaceholderAnimation ; PLACEHOLDER - Swampert
 	dw PoochyenaAnimation
@@ -298,27 +298,27 @@ AnimationPointers:
 	dw SwabluAnimation
 	dw AltariaAnimation
 	dw LileepAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Cradily
-	dw PlaceholderAnimation ; PLACEHOLDER - Feebas
-	dw PlaceholderAnimation ; PLACEHOLDER - Milotic
-	dw PlaceholderAnimation ; PLACEHOLDER - Duskull
-	dw PlaceholderAnimation ; PLACEHOLDER - Dusclops
-	dw PlaceholderAnimation ; PLACEHOLDER - Absol
-	dw PlaceholderAnimation ; PLACEHOLDER - Snorunt
+	dw CradilyAnimation
+	dw FeebasAnimation
+	dw MiloticAnimation
+	dw DuskullAnimation
+	dw DusclopsAnimation
+	dw AbsolAnimation
+	dw SnoruntAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Spheal
 	dw PlaceholderAnimation ; PLACEHOLDER - Sealeo
 	dw PlaceholderAnimation ; PLACEHOLDER - Walrein
-	dw PlaceholderAnimation ; PLACEHOLDER - Bagon
-	dw PlaceholderAnimation ; PLACEHOLDER - Shelgon
-	dw PlaceholderAnimation ; PLACEHOLDER - Salamance
-	dw PlaceholderAnimation ; PLACEHOLDER - Beldum
-	dw PlaceholderAnimation ; PLACEHOLDER - Metang
+	dw BagonAnimation
+	dw ShelgonAnimation
+	dw SalamenceAnimation
+	dw BeldumAnimation
+	dw MetangAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Metagross
 	dw PlaceholderAnimation ; PLACEHOLDER - Latias
 	dw PlaceholderAnimation ; PLACEHOLDER - Latios
 	dw PlaceholderAnimation ; PLACEHOLDER - Groudon
 	dw PlaceholderAnimation ; PLACEHOLDER - Turtwig
-	dw PlaceholderAnimation ; PLACEHOLDER - Grotle
+	dw GrotleAnimation 
 	dw PlaceholderAnimation ; PLACEHOLDER - Torterra
 	dw PlaceholderAnimation ; PLACEHOLDER - Chimchar
 	dw PlaceholderAnimation ; PLACEHOLDER - Monferno
@@ -334,7 +334,7 @@ AnimationPointers:
 	dw BudewAnimation 
 	dw PlaceholderAnimation ; PLACEHOLDER - Roserade
 	dw PlaceholderAnimation ; PLACEHOLDER - Burmy
-	dw PlaceholderAnimation ; PLACEHOLDER - Wormadam
+	dw PlaceholderAnimation ; PLACEHOLDER - Mothim
 	dw PlaceholderAnimation ; PLACEHOLDER - Buizel
 	dw PlaceholderAnimation ; PLACEHOLDER - Floatzel
 	dw PlaceholderAnimation ; PLACEHOLDER - Shellos
@@ -347,7 +347,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Bronzong
 	dw PlaceholderAnimation ; PLACEHOLDER - Bonsly
 	dw ChatotAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Croagunk
+	dw CroagunkAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Toxicroak
 	dw PlaceholderAnimation ; PLACEHOLDER - Leafeon
 	dw GlaceonAnimation

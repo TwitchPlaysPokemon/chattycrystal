@@ -76,6 +76,7 @@ VictreebelFrontpic:  INCBIN "gfx/pokemon/victreebel/front.animated.2bpp.lz"
 RaichuFrontpic:      INCBIN "gfx/pokemon/raichu/front.animated.2bpp.lz"
 PrimeapeFrontpic:    INCBIN "gfx/pokemon/primeape/front.animated.2bpp.lz"
 OmastarBackpic:      INCBIN "gfx/pokemon/omastar/back.2bpp.lz"
+MudkipBackpic:       INCBIN "gfx/pokemon/mudkip/back.2bpp.lz"
 
 SECTION "Pics 4", ROMX
 
@@ -503,6 +504,7 @@ SchoolboyPic:        INCBIN "gfx/trainers/schoolboy.2bpp.lz"
 MagnemiteFrontpic:   INCBIN "gfx/pokemon/magnemite/front.animated.2bpp.lz"
 MagnemiteBackpic:    INCBIN "gfx/pokemon/magnemite/back.2bpp.lz"
 BudewFrontpic:       INCBIN "gfx/pokemon/budew/front.animated.2bpp.lz"
+CombuskenFrontpic:   INCBIN "gfx/pokemon/combusken/front.animated.2bpp.lz"
 
 
 SECTION "Pics 16", ROMX
@@ -555,7 +557,8 @@ SwinubFrontpic:      INCBIN "gfx/pokemon/swinub/front.animated.2bpp.lz"
 LarvitarBackpic:     INCBIN "gfx/pokemon/larvitar/back.2bpp.lz"
 PorygonBackpic:      INCBIN "gfx/pokemon/porygon/back.2bpp.lz"
 UnownHBackpic:       INCBIN "gfx/pokemon/unown_h/back.2bpp.lz"
-
+SceptileFrontpic:    INCBIN "gfx/pokemon/sceptile/front.animated.2bpp.lz"
+GrotleFrontpic:      INCBIN "gfx/pokemon/grotle/front.animated.2bpp.lz"
 
 SECTION "Pics 17", ROMX
 
@@ -617,7 +620,8 @@ MetapodBackpic:      INCBIN "gfx/pokemon/metapod/back.2bpp.lz"
 JigglypuffBackpic:   INCBIN "gfx/pokemon/jigglypuff/back.2bpp.lz"
 OddishBackpic:       INCBIN "gfx/pokemon/oddish/back.2bpp.lz"
 UnownDBackpic:       INCBIN "gfx/pokemon/unown_d/back.2bpp.lz"
-
+MudkipFrontpic:      INCBIN "gfx/pokemon/mudkip/front.animated.2bpp.lz"
+CroagunkFrontpic:    INCBIN "gfx/pokemon/croagunk/front.animated.2bpp.lz"
 
 SECTION "Pics 18", ROMX
 
@@ -742,7 +746,6 @@ SECTION "Pics 21", ROMX
 
 GrovyleFrontpic:    INCBIN "gfx/pokemon/grovyle/front.animated.2bpp.lz"
 GrovyleBackpic:     INCBIN "gfx/pokemon/grovyle/back.2bpp.lz"
-SceptileFrontpic:   INCBIN "gfx/pokemon/sceptile/front.animated.2bpp.lz"
 SceptileBackpic:    INCBIN "gfx/pokemon/sceptile/back.2bpp.lz"
 PlaceholderFrontpic:: INCBIN "gfx/pokemon/placeholder/front.animated.2bpp.lz"
 
@@ -750,7 +753,6 @@ SECTION "Pics 22", ROMX
 
 LombreFrontpic:     INCBIN "gfx/pokemon/lombre/front.animated.2bpp.lz"
 LombreBackpic:      INCBIN "gfx/pokemon/lombre/back.2bpp.lz"
-CombuskenFrontpic:  INCBIN "gfx/pokemon/combusken/front.animated.2bpp.lz"
 CombuskenBackpic:   INCBIN "gfx/pokemon/combusken/back.2bpp.lz"
 
 SECTION "Pics 23", ROMX

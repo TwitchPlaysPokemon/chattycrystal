@@ -16,38 +16,15 @@ ENDM
 
 Formes::
 	dw BURMY, BurmyFormes
-	dw WORMADAM, WormadamFormes
 	dw SHELLOS, ShellosFormes
 	dw GASTRODON, GastrodonFormes
 	dw -1
 
 FormeTypeOverrides:
-	dw WORMADAM
-	db BUG, GRASS  ; plant cloak
-	db BUG, GROUND ; sandy cloak
-	db BUG, STEEL  ; trash cloak
-	db BUG, GRASS  ; plant cloak
-	db BUG, GROUND ; sandy cloak
-	db BUG, STEEL  ; trash cloak
-
 	dw -1
 
 
 BurmyFormes:
-	; PLACEHOLDER - plant cloak
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - sandy cloak
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - trash cloak
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - plant cloak
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - sandy cloak
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - trash cloak
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-
-WormadamFormes:
 	; PLACEHOLDER - plant cloak
 	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
 	; PLACEHOLDER - sandy cloak

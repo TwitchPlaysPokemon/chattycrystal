@@ -715,6 +715,8 @@ INCLUDE "gfx/pokemon/buneary/shiny.pal"
 INCBIN "gfx/pokemon/lopunny/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/lopunny/shiny.pal"
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Stunky
+INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Stunky
+INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Skuntank
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Skuntank
 INCBIN "gfx/pokemon/bronzor/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/bronzor/shiny.pal"

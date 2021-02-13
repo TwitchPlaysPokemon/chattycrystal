@@ -32,9 +32,9 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw NoEggMoves2
 	dw NoEggMoves2
-	dw MarillEggMoves
 	dw NoEggMoves2
-	dw SudowoodoEggMoves
+	dw NoEggMoves2
+	dw NoEggMoves2
 	dw NoEggMoves2
 	dw HoppipEggMoves
 	dw NoEggMoves2
@@ -212,21 +212,6 @@ MareepEggMoves:
 	dw SAFEGUARD
 	dw SCREECH
 	dw REFLECT
-	dw -1 ; end
-
-MarillEggMoves:
-	dw LIGHT_SCREEN
-	dw PRESENT
-	dw AMNESIA
-	dw FUTURE_SIGHT
-	dw BELLY_DRUM
-	dw PERISH_SONG
-	dw SUPERSONIC
-	dw FORESIGHT
-	dw -1 ; end
-
-SudowoodoEggMoves:
-	dw SELFDESTRUCT
 	dw -1 ; end
 
 HoppipEggMoves:

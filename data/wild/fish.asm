@@ -27,29 +27,29 @@ FishGroups:
 	dbbw 100 percent,     15, KRABBY
 .Shore_Good:
 	dbbw  35 percent,     35, MAGIKARP
-	dbbw  70 percent,     35, KRABBY
+	dbbw  70 percent,     35, FEEBAS
 	dbbw  90 percent + 1, 35, KRABBY
 	dbbw 100 percent,      0, TIME_GROUP
 .Shore_Super:
 	dbbw  40 percent,     40, KRABBY
 	dbbw  70 percent,      1, TIME_GROUP
-	dbbw  90 percent + 1, 40, KRABBY
-	dbbw 100 percent,     40, KINGLER
+	dbbw  90 percent + 1, 40, KINGLER
+	dbbw 100 percent,     40, MILOTIC
 
 .Ocean_Old:
 	dbbw  70 percent + 1, 15, MAGIKARP
 	dbbw  85 percent + 1, 15, MAGIKARP
 	dbbw 100 percent,     15, TENTACOOL
 .Ocean_Good:
-	dbbw  35 percent,     35, MAGIKARP
-	dbbw  70 percent,     35, TENTACOOL
-	dbbw  90 percent + 1, 35, CHINCHOU
+	dbbw  35 percent,     35, FEEBAS
+	dbbw  70 percent,     35, CHINCHOU
+	dbbw  90 percent + 1, 35, WAILMER
 	dbbw 100 percent,      2, TIME_GROUP
 .Ocean_Super:
-	dbbw  40 percent,     40, CHINCHOU
-	dbbw  70 percent,      3, TIME_GROUP
-	dbbw  90 percent + 1, 40, TENTACRUEL
-	dbbw 100 percent,     40, LANTURN
+	dbbw  40 percent,      3, TIME_GROUP
+	dbbw  70 percent,     40, LANTURN
+	dbbw  90 percent + 1, 40, WAILORD
+	dbbw 100 percent,     40, MILOTIC
 
 .Lake_Old:
 	dbbw  70 percent + 1, 15, MAGIKARP
@@ -57,14 +57,14 @@ FishGroups:
 	dbbw 100 percent,     15, GOLDEEN
 .Lake_Good:
 	dbbw  35 percent,     35, MAGIKARP
-	dbbw  70 percent,     35, GOLDEEN
+	dbbw  70 percent,     35, FEEBAS
 	dbbw  90 percent + 1, 35, GOLDEEN
 	dbbw 100 percent,      4, TIME_GROUP
 .Lake_Super:
 	dbbw  40 percent,     40, GOLDEEN
 	dbbw  70 percent,      5, TIME_GROUP
-	dbbw  90 percent + 1, 40, MAGIKARP
-	dbbw 100 percent,     40, SEAKING
+	dbbw  90 percent + 1, 40, SEAKING
+	dbbw 100 percent,     40, MILOTIC
 
 .Pond_Old:
 	dbbw  70 percent + 1, 15, MAGIKARP

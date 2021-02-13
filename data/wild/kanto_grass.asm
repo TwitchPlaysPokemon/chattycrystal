@@ -116,26 +116,26 @@ KantoGrassWildMons:
 	dbw 34, GRAVELER
 	dbw 32, RHYHORN
 	dbw 33, ONIX
-	dbw 34, GOLBAT
+	dbw 34, HARIYAMA
 	dbw 35, SANDSLASH
-	dbw 35, RHYDON
+	dbw 35, LOUDRED
 	dbw 35, RHYDON
 	; day
 	dbw 34, GRAVELER
 	dbw 32, RHYHORN
 	dbw 33, ONIX
-	dbw 34, GOLBAT
+	dbw 34, HARIYAMA
 	dbw 35, SANDSLASH
-	dbw 35, RHYDON
+	dbw 35, LOUDRED
 	dbw 35, RHYDON
 	; nite
 	dbw 34, GOLBAT
 	dbw 34, GRAVELER
 	dbw 32, ONIX
-	dbw 36, GRAVELER
-	dbw 38, GRAVELER
-	dbw 40, GRAVELER
-	dbw 40, GRAVELER
+	dbw 36, HARIYAMA
+	dbw 38, LOUDRED
+	dbw 40, ABSOL
+	dbw 40, ABSOL
 
 	map_id TOHJO_FALLS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

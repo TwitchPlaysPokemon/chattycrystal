@@ -109,13 +109,13 @@ TreeMonSet_Forest:
 ; common
 	dbbw 50, 25, HOOTHOOT
 	dbbw 15, 25, PINECO
-	dbbw 15, 25, PINECO
+	dbbw 15, 25, BURMY
 	dbbw 10, 25, NOCTOWL
 	dbbw  5, 25, BUTTERFREE
 	dbbw  5, 25, BEEDRILL
 	db -1
 ; rare
-	dbbw 50, 25, NOCTOWL
+	dbbw 50, 25, BURMY
 	dbbw 15, 25, CATERPIE
 	dbbw 15, 25, WEEDLE
 	dbbw 10, 25, NOCTOWL

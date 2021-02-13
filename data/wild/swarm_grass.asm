@@ -10,7 +10,7 @@ SwarmGrassWildMons:
 	dbw 3, DUNSPARCE
 	dbw 2, ZUBAT
 	dbw 2, GEODUDE
-	dbw 2, DUNSPARCE
+	dbw 2, ARON
 	dbw 4, DUNSPARCE
 	dbw 4, DUNSPARCE
 	; day
@@ -18,7 +18,7 @@ SwarmGrassWildMons:
 	dbw 3, DUNSPARCE
 	dbw 2, ZUBAT
 	dbw 2, GEODUDE
-	dbw 2, DUNSPARCE
+	dbw 2, ARON
 	dbw 4, DUNSPARCE
 	dbw 4, DUNSPARCE
 	; nite
@@ -26,7 +26,7 @@ SwarmGrassWildMons:
 	dbw 3, DUNSPARCE
 	dbw 2, ZUBAT
 	dbw 2, GEODUDE
-	dbw 2, DUNSPARCE
+	dbw 2, ARON
 	dbw 4, DUNSPARCE
 	dbw 4, DUNSPARCE
 
@@ -38,7 +38,7 @@ SwarmGrassWildMons:
 	dbw 12, NIDORAN_F
 	dbw 12, YANMA
 	dbw 14, YANMA
-	dbw 14, PIDGEY
+	dbw 14, EEVEE
 	dbw 10, DITTO
 	dbw 10, DITTO
 	; day
@@ -46,7 +46,7 @@ SwarmGrassWildMons:
 	dbw 12, NIDORAN_F
 	dbw 12, YANMA
 	dbw 14, YANMA
-	dbw 14, PIDGEY
+	dbw 14, EEVEE
 	dbw 10, DITTO
 	dbw 10, DITTO
 	; nite
@@ -54,7 +54,7 @@ SwarmGrassWildMons:
 	dbw 12, NIDORAN_F
 	dbw 12, YANMA
 	dbw 14, YANMA
-	dbw 14, HOOTHOOT
+	dbw 14, EEVEE
 	dbw 10, DITTO
 	dbw 10, DITTO
 

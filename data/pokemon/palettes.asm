@@ -832,3 +832,8 @@ INCLUDE "gfx/pokemon/steelurret/shiny.pal"
 ; TPP's signature fakemon
 INCBIN "gfx/pokemon/phancero/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/phancero/shiny.pal"
+
+PlaceholderPalette:
+; for formes
+INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER
+INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER

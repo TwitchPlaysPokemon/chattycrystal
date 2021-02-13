@@ -303,3 +303,4 @@ MoveNames::
 	db "HAMMER ARM@"
 	db "ICE HAMMER@"
 	db "AQUA RING@"
+	db "ICE BALL@"

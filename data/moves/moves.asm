@@ -321,9 +321,9 @@ Moves1:
 	move EFFECT_SELF_SPEED_DOWN_HIT,100, FIGHTING,  90, 10, 100 ;HAMMER_ARM
 	move EFFECT_SELF_SPEED_DOWN_HIT,100, ICE,       90, 10, 100 ;ICE_HAMMER
 	move EFFECT_AQUA_RING,            0, WATER,      0, 20, 100 ;AQUA_RING
+	move EFFECT_ROLLOUT,             30, ICE,       90, 20,   0 ;ICE_BALL
 
 ;	move EFFECT_LEECH_HIT,          50, FAIRY,    100, 10,   0 ;DRAININGKISS TODO: does not drain 75%
 ;	move EFFECT_NORMAL_HIT,         80, FAIRY,    100, 10,   0 ;DAZZLINGLEAM TODO: Add fairy type
 ;	move EFFECT_FLY,                80, WATER,    100, 10,   0 ;DIVE TODO add the special accomidations for 2 turn moves
-;	move EFFECT_ROLLOUT,            30, ICE,       90, 20,   0 ;ICE_BALL needs special checks
 ;	move EFFECT_BURN_HIT,           65, FIRE,     95,  15,  10 ;FIRE_FANG needs a new effect as it also has a flinch chance

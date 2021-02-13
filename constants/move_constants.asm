@@ -310,6 +310,7 @@
 	const HAMMER_ARM   ; 12e
 	const ICE_HAMMER   ; 12f
 	const AQUA_RING    ; 130
+	const ICE_BALL     ; 131
 
 NUM_ATTACKS EQU const_value + -1
 

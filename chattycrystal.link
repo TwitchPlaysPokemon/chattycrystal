@@ -173,10 +173,6 @@ ROMX $3f
 	"Pic Animations 5"
 ROMX $40
 	"mobile_40"
-	"tetsuji"
-	"bank40_2"
-	"ascii 10186f"
-	"bank40_3"
 ROMX $41
 	"bank41"
 	"Enemy Trainer Parties 1"

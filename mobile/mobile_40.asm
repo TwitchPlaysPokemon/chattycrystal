@@ -1692,8 +1692,6 @@ Function100ae7:
 	ret
 
 
-SECTION "tetsuji", ROMX
-
 	pushc
 	setcharmap ascii
 
@@ -1702,8 +1700,6 @@ Unknown_100b0a:
 
 	popc
 
-
-SECTION "bank40_2", ROMX
 
 Function100b12:
 	call Function100dd8
@@ -3585,8 +3581,6 @@ Function101826:
 	ret
 
 
-SECTION "ascii 10186f", ROMX
-
 	pushc
 	setcharmap ascii
 
@@ -3607,8 +3601,6 @@ Unknown_101895:
 
 	popc
 
-
-SECTION "bank40_3", ROMX
 
 Function1018a8:
 	ld hl, wccb5

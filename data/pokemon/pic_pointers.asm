@@ -594,8 +594,8 @@ PokemonPicPointers::
 	dba PlaceholderBackpic ; PLACEHOLDER - Roselia
 	dba WailmerFrontpic
 	dba WailmerBackpic
-	dba WailordBackpic
 	dba WailordFrontpic
+	dba WailordBackpic
 	dba TrapinchFrontpic
 	dba TrapinchBackpic
 	dba VibravaFrontpic

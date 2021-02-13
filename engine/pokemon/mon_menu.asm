@@ -619,63 +619,55 @@ MonMenu_Cut:
 MonMenu_Fly:
 	farcall FlyFunction
 	ld a, [wFieldMoveSucceeded]
-	cp $2
+	cp 2
 	jr z, .Fail
-	cp $0
-	jr z, .Error
-	ld b, $4
-	ld a, $2
+	and a
+	ret z
+	ld b, 4
+	ld a, 2
 	ret
 
 .Fail:
-	ld a, $3
-	ret
-
-.Error:
-	ld a, $0
-	ret
-
-.Unreferenced:
-	ld a, $1
+	ld a, 3
 	ret
 
 MonMenu_Flash:
 	farcall OWFlash
 	ld a, [wFieldMoveSucceeded]
-	cp $1
+	cp 1
 	jr nz, .Fail
-	ld b, $4
-	ld a, $2
+	ld b, 4
+	ld a, 2
 	ret
 
 .Fail:
-	ld a, $3
+	ld a, 3
 	ret
 
 MonMenu_Strength:
 	farcall StrengthFunction
 	ld a, [wFieldMoveSucceeded]
-	cp $1
+	cp 1
 	jr nz, .Fail
-	ld b, $4
-	ld a, $2
+	ld b, 4
+	ld a, 2
 	ret
 
 .Fail:
-	ld a, $3
+	ld a, 3
 	ret
 
 MonMenu_Whirlpool:
 	farcall WhirlpoolFunction
 	ld a, [wFieldMoveSucceeded]
-	cp $1
+	cp 1
 	jr nz, .Fail
-	ld b, $4
-	ld a, $2
+	ld b, 4
+	ld a, 2
 	ret
 
 .Fail:
-	ld a, $3
+	ld a, 3
 	ret
 
 MonMenu_Waterfall:
@@ -775,33 +767,33 @@ MonMenu_Softboiled_MilkDrink:
 MonMenu_Headbutt:
 	farcall HeadbuttFunction
 	ld a, [wFieldMoveSucceeded]
-	cp $1
+	cp 1
 	jr nz, .Fail
-	ld b, $4
-	ld a, $2
+	ld b, 4
+	ld a, 2
 	ret
 
 .Fail:
-	ld a, $3
+	ld a, 3
 	ret
 
 MonMenu_RockSmash:
 	farcall RockSmashFunction
 	ld a, [wFieldMoveSucceeded]
-	cp $1
+	cp 1
 	jr nz, .Fail
-	ld b, $4
-	ld a, $2
+	ld b, 4
+	ld a, 2
 	ret
 
 .Fail:
-	ld a, $3
+	ld a, 3
 	ret
 
 MonMenu_SweetScent:
 	farcall SweetScentFromMenu
-	ld b, $4
-	ld a, $2
+	ld b, 4
+	ld a, 2
 	ret
 
 ChooseMoveToDelete:

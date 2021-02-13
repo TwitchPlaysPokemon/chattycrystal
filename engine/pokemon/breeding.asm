@@ -959,19 +959,17 @@ DayCareMonCompatibilityText:
 	ld a, [wBreedingCompatibility]
 	ld hl, .AllAlone
 	cp -1
-	jr z, .done
+	ret z
 	ld hl, .Incompatible
 	and a
-	jr z, .done
+	ret 
 	ld hl, .HighCompatibility
 	cp 230
-	jr nc, .done
+	ret nc
 	cp 70
 	ld hl, .ModerateCompatibility
-	jr nc, .done
+	ret nc
 	ld hl, .SlightCompatibility
-
-.done
 	ret
 
 .AllAlone:
@@ -998,10 +996,3 @@ DayCareMonCompatibilityText:
 	; It shows interest in @ .
 	text_far UnknownText_0x1c0ec6
 	text_end
-
-Unreferenced_DayCareMonPrintEmptyString:
-	ld hl, .string
-	ret
-
-.string
-	db "@"

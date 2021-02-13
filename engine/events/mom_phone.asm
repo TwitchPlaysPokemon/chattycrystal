@@ -58,7 +58,7 @@ MomTriesToBuySomething::
 CheckBalance_MomItem2:
 	ld a, [wWhichMomItem]
 	cp NUM_MOM_ITEMS_2
-	jr nc, .nope
+	jr nc, .check_have_2300
 	call GetItemFromMom
 	ld a, [hli]
 	ldh [hMoneyTemp], a
@@ -69,14 +69,8 @@ CheckBalance_MomItem2:
 	ld de, wMomsMoney
 	ld bc, hMoneyTemp
 	farcall CompareMoney
-	jr nc, .have_enough_money
-
-.nope
-	jr .check_have_2300
-
-.have_enough_money
-	scf
-	ret
+	ccf
+	ret c
 
 .check_have_2300
 	ld hl, hMoneyTemp
@@ -148,8 +142,7 @@ Mom_GiveItemOrDoll:
 	ld a, 1
 	ld [wItemQuantityChangeBuffer], a
 	ld hl, wNumPCItems
-	call ReceiveItem
-	ret
+	jp ReceiveItem
 
 Mom_GetScriptPointer:
 	call GetItemFromMom
@@ -204,8 +197,6 @@ endr
 
 INCLUDE "data/items/mom_phone.asm"
 
-	db 0, 0, 0 ; unused
-
 _MomText_HiHowAreYou:
 	; Hi,  ! How are you?
 	text_far _MomShoppingText1
@@ -235,10 +226,3 @@ _MomText_ItsInRoom:
 	; It's in your room. You'll love it!
 	text_far _MomShoppingText6
 	text_end
-
-	db 0 ; unused
-
-DummyPredef3A:
-	ret
-
-	ret ; unused

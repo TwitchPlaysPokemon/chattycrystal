@@ -95,3 +95,43 @@ FarSkipEvolutions::
 	pop af
 	rst Bankswitch
 	ret
+
+GetFormeData::
+	; in: bc = species index
+	; if the species has formes, returns the forme base pointer in bc and carry
+	; otherwise, carry is cleared and bc is unchanged
+	ldh a, [hROMBank]
+	push af
+	push hl
+	push de
+	push bc
+	ld a, BANK(Formes)
+	rst Bankswitch
+	ld de, 4
+	ld hl, Formes
+	call IsInHalfwordArray
+	pop bc
+	jr nc, .done
+	inc hl
+	inc hl
+	ld a, [wCurrentForme]
+	ld c, a
+	assert FORME_STRUCT_SIZE == $11
+	add a, a
+	add a, a
+	add a, a
+	add a, a
+	add a, c
+	add a, [hl]
+	inc hl
+	ld c, a
+	adc [hl]
+	sub c
+	ld b, a
+	scf
+.done
+	pop de
+	pop hl
+	pop af
+	rst Bankswitch
+	ret

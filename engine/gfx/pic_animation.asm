@@ -348,12 +348,54 @@ PokeAnim_InitAnim:
 	ld [wPokeAnimSpeed], a
 	ld a, c
 	ld [wPokeAnimIdleFlag], a
+	ld a, [wPokeAnimSpecies]
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	call GetFormeData
+	jr c, .forme
 	call GetMonAnimPointer
 	call GetMonFramesPointer
 	call GetMonBitmaskPointer
 	pop af
 	ldh [rSVBK], a
 	ret
+
+.forme
+	ld hl, FORME_FRAMES - 1
+	add hl, bc
+	call .get_next
+	ld [wPokeAnimFramesAddr], a
+	call .get_next
+	ld [wPokeAnimFramesAddr + 1], a
+	call .get_next
+	ld [wPokeAnimFramesBank], a
+	call .get_next
+	ld [wPokeAnimBitmaskAddr], a
+	call .get_next
+	ld [wPokeAnimBitmaskAddr + 1], a
+	ld a, BANK(BitmasksPointers)
+	ld [wPokeAnimBitmaskBank], a
+	ld a, [wPokeAnimIdleFlag]
+	and a
+	jr z, .not_idle
+	inc hl
+	inc hl
+.not_idle
+	call .get_next
+	ld [wPokeAnimPointerAddr], a
+	call .get_next
+	ld [wPokeAnimPointerAddr + 1], a
+	ld a, BANK(AnimationPointers)
+	ld [wPokeAnimPointerBank], a
+	pop af
+	ldh [rSVBK], a
+	ret
+
+.get_next
+	ld a, BANK(Formes)
+	inc hl
+	jp GetFarByte
 
 PokeAnim_DoAnimScript:
 	xor a

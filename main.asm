@@ -718,3 +718,4 @@ INCLUDE "engine/16/table_functions.asm"
 ; own sections
 INCLUDE "data/trainers/parties.asm"
 INCLUDE "engine/battle/effect_command_files.asm"
+INCLUDE "gfx/pokemon/formes.asm"

@@ -558,12 +558,22 @@ GetTrainerPalettePointer:
 
 GetMonPalettePointer:
 	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	call GetFormeData
+	jr c, .forme
 	add hl, hl
 	add hl, hl
 	add hl, hl
 	ld bc, PokemonPalettes
 	add hl, bc
 	ret
+
+.forme
+	ld hl, FORME_PALETTES
+	add hl, bc
+	ld a, BANK(Formes)
+	jp GetFarHalfword
 
 BattleObjectPals:
 INCLUDE "gfx/battle_anims/battle_anims.pal"

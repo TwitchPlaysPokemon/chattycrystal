@@ -157,6 +157,10 @@ GetPicIndirectPointer:
 	endc
 	jr z, .unown
 .not_unown
+	call GetFormeData
+	assert !FORME_FRONTPIC
+	ld d, BANK(Formes)
+	ret c
 	ld hl, PokemonPicPointers
 	ld d, BANK(PokemonPicPointers)
 .done

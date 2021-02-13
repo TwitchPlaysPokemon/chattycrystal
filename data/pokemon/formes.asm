@@ -18,4 +18,12 @@ Formes::
 	dw -1
 
 FormeTypeOverrides:
+	dw WORMADAM
+	db BUG, GRASS  ; plant cloak
+	db BUG, GROUND ; sandy cloak
+	db BUG, STEEL  ; trash cloak
+	db BUG, GRASS  ; plant cloak
+	db BUG, GROUND ; sandy cloak
+	db BUG, STEEL  ; trash cloak
+
 	dw -1

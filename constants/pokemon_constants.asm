@@ -355,7 +355,7 @@ JOHTO_POKEMON EQU const_value
 	const BUDEW        ; 14d - MISSING
 	const ROSERADE     ; 14e - MISSING
 	const BURMY        ; 14f - MISSING
-	const WORMADAM     ; 150 - MISSING
+	const WORMADAM     ; 150 - MISSING TODO: change to mothim
 	const BUIZEL       ; 151 - MISSING
 	const FLOATZEL     ; 152 - MISSING
 	const SHELLOS      ; 153 - MISSING

@@ -49,7 +49,7 @@ INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Altaria
 INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Lileep
 INCLUDE "data/pokemon/base_stats/cradily.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Feebas
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Milotic
+INCLUDE "data/pokemon/base_stats/milotic.asm"
 INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Duskull
 INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Dusclops
 INCLUDE "data/pokemon/base_stats/absol.asm"
@@ -83,13 +83,13 @@ INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Luxray
 INCLUDE "data/pokemon/base_stats/budew.asm"
 INCLUDE "data/pokemon/base_stats/roserade.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Burmy
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Wormadam
+INCLUDE "data/pokemon/base_stats/mothim.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Buizel
 INCLUDE "data/pokemon/base_stats/floatzel.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Shellos
 INCLUDE "data/pokemon/base_stats/gastrodon.asm"
 INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Buneary
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Lopunny
+INCLUDE "data/pokemon/base_stats/lopunny.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Stunky
 INCLUDE "data/pokemon/base_stats/skuntank.asm"
 INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Bronzor
@@ -100,35 +100,35 @@ INCLUDE "data/pokemon/base_stats/croagunk.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Toxicroak
 INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Leafeon
 INCLUDE "data/pokemon/base_stats/glaceon.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Porygon Z
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Dusknoir
+INCLUDE "data/pokemon/base_stats/porygonz.asm"
+INCLUDE "data/pokemon/base_stats/dusknoir.asm"
 INCLUDE "data/pokemon/base_stats/froslass.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Darkrai
+INCLUDE "data/pokemon/base_stats/darkrai.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Pansage
 INCLUDE "data/pokemon/base_stats/simisage.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Drillbur
 INCLUDE "data/pokemon/base_stats/excadrill.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Sandile
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Krokorok
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Krookodile
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Ducklett
+INCLUDE "data/pokemon/base_stats/krookodile.asm"
+INCLUDE "data/pokemon/base_stats/ducklett.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Swanna
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Tynamo
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Eelektrik
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Eelektross
+INCLUDE "data/pokemon/base_stats/eelektross.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Litwick
 INCLUDE "data/pokemon/base_stats/lampent.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Chandelure
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Clauncher
+INCLUDE "data/pokemon/base_stats/clauncher.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Clawitzer
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Helioptile
 INCLUDE "data/pokemon/base_stats/heliolisk.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Amaura
 INCLUDE "data/pokemon/base_stats/aurorus.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Sylveon
+INCLUDE "data/pokemon/base_stats/sylveon.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Goomy
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Sliggoo
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Goodra
+INCLUDE "data/pokemon/base_stats/goodra.asm"
 INCLUDE "data/pokemon/base_stats/crabrawler.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Crabominable
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Cutiefly

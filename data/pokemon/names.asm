@@ -338,7 +338,7 @@ PokemonNames::
 	db "BUDEW@@@@@"
 	db "ROSERADE@@"
 	db "BURMY@@@@@"
-	db "WORMADAM@@"
+	db "MOTHIM@@@@"
 	db "BUIZEL@@@@"
 	db "FLOATZEL@@"
 	db "SHELLOS@@@"

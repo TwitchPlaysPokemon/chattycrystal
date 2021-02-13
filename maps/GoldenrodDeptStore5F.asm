@@ -184,7 +184,7 @@ GoldenrodDeptStore5FCarrieMysteryGiftExplanationText:
 GoldenrodDeptStore5FCarrieMysteryGiftRequiresGBCText:
 	text "The MYSTERY GIFT"
 	line "option requires a"
-	cont "Game Boy Color."
+	cont "Game Boy Roloc."
 	done
 
 GoldenrodDeptStore5FLassText:

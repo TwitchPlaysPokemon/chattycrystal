@@ -52,8 +52,10 @@ OlivineCityRivalBattle:
 	waitbutton
 	closetext
 	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW3
+	winlosstext OlivineCityRivalText, OlivineCityRivalText
 	startbattle
 	reloadmapafterbattle
+	playmusic MUSIC_RIVAL_AFTER
 	end
 
 OlivineCityRivalEnter:

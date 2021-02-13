@@ -365,17 +365,19 @@ PokeAnim_InitAnim:
 	ld hl, FORME_FRAMES - 1
 	add hl, bc
 	call .get_next
+	ld [wPokeAnimFramesBank], a
+	call .get_next
 	ld [wPokeAnimFramesAddr], a
 	call .get_next
 	ld [wPokeAnimFramesAddr + 1], a
-	call .get_next
-	ld [wPokeAnimFramesBank], a
+	ld a, BANK(BitmasksPointers)
+	ld [wPokeAnimBitmaskBank], a
 	call .get_next
 	ld [wPokeAnimBitmaskAddr], a
 	call .get_next
 	ld [wPokeAnimBitmaskAddr + 1], a
-	ld a, BANK(BitmasksPointers)
-	ld [wPokeAnimBitmaskBank], a
+	ld a, BANK(AnimationPointers)
+	ld [wPokeAnimPointerBank], a
 	ld a, [wPokeAnimIdleFlag]
 	and a
 	jr z, .not_idle
@@ -386,8 +388,6 @@ PokeAnim_InitAnim:
 	ld [wPokeAnimPointerAddr], a
 	call .get_next
 	ld [wPokeAnimPointerAddr + 1], a
-	ld a, BANK(AnimationPointers)
-	ld [wPokeAnimPointerBank], a
 	pop af
 	ldh [rSVBK], a
 	ret

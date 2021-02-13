@@ -581,7 +581,8 @@ INCLUDE "gfx/battle_anims/battle_anims.pal"
 GetMonNormalOrShinyPalettePointer:
 	push bc
 	push af
-	ld hl, sp + 2
+	ld h, b
+	ld l, c
 	predef GetUnownLetter
 	pop af
 	call GetMonPalettePointer

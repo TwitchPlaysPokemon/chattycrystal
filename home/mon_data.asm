@@ -101,15 +101,16 @@ GetFormeData::
 	; if the species has formes, returns the forme base pointer in bc and carry
 	; otherwise, carry is cleared and bc is unchanged
 	ldh a, [hROMBank]
-	push af
 	push hl
-	push de
+	push af
 	push bc
+	push de
 	ld a, BANK(Formes)
 	rst Bankswitch
 	ld de, 4
 	ld hl, Formes
 	call IsInHalfwordArray
+	pop de
 	pop bc
 	jr nc, .done
 	inc hl
@@ -130,8 +131,8 @@ GetFormeData::
 	ld b, a
 	scf
 .done
-	pop de
 	pop hl
-	pop af
+	ld a, h
 	rst Bankswitch
+	pop hl
 	ret

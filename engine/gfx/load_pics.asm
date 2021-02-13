@@ -160,6 +160,8 @@ GetPicIndirectPointer:
 	call GetFormeData
 	assert !FORME_FRONTPIC
 	ld d, BANK(Formes)
+	ld h, b
+	ld l, c
 	ret c
 	ld hl, PokemonPicPointers
 	ld d, BANK(PokemonPicPointers)

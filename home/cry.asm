@@ -4,8 +4,7 @@ PlayStereoCry::
 	ld [wStereoPanningMask], a
 	pop af
 	call _PlayMonCry
-	call WaitSFX
-	ret
+	jp WaitSFX
 
 PlayStereoCry2::
 ; Don't wait for the cry to end.
@@ -14,12 +13,11 @@ PlayStereoCry2::
 	ld a, 1
 	ld [wStereoPanningMask], a
 	pop af
-	jp _PlayMonCry
+	jr _PlayMonCry
 
 PlayMonCry::
 	call PlayMonCry2
-	call WaitSFX
-	ret
+	jp WaitSFX
 
 PlayMonCry2::
 ; Don't wait for the cry to end.
@@ -28,9 +26,6 @@ PlayMonCry2::
 	ld [wStereoPanningMask], a
 	ld [wCryTracks], a
 	pop af
-	call _PlayMonCry
-	ret
-
 _PlayMonCry::
 	push hl
 	push de
@@ -83,10 +78,12 @@ endr
 	ret
 
 GetCryIndex::
-	and a
-	jr z, .no
+	sub 1
+	ret c
+	inc a
 	cp MON_TABLE_ENTRIES + 1
-	jr nc, .no
+	ccf
+	ret c
 
 	push hl
 	call GetPokemonIndexFromID
@@ -95,8 +92,4 @@ GetCryIndex::
 	ld c, l
 	pop hl
 	and a
-	ret
-
-.no
-	scf
 	ret

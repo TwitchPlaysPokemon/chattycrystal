@@ -364,17 +364,17 @@ WRAMX 6
 	"Scratch RAM"
 WRAMX 7
 	"Stack RAM"
-VRAM $00
+VRAM 0
 	"VRAM0"
-VRAM $01
+VRAM 1
 	"VRAM1"
-SRAM $00
+SRAM 0
 	"Scratch"
 	"SRAM Bank 0"
 	"Boxes 15-18"
 	align 8
 	"Saved 16-bit conversion tables"
-SRAM $01
+SRAM 1
 	"Save"
 	"Active Box"
 	"Link Battle Data"
@@ -382,13 +382,13 @@ SRAM $01
 	"SRAM Crystal Data"
 	"SRAM Battle Tower"
 	"Boxes 19-20"
-SRAM $02
+SRAM 2
 	"Boxes 1-7"
-SRAM $03
+SRAM 3
 	"Boxes 8-14"
-SRAM $04
+SRAM 4
 	"SRAM Mobile 1"
-SRAM $05
+SRAM 5
 	"SRAM Mobile 2"
 HRAM
 	"HRAM"

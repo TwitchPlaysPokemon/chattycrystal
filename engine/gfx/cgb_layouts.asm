@@ -5,6 +5,8 @@ CheckCGB:
 	and a
 	ret
 
+LoadSGBLayout:
+	; SGB is not supported. Fall through.
 LoadSGBLayoutCGB:
 	ld a, b
 	cp SCGB_RAM

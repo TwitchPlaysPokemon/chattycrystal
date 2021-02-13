@@ -318,7 +318,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Latios
 	dw PlaceholderBitmasks ; PLACEHOLDER - Groudon
 	dw PlaceholderBitmasks ; PLACEHOLDER - Turtwig
-	dw PlaceholderBitmasks ; PLACEHOLDER - Grotle
+	dw GrotleBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Torterra
 	dw PlaceholderBitmasks ; PLACEHOLDER - Chimchar
 	dw PlaceholderBitmasks ; PLACEHOLDER - Monferno

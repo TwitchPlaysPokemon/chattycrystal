@@ -504,6 +504,8 @@ MagnemiteFrontpic:   INCBIN "gfx/pokemon/magnemite/front.animated.2bpp.lz"
 MagnemiteBackpic:    INCBIN "gfx/pokemon/magnemite/back.2bpp.lz"
 BudewFrontpic:       INCBIN "gfx/pokemon/budew/front.animated.2bpp.lz"
 CombuskenFrontpic:   INCBIN "gfx/pokemon/combusken/front.animated.2bpp.lz"
+GrotleFrontpic:      INCBIN "gfx/pokemon/grotle/front.animated.2bpp.lz"
+
 
 SECTION "Pics 16", ROMX
 

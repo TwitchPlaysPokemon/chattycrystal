@@ -318,7 +318,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Latios
 	dw PlaceholderAnimation ; PLACEHOLDER - Groudon
 	dw PlaceholderAnimation ; PLACEHOLDER - Turtwig
-	dw PlaceholderAnimation ; PLACEHOLDER - Grotle
+	dw GrotleAnimation 
 	dw PlaceholderAnimation ; PLACEHOLDER - Torterra
 	dw PlaceholderAnimation ; PLACEHOLDER - Chimchar
 	dw PlaceholderAnimation ; PLACEHOLDER - Monferno

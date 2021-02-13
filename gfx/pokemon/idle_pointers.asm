@@ -318,7 +318,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Latios
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Groudon
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Turtwig
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Grotle
+	dw GrotleAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Torterra
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chimchar
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Monferno

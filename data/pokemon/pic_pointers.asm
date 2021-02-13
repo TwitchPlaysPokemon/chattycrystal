@@ -648,7 +648,7 @@ PokemonPicPointers::
 	dba GroudonBackpic
 	dba PlaceholderFrontpic ; PLACEHOLDER - Turtwig
 	dba PlaceholderBackpic ; PLACEHOLDER - Turtwig
-	dba PlaceholderFrontpic ; PLACEHOLDER - Grotle
+	dba GrotleFrontpic 
 	dba PlaceholderBackpic ; PLACEHOLDER - Grotle
 	dba PlaceholderFrontpic ; PLACEHOLDER - Torterra
 	dba PlaceholderBackpic ; PLACEHOLDER - Torterra

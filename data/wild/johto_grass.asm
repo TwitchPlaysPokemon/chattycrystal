@@ -781,7 +781,7 @@ JohtoGrassWildMons:
 	dbw 24, ZUBAT
 	dbw 24, DELIBIRD
 	dbw 25, SNORUNT
-	dbw 26, SPHEA
+	dbw 26, SPHEAL
 	dbw 22, SNEASEL
 	dbw 24, SNEASEL
 
@@ -791,7 +791,7 @@ JohtoGrassWildMons:
 	dbw 24, SWINUB
 	dbw 25, ZUBAT
 	dbw 25, SWINUB
-	dbw 26, JINX
+	dbw 26, JYNX
 	dbw 22, SNORUNT
 	dbw 24, PIPLUP
 	dbw 26, FROSLASS
@@ -799,7 +799,7 @@ JohtoGrassWildMons:
 	dbw 24, SWINUB
 	dbw 25, ZUBAT
 	dbw 25, SWINUB
-	dbw 26, JINX
+	dbw 26, JYNX
 	dbw 22, SPHEAL
 	dbw 24, PIPLUP
 	dbw 26, SEALEO
@@ -1142,7 +1142,7 @@ JohtoGrassWildMons:
 	dbw 8, GEODUDE
 	dbw 7, ZUBAT
 	dbw 7, GEODUDE
-	dbw 9, GEODUDE
+	dbw 9, LARVITAR
 	dbw 7, TEDDIURSA
 	dbw 9, ARON
 	dbw 9, DUNSPARCE
@@ -1150,7 +1150,7 @@ JohtoGrassWildMons:
 	dbw 8, GEODUDE
 	dbw 7, ZUBAT
 	dbw 7, GEODUDE
-	dbw 9, GEODUDE
+	dbw 9, LARVITAR
 	dbw 7, ZUBAT
 	dbw 9, ARON
 	dbw 9, DUNSPARCE
@@ -1158,7 +1158,7 @@ JohtoGrassWildMons:
 	dbw 9, GEODUDE
 	dbw 7, ZUBAT
 	dbw 7, GEODUDE
-	dbw 9, GEODUDE
+	dbw 9, LARVITAR
 	dbw 7, ZUBAT
 	dbw 7, ARON
 	dbw 9, DUNSPARCE
@@ -1341,7 +1341,7 @@ JohtoGrassWildMons:
 	dbw 22, ABRA
 	dbw 20, SWABLU
 	dbw 22, LOMBRE
-	dbw 20, JIGGLY
+	dbw 20, JIGGLYPUFF
 	dbw 20, DITTO
 	; nite
 	dbw 22, DROWZEE

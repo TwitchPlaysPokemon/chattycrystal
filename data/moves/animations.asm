@@ -329,6 +329,7 @@ BattleAnimations::
 	dw BattleAnim_IcePunch
 	dw BattleAnim_Waterfall    ; 130
 	dw BattleAnim_IcePunch
+	dw BattleAnim_Headbutt
 
 
 BattleAnim_0:

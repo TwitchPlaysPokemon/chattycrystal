@@ -2288,3 +2288,24 @@ AquaRing:
 	doturn
 	aquaring
 	endmove
+
+TrumpCard:
+	checkobedience
+	usedmovetext
+	doturn
+	trumpcard
+	critical
+	damagestats
+	damagecalc
+	stab
+	checkhit
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

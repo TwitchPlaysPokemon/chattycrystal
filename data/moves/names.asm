@@ -304,3 +304,4 @@ MoveNames::
 	db "ICE HAMMER@"
 	db "AQUA RING@"
 	db "ICE BALL@"
+	db "TRUMP CARD@"

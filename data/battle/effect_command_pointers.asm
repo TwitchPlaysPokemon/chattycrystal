@@ -203,3 +203,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_SelfEvasionDown2
 	effectfn BattleCommand_SelfStatDownMessage
 	effectfn BattleCommand_AquaRing
+	effectfn BattleCommand_TrumpCard

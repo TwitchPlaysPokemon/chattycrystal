@@ -203,6 +203,7 @@ ENDM
 	command selfevasiondown2        ; c4
 	command selfstatdownmessage     ; c5
 	command aquaring                ; c6
+	command trumpcard               ; c7
 
 	enum_start $fe
 	command endturn                 ; fe

@@ -1,6 +1,4 @@
 BattleCommand_AquaRing:
-; safeguard
-
 	ld a, BATTLE_VARS_SUBSTATUS5
 	call GetBattleVarAddr
 	bit SUBSTATUS_AQUA_RING, [hl]

@@ -309,6 +309,8 @@ MoveDescriptions1:
 	dw HammerArmDescription
 	dw HammerArmDescription
 	dw AquaRingDescription
+	dw RolloutDescription
+	dw TrumpCardDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1372,3 +1374,7 @@ HammerArmDescription:
 AquaRingDescription:
 	db   "Recovers HP over"
 	next "time.@"
+
+TrumpCardDescription:
+	db   "Powers up with"
+	next "more uses.@"

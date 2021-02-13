@@ -322,6 +322,7 @@ Moves1:
 	move EFFECT_SELF_SPEED_DOWN_HIT,100, ICE,       90, 10, 100 ;ICE_HAMMER
 	move EFFECT_AQUA_RING,            0, WATER,      0, 20, 100 ;AQUA_RING
 	move EFFECT_ROLLOUT,             30, ICE,       90, 20,   0 ;ICE_BALL
+	move EFFECT_TRUMP_CARD,           1, NORMAL,   100,  5,   0 ;TRUMP_CARD
 
 ;	move EFFECT_LEECH_HIT,          50, FAIRY,    100, 10,   0 ;DRAININGKISS TODO: does not drain 75%
 ;	move EFFECT_NORMAL_HIT,         80, FAIRY,    100, 10,   0 ;DAZZLINGLEAM TODO: Add fairy type

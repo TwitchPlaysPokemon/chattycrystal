@@ -311,6 +311,7 @@
 	const ICE_HAMMER   ; 12f
 	const AQUA_RING    ; 130
 	const ICE_BALL     ; 131
+	const TRUMP_CARD   ; 132
 
 NUM_ATTACKS EQU const_value + -1
 

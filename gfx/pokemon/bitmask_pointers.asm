@@ -284,7 +284,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Skitty
 	dw PlaceholderBitmasks ; PLACEHOLDER - Delcatty
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sableye
-	dw PlaceholderBitmasks ; PLACEHOLDER - Aron
+	dw AronBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Lairon
 	dw PlaceholderBitmasks ; PLACEHOLDER - Aggron
 	dw PlaceholderBitmasks ; PLACEHOLDER - Electrike

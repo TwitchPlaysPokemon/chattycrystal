@@ -284,7 +284,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Skitty
 	dw PlaceholderAnimation ; PLACEHOLDER - Delcatty
 	dw PlaceholderAnimation ; PLACEHOLDER - Sableye
-	dw PlaceholderAnimation ; PLACEHOLDER - Aron
+	dw AronAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Lairon
 	dw PlaceholderAnimation ; PLACEHOLDER - Aggron
 	dw PlaceholderAnimation ; PLACEHOLDER - Electrike

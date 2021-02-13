@@ -284,7 +284,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Skitty
 	dba PlaceholderFrames ; PLACEHOLDER - Delcatty
 	dba PlaceholderFrames ; PLACEHOLDER - Sableye
-	dba PlaceholderFrames ; PLACEHOLDER - Aron
+	dba AronFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Lairon
 	dba PlaceholderFrames ; PLACEHOLDER - Aggron
 	dba PlaceholderFrames ; PLACEHOLDER - Electrike

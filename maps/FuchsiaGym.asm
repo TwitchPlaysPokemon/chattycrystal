@@ -21,7 +21,7 @@ FuchsiaGymJanineScript:
 	waitbutton
 	closetext
 	winlosstext JanineText_ToughOne, 0
-	loadtrainer JANINE, JANINE1
+	loadtrainer PT_LUCAS, NQPPPNL
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JANINE
@@ -214,7 +214,7 @@ FuchsiaGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, JANINE, JANINE1
+	gettrainername STRING_BUFFER_4, PT_LUCAS, NQPPPNL
 	jumpstd gymstatue2
 
 Movement_NinjaSpin:
@@ -233,56 +233,16 @@ Movement_NinjaSpin:
 	turn_head DOWN
 	step_end
 
-JanineText_DisappointYou:
-	text "Fufufufu…"
-
-	para "I'm sorry to dis-"
-	line "appoint you…"
-
-	para "I'm only joking!"
-
-	para "I'm the real deal!"
-
-	para "JANINE of FUCHSIA"
-	line "GYM, that's me!"
-	done
-
+JanineText_ToxicSpeech:
 JanineText_ToughOne:
-	text "JANINE: You're a"
-	line "tough one. You"
-	cont "definitely won…"
-
-	para "Here's SOULBADGE."
-	line "Take it."
+JanineText_DisappointYou:
+JanineText_ApplyMyself:
+	text "<...>"
 	done
 
 Text_ReceivedSoulBadge:
 	text "<PLAYER> received"
 	line "SOULBADGE."
-	done
-
-JanineText_ToxicSpeech:
-	text "JANINE: You're so"
-	line "tough! I have a"
-	cont "special gift!"
-
-	para "It's TOXIC, a pow-"
-	line "erful poison that"
-
-	para "steadily saps the"
-	line "victim's HP."
-	done
-
-JanineText_ApplyMyself:
-	text "JANINE: I'm going"
-	line "to really apply"
-
-	para "myself and improve"
-	line "my skills."
-
-	para "I want to become"
-	line "better than both"
-	cont "Father and you!"
 	done
 
 LassAliceBeforeText:

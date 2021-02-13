@@ -28,7 +28,7 @@ GoldenrodGymWhitneyScript:
 	waitbutton
 	closetext
 	winlosstext WhitneyShouldntBeSoSeriousText, 0
-	loadtrainer SMUSUM_ELIO2_LEADER, D76O6YTTR
+	loadtrainer FRLG_LEAF, A_FIRERED
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_WHITNEY
@@ -169,7 +169,7 @@ GoldenrodGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, SMUSUM_ELIO2, D76O6YTTR
+	gettrainername STRING_BUFFER_4, FRLG_LEAF, A_FIRERED
 	jumpstd gymstatue2
 
 BridgetWalksUpMovement:
@@ -183,36 +183,18 @@ BridgetWalksAwayMovement:
 	step_end
 
 WhitneyBeforeText:
-	text "…"
-	done
-
 WhitneyShouldntBeSoSeriousText:
-	text "…"
-	done
-
 WhitneyYouMeanieText:
-	text "…"
-	done
-
 WhitneyWhatDoYouWantText:
+WhitneyPlainBadgeText:
+WhitneyAttractText:
+WhitneyGoodCryText:
 	text "…"
 	done
 
 PlayerReceivedPlainBadgeText:
 	text "<PLAYER> received"
 	line "PLAINBADGE."
-	done
-
-WhitneyPlainBadgeText:
-	text "…"
-	done
-
-WhitneyAttractText:
-	text "…"
-	done
-
-WhitneyGoodCryText:
-	text "…"
 	done
 
 LassCarrieSeenText:

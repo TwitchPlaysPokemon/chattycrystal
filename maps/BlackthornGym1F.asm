@@ -37,7 +37,7 @@ BlackthornGymClairScript:
 	waitbutton
 	closetext
 	winlosstext ClairWinText, 0
-	loadtrainer CLAIR, CLAIR1
+	loadtrainer NATE_LEADER, AAAALK
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CLAIR
@@ -144,145 +144,26 @@ BlackthornGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, CLAIR, CLAIR1
+	gettrainername STRING_BUFFER_4, NATE_LEADER, AAAALK
 	jumpstd gymstatue2
 
-ClairIntroText:
-	text "I am CLAIR."
-
-	para "The world's best"
-	line "dragon master."
-
-	para "I can hold my own"
-	line "against even the"
-
-	para "#MON LEAGUE's"
-	line "ELITE FOUR."
-
-	para "Do you still want"
-	line "to take me on?"
-
-	para "…Fine."
-	line "Let's do it!"
-
-	para "As a GYM LEADER,"
-	line "I will use my full"
-
-	para "power against any"
-	line "opponent!"
-	done
-
 ClairWinText:
-	text "I lost?"
-
-	para "I don't believe"
-	line "it. There must be"
-	cont "some mistake…"
-	done
-
 ClairText_GoToDragonsDen:
-	text "I won't admit"
-	line "this."
-
-	para "I may have lost,"
-	line "but you're still"
-
-	para "not ready for the"
-	line "#MON LEAGUE."
-
-	para "I know. You should"
-	line "take the dragon"
-	cont "user challenge."
-
-	para "Behind this GYM is"
-	line "a place called"
-	cont "DRAGON'S DEN."
-
-	para "There is a small"
-	line "shrine at its"
-
-	para "center."
-	line "Go there."
-
-	para "If you can prove"
-	line "that you've lost"
-
-	para "your lazy ideals,"
-	line "I will recognize"
-
-	para "you as a trainer"
-	line "worthy of a GYM"
-	cont "BADGE!"
-	done
-
 ClairText_TooMuchToExpect:
-	text "What's the matter?"
-
-	para "Is it too much to"
-	line "expect of you?"
-	done
-
 BlackthornGymClairText_YouKeptMeWaiting:
-	text "You've kept me"
-	line "waiting!"
+BlackthornGymClairText_DescribeTM24:
+BlackthornGymClairText_BagFull:
+BlackthornGymClairText_League:
 
-	para "Here! Take this!"
+ClairIntroText:
+	text "…"
 	done
-
+	
 BlackthornGymText_ReceivedTM24:
 	text "<PLAYER> received"
 	line "TM24."
 	done
-
-BlackthornGymClairText_DescribeTM24:
-	text "That contains"
-	line "DRAGONBREATH."
-
-	para "No, it doesn't"
-	line "have anything to"
-	cont "do with my breath."
-
-	para "If you don't want"
-	line "it, you don't have"
-	cont "to take it."
-	done
-
-BlackthornGymClairText_BagFull:
-	text "What is this? You"
-	line "don't have room?"
-	done
-
-BlackthornGymClairText_League:
-	text "What's the matter?"
-
-	para "Aren't you headed"
-	line "to the #MON"
-	cont "LEAGUE?"
-
-	para "Don't you know"
-	line "where it is?"
-
-	para "From here, go to"
-	line "NEW BARK TOWN."
-
-	para "Then SURF east."
-	line "The route there is"
-	cont "very tough."
-
-	para "Don't you dare"
-	line "lose at the #-"
-	cont "MON LEAGUE!"
-
-	para "If you do, I'll"
-	line "feel even worse"
-
-	para "about having lost"
-	line "to you!"
-
-	para "Give it every-"
-	line "thing you've got."
-	done
-
+	
 CooltrainermPaulSeenText:
 	text "Your first battle"
 	line "against dragons?"

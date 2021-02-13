@@ -20,7 +20,7 @@ SaffronGymSabrinaScript:
 	waitbutton
 	closetext
 	winlosstext SabrinaWinLossText, 0
-	loadtrainer SABRINA, SABRINA1
+	loadtrainer XD_MICHAEL, STARS
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_SABRINA
@@ -109,88 +109,19 @@ SaffronGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, SABRINA, SABRINA1
+	gettrainername STRING_BUFFER_4, XD_MICHAEL, STARS
 	jumpstd gymstatue2
 
-SabrinaIntroText:
-	text "SABRINA: I knew"
-	line "you were coming…"
-
-	para "Three years ago I"
-	line "had a vision of"
-	cont "your arrival."
-
-	para "You're after my"
-	line "BADGE."
-
-	para "I don't enjoy bat-"
-	line "tling, but it's my"
-
-	para "duty as a LEADER"
-	line "to confer BADGES"
-
-	para "on anyone who has"
-	line "proven him- or"
-	cont "herself worthy."
-
-	para "Since you wish it,"
-	line "I will show you my"
-	cont "psychic powers!"
-	done
-
+SabrinaMarshBadgeText:
+SabrinaFightDoneText:
 SabrinaWinLossText:
-	text "SABRINA: Your"
-	line "power…"
-
-	para "It far exceeds"
-	line "what I foresaw…"
-
-	para "Maybe it isn't"
-	line "possible to fully"
-
-	para "predict what the"
-	line "future holds…"
-
-	para "OK, you win. You"
-	line "earned yourself"
-	cont "MARSHBADGE."
+SabrinaIntroText:
+	text "<...>"
 	done
 
 ReceivedMarshBadgeText:
 	text "<PLAYER> received"
 	line "MARSHBADGE."
-	done
-
-SabrinaMarshBadgeText:
-	text "SABRINA: MARSH-"
-	line "BADGE draws out"
-
-	para "your subliminal"
-	line "powers…"
-
-	para "Although I failed"
-	line "to accurately pre-"
-	cont "dict your power,"
-	cont "this much I know"
-	cont "to be true."
-
-	para "You will become a"
-	line "celebrated and"
-	cont "beloved CHAMPION!"
-	done
-
-SabrinaFightDoneText:
-	text "SABRINA: Your love"
-	line "for your #MON"
-
-	para "overwhelmed my"
-	line "psychic power…"
-
-	para "The power of love,"
-	line "I think, is also a"
-
-	para "kind of psychic"
-	line "power…"
 	done
 
 MediumRebeccaSeenText:

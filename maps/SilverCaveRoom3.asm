@@ -14,7 +14,7 @@ Red:
 	waitbutton
 	closetext
 	winlosstext .Text2, .Text2
-	loadtrainer RED, RED1
+	loadtrainer RED, GF_RED
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

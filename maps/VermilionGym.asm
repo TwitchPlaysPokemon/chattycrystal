@@ -19,7 +19,7 @@ VermilionGymSurgeScript:
 	waitbutton
 	closetext
 	winlosstext LtSurgeWinLossText, 0
-	loadtrainer LT_SURGE, LT_SURGE1
+	loadtrainer URF, URF1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_LTSURGE
@@ -99,64 +99,19 @@ VermilionGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, LT_SURGE, LT_SURGE1
+	gettrainername STRING_BUFFER_4, URF, URF1
 	jumpstd gymstatue2
 
-LtSurgeIntroText:
-	text "SURGE: Hey, you"
-	line "little tyke!"
-
-	para "I have to hand it"
-	line "to you. It may not"
-
-	para "be very smart to"
-	line "challenge me, but"
-	cont "it takes guts!"
-
-	para "When it comes to"
-	line "electric #MON,"
-	cont "I'm number one!"
-
-	para "I've never lost on"
-	line "the battlefield."
-
-	para "I'll zap you just"
-	line "like I did my"
-	cont "enemies in war!"
-	done
-
 LtSurgeWinLossText:
-	text "SURGE: Arrrgh!"
-	line "You are strong!"
-
-	para "OK, kid. You get"
-	line "THUNDERBADGE!"
+LtSurgeThunderBadgeText:
+LtSurgeFightDoneText:
+LtSurgeIntroText:
+	text "<...>"
 	done
 
 ReceivedThunderBadgeText:
 	text "<PLAYER> received"
 	line "THUNDERBADGE."
-	done
-
-LtSurgeThunderBadgeText:
-	text "SURGE: THUNDER-"
-	line "BADGE increases"
-	cont "#MON's speed. "
-
-	para "Consider it proof"
-	line "that you defeated"
-
-	para "me. You wear it"
-	line "proudly, hear?"
-	done
-
-LtSurgeFightDoneText:
-	text "SURGE: Hey, kid!"
-	line "Still slugging and"
-	cont "chugging away?"
-
-	para "My #MON and I"
-	line "are still at it!"
 	done
 
 GentlemanGregorySeenText:

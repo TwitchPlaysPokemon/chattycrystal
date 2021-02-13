@@ -58,7 +58,7 @@ VictoryRoadRivalNext:
 	setevent EVENT_RIVAL_VICTORY_ROAD
 	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
 	setlasttalked VICTORYROAD_SILVER
-	loadtrainer RIVAL1, RIVAL1_5_TOTODILE
+	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW5
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

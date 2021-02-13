@@ -21,7 +21,7 @@ MahoganyGymPryceScript:
 	waitbutton
 	closetext
 	winlosstext PryceText_Impressed, 0
-	loadtrainer PT_DAWN, IECBW
+	loadtrainer FC_CHRIS, Y_FUSEDCRYSTAL
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_PRYCE
@@ -144,98 +144,20 @@ MahoganyGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, PT_DAWN, IECBW
+	gettrainername STRING_BUFFER_4, FC_CHRIS, Y_FUSEDCRYSTAL
 	jumpstd gymstatue2
 
-PryceText_Intro:
-	text "#MON have many"
-	line "experiences in"
-
-	para "their lives, just "
-	line "like we do. "
-
-	para "I, too, have seen"
-	line "and suffered much"
-	cont "in my life."
-
-	para "Since I am your"
-	line "elder, let me show"
-	cont "you what I mean."
-
-	para "I have been with"
-	line "#MON since"
-
-	para "before you were"
-	line "born."
-
-	para "I do not lose"
-	line "easily."
-
-	para "I, PRYCE--the"
-	line "winter trainer--"
-
-	para "shall demonstrate"
-	line "my power!"
-	done
-
 PryceText_Impressed:
-	text "Ah, I am impressed"
-	line "by your prowess."
-
-	para "With your strong"
-	line "will, I know you"
-
-	para "will overcome all"
-	line "life's obstacles."
-
-	para "You are worthy of"
-	line "this BADGE!"
+PryceText_GlacierBadgeSpeech:
+PryceText_IcyWindSpeech:
+PryceText_CherishYourPokemon:
+PryceText_Intro:
+	text "<...>"
 	done
 
 Text_ReceivedGlacierBadge:
 	text "<PLAYER> received"
 	line "GLACIERBADGE."
-	done
-
-PryceText_GlacierBadgeSpeech:
-	text "That BADGE will"
-	line "raise the SPECIAL"
-	cont "stats of #MON."
-
-	para "It also lets your"
-	line "#MON use WHIRL-"
-	cont "POOL to get across"
-	cont "real whirlpools."
-
-	para "And this… This is"
-	line "a gift from me!"
-	done
-
-PryceText_IcyWindSpeech:
-	text "That TM contains"
-	line "ICY WIND."
-
-	para "It inflicts damage"
-	line "and lowers speed."
-
-	para "It demonstrates"
-	line "the harshness of"
-	cont "winter."
-	done
-
-PryceText_CherishYourPokemon:
-	text "When the ice and"
-	line "snow melt, spring"
-	cont "arrives."
-
-	para "You and your #-"
-	line "MON will be to-"
-
-	para "gether for many"
-	line "years to come."
-
-	para "Cherish your time"
-	line "together!"
 	done
 
 BoarderRonaldSeenText:

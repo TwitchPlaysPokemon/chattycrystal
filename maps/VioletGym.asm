@@ -18,7 +18,7 @@ VioletGymFalknerScript:
 	waitbutton
 	closetext
 	winlosstext FalknerText, FalknerText
-	loadtrainer RSEORAS_BRENDAN_LEADER, ORLANDO
+	loadtrainer BRENDAN_JOHTO_LEADER, ORLANDO
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER
@@ -114,7 +114,7 @@ VioletGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, RSEORAS_BRENDAN, ORLANDO
+	gettrainername STRING_BUFFER_4, BRENDAN_JOHTO_LEADER, ORLANDO
 	jumpstd gymstatue2
 
 FalknerText:

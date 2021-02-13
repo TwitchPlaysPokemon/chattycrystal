@@ -49,7 +49,7 @@ BrunoScript_Battle:
 	waitbutton
 	closetext
 	winlosstext BrunoScript_BrunoBeatenText, 0
-	loadtrainer BRUNO, BRUNO1
+	loadtrainer NATE_ELITE_4, R_BLACK22
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_BRUNO
@@ -78,48 +78,10 @@ BrunosRoom_EnterMovement:
 	step UP
 	step_end
 
-BrunoScript_BrunoBeforeText:
-	text "I am BRUNO of the"
-	line "ELITE FOUR."
-
-	para "I always train to"
-	line "the extreme be-"
-	cont "cause I believe in"
-	cont "our potential."
-
-	para "That is how we"
-	line "became strong."
-
-	para "Can you withstand"
-	line "our power?"
-
-	para "Hm? I see no fear"
-	line "in you. You look"
-
-	para "determined. Per-"
-	line "fect for battle!"
-
-	para "Ready, <PLAYER>?"
-	line "You will bow down"
-
-	para "to our overwhelm-"
-	line "ing power!"
-
-	para "Hoo hah!"
-	done
-
 BrunoScript_BrunoBeatenText:
-	text "Why? How could we"
-	line "lose?"
-	done
-
 BrunoScript_BrunoDefeatText:
-	text "Having lost, I"
-	line "have no right to"
-	cont "say anything…"
-
-	para "Go face your next"
-	line "challenge!"
+BrunoScript_BrunoBeforeText:
+	text "<...>"
 	done
 
 BrunosRoom_MapEvents:

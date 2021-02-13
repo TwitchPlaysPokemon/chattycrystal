@@ -90,7 +90,7 @@ PlateauRivalBattleCommon:
 	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	winlosstext PlateauRivalWinText, PlateauRivalLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
-	loadtrainer RIVAL2, RIVAL2_2_TOTODILE
+	loadtrainer BABA, BABA4
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

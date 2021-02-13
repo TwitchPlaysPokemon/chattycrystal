@@ -168,7 +168,7 @@ UndergroundSilverBattleScript:
 	setevent EVENT_RIVAL_GOLDENROD_UNDERGROUND
 	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
 	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
-	loadtrainer RIVAL1, RIVAL1_4_TOTODILE
+	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW4
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

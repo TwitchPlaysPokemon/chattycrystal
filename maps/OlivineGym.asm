@@ -16,7 +16,7 @@ OlivineGymJasmineScript:
 	waitbutton
 	closetext
 	winlosstext Jasmine_BetterTrainer, 0
-	loadtrainer GREEN_MAY_LEADER, ACCPPQ
+	loadtrainer RED_JOHTO_LEADER, AIIIAAB1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JASMINE
@@ -89,30 +89,18 @@ OlivineGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, GREEN_MAY, ACCPPQ
+	gettrainername STRING_BUFFER_4, RED_JOHTO_LEADER, AIIIAAB1
 	jumpstd gymstatue2
-
-Jasmine_SteelTypeIntro:
-	text "…"
-	done
-
-Jasmine_BetterTrainer:
-	text "…"
-	done
 
 Text_ReceivedMineralBadge:
 	text "<PLAYER> received"
 	line "MINERALBADGE."
 	done
 
+Jasmine_SteelTypeIntro:
+Jasmine_BetterTrainer:
 Jasmine_BadgeSpeech:
-	text "…"
-	done
-
 Jasmine_IronTailSpeech:
-	text "…"
-	done
-
 Jasmine_GoodLuck:
 	text "…"
 	done

@@ -28,7 +28,7 @@ MountMoon_MapScripts:
 	closetext
 	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
 	setlasttalked MOUNTMOON_SILVER
-	loadtrainer RIVAL2, RIVAL2_1_TOTODILE
+	loadtrainer AC_CHRIS, EVAN3
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

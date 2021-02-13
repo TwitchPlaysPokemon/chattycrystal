@@ -88,13 +88,13 @@ PlayBattleMusic:
 
 .trainermusic
 	ld de, MUSIC_CHAMPION_BATTLE
-	cp CHAMPION
-	jr z, .done
-	cp RED
+	cp P_CYAN
 	jr z, .done
 
 	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...
 	ld de, MUSIC_ROCKET_BATTLE
+	cp SCIENTIST
+	jr z, .done
 	cp GRUNTM
 	jr z, .done
 	cp GRUNTF
@@ -125,13 +125,11 @@ PlayBattleMusic:
 	cp BABA
 	jr z, .done
 	cp AC_CHRIS
-	jr nz, .othertrainer
+	jr z, .done
 
-	ld a, [wOtherTrainerID]
-	cp RIVAL2_2_CHIKORITA ; Rival in Indigo Plateau
-	jr c, .done
 	ld de, MUSIC_CHAMPION_BATTLE
-	jr .done
+	cp P_CYAN
+	jr z, .done
 
 .othertrainer
 	ld a, [wLinkMode]

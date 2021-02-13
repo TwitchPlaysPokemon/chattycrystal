@@ -5,28 +5,24 @@
 ; accounted for prior to the list check.
 
 GymLeaders:
-	db RSEORAS_BRENDAN_LEADER
-	db SMUSUM_ELIO2_LEADER
-	db SWSH_GLORIA
+	db BRENDAN_JOHTO_LEADER
 	db HGSS_LYRA
-	db PRYCE
-	db GREEN_MAY_LEADER
+	db GLAZED
+	db FRLG_LEAF
 	db BROWN
-	db CLAIR
-	db WILL
-	db BRUNO
-	db KAREN
-	db KOGA
-	db CHAMPION
-	db RED
+	db SMUSUM_ELIO
+	db FC_CHRIS
+	db RED_JOHTO_LEADER
+	db B2W2_NATE
+	db GREEN_MAY
+	db XY_SERENA2
 ; fallthrough
 KantoGymLeaders:
-	db BROCK
-	db MISTY
-	db LT_SURGE
-	db ERIKA
-	db JANINE
-	db SABRINA
-	db BLAINE
-	db BLUE
+	db URF
+	db XD_MICHAEL
+	db RED_KANTO_LEADER
+	db PT_LUCAS
+	db GSCHGSS_CHRIS
+	db GSC_KRIS
+	db BRENDAN_KANTO_LEADER
 	db -1

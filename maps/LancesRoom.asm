@@ -57,7 +57,7 @@ LancesRoomLanceScript:
 	closetext
 	winlosstext LanceBattleWinText, 0
 	setlasttalked LANCESROOM_LANCE
-	loadtrainer CHAMPION, LANCE
+	loadtrainer P_CYAN, CYAN
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -204,73 +204,11 @@ LancesRoomMovementData_MaryRunsBackAndForth:
 	turn_head UP
 	step_end
 
-LanceBattleIntroText:
-	text "LANCE: I've been"
-	line "waiting for you."
-
-	para "<PLAY_G>!"
-
-	para "I knew that you,"
-	line "with your skills,"
-
-	para "would eventually"
-	line "reach me here."
-
-	para "There's no need"
-	line "for words now."
-
-	para "We will battle to"
-	line "determine who is"
-
-	para "the stronger of"
-	line "the two of us."
-
-	para "As the most power-"
-	line "ful trainer and as"
-
-	para "the #MON LEAGUE"
-	line "CHAMPION…"
-
-	para "I, LANCE the drag-"
-	line "on master, accept"
-	cont "your challenge!"
-	done
-
+UnknownText_0x18137b:
 LanceBattleWinText:
-	text "…It's over."
-
-	para "But it's an odd"
-	line "feeling."
-
-	para "I'm not angry that"
-	line "I lost. In fact, I"
-	cont "feel happy."
-
-	para "Happy that I"
-	line "witnessed the rise"
-
-	para "of a great new"
-	line "CHAMPION!"
-	done
-
 LanceBattleAfterText:
-	text "…Whew."
-
-	para "You have become"
-	line "truly powerful,"
-	cont "<PLAY_G>."
-
-	para "Your #MON have"
-	line "responded to your"
-
-	para "strong and up-"
-	line "standing nature."
-
-	para "As a trainer, you"
-	line "will continue to"
-
-	para "grow strong with"
-	line "your #MON."
+LanceBattleIntroText:
+	text "<...>"
 	done
 
 UnknownText_0x1811dd:
@@ -318,15 +256,6 @@ UnknownText_0x18134b:
 	text "MARY: Let's inter-"
 	line "view the brand new"
 	cont "CHAMPION!"
-	done
-
-UnknownText_0x18137b:
-	text "LANCE: This is"
-	line "getting to be a"
-	cont "bit too noisy…"
-
-	para "<PLAY_G>, could you"
-	line "come with me?"
 	done
 
 UnknownText_0x1813c5:

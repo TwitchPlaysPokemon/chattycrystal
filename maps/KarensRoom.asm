@@ -49,7 +49,7 @@ KarenScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KarenScript_KarenBeatenText, 0
-	loadtrainer KAREN, KAREN1
+	loadtrainer BROWN, PAUL
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN
@@ -78,56 +78,10 @@ KarensRoom_EnterMovement:
 	step UP
 	step_end
 
-KarenScript_KarenBeforeText:
-	text "I am KAREN of the"
-	line "ELITE FOUR."
-
-	para "You're <PLAYER>?"
-	line "How amusing."
-
-	para "I love dark-type"
-	line "#MON."
-
-	para "I find their wild,"
-	line "tough image to be"
-
-	para "so appealing. And"
-	line "they're so strong."
-
-	para "Think you can take"
-	line "them? Just try to"
-	cont "entertain me."
-
-	para "Let's go."
-	done
-
 KarenScript_KarenBeatenText:
-	text "Well, aren't you"
-	line "good. I like that"
-	cont "in a trainer."
-	done
-
 KarenScript_KarenDefeatText:
-	text "Strong #MON."
-
-	para "Weak #MON."
-
-	para "That is only the"
-	line "selfish perception"
-	cont "of people."
-
-	para "Truly skilled"
-	line "trainers should"
-
-	para "try to win with"
-	line "their favorites."
-
-	para "I like your style."
-	line "You understand"
-	cont "what's important."
-
-	para "Go on--the CHAM-"
-	line "PION is waiting."
+KarenScript_KarenBeforeText:
+	text "<...>"
 	done
 
 KarensRoom_MapEvents:

@@ -49,7 +49,7 @@ WillScript_Battle:
 	waitbutton
 	closetext
 	winlosstext WillScript_WillBeatenText, 0
-	loadtrainer WILL, WILL1
+	loadtrainer GREEN_MAY, A_EMERALD
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_WILL

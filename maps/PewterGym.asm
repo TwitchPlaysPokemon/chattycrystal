@@ -17,7 +17,7 @@ PewterGymBrockScript:
 	waitbutton
 	closetext
 	winlosstext BrockWinLossText, 0
-	loadtrainer BROCK, BROCK1
+	loadtrainer GSC_KRIS, EWWYPPP
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BROCK
@@ -70,78 +70,18 @@ PewterGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, BROCK, BROCK1
+	gettrainername STRING_BUFFER_4, GSC_KRIS, EWWYPPP
 	jumpstd gymstatue2
 
-BrockIntroText:
-	text "BROCK: Wow, it's"
-	line "not often that we"
-
-	para "get a challenger"
-	line "from JOHTO."
-
-	para "I'm BROCK, the"
-	line "PEWTER GYM LEADER."
-
-	para "I'm an expert on"
-	line "rock-type #MON."
-
-	para "My #MON are im-"
-	line "pervious to most"
-
-	para "physical attacks."
-	line "You'll have a hard"
-
-	para "time inflicting"
-	line "any damage."
-
-	para "Come on!"
-	done
-
+BrockBoulderBadgeText:
+BrockFightDoneText:
 BrockWinLossText:
-	text "BROCK: Your #-"
-	line "MON's powerful at-"
-	cont "tacks overcame my"
-	cont "rock-hard defense…"
-
-	para "You're stronger"
-	line "than I expected…"
-
-	para "Go ahead--take"
-	line "this BADGE."
-	done
+BrockIntroText:
+	text "<...>"
 
 ReceivedBoulderBadgeText:
 	text "<PLAYER> received"
 	line "BOULDERBADGE."
-	done
-
-BrockBoulderBadgeText:
-	text "BROCK: <PLAY_G>,"
-	line "thanks. I enjoyed"
-
-	para "battling you, even"
-	line "though I am a bit"
-	cont "upset."
-
-	para "That BOULDERBADGE"
-	line "will make your"
-
-	para "#MON even more"
-	line "powerful."
-	done
-
-BrockFightDoneText:
-	text "BROCK: The world"
-	line "is huge. There are"
-
-	para "still many strong"
-	line "trainers like you."
-
-	para "Just wait and see."
-	line "I'm going to be-"
-	cont "come a lot strong-"
-	cont "er too."
 	done
 
 CamperJerrySeenText:

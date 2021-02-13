@@ -20,7 +20,7 @@ CeladonGymErikaScript:
 	waitbutton
 	closetext
 	winlosstext ErikaBeatenText, 0
-	loadtrainer ERIKA, ERIKA1
+	loadtrainer RED_KANTO_LEADER, RED_RED
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ERIKA
@@ -107,84 +107,18 @@ CeladonGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, ERIKA, ERIKA1
+	gettrainername STRING_BUFFER_4, RED_KANTO_LEADER, RED_RED
 	jumpstd gymstatue2
 
-ErikaBeforeBattleText:
-	text "ERIKA: Hello…"
-	line "Lovely weather,"
-
-	para "isn't it?"
-	line "It's so pleasant…"
-
-	para "…I'm afraid I may"
-	line "doze off…"
-
-	para "My name is ERIKA."
-	line "I am the LEADER of"
-	cont "CELADON GYM."
-
-	para "…Oh? All the way"
-	line "from JOHTO, you"
-	cont "say? How nice…"
-
-	para "Oh. I'm sorry, I"
-	line "didn't realize"
-
-	para "that you wished to"
-	line "challenge me."
-
-	para "Very well, but I"
-	line "shall not lose."
-	done
-
+ErikaAfterBattleText:
+ErikaExplainTMText:
 ErikaBeatenText:
-	text "ERIKA: Oh!"
-	line "I concede defeat…"
-
-	para "You are remarkably"
-	line "strong…"
-
-	para "I shall give you"
-	line "RAINBOWBADGE…"
-	done
+ErikaBeforeBattleText:
+	text "<...>"
 
 PlayerReceivedRainbowBadgeText:
 	text "<PLAYER> received"
 	line "RAINBOWBADGE."
-	done
-
-ErikaExplainTMText:
-	text "ERIKA: That was a"
-	line "delightful match."
-
-	para "I felt inspired."
-	line "Please, I wish you"
-	cont "to have this TM."
-
-	para "It is GIGA DRAIN."
-
-	para "It is a wonderful"
-	line "move that drains"
-
-	para "half the damage it"
-	line "inflicts to heal"
-	cont "your #MON."
-
-	para "Please use it if"
-	line "it pleases you…"
-	done
-
-ErikaAfterBattleText:
-	text "ERIKA: Losing"
-	line "leaves a bitter"
-	cont "aftertaste…"
-
-	para "But knowing that"
-	line "there are strong"
-
-	para "trainers spurs me"
-	line "to do better…"
 	done
 
 LassMichelleSeenText:

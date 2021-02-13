@@ -65,7 +65,7 @@ CeruleanGymMistyScript:
 	waitbutton
 	closetext
 	winlosstext MistyWinLossText, 0
-	loadtrainer MISTY, MISTY1
+	loadtrainer GSCHGSS_CHRIS, D_GAUNTLETCRYSTAL
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MISTY
@@ -158,7 +158,7 @@ CeruleanGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, MISTY, MISTY1
+	gettrainername STRING_BUFFER_4, GSCHGSS_CHRIS, D_GAUNTLETCRYSTAL
 	jumpstd gymstatue2
 
 CeruleanGymGruntRunsDownMovement:
@@ -194,36 +194,14 @@ CeruleanGymGruntBacksAwayMovement:
 	slow_step UP
 	remove_fixed_facing
 	step_end
-
-CeruleanGymGruntIntroText:
-	text "Oops! I so sorry!"
-	line "You not hurt,"
-	cont "okay?"
-
-	para "I very busy."
-	line "No time for talk-"
-	cont "ing with you. Not"
-	cont "good for me if"
-	cont "seen by somebody."
-	done
-
+	
+MistyIntroText:
+MistyWinLossText:
+MistyFightDoneText:
 CeruleanGymGruntBigMistakeText:
-	text "Oh no! You seen"
-	line "me already! I make"
-	cont "big mistake!"
-	done
-
 CeruleanGymGruntByeText:
-	text "Hey, you! Forget"
-	line "you see me, okay?"
-
-	para "You see, hear,"
-	line "know nothing,"
-
-	para "okay?"
-	line "Bye, kid! Nothing!"
-
-	para "Bye-bye a go-go!"
+CeruleanGymGruntIntroText:
+	text "<...>"
 	done
 
 CeruleanGymNote1Text:
@@ -238,49 +216,9 @@ CeruleanGymNote2Text:
 	cont "GYM TRAINERS"
 	done
 
-MistyIntroText:
-	text "MISTY: I was ex-"
-	line "pecting you, you"
-	cont "pest!"
-
-	para "You may have a"
-	line "lot of JOHTO GYM"
-
-	para "BADGES, but you'd"
-	line "better not take me"
-	cont "too lightly."
-
-	para "My water-type"
-	line "#MON are tough!"
-	done
-
-MistyWinLossText:
-	text "MISTY: You really"
-	line "are good…"
-
-	para "I'll admit that"
-	line "you are skilled…"
-
-	para "Here you go. It's"
-	line "CASCADEBADGE."
-	done
-
 ReceivedCascadeBadgeText:
 	text "<PLAYER> received"
 	line "CASCADEBADGE."
-	done
-
-MistyFightDoneText:
-	text "MISTY: Are there"
-	line "many strong train-"
-	cont "ers in JOHTO? Like"
-	cont "you, I mean."
-
-	para "I'm going to"
-	line "travel one day, so"
-
-	para "I can battle some"
-	line "skilled trainers."
 	done
 
 SwimmerfDianaSeenText:

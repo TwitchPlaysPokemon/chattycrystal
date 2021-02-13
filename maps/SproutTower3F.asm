@@ -80,7 +80,7 @@ SageLiScript:
 	waitbutton
 	closetext
 	winlosstext SproutTowerRivalSageText, SproutTowerRivalSageText
-	loadtrainer B2W2_NATE, R_BLACK2
+	loadtrainer B2W2_NATE, R_BLACK21
 	startbattle
 	reloadmapafterbattle
 	opentext

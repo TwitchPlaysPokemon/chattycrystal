@@ -1,25 +1,11 @@
 TrainerClassNames::
 ; entries correspond to trainer classes (see constants/trainer_constants.asm)
-	db "LEADER@" ; Kept only as padding
-	db "LEADER@" ; Kept only as padding
-	db "RIVAL@"
-	db "#MON PROF.@"
-	db "ELITE FOUR@"
 	db "<PKMN> TRAINER@"
-	db "ELITE FOUR@"
-	db "ELITE FOUR@"
-	db "ELITE FOUR@"
-	db "CHAMPION@"
-	db "LEADER@"
-	db "LEADER@"
-	db "LEADER@"
 	db "SCIENTIST@"
-	db "LEADER@"
 	db "YOUNGSTER@"
 	db "SCHOOLBOY@"
 	db "BIRD KEEPER@"
 	db "LASS@"
-	db "LEADER@"
 	db "COOLTRAINER@"
 	db "COOLTRAINER@"
 	db "BEAUTY@"
@@ -28,7 +14,6 @@ TrainerClassNames::
 	db "GENTLEMAN@"
 	db "SKIER@"
 	db "TEACHER@"
-	db "LEADER@"
 	db "BUG CATCHER@"
 	db "FISHER@"
 	db "SWIMMER♂@"
@@ -39,16 +24,13 @@ TrainerClassNames::
 	db "GUITARIST@"
 	db "HIKER@"
 	db "BIKER@"
-	db "LEADER@"
 	db "BURGLAR@"
 	db "FIREBREATHER@"
 	db "JUGGLER@"
 	db "BLACKBELT@"
-	db "ROCKET@"
 	db "PSYCHIC@"
 	db "PICNICKER@"
 	db "CAMPER@"
-	db "ROCKET@"
 	db "SAGE@"
 	db "MEDIUM@"
 	db "BOARDER@"
@@ -57,50 +39,37 @@ TrainerClassNames::
 	db "TWINS@"
 	db "#FAN@"
 	db "<PKMN> TRAINER@"
-	db "LEADER@"
 	db "OFFICER@"
 	db "ROCKET@"
-	db "MYSTICALMAN@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "LEADER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "LEADER@"
-	db "<PKMN> TRAINER@"
-	db "LEADER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "<PKMN> TRAINER@"
-	db "LEADER@"
-	db "LEADER@"
-	db "<PKMN> TRAINER@"
+	db "<PKMN> TRAINER@" ;AZURE
+	db "ROCKET@" ;FC_LARRY
+	db "<PKMN> TRAINER@" ;RBY_GREEN
+	db "@" ;CY_ROBORED
+	db "LEADER@" ;GSCHGSS_CHRIS
+	db "LEADER@" ;GSC_KRIS
+	db "RIVAL@" ;AC_CHRIS
+	db "LEADER@" ;FC_CHRIS
+	db "LEADER@" ; BRENDAN_KANTO_LEADER
+	db "LEADER@" ;FRLG_LEAF
+	db "ROCKET@" ;COLO_WES
+	db "LEADER@" ;XD_MICHAEL
+	db "LEADER@" ;PT_LUCAS
+	db "LEADER@" ;HGSS_LYRA
+	db "ELDER@" ;B2W2_NATE
+	db "ELITE 4@" ;XY_SERENA2
+	db "LEADER@" ;SMUSUM_ELIO
+	db "LEADER@" ;GLAZED
+	db "ROCKET@" ;NUZLOCKE
+	db "CHAMPION@" ;P_CYAN
+	db "ROCKET@" ;RED_LARRY
+	db "ELITE 4@" ;GREEN_MAY
+	db "ELITE 4@" ;BROWN
+	db "@" ; BABA TODO find VC name for rival
+	db "@" ; URF TODO find LS name for gym leader
+	db "LEADER@" ; BRENDAN_JOHTO_LEADER
+	db "RIVAL@" ; GSCHGSS_CHRIS_RIVAL
+	db "LEADER@" ; RED_JOHTO_LEADER
+	db "LEADER@" ;RED_KANTO_LEADER
+	db "LEADER@" ; NATE_LEADER
+	db "ELITE 4@" ; NATE_ELITE_4
+	db "PROFESSOR" ; POKEMON_PROF

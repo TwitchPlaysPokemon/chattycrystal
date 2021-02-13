@@ -765,6 +765,7 @@ LotadBackpic:       INCBIN "gfx/pokemon/lotad/back.2bpp.lz"
 WingullFrontpic:    INCBIN "gfx/pokemon/wingull/front.animated.2bpp.lz"
 WingullBackpic:     INCBIN "gfx/pokemon/wingull/back.2bpp.lz"
 PlaceholderBackpic:: INCBIN "gfx/pokemon/placeholder/back.2bpp.lz"
+ElectrikeBackpic:   INCBIN "gfx/pokemon/electrike/back.2bpp.lz"
 
 SECTION "Pics 24", ROMX
 
@@ -798,7 +799,6 @@ LaironBackpic:      INCBIN "gfx/pokemon/lairon/back.2bpp.lz"
 AggronFrontpic:     INCBIN "gfx/pokemon/aggron/front.animated.2bpp.lz"
 AggronBackpic:      INCBIN "gfx/pokemon/aggron/back.2bpp.lz"
 DuskullBackpic:     INCBIN "gfx/pokemon/duskull/back.2bpp.lz"
-ElectrikeBackpic:   INCBIN "gfx/pokemon/electrike/back.2bpp.lz"
 
 SECTION "Pics 25", ROMX
 

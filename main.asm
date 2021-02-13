@@ -450,9 +450,6 @@ INCLUDE "gfx/pokemon/anim_pointers.asm"
 INCLUDE "gfx/pokemon/anims.asm"
 INCLUDE "gfx/pokemon/idle_pointers.asm"
 INCLUDE "gfx/pokemon/idles.asm"
-INCLUDE "gfx/pokemon/bitmask_pointers.asm"
-INCLUDE "gfx/pokemon/bitmasks.asm"
-
 
 SECTION "Pic Animations 2", ROMX
 
@@ -481,6 +478,11 @@ INCLUDE "gfx/pokemon/unown_idles.asm"
 SECTION "Pic Animations 4", ROMX
 
 INCLUDE "gfx/pokemon/new_frames.asm"
+
+SECTION "Pic Animations 5", ROMX
+
+INCLUDE "gfx/pokemon/bitmask_pointers.asm"
+INCLUDE "gfx/pokemon/bitmasks.asm"
 
 
 SECTION "bank38", ROMX

@@ -265,14 +265,14 @@ BitmasksPointers:
 	dw LinooneBitmasks
 	dw LotadBitmasks
 	dw LombreBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw LudicoloBitmasks
+	dw TaillowBitmasks
+	dw SwellowBitmasks
 	dw WingullBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw RaltsBitmasks
+	dw KirliaBitmasks
+	dw GardevoirBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER
 	dw PlaceholderBitmasks ; PLACEHOLDER
 	dw WhismurBitmasks

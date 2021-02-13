@@ -263,16 +263,16 @@ AnimationIdlePointers:
 	dw MightyenaAnimationIdle
 	dw ZigzagoonAnimationIdle
 	dw LinooneAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw LotadAnimationIdle
 	dw LombreAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw LudicoloAnimationIdle
+	dw TaillowAnimationIdle
+	dw SwellowAnimationIdle
 	dw WingullAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw RaltsAnimationIdle
+	dw KirliaAnimationIdle
+	dw GardevoirAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER
 	dw PlaceholderAnimationIdle ; PLACEHOLDER
 	dw WhismurAnimationIdle

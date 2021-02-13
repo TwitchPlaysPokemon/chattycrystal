@@ -265,14 +265,14 @@ FramesPointers:
 	dba LinooneFrames
 	dba LotadFrames
 	dba LombreFrames
-	dba PlaceholderFrames ; PLACEHOLDER
-	dba PlaceholderFrames ; PLACEHOLDER
-	dba PlaceholderFrames ; PLACEHOLDER
+	dba LudicoloFrames
+	dba TaillowFrames
+	dba SwellowFrames
 	dba WingullFrames
 	dba PlaceholderFrames ; PLACEHOLDER
-	dba PlaceholderFrames ; PLACEHOLDER
-	dba PlaceholderFrames ; PLACEHOLDER
-	dba PlaceholderFrames ; PLACEHOLDER
+	dba RaltsFrames
+	dba KirliaFrames
+	dba GardevoirFrames
 	dba PlaceholderFrames ; PLACEHOLDER
 	dba PlaceholderFrames ; PLACEHOLDER
 	dba WhismurFrames

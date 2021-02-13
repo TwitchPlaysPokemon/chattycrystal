@@ -265,14 +265,14 @@ AnimationPointers:
 	dw LinooneAnimation
 	dw LotadAnimation
 	dw LombreAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER
-	dw PlaceholderAnimation ; PLACEHOLDER
-	dw PlaceholderAnimation ; PLACEHOLDER
+	dw LudicoloAnimation
+	dw TaillowAnimation
+	dw SwellowAnimation
 	dw WingullAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER
-	dw PlaceholderAnimation ; PLACEHOLDER
-	dw PlaceholderAnimation ; PLACEHOLDER
-	dw PlaceholderAnimation ; PLACEHOLDER
+	dw RaltsAnimation
+	dw KirliaAnimation
+	dw GardevoirAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER
 	dw PlaceholderAnimation ; PLACEHOLDER
 	dw WhismurAnimation

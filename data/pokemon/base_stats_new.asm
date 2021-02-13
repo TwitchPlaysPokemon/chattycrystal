@@ -16,12 +16,12 @@ INCLUDE "data/pokemon/base_stats/lotad.asm"
 INCLUDE "data/pokemon/base_stats/lombre.asm"
 INCLUDE "data/pokemon/base_stats/ludicolo.asm"
 INCLUDE "data/pokemon/base_stats/taillow.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/swellow.asm"
 INCLUDE "data/pokemon/base_stats/wingull.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
+INCLUDE "data/pokemon/base_stats/ralts.asm"
+INCLUDE "data/pokemon/base_stats/kirlia.asm"
+INCLUDE "data/pokemon/base_stats/gardevoir.asm"
 INCLUDE "data/pokemon/base_stats/surskit.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER
 INCLUDE "data/pokemon/base_stats/whismur.asm"

@@ -3,8 +3,8 @@
 
 	db   "This message"
 	next "should not appear."
-	next "Tell me if you"
+	next "Tell M4, Reddo,"
 
-	page "see it."
-	next ""
+	page "Frosty, Chaos or"
+	next "ax6 if you see it."
 	next "@"

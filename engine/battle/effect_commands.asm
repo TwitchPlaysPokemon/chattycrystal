@@ -5418,7 +5418,7 @@ BattleCommand_Chatter:
 .charging
 	call LoadMoveAnim
 if TESTMODE
-	ld hl, POUND
+	ld hl, CONSTRICT
 else
 	ld hl, wChattyChatterMove
 	ld a, [hli]
@@ -5431,6 +5431,7 @@ endc
 	call GetBattleVarAddr
 	ld [hl], b
 	call UpdateMoveData
+	nop
 AissLoadMoveNameHere::
 	jp ResetTurn
 

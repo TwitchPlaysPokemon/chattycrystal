@@ -9,11 +9,8 @@ SproutTower2F_MapScripts:
 	db 0 ; callbacks
 
 TrainerSageNico:
-if TESTMODE
-	trainer BABA, BABA1, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText, 0, .Script
-else
 	trainer SAGE, NICO, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText, 0, .Script
-endc
+
 
 .Script:
 	endifjustbattled
@@ -24,11 +21,7 @@ endc
 	end
 
 TrainerSageEdmond:
-if TESTMODE
-	trainer AC_CHRIS, EVAN, EVENT_BEAT_SAGE_EDMOND, SageEdmondSeenText, SageEdmondBeatenText, 0, .Script
-else
 	trainer SAGE, EDMOND, EVENT_BEAT_SAGE_EDMOND, SageEdmondSeenText, SageEdmondBeatenText, 0, .Script
-endc
 
 .Script:
 	endifjustbattled
@@ -105,11 +98,6 @@ SproutTower2F_MapEvents:
 	bg_event 12, 15, BGEVENT_READ, SproutTower2FStatue
 
 	db 3 ; object events
-if TESTMODE
-	object_event 12,  3, SPRITE_KRIS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerSageNico, -1
-	object_event  9, 14, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerSageEdmond, -1
-else
 	object_event 12,  3, SPRITE_SAGE, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerSageNico, -1
 	object_event  9, 14, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerSageEdmond, -1
-endc
 	object_event  3,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SproutTower2FXAccuracy, EVENT_SPROUT_TOWER2F_X_ACCURACY

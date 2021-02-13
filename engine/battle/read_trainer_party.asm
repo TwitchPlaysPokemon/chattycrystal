@@ -323,7 +323,7 @@ GetTrainerName:: ;copy trainer class c ID b's name into wStringBuffer1
 	ld [hl], c
 	ld hl, wChattyTrainerID
 	ld [hl], b
-.AissCollectClassAndID
+AissCollectClassAndID::
 	ld a, c
 	cp CAL
 	jr nz, .not_cal2

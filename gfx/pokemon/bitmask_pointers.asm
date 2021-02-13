@@ -313,10 +313,10 @@ BitmasksPointers:
 	dw SalamenceBitmasks
 	dw BeldumBitmasks
 	dw MetangBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Metagross
+	dw MetagrossBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Latias
 	dw PlaceholderBitmasks ; PLACEHOLDER - Latios
-	dw PlaceholderBitmasks ; PLACEHOLDER - Groudon
+	dw GroudonBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Turtwig
 	dw GrotleBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Torterra
@@ -328,9 +328,9 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Empoleon
 	dw PlaceholderBitmasks ; PLACEHOLDER - Bidoof
 	dw PlaceholderBitmasks ; PLACEHOLDER - Bibarel
-	dw PlaceholderBitmasks ; PLACEHOLDER - Shinx
-	dw PlaceholderBitmasks ; PLACEHOLDER - Luxio
-	dw PlaceholderBitmasks ; PLACEHOLDER - Luxray
+	dw ShinxBitmasks
+	dw LuxioBitmasks
+	dw LuxrayBitmasks
 	dw BudewBitmasks 
 	dw PlaceholderBitmasks ; PLACEHOLDER - Roserade
 	dw PlaceholderBitmasks ; PLACEHOLDER - Burmy
@@ -339,21 +339,21 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Floatzel
 	dw PlaceholderBitmasks ; PLACEHOLDER - Shellos
 	dw PlaceholderBitmasks ; PLACEHOLDER - Gastrodon
-	dw PlaceholderBitmasks ; PLACEHOLDER - Buneary
-	dw PlaceholderBitmasks ; PLACEHOLDER - Lopunny
+	dw BunearyBitmasks
+	dw LopunnyBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Stunky
 	dw PlaceholderBitmasks ; PLACEHOLDER - Skuntank
-	dw PlaceholderBitmasks ; PLACEHOLDER - Bronzor
-	dw PlaceholderBitmasks ; PLACEHOLDER - Bronzong
+	dw BronzorBitmasks
+	dw BronzongBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Bonsly
 	dw ChatotBitmasks
 	dw CroagunkBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Toxicroak
-	dw PlaceholderBitmasks ; PLACEHOLDER - Leafeon
+	dw LeafeonBitmasks
 	dw GlaceonBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Porygon Z
-	dw PlaceholderBitmasks ; PLACEHOLDER - Dusknoir
-	dw PlaceholderBitmasks ; PLACEHOLDER - Froslass
+	dw PorygonZBitmasks
+	dw DusknoirBitmasks
+	dw FroslassBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Darkrai
 	dw PlaceholderBitmasks ; PLACEHOLDER - Pansage
 	dw PlaceholderBitmasks ; PLACEHOLDER - Simisage
@@ -376,7 +376,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Heliolisk
 	dw PlaceholderBitmasks ; PLACEHOLDER - Amaura
 	dw PlaceholderBitmasks ; PLACEHOLDER - Aurorus
-	dw PlaceholderBitmasks ; PLACEHOLDER - Sylveon
+	dw SylveonBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Goomy
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sliggoo
 	dw PlaceholderBitmasks ; PLACEHOLDER - Goodra
@@ -400,4 +400,4 @@ BitmasksPointers:
 	dw QuagynxBitmasks
 	dw SteelurretBitmasks
 	; TPP's signature fakemon
-	dw PlaceholderBitmasks ; PLACEHOLDER - Phancero
+	dw PhanceroBitmasks

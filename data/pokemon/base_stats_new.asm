@@ -36,7 +36,7 @@ INCLUDE "data/pokemon/base_stats/sableye.asm"
 INCLUDE "data/pokemon/base_stats/aron.asm"
 INCLUDE "data/pokemon/base_stats/lairon.asm"
 INCLUDE "data/pokemon/base_stats/aggron.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Electrike
+INCLUDE "data/pokemon/base_stats/electrike.asm"
 INCLUDE "data/pokemon/base_stats/manectric.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Roselia
 INCLUDE "data/pokemon/base_stats/wailmer.asm"
@@ -78,8 +78,8 @@ INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Empoleon
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Bidoof
 INCLUDE "data/pokemon/base_stats/bibarel.asm"
 INCLUDE "data/pokemon/base_stats/shinx.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Luxio
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Luxray
+INCLUDE "data/pokemon/base_stats/luxio.asm"
+INCLUDE "data/pokemon/base_stats/luxray.asm"
 INCLUDE "data/pokemon/base_stats/budew.asm"
 INCLUDE "data/pokemon/base_stats/roserade.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Burmy
@@ -88,17 +88,17 @@ INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Buizel
 INCLUDE "data/pokemon/base_stats/floatzel.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Shellos
 INCLUDE "data/pokemon/base_stats/gastrodon.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Buneary
+INCLUDE "data/pokemon/base_stats/buneary.asm"
 INCLUDE "data/pokemon/base_stats/lopunny.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Stunky
 INCLUDE "data/pokemon/base_stats/skuntank.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Bronzor
+INCLUDE "data/pokemon/base_stats/bronzor.asm"
 INCLUDE "data/pokemon/base_stats/bronzong.asm"
 INCLUDE "data/pokemon/base_stats/bonsly.asm"
 INCLUDE "data/pokemon/base_stats/chatot.asm"
 INCLUDE "data/pokemon/base_stats/croagunk.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Toxicroak
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Leafeon
+INCLUDE "data/pokemon/base_stats/leafeon.asm"
 INCLUDE "data/pokemon/base_stats/glaceon.asm"
 INCLUDE "data/pokemon/base_stats/porygonz.asm"
 INCLUDE "data/pokemon/base_stats/dusknoir.asm"
@@ -147,4 +147,4 @@ INCLUDE "data/pokemon/base_stats/jumpanium.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Woochum
 INCLUDE "data/pokemon/base_stats/quagynx.asm"
 INCLUDE "data/pokemon/base_stats/steelurret.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Phancero
+INCLUDE "data/pokemon/base_stats/phancero.asm"

@@ -313,10 +313,10 @@ FramesPointers:
 	dba SalamenceFrames
 	dba BeldumFrames
 	dba MetangFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Metagross
+	dba MetagrossFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Latias
 	dba PlaceholderFrames ; PLACEHOLDER - Latios
-	dba PlaceholderFrames ; PLACEHOLDER - Groudon
+	dba GroudonFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Turtwig
 	dba GrotleFrames 
 	dba PlaceholderFrames ; PLACEHOLDER - Torterra
@@ -328,9 +328,9 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Empoleon
 	dba PlaceholderFrames ; PLACEHOLDER - Bidoof
 	dba PlaceholderFrames ; PLACEHOLDER - Bibarel
-	dba PlaceholderFrames ; PLACEHOLDER - Shinx
-	dba PlaceholderFrames ; PLACEHOLDER - Luxio
-	dba PlaceholderFrames ; PLACEHOLDER - Luxray
+	dba ShinxFrames
+	dba LuxioFrames
+	dba LuxrayFrames
 	dba BudewFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Roserade
 	dba PlaceholderFrames ; PLACEHOLDER - Burmy
@@ -339,21 +339,21 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Floatzel
 	dba PlaceholderFrames ; PLACEHOLDER - Shellos
 	dba PlaceholderFrames ; PLACEHOLDER - Gastrodon
-	dba PlaceholderFrames ; PLACEHOLDER - Buneary
-	dba PlaceholderFrames ; PLACEHOLDER - Lopunny
+	dba BunearyFrames
+	dba LopunnyFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Stunky
 	dba PlaceholderFrames ; PLACEHOLDER - Skuntank
-	dba PlaceholderFrames ; PLACEHOLDER - Bronzor
-	dba PlaceholderFrames ; PLACEHOLDER - Bronzong
+	dba BronzorFrames
+	dba BronzongFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Bonsly
 	dba ChatotFrames
 	dba CroagunkFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Toxicroak
-	dba PlaceholderFrames ; PLACEHOLDER - Leafeon
+	dba LeafeonFrames
 	dba GlaceonFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Porygon Z
-	dba PlaceholderFrames ; PLACEHOLDER - Dusknoir
-	dba PlaceholderFrames ; PLACEHOLDER - Froslass
+	dba PorygonZFrames
+	dba DusknoirFrames
+	dba FroslassFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Darkai
 	dba PlaceholderFrames ; PLACEHOLDER - Pansage
 	dba PlaceholderFrames ; PLACEHOLDER - Simisage
@@ -376,7 +376,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Heliolisk
 	dba PlaceholderFrames ; PLACEHOLDER - Amaura
 	dba PlaceholderFrames ; PLACEHOLDER - Aurorus
-	dba PlaceholderFrames ; PLACEHOLDER - Sylveon
+	dba SylveonFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Goomy
 	dba PlaceholderFrames ; PLACEHOLDER - Sliggoo
 	dba PlaceholderFrames ; PLACEHOLDER - Goodra
@@ -400,4 +400,4 @@ FramesPointers:
 	dba QuagynxFrames
 	dba SteelurretFrames
 	; TPP's signature fakemon
-	dba PlaceholderFrames ; PLACEHOLDER - Phancero
+	dba PhanceroFrames

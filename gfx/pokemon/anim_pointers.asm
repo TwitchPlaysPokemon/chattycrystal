@@ -313,10 +313,10 @@ AnimationPointers:
 	dw SalamenceAnimation
 	dw BeldumAnimation
 	dw MetangAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Metagross
+	dw MetagrossAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Latias
 	dw PlaceholderAnimation ; PLACEHOLDER - Latios
-	dw PlaceholderAnimation ; PLACEHOLDER - Groudon
+	dw GroudonAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Turtwig
 	dw GrotleAnimation 
 	dw PlaceholderAnimation ; PLACEHOLDER - Torterra
@@ -328,9 +328,9 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Empoleon
 	dw PlaceholderAnimation ; PLACEHOLDER - Bidoof
 	dw PlaceholderAnimation ; PLACEHOLDER - Bibarel
-	dw PlaceholderAnimation ; PLACEHOLDER - Shinx
-	dw PlaceholderAnimation ; PLACEHOLDER - Luxio
-	dw PlaceholderAnimation ; PLACEHOLDER - Luxray
+	dw ShinxAnimation
+	dw LuxioAnimation
+	dw LuxrayAnimation
 	dw BudewAnimation 
 	dw PlaceholderAnimation ; PLACEHOLDER - Roserade
 	dw PlaceholderAnimation ; PLACEHOLDER - Burmy
@@ -339,21 +339,21 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Floatzel
 	dw PlaceholderAnimation ; PLACEHOLDER - Shellos
 	dw PlaceholderAnimation ; PLACEHOLDER - Gastrodon
-	dw PlaceholderAnimation ; PLACEHOLDER - Buneary
-	dw PlaceholderAnimation ; PLACEHOLDER - Lopunny
+	dw BunearyAnimation
+	dw LopunnyAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Stunky
 	dw PlaceholderAnimation ; PLACEHOLDER - Skuntank
-	dw PlaceholderAnimation ; PLACEHOLDER - Bronzor
-	dw PlaceholderAnimation ; PLACEHOLDER - Bronzong
+	dw BronzorAnimation
+	dw BronzongAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Bonsly
 	dw ChatotAnimation
 	dw CroagunkAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Toxicroak
-	dw PlaceholderAnimation ; PLACEHOLDER - Leafeon
+	dw LeafeonAnimation
 	dw GlaceonAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Porygon Z
-	dw PlaceholderAnimation ; PLACEHOLDER - Dusknoir
-	dw PlaceholderAnimation ; PLACEHOLDER - Froslass
+	dw PorygonZAnimation
+	dw DusknoirAnimation
+	dw FroslassAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Darkrai
 	dw PlaceholderAnimation ; PLACEHOLDER - Pansage
 	dw PlaceholderAnimation ; PLACEHOLDER - Simisage
@@ -376,7 +376,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Heliolisk
 	dw PlaceholderAnimation ; PLACEHOLDER - Amaura
 	dw PlaceholderAnimation ; PLACEHOLDER - Aurorus
-	dw PlaceholderAnimation ; PLACEHOLDER - Sylveon
+	dw SylveonAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Goomy
 	dw PlaceholderAnimation ; PLACEHOLDER - Sliggoo
 	dw PlaceholderAnimation ; PLACEHOLDER - Goodra
@@ -400,4 +400,4 @@ AnimationPointers:
 	dw QuagsireAnimation    ; Quagynx
 	dw SteelixAnimation     ; Steelurret
 	; TPP's signature fakemon
-	dw PlaceholderAnimation ; PLACEHOLDER - Phancero
+	dw PhanceroAnimation

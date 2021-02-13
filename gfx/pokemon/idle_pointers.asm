@@ -313,10 +313,10 @@ AnimationIdlePointers:
 	dw SalamenceAnimationIdle
 	dw BeldumAnimationIdle
 	dw MetangAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Metagross
+	dw MetagrossAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Latias
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Latios
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Groudon
+	dw GroudonAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Turtwig
 	dw GrotleAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Torterra
@@ -328,9 +328,9 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Empoleon
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bidoof
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bibarel
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Shinx
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Luxio
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Luxray
+	dw ShinxAnimationIdle
+	dw LuxioAnimationIdle
+	dw LuxrayAnimationIdle
 	dw BudewAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Roserade
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Burmy
@@ -339,21 +339,21 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Floatzel
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Shellos
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Gastrodon
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Buneary
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Lopunny
+	dw BunearyAnimationIdle
+	dw LopunnyAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Stunky
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Skuntank
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bronzor
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bronzong
+	dw BronzorAnimationIdle
+	dw BronzongAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bonsly
 	dw ChatotAnimationIdle
 	dw CroagunkAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Toxicroak
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Leafeon
+	dw LeafeonAnimationIdle
 	dw GlaceonAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Porygon Z
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Dusknoir
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Froslass
+	dw PorygonZAnimationIdle
+	dw DusknoirAnimationIdle
+	dw FroslassAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Darkrai
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Pansage
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Simisage
@@ -376,7 +376,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Heliolisk
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Amaura
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Aurorus
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sylveon
+	dw SylveonAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Goomy
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sliggoo
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Goodra
@@ -400,4 +400,4 @@ AnimationIdlePointers:
 	dw QuagynxAnimationIdle
 	dw SteelurretAnimationIdle
 	; TPP's signature fakemon
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Phancero
+	dw PhanceroAnimationIdle

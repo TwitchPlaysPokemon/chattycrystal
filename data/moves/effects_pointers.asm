@@ -163,3 +163,4 @@ MoveEffectsPointers:
 	dw Revenge
 	dw NormalHit
 	dw SelfSpeedDownHit
+	dw AquaRing

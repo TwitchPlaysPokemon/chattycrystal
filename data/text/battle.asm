@@ -91,8 +91,8 @@ PerishCountText:
 	text "!"
 	prompt
 
-BattleText_TargetRecoveredWithItem:
-	text "<TARGET>"
+BattleText_UserRecoveredWithSomething:
+	text "<USER>"
 	line "recovered with"
 	cont "@"
 	text_ram wStringBuffer1
@@ -1007,6 +1007,12 @@ BracedItselfText:
 FellInLoveText:
 	text "<TARGET>"
 	line "fell in love!"
+	prompt
+
+SurroundedByWaterText:
+	text "<USER>"
+	line "surrounds itself"
+	cont "with water!"
 	prompt
 
 CoveredByVeilText:

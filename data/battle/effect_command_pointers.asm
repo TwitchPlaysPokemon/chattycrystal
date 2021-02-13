@@ -202,3 +202,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_SelfAccuracyDown2
 	effectfn BattleCommand_SelfEvasionDown2
 	effectfn BattleCommand_SelfStatDownMessage
+	effectfn BattleCommand_AquaRing

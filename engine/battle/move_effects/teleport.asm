@@ -15,6 +15,10 @@ BattleCommand_Teleport:
 	call GetBattleVar
 	bit SUBSTATUS_CANT_RUN, a
 	jr nz, .failed
+	ld a, BATTLE_VARS_SUBSTATUS5
+	call GetBattleVar
+	bit SUBSTATUS_AQUA_RING, a
+	jr nz, .failed
 ; Only need to check these next things if it's your turn
 	ldh a, [hBattleTurn]
 	and a

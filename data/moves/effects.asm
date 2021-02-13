@@ -2282,4 +2282,9 @@ SelfSpeedDownHit:
 	selfstatdownmessage
 	endmove
 
-
+AquaRing:
+	checkobedience
+	usedmovetext
+	doturn
+	aquaring
+	endmove

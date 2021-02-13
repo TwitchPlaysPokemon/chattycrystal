@@ -308,6 +308,7 @@ MoveDescriptions1:
 	dw ForesightDescription
 	dw HammerArmDescription
 	dw HammerArmDescription
+	dw AquaRingDescription
 
 InvalidMoveDescription:
 	db "?@"
@@ -1367,3 +1368,7 @@ DragonPulseDescription:
 HammerArmDescription:
 	db   "Attack that lowers"
 	next "the user's SPEED.@"
+
+AquaRingDescription:
+	db   "Recovers HP over"
+	next "time.@"

@@ -261,7 +261,7 @@ HandleBetweenTurnEffects:
 	ret c
 
 .NoMoreFaintingConditions:
-	call HandleLeftovers
+	call HandleLeftoversAndAquaRing
 	call HandleMysteryberry
 	call HandleDefrost
 	call HandleSafeguard
@@ -807,6 +807,10 @@ TryEnemyFlee:
 	bit SUBSTATUS_CANT_RUN, a
 	jr nz, .Stay
 
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_AQUA_RING, a
+	jr nz, .Stay
+
 	ld a, [wEnemyWrapCount]
 	and a
 	jr nz, .Stay
@@ -1314,7 +1318,7 @@ SwitchTurnCore:
 	ldh [hBattleTurn], a
 	ret
 
-HandleLeftovers:
+HandleLeftoversAndAquaRing:
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
 	jr z, .DoEnemyFirst
@@ -1329,6 +1333,18 @@ HandleLeftovers:
 	call SetPlayerTurn
 .do_it
 
+	; Aqua Ring heals 1/16 of max HP every turn if active
+	ld a, BATTLE_VARS_SUBSTATUS5
+	call GetBattleVar
+	bit SUBSTATUS_AQUA_RING, a
+	jr z, .aqua_ring_done
+	ld hl, AQUA_RING
+	call GetMoveIDFromIndex
+	ld [wNamedObjectIndexBuffer], a
+	call GetMoveName
+	call .do_recovery
+	; fallthrough
+.aqua_ring_done
 	callfar GetUserItem
 	ld a, [hl]
 	ld [wNamedObjectIndexBuffer], a
@@ -1337,6 +1353,7 @@ HandleLeftovers:
 	cp HELD_LEFTOVERS
 	ret nz
 
+.do_recovery
 	ld hl, wBattleMonHP
 	ldh a, [hBattleTurn]
 	and a
@@ -1360,7 +1377,8 @@ HandleLeftovers:
 	call GetSixteenthMaxHP
 	call SwitchTurnCore
 	call RestoreHP
-	ld hl, BattleText_TargetRecoveredWithItem
+	call SwitchTurnCore
+	ld hl, BattleText_UserRecoveredWithSomething
 	jp StdBattleTextbox
 
 HandleMysteryberry:
@@ -3762,6 +3780,10 @@ TryToRunAwayFromBattle:
 	bit SUBSTATUS_CANT_RUN, a
 	jp nz, .cant_escape
 
+	ld a, [wPlayerSubStatus5]
+	bit SUBSTATUS_AQUA_RING, a
+	jp nz, .cant_escape
+
 	ld a, [wPlayerWrapCount]
 	and a
 	jp nz, .cant_escape
@@ -5226,6 +5248,9 @@ TryPlayerSwitch:
 	jr nz, .trapped
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
+	jr nz, .trapped
+	ld a, [wPlayerSubStatus5]
+	bit SUBSTATUS_AQUA_RING, a
 	jr z, .try_switch
 
 .trapped

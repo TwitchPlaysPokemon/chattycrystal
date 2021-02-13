@@ -302,3 +302,4 @@ MoveNames::
 	db "ODOR SLEUTH@"
 	db "HAMMER ARM@"
 	db "ICE HAMMER@"
+	db "AQUA RING@"

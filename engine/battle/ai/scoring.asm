@@ -1992,6 +1992,10 @@ AI_Smart_PerishSong:
 	bit SUBSTATUS_CANT_RUN, a
 	jr nz, .yes
 
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_AQUA_RING, a
+	jr nz, .yes
+
 	push hl
 	callfar CheckPlayerMoveTypeMatchups
 	ld a, [wEnemyAISwitchScore]

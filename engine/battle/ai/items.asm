@@ -16,6 +16,10 @@ AI_SwitchOrTryItem:
 	bit SUBSTATUS_CANT_RUN, a
 	jr nz, DontSwitch
 
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_AQUA_RING, a
+	jr nz, DontSwitch
+
 	ld a, [wEnemyWrapCount]
 	and a
 	jr nz, DontSwitch

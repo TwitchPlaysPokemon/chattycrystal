@@ -327,6 +327,7 @@ BattleAnimations::
 	dw BattleAnim_Detect
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_IcePunch
+	dw BattleAnim_Waterfall    ; 130
 
 
 BattleAnim_0:

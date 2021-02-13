@@ -761,27 +761,12 @@ _InitSGBBorderPals:
 	dw DataSndPacket7
 	dw DataSndPacket8
 
-Unreferenced_Function9911:
-	di
-	xor a
-	ldh [rJOYP], a
-	ld hl, MaskEnFreezePacket
-	call _PushSGBPals
-	call PushSGBBorder
-	call SGBDelayCycles
-	call SGB_ClearVRAM
-	ld hl, MaskEnCancelPacket
-	call _PushSGBPals
-	ei
-	ret
-
 PushSGBBorder:
 	call .LoadSGBBorderPointers
 	push de
 	call SGBBorder_YetMorePalPushing
 	pop hl
-	call SGBBorder_MorePalPushing
-	ret
+	jp SGBBorder_MorePalPushing
 
 .LoadSGBBorderPointers:
 	ld hl, SGBBorder

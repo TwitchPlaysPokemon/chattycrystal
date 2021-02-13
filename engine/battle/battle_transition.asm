@@ -21,7 +21,7 @@ DoBattleTransition:
 	ld hl, hVBlank
 	ld a, [hl]
 	push af
-	ld [hl], $1
+	ld [hl], 1
 
 .loop
 	ld a, [wJumptableIndex]
@@ -824,12 +824,4 @@ ENDM
 	pop bc
 	dec b
 	jr nz, .row
-	ret
-
-Unreferenced_Function8c7c9:
-	ld a, $1
-	ldh [hBGMapMode], a
-	call WaitBGMap
-	xor a
-	ldh [hBGMapMode], a
 	ret

@@ -2,7 +2,7 @@ SendScreenToPrinter:
 .loop
 	call JoyTextDelay
 	call CheckCancelPrint
-	jr c, .cancel
+	ret c
 	ld a, [wJumptableIndex]
 	bit 7, a
 	jr nz, .finished
@@ -16,10 +16,6 @@ SendScreenToPrinter:
 	and a
 	ret
 
-.cancel
-	scf
-	ret
-
 Printer_CleanUpAfterSend:
 	xor a
 	ld [wPrinterConnectionOpen], a
@@ -31,13 +27,11 @@ Printer_PrepareTileMapForPrint:
 	call Printer_StartTransmission
 	pop af
 	ld [wPrinterMargins], a
-	call Printer_CopyTileMapToBuffer
-	ret
+	jp Printer_CopyTileMapToBuffer
 
 Printer_ExitPrinter:
 	call ReturnToMapFromSubmenu
-	call Printer_RestartMapMusic
-	ret
+	jp Printer_RestartMapMusic
 
 PrintDexEntry:
 	ld a, [wPrinterQueueLength]
@@ -568,37 +562,6 @@ PlacePrinterStatusString:
 	ld a, BANK(GBPrinterStrings)
 	call FarString
 	hlcoord 2, 15
-	ld de, String_PressBToCancel
-	call PlaceString
-	ld a, $1
-	ldh [hBGMapMode], a
-	xor a
-	ld [wPrinterStatus], a
-	ret
-
-Unreferenced_Function847bd:
-	ld a, [wPrinterStatus]
-	and a
-	ret z
-	push af
-	xor a
-	ldh [hBGMapMode], a
-	hlcoord 2, 4
-	lb bc, 13, 16
-	call ClearBox
-	pop af
-	ld e, a
-	ld d, 0
-	ld hl, PrinterStatusStringPointers
-	add hl, de
-	add hl, de
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	hlcoord 4, 7
-	ld a, BANK(GBPrinterStrings)
-	call FarString
-	hlcoord 4, 15
 	ld de, String_PressBToCancel
 	call PlaceString
 	ld a, $1

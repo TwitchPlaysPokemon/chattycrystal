@@ -72,10 +72,6 @@ LavRadioTower1FDirectory:
 LavRadioTower1FPokeFluteSign:
 	jumptext LavRadioTower1FPokeFluteSignText
 
-LavRadioTower1FReferenceLibrary:
-; unreferenced
-	jumptext LavRadioTower1FReferenceLibraryText
-
 LavRadioTower1FReceptionistText:
 	text "Welcome!"
 	line "Feel free to look"
@@ -209,15 +205,6 @@ LavRadioTower1FPokeFluteSignText:
 
 	para "of the # FLUTE"
 	line "on CHANNEL 20"
-	done
-
-LavRadioTower1FReferenceLibraryText:
-	text "Wow! A full rack"
-	line "of #MON CDs and"
-	cont "videos."
-
-	para "This must be the"
-	line "reference library."
 	done
 
 LavRadioTower1F_MapEvents:

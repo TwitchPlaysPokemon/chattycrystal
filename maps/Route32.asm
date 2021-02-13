@@ -50,17 +50,6 @@ Route32CooltrainerMContinueScene:
 	iftrue .GotMiracleSeed
 	checkflag ENGINE_ZEPHYRBADGE
 	iffalse .DontHaveZephyrBadge
-	checkevent EVENT_GOT_HM05_FLASH
-	iffalse .Unreferenced
-	sjump .GiveMiracleSeed
-
-.Unreferenced:
-	writetext Route32CooltrainerMText_UnusedSproutTower
-	waitbutton
-	closetext
-	end
-
-.GiveMiracleSeed:
 	writetext Route32CooltrainerMText_HaveThisSeed
 	buttonsound
 	verbosegiveitem MIRACLE_SEED
@@ -569,22 +558,6 @@ Route32CooltrainerMText_AideIsWaiting:
 
 	para "you at the #MON"
 	line "CENTER."
-	done
-
-Route32CooltrainerMText_UnusedSproutTower:
-; unused
-	text "Have you gone to"
-	line "SPROUT TOWER?"
-
-	para "If you ever visit"
-	line "VIOLET CITY, "
-
-	para "they'll expect you"
-	line "to train there."
-
-	para "That's basic for"
-	line "trainers. Go to"
-	cont "SPROUT TOWER!"
 	done
 
 Route32CooltrainerMText_VioletGym:

@@ -12,8 +12,6 @@ TradeCenter_MapScripts:
 
 .InitializeTradeCenter:
 	prioritysjump .InitializeAndPreparePokecenter2F
-	end
-
 .DummyScene:
 	end
 
@@ -38,19 +36,6 @@ TradeCenterConsoleScript:
 	special TradeCenter
 	newloadmap MAPSETUP_LINKRETURN
 	end
-
-TradeCenterFriendScript:
-; unreferenced
-	opentext
-	writetext .FriendReadyText
-	waitbutton
-	closetext
-	end
-
-.FriendReadyText:
-	text "Your friend is"
-	line "ready."
-	done
 
 TradeCenter_MapEvents:
 	db 0, 0 ; filler

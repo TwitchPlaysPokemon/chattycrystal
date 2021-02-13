@@ -18,8 +18,6 @@ BurnedTowerB1F_MapScripts:
 	callback MAPCALLBACK_TILES, .LadderCallback
 
 .DummyScene0:
-	end
-
 .DummyScene1:
 	end
 
@@ -152,13 +150,6 @@ BurnedTowerSuicuneMovement2:
 	fast_jump_step UP
 	big_step UP
 	fast_jump_step RIGHT
-	remove_sliding
-	step_end
-
-BurnedTowerUnusedMovement:
-; unreferenced
-	set_sliding
-	big_step DOWN
 	remove_sliding
 	step_end
 

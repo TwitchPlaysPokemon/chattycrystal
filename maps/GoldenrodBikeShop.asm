@@ -6,9 +6,6 @@ GoldenrodBikeShop_MapScripts:
 
 	db 0 ; callbacks
 
-.UnreferencedDummyScene:
-	end
-
 GoldenrodBikeShopClerkScript:
 	faceplayer
 	opentext
@@ -38,10 +35,6 @@ GoldenrodBikeShopClerkScript:
 	waitbutton
 	closetext
 	end
-
-GoldenrodBikeShopJustReleasedCompactBike:
-; unused
-	jumptext GoldenrodBikeShopJustReleasedCompactBikeText
 
 GoldenrodBikeShopBicycle:
 	jumptext GoldenrodBikeShopBicycleText
@@ -85,13 +78,6 @@ GoldenrodBikeShopClerkRefusedText:
 	text "…sigh… Oh, for"
 	line "the kindness of"
 	cont "people…"
-	done
-
-GoldenrodBikeShopJustReleasedCompactBikeText:
-	text "Just released!"
-
-	para "First-rate compact"
-	line "BICYCLES!"
 	done
 
 GoldenrodBikeShopBicycleText:

@@ -16,11 +16,7 @@ BurnedTower1F_MapScripts:
 
 .EusineScene:
 	prioritysjump .MeetEusine
-	end
-
 .DummyScene1:
-	end
-
 .DummyScene2:
 	end
 

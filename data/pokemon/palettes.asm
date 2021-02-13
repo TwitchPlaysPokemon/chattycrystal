@@ -538,8 +538,8 @@ INCBIN "gfx/pokemon/grovyle/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/grovyle/shiny.pal"
 INCBIN "gfx/pokemon/sceptile/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/sceptile/shiny.pal"
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Torchic
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Torchic
+INCBIN "gfx/pokemon/torchic/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/torchic/shiny.pal"
 INCBIN "gfx/pokemon/combusken/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/combusken/shiny.pal"
 INCBIN "gfx/pokemon/blaziken/front.gbcpal", middle_colors

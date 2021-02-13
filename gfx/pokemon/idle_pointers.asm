@@ -298,13 +298,13 @@ AnimationIdlePointers:
 	dw SwabluAnimationIdle
 	dw AltariaAnimationIdle
 	dw LileepAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Cradily
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Feebas
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Milotic
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Duskull
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Dusclops
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Absol
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Snorunt
+	dw CradilyAnimationIdle
+	dw FeebasAnimationIdle
+	dw MiloticAnimationIdle
+	dw DuskullAnimationIdle
+	dw DusclopsAnimationIdle
+	dw AbsolAnimationIdle
+	dw SnoruntAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Spheal
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sealeo
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Walrein

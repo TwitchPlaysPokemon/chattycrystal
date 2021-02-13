@@ -298,13 +298,13 @@ FramesPointers:
 	dba SwabluFrames
 	dba AltariaFrames
 	dba LileepFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Cradily
-	dba PlaceholderFrames ; PLACEHOLDER - Feebas
-	dba PlaceholderFrames ; PLACEHOLDER - Milotic
-	dba PlaceholderFrames ; PLACEHOLDER - Duskull
-	dba PlaceholderFrames ; PLACEHOLDER - Dusclops
-	dba PlaceholderFrames ; PLACEHOLDER - Absol
-	dba PlaceholderFrames ; PLACEHOLDER - Snorunt
+	dba CradilyFrames
+	dba FeebasFrames
+	dba MiloticFrames
+	dba DuskullFrames
+	dba DusclopsFrames
+	dba AbsolFrames
+	dba SnoruntFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Spheal
 	dba PlaceholderFrames ; PLACEHOLDER - Sealeo
 	dba PlaceholderFrames ; PLACEHOLDER - Walrein

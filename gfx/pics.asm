@@ -503,7 +503,7 @@ SchoolboyPic:        INCBIN "gfx/trainers/schoolboy.2bpp.lz"
 MagnemiteFrontpic:   INCBIN "gfx/pokemon/magnemite/front.animated.2bpp.lz"
 MagnemiteBackpic:    INCBIN "gfx/pokemon/magnemite/back.2bpp.lz"
 BudewFrontpic:       INCBIN "gfx/pokemon/budew/front.animated.2bpp.lz"
-
+CombuskenFrontpic:   INCBIN "gfx/pokemon/combusken/front.animated.2bpp.lz"
 
 SECTION "Pics 16", ROMX
 
@@ -555,7 +555,7 @@ SwinubFrontpic:      INCBIN "gfx/pokemon/swinub/front.animated.2bpp.lz"
 LarvitarBackpic:     INCBIN "gfx/pokemon/larvitar/back.2bpp.lz"
 PorygonBackpic:      INCBIN "gfx/pokemon/porygon/back.2bpp.lz"
 UnownHBackpic:       INCBIN "gfx/pokemon/unown_h/back.2bpp.lz"
-
+SceptileFrontpic:    INCBIN "gfx/pokemon/sceptile/front.animated.2bpp.lz"
 
 SECTION "Pics 17", ROMX
 
@@ -742,7 +742,6 @@ SECTION "Pics 21", ROMX
 
 GrovyleFrontpic:    INCBIN "gfx/pokemon/grovyle/front.animated.2bpp.lz"
 GrovyleBackpic:     INCBIN "gfx/pokemon/grovyle/back.2bpp.lz"
-SceptileFrontpic:   INCBIN "gfx/pokemon/sceptile/front.animated.2bpp.lz"
 SceptileBackpic:    INCBIN "gfx/pokemon/sceptile/back.2bpp.lz"
 PlaceholderFrontpic:: INCBIN "gfx/pokemon/placeholder/front.animated.2bpp.lz"
 
@@ -750,7 +749,6 @@ SECTION "Pics 22", ROMX
 
 LombreFrontpic:     INCBIN "gfx/pokemon/lombre/front.animated.2bpp.lz"
 LombreBackpic:      INCBIN "gfx/pokemon/lombre/back.2bpp.lz"
-CombuskenFrontpic:  INCBIN "gfx/pokemon/combusken/front.animated.2bpp.lz"
 CombuskenBackpic:   INCBIN "gfx/pokemon/combusken/back.2bpp.lz"
 
 SECTION "Pics 23", ROMX

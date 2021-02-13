@@ -298,13 +298,13 @@ BitmasksPointers:
 	dw SwabluBitmasks
 	dw AltariaBitmasks
 	dw LileepBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Cradily
-	dw PlaceholderBitmasks ; PLACEHOLDER - Feebas
-	dw PlaceholderBitmasks ; PLACEHOLDER - Milotic
-	dw PlaceholderBitmasks ; PLACEHOLDER - Duskull
-	dw PlaceholderBitmasks ; PLACEHOLDER - Dusclops
-	dw PlaceholderBitmasks ; PLACEHOLDER - Absol
-	dw PlaceholderBitmasks ; PLACEHOLDER - Snorunt
+	dw CradilyBitmasks
+	dw FeebasBitmasks
+	dw MiloticBitmasks
+	dw DuskullBitmasks
+	dw DusclopsBitmasks
+	dw AbsolBitmasks
+	dw SnoruntBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Spheal
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sealeo
 	dw PlaceholderBitmasks ; PLACEHOLDER - Walrein

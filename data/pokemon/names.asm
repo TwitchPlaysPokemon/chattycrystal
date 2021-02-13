@@ -388,6 +388,7 @@ PokemonNames::
 	db "CRABOM<IN>AB<LE>"
 	db "CUTIEFLY@@"
 	db "RIBOMBEE@@"
+	; Fused Crystal mons
 	db "ONIXTRET@@"
 	db "CHIQUIRTLE"
 	db "BAYTORTLE@"
@@ -402,4 +403,5 @@ PokemonNames::
 	db "WOOCHUM@@@"
 	db "QUAGYNX@@@"
 	db "STEELURRET"
+	;TPP's signature fakemon
 	db "PHANCERO@@"

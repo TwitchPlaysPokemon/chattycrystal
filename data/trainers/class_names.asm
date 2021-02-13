@@ -20,7 +20,6 @@ TrainerClassNames::
 	db "SWIMMER♀@"
 	db "SAILOR@"
 	db "SUPER NERD@"
-	db "RIVAL@"
 	db "GUITARIST@"
 	db "HIKER@"
 	db "BIKER@"

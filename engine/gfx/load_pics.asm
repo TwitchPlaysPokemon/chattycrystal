@@ -1,5 +1,26 @@
 GetUnownLetter:
-; Return Unown letter in wUnownLetter based on DVs at hl
+; Return Unown letter in wUnownLetter and forme in wCurrentForme based on DVs at hl
+
+; forme = ((attack ^ speed) * 5 + (defense ^ special)) % 6
+	push hl
+	ld a, [hli]
+	xor [hl]
+	ld l, a
+	and $f
+	ld h, a
+	xor l
+	swap a
+	ld l, a
+	add a, a
+	add a, a
+	add a, l
+	add a, h
+	pop hl
+.loop
+	sub 6
+	jr nc, .loop
+	add a, 6
+	ld [wCurrentForme], a
 
 ; Take the middle 2 bits of each DV and place them in order:
 ;	atk  def  spd  spc
@@ -136,6 +157,12 @@ GetPicIndirectPointer:
 	endc
 	jr z, .unown
 .not_unown
+	call GetFormeData
+	assert !FORME_FRONTPIC
+	ld d, BANK(Formes)
+	ld h, b
+	ld l, c
+	ret c
 	ld hl, PokemonPicPointers
 	ld d, BANK(PokemonPicPointers)
 .done

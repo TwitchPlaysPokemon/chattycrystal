@@ -96,27 +96,43 @@ FarSkipEvolutions::
 	rst Bankswitch
 	ret
 
-GetFormeIndex::
-; Returns an index from 0 to 5 based on the DVs given at hl.
-; forme = ((attack ^ speed) * 5 + (defense ^ special)) % 6
+GetFormeData::
+	; in: bc = species index
+	; if the species has formes, returns the forme base pointer in bc and carry
+	; otherwise, carry is cleared and bc is unchanged
+	ldh a, [hROMBank]
 	push hl
-	ld a, [hli]
-	xor [hl]
-	ld l, a
-	and $f
-	ld h, a
-	xor l
-	swap a
-	ld l, a
+	push af
+	push bc
+	push de
+	ld a, BANK(Formes)
+	rst Bankswitch
+	ld de, 4
+	ld hl, Formes
+	call IsInHalfwordArray
+	pop de
+	pop bc
+	jr nc, .done
+	inc hl
+	inc hl
+	ld a, [wCurrentForme]
+	ld c, a
+	assert FORME_STRUCT_SIZE == $11
 	add a, a
 	add a, a
-	add a, l
-	add a, h
+	add a, a
+	add a, a
+	add a, c
+	add a, [hl]
+	inc hl
+	ld c, a
+	adc [hl]
+	sub c
+	ld b, a
+	scf
+.done
 	pop hl
-.loop
-	sub 12
-	jr nc, .loop
-	add a, 6
-	ret c
-	add a, 6
+	ld a, h
+	rst Bankswitch
+	pop hl
 	ret

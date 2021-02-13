@@ -1603,6 +1603,8 @@ wChattyHPType:: db ;The type chatty hidden power should be
 wChattyHPPower:: db ;The power chatty hidden power should be
 wChattyChatterMove:: dw ;the move to call with chatter
 
+wCurrentForme:: db
+
 wRequestedBoxSwitch:: db
 
 wTempLoopCounter:: db

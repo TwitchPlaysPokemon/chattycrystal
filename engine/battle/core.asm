@@ -2429,11 +2429,8 @@ WinTrainerBattle:
 .skip_heal
 	ld a, [wDebugFlags]
 	bit DEBUG_BATTLE_F, a
-	jr nz, .skip_win_loss_text
-	call PrintWinLossText
-
-.skip_win_loss_text
-	jp .GiveMoney
+	call z, PrintWinLossText
+	jr .GiveMoney
 
 .mobile
 	call BattleWinSlideInEnemyTrainerFrontpic
@@ -2978,9 +2975,7 @@ LostBattle:
 
 	ld a, [wDebugFlags]
 	bit DEBUG_BATTLE_F, a
-	jr nz, .skip_win_loss_text
-	call PrintWinLossText
-.skip_win_loss_text
+	jp z, PrintWinLossText
 	ret
 
 .battle_tower

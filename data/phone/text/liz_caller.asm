@@ -97,10 +97,10 @@ UnknownText_0x1762c3:
 	text "Listen, listen!"
 
 	para "Don't you think"
-	line "FALKNER of VIOLET"
+	line "!12rtyhasz of"
 
-	para "GYM is cool and"
-	line "handsome?"
+	para "VIOLET GYM is cool"
+	line "and handsome?"
 
 	para "But they say his"
 	line "dad, who's out"
@@ -109,7 +109,7 @@ UnknownText_0x1762c3:
 	line "road, is even more"
 
 	para "cool and handsome"
-	line "than FALKNER."
+	line "than !12rtyhasz."
 
 	para "I wish I could"
 	line "meet him!"
@@ -202,10 +202,10 @@ UnknownText_0x1766ac:
 	text "Listen, listen!"
 
 	para "GOLDENROD GYM's"
-	line "WHITNEY began"
+	line "A began battling"
 
-	para "battling only a"
-	line "little while ago!"
+	para "only a little"
+	line "while ago!"
 
 	para "But the #MON"
 	line "LEAGUE chose her"

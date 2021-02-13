@@ -433,7 +433,7 @@ GoldenrodDeptStoreSignText:
 GoldenrodGymSignText:
 	text "GOLDENROD CITY"
 	line "#MON GYM"
-	cont "LEADER: d76o6yttr?"
+	cont "LEADER: A"
 
 	done
 

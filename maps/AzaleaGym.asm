@@ -258,7 +258,7 @@ TwinsAmyandmay2AfterBattleText:
 AzaleaGymGuyText:
 	text "Yo, challenger!"
 
-	para ":::?89977r's young"
+	para "AHUNIgg's young"
 	line "but her knowledge"
 
 	para "of #MON is for"

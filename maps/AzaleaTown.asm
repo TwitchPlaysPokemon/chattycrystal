@@ -346,11 +346,7 @@ KurtsHouseSignText:
 AzaleaGymSignText:
 	text "AZALEA TOWN"
 	line "#MON GYM"
-	cont "LEADER: :::?89977r"
-
-	para "The Walking"
-	line "Bug #MON"
-	cont "Encyclopedia"
+	cont "LEADER: AHUNIgg"
 	done
 
 SlowpokeWellSignText:

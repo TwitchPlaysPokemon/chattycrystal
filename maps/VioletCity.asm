@@ -226,17 +226,11 @@ VioletCitySuperNerdText:
 	done
 
 VioletCityGrampsText:
-	text "FALKNER, from the"
-	line "VIOLET #MON"
+	text "!12rtyhasz, from"
+	line "the VIOLET #MON"
 
 	para "GYM, is a fine"
 	line "trainer!"
-
-	para "He inherited his"
-	line "father's gym and"
-
-	para "has done a great"
-	line "job with it."
 	done
 
 VioletCityYoungsterText:
@@ -258,10 +252,7 @@ VioletCitySignText:
 VioletGymSignText:
 	text "VIOLET CITY"
 	line "#MON GYM"
-	cont "LEADER: FALKNER"
-
-	para "The Elegant Master"
-	line "of Flying #MON"
+	cont "LEADER: !12rtyhasz"
 	done
 
 SproutTowerSignText:

@@ -23,7 +23,7 @@ UnknownText_0x64099:
 	text "<PLAY_G>, I heard!"
 
 	para "You defeated that"
-	line "WHITNEY?"
+	line "A?"
 
 	para "It makes me proud"
 	line "to be your friend!"

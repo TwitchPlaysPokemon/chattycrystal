@@ -230,7 +230,7 @@ LassBridgetBeatenText:
 
 LassBridgetAfterBattleText:
 	text "I'm trying to beat"
-	line "d76o6yttr?, but…"
+	line "A, but…"
 	cont "It's depressing."
 
 	para "I'm okay! If I"
@@ -242,7 +242,7 @@ LassBridgetAfterBattleText:
 
 BridgetWhitneyCriesText:
 	text "Oh, no. You made"
-	line "d76o6yttr? cry."
+	line "A cry."
 
 	para "It's OK. She'll"
 	line "stop soon. She"

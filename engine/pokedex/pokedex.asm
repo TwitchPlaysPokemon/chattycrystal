@@ -2692,6 +2692,13 @@ Pokedex_LoadSelectedMonTiles:
 	jr z, .QuestionMark
 	ld a, [wFirstUnownSeen]
 	ld [wUnownLetter], a
+.reject
+	call Random
+	cp ($100 / 6) * 6
+	jr nc, .reject
+	ld c, 6
+	call SimpleDivide
+	ld [wCurrentForme], a
 	ld a, [wTempSpecies]
 	ld [wCurPartySpecies], a
 	call GetBaseData

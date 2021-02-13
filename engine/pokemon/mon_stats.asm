@@ -446,4 +446,5 @@ ListMoves:
 	ld b, 0
 	add hl, bc
 	pop af
+	inc a
 	jr .nonmove_loop

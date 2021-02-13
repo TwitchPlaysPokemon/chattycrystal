@@ -954,10 +954,6 @@ StatsScreen_LoadTextboxSpaceGFX:
 	pop hl
 	ret
 
-Unreferenced_4e32a:
-; A blank space tile?
-	ds 16
-
 EggStatsScreen:
 	xor a
 	ldh [hBGMapMode], a

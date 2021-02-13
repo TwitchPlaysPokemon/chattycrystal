@@ -100,8 +100,3 @@ DisplayAlreadyCaughtText:
 	; You already caught a @ .
 	text_far UnknownText_0x1c10dd
 	text_end
-
-DummyPredef2F:
-DummyPredef38:
-DummyPredef39:
-	ret

@@ -1,50 +1,24 @@
 ; Pic animation arrangement.
 
-Unused_AnimateMon_Slow_Normal:
-	hlcoord 12, 0
-	ld a, [wBattleMode]
-	cp WILD_BATTLE
-	jr z, .wild
-	ld e, ANIM_MON_SLOW
-	ld d, $0
-	call AnimateFrontpic
-	ret
-
-.wild
-	ld e, ANIM_MON_NORMAL
-	ld d, $0
-	call AnimateFrontpic
-	ret
-
 AnimateMon_Menu:
-	ld e, ANIM_MON_MENU
-	ld d, $0
-	call AnimateFrontpic
-	ret
+	ld de, ANIM_MON_MENU
+	jp AnimateFrontpic
 
 AnimateMon_Trade:
-	ld e, ANIM_MON_TRADE
-	ld d, $0
-	call AnimateFrontpic
-	ret
+	ld de, ANIM_MON_TRADE
+	jp AnimateFrontpic
 
 AnimateMon_Evolve:
-	ld e, ANIM_MON_EVOLVE
-	ld d, $0
-	call AnimateFrontpic
-	ret
+	ld de, ANIM_MON_EVOLVE
+	jp AnimateFrontpic
 
 AnimateMon_Hatch:
-	ld e, ANIM_MON_HATCH
-	ld d, $0
-	call AnimateFrontpic
-	ret
+	ld de, ANIM_MON_HATCH
+	jp AnimateFrontpic
 
 AnimateMon_HOF:
-	ld e, ANIM_MON_HOF
-	ld d, $0
-	call AnimateFrontpic
-	ret
+	ld de, ANIM_MON_HOF
+	jp AnimateFrontpic
 
 pokeanim: MACRO
 rept _NARG
@@ -692,7 +666,7 @@ PokeAnim_ConvertAndApplyBitmask:
 	ld e, a
 	ld d, 0
 	add hl, de
-	jr .skip2
+	ret
 
 .go
 	ld a, [wPokeAnimBitmaskCurCol]
@@ -703,12 +677,7 @@ PokeAnim_ConvertAndApplyBitmask:
 	ld a, h
 	sbc 0
 	ld h, a
-
-.skip2
 	ret
-
-; unused
-	db 6, 5, 4
 
 .GetTilemap:
 	push af
@@ -1113,10 +1082,6 @@ PokeAnim_GetSpeciesOrUnown:
 .unown
 	ld a, [wPokeAnimUnownLetter]
 	ret
-
-Unused_HOF_AnimateAlignedFrontpic:
-	ld a, $1
-	ld [wBoxAlignment], a
 
 HOF_AnimateFrontpic:
 	call AnimateMon_CheckIfPokemon

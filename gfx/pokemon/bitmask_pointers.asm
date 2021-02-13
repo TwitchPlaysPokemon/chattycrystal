@@ -253,12 +253,12 @@ BitmasksPointers:
 	dw TreeckoBitmasks
 	dw GrovyleBitmasks
 	dw SceptileBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Torchic
 	dw CombuskenBitmasks
 	dw BlazikenBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Mudkip
+	dw PlaceholderBitmasks ; PLACEHOLDER - Marshtomp
+	dw PlaceholderBitmasks ; PLACEHOLDER - Swampert
 	dw PoochyenaBitmasks
 	dw MightyenaBitmasks
 	dw ZigzagoonBitmasks
@@ -269,133 +269,135 @@ BitmasksPointers:
 	dw TaillowBitmasks
 	dw SwellowBitmasks
 	dw WingullBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Pelipper
 	dw RaltsBitmasks
 	dw KirliaBitmasks
 	dw GardevoirBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Surskit
+	dw PlaceholderBitmasks ; PLACEHOLDER - Masquerain
 	dw WhismurBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Loudred
+	dw PlaceholderBitmasks ; PLACEHOLDER - Exploud
+	dw PlaceholderBitmasks ; PLACEHOLDER - Makuhita
+	dw PlaceholderBitmasks ; PLACEHOLDER - Hariyama
+	dw PlaceholderBitmasks ; PLACEHOLDER - Azurill
+	dw PlaceholderBitmasks ; PLACEHOLDER - Skitty
+	dw PlaceholderBitmasks ; PLACEHOLDER - Delcatty
+	dw PlaceholderBitmasks ; PLACEHOLDER - Sableye
+	dw PlaceholderBitmasks ; PLACEHOLDER - Aron
+	dw PlaceholderBitmasks ; PLACEHOLDER - Lairon
+	dw PlaceholderBitmasks ; PLACEHOLDER - Aggron
+	dw PlaceholderBitmasks ; PLACEHOLDER - Electrike
+	dw PlaceholderBitmasks ; PLACEHOLDER - Manectric
+	dw PlaceholderBitmasks ; PLACEHOLDER - Roselia
+	dw PlaceholderBitmasks ; PLACEHOLDER - Wailmer
+	dw PlaceholderBitmasks ; PLACEHOLDER - Wailord
+	dw PlaceholderBitmasks ; PLACEHOLDER - Trapinch
+	dw PlaceholderBitmasks ; PLACEHOLDER - Vibrava
+	dw PlaceholderBitmasks ; PLACEHOLDER - Flygon
+	dw PlaceholderBitmasks ; PLACEHOLDER - Swablu
+	dw PlaceholderBitmasks ; PLACEHOLDER - Altaira
+	dw PlaceholderBitmasks ; PLACEHOLDER - Lileep
+	dw PlaceholderBitmasks ; PLACEHOLDER - Cradily
+	dw PlaceholderBitmasks ; PLACEHOLDER - Feebas
+	dw PlaceholderBitmasks ; PLACEHOLDER - Milotic
+	dw PlaceholderBitmasks ; PLACEHOLDER - Duskull
+	dw PlaceholderBitmasks ; PLACEHOLDER - Dusclops
+	dw PlaceholderBitmasks ; PLACEHOLDER - Absol
+	dw PlaceholderBitmasks ; PLACEHOLDER - Snorunt
+	dw PlaceholderBitmasks ; PLACEHOLDER - Spheal
+	dw PlaceholderBitmasks ; PLACEHOLDER - Sealeo
+	dw PlaceholderBitmasks ; PLACEHOLDER - Walrein
+	dw PlaceholderBitmasks ; PLACEHOLDER - Bagon
+	dw PlaceholderBitmasks ; PLACEHOLDER - Shelgon
+	dw PlaceholderBitmasks ; PLACEHOLDER - Salamence
+	dw PlaceholderBitmasks ; PLACEHOLDER - Beldum
+	dw PlaceholderBitmasks ; PLACEHOLDER - Metang
+	dw PlaceholderBitmasks ; PLACEHOLDER - Metagross
+	dw PlaceholderBitmasks ; PLACEHOLDER - Latias
+	dw PlaceholderBitmasks ; PLACEHOLDER - Latios
+	dw PlaceholderBitmasks ; PLACEHOLDER - Groudon
+	dw PlaceholderBitmasks ; PLACEHOLDER - Turtwig
+	dw PlaceholderBitmasks ; PLACEHOLDER - Grotle
+	dw PlaceholderBitmasks ; PLACEHOLDER - Torterra
+	dw PlaceholderBitmasks ; PLACEHOLDER - Chimchar
+	dw PlaceholderBitmasks ; PLACEHOLDER - Monferno
+	dw PlaceholderBitmasks ; PLACEHOLDER - Infernape
+	dw PlaceholderBitmasks ; PLACEHOLDER - Piplup
+	dw PlaceholderBitmasks ; PLACEHOLDER - Prinplup
+	dw PlaceholderBitmasks ; PLACEHOLDER - Empoleon
+	dw PlaceholderBitmasks ; PLACEHOLDER - Bidoof
+	dw PlaceholderBitmasks ; PLACEHOLDER - Bibarel
+	dw PlaceholderBitmasks ; PLACEHOLDER - Shinx
+	dw PlaceholderBitmasks ; PLACEHOLDER - Luxio
+	dw PlaceholderBitmasks ; PLACEHOLDER - Luxray
+	dw PlaceholderBitmasks ; PLACEHOLDER - Budew
+	dw PlaceholderBitmasks ; PLACEHOLDER - Roserade
+	dw PlaceholderBitmasks ; PLACEHOLDER - Burmy
+	dw PlaceholderBitmasks ; PLACEHOLDER - Wormadam
+	dw PlaceholderBitmasks ; PLACEHOLDER - Buizel
+	dw PlaceholderBitmasks ; PLACEHOLDER - Floatzel
+	dw PlaceholderBitmasks ; PLACEHOLDER - Shellos
+	dw PlaceholderBitmasks ; PLACEHOLDER - Gastrodon
+	dw PlaceholderBitmasks ; PLACEHOLDER - Buneary
+	dw PlaceholderBitmasks ; PLACEHOLDER - Lopunny
+	dw PlaceholderBitmasks ; PLACEHOLDER - Stunky
+	dw PlaceholderBitmasks ; PLACEHOLDER - Skuntank
+	dw PlaceholderBitmasks ; PLACEHOLDER - Bronzor
+	dw PlaceholderBitmasks ; PLACEHOLDER - Bronzong
+	dw PlaceholderBitmasks ; PLACEHOLDER - Bonsly
 	dw ChatotBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Croagunk
+	dw PlaceholderBitmasks ; PLACEHOLDER - Toxicroak
+	dw PlaceholderBitmasks ; PLACEHOLDER - Leafeon
 	dw GlaceonBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Porygon Z
+	dw PlaceholderBitmasks ; PLACEHOLDER - Dusknoir
+	dw PlaceholderBitmasks ; PLACEHOLDER - Froslass
+	dw PlaceholderBitmasks ; PLACEHOLDER - Darkrai
+	dw PlaceholderBitmasks ; PLACEHOLDER - Pansage
+	dw PlaceholderBitmasks ; PLACEHOLDER - Simisage
+	dw PlaceholderBitmasks ; PLACEHOLDER - Drillbur
+	dw PlaceholderBitmasks ; PLACEHOLDER - Excadrill
+	dw PlaceholderBitmasks ; PLACEHOLDER - Sandile
+	dw PlaceholderBitmasks ; PLACEHOLDER - Krokorok
+	dw PlaceholderBitmasks ; PLACEHOLDER - Krookodile
+	dw PlaceholderBitmasks ; PLACEHOLDER - Ducklett
+	dw PlaceholderBitmasks ; PLACEHOLDER - Swanna
+	dw PlaceholderBitmasks ; PLACEHOLDER - Tynamo
+	dw PlaceholderBitmasks ; PLACEHOLDER - Eelektrik
+	dw PlaceholderBitmasks ; PLACEHOLDER - Eelektross
+	dw PlaceholderBitmasks ; PLACEHOLDER - Litwick
+	dw PlaceholderBitmasks ; PLACEHOLDER - Lampent
+	dw PlaceholderBitmasks ; PLACEHOLDER - Chandelure
+	dw PlaceholderBitmasks ; PLACEHOLDER - Clauncher
+	dw PlaceholderBitmasks ; PLACEHOLDER - Clawitzer
+	dw PlaceholderBitmasks ; PLACEHOLDER - Helioptile
+	dw PlaceholderBitmasks ; PLACEHOLDER - Heliolisk
+	dw PlaceholderBitmasks ; PLACEHOLDER - Amaura
+	dw PlaceholderBitmasks ; PLACEHOLDER - Aurorus
+	dw PlaceholderBitmasks ; PLACEHOLDER - Sylveon
+	dw PlaceholderBitmasks ; PLACEHOLDER - Goomy
+	dw PlaceholderBitmasks ; PLACEHOLDER - Sliggoo
+	dw PlaceholderBitmasks ; PLACEHOLDER - Goodra
+	dw PlaceholderBitmasks ; PLACEHOLDER - Crabrawler
+	dw PlaceholderBitmasks ; PLACEHOLDER - Crabominable
+	dw PlaceholderBitmasks ; PLACEHOLDER - Cutiefly
+	dw PlaceholderBitmasks ; PLACEHOLDER - Ribombee
+	; Fused Crystal mons
+	dw PlaceholderBitmasks ; PLACEHOLDER - Onixtret
+	dw PlaceholderBitmasks ; PLACEHOLDER - Chiquirtle
+	dw PlaceholderBitmasks ; PLACEHOLDER - Baytortle
 	dw MegastoiseBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Hootduo
 	dw NoctdrioBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Togekey
 	dw TogetapeBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Hopporita
+	dw PlaceholderBitmasks ; PLACEHOLDER - Skipleef
 	dw JumpaniumBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw PlaceholderBitmasks ; PLACEHOLDER - Woochum
 	dw QuagynxBitmasks
 	dw SteelurretBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	; TPP's signature fakemon
+	dw PlaceholderBitmasks ; PLACEHOLDER - Phancero

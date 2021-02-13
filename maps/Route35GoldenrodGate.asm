@@ -28,8 +28,8 @@ RandyScript:
 	writetext Route35GoldenrodGatePlayerReceivedAMonWithMailText
 	playsound SFX_KEY_ITEM
 	waitsfx
-	givepoke CHATOT, 20, NO_ITEM, TRUE, GiftSpearowName, GiftSpearowOTName
-	givepokemail GiftSpearowMail
+	givepoke CHATOT, 20, NO_ITEM, TRUE, GiftChatotName, GiftChatotOTName
+	givepokemail GiftChatotMail
 	setevent EVENT_GOT_KENYA
 .alreadyhavekenya
 	writetext Route35GoldenrodGateRandyWeirdTreeBlockingRoadText
@@ -62,15 +62,15 @@ RandyScript:
 	closetext
 	end
 
-GiftSpearowMail:
+GiftChatotMail:
 	db FLOWER_MAIL
 	db   "DARK CAVE leads"
 	next "to another road@"
 
-GiftSpearowName:
+GiftChatotName:
 	db "KENYA@"
 
-GiftSpearowOTName:
+GiftChatotOTName:
 	db "RANDY@"
 
 	db 0 ; filler

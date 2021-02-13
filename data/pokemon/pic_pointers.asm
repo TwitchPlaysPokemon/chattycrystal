@@ -524,8 +524,8 @@ PokemonPicPointers::
 	dba CombuskenBackpic
 	dba BlazikenFrontpic
 	dba BlazikenBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Mudkip
-	dba PlaceholderBackpic ; PLACEHOLDER - Mudkip
+	dba MudkipFrontpic
+	dba MudkipBackpic
 	dba PlaceholderFrontpic ; PLACEHOLDER - Marshtomp
 	dba PlaceholderBackpic ; PLACEHOLDER - Marshtomp
 	dba PlaceholderFrontpic ; PLACEHOLDER - Swampert

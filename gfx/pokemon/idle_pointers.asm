@@ -256,7 +256,7 @@ AnimationIdlePointers:
 	dw TorchicAnimationIdle
 	dw CombuskenAnimationIdle
 	dw BlazikenAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Mudkip
+	dw MudkipAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Marshtomp
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Swampert
 	dw PoochyenaAnimationIdle
@@ -308,11 +308,11 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Spheal
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sealeo
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Walrein
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bagon
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Shelgon
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Salamence
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Beldum
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Metang
+	dw BagonAnimationIdle
+	dw ShelgonAnimationIdle
+	dw SalamenceAnimationIdle
+	dw BeldumAnimationIdle
+	dw MetangAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Metagross
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Latias
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Latios

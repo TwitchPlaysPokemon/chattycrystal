@@ -5,7 +5,7 @@ INCLUDE "data/pokemon/base_stats/sceptile.asm"
 INCLUDE "data/pokemon/base_stats/torchic.asm"
 INCLUDE "data/pokemon/base_stats/combusken.asm"
 INCLUDE "data/pokemon/base_stats/blaziken.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Mudkip
+INCLUDE "data/pokemon/base_stats/mudkip.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Marshtomp
 INCLUDE "data/pokemon/base_stats/swampert.asm"
 INCLUDE "data/pokemon/base_stats/poochyena.asm"
@@ -57,11 +57,11 @@ INCLUDE "data/pokemon/base_stats/snorunt.asm"
 INCLUDE "data/pokemon/base_stats/spheal.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Sealeo
 INCLUDE "data/pokemon/base_stats/walrein.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Bagon
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Shelgon
+INCLUDE "data/pokemon/base_stats/bagon.asm"
+INCLUDE "data/pokemon/base_stats/shelgon.asm"
 INCLUDE "data/pokemon/base_stats/salamence.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Beldum
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Metang
+INCLUDE "data/pokemon/base_stats/beldum.asm"
+INCLUDE "data/pokemon/base_stats/metang.asm"
 INCLUDE "data/pokemon/base_stats/metagross.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Latias
 INCLUDE "data/pokemon/base_stats/latios.asm"

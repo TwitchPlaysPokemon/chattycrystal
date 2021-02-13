@@ -256,7 +256,7 @@ FramesPointers:
 	dba TorchicFrames
 	dba CombuskenFrames
 	dba BlazikenFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Mudkip
+	dba MudkipFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Marshtomp
 	dba PlaceholderFrames ; PLACEHOLDER - Swampert
 	dba PoochyenaFrames
@@ -308,11 +308,11 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Spheal
 	dba PlaceholderFrames ; PLACEHOLDER - Sealeo
 	dba PlaceholderFrames ; PLACEHOLDER - Walrein
-	dba PlaceholderFrames ; PLACEHOLDER - Bagon
-	dba PlaceholderFrames ; PLACEHOLDER - Shelgon
-	dba PlaceholderFrames ; PLACEHOLDER - Salamence
-	dba PlaceholderFrames ; PLACEHOLDER - Beldum
-	dba PlaceholderFrames ; PLACEHOLDER - Metang
+	dba BagonFrames
+	dba ShelgonFrames
+	dba SalamenceFrames
+	dba BeldumFrames
+	dba MetangFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Metagross
 	dba PlaceholderFrames ; PLACEHOLDER - Latias
 	dba PlaceholderFrames ; PLACEHOLDER - Latios

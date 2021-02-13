@@ -256,7 +256,7 @@ BitmasksPointers:
 	dw TorchicBitmasks
 	dw CombuskenBitmasks
 	dw BlazikenBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Mudkip
+	dw MudkipBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Marshtomp
 	dw PlaceholderBitmasks ; PLACEHOLDER - Swampert
 	dw PoochyenaBitmasks
@@ -308,11 +308,11 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Spheal
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sealeo
 	dw PlaceholderBitmasks ; PLACEHOLDER - Walrein
-	dw PlaceholderBitmasks ; PLACEHOLDER - Bagon
-	dw PlaceholderBitmasks ; PLACEHOLDER - Shelgon
-	dw PlaceholderBitmasks ; PLACEHOLDER - Salamence
-	dw PlaceholderBitmasks ; PLACEHOLDER - Beldum
-	dw PlaceholderBitmasks ; PLACEHOLDER - Metang
+	dw BagonBitmasks
+	dw ShelgonBitmasks
+	dw SalamenceBitmasks
+	dw BeldumBitmasks
+	dw MetangBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Metagross
 	dw PlaceholderBitmasks ; PLACEHOLDER - Latias
 	dw PlaceholderBitmasks ; PLACEHOLDER - Latios

@@ -23,40 +23,29 @@ OlivineCity_MapScripts:
 	return
 
 OlivineCityRivalSceneTop:
-	turnobject PLAYER, LEFT
-	showemote EMOTE_SHOCK, PLAYER, 15
-	special FadeOutMusic
-	pause 15
-	playsound SFX_ENTER_DOOR
-	appear OLIVINECITY_OLIVINE_RIVAL
-	waitsfx
+	scall OlivineCityRivalEnter
 	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88d2
-	playmusic MUSIC_RIVAL_ENCOUNTER
-	opentext
-	writetext OlivineCityRivalText
-	waitbutton
-	closetext
-	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW3
-	startbattle
-	reloadmapafterbattle
+	scall OlivineCityRivalBattle
 	applymovement PLAYER, MovementData_0x1a88f4
 	turnobject PLAYER, RIGHT
 	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88db
-	setscene SCENE_FINISHED
+	sjump OlivineCityRivalExit
+
+OlivineCityRivalSceneBottom:
+	scall OlivineCityRivalEnter
+	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88d6
+	scall OlivineCityRivalBattle
+	applymovement PLAYER, MovementData_0x1a88f7
+	turnobject PLAYER, RIGHT
+	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88e8
+OlivineCityRivalExit:
 	disappear OLIVINECITY_OLIVINE_RIVAL
+	setscene SCENE_FINISHED
 	special RestartMapMusic
 	special LoadUsedSpritesGFX
 	end
 
-OlivineCityRivalSceneBottom:
-	turnobject PLAYER, LEFT
-	showemote EMOTE_SHOCK, PLAYER, 15
-	special FadeOutMusic
-	pause 15
-	playsound SFX_ENTER_DOOR
-	appear OLIVINECITY_OLIVINE_RIVAL
-	waitsfx
-	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88d6
+OlivineCityRivalBattle:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext OlivineCityRivalText
@@ -65,13 +54,16 @@ OlivineCityRivalSceneBottom:
 	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW3
 	startbattle
 	reloadmapafterbattle
-	applymovement PLAYER, MovementData_0x1a88f7
-	turnobject PLAYER, RIGHT
-	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88e8
-	disappear OLIVINECITY_OLIVINE_RIVAL
-	setscene SCENE_FINISHED
-	special RestartMapMusic
-	special LoadUsedSpritesGFX
+	end
+
+OlivineCityRivalEnter:
+	turnobject PLAYER, LEFT
+	showemote EMOTE_SHOCK, PLAYER, 15
+	special FadeOutMusic
+	pause 15
+	playsound SFX_ENTER_DOOR
+	appear OLIVINECITY_OLIVINE_RIVAL
+	waitsfx
 	end
 
 OlivineCitySailor1Script:

@@ -502,6 +502,7 @@ YoungsterPic:        INCBIN "gfx/trainers/youngster.2bpp.lz"
 SchoolboyPic:        INCBIN "gfx/trainers/schoolboy.2bpp.lz"
 MagnemiteFrontpic:   INCBIN "gfx/pokemon/magnemite/front.animated.2bpp.lz"
 MagnemiteBackpic:    INCBIN "gfx/pokemon/magnemite/back.2bpp.lz"
+BudewFrontpic:       INCBIN "gfx/pokemon/budew/front.2bpp.lz"
 
 
 SECTION "Pics 16", ROMX

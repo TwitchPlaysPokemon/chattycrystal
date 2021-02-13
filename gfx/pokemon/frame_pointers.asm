@@ -331,7 +331,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Shinx
 	dba PlaceholderFrames ; PLACEHOLDER - Luxio
 	dba PlaceholderFrames ; PLACEHOLDER - Luxray
-	dba PlaceholderFrames ; PLACEHOLDER - Budew
+	dba BudewFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Roserade
 	dba PlaceholderFrames ; PLACEHOLDER - Burmy
 	dba PlaceholderFrames ; PLACEHOLDER - Wormadam

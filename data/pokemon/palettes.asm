@@ -694,7 +694,7 @@ INCBIN "gfx/pokemon/luxio/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/luxio/shiny.pal"
 INCBIN "gfx/pokemon/luxray/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/luxray/shiny.pal"
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Budew
+INCBIN "gfx/pokemon/budew/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Budew
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Roserade
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Roserade

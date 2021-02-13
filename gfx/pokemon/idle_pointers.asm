@@ -331,7 +331,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Shinx
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Luxio
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Luxray
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Budew
+	dw BudewAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Roserade
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Burmy
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Wormadam

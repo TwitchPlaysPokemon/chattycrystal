@@ -674,7 +674,7 @@ PokemonPicPointers::
 	dba LuxioBackpic
 	dba LuxrayFrontpic
 	dba LuxrayBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Budew
+	dba BudewFrontpic
 	dba PlaceholderBackpic ; PLACEHOLDER - Budew
 	dba PlaceholderFrontpic ; PLACEHOLDER - Roserade
 	dba PlaceholderBackpic ; PLACEHOLDER - Roserade

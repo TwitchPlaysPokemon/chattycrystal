@@ -334,7 +334,7 @@ PokedexDataPointerTable:
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Budew
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Roserade
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Burmy
-	dba PlaceholderPokedexEntry ; PLACEHOLDER - Wormadam
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Mothim
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Buizel
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Floatzel
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Shellos

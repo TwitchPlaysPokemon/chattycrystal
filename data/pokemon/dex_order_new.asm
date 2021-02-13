@@ -342,7 +342,7 @@ NewPokedexOrder:
 	dw LUXIO
 	dw LUXRAY
 	dw BURMY
-	dw WORMADAM
+	dw MOTHIM
 	dw BUIZEL
 	dw FLOATZEL
 	dw SHELLOS

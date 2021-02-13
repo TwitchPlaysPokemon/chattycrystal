@@ -333,7 +333,7 @@ INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Luxray
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Budew
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Roserade
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Burmy
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Wormadam
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Mothim
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Buizel
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Floatzel
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Shellos

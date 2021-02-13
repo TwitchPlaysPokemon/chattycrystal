@@ -334,7 +334,7 @@ BitmasksPointers:
 	dw BudewBitmasks 
 	dw PlaceholderBitmasks ; PLACEHOLDER - Roserade
 	dw PlaceholderBitmasks ; PLACEHOLDER - Burmy
-	dw PlaceholderBitmasks ; PLACEHOLDER - Wormadam
+	dw PlaceholderBitmasks ; PLACEHOLDER - Mothim
 	dw PlaceholderBitmasks ; PLACEHOLDER - Buizel
 	dw PlaceholderBitmasks ; PLACEHOLDER - Floatzel
 	dw PlaceholderBitmasks ; PLACEHOLDER - Shellos

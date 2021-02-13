@@ -334,7 +334,7 @@ AnimationPointers:
 	dw BudewAnimation 
 	dw PlaceholderAnimation ; PLACEHOLDER - Roserade
 	dw PlaceholderAnimation ; PLACEHOLDER - Burmy
-	dw PlaceholderAnimation ; PLACEHOLDER - Wormadam
+	dw PlaceholderAnimation ; PLACEHOLDER - Mothim
 	dw PlaceholderAnimation ; PLACEHOLDER - Buizel
 	dw PlaceholderAnimation ; PLACEHOLDER - Floatzel
 	dw PlaceholderAnimation ; PLACEHOLDER - Shellos

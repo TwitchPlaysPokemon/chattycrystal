@@ -226,6 +226,7 @@ AlphabeticalPokedexOrder:
 	dw MISDREAVUS
 	dw MOLTRES
 	dw MONFERNO
+	dw MOTHIM
 	dw MR__MIME
 	dw MUDKIP
 	dw MUK
@@ -393,7 +394,6 @@ AlphabeticalPokedexOrder:
 	dw WOBBUFFET
 	dw WOOCHUM
 	dw WOOPER
-	dw WORMADAM
 	dw XATU
 	dw YANMA
 	dw ZAPDOS

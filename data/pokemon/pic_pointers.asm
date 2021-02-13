@@ -680,8 +680,8 @@ PokemonPicPointers::
 	dba PlaceholderBackpic ; PLACEHOLDER - Roserade
 	dba PlaceholderFrontpic ; PLACEHOLDER - Burmy
 	dba PlaceholderBackpic ; PLACEHOLDER - Burmy
-	dba PlaceholderFrontpic ; PLACEHOLDER - Wormadam
-	dba PlaceholderBackpic ; PLACEHOLDER - Wormadam
+	dba PlaceholderFrontpic ; PLACEHOLDER - Mothim
+	dba PlaceholderBackpic ; PLACEHOLDER - Mothim
 	dba PlaceholderFrontpic ; PLACEHOLDER - Buizel
 	dba PlaceholderBackpic ; PLACEHOLDER - Buizel
 	dba PlaceholderFrontpic ; PLACEHOLDER - Floatzel

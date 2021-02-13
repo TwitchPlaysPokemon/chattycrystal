@@ -703,7 +703,7 @@ INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Burmy
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Wormadam
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Wormadam
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Buizel
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Biuzel
+INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Buizel
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Floatzel
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Floatzel
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Shellos
@@ -722,8 +722,6 @@ INCBIN "gfx/pokemon/bronzong/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/bronzong/shiny.pal"
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Bonsly
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Bonsly
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - ???
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - ???
 INCBIN "gfx/pokemon/chatot/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/chatot/shiny.pal"
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Croagunk
@@ -789,17 +787,18 @@ INCLUDE "gfx/pokemon/sylveon/shiny.pal"
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Goomy
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Goomy
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Sligoo
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Sligoo
+INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Sliggoo
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Goodra
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Goodra
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Crabrawler
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Crabrawler
+INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Crabominable
+INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Crabominable
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Cutiefly
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Cutiefly
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Ribombee
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Ribombee
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER
+; Fused Crystal mons
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Onixtret
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Onixtret
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Chiquirtle
@@ -828,5 +827,6 @@ INCBIN "gfx/pokemon/quagynx/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/quagynx/shiny.pal"
 INCBIN "gfx/pokemon/steelurret/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/steelurret/shiny.pal"
+; TPP's signature fakemon
 INCBIN "gfx/pokemon/phancero/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/phancero/shiny.pal"

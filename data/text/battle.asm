@@ -349,20 +349,6 @@ BattleText_StringBuffer1GrewToLevel:
 	sound_dex_fanfare_50_79
 	text_end
 
-BattleText_WildMonIsEating:
-	text "Wild @"
-	text_ram wEnemyMonNick
-	text_start
-	line "is eating!"
-	prompt
-
-BattleText_WildMonIsAngry:
-	text "Wild @"
-	text_ram wEnemyMonNick
-	text_start
-	line "is angry!"
-	prompt
-
 FastAsleepText:
 	text "<USER>"
 	line "is fast asleep!"

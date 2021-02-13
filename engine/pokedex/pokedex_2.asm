@@ -220,12 +220,7 @@ DisplayDexEntry:
 	inc de
 	pop af
 	hlcoord 2, 11
-	call FarString
-	ret
-
-UnreferencedPOKeString:
-; unused
-	db "#@"
+	jp FarString
 
 GetDexEntryPointer:
 ; return dex entry pointer b:de

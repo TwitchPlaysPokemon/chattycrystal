@@ -41,43 +41,39 @@ PredefPointers::
 	add_predef CopyMonToTempMon
 	add_predef ListMoves ; $20
 	add_predef PlaceNonFaintStatus
-	add_predef Unused_PlaceEnemyHPLevel
 	add_predef ListMovePP
 	add_predef GetGender
 	add_predef StatsScreenInit
 	add_predef DrawPlayerHP
 	add_predef DrawEnemyHP
-	add_predef PrintTempMonStats ; $28
-	add_predef GetTypeName
+	add_predef PrintTempMonStats
+	add_predef GetTypeName ; $28
 	add_predef PrintMoveType
 	add_predef PrintType
 	add_predef PrintMonTypes
 	add_predef GetCurrentForme
 	add_predef LoadPoisonBGPals
 	add_predef DummyPredef2F
-	add_predef InitSGBBorder ; $30
-	add_predef LoadSGBLayout
+	add_predef InitSGBBorder
+	add_predef LoadSGBLayout ; $30
 	add_predef Pokedex_GetArea
-	add_predef Unused_CheckShininess
 	add_predef DoBattleTransition
 	add_predef DummyPredef35
 	add_predef DummyPredef36
 	add_predef PlayBattleAnim
-	add_predef DummyPredef38 ; $38
+	add_predef DummyPredef38
 	add_predef DummyPredef39
-	add_predef DummyPredef3A
+	add_predef DummyPredef3A ; $38
 	add_predef PartyMonItemName
 	add_predef GetMonFrontpic
 	add_predef GetMonBackpic
 	add_predef GetAnimatedFrontpic
 	add_predef GetTrainerPic
-	add_predef DecompressGet2bpp ; $40
+	add_predef DecompressGet2bpp
 	add_predef CheckTypeMatchup
-	add_predef ConvertMon_1to2
+	add_predef ConvertMon_1to2 ; $40
 	add_predef NewPokedexEntry
-	add_predef Unused_AnimateMon_Slow_Normal
 	add_predef PlaceStatusString
 	add_predef LoadMonAnimation
 	add_predef AnimateFrontpic
-	add_predef Unused_HOF_AnimateAlignedFrontpic ; $48
 	add_predef HOF_AnimateFrontpic

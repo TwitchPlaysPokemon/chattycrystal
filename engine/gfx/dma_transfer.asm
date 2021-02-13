@@ -16,8 +16,7 @@ HDMATransferAttrMapAndTileMapToWRAMBank3::
 	ld a, $1
 	ldh [rVBK], a
 	ld hl, wScratchAttrMap
-	call HDMATransferToWRAMBank3
-	ret
+	jp HDMATransferToWRAMBank3
 
 HDMATransferTileMapToWRAMBank3::
 	ld hl, .Function
@@ -30,8 +29,7 @@ HDMATransferTileMapToWRAMBank3::
 	ld a, $0
 	ldh [rVBK], a
 	ld hl, wScratchTileMap
-	call HDMATransferToWRAMBank3
-	ret
+	jp HDMATransferToWRAMBank3
 
 HDMATransferAttrMapToWRAMBank3:
 	ld hl, .Function
@@ -44,8 +42,7 @@ HDMATransferAttrMapToWRAMBank3:
 	ld a, $1
 	ldh [rVBK], a
 	ld hl, wScratchAttrMap
-	call HDMATransferToWRAMBank3
-	ret
+	jp HDMATransferToWRAMBank3
 
 ReloadMapPart::
 	ld hl, .Function
@@ -108,42 +105,6 @@ Mobile_ReloadMapPart:
 
 	ret
 
-; unused
-	ld hl, .unreferenced_1040da
-	jp CallInSafeGFXMode
-
-.unreferenced_1040da
-	ld a, $1
-	ldh [rVBK], a
-	ld a, BANK(w3_d800)
-	ldh [rSVBK], a
-	ld de, w3_d800
-	ldh a, [hBGMapAddress + 1]
-	ldh [rHDMA1], a
-	ldh a, [hBGMapAddress]
-	ldh [rHDMA2], a
-	ld a, d
-	ldh [rHDMA3], a
-	ld a, e
-	ldh [rHDMA4], a
-	ld a, $23
-	ldh [hDMATransfer], a
-	call WaitDMATransfer
-	ret
-
-; unused
-	ld hl, .unreferenced_104101
-	jp CallInSafeGFXMode
-
-.unreferenced_104101
-	ld a, $1
-	ldh [rVBK], a
-	ld a, BANK(w3_d800)
-	ldh [rSVBK], a
-	ld hl, w3_d800
-	call HDMATransferToWRAMBank3
-	ret
-
 OpenAndCloseMenu_HDMATransferTileMapAndAttrMap::
 ; OpenText
 	ld hl, .Function
@@ -200,8 +161,7 @@ Mobile_OpenAndCloseMenu_HDMATransferTileMapAndAttrMap:
 	ld a, $0
 	ldh [rVBK], a
 	ld hl, wScratchTileMap
-	call HDMATransfer_Wait127Scanlines_toBGMap
-	ret
+	jp HDMATransfer_Wait127Scanlines_toBGMap
 
 CallInSafeGFXMode:
 	ldh a, [hBGMapMode]
@@ -218,7 +178,7 @@ CallInSafeGFXMode:
 	ldh a, [rVBK]
 	push af
 
-	call ._hl_
+	call _hl_
 
 	pop af
 	ldh [rVBK], a
@@ -229,9 +189,6 @@ CallInSafeGFXMode:
 	pop af
 	ldh [hBGMapMode], a
 	ret
-
-._hl_
-	jp hl
 
 HDMATransferToWRAMBank3:
 	call _LoadHDMAParameters

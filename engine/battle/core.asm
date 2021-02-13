@@ -1956,25 +1956,6 @@ GetMaxHP:
 	ld c, a
 	ret
 
-Unreferenced_GetHalfHP:
-	ld hl, wBattleMonHP
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .ok
-	ld hl, wEnemyMonHP
-.ok
-	ld a, [hli]
-	ld b, a
-	ld a, [hli]
-	ld c, a
-	srl b
-	rr c
-	ld a, [hli]
-	ld [wBuffer2], a
-	ld a, [hl]
-	ld [wBuffer1], a
-	ret
-
 CheckUserHasEnoughHP:
 	ld hl, wBattleMonHP + 1
 	ldh a, [hBattleTurn]
@@ -5849,8 +5830,7 @@ CheckPlayerHasUsableMoves:
 	jr .loop
 
 .done
-	; Bug: this will result in a move with PP Up confusing the game.
-	and a ; should be "and PP_MASK"
+	and PP_MASK
 	ret nz
 
 .force_struggle
@@ -6619,17 +6599,6 @@ CheckUnownLetter:
 
 INCLUDE "data/wild/unlocked_unowns.asm"
 
-Unreferenced_SwapBattlerLevels:
-	push bc
-	ld a, [wBattleMonLevel]
-	ld b, a
-	ld a, [wEnemyMonLevel]
-	ld [wBattleMonLevel], a
-	ld a, b
-	ld [wEnemyMonLevel], a
-	pop bc
-	ret
-
 BattleWinSlideInEnemyTrainerFrontpic:
 	xor a
 	ld [wTempEnemyMonSpecies], a
@@ -6891,20 +6860,6 @@ _LoadBattleFontsHPBar:
 _LoadHPBar:
 	callfar LoadHPBar
 	ret
-
-Unreferenced_LoadHPExpBarGFX:
-	ld de, EnemyHPBarBorderGFX
-	ld hl, vTiles2 tile $6c
-	lb bc, BANK(EnemyHPBarBorderGFX), 4
-	call Get1bpp
-	ld de, HPExpBarBorderGFX
-	ld hl, vTiles2 tile $73
-	lb bc, BANK(HPExpBarBorderGFX), 6
-	call Get1bpp
-	ld de, ExpBarGFX
-	ld hl, vTiles2 tile $55
-	lb bc, BANK(ExpBarGFX), 8
-	jp Get2bpp
 
 EmptyBattleTextbox:
 	ld hl, .empty
@@ -7802,45 +7757,9 @@ TextJump_GoodComeBack:
 	text_far Text_GoodComeBack
 	text_end
 
-Unreferenced_TextJump_ComeBack:
-; this function doesn't seem to be used
-	ld hl, TextJump_ComeBack
-	ret
-
 TextJump_ComeBack:
 	text_far Text_ComeBack
 	text_end
-
-Unreferenced_HandleSafariAngerEatingStatus:
-	ld hl, wSafariMonEating
-	ld a, [hl]
-	and a
-	jr z, .angry
-	dec [hl]
-	ld hl, BattleText_WildMonIsEating
-	jr .finish
-
-.angry
-	dec hl ; wSafariMonAngerCount
-	ld a, [hl]
-	and a
-	ret z
-	dec [hl]
-	ld hl, BattleText_WildMonIsAngry
-	jr nz, .finish
-	push hl
-	ld a, [wEnemyMonSpecies]
-	ld [wCurSpecies], a
-	call GetBaseData
-	ld a, [wBaseCatchRate]
-	ld [wEnemyMonCatchRate], a
-	pop hl
-
-.finish
-	push hl
-	call Call_LoadTempTileMapToTileMap
-	pop hl
-	jp StdBattleTextbox
 
 FillInExpBar:
 	push hl
@@ -8258,58 +8177,9 @@ InitEnemyWildmon:
 	predef PlaceGraphic
 	ret
 
-Unreferenced_Function3f662:
-	ld hl, wEnemyMonMoves
-	ld de, wListMoves_MoveIndicesBuffer
-	ld b, NUM_MOVES
-.loop
-	ld a, [de]
-	inc de
-	ld [hli], a
-	and a
-	jr z, .clearpp
-
-	push bc
-	push hl
-
-	push hl
-	ld l, a
-	ld a, MOVE_PP
-	call GetMoveAttribute
-	pop hl
-
-	ld bc, wEnemyMonPP - (wEnemyMonMoves + 1)
-	add hl, bc
-	ld [hl], a
-
-	pop hl
-	pop bc
-
-	dec b
-	jr nz, .loop
-	ret
-
-.clear
-	xor a
-	ld [hli], a
-
-.clearpp
-	push bc
-	push hl
-	ld bc, wEnemyMonPP - (wEnemyMonMoves + 1)
-	add hl, bc
-	xor a
-	ld [hl], a
-	pop hl
-	pop bc
-	dec b
-	jr nz, .clear
-	ret
-
 ExitBattle:
 	call .HandleEndOfBattle
-	call CleanUpBattleRAM
-	ret
+	jp CleanUpBattleRAM
 
 .HandleEndOfBattle:
 	ld a, [wLinkMode]
@@ -8318,8 +8188,7 @@ ExitBattle:
 	call ShowLinkBattleParticipantsAfterEnd
 	ld c, 150
 	call DelayFrames
-	call DisplayLinkBattleResult
-	ret
+	jp DisplayLinkBattleResult
 
 .not_linked
 	ld a, [wBattleResult]
@@ -8396,8 +8265,7 @@ CheckPayDay:
 	bit 0, a
 	ret z
 	call ClearTileMap
-	call ClearBGPalettes
-	ret
+	jp ClearBGPalettes
 
 ShowLinkBattleParticipantsAfterEnd:
 	farcall BackupMobileEventIndex

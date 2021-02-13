@@ -4,8 +4,7 @@ PlaceMenuItemName:
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	pop hl
-	call PlaceString
-	ret
+	jp PlaceString
 
 PlaceMenuItemQuantity:
 	push de
@@ -15,17 +14,14 @@ PlaceMenuItemQuantity:
 	ld a, [wItemAttributeParamBuffer]
 	pop hl
 	and a
-	jr nz, .done
+	ret nz
 	ld de, $15
 	add hl, de
 	ld [hl], "×"
 	inc hl
 	ld de, wMenuSelectionQuantity
 	lb bc, 1, 2
-	call PrintNum
-
-.done
-	ret
+	jp PrintNum
 
 PlaceMoneyTopRight:
 	ld hl, MenuHeader_0x24b15
@@ -110,45 +106,11 @@ CoinString:
 ShowMoney_TerminatorString:
 	db "@"
 
-Unreferenced_Function24b8f:
-; related to safari?
-	ld hl, wOptions
-	ld a, [hl]
-	push af
-	set NO_TEXT_SCROLL, [hl]
-	hlcoord 0, 0
-	ld b, 3
-	ld c, 7
-	call Textbox
-	hlcoord 1, 1
-	ld de, wSafariTimeRemaining
-	lb bc, 2, 3
-	call PrintNum
-	hlcoord 4, 1
-	ld de, .slash_500
-	call PlaceString
-	hlcoord 1, 3
-	ld de, .booru_ko
-	call PlaceString
-	hlcoord 5, 3
-	ld de, wSafariBallsRemaining
-	lb bc, 1, 2
-	call PrintNum
-	pop af
-	ld [wOptions], a
-	ret
-
-.slash_500
-	db "／５００@"
-.booru_ko
-	db "ボール　　　こ@"
-
 StartMenu_DrawBugContestStatusBox:
 	hlcoord 0, 0
 	ld b, 5
 	ld c, 17
-	call Textbox
-	ret
+	jp Textbox
 
 StartMenu_PrintBugContestStatus:
 	ld hl, wOptions

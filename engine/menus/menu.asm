@@ -654,38 +654,6 @@ _ExitMenu::
 	dec [hl]
 	ret
 
-Unreferenced_Function24423:
-	ld a, [wVramState]
-	bit 0, a
-	ret z
-	xor a ; sScratch
-	call GetSRAMBank
-	hlcoord 0, 0
-	ld de, sScratch
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	call CopyBytes
-	call CloseSRAM
-	call OverworldTextModeSwitch
-	xor a ; sScratch
-	call GetSRAMBank
-	ld hl, sScratch
-	decoord 0, 0
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-.loop
-	ld a, [hl]
-	cp $61
-	jr c, .next
-	ld [de], a
-.next
-	inc hl
-	inc de
-	dec bc
-	ld a, c
-	or b
-	jr nz, .loop
-	call CloseSRAM
-	ret
-
 Error_Cant_ExitMenu:
 	ld hl, .Text_NoWindowsAvailableForPopping
 	call PrintText

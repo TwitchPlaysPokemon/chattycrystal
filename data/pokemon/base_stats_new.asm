@@ -2,7 +2,7 @@ BaseData2:
 INCLUDE "data/pokemon/base_stats/treecko.asm"
 INCLUDE "data/pokemon/base_stats/grovyle.asm"
 INCLUDE "data/pokemon/base_stats/sceptile.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Torchic
+INCLUDE "data/pokemon/base_stats/torchic.asm"
 INCLUDE "data/pokemon/base_stats/combusken.asm"
 INCLUDE "data/pokemon/base_stats/blaziken.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Mudkip
@@ -44,9 +44,9 @@ INCLUDE "data/pokemon/base_stats/wailord.asm"
 INCLUDE "data/pokemon/base_stats/trapinch.asm"
 INCLUDE "data/pokemon/base_stats/vibrava.asm"
 INCLUDE "data/pokemon/base_stats/flygon.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Swablu
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Altaria
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Lileep
+INCLUDE "data/pokemon/base_stats/swablu.asm"
+INCLUDE "data/pokemon/base_stats/altaria.asm"
+INCLUDE "data/pokemon/base_stats/lileep.asm"
 INCLUDE "data/pokemon/base_stats/cradily.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Feebas
 INCLUDE "data/pokemon/base_stats/milotic.asm"

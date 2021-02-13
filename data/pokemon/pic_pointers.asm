@@ -518,8 +518,8 @@ PokemonPicPointers::
 	dba GrovyleBackpic
 	dba SceptileFrontpic
 	dba SceptileBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Torchic
-	dba PlaceholderBackpic ; PLACEHOLDER - Torchic
+	dba TorchicFrontpic
+	dba TorchicBackpic
 	dba CombuskenFrontpic
 	dba CombuskenBackpic
 	dba BlazikenFrontpic

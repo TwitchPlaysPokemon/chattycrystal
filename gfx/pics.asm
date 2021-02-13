@@ -34,6 +34,7 @@ TaurosFrontpic:      INCBIN "gfx/pokemon/tauros/front.animated.2bpp.lz"
 VenusaurFrontpic:    INCBIN "gfx/pokemon/venusaur/front.animated.2bpp.lz"
 EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
+TorchicBackpic:      INCBIN "gfx/pokemon/torchic/back.2bpp.lz"
 
 SECTION "Pics 2", ROMX
 
@@ -452,7 +453,7 @@ ClefairyBackpic:     INCBIN "gfx/pokemon/clefairy/back.2bpp.lz"
 VenonatBackpic:      INCBIN "gfx/pokemon/venonat/back.2bpp.lz"
 BellossomBackpic:    INCBIN "gfx/pokemon/bellossom/back.2bpp.lz"
 SwinubBackpic:       INCBIN "gfx/pokemon/swinub/back.2bpp.lz"
-
+TorchicFrontpic:     INCBIN "gfx/pokemon/torchic/front.animated.2bpp.lz"
 
 SECTION "Pics 15", ROMX
 

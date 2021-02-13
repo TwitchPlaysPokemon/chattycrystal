@@ -253,7 +253,7 @@ FramesPointers:
 	dba TreeckoFrames
 	dba GrovyleFrames
 	dba SceptileFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Treecko
+	dba TorchicFrames
 	dba CombuskenFrames
 	dba BlazikenFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Mudkip
@@ -291,13 +291,13 @@ FramesPointers:
 	dba ManectricFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Roselia
 	dba WailmerFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Wailord
-	dba PlaceholderFrames ; PLACEHOLDER - Trapinch
-	dba PlaceholderFrames ; PLACEHOLDER - Vibrava
-	dba PlaceholderFrames ; PLACEHOLDER - Flygon
-	dba PlaceholderFrames ; PLACEHOLDER - Swablu
-	dba PlaceholderFrames ; PLACEHOLDER - Altaira
-	dba PlaceholderFrames ; PLACEHOLDER - Lileep
+	dba WailordFrames
+	dba TrapinchFrames
+	dba VibravaFrames
+	dba FlygonFrames
+	dba SwabluFrames
+	dba AltariaFrames
+	dba LileepFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Cradily
 	dba PlaceholderFrames ; PLACEHOLDER - Feebas
 	dba PlaceholderFrames ; PLACEHOLDER - Milotic

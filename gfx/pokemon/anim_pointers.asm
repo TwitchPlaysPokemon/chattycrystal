@@ -253,7 +253,7 @@ AnimationPointers:
 	dw TreeckoAnimation
 	dw GrovyleAnimation
 	dw SceptileAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Torchic
+	dw TorchicAnimation
 	dw CombuskenAnimation
 	dw BlazikenAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Mudkip
@@ -291,13 +291,13 @@ AnimationPointers:
 	dw ManectricAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Roselia
 	dw WailmerAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Wailord
-	dw PlaceholderAnimation ; PLACEHOLDER - Trapinch
-	dw PlaceholderAnimation ; PLACEHOLDER - Vibrava
-	dw PlaceholderAnimation ; PLACEHOLDER - Flygon
-	dw PlaceholderAnimation ; PLACEHOLDER - Swablu
-	dw PlaceholderAnimation ; PLACEHOLDER - Altaira
-	dw PlaceholderAnimation ; PLACEHOLDER - Lileep
+	dw WailordAnimation
+	dw TrapinchAnimation
+	dw VibravaAnimation
+	dw FlygonAnimation
+	dw SwabluAnimation
+	dw AltariaAnimation
+	dw LileepAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Cradily
 	dw PlaceholderAnimation ; PLACEHOLDER - Feebas
 	dw PlaceholderAnimation ; PLACEHOLDER - Milotic

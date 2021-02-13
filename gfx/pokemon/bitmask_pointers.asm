@@ -253,7 +253,7 @@ BitmasksPointers:
 	dw TreeckoBitmasks
 	dw GrovyleBitmasks
 	dw SceptileBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Torchic
+	dw TorchicBitmasks
 	dw CombuskenBitmasks
 	dw BlazikenBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Mudkip
@@ -291,13 +291,13 @@ BitmasksPointers:
 	dw ManectricBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Roselia
 	dw WailmerBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Wailord
-	dw PlaceholderBitmasks ; PLACEHOLDER - Trapinch
-	dw PlaceholderBitmasks ; PLACEHOLDER - Vibrava
-	dw PlaceholderBitmasks ; PLACEHOLDER - Flygon
-	dw PlaceholderBitmasks ; PLACEHOLDER - Swablu
-	dw PlaceholderBitmasks ; PLACEHOLDER - Altaira
-	dw PlaceholderBitmasks ; PLACEHOLDER - Lileep
+	dw WailordBitmasks
+	dw TrapinchBitmasks
+	dw VibravaBitmasks
+	dw FlygonBitmasks
+	dw SwabluBitmasks
+	dw AltariaBitmasks
+	dw LileepBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Cradily
 	dw PlaceholderBitmasks ; PLACEHOLDER - Feebas
 	dw PlaceholderBitmasks ; PLACEHOLDER - Milotic

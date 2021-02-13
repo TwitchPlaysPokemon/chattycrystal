@@ -255,7 +255,7 @@ FramesPointers:
 	dba SceptileFrames
 	dba PlaceholderFrames ; PLACEHOLDER
 	dba CombuskenFrames
-	dba PlaceholderFrames ; PLACEHOLDER
+	dba BlazikenFrames
 	dba PlaceholderFrames ; PLACEHOLDER
 	dba PlaceholderFrames ; PLACEHOLDER
 	dba PlaceholderFrames ; PLACEHOLDER

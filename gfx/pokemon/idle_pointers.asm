@@ -255,7 +255,7 @@ AnimationIdlePointers:
 	dw SceptileAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER
 	dw CombuskenAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw BlazikenAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER
 	dw PlaceholderAnimationIdle ; PLACEHOLDER
 	dw PlaceholderAnimationIdle ; PLACEHOLDER

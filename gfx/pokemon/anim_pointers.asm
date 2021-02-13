@@ -255,7 +255,7 @@ AnimationPointers:
 	dw SceptileAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER
 	dw CombuskenAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER
+	dw BlazikenAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER
 	dw PlaceholderAnimation ; PLACEHOLDER
 	dw PlaceholderAnimation ; PLACEHOLDER

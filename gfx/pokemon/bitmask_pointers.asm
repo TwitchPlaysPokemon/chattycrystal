@@ -255,7 +255,7 @@ BitmasksPointers:
 	dw SceptileBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER
 	dw CombuskenBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER
+	dw BlazikenBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER
 	dw PlaceholderBitmasks ; PLACEHOLDER
 	dw PlaceholderBitmasks ; PLACEHOLDER

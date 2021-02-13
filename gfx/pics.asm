@@ -53,6 +53,7 @@ MewtwoFrontpic:      INCBIN "gfx/pokemon/mewtwo/front.animated.2bpp.lz"
 FearowFrontpic:      INCBIN "gfx/pokemon/fearow/front.animated.2bpp.lz"
 CharizardFrontpic:   INCBIN "gfx/pokemon/charizard/front.animated.2bpp.lz"
 QuilavaFrontpic:     INCBIN "gfx/pokemon/quilava/front.animated.2bpp.lz"
+BlazikenBackpic:     INCBIN "gfx/pokemon/blaziken/back.2bpp.lz"
 
 SECTION "Pics 3", ROMX
 
@@ -915,6 +916,7 @@ DuskullFrontpic:    INCBIN "gfx/pokemon/duskull/front.animated.2bpp.lz"
 DusclopsFrontpic:   INCBIN "gfx/pokemon/dusclops/front.animated.2bpp.lz"
 DusclopsBackpic:    INCBIN "gfx/pokemon/dusclops/back.2bpp.lz"
 ElectrikeFrontpic:  INCBIN "gfx/pokemon/electrike/front.animated.2bpp.lz"
+BlazikenFrontpic:   INCBIN "gfx/pokemon/blaziken/front.animated.2bpp.lz"
 
 SECTION "Pics 29", ROMX
 

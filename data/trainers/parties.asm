@@ -5239,27 +5239,32 @@ PokefanMGroup:
 KimonoGirlGroup:
 	next_list_item; KIMONO_GIRL (1)
 	db "NAOKO@", TRAINERTYPE_NORMAL
-	db 30, FLAREON
+	db 30
+	dw FLAREON
 	db -1 ; end
 
 	next_list_item; KIMONO_GIRL (2)
 	db "SAYO@", TRAINERTYPE_NORMAL
-	db 30, ESPEON
+	db 30
+	dw ESPEON
 	db -1 ; end
 
 	next_list_item; KIMONO_GIRL (3)
 	db "ZUKI@", TRAINERTYPE_NORMAL
-	db 30, UMBREON
+	db 30
+	dw UMBREON
 	db -1 ; end
 
 	next_list_item; KIMONO_GIRL (4)
 	db "KUNI@", TRAINERTYPE_NORMAL
-	db 30, VAPOREON
+	db 30
+	dw VAPOREON
 	db -1 ; end
 
 	next_list_item; KIMONO_GIRL (5)
 	db "MIKI@", TRAINERTYPE_NORMAL
-	db 30, JOLTEON
+	db 30
+	dw JOLTEON
 	db -1 ; end
 	
 	end_list_items

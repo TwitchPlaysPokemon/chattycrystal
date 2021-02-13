@@ -273,13 +273,13 @@ AnimationPointers:
 	dw RaltsAnimation
 	dw KirliaAnimation
 	dw GardevoirAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Surskit
-	dw PlaceholderAnimation ; PLACEHOLDER - Masquerain
+	dw SurskitAnimation
+	dw MasquerainAnimation
 	dw WhismurAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Loudred
-	dw PlaceholderAnimation ; PLACEHOLDER - Exploud
-	dw PlaceholderAnimation ; PLACEHOLDER - Makuhita
-	dw PlaceholderAnimation ; PLACEHOLDER - Hariyama
+	dw LoudredAnimation
+	dw ExploudAnimation
+	dw MakuhitaAnimation
+	dw HariyamaAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Azurill
 	dw PlaceholderAnimation ; PLACEHOLDER - Skitty
 	dw PlaceholderAnimation ; PLACEHOLDER - Delcatty

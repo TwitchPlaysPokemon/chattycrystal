@@ -273,13 +273,13 @@ FramesPointers:
 	dba RaltsFrames
 	dba KirliaFrames
 	dba GardevoirFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Surskit
-	dba PlaceholderFrames ; PLACEHOLDER - Masquerain
+	dba SurskitFrames
+	dba MasquerainFrames
 	dba WhismurFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Loudred
-	dba PlaceholderFrames ; PLACEHOLDER - Exploud
-	dba PlaceholderFrames ; PLACEHOLDER - Makuhita
-	dba PlaceholderFrames ; PLACEHOLDER - Hariyama
+	dba LoudredFrames
+	dba ExploudFrames
+	dba MakuhitaFrames
+	dba HariyamaFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Azurill
 	dba PlaceholderFrames ; PLACEHOLDER - Skitty
 	dba PlaceholderFrames ; PLACEHOLDER - Delcatty

@@ -273,13 +273,13 @@ AnimationIdlePointers:
 	dw RaltsAnimationIdle
 	dw KirliaAnimationIdle
 	dw GardevoirAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Surskit
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Masquerain
+	dw SurskitAnimationIdle
+	dw MasquerainAnimationIdle
 	dw WhismurAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Loudred
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Exploud
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Makuhita
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Hariyama
+	dw LoudredAnimationIdle
+	dw ExploudAnimationIdle
+	dw MakuhitaAnimationIdle
+	dw HariyamaAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Azurill
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Skitty
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Delcatty

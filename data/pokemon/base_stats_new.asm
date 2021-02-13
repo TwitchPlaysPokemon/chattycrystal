@@ -23,12 +23,12 @@ INCLUDE "data/pokemon/base_stats/ralts.asm"
 INCLUDE "data/pokemon/base_stats/kirlia.asm"
 INCLUDE "data/pokemon/base_stats/gardevoir.asm"
 INCLUDE "data/pokemon/base_stats/surskit.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Masquerain
+INCLUDE "data/pokemon/base_stats/masquerain.asm"
 INCLUDE "data/pokemon/base_stats/whismur.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Loudred
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Exploud
+INCLUDE "data/pokemon/base_stats/loudred.asm"
+INCLUDE "data/pokemon/base_stats/exploud.asm"
 INCLUDE "data/pokemon/base_stats/makuhita.asm"
-INCLUDE "data/pokemon/base_stats/placeholder2.asm" ; PLACEHOLDER - Hariyama
+INCLUDE "data/pokemon/base_stats/hariyama.asm"
 INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Azurill
 INCLUDE "data/pokemon/base_stats/skitty.asm"
 INCLUDE "data/pokemon/base_stats/delcatty.asm"

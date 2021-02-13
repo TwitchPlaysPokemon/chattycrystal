@@ -273,13 +273,13 @@ BitmasksPointers:
 	dw RaltsBitmasks
 	dw KirliaBitmasks
 	dw GardevoirBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Surskit
-	dw PlaceholderBitmasks ; PLACEHOLDER - Masquerain
+	dw SurskitBitmasks
+	dw MasquerainBitmasks
 	dw WhismurBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Loudred
-	dw PlaceholderBitmasks ; PLACEHOLDER - Exploud
-	dw PlaceholderBitmasks ; PLACEHOLDER - Makuhita
-	dw PlaceholderBitmasks ; PLACEHOLDER - Hariyama
+	dw LoudredBitmasks
+	dw ExploudBitmasks
+	dw MakuhitaBitmasks
+	dw HariyamaBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Azurill
 	dw PlaceholderBitmasks ; PLACEHOLDER - Skitty
 	dw PlaceholderBitmasks ; PLACEHOLDER - Delcatty

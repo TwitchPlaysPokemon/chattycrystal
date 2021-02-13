@@ -753,17 +753,6 @@ SellMenu:
 	and a
 	ret
 
-.Unreferenced_NothingToSell:
-	ld hl, .NothingToSellText
-	call MenuTextboxBackup
-	and a
-	ret
-
-.NothingToSellText:
-	; You don't have anything to sell.
-	text_far UnknownText_0x1c4f12
-	text_end
-
 .TryToSellItem:
 	farcall CheckItemMenu
 	ld a, [wItemAttributeParamBuffer]

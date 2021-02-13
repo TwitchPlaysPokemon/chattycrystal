@@ -1355,14 +1355,6 @@ HandleCmdQueue::
 	jr nz, .loop
 	ret
 
-Unreferenced_GetNthCmdQueueEntry:
-	ld hl, wCmdQueue
-	ld bc, CMDQUEUE_ENTRY_SIZE
-	call AddNTimes
-	ld b, h
-	ld c, l
-	ret
-
 WriteCmdQueue::
 	push bc
 	push de

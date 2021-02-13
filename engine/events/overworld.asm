@@ -980,12 +980,9 @@ StrengthFunction:
 	ld de, ENGINE_PLAINBADGE
 	call CheckBadge
 	jr c, .Failed
-	jr .UseStrength
-
-.Unreferenced_AlreadyUsing:
-	ld hl, .JumpText
-	call MenuTextboxBackup
-	ld a, $80
+	ld hl, Script_StrengthFromMenu
+	call QueueScript
+	ld a, $81
 	ret
 
 .JumpText:
@@ -994,12 +991,6 @@ StrengthFunction:
 
 .Failed:
 	ld a, $80
-	ret
-
-.UseStrength:
-	ld hl, Script_StrengthFromMenu
-	call QueueScript
-	ld a, $81
 	ret
 
 SetStrengthFlag:
@@ -1203,8 +1194,7 @@ DisappearWhirlpool:
 	ld e, a
 	farcall PlayWhirlpoolSound
 	call BufferScreen
-	call GetMovementPermissions
-	ret
+	jp GetMovementPermissions
 
 TryWhirlpoolOW::
 	ld hl, WHIRLPOOL

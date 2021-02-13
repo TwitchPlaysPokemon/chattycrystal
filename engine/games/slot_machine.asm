@@ -198,8 +198,7 @@ SlotsLoop:
 	ret nz
 	ldh a, [rBGP]
 	xor %00001100
-	call DmgToCgbBGPals
-	ret
+	jp DmgToCgbBGPals
 
 .PrintCoinsAndPayout:
 	hlcoord 5, 1
@@ -209,46 +208,7 @@ SlotsLoop:
 	hlcoord 11, 1
 	ld de, wPayout
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 4
-	call PrintNum
-	ret
-
-Unreferenced_Function92811:
-; debug function?
-	ld a, [wSlotBias]
-	add 0
-	daa
-	ld e, a
-	and $f
-	add "0"
-	hlcoord 1, 0
-	ld [hl], a
-	ld a, e
-	swap a
-	and $f
-	add "0"
-	hlcoord 0, 0
-	ld [hl], a
-	ret
-
-Unreferenced_Function9282c:
-; animate OAM tiles?
-	ld hl, wcf66
-	ld a, [hl]
-	inc [hl]
-	and $7
-	ret nz
-	ld hl, wVirtualOAMSprite16TileID
-	ld c, NUM_SPRITE_OAM_STRUCTS - 16
-.loop
-	ld a, [hl]
-	xor %00100000
-	ld [hli], a ; tile id
-rept SPRITEOAMSTRUCT_LENGTH + -1
-	inc hl
-endr
-	dec c
-	jr nz, .loop
-	ret
+	jp PrintNum
 
 SlotsJumptable:
 	jumptable .Jumptable, wJumptableIndex
@@ -826,22 +786,6 @@ Slots_UpdateReelPositionAndOAM:
 	cp 2 * TILE_WIDTH
 	jr nz, .loop
 	ret
-
-Unreferenced_Function92bbe:
-	push hl
-	srl a
-	srl a
-	add LOW(.Unknown_92bce)
-	ld l, a
-	ld a, 0
-	adc HIGH(.Unknown_92bce)
-	ld h, a
-	ld a, [hl]
-	pop hl
-	ret
-
-.Unknown_92bce:
-	db 0, 1, 2, 3, 4, 5
 
 ReelActionJumptable:
 	ld hl, REEL_ACTION

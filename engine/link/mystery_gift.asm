@@ -1349,10 +1349,6 @@ InitMysteryGiftLayout:
 	ld b,  5
 	jr .gfx_loop
 
-.Unreferenced_Load6GFX:
-	ld b,  6
-	jr .gfx_loop
-
 .Load16GFX:
 	ld b, 16
 

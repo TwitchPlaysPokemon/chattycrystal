@@ -402,19 +402,6 @@ UpdatePlayerStep:
 	set PLAYERSTEP_CONTINUE_F, [hl]
 	ret
 
-Unreferenced_Function4759:
-	push bc
-	ld e, a
-	ld d, 0
-	ld hl, OBJECT_MAP_OBJECT_INDEX
-	add hl, bc
-	ld a, [hl]
-	call GetMapObject
-	add hl, de
-	ld a, [hl]
-	pop bc
-	ret
-
 RestoreDefaultMovement:
 	ld hl, OBJECT_MAP_OBJECT_INDEX
 	add hl, bc
@@ -1814,8 +1801,7 @@ Function5000: ; unscripted?
 
 GetMovementByte:
 	ld hl, wMovementDataBank
-	call _GetMovementByte
-	ret
+	jp _GetMovementByte
 
 Function5015:
 	ld hl, OBJECT_MOVEMENT_BYTE_INDEX

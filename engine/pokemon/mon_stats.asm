@@ -397,7 +397,11 @@ ParString: db "PAR@"
 ListMoves:
 ; List moves at hl, spaced every [wBuffer1] tiles.
 	ld de, wListMoves_MoveIndicesBuffer
-	ld b, $0
+	ldh a, [hBattleTurn]
+	ld c, a
+	xor a
+	ld b, a
+	ldh [hBattleTurn], a
 .moves_loop
 	ld a, [de]
 	inc de
@@ -424,14 +428,17 @@ ListMoves:
 	add hl, bc
 	pop bc
 	pop de
-	ld a, b
-	cp NUM_MOVES
-	jr z, .done
-	jr .moves_loop
+	assert NUM_MOVES == 4
+	bit 2, b
+	jr z, .moves_loop
 
 .no_more_moves
+	ld a, c
+	ldh [hBattleTurn], a
 	ld a, b
 .nonmove_loop
+	cp NUM_MOVES
+	ret nc
 	push af
 	ld [hl], "-"
 	ld a, [wBuffer1]
@@ -439,9 +446,4 @@ ListMoves:
 	ld b, 0
 	add hl, bc
 	pop af
-	inc a
-	cp NUM_MOVES
-	jr nz, .nonmove_loop
-
-.done
-	ret
+	jr .nonmove_loop

@@ -282,7 +282,7 @@ RSEORASMayGroup:
 	db "ézzxééééé:@"
 
 	db 30
-	dw HAUNTER ; TODO: add LAMPENT
+	dw LAMPENT
 	db NO_ITEM
 	dw DREAM_EATER, NO_MOVE, NO_MOVE, NO_MOVE ; TODO: add quiver dance, shadow punch
 	bigdw $FFFF
@@ -608,7 +608,7 @@ PTDawnGroup:
 	next_list_item ; IECBW
 	db ".iecbw@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 48
-	dw VENUSAUR ; TODO: add torterra
+	dw TORTERRA
 	db BLUESKY_MAIL
 	dw CURSE, RAZOR_LEAF, SYNTHESIS, NO_MOVE ; TODO: add rock climb
 	bigdw $FFFF
@@ -634,7 +634,7 @@ PTDawnGroup:
 	db "AACm  neg@"
 
 	db 42
-	dw DRAGONITE ; TODO: add altaria
+	dw ALTARIA
 	db BLUESKY_MAIL
 	dw DRAGONBREATH, FIRE_BLAST, FLY, NO_MOVE ; TODO: add dragon dance
 	bigdw $0FFF
@@ -647,7 +647,7 @@ PTDawnGroup:
 	db "!!@"
 
 	db 49
-	dw TANGELA ; TODO: add LEAFEON
+	dw LEAFEON
 	db BLUESKY_MAIL
 	dw GIGA_DRAIN, STRENGTH, SYNTHESIS, NO_MOVE ; TODO: add bullet seed
 	bigdw $FFFF
@@ -708,7 +708,7 @@ HGSSLyraGroup:
 	db "aoooo@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
 	db 16
-	dw SUDOWOODO ; TODO: add bonsly
+	dw BONSLY
 	db DRAGON_FANG
 	dw ROCK_SLIDE, BARRAGE, MEGA_PUNCH, NIGHT_SHADE
 	bigdw $0FFF
@@ -721,7 +721,7 @@ HGSSLyraGroup:
 	db "A@"
 
 	db 28
-	dw DIGLETT ; TODO: add trapinch
+	dw TRAPINCH
 	db NO_ITEM
 	dw SWIFT, HAMMER_ARM, NO_MOVE, NO_MOVE ; TODO: Trump card
 	bigdw $0FFF
@@ -747,7 +747,7 @@ HGSSLyraGroup:
 	db "?? ((GG6W@"
 
 	db 33
-	dw HO_OH ; TODO: add groudon
+	dw GROUDON
 	db TM_FURY_CUTTER
 	dw SURF, CUT, FOCUS_BLAST, NO_MOVE ; TODO: add sand tomb
 	bigdw $0FFF
@@ -813,7 +813,7 @@ BWHildaGroup:
 	db "Zigzagoony@"
 
 	db 22
-	dw GEODUDE ; TODO: add aron
+	dw ARON
 	db NO_ITEM
 	dw TACKLE, METAL_CLAW, HEADBUTT, HARDEN
 	bigdw $0FFF
@@ -839,7 +839,7 @@ BWHildaGroup:
 	db "Staravia@"
 
 	db 23
-	dw MACHOP ; TODO: add croagunk
+	dw CROAGUNK
 	db EON_MAIL
 	dw PURSUIT, MUD_SLAP, FAINT_ATTACK, REVENGE
 	bigdw $FFFF
@@ -1079,7 +1079,7 @@ SMUSUMSeleneGroup:
 	db "Sigilyph@"
 
 	db 22
-	dw MAREEP ; TODO: add Electrike
+	dw ELECTRIKE
 	db THICK_CLUB
 	dw STRUGGLE, NO_MOVE, NO_MOVE, NO_MOVE ; TODO: add Rock wrecker, Attack order, Thousond waves (electric terrain is not worth it), Struggle added to prevent crashes.
 	bigdw $0FFF
@@ -1118,7 +1118,7 @@ SMUSUMSeleneGroup:
 	db "Aromatisse@"
 
 	db 25
-	dw CHIKORITA ; TODO: add pansage
+	dw PANSAGE
 	db NO_ITEM
 	dw SMOKESCREEN, NO_MOVE, NO_MOVE, NO_MOVE ; TODO: add Petal Blizzard, Roar of time
 	bigdw $FFFF
@@ -1216,7 +1216,7 @@ SWSHGloriaGroup:
 	db "Wooloo@"
 
 	db 17
-	dw MAREEP ; TODO: add Electrike
+	dw ELECTRIKE
 	db NO_ITEM
 	dw LEER, QUICK_ATTACK, HOWL, SHOCK_WAVE
 	bigdw $0FFF
@@ -1237,7 +1237,7 @@ GlazedGroup:
 	db "AHUNIgg@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
 	db 14
-	dw BAYLEEF ; TODO: add grotle
+	dw GROTLE
 	db POKE_BALL
 	dw RAZOR_LEAF, BITE, ABSORB, CURSE
 	bigdw $FFFF
@@ -1289,7 +1289,7 @@ GlazedGroup:
 	db "Ekans@"
 
 	db 10
-	dw MACHOP ; TODO: add Croagunk
+	dw CROAGUNK
 	db NO_ITEM
 	dw POISON_STING, MUD_SLAP, ASTONISH, NO_MOVE ; TODO: add taunt
 	bigdw $0FFF
@@ -1302,7 +1302,7 @@ GlazedGroup:
 	db "BBBBBBAAA@"
 
 	db 11
-	dw BULBASAUR ; TODO: add Budew
+	dw BUDEW
 	db NO_ITEM
 	dw ABSORB, GROWTH, STUN_SPORE, NO_MOVE
 	bigdw $0FFF
@@ -1352,7 +1352,7 @@ PCyanGroup:
 	db "Larvitar@"
 
 	db 4
-	dw PIDGEY ;TODO add tailow
+	dw TAILLOW
 	db NO_ITEM
 	dw PURSUIT, GROWL, NO_MOVE, NO_MOVE
 	bigdw $45A5
@@ -1365,7 +1365,7 @@ PCyanGroup:
 	db "QYXXWWWVVV@"
 
 	db 6
-	dw ABRA ;TODO add ralts
+	dw RALTS
 	db NO_ITEM
 	dw MUD_SLAP, GROWL, NO_MOVE, NO_MOVE
 	bigdw $FB61
@@ -1461,7 +1461,7 @@ GreenMayGroup:
 	db "n@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
 	db 23
-	dw MISDREAVUS ; TODO: add SABLEYE
+	dw SABLEYE
 	db NO_ITEM
 	dw NIGHT_SHADE, SCRATCH, ASTONISH, NO_MOVE ; TODO: add fake out
 	bigdw $FFFF
@@ -1474,7 +1474,7 @@ GreenMayGroup:
 	db "aabaaa66@"
 
 	db 30
-	dw GEODUDE ;TODO add aron
+	dw ARON
 	db NO_ITEM
 	dw MUD_SLAP, IRON_TAIL, METAL_CLAW, HEADBUTT
 	bigdw $FFFF
@@ -1487,7 +1487,7 @@ GreenMayGroup:
 	db "ATTMG555……@"
 
 	db 11
-	dw GEODUDE ;TODO add aron
+	dw ARON
 	db HARD_STONE
 	dw MUD_SLAP, TACKLE, HARDEN, HEADBUTT
 	bigdw $FFFF
@@ -1862,7 +1862,7 @@ GreenMayLeaderGroup:
 	db "Vigoroth@"
 
 	db 32
-	dw NOCTOWL  ; TODO: add swellow
+	dw SWELLOW  ; TODO: add swellow
 	db NO_ITEM
 	dw FOCUS_ENERGY, QUICK_ATTACK, WING_ATTACK, NO_MOVE
 	bigdw $0FFF
@@ -6755,7 +6755,7 @@ NuzlockeGroup:
 	db "6@"
 
 	db 17
-	dw MACHOP ; TODO: add Makuhita
+	dw MAKUHITA
 	db EXP_SHARE
 	dw VITAL_THROW, FOCUS_ENERGY, SAND_ATTACK, ARM_THRUST
 	bigdw $FFFF
@@ -6768,7 +6768,7 @@ NuzlockeGroup:
 	db "Bbbt@"
 
 	db 16
-	dw PIDGEY ; TODO: add Tailow
+	dw TAILLOW
 	db EXP_SHARE
 	dw WING_ATTACK, GROWL, PECK, QUICK_ATTACK
 	bigdw $FFFF
@@ -6781,7 +6781,7 @@ NuzlockeGroup:
 	db "Tailow@"
 
 	db 11
-	dw GEODUDE ; TODO: add aron
+	dw ARON
 	db NO_ITEM
 	dw TACKLE, HARDEN, MUD_SLAP, HEADBUTT
 	bigdw $0FFF
@@ -6799,7 +6799,7 @@ NuzlockeGroup:
 	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
 	db 42
-	dw RAICHU ; TODO: add manectric
+	dw MANECTRIC
 	db POKE_BALL
 	dw THUNDERBOLT, BITE, SPARK, HOWL
 	bigdw $0FFF
@@ -6812,7 +6812,7 @@ NuzlockeGroup:
 	db "b syro .9@"
 
 	db 49
-	dw CHARIZARD ; TODO: add blaziken
+	dw BLAZIKEN
 	db RAGECANDYBAR
 	dw SLASH, DOUBLE_KICK, BLAZE_KICK, NO_MOVE ; TODO: add Rock tomb
 	bigdw $FFFF
@@ -6825,7 +6825,7 @@ NuzlockeGroup:
 	db "Zzzzzz mmg@"
 
 	db 49
-	dw DRAGONITE ;TODO add Vibrava
+	dw VIBRAVA
 	db AMULET_COIN
 	dw BITE, FAINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
 	bigdw $FFFF
@@ -6838,7 +6838,7 @@ NuzlockeGroup:
 	db "Piiiv@"
 
 	db 47
-	dw SEAKING ; TODO: add wailmer
+	dw WAILMER
 	db EXP_SHARE
 	dw ASTONISH, ROLLOUT, WATER_GUN, NO_MOVE ; TODO: add water Pulse
 	bigdw $FFFF
@@ -6851,7 +6851,7 @@ NuzlockeGroup:
 	db "Wu''''2@"
 
 	db 19
-	dw MISDREAVUS ;TODO add sableye
+	dw SABLEYE
 	db EXP_SHARE
 	dw FORESIGHT, SCRATCH, FURY_SWIPES, NIGHT_SHADE
 	bigdw $0FFF
@@ -6868,7 +6868,7 @@ NuzlockeGroup:
 	next_list_item ; F483
 	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 47
-	dw SEAKING ; TODO: add wailord
+	dw WAILORD
 	db EXP_SHARE
 	dw REST, ROLLOUT, SURF, NO_MOVE ; TODO: add water spout
 	bigdw $FFFF
@@ -6881,7 +6881,7 @@ NuzlockeGroup:
 	db "Wu''''2@"
 
 	db 49
-	dw DRAGONITE ;TODO add flygon
+	dw FLYGON
 	db AMULET_COIN
 	dw BITE, FAINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
 	bigdw $FFFF
@@ -6907,7 +6907,7 @@ NuzlockeGroup:
 	db "Sharpedo@"
 
 	db 52
-	dw RAICHU ; TODO: add manectric
+	dw MANECTRIC
 	db POKE_BALL
 	dw THUNDERBOLT, BITE, THUNDER, HOWL
 	bigdw $0FFF
@@ -6920,7 +6920,7 @@ NuzlockeGroup:
 	db "b syro .9@"
 
 	db 51
-	dw CHARIZARD ; TODO: add blaziken
+	dw BLAZIKEN
 	db RAGECANDYBAR
 	dw SLASH, DOUBLE_KICK, NO_MOVE, NO_MOVE ; TODO: add Rock tomb, Blaze Kick
 	bigdw $FFFF
@@ -6933,7 +6933,7 @@ NuzlockeGroup:
 	db "Zzzzzz mmg@"
 
 	db 31
-	dw SEEL ; TODO: add spheal
+	dw SPHEAL
 	db EXP_SHARE
 	dw BODY_SLAM, AURORA_BEAM, ENCORE, NO_MOVE ; TODO: add Ice Ball
 	bigdw $FFFF

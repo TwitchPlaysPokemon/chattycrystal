@@ -253,149 +253,151 @@ PokedexDataPointerTable:
 	dba TreeckoPokedexEntry
 	dba GrovylePokedexEntry
 	dba SceptilePokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Torchic
 	dba CombuskenPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Blaziken
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Mudkip
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Marshtomp
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Swampert
 	dba PoochyenaPokedexEntry
 	dba MightyenaPokedexEntry
 	dba ZigzagoonPokedexEntry
 	dba LinoonePokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Lotad
 	dba LombrePokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Ludicolo
 	dba TaillowPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Swellow
 	dba WingullPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Pelipper
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Ralts
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Kirlia
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Gardevoir
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Surskit
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Masquerain
 	dba WhismurPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Loudred
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Exploud
 	dba MakuhitaPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Hariyama
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Azurill
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Skitty
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Delcatty
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Sableye
 	dba AronPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Lairon
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Aggron
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Electrike
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Manectric
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Roselia
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Wailmer
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Wailord
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Trapinch
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Vibrava
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Flygon
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Swablu
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Altaria
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Lileep
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Cradily
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Feebas
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Milotic
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Duskull
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Dusclops
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Absol
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Snorunt
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Spheal
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Sealeo
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Walrein
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Bagon
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Shelgon
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Salamence
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Beldum
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Metang
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Metagross
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Latias
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Latios
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Groudon
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Turtwig
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Grotle
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Torterra
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Chimchar
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Monferno
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Infernape
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Piplup
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Prinplup
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Empoleon
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Bidoof
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Bibarel
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Shinx
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Luxio
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Luxray
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Budew
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Roserade
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Burmy
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Wormadam
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Buizel
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Floatzel
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Shellos
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Gastrodon
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Buneary
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Lopunny
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Stunky
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Skuntank
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Bronzor
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Bronzong
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Bonsly
 	dba ChatotPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Croagunk
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Toxicroak
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Leafeon
 	dba GlaceonPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba MegastoisePokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba NoctdrioPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba TogetapePokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba JumpaniumPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
-	dba QuagynxPokedexEntry
-	dba SteelurretPokedexEntry
-	dba PlaceholderPokedexEntry ; PLACEHOLDER
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Porygon Z
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Dusknoir
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Froslass
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Darkrai
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Pansage
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Simisear
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Drillbur
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Excadrill
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Sandile
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Krokorok
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Krookodile
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Ducklett
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Swanna
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Tynamo
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Eelektrik
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Eelektross
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Litwick
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Lampent
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Chandelure
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Clauncher
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Clawitzer
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Helioptile
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Heliolisk
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Amaura
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Aurorus
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Sylveon
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Goomy
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Sliggoo
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Goodra
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Crabrawler
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Crabominable
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Cutiefly
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Ribombee
+	; Fused Crystal mons used their base mon's entry
+	dba OnixPokedexEntry 		; Onixtret
+	dba ChikoritaPokedexEntry 	; Chiquirtle
+	dba BayleefPokedexEntry		; Baytortle
+	dba MeganiumPokedexEntry	; Megastoise
+	dba HoothootPokedexEntry 	; Hootduo
+	dba NoctowlPokedexEntry		; Noctdrio
+	dba TogepiPokedexEntry 		; Togekey
+	dba TogeticPokedexEntry		; Togetape
+	dba HoppipPokedexEntry 		; Hopporita
+	dba SkiploomPokedexEntry 	; Skipleef
+	dba JumpluffPokedexEntry	; Jumpanium
+	dba WooperPokedexEntry		; Woochum
+	dba QuagsirePokedexEntry	; Quagynx		
+	dba SteelixPokedexEntry		; Steelurret
+	; TPP's signature fakemon
+	dba PlaceholderPokedexEntry ; PLACEHOLDER - Phancero

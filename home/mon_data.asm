@@ -14,6 +14,7 @@ GetBaseData::
 	call GetPokemonIndexFromID
 	ld b, h
 	ld c, l
+	push bc
 	ld a, BANK(BaseData)
 	ld hl, BaseData
 	call LoadIndirectPointer
@@ -22,6 +23,13 @@ GetBaseData::
 	ld de, wCurBaseData
 	ld bc, BASE_DATA_SIZE
 	call CopyBytes
+	pop bc
+	call GetFormeTypeOverrides.function
+	jr nc, .end
+	ld a, b
+	ld [wBaseType1], a
+	ld a, c
+	ld [wBaseType2], a
 	jr .end
 
 .egg
@@ -48,6 +56,24 @@ GetBaseData::
 	pop de
 	pop bc
 	ret
+
+GetFormeTypeOverrides::
+	; in: bc: species
+	; out: carry: type overrides loaded; bc: type overrides (clobbered if no carry)
+	push hl
+	ld a, [hROMBank]
+	push af
+	call .function
+	pop hl
+	ld a, h
+	rst Bankswitch
+	pop hl
+	ret
+
+.function
+	ld a, BANK(_GetFormeTypeOverrides)
+	rst Bankswitch
+	jp _GetFormeTypeOverrides
 
 GetCurNick::
 	ld a, [wCurPartyMon]

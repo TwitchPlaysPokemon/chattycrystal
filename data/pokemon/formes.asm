@@ -12,9 +12,10 @@ forme: MACRO
 	dw \7 ; idle animation
 ENDM
 
-SECTION "Formes", ROMX
-
 ; MUST have 6 formes per species; duplicate as needed!
 
 Formes::
+	dw -1
+
+FormeTypeOverrides:
 	dw -1

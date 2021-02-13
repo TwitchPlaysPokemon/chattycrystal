@@ -36,6 +36,7 @@ ROMX $03
 	"bank3"
 ROMX $04
 	"bank4"
+	"Formes"
 ROMX $05
 	"bank5"
 ROMX $06
@@ -131,7 +132,6 @@ ROMX $2d
 	"Tileset Data 5"
 ROMX $2e
 	"bank2E"
-	"Formes"
 ROMX $2f
 	"Phone Scripts 2"
 ROMX $30

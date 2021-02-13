@@ -356,6 +356,13 @@ FindEnemyMonsImmuneToLastCounterMove:
 	pop hl
 	jr z, .next
 
+	push hl
+	push bc
+	ld bc, MON_DVS
+	add hl, bc
+	predef GetUnownLetter
+	pop bc
+	pop hl
 	ld a, [hl]
 	ld [wCurSpecies], a
 	call GetBaseData
@@ -536,6 +543,14 @@ FindEnemyMonsThatResistPlayer:
 
 	push hl
 	ld [wCurSpecies], a
+	ld a, l
+	sub LOW(wOTPartySpecies + 1)
+	push bc
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld hl, wOTPartyMon1DVs
+	call AddNTimes
+	predef GetUnownLetter
+	pop bc
 	call GetBaseData
 	ld a, [wLastPlayerCounterMove]
 	and a

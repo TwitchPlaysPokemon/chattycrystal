@@ -3351,26 +3351,37 @@ IsThePlayerMonTypesEffectiveAgainstOTMon:
 ; Calculates the effectiveness of the types of the PlayerMon
 ; against the OTMon
 	push bc
-	ld hl, wOTPartyCount
+	ld hl, wOTPartyMon1DVs
 	ld a, b
-	inc a
-	ld c, a
-	ld b, 0
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	push hl
+	predef GetUnownLetter
+	pop hl
+	ld bc, -MON_DVS
 	add hl, bc
 	ld a, [hl]
 	call GetPokemonIndexFromID
 	ld b, h
 	ld c, l
+	push bc
+	call GetFormeTypeOverrides
+	ld h, b
+	ld l, c
+	pop bc
+	jr c, .found_types
 	ld hl, BaseData
 	ld a, BANK(BaseData)
 	call LoadIndirectPointer
 	jr z, .done
 	ld bc, BASE_TYPES
 	add hl, bc
-	ld de, wEnemyMonType
-	ld c, BASE_CATCH_RATE - BASE_TYPES
-	ld a, BANK(BaseData)
-	call FarCopyBytes
+	call GetFarHalfword
+.found_types
+	ld a, h
+	ld [wEnemyMonType1], a
+	ld a, l
+	ld [wEnemyMonType2], a
 	ld a, [wBattleMonType1]
 	ld [wPlayerMoveStruct + MOVE_TYPE], a
 	call SetPlayerTurn
@@ -3483,9 +3494,20 @@ LoadEnemyMonToSwitchTo:
 	ld [wTempEnemyMonSpecies], a
 	ld [wCurPartySpecies], a
 	call LoadEnemyMon
+	ld hl, wEnemyMonDVs
+	predef GetUnownLetter
 
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	call GetFormeTypeOverrides
+	jr nc, .no_overrides
+	ld a, b
+	ld [wEnemyMonType1], a
+	ld a, c
+	ld [wEnemyMonType2], a
+.no_overrides
 	ld a, l
 	sub LOW(UNOWN)
 	if HIGH(UNOWN) == 0
@@ -3503,8 +3525,6 @@ LoadEnemyMonToSwitchTo:
 	ld a, [wFirstUnownSeen]
 	and a
 	jr nz, .skip_unown
-	ld hl, wEnemyMonDVs
-	predef GetUnownLetter
 	ld a, [wUnownLetter]
 	ld [wFirstUnownSeen], a
 .skip_unown
@@ -3929,6 +3949,9 @@ InitBattleMon:
 	call CopyBytes
 	ld bc, MON_DVS - MON_ID
 	add hl, bc
+	push hl
+	predef GetUnownLetter
+	pop hl
 	ld de, wBattleMonDVs
 	ld bc, MON_PKRUS - MON_DVS
 	call CopyBytes
@@ -4013,6 +4036,9 @@ InitEnemyMon:
 	call CopyBytes
 	ld bc, MON_DVS - MON_ID
 	add hl, bc
+	push hl
+	predef GetUnownLetter
+	pop hl
 	ld de, wEnemyMonDVs
 	ld bc, MON_PKRUS - MON_DVS
 	call CopyBytes
@@ -8193,6 +8219,15 @@ InitEnemyWildmon:
 	predef GetUnownLetter
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	call GetFormeTypeOverrides
+	jr nc, .no_overrides
+	ld a, b
+	ld [wEnemyMonType1], a
+	ld a, c
+	ld [wEnemyMonType2], a
+.no_overrides
 	ld a, l
 	sub UNOWN
 	if HIGH(UNOWN) == 0

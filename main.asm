@@ -715,7 +715,11 @@ SECTION "16-bit ID stuff", ROMX
 
 INCLUDE "engine/16/table_functions.asm"
 
+SECTION "Formes", ROMX
+
+INCLUDE "engine/pokemon/formes.asm"
+INCLUDE "data/pokemon/formes.asm"
+
 ; own sections
 INCLUDE "data/trainers/parties.asm"
 INCLUDE "engine/battle/effect_command_files.asm"
-INCLUDE "gfx/pokemon/formes.asm"

@@ -253,12 +253,12 @@ AnimationIdlePointers:
 	dw TreeckoAnimationIdle
 	dw GrovyleAnimationIdle
 	dw SceptileAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Torchic
 	dw CombuskenAnimationIdle
 	dw BlazikenAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Mudkip
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Marshtomp
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Swampert
 	dw PoochyenaAnimationIdle
 	dw MightyenaAnimationIdle
 	dw ZigzagoonAnimationIdle
@@ -269,132 +269,135 @@ AnimationIdlePointers:
 	dw TaillowAnimationIdle
 	dw SwellowAnimationIdle
 	dw WingullAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Pelipper
 	dw RaltsAnimationIdle
 	dw KirliaAnimationIdle
 	dw GardevoirAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Surskit
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Masquerain
 	dw WhismurAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Loudred
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Exploud
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Makuhita
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Hariyama
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Azurill
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Skitty
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Delcatty
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sableye
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Aron
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Lairon
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Aggron
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Electrike
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Manectric
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Roselia
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Wailmer
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Wailord
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Trapinch
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Vibrava
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Flygon
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Swablu
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Altaria
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Lileep
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Cradily
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Feebas
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Milotic
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Duskull
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Dusclops
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Absol
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Snorunt
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Spheal
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sealeo
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Walrein
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bagon
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Shelgon
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Salamence
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Beldum
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Metang
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Metagross
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Latias
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Latios
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Groudon
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Turtwig
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Grotle
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Torterra
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chimchar
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Monferno
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Infernape
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Piplup
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Prinplup
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Empoleon
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bidoof
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bibarel
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Shinx
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Luxio
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Luxray
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Budew
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Roserade
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Burmy
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Wormadam
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Buizel
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Floatzel
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Shellos
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Gastrodon
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Buneary
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Lopunny
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Stunky
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Skuntank
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bronzor
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bronzong
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bonsly
 	dw ChatotAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Croagunk
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Toxicroak
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Leafeon
 	dw GlaceonAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Porygon Z
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Dusknoir
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Froslass
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Darkrai
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Pansage
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Simisage
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Drillbur
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Excadrill
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sandile
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Krokorok
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Krookodile
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Ducklett
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Swanna
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Tynamo
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Eelektrik
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Eelektross
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Litwick
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Lampent
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chandelure
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Clauncher
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Clawitzer
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Helioptile
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Heliolisk
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Amaura
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Aurorus
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sylveon
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Goomy
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sliggoo
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Goodra
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Crabrawler
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Crabominable
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Cutiefly
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Ribombee
+	; Fused Crystal mons
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Onixtret
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chiquirtle
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Baytortle
 	dw MegastoiseAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Hootduo
 	dw NoctdrioAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Togekey
 	dw TogetapeAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Hopporita
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Skipleef
 	dw JumpaniumAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Woochum
 	dw QuagynxAnimationIdle
 	dw SteelurretAnimationIdle
+	; TPP's signature fakemon
+	dw PlaceholderAnimationIdle ; PLACEHOLDER - Phancero

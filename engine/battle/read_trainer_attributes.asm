@@ -1,6 +1,7 @@
 GetTrainerClassName:
 if TESTMODE
 else
+	ld a, c
 	ld [wCurSpecies], a
 	ld a, [wScriptActive]
 	and a
@@ -42,7 +43,9 @@ else
 	ld a, [wScriptActive]
 	and a
 	jr nz, .chatty
-
+	
+	ld a, c
+	
 	ld [wCurSpecies], a
 	ld a, TRAINER_NAME
 	ld [wNamedObjectTypeBuffer], a

@@ -711,7 +711,7 @@ else
 	and a
 	jr z, SkipChattyTextInjection
 endc
-	ld a, [wChattyOveride]
+	ld a, [wChattyOverride]
 	and a
 	jr z, HomeHandleChattyText
 SkipChattyTextInjection:

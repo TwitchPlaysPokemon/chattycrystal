@@ -311,7 +311,7 @@ EvolveAfterBattle_MasterLoop:
 	endc
 	jr nz, .skip_unown
 	ld hl, wTempMonDVs
-	predef GetUnownLetter
+	predef GetCurrentForme
 	callfar UpdateUnownDex
 
 .skip_unown

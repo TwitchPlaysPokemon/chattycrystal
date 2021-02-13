@@ -6360,7 +6360,7 @@ Function102d48:
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld hl, wPartyMon1DVs
 	call AddNTimes
-	predef GetUnownLetter
+	predef GetCurrentForme
 	farcall UpdateUnownDex
 	ld a, [wFirstUnownSeen]
 	and a

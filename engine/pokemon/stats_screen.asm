@@ -567,7 +567,7 @@ StatsScreen_LoadGFX:
 	call PlaceString
 .done_status
 	ld hl, wTempMonDVs
-	predef GetUnownLetter
+	predef GetCurrentForme
 	hlcoord 1, 15
 	predef PrintMonTypes
 	hlcoord 9, 8
@@ -779,7 +779,7 @@ OTString:
 
 StatsScreen_PlaceFrontpic:
 	ld hl, wTempMonDVs
-	predef GetUnownLetter
+	predef GetCurrentForme
 	call StatsScreen_GetAnimationParam
 	jr c, .egg
 	and a

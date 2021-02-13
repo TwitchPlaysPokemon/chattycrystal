@@ -279,7 +279,7 @@ MobileTradeAnim_ClearBGMap:
 MobileTradeAnim_GetFrontpic:
 	push de
 	push af
-	predef GetUnownLetter
+	predef GetCurrentForme
 	pop af
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
@@ -291,7 +291,7 @@ MobileTradeAnim_GetFrontpic:
 Function108201:
 	push de
 	push af
-	predef GetUnownLetter
+	predef GetCurrentForme
 	pop af
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a

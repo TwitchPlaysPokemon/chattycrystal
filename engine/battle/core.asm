@@ -3356,7 +3356,7 @@ IsThePlayerMonTypesEffectiveAgainstOTMon:
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
 	push hl
-	predef GetUnownLetter
+	predef GetCurrentForme
 	pop hl
 	ld bc, -MON_DVS
 	add hl, bc
@@ -3495,7 +3495,7 @@ LoadEnemyMonToSwitchTo:
 	ld [wCurPartySpecies], a
 	call LoadEnemyMon
 	ld hl, wEnemyMonDVs
-	predef GetUnownLetter
+	predef GetCurrentForme
 
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
@@ -3950,7 +3950,7 @@ InitBattleMon:
 	ld bc, MON_DVS - MON_ID
 	add hl, bc
 	push hl
-	predef GetUnownLetter
+	predef GetCurrentForme
 	pop hl
 	ld de, wBattleMonDVs
 	ld bc, MON_PKRUS - MON_DVS
@@ -4037,7 +4037,7 @@ InitEnemyMon:
 	ld bc, MON_DVS - MON_ID
 	add hl, bc
 	push hl
-	predef GetUnownLetter
+	predef GetCurrentForme
 	pop hl
 	ld de, wEnemyMonDVs
 	ld bc, MON_PKRUS - MON_DVS
@@ -4103,7 +4103,7 @@ SwitchPlayerMon:
 
 SendOutPlayerMon:
 	ld hl, wBattleMonDVs
-	predef GetUnownLetter
+	predef GetCurrentForme
 	hlcoord 1, 5
 	ld b, 7
 	ld c, 8
@@ -6253,7 +6253,7 @@ LoadEnemyMon:
 
 ; Get letter based on DVs
 	ld hl, wEnemyMonDVs
-	predef GetUnownLetter
+	predef GetCurrentForme
 ; Can't use any letters that haven't been unlocked
 ; If combined with forced shiny battletype, causes an infinite loop
 	call CheckUnownLetter
@@ -7996,7 +7996,7 @@ DropPlayerSub:
 	ld a, [wBattleMonSpecies]
 	ld [wCurPartySpecies], a
 	ld hl, wBattleMonDVs
-	predef GetUnownLetter
+	predef GetCurrentForme
 	ld de, vTiles2 tile $31
 	predef GetMonBackpic
 	pop af
@@ -8033,7 +8033,7 @@ DropEnemySub:
 	ld [wCurPartySpecies], a
 	call GetBaseData
 	ld hl, wEnemyMonDVs
-	predef GetUnownLetter
+	predef GetCurrentForme
 	ld de, vTiles2
 	predef GetAnimatedFrontpic
 	pop af
@@ -8216,7 +8216,7 @@ InitEnemyWildmon:
 	ld bc, NUM_MOVES
 	call CopyBytes
 	ld hl, wEnemyMonDVs
-	predef GetUnownLetter
+	predef GetCurrentForme
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
 	ld b, h

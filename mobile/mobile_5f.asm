@@ -411,7 +411,7 @@ Function17d1f1:
 	dec a
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
-	predef GetUnownLetter
+	predef GetCurrentForme
 	callfar UpdateUnownDex
 	ld a, [wFirstUnownSeen]
 	and a

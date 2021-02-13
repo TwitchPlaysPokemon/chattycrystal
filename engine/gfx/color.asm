@@ -583,7 +583,7 @@ GetMonNormalOrShinyPalettePointer:
 	push af
 	ld h, b
 	ld l, c
-	predef GetUnownLetter
+	predef GetCurrentForme
 	pop af
 	call GetMonPalettePointer
 	pop bc

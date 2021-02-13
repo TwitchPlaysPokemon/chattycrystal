@@ -52,7 +52,7 @@ PredefPointers::
 	add_predef PrintMoveType
 	add_predef PrintType
 	add_predef PrintMonTypes
-	add_predef GetUnownLetter
+	add_predef GetCurrentForme
 	add_predef LoadPoisonBGPals
 	add_predef DummyPredef2F
 	add_predef InitSGBBorder ; $30

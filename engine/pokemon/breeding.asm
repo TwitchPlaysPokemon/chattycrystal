@@ -259,7 +259,7 @@ HatchEggs:
 	jr nz, .notunown
 	ld de, wPartyMon1DVs - wPartyMon1Species
 	add hl, de
-	predef GetUnownLetter ;get the UnownLetter for both the first seen check and the animation
+	predef GetCurrentForme ;get the UnownLetter for both the first seen check and the animation
 	ld a, [wFirstUnownSeen]
 	and a
 	jr nz, .notFirst

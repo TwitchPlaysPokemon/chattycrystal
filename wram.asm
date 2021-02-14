@@ -440,7 +440,7 @@ wPlayerSubStatus2:: ; c669
 ; bit
 ; 7
 ; 6
-; 5
+; 5 flinched
 ; 4 damaged this turn (for assurance)
 ; 3 roosting
 ; 2 charged last turn
@@ -453,7 +453,7 @@ wPlayerSubStatus3:: ; c66a
 ; 6 flying
 ; 5 underground
 ; 4 charged
-; 3 flinched
+; 3
 ; 2 in loop
 ; 1 rampage
 ; 0 bide

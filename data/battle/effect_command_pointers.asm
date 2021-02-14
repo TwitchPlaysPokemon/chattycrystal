@@ -206,3 +206,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_TrumpCard
 	effectfn BattleCommand_Assist
 	effectfn BattleCommand_Assurance
+	effectfn BattleCommand_Brine

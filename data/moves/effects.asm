@@ -2419,3 +2419,24 @@ Assurance:
 	buildopponentrage
 	kingsrock
 	endmove
+
+Brine:
+	checkobedience
+	usedmovetext
+	doturn
+	brine
+	critical
+	damagestats
+	damagecalc
+	stab
+	checkhit
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

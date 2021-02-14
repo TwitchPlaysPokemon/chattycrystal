@@ -298,9 +298,9 @@
 	const ROOST        ; 122
 	const WAKE_UP_SLAP ; 123 (PLACEHOLDER)
 	const HAMMER_ARM   ; 124
-	const BRINE        ; 125 (PLACEHOLDER)
+	const BRINE        ; 125
 	const CLOSE_COMBAT ; 126
-	const ASSURANCE    ; 127 (PLACEHOLDER)
+	const ASSURANCE    ; 127
 	const TRUMP_CARD   ; 128
 	const SUCKER_PUNCH ; 129 (PLACEHOLDER)
 	const AQUA_RING    ; 12a

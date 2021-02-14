@@ -441,7 +441,7 @@ wPlayerSubStatus2:: ; c669
 ; 7
 ; 6
 ; 5
-; 4
+; 4 damaged this turn (for assurance)
 ; 3 roosting
 ; 2 charged last turn
 ; 1 charged

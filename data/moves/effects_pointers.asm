@@ -172,4 +172,5 @@ MoveEffectsPointers:
 	dw CrystalBolt
 	dw Assist
 	dw Assurance
+	dw Brine
 	dw Placeholder

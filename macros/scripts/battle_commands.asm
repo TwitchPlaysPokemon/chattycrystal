@@ -206,6 +206,7 @@ ENDM
 	command trumpcard               ; c7
 	command assist                  ; c8
 	command assurance               ; c9
+	command brine                   ; ca
 
 	enum_start $fe
 	command endturn                 ; fe

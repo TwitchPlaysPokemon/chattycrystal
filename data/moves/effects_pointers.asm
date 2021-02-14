@@ -183,4 +183,5 @@ MoveEffectsPointers:
 	dw ToxicHit
 	dw Superpower
 	dw Tickle
+	dw Psyshock
 	dw Placeholder

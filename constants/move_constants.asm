@@ -336,7 +336,7 @@
 	const ATTACK_ORDER ; 148
 	const DARK_VOID    ; 149
 	const HONE_CLAWS   ; 14a
-	const PSYSHOCK     ; 14b (PLACEHOLDER)
+	const PSYSHOCK     ; 14b
 	const QUIVER_DANCE ; 14c
 	const FOUL_PLAY    ; 14d (PLACEHOLDER)
 	const ECHOED_VOICE ; 14e

@@ -354,7 +354,7 @@ BattleAnimations::
 	dw BattleAnim_SweetScent   ; 148
 	dw BattleAnim_Hypnosis
 	dw BattleAnim_Sharpen
-	dw BattleAnim_Headbutt
+	dw BattleAnim_PsychicM
 	dw BattleAnim_Growth
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Roar

@@ -347,7 +347,7 @@ Moves1:
 	move EFFECT_NORMAL_HIT,          90, BUG,      100, 15,   0 ;ATTACK_ORDER
 	move EFFECT_SLEEP,                0, DARK,      80, 10,   0 ;DARK_VOID
 	move EFFECT_HONE_CLAWS,           0, DARK,     100, 15,   0 ;HONE_CLAWS
-	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;PSYSHOCK
+	move EFFECT_PSYSHOCK,            80, PSYCHIC,  100, 10,   0 ;PSYSHOCK
 	move EFFECT_QUIVER_DANCE,         0, BUG,      100, 20,   0 ;QUIVER_DANCE
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;FOUL_PLAY
 	move EFFECT_FURY_CUTTER,         40, NORMAL,   100, 15,   0 ;ECHOED_VOICE

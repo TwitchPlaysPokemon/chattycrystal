@@ -2470,7 +2470,13 @@ PlayerAttackDamage:
 	jr .thickclub
 
 .special
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_PSYSHOCK
 	ld hl, wEnemyMonSpclDef
+	jr nz, .got_sp_defense
+	ld hl, wEnemyMonDefense
+.got_sp_defense
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
@@ -2722,7 +2728,13 @@ EnemyAttackDamage:
 	jr .thickclub
 
 .Special:
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_PSYSHOCK
 	ld hl, wBattleMonSpclDef
+	jr nz, .got_sp_defense
+	ld hl, wBattleMonDefense
+.got_sp_defense
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]

@@ -707,7 +707,7 @@ IntroScene7:
 	ldh [hWY], a
 	call Intro_ResetLYOverrides
 	farcall ClearSpriteAnims
-	depixel 13, 27, 4 - TITLE_ANIMATION_CHATOT_HEIGHT, 0
+	lb de, 108 - TITLE_ANIMATION_CHATOT_HEIGHT, 216
 	ld a, SPRITE_ANIM_INDEX_INTRO_SUICUNE
 	call _InitSpriteAnimStruct
 	ld a, $f0
@@ -970,7 +970,7 @@ IntroScene13:
 	ld a, $90
 	ldh [hWY], a
 	farcall ClearSpriteAnims
-	depixel 13, 11, 4 - TITLE_ANIMATION_CHATOT_HEIGHT, 0
+	lb de, 108 - TITLE_ANIMATION_CHATOT_HEIGHT, 88
 	ld a, SPRITE_ANIM_INDEX_INTRO_SUICUNE
 	call _InitSpriteAnimStruct
 	ld de, MUSIC_CRYSTAL_OPENING

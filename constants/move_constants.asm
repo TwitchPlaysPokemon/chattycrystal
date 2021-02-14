@@ -262,7 +262,7 @@
 	const CHARGE       ;  fe
 	const TAUNT        ;  ff (PLACEHOLDER)
 	const ASSIST       ; 100
-	const SUPERPOWER   ; 101 (PLACEHOLDER)
+	const SUPERPOWER   ; 101
 	const REVENGE      ; 102
 	const ENDEAVOR     ; 103
 	const SNATCH       ; 104 (PLACEHOLDER)

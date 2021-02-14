@@ -2463,6 +2463,30 @@ CloseCombat:
 	selfstatdownmessage
 	endmove
 
+Superpower:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	selfattackdown
+	selfstatdownmessage
+	resetmiss
+	selfdefensedown
+	selfstatdownmessage
+	endmove
+
 AquaRing:
 	checkobedience
 	usedmovetext

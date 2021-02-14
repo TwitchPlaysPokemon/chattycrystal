@@ -181,4 +181,5 @@ MoveEffectsPointers:
 	dw FlareBlitz
 	dw VoltTackle
 	dw ToxicHit
+	dw Superpower
 	dw Placeholder

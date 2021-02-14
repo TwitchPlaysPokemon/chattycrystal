@@ -75,6 +75,7 @@ PoisonHit:
 	poisontarget
 	endmove
 
+DrainingKiss:
 LeechHit:
 	checkobedience
 	usedmovetext

@@ -349,7 +349,7 @@
 	const TAIL_SLAP    ; 155 (PLACEHOLDER)
 	const BLUE_FLARE   ; 156
 	const FREEZE_DRY   ; 157
-	const DRAININGKISS ; 158 (PLACEHOLDER)
+	const DRAININGKISS ; 158
 	const PLAY_ROUGH   ; 159
 	const MOONBLAST    ; 15a
 	const DAZZLINGLEAM ; 15b

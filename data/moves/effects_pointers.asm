@@ -175,4 +175,5 @@ MoveEffectsPointers:
 	dw Brine
 	dw Surf
 	dw Whirlpool
+	dw DrainingKiss
 	dw Placeholder

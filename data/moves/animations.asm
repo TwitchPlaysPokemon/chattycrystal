@@ -367,7 +367,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_SacredFire
 	dw BattleAnim_IceBeam
-	dw BattleAnim_Headbutt     ; 158
+	dw BattleAnim_MegaDrain    ; 158
 	dw BattleAnim_Submission
 	dw BattleAnim_SeismicToss
 	dw BattleAnim_MorningSun

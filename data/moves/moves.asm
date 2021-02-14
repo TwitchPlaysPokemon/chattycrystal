@@ -360,6 +360,7 @@ Moves1:
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;TAIL_SLAP
 	move EFFECT_BURN_HIT,           120, FIRE,      85, 5,   20 ;BLUE_FLARE
 	move EFFECT_FREEZE_DRY,          70, NORMAL,   100, 20,  10 ;FREEZE_DRY
+	move EFFECT_DRAINING_KISS,       50, FAIRY,    100, 10,   0 ;DRAININGKISS
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;DRAININGKISS
 	move EFFECT_ATTACK_DOWN_HIT,     90, FAIRY,     90, 10,  10 ;PLAY_ROUGH
 	move EFFECT_SP_ATK_DOWN_HIT,     95, FAIRY,    100, 15,  30 ;MOONBLAST
@@ -371,6 +372,5 @@ Moves1:
 	move EFFECT_CHATTY_HP,            1, NORMAL,   100, 15,   0 ;CHATTY_HP
 	move EFFECT_CRYSTAL_BOLT,        70, ELECTRIC, 100, 20,   0 ;CRYSTAL_BOLT
 
-;	move EFFECT_LEECH_HIT,          50, FAIRY,    100, 10,   0 ;DRAININGKISS TODO: does not drain 75%
 ;	move EFFECT_NORMAL_HIT,         80, FAIRY,    100, 10,   0 ;DAZZLINGLEAM TODO: Add fairy type
 ;	move EFFECT_BURN_HIT,           65, FIRE,     95,  15,  10 ;FIRE_FANG needs a new effect as it also has a flinch chance

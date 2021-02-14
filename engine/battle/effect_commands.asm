@@ -3652,19 +3652,37 @@ BattleCommand_EatDream:
 	jp StdBattleTextbox
 
 SapHealth:
-	; Divide damage by 2, store it in hDividend
+	; Multiply by 2 or 3, then divide by 4 to get 1/2 or 3/4 drain.
+	xor a
+	ldh [hMultiplicand], a
 	ld hl, wCurDamage
 	ld a, [hli]
-	srl a
-	ldh [hDividend], a
-	ld b, a
+	ldh [hMultiplicand + 1], a
 	ld a, [hl]
-	rr a
-	ldh [hDividend + 1], a
-	or b
+	ldh [hMultiplicand + 2], a
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_DRAINING_KISS
+	ld a, 3
+	jr z, .got_multiplier
+	dec a
+.got_multiplier
+	ldh [hMultiplier], a
+	call Multiply
+	ld b, 4
+	ld a, 4
+	ldh [hDivisor], a
+	call Divide
+
+	; Ensure we have a minimum drain of 1HP
+	xor a
+	ld hl, hMultiplicand + 1 ; Assumes 16bit damage cap
+	or [hl]
+	inc hl
+	or [hl]
 	jr nz, .at_least_one
-	ld a, 1
-	ldh [hDividend + 1], a
+	inc [hl]
 .at_least_one
 
 	ld hl, wBattleMonHP
@@ -3694,12 +3712,12 @@ SapHealth:
 	ld [bc], a
 
 	; Add hDividend to current HP and copy it to little endian wBuffer5/6
-	ldh a, [hDividend + 1]
+	ldh a, [hDividend + 3]
 	ld b, [hl]
 	add b
 	ld [hld], a
 	ld [wBuffer5], a
-	ldh a, [hDividend]
+	ldh a, [hDividend + 2]
 	ld b, [hl]
 	adc b
 	ld [hli], a

@@ -296,7 +296,7 @@ BattleAnimations::
 	dw BattleAnim_Cut
 	dw BattleAnim_SacredFire
 	dw BattleAnim_Detect       ; 110
-	dw BattleAnim_Headbutt
+	dw BattleAnim_RockThrow
 	dw BattleAnim_Screech
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt

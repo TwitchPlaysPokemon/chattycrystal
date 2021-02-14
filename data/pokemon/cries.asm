@@ -352,6 +352,7 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BRONZOR - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BRONZONG - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BONSLY - PLACEHOLDER
+ChatotCry::
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; CHATOT - TODO: port chatot cry (not that important as it's played by the controller)
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CROAGUNK - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TOXICROAK - PLACEHOLDER

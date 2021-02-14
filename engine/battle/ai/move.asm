@@ -30,7 +30,7 @@ AIChooseMove:
 	dec a
 	push hl
 	ld b, a
-	call CheckUsableMove_b
+	farcall CheckUsableMove_b
 	ld a, b
 	pop hl
 	and a

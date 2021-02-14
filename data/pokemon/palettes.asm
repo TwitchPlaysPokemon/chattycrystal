@@ -698,6 +698,7 @@ INCBIN "gfx/pokemon/budew/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Budew
 INCBIN "gfx/pokemon/roserade/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Roserade
+BurmyPalette:
 INCBIN "gfx/pokemon/burmy/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Burmy
 INCBIN "gfx/pokemon/mothim/front.gbcpal", middle_colors
@@ -706,8 +707,10 @@ INCBIN "gfx/pokemon/buizel/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Buizel
 INCBIN "gfx/pokemon/floatzel/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Floatzel
+ShellosPalette:
 INCBIN "gfx/pokemon/shellos/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Shellos
+GastrodonPalette:
 INCBIN "gfx/pokemon/gastrodon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Gastrodon
 INCBIN "gfx/pokemon/buneary/front.gbcpal", middle_colors

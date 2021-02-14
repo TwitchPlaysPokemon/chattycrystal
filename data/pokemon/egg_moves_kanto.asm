@@ -181,7 +181,7 @@ SquirtleEggMoves:
 
 PidgeyEggMoves:
 	dw PURSUIT
-	dw FAINT_ATTACK
+	dw FEINT_ATTACK
 	dw FORESIGHT
 	dw -1 ; end
 
@@ -195,7 +195,7 @@ RattataEggMoves:
 	dw -1 ; end
 
 SpearowEggMoves:
-	dw FAINT_ATTACK
+	dw FEINT_ATTACK
 	dw FALSE_SWIPE
 	dw SCARY_FACE
 	dw QUICK_ATTACK
@@ -239,7 +239,7 @@ NidoranMEggMoves:
 	dw -1 ; end
 
 VulpixEggMoves:
-	dw FAINT_ATTACK
+	dw FEINT_ATTACK
 	dw HYPNOSIS
 	dw FLAIL
 	dw SPITE
@@ -249,7 +249,7 @@ VulpixEggMoves:
 ZubatEggMoves:
 	dw QUICK_ATTACK
 	dw PURSUIT
-	dw FAINT_ATTACK
+	dw FEINT_ATTACK
 	dw GUST
 	dw WHIRLWIND
 	dw -1 ; end
@@ -278,7 +278,7 @@ VenonatEggMoves:
 	dw -1 ; end
 
 DiglettEggMoves:
-	dw FAINT_ATTACK
+	dw FEINT_ATTACK
 	dw SCREECH
 	dw ANCIENTPOWER
 	dw PURSUIT
@@ -390,7 +390,7 @@ DoduoEggMoves:
 	dw QUICK_ATTACK
 	dw SUPERSONIC
 	dw HAZE
-	dw FAINT_ATTACK
+	dw FEINT_ATTACK
 	dw FLAIL
 	dw -1 ; end
 

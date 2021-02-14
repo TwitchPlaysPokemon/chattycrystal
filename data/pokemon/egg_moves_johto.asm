@@ -140,7 +140,7 @@ SentretEggMoves:
 HoothootEggMoves:
 	dw MIRROR_MOVE
 	dw SUPERSONIC
-	dw FAINT_ATTACK
+	dw FEINT_ATTACK
 	dw WING_ATTACK
 	dw WHIRLWIND
 	dw SKY_ATTACK
@@ -186,7 +186,7 @@ CleffaEggMoves:
 IgglybuffEggMoves:
 	dw PERISH_SONG
 	dw PRESENT
-	dw FAINT_ATTACK
+	dw FEINT_ATTACK
 	dw -1 ; end
 
 TogepiEggMoves:
@@ -201,7 +201,7 @@ NatuEggMoves:
 	dw HAZE
 	dw DRILL_PECK
 	dw QUICK_ATTACK
-	dw FAINT_ATTACK
+	dw FEINT_ATTACK
 	dw STEEL_WING
 	dw -1 ; end
 
@@ -293,7 +293,7 @@ GligarEggMoves:
 
 SnubbullEggMoves:
 	dw METRONOME
-	dw FAINT_ATTACK
+	dw FEINT_ATTACK
 	dw REFLECT
 	dw PRESENT
 	dw CRUNCH

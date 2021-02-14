@@ -201,7 +201,7 @@ Moves1:
 	move EFFECT_PROTECT,              0, NORMAL,   100, 10,   0 ;PROTECT
 	move EFFECT_PRIORITY_HIT,        40, FIGHTING, 100, 30,   0 ;MACH_PUNCH
 	move EFFECT_SPEED_DOWN_2,         0, NORMAL,    90, 10,   0 ;SCARY_FACE
-	move EFFECT_ALWAYS_HIT,          60, DARK,     100, 20,   0 ;FAINT_ATTACK
+	move EFFECT_ALWAYS_HIT,          60, DARK,     100, 20,   0 ;FEINT_ATTACK
 	move EFFECT_CONFUSE,              0, FAIRY,     75, 10,   0 ;SWEET_KISS
 	move EFFECT_BELLY_DRUM,           0, NORMAL,   100, 10,   0 ;BELLY_DRUM
 	move EFFECT_POISON_HIT,          90, POISON,   100, 10,  30 ;SLUDGE_BOMB

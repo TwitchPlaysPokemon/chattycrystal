@@ -551,7 +551,7 @@ SudowoodoEvosAttacks:
 	dbw 10, FLAIL
 	dbw 19, LOW_KICK
 	dbw 28, ROCK_SLIDE
-	dbw 37, FAINT_ATTACK
+	dbw 37, FEINT_ATTACK
 	dbw 46, SLAM
 	db 0 ; no more level-up moves
 
@@ -709,7 +709,7 @@ UmbreonEvosAttacks:
 	dbw 16, PURSUIT
 	dbw 23, QUICK_ATTACK
 	dbw 30, CONFUSE_RAY
-	dbw 36, FAINT_ATTACK
+	dbw 36, FEINT_ATTACK
 	dbw 42, MEAN_LOOK
 	dbw 47, SCREECH
 	dbw 52, MOONLIGHT
@@ -721,7 +721,7 @@ MurkrowEvosAttacks:
 	dbw 11, PURSUIT
 	dbw 16, HAZE
 	dbw 26, NIGHT_SHADE
-	dbw 31, FAINT_ATTACK
+	dbw 31, FEINT_ATTACK
 	dbw 41, MEAN_LOOK
 	db 0 ; no more level-up moves
 
@@ -822,7 +822,7 @@ GligarEvosAttacks:
 	dbw 6, SAND_ATTACK
 	dbw 13, HARDEN
 	dbw 20, QUICK_ATTACK
-	dbw 28, FAINT_ATTACK
+	dbw 28, FEINT_ATTACK
 	dbw 36, SLASH
 	dbw 44, SCREECH
 	dbw 52, GUILLOTINE
@@ -925,7 +925,7 @@ SneaselEvosAttacks:
 	dbw 1, LEER
 	dbw 9, QUICK_ATTACK
 	dbw 17, SCREECH
-	dbw 25, FAINT_ATTACK
+	dbw 25, FEINT_ATTACK
 	dbw 33, FURY_SWIPES
 	dbw 41, AGILITY
 	dbw 49, SLASH
@@ -940,7 +940,7 @@ TeddiursaEvosAttacks:
 	dbw 1, LEER
 	dbw 8, LICK
 	dbw 15, FURY_SWIPES
-	dbw 22, FAINT_ATTACK
+	dbw 22, FEINT_ATTACK
 	dbw 29, REST
 	dbw 36, SLASH
 	dbw 43, SNORE
@@ -955,7 +955,7 @@ UrsaringEvosAttacks:
 	dbw 1, FURY_SWIPES
 	dbw 8, LICK
 	dbw 15, FURY_SWIPES
-	dbw 22, FAINT_ATTACK
+	dbw 22, FEINT_ATTACK
 	dbw 29, REST
 	dbw 39, SLASH
 	dbw 49, SNORE
@@ -1089,7 +1089,7 @@ HoundourEvosAttacks:
 	dbw 7, ROAR
 	dbw 13, SMOG
 	dbw 20, BITE
-	dbw 27, FAINT_ATTACK
+	dbw 27, FEINT_ATTACK
 	dbw 35, FLAMETHROWER
 	dbw 43, CRUNCH
 	db 0 ; no more level-up moves
@@ -1101,7 +1101,7 @@ HoundoomEvosAttacks:
 	dbw 7, ROAR
 	dbw 13, SMOG
 	dbw 20, BITE
-	dbw 30, FAINT_ATTACK
+	dbw 30, FEINT_ATTACK
 	dbw 41, FLAMETHROWER
 	dbw 52, CRUNCH
 	db 0 ; no more level-up moves

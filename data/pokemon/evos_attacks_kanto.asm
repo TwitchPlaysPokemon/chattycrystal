@@ -826,7 +826,7 @@ MeowthEvosAttacks:
 	dbw 1, GROWL
 	dbw 11, BITE
 	dbw 20, PAY_DAY
-	dbw 28, FAINT_ATTACK
+	dbw 28, FEINT_ATTACK
 	dbw 35, SCREECH
 	dbw 41, FURY_SWIPES
 	dbw 46, SLASH
@@ -839,7 +839,7 @@ PersianEvosAttacks:
 	dbw 1, BITE
 	dbw 11, BITE
 	dbw 20, PAY_DAY
-	dbw 29, FAINT_ATTACK
+	dbw 29, FEINT_ATTACK
 	dbw 38, SCREECH
 	dbw 46, FURY_SWIPES
 	dbw 53, SLASH

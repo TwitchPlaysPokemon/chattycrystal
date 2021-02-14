@@ -5893,7 +5893,7 @@ NuzlockeGroup:
 	db 49
 	dw VIBRAVA
 	db AMULET_COIN
-	dw BITE, FAINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
+	dw BITE, FEINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
 	bigdw $FFFF
 	bigdw 110
 	bigdw 78
@@ -5949,7 +5949,7 @@ NuzlockeGroup:
 	db 49
 	dw FLYGON
 	db AMULET_COIN
-	dw BITE, FAINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
+	dw BITE, FEINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
 	bigdw $FFFF
 	bigdw 159
 	bigdw 127

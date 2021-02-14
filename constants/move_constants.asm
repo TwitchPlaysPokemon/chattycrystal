@@ -319,7 +319,7 @@
 	const BULLET_PUNCH ; 137
 	const ICE_SHARD    ; 138
 	const FIRE_FANG    ; 139
-	const SHADOW_SNEAK ; 13a (PLACEHOLDER)
+	const SHADOW_SNEAK ; 13a
 	const MUD_BOMB     ; 13b
 	const PSYCHO_CUT   ; 13c
 	const ZEN_HEADBUTT ; 13d

@@ -337,7 +337,7 @@ BattleAnimations::
 	dw BattleAnim_MachPunch
 	dw BattleAnim_PowderSnow   ; 138
 	dw BattleAnim_Bite
-	dw BattleAnim_Headbutt
+	dw BattleAnim_QuickAttack
 	dw BattleAnim_SludgeBomb
 	dw BattleAnim_Cut
 	dw BattleAnim_Headbutt

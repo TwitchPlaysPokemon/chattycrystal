@@ -20,6 +20,7 @@
 	const DAYCARETEXT_NOT_ENOUGH_MONEY
 	const DAYCARETEXT_OH_FINE
 	const DAYCARETEXT_COME_AGAIN
+	const DAYCARETEXT_TOO_ATTACHED
 
 DayCareMan:
 	ld hl, wDayCareMan
@@ -35,8 +36,7 @@ DayCareMan:
 	ld hl, wDayCareMan
 	set DAYCAREMAN_HAS_MON_F, [hl]
 	call DayCare_DepositPokemonText
-	call DayCare_InitBreeding
-	ret
+	jp DayCare_InitBreeding
 
 .AskWithdrawMon:
 	farcall GetBreedMon1LevelGrowth
@@ -73,8 +73,7 @@ DayCareLady:
 	ld hl, wDayCareLady
 	set DAYCARELADY_HAS_MON_F, [hl]
 	call DayCare_DepositPokemonText
-	call DayCare_InitBreeding
-	ret
+	jp DayCare_InitBreeding
 
 .AskWithdrawMon:
 	farcall GetBreedMon2LevelGrowth
@@ -117,59 +116,44 @@ DayCareManIntroText:
 DayCareAskDepositPokemon:
 	ld a, [wPartyCount]
 	cp 2
-	jr c, .OnlyOneMon
+	ld a, DAYCARETEXT_LAST_MON
+	ret c
 	ld a, DAYCARETEXT_WHICH_ONE
 	call PrintDayCareText
 	ld b, PARTYMENUACTION_GIVE_MON
 	farcall SelectTradeOrDayCareMon
-	jr c, .Declined
+	ld a, DAYCARETEXT_OH_FINE
+	ret c
 	ld a, [wCurPartySpecies]
 	cp EGG
-	jr z, .Egg
+	ld a, DAYCARETEXT_CANT_BREED_EGG
+	scf
+	ret z
+	ld a, [wTPPFeatureLock]
+	cp TPP_FEATURE_LOCK_VALUE
+	jr nz, .not_locked
+	ld a, [wCurPartyMon]
+	ld c, a
+	farcall CheckChattyMon
+	ld a, DAYCARETEXT_TOO_ATTACHED
+	ret c
+.not_locked
 	farcall CheckCurPartyMonFainted
-	jr c, .OutOfUsableMons
+	ld a, DAYCARETEXT_LAST_ALIVE_MON
+	ret c
 	ld hl, wPartyMon1Item
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, [wCurPartyMon]
 	call AddNTimes
 	ld d, [hl]
 	farcall ItemIsMail
-	jr c, .HoldingMail
+	ld a, DAYCARETEXT_REMOVE_MAIL
+	ret c
 	ld hl, wPartyMonNicknames
 	ld a, [wCurPartyMon]
 	call GetNick
 	and a
 	ret
-
-.Declined:
-	ld a, DAYCARETEXT_OH_FINE
-	scf
-	ret
-
-.Egg:
-	ld a, DAYCARETEXT_CANT_BREED_EGG
-	scf
-	ret
-
-.OnlyOneMon:
-	ld a, DAYCARETEXT_LAST_MON
-	scf
-	ret
-
-.OutOfUsableMons:
-	ld a, DAYCARETEXT_LAST_ALIVE_MON
-	scf
-	ret
-
-.HoldingMail:
-	ld a, DAYCARETEXT_REMOVE_MAIL
-	scf
-	ret
-
-.DummyText:
-	;
-	text_far _DaycareDummyText
-	text_end
 
 DayCare_DepositPokemonText:
 	ld a, DAYCARETEXT_DEPOSIT
@@ -294,6 +278,7 @@ PrintDayCareText:
 	dw .NotEnoughMoney ; 11
 	dw .OhFineThen ; 12
 	dw .ComeAgain ; 13
+	dw .TooAttached ; 14
 
 .DayCareManIntro:
 	; I'm the DAY-CARE MAN. Want me to raise a #MON?
@@ -395,13 +380,16 @@ PrintDayCareText:
 	text_far _ComeAgainText
 	text_end
 
+.TooAttached:
+	text_far _TooAttachedText
+	text_end
+
 DayCareManOutside:
 	ld hl, wDayCareMan
 	bit DAYCAREMAN_HAS_EGG_F, [hl]
 	jr nz, .AskGiveEgg
 	ld hl, .NotYet
-	call PrintText
-	ret
+	jp PrintText
 
 .NotYet:
 	; Not yet…

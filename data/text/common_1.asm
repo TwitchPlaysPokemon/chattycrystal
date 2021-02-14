@@ -1809,6 +1809,13 @@ _ComeAgainText::
 	text "Come again."
 	done
 
+_TooAttachedText::
+	text "It's too attached"
+	line "to you<...> I couldn't"
+	para "possibly take it"
+	line "away from you."
+	done
+
 _NotYetText::
 	text "Not yet…"
 	done

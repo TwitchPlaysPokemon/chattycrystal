@@ -40,8 +40,7 @@ NamingScreen:
 	ldh [hMapAnims], a
 	pop af
 	ld [wOptions], a
-	call ClearJoypad
-	ret
+	jp ClearJoypad
 
 .SetUpNamingScreen:
 	call ClearBGPalettes
@@ -56,8 +55,7 @@ NamingScreen:
 	call WaitBGMap
 	call WaitTop
 	call SetPalettes
-	call NamingScreen_InitNameEntry
-	ret
+	jp NamingScreen_InitNameEntry
 
 .GetNamingScreenSetup:
 	ld a, [wNamingScreenType]
@@ -111,8 +109,7 @@ NamingScreen:
 	hlcoord 1, 2
 	ld [hl], a
 .genderless
-	call .StoreMonIconParams
-	ret
+	jp .StoreMonIconParams
 
 .NicknameStrings:
 	db "'S@"
@@ -124,8 +121,7 @@ NamingScreen:
 	hlcoord 5, 2
 	ld de, .PlayerNameString
 	call PlaceString
-	call .StoreSpriteIconParams
-	ret
+	jp .StoreSpriteIconParams
 
 .PlayerNameString:
 	db "YOUR NAME?@"
@@ -137,8 +133,7 @@ NamingScreen:
 	hlcoord 5, 2
 	ld de, .RivalNameString
 	call PlaceString
-	call .StoreSpriteIconParams
-	ret
+	jp .StoreSpriteIconParams
 
 .RivalNameString:
 	db "RIVAL'S NAME?@"
@@ -150,8 +145,7 @@ NamingScreen:
 	hlcoord 5, 2
 	ld de, .MomNameString
 	call PlaceString
-	call .StoreSpriteIconParams
-	ret
+	jp .StoreSpriteIconParams
 
 .MomNameString:
 	db "MOTHER'S NAME?@"
@@ -174,8 +168,7 @@ NamingScreen:
 	hlcoord 5, 2
 	ld de, .BoxNameString
 	call PlaceString
-	call .StoreBoxIconParams
-	ret
+	jp .StoreBoxIconParams
 
 .BoxNameString:
 	db "BOX NAME?@"
@@ -184,8 +177,7 @@ NamingScreen:
 	hlcoord 3, 2
 	ld de, .oTomodachi_no_namae_sutoringu
 	call PlaceString
-	call .StoreSpriteIconParams
-	ret
+	jp .StoreSpriteIconParams
 
 .oTomodachi_no_namae_sutoringu
 	db "おともだち　の　なまえは？@"
@@ -395,7 +387,30 @@ NamingScreenJoypadLoop:
 	ld a, [hl]
 	ld hl, SPRITEANIMSTRUCT_0E
 	add hl, bc
+	ld [hld], a
+	ld a, [wTPPFeatureLock]
+	cp TPP_FEATURE_LOCK_VALUE
+	jr nz, .repositioned
+.rejectY
+	call Random
+	and 3
+	call NamingScreen_IsTargetBox
+	jr nz, .gotY
+	ldh a, [hRandomSub]
+	inc a
+	jr z, .rejectY
+	ld c, 5
+	call SimpleDivide
+.gotY
+	ld [hld], a
+.rejectX
+	call Random
+	cp $100 % 9
+	jr c, .rejectX
+	ld c, 9
+	call SimpleDivide
 	ld [hl], a
+.repositioned
 	ld hl, wJumptableIndex
 	inc [hl]
 	ret
@@ -407,7 +422,7 @@ NamingScreenJoypadLoop:
 	jr nz, .a
 	ld a, [hl]
 	and B_BUTTON
-	jr nz, .b
+	jp nz, NamingScreen_DeleteCharacter
 	ld a, [hl]
 	and START
 	jr nz, .start
@@ -421,7 +436,7 @@ NamingScreenJoypadLoop:
 	cp $1
 	jr z, .select
 	cp $2
-	jr z, .b
+	jp z, NamingScreen_DeleteCharacter
 	cp $3
 	jr z, .end
 	call NamingScreen_GetLastCharacter
@@ -442,10 +457,6 @@ NamingScreenJoypadLoop:
 	call NamingScreen_IsTargetBox
 	ret nz
 	inc [hl]
-	ret
-
-.b
-	call NamingScreen_DeleteCharacter
 	ret
 
 .end
@@ -669,7 +680,6 @@ NamingScreen_AnimateCursor:
 	ret
 
 NamingScreen_TryAddCharacter:
-	ld a, [wNamingScreenLastCharacter] ; lost
 MailComposition_TryAddCharacter:
 	ld a, [wNamingScreenMaxNameLength]
 	ld c, a

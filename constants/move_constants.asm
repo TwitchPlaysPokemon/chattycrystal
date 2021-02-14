@@ -269,7 +269,7 @@
 	const SECRET_POWER ; 105 (PLACEHOLDER)
 	const DIVE         ; 106
 	const ARM_THRUST   ; 107
-	const TEETER_DANCE ; 108 (PLACEHOLDER)
+	const TEETER_DANCE ; 108
 	const BLAZE_KICK   ; 109
 	const ICE_BALL     ; 10a
 	const POISON_FANG  ; 10b

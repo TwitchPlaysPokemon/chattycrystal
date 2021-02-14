@@ -287,7 +287,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Fly
 	dw BattleAnim_Doubleslap
-	dw BattleAnim_Headbutt     ; 108
+	dw BattleAnim_PsychUp      ; 108
 	dw BattleAnim_HiJumpKick
 	dw BattleAnim_IcePunch
 	dw BattleAnim_Crunch

@@ -280,7 +280,7 @@ Moves1:
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;SECRET_POWER
 	move EFFECT_FLY,                 80, WATER,    100, 10,   0 ;DIVE
 	move EFFECT_MULTI_HIT,           15, FIGHTING, 100, 20,   0 ;ARM_THRUST
-	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;TEETER_DANCE
+	move EFFECT_CONFUSE,              0, NORMAL,   100, 20,   0 ;TEETER_DANCE
 	move EFFECT_BURN_HIT,            85, FIRE,      90, 10,  10 ;BLAZE_KICK
 	move EFFECT_ROLLOUT,             30, ICE,       90, 20,   0 ;ICE_BALL
 	move EFFECT_TOXIC_HIT,           50, POISON,   100, 15,  50 ;POISON_FANG

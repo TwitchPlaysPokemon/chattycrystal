@@ -1,9 +1,3 @@
-MainMenu_Mobile:
-	call ClearBGPalettes
-	ld a, MUSIC_MOBILE_ADAPTER_MENU
-	ld [wMapMusic], a
-	ld de, MUSIC_MOBILE_ADAPTER_MENU
-	call Function4a6c5
 Function49f0a:
 	call ClearBGPalettes
 	call Function4a3a7
@@ -610,31 +604,6 @@ Function4a485:
 
 Function4a492:
 	call MG_Mobile_Layout00
-	ret
-
-MainMenu_MobileStudium:
-	ld a, [wStartDay]
-	ld b, a
-	ld a, [wStartHour]
-	ld c, a
-	ld a, [wStartMinute]
-	ld d, a
-	ld a, [wStartSecond]
-	ld e, a
-	push bc
-	push de
-	farcall MobileStudium
-	call ClearBGPalettes
-	pop de
-	pop bc
-	ld a, b
-	ld [wStartDay], a
-	ld a, c
-	ld [wStartHour], a
-	ld a, d
-	ld [wStartMinute], a
-	ld a, e
-	ld [wStartSecond], a
 	ret
 
 Function4a4c4:

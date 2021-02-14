@@ -17,15 +17,12 @@ MainMenu:
 	call LoadMenuHeader
 	call MainMenuJoypadLoop
 	call CloseWindow
-	jr c, .quit
+	ret c
 	call ClearTileMap
 	ld a, [wMenuSelection]
 	ld hl, .Jumptable
 	rst JumpTable
 	jr MainMenu
-
-.quit
-	ret
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -45,23 +42,17 @@ MainMenu:
 	db "NEW GAME@"
 	db "OPTION@"
 	db "MYSTERY GIFT@"
-	db "MOBILE@"
-	db "MOBILE STUDIUM@"
 
 .Jumptable:
 	dw MainMenu_Continue
 	dw MainMenu_NewGame
 	dw MainMenu_Options
 	dw MainMenu_MysteryGift
-	dw MainMenu_Mobile
-	dw MainMenu_MobileStudium
 
 CONTINUE       EQU 0
 NEW_GAME       EQU 1
 OPTION         EQU 2
 MYSTERY_GIFT   EQU 3
-MOBILE         EQU 4
-MOBILE_STUDIUM EQU 5
 
 MainMenuItems:
 
@@ -78,42 +69,6 @@ ContinueMenu:
 	db OPTION
 	db -1
 
-MobileMysteryMenu:
-	db 5
-	db CONTINUE
-	db NEW_GAME
-	db OPTION
-	db MYSTERY_GIFT
-	db MOBILE
-	db -1
-
-MobileMenu:
-	db 4
-	db CONTINUE
-	db NEW_GAME
-	db OPTION
-	db MOBILE
-	db -1
-
-MobileStudiumMenu:
-	db 5
-	db CONTINUE
-	db NEW_GAME
-	db OPTION
-	db MOBILE
-	db MOBILE_STUDIUM
-	db -1
-
-MysteryMobileStudiumMenu:
-	db 6
-	db CONTINUE
-	db NEW_GAME
-	db OPTION
-	db MYSTERY_GIFT
-	db MOBILE
-	db MOBILE_STUDIUM
-	db -1
-
 MysteryMenu:
 	db 4
 	db CONTINUE
@@ -122,70 +77,22 @@ MysteryMenu:
 	db MYSTERY_GIFT
 	db -1
 
-MysteryStudiumMenu:
-	db 5
-	db CONTINUE
-	db NEW_GAME
-	db OPTION
-	db MYSTERY_GIFT
-	db MOBILE_STUDIUM
-	db -1
-
-StudiumMenu:
-	db 4
-	db CONTINUE
-	db NEW_GAME
-	db OPTION
-	db MOBILE_STUDIUM
-	db -1
-
 MainMenu_GetWhichMenu:
-	nop
-	nop
-	nop
 	ld a, [wSaveFileExists]
 	and a
-	jr nz, .next
-	ld a, $0 ; New Game
-	ret
-
-.next
+	ret z
 	ldh a, [hCGB]
-	cp $1
-	ld a, $1
+	cp 1
+	ld a, 1
 	ret nz
 	ld a, BANK(sNumDailyMysteryGiftPartnerIDs)
 	call GetSRAMBank
 	ld a, [sNumDailyMysteryGiftPartnerIDs]
-	cp -1
+	inc a
 	call CloseSRAM
-	jr nz, .mystery_gift
-	; This check makes no difference.
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_MAIN_MENU_MOBILE_CHOICES_F, a
-	ld a, $1 ; Continue
-	jr z, .ok
-	jr .ok
-
-.ok
-	jr .ok2
-
-.ok2
-	ld a, $1 ; Continue
-	ret
-
-.mystery_gift
-	; This check makes no difference.
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_MAIN_MENU_MOBILE_CHOICES_F, a
-	jr z, .ok3
-	jr .ok3
-
-.ok3
-	jr .ok4
-
-.ok4
-	ld a, $6 ; Mystery Gift
+	ld a, 1 ; Continue
+	ret z
+	inc a
 	ret
 
 MainMenuJoypadLoop:
@@ -317,8 +224,7 @@ Function49ed0:
 	call ClearTileMap
 	call LoadFontsExtra
 	call LoadStandardFont
-	call ClearWindowData
-	ret
+	jp ClearWindowData
 
 MainMenu_NewGame:
 	farcall NewGame

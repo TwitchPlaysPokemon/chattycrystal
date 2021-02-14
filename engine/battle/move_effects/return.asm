@@ -1,23 +1,35 @@
+BattleCommand_FrustrationPower:
+; frustrationpower
+	ld d, $ff
+	jr ReturnFrustrationPower
+
 BattleCommand_HappinessPower:
 ; happinesspower
-	push bc
+	ld d, 0
+ReturnFrustrationPower:
 	ld hl, wBattleMonHappiness
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .ok
 	ld hl, wEnemyMonHappiness
+	ld a, [wLinkMode]
+	and a
+	jr nz, .ok
+	ld d, $ff * 2 / 5
+	ret
+
 .ok
-	xor a
-	ldh [hMultiplicand + 0], a
-	ldh [hMultiplicand + 1], a
+	push bc
 	ld a, [hl]
-	ldh [hMultiplicand + 2], a
-	ld a, 10
-	ldh [hMultiplier], a
-	call Multiply
-	ld a, 25
+	xor d
+	add a, a
+	ldh [hDividend + 1], a
+	sbc a
+	and 1
+	ldh [hDividend], a
+	ld a, 5
 	ldh [hDivisor], a
-	ld b, 4
+	ld b, 2
 	call Divide
 	ldh a, [hQuotient + 3]
 	ld d, a

@@ -68,7 +68,6 @@ INCLUDE "engine/battle/move_effects/trump_card.asm"
 SECTION "Effect Commands Extra", ROMX
 INCLUDE "engine/battle/effect_commands_extra.asm"
 
-INCLUDE "engine/battle/move_effects/frustration.asm"
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 INCLUDE "engine/battle/move_effects/hidden_power.asm"
 INCLUDE "engine/battle/move_effects/pay_day.asm"

@@ -182,4 +182,5 @@ MoveEffectsPointers:
 	dw VoltTackle
 	dw ToxicHit
 	dw Superpower
+	dw Tickle
 	dw Placeholder

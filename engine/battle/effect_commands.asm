@@ -4657,6 +4657,28 @@ GetStatName:
 	ld bc, wStringBuffer3 - wStringBuffer2
 	jp CopyBytes
 
+BattleCommand_Tickle:
+; We can't use the general resetmiss battle command, because we may have missed
+; due to accuracy, which shouldn't allow the 2nd stat-down to apply.
+	ld a, [wAttackMissed]
+	and a
+	jr nz, .miss
+
+	call BattleCommand_AttackDown
+	call BattleCommand_StatDownAnim
+	call BattleCommand_StatDownMessage
+	call BattleCommand_StatDownFailText
+	call BattleCommand_ResetMiss
+	call BattleCommand_DefenseDown
+	call BattleCommand_StatDownAnim
+	call BattleCommand_StatDownMessage
+	jp BattleCommand_StatDownFailText
+
+.miss
+	call BattleCommand_MoveDelay
+	ld hl, AttackMissedText
+	jp StdBattleTextbox
+
 BattleCommand_AllStatsUp:
 ; allstatsup
 

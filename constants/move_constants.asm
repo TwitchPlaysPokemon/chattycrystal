@@ -280,7 +280,7 @@
 	const ODOR_SLEUTH  ; 110
 	const ROCK_TOMB    ; 111
 	const METAL_SOUND  ; 112
-	const TICKLE       ; 113 (PLACEHOLDER)
+	const TICKLE       ; 113
 	const SIGNAL_BEAM  ; 114 (PLACEHOLDER)
 	const SHADOW_PUNCH ; 115 (PLACEHOLDER)
 	const EXTRASENSORY ; 116

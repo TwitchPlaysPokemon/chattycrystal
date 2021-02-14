@@ -298,7 +298,7 @@ BattleAnimations::
 	dw BattleAnim_Detect       ; 110
 	dw BattleAnim_RockThrow
 	dw BattleAnim_Screech
-	dw BattleAnim_Headbutt
+	dw BattleAnim_TailWhip
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Psywave

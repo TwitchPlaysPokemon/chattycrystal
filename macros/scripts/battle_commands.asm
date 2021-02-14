@@ -209,6 +209,7 @@ ENDM
 	command brine                   ; ca
 	command doubledivingdamage      ; cb
 	command resetmiss               ; cc
+	command tickle                  ; cd
 
 	enum_start $fe
 	command endturn                 ; fe

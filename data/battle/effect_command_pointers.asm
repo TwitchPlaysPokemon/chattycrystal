@@ -209,3 +209,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_Brine
 	effectfn BattleCommand_DoubleDivingDamage
 	effectfn BattleCommand_ResetMiss
+	effectfn BattleCommand_Tickle

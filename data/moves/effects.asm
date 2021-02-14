@@ -2595,3 +2595,13 @@ QuiverDance:
 	statupfailtext
 	raisesub
 	endmove
+
+Tickle:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	lowersub
+	tickle
+	raisesub
+	endmove

@@ -332,15 +332,15 @@ JohtoGrassWildMons:
 	dbw 22, NIDORAN_M
 	dbw 22, NIDORAN_F
 	dbw 24, LEDIAN
-	dbw 23, PIDGEOTTO
-	dbw 20, BUTTERFREE
+	dbw 23, BUTTERFREE
 	dbw 20, BEEDRILL
+	dbw 20, CUTIEFLY
 	dbw 20, TURTWIG
 	; day
 	dbw 22, NIDORAN_F
 	dbw 22, NIDORAN_M
 	dbw 24, SUNKERN
-	dbw 23, PIDGEOTTO
+	dbw 23, CUTIEFLY
 	dbw 20, BUTTERFREE
 	dbw 20, BEEDRILL
 	dbw 20, TURTWIG

@@ -173,4 +173,6 @@ MoveEffectsPointers:
 	dw Assist
 	dw Assurance
 	dw Brine
+	dw Surf
+	dw Whirlpool
 	dw Placeholder

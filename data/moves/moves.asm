@@ -73,7 +73,7 @@ Moves1:
 	move EFFECT_MIST,                 0, ICE,      100, 30,   0 ;MIST
 	move EFFECT_NORMAL_HIT,          40, WATER,    100, 25,   0 ;WATER_GUN
 	move EFFECT_NORMAL_HIT,         120, WATER,     80,  5,   0 ;HYDRO_PUMP
-	move EFFECT_NORMAL_HIT,          95, WATER,    100, 15,   0 ;SURF
+	move EFFECT_SURF,                95, WATER,    100, 15,   0 ;SURF
 	move EFFECT_FREEZE_HIT,          95, ICE,      100, 10,  10 ;ICE_BEAM
 	move EFFECT_FREEZE_HIT,         120, ICE,       70,  5,  10 ;BLIZZARD
 	move EFFECT_CONFUSE_HIT,         65, PSYCHIC,  100, 20,  10 ;PSYBEAM
@@ -266,7 +266,7 @@ Moves1:
 	move EFFECT_SP_DEF_DOWN_HIT,     80, GHOST,    100, 15,  20 ;SHADOW_BALL
 	move EFFECT_FUTURE_SIGHT,        80, PSYCHIC,   90, 15,   0 ;FUTURE_SIGHT
 	move EFFECT_DEFENSE_DOWN_HIT,    20, FIGHTING, 100, 15,  50 ;ROCK_SMASH
-	move EFFECT_TRAP_TARGET,         15, WATER,     70, 15,   0 ;WHIRLPOOL
+	move EFFECT_WHIRLPOOL,           15, WATER,     70, 15,   0 ;WHIRLPOOL
 	move EFFECT_BEAT_UP,             10, DARK,     100, 10,   0 ;BEAT_UP
 	move EFFECT_FAKE_OUT,            40, NORMAL,   100, 10, 100 ;FAKE_OUT
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;WILL_O_WISP
@@ -278,7 +278,7 @@ Moves1:
 	move EFFECT_ENDEAVOR,             0, NORMAL,   100,  5,   0 ;ENDEAVOR
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;SNATCH
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;SECRET_POWER
-	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;DIVE
+	move EFFECT_FLY,                 80, WATER,    100, 10,   0 ;DIVE
 	move EFFECT_MULTI_HIT,           15, FIGHTING, 100, 20,   0 ;ARM_THRUST
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;TEETER_DANCE
 	move EFFECT_BURN_HIT,            85, FIRE,      90, 10,  10 ;BLAZE_KICK
@@ -373,5 +373,4 @@ Moves1:
 
 ;	move EFFECT_LEECH_HIT,          50, FAIRY,    100, 10,   0 ;DRAININGKISS TODO: does not drain 75%
 ;	move EFFECT_NORMAL_HIT,         80, FAIRY,    100, 10,   0 ;DAZZLINGLEAM TODO: Add fairy type
-;	move EFFECT_FLY,                80, WATER,    100, 10,   0 ;DIVE TODO add the special accomidations for 2 turn moves
 ;	move EFFECT_BURN_HIT,           65, FIRE,     95,  15,  10 ;FIRE_FANG needs a new effect as it also has a flinch chance

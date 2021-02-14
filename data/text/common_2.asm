@@ -714,6 +714,11 @@ UnknownText_0x1c0d6c::
 	line "dug a hole!"
 	prompt
 
+CommonText_HidUnderwater::
+	text_start
+	line "hid underwater!"
+	prompt
+
 _ActorNameText::
 	text "<USER>@"
 	text_end

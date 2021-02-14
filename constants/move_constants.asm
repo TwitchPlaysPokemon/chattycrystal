@@ -267,7 +267,7 @@
 	const ENDEAVOR     ; 103
 	const SNATCH       ; 104 (PLACEHOLDER)
 	const SECRET_POWER ; 105 (PLACEHOLDER)
-	const DIVE         ; 106 (PLACEHOLDER)
+	const DIVE         ; 106
 	const ARM_THRUST   ; 107
 	const TEETER_DANCE ; 108 (PLACEHOLDER)
 	const BLAZE_KICK   ; 109

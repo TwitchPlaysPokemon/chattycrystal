@@ -207,3 +207,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_Assist
 	effectfn BattleCommand_Assurance
 	effectfn BattleCommand_Brine
+	effectfn BattleCommand_DoubleDivingDamage

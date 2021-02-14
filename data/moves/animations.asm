@@ -285,7 +285,7 @@ BattleAnimations::
 	dw BattleAnim_PainSplit
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Fly
 	dw BattleAnim_Doubleslap
 	dw BattleAnim_Headbutt     ; 108
 	dw BattleAnim_HiJumpKick

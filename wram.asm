@@ -453,7 +453,7 @@ wPlayerSubStatus3:: ; c66a
 ; 6 flying
 ; 5 underground
 ; 4 charged
-; 3
+; 3 diving
 ; 2 in loop
 ; 1 rampage
 ; 0 bide

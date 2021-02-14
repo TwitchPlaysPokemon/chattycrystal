@@ -278,6 +278,14 @@ BattleCommand_DoubleUndergroundDamage:
 	call GetBattleVar
 	bit SUBSTATUS_UNDERGROUND, a
 	ret z
+	jr DoubleDamage
+
+BattleCommand_DoubleDivingDamage:
+; doubleundergrounddamage
+	ld a, BATTLE_VARS_SUBSTATUS3_OPP
+	call GetBattleVar
+	bit SUBSTATUS_DIVING, a
+	ret z
 	; fallthrough
 
 DoubleDamage:

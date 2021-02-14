@@ -207,6 +207,7 @@ ENDM
 	command assist                  ; c8
 	command assurance               ; c9
 	command brine                   ; ca
+	command doubledivingdamage      ; cb
 
 	enum_start $fe
 	command endturn                 ; fe

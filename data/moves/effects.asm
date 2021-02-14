@@ -24,6 +24,27 @@ NormalHit:
 	kingsrock
 	endmove
 
+Surf:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	doubledivingdamage
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove
+
 DoSleep:
 	checkobedience
 	usedmovetext
@@ -1281,6 +1302,28 @@ TrapTarget:
 	stab
 	damagevariation
 	clearmissdamage
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	traptarget
+	endmove
+
+Whirlpool:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	clearmissdamage
+	doubledivingdamage
 	moveanim
 	failuretext
 	applydamage

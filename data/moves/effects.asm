@@ -913,6 +913,29 @@ FlinchHit:
 	flinchtarget
 	endmove
 
+FireFang:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	effectchance
+	burntarget
+	effectchance ; independent chance
+	flinchtarget
+	endmove
+
 OHKOHit:
 	checkobedience
 	usedmovetext

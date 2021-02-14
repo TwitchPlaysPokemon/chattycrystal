@@ -257,7 +257,7 @@
 	const ROCK_SMASH   ;  f9
 	const WHIRLPOOL    ;  fa
 	const BEAT_UP      ;  fb
-	const FAKE_OUT     ;  fc (PLACEHOLDER)
+	const FAKE_OUT     ;  fc
 	const WILL_O_WISP  ;  fd (PLACEHOLDER)
 	const CHARGE       ;  fe
 	const TAUNT        ;  ff (PLACEHOLDER)
@@ -318,7 +318,7 @@
 	const NASTY_PLOT   ; 136
 	const BULLET_PUNCH ; 137
 	const ICE_SHARD    ; 138
-	const FIRE_FANG    ; 139 (PLACEHOLDER)
+	const FIRE_FANG    ; 139
 	const SHADOW_SNEAK ; 13a (PLACEHOLDER)
 	const MUD_BOMB     ; 13b
 	const PSYCHO_CUT   ; 13c (PLACEHOLDER)

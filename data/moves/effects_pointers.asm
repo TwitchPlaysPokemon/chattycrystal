@@ -165,4 +165,5 @@ MoveEffectsPointers:
 	dw SelfSpeedDownHit
 	dw AquaRing
 	dw TrumpCard
+	dw FireFang
 	dw Placeholder

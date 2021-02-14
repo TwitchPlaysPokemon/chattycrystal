@@ -373,7 +373,7 @@ BattleAnimations::
 	dw BattleAnim_MorningSun
 	dw BattleAnim_Spark
 	dw BattleAnim_IcePunch
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Smokescreen
 	dw BattleAnim_Submission
 	dw BattleAnim_HiddenPower  ; 160
 	dw BattleAnim_ThunderWave

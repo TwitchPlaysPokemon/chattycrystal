@@ -355,7 +355,7 @@
 	const DAZZLINGLEAM ; 15b
 	const NUZZLE       ; 15c
 	const ICE_HAMMER   ; 15d
-	const POLLEN_PUFF  ; 15e (PLACEHOLDER)
+	const POLLEN_PUFF  ; 15e
 	const POWER_TRIP   ; 15f
 	const CHATTY_HP    ; 160
 	const CRYSTAL_BOLT ; 161

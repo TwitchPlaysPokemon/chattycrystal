@@ -272,7 +272,7 @@
 	const TEETER_DANCE ; 108 (PLACEHOLDER)
 	const BLAZE_KICK   ; 109
 	const ICE_BALL     ; 10a
-	const POISON_FANG  ; 10b (PLACEHOLDER)
+	const POISON_FANG  ; 10b
 	const METEOR_MASH  ; 10c
 	const ASTONISH     ; 10d
 	const AIR_CUTTER   ; 10e

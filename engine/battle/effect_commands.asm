@@ -3535,7 +3535,27 @@ BattleCommand_PoisonTarget:
 	call PlayOpponentBattleAnim
 	call RefreshBattleHuds
 
+	; Check if we should badly poison the foe.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_TOXIC_HIT
 	ld hl, WasPoisonedText
+	jr nz, .print_msg
+
+	; Badly poison the foe, then use a different message.
+	ld a, BATTLE_VARS_SUBSTATUS5_OPP
+	call GetBattleVarAddr
+	set SUBSTATUS_TOXIC, [hl]
+	ldh a, [hBattleTurn]
+	and a
+	ld hl, wEnemyToxicCount
+	jr z, .got_toxic_count
+	ld hl, wPlayerToxicCount
+.got_toxic_count
+	ld [hl], 0
+	ld hl, BadlyPoisonedText
+	; fallthrough
+.print_msg
 	call StdBattleTextbox
 
 	farcall UseHeldStatusHealingItem

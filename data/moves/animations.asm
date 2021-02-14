@@ -290,7 +290,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt     ; 108
 	dw BattleAnim_HiJumpKick
 	dw BattleAnim_IcePunch
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Crunch
 	dw BattleAnim_Dynamicpunch
 	dw BattleAnim_FeintAttack
 	dw BattleAnim_Cut

@@ -55,6 +55,7 @@ DoSleep:
 	endmove
 
 PoisonHit:
+ToxicHit:
 	checkobedience
 	usedmovetext
 	doturn

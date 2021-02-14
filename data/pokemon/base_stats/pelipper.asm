@@ -16,6 +16,6 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_WATER_1, EGG_FLYING ; egg groups
 
-	; tm/hm learnset TODO: proper learnset
+	; tm/hm learnset
 	tmhm TOXIC, HIDDEN_POWER, ICE_BEAM, BLIZZARD, PROTECT, RAIN_DANCE, FRUSTRATION, RETURN, DOUBLE_TEAM, REST, ATTRACT, THIEF, STEEL_WING, FLY
 	; end

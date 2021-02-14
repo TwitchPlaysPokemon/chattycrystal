@@ -18,7 +18,7 @@ INCLUDE "data/pokemon/base_stats/ludicolo.asm"
 INCLUDE "data/pokemon/base_stats/taillow.asm"
 INCLUDE "data/pokemon/base_stats/swellow.asm"
 INCLUDE "data/pokemon/base_stats/wingull.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Pelipper
+INCLUDE "data/pokemon/base_stats/pelipper.asm"
 INCLUDE "data/pokemon/base_stats/ralts.asm"
 INCLUDE "data/pokemon/base_stats/kirlia.asm"
 INCLUDE "data/pokemon/base_stats/gardevoir.asm"

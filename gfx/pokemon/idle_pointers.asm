@@ -269,7 +269,7 @@ AnimationIdlePointers:
 	dw TaillowAnimationIdle
 	dw SwellowAnimationIdle
 	dw WingullAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Pelipper
+	dw PelipperAnimationIdle
 	dw RaltsAnimationIdle
 	dw KirliaAnimationIdle
 	dw GardevoirAnimationIdle

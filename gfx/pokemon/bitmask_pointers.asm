@@ -269,7 +269,7 @@ BitmasksPointers:
 	dw TaillowBitmasks
 	dw SwellowBitmasks
 	dw WingullBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Pelipper
+	dw PelipperBitmasks
 	dw RaltsBitmasks
 	dw KirliaBitmasks
 	dw GardevoirBitmasks

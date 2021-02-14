@@ -269,7 +269,7 @@ FramesPointers:
 	dba TaillowFrames
 	dba SwellowFrames
 	dba WingullFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Pelipper
+	dba PelipperFrames
 	dba RaltsFrames
 	dba KirliaFrames
 	dba GardevoirFrames

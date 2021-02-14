@@ -570,8 +570,8 @@ INCBIN "gfx/pokemon/swellow/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/swellow/shiny.pal"
 INCBIN "gfx/pokemon/wingull/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/wingull/shiny.pal"
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Pelipper
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Pelipper
+INCBIN "gfx/pokemon/pelipper/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/pelipper/shiny.pal"
 INCBIN "gfx/pokemon/ralts/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/ralts/shiny.pal"
 INCBIN "gfx/pokemon/kirlia/front.gbcpal", middle_colors

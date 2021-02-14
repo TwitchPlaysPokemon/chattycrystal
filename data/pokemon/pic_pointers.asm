@@ -550,8 +550,8 @@ PokemonPicPointers::
 	dba SwellowBackpic
 	dba WingullFrontpic
 	dba WingullBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Pelipper
-	dba PlaceholderBackpic ; PLACEHOLDER - Pelipper
+	dba PelipperFrontpic
+	dba PelipperBackpic
 	dba RaltsFrontpic
 	dba RaltsBackpic
 	dba KirliaFrontpic

@@ -269,7 +269,7 @@ AnimationPointers:
 	dw TaillowAnimation
 	dw SwellowAnimation
 	dw WingullAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Pelipper
+	dw PelipperAnimation
 	dw RaltsAnimation
 	dw KirliaAnimation
 	dw GardevoirAnimation

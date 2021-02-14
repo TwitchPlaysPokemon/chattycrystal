@@ -1009,7 +1009,6 @@ CutieflyEvosAttacks:
 	db 0 ; no more level-up  moves
 	
 RibombeeEvosAttacks:
-	dbbw EVOLVE_LEVEL, 20, RIBOMBEE
 	db 0
 	dbw 1, ABSORB
 	dbw 1, POLLEN_PUFF

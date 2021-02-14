@@ -257,61 +257,108 @@
 	const ROCK_SMASH   ;  f9
 	const WHIRLPOOL    ;  fa
 	const BEAT_UP      ;  fb
-	const HOWL         ;  fc
-	const ECHOED_VOICE ;  fd
-	const ARM_THRUST   ;  fe
-	const CHATTY_HP    ;  ff
-	const CHATTER      ; 100
-	const NUZZLE       ; 101
-	const SHOCK_WAVE   ; 102
-	const CHARGE_BEAM  ; 103
-	const CHARGE       ; 104
-	const METAL_SOUND  ; 105
-	const HONE_CLAWS   ; 106
-	const POWER_TRIP   ; 107
-	const ENDEAVOR     ; 108
-	const ROOST        ; 109
-	const COVET        ; 10a
-	const ASTONISH     ; 10b
-	const DUAL_CHOP    ; 10c
-	const ZEN_HEADBUTT ; 10d
-	const WORK_UP      ; 10e
-	const REVENGE      ; 10f
-	const NASTY_PLOT   ; 110
-	const AERIAL_ACE   ; 111
-	const AIR_CUTTER   ; 112
-	const AIR_SLASH    ; 113
-	const AQUA_JET     ; 114
-	const ATTACK_ORDER ; 115
-	const AURA_SPHERE  ; 116
-	const BLAZE_KICK   ; 117
-	const BLUE_FLARE   ; 118
-	const BRAVE_BIRD   ; 119
-	const BUG_BUZZ     ; 11a
-	const BULLDOZE     ; 11b
-	const BULLET_PUNCH ; 11c
-	const DISCHARGE    ; 11d
-	const DRAGON_CLAW  ; 11e
-	const DRAGON_PULSE ; 11f
-	const DRAIN_PUNCH  ; 120
-	const EARTH_POWER  ; 121
-	const EXTRASENSORY ; 122
-	const FLASH_CANNON ; 123
-	const FOCUS_BLAST  ; 124
-	const HORN_LEECH   ; 125
-	const ICE_SHARD    ; 126
-	const IRON_DEFENSE ; 127
-	const IRON_HEAD    ; 128
-	const METEOR_MASH  ; 129
-	const MUD_BOMB     ; 12a
-	const MUDDY_WATER  ; 12b
-	const NIGHT_SLASH  ; 12c
-	const ODOR_SLEUTH  ; 12d
-	const HAMMER_ARM   ; 12e
-	const ICE_HAMMER   ; 12f
-	const AQUA_RING    ; 130
-	const ICE_BALL     ; 131
-	const TRUMP_CARD   ; 132
+	const FAKE_OUT     ;  fc (PLACEHOLDER)
+	const WILL_O_WISP  ;  fd (PLACEHOLDER)
+	const CHARGE       ;  fe
+	const TAUNT        ;  ff (PLACEHOLDER)
+	const ASSIST       ; 100 (PLACEHOLDER)
+	const SUPERPOWER   ; 101 (PLACEHOLDER)
+	const REVENGE      ; 102
+	const ENDEAVOR     ; 103
+	const SNATCH       ; 104 (PLACEHOLDER)
+	const SECRET_POWER ; 105 (PLACEHOLDER)
+	const DIVE         ; 106 (PLACEHOLDER)
+	const ARM_THRUST   ; 107
+	const TEETER_DANCE ; 108 (PLACEHOLDER)
+	const BLAZE_KICK   ; 109
+	const ICE_BALL     ; 10a
+	const POISON_FANG  ; 10b (PLACEHOLDER)
+	const METEOR_MASH  ; 10c
+	const ASTONISH     ; 10d
+	const AIR_CUTTER   ; 10e
+	const OVERHEAT     ; 10f (PLACEHOLDER)
+	const ODOR_SLEUTH  ; 110
+	const ROCK_TOMB    ; 111 (PLACEHOLDER)
+	const METAL_SOUND  ; 112
+	const TICKLE       ; 113 (PLACEHOLDER)
+	const SIGNAL_BEAM  ; 114 (PLACEHOLDER)
+	const SHADOW_PUNCH ; 115 (PLACEHOLDER)
+	const EXTRASENSORY ; 116
+	const SAND_TOMB    ; 117 (PLACEHOLDER)
+	const MUDDY_WATER  ; 118
+	const AERIAL_ACE   ; 119
+	const IRON_DEFENSE ; 11a
+	const HOWL         ; 11b
+	const DRAGON_CLAW  ; 11c
+	const COVET        ; 11d
+	const VOLT_TACKLE  ; 11e (PLACEHOLDER)
+	const DRAGON_DANCE ; 11f (PLACEHOLDER)
+	const SHOCK_WAVE   ; 120
+	const WATER_PULSE  ; 121 (PLACEHOLDER)
+	const ROOST        ; 122
+	const WAKE_UP_SLAP ; 123 (PLACEHOLDER)
+	const HAMMER_ARM   ; 124
+	const BRINE        ; 125 (PLACEHOLDER)
+	const CLOSE_COMBAT ; 126 (PLACEHOLDER)
+	const ASSURANCE    ; 127 (PLACEHOLDER)
+	const TRUMP_CARD   ; 128
+	const SUCKER_PUNCH ; 129 (PLACEHOLDER)
+	const AQUA_RING    ; 12a
+	const FLARE_BLITZ  ; 12b (PLACEHOLDER)
+	const AURA_SPHERE  ; 12c
+	const NIGHT_SLASH  ; 12d
+	const AIR_SLASH    ; 12e
+	const BUG_BUZZ     ; 12f
+	const DRAGON_PULSE ; 130
+	const POWER_GEM    ; 131 (PLACEHOLDER)
+	const DRAIN_PUNCH  ; 132
+	const FOCUS_BLAST  ; 133
+	const BRAVE_BIRD   ; 134
+	const EARTH_POWER  ; 135
+	const NASTY_PLOT   ; 136
+	const BULLET_PUNCH ; 137
+	const ICE_SHARD    ; 138
+	const FIRE_FANG    ; 139 (PLACEHOLDER)
+	const SHADOW_SNEAK ; 13a (PLACEHOLDER)
+	const MUD_BOMB     ; 13b
+	const PSYCHO_CUT   ; 13c (PLACEHOLDER)
+	const ZEN_HEADBUTT ; 13d
+	const FLASH_CANNON ; 13e
+	const ROCK_CLIMB   ; 13f (PLACEHOLDER)
+	const DISCHARGE    ; 140
+	const LEAF_STORM   ; 141 (PLACEHOLDER)
+	const IRON_HEAD    ; 142
+	const GRASS_KNOT   ; 143 (PLACEHOLDER)
+	const CHATTER      ; 144
+	const CHARGE_BEAM  ; 145
+	const WOOD_HAMMER  ; 146 (PLACEHOLDER)
+	const AQUA_JET     ; 147
+	const ATTACK_ORDER ; 148
+	const DARK_VOID    ; 149 (PLACEHOLDER)
+	const HONE_CLAWS   ; 14a
+	const PSYSHOCK     ; 14b (PLACEHOLDER)
+	const QUIVER_DANCE ; 14c (PLACEHOLDER)
+	const FOUL_PLAY    ; 14d (PLACEHOLDER)
+	const ECHOED_VOICE ; 14e
+	const SCALD        ; 14f (PLACEHOLDER)
+	const BULLDOZE     ; 150
+	const WORK_UP      ; 151
+	const DUAL_CHOP    ; 152
+	const HORN_LEECH   ; 153
+	const STEAMROLLER  ; 154 (PLACEHOLDER)
+	const TAIL_SLAP    ; 155 (PLACEHOLDER)
+	const BLUE_FLARE   ; 156
+	const FREEZE_DRY   ; 157 (PLACEHOLDER)
+	const DRAININGKISS ; 158 (PLACEHOLDER)
+	const PLAY_ROUGH   ; 159 (PLACEHOLDER)
+	const MOONBLAST    ; 15a (PLACEHOLDER)
+	const DAZZLINGLEAM ; 15b (PLACEHOLDER)
+	const NUZZLE       ; 15c
+	const ICE_HAMMER   ; 15d
+	const POLLEN_PUFF  ; 15e (PLACEHOLDER)
+	const POWER_TRIP   ; 15f
+	const CHATTY_HP    ; 160
+	const CRYSTAL_BOLT ; 161 (PLACEHOLDER)
 
 NUM_ATTACKS EQU const_value + -1
 

@@ -330,6 +330,53 @@ BattleAnimations::
 	dw BattleAnim_Waterfall    ; 130
 	dw BattleAnim_IcePunch
 	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt     ; 138
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt     ; 140
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt     ; 148
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt     ; 150
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt     ; 158
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt     ; 160
+	dw BattleAnim_Headbutt
 
 
 BattleAnim_0:

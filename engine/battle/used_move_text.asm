@@ -87,6 +87,7 @@ UsedMoveAlternateMessages:
 	dbw FC_LARRY, .bootleg_message
 	dbw RED_LARRY, .bootleg_message
 	dbw BABA, .vc_message
+	dbw URF, LSAlternateMessage
 	db 0
 
 .vc_message
@@ -103,6 +104,33 @@ UsedMoveAlternateMessages:
 	text_ram wEnemyMonNick
 	text "'s"
 	line "@"
+	text_ram wStringBuffer2
+	text "!"
+	done
+
+LSAlternateMessage:
+	text "Enemy@"
+	text_ram wEnemyMonNick
+	text_asm
+	ld hl, .no_line_break
+	push bc
+.loop
+	ld c, 5 ; if the name is longer than this, we'll need a line break
+	ld de, wEnemyMonNick
+	ld a, [de]
+	inc de
+	cp "@"
+	jr z, .done
+	dec c
+	jr nz, .loop
+	ld hl, .line_break
+.done
+	pop bc
+	ret
+.line_break
+	text ""
+	line "@"
+.no_line_break
 	text_ram wStringBuffer2
 	text "!"
 	done

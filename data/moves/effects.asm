@@ -1019,6 +1019,29 @@ FlareBlitz:
 	kingsrock
 	endmove
 
+VoltTackle:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	recoil
+	checkfaint
+	buildopponentrage
+	paralyzetarget
+	kingsrock
+	endmove
+
 Mist:
 	checkobedience
 	usedmovetext

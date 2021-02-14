@@ -291,7 +291,7 @@
 	const HOWL         ; 11b
 	const DRAGON_CLAW  ; 11c
 	const COVET        ; 11d
-	const VOLT_TACKLE  ; 11e (PLACEHOLDER)
+	const VOLT_TACKLE  ; 11e
 	const DRAGON_DANCE ; 11f
 	const SHOCK_WAVE   ; 120
 	const WATER_PULSE  ; 121 (PLACEHOLDER)

@@ -179,4 +179,5 @@ MoveEffectsPointers:
 	dw DragonDance
 	dw QuiverDance
 	dw FlareBlitz
+	dw VoltTackle
 	dw Placeholder

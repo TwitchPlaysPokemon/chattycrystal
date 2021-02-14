@@ -309,7 +309,7 @@ BattleAnimations::
 	dw BattleAnim_Roar
 	dw BattleAnim_Slash
 	dw BattleAnim_Thief
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Spark
 	dw BattleAnim_Sharpen
 	dw BattleAnim_ThunderWave  ; 120
 	dw BattleAnim_Headbutt

@@ -328,7 +328,7 @@ BattleAnimations::
 	dw BattleAnim_Slash
 	dw BattleAnim_Roar
 	dw BattleAnim_ShadowBall   ; 130
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Ancientpower
 	dw BattleAnim_Dynamicpunch
 	dw BattleAnim_ShadowBall
 	dw BattleAnim_WingAttack

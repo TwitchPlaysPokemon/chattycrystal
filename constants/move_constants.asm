@@ -310,7 +310,7 @@
 	const AIR_SLASH    ; 12e
 	const BUG_BUZZ     ; 12f
 	const DRAGON_PULSE ; 130
-	const POWER_GEM    ; 131 (PLACEHOLDER)
+	const POWER_GEM    ; 131
 	const DRAIN_PUNCH  ; 132
 	const FOCUS_BLAST  ; 133
 	const BRAVE_BIRD   ; 134

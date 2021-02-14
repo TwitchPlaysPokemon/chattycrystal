@@ -572,8 +572,8 @@ PokemonPicPointers::
 	dba MakuhitaBackpic
 	dba HariyamaFrontpic
 	dba HariyamaBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Azurill
-	dba PlaceholderBackpic ; PLACEHOLDER - Azurill
+	dba AzurillFrontpic
+	dba AzurillBackpic
 	dba SkittyFrontpic ; PLACEHOLDER - Skitty
 	dba PlaceholderBackpic ; PLACEHOLDER - Skitty
 	dba PlaceholderFrontpic ; PLACEHOLDER - Delcatty

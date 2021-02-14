@@ -280,7 +280,7 @@ BitmasksPointers:
 	dw ExploudBitmasks
 	dw MakuhitaBitmasks
 	dw HariyamaBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Azurill
+	dw AzurillBitmasks
 	dw SkittyBitmasks ; PLACEHOLDER - Skitty
 	dw PlaceholderBitmasks ; PLACEHOLDER - Delcatty
 	dw SableyeBitmasks

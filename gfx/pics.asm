@@ -369,6 +369,7 @@ FlareonBackpic:      INCBIN "gfx/pokemon/flareon/back.2bpp.lz"
 GoldeenBackpic:      INCBIN "gfx/pokemon/goldeen/back.2bpp.lz"
 BulbasaurFrontpic:   INCBIN "gfx/pokemon/bulbasaur/front.animated.2bpp.lz"
 StarmieBackpic:      INCBIN "gfx/pokemon/starmie/back.2bpp.lz"
+AzurillBackpic:      INCBIN "gfx/pokemon/azurill/back.2bpp.lz"
 
 SECTION "Pics 13", ROMX
 
@@ -734,7 +735,8 @@ NoctdrioBackpic:    INCBIN "gfx/pokemon/noctdrio/back.2bpp.lz"
 QuagynxFrontpic:    INCBIN "gfx/pokemon/quagynx/front.animated.2bpp.lz"
 QuagynxBackpic:     INCBIN "gfx/pokemon/quagynx/back.2bpp.lz"
 SteelurretFrontpic: INCBIN "gfx/pokemon/steelurret/front.animated.2bpp.lz"
-SkittyFrontpic:      INCBIN "gfx/pokemon/skitty/front.animated.2bpp.lz"
+SkittyFrontpic:     INCBIN "gfx/pokemon/skitty/front.animated.2bpp.lz"
+AzurillFrontpic:    INCBIN "gfx/pokemon/azurill/front.animated.2bpp.lz"
 
 SECTION "Pics 20", ROMX
 

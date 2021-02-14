@@ -592,8 +592,8 @@ INCBIN "gfx/pokemon/makuhita/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/makuhita/shiny.pal"
 INCBIN "gfx/pokemon/hariyama/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/hariyama/shiny.pal"
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Azurill
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Azurill
+INCBIN "gfx/pokemon/azurill/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/azurill/shiny.pal"
 INCBIN "gfx/pokemon/skitty/front.gbcpal", middle_colors ; PLACEHOLDER - Skitty
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Skitty
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Delcatty

@@ -280,7 +280,7 @@ FramesPointers:
 	dba ExploudFrames
 	dba MakuhitaFrames
 	dba HariyamaFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Azurill
+	dba AzurillFrames
 	dba SkittyFrames ; PLACEHOLDER - Skitty
 	dba PlaceholderFrames ; PLACEHOLDER - Delcatty
 	dba SableyeFrames

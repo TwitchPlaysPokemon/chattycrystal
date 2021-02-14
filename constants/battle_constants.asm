@@ -26,6 +26,7 @@ MORE_EFFECTIVE     EQU 15
 EFFECTIVE          EQU 10
 NOT_VERY_EFFECTIVE EQU 05
 NO_EFFECT          EQU 00
+CONDITIONAL_MATCHUP EQU -1 ; for handling Freeze Dry
 
 ; wPlayerStatLevels and wEnemyStatLevels indexes (see wram.asm)
 ; GetStatName arguments (see data/battle/stat_names.asm)

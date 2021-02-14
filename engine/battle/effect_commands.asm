@@ -1283,6 +1283,17 @@ BattleCommand_Stab:
 	ld [wAttackMissed], a
 	xor a
 .NotImmune:
+	cp CONDITIONAL_MATCHUP
+	jr nz, .got_matchup
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FREEZE_DRY
+	ld a, SUPER_EFFECTIVE
+	jr z, .got_matchup
+	ld a, NOT_VERY_EFFECTIVE
+	; fallthrough
+.got_matchup
 	ldh [hMultiplier], a
 	add b
 	ld [wTypeModifier], a
@@ -1388,12 +1399,24 @@ CheckTypeMatchup:
 	jr .TypesLoop
 
 .Yup:
+	; Maybe handle Freeze Dry
+	ld a, [hli]
+	cp CONDITIONAL_MATCHUP
+	jr nz, .got_matchup
+
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FREEZE_DRY
+	ld a, SUPER_EFFECTIVE
+	jr z, .got_matchup
+	ld a, NOT_VERY_EFFECTIVE
+	; fallthrough
+.got_matchup
+	ldh [hMultiplicand + 2], a
 	xor a
 	ldh [hDividend + 0], a
 	ldh [hMultiplicand + 0], a
 	ldh [hMultiplicand + 1], a
-	ld a, [hli]
-	ldh [hMultiplicand + 2], a
 	ld a, [wTypeMatchup]
 	ldh [hMultiplier], a
 	call Multiply

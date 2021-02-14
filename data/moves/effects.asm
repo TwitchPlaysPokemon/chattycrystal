@@ -95,6 +95,7 @@ BurnHit:
 	burntarget
 	endmove
 
+FreezeDry: ; special cased in type matchup checking
 FreezeHit:
 	checkobedience
 	usedmovetext

@@ -366,7 +366,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
 	dw BattleAnim_SacredFire
-	dw BattleAnim_Headbutt
+	dw BattleAnim_IceBeam
 	dw BattleAnim_Headbutt     ; 158
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt

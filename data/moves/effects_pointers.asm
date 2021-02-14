@@ -168,4 +168,5 @@ MoveEffectsPointers:
 	dw TrumpCard
 	dw FireFang
 	dw CloseCombat
+	dw FreezeDry
 	dw Placeholder

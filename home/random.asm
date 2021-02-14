@@ -161,7 +161,21 @@ AdvanceRNGState:
 	ld [hl], e
 	ret
 
+BattleRandomRange::
+	push de
+	ld de, BattleRandom
+	call _RandomRange
+	pop de
+	ret
+
 RandomRange::
+	push de
+	ld de, Random
+	call _RandomRange
+	pop de
+	ret
+
+_RandomRange:
 ; Return a random number between 0 and a (non-inclusive).
 
 	push bc
@@ -180,7 +194,7 @@ RandomRange::
 	; from 0 to $ff - b.
 	push bc
 .loop
-	call Random
+	call _de_
 	ldh a, [hRandomAdd]
 	ld c, a
 	add b

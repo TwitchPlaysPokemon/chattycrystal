@@ -287,7 +287,7 @@ JOHTO_POKEMON EQU const_value
 	const LOTAD        ; 109
 	const LOMBRE       ; 10a
 	const LUDICOLO     ; 10b - MISSING
-	const TAILLOW      ; 10c 
+	const TAILLOW      ; 10c
 	const SWELLOW      ; 10d - MISSING
 	const WINGULL      ; 10e
 	const PELIPPER     ; 10f - MISSING
@@ -299,7 +299,7 @@ JOHTO_POKEMON EQU const_value
 	const WHISMUR      ; 115
 	const LOUDRED      ; 116 - MISSING
 	const EXPLOUD      ; 117 - MISSING
-	const MAKUHITA     ; 118 
+	const MAKUHITA     ; 118
 	const HARIYAMA     ; 119 - MISSING
 	const AZURILL      ; 11a - MISSING
 	const SKITTY       ; 11b - MISSING

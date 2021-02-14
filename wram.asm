@@ -1907,7 +1907,12 @@ ENDU ; d066
 
 wTMHMMoveNameBackup:: ds MOVE_NAME_LENGTH ; d066
 
+UNION
 wStringBuffer1:: ds 19 ; d073
+NEXTU
+wAssistMove:: db
+wAssistMoveIterator:: db
+ENDU
 wStringBuffer2:: ds 19 ; d086
 wStringBuffer3:: ds 19 ; d099
 wStringBuffer4:: ds 19 ; d0ac

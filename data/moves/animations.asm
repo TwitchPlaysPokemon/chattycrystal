@@ -279,7 +279,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_CrossChop
 	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt     ; 100
+	dw BattleAnim_Metronome    ; 100
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Counter
 	dw BattleAnim_PainSplit

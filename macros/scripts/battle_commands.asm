@@ -204,6 +204,7 @@ ENDM
 	command selfstatdownmessage     ; c5
 	command aquaring                ; c6
 	command trumpcard               ; c7
+	command assist                  ; c8
 
 	enum_start $fe
 	command endturn                 ; fe

@@ -170,4 +170,5 @@ MoveEffectsPointers:
 	dw CloseCombat
 	dw FreezeDry
 	dw CrystalBolt
+	dw Assist
 	dw Placeholder

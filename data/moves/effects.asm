@@ -1188,6 +1188,13 @@ Mimic:
 	mimic
 	endmove
 
+Assist:
+	checkobedience
+	usedmovetext
+	doturn
+	assist
+	endmove
+
 Metronome:
 	checkobedience
 	usedmovetext

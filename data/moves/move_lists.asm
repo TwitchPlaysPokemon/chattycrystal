@@ -29,6 +29,32 @@ MetronomeExcepts:
 	dw THIEF
 	dw -1
 
+AssistExcepts:
+	dw ASSIST
+	dw CHATTER
+	dw COUNTER
+	dw COVET
+	dw DESTINY_BOND
+	dw DETECT
+	dw DIG
+	dw DIVE
+	dw ENDURE
+	dw FLY
+	dw METRONOME
+	dw MIMIC
+	dw MIRROR_COAT
+	dw MIRROR_MOVE
+	dw PROTECT
+	dw ROAR
+	dw SKETCH
+	dw SLEEP_TALK
+	dw SNATCH
+	dw STRUGGLE
+	dw THIEF
+	dw TRANSFORM
+	dw WHIRLWIND
+	dw -1
+
 SleepBypassMoves:
 	dw SNORE
 	dw SLEEP_TALK

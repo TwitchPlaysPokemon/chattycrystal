@@ -261,7 +261,7 @@
 	const WILL_O_WISP  ;  fd (PLACEHOLDER)
 	const CHARGE       ;  fe
 	const TAUNT        ;  ff (PLACEHOLDER)
-	const ASSIST       ; 100 (PLACEHOLDER)
+	const ASSIST       ; 100
 	const SUPERPOWER   ; 101 (PLACEHOLDER)
 	const REVENGE      ; 102
 	const ENDEAVOR     ; 103

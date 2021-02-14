@@ -626,8 +626,8 @@ PokemonPicPointers::
 	dba SphealBackpic
 	dba SealeoFrontpic
 	dba SealeoBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Walrein
-	dba PlaceholderBackpic ; PLACEHOLDER - Walrein
+	dba WalreinFrontpic
+	dba WalreinBackpic
 	dba BagonFrontpic
 	dba BagonBackpic
 	dba ShelgonFrontpic

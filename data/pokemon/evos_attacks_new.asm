@@ -113,14 +113,14 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Sandile
 	dw DummyEvosAttacks ; PLACEHOLDER - Krokorok
 	dw DummyEvosAttacks ; PLACEHOLDER - Krookodile
-	dw DucklettEvosAttacks ; PLACEHOLDER - Ducklett
-	dw SwannaEvosAttacks ; PLACEHOLDER - Swanna
+	dw DummyEvosAttacks ; PLACEHOLDER - Ducklett
+	dw DummyEvosAttacks ; PLACEHOLDER - Swanna
 	dw DummyEvosAttacks ; PLACEHOLDER - Tynamo
 	dw DummyEvosAttacks ; PLACEHOLDER - Eelektrik
 	dw DummyEvosAttacks ; PLACEHOLDER - Eelektross
-	dw LitwickEvosAttacks ; PLACEHOLDER - Litwick
-	dw LampentEvosAttacks ; PLACEHOLDER - Lampent
-	dw ChandelureEvosAttacks ; PLACEHOLDER - Chandelure
+	dw DummyEvosAttacks ; PLACEHOLDER - Litwick
+	dw DummyEvosAttacks ; PLACEHOLDER - Lampent
+	dw DummyEvosAttacks ; PLACEHOLDER - Chandelure
 	dw DummyEvosAttacks ; PLACEHOLDER - Clauncher
 	dw DummyEvosAttacks ; PLACEHOLDER - Clawitzer
 	dw DummyEvosAttacks ; PLACEHOLDER - Heloptile
@@ -134,7 +134,7 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Crabrawler
 	dw DummyEvosAttacks ; PLACEHOLDER - Crabominable
 	dw CutieflyEvosAttacks ; PLACEHOLDER - Cutiefly
-	dw RibombeeEvosAttacks ; PLACEHOLDER - Ribombee
+	dw DummyEvosAttacks ; PLACEHOLDER - Ribombee
     ; Fused Crystal mons
 	dw DummyEvosAttacks ; PLACEHOLDER - Onixtret
 	dw DummyEvosAttacks ; PLACEHOLDER - Chiquirtle
@@ -152,12 +152,6 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Steelurret
     ; TPP's signature fakemon
 	dw DummyEvosAttacks ; PLACEHOLDER - Phancero
-
-DummyEvosAttacks:
-	; remove when no longer in use
-	db 0
-	dbw 1, POUND ; usual filler move
-	db 0 ; no more level-up moves
 
 TreeckoEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, GROVYLE
@@ -661,7 +655,7 @@ SwabluEvosAttacks:
 	dbw 11, SING
 	dbw 18, FURY_ATTACK
 	dbw 21, SAFEGUARD
-	dbw 28, MUST
+	dbw 28, MIST
 	dbw 31, TAKE_DOWN
 	dbw 38, MIRROR_MOVE
 	dbw 41, HEAL_BELL
@@ -676,7 +670,7 @@ AltariaEvosAttacks:
 	dbw 1, SING
 	dbw 18, FURY_ATTACK
 	dbw 21, SAFEGUARD
-	dbw 28, MUST
+	dbw 28, MIST
 	dbw 31, TAKE_DOWN
 	dbw 35, DRAGONBREATH
 	dbw 40, DRAGON_DANCE
@@ -774,7 +768,7 @@ SnoruntEvosAttacks:
 	dbw 25, PROTECT
 	dbw 38, CRUNCH
 	dbw 34, ICE_BEAM
-	dbw 37, HAIL
+;	dbw 37, HAIL
 	dbw 43, BLIZZARD
 	db 0 ; no more level-up moves
 
@@ -872,7 +866,7 @@ BidoofEvosAttacks:
 	dbw 13, ROLLOUT
 	dbw 17, HEADBUTT
 	dbw 21, HYPER_FANG
-	dbw 25, YAWN
+;	dbw 25, YAWN
 	dbw 29, AMNESIA
 	dbw 33, TAKE_DOWN
 	dbw 37, SUPER_FANG
@@ -889,7 +883,7 @@ BibarelEvosAttacks:
 	dbw 15, WATER_GUN
 	dbw 18, HEADBUTT
 	dbw 23, HYPER_FANG
-	dbw 28, YAWN
+;	dbw 28, YAWN
 	dbw 33, AMNESIA
 	dbw 38, TAKE_DOWN
 	dbw 43, SUPER_FANG
@@ -956,12 +950,12 @@ BunearyEvosAttacks:
 	dbw 33, AGILITY
 	dbw 36, DIZZY_PUNCH
 	dbw 43, CHARM
-	dbw 46, BOUNCE
+;	dbw 46, BOUNCE
 	db 0 ; no more level-up moves
 
 LopunnyEvosAttacks:
 	db 0
-	dbw 1, MAGIC_COAT
+;	dbw 1, MAGIC_COAT
 	dbw 1, SPLASH
 	dbw 1, POUND
 	dbw 1, DEFENSE_CURL
@@ -974,7 +968,7 @@ LopunnyEvosAttacks:
 	dbw 33, AGILITY
 	dbw 36, DIZZY_PUNCH
 	dbw 43, CHARM
-	dbw 46, BOUNCE
+;	dbw 46, BOUNCE
 	db 0 ; no more level-up moves
 
 BurmyEvosAttacks:
@@ -990,7 +984,6 @@ MothimEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, PROTECT
 	dbw 1, HIDDEN_POWER
-	dbw 1, 
 	db 0 ; no more level-up moves
 
 CutieflyEvosAttacks:
@@ -1000,7 +993,7 @@ CutieflyEvosAttacks:
 	dbw 7, STUN_SPORE
 	dbw 16, DRAININGKISS
 	dbw 21, SWEET_SCENT
-	dbw 31, DAZZLINGGLEAM
+;	dbw 31, DAZZLINGGLEAM
 	dbw 41, QUIVER_DANCE
 	db 0 ; no more level-up  moves
 
@@ -1012,7 +1005,7 @@ DummyEvosAttacks:
 	dbw 16, DRAININGKISS
 	dbw 20, POLLEN_PUFF
 	dbw 21, SWEET_SCENT
-	dbw 35, DAZZLINGGLEAM
+;	dbw 35, DAZZLINGGLEAM
 	dbw 49, QUIVER_DANCE
 	db 0 ; no more level-up  moves
 

@@ -578,8 +578,8 @@ PokemonPicPointers::
 	dba PlaceholderBackpic ; PLACEHOLDER - Skitty
 	dba PlaceholderFrontpic ; PLACEHOLDER - Delcatty
 	dba PlaceholderBackpic ; PLACEHOLDER - Delcatty
-	dba PlaceholderFrontpic ; PLACEHOLDER - Sableye
-	dba PlaceholderBackpic ; PLACEHOLDER - Sableye
+	dba SableyeFrontpic
+	dba SableyeBackpic
 	dba AronFrontpic
 	dba AronBackpic
 	dba LaironFrontpic

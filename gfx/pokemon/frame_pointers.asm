@@ -283,7 +283,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Azurill
 	dba SkittyFrames ; PLACEHOLDER - Skitty
 	dba PlaceholderFrames ; PLACEHOLDER - Delcatty
-	dba PlaceholderFrames ; PLACEHOLDER - Sableye
+	dba SableyeFrames
 	dba AronFrames
 	dba LaironFrames
 	dba AggronFrames

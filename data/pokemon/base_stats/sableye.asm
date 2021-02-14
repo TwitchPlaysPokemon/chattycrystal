@@ -11,7 +11,7 @@
 	db 100 ; unknown 1
 	db 26 ; step cycles to hatch
 	db 5 ; unknown 2
-	INCBIN "gfx/pokemon/placeholder/front.dimensions"
+	INCBIN "gfx/pokemon/sableye/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_HUMANSHAPE, EGG_HUMANSHAPE ; egg groups

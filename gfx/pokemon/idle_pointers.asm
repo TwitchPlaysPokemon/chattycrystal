@@ -283,7 +283,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Azurill
 	dw SkittyAnimationIdle ; PLACEHOLDER - Skitty
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Delcatty
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sableye
+	dw SableyeAnimationIdle
 	dw AronAnimationIdle
 	dw LaironAnimationIdle
 	dw AggronAnimationIdle

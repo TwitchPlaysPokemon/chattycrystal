@@ -283,7 +283,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Azurill
 	dw SkittyAnimation ; PLACEHOLDER - Skitty
 	dw PlaceholderAnimation ; PLACEHOLDER - Delcatty
-	dw PlaceholderAnimation ; PLACEHOLDER - Sableye
+	dw SableyeAnimation
 	dw AronAnimation
 	dw LaironAnimation
 	dw AggronAnimation

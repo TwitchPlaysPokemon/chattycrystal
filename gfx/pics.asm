@@ -244,6 +244,7 @@ SandshrewFrontpic:   INCBIN "gfx/pokemon/sandshrew/front.animated.2bpp.lz"
 NidoranFFrontpic:    INCBIN "gfx/pokemon/nidoran_f/front.animated.2bpp.lz"
 PidgeyFrontpic:      INCBIN "gfx/pokemon/pidgey/front.animated.2bpp.lz"
 ParasectBackpic:     INCBIN "gfx/pokemon/parasect/back.2bpp.lz"
+SableyeBackpic:      INCBIN "gfx/pokemon/sableye/back.2bpp.lz"
 
 SECTION "Pics 10", ROMX
 
@@ -689,6 +690,7 @@ UnownIBackpic:       INCBIN "gfx/pokemon/unown_i/back.2bpp.lz"
 UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 MarshtompFrontpic:   INCBIN "gfx/pokemon/marshtomp/front.animated.2bpp.lz"
 SwampertFrontpic:    INCBIN "gfx/pokemon/swampert/front.animated.2bpp.lz"
+SableyeFrontpic:     INCBIN "gfx/pokemon/sableye/front.animated.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 

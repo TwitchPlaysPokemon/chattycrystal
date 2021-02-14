@@ -528,8 +528,8 @@ PokemonPicPointers::
 	dba MudkipBackpic
 	dba MarshtompFrontpic
 	dba MarshtompBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Swampert
-	dba PlaceholderBackpic ; PLACEHOLDER - Swampert
+	dba SwampertFrontpic
+	dba SwampertBackpic
 	dba PoochyenaFrontpic
 	dba PoochyenaBackpic
 	dba MightyenaFrontpic

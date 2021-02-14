@@ -209,6 +209,7 @@ FurretFrontpic:      INCBIN "gfx/pokemon/furret/front.animated.2bpp.lz"
 CyndaquilFrontpic:   INCBIN "gfx/pokemon/cyndaquil/front.animated.2bpp.lz"
 HitmonchanFrontpic:  INCBIN "gfx/pokemon/hitmonchan/front.animated.2bpp.lz"
 QuagsireFrontpic:    INCBIN "gfx/pokemon/quagsire/front.animated.2bpp.lz"
+SwampertBackpic:     INCBIN "gfx/pokemon/swampert/back.2bpp.lz"
 
 SECTION "Pics 9", ROMX
 
@@ -687,6 +688,7 @@ UnownPBackpic:       INCBIN "gfx/pokemon/unown_p/back.2bpp.lz"
 UnownIBackpic:       INCBIN "gfx/pokemon/unown_i/back.2bpp.lz"
 UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 MarshtompFrontpic:   INCBIN "gfx/pokemon/marshtomp/front.animated.2bpp.lz"
+SwampertFrontpic:    INCBIN "gfx/pokemon/swampert/front.animated.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 

@@ -258,7 +258,7 @@ AnimationPointers:
 	dw BlazikenAnimation
 	dw MudkipAnimation
 	dw MarshtompAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Swampert
+	dw SwampertAnimation
 	dw PoochyenaAnimation
 	dw MightyenaAnimation
 	dw ZigzagoonAnimation

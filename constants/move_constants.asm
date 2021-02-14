@@ -346,7 +346,7 @@
 	const DUAL_CHOP    ; 152
 	const HORN_LEECH   ; 153
 	const STEAMROLLER  ; 154 (PLACEHOLDER)
-	const TAIL_SLAP    ; 155 (PLACEHOLDER)
+	const TAIL_SLAP    ; 155
 	const BLUE_FLARE   ; 156
 	const FREEZE_DRY   ; 157
 	const DRAININGKISS ; 158

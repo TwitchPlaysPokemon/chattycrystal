@@ -364,7 +364,7 @@ BattleAnimations::
 	dw BattleAnim_CrossChop
 	dw BattleAnim_GigaDrain
 	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Doubleslap
 	dw BattleAnim_SacredFire
 	dw BattleAnim_IceBeam
 	dw BattleAnim_MegaDrain    ; 158

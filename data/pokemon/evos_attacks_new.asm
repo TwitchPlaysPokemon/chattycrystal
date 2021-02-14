@@ -413,7 +413,7 @@ RaltsEvosAttacks:
 	dbw 6, CONFUSION
 	dbw 11, DOUBLE_TEAM
 	dbw 16, TELEPORT
-	dbw 21, PSYCHIC
+	dbw 21, PSYCHIC_M
 	dbw 36, FUTURE_SIGHT
 	dbw 41, HYPNOSIS
 	dbw 46, DREAM_EATER
@@ -426,7 +426,7 @@ KirliaEvosAttacks:
 	dbw 1, CONFUSION
 	dbw 1, DOUBLE_TEAM
 	dbw 1, TELEPORT
-	dbw 26, PSYCHIC
+	dbw 26, PSYCHIC_M
 	dbw 40, FUTURE_SIGHT
 	dbw 47, HYPNOSIS
 	dbw 54, DREAM_EATER
@@ -438,7 +438,7 @@ GardevoirEvosAttacks:
 	dbw 1, CONFUSION
 	dbw 1, DOUBLE_TEAM
 	dbw 1, TELEPORT
-	dbw 26, PSYCHIC
+	dbw 26, PSYCHIC_M
 	dbw 42, FUTURE_SIGHT
 	dbw 51, HYPNOSIS
 	dbw 60, DREAM_EATER
@@ -842,7 +842,7 @@ MetangEvosAttacks:
 	dbw 20, METAL_CLAW
 	dbw 26, SCARY_FACE
 	dbw 32, PURSUIT
-	dbw 38, PSYCHIC
+	dbw 38, PSYCHIC_M
 	dbw 44, IRON_DEFENSE
 	dbw 50, METEOR_MASH
 	dbw 56, AGILITY
@@ -856,7 +856,7 @@ MetagrossEvosAttacks:
 	dbw 1, METAL_CLAW
 	dbw 1, SCARY_FACE
 	dbw 32, PURSUIT
-	dbw 38, PSYCHIC
+	dbw 38, PSYCHIC_M
 	dbw 44, IRON_DEFENSE
 	dbw 55, METEOR_MASH
 	dbw 66, AGILITY

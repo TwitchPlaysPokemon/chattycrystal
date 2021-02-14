@@ -726,8 +726,8 @@ PokemonPicPointers::
 	dba PansageBackpic
 	dba SimisageFrontpic
 	dba SimisageBackpic
-	dba DrillburFrontpic
-	dba DrillburBackpic
+	dba DrilburFrontpic
+	dba DrilburBackpic
 	dba ExcadrillFrontpic
 	dba ExcadrillBackpic
 	dba SandileFrontpic
@@ -754,8 +754,8 @@ PokemonPicPointers::
 	dba ChandelureBackpic
 	dba ClauncherFrontpic
 	dba ClauncherBackpic
-	dba ClawtizerFrontpic
-	dba ClawtizerBackpic
+	dba ClawitzerFrontpic
+	dba ClawitzerBackpic
 	dba HelioptileFrontpic
 	dba HelioptileBackpic
 	dba HelioliskFrontpic

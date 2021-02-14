@@ -746,7 +746,7 @@ INCBIN "gfx/pokemon/pansage/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Pansage
 INCBIN "gfx/pokemon/simisage/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Simisage
-INCBIN "gfx/pokemon/drillbur/front.gbcpal", middle_colors
+INCBIN "gfx/pokemon/drilbur/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Drillbur
 INCBIN "gfx/pokemon/excadrill/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Excadrill
@@ -774,7 +774,7 @@ INCBIN "gfx/pokemon/chandelure/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Chandelure
 INCBIN "gfx/pokemon/clauncher/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Clauncher
-INCBIN "gfx/pokemon/clawtizer/front.gbcpal", middle_colors
+INCBIN "gfx/pokemon/clawitzer/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Clawtizer
 INCBIN "gfx/pokemon/helioptile/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Helioptile

@@ -304,6 +304,7 @@ BitmasksPointers:
 	dw DuskullBitmasks
 	dw DusclopsBitmasks
 	dw AbsolBitmasks
+	dw SnoruntBitmasks
 	dw SphealBitmasks
 	dw SealeoBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Walrein

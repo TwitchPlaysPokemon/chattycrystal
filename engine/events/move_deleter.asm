@@ -25,6 +25,8 @@ MoveDeletion:
 	call ReturnToMapWithSpeechTextbox
 	pop af
 	jr c, .declined
+	call .check_deletable
+	jr c, .undeletable
 	ld a, [wMenuCursorY]
 	push af
 	ld a, [wCurSpecies]
@@ -41,23 +43,24 @@ MoveDeletion:
 	call PlaySFX
 	call WaitSFX
 	ld hl, .MoveDeletedText
-	call PrintText
-	ret
+.print_text
+	jp PrintText
 
 .egg
 	ld hl, .EggText
-	call PrintText
-	ret
+	jr .print_text
 
 .declined
 	ld hl, .DeclinedDeletionText
-	call PrintText
-	ret
+	jr .print_text
 
 .onlyonemove
 	ld hl, .OnlyOneMoveText
-	call PrintText
-	ret
+	jr .print_text
+
+.undeletable
+	ld hl, .UndeletableText
+	jr .print_text
 
 .OnlyOneMoveText:
 	; That #MON knows only one move.
@@ -98,6 +101,36 @@ MoveDeletion:
 	; Which #MON?
 	text_far UnknownText_0x1c5fd1
 	text_end
+
+.UndeletableText:
+	text_far _Text_CantForgetThatMove
+	text_end
+
+.check_deletable
+	ld a, [wMenuCursorY]
+	ld c, a
+	ld b, 0
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMon1Moves - 1
+	add hl, bc
+	ld c, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+	ld a, [hl]
+	call GetMoveIndexFromID
+	assert HIGH(CHATTER) == HIGH(CHATTY_HP)
+	assert HIGH(CHATTER) == 1
+	dec h
+	jr nz, .deletable
+	ld a, l
+	cp LOW(CHATTER)
+	scf
+	ret z
+	cp LOW(CHATTY_HP)
+	scf
+	ret z
+.deletable
+	and a
+	ret
 
 .DeleteMove:
 	ld a, b

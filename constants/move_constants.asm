@@ -294,7 +294,7 @@
 	const VOLT_TACKLE  ; 11e
 	const DRAGON_DANCE ; 11f
 	const SHOCK_WAVE   ; 120
-	const WATER_PULSE  ; 121 (PLACEHOLDER)
+	const WATER_PULSE  ; 121
 	const ROOST        ; 122
 	const WAKE_UP_SLAP ; 123 (PLACEHOLDER)
 	const HAMMER_ARM   ; 124

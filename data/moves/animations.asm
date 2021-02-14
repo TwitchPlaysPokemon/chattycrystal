@@ -312,7 +312,7 @@ BattleAnimations::
 	dw BattleAnim_Spark
 	dw BattleAnim_Sharpen
 	dw BattleAnim_ThunderWave  ; 120
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Bubblebeam
 	dw BattleAnim_Recover
 	dw BattleAnim_Headbutt
 	dw BattleAnim_MegaPunch

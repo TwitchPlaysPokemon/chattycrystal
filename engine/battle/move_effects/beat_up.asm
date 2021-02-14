@@ -155,7 +155,7 @@ BattleCommand_BeatUp:
 	call GetPokemonName
 	ld hl, BeatUpAttackText
 	call StdBattleTextbox
-	jp EnemyAttackDamage
+	jp AttackDamage
 
 .finish_beatup
 	ld hl, BeatUpAttackText

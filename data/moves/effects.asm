@@ -4,6 +4,7 @@ MoveEffects: ; used only for BANK(MoveEffects)
 
 Placeholder:
 CrystalBolt: ; special cased in type matchup checking
+FoulPlay: ; special cased in damagestats
 Psyshock: ; special cased in damagestats
 NormalHit:
 	checkobedience

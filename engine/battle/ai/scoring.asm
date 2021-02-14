@@ -1640,7 +1640,7 @@ AI_Smart_PriorityHit:
 	ld a, $1
 	ldh [hBattleTurn], a
 	push hl
-	callfar EnemyAttackDamage
+	callfar AttackDamage
 	callfar BattleCommand_DamageCalc
 	callfar BattleCommand_Stab
 	pop hl
@@ -3061,7 +3061,7 @@ AIDamageCalc:
 	ret
 
 .asm_39400
-	callfar EnemyAttackDamage
+	callfar AttackDamage
 	callfar BattleCommand_DamageCalc
 	callfar BattleCommand_Stab
 	ret

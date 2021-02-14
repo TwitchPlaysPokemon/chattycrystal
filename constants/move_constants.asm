@@ -338,7 +338,7 @@
 	const HONE_CLAWS   ; 14a
 	const PSYSHOCK     ; 14b
 	const QUIVER_DANCE ; 14c
-	const FOUL_PLAY    ; 14d (PLACEHOLDER)
+	const FOUL_PLAY    ; 14d
 	const ECHOED_VOICE ; 14e
 	const SCALD        ; 14f (PLACEHOLDER)
 	const BULLDOZE     ; 150

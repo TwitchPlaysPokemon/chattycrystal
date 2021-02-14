@@ -356,7 +356,7 @@ BattleAnimations::
 	dw BattleAnim_Sharpen
 	dw BattleAnim_PsychicM
 	dw BattleAnim_Growth
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Pursuit
 	dw BattleAnim_Roar
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Earthquake   ; 150

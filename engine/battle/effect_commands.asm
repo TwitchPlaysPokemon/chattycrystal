@@ -2423,89 +2423,149 @@ DittoMetalPowder:
 	rr c
 	ret
 
-BattleCommand_DamageStats:
-; damagestats
-
+GetAttackStatInHL:
+; Returns stats in hl. Preserves bc, de.
+	push de
+	push bc
 	ldh a, [hBattleTurn]
 	and a
-	jp nz, EnemyAttackDamage
-
+	ld hl, wBattleMonAttack
+	ld de, wPlayerAttack
+	ld bc, wPlayerAtkLevel
+	jr z, _GetOffensiveStatInHL
+	ld hl, wEnemyMonAttack
+	ld de, wEnemyAttack
+	ld bc, wEnemyAtkLevel
+	jr _GetOffensiveStatInHL
+GetSpAtkStatInHL:
+	push de
+	push bc
+	ldh a, [hBattleTurn]
+	and a
+	ld hl, wBattleMonSpclAtk
+	ld de, wPlayerSpAtk
+	ld bc, wPlayerSAtkLevel
+	jr z, _GetOffensiveStatInHL
+	ld hl, wEnemyMonSpclAtk
+	ld de, wEnemySpAtk
+	ld bc, wEnemySAtkLevel
 	; fallthrough
+_GetOffensiveStatInHL:
+	ld a, [bc]
+	jr _GetStatInHL
+GetDefenseStatInHL:
+	push de
+	push bc
+	ldh a, [hBattleTurn]
+	and a
+	ld hl, wBattleMonDefense
+	ld de, wPlayerDefense
+	ld bc, wPlayerDefLevel
+	jr nz, _GetDefensiveStatInHL
+	ld hl, wEnemyMonDefense
+	ld de, wEnemyDefense
+	ld bc, wEnemyDefLevel
+	jr _GetDefensiveStatInHL
+GetSpDefStatInHL:
+	push de
+	push bc
+	ldh a, [hBattleTurn]
+	and a
+	ld hl, wBattleMonSpclDef
+	ld de, wPlayerSpDef
+	ld bc, wPlayerSDefLevel
+	jr nz, _GetDefensiveStatInHL
+	ld hl, wEnemyMonSpclDef
+	ld de, wEnemySpDef
+	ld bc, wEnemySDefLevel
+	; fallthrough
+_GetDefensiveStatInHL:
+	; invert so >7 gives more damage
+	ld a, [bc]
+	cpl
+	add BASE_STAT_LEVEL * 2 + 1
+	; fallthrough
+_GetStatInHL:
+	; If (possibly modified) stat change is less than base, don't check crit.
+	cp BASE_STAT_LEVEL
+	jr c, .getstat_done
 
-PlayerAttackDamage:
+	; If a crit happened, replace modified stat hl with unmodified de
+	ld a, [wCriticalHit]
+	and a
+	jr z, .getstat_done
+	ld h, d
+	ld l, e
+.getstat_done
+	pop bc
+	pop de
+	ret
+
+BattleCommand_DamageStats:
+; damagestats
+	; fallthrough
+AttackDamage:
 ; Return move power d, player level e, enemy defense c and player attack b.
+	; Set level of attacking mon
+	ldh a, [hBattleTurn]
+	and a
+	ld hl, wBattleMonLevel
+	jr z, .got_level
+	ld hl, wEnemyMonLevel
+.got_level
+	ld e, [hl]
 
-	ld hl, wPlayerMoveStructPower
+	; If the move has no power, we can just return early.
+	ld a, BATTLE_VARS_MOVE_POWER
+	call GetBattleVarAddr
 	ld a, [hli]
 	and a
 	ld d, a
 	ret z
 
+	; Check move category.
 	ld a, [hl]
 	cp SPECIAL
 	jr nc, .special
 
-.physical
-	ld hl, wEnemyMonDefense
-	ld a, [hli]
-	ld b, a
-	ld c, [hl]
-
-	ld a, [wEnemyScreens]
-	bit SCREENS_REFLECT, a
-	jr z, .physicalcrit
-	sla c
-	rl b
-
-.physicalcrit
-	ld hl, wBattleMonAttack
-	call CheckDamageStatsCritical
-	jr c, .thickclub
-
-	ld hl, wEnemyDefense
-	ld a, [hli]
-	ld b, a
-	ld c, [hl]
-	ld hl, wPlayerAttack
-	jr .thickclub
+	; The move is physical.
+	call GetDefenseStatInHL
+	ld a, 1 << SCREENS_REFLECT
+	call .ApplyScreen
+	call GetAttackStatInHL
+	call ThickClubBoost
+	jr .done
 
 .special
+	; Psyshock checks the Defense, not the Spcl.Def. one. It's still considered
+	; a special attack for other purposes (light screen, etc.).
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_PSYSHOCK
-	ld hl, wEnemyMonSpclDef
-	jr nz, .got_sp_defense
-	ld hl, wEnemyMonDefense
+	jr nz, .not_psyshock
+	call GetDefenseStatInHL
+	jr .got_sp_defense
+.not_psyshock
+	call GetSpDefStatInHL
 .got_sp_defense
-	ld a, [hli]
-	ld b, a
-	ld c, [hl]
+	ld a, 1 << SCREENS_LIGHT_SCREEN
+	call .ApplyScreen
 
-	ld a, [wEnemyScreens]
-	bit SCREENS_LIGHT_SCREEN, a
-	jr z, .specialcrit
-	sla c
-	rl b
+	; Handle Foul Play (Special attack in this game)
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_FOUL_PLAY
+	jr nz, .not_foul_play
+	call BattleCommand_SwitchTurn
+	call GetSpAtkStatInHL
+	call BattleCommand_SwitchTurn
+	jr .lightball
 
-.specialcrit
-	ld hl, wBattleMonSpclAtk
-	call CheckDamageStatsCritical
-	jr c, .lightball
-
-	ld hl, wEnemySpDef
-	ld a, [hli]
-	ld b, a
-	ld c, [hl]
-	ld hl, wPlayerSpAtk
-
+.not_foul_play
+	call GetSpAtkStatInHL
 .lightball
-; Note: Returns player special attack at hl in hl.
 	call LightBallBoost
 	jr .done
-
-.thickclub
-; Note: Returns player attack at hl in hl.
-	call ThickClubBoost
 
 .done
 	call TruncateHL_BC
@@ -2516,6 +2576,39 @@ PlayerAttackDamage:
 
 	ld a, 1
 	and a
+	ret
+
+.ApplyScreen:
+	; Read defense stat in hl first.
+	push af
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+
+	; Now we no longer care for preserving hl, so we can safely mess with it.
+	ldh a, [hBattleTurn]
+	and a
+	ld hl, wPlayerScreens
+	jr nz, .got_opponent_screens
+	ld hl, wEnemyScreens
+.got_opponent_screens
+	ld a, [hl]
+	ld h, a
+
+	; Screen is ignored on a critical hit
+	ld a, [wCriticalHit]
+	and a
+	jr nz, .no_crit
+	ld h, 0 ; just clear screen flags, we need to pop af anyway.
+
+.no_crit
+	; If screen flag is nonzero, double bc.
+	pop af
+	and h
+	ret z
+
+	sla b
+	rl c
 	ret
 
 TruncateHL_BC:
@@ -2690,88 +2783,6 @@ DoubleStatIfSpeciesHoldingItem:
 	rl h
 	ret
 
-EnemyAttackDamage:
-
-; No damage dealt with 0 power.
-	ld hl, wEnemyMoveStructPower
-	ld a, [hli] ; hl = wEnemyMoveStructType
-	ld d, a
-	and a
-	ret z
-
-	ld a, [hl]
-	cp SPECIAL
-	jr nc, .Special
-
-.physical
-	ld hl, wBattleMonDefense
-	ld a, [hli]
-	ld b, a
-	ld c, [hl]
-
-	ld a, [wPlayerScreens]
-	bit SCREENS_REFLECT, a
-	jr z, .physicalcrit
-	sla c
-	rl b
-
-.physicalcrit
-	ld hl, wEnemyMonAttack
-	call CheckDamageStatsCritical
-	jr c, .thickclub
-
-	ld hl, wPlayerDefense
-	ld a, [hli]
-	ld b, a
-	ld c, [hl]
-	ld hl, wEnemyAttack
-	jr .thickclub
-
-.Special:
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_PSYSHOCK
-	ld hl, wBattleMonSpclDef
-	jr nz, .got_sp_defense
-	ld hl, wBattleMonDefense
-.got_sp_defense
-	ld a, [hli]
-	ld b, a
-	ld c, [hl]
-
-	ld a, [wPlayerScreens]
-	bit SCREENS_LIGHT_SCREEN, a
-	jr z, .specialcrit
-	sla c
-	rl b
-
-.specialcrit
-	ld hl, wEnemyMonSpclAtk
-	call CheckDamageStatsCritical
-	jr c, .lightball
-	ld hl, wPlayerSpDef
-	ld a, [hli]
-	ld b, a
-	ld c, [hl]
-	ld hl, wEnemySpAtk
-
-.lightball
-	call LightBallBoost
-	jr .done
-
-.thickclub
-	call ThickClubBoost
-
-.done
-	call TruncateHL_BC
-
-	ld a, [wEnemyMonLevel]
-	ld e, a
-	call DittoMetalPowder
-
-	ld a, 1
-	and a
-	ret
 
 HitSelfInConfusion:
 	call ResetDamage
@@ -3183,16 +3194,15 @@ BattleCommand_ConstantDamage:
 	ld hl, wPlayerMoveStructPower
 	ld [hl], a
 	push hl
-	call PlayerAttackDamage
 	jr .notEnemysTurn
 
 .notPlayersTurn
 	ld hl, wEnemyMoveStructPower
 	ld [hl], a
 	push hl
-	call EnemyAttackDamage
 
 .notEnemysTurn
+	call AttackDamage
 	call BattleCommand_DamageCalc
 	pop hl
 	ld [hl], 1

@@ -184,4 +184,5 @@ MoveEffectsPointers:
 	dw Superpower
 	dw Tickle
 	dw Psyshock
+	dw FoulPlay
 	dw Placeholder

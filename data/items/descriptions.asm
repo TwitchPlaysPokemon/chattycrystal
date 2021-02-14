@@ -20,7 +20,7 @@ ItemDescriptions:
 	dw PotionDesc
 	dw EscapeRopeDesc
 	dw RepelDesc
-	dw MaxElixerDesc
+	dw MaxElixirDesc
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
@@ -64,7 +64,7 @@ ItemDescriptions:
 	dw PPUpDesc
 	dw EtherDesc
 	dw MaxEtherDesc
-	dw ElixerDesc
+	dw ElixirDesc
 	dw RedScaleDesc
 	dw SecretPotionDesc
 	dw SSTicketDesc
@@ -332,7 +332,7 @@ RepelDesc:
 	db   "Repels weak #-"
 	next "MON for 100 steps.@"
 
-MaxElixerDesc:
+MaxElixirDesc:
 	db   "Fully restores the"
 	next "PP of one #MON.@"
 
@@ -496,7 +496,7 @@ MaxEtherDesc:
 	db   "Fully restores PP"
 	next "of one move.@"
 
-ElixerDesc:
+ElixirDesc:
 	db   "Restores PP of all"
 	next "moves by 10.@"
 

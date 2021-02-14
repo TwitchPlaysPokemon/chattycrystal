@@ -26,7 +26,7 @@
 	const POTION       ; 12
 	const ESCAPE_ROPE  ; 13
 	const REPEL        ; 14
-	const MAX_ELIXER   ; 15
+	const MAX_ELIXIR   ; 15
 	const FIRE_STONE   ; 16
 	const THUNDERSTONE ; 17
 	const WATER_STONE  ; 18
@@ -70,7 +70,7 @@
 	const PP_UP        ; 3e
 	const ETHER        ; 3f
 	const MAX_ETHER    ; 40
-	const ELIXER       ; 41
+	const ELIXIR       ; 41
 	const RED_SCALE    ; 42
 	const SECRETPOTION ; 43
 	const S_S_TICKET   ; 44

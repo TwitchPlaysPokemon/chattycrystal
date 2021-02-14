@@ -67,8 +67,8 @@ Route12Calcium:
 Route12Nugget:
 	itemball NUGGET
 
-Route12HiddenElixer:
-	hiddenitem ELIXER, EVENT_ROUTE_12_HIDDEN_ELIXER
+Route12HiddenElixir:
+	hiddenitem ELIXIR, EVENT_ROUTE_12_HIDDEN_ELIXIR
 
 FisherMartinSeenText:
 	text "Patience is the"
@@ -175,7 +175,7 @@ Route12_MapEvents:
 	db 3 ; bg events
 	bg_event 11, 27, BGEVENT_READ, Route12Sign
 	bg_event 13,  9, BGEVENT_READ, FishingSpotSign
-	bg_event 14, 13, BGEVENT_ITEM, Route12HiddenElixer
+	bg_event 14, 13, BGEVENT_ITEM, Route12HiddenElixir
 
 	db 6 ; object events
 	object_event  5, 13, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerFisherMartin, -1

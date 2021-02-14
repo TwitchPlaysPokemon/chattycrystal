@@ -62,8 +62,8 @@ TrainerBikerGlenn:
 Route17HiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_ROUTE_17_HIDDEN_MAX_ETHER
 
-Route17HiddenMaxElixer:
-	hiddenitem MAX_ELIXER, EVENT_ROUTE_17_HIDDEN_MAX_ELIXER
+Route17HiddenMaxElixir:
+	hiddenitem MAX_ELIXIR, EVENT_ROUTE_17_HIDDEN_MAX_ELIXIR
 
 BikerRileySeenText:
 	text "Hey, you! You're"
@@ -141,7 +141,7 @@ Route17_MapEvents:
 
 	db 2 ; bg events
 	bg_event  9, 54, BGEVENT_ITEM, Route17HiddenMaxEther
-	bg_event  8, 77, BGEVENT_ITEM, Route17HiddenMaxElixer
+	bg_event  8, 77, BGEVENT_ITEM, Route17HiddenMaxElixir
 
 	db 4 ; object events
 	object_event  4, 17, SPRITE_BIKER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBikerRiley, -1

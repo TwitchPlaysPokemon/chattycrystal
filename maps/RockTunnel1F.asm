@@ -7,8 +7,8 @@ RockTunnel1F_MapScripts:
 
 	db 0 ; callbacks
 
-RockTunnel1FElixer:
-	itemball ELIXER
+RockTunnel1FElixir:
+	itemball ELIXIR
 
 RockTunnel1FTMSteelWing:
 	itemball TM_STEEL_WING
@@ -37,5 +37,5 @@ RockTunnel1F_MapEvents:
 	bg_event 21, 15, BGEVENT_ITEM, RockTunnel1FHiddenXDefend
 
 	db 2 ; object events
-	object_event  4, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FElixer, EVENT_ROCK_TUNNEL_1F_ELIXER
+	object_event  4, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FElixir, EVENT_ROCK_TUNNEL_1F_ELIXIR
 	object_event 10, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FTMSteelWing, EVENT_ROCK_TUNNEL_1F_TM_STEEL_WING

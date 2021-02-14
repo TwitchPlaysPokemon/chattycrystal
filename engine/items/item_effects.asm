@@ -33,7 +33,7 @@ ItemEffects:
 	dw RestoreHPEffect     ; POTION
 	dw EscapeRopeEffect    ; ESCAPE_ROPE
 	dw RepelEffect         ; REPEL
-	dw RestorePPEffect     ; MAX_ELIXER
+	dw RestorePPEffect     ; MAX_ELIXIR
 	dw EvoStoneEffect      ; FIRE_STONE
 	dw EvoStoneEffect      ; THUNDERSTONE
 	dw EvoStoneEffect      ; WATER_STONE
@@ -77,7 +77,7 @@ ItemEffects:
 	dw RestorePPEffect     ; PP_UP
 	dw RestorePPEffect     ; ETHER
 	dw RestorePPEffect     ; MAX_ETHER
-	dw RestorePPEffect     ; ELIXER
+	dw RestorePPEffect     ; ELIXIR
 	dw NoEffect            ; RED_SCALE
 	dw NoEffect            ; SECRETPOTION
 	dw NoEffect            ; S_S_TICKET
@@ -2277,10 +2277,10 @@ RestorePPEffect:
 
 .loop2
 	ld a, [wd002]
-	cp MAX_ELIXER
-	jp z, Elixer_RestorePPofAllMoves
-	cp ELIXER
-	jp z, Elixer_RestorePPofAllMoves
+	cp MAX_ELIXIR
+	jp z, Elixir_RestorePPofAllMoves
+	cp ELIXIR
+	jp z, Elixir_RestorePPofAllMoves
 
 	ld hl, TextJump_RaiseThePPOfWhichMove
 	ld a, [wd002]
@@ -2423,7 +2423,7 @@ Not_PP_Up:
 	jr nz, BattleRestorePP
 	jp PPRestoreItem_NoEffect
 
-Elixer_RestorePPofAllMoves:
+Elixir_RestorePPofAllMoves:
 	xor a
 	ld hl, wMenuCursorY
 	ld [hli], a
@@ -2477,7 +2477,7 @@ RestorePP:
 	jr nc, .dont_restore
 
 	ld a, [wd002]
-	cp MAX_ELIXER
+	cp MAX_ELIXIR
 	jr z, .restore_all
 	cp MAX_ETHER
 	jr z, .restore_all

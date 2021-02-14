@@ -15,6 +15,8 @@ CorrectNickErrors::
 	jr z, .end
 
 ; check if this char is a text command
+	inc a
+	jr z, .done
 	add a, a
 	jr c, .done
 

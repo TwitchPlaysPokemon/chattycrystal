@@ -511,7 +511,7 @@ MagnemiteFrontpic:   INCBIN "gfx/pokemon/magnemite/front.animated.2bpp.lz"
 MagnemiteBackpic:    INCBIN "gfx/pokemon/magnemite/back.2bpp.lz"
 BudewFrontpic:       INCBIN "gfx/pokemon/budew/front.animated.2bpp.lz"
 CombuskenFrontpic:   INCBIN "gfx/pokemon/combusken/front.animated.2bpp.lz"
-
+DelcattyBackpic:     INCBIN "gfx/pokemon/delcatty/back.2bpp.lz"
 
 SECTION "Pics 16", ROMX
 
@@ -738,6 +738,7 @@ QuagynxBackpic:     INCBIN "gfx/pokemon/quagynx/back.2bpp.lz"
 SteelurretFrontpic: INCBIN "gfx/pokemon/steelurret/front.animated.2bpp.lz"
 SkittyFrontpic:     INCBIN "gfx/pokemon/skitty/front.animated.2bpp.lz"
 AzurillFrontpic:    INCBIN "gfx/pokemon/azurill/front.animated.2bpp.lz"
+DelcattyFrontpic:   INCBIN "gfx/pokemon/delcatty/front.animated.2bpp.lz"
 
 SECTION "Pics 20", ROMX
 

@@ -282,7 +282,7 @@ AnimationPointers:
 	dw HariyamaAnimation
 	dw AzurillAnimation
 	dw SkittyAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Delcatty
+	dw DelcattyAnimation
 	dw SableyeAnimation
 	dw AronAnimation
 	dw LaironAnimation

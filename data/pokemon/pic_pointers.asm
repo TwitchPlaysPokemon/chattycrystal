@@ -576,8 +576,8 @@ PokemonPicPointers::
 	dba AzurillBackpic
 	dba SkittyFrontpic
 	dba SkittyBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Delcatty
-	dba PlaceholderBackpic ; PLACEHOLDER - Delcatty
+	dba DelcattyFrontpic
+	dba DelcattyBackpic
 	dba SableyeFrontpic
 	dba SableyeBackpic
 	dba AronFrontpic

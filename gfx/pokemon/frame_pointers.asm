@@ -282,7 +282,7 @@ FramesPointers:
 	dba HariyamaFrames
 	dba AzurillFrames
 	dba SkittyFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Delcatty
+	dba DelcattyFrames
 	dba SableyeFrames
 	dba AronFrames
 	dba LaironFrames

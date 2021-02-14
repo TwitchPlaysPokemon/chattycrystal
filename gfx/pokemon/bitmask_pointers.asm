@@ -282,7 +282,7 @@ BitmasksPointers:
 	dw HariyamaBitmasks
 	dw AzurillBitmasks
 	dw SkittyBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Delcatty
+	dw DelcattyBitmasks
 	dw SableyeBitmasks
 	dw AronBitmasks
 	dw LaironBitmasks

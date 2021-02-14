@@ -644,7 +644,7 @@ INCBIN "gfx/pokemon/snorunt/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/snorunt/shiny.pal"
 INCBIN "gfx/pokemon/spheal/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Spheal
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Sealeo
+INCBIN "gfx/pokemon/sealeo/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Sealeo
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Walrein
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Walrein

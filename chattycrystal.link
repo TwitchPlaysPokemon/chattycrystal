@@ -288,8 +288,8 @@ ROMX $6e
 	"Cries"
 ROMX $6f
 	"Text 1"
-ROMX $70
 	"Text 2"
+ROMX $70
 	"Pic Animations 4"
 ROMX $71
 	"Text 3"

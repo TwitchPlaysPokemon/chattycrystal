@@ -305,7 +305,7 @@ BitmasksPointers:
 	dw DusclopsBitmasks
 	dw AbsolBitmasks
 	dw SphealBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Sealeo
+	dw SealeoBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Walrein
 	dw BagonBitmasks
 	dw ShelgonBitmasks

@@ -610,7 +610,7 @@ INCBIN "gfx/pokemon/electrike/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/electrike/shiny.pal"
 INCBIN "gfx/pokemon/manectric/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/manectric/shiny.pal"
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Roselia
+INCBIN "gfx/pokemon/roselia/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Roselia
 INCBIN "gfx/pokemon/wailmer/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/wailmer/shiny.pal"

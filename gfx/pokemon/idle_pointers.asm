@@ -289,7 +289,7 @@ AnimationIdlePointers:
 	dw AggronAnimationIdle
 	dw ElectrikeAnimationIdle
 	dw ManectricAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Roselia
+	dw RoseliaAnimationIdle
 	dw WailmerAnimationIdle
 	dw WailordAnimationIdle
 	dw TrapinchAnimationIdle

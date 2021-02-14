@@ -289,7 +289,7 @@ FramesPointers:
 	dba AggronFrames
 	dba ElectrikeFrames
 	dba ManectricFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Roselia
+	dba RoseliaFrames
 	dba WailmerFrames
 	dba WailordFrames
 	dba TrapinchFrames

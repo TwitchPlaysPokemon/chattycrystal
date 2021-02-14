@@ -289,7 +289,7 @@ BitmasksPointers:
 	dw AggronBitmasks
 	dw ElectrikeBitmasks
 	dw ManectricBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Roselia
+	dw RoseliaBitmasks
 	dw WailmerBitmasks
 	dw WailordBitmasks
 	dw TrapinchBitmasks

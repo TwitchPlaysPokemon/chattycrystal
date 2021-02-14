@@ -695,6 +695,7 @@ MarshtompFrontpic:   INCBIN "gfx/pokemon/marshtomp/front.animated.2bpp.lz"
 SwampertFrontpic:    INCBIN "gfx/pokemon/swampert/front.animated.2bpp.lz"
 SableyeFrontpic:     INCBIN "gfx/pokemon/sableye/front.animated.2bpp.lz"
 PelipperFrontpic:    INCBIN "gfx/pokemon/pelipper/front.animated.2bpp.lz"
+RoseliaBackpic:      INCBIN "gfx/pokemon/roselia/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
@@ -739,6 +740,7 @@ SteelurretFrontpic: INCBIN "gfx/pokemon/steelurret/front.animated.2bpp.lz"
 SkittyFrontpic:     INCBIN "gfx/pokemon/skitty/front.animated.2bpp.lz"
 AzurillFrontpic:    INCBIN "gfx/pokemon/azurill/front.animated.2bpp.lz"
 DelcattyFrontpic:   INCBIN "gfx/pokemon/delcatty/front.animated.2bpp.lz"
+RoseliaFrontpic:    INCBIN "gfx/pokemon/roselia/front.animated.2bpp.lz"
 
 SECTION "Pics 20", ROMX
 

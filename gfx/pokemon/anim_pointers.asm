@@ -289,7 +289,7 @@ AnimationPointers:
 	dw AggronAnimation
 	dw ElectrikeAnimation
 	dw ManectricAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Roselia
+	dw RoseliaAnimation
 	dw WailmerAnimation
 	dw WailordAnimation
 	dw TrapinchAnimation

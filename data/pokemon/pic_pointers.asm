@@ -590,8 +590,8 @@ PokemonPicPointers::
 	dba ElectrikeBackpic
 	dba ManectricFrontpic
 	dba ManectricBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Roselia
-	dba PlaceholderBackpic ; PLACEHOLDER - Roselia
+	dba RoseliaFrontpic
+	dba RoseliaBackpic
 	dba WailmerFrontpic
 	dba WailmerBackpic
 	dba WailordFrontpic

@@ -278,7 +278,7 @@
 	const AIR_CUTTER   ; 10e
 	const OVERHEAT     ; 10f
 	const ODOR_SLEUTH  ; 110
-	const ROCK_TOMB    ; 111 (PLACEHOLDER)
+	const ROCK_TOMB    ; 111
 	const METAL_SOUND  ; 112
 	const TICKLE       ; 113 (PLACEHOLDER)
 	const SIGNAL_BEAM  ; 114 (PLACEHOLDER)
@@ -350,15 +350,15 @@
 	const BLUE_FLARE   ; 156
 	const FREEZE_DRY   ; 157
 	const DRAININGKISS ; 158 (PLACEHOLDER)
-	const PLAY_ROUGH   ; 159 (PLACEHOLDER)
-	const MOONBLAST    ; 15a (PLACEHOLDER)
-	const DAZZLINGLEAM ; 15b (PLACEHOLDER)
+	const PLAY_ROUGH   ; 159
+	const MOONBLAST    ; 15a
+	const DAZZLINGLEAM ; 15b
 	const NUZZLE       ; 15c
 	const ICE_HAMMER   ; 15d
 	const POLLEN_PUFF  ; 15e (PLACEHOLDER)
 	const POWER_TRIP   ; 15f
 	const CHATTY_HP    ; 160
-	const CRYSTAL_BOLT ; 161 (PLACEHOLDER)
+	const CRYSTAL_BOLT ; 161
 
 NUM_ATTACKS EQU const_value + -1
 

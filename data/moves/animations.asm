@@ -370,7 +370,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt     ; 158
 	dw BattleAnim_Submission
 	dw BattleAnim_SeismicToss
-	dw BattleAnim_Headbutt
+	dw BattleAnim_MorningSun
 	dw BattleAnim_Spark
 	dw BattleAnim_IcePunch
 	dw BattleAnim_Headbutt

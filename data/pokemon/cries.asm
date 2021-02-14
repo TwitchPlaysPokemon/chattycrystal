@@ -267,13 +267,13 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SWAMPERT - PLACEHOLDER
 	mon_cry CRY_MUK,         $115,  $0C0 ; POOCHYENA
 	mon_cry CRY_BLASTOISE,   $000,  $150 ; MIGHTYENA
-	mon_cry CRY_ZIGZAGOON,   $08a,  $0b8 ; ZIGZAGOON
-	mon_cry CRY_ZIGZAGOON,   $06b,  $102 ; LINOONE
+	mon_cry CRY_NIDORAN_M,  -$030,  $1b0 ; ZIGZAGOON
+	mon_cry CRY_BLASTOISE,   $2F0,  $100 ; LINOONE
 	mon_cry CRY_LOTAD,       $0df,  $084 ; LOTAD
 	mon_cry CRY_LOMBRE,      $028,  $140 ; LOMBRE
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LUDICOLO - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TAILLOW - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SWELLOW - PLACEHOLDER
+	mon_cry CRY_SPEAROW,     $06F,  $080 ; TAILLOW
+	mon_cry CRY_SPEAROW,     $020,  $090 ; SWELLOW
 	mon_cry CRY_SWELLOW,     $000,  $100 ; WINGULL
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; PELIPPER - PLACEHOLDER
 	mon_cry CRY_NIDORAN_F,   $000,  $100 ; RALTS

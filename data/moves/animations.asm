@@ -363,7 +363,7 @@ BattleAnimations::
 	dw BattleAnim_Meditate
 	dw BattleAnim_CrossChop
 	dw BattleAnim_GigaDrain
-	dw BattleAnim_Headbutt
+	dw BattleAnim_RapidSpin
 	dw BattleAnim_Doubleslap
 	dw BattleAnim_SacredFire
 	dw BattleAnim_IceBeam

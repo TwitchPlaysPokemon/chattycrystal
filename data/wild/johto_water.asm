@@ -106,7 +106,7 @@ JohtoWaterWildMons:
 
 	map_id OLIVINE_PORT
 	db 2 percent ; encounter rate
-	dbw 20, WINGULL
+	dbw 20, TENTACOOL
 	dbw 15, WINGULL
 	dbw 20, DUCKLETT
 
@@ -142,7 +142,7 @@ JohtoWaterWildMons:
 
 	map_id ROUTE_40
 	db 6 percent ; encounter rate
-	dbw 34, WINGULL
+	dbw 34, TENTACOOL
 	dbw 29, WINGULL
 	dbw 34, DUCKLETT
 

@@ -317,7 +317,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
+	dw BattleAnim_MegaPunch
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt     ; 128
 	dw BattleAnim_Headbutt

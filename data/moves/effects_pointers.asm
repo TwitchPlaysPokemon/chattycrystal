@@ -167,4 +167,5 @@ MoveEffectsPointers:
 	dw AquaRing
 	dw TrumpCard
 	dw FireFang
+	dw CloseCombat
 	dw Placeholder

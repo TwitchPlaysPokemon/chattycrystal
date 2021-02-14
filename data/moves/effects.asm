@@ -2339,6 +2339,29 @@ SelfSpecialAttackDown2Hit:
 	selfstatdownmessage
 	endmove
 
+CloseCombat:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	selfdefensedown
+	selfstatdownmessage
+	selfspecialdefensedown
+	selfstatdownmessage
+	endmove
+
 AquaRing:
 	checkobedience
 	usedmovetext

@@ -993,7 +993,7 @@ CutieflyEvosAttacks:
 	dbw 7, STUN_SPORE
 	dbw 16, DRAININGKISS
 	dbw 21, SWEET_SCENT
-;	dbw 31, DAZZLINGGLEAM
+	dbw 31, DAZZLINGLEAM
 	dbw 41, QUIVER_DANCE
 	db 0 ; no more level-up  moves
 
@@ -1005,7 +1005,7 @@ DummyEvosAttacks:
 	dbw 16, DRAININGKISS
 	dbw 20, POLLEN_PUFF
 	dbw 21, SWEET_SCENT
-;	dbw 35, DAZZLINGGLEAM
+	dbw 35, DAZZLINGLEAM
 	dbw 49, QUIVER_DANCE
 	db 0 ; no more level-up  moves
 

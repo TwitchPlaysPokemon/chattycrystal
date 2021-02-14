@@ -39,7 +39,7 @@ InitGender:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 6, 4, 12, 9
 	dw .MenuData
-	db 1 ; default option
+	db 2 ; default option
 
 .MenuData:
 	db STATICMENU_CURSOR | STATICMENU_WRAP | STATICMENU_DISABLE_B ; flags

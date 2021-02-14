@@ -350,5 +350,5 @@ MoveNames::
 	db "ICE HAMMER@"
 	db "POLLEN PUFF@"
 	db "POWER TRIP@"
-	db "CHATTY HP@"
+	db "HIDDEN POWER@"
 	db "CRYSTAL BOLT@"

@@ -322,7 +322,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt     ; 128
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Waterfall
-	dw BattleAnim_Headbutt
+	dw BattleAnim_FlameWheel
 	dw BattleAnim_ShadowBall
 	dw BattleAnim_Slash
 	dw BattleAnim_Slash

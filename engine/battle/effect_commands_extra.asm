@@ -194,7 +194,31 @@ BattleCommand_TrapTarget:
 	dw WHIRLPOOL, WhirlpoolTrapText ; 'was trapped!'
 
 BattleCommand_Recoil:
-; recoil
+	xor a
+	ld hl, hDividend
+	ld [hli], a
+	ld [hli], a
+	ld a, [wCurDamage]
+	ld [hli], a
+	ld a, [wCurDamage + 1]
+	ld [hl], a
+
+	; Check if we should do 1/3 or 1/4 recoil.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_RECOIL_HIT
+	ld a, 4
+	jr z, .got_recoil
+	dec a
+.got_recoil
+	ld b, 4
+	ldh [hDivisor], a
+	call Divide
+
+	ldh a, [hQuotient + 2]
+	ld b, a
+	ldh a, [hQuotient + 3]
+	ld c, a
 
 	ld hl, wBattleMonMaxHP
 	ldh a, [hBattleTurn]
@@ -205,15 +229,8 @@ BattleCommand_Recoil:
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
 	ld d, a
-; get 1/4 damage or 1 HP, whichever is higher
-	ld a, [wCurDamage]
-	ld b, a
-	ld a, [wCurDamage + 1]
-	ld c, a
-	srl b
-	rr c
-	srl b
-	rr c
+
+	; Ensure we have at least 1HP recoil.
 	ld a, b
 	or c
 	jr nz, .min_damage

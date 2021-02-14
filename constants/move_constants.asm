@@ -304,7 +304,7 @@
 	const TRUMP_CARD   ; 128
 	const SUCKER_PUNCH ; 129 (PLACEHOLDER)
 	const AQUA_RING    ; 12a
-	const FLARE_BLITZ  ; 12b (PLACEHOLDER)
+	const FLARE_BLITZ  ; 12b
 	const AURA_SPHERE  ; 12c
 	const NIGHT_SLASH  ; 12d
 	const AIR_SLASH    ; 12e

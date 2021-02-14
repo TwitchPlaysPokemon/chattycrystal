@@ -178,4 +178,5 @@ MoveEffectsPointers:
 	dw DrainingKiss
 	dw DragonDance
 	dw QuiverDance
+	dw FlareBlitz
 	dw Placeholder

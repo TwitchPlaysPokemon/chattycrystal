@@ -281,7 +281,7 @@
 	const ROCK_TOMB    ; 111
 	const METAL_SOUND  ; 112
 	const TICKLE       ; 113
-	const SIGNAL_BEAM  ; 114 (PLACEHOLDER)
+	const SIGNAL_BEAM  ; 114
 	const SHADOW_PUNCH ; 115 (PLACEHOLDER)
 	const EXTRASENSORY ; 116
 	const SAND_TOMB    ; 117
@@ -324,7 +324,7 @@
 	const PSYCHO_CUT   ; 13c
 	const ZEN_HEADBUTT ; 13d
 	const FLASH_CANNON ; 13e
-	const ROCK_CLIMB   ; 13f (PLACEHOLDER)
+	const ROCK_CLIMB   ; 13f
 	const DISCHARGE    ; 140
 	const LEAF_STORM   ; 141
 	const IRON_HEAD    ; 142

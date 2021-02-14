@@ -299,7 +299,7 @@ BattleAnimations::
 	dw BattleAnim_RockThrow
 	dw BattleAnim_Screech
 	dw BattleAnim_TailWhip
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Psybeam
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Psywave
 	dw BattleAnim_Twister
@@ -342,7 +342,7 @@ BattleAnimations::
 	dw BattleAnim_Cut
 	dw BattleAnim_Headbutt
 	dw BattleAnim_ShadowBall
-	dw BattleAnim_Headbutt
+	dw BattleAnim_RockSmash
 	dw BattleAnim_ThunderWave  ; 140
 	dw BattleAnim_RazorLeaf
 	dw BattleAnim_Headbutt

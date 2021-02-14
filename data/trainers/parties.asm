@@ -310,7 +310,7 @@ ColoWesGroup:
 	db 44
 	dw UMBREON
 	db NO_ITEM
-	dw MEAN_LOOK, NO_MOVE, NO_MOVE, NO_MOVE ; TODO: add snatch, taunt, secret power
+	dw MEAN_LOOK, SNATCH, TAUNT, SECRET_POWER
 	bigdw $0FFF
 	bigdw 118
 	bigdw 74
@@ -418,7 +418,7 @@ HGSSLyraGroup:
 	db 33
 	dw GROUDON
 	db TM_FURY_CUTTER
-	dw SURF, CUT, FOCUS_BLAST, NO_MOVE ; TODO: add sand tomb
+	dw SURF, CUT, FOCUS_BLAST, SAND_TOMB
 	bigdw $0FFF
 	bigdw 115
 	bigdw 113
@@ -488,7 +488,7 @@ B2W2NateGroup:
 	db 7
 	dw TYROGUE
 	db NO_ITEM
-	dw TACKLE, FORESIGHT, NO_MOVE, NO_MOVE ;add fake out
+	dw TACKLE, FORESIGHT, NO_MOVE, FAKE_OUT
 	bigdw $FFFF
 	bigdw 22
 	bigdw 10
@@ -595,7 +595,7 @@ GlazedGroup:
 	db 10
 	dw CROAGUNK
 	db NO_ITEM
-	dw POISON_STING, MUD_SLAP, ASTONISH, NO_MOVE ; TODO: add taunt
+	dw POISON_STING, MUD_SLAP, ASTONISH, TAUNT
 	bigdw $0FFF
 	bigdw 30
 	bigdw 18
@@ -4433,7 +4433,7 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (5)
 	db "GREG@", TRAINERTYPE_MOVES
-	db 30
+	db 31
 	dw DROWZEE
 	dw HYPNOSIS, HEADBUTT, DREAM_EATER, CONFUSION
 	db -1 ; end
@@ -5250,31 +5250,31 @@ PokefanMGroup:
 KimonoGirlGroup:
 	next_list_item; KIMONO_GIRL (1)
 	db "NAOKO@", TRAINERTYPE_NORMAL
-	db 30
+	db 32
 	dw FLAREON
 	db -1 ; end
 
 	next_list_item; KIMONO_GIRL (2)
 	db "SAYO@", TRAINERTYPE_NORMAL
-	db 30
+	db 32
 	dw ESPEON
 	db -1 ; end
 
 	next_list_item; KIMONO_GIRL (3)
 	db "ZUKI@", TRAINERTYPE_NORMAL
-	db 30
+	db 32
 	dw UMBREON
 	db -1 ; end
 
 	next_list_item; KIMONO_GIRL (4)
 	db "KUNI@", TRAINERTYPE_NORMAL
-	db 30
+	db 32
 	dw VAPOREON
 	db -1 ; end
 
 	next_list_item; KIMONO_GIRL (5)
 	db "MIKI@", TRAINERTYPE_NORMAL
-	db 30
+	db 32
 	dw JOLTEON
 	db -1 ; end
 	
@@ -5291,17 +5291,17 @@ TwinsGroup:
 
 	next_list_item ; TWINS (2)
 	db "ANN & ANNE@", TRAINERTYPE_NORMAL
-	db 29
+	db 30
 	dw CLEFAIRY
-	db 29
+	db 30
 	dw JIGGLYPUFF
 	db -1 ; end
 
 	next_list_item ; TWINS (3)
 	db "ANN & ANNE@", TRAINERTYPE_NORMAL
-	db 29
+	db 30
 	dw JIGGLYPUFF
-	db 29
+	db 30
 	dw CLEFAIRY
 	db -1 ; end
 
@@ -5880,7 +5880,7 @@ NuzlockeGroup:
 	db 49
 	dw BLAZIKEN
 	db RAGECANDYBAR
-	dw SLASH, DOUBLE_KICK, BLAZE_KICK, NO_MOVE ; TODO: add Rock tomb
+	dw SLASH, DOUBLE_KICK, BLAZE_KICK, ROCK_TOMB
 	bigdw $FFFF
 	bigdw 153
 	bigdw 127
@@ -5893,7 +5893,7 @@ NuzlockeGroup:
 	db 49
 	dw VIBRAVA
 	db AMULET_COIN
-	dw BITE, FEINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
+	dw BITE, FEINT_ATTACK, DRAGONBREATH, SAND_TOMB
 	bigdw $FFFF
 	bigdw 110
 	bigdw 78
@@ -5906,7 +5906,7 @@ NuzlockeGroup:
 	db 47
 	dw WAILMER
 	db EXP_SHARE
-	dw ASTONISH, ROLLOUT, WATER_GUN, NO_MOVE ; TODO: add water Pulse
+	dw ASTONISH, ROLLOUT, WATER_GUN, WATER_PULSE
 	bigdw $FFFF
 	bigdw 126
 	bigdw 56
@@ -5936,7 +5936,7 @@ NuzlockeGroup:
 	db 47
 	dw WAILORD
 	db EXP_SHARE
-	dw REST, ROLLOUT, SURF, NO_MOVE ; TODO: add water spout
+	dw REST, ROLLOUT, SURF, WATER_SPOUT
 	bigdw $FFFF
 	bigdw 240
 	bigdw 117
@@ -5949,7 +5949,7 @@ NuzlockeGroup:
 	db 49
 	dw FLYGON
 	db AMULET_COIN
-	dw BITE, FEINT_ATTACK, DRAGONBREATH, NO_MOVE ; TODO: add sand tomb
+	dw BITE, FEINT_ATTACK, DRAGONBREATH, SAND_TOMB
 	bigdw $FFFF
 	bigdw 159
 	bigdw 127
@@ -5960,9 +5960,9 @@ NuzlockeGroup:
 	db "Piiiv@"
 
 	db 36
-	dw QWILFISH ;TODO add sharpedo
+	dw SHARPEDO
 	db FULL_HEAL
-	dw CRUNCH, SCREECH, SLASH, NO_MOVE ; TODO: add taunt
+	dw CRUNCH, SCREECH, SLASH, TAUNT
 	bigdw $0FFF
 	bigdw 108
 	bigdw 92
@@ -5988,7 +5988,7 @@ NuzlockeGroup:
 	db 51
 	dw BLAZIKEN
 	db RAGECANDYBAR
-	dw SLASH, DOUBLE_KICK, BLAZE_KICK, NO_MOVE ; TODO: add Rock tomb
+	dw SLASH, DOUBLE_KICK, BLAZE_KICK, ROCK_TOMB
 	bigdw $FFFF
 	bigdw 158
 	bigdw 133
@@ -6001,7 +6001,7 @@ NuzlockeGroup:
 	db 31
 	dw SPHEAL
 	db EXP_SHARE
-	dw BODY_SLAM, AURORA_BEAM, ENCORE, NO_MOVE ; TODO: add Ice Ball
+	dw BODY_SLAM, AURORA_BEAM, ENCORE, ICE_BALL
 	bigdw $FFFF
 	bigdw 90
 	bigdw 35

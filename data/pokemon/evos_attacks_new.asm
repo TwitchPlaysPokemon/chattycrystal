@@ -77,21 +77,21 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Piplup
 	dw DummyEvosAttacks ; PLACEHOLDER - Prinplup
 	dw DummyEvosAttacks ; PLACEHOLDER - Empoleon
-	dw BidoofEvosAttacks ; PLACEHOLDER - Bidoof
-	dw BibarelEvosAttacks ; PLACEHOLDER - Bibarel
-	dw ShinxEvosAttacks ; PLACEHOLDER - Shinx
-	dw LuxioEvosAttacks ; PLACEHOLDER - Luxio
-	dw LuxrayEvosAttacks ; PLACEHOLDER - Luxray
+	dw BidoofEvosAttacks
+	dw BibarelEvosAttacks
+	dw ShinxEvosAttacks
+	dw LuxioEvosAttacks
+	dw LuxrayEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Budew
 	dw DummyEvosAttacks ; PLACEHOLDER - Roserade
-	dw BurmyEvosAttacks ; PLACEHOLDER - Burmy
-	dw MothimEvosAttacks ; PLACEHOLDER - Mothim
+	dw BurmyEvosAttacks
+	dw MothimEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Buizel
 	dw DummyEvosAttacks ; PLACEHOLDER - Floatzel
 	dw DummyEvosAttacks ; PLACEHOLDER - Shellos
 	dw DummyEvosAttacks ; PLACEHOLDER - Gastrodon
-	dw BunearyEvosAttacks ; PLACEHOLDER - Buneary
-	dw LopunnyEvosAttacks ; PLACEHOLDER - Lopunny
+	dw BunearyEvosAttacks
+	dw LopunnyEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Stunky
 	dw DummyEvosAttacks ; PLACEHOLDER - Skuntank
 	dw DummyEvosAttacks ; PLACEHOLDER - Bronzor
@@ -113,14 +113,14 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Sandile
 	dw DummyEvosAttacks ; PLACEHOLDER - Krokorok
 	dw DummyEvosAttacks ; PLACEHOLDER - Krookodile
-	dw DummyEvosAttacks ; PLACEHOLDER - Ducklett
-	dw DummyEvosAttacks ; PLACEHOLDER - Swanna
+	dw DucklettEvosAttacks
+	dw SwannaEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Tynamo
 	dw DummyEvosAttacks ; PLACEHOLDER - Eelektrik
 	dw DummyEvosAttacks ; PLACEHOLDER - Eelektross
-	dw DummyEvosAttacks ; PLACEHOLDER - Litwick
-	dw DummyEvosAttacks ; PLACEHOLDER - Lampent
-	dw DummyEvosAttacks ; PLACEHOLDER - Chandelure
+	dw LitwickEvosAttacks
+	dw LampentEvosAttacks
+	dw ChandelureEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Clauncher
 	dw DummyEvosAttacks ; PLACEHOLDER - Clawitzer
 	dw DummyEvosAttacks ; PLACEHOLDER - Heloptile
@@ -133,8 +133,8 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Goodra
 	dw DummyEvosAttacks ; PLACEHOLDER - Crabrawler
 	dw DummyEvosAttacks ; PLACEHOLDER - Crabominable
-	dw CutieflyEvosAttacks ; PLACEHOLDER - Cutiefly
-	dw DummyEvosAttacks ; PLACEHOLDER - Ribombee
+	dw CutieflyEvosAttacks
+	dw RibombeeEvosAttacks
     ; Fused Crystal mons
 	dw DummyEvosAttacks ; PLACEHOLDER - Onixtret
 	dw DummyEvosAttacks ; PLACEHOLDER - Chiquirtle
@@ -152,6 +152,11 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Steelurret
     ; TPP's signature fakemon
 	dw DummyEvosAttacks ; PLACEHOLDER - Phancero
+
+DummyEvosAttacks:
+	db 0
+	dbw 1, POUND
+	db 0 ; no more level-up moves
 
 TreeckoEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, GROVYLE
@@ -983,7 +988,13 @@ MothimEvosAttacks:
 	db 0
 	dbw 1, TACKLE
 	dbw 1, PROTECT
-	dbw 1, HIDDEN_POWER
+	dbw 20, HIDDEN_POWER
+	dbw 23, CONFUSION
+	dbw 26, GUST
+	dbw 29, POISONPOWDER
+	dbw 32, PSYBEAM
+	dbw 35, CONVERSION
+	dbw 44, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 CutieflyEvosAttacks:
@@ -996,17 +1007,88 @@ CutieflyEvosAttacks:
 	dbw 31, DAZZLINGLEAM
 	dbw 41, QUIVER_DANCE
 	db 0 ; no more level-up  moves
-
-DummyEvosAttacks:
+	
+RibombeeEvosAttacks:
+	dbbw EVOLVE_LEVEL, 20, RIBOMBEE
 	db 0
-	dbw 1, POLLEN_PUFF
 	dbw 1, ABSORB
-	dbw 1, STUN_SPORE
+	dbw 1, POLLEN_PUFF
+	dbw 7, STUN_SPORE
 	dbw 16, DRAININGKISS
 	dbw 20, POLLEN_PUFF
 	dbw 21, SWEET_SCENT
 	dbw 35, DAZZLINGLEAM
 	dbw 49, QUIVER_DANCE
+	db 0 ; no more level-up  moves
+
+LitwickEvosAttacks:
+	dbbw EVOLVE_LEVEL, 41, LAMPENT
+	db 0
+	dbw 1, EMBER
+	dbw 1, ASTONISH
+	dbw 3, MINIMIZE
+	dbw 7, FIRE_SPIN
+	dbw 10, CONFUSE_RAY
+	dbw 13, NIGHT_SHADE
+	dbw 16, WILL_O_WISP
+	dbw 20, FLAME_WHEEL
+;	dbw 38, MEMENTO
+	dbw 49, SHADOW_BALL
+	dbw 55, PAIN_SPLIT
+	dbw 61, OVERHEAT
+	db 0 ; no more level-up  moves
+
+LampentEvosAttacks:
+	dbbw EVOLVE_LEVEL, MOON_STONE, CHANDELURE
+	db 0
+	dbw 1, EMBER
+	dbw 1, ASTONISH
+	dbw 3, MINIMIZE
+	dbw 7, FIRE_SPIN
+	dbw 10, CONFUSE_RAY
+	dbw 13, NIGHT_SHADE
+	dbw 16, WILL_O_WISP
+	dbw 20, FLAME_WHEEL
+;	dbw 38, MEMENTO
+	dbw 53, SHADOW_BALL
+	dbw 61, PAIN_SPLIT
+	dbw 69, OVERHEAT
+	db 0 ; no more level-up  moves
+
+ChandelureEvosAttacks:
+	db 0
+	dbw 1, SMOG
+	dbw 1, CONFUSE_RAY
+	dbw 1, FLAME_WHEEL
+	db 0 ; no more level-up  moves
+	
+DucklettEvosAttacks:
+	dbbw EVOLVE_LEVEL, 35, SWANNA
+	db 0
+	dbw 1, WATER_GUN
+	dbw 9, WING_ATTACK
+	dbw 13, WATER_PULSE
+	dbw 15, AERIAL_ACE
+	dbw 19, BUBBLEBEAM
+	dbw 24, AQUA_RING
+	dbw 27, AIR_SLASH
+	dbw 30, ROOST
+	dbw 34, RAIN_DANCE
+	dbw 41, BRAVE_BIRD
+	db 0 ; no more level-up  moves
+
+SwannaEvosAttacks:
+	db 0
+	dbw 1, WATER_GUN
+	dbw 1, WING_ATTACK
+	dbw 13, WATER_PULSE
+	dbw 15, AERIAL_ACE
+	dbw 19, BUBBLEBEAM
+	dbw 24, AQUA_RING
+	dbw 27, AIR_SLASH
+	dbw 30, ROOST
+	dbw 34, RAIN_DANCE
+	dbw 47, BRAVE_BIRD
 	db 0 ; no more level-up  moves
 
 GlaceonEvosAttacks:

@@ -208,3 +208,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_Assurance
 	effectfn BattleCommand_Brine
 	effectfn BattleCommand_DoubleDivingDamage
+	effectfn BattleCommand_ResetMiss

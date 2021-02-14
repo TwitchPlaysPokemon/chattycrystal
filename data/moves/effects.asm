@@ -2411,6 +2411,7 @@ CloseCombat:
 	buildopponentrage
 	selfdefensedown
 	selfstatdownmessage
+	resetmiss
 	selfspecialdefensedown
 	selfstatdownmessage
 	endmove
@@ -2483,4 +2484,43 @@ Brine:
 	checkfaint
 	buildopponentrage
 	kingsrock
+	endmove
+
+DragonDance:
+	checkobedience
+	usedmovetext
+	doturn
+	lowersub
+	attackup
+	statupanim
+	statupmessage
+	statupfailtext
+	resetmiss
+	speedup
+	statupanim
+	statupmessage
+	statupfailtext
+	raisesub
+	endmove
+
+QuiverDance:
+	checkobedience
+	usedmovetext
+	doturn
+	lowersub
+	specialattackup
+	statupanim
+	statupmessage
+	statupfailtext
+	resetmiss
+	specialdefenseup
+	statupanim
+	statupmessage
+	statupfailtext
+	resetmiss
+	speedup
+	statupanim
+	statupmessage
+	statupfailtext
+	raisesub
 	endmove

@@ -208,6 +208,7 @@ ENDM
 	command assurance               ; c9
 	command brine                   ; ca
 	command doubledivingdamage      ; cb
+	command resetmiss               ; cc
 
 	enum_start $fe
 	command endturn                 ; fe

@@ -126,7 +126,7 @@ BattleCommand_CheckTurn:
 	ld [wEffectFailed], a
 	ld [wKickCounter], a
 	ld [wAlreadyDisobeyed], a
-	ld [wAlreadyFailed], a
+	ld [wAlreadyPerformed], a
 	ld [wSomeoneIsRampaging], a
 
 	ld a, EFFECTIVE
@@ -1949,6 +1949,15 @@ BattleCommand_StatDownAnim:
 	; fallthrough
 
 BattleCommand_StatUpDownAnim:
+	; Only perform the animation once. Used for multi-stat-up moves.
+	ld a, [wAlreadyPerformed]
+	and a
+	ret nz
+	inc a
+	ld [wAlreadyPerformed], a
+	dec a
+
+	; Now do the actual animation.
 	ld [wNumHits], a
 	xor a
 	ld [wKickCounter], a
@@ -4657,6 +4666,7 @@ BattleCommand_AllStatsUp:
 	jp   BattleCommand_StatUpMessage
 
 ResetMiss:
+BattleCommand_ResetMiss:
 	xor a
 	ld [wAttackMissed], a
 	ret
@@ -6097,7 +6107,7 @@ PrintNothingHappened:
 	jp StdBattleTextbox
 
 TryPrintButItFailed:
-	ld a, [wAlreadyFailed]
+	ld a, [wAlreadyPerformed]
 	and a
 	ret nz
 

@@ -610,7 +610,7 @@ wLastEnemyCounterMove:: db ; c6f9
 
 wEnemyMinimized:: db ; c6fa
 
-wAlreadyFailed:: db ; c6fb
+wAlreadyPerformed:: db ; c6fb
 
 wBattleParticipantsIncludingFainted:: db ; c6fc
 wBattleLowHealthAlarm:: db ; c6fd

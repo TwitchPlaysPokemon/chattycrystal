@@ -310,7 +310,7 @@ BattleAnimations::
 	dw BattleAnim_Slash
 	dw BattleAnim_Thief
 	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Sharpen
 	dw BattleAnim_ThunderWave  ; 120
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Recover
@@ -355,7 +355,7 @@ BattleAnimations::
 	dw BattleAnim_Hypnosis
 	dw BattleAnim_Sharpen
 	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Growth
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Roar
 	dw BattleAnim_Headbutt

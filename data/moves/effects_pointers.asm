@@ -176,4 +176,6 @@ MoveEffectsPointers:
 	dw Surf
 	dw Whirlpool
 	dw DrainingKiss
+	dw DragonDance
+	dw QuiverDance
 	dw Placeholder

@@ -292,7 +292,7 @@
 	const DRAGON_CLAW  ; 11c
 	const COVET        ; 11d
 	const VOLT_TACKLE  ; 11e (PLACEHOLDER)
-	const DRAGON_DANCE ; 11f (PLACEHOLDER)
+	const DRAGON_DANCE ; 11f
 	const SHOCK_WAVE   ; 120
 	const WATER_PULSE  ; 121 (PLACEHOLDER)
 	const ROOST        ; 122
@@ -337,7 +337,7 @@
 	const DARK_VOID    ; 149
 	const HONE_CLAWS   ; 14a
 	const PSYSHOCK     ; 14b (PLACEHOLDER)
-	const QUIVER_DANCE ; 14c (PLACEHOLDER)
+	const QUIVER_DANCE ; 14c
 	const FOUL_PLAY    ; 14d (PLACEHOLDER)
 	const ECHOED_VOICE ; 14e
 	const SCALD        ; 14f (PLACEHOLDER)

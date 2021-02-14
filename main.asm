@@ -668,6 +668,7 @@ INCLUDE "data/moves/vc_names.asm"
 SECTION "Chatty Handling", ROMX
 
 INCLUDE "engine/chattywritearea.asm"
+INCLUDE "engine/pokemon/chatty_mon_checks.asm"
 
 
 SECTION "bank77", ROMX

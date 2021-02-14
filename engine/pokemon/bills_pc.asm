@@ -66,8 +66,7 @@ _DepositPKMN:
 	call BillsPC_ApplyPalettes
 	call WaitBGMap
 	call BillsPC_UpdateSelectionCursor
-	call BillsPC_IncrementJumptableIndex
-	ret
+	jp BillsPC_IncrementJumptableIndex
 
 .HandleJoypad:
 	ld hl, hJoyPressed
@@ -155,6 +154,8 @@ BillsPCDepositJumptable:
 BillsPCDepositFuncDeposit:
 	call BillsPC_CheckMail_PreventBlackout
 	jp c, BillsPCDepositFuncCancel
+	call BillsPC_BlockChattyDisposal
+	jp c, BillsPCDepositFuncCancel
 	call DepositPokemon
 	jr c, .box_full
 	ld a, $0
@@ -168,6 +169,24 @@ BillsPCDepositFuncDeposit:
 	ld de, PCString_WhatsUp
 	jp BillsPC_PlaceString
 
+BillsPC_BlockChattyDisposal:
+	ld a, [wBillsPC_CursorPosition]
+	ld c, a
+	ld a, [wBillsPC_ScrollPosition]
+	add a, c
+	ld c, a
+	farcall CheckChattyMon
+	ret nc
+	ld de, PCString_RefusesToLeave
+	call BillsPC_PlaceString
+	ld de, SFX_WRONG
+	call WaitPlaySFX
+	call WaitSFX
+	ld c, 50
+	call DelayFrames
+	scf
+	ret
+
 BillsPCDepositFuncStats:
 	call LoadStandardMenuHeader
 	call BillsPC_StatsScreen
@@ -176,14 +195,15 @@ BillsPCDepositFuncStats:
 	call BillsPC_GetSelectedPokemonSpecies
 	ld [wCurPartySpecies], a
 	ld a, SCGB_BILLS_PC
-	call BillsPC_ApplyPalettes
-	ret
+	jp BillsPC_ApplyPalettes
 
 BillsPCDepositFuncRelease:
 	call BillsPC_CheckMail_PreventBlackout
 	jr c, BillsPCDepositFuncCancel
 	call BillsPC_IsMonAnEgg
 	jr c, BillsPCDepositFuncCancel
+	call BillsPC_BlockChattyDisposal
+	jp c, BillsPCDepositFuncCancel
 	ld a, [wMenuCursorY]
 	push af
 	ld de, PCString_ReleasePKMN
@@ -220,7 +240,7 @@ BillsPCDepositFuncRelease:
 	ret
 
 BillsPCDepositFuncCancel:
-	ld a, $0
+	xor a
 	ld [wJumptableIndex], a
 	ret
 
@@ -357,10 +377,9 @@ _WithdrawPKMN:
 	call BillsPC_ApplyPalettes
 	ld de, PCString_WhatsUp
 	call BillsPC_PlaceString
-	ld a, $1
+	ld a, 1
 	ld [wMenuCursorY], a
-	call BillsPC_IncrementJumptableIndex
-	ret
+	jp BillsPC_IncrementJumptableIndex
 
 BillsPC_Withdraw:
 	ld hl, .MenuHeader
@@ -636,7 +655,11 @@ _MovePKMNWithoutMail:
 
 .Move:
 	call BillsPC_CheckMail_PreventBlackout
-	jp c, .Cancel
+	jr c, .Cancel
+	ld a, [wBillsPC_LoadedBox]
+	and a
+	call z, BillsPC_BlockChattyDisposal
+	jr c, .Cancel
 	ld a, [wBillsPC_ScrollPosition]
 	ld [wBillsPC_BackupScrollPosition], a
 	ld a, [wBillsPC_CursorPosition]
@@ -2252,6 +2275,7 @@ PCString_Non: db "Non.@"
 PCString_BoxFull: db "The BOX is full.@"
 PCString_PartyFull: db "The party's full!@"
 PCString_NoReleasingEGGS: db "No releasing EGGS!@"
+PCString_RefusesToLeave: db "It refuses to go!@"
 
 _ChangeBox:
 	call LoadStandardMenuHeader

@@ -281,7 +281,7 @@ FramesPointers:
 	dba MakuhitaFrames
 	dba HariyamaFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Azurill
-	dba PlaceholderFrames ; PLACEHOLDER - Skitty
+	dba SkittyFrames ; PLACEHOLDER - Skitty
 	dba PlaceholderFrames ; PLACEHOLDER - Delcatty
 	dba PlaceholderFrames ; PLACEHOLDER - Sableye
 	dba AronFrames

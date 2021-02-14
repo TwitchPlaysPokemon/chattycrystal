@@ -727,6 +727,7 @@ NoctdrioBackpic:    INCBIN "gfx/pokemon/noctdrio/back.2bpp.lz"
 QuagynxFrontpic:    INCBIN "gfx/pokemon/quagynx/front.animated.2bpp.lz"
 QuagynxBackpic:     INCBIN "gfx/pokemon/quagynx/back.2bpp.lz"
 SteelurretFrontpic: INCBIN "gfx/pokemon/steelurret/front.animated.2bpp.lz"
+SkittyFrontpic:      INCBIN "gfx/pokemon/skitty/front.animated.2bpp.lz"
 
 SECTION "Pics 20", ROMX
 

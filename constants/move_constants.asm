@@ -321,7 +321,7 @@
 	const FIRE_FANG    ; 139
 	const SHADOW_SNEAK ; 13a (PLACEHOLDER)
 	const MUD_BOMB     ; 13b
-	const PSYCHO_CUT   ; 13c (PLACEHOLDER)
+	const PSYCHO_CUT   ; 13c
 	const ZEN_HEADBUTT ; 13d
 	const FLASH_CANNON ; 13e
 	const ROCK_CLIMB   ; 13f (PLACEHOLDER)

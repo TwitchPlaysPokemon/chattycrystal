@@ -339,7 +339,7 @@ BattleAnimations::
 	dw BattleAnim_Bite
 	dw BattleAnim_Headbutt
 	dw BattleAnim_SludgeBomb
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Cut
 	dw BattleAnim_Headbutt
 	dw BattleAnim_ShadowBall
 	dw BattleAnim_Headbutt

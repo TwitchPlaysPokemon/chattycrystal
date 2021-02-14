@@ -12,6 +12,7 @@ CriticalHitMoves:
 	dw ATTACK_ORDER
 	dw BLAZE_KICK
 	dw NIGHT_SLASH
+	dw PSYCHO_CUT
 	dw -1
 
 MetronomeExcepts:

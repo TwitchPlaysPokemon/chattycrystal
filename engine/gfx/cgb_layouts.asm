@@ -631,8 +631,10 @@ _CGB_TrainerCard:
 	xor a ; CHRIS
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, CAL
+	ld a, KRIS
 	call GetTrainerPalettePointer
+	call LoadPalette_White_Col1_Col2_Black
+	ld hl, .leader_sprite_palette
 	call LoadPalette_White_Col1_Col2_Black
 	ld a, PREDEFPAL_CGB_BADGE
 	call GetPredefPal
@@ -643,9 +645,9 @@ _CGB_TrainerCard:
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
-	ld a, $1 ; kris
+	ld a, 1 ; kris
 	jr z, .got_gender
-	ld a, $0 ; chris
+	xor a
 .got_gender
 	call ByteFill
 	; fill trainer sprite area with same-gender palette
@@ -653,9 +655,8 @@ _CGB_TrainerCard:
 	lb bc, 7, 5
 	ld a, [wPlayerGender]
 	and a
-	ld a, $0 ; chris
 	jr z, .got_gender2
-	ld a, $1 ; kris
+	ld a, 1 ; kris
 .got_gender2
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
@@ -663,55 +664,45 @@ _CGB_TrainerCard:
 	ld [hl], $1
 	hlcoord 2, 11, wAttrMap
 	lb bc, 2, 4
-	ld a, $1 ; falkner
+	ld a, b
 	call FillBoxCGB
 	hlcoord 6, 11, wAttrMap
 	lb bc, 2, 4
-	ld a, $2 ; bugsy
 	call FillBoxCGB
 	hlcoord 10, 11, wAttrMap
 	lb bc, 2, 4
-	ld a, $3 ; whitney
 	call FillBoxCGB
 	hlcoord 14, 11, wAttrMap
 	lb bc, 2, 4
-	ld a, $4 ; morty
 	call FillBoxCGB
 	hlcoord 2, 14, wAttrMap
 	lb bc, 2, 4
-	ld a, $5 ; chuck
 	call FillBoxCGB
 	hlcoord 6, 14, wAttrMap
 	lb bc, 2, 4
-	ld a, $6 ; jasmine
 	call FillBoxCGB
 	hlcoord 10, 14, wAttrMap
 	lb bc, 2, 4
-	ld a, $7 ; pryce
 	call FillBoxCGB
-	; clair uses kris's palette
-	ld a, [wPlayerGender]
-	and a
-	push af
-	jr z, .got_gender3
 	hlcoord 14, 14, wAttrMap
 	lb bc, 2, 4
-	ld a, $1
 	call FillBoxCGB
-.got_gender3
-	pop af
-	ld c, $0
-	jr nz, .got_gender4
-	inc c
+	ld a, [wPlayerGender]
+	and a
+	jr z, .got_gender4
+	ld a, 1
 .got_gender4
-	ld a, c
 	hlcoord 18, 1, wAttrMap
 	ld [hl], a
 	call ApplyAttrMap
 	call ApplyPals
-	ld a, $1
+	ld a, 1
 	ldh [hCGBPalUpdate], a
 	ret
+
+.leader_sprite_palette
+	RGB 21, 21, 21
+	RGB 10, 10, 10
 
 _CGB_MoveList:
 	ld de, wBGPals1

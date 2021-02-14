@@ -163,6 +163,7 @@ MoveEffectsPointers:
 	dw Revenge
 	dw NormalHit
 	dw SelfSpeedDownHit
+	dw SelfSpecialAttackDown2Hit
 	dw AquaRing
 	dw TrumpCard
 	dw FireFang

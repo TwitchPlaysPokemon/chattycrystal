@@ -2318,6 +2318,27 @@ SelfSpeedDownHit:
 	selfstatdownmessage
 	endmove
 
+SelfSpecialAttackDown2Hit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	selfspecialattackdown2
+	selfstatdownmessage
+	endmove
+
 AquaRing:
 	checkobedience
 	usedmovetext

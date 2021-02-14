@@ -1,11 +1,11 @@
 VCMoveNames::
 	indirect_table 9, 1
-	indirect_entries BEAT_UP, .original_names
+	indirect_entries BEAT_UP, .original_moves
 	indirect_entries CHATTY_HP - 1
 	indirect_entries CHATTY_HP, .hidden_power
 	indirect_table_end
 
-.original_names
+.original_moves
 	db "PAT@@@@@@"
 	db "GRADE  @@"
 	db "KNOCK  @@"

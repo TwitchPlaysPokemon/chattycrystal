@@ -1,9 +1,9 @@
 BootlegMoveNames::
 	indirect_table 17, 1
-	indirect_entries STRUGGLE, .original_names
+	indirect_entries STRUGGLE, .original_moves
 	indirect_table_end
 
-.original_names
+.original_moves
 	db "BEAT@@@@@@@@@@@@@"
 	db "BARE-HANDED CUT@@"
 	db "SLAP@@@@@@@@@@@@@"

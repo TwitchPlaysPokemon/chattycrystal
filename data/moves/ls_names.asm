@@ -1,10 +1,52 @@
 LSMoveNames::
 	indirect_table 8, 1
-	indirect_entries BEAT_UP, .first_names
-	; TODO: add more moves
+	indirect_entries BEAT_UP, .original_moves
+	indirect_entries WATER_PULSE, .new_moves
+	indirect_entries CHATTY_HP - 1
+	indirect_entries CHATTY_HP, .hidden_power
 	indirect_table_end
 
-.first_names
+.new_moves
+	db "Dream@@@" ;  fc
+	db "Ghost@@@"
+	db "Charg@@@"
+	db "Provo@@@"
+	db "Chen@@@@" ; 100
+	db "Powe@@@@"
+	db "Turn@@@@"
+	db "Confu@@@"
+	db "Snatch@@"
+	db "Power@@@"
+	db "Diving@@"
+	db "Support@"
+	db "Free@@@@" ; 108
+	db "Kick@@@@"
+	db "Chaire@@"
+	db "Poison@@"
+	db "Meteor@@"
+	db "Threaf@@"
+	db "Hit@@@@@"
+	db "Super@@@"
+	db "Diffe@@@" ; 110
+	db "Seal@@@@"
+	db "Metal@@@"
+	db "Smillk@@"
+	db "Rock@@@@"
+	db "Shadow@@"
+	db "Rate@@@@"
+	db "Hell@@@@"
+	db "Curre@@@" ; 118
+	db "Wing@@@@"
+	db "Wall@@@@"
+	db "Call@@@@"
+	db "Cut@@@@@"
+	db "Want@@@@"
+	db "Dasiqi@@"
+	db "Dance@@@"
+	db "Shock@@@" ; 120
+	db "Beam@@@@"
+
+.original_moves
 	db "fihgt@@@"
 	db "strike@@"
 	db "fro@@@@@"
@@ -241,6 +283,7 @@ LSMoveNames::
 	db "Sun@@@@@"
 	db "Photos@@"
 	db "Moon@@@@"
+.hidden_power
 	db "Power@@@"
 	db "Strike@@"
 	db "Cylone@@"

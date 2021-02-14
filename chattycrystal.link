@@ -120,6 +120,7 @@ ROMX $27
 	"Map Scripts 12"
 ROMX $28
 	"Phone Scripts 1"
+	"Pics 33"
 ROMX $29
 	"Phone Text"
 ROMX $2a
@@ -128,6 +129,7 @@ ROMX $2b
 	"Map Blocks 2"
 ROMX $2c
 	"Map Blocks 3"
+	"Pics 32"
 ROMX $2d
 	"Tileset Data 5"
 ROMX $2e

@@ -977,6 +977,8 @@ EelektrossFrontpic:  INCBIN "gfx/pokemon/eelektross/front.animated.2bpp.lz"
 LitwickBackpic:      INCBIN "gfx/pokemon/litwick/back.2bpp.lz"
 LitwickFrontpic:     INCBIN "gfx/pokemon/litwick/front.animated.2bpp.lz"
 LampentBackpic:      INCBIN "gfx/pokemon/lampent/back.2bpp.lz"
+CutieflyBackpic:     INCBIN "gfx/pokemon/cutiefly/back.2bpp.lz"
+RibombeeBackpic:     INCBIN "gfx/pokemon/ribombee/back.2bpp.lz"
 
 SECTION "Pics 32", ROMX
 
@@ -1008,7 +1010,5 @@ CrabominableBackpic: INCBIN "gfx/pokemon/crabominable/back.2bpp.lz"
 SECTION "Pics 33", ROMX
 
 CrabominableFrontpic:INCBIN "gfx/pokemon/crabominable/front.animated.2bpp.lz"
-CutieflyBackpic:     INCBIN "gfx/pokemon/cutiefly/back.2bpp.lz"
 CutieflyFrontpic:    INCBIN "gfx/pokemon/cutiefly/front.animated.2bpp.lz"
-RibombeeBackpic:     INCBIN "gfx/pokemon/ribombee/back.2bpp.lz"
 RibombeeFrontpic:    INCBIN "gfx/pokemon/ribombee/front.animated.2bpp.lz"

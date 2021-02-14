@@ -7,8 +7,18 @@ BattleCommand_PainSplit:
 	call CheckSubstituteOpp
 	jp nz, PrintDidntAffect2
 	call AnimateCurrentMove
-	ld hl, wBattleMonMaxHP + 1
-	ld de, wEnemyMonMaxHP + 1
+	ld hl, wBattleMonMaxHP
+	ld de, wEnemyMonMaxHP
+
+	; Check whom has the most HP, because we need to flag potential damage.
+	ld a, [de]
+	inc de
+	cp [hl]
+	inc hl
+	call .CheckHPEquality
+	call nz, .CheckHPEqualityPre
+
+	; At this point, HP pointers point to the second bytes.
 	call .PlayerShareHP
 	ld a, $1
 	ld [wWhichHPBar], a ;set HP bar to player
@@ -87,4 +97,22 @@ BattleCommand_PainSplit:
 	ld a, b
 	ld [hli], a
 	ld [wBuffer6], a
+	ret
+
+.CheckHPEqualityPre:
+	ld a, [de] ; Enemy HP byte
+	cp [hl] ; Player HP byte
+	; fallthrough
+.CheckHPEquality:
+; Checks if the player or enemy has more HP. Unless equal, mark the one with
+; more as taking damage. Returns z if HP is equal.
+	ld bc, wPlayerSubStatus2
+	jr c, .got_substatus
+	ret z
+	ld bc, wEnemySubStatus2
+.got_substatus
+	ld a, [bc]
+	or 1 << SUBSTATUS_DAMAGED_THIS_TURN
+	ld [bc], a
+	xor a
 	ret

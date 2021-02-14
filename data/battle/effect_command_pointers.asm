@@ -205,3 +205,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_AquaRing
 	effectfn BattleCommand_TrumpCard
 	effectfn BattleCommand_Assist
+	effectfn BattleCommand_Assurance

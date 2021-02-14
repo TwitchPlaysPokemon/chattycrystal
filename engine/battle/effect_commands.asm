@@ -3240,6 +3240,12 @@ DoEnemyDamage:
 	jp nz, DoSubstituteDamage
 
 .ignore_substitute
+	; Mark that we're taking damage.
+	push hl
+	ld hl, wEnemySubStatus2
+	set SUBSTATUS_DAMAGED_THIS_TURN, [hl]
+	pop hl
+
 	; Substract wCurDamage from wEnemyMonHP.
 	;  store original HP in little endian wBuffer3/4
 	ld a, [hld]
@@ -3300,6 +3306,12 @@ DoPlayerDamage:
 	jp nz, DoSubstituteDamage
 
 .ignore_substitute
+	; Mark that we're taking damage.
+	push hl
+	ld hl, wPlayerSubStatus2
+	set SUBSTATUS_DAMAGED_THIS_TURN, [hl]
+	pop hl
+
 	; Substract wCurDamage from wBattleMonHP.
 	;  store original HP in little endian wBuffer3/4
 	;  store new HP in little endian wBuffer5/6

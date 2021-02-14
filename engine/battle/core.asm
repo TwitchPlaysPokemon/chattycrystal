@@ -200,6 +200,12 @@ BattleTurn:
 	call EnemyTriesToFlee
 	ret c
 
+	; Reset "damaged this turn" flag (used by Assurance)
+	ld hl, wPlayerSubStatus2
+	res SUBSTATUS_DAMAGED_THIS_TURN, [hl]
+	ld hl, wEnemySubStatus2
+	res SUBSTATUS_DAMAGED_THIS_TURN, [hl]
+
 	call DetermineMoveOrder
 	jr c, .false
 	call Battle_EnemyFirst
@@ -221,7 +227,7 @@ BattleTurn:
 	call HandleBetweenTurnEffects
 	ld a, [wBattleEnded]
 	and a
-	jr z, .loop
+	jp z, .loop
 	ret
 
 HandleBetweenTurnEffects:
@@ -1864,6 +1870,11 @@ SubtractHPFromUser:
 	jp UpdateHPBarBattleHuds
 
 SubtractHP:
+	; Mark that we're taking damage.
+	ld a, BATTLE_VARS_SUBSTATUS2
+	call GetBattleVarAddr
+	set SUBSTATUS_DAMAGED_THIS_TURN, [hl]
+
 	ld hl, wBattleMonHP
 	ldh a, [hBattleTurn]
 	and a

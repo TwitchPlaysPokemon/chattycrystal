@@ -2398,3 +2398,24 @@ TrumpCard:
 	buildopponentrage
 	kingsrock
 	endmove
+
+Assurance:
+	checkobedience
+	usedmovetext
+	doturn
+	assurance
+	critical
+	damagestats
+	damagecalc
+	stab
+	checkhit
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

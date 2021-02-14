@@ -171,4 +171,5 @@ MoveEffectsPointers:
 	dw FreezeDry
 	dw CrystalBolt
 	dw Assist
+	dw Assurance
 	dw Placeholder

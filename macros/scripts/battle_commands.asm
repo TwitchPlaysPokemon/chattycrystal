@@ -205,6 +205,7 @@ ENDM
 	command aquaring                ; c6
 	command trumpcard               ; c7
 	command assist                  ; c8
+	command assurance               ; c9
 
 	enum_start $fe
 	command endturn                 ; fe

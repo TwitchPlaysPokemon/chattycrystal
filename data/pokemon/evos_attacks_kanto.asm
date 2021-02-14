@@ -1746,7 +1746,7 @@ GoldeenEvosAttacks:
 	dbw 15, HORN_ATTACK
 	dbw 24, FLAIL
 	dbw 29, FURY_ATTACK
-	dbw 38, WATERFALL
+	dbw 38, HYDRO_PUMP
 	dbw 43, HORN_DRILL
 	dbw 52, AGILITY
 	db 0 ; no more level-up moves
@@ -1760,7 +1760,7 @@ SeakingEvosAttacks:
 	dbw 15, HORN_ATTACK
 	dbw 24, FLAIL
 	dbw 29, FURY_ATTACK
-	dbw 41, WATERFALL
+	dbw 41, HYDRO_PUMP
 	dbw 49, HORN_DRILL
 	dbw 61, AGILITY
 	db 0 ; no more level-up moves

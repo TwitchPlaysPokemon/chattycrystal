@@ -331,7 +331,7 @@
 	const GRASS_KNOT   ; 143 (PLACEHOLDER)
 	const CHATTER      ; 144
 	const CHARGE_BEAM  ; 145
-	const WOOD_HAMMER  ; 146 (PLACEHOLDER)
+	const WOOD_HAMMER  ; 146
 	const AQUA_JET     ; 147
 	const ATTACK_ORDER ; 148
 	const DARK_VOID    ; 149

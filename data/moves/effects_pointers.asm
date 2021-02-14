@@ -186,4 +186,5 @@ MoveEffectsPointers:
 	dw Psyshock
 	dw FoulPlay
 	dw Taunt
+	dw HighRecoil
 	dw Placeholder

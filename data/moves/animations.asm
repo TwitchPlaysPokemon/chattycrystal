@@ -349,7 +349,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Roar
 	dw BattleAnim_HyperBeam
-	dw BattleAnim_Headbutt
+	dw BattleAnim_VineWhip
 	dw BattleAnim_Waterfall
 	dw BattleAnim_SweetScent   ; 148
 	dw BattleAnim_Hypnosis

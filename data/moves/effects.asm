@@ -978,6 +978,7 @@ OHKOHit:
 	buildopponentrage
 	endmove
 
+HighRecoil: ; gets 1/3 instead of 1/4 recoil
 RecoilHit:
 	checkobedience
 	usedmovetext

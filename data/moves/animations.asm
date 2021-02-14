@@ -302,7 +302,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Psywave
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Twister
 	dw BattleAnim_Surf         ; 118
 	dw BattleAnim_WingAttack
 	dw BattleAnim_Harden

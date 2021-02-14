@@ -192,6 +192,7 @@ BattleCommand_TrapTarget:
 	dw FIRE_SPIN, FireSpinTrapText  ; 'was trapped!'
 	dw CLAMP,     ClampedByText     ; 'was CLAMPED by'
 	dw WHIRLPOOL, WhirlpoolTrapText ; 'was trapped!'
+	dw SAND_TOMB, SandTombTrapText  ; 'was trapped!'
 
 BattleCommand_Recoil:
 	xor a

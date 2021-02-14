@@ -444,6 +444,11 @@ FireSpinTrapText:
 	line "was trapped!"
 	prompt
 
+SandTombTrapText:
+	text "<TARGET>"
+	line "was trapped!"
+	prompt
+
 WrappedByText:
 	text "<TARGET>"
 	line "was WRAPPED by"

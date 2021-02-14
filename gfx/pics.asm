@@ -696,6 +696,7 @@ SwampertFrontpic:    INCBIN "gfx/pokemon/swampert/front.animated.2bpp.lz"
 SableyeFrontpic:     INCBIN "gfx/pokemon/sableye/front.animated.2bpp.lz"
 PelipperFrontpic:    INCBIN "gfx/pokemon/pelipper/front.animated.2bpp.lz"
 RoseliaBackpic:      INCBIN "gfx/pokemon/roselia/back.2bpp.lz"
+SphealBackpic:       INCBIN "gfx/pokemon/spheal/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
@@ -781,6 +782,7 @@ WingullFrontpic:    INCBIN "gfx/pokemon/wingull/front.animated.2bpp.lz"
 WingullBackpic:     INCBIN "gfx/pokemon/wingull/back.2bpp.lz"
 PlaceholderBackpic:: INCBIN "gfx/pokemon/placeholder/back.2bpp.lz"
 ElectrikeBackpic:   INCBIN "gfx/pokemon/electrike/back.2bpp.lz"
+SphealFrontpic:     INCBIN "gfx/pokemon/spheal/front.animated.2bpp.lz"
 
 SECTION "Pics 24", ROMX
 

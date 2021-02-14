@@ -305,7 +305,7 @@ AnimationIdlePointers:
 	dw DusclopsAnimationIdle
 	dw AbsolAnimationIdle
 	dw SnoruntAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Spheal
+	dw SphealAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sealeo
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Walrein
 	dw BagonAnimationIdle

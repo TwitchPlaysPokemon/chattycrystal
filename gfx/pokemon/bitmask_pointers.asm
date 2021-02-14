@@ -257,7 +257,7 @@ BitmasksPointers:
 	dw CombuskenBitmasks
 	dw BlazikenBitmasks
 	dw MudkipBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Marshtomp
+	dw MarshtompBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Swampert
 	dw PoochyenaBitmasks
 	dw MightyenaBitmasks

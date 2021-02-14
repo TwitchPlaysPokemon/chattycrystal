@@ -257,7 +257,7 @@ FramesPointers:
 	dba CombuskenFrames
 	dba BlazikenFrames
 	dba MudkipFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Marshtomp
+	dba MarshtompFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Swampert
 	dba PoochyenaFrames
 	dba MightyenaFrames

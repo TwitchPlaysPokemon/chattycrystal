@@ -546,8 +546,8 @@ INCBIN "gfx/pokemon/blaziken/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/blaziken/shiny.pal"
 INCBIN "gfx/pokemon/mudkip/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/mudkip/shiny.pal"
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Marshtomp
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Marshtomp
+INCBIN "gfx/pokemon/marshtomp/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/marshtomp/shiny.pal"
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Swampert
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Swampert
 INCBIN "gfx/pokemon/poochyena/front.gbcpal", middle_colors

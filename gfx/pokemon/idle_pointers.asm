@@ -257,7 +257,7 @@ AnimationIdlePointers:
 	dw CombuskenAnimationIdle
 	dw BlazikenAnimationIdle
 	dw MudkipAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Marshtomp
+	dw MarshtompAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Swampert
 	dw PoochyenaAnimationIdle
 	dw MightyenaAnimationIdle

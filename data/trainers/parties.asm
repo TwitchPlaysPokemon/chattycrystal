@@ -5936,7 +5936,7 @@ NuzlockeGroup:
 	db 47
 	dw WAILORD
 	db EXP_SHARE
-	dw REST, ROLLOUT, SURF, WATER_SPOUT
+	dw REST, ROLLOUT, SURF, NO_MOVE; WATER_SPOUT
 	bigdw $FFFF
 	bigdw 240
 	bigdw 117
@@ -5960,7 +5960,7 @@ NuzlockeGroup:
 	db "Piiiv@"
 
 	db 36
-	dw SHARPEDO
+	dw QWILFISH ; add Sharpedo
 	db FULL_HEAL
 	dw CRUNCH, SCREECH, SLASH, TAUNT
 	bigdw $0FFF

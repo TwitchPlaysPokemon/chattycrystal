@@ -334,7 +334,7 @@
 	const WOOD_HAMMER  ; 146 (PLACEHOLDER)
 	const AQUA_JET     ; 147
 	const ATTACK_ORDER ; 148
-	const DARK_VOID    ; 149 (PLACEHOLDER)
+	const DARK_VOID    ; 149
 	const HONE_CLAWS   ; 14a
 	const PSYSHOCK     ; 14b (PLACEHOLDER)
 	const QUIVER_DANCE ; 14c (PLACEHOLDER)

@@ -352,7 +352,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Waterfall
 	dw BattleAnim_SweetScent   ; 148
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Hypnosis
 	dw BattleAnim_Sharpen
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt

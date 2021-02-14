@@ -345,7 +345,7 @@ Moves1:
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;WOOD_HAMMER
 	move EFFECT_PRIORITY_HIT,        40, WATER,    100, 20,   0 ;AQUA_JET
 	move EFFECT_NORMAL_HIT,          90, BUG,      100, 15,   0 ;ATTACK_ORDER
-	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;DARK_VOID
+	move EFFECT_SLEEP,                0, DARK,      80, 10,   0 ;DARK_VOID
 	move EFFECT_HONE_CLAWS,           0, DARK,     100, 15,   0 ;HONE_CLAWS
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;PSYSHOCK
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;QUIVER_DANCE

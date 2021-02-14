@@ -300,7 +300,7 @@ BattleAnimations::
 	dw BattleAnim_Screech
 	dw BattleAnim_TailWhip
 	dw BattleAnim_Psybeam
-	dw BattleAnim_Headbutt
+	dw BattleAnim_FeintAttack
 	dw BattleAnim_Psywave
 	dw BattleAnim_Twister
 	dw BattleAnim_Surf         ; 118

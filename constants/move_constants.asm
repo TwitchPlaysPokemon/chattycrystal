@@ -282,7 +282,7 @@
 	const METAL_SOUND  ; 112
 	const TICKLE       ; 113
 	const SIGNAL_BEAM  ; 114
-	const SHADOW_PUNCH ; 115 (PLACEHOLDER)
+	const SHADOW_PUNCH ; 115
 	const EXTRASENSORY ; 116
 	const SAND_TOMB    ; 117
 	const MUDDY_WATER  ; 118

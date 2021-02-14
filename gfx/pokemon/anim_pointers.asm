@@ -281,7 +281,7 @@ AnimationPointers:
 	dw MakuhitaAnimation
 	dw HariyamaAnimation
 	dw AzurillAnimation
-	dw SkittyAnimation ; PLACEHOLDER - Skitty
+	dw SkittyAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Delcatty
 	dw SableyeAnimation
 	dw AronAnimation

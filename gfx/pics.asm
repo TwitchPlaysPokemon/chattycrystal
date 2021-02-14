@@ -460,6 +460,7 @@ VenonatBackpic:      INCBIN "gfx/pokemon/venonat/back.2bpp.lz"
 BellossomBackpic:    INCBIN "gfx/pokemon/bellossom/back.2bpp.lz"
 SwinubBackpic:       INCBIN "gfx/pokemon/swinub/back.2bpp.lz"
 TorchicFrontpic:     INCBIN "gfx/pokemon/torchic/front.animated.2bpp.lz"
+SkittyBackpic:       INCBIN "gfx/pokemon/skitty/back.2bpp.lz"
 
 SECTION "Pics 15", ROMX
 

@@ -281,7 +281,7 @@ AnimationIdlePointers:
 	dw MakuhitaAnimationIdle
 	dw HariyamaAnimationIdle
 	dw AzurillAnimationIdle
-	dw SkittyAnimationIdle ; PLACEHOLDER - Skitty
+	dw SkittyAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Delcatty
 	dw SableyeAnimationIdle
 	dw AronAnimationIdle

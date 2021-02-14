@@ -45,6 +45,7 @@ AI_Redundant:
 	dbw EFFECT_SWAGGER,      .Swagger
 	dbw EFFECT_FUTURE_SIGHT, .FutureSight
 	dbw EFFECT_AQUA_RING,    .AquaRing
+	dbw EFFECT_FAKE_OUT,     .FakeOut
 	db -1
 
 .LightScreen:
@@ -184,6 +185,11 @@ AI_Redundant:
 .AquaRing:
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_AQUA_RING, a
+	ret
+
+.FakeOut:
+	ld a, [wEnemyTurnsTaken]
+	and a
 	ret
 
 .Heal:

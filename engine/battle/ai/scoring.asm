@@ -385,6 +385,7 @@ AI_Smart:
 	dbw EFFECT_SOLARBEAM,        AI_Smart_Solarbeam
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
+	dbw EFFECT_FAKE_OUT,         AI_Smart_FakeOut
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -2676,6 +2677,18 @@ AI_Smart_Thunder:
 	ret c
 
 	inc [hl]
+	ret
+
+AI_Smart_FakeOut:
+; Always encourage this on our first turn.
+	; Discouraging is done as part of redundancy checks already.
+	ld a, [wEnemyTurnsTaken]
+	and a
+	ret nz
+
+	dec [hl]
+	dec [hl]
+	dec [hl]
 	ret
 
 AICompareSpeed:

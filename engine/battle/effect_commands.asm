@@ -1276,24 +1276,13 @@ BattleCommand_Stab:
 	and %10000000
 	ld b, a
 ; If the target is immune to the move, treat it as a miss and calculate the damage as 0
-	ld a, [hl]
+	call InterpretTypeMatchup
 	and a
 	jr nz, .NotImmune
 	inc a
 	ld [wAttackMissed], a
 	xor a
 .NotImmune:
-	cp CONDITIONAL_MATCHUP
-	jr nz, .got_matchup
-
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_FREEZE_DRY
-	ld a, SUPER_EFFECTIVE
-	jr z, .got_matchup
-	ld a, NOT_VERY_EFFECTIVE
-	; fallthrough
-.got_matchup
 	ldh [hMultiplier], a
 	add b
 	ld [wTypeModifier], a
@@ -1344,6 +1333,50 @@ BattleCommand_Stab:
 	inc hl
 	inc hl
 	jp .TypesLoop
+
+InterpretTypeMatchup:
+; Compare move effect against defending type. If move effect and type matches,
+; use a special matchup. Otherwise, just load the regular one.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	push de
+	push bc
+	ld b, a
+	dec hl
+	ld a, [hli]
+	ld c, a
+	ld de, .NonstandardTypeMatchup
+.loop
+	ld a, [de]
+	inc de
+	cp b
+	jr nz, .next
+	ld a, [de]
+	inc de
+	cp c
+	jr nz, .next2
+	ld a, [de]
+	jr .got_matchup
+
+.next
+	inc a
+	ld a, [hl] ; Reads the default matchup, in case we have no nonstandard one.
+	jr z, .got_matchup
+	inc de
+.next2
+	inc de
+	jr .loop
+
+.got_matchup
+	pop bc
+	pop de
+	ret
+
+.NonstandardTypeMatchup:
+	db EFFECT_FREEZE_DRY, WATER, SUPER_EFFECTIVE
+	db EFFECT_CRYSTAL_BOLT, GROUND, EFFECTIVE ; neutral hit
+	db -1
+
 
 BattleCheckTypeMatchup:
 	ld hl, wEnemyMonType1
@@ -1400,18 +1433,8 @@ CheckTypeMatchup:
 
 .Yup:
 	; Maybe handle Freeze Dry
-	ld a, [hli]
-	cp CONDITIONAL_MATCHUP
-	jr nz, .got_matchup
-
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_FREEZE_DRY
-	ld a, SUPER_EFFECTIVE
-	jr z, .got_matchup
-	ld a, NOT_VERY_EFFECTIVE
-	; fallthrough
-.got_matchup
+	call InterpretTypeMatchup
+	inc hl
 	ldh [hMultiplicand + 2], a
 	xor a
 	ldh [hDividend + 0], a

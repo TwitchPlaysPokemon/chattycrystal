@@ -369,7 +369,7 @@ Moves1:
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;POLLEN_PUFF
 	move EFFECT_STORED_POWER,        20, DARK,     100, 10,   0 ;POWER_TRIP
 	move EFFECT_CHATTY_HP,            1, NORMAL,   100, 15,   0 ;CHATTY_HP
-	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;CRYSTAL_BOLT
+	move EFFECT_CRYSTAL_BOLT,        70, ELECTRIC, 100, 20,   0 ;CRYSTAL_BOLT
 
 ;	move EFFECT_LEECH_HIT,          50, FAIRY,    100, 10,   0 ;DRAININGKISS TODO: does not drain 75%
 ;	move EFFECT_NORMAL_HIT,         80, FAIRY,    100, 10,   0 ;DAZZLINGLEAM TODO: Add fairy type

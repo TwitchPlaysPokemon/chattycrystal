@@ -169,4 +169,5 @@ MoveEffectsPointers:
 	dw FireFang
 	dw CloseCombat
 	dw FreezeDry
+	dw CrystalBolt
 	dw Placeholder

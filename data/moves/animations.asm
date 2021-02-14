@@ -376,7 +376,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Submission
 	dw BattleAnim_HiddenPower  ; 160
-	dw BattleAnim_Headbutt
+	dw BattleAnim_ThunderWave
 
 
 BattleAnim_0:

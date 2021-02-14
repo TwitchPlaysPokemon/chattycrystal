@@ -351,7 +351,7 @@ Moves1:
 	move EFFECT_QUIVER_DANCE,         0, BUG,      100, 20,   0 ;QUIVER_DANCE
 	move EFFECT_FOUL_PLAY,           95, DARK,     100, 15,   0 ;FOUL_PLAY
 	move EFFECT_FURY_CUTTER,         40, NORMAL,   100, 15,   0 ;ECHOED_VOICE
-	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;SCALD
+	move EFFECT_BURN_HIT,            80, WATER,    100, 15,  30 ;SCALD
 	move EFFECT_SPEED_DOWN,          60, GROUND,   100, 20, 100 ;BULLDOZE
 	move EFFECT_WORK_UP,              0, NORMAL,   100, 30, 100 ;WORK_UP
 	move EFFECT_DOUBLE_HIT,          40, DRAGON,    90, 15,   0 ;DUAL_CHOP

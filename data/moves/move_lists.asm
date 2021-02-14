@@ -64,6 +64,7 @@ SleepBypassMoves:
 ThawingMoves:
 	dw FLAME_WHEEL
 	dw SACRED_FIRE
+	dw SCALD
 	dw -1
 
 SemiInvulnerableMoves:

@@ -340,7 +340,7 @@
 	const QUIVER_DANCE ; 14c
 	const FOUL_PLAY    ; 14d
 	const ECHOED_VOICE ; 14e
-	const SCALD        ; 14f (PLACEHOLDER)
+	const SCALD        ; 14f
 	const BULLDOZE     ; 150
 	const WORK_UP      ; 151
 	const DUAL_CHOP    ; 152

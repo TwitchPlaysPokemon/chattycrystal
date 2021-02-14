@@ -358,7 +358,7 @@ BattleAnimations::
 	dw BattleAnim_Growth
 	dw BattleAnim_Pursuit
 	dw BattleAnim_Roar
-	dw BattleAnim_Headbutt
+	dw BattleAnim_HydroPump
 	dw BattleAnim_Earthquake   ; 150
 	dw BattleAnim_Meditate
 	dw BattleAnim_CrossChop

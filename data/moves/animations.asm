@@ -294,7 +294,7 @@ BattleAnimations::
 	dw BattleAnim_Dynamicpunch
 	dw BattleAnim_FeintAttack
 	dw BattleAnim_Cut
-	dw BattleAnim_Headbutt
+	dw BattleAnim_SacredFire
 	dw BattleAnim_Detect       ; 110
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Screech
@@ -336,7 +336,7 @@ BattleAnimations::
 	dw BattleAnim_PsychUp
 	dw BattleAnim_MachPunch
 	dw BattleAnim_PowderSnow   ; 138
-	dw BattleAnim_Headbutt
+	dw BattleAnim_Bite
 	dw BattleAnim_Headbutt
 	dw BattleAnim_SludgeBomb
 	dw BattleAnim_Headbutt
@@ -344,7 +344,7 @@ BattleAnimations::
 	dw BattleAnim_ShadowBall
 	dw BattleAnim_Headbutt
 	dw BattleAnim_ThunderWave  ; 140
-	dw BattleAnim_Headbutt
+	dw BattleAnim_RazorLeaf
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Roar

@@ -276,7 +276,7 @@
 	const METEOR_MASH  ; 10c
 	const ASTONISH     ; 10d
 	const AIR_CUTTER   ; 10e
-	const OVERHEAT     ; 10f (PLACEHOLDER)
+	const OVERHEAT     ; 10f
 	const ODOR_SLEUTH  ; 110
 	const ROCK_TOMB    ; 111 (PLACEHOLDER)
 	const METAL_SOUND  ; 112
@@ -326,7 +326,7 @@
 	const FLASH_CANNON ; 13e
 	const ROCK_CLIMB   ; 13f (PLACEHOLDER)
 	const DISCHARGE    ; 140
-	const LEAF_STORM   ; 141 (PLACEHOLDER)
+	const LEAF_STORM   ; 141
 	const IRON_HEAD    ; 142
 	const GRASS_KNOT   ; 143 (PLACEHOLDER)
 	const CHATTER      ; 144

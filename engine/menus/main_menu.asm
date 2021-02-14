@@ -77,9 +77,19 @@ MysteryMenu:
 	db MYSTERY_GIFT
 	db -1
 
+ContinueLockedMenu:
+	db 2
+	db CONTINUE
+	db OPTION
+	db -1
+
 MainMenu_GetWhichMenu:
 	ld a, [wSaveFileExists]
 	and a
+	ret z
+	ld a, [wTPPFeatureLock]
+	cp TPP_FEATURE_LOCK_VALUE
+	ld a, 3
 	ret z
 	ldh a, [hCGB]
 	cp 1
@@ -107,10 +117,7 @@ MainMenuJoypadLoop:
 	cp B_BUTTON
 	jr z, .b_button
 	cp A_BUTTON
-	jr z, .a_button
-	jr .loop
-
-.a_button
+	jr nz, .loop
 	call PlayClickSFX
 	and a
 	ret
@@ -140,16 +147,11 @@ MainMenu_PrintCurrentTimeAndDay:
 .PlaceBox:
 	call CheckRTCStatus
 	and $80
-	jr nz, .TimeFail
+	jp nz, SpeechTextbox
 	hlcoord 0, 14
 	ld b, 2
 	ld c, 18
-	call Textbox
-	ret
-
-.TimeFail:
-	call SpeechTextbox
-	ret
+	jp Textbox
 
 .PlaceTime:
 	ld a, [wSaveFileExists]
@@ -171,18 +173,12 @@ MainMenu_PrintCurrentTimeAndDay:
 	inc hl
 	ld de, hMinutes
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
-	call PrintNum
-	ret
-
-.min
-; unused
-	db "min.@"
+	jp PrintNum
 
 .PrintTimeNotSet:
 	hlcoord 1, 14
 	ld de, .TimeNotSet
-	call PlaceString
-	ret
+	jp PlaceString
 
 .TimeNotSet:
 	db "TIME NOT SET@"

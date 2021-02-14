@@ -1611,6 +1611,7 @@ wTempLoopCounter:: db
 
 wChattyTrainerClass:: db
 wChattyTrainerID:: db
+wTPPFeatureLock:: db ; set to $ba to lock in TPP-only features
 
 
 SECTION "16-bit WRAM home data", WRAM0

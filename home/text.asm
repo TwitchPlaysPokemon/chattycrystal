@@ -312,6 +312,8 @@ PlaceEnemysName::
 	jr nz, PlaceEnemysNameRivalLinkBattle
 
 	ld de, wOTClassName
+	ld b, h
+	ld c, l
 	ld a, [de]
 	cp "@"
 	jr z, .chatty

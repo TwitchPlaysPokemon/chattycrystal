@@ -642,8 +642,8 @@ PokemonPicPointers::
 	dba MetagrossBackpic
 	dba LatiasFrontpic
 	dba LatiasBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Latios
-	dba PlaceholderBackpic ; PLACEHOLDER - Latios
+	dba LatiosFrontpic
+	dba LatiosBackpic
 	dba GroudonFrontpic
 	dba GroudonBackpic
 	dba TurtwigFrontpic

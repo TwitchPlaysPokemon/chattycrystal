@@ -662,7 +662,7 @@ INCBIN "gfx/pokemon/metagross/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/metagross/shiny.pal"
 INCBIN "gfx/pokemon/latias/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Latias
-INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors  ; PLACEHOLDER - Latios
+INCBIN "gfx/pokemon/latios/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Latios
 INCBIN "gfx/pokemon/groudon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/groudon/shiny.pal"

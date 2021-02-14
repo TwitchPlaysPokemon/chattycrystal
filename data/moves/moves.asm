@@ -271,7 +271,7 @@ Moves1:
 	move EFFECT_FAKE_OUT,            40, NORMAL,   100, 10, 100 ;FAKE_OUT
 	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;WILL_O_WISP
 	move EFFECT_CHARGE,               0, ELECTRIC, 100, 20,   0 ;CHARGE
-	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;TAUNT
+	move EFFECT_TAUNT,                0, DARK,     100, 20,   0 ;TAUNT
 	move EFFECT_ASSIST,               0, NORMAL,   100, 20,   0 ;ASSIST
 	move EFFECT_SUPERPOWER,         120, FIGHTING, 100,  5,   0 ;SUPERPOWER
 	move EFFECT_REVENGE,             60, FIGHTING, 100, 10, 100 ;REVENGE

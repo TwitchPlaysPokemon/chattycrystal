@@ -329,6 +329,11 @@ BattleText_TheMoveIsDisabled:
 	line "DISABLED!"
 	prompt
 
+BattleText_YouAreTaunted:
+	text "TAUNT allows only"
+	line "attacking moves!"
+	prompt
+
 BattleText_MonHasNoMovesLeft:
 	text_ram wBattleMonNick
 	text_start
@@ -1018,6 +1023,16 @@ SurroundedByWaterText:
 	text "<USER>"
 	line "surrounds itself"
 	cont "with water!"
+	prompt
+
+WasTauntedText:
+	text "<USER>"
+	line "taunts the foe!"
+	prompt
+
+NoLongerTauntedText:
+	text "<USER>'s"
+	line "no longer taunted."
 	prompt
 
 CoveredByVeilText:

@@ -272,6 +272,7 @@ HandleBetweenTurnEffects:
 	call HandleDefrost
 	call HandleSafeguard
 	call HandleScreens
+	call HandleTaunt
 	call HandleCharge
 	call HandleRoost
 	call HandleStatBoostingHeldItems
@@ -1324,6 +1325,32 @@ SwitchTurnCore:
 	xor 1
 	ldh [hBattleTurn], a
 	ret
+
+HandleTaunt:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .DoEnemyFirst
+	call SetPlayerTurn
+	call .do_it
+	call SetEnemyTurn
+	jp .do_it
+
+.DoEnemyFirst:
+	call SetEnemyTurn
+	call .do_it
+	call SetPlayerTurn
+.do_it
+	ldh a, [hBattleTurn]
+	and a
+	ld hl, wPlayerTauntCount
+	ld a, [hl]
+	and a
+	ret z
+	dec [hl]
+	ret nz
+
+	ld hl, NoLongerTauntedText
+	jp StdBattleTextbox
 
 HandleLeftoversAndAquaRing:
 	ldh a, [hSerialConnectionStatus]
@@ -3689,6 +3716,7 @@ rept 4
 	ld [hli], a
 endr
 	ld [hl], a
+	ld [wEnemyTauntCount], a
 	ld [wEnemyDisableCount], a
 	ld [wEnemyFuryCutterCount], a
 	ld [wEnemyProtectCount], a
@@ -4181,6 +4209,7 @@ endr
 	ld [hli], a
 	ld [hli], a
 	ld [hl], a
+	ld [wPlayerTauntCount], a
 	ld [wPlayerDisableCount], a
 	ld [wPlayerFuryCutterCount], a
 	ld [wPlayerProtectCount], a
@@ -5431,8 +5460,8 @@ MoveSelectionScreen:
 	jr z, .got_menu_type
 	dec a
 	jr z, .ether_elixir_menu
-	call CheckPlayerHasUsableMoves
-	ret z ; use Struggle
+	call CheckUsableMoves
+	ret nz ; use Struggle
 	ld hl, wBattleMonMoves
 	jr .got_menu_type
 
@@ -5579,21 +5608,18 @@ MoveSelectionScreen:
 .use_move
 	pop af
 	ret nz
+	call SetPlayerTurn ; just in case
 
-	ld hl, wBattleMonPP
 	ld a, [wMenuCursorY]
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [hl]
-	and PP_MASK
-	jr z, .no_pp_left
-	ld a, [wPlayerDisableCount]
-	swap a
-	and $f
+	call CheckUsableMove
 	dec a
-	cp c
+	jr z, .no_pp_left
+	dec a
 	jr z, .move_disabled
+	dec a
+	jr z, .taunted
+	; Encore is handled elsewhere
+
 	ld a, [wUnusedPlayerLockedMove]
 	and a
 	jr nz, .skip2
@@ -5608,6 +5634,10 @@ MoveSelectionScreen:
 	ld [wCurPlayerMove], a
 	xor a
 	ret
+
+.taunted
+	ld hl, BattleText_YouAreTaunted
+	jr .place_textbox_start_over
 
 .move_disabled
 	ld hl, BattleText_TheMoveIsDisabled
@@ -5826,51 +5856,125 @@ MoveInfoBox:
 	call PrintNum
 	ret
 
-CheckPlayerHasUsableMoves:
-	ld hl, STRUGGLE
-	call GetMoveIDFromIndex
-	ld [wCurPlayerMove], a
-	ld a, [wPlayerDisableCount]
+CheckUsableMoves:
+; Returns nz if we have no usable moves.
+	ld a, 4
+.loop
+	dec a
+	push af
+	call CheckUsableMove
+	jr z, .usable
+	pop af
+	and a
+	jr nz, .loop
+	inc a
+	ret
+.usable
+	pop af
+	xor a
+	ret
+
+CheckUsableMove_b:
+; Like CheckUsableMove but uses b instead of a. For farcall purposes.
+	ld a, b
+	call CheckUsableMove
+	ld b, a
+	ret
+
+CheckUsableMove:
+; Check if move a in the move list is usable. Returns z if usable
+; Note that the first move in the list is move 0, not move 1.
+; If nz, a contains a number describing why it isn't usable:
+; 1 - no PP
+; 2 - disabled
+; 3 - taunted
+; 4 - encored
+	push hl
+	push de
+	push bc
+
+	; Check if we're out of pp.
+	ld c, a
+	ld b, 0
+	ldh a, [hBattleTurn]
 	and a
 	ld hl, wBattleMonPP
-	jr nz, .disabled
-
-	ld a, [hli]
-	or [hl]
-	inc hl
-	or [hl]
-	inc hl
-	or [hl]
+	ld de, wBattleMonMoves
+	jr z, .got_pp
+	ld hl, wEnemyMonPP
+	ld de, wEnemyMonMoves
+.got_pp
+	add hl, bc
+	ld a, [hl]
 	and PP_MASK
-	ret nz
-	jr .force_struggle
+	ld a, 1
+	jr z, .end
 
-.disabled
-	swap a
-	and $f
-	ld b, a
-	ld d, NUM_MOVES + 1
-	xor a
-.loop
-	dec d
+	; Check Encore
+	ld a, BATTLE_VARS_SUBSTATUS5
+	call GetBattleVar
+	bit SUBSTATUS_ENCORED, a
+	jr z, .not_encored
+	ldh a, [hBattleTurn]
+	and a
+	ld hl, wCurMoveNum
+	jr z, .got_encore_num
+	ld hl, wCurEnemyMoveNum
+.got_encore_num
+	ld a, [hl]
+	cp c
+	ld a, 4
+	jr z, .end
+
+.not_encored
+	; Check Disable
+	push bc
+	ldh a, [hBattleTurn]
+	and a
+	ld hl, wPlayerDisableCount
+	ld bc, wDisabledMove
+	jr z, .got_disable
+	ld hl, wEnemyDisableCount
+	ld bc, wEnemyDisabledMove
+.got_disable
+	ld a, [hl]
+	ld h, d
+	ld l, e
+	and a
+	ld a, [bc]
+	pop bc
+	add hl, bc
+	jr z, .not_disabled
+	cp [hl]
+	ld a, 2
+	jr z, .end
+
+.not_disabled
+	; Check Taunt. Treat move power 0 as "status" moves.
+	ldh a, [hBattleTurn]
+	and a
+	ld a, [wPlayerTauntCount]
+	jr z, .got_taunt
+	ld a, [wEnemyTauntCount]
+.got_taunt
+	and a
 	jr z, .done
-	ld c, [hl]
-	inc hl
-	dec b
-	jr z, .loop
-	or c
-	jr .loop
 
-.done
-	and PP_MASK
-	ret nz
-
-.force_struggle
-	ld hl, BattleText_MonHasNoMovesLeft
-	call StdBattleTextbox
-	ld c, 60
-	call DelayFrames
+	ld a, [hl]
+	ld l, a
+	ld a, MOVE_POWER
+	call GetMoveAttribute
+	and a
+	ld a, 3
+	jr z, .end
 	xor a
+	jr .done
+.end
+	and a
+.done
+	pop bc
+	pop de
+	pop hl
 	ret
 
 ParseEnemyAction:
@@ -5913,6 +6017,10 @@ ParseEnemyAction:
 	jp .finish
 
 .not_linked
+	call SetEnemyTurn
+	call CheckUsableMoves
+	jp nz, .struggle
+
 	ld hl, wEnemySubStatus5
 	bit SUBSTATUS_ENCORED, [hl]
 	jr z, .skip_encore

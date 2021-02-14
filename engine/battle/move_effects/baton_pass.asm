@@ -125,6 +125,13 @@ FailedBatonPass:
 
 ResetBatonPassStatus:
 ; Reset status changes that aren't passed by Baton Pass.
+	ldh a, [hBattleTurn]
+	and a
+	ld hl, wPlayerTauntCount
+	jr z, .got_taunt
+	ld hl, wEnemyTauntCount
+.got_taunt
+	ld [hl], 0
 
 	; Nightmare isn't passed.
 	ld a, BATTLE_VARS_STATUS

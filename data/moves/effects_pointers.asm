@@ -185,4 +185,5 @@ MoveEffectsPointers:
 	dw Tickle
 	dw Psyshock
 	dw FoulPlay
+	dw Taunt
 	dw Placeholder

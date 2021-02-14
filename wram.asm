@@ -388,7 +388,8 @@ wBattleMonNick:: ds MON_NAME_LENGTH ; c621
 
 wBattleMon:: battle_struct wBattleMon ; c62c
 
-	ds 2
+wPlayerTauntCount:: db
+wEnemyTauntCount:: db
 
 wWildMon:: db ; c64e
 	ds 1

@@ -21,44 +21,25 @@ AIChooseMove:
 	ld [hli], a
 	ld [hli], a
 	ld [hli], a
-	ld [hl], a
+	ld [hli], a
 
-; Don't pick disabled moves.
-	ld a, [wEnemyDisabledMove]
-	and a
-	jr z, .CheckPP
-
-	ld hl, wEnemyMonMoves
-	ld c, 0
-.CheckDisabledMove:
-	cp [hl]
-	jr z, .ScoreDisabledMove
-	inc c
-	inc hl
-	jr .CheckDisabledMove
-.ScoreDisabledMove:
-	ld hl, wBuffer1
-	ld b, 0
-	add hl, bc
-	ld [hl], 80
-
-; Don't pick moves with 0 PP.
-.CheckPP:
-	ld hl, wBuffer1 - 1
-	ld de, wEnemyMonPP
-	ld b, 0
-.CheckMovePP:
-	inc b
+	; Set unusable moves to 80.
+	ld c, NUM_MOVES
+.unusable_loop
+	ld a, c
+	dec a
+	push hl
+	ld b, a
+	call CheckUsableMove_b
 	ld a, b
-	cp wEnemyMonMovesEnd - wEnemyMonMoves + 1
-	jr z, .ApplyLayers
-	inc hl
-	ld a, [de]
-	inc de
-	and PP_MASK
-	jr nz, .CheckMovePP
+	pop hl
+	and a
+	dec hl
+	jr z, .usable
 	ld [hl], 80
-	jr .CheckMovePP
+.usable
+	dec c
+	jr nz, .unusable_loop
 
 ; Apply AI scoring layers depending on the trainer class.
 .ApplyLayers:

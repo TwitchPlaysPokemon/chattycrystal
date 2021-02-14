@@ -64,7 +64,7 @@ ENDM
 	command charge                  ; 39
 	command checkcharge             ; 3a
 	command traptarget              ; 3b
-	command checkchatty              ; 3c
+	command checkchatty             ; 3c
 	command rampage                 ; 3d
 	command checkrampage            ; 3e
 	command constantdamage          ; 3f
@@ -210,6 +210,7 @@ ENDM
 	command doubledivingdamage      ; cb
 	command resetmiss               ; cc
 	command tickle                  ; cd
+	command taunt                   ; ce
 
 	enum_start $fe
 	command endturn                 ; fe

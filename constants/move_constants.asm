@@ -260,7 +260,7 @@
 	const FAKE_OUT     ;  fc
 	const WILL_O_WISP  ;  fd (PLACEHOLDER)
 	const CHARGE       ;  fe
-	const TAUNT        ;  ff (PLACEHOLDER)
+	const TAUNT        ;  ff
 	const ASSIST       ; 100
 	const SUPERPOWER   ; 101
 	const REVENGE      ; 102

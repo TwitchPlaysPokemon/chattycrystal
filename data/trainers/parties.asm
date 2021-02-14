@@ -10,26 +10,37 @@
 SECTION "Enemy Trainer Parties 1", ROMX
 
 PKMNTrainerGroup:
-	; CAL (1)
+	next_list_item ; CAL (1)
 	db "CAL@", TRAINERTYPE_NORMAL
-	db 10, CHIKORITA
-	db 10, CYNDAQUIL
-	db 10, TOTODILE
+	db 10
+	dw CHIKORITA
+	db 10
+	dw CYNDAQUIL
+	db 10
+	dw TOTODILE
 	db -1 ; end
 
-	; CAL (2)
+	next_list_item ; CAL (2)
 	db "CAL@", TRAINERTYPE_NORMAL
-	db 30, BAYLEEF
-	db 30, QUILAVA
-	db 30, CROCONAW
+	db 30
+	dw BAYLEEF
+	db 30
+	dw QUILAVA
+	db 30
+	dw CROCONAW
 	db -1 ; end
 
-	; CAL (3)
+	next_list_item ; CAL (3)
 	db "CAL@", TRAINERTYPE_NORMAL
-	db 50, MEGANIUM
-	db 50, TYPHLOSION
-	db 50, FERALIGATR
+	db 50
+	dw MEGANIUM
+	db 50
+	dw TYPHLOSION
+	db 50
+	dw FERALIGATR
 	db -1 ; end
+
+	end_list_items
 
 GSCKrisGroup:
 	next_list_item ; EWWYPPP

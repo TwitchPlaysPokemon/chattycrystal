@@ -275,107 +275,107 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
-	dw BattleAnim_Roar
-	dw BattleAnim_Roar
-	dw BattleAnim_Doubleslap
-	dw BattleAnim_HiddenPower
-	dw BattleAnim_Roar         ; 100
-	dw BattleAnim_Spark
-	dw BattleAnim_ThunderWave
-	dw BattleAnim_HyperBeam
-	dw BattleAnim_Recover
-	dw BattleAnim_Screech
-	dw BattleAnim_Sharpen
-	dw BattleAnim_Submission
-	dw BattleAnim_PainSplit    ; 108
-	dw BattleAnim_Recover
-	dw BattleAnim_Thief
-	dw BattleAnim_FaintAttack
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
 	dw BattleAnim_CrossChop
 	dw BattleAnim_Headbutt
-	dw BattleAnim_Meditate
+	dw BattleAnim_Headbutt     ; 100
+	dw BattleAnim_Headbutt
 	dw BattleAnim_Counter
-	dw BattleAnim_PsychUp      ; 110
-	dw BattleAnim_WingAttack
-	dw BattleAnim_Cut
-	dw BattleAnim_Slash
-	dw BattleAnim_Waterfall
-	dw BattleAnim_SweetScent
-	dw BattleAnim_ShadowBall
+	dw BattleAnim_PainSplit
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Doubleslap
+	dw BattleAnim_Headbutt     ; 108
 	dw BattleAnim_HiJumpKick
-	dw BattleAnim_SacredFire   ; 118
-	dw BattleAnim_WingAttack
-	dw BattleAnim_Roar
-	dw BattleAnim_Earthquake
-	dw BattleAnim_MachPunch
-	dw BattleAnim_ThunderWave
-	dw BattleAnim_Slash
-	dw BattleAnim_ShadowBall
-	dw BattleAnim_Dynamicpunch ; 120
-	dw BattleAnim_Earthquake
-	dw BattleAnim_Psywave
-	dw BattleAnim_ShadowBall
-	dw BattleAnim_ShadowBall
-	dw BattleAnim_GigaDrain
-	dw BattleAnim_PowderSnow
-	dw BattleAnim_Harden
-	dw BattleAnim_Headbutt     ; 128
+	dw BattleAnim_IcePunch
+	dw BattleAnim_Headbutt
 	dw BattleAnim_Dynamicpunch
-	dw BattleAnim_SludgeBomb
-	dw BattleAnim_Surf
+	dw BattleAnim_FaintAttack
+	dw BattleAnim_Cut
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Detect       ; 110
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Screech
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Psywave
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Surf         ; 118
+	dw BattleAnim_WingAttack
+	dw BattleAnim_Harden
+	dw BattleAnim_Roar
 	dw BattleAnim_Slash
-	dw BattleAnim_Detect
+	dw BattleAnim_Thief
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_ThunderWave  ; 120
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Recover
+	dw BattleAnim_Headbutt
 	dw BattleAnim_MegaPunch
-	dw BattleAnim_IcePunch
-	dw BattleAnim_Waterfall    ; 130
-	dw BattleAnim_IcePunch
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt     ; 128
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Waterfall
+	dw BattleAnim_Headbutt
+	dw BattleAnim_ShadowBall
+	dw BattleAnim_Slash
+	dw BattleAnim_Slash
+	dw BattleAnim_Roar
+	dw BattleAnim_ShadowBall   ; 130
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Dynamicpunch
+	dw BattleAnim_ShadowBall
+	dw BattleAnim_WingAttack
+	dw BattleAnim_Earthquake
+	dw BattleAnim_PsychUp
+	dw BattleAnim_MachPunch
+	dw BattleAnim_PowderSnow   ; 138
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_SludgeBomb
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Headbutt
+	dw BattleAnim_ShadowBall
+	dw BattleAnim_Headbutt
+	dw BattleAnim_ThunderWave  ; 140
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt     ; 138
+	dw BattleAnim_Roar
+	dw BattleAnim_HyperBeam
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Waterfall
+	dw BattleAnim_SweetScent   ; 148
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Sharpen
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
+	dw BattleAnim_Roar
+	dw BattleAnim_Headbutt
+	dw BattleAnim_Earthquake   ; 150
+	dw BattleAnim_Meditate
+	dw BattleAnim_CrossChop
+	dw BattleAnim_GigaDrain
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt     ; 140
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt     ; 148
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt     ; 150
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
+	dw BattleAnim_SacredFire
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt     ; 158
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
 	dw BattleAnim_Headbutt
+	dw BattleAnim_Spark
+	dw BattleAnim_IcePunch
 	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt
-	dw BattleAnim_Headbutt     ; 160
+	dw BattleAnim_Submission
+	dw BattleAnim_HiddenPower  ; 160
 	dw BattleAnim_Headbutt
 
 

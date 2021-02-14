@@ -699,6 +699,7 @@ RoseliaBackpic:      INCBIN "gfx/pokemon/roselia/back.2bpp.lz"
 SphealBackpic:       INCBIN "gfx/pokemon/spheal/back.2bpp.lz"
 SealeoBackpic:       INCBIN "gfx/pokemon/sealeo/back.2bpp.lz"
 WalreinBackpic:      INCBIN "gfx/pokemon/walrein/back.2bpp.lz"
+LatiasBackpic:       INCBIN "gfx/pokemon/latias/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
@@ -905,6 +906,7 @@ ElectrikeFrontpic:  INCBIN "gfx/pokemon/electrike/front.animated.2bpp.lz"
 BlazikenFrontpic:   INCBIN "gfx/pokemon/blaziken/front.animated.2bpp.lz"
 SealeoFrontpic:     INCBIN "gfx/pokemon/sealeo/front.animated.2bpp.lz"
 WalreinFrontpic:    INCBIN "gfx/pokemon/walrein/front.animated.2bpp.lz"
+LatiasFrontpic:     INCBIN "gfx/pokemon/latias/front.animated.2bpp.lz"
 
 SECTION "Pics 29", ROMX
 TurtwigFrontpic:     INCBIN "gfx/pokemon/turtwig/front.animated.2bpp.lz"

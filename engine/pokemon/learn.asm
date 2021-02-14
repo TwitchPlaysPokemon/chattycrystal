@@ -175,18 +175,18 @@ ForgetMove:
 	ld a, [hl]
 	push af
 	push bc
-	call IsHMMove
+	call MoveIsUnforgettable
 	pop bc
 	pop de
 	ld a, d
-	jr c, .hmmove
+	jr c, .unforgettable
 	pop hl
 	add hl, bc
 	and a
 	ret
 
-.hmmove
-	ld hl, Text_CantForgetHM
+.unforgettable
+	ld hl, Text_CantForgetThatMove
 	call PrintText
 	pop hl
 	jr .loop
@@ -194,6 +194,26 @@ ForgetMove:
 .cancel
 	scf
 	ret
+
+MoveIsUnforgettable::
+	call GetMoveIndexFromID
+	ld b, h
+	ld c, l
+	ld hl, .moves
+	ld de, 2
+	jp IsInHalfwordArray
+
+.moves
+	dw CUT
+	dw FLY
+	dw SURF
+	dw STRENGTH
+	dw FLASH
+	dw WATERFALL
+	dw WHIRLPOOL
+	dw CHATTER
+	dw CHATTY_HP
+	dw -1 ; end
 
 Text_LearnedMove:
 ; <MON> learned <MOVE>!
@@ -236,7 +256,7 @@ Text_1_2_and_Poof:
 	text_far UnknownText_0x1c574e
 	text_end
 
-Text_CantForgetHM:
+Text_CantForgetThatMove:
 ; HM moves can't be forgotten now.
-	text_far UnknownText_0x1c5772
+	text_far _Text_CantForgetThatMove
 	text_end

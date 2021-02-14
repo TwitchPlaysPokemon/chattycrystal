@@ -256,8 +256,6 @@ GetTMHMName::
 .HMTextEnd:
 	db "@"
 
-INCLUDE "home/hm_moves.asm"
-
 GetMoveName::
 	push hl
 	push bc

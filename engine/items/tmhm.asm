@@ -165,6 +165,15 @@ TeachTMHM:
 	scf
 	ret
 
+IsHM::
+	cp HM01
+	jr c, .NotHM
+	scf
+	ret
+.NotHM:
+	and a
+	ret
+
 Text_BootedTM:
 	; Booted up a TM.
 	text_far UnknownText_0x1c0373

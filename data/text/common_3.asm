@@ -981,8 +981,8 @@ UnknownText_0x1c574e::
 	para "And…"
 	prompt
 
-UnknownText_0x1c5772::
-	text "HM moves can't be"
+_Text_CantForgetThatMove::
+	text "That move can't be"
 	line "forgotten now."
 	prompt
 

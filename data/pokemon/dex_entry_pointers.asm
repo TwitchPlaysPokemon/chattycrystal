@@ -267,17 +267,17 @@ PokedexDataPointerTable:
 	dba LombrePokedexEntry
 	dba LudicoloPokedexEntry
 	dba TaillowPokedexEntry
-	dba SwellowPokedexEntry ; PLACEHOLDER - Swellow
+	dba SwellowPokedexEntry
 	dba WingullPokedexEntry
-	dba PelipperPokedexEntry ; PLACEHOLDER - Pelipper
+	dba PelipperPokedexEntry
 	dba RaltsPokedexEntry
 	dba KirliaPokedexEntry
 	dba GardevoirPokedexEntry
-	dba SurskitPokedexEntry ; PLACEHOLDER - Surskit
-	dba MasquerainPokedexEntry ; PLACEHOLDER - Masquerain
+	dba SurskitPokedexEntry
+	dba MasquerainPokedexEntry
 	dba WhismurPokedexEntry
-	dba LoudredPokedexEntry ; PLACEHOLDER - Loudred
-	dba ExploudPokedexEntry ; PLACEHOLDER - Exploud
+	dba LoudredPokedexEntry
+	dba ExploudPokedexEntry
 	dba MakuhitaPokedexEntry
 	dba HariyamaPokedexEntry ; PLACEHOLDER - Hariyama
 	dba AzurillPokedexEntry ; PLACEHOLDER - Azurill

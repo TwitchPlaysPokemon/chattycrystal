@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "POND SKATER@" ; species name
+	dw 108, 37 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It appears as if"
+	next "it's skating on"
+	next "water."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It draws prey with"
+	next "a sweet scent from"
+	next "a tip on its head.@"

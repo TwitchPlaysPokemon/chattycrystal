@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BIG VOICE@" ; species name
+	dw 303, 893 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "The shock waves"
+	next "from its cries can"
+	next "tip over trucks."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "It stamps its feet"
+	next "to power up."
 	next "@"

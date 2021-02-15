@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SWALLOW@" ; species name
+	dw 204, 437 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It circles the sky"
+	next "in search of prey."
+	next ""
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "When it spots one,"
+	next "it dives steeply"
+	next "to catch the prey.@"

@@ -462,7 +462,7 @@ CooltrainermAllenAfterBattleText:
 	para "I wonder if"
 	line "ECRUTEAK GYM's"
 
-	para "MORTY is still in"
+	para "aoooo is still in"
 	line "training?"
 
 	para "He really hammered"

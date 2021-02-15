@@ -185,7 +185,7 @@ IrwinCalledRightAwayText:
 UnknownText_0x646df:
 	text "I saw, I heard!"
 
-	para "You beat MORTY of"
+	para "You beat aoooo of"
 	line "ECRUTEAK GYM!"
 
 	para "Th-that's just"

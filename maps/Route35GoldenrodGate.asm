@@ -4,9 +4,14 @@
 	const ROUTE35GOLDENRODGATE_FISHER
 
 Route35GoldenrodGate_MapScripts:
-	db 0 ; scene scripts
+	db 2 ; scene scripts
+	scene_script .dummy ; SCENE_DEFAULT
+	scene_script .dummy ; SCENE_FINISHED
 
 	db 0 ; callbacks
+
+.dummy
+	end
 
 RandyScript:
 	faceplayer
@@ -17,6 +22,7 @@ RandyScript:
 	iftrue .questcomplete
 	checkevent EVENT_GOT_KENYA
 	iftrue .alreadyhavekenya
+.continue
 	writetext Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText
 	yesorno
 	iffalse .refused
@@ -31,6 +37,7 @@ RandyScript:
 	givepoke CHATOT, 20, NO_ITEM, TRUE, GiftChatotName, GiftChatotOTName
 	givepokemail GiftChatotMail
 	setevent EVENT_GOT_KENYA
+	setscene SCENE_FINISHED
 .alreadyhavekenya
 	writetext Route35GoldenrodGateRandyWeirdTreeBlockingRoadText
 	waitbutton
@@ -73,7 +80,38 @@ GiftChatotName:
 GiftChatotOTName:
 	db "RANDY@"
 
-	db 0 ; filler
+Route35GoldenrodGate_KenyaLock_Left:
+	turnobject ROUTE35GOLDENRODGATE_RANDY, RIGHT
+	showemote EMOTE_SHOCK, ROUTE35GOLDENRODGATE_RANDY, 20
+	opentext
+	writetext Route35GoldenrodGate_KenyaLock_HeyWaitText
+	closetext
+	applymovement PLAYER, Route35GoldenrodGate_KenyaLock_MovementLeft
+	opentext
+	sjump RandyScript.continue
+
+Route35GoldenrodGate_KenyaLock_Right:
+	turnobject ROUTE35GOLDENRODGATE_RANDY, RIGHT
+	opentext
+	writetext Route35GoldenrodGate_KenyaLock_HeyWaitText
+	closetext
+	applymovement PLAYER, Route35GoldenrodGate_KenyaLock_MovementRight
+	opentext
+	sjump RandyScript.continue
+
+Route35GoldenrodGate_KenyaLock_HeyWaitText:
+	text "Hey, wait!"
+	prompt
+
+Route35GoldenrodGate_KenyaLock_MovementRight:
+	step LEFT
+Route35GoldenrodGate_KenyaLock_MovementLeft:
+	step DOWN
+	step DOWN
+	step DOWN
+	step LEFT
+	step LEFT
+	step_end
 
 Route35GoldenrodGatePokefanFScript:
 	faceplayer
@@ -204,7 +242,9 @@ Route35GoldenrodGate_MapEvents:
 	warp_event  4,  7, GOLDENROD_CITY, 12
 	warp_event  5,  7, GOLDENROD_CITY, 12
 
-	db 0 ; coord events
+	db 2 ; coord events
+	coord_event 4, 1, SCENE_DEFAULT, Route35GoldenrodGate_KenyaLock_Left
+	coord_event 5, 1, SCENE_DEFAULT, Route35GoldenrodGate_KenyaLock_Right
 
 	db 0 ; bg events
 

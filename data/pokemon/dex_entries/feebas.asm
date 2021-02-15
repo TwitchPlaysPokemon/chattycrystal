@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "FISH@" ; species name
+	dw 200, 163 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It is famous for"
+	next "its shabby"
+	next "appearance."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "While populous,"
+	next "they cluster in"
+	next "set locations.@"

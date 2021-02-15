@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "COTTON BIRD@" ; species name
+	dw 104, 26 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Its wings bring"
+	next "cottony clouds to"
+	next "mind."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It likes to sit on"
+	next "people's heads and"
+	next "act like a hat.@"

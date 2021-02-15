@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SEA LILY@" ; species name
+	dw 303, 525 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It disguises its"
+	next "tentacles as"
+	next "flowers to attract"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "and catch prey."
+	next "It became extinct"
+	next "in ancient times.@"

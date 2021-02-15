@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "HUMMING@" ; species name
+	dw 307, 454 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It looks like a"
+	next "fluffy cloud when"
+	next "it is in flight."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "It hums with its"
+	next "soprano voice."
 	next "@"

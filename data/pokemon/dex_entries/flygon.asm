@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "MYSTIC@" ; species name
+	dw 607, 1808 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It whips up sand-"
+	next "storms by flapping"
+	next "its strong wings."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "Red covers shield"
+	next "its eyes from"
+	next "sand.@"

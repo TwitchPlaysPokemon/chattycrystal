@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "ANT PIT@" ; species name
+	dw 204, 331 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It makes a conical"
+	next "pit in desert sand"
+	next "and lies in wait"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "at the bottom for"
+	next "prey to come"
+	next "tumbling down.@"

@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "VIBRATION@" ; species name
+	dw 307, 337 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It shudders its"
+	next "wings violently,"
+	next "generating"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "ultrasonic waves"
+	next "that causes"
+	next "serious headaches.@"

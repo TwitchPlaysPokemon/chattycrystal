@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BARNACLE@" ; species name
+	dw 411, 1332 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It lives in the"
+	next "shallows of warm"
+	next "seas. When the"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "tide goes out, it"
+	next "digs up its prey"
+	next "from the beaches.@"

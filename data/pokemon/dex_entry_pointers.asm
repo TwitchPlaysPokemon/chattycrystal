@@ -290,17 +290,17 @@ PokedexDataPointerTable:
 	dba ElectrikePokedexEntry
 	dba ManectricPokedexEntry
 	dba RoseliaPokedexEntry
-	dba WailmerPokedexEntry ; PLACEHOLDER - Wailmer
-	dba WailordPokedexEntry ; PLACEHOLDER - Wailord
-	dba TrapinchPokedexEntry ; PLACEHOLDER - Trapinch
-	dba VibravaPokedexEntry ; PLACEHOLDER - Vibrava
-	dba FlygonPokedexEntry ; PLACEHOLDER - Flygon
-	dba SwabluPokedexEntry ; PLACEHOLDER - Swablu
-	dba AltariaPokedexEntry ; PLACEHOLDER - Altaria
-	dba LileepPokedexEntry ; PLACEHOLDER - Lileep
-	dba CradilyPokedexEntry ; PLACEHOLDER - Cradily
-	dba FeebasPokedexEntry ; PLACEHOLDER - Feebas
-	dba MiloticPokedexEntry ; PLACEHOLDER - Milotic
+	dba WailmerPokedexEntry
+	dba WailordPokedexEntry
+	dba TrapinchPokedexEntry
+	dba VibravaPokedexEntry
+	dba FlygonPokedexEntry
+	dba SwabluPokedexEntry
+	dba AltariaPokedexEntry
+	dba LileepPokedexEntry
+	dba CradilyPokedexEntry
+	dba FeebasPokedexEntry
+	dba MiloticPokedexEntry
 	dba DuskullPokedexEntry ; PLACEHOLDER - Duskull
 	dba DusclopsPokedexEntry ; PLACEHOLDER - Dusclops
 	dba AbsolPokedexEntry ; PLACEHOLDER - Absol

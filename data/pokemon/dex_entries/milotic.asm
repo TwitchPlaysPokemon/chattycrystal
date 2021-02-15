@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "TENDER@" ; species name
+	dw 2004, 3571 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It is said that a"
+	next "glimpse of a"
+	next "Milotic and its"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "beauty will calm"
+	next "any hostile"
+	next "emotions felt.@"

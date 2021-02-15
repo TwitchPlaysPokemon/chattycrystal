@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "FLOATWHALE@" ; species name
+	dw 4707, 8774 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It is the largest"
+	next "of all identified"
+	next "#MON."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "They jump as a"
+	next "pack to herd their"
+	next "prey.@"

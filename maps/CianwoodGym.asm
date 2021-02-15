@@ -38,7 +38,7 @@ CianwoodGymChuckScript:
 	waitbutton
 	closetext
 	winlosstext ChuckLossText, 0
-	loadtrainer SMUSUM_ELIO2, RRWQ
+	loadtrainer SMUSUM_ELIO, L_SUN
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHUCK
@@ -259,7 +259,7 @@ CianwoodGym_MapEvents:
 	bg_event  6, 15, BGEVENT_READ, CianwoodGymStatue
 
 	db 9 ; object events
-	object_event  4,  1, SPRITE_ELIO2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckScript, -1
+	object_event  4,  1, SPRITE_ELIO, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodGymChuckScript, -1
 	object_event  2, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltYoshi, -1
 	object_event  7, 12, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBlackbeltLao, -1
 	object_event  3,  9, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBlackbeltNob, -1

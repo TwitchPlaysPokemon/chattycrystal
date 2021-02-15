@@ -34,6 +34,7 @@ Marts:
 	dw MartMtMoon
 	dw MartIndigoPlateau
 	dw MartUnderground
+	dw MartGoldenrodStones
 .End
 
 MartCherrygrove:
@@ -397,6 +398,16 @@ MartUnderground:
 	db ENERGY_ROOT
 	db HEAL_POWDER
 	db REVIVAL_HERB
+	db -1 ; end
+
+MartGoldenrodStones:
+	db 6 ; # items
+	db FIRE_STONE
+	db ICE_STONE
+	db LEAF_STONE
+	db MOON_STONE
+	db WATER_STONE
+	db THUNDERSTONE
 	db -1 ; end
 
 DefaultMart:

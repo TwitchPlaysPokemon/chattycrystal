@@ -127,7 +127,7 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Heliolisk
 	dw DummyEvosAttacks ; PLACEHOLDER - Amaura
 	dw DummyEvosAttacks ; PLACEHOLDER - Aurorus
-	dw DummyEvosAttacks ; PLACEHOLDER - Sylveon
+	dw SylveonEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Goomy
 	dw DummyEvosAttacks ; PLACEHOLDER - Sliggoo
 	dw DummyEvosAttacks ; PLACEHOLDER - Goodra
@@ -1143,3 +1143,16 @@ GlaceonEvosAttacks:
 	dbw 41, ICE_BEAM ; Replacement for Last Resort, and because Ice Beam isn't a TM this gen, and fuck the postgame tutor.
 	dbw 45, BLIZZARD
 	db 0 ; no more level-up moves
+
+SylveonEvosAttacks:
+	db 0,
+	dbw 1, TAIL_WHIP
+	dbw 1, TACKLE
+	dbw 5, SAND_ATTACK
+	dbw 13, QUICK_ATTACK
+	dbw 17, SWIFT
+	dbw 20, DRAININGKISS
+	dbw 33, LIGHT_SCREEN
+	dbw 37, MOONBLAST
+	dbw 41, MOONLIGHT ; replacement for Last Resort
+	dbw 45, PSYCH_UP

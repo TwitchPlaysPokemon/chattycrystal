@@ -2480,9 +2480,9 @@ _GetDefensiveStatInHL:
 	add BASE_STAT_LEVEL * 2 + 1
 	; fallthrough
 _GetStatInHL:
-	; If (possibly modified) stat change is less than base, don't check crit.
+	; If (possibly modified) stat change is more than base, don't check crit.
 	cp BASE_STAT_LEVEL
-	jr c, .getstat_done
+	jr nc, .getstat_done
 
 	; If a crit happened, replace modified stat hl with unmodified de
 	ld a, [wCriticalHit]

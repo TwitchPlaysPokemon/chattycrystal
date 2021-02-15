@@ -270,9 +270,9 @@ PokedexDataPointerTable:
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Swellow
 	dba WingullPokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Pelipper
-	dba PlaceholderPokedexEntry ; PLACEHOLDER - Ralts
-	dba PlaceholderPokedexEntry ; PLACEHOLDER - Kirlia
-	dba PlaceholderPokedexEntry ; PLACEHOLDER - Gardevoir
+	dba RaltsPokedexEntry
+	dba KirliaPokedexEntry
+	dba GardevoirPokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Surskit
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Masquerain
 	dba WhismurPokedexEntry

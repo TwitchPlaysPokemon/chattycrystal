@@ -92,8 +92,8 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Gastrodon
 	dw BunearyEvosAttacks
 	dw LopunnyEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER - Stunky
-	dw DummyEvosAttacks ; PLACEHOLDER - Skuntank
+	dw StunkyEvosAttacks
+	dw SkuntankEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Bronzor
 	dw DummyEvosAttacks ; PLACEHOLDER - Bronzong
 	dw DummyEvosAttacks ; PLACEHOLDER - Bonsly
@@ -998,6 +998,38 @@ LopunnyEvosAttacks:
 	dbw 36, DIZZY_PUNCH
 	dbw 43, CHARM
 	dbw 46, DIG
+	db 0 ; no more level-up moves
+
+StunkyEvosAttacks:
+	dbbw EVOLVE_LEVEL, 34, SKUNTANK
+	db 0
+	dbw 1, SCRATCH
+	dbw 1, FOCUS_ENERGY
+	dbw 4, POISON_GAS
+	dbw 7, SCREECH
+	dbw 10, FURY_SWIPES
+	dbw 14, SMOKESCREEN
+	dbw 18, FEINT_ATTACK ; replacement for Feint
+	dbw 22, SLASH
+	dbw 27, TOXIC
+	dbw 32, NIGHT_SLASH
+	dbw 44, EXPLOSION
+	db 0 ; no more level-up moves
+
+SkuntankEvosAttacks:
+	db 0
+	dbw 1, SCRATCH
+	dbw 1, FOCUS_ENERGY
+	dbw 4, POISON_GAS
+	dbw 7, SCREECH
+	dbw 10, FURY_SWIPES
+	dbw 14, SMOKESCREEN
+	dbw 18, FEINT_ATTACK ; replacement for Feint
+	dbw 22, SLASH
+	dbw 27, TOXIC
+	dbw 32, NIGHT_SLASH
+	dbw 34, FLAMETHROWER
+	dbw 52, EXPLOSION
 	db 0 ; no more level-up moves
 
 BurmyEvosAttacks:

@@ -357,7 +357,7 @@ PokedexDataPointerTable:
 	dba DarkraiPokedexEntry ; PLACEHOLDER - Darkrai
 	dba PansagePokedexEntry ; PLACEHOLDER - Pansage
 	dba SimisagePokedexEntry ; PLACEHOLDER - Simisage
-	dba DrillburPokedexEntry ; PLACEHOLDER - Drillbur
+	dba DrilburPokedexEntry ; PLACEHOLDER - Drilbur
 	dba ExcadrillPokedexEntry ; PLACEHOLDER - Excadrill
 	dba SandilePokedexEntry ; PLACEHOLDER - Sandile
 	dba KrokorokPokedexEntry ; PLACEHOLDER - Krokorok

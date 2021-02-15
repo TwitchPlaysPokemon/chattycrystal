@@ -357,7 +357,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Darkrai
 	dw PlaceholderAnimation ; PLACEHOLDER - Pansage
 	dw PlaceholderAnimation ; PLACEHOLDER - Simisage
-	dw PlaceholderAnimation ; PLACEHOLDER - Drillbur
+	dw PlaceholderAnimation ; PLACEHOLDER - Drilbur
 	dw PlaceholderAnimation ; PLACEHOLDER - Excadrill
 	dw PlaceholderAnimation ; PLACEHOLDER - Sandile
 	dw PlaceholderAnimation ; PLACEHOLDER - Krokorok

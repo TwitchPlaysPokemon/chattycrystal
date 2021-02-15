@@ -108,7 +108,7 @@ EggMovePointers3::
 	dw NoEggMoves3         ; Darkrai
 	dw NoEggMoves3         ; PLACEHOLDER - Pansage
 	dw NoEggMoves3         ; Simisage
-	dw NoEggMoves3         ; PLACEHOLDER - Drillbur
+	dw NoEggMoves3         ; PLACEHOLDER - Drilbur
 	dw NoEggMoves3         ; Excadrill
 	dw NoEggMoves3         ; PLACEHOLDER - Sandile
 	dw NoEggMoves3         ; Krokorok

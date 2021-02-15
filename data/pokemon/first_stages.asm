@@ -358,8 +358,8 @@ FirstEvoStages::
     dw DARKRAI      ; Darkrai
     dw PANSAGE      ; Pansage
     dw PANSAGE      ; Simisage
-    dw DRILLBUR     ; Drillbur
-    dw DRILLBUR     ; Excadrill
+    dw DRILBUR     ; Drilbur
+    dw DRILBUR     ; Excadrill
     dw SANDILE      ; Sandile
     dw SANDILE      ; Krokorok
     dw SANDILE      ; Krookodile

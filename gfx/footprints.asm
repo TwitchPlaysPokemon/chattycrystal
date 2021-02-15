@@ -356,7 +356,7 @@ INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Froslass
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Darkrai
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Pansage
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Simisage
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Drillbur
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Drilbur
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Excadrill
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Sandile
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Krokorok

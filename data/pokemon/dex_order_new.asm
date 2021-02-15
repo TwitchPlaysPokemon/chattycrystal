@@ -358,7 +358,7 @@ NewPokedexOrder:
 	dw DARKRAI
 	dw PANSAGE
 	dw SIMISAGE
-	dw DRILLBUR
+	dw DRILBUR
 	dw EXCADRILL
 	dw SANDILE
 	dw KROKOROK

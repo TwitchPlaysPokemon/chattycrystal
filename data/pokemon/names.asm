@@ -361,7 +361,7 @@ PokemonNames::
 	db "DARKRAI@@@"
 	db "PANSAGE@@@"
 	db "SIMISAGE@@"
-	db "DRILLBUR@@"
+	db "DRILBUR@@@"
 	db "EXCADRILL@"
 	db "SANDILE@@@"
 	db "KROKOROK@@"

@@ -818,7 +818,7 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
@@ -826,14 +826,14 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
 	; nite
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
-	dbw 46, DRILLBUR
+	dbw 46, DRILBUR
 	dbw 48, KRABBY
 	dbw 49, GOLBAT
 	dbw 48, GOLBAT
@@ -845,7 +845,7 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
@@ -853,14 +853,14 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
 	; nite
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
-	dbw 46, DRILLBUR
+	dbw 46, DRILBUR
 	dbw 48, KRABBY
 	dbw 49, GOLBAT
 	dbw 48, GOLBAT
@@ -872,7 +872,7 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
@@ -880,14 +880,14 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
 	; nite
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
-	dbw 46, DRILLBUR
+	dbw 46, DRILBUR
 	dbw 48, KRABBY
 	dbw 49, GOLBAT
 	dbw 48, GOLBAT
@@ -899,7 +899,7 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
@@ -907,14 +907,14 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
 	; nite
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
-	dbw 46, DRILLBUR
+	dbw 46, DRILBUR
 	dbw 48, KRABBY
 	dbw 49, GOLBAT
 	dbw 48, GOLBAT
@@ -926,7 +926,7 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
@@ -934,14 +934,14 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
 	; nite
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
-	dbw 46, DRILLBUR
+	dbw 46, DRILBUR
 	dbw 48, KRABBY
 	dbw 49, GOLBAT
 	dbw 48, GOLBAT
@@ -951,7 +951,7 @@ JohtoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 47, KRABBY
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 47, SEEL
 	dbw 49, KRABBY
 	dbw 50, GOLBAT
@@ -959,7 +959,7 @@ JohtoGrassWildMons:
 	dbw 49, EXCADRILL
 	; day
 	dbw 47, KRABBY
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 47, SEEL
 	dbw 49, KRABBY
 	dbw 50, GOLBAT
@@ -967,7 +967,7 @@ JohtoGrassWildMons:
 	dbw 49, EXCADRILL
 	; nite
 	dbw 47, KRABBY
-	dbw 48, DRILLBUR
+	dbw 48, DRILBUR
 	dbw 47, KRABBY
 	dbw 49, KRABBY
 	dbw 50, GOLBAT
@@ -978,7 +978,7 @@ JohtoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 48, KRABBY
-	dbw 49, DRILLBUR
+	dbw 49, DRILBUR
 	dbw 48, SEEL
 	dbw 50, KRABBY
 	dbw 51, GOLBAT
@@ -986,7 +986,7 @@ JohtoGrassWildMons:
 	dbw 50, EXCADRILL
 	; day
 	dbw 48, KRABBY
-	dbw 49, DRILLBUR
+	dbw 49, DRILBUR
 	dbw 48, SEEL
 	dbw 50, KRABBY
 	dbw 51, GOLBAT
@@ -994,7 +994,7 @@ JohtoGrassWildMons:
 	dbw 50, EXCADRILL
 	; nite
 	dbw 48, KRABBY
-	dbw 49, DRILLBUR
+	dbw 49, DRILBUR
 	dbw 48, KRABBY
 	dbw 50, KRABBY
 	dbw 51, GOLBAT
@@ -1004,7 +1004,7 @@ JohtoGrassWildMons:
 	map_id WHIRL_ISLAND_LUGIA_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 49, DRILLBUR
+	dbw 49, DRILBUR
 	dbw 50, ZUBAT
 	dbw 49, EXCADRILL
 	dbw 51, KRABBY
@@ -1012,7 +1012,7 @@ JohtoGrassWildMons:
 	dbw 51, SEEL
 	dbw 51, SEEL
 	; day
-	dbw 49, DRILLBUR
+	dbw 49, DRILBUR
 	dbw 50, ZUBAT
 	dbw 49, EXCADRILL
 	dbw 51, KRABBY
@@ -1020,7 +1020,7 @@ JohtoGrassWildMons:
 	dbw 51, SEEL
 	dbw 51, SEEL
 	; nite
-	dbw 49, DRILLBUR
+	dbw 49, DRILBUR
 	dbw 50, ZUBAT
 	dbw 49, EXCADRILL
 	dbw 51, KRABBY

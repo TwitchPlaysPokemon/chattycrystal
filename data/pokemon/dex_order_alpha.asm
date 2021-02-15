@@ -78,7 +78,7 @@ AlphabeticalPokedexOrder:
 	dw DRAGONAIR
 	dw DRAGONITE
 	dw DRATINI
-	dw DRILLBUR
+	dw DRILBUR
 	dw DROWZEE
 	dw DUCKLETT
 	dw DUGTRIO

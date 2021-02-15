@@ -750,7 +750,7 @@ INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Pansage
 INCBIN "gfx/pokemon/simisage/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Simisage
 INCBIN "gfx/pokemon/drilbur/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Drillbur
+INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Drilbur
 INCBIN "gfx/pokemon/excadrill/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Excadrill
 INCBIN "gfx/pokemon/sandile/front.gbcpal", middle_colors

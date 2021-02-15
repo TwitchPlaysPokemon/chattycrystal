@@ -378,7 +378,7 @@ JOHTO_POKEMON EQU const_value
 	const DARKRAI      ; 164 - MISSING
 	const PANSAGE      ; 165 - MISSING
 	const SIMISAGE     ; 166 - MISSING
-	const DRILLBUR     ; 167 - MISSING
+	const DRILBUR      ; 167 - MISSING
 	const EXCADRILL    ; 168 - MISSING
 	const SANDILE      ; 169 - MISSING
 	const KROKOROK     ; 16a - MISSING

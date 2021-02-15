@@ -269,9 +269,9 @@ INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Taillow
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Swellow
 INCBIN "gfx/footprints/wingull.1bpp"
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Pelipper
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Ralts
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Kirlia
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Gardevoir
+INCBIN "gfx/footprints/ralts.1bpp"
+INCBIN "gfx/footprints/kirlia.1bpp"
+INCBIN "gfx/footprints/gardevoir.1bpp"
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Surskit
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Masquerain
 INCBIN "gfx/footprints/whismur.1bpp"

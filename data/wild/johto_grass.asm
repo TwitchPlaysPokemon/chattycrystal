@@ -518,29 +518,29 @@ JohtoGrassWildMons:
 	map_id SLOWPOKE_WELL_B2F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 21, ZUBAT
-	dbw 23, ZUBAT
-	dbw 19, MAKUHITA
-	dbw 21, SLOWPOKE
-	dbw 23, GOLBAT
-	dbw 23, SLOWPOKE
-	dbw 23, SLOWPOKE
+	dbw 33, SLOWPOKE
+	dbw 35, ZUBAT
+	dbw 31, HARIYAMA
+	dbw 33, SLOWPOKE
+	dbw 35, GOLBAT
+	dbw 35, SLOWBRO
+	dbw 35, SLOWKING
 	; day
-	dbw 21, ZUBAT
-	dbw 23, ZUBAT
-	dbw 19, MAKUHITA
-	dbw 21, SLOWPOKE
-	dbw 23, GOLBAT
-	dbw 23, SLOWPOKE
-	dbw 23, SLOWPOKE
+	dbw 33, SLOWPOKE
+	dbw 35, ZUBAT
+	dbw 31, HARIYAMA
+	dbw 33, SLOWPOKE
+	dbw 35, GOLBAT
+	dbw 35, SLOWBRO
+	dbw 35, SLOWKING
 	; nite
-	dbw 21, ZUBAT
-	dbw 23, ZUBAT
-	dbw 19, MAKUHITA
-	dbw 21, SLOWPOKE
-	dbw 23, GOLBAT
-	dbw 23, SLOWPOKE
-	dbw 23, SLOWPOKE
+	dbw 33, SLOWPOKE
+	dbw 35, ZUBAT
+	dbw 31, HARIYAMA
+	dbw 33, SLOWPOKE
+	dbw 35, GOLBAT
+	dbw 35, SLOWBRO
+	dbw 35, SLOWKING
 
 	map_id ILEX_FOREST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite

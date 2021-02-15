@@ -1427,7 +1427,7 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (10)
 	db "CHAD@", TRAINERTYPE_NORMAL
-	db 33
+	db 34
 	dw MR__MIME
 	db -1 ; end
 
@@ -1609,11 +1609,11 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (5)
 	db "TOBY@", TRAINERTYPE_NORMAL
-	db 29
-	dw DODUO
 	db 30
 	dw DODUO
 	db 31
+	dw DODUO
+	db 32
 	dw DODRIO
 	db -1 ; end
 
@@ -1813,10 +1813,10 @@ LassGroup:
 
 	next_list_item ; LASS (10)
 	db "DANA@", TRAINERTYPE_MOVES
-	db 31
+	db 32
 	dw AMPHAROS
 	dw COTTON_SPORE, GROWL, THUNDERSHOCK, THUNDER_WAVE
-	db 32
+	db 33
 	dw PSYDUCK
 	dw SURF, PSYCH_UP, DISABLE, CONFUSION
 	db -1 ; end
@@ -2128,27 +2128,27 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (5)
 	db "KATE@", TRAINERTYPE_NORMAL
-	db 26
+	db 31
 	dw SHELLDER
-	db 28
+	db 33
 	dw CLOYSTER
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (6)
 	db "IRENE@", TRAINERTYPE_NORMAL
-	db 22
+	db 31
 	dw GOLDEEN
-	db 24
+	db 33
 	dw SEAKING
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (7)
 	db "KELLY@", TRAINERTYPE_NORMAL
-	db 27
-	dw MARILL
-	db 24
+	db 33
+	dw AZUMARILL
+	db 31
 	dw WARTORTLE
-	db 24
+	db 31
 	dw WARTORTLE
 	db -1 ; end
 
@@ -2401,17 +2401,17 @@ BeautyGroup:
 
 	next_list_item ; BEAUTY (16)
 	db "VALERIE@", TRAINERTYPE_MOVES
-	db 32
+	db 33
 	dw SKIPLOOM
 	dw SYNTHESIS, SLEEP_POWDER, TACKLE, LEECH_SEED
-	db 32
+	db 33
 	dw JUMPLUFF
 	dw SYNTHESIS, SLEEP_POWDER, TACKLE, LEECH_SEED
 	db -1 ; end
 
 	next_list_item ; BEAUTY (17)
 	db "OLIVIA@", TRAINERTYPE_NORMAL
-	db 19
+	db 34
 	dw CORSOLA
 	db -1 ; end
 
@@ -3589,11 +3589,11 @@ SwimmerFGroup:
 SailorGroup:
 	next_list_item ; SAILOR (1)
 	db "EUGENE@", TRAINERTYPE_NORMAL
-	db 31
+	db 32
 	dw POLIWHIRL
-	db 31
+	db 32
 	dw RATICATE
-	db 33
+	db 34
 	dw KRABBY
 	db -1 ; end
 
@@ -3669,7 +3669,7 @@ SailorGroup:
 
 	next_list_item ; SAILOR (10)
 	db "HARRY@", TRAINERTYPE_NORMAL
-	db 33
+	db 34
 	dw QUAGSIRE
 	db -1 ; end
 
@@ -4440,11 +4440,11 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (6)
 	db "NORMAN@", TRAINERTYPE_MOVES
-	db 30
+	db 31
 	dw SLOWPOKE
 	dw DISABLE, GROWL, WATER_GUN, CONFUSION
-	db 33
-	dw SLOWPOKE
+	db 34
+	dw SLOWKING
 	dw CURSE, BODY_SLAM, WATER_GUN, CONFUSION
 	db -1 ; end
 
@@ -5123,7 +5123,7 @@ PokefanMGroup:
 
 	next_list_item ; POKEFANM (2)
 	db "DEREK@", TRAINERTYPE_ITEM
-	db 34
+	db 35
 	dw PIKACHU
 	db LIGHT_BALL
 	db -1 ; end
@@ -5377,7 +5377,7 @@ PokefanFGroup:
 
 	next_list_item ; POKEFANF (2)
 	db "RUTH@", TRAINERTYPE_ITEM
-	db 34
+	db 35
 	dw PIKACHU
 	db LIGHT_BALL
 	db -1 ; end
@@ -5417,8 +5417,8 @@ PokefanFGroup:
 
 	next_list_item ; POKEFANF (6)
 	db "JAIME@", TRAINERTYPE_ITEM
-	db 34
-	dw MEOWTH
+	db 35
+	dw PERSIAN
 	db GOLD_BERRY
 	db -1 ; end
 

@@ -34,9 +34,9 @@ JohtoWaterWildMons:
 
 	map_id SLOWPOKE_WELL_B2F
 	db 2 percent ; encounter rate
-	dbw 15, SLOWPOKE
-	dbw 20, SLOWPOKE
-	dbw 20, SLOWBRO
+	dbw 30, SLOWPOKE
+	dbw 35, SLOWPOKE
+	dbw 35, SLOWBRO
 
 	map_id ILEX_FOREST
 	db 2 percent ; encounter rate

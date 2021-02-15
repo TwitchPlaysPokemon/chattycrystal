@@ -282,10 +282,7 @@ CianwoodGymSignText:
 	text "CIANWOOD CITY"
 	line "#MON GYM"
 
-	para "LEADER: CHUCK"
-
-	para "His Roaring Fists"
-	line "Do the Talking"
+	para "LEADER: 9'l"
 	done
 
 CianwoodPharmacySignText:

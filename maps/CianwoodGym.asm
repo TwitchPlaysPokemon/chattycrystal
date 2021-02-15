@@ -136,7 +136,7 @@ CianwoodGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, BROWN, PAUL
+	gettrainername STRING_BUFFER_4, SMUSUM_ELIO, L_SUN
 	jumpstd gymstatue2
 
 CianwoodGymMovement_ChuckChucksBoulder:

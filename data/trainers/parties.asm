@@ -252,7 +252,7 @@ FRLGLeafGroup:
 	db 28
 	dw SKITTY
 	db BRIGHTPOWDER
-	dw PSYCHIC, RAZOR_WIND, HYPER_FANG, MEAN_LOOK
+	dw PSYCHIC_M, RAZOR_WIND, HYPER_FANG, MEAN_LOOK
 	bigdw $FFFF
 	bigdw 77
 	bigdw 38
@@ -500,16 +500,16 @@ B2W2NateGroup:
 	db -1 ; end
 
 	end_list_items
-	
+
 NateLeaderGroup:
 	next_list_item ; AAAALK
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	end_list_items
-	
+
 NateElite4Group:
 	next_list_item ; R_BLACK22
 	db "?@", TRAINERTYPE_NORMAL
@@ -547,7 +547,7 @@ SMUSUMElioGroup:
 	db 38
 	dw KADABRA
 	db TINYMUSHROOM
-	dw PSYCHO_CUT, PSYCHIC, KINESIS, NO_MOVE
+	dw PSYCHO_CUT, PSYCHIC_M, KINESIS, NO_MOVE
 	bigdw $FFFF
 	bigdw 1
 	bigdw 1
@@ -560,7 +560,7 @@ SMUSUMElioGroup:
 	db 38
 	dw RIBOMBEE
 	db STAR_PIECE
-	dw POLLEN_PUFF, PSYCHIC, DRAININGKISS, DAZZLINGLEAM
+	dw POLLEN_PUFF, PSYCHIC_M, DRAININGKISS, DAZZLINGLEAM
 	bigdw $FFFF
 	bigdw 1
 	bigdw 1
@@ -5353,7 +5353,7 @@ KimonoGirlGroup:
 	db 32
 	dw JOLTEON
 	db -1 ; end
-	
+
 	end_list_items
 
 TwinsGroup:
@@ -5682,19 +5682,19 @@ RedGroup:
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	next_list_item ;CCC_DUALRED
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	next_list_item ;KAY
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA
 	db -1 ; end
-	
+
 	next_list_item ;RED_GAUNTLETRED
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
@@ -5876,7 +5876,7 @@ CYRoboredGroup:
 
 	db -1 ; end
 	end_list_items
-	
+
 PokemonProfessorGroup:
 GSCHGSSChrisGroup:
 	next_list_item ; AAEFFFF

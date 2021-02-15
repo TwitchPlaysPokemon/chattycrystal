@@ -5459,9 +5459,20 @@ MoveSelectionScreen:
 	dec a
 	jr z, .ether_elixir_menu
 	call CheckUsableMoves
-	ret nz ; use Struggle
 	ld hl, wBattleMonMoves
-	jr .got_menu_type
+	jr z, .got_menu_type
+
+	; use Struggle
+	ld hl, STRUGGLE
+	call GetMoveIDFromIndex
+	ld [wCurPlayerMove], a
+
+	ld hl, BattleText_MonHasNoMovesLeft
+	call StdBattleTextbox
+	ld c, 60
+	call DelayFrames
+	xor a
+	ret
 
 .ether_elixir_menu
 	ld a, MON_MOVES

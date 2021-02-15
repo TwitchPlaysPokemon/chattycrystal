@@ -679,11 +679,11 @@ INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Monferno
 INCBIN "gfx/pokemon/infernape/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Infernape
 INCBIN "gfx/pokemon/piplup/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Piplup
+INCLUDE "gfx/pokemon/empoleon/shiny.pal"
 INCBIN "gfx/pokemon/prinplup/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Prinplup
+INCLUDE "gfx/pokemon/empoleon/shiny.pal"
 INCBIN "gfx/pokemon/empoleon/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Empoleon
+INCLUDE "gfx/pokemon/empoleon/shiny.pal"
 INCBIN "gfx/pokemon/bidoof/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Bidoof
 INCBIN "gfx/pokemon/bibarel/front.gbcpal", middle_colors

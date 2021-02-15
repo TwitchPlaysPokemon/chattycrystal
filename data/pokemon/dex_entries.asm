@@ -397,7 +397,7 @@ AmauraPokedexEntry::     INCLUDE "data/pokemon/dex_entries/amaura.asm"
 AurorusPokedexEntry::    INCLUDE "data/pokemon/dex_entries/aurorus.asm"
 SylveonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/sylveon.asm"
 GoomyPokedexEntry::      INCLUDE "data/pokemon/dex_entries/goomy.asm"
-SliggoPokedexEntry::     INCLUDE "data/pokemon/dex_entries/sliggo.asm"
+SliggooPokedexEntry::     INCLUDE "data/pokemon/dex_entries/sliggoo.asm"
 GoodraPokedexEntry::     INCLUDE "data/pokemon/dex_entries/goodra.asm"
 
 SECTION "New Pokedex Entries 2", ROMX
@@ -405,3 +405,4 @@ CrabrawlerPokedexEntry:: INCLUDE "data/pokemon/dex_entries/crabrawler.asm"
 CrabominablePokedexEntry:: INCLUDE "data/pokemon/dex_entries/crabominable.asm"
 CutieflyPokedexEntry::   INCLUDE "data/pokemon/dex_entries/cutiefly.asm"
 RibombeePokedexEntry::   INCLUDE "data/pokemon/dex_entries/ribombee.asm"
+PhanceroPokedexEntry::   INCLUDE "data/pokemon/dex_entries/phancero.asm"

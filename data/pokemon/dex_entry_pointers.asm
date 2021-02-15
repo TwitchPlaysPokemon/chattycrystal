@@ -345,43 +345,43 @@ PokedexDataPointerTable:
 	dba SkuntankPokedexEntry
 	dba BronzorPokedexEntry
 	dba BronzongPokedexEntry
-	dba BonslyPokedexEntry ; PLACEHOLDER - Bonsly
+	dba BonslyPokedexEntry
 	dba ChatotPokedexEntry
-	dba CroagunkPokedexEntry ; PLACEHOLDER - Croagunk
-	dba ToxicroakPokedexEntry ; PLACEHOLDER - Toxicroak
-	dba LeafeonPokedexEntry ; PLACEHOLDER - Leafeon
+	dba CroagunkPokedexEntry
+	dba ToxicroakPokedexEntry
+	dba LeafeonPokedexEntry
 	dba GlaceonPokedexEntry
-	dba PorygonZPokedexEntry ; PLACEHOLDER - Porygon Z
+	dba PorygonZPokedexEntry
 	dba DusknoirPokedexEntry
 	dba FroslassPokedexEntry
-	dba DarkraiPokedexEntry ; PLACEHOLDER - Darkrai
-	dba PansagePokedexEntry ; PLACEHOLDER - Pansage
-	dba SimisagePokedexEntry ; PLACEHOLDER - Simisage
-	dba DrilburPokedexEntry ; PLACEHOLDER - Drilbur
-	dba ExcadrillPokedexEntry ; PLACEHOLDER - Excadrill
-	dba SandilePokedexEntry ; PLACEHOLDER - Sandile
-	dba KrokorokPokedexEntry ; PLACEHOLDER - Krokorok
-	dba KrookodilePokedexEntry ; PLACEHOLDER - Krookodile
-	dba DucklettPokedexEntry ; PLACEHOLDER - Ducklett
-	dba SwannaPokedexEntry ; PLACEHOLDER - Swanna
-	dba TynamoPokedexEntry ; PLACEHOLDER - Tynamo
-	dba EelektrikPokedexEntry ; PLACEHOLDER - Eelektrik
-	dba EelektrossPokedexEntry ; PLACEHOLDER - Eelektross
+	dba DarkraiPokedexEntry
+	dba PansagePokedexEntry
+	dba SimisagePokedexEntry
+	dba DrilburPokedexEntry
+	dba ExcadrillPokedexEntry
+	dba SandilePokedexEntry
+	dba KrokorokPokedexEntry
+	dba KrookodilePokedexEntry
+	dba DucklettPokedexEntry
+	dba SwannaPokedexEntry
+	dba TynamoPokedexEntry
+	dba EelektrikPokedexEntry
+	dba EelektrossPokedexEntry
 	dba LitwickPokedexEntry
 	dba LampentPokedexEntry
 	dba ChandelurePokedexEntry
-	dba ClauncherPokedexEntry ; PLACEHOLDER - Clauncher
-	dba ClawitzerPokedexEntry ; PLACEHOLDER - Clawitzer
-	dba HelioptilePokedexEntry ; PLACEHOLDER - Helioptile
-	dba HelioliskPokedexEntry ; PLACEHOLDER - Heliolisk
-	dba AmauraPokedexEntry ; PLACEHOLDER - Amaura
-	dba AurorusPokedexEntry ; PLACEHOLDER - Aurorus
-	dba SylveonPokedexEntry ; PLACEHOLDER - Sylveon
-	dba GoomyPokedexEntry ; PLACEHOLDER - Goomy
-	dba SliggoPokedexEntry ; PLACEHOLDER - Sliggoo
-	dba GoodraPokedexEntry ; PLACEHOLDER - Goodra
-	dba CrabrawlerPokedexEntry ; PLACEHOLDER - Crabrawler
-	dba CrabominablePokedexEntry ; PLACEHOLDER - Crabominable
+	dba ClauncherPokedexEntry
+	dba ClawitzerPokedexEntry
+	dba HelioptilePokedexEntry
+	dba HelioliskPokedexEntry
+	dba AmauraPokedexEntry
+	dba AurorusPokedexEntry
+	dba SylveonPokedexEntry
+	dba GoomyPokedexEntry
+	dba SliggooPokedexEntry
+	dba GoodraPokedexEntry
+	dba CrabrawlerPokedexEntry
+	dba CrabominablePokedexEntry
 	dba CutieflyPokedexEntry
 	dba RibombeePokedexEntry
 	; Fused Crystal mons used their base mon's entry
@@ -400,4 +400,4 @@ PokedexDataPointerTable:
 	dba QuagsirePokedexEntry    ; Quagynx
 	dba SteelixPokedexEntry     ; Steelurret
 	; TPP's signature fakemon
-	dba PlaceholderPokedexEntry ; PLACEHOLDER - Phancero
+	dba PhanceroPokedexEntry

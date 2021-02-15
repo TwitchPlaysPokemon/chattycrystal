@@ -1465,7 +1465,6 @@ DrilburEvosAttacks:
 	db 0 ; no more level-up moves
 
 ExcadrillEvosAttacks:
-	dbbw EVOLVE_LEVEL, 31, EXCADRILL
 	db 0
 	dbw 1, SCRATCH
 	dbw 1, MUD_SLAP ; Mud Sport

@@ -5,38 +5,17 @@ _GiveOddEgg:
 	; probabilities out of 0xffff.
 	call Random
 	ld hl, OddEggProbabilities
-	ld c, 0
-	ld b, c
+	ld c, -1
 .loop
+	ld b, a
 	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-
-	; Break on $ffff.
-	ld a, d
-	cp HIGH($ffff)
-	jr nz, .not_done
-	ld a, e
-	cp LOW($ffff)
-	jr z, .done
-.not_done
-
-	; Break when [hRandom] <= de.
-	ldh a, [hRandom + 1]
-	cp d
-	jr c, .done
-	jr z, .ok
-	jr .next
-.ok
-	ldh a, [hRandom + 0]
-	cp e
-	jr c, .done
-	jr z, .done
-.next
-	inc bc
-	jr .loop
-.done
+	cpl
+	inc a
+	jr z, _GiveOddEgg ; we overshot, resample
+	inc c
+	add a, b
+	jr c, .loop
+	ld b, 0
 
 	push bc
 	ld hl, OddEggs

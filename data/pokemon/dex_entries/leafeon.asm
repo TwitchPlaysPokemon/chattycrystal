@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "VERDANT@" ; species name
+	dw 303, 562 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It basically does"
+	next "not fight. With"
+	next "cells similar to"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "those of plants,"
+	next "it can perform"
+	next "photosynthesis.@"

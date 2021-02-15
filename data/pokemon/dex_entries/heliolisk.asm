@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "GENERATOR@" ; species name
+	dw 303, 463 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "They flare their"
+	next "frills to generate"
+	next "energy from the"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "sun. One HELIOLISK"
+	next "alone can power an"
+	next "entire skyscraper.@"

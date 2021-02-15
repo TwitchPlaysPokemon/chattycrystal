@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "LEAFMONKEY@" ; species name
+	dw 200, 231 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It shares the leaf"
+	next "on its head with"
+	next "#MON that look"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "weary. The leaves"
+	next "relieves stress"
+	next "when eaten.@"

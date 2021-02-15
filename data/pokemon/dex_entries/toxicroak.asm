@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "TOXICMOUTH@" ; species name
+	dw 403, 979 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It has a poison"
+	next "sac at its throat."
+	next "When it croaks,"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "the stored poison"
+	next "mixture churns to"
+	next "maximize potency.@"

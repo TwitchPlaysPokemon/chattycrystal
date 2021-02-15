@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SOFTTISSUE@" ; species name
+	dw 100, 62 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "The weakest of all"
+	next "DRAGON #MON, it"
+	next "lives in shady,"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "damp places so its"
+	next "slimy skin does"
+	next "not dry out.@"

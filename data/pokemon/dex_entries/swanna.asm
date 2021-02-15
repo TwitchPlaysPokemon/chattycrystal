@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "WHITE BIRD@" ; species name
+	dw 403, 534 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "SWANNA start to"
+	next "dance at dusk. The"
+	next "one dancing in the"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "middle is usually"
+	next "the leader of that"
+	next "particular flock.@"

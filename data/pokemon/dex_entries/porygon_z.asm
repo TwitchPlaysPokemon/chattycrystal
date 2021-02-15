@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "VIRTUAL@" ; species name
+	dw 211, 750 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Its programming"
+	next "was modified to "
+	next "allow travel to"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "other dimensions,"
+	next "but that lead to "
+	next "strange behavior.@"

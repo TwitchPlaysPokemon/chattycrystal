@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "ELEFISH@" ; species name
+	dw 008, 03 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "These #MON move"
+	next "in schools. While"
+	next "one does not have"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "much power, chains"
+	next "of them can create"
+	next "strong lightning.@"

@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "DESERTCROC@" ; species name
+	dw 204, 335 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "They live buried"
+	next "in the sands of"
+	next "the desert. The"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "sun-warmed sands"
+	next "keep their body"
+	next "temperature high.@"

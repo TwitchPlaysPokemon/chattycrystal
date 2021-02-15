@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "DAUNTING@" ; species name
+	dw 411, 2123 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "They never allow"
+	next "prey to escape."
+	next "Their jaws are so"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "powerful, they can"
+	next "crush the body of"
+	next "an automobile.@"

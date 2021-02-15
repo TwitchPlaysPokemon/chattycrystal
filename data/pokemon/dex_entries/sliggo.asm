@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SOFTTISSUE@" ; species name
+	dw 207, 386 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "This #MON can"
+	next "dissolve anything"
+	next "with its mucous."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "After its prey has"
+	next "nicely dissolved,"
+	next "it slurps them up.@"

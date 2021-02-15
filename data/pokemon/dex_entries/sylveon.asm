@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "INTERTWINE@" ; species name
+	dw 303, 518 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "SYLVEON wraps its"
+	next "ribbonlike feelers"
+	next "around the arm of"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "its trainer. This"
+	next "allows it to read"
+	next "their feelings.@"

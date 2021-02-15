@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "DARKNESS@" ; species name
+	dw 108, 243 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It dwells in the"
+	next "darkness of caves."
+	next ""
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It uses sharp claws"
+	next "to dig up gems to"
+	next "nourish itself.@"

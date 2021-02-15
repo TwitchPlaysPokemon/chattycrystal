@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "IRON ARMOR@" ; species name
+	dw 211, 2646 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Lairon fight over"
+	next "territory, and"
+	next "when their steel"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "bodies collide,"
+	next "sparks fly."
 	next "@"

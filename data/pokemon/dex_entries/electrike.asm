@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "LIGHTNING@" ; species name
+	dw 200, 335 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Using electricity"
+	next "stored in its fur,"
+	next "it stimulates its"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "muscles to improve"
+	next "its reaction time."
 	next "@"

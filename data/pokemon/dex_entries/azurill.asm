@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "POLKA DOT@" ; species name
+	dw 8, 44 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Its tail is filled"
+	next "with nutrients"
+	next "needed for growth."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It plays by"
+	next "bouncing on its"
+	next "tail.@"

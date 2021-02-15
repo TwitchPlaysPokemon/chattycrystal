@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "THORN@" ; species name
+	dw 100, 44 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Roselia that drink"
+	next "nutritionally rich"
+	next "springwater are"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "said to reveal"
+	next "rare coloration when"
+	next "they bloom.@"

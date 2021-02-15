@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "ARM THRUST@" ; species name
+	dw 707, 5595 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It loves to match"
+	next "power with big-"
+	next "bodied #MON."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It can knock a"
+	next "truck flying with"
+	next "its arm thrusts.@"

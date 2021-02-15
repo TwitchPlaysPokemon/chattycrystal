@@ -279,17 +279,17 @@ PokedexDataPointerTable:
 	dba LoudredPokedexEntry
 	dba ExploudPokedexEntry
 	dba MakuhitaPokedexEntry
-	dba HariyamaPokedexEntry ; PLACEHOLDER - Hariyama
-	dba AzurillPokedexEntry ; PLACEHOLDER - Azurill
-	dba SkittyPokedexEntry ; PLACEHOLDER - Skitty
-	dba DelcattyPokedexEntry ; PLACEHOLDER - Delcatty
-	dba SableyePokedexEntry ; PLACEHOLDER - Sableye
+	dba HariyamaPokedexEntry
+	dba AzurillPokedexEntry
+	dba SkittyPokedexEntry
+	dba DelcattyPokedexEntry
+	dba SableyePokedexEntry
 	dba AronPokedexEntry
-	dba LaironPokedexEntry ; PLACEHOLDER - Lairon
-	dba AggronPokedexEntry ; PLACEHOLDER - Aggron
-	dba ElectrikePokedexEntry ; PLACEHOLDER - Electrike
-	dba ManectricPokedexEntry ; PLACEHOLDER - Manectric
-	dba RoseliaPokedexEntry ; PLACEHOLDER - Roselia
+	dba LaironPokedexEntry
+	dba AggronPokedexEntry
+	dba ElectrikePokedexEntry
+	dba ManectricPokedexEntry
+	dba RoseliaPokedexEntry
 	dba WailmerPokedexEntry ; PLACEHOLDER - Wailmer
 	dba WailordPokedexEntry ; PLACEHOLDER - Wailord
 	dba TrapinchPokedexEntry ; PLACEHOLDER - Trapinch

@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "PRIM@" ; species name
+	dw 307, 719 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It dislikes dirty"
+	next "places. It often"
+	next "searches for a"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "comfortable place"
+	next "in which to groom"
+	next "itself.@"

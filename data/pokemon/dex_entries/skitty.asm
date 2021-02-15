@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "KITTEN@" ; species name
+	dw 200, 243 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It's adorable when"
+	next "it chases its own"
+	next "tail."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "It's difficult to"
+	next "earn its trust."
 	next "@"

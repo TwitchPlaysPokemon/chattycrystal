@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "DISCHARGE@" ; species name
+	dw 411, 886 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Its nest can be"
+	next "found where a"
+	next "thunderbolt hits."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It is discharging"
+	next "electricity from"
+	next "its mane.@"

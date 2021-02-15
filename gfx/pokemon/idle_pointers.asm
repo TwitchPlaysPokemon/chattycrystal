@@ -315,7 +315,7 @@ AnimationIdlePointers:
 	dw MetangAnimationIdle
 	dw MetagrossAnimationIdle
 	dw LatiasAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Latios
+	dw LatiosAnimationIdle
 	dw GroudonAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Turtwig
 	dw GrotleAnimationIdle

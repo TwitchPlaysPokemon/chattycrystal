@@ -315,7 +315,7 @@ BitmasksPointers:
 	dw MetangBitmasks
 	dw MetagrossBitmasks
 	dw LatiasBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Latios
+	dw LatiosBitmasks
 	dw GroudonBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Turtwig
 	dw GrotleBitmasks

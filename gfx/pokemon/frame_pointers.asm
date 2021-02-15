@@ -315,7 +315,7 @@ FramesPointers:
 	dba MetangFrames
 	dba MetagrossFrames
 	dba LatiasFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Latios
+	dba LatiosFrames
 	dba GroudonFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Turtwig
 	dba GrotleFrames 

@@ -609,29 +609,23 @@ BattleCommand_CheckObedience:
 
 .obeylevel
 	; The maximum obedience level is constrained by owned badges:
-	ld hl, wJohtoBadges
+	ld a, [wJohtoBadges]
 
-	; risingbadge
-	bit RISINGBADGE, [hl]
-	ret nz
-
-	; stormbadge
-	bit STORMBADGE, [hl]
-	ld c, 70
-	jr nz, .getlevel
-
-	; fogbadge
-	bit FOGBADGE, [hl]
-	ld c, 50
-	jr nz, .getlevel
-
-	; hivebadge
-	bit HIVEBADGE, [hl]
-	ld c, 30
-	jr nz, .getlevel
-
-	; no badges
+	inc a
+	ret z
+	add a, -1 ; will always carry
 	ld c, 10
+.levelloop
+	dec c
+	rla
+	jr nc, .levelloop
+	sla c
+	ld a, c
+	add a, a
+	add a, a
+	add a, c
+	ld c, a
+	inc c
 
 .getlevel
 ; c = obedience level

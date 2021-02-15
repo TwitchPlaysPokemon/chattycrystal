@@ -7,4 +7,4 @@
 
 	page "on an icy mountain"
 	next "was reborn as"
-	next "Froslass.@"
+	next "FROSLASS.@"

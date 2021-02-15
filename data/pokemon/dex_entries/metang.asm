@@ -2,7 +2,7 @@
 	dw 311, 4464 ; height, weight
 
 	db   "It is formed by"
-	next "two Beldum joining"
+	next "two BELDUM joining"
 	next "together."
 
 	page "Not even a jet can"

@@ -3,7 +3,7 @@
 
 	db   "It is said that a"
 	next "glimpse of a"
-	next "Milotic and its"
+	next "MILOTIC and its"
 
 	page "beauty will calm"
 	next "any hostile"

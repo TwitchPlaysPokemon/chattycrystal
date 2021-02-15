@@ -6,5 +6,5 @@
 	next "soil."
 
 	page "On a very healthy"
-	next "Turtwig, the shell"
+	next "TURTWIG, the shell"
 	next "should feel moist.@"

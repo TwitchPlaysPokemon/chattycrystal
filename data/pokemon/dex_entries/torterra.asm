@@ -3,7 +3,7 @@
 
 	db   "Some #MON are"
 	next "born on the back"
-	next "of a Torterra."
+	next "of a TORTERRA."
 
 	page "They can even"
 	next "spend their entire"

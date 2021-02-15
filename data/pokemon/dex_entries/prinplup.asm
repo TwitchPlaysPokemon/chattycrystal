@@ -2,7 +2,7 @@
 	dw 207, 507 ; height, weight
 
 	db   "Because every"
-	next "Prinplup considers"
+	next "PRINPLUP considers"
 	next "itself the most"
 
 	page "important, they"

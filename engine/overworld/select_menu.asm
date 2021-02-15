@@ -1,15 +1,7 @@
 SelectMenu::
 	call CheckRegisteredItem
-	jr c, .NotRegistered
+	ret c
 	jp UseRegisteredItem
-
-.NotRegistered:
-	call OpenText
-	ld b, BANK(ItemMayBeRegisteredText)
-	ld hl, ItemMayBeRegisteredText
-	call MapTextbox
-	call WaitButton
-	jp CloseText
 
 ItemMayBeRegisteredText:
 	text_far UnknownText_0x1c1cf3

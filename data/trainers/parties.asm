@@ -392,7 +392,7 @@ HGSSLyraGroup:
 	db 28
 	dw TRAPINCH
 	db NO_ITEM
-	dw SWIFT, HAMMER_ARM, NO_MOVE, NO_MOVE ; TODO: Trump card
+	dw SWIFT, HAMMER_ARM, TRUMP_CARD, NO_MOVE
 	bigdw $0FFF
 	bigdw 73
 	bigdw 68

@@ -602,6 +602,7 @@ CHRIS EQU __enum__
 	const XXWWNN
 
 	trainerclass CY_ROBORED ; 2c
+	const X_CHATTYYELLOW1
 	const X_CHATTYYELLOW2
 
 	trainerclass GSCHGSS_CHRIS ; 2d

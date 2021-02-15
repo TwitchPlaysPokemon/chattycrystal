@@ -5637,6 +5637,87 @@ RBYGreenGroup:
 	end_list_items
 
 CYRoboredGroup:
+	next_list_item ; X_CHATTYYELLOW1
+	db "x<MN>(?@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 8
+	dw RATTATA
+	db NO_ITEM
+	dw TACKLE, TAIL_WHIP, WATER_GUN, QUICK_ATTACK
+	bigdw $0FFF
+	bigdw 23
+	bigdw 15
+	bigdw 12
+	bigdw 17
+	bigdw 9
+	bigdw 9
+	db "RATTATA@"
+
+	db 9
+	dw NIDORAN_F
+	db NO_ITEM
+	dw TACKLE, GROWL, SCRATCH, NO_MOVE
+	bigdw $0FFF
+	bigdw 30
+	bigdw 14
+	bigdw 15
+	bigdw 14
+	bigdw 12
+	bigdw 12
+	db "AAAIIIIII<PK>@"
+
+	db 33
+	dw CHATOT
+	db NO_ITEM
+	dw CHATTER, ROOST, PECK, MIRROR_MOVE
+	bigdw $19B5
+	bigdw 111
+	bigdw 56
+	bigdw 48
+	bigdw 80
+	bigdw 76
+	bigdw 76
+	db "IIAAAIig--@"
+
+	db 7
+	dw MAGIKARP
+	db NO_ITEM
+	dw SPLASH, NO_MOVE, NO_MOVE, NO_MOVE
+	bigdw $4FFF
+	bigdw 20
+	bigdw 7
+	bigdw 13
+	bigdw 17
+	bigdw 10
+	bigdw 10
+	db "MAGIKARP@"
+
+	db 11
+	dw BULBASAUR
+	db NO_ITEM
+	dw TACKLE, GROWL, LEECH_SEED, NO_MOVE
+	bigdw $2FFF
+	bigdw 32
+	bigdw 16
+	bigdw 17
+	bigdw 16
+	bigdw 21
+	bigdw 21
+	db "RJKKCCCDDF@"
+
+	db 10
+	dw PIKACHU
+	db NO_ITEM
+	dw THUNDERSHOCK, GROWL, TAIL_WHIP, THUNDER_WAVE
+	bigdw $0FFF
+	bigdw 28
+	bigdw 16
+	bigdw 11
+	bigdw 26
+	bigdw 16
+	bigdw 16
+	db "AJ<MN><MN><MN><MN><MN><PK><PK><PK>@"
+	db -1 ; end
+
 	next_list_item ; X_CHATTYYELLOW2
 	db "x<MN>(?@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 20

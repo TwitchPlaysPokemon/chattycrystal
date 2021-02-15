@@ -39,6 +39,14 @@ BurnedTower1F_MapScripts:
 	writetext BurnedTower1FEusineIntroText
 	waitbutton
 	closetext
+	winlosstext BurnedTower1FEusineIntroText, BurnedTower1FEusineIntroText
+	loadtrainer CY_ROBORED, X_CHATTYYELLOW1
+	startbattle
+	reloadmapafterbattle
+	opentext
+	writetext BurnedTower1FEusineIntroText
+	waitbutton
+	closetext
 	moveobject BURNEDTOWER1F_EUSINE, 9, 14
 	setscene SCENE_BURNEDTOWER1F_RIVAL_BATTLE
 	end

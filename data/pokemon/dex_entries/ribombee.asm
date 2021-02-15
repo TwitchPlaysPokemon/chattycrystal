@@ -6,5 +6,5 @@
 	next "different kinds."
 
 	page "Some are used as"
-	next "food, while others"
-	next "in battle.@"
+	next "food, others are"
+	next "used in battle.@"

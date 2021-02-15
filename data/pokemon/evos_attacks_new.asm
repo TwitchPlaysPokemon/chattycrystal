@@ -100,7 +100,7 @@ EvosAttacksPointers3::
 	dw ChatotEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Croagunk
 	dw DummyEvosAttacks ; PLACEHOLDER - Toxicroak
-	dw DummyEvosAttacks ; PLACEHOLDER - Leafeon
+	dw LeafeonEvosAttacks
 	dw GlaceonEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Porygon Z
 	dw DummyEvosAttacks ; PLACEHOLDER - Dusknoir
@@ -1113,6 +1113,20 @@ SwannaEvosAttacks:
 	dbw 34, RAIN_DANCE
 	dbw 47, BRAVE_BIRD
 	db 0 ; no more level-up  moves
+
+LeafeonEvosAttacks:
+	db 0
+	dbw 1, TACKLE
+	dbw 8, SAND_ATTACK
+	dbw 15, RAZOR_LEAF
+	dbw 22, QUICK_ATTACK
+	dbw 29, SYNTHESIS
+	dbw 43, GIGA_DRAIN
+	dbw 50, SOLARBEAM ; replacement for Last Resort
+	dbw 57, SING ; replacement for Grasswhistle
+	dbw 64, SUNNY_DAY
+	dbw 78, SWORDS_DANCE
+	db 0 ; no more level-up moves
 
 GlaceonEvosAttacks:
 	db 0 ; no more evolutions

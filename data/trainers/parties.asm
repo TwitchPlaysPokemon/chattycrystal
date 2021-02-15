@@ -528,7 +528,7 @@ XYSerena2Group:
 	end_list_items
 
 SMUSUMElioGroup:
-next_list_item ; AHUNIgg
+	next_list_item ; SUN_L
 	db "9'l@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
 	db 40

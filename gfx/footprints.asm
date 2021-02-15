@@ -325,8 +325,8 @@ INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Infernape
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Piplup
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Prinplup
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Empoleon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Bidoof
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Bibarel
+INCBIN "gfx/footprints/bidoof.1bpp"
+INCBIN "gfx/footprints/bibarel.1bpp"
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Shinx
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Luxio
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Luxray

@@ -1,7 +1,16 @@
 SelectMenu::
 	call CheckRegisteredItem
-	ret c
-	jp UseRegisteredItem
+	jp nc, UseRegisteredItem
+	ld a, [wTPPFeatureLock]
+	cp TPP_FEATURE_LOCK_VALUE
+	ret z
+
+	call OpenText
+	ld b, BANK(ItemMayBeRegisteredText)
+	ld hl, ItemMayBeRegisteredText
+	call MapTextbox
+	call WaitButton
+	jp CloseText
 
 ItemMayBeRegisteredText:
 	text_far UnknownText_0x1c1cf3

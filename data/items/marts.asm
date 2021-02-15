@@ -401,11 +401,12 @@ MartUnderground:
 	db -1 ; end
 
 MartGoldenrodStones:
-	db 6 ; # items
+	db 7 ; # items
 	db FIRE_STONE
 	db ICE_STONE
 	db LEAF_STONE
 	db MOON_STONE
+	db SUN_STONE
 	db WATER_STONE
 	db THUNDERSTONE
 	db -1 ; end

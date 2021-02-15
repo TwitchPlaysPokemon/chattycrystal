@@ -1388,7 +1388,7 @@ JohtoGrassWildMons:
 	dbw 9, GROWLITHE
 	dbw 9, RALTS
 	dbw 10, PIDGEY
-	dbw 10, PIDGEY
+	dbw 10, BONSLY
 	; day
 	dbw 8, PIDGEY
 	dbw 8, RALTS
@@ -1396,7 +1396,7 @@ JohtoGrassWildMons:
 	dbw 9, GROWLITHE
 	dbw 9, PIDGEY
 	dbw 10, PIDGEY
-	dbw 10, PIDGEY
+	dbw 10, BONSLY
 	; nite
 	dbw 8, SPINARAK
 	dbw 8, HOOTHOOT
@@ -1404,7 +1404,7 @@ JohtoGrassWildMons:
 	dbw 9, RALTS
 	dbw 9, HOOTHOOT
 	dbw 9, GASTLY
-	dbw 9, GASTLY
+	dbw 9, BONSLY
 
 	map_id ROUTE_37
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

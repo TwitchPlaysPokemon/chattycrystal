@@ -301,10 +301,10 @@ PokedexDataPointerTable:
 	dba CradilyPokedexEntry
 	dba FeebasPokedexEntry
 	dba MiloticPokedexEntry
-	dba DuskullPokedexEntry ; PLACEHOLDER - Duskull
-	dba DusclopsPokedexEntry ; PLACEHOLDER - Dusclops
-	dba AbsolPokedexEntry ; PLACEHOLDER - Absol
-	dba SnoruntPokedexEntry ; PLACEHOLDER - Snorunt
+	dba DuskullPokedexEntry
+	dba DusclopsPokedexEntry
+	dba AbsolPokedexEntry
+	dba SnoruntPokedexEntry
 	dba SphealPokedexEntry ; PLACEHOLDER - Spheal
 	dba SealeoPokedexEntry ; PLACEHOLDER - Sealeo
 	dba WalreinPokedexEntry ; PLACEHOLDER - Walrein
@@ -328,13 +328,13 @@ PokedexDataPointerTable:
 	dba EmpoleonPokedexEntry ; PLACEHOLDER - Empoleon
 	dba BidoofPokedexEntry
 	dba BibarelPokedexEntry
-	dba ShinxPokedexEntry ; PLACEHOLDER - Shinx
-	dba LuxioPokedexEntry ; PLACEHOLDER - Luxio
-	dba LuxrayPokedexEntry ; PLACEHOLDER - Luxray
+	dba ShinxPokedexEntry
+	dba LuxioPokedexEntry
+	dba LuxrayPokedexEntry
 	dba BudewPokedexEntry ; PLACEHOLDER - Budew
 	dba RoseradePokedexEntry ; PLACEHOLDER - Roserade
-	dba BurmyPokedexEntry ; PLACEHOLDER - Burmy
-	dba MothimPokedexEntry ; PLACEHOLDER - Mothim
+	dba BurmyPokedexEntry
+	dba MothimPokedexEntry
 	dba BuizelPokedexEntry ; PLACEHOLDER - Buizel
 	dba FloatzelPokedexEntry ; PLACEHOLDER - Floatzel
 	dba ShellosPokedexEntry ; PLACEHOLDER - Shellos
@@ -352,8 +352,8 @@ PokedexDataPointerTable:
 	dba LeafeonPokedexEntry ; PLACEHOLDER - Leafeon
 	dba GlaceonPokedexEntry
 	dba PorygonZPokedexEntry ; PLACEHOLDER - Porygon Z
-	dba DusknoirPokedexEntry ; PLACEHOLDER - Dusknoir
-	dba FroslassPokedexEntry ; PLACEHOLDER - Froslass
+	dba DusknoirPokedexEntry
+	dba FroslassPokedexEntry
 	dba DarkraiPokedexEntry ; PLACEHOLDER - Darkrai
 	dba PansagePokedexEntry ; PLACEHOLDER - Pansage
 	dba SimisagePokedexEntry ; PLACEHOLDER - Simisage
@@ -367,9 +367,9 @@ PokedexDataPointerTable:
 	dba TynamoPokedexEntry ; PLACEHOLDER - Tynamo
 	dba EelektrikPokedexEntry ; PLACEHOLDER - Eelektrik
 	dba EelektrossPokedexEntry ; PLACEHOLDER - Eelektross
-	dba LitwickPokedexEntry ; PLACEHOLDER - Litwick
-	dba LampentPokedexEntry ; PLACEHOLDER - Lampent
-	dba ChandelurePokedexEntry ; PLACEHOLDER - Chandelure
+	dba LitwickPokedexEntry
+	dba LampentPokedexEntry
+	dba ChandelurePokedexEntry
 	dba ClauncherPokedexEntry ; PLACEHOLDER - Clauncher
 	dba ClawitzerPokedexEntry ; PLACEHOLDER - Clawitzer
 	dba HelioptilePokedexEntry ; PLACEHOLDER - Helioptile

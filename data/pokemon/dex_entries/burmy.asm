@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BAGWORM@" ; species name
+	dw 8, 75 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It covers itself"
+	next "with a cloak to"
+	next "shelter from cold."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "When it's hot, its"
+	next "cloak is thinner."
 	next "@"

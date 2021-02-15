@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SNOW LAND@" ; species name
+	dw 403, 586 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Legends in snowy"
+	next "regions say that a"
+	next "woman who was lost"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "on an icy mountain"
+	next "was reborn as"
+	next "Froslass.@"

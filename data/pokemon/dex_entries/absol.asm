@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "DISASTER@" ; species name
+	dw 311, 1036 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It has the ability"
+	next "to sense coming"
+	next "natural disasters."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "Its life span is"
+	next "over a hundred"
+	next "years.@"

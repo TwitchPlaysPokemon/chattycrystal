@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SNOW HAT@" ; species name
+	dw 204, 370 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It's said that if"
+	next "they are seen at"
+	next "midnight, they'll"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "cause heavy snow."
+	next "They eat snow and"
+	next "ice to survive.@"

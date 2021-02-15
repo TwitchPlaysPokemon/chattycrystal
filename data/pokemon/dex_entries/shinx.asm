@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "FLASH@" ; species name
+	dw 108, 209 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "All of its fur"
+	next "dazzles if danger"
+	next "is sensed."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It flees while the"
+	next "foe is momentarily"
+	next "blinded.@"

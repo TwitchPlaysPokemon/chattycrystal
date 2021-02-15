@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "LURING@" ; species name
+	dw 303, 756 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Being consumed in"
+	next "Chandelure's flame"
+	next "burns the spirit,"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "leaving the body"
+	next "behind."
 	next "@"

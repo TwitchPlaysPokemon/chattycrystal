@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "MOTH@" ; species name
+	dw 211, 514 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It does not keep a"
+	next "nest. It flies"
+	next "over fields and"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "mountains in"
+	next "constant search"
+	next "of floral honey.@"

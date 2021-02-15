@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "GRIPPER@" ; species name
+	dw 703, 2350 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It is said to take"
+	next "lost spirits into"
+	next "its pliant body"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "and guide them"
+	next "home."
 	next "@"

@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "CANDLE@" ; species name
+	dw 100, 68 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Litwick shines a"
+	next "light that absorbs"
+	next "the life energy of"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "people and #MON"
+	next "which becomes the"
+	next "fuel that it burns.@"

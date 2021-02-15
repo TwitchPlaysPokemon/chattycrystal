@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "GLEAM EYES@" ; species name
+	dw 407, 926 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Luxray's ability to"
+	next "see through"
+	next "objects come in"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "handy when it's"
+	next "scouting for"
+	next "danger.@"

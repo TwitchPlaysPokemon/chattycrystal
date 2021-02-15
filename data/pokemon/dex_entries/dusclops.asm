@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BECKON@" ; species name
+	dw 503, 675 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Anyone who dares"
+	next "peer into its body"
+	next "to see its ball of"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "spectral fire will"
+	next "have their spirit"
+	next "stolen away.@"

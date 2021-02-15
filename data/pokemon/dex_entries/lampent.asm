@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "LAMP@" ; species name
+	dw 200, 287 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It arrives near"
+	next "the moment of"
+	next "death and steals"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "spirit from the"
+	next "body."
 	next "@"

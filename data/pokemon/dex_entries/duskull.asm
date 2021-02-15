@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "REQUIEM@" ; species name
+	dw 207, 331 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "If it finds bad"
+	next "children who won't"
+	next "listen to their"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "parents, it will"
+	next "spirit them away--"
+	next "or so it's said.@"

@@ -222,7 +222,7 @@ OlivineGroupSprites:
 ; Route38, Route39, OlivineCity
 CianwoodGroupSprites:
 ; Route40, Route41, CianwoodCity, BattleTowerOutside
-	db SPRITE_SWIMMER_GUY ; variable sprite: becomes SPRITE_SILVER and SPRITE_SWIMMER_GUY
+	db SPRITE_SWIMMER_GUY
 	db SPRITE_CHRIS
 	db SPRITE_POKEFAN_M
 	db SPRITE_LASS

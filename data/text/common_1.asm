@@ -1814,7 +1814,7 @@ _TooAttachedText::
 	line "to you<...> I couldn't"
 	para "possibly take it"
 	line "away from you."
-	done
+	prompt
 
 _NotYetText::
 	text "Not yet…"

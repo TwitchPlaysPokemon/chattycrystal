@@ -1298,8 +1298,8 @@ wHPPals:: ds PARTY_LENGTH
 wCurHPPal:: db
 
 wRNGState:: ds 4
-wRNGCumulativeDividerMinus:: db
 wRNGCumulativeDividerPlus:: dw
+wRNGCumulativeDividerMinus:: db
 
 wSGBPals:: ds 48 ; cda9
 

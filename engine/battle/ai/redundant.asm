@@ -46,7 +46,33 @@ AI_Redundant:
 	dbw EFFECT_FUTURE_SIGHT, .FutureSight
 	dbw EFFECT_AQUA_RING,    .AquaRing
 	dbw EFFECT_FAKE_OUT,     .FakeOut
+	dbw EFFECT_TAUNT,        .Taunt
 	db -1
+
+.Swagger:
+	ld a, [wPlayerSubStatus3]
+	bit SUBSTATUS_CONFUSED, a
+	ret
+
+.FutureSight:
+	ld a, [wEnemyScreens]
+	bit 5, a
+	ret
+
+.AquaRing:
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_AQUA_RING, a
+	ret
+
+.FakeOut:
+	ld a, [wEnemyTurnsTaken]
+	and a
+	ret
+
+.Taunt:
+	ld a, [wPlayerTauntCount]
+	and a
+	ret
 
 .LightScreen:
 	ld a, [wEnemyScreens]
@@ -171,26 +197,6 @@ AI_Redundant:
 	and SLP
 	jr z, .Redundant
 	jr .NotRedundant
-
-.Swagger:
-	ld a, [wPlayerSubStatus3]
-	bit SUBSTATUS_CONFUSED, a
-	ret
-
-.FutureSight:
-	ld a, [wEnemyScreens]
-	bit 5, a
-	ret
-
-.AquaRing:
-	ld a, [wEnemySubStatus5]
-	bit SUBSTATUS_AQUA_RING, a
-	ret
-
-.FakeOut:
-	ld a, [wEnemyTurnsTaken]
-	and a
-	ret
 
 .Heal:
 .MorningSun:

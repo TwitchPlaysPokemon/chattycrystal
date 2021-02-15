@@ -27,41 +27,41 @@ FormeTypeOverrides:
 BurmyFormes:
 	; plant cloak - animation is PLACEHOLDER
 	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - sandy cloak
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - trash cloak
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; sandy cloak - animation is PLACEHOLDER
+	forme BurmySandyFrontpic, BurmySandyBackpic, BurmySandyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; trash cloak - animation is PLACEHOLDER
+	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
 	; plant cloak - animation is PLACEHOLDER
 	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - sandy cloak
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - trash cloak
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; sandy cloak - animation is PLACEHOLDER
+	forme BurmySandyFrontpic, BurmySandyBackpic, BurmySandyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; trash cloak - animation is PLACEHOLDER
+	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
 
 ShellosFormes:
 	; west sea - animation is PLACEHOLDER
 	forme ShellosFrontpic, ShellosBackpic, ShellosPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - east sea
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; east sea - animation is PLACEHOLDER
+	forme ShellosEastFrontpic, ShellosEastBackpic, ShellosEastPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
 	; west sea - animation is PLACEHOLDER
 	forme ShellosFrontpic, ShellosBackpic, ShellosPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - east sea
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; east sea - animation is PLACEHOLDER
+	forme ShellosEastFrontpic, ShellosEastBackpic, ShellosEastPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
 	; west sea - animation is PLACEHOLDER
 	forme ShellosFrontpic, ShellosBackpic, ShellosPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - east sea
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; east sea - animation is PLACEHOLDER
+	forme ShellosEastFrontpic, ShellosEastBackpic, ShellosEastPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
 
 GastrodonFormes:
 	; west sea - animation is PLACEHOLDER
 	forme GastrodonFrontpic, GastrodonBackpic, GastrodonPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - east sea
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; east sea - animation is PLACEHOLDER
+	forme GastrodonEastFrontpic, GastrodonEastBackpic, GastrodonEastPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
 	; west sea - animation is PLACEHOLDER
 	forme GastrodonFrontpic, GastrodonBackpic, GastrodonPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - east sea
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; east sea - animation is PLACEHOLDER
+	forme GastrodonEastFrontpic, GastrodonEastBackpic, GastrodonEastPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
 	; west sea - animation is PLACEHOLDER
 	forme GastrodonFrontpic, GastrodonBackpic, GastrodonPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; PLACEHOLDER - east sea
-	forme PlaceholderFrontpic, PlaceholderBackpic, PlaceholderPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; east sea - animation is PLACEHOLDER
+	forme GastrodonEastFrontpic, GastrodonEastBackpic, GastrodonEastPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle

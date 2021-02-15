@@ -94,8 +94,8 @@ EvosAttacksPointers3::
 	dw LopunnyEvosAttacks
 	dw StunkyEvosAttacks
 	dw SkuntankEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER - Bronzor
-	dw DummyEvosAttacks ; PLACEHOLDER - Bronzong
+	dw BronzorEvosAttacks
+	dw BronzongEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Bonsly
 	dw ChatotEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Croagunk
@@ -1031,6 +1031,37 @@ SkuntankEvosAttacks:
 	dbw 34, FLAMETHROWER
 	dbw 52, EXPLOSION
 	db 0 ; no more level-up moves
+
+BronzorEvosAttacks:
+	dbbw EVOLVE_LEVEL, 33, BRONZONG
+	db 0
+	dbw 1, TACKLE
+	dbw 1, CONFUSION
+	dbw 7, HYPNOSIS
+	dbw 14, CONFUSE_RAY
+	dbw 19, EXTRASENSORY
+	dbw 26, IRON_DEFENSE
+	dbw 30, SAFEGUARD
+	dbw 35, ROLLOUT ; replacement for Gyro Ball
+	dbw 37, FUTURE_SIGHT
+	dbw 41, FEINT_ATTACK
+	db 0
+
+BronzongEvosAttacks:
+	db 0
+	dbw 1, SUNNY_DAY
+	dbw 1, RAIN_DANCE
+	dbw 1, TACKLE
+	dbw 1, CONFUSION
+	dbw 7, HYPNOSIS
+	dbw 14, CONFUSE_RAY
+	dbw 19, EXTRASENSORY
+	dbw 26, IRON_DEFENSE
+	dbw 30, SAFEGUARD
+	dbw 38, ROLLOUT ; replacement for Gyro Ball
+	dbw 43, FUTURE_SIGHT
+	dbw 50, FEINT_ATTACK
+	db 0
 
 BurmyEvosAttacks:
 	dbbw EVOLVE_LEVEL, 20, MOTHIM

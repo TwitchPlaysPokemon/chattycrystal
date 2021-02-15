@@ -307,7 +307,7 @@ AnimationPointers:
 	dw SnoruntAnimation
 	dw SphealAnimation
 	dw SealeoAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Walrein
+	dw WalreinAnimation
 	dw BagonAnimation
 	dw ShelgonAnimation
 	dw SalamenceAnimation

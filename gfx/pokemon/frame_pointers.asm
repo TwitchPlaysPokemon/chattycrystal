@@ -307,7 +307,7 @@ FramesPointers:
 	dba SnoruntFrames
 	dba SphealFrames
 	dba SealeoFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Walrein
+	dba WalreinFrames
 	dba BagonFrames
 	dba ShelgonFrames
 	dba SalamenceFrames

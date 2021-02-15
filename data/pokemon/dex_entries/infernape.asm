@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "FLAME@" ; species name
+	dw 311, 1213 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It uses unique"
+	next "fighting moves"
+	next "with fire on its"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "hands and feet."
+	next "It will take on"
+	next "any opponent.@"

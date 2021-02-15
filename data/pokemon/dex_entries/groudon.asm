@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "CONTINENT@" ; species name
+	dw 1106, 20944 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It had been asleep"
+	next "in underground"
+	next "magma ever since"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "it fiercely fought"
+	next "Kyogre long ago."
 	next "@"

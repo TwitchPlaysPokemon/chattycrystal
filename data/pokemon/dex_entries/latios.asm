@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "EON@" ; species name
+	dw 607, 1323 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Very intelligent,"
+	next "it understands"
+	next "human speech."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It is a tender"
+	next "#MON that"
+	next "dislikes fighting.@"

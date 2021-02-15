@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SEA WEASEL@" ; species name
+	dw 307, 739 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It is a common"
+	next "sight around"
+	next "fishing ports."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It is known to"
+	next "rescue people and"
+	next "carry off prey.@"

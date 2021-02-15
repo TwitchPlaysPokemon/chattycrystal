@@ -406,6 +406,7 @@ RibombeePokedexEntry::   INCLUDE "data/pokemon/dex_entries/ribombee.asm"
 
 MegastoisePokedexEntry:: INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry
 NoctdrioPokedexEntry::   INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry
+SECTION "New Pokedex Entries 2", ROMX
 TogetapePokedexEntry::   INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry
 JumpaniumPokedexEntry::  INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry
 QuagynxPokedexEntry::    INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry

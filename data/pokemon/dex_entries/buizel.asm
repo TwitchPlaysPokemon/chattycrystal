@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SEA WEASEL@" ; species name
+	dw 204, 650 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It spins its two"
+	next "tails like a screw"
+	next "to propel itself"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "through water. The"
+	next "tails also slice"
+	next "clinging seaweed.@"

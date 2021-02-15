@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BRONZE@" ; species name
+	dw 108, 1334 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "There are"
+	next "researchers who"
+	next "believe this"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "#MON reflected"
+	next "like a mirror in"
+	next "the distant past.@"

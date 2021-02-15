@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "RABBIT@" ; species name
+	dw 104, 121 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Its ears are"
+	next "always rolled up."
+	next "They can be force-"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "fully extended to"
+	next "shatter even a"
+	next "large boulder.@"

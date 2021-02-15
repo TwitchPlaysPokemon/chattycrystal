@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BUD@" ; species name
+	dw 8, 26 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "When it feels the"
+	next "sun's warm touch,"
+	next "it opens its bud"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "to release pollen."
+	next "It lives alongside"
+	next "clear pools.@"

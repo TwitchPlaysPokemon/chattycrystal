@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BRONZEBELL@" ; species name
+	dw 403, 4123 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It brought rains"
+	next "by opening portals"
+	next "to another world."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It was revered as"
+	next "a bringer of great"
+	next "harvests.@"

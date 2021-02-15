@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "IRON LEG@" ; species name
+	dw 503, 12125 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It folds its four"
+	next "legs when flying."
+	next "Its four brains"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "are said to be"
+	next "superior to a"
+	next "supercomputer.@"

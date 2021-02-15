@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BEE FLY@" ; species name
+	dw 4, 4 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It feeds on nectar"
+	next "and pollen of"
+	next "flowers. It's able"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "to sense auras,"
+	next "sensing flowers"
+	next "which will bloom.@"

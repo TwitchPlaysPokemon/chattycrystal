@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "PENGUIN@" ; species name
+	dw 104, 115 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "A poor walker, it"
+	next "often falls down."
+	next "However, its pride"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "makes it puff up"
+	next "its chest without"
+	next "a care.@"

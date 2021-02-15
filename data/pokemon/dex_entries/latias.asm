@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "EON@" ; species name
+	dw 407, 882 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It communicates"
+	next "using telepathy."
+	next "The down covering"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "its body refracts"
+	next "light to make it"
+	next "invisible.@"

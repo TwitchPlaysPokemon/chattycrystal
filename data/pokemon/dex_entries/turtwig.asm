@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "TINY LEAF@" ; species name
+	dw 104, 225 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "The shell on its"
+	next "back is made of"
+	next "soil."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "On a very healthy"
+	next "Turtwig, the shell"
+	next "should feel moist.@"

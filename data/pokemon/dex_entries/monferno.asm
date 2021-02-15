@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "PLAYFUL@" ; species name
+	dw 211, 485 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "A bigger fire and"
+	next "a brighter blue"
+	next "pattern on its"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "face means its"
+	next "rank in its pack"
+	next "is higher.@"

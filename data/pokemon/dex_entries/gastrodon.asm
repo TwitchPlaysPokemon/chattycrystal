@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SEA SLUG@" ; species name
+	dw 211, 659 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Long ago, its back"
+	next "was shielded with"
+	next "a sturdy shell."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "There are traces"
+	next "of it left in its"
+	next "cells.@"

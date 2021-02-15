@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "RABBIT@" ; species name
+	dw 311, 734 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "The ears appears"
+	next "to be delicate."
+	next "If they're touched"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "roughly, it kicks"
+	next "with its graceful"
+	next "legs.@"

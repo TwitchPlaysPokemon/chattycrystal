@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SKUNK@" ; species name
+	dw 303, 838 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It attacks by"
+	next "spraying a vile-"
+	next "smelling fluid"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "from its tail's"
+	next "tip. Attacks from"
+	next "above confound it.@"

@@ -314,37 +314,37 @@ PokedexDataPointerTable:
 	dba BeldumPokedexEntry
 	dba MetangPokedexEntry
 	dba MetagrossPokedexEntry
-	dba LatiasPokedexEntry ; PLACEHOLDER - Latias
-	dba LatiosPokedexEntry ; PLACEHOLDER - Latios
-	dba GroudonPokedexEntry ; PLACEHOLDER - Groudon
-	dba TurtwigPokedexEntry ; PLACEHOLDER - Turtwig
-	dba GrotlePokedexEntry ; PLACEHOLDER - Grotle
-	dba TorterraPokedexEntry ; PLACEHOLDER - Torterra
-	dba ChimcharPokedexEntry ; PLACEHOLDER - Chimchar
-	dba MonfernoPokedexEntry ; PLACEHOLDER - Monferno
-	dba InfernapePokedexEntry ; PLACEHOLDER - Infernape
-	dba PiplupPokedexEntry ; PLACEHOLDER - Piplup
-	dba PrinplupPokedexEntry ; PLACEHOLDER - Prinplup
-	dba EmpoleonPokedexEntry ; PLACEHOLDER - Empoleon
+	dba LatiasPokedexEntry
+	dba LatiosPokedexEntry
+	dba GroudonPokedexEntry
+	dba TurtwigPokedexEntry
+	dba GrotlePokedexEntry
+	dba TorterraPokedexEntry
+	dba ChimcharPokedexEntry
+	dba MonfernoPokedexEntry
+	dba InfernapePokedexEntry
+	dba PiplupPokedexEntry
+	dba PrinplupPokedexEntry
+	dba EmpoleonPokedexEntry
 	dba BidoofPokedexEntry
 	dba BibarelPokedexEntry
 	dba ShinxPokedexEntry
 	dba LuxioPokedexEntry
 	dba LuxrayPokedexEntry
-	dba BudewPokedexEntry ; PLACEHOLDER - Budew
-	dba RoseradePokedexEntry ; PLACEHOLDER - Roserade
+	dba BudewPokedexEntry
+	dba RoseradePokedexEntry
 	dba BurmyPokedexEntry
 	dba MothimPokedexEntry
-	dba BuizelPokedexEntry ; PLACEHOLDER - Buizel
-	dba FloatzelPokedexEntry ; PLACEHOLDER - Floatzel
-	dba ShellosPokedexEntry ; PLACEHOLDER - Shellos
-	dba GastrodonPokedexEntry ; PLACEHOLDER - Gastrodon
-	dba BunearyPokedexEntry ; PLACEHOLDER - Buneary
-	dba LopunnyPokedexEntry ; PLACEHOLDER - Lopunny
-	dba StunkyPokedexEntry ; PLACEHOLDER - Stunky
-	dba SkuntankPokedexEntry ; PLACEHOLDER - Skuntank
-	dba BronzorPokedexEntry ; PLACEHOLDER - Bronzor
-	dba BronzongPokedexEntry ; PLACEHOLDER - Bronzong
+	dba BuizelPokedexEntry
+	dba FloatzelPokedexEntry
+	dba ShellosPokedexEntry
+	dba GastrodonPokedexEntry
+	dba BunearyPokedexEntry
+	dba LopunnyPokedexEntry
+	dba StunkyPokedexEntry
+	dba SkuntankPokedexEntry
+	dba BronzorPokedexEntry
+	dba BronzongPokedexEntry
 	dba BonslyPokedexEntry ; PLACEHOLDER - Bonsly
 	dba ChatotPokedexEntry
 	dba CroagunkPokedexEntry ; PLACEHOLDER - Croagunk
@@ -382,8 +382,8 @@ PokedexDataPointerTable:
 	dba GoodraPokedexEntry ; PLACEHOLDER - Goodra
 	dba CrabrawlerPokedexEntry ; PLACEHOLDER - Crabrawler
 	dba CrabominablePokedexEntry ; PLACEHOLDER - Crabominable
-	dba CutieflyPokedexEntry ; PLACEHOLDER - Cutiefly
-	dba RibombeePokedexEntry ; PLACEHOLDER - Ribombee
+	dba CutieflyPokedexEntry
+	dba RibombeePokedexEntry
 	; Fused Crystal mons used their base mon's entry
 	dba OnixPokedexEntry        ; Onixtret
 	dba ChikoritaPokedexEntry   ; Chiquirtle

@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SKUNK@" ; species name
+	dw 104, 423 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It sprays a nose-"
+	next "curling, stinky"
+	next "fluid from its"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "rear. The stench"
+	next "lingers for 24"
+	next "hours.@"

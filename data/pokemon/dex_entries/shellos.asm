@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "SEA SLUG@" ; species name
+	dw 100, 139 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Beware of pushing"
+	next "strongly on its"
+	next "squishy body, as"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "it makes a"
+	next "mysterious purple"
+	next "fluid ooze out.@"

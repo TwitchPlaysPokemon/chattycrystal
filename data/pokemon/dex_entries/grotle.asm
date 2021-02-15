@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "GROVE@" ; species name
+	dw 307, 2138 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It knows where"
+	next "pure water wells"
+	next "up."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It carries fellow"
+	next "#MON there on"
+	next "its back.@"

@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BOUQUET@" ; species name
+	dw 211, 320 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Each of its hands"
+	next "contains different"
+	next "toxins."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "Both hands can jab"
+	next "with near-fatal"
+	next "power.@"

@@ -108,8 +108,8 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Darkrai
 	dw DummyEvosAttacks ; PLACEHOLDER - Pansage
 	dw DummyEvosAttacks ; PLACEHOLDER - Simisage
-	dw DummyEvosAttacks ; PLACEHOLDER - Drilbur
-	dw DummyEvosAttacks ; PLACEHOLDER - Excadrill
+	dw DrilburEvosAttacks
+	dw ExcadrillEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Sandile
 	dw DummyEvosAttacks ; PLACEHOLDER - Krokorok
 	dw DummyEvosAttacks ; PLACEHOLDER - Krookodile

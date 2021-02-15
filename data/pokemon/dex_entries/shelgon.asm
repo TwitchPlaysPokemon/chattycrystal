@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "ENDURANCE@" ; species name
+	dw 307, 2436 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It surrounds its"
+	next "body in an iron-"
+	next "hard shell to"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "accumulate enough"
+	next "power to evolve."
 	next "@"

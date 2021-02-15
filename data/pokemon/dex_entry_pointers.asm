@@ -305,15 +305,15 @@ PokedexDataPointerTable:
 	dba DusclopsPokedexEntry
 	dba AbsolPokedexEntry
 	dba SnoruntPokedexEntry
-	dba SphealPokedexEntry ; PLACEHOLDER - Spheal
-	dba SealeoPokedexEntry ; PLACEHOLDER - Sealeo
-	dba WalreinPokedexEntry ; PLACEHOLDER - Walrein
-	dba BagonPokedexEntry ; PLACEHOLDER - Bagon
-	dba ShelgonPokedexEntry ; PLACEHOLDER - Shelgon
-	dba SalamencePokedexEntry ; PLACEHOLDER - Salamence
-	dba BeldumPokedexEntry ; PLACEHOLDER - Beldum
-	dba MetangPokedexEntry ; PLACEHOLDER - Metang
-	dba MetagrossPokedexEntry ; PLACEHOLDER - Metagross
+	dba SphealPokedexEntry
+	dba SealeoPokedexEntry
+	dba WalreinPokedexEntry
+	dba BagonPokedexEntry
+	dba ShelgonPokedexEntry
+	dba SalamencePokedexEntry
+	dba BeldumPokedexEntry
+	dba MetangPokedexEntry
+	dba MetagrossPokedexEntry
 	dba LatiasPokedexEntry ; PLACEHOLDER - Latias
 	dba LatiosPokedexEntry ; PLACEHOLDER - Latios
 	dba GroudonPokedexEntry ; PLACEHOLDER - Groudon

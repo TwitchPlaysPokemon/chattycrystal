@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "ROCK HEAD@" ; species name
+	dw 200, 928 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Its steel-hard"
+	next "head can shatter"
+	next "boulders."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It longingly hopes"
+	next "for wings to grow"
+	next "so it can fly.@"

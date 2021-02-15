@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BALL ROLL@" ; species name
+	dw 307, 1931 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It has a very"
+	next "sensitive nose."
+	next "It touches new"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "things with its"
+	next "nose to examine"
+	next "them.@"

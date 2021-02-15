@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "ICE BREAK@" ; species name
+	dw 407, 3320 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It shatters drift"
+	next "ice with its"
+	next "strong tusks."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "Its thick layer of"
+	next "blubber repels"
+	next "enemy attacks.@"

@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "IRON CLAW@" ; species name
+	dw 311, 4464 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It is formed by"
+	next "two Beldum joining"
+	next "together."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "Not even a jet can"
+	next "scratch its body"
+	next "if collided with.@"

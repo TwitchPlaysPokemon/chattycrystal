@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "CLAP@" ; species name
+	dw 207, 871 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It rolls across"
+	next "ice floes to reach"
+	next "shores because its"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "body is poorly"
+	next "shaped for"
+	next "swimming.@"

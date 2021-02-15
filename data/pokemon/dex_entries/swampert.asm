@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "MUD FISH@" ; species name
+	dw 411, 1806 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It can swim while"
+	next "towing a large."
+	next "ship."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "It bashes down"
+	next "foes with a swing"
+	next "of its thick arms.@"

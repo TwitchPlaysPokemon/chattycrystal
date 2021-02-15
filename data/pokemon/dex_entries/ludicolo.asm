@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "CAREFREE@" ; species name
+	dw 411, 1213 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "If it hears upbeat"
+	next "music, it begins"
+	next "moving in rhytm."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "This allows it to"
+	next "amplify its power."
 	next "@"

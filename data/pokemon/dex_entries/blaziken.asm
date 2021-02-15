@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BLAZE@" ; species name
+	dw 603, 1146 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It can clear a 30-"
+	next "story building in"
+	next "a leap."
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
+	page "Its fiery punches"
+	next "scorch its foes."
 	next "@"

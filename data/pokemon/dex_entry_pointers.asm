@@ -253,19 +253,19 @@ PokedexDataPointerTable:
 	dba TreeckoPokedexEntry
 	dba GrovylePokedexEntry
 	dba SceptilePokedexEntry
-	dba TorchicPokedexEntry ; PLACEHOLDER - Torchic
+	dba TorchicPokedexEntry
 	dba CombuskenPokedexEntry
-	dba BlazikenPokedexEntry ; PLACEHOLDER - Blaziken
-	dba MudkipPokedexEntry ; PLACEHOLDER - Mudkip
-	dba MarshtompPokedexEntry ; PLACEHOLDER - Marshtomp
-	dba SwampertPokedexEntry ; PLACEHOLDER - Swampert
+	dba BlazikenPokedexEntry
+	dba MudkipPokedexEntry
+	dba MarshtompPokedexEntry
+	dba SwampertPokedexEntry
 	dba PoochyenaPokedexEntry
 	dba MightyenaPokedexEntry
 	dba ZigzagoonPokedexEntry
 	dba LinoonePokedexEntry
-	dba LotadPokedexEntry ; PLACEHOLDER - Lotad
+	dba LotadPokedexEntry
 	dba LombrePokedexEntry
-	dba LudicoloPokedexEntry ; PLACEHOLDER - Ludicolo
+	dba LudicoloPokedexEntry
 	dba TaillowPokedexEntry
 	dba SwellowPokedexEntry ; PLACEHOLDER - Swellow
 	dba WingullPokedexEntry

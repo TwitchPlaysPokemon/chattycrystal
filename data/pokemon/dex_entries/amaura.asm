@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "TUNDRA@" ; species name
+	dw 403, 556 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "This calm #MON"
+	next "thrived in cold"
+	next "tundras in ancient"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "times. It's said"
+	next "auroras are caused"
+	next "by its whinnies.@"

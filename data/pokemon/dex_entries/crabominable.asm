@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "WOOLLYCRAB@" ; species name
+	dw 507, 3968 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It aimed for the"
+	next "top but got lost"
+	next "and ended up on a"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "snowy mountain."
+	next "It evolved fur to"
+	next "endure the cold.@"

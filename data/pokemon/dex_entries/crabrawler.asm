@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BOXING@" ; species name
+	dw 200, 154 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "While guarding its"
+	next "weak points with"
+	next "its pincers, it"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "looks for openings"
+	next "to unleash punches"
+	next "on its opponents.@"

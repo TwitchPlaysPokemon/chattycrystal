@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "PITCHBLACK@" ; species name
+	dw 411, 1113 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It chases people"
+	next "and #MON from"
+	next "its territory by"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "causing them to"
+	next "experience deep,"
+	next "horrifying dreams.@"

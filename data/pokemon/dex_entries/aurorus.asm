@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "TUNDRA@" ; species name
+	dw 810, 4960 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "The diamond-shaped"
+	next "crystals on its"
+	next "body expel air so"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "cold it can freeze"
+	next "its enemies solid"
+	next "in mere seconds.@"

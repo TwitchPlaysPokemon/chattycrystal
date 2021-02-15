@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "WATER BIRD@" ; species name
+	dw 108, 121 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "These bird #MON"
+	next "are excellent at"
+	next "diving. When they"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "are attacked, they"
+	next "splash wildly and"
+	next "escape underwater.@"

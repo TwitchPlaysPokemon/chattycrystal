@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "ELEFISH@" ; species name
+	dw 611, 1775 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "They crawl out of"
+	next "the ocean using"
+	next "their arms. They"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "will attack prey"
+	next "on shore and drag"
+	next "it into the ocean.@"

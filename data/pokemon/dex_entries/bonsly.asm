@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "BONSAI@" ; species name
+	dw 108, 331 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "It prefers an arid"
+	next "atmosphere. It"
+	next "leaks water that"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "looks like tears"
+	next "when adjusting its"
+	next "moisture level.@"

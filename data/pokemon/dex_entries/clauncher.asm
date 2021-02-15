@@ -1,10 +1,10 @@
-	db "TODO@" ; species name
-	dw 0, 0 ; height, weight
+	db "WATER GUN@" ; species name
+	dw 108, 183 ; height, weight
 
-	db   "This message"
-	next "should not appear."
-	next "Tell M4, Reddo,"
+	db   "Through controlled"
+	next "expulsions of gas,"
+	next "it can expel water"
 
-	page "Frosty, Chaos or"
-	next "ax6 if you see it."
-	next "@"
+	page "like pistol shots."
+	next "At close range, it"
+	next "can shatter rock.@"

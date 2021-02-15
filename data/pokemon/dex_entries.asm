@@ -399,9 +399,9 @@ SylveonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/sylveon.asm"
 GoomyPokedexEntry::      INCLUDE "data/pokemon/dex_entries/goomy.asm"
 SliggoPokedexEntry::     INCLUDE "data/pokemon/dex_entries/sliggo.asm"
 GoodraPokedexEntry::     INCLUDE "data/pokemon/dex_entries/goodra.asm"
-CrabrawlerPokedexEntry:: INCLUDE "data/pokemon/dex_entries/crabrawler.asm"
-CrabominablePokedexEntry:: INCLUDE "data/pokemon/dex_entries/crabominable.asm"
 
 SECTION "New Pokedex Entries 2", ROMX
+CrabrawlerPokedexEntry:: INCLUDE "data/pokemon/dex_entries/crabrawler.asm"
+CrabominablePokedexEntry:: INCLUDE "data/pokemon/dex_entries/crabominable.asm"
 CutieflyPokedexEntry::   INCLUDE "data/pokemon/dex_entries/cutiefly.asm"
 RibombeePokedexEntry::   INCLUDE "data/pokemon/dex_entries/ribombee.asm"

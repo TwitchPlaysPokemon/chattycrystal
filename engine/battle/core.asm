@@ -54,9 +54,9 @@ DoBattle:
 	call Call_LoadTempTileMapToTileMap
 	ld a, [wBattleType]
 	cp BATTLETYPE_DEBUG
-	jp z, .tutorial_debug
+	jp z, BattleMenu
 	cp BATTLETYPE_TUTORIAL
-	jp z, .tutorial_debug
+	jp z, BattleMenu
 	xor a
 	ld [wCurPartyMon], a
 .loop2
@@ -111,9 +111,6 @@ DoBattle:
 
 .not_linked_2
 	jp BattleTurn
-
-.tutorial_debug
-	jp BattleMenu
 
 WildFled_EnemyFled_LinkBattleCanceled:
 	call Call_LoadTempTileMapToTileMap
@@ -3659,6 +3656,7 @@ Function_SetEnemyMonAndSendOutAnimation:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wCurPartySpecies], a
 	ld [wCurSpecies], a
+	call SetSeenMon
 	call GetBaseData
 	ld a, OTPARTYMON
 	ld [wMonType], a

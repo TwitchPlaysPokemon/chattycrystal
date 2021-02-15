@@ -32,8 +32,8 @@ EvosAttacksPointers3::
 	dw MakuhitaEvosAttacks
 	dw HariyamaEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Azurill
-	dw DummyEvosAttacks ; PLACEHOLDER - Skitty
-	dw DummyEvosAttacks ; PLACEHOLDER - Delcatty
+	dw SkittyEvosAttacks
+	dw DelcattyEvosAttacks
 	dw SableyeEvosAttacks
 	dw AronEvosAttacks
 	dw LaironEvosAttacks
@@ -351,7 +351,7 @@ LudicoloEvosAttacks:
 	dbw 1, ABSORB
 	dbw 1, ANCIENTPOWER
 	db 0 ; no more level-up moves
-	
+
 TaillowEvosAttacks:
 	dbbw EVOLVE_LEVEL, 22, SWELLOW
 	db 0
@@ -524,7 +524,7 @@ HariyamaEvosAttacks:
 	dbw 51, SEISMIC_TOSS
 	dbw 55, REVERSAL
 	db 0 ; no more level-up moves
-	
+
 AronEvosAttacks:
 	dbbw EVOLVE_LEVEL, 32, LAIRON
 	db 0
@@ -539,7 +539,7 @@ AronEvosAttacks:
 	dbw 39, METAL_SOUND
 	dbw 44, DOUBLE_EDGE
 	db 0 ; no more level-up moves
-	
+
 LaironEvosAttacks:
 	dbbw EVOLVE_LEVEL, 42, LAIRON
 	db 0
@@ -556,7 +556,7 @@ LaironEvosAttacks:
 	dbw 45, METAL_SOUND
 	dbw 53, DOUBLE_EDGE
 	db 0 ; no more level-up moves
-	
+
 AggronEvosAttacks:
 	db 0
 	dbw 1, TACKLE
@@ -572,7 +572,32 @@ AggronEvosAttacks:
 	dbw 50, METAL_SOUND
 	dbw 63, DOUBLE_EDGE
 	db 0 ; no more level-up moves
-	
+
+SkittyEvosAttacks:
+	dbbw EVOLVE_ITEM, MOON_STONE, DELCATTY
+	db 0
+	dbw 1, GROWL
+	dbw 1, TACKLE
+	dbw 3, TAIL_WHIP
+	dbw 7, ATTRACT
+	dbw 13, SING
+	dbw 15, DOUBLESLAP
+	dbw 19, ASSIST
+	dbw 25, CHARM
+	dbw 27, FEINT_ATTACK
+	dbw 31, COVET
+	dbw 37, HEAL_BELL
+	dbw 39, DOUBLE_EDGE
+	db 0 ; no more level-up moves
+
+DelcattyEvosAttacks:
+	db 0
+	dbw 1, GROWL
+	dbw 1, ATTRACT
+	dbw 1, SING
+	dbw 1, DOUBLE_EDGE
+	db 0 ; no more level-up moves
+
 SableyeEvosAttacks:
 	db 0
 	dbw 1, SCRATCH
@@ -623,7 +648,7 @@ ManectricEvosAttacks:
 WailmerEvosAttacks:
 	dbbw EVOLVE_LEVEL, 40, WAILORD
 	db 0
-	dbw 1, SPLASH 
+	dbw 1, SPLASH
 	dbw 1, GROWL
 	dbw 10, WATER_GUN
 	dbw 14, ROLLOUT
@@ -638,7 +663,7 @@ WailmerEvosAttacks:
 
 WailordEvosAttacks:
 	db 0
-	dbw 1, SPLASH 
+	dbw 1, SPLASH
 	dbw 1, GROWL
 	dbw 1, WATER_GUN
 	dbw 1, ROLLOUT
@@ -721,7 +746,7 @@ FlygonEvosAttacks:
 	dbw 35, DRAGONBREATH
 	dbw 41, SCREECH
 	dbw 53, SANDSTORM
-	dbw 65, HYPER_BEAM 
+	dbw 65, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 FeebasEvosAttacks:
@@ -1006,7 +1031,7 @@ CutieflyEvosAttacks:
 	dbw 31, DAZZLINGLEAM
 	dbw 41, QUIVER_DANCE
 	db 0 ; no more level-up  moves
-	
+
 RibombeeEvosAttacks:
 	db 0
 	dbw 1, ABSORB
@@ -1059,7 +1084,7 @@ ChandelureEvosAttacks:
 	dbw 1, CONFUSE_RAY
 	dbw 1, FLAME_WHEEL
 	db 0 ; no more level-up  moves
-	
+
 DucklettEvosAttacks:
 	dbbw EVOLVE_LEVEL, 35, SWANNA
 	db 0

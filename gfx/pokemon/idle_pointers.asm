@@ -380,7 +380,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Goomy
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sliggoo
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Goodra
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Crabrawler
+	dw CrabrawlerAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Crabominable
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Cutiefly
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Ribombee

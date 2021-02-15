@@ -126,6 +126,9 @@ UseRegisteredItem:
 	dw .Overworld
 
 .NoFunction:
+	ld a, [wTPPFeatureLock]
+	cp TPP_FEATURE_LOCK_VALUE
+	ret z
 	call OpenText
 	call CantUseItem
 	call CloseText
@@ -167,6 +170,9 @@ UseRegisteredItem:
 	call RefreshScreen
 
 ._cantuse
+	ld a, [wTPPFeatureLock]
+	cp TPP_FEATURE_LOCK_VALUE
+	ret z
 	call CantUseItem
 	call CloseText
 	and a

@@ -69,7 +69,7 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Latios
 	dw DummyEvosAttacks ; PLACEHOLDER - Groudon
 	dw TurtwigEvosAttacks
-	dw GrotleEvosAttacks 
+	dw GrotleEvosAttacks
 	dw TorterraEvosAttacks
 	dw ChimcharEvosAttacks
 	dw MonfernoEvosAttacks
@@ -1144,13 +1144,14 @@ BurmyEvosAttacks:
 MothimEvosAttacks:
 	db 0
 	dbw 1, TACKLE
-	dbw 1, PROTECT
+	dbw 10, PROTECT
 	dbw 20, HIDDEN_POWER
 	dbw 23, CONFUSION
 	dbw 26, GUST
 	dbw 29, POISONPOWDER
 	dbw 32, PSYBEAM
 	dbw 35, CONVERSION
+	dbw 41, AIR_SLASH
 	dbw 44, PSYCHIC_M
 	db 0 ; no more level-up moves
 
@@ -1328,7 +1329,7 @@ ChimcharEvosAttacks:
 	dbw 39, RECOVER ; Slack Off
 	dbw 41, FLAMETHROWER
 	db 0 ; no more level-up moves
-	
+
 MonfernoEvosAttacks:
 	dbbw EVOLVE_LEVEL, 36, INFERNAPE
 	db 0
@@ -1375,7 +1376,7 @@ BonslyEvosAttacks:
 	dbw 41, SUCKER_PUNCH
 	dbw 46, DOUBLE_EDGE
 	db 0 ; no more level-up moves
-	
+
 ClauncherEvosAttacks:
 	dbbw EVOLVE_LEVEL, 37, CLAWITZER
 	db 0

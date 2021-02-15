@@ -327,7 +327,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Prinplup
 	dw PlaceholderAnimation ; PLACEHOLDER - Empoleon
 	dw BidoofAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Bibarel
+	dw BibarelAnimation
 	dw ShinxAnimation
 	dw LuxioAnimation
 	dw LuxrayAnimation

@@ -184,7 +184,7 @@ ROMX $42
 	"Credits"
 ROMX $43
 	"Title"
-	"New Pokedex Entries"
+	"New Pokedex Entries 1"
 ROMX $44
 	"Mobile Adapter SDK"
 ROMX $45
@@ -266,6 +266,7 @@ ROMX $64
 	"Map Scripts 17"
 ROMX $65
 	"Map Scripts 18"
+	"New Pokedex Entries 2"
 ROMX $66
 	"Map Scripts 19"
 ROMX $67

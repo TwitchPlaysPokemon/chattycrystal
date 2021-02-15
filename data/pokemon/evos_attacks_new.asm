@@ -772,8 +772,8 @@ SnoruntEvosAttacks:
 	dbw 19, HEADBUTT
 	dbw 25, PROTECT
 	dbw 38, CRUNCH
-	dbw 34, ICE_BEAM
-;	dbw 37, HAIL
+	dbw 34, ICE_PUNCH
+	dbw 37, ICE_BEAM
 	dbw 43, BLIZZARD
 	db 0 ; no more level-up moves
 
@@ -871,7 +871,7 @@ BidoofEvosAttacks:
 	dbw 13, ROLLOUT
 	dbw 17, HEADBUTT
 	dbw 21, HYPER_FANG
-;	dbw 25, YAWN
+	dbw 25, SING
 	dbw 29, AMNESIA
 	dbw 33, TAKE_DOWN
 	dbw 37, SUPER_FANG
@@ -888,7 +888,7 @@ BibarelEvosAttacks:
 	dbw 15, WATER_GUN
 	dbw 18, HEADBUTT
 	dbw 23, HYPER_FANG
-;	dbw 28, YAWN
+	dbw 28, SING
 	dbw 33, AMNESIA
 	dbw 38, TAKE_DOWN
 	dbw 43, SUPER_FANG
@@ -955,12 +955,11 @@ BunearyEvosAttacks:
 	dbw 33, AGILITY
 	dbw 36, DIZZY_PUNCH
 	dbw 43, CHARM
-;	dbw 46, BOUNCE
+	dbw 46, DIG
 	db 0 ; no more level-up moves
 
 LopunnyEvosAttacks:
 	db 0
-;	dbw 1, MAGIC_COAT
 	dbw 1, SPLASH
 	dbw 1, POUND
 	dbw 1, DEFENSE_CURL
@@ -973,7 +972,7 @@ LopunnyEvosAttacks:
 	dbw 33, AGILITY
 	dbw 36, DIZZY_PUNCH
 	dbw 43, CHARM
-;	dbw 46, BOUNCE
+	dbw 46, DIG
 	db 0 ; no more level-up moves
 
 BurmyEvosAttacks:
@@ -1031,14 +1030,14 @@ LitwickEvosAttacks:
 	dbw 13, NIGHT_SHADE
 	dbw 16, WILL_O_WISP
 	dbw 20, FLAME_WHEEL
-;	dbw 38, MEMENTO
+	dbw 38, CURSE
 	dbw 49, SHADOW_BALL
 	dbw 55, PAIN_SPLIT
 	dbw 61, OVERHEAT
 	db 0 ; no more level-up  moves
 
 LampentEvosAttacks:
-	dbbw EVOLVE_LEVEL, MOON_STONE, CHANDELURE
+	dbbw EVOLVE_ITEM, MOON_STONE, CHANDELURE
 	db 0
 	dbw 1, EMBER
 	dbw 1, ASTONISH
@@ -1048,7 +1047,7 @@ LampentEvosAttacks:
 	dbw 13, NIGHT_SHADE
 	dbw 16, WILL_O_WISP
 	dbw 20, FLAME_WHEEL
-;	dbw 38, MEMENTO
+	dbw 38, CURSE
 	dbw 53, SHADOW_BALL
 	dbw 61, PAIN_SPLIT
 	dbw 69, OVERHEAT

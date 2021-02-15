@@ -5,11 +5,11 @@ GiveShuckle:
 	xor a
 	ld [wMonType], a
 
-; Level 15 Shuckle.
+; Level 30 Shuckle.
 	ld hl, SHUCKLE
 	call GetPokemonIDFromIndex
 	ld [wCurPartySpecies], a
-	ld a, 15
+	ld a, 30
 	ld [wCurPartyLevel], a
 
 	predef TryAddMonToParty

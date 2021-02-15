@@ -268,7 +268,6 @@ HoOhPokedexEntry::       INCLUDE "data/pokemon/dex_entries/ho_oh.asm"
 CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
 
 SECTION "New Pokedex Entries 1", ROMX
-PlaceholderPokedexEntry::INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; PLACEHOLDER, REMOVE WHEN NOT NEEDED
 TreeckoPokedexEntry::    INCLUDE "data/pokemon/dex_entries/treecko.asm"
 GrovylePokedexEntry::    INCLUDE "data/pokemon/dex_entries/grovyle.asm"
 SceptilePokedexEntry::   INCLUDE "data/pokemon/dex_entries/sceptile.asm"

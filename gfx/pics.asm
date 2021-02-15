@@ -907,7 +907,6 @@ ElectrikeFrontpic:  INCBIN "gfx/pokemon/electrike/front.animated.2bpp.lz"
 BlazikenFrontpic:   INCBIN "gfx/pokemon/blaziken/front.animated.2bpp.lz"
 SealeoFrontpic:     INCBIN "gfx/pokemon/sealeo/front.animated.2bpp.lz"
 WalreinFrontpic:    INCBIN "gfx/pokemon/walrein/front.animated.2bpp.lz"
-LatiasFrontpic:     INCBIN "gfx/pokemon/latias/front.animated.2bpp.lz"
 LatiosFrontpic:     INCBIN "gfx/pokemon/latios/front.animated.2bpp.lz"
 
 SECTION "Pics 29", ROMX
@@ -964,6 +963,7 @@ DarkraiFrontpic:     INCBIN "gfx/pokemon/darkrai/front.animated.2bpp.lz"
 PansageBackpic:      INCBIN "gfx/pokemon/pansage/back.2bpp.lz"
 PansageFrontpic:     INCBIN "gfx/pokemon/pansage/front.animated.2bpp.lz"
 SimisageBackpic:     INCBIN "gfx/pokemon/simisage/back.2bpp.lz"
+LatiasFrontpic:      INCBIN "gfx/pokemon/latias/front.animated.2bpp.lz"
 
 SECTION "Pics 31", ROMX
 

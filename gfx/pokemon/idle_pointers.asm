@@ -314,7 +314,7 @@ AnimationIdlePointers:
 	dw BeldumAnimationIdle
 	dw MetangAnimationIdle
 	dw MetagrossAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Latias
+	dw LatiasAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Latios
 	dw GroudonAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Turtwig

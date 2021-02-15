@@ -31,7 +31,7 @@ EvosAttacksPointers3::
 	dw ExploudEvosAttacks
 	dw MakuhitaEvosAttacks
 	dw HariyamaEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER - Azurill
+	dw AzurillEvosAttacks
 	dw SkittyEvosAttacks
 	dw DelcattyEvosAttacks
 	dw SableyeEvosAttacks
@@ -74,9 +74,9 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Chimchar
 	dw DummyEvosAttacks ; PLACEHOLDER - Monferno
 	dw DummyEvosAttacks ; PLACEHOLDER - Infernape
-	dw DummyEvosAttacks ; PLACEHOLDER - Piplup
-	dw DummyEvosAttacks ; PLACEHOLDER - Prinplup
-	dw DummyEvosAttacks ; PLACEHOLDER - Empoleon
+	dw PiplupEvosAttacks
+	dw PrinplupEvosAttacks
+	dw EmpoleonEvosAttacks
 	dw BidoofEvosAttacks
 	dw BibarelEvosAttacks
 	dw ShinxEvosAttacks
@@ -573,6 +573,17 @@ AggronEvosAttacks:
 	dbw 63, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
+AzurillEvosAttacks:
+	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, MARILL
+	db 0
+	dbw 1, SPLASH
+	dbw 3, CHARM
+	dbw 6, TAIL_WHIP
+	dbw 10, BUBBLE
+	dbw 15, SLAM
+	dbw 21, WATER_GUN
+	db 0 ; no more level-up moves
+
 SkittyEvosAttacks:
 	dbbw EVOLVE_ITEM, MOON_STONE, DELCATTY
 	db 0
@@ -885,6 +896,65 @@ MetagrossEvosAttacks:
 	dbw 55, METEOR_MASH
 	dbw 66, AGILITY
 	dbw 77, HYPER_BEAM
+	db 0 ; no more level-up moves
+
+PiplupEvosAttacks:
+	dbbw EVOLVE_LEVEL, 16, PRINPLUP
+	db 0
+	dbw 1, POUND
+	dbw 4, GROWL
+	dbw 8, BUBBLE
+	dbw 11, RAIN_DANCE
+	dbw 15, PECK
+	dbw 18, BUBBLEBEAM
+	dbw 22, BIDE
+	dbw 25, FURY_ATTACK
+	dbw 29, BRINE
+	dbw 32, WHIRLPOOL
+	dbw 36, MIST
+	dbw 39, DRILL_PECK
+	dbw 43, HYDRO_PUMP
+	db 0 ; no more level-up moves
+
+PrinplupEvosAttacks:
+	dbbw EVOLVE_LEVEL, 36, EMPOLEON
+	db 0
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 4, GROWL
+	dbw 8, BUBBLE
+	dbw 11, RAIN_DANCE
+	dbw 15, PECK
+	dbw 16, METAL_CLAW
+	dbw 19, BUBBLEBEAM
+	dbw 24, BIDE
+	dbw 28, FURY_ATTACK
+	dbw 33, BRINE
+	dbw 37, WHIRLPOOL
+	dbw 42, MIST
+	dbw 46, DRILL_PECK
+	dbw 51, HYDRO_PUMP
+	db 0 ; no more level-up moves
+
+EmpoleonEvosAttacks:
+	db 0
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, BUBBLE
+	dbw 4, GROWL
+	dbw 8, BUBBLE
+	dbw 11, SWORD_SDANCE
+	dbw 15, PECK
+	dbw 16, METAL_CLAW
+	dbw 19, BUBBLEBEAM
+	dbw 24, SWAGGER
+	dbw 28, FURY_ATTACK
+	dbw 33, BRINE
+	dbw 36, SURF
+	dbw 39, WHIRLPOOL
+	dbw 46, MIST
+	dbw 52, DRILL_PECK
+	dbw 59, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 BidoofEvosAttacks:

@@ -203,7 +203,7 @@ JohtoWaterWildMons:
 	map_id OLIVINE_CITY
 	db 6 percent ; encounter rate
 	dbw 33, TENTACOOL
-	dbw 28, TENTACOOL
+	dbw 28, WINGULL
 	dbw 33, TENTACRUEL
 
 	map_id ECRUTEAK_CITY

@@ -304,26 +304,26 @@ JohtoGrassWildMons:
 	; morn
 	dbw 26, RATTATA
 	dbw 26, KOFFING
-	dbw 28, KOFFING
+	dbw 28, LITWICK
 	dbw 27, ZUBAT
 	dbw 24, KOFFING
-	dbw 28, LITWICK
+	dbw 28, KOFFING
 	dbw 28, WEEZING
 	; day
 	dbw 26, RATTATA
 	dbw 26, KOFFING
-	dbw 28, KOFFING
+	dbw 28, LITWICK
 	dbw 27, ZUBAT
 	dbw 24, KOFFING
-	dbw 28, LITWICK
+	dbw 28, KOFFING
 	dbw 28, WEEZING
 	; nite
 	dbw 26, RATTATA
-	dbw 26, KOFFING
+	dbw 26, LITWICK
 	dbw 28, KOFFING
 	dbw 27, ZUBAT
 	dbw 24, KOFFING
-	dbw 28, LITWICK
+	dbw 28, KOFFING
 	dbw 28, WEEZING
 
 	map_id NATIONAL_PARK
@@ -332,9 +332,9 @@ JohtoGrassWildMons:
 	dbw 22, NIDORAN_M
 	dbw 22, NIDORAN_F
 	dbw 24, LEDIAN
-	dbw 23, BUTTERFREE
+	dbw 23, CUTIEFLY
 	dbw 20, BEEDRILL
-	dbw 20, CUTIEFLY
+	dbw 20, BUTTERFREE
 	dbw 20, TURTWIG
 	; day
 	dbw 22, NIDORAN_F
@@ -603,77 +603,77 @@ JohtoGrassWildMons:
 	dbw 43, RATTATA
 	dbw 44, MACHOP
 	dbw 43, RATICATE
-	dbw 44, ZUBAT
-	dbw 44, GOLBAT
 	dbw 44, SABLEYE
+	dbw 44, GOLBAT
+	dbw 44, ZUBAT
 	; day
 	dbw 42, GEODUDE
 	dbw 43, RATTATA
 	dbw 44, MACHOP
 	dbw 43, RATICATE
-	dbw 44, ZUBAT
-	dbw 44, GOLBAT
 	dbw 44, SABLEYE
+	dbw 44, GOLBAT
+	dbw 44, ZUBAT
 	; nite
 	dbw 42, GEODUDE
 	dbw 43, RATTATA
 	dbw 44, RATICATE
-	dbw 43, ZUBAT
+	dbw 43, SABLEYE
 	dbw 44, MARILL
 	dbw 44, GOLBAT
-	dbw 44, SABLEYE
+	dbw 44, ZUBAT
 
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 31, GRAVELER
 	dbw 32, MACHOKE
-	dbw 31, GEODUDE
+	dbw 31, SABLEYE
 	dbw 30, RATICATE
 	dbw 28, MACHOP
-	dbw 30, SABLEYE
+	dbw 30, GEODUDE
 	dbw 30, GOLBAT
 	; day
 	dbw 31, GRAVELER
 	dbw 32, MACHOKE
-	dbw 31, GEODUDE
+	dbw 31, SABLEYE
 	dbw 30, RATICATE
 	dbw 28, MACHOP
-	dbw 30, SABLEYE
+	dbw 30, GEODUDE
 	dbw 30, GOLBAT
 	; nite
 	dbw 31, GRAVELER
-	dbw 31, GEODUDE
+	dbw 31, SABLEYE
 	dbw 30, RATICATE
 	dbw 30, GOLBAT
 	dbw 28, MARILL
-	dbw 32, SABLEYE
+	dbw 32, GEODUDE
 	dbw 32, GOLBAT
 
 	map_id MOUNT_MORTAR_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 44, ZUBAT
-	dbw 46, ZUBAT
 	dbw 46, GOLBAT
-	dbw 45, MACHOP
+	dbw 46, MARILL
 	dbw 45, GEODUDE
+	dbw 45, BAGON
 	dbw 47, BAGON
 	dbw 47, RATICATE
 	; day
 	dbw 44, ZUBAT
-	dbw 46, ZUBAT
 	dbw 46, GOLBAT
-	dbw 45, MACHOP
+	dbw 46, MARILL
 	dbw 45, GEODUDE
+	dbw 45, BAGON
 	dbw 47, BAGON
 	dbw 47, RATICATE
 	; nite
 	dbw 44, ZUBAT
-	dbw 46, ZUBAT
 	dbw 46, GOLBAT
-	dbw 45, MARILL
+	dbw 46, MARILL
 	dbw 45, GEODUDE
+	dbw 45, BAGON
 	dbw 47, BAGON
 	dbw 47, RATICATE
 
@@ -818,7 +818,7 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, KRABBY
+	dbw 48, DRILLBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
@@ -826,14 +826,14 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, KRABBY
+	dbw 48, DRILLBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
 	; nite
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
-	dbw 46, KRABBY
+	dbw 46, DRILLBUR
 	dbw 48, KRABBY
 	dbw 49, GOLBAT
 	dbw 48, GOLBAT
@@ -845,7 +845,7 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, KRABBY
+	dbw 48, DRILLBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
@@ -853,14 +853,14 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, KRABBY
+	dbw 48, DRILLBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
 	; nite
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
-	dbw 46, KRABBY
+	dbw 46, DRILLBUR
 	dbw 48, KRABBY
 	dbw 49, GOLBAT
 	dbw 48, GOLBAT
@@ -872,7 +872,7 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, KRABBY
+	dbw 48, DRILLBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
@@ -880,14 +880,14 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, KRABBY
+	dbw 48, DRILLBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
 	; nite
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
-	dbw 46, KRABBY
+	dbw 46, DRILLBUR
 	dbw 48, KRABBY
 	dbw 49, GOLBAT
 	dbw 48, GOLBAT
@@ -899,7 +899,7 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, KRABBY
+	dbw 48, DRILLBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
@@ -907,14 +907,14 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, KRABBY
+	dbw 48, DRILLBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
 	; nite
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
-	dbw 46, KRABBY
+	dbw 46, DRILLBUR
 	dbw 48, KRABBY
 	dbw 49, GOLBAT
 	dbw 48, GOLBAT
@@ -926,7 +926,7 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, KRABBY
+	dbw 48, DRILLBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
@@ -934,14 +934,14 @@ JohtoGrassWildMons:
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
 	dbw 46, SEEL
-	dbw 48, KRABBY
+	dbw 48, DRILLBUR
 	dbw 49, GOLBAT
 	dbw 48, SEEL
 	dbw 48, SEEL
 	; nite
 	dbw 46, KRABBY
 	dbw 47, ZUBAT
-	dbw 46, KRABBY
+	dbw 46, DRILLBUR
 	dbw 48, KRABBY
 	dbw 49, GOLBAT
 	dbw 48, GOLBAT
@@ -951,78 +951,78 @@ JohtoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 47, KRABBY
-	dbw 48, ZUBAT
+	dbw 48, DRILLBUR
 	dbw 47, SEEL
 	dbw 49, KRABBY
 	dbw 50, GOLBAT
 	dbw 49, SEEL
-	dbw 49, SEEL
+	dbw 49, EXCADRILL
 	; day
 	dbw 47, KRABBY
-	dbw 48, ZUBAT
+	dbw 48, DRILLBUR
 	dbw 47, SEEL
 	dbw 49, KRABBY
 	dbw 50, GOLBAT
 	dbw 49, SEEL
-	dbw 49, SEEL
+	dbw 49, EXCADRILL
 	; nite
 	dbw 47, KRABBY
-	dbw 48, ZUBAT
+	dbw 48, DRILLBUR
 	dbw 47, KRABBY
 	dbw 49, KRABBY
 	dbw 50, GOLBAT
-	dbw 49, GOLBAT
+	dbw 49, EXCADRILL
 	dbw 49, GOLBAT
 
 	map_id WHIRL_ISLAND_B2F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 48, KRABBY
-	dbw 49, ZUBAT
+	dbw 49, DRILLBUR
 	dbw 48, SEEL
 	dbw 50, KRABBY
 	dbw 51, GOLBAT
 	dbw 50, SEEL
-	dbw 50, SEEL
+	dbw 50, EXCADRILL
 	; day
 	dbw 48, KRABBY
-	dbw 49, ZUBAT
+	dbw 49, DRILLBUR
 	dbw 48, SEEL
 	dbw 50, KRABBY
 	dbw 51, GOLBAT
 	dbw 50, SEEL
-	dbw 50, SEEL
+	dbw 50, EXCADRILL
 	; nite
 	dbw 48, KRABBY
-	dbw 49, ZUBAT
+	dbw 49, DRILLBUR
 	dbw 48, KRABBY
 	dbw 50, KRABBY
 	dbw 51, GOLBAT
-	dbw 50, GOLBAT
-	dbw 50, GOLBAT
+	dbw 50, EXCADRILL
+	dbw 50, EXCADRILL
 
 	map_id WHIRL_ISLAND_LUGIA_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 49, KRABBY
+	dbw 49, DRILLBUR
 	dbw 50, ZUBAT
-	dbw 49, SEEL
+	dbw 49, EXCADRILL
 	dbw 51, KRABBY
 	dbw 52, GOLBAT
 	dbw 51, SEEL
 	dbw 51, SEEL
 	; day
-	dbw 49, KRABBY
+	dbw 49, DRILLBUR
 	dbw 50, ZUBAT
-	dbw 49, SEEL
+	dbw 49, EXCADRILL
 	dbw 51, KRABBY
 	dbw 52, GOLBAT
 	dbw 51, SEEL
 	dbw 51, SEEL
 	; nite
-	dbw 49, KRABBY
+	dbw 49, DRILLBUR
 	dbw 50, ZUBAT
-	dbw 49, KRABBY
+	dbw 49, EXCADRILL
 	dbw 51, KRABBY
 	dbw 52, GOLBAT
 	dbw 51, GOLBAT
@@ -1112,29 +1112,29 @@ JohtoGrassWildMons:
 	map_id SILVER_CAVE_ITEM_ROOMS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 48, GOLBAT
-	dbw 46, GOLBAT
-	dbw 50, GOLBAT
-	dbw 46, PARASECT
-	dbw 48, PARASECT
-	dbw 50, PARASECT
-	dbw 52, PARASECT
+	dbw 48, LILEEP
+	dbw 46, SWABLU
+	dbw 50, AMAURA
+	dbw 46, ALTARIA
+	dbw 48, CRADILY
+	dbw 50, AURORUS
+	dbw 52, ALTARIA
 	; day
-	dbw 48, GOLBAT
-	dbw 46, GOLBAT
-	dbw 50, GOLBAT
-	dbw 46, PARASECT
-	dbw 48, PARASECT
-	dbw 50, PARASECT
-	dbw 52, PARASECT
+	dbw 48, LILEEP
+	dbw 46, SWABLU
+	dbw 50, AMAURA
+	dbw 46, ALTARIA
+	dbw 48, CRADILY
+	dbw 50, AURORUS
+	dbw 52, ALTARIA
 	; nite
-	dbw 45, MISDREAVUS
-	dbw 48, GOLBAT
-	dbw 50, GOLBAT
-	dbw 46, PARASECT
-	dbw 48, PARASECT
-	dbw 50, PARASECT
-	dbw 52, PARASECT
+	dbw 48, LILEEP
+	dbw 46, SWABLU
+	dbw 50, AMAURA
+	dbw 46, ALTARIA
+	dbw 48, CRADILY
+	dbw 50, AURORUS
+	dbw 52, ALTARIA
 
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1411,134 +1411,134 @@ JohtoGrassWildMons:
 	; morn
 	dbw 25, LEDYBA
 	dbw 26, GROWLITHE
-	dbw 27, PIDGEY
-	dbw 28, GROWLITHE
+	dbw 27, ELECTRIKE
+	dbw 28, SKITTY
 	dbw 27, PIDGEOTTO
 	dbw 27, LEDIAN
 	dbw 27, LEDIAN
 	; day
 	dbw 25, PIDGEY
 	dbw 26, GROWLITHE
-	dbw 27, PIDGEY
-	dbw 28, GROWLITHE
+	dbw 27, ELECTRIKE
+	dbw 28, SKITTY
 	dbw 27, PIDGEOTTO
 	dbw 27, PIDGEY
 	dbw 27, MANECTRIC
 	; nite
 	dbw 25, SPINARAK
-	dbw 26, STANTLER
+	dbw 26, ELECTRIKE
 	dbw 27, HOOTHOOT
-	dbw 28, STANTLER
+	dbw 28, MANECTRIC
 	dbw 27, NOCTOWL
+	dbw 27, STANTLER
 	dbw 27, ARIADOS
-	dbw 27, MANECTRIC
 
 	map_id ROUTE_38
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 30, RATTATA
-	dbw 30, RATICATE
 	dbw 30, MAGNEMITE
+	dbw 30, RATICATE
+	dbw 30, STUNKY
 	dbw 30, PIDGEOTTO
 	dbw 27, TAUROS
-	dbw 27, MILTANK
+	dbw 27, BRONZOR
 	dbw 27, MILTANK
 	; day
-	dbw 30, RATTATA
-	dbw 30, RATICATE
 	dbw 30, MAGNEMITE
+	dbw 30, RATICATE
+	dbw 30, STUNKY
 	dbw 30, PIDGEOTTO
 	dbw 27, TAUROS
-	dbw 27, MILTANK
+	dbw 27, BRONZOR
 	dbw 27, MILTANK
 	; nite
 	dbw 30, MEOWTH
-	dbw 30, RATICATE
+	dbw 30, STUNKY
 	dbw 30, MAGNEMITE
 	dbw 30, NOCTOWL
-	dbw 30, MEOWTH
-	dbw 30, MEOWTH
-	dbw 30, MEOWTH
+	dbw 30, SKUNTANK
+	dbw 30, SKUNTANK
+	dbw 30, BRONZONG
 
 	map_id ROUTE_39
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 31, RATTATA
-	dbw 31, RATICATE
 	dbw 31, MAGNEMITE
+	dbw 31, RATICATE
+	dbw 31, STUNKY
 	dbw 31, PIDGEOTTO
 	dbw 30, MILTANK
-	dbw 30, TAUROS
+	dbw 30, BRONZOR
 	dbw 30, TAUROS
 	; day
-	dbw 31, RATTATA
-	dbw 31, RATICATE
 	dbw 31, MAGNEMITE
+	dbw 31, RATICATE
+	dbw 31, STUNKY
 	dbw 31, PIDGEOTTO
 	dbw 30, MILTANK
-	dbw 30, TAUROS
+	dbw 30, BRONZOR
 	dbw 30, TAUROS
 	; nite
 	dbw 31, MEOWTH
-	dbw 31, RATICATE
+	dbw 31, STUNKY
 	dbw 31, MAGNEMITE
 	dbw 31, NOCTOWL
-	dbw 33, MEOWTH
-	dbw 33, MEOWTH
-	dbw 33, MEOWTH
+	dbw 33, SKUNTANK
+	dbw 33, SKUNTANK
+	dbw 33, BRONZONG
 
 	map_id ROUTE_42
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 42, EKANS
 	dbw 43, SPEAROW
-	dbw 44, RATTATA
-	dbw 45, RATICATE
-	dbw 44, ARBOK
-	dbw 45, FEAROW
-	dbw 45, FEAROW
+	dbw 44, LINOONE
+	dbw 45, ARBOK
+	dbw 44, FEAROW
+	dbw 45, SWELLOW
+	dbw 45, MIGHTYENA
 	; day
 	dbw 42, EKANS
-	dbw 43, SPEAROW
+	dbw 43, LINOONE
 	dbw 44, RATTATA
-	dbw 45, RATICATE
-	dbw 44, ARBOK
-	dbw 45, FEAROW
-	dbw 45, FEAROW
+	dbw 45, ARBOK
+	dbw 44, FEAROW
+	dbw 45, SWELLOW
+	dbw 45, MIGHTYENA
 	; nite
-	dbw 42, RATTATA
-	dbw 43, ZUBAT
-	dbw 44, RATICATE
+	dbw 42, LINOONE
+	dbw 43, TAILLOW
+	dbw 44, MIGHTYENA
 	dbw 45, GOLBAT
 	dbw 44, MARILL
-	dbw 45, GOLBAT
+	dbw 45, SWELLOW
 	dbw 45, GOLBAT
 
 	map_id ROUTE_43
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 43, SENTRET
-	dbw 44, PIDGEOTTO
+	dbw 44, CROAGUNK
 	dbw 44, FARFETCH_D
 	dbw 43, FURRET
 	dbw 45, RATICATE
-	dbw 45, FURRET
+	dbw 45, GIRAFARIG
 	dbw 45, FURRET
 	; day
 	dbw 43, SENTRET
-	dbw 44, PIDGEOTTO
+	dbw 44, CROAGUNK
 	dbw 44, FARFETCH_D
 	dbw 43, FURRET
 	dbw 45, RATICATE
-	dbw 45, FURRET
+	dbw 45, GIRAFARIG
 	dbw 45, FURRET
 	; nite
-	dbw 43, VENONAT
+	dbw 43, CROAGUNK
 	dbw 44, NOCTOWL
-	dbw 44, RATICATE
+	dbw 44, GIRAFARIG
 	dbw 45, VENONAT
 	dbw 45, RATICATE
-	dbw 45, VENOMOTH
+	dbw 45, TOXICROAK
 	dbw 45, VENOMOTH
 
 	map_id ROUTE_44

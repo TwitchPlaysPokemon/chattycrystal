@@ -28,12 +28,12 @@ FishGroups:
 .Shore_Good:
 	dbbw  35 percent,     35, MAGIKARP
 	dbbw  70 percent,     35, FEEBAS
-	dbbw  90 percent + 1, 35, KRABBY
+	dbbw  90 percent + 1, 35, CLAUNCHER
 	dbbw 100 percent,      0, TIME_GROUP
 .Shore_Super:
-	dbbw  40 percent,     40, KRABBY
+	dbbw  40 percent,     40, KINGLER
 	dbbw  70 percent,      1, TIME_GROUP
-	dbbw  90 percent + 1, 40, KINGLER
+	dbbw  90 percent + 1, 40, CLAWITZER
 	dbbw 100 percent,     40, MILOTIC
 
 .Ocean_Old:

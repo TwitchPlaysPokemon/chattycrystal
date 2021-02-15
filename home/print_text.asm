@@ -9,6 +9,11 @@ PrintLetterDelay::
 ; wTextboxFlags[!0] and A or B override text speed with a one-frame delay.
 ; wOptions[4] and wTextboxFlags[!1] disable the delay.
 
+; non-scrolling text?
+	ld a, [wTextboxFlags]
+	bit NO_TEXT_DELAY_F, a
+	ret z
+
 	push de
 	decoord 19, 14
 	call .check_coord
@@ -19,11 +24,6 @@ PrintLetterDelay::
 	ld a, [wOptions]
 	bit NO_TEXT_SCROLL, a
 	ret nz
-
-; non-scrolling text?
-	ld a, [wTextboxFlags]
-	bit NO_TEXT_DELAY_F, a
-	ret z
 
 	push hl
 	push de

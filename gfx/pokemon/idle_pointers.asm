@@ -326,7 +326,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Piplup
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Prinplup
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Empoleon
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bidoof
+	dw BidoofAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bibarel
 	dw ShinxAnimationIdle
 	dw LuxioAnimationIdle

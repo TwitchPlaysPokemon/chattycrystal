@@ -326,7 +326,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Piplup
 	dba PlaceholderFrames ; PLACEHOLDER - Prinplup
 	dba PlaceholderFrames ; PLACEHOLDER - Empoleon
-	dba PlaceholderFrames ; PLACEHOLDER - Bidoof
+	dba BidoofFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Bibarel
 	dba ShinxFrames
 	dba LuxioFrames

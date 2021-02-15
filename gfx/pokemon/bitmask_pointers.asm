@@ -326,7 +326,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Piplup
 	dw PlaceholderBitmasks ; PLACEHOLDER - Prinplup
 	dw PlaceholderBitmasks ; PLACEHOLDER - Empoleon
-	dw PlaceholderBitmasks ; PLACEHOLDER - Bidoof
+	dw BidoofBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Bibarel
 	dw ShinxBitmasks
 	dw LuxioBitmasks

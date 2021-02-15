@@ -13,9 +13,9 @@ OddEggSpecies:
 
 OddEggMoves:
 	dw WATER_GUN, DEFENSE_CURL, IRON_TAIL, NO_MOVE ; Azurill
-	dw POUND, NO_MOVE, NO_MOVE, NO_MOVE ; Turtwig - TODO
-	dw POUND, NO_MOVE, NO_MOVE, NO_MOVE ; Chimchar - TODO
-	dw POUND, BUBBLE, DIZZY_PUNCH, NO_MOVE ; Piplup
+	dw TACKLE, WITHDRAW, ABSORB, DIZZY_PUNCH ; Turtwig
+	dw SCRATCH, LEER, EMBER, DIZZY_PUNCH ; Chimchar
+	dw POUND, GROWL, BUBBLE, DIZZY_PUNCH ; Piplup
 
 OddEggs:
 ; Azurill
@@ -58,7 +58,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	dn 15, 10, 10, 10 ; DVs
-	db 35, 0, 0, 0 ; TODO: PP
+	db 35, 40, 20, 10 ; PP
 	db 21 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level
@@ -85,7 +85,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	dn 15, 10, 10, 10 ; DVs
-	db 35, 0, 0, 0 ; TODO: PP
+	db 35, 30, 25, 10 ; PP
 	db 21 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level
@@ -112,7 +112,7 @@ OddEggs:
 	bigdw 0
 	bigdw 0
 	dn 15, 10, 10, 10 ; DVs
-	db 35, 20, 10, 0 ; PP
+	db 35, 40, 20, 10 ; PP
 	db 21 ; Step cycles to hatch
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 5 ; Level

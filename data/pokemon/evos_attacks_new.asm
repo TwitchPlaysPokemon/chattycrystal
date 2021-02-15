@@ -943,7 +943,7 @@ EmpoleonEvosAttacks:
 	dbw 1, BUBBLE
 	dbw 4, GROWL
 	dbw 8, BUBBLE
-	dbw 11, SWORD_SDANCE
+	dbw 11, SWORDS_DANCE
 	dbw 15, PECK
 	dbw 16, METAL_CLAW
 	dbw 19, BUBBLEBEAM

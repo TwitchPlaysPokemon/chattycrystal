@@ -287,6 +287,8 @@ GardevoirPokedexEntry::  INCLUDE "data/pokemon/dex_entries/gardevoir.asm"
 WhismurPokedexEntry::    INCLUDE "data/pokemon/dex_entries/whismur.asm"
 MakuhitaPokedexEntry::   INCLUDE "data/pokemon/dex_entries/makuhita.asm"
 AronPokedexEntry::       INCLUDE "data/pokemon/dex_entries/aron.asm"
+BidoofPokedexEntry::     INCLUDE "data/pokemon/dex_entries/bidoof.asm"
+BibarelPokedexEntry::    INCLUDE "data/pokemon/dex_entries/bibarel.asm"
 ChatotPokedexEntry::     INCLUDE "data/pokemon/dex_entries/chatot.asm"
 GlaceonPokedexEntry::    INCLUDE "data/pokemon/dex_entries/glaceon.asm"
 MegastoisePokedexEntry:: INCLUDE "data/pokemon/dex_entries/placeholder.asm" ; TODO: add dex entry

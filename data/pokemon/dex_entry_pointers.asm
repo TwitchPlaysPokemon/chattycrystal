@@ -326,8 +326,8 @@ PokedexDataPointerTable:
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Piplup
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Prinplup
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Empoleon
-	dba PlaceholderPokedexEntry ; PLACEHOLDER - Bidoof
-	dba PlaceholderPokedexEntry ; PLACEHOLDER - Bibarel
+	dba BidoofPokedexEntry
+	dba BibarelPokedexEntry
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Shinx
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Luxio
 	dba PlaceholderPokedexEntry ; PLACEHOLDER - Luxray

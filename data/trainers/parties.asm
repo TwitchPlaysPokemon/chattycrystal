@@ -528,10 +528,86 @@ XYSerena2Group:
 	end_list_items
 
 SMUSUMElioGroup:
-	next_list_item ; L_SUN
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+next_list_item ; AHUNIgg
+	db "9'l@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 40
+	dw FEAROW
+	db STAR_PIECE
+	dw FLY, AERIAL_ACE, MIRROR_MOVE, ASSURANCE
+	bigdw $FFFF
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	db "cc5cch8ccc@"
+
+	db 38
+	dw KADABRA
+	db TINYMUSHROOM
+	dw PSYCHO_CUT, PSYCHIC, KINESIS, NO_MOVE
+	bigdw $FFFF
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	db "cccc55gg11@"
+
+	db 38
+	dw RIBOMBEE
+	db STAR_PIECE
+	dw POLLEN_PUFF, PSYCHIC, DRAININGKISS, DAZZLINGLEAM
+	bigdw $FFFF
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	db "Ribombee@"
+
+	db 41
+	dw ARIADOS
+	db NO_ITEM
+	dw SHADOW_SNEAK, SUCKER_PUNCH, AGILITY, NIGHT_SHADE
+	bigdw $0FFF
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	db "Ariados@"
+
+	db 39
+	dw FEAROW
+	db MYSTIC_WATER
+	dw FLY, MIRROR_MOVE, ECHOED_VOICE, AGILITY
+	bigdw $FFFF
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	db "Fearow@"
+
+	db 38
+	dw CRABRAWLER
+	db BURNT_BERRY
+	dw PURSUIT, BUBBLEBEAM, CRABHAMMER, DIZZY_PUNCH
+	bigdw $FFFF
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	bigdw 1
+	db "Uuuc77czzp@"
 	db -1 ; end
 
 	end_list_items
@@ -5849,15 +5925,6 @@ RSEORASBrendanLeaderGroup:
 
 	end_list_items
 
-SMUSUMElio2Group:
-	next_list_item ; RRWQ
-	db "?@", TRAINERTYPE_NORMAL
-
-	db 5
-	dw CHIKORITA
-	db -1 ; end
-
-	end_list_items
 
 NuzlockeGroup:
 	next_list_item ; F481

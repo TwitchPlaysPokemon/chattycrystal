@@ -6121,19 +6121,6 @@ NuzlockeGroup:
 
 	next_list_item ; F483
 	db "F48@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	db 47
-	dw WAILORD
-	db EXP_SHARE
-	dw REST, ROLLOUT, SURF, NO_MOVE; WATER_SPOUT
-	bigdw $FFFF
-	bigdw 240
-	bigdw 117
-	bigdw 49
-	bigdw 81
-	bigdw 107
-	bigdw 63
-	db "Wu''''2@"
-
 	db 49
 	dw FLYGON
 	db AMULET_COIN
@@ -6146,58 +6133,71 @@ NuzlockeGroup:
 	bigdw 90
 	bigdw 96
 	db "Piiiv@"
-
-	db 36
-	dw QWILFISH ; add Sharpedo
-	db FULL_HEAL
-	dw CRUNCH, SCREECH, SLASH, TAUNT
-	bigdw $0FFF
+	
+	db 43
+	dw WAILORD
+	db EXP_SHARE
+	dw REST, ROLLOUT, SURF, NO_MOVE; WATER_SPOUT
+	bigdw $FFFF
+	bigdw 220
 	bigdw 108
-	bigdw 92
-	bigdw 38
-	bigdw 83
-	bigdw 81
 	bigdw 45
-	db "Sharpedo@"
+	bigdw 74
+	bigdw 99
+	bigdw 58
+	db "Wu''''2@"
 
-	db 52
-	dw MANECTRIC
-	db POKE_BALL
-	dw THUNDERBOLT, BITE, THUNDER, HOWL
+	db 33
+	dw SABLEYE
+	db EXP_SHARE
+	dw SHADOW_BALL, FURY_SWIPES, NIGHT_SHADE, NO_MOVE ;KNOCK_OFF
 	bigdw $0FFF
-	bigdw 149
-	bigdw 85
 	bigdw 88
-	bigdw 143
-	bigdw 136
-	bigdw 80
-	db "b syro .9@"
-
-	db 51
+	bigdw 63
+	bigdw 58
+	bigdw 45
+	bigdw 56
+	bigdw 63
+	db "Eeedjjllfn@"
+	
+	db 50
 	dw BLAZIKEN
 	db RAGECANDYBAR
 	dw SLASH, DOUBLE_KICK, BLAZE_KICK, ROCK_TOMB
 	bigdw $FFFF
-	bigdw 158
-	bigdw 133
-	bigdw 85
-	bigdw 105
-	bigdw 143
-	bigdw 100
+	bigdw 156
+	bigdw 130
+	bigdw 84
+	bigdw 104
+	bigdw 141
+	bigdw 99
 	db "Zzzzzz mmg@"
 
-	db 31
-	dw SPHEAL
-	db EXP_SHARE
-	dw BODY_SLAM, AURORA_BEAM, ENCORE, ICE_BALL
+	db 47
+	dw MANECTRIC
+	db POKE_BALL
+	dw THUNDERBOLT, BITE, THUNDER, HOWL
+	bigdw $0FFF
+	bigdw 136
+	bigdw 77
+	bigdw 80
+	bigdw 129
+	bigdw 123
+	bigdw 73
+	db "b syro .9@"
+
+	db 27
+	dw DUSKULL
+	db NO_ITEM
+	dw SHADOW_BALL, ASTONISH, CONFUSE_RAY, PURSUIT
 	bigdw $FFFF
-	bigdw 90
-	bigdw 35
-	bigdw 35
+	bigdw 51
 	bigdw 27
-	bigdw 47
-	bigdw 45
-	db "Zzzzzz mmg@"
+	bigdw 66
+	bigdw 25
+	bigdw 21
+	bigdw 59
+	db "Dddd@"
 
 	db -1 ; end
 	end_list_items

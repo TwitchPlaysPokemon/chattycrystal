@@ -3,8 +3,8 @@
 
 	db   "It dwells in the"
 	next "darkness of caves."
-	next ""
+	next "It uses its sharp"
 
-	page "It uses sharp claws"
-	next "to dig up gems to"
-	next "nourish itself.@"
+	page "claws to dig up"
+	next "gems to nourish"
+	next "itself.@"

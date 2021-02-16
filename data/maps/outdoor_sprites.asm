@@ -257,7 +257,7 @@ MahoganyGroupSprites:
 
 LakeOfRageGroupSprites:
 ; Route43, LakeOfRage
-	db SPRITE_LANCE
+	db SPRITE_CYAN
 	db SPRITE_GRAMPS
 	db SPRITE_SUPER_NERD
 	db SPRITE_COOLTRAINER_F

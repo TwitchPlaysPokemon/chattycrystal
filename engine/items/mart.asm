@@ -769,17 +769,21 @@ SellMenu:
 	dw .try_sell
 	dw .try_sell
 
-.cant_buy
-	ret
-
 .try_sell
 	farcall _CheckTossableItem
 	ld a, [wItemAttributeParamBuffer]
 	and a
 	jr z, .okay_to_sell
+	ld hl, wChattyOverride
+	ld a, [hl]
+	push af
+	ld [hl], 1
 	ld hl, TextMart_CantBuyFromYou
 	call PrintText
+	pop af
+	ld [wChattyOverride], a
 	and a
+.cant_buy
 	ret
 
 .okay_to_sell
@@ -792,9 +796,16 @@ SellMenu:
 	hlcoord 1, 14
 	lb bc, 3, 18
 	call ClearBox
+	ld hl, wChattyOverride
+	ld a, [hl]
+	push af
+	ld [hl], 1
 	ld hl, Text_Mart_ICanPayThisMuch
 	call PrintTextboxText
 	call YesNoBox
+	pop hl
+	ld a, h
+	ld [wChattyOverride], a
 	jr c, .declined
 	ld de, wMoney
 	ld bc, hMoneyTemp

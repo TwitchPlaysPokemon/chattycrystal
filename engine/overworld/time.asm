@@ -42,7 +42,6 @@ CheckReceiveCallTimer:
 
 InitOneDayCountdown:
 	ld a, 1
-
 InitNDaysCountdown:
 	ld [hl], a
 	push hl
@@ -76,7 +75,7 @@ CheckReceiveCallDelay:
 
 RestartDailyResetTimer:
 	ld hl, wDailyResetTimer
-	jp InitOneDayCountdown
+	jr InitOneDayCountdown
 
 CheckDailyResetTimer::
 	ld hl, wDailyResetTimer
@@ -126,8 +125,7 @@ StartBugContestTimer:
 	ld [wBugContestSecsRemaining], a
 	call UpdateTime
 	ld hl, wBugContestStartTime
-	call CopyDayHourMinSecToHL
-	ret
+	jp CopyDayHourMinSecToHL
 
 CheckBugContestTimer::
 	ld hl, wBugContestStartTime
@@ -166,8 +164,7 @@ CheckBugContestTimer::
 InitializeStartDay:
 	call UpdateTime
 	ld hl, wTimerEventStartDay
-	call CopyDayToHL
-	ret
+	jp CopyDayToHL
 
 CheckPokerusTick::
 	ld hl, wTimerEventStartDay
@@ -187,8 +184,7 @@ SetUnusedTwoDayTimer:
 	ld [hl], a
 	call UpdateTime
 	ld hl, wUnusedTwoDayTimerStartDate
-	call CopyDayToHL
-	ret
+	jp CopyDayToHL
 
 RestartLuckyNumberCountdown:
 	call .GetDaysUntilNextFriday
@@ -201,12 +197,9 @@ RestartLuckyNumberCountdown:
 	ld a, FRIDAY
 	sub c
 	jr z, .friday_saturday
-	jr nc, .earlier ; could have done "ret nc"
-
+	ret nc
 .friday_saturday
 	add 7
-
-.earlier
 	ret
 
 _CheckLuckyNumberShowFlag:
@@ -239,8 +232,7 @@ DoMysteryGiftIfDayHasPassed:
 	ld [sMysteryGiftTimer], a
 	ld a, [hl]
 	ld [sMysteryGiftTimer + 1], a
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 UpdateTimeRemaining:
 ; If the amount of time elapsed exceeds the capacity of its

@@ -5458,6 +5458,7 @@ MoveSelectionScreen:
 	jr z, .got_menu_type
 	dec a
 	jr z, .ether_elixir_menu
+	call SetPlayerTurn
 	call CheckUsableMoves
 	ld hl, wBattleMonMoves
 	jr z, .got_menu_type

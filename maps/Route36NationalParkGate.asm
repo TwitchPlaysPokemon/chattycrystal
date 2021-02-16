@@ -41,17 +41,6 @@ Route36NationalParkGate_MapScripts:
 .CheckIfContestAvailable:
 	checkevent EVENT_WARPED_FROM_ROUTE_35_NATIONAL_PARK_GATE
 	iftrue .Return
-	readvar VAR_WEEKDAY
-	ifequal TUESDAY, .SetContestOfficer
-	ifequal THURSDAY, .SetContestOfficer
-	ifequal SATURDAY, .SetContestOfficer
-	checkflag ENGINE_BUG_CONTEST_TIMER
-	iftrue .SetContestOfficer
-	disappear ROUTE36NATIONALPARKGATE_OFFICER1
-	appear ROUTE36NATIONALPARKGATE_OFFICER2
-	return
-
-.SetContestOfficer:
 	appear ROUTE36NATIONALPARKGATE_OFFICER1
 	disappear ROUTE36NATIONALPARKGATE_OFFICER2
 .Return:
@@ -135,89 +124,15 @@ Route36NationalParkGate_MapScripts:
 	end
 
 Route36OfficerScriptContest:
-	faceplayer
-	opentext
-	checkflag ENGINE_DAILY_BUG_CONTEST
-	iftrue Route36Officer_ContestHasConcluded
-	writetext Route35NationalParkGateOfficer1AskToParticipateText
-	yesorno
-	iffalse .DecidedNotToJoinContest
-	readvar VAR_PARTYCOUNT
-	ifgreater 1, .LeaveMonsWithOfficer
-	special ContestDropOffMons
-	clearevent EVENT_LEFT_MONS_WITH_CONTEST_OFFICER
-.ResumeStartingContest:
-	setflag ENGINE_BUG_CONTEST_TIMER
-	special PlayMapMusic
-	writetext Route35NationalParkGateOfficer1GiveParkBallsText
-	buttonsound
-	waitsfx
-	writetext Route35NationalParkGatePlayerReceivedParkBallsText
-	playsound SFX_ITEM
-	waitsfx
-	writetext Route35NationalParkGateOfficer1ExplainsRulesText
-	waitbutton
-	closetext
-	setflag ENGINE_BUG_CONTEST_TIMER
-	special GiveParkBalls
+	scall NationalParkGate_StartContest
+	iffalse .end
 	turnobject PLAYER, LEFT
 	playsound SFX_EXIT_BUILDING
 	special FadeOutPalettes
 	waitsfx
 	special SelectRandomBugContestContestants
 	warpfacing LEFT, NATIONAL_PARK_BUG_CONTEST, 33, 18
-	end
-
-.LeaveMonsWithOfficer:
-	readvar VAR_PARTYCOUNT
-	ifless PARTY_LENGTH, .ContinueLeavingMons
-	readvar VAR_BOXSPACE
-	ifequal 0, .BoxFull
-.ContinueLeavingMons:
-	special CheckFirstMonIsEgg
-	ifequal TRUE, .FirstMonIsEgg
-	writetext Route35NationalParkGateOfficer1AskToUseFirstMonText
-	yesorno
-	iffalse .RefusedToLeaveMons
-	special ContestDropOffMons
-	iftrue .FirstMonIsFainted
-	setevent EVENT_LEFT_MONS_WITH_CONTEST_OFFICER
-	writetext Route35NationalParkGateOfficer1WellHoldYourMonText
-	buttonsound
-	writetext Route35NationalParkGatePlayersMonLeftWithHelperText
-	playsound SFX_GOT_SAFARI_BALLS
-	waitsfx
-	buttonsound
-	sjump .ResumeStartingContest
-
-.DecidedNotToJoinContest:
-	writetext Route35NationalParkGateOfficer1TakePartInFutureText
-	waitbutton
-	closetext
-	end
-
-.RefusedToLeaveMons:
-	writetext Route35NationalParkGateOfficer1ChooseMonAndComeBackText
-	waitbutton
-	closetext
-	end
-
-.FirstMonIsFainted:
-	writetext Route35NationalParkGateOfficer1FirstMonCantBattleText
-	waitbutton
-	closetext
-	end
-
-.BoxFull:
-	writetext Route35NationalParkGateOfficer1MakeRoomText
-	waitbutton
-	closetext
-	end
-
-.FirstMonIsEgg:
-	writetext Route35NationalParkGateOfficer1EggAsFirstMonText
-	waitbutton
-	closetext
+.end
 	end
 
 Route36Officer_ContestHasConcluded:

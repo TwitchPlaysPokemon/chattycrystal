@@ -53,6 +53,18 @@ Route35NationalParkGate_MapScripts:
 	end
 
 Route35OfficerScriptContest:
+	scall NationalParkGate_StartContest
+	iffalse .end
+	scall Route35NationalParkGate_EnterContest
+	playsound SFX_ENTER_DOOR
+	special FadeOutPalettes
+	waitsfx
+	special SelectRandomBugContestContestants
+	warpfacing UP, NATIONAL_PARK_BUG_CONTEST, 10, 47
+.end
+	end
+
+NationalParkGate_StartContest:
 	faceplayer
 	opentext
 	writetext Route35NationalParkGateOfficer1AskToParticipateText
@@ -74,19 +86,14 @@ Route35OfficerScriptContest:
 	waitbutton
 	closetext
 	special GiveParkBalls
-	scall Route35NationalParkGate_EnterContest
-	playsound SFX_ENTER_DOOR
-	special FadeOutPalettes
-	waitsfx
-	special SelectRandomBugContestContestants
-	warpfacing UP, NATIONAL_PARK_BUG_CONTEST, 10, 47
+	setval 1
 	end
 
 .multiple_mons_in_party
 	readvar VAR_PARTYCOUNT
 	ifless PARTY_LENGTH, .party_not_full
 	readvar VAR_BOXSPACE
-	ifequal 0, .no_room_in_box
+	iffalse .no_room_in_box
 .party_not_full
 	special CheckFirstMonIsEgg
 	ifequal TRUE, .first_mon_egg
@@ -120,6 +127,7 @@ Route35OfficerScriptContest:
 	writetext Route35NationalParkGateOfficer1FirstMonCantBattleText
 	waitbutton
 	closetext
+	setval 0
 	end
 
 .no_room_in_box
@@ -132,6 +140,7 @@ Route35OfficerScriptContest:
 	writetext Route35NationalParkGateOfficer1EggAsFirstMonText
 	waitbutton
 	closetext
+	setval 0
 	end
 
 BugCatchingContestExplanationSign:

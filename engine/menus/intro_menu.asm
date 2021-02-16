@@ -312,7 +312,7 @@ InitializeNPCNames:
 InitializeWorld:
 	call ShrinkPlayer
 	farcall SpawnPlayer
-	farcall _InitializeStartDay
+	farcall InitializeStartDay
 	ret
 
 LoadOrRegenerateLuckyIDNumber:

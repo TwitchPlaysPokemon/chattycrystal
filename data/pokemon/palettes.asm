@@ -667,11 +667,11 @@ INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Latios
 INCBIN "gfx/pokemon/groudon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/groudon/shiny.pal"
 INCBIN "gfx/pokemon/turtwig/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Turtwig
+INCLUDE "gfx/pokemon/turtwig/shiny.pal"
 INCBIN "gfx/pokemon/grotle/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Grotle
+INCLUDE "gfx/pokemon/grotle/shiny.pal"
 INCBIN "gfx/pokemon/torterra/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Torterra
+INCLUDE "gfx/pokemon/torterra/shiny.pal"
 INCBIN "gfx/pokemon/chimchar/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Chimchar
 INCBIN "gfx/pokemon/monferno/front.gbcpal", middle_colors

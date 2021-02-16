@@ -81,8 +81,9 @@ INCLUDE "maps/VioletKylesHouse.asm"
 INCLUDE "maps/Route32RuinsOfAlphGate.asm"
 INCLUDE "maps/Route32Pokecenter1F.asm"
 INCLUDE "maps/Route35GoldenrodGate.asm"
-INCLUDE "maps/Route35NationalParkGate.asm"
 INCLUDE "maps/Route36RuinsOfAlphGate.asm"
+; ensure the following two scripts are ALWAYS in the same bank
+INCLUDE "maps/Route35NationalParkGate.asm"
 INCLUDE "maps/Route36NationalParkGate.asm"
 
 

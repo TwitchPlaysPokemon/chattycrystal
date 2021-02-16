@@ -63,7 +63,7 @@ Route36NationalParkGate_MapScripts:
 	readvar VAR_CONTESTMINUTES
 	addval 1
 	getnum STRING_BUFFER_3
-	writetext Route36NationalParkGateOfficer1WantToFinishText
+	writetext Route35NationalParkGateOfficer1WantToFinishText
 	yesorno
 	iffalse .GoBackToContest
 	writetext Route36NationalParkGateOfficer1WaitHereForAnnouncementText
@@ -80,7 +80,7 @@ Route36NationalParkGate_MapScripts:
 	jumpstd bugcontestresults
 
 .GoBackToContest:
-	writetext Route36NationalParkGateOfficer1OkGoFinishText
+	writetext Route35NationalParkGateOfficer1OkGoFinishText
 	waitbutton
 	closetext
 	turnobject PLAYER, LEFT
@@ -135,17 +135,11 @@ Route36NationalParkGate_MapScripts:
 	end
 
 Route36OfficerScriptContest:
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, _ContestNotOn
-	ifequal MONDAY, _ContestNotOn
-	ifequal WEDNESDAY, _ContestNotOn
-	ifequal FRIDAY, _ContestNotOn
 	faceplayer
 	opentext
 	checkflag ENGINE_DAILY_BUG_CONTEST
 	iftrue Route36Officer_ContestHasConcluded
-	scall Route36ParkGate_DayToText
-	writetext Route36NationalParkGateOfficer1AskToParticipateText
+	writetext Route35NationalParkGateOfficer1AskToParticipateText
 	yesorno
 	iffalse .DecidedNotToJoinContest
 	readvar VAR_PARTYCOUNT
@@ -155,13 +149,13 @@ Route36OfficerScriptContest:
 .ResumeStartingContest:
 	setflag ENGINE_BUG_CONTEST_TIMER
 	special PlayMapMusic
-	writetext Route36NationalParkGateOfficer1GiveParkBallsText
+	writetext Route35NationalParkGateOfficer1GiveParkBallsText
 	buttonsound
 	waitsfx
-	writetext Route36NationalParkGatePlayerReceivedParkBallsText
+	writetext Route35NationalParkGatePlayerReceivedParkBallsText
 	playsound SFX_ITEM
 	waitsfx
-	writetext Route36NationalParkGateOfficer1ExplainsRulesText
+	writetext Route35NationalParkGateOfficer1ExplainsRulesText
 	waitbutton
 	closetext
 	setflag ENGINE_BUG_CONTEST_TIMER
@@ -182,46 +176,46 @@ Route36OfficerScriptContest:
 .ContinueLeavingMons:
 	special CheckFirstMonIsEgg
 	ifequal TRUE, .FirstMonIsEgg
-	writetext Route36NationalParkGateOfficer1AskToUseFirstMonText
+	writetext Route35NationalParkGateOfficer1AskToUseFirstMonText
 	yesorno
 	iffalse .RefusedToLeaveMons
 	special ContestDropOffMons
 	iftrue .FirstMonIsFainted
 	setevent EVENT_LEFT_MONS_WITH_CONTEST_OFFICER
-	writetext Route36NationalParkGateOfficer1WellHoldYourMonText
+	writetext Route35NationalParkGateOfficer1WellHoldYourMonText
 	buttonsound
-	writetext Route36NationalParkGatePlayersMonLeftWithHelperText
+	writetext Route35NationalParkGatePlayersMonLeftWithHelperText
 	playsound SFX_GOT_SAFARI_BALLS
 	waitsfx
 	buttonsound
 	sjump .ResumeStartingContest
 
 .DecidedNotToJoinContest:
-	writetext Route36NationalParkGateOfficer1TakePartInFutureText
+	writetext Route35NationalParkGateOfficer1TakePartInFutureText
 	waitbutton
 	closetext
 	end
 
 .RefusedToLeaveMons:
-	writetext Route36NationalParkGateOfficer1ChooseMonAndComeBackText
+	writetext Route35NationalParkGateOfficer1ChooseMonAndComeBackText
 	waitbutton
 	closetext
 	end
 
 .FirstMonIsFainted:
-	writetext Route36NationalParkGateOfficer1FirstMonCantBattleText
+	writetext Route35NationalParkGateOfficer1FirstMonCantBattleText
 	waitbutton
 	closetext
 	end
 
 .BoxFull:
-	writetext Route36NationalParkGateOfficer1MakeRoomText
+	writetext Route35NationalParkGateOfficer1MakeRoomText
 	waitbutton
 	closetext
 	end
 
 .FirstMonIsEgg:
-	writetext Route36NationalParkGateOfficer1EggAsFirstMonText
+	writetext Route35NationalParkGateOfficer1EggAsFirstMonText
 	waitbutton
 	closetext
 	end
@@ -280,23 +274,6 @@ Route36Officer_ContestHasConcluded:
 	writetext Route36NationalParkGateOfficer1WellHoldPrizeText
 	waitbutton
 	closetext
-	end
-
-_ContestNotOn:
-	jumptextfaceplayer Route36NationalParkGateOfficer1SomeMonOnlySeenInParkText
-
-Route36NationalParkGateOfficerScript:
-	faceplayer
-	opentext
-	checkflag ENGINE_DAILY_BUG_CONTEST
-	iftrue Route36Officer_ContestHasConcluded
-	writetext Route36NationalParkGateOfficer1SomeMonOnlySeenInParkText
-	waitbutton
-	closetext
-	end
-
-Route36ParkGate_DayToText:
-	jumpstd daytotext
 	end
 
 BugCatchingContestant1BScript:
@@ -465,163 +442,6 @@ Route36NationalParkGatePlayerWaitWithContestantsMovement:
 	turn_head UP
 	step_end
 
-Route36NationalParkGateOfficer1AskToParticipateText:
-	text "Today's @"
-	text_ram wStringBuffer3
-	text "."
-	line "That means the"
-
-	para "Bug-Catching Con-"
-	line "test is on today."
-
-	para "The rules are sim-"
-	line "ple."
-
-	para "Using one of your"
-	line "#MON, catch a"
-
-	para "bug #MON to be"
-	line "judged."
-
-	para "Would you like to"
-	line "give it a try?"
-	done
-
-Route36NationalParkGateOfficer1GiveParkBallsText:
-	text "Here are the PARK"
-	line "BALLS for the"
-	cont "Contest."
-	done
-
-Route36NationalParkGatePlayerReceivedParkBallsText:
-	text "<PLAYER> received"
-	line "20 PARK BALLS."
-	done
-
-Route36NationalParkGateOfficer1ExplainsRulesText:
-	text "The person who"
-	line "gets the strong-"
-	cont "est bug #MON"
-	cont "is the winner."
-
-	para "You have 20"
-	line "minutes."
-
-	para "If you run out of"
-	line "PARK BALLS, you're"
-	cont "done."
-
-	para "You can keep the"
-	line "last #MON you"
-	cont "catch as your own."
-
-	para "Go out and catch"
-	line "the strongest bug"
-
-	para "#MON you can"
-	line "find!"
-	done
-
-Route36NationalParkGateOfficer1AskToUseFirstMonText:
-	text "Uh-oh…"
-
-	para "You have more than"
-	line "one #MON."
-
-	para "You'll have to use"
-	line "@"
-	text_ram wStringBuffer3
-	text ", the"
-
-	para "first #MON in"
-	line "your party."
-
-	para "Is that OK with"
-	line "you?"
-	done
-
-Route36NationalParkGateOfficer1WellHoldYourMonText:
-	text "Fine, we'll hold"
-	line "your other #MON"
-	cont "while you compete."
-	done
-
-Route36NationalParkGatePlayersMonLeftWithHelperText:
-	text "<PLAYER>'s #MON"
-	line "were left with the"
-	cont "CONTEST HELPER."
-	done
-
-Route36NationalParkGateOfficer1ChooseMonAndComeBackText:
-	text "Please choose the"
-	line "#MON to be used"
-
-	para "in the Contest,"
-	line "then come see me."
-	done
-
-Route36NationalParkGateOfficer1TakePartInFutureText:
-	text "OK. We hope you'll"
-	line "take part in the"
-	cont "future."
-	done
-
-Route36NationalParkGateOfficer1FirstMonCantBattleText:
-	text "Uh-oh…"
-	line "The first #MON"
-
-	para "in your party"
-	line "can't battle."
-
-	para "Please switch it"
-	line "with the #MON"
-
-	para "you want to use,"
-	line "then come see me."
-	done
-
-Route36NationalParkGateOfficer1MakeRoomText:
-	text "Uh-oh…"
-	line "Both your party"
-
-	para "and your PC BOX"
-	line "are full."
-
-	para "You have no room"
-	line "to put the bug"
-	cont "#MON you catch."
-
-	para "Please make room"
-	line "in your party or"
-
-	para "your PC BOX, then"
-	line "come see me."
-	done
-
-Route36NationalParkGateOfficer1EggAsFirstMonText:
-	text "Uh-oh…"
-	line "You have an EGG as"
-
-	para "the first #MON"
-	line "in your party."
-
-	para "Please switch it"
-	line "with the #MON"
-
-	para "you want to use,"
-	line "then come see me."
-	done
-
-Route36NationalParkGateOfficer1WantToFinishText:
-	text "You still have @"
-	text_ram wStringBuffer3
-	text_start
-	line "minute(s) left."
-
-	para "Do you want to"
-	line "finish now?"
-	done
-
 Route36NationalParkGateOfficer1WaitHereForAnnouncementText:
 	text "OK. Please wait"
 	line "here for the"
@@ -630,24 +450,12 @@ Route36NationalParkGateOfficer1WaitHereForAnnouncementText:
 	line "the winners."
 	done
 
-Route36NationalParkGateOfficer1OkGoFinishText:
-	text "OK. Please go back"
-	line "outside and finish"
-	cont "up."
-	done
-
 Route36NationalParkGateOfficer1ContestIsOverText:
 	text "Today's Contest is"
 	line "over. We hope you"
 
 	para "will participate"
 	line "in the future."
-	done
-
-Route36NationalParkGateOfficer1SomeMonOnlySeenInParkText:
-	text "Some #MON can"
-	line "only be seen in"
-	cont "the PARK."
 	done
 
 BugCatchingContestant1BText:
@@ -833,4 +641,4 @@ Route36NationalParkGate_MapEvents:
 	object_event  4,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant8BScript, EVENT_BUG_CATCHING_CONTESTANT_8B
 	object_event  6,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant9BScript, EVENT_BUG_CATCHING_CONTESTANT_9B
 	object_event  6,  6, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, BugCatchingContestant10BScript, EVENT_BUG_CATCHING_CONTESTANT_10B
-	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route36NationalParkGateOfficerScript, EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY
+	object_event  3,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route36OfficerScriptContest, EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY

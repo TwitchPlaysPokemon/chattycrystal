@@ -42,6 +42,7 @@ GetTMHMItemMove:
 	ret
 
 AskTeachTMHM:
+	rst ChattyOff
 	ld hl, wOptions
 	ld a, [hl]
 	push af
@@ -63,6 +64,7 @@ AskTeachTMHM:
 	call PrintText
 	ld hl, Text_ItContained
 	call PrintText
+	rst ChattyOn
 	call YesNoBox
 .NotTMHM:
 	pop bc
@@ -117,6 +119,7 @@ ChooseMonToLearnTMHM_NoRefresh:
 	jr .loopback
 
 TeachTMHM:
+	rst ChattyOff
 	predef CanLearnTMHMMove
 
 	push bc
@@ -144,7 +147,8 @@ TeachTMHM:
 	ld a, b
 	and a
 	jr z, .nope
-
+	
+	rst ChattyOn
 	ld a, [wCurItem]
 	call IsHM
 	ret c
@@ -155,6 +159,7 @@ TeachTMHM:
 	jr .learned_move
 
 .nope
+	rst ChattyOn
 	and a
 	ret
 
@@ -183,6 +188,7 @@ Text_BootedHM:
 	; Booted up an HM.
 	text_far UnknownText_0x1c0384
 	text_end
+	
 
 Text_ItContained:
 	; It contained @ . Teach @ to a #MON?

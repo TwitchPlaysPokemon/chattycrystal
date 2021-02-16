@@ -943,6 +943,7 @@ PoliwagEvosAttacks:
 PoliwhirlEvosAttacks:
 	dbbw EVOLVE_ITEM, WATER_STONE, POLIWRATH
 	dbbw EVOLVE_TRADE, KINGS_ROCK, POLITOED
+	dbbw EVOLVE_ITEM, KINGS_ROCK, POLITOED
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
 	dbw 1, HYPNOSIS
@@ -974,6 +975,7 @@ AbraEvosAttacks:
 
 KadabraEvosAttacks:
 	dbbw EVOLVE_TRADE, -1, ALAKAZAM
+	dbbw EVOLVE_LEVEL, 38, ALAKAZAM
 	db 0 ; no more evolutions
 	dbw 1, TELEPORT
 	dbw 1, KINESIS
@@ -1018,6 +1020,7 @@ MachopEvosAttacks:
 
 MachokeEvosAttacks:
 	dbbw EVOLVE_TRADE, -1, MACHAMP
+	dbbw EVOLVE_LEVEL, 38, MACHAMP
 	db 0 ; no more evolutions
 	dbw 1, LOW_KICK
 	dbw 1, LEER
@@ -1132,6 +1135,7 @@ GeodudeEvosAttacks:
 
 GravelerEvosAttacks:
 	dbbw EVOLVE_TRADE, -1, GOLEM
+	dbbw EVOLVE_LEVEL, 38, GRAVELER
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, DEFENSE_CURL
@@ -1196,6 +1200,7 @@ RapidashEvosAttacks:
 SlowpokeEvosAttacks:
 	dbbw EVOLVE_LEVEL, 37, SLOWBRO
 	dbbw EVOLVE_TRADE, KINGS_ROCK, SLOWKING
+	dbbw EVOLVE_ITEM, KINGS_ROCK, SLOWKING
 	db 0 ; no more evolutions
 	dbw 1, CURSE
 	dbw 1, TACKLE
@@ -1385,6 +1390,7 @@ GastlyEvosAttacks:
 
 HaunterEvosAttacks:
 	dbbw EVOLVE_TRADE, -1, GENGAR
+	dbbw EVOLVE_LEVEL, 38, GENGAR
 	db 0 ; no more evolutions
 	dbw 1, HYPNOSIS
 	dbw 1, LICK
@@ -1414,6 +1420,7 @@ GengarEvosAttacks:
 
 OnixEvosAttacks:
 	dbbw EVOLVE_TRADE, METAL_COAT, STEELIX
+	dbbw EVOLVE_ITEM, METAL_COAT, STEELIX
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, SCREECH
@@ -1724,6 +1731,7 @@ HorseaEvosAttacks:
 
 SeadraEvosAttacks:
 	dbbw EVOLVE_TRADE, DRAGON_SCALE, KINGDRA
+	dbbw EVOLVE_ITEM, DRAGON_SCALE, KINGDRA
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
 	dbw 1, SMOKESCREEN
@@ -1806,6 +1814,7 @@ MrMimeEvosAttacks:
 
 ScytherEvosAttacks:
 	dbbw EVOLVE_TRADE, METAL_COAT, SCIZOR
+	dbbw EVOLVE_ITEM, METAL_COAT, SCIZOR
 	db 0 ; no more evolutions
 	dbw 1, QUICK_ATTACK
 	dbw 1, LEER
@@ -1993,6 +2002,7 @@ FlareonEvosAttacks:
 
 PorygonEvosAttacks:
 	dbbw EVOLVE_TRADE, UP_GRADE, PORYGON2
+	dbbw EVOLVE_ITEM, UP_GRADE, PORYGON2
 	db 0 ; no more evolutions
 	dbw 1, CONVERSION2
 	dbw 1, TACKLE

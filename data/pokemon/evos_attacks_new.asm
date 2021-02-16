@@ -48,17 +48,17 @@ EvosAttacksPointers3::
 	dw FlygonEvosAttacks
 	dw SwabluEvosAttacks
 	dw AltariaEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER - Lileep
-	dw DummyEvosAttacks ; PLACEHOLDER - Cradily
+	dw LileepEvosAttacks
+	dw CradilyEvosAttacks
 	dw FeebasEvosAttacks
 	dw MiloticEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Duskull
 	dw DummyEvosAttacks ; PLACEHOLDER - Dusclops
 	dw AbsolEvosAttacks
 	dw SnoruntEvosAttacks
-	dw DummyEvosAttacks ; PLACEHOLDER - Spheal
-	dw DummyEvosAttacks ; PLACEHOLDER - Sealeo
-	dw DummyEvosAttacks ; PLACEHOLDER - Walrein
+	dw SphealEvosAttacks
+	dw SealeoEvosAttacks
+	dw WalreinEvosAttacks
 	dw BagonEvosAttacks
 	dw ShelgonEvosAttacks
 	dw SalamenceEvosAttacks
@@ -104,7 +104,7 @@ EvosAttacksPointers3::
 	dw GlaceonEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Porygon Z
 	dw DummyEvosAttacks ; PLACEHOLDER - Dusknoir
-	dw DummyEvosAttacks ; PLACEHOLDER - Froslass
+	dw FroslassEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Darkrai
 	dw DummyEvosAttacks ; PLACEHOLDER - Pansage
 	dw DummyEvosAttacks ; PLACEHOLDER - Simisage
@@ -125,8 +125,8 @@ EvosAttacksPointers3::
 	dw ClawitzerEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Heloptile
 	dw DummyEvosAttacks ; PLACEHOLDER - Heliolisk
-	dw DummyEvosAttacks ; PLACEHOLDER - Amaura
-	dw DummyEvosAttacks ; PLACEHOLDER - Aurorus
+	dw AmauraEvosAttacks
+	dw AurorusEvosAttacks
 	dw SylveonEvosAttacks
 	dw DummyEvosAttacks ; PLACEHOLDER - Goomy
 	dw DummyEvosAttacks ; PLACEHOLDER - Sliggoo
@@ -719,6 +719,41 @@ AltariaEvosAttacks:
 	dbw 54, PERISH_SONG
 	dbw 59, SKY_ATTACK
 	db 0 ; no more level-up moves
+	
+LileepEvosAttacks:	
+	dbbw EVOLVE_LEVEL, 40, CRADILY
+	db 0
+	dbw 1, ASTONISH
+	dbw 1, CONSTRICT
+	dbw 5, ACID
+	dbw 9, LEECH_SEED
+	dbw 13, CONFUSE_RAY
+	dbw 17, ANCIENTPOWER
+	dbw 21, BRINE
+	dbw 26, MEGA_DRAIN
+	dbw 31, AMNESIA
+	dbw 36, MIRROR_COAT
+	dbw 41, GIGA_DRAIN
+	dbw 46, RECOVER
+	dbw 52, ROCK_SLIDE
+	db 0 ; no more level-up moves
+	
+CradilyEvosAttacks:	
+	db 0
+	dbw 1, ASTONISH
+	dbw 1, CONSTRICT
+	dbw 5, ACID
+	dbw 9, LEECH_SEED
+	dbw 13, CONFUSE_RAY
+	dbw 17, ANCIENTPOWER
+	dbw 21, BRINE
+	dbw 26, MEGA_DRAIN
+	dbw 31, AMNESIA
+	dbw 36, MIRROR_COAT
+	dbw 44, GIGA_DRAIN
+	dbw 52, RECOVER
+	dbw 61, ROCK_SLIDE
+	db 0 ; no more level-up moves
 
 TrapinchEvosAttacks:
 	dbbw EVOLVE_LEVEL, 35, VIBRAVA
@@ -811,6 +846,66 @@ SnoruntEvosAttacks:
 	dbw 34, ICE_PUNCH
 	dbw 37, ICE_BEAM
 	dbw 43, BLIZZARD
+	db 0 ; no more level-up moves
+	
+SphealEvosAttacks:	
+	dbbw EVOLVE_LEVEL, 32, SEALEO
+	db 0
+	dbw 1, DEFENSE_CURL
+	dbw 1, POWDER_SNOW
+	dbw 1, GROWL
+	dbw 1, WATER_GUN
+	dbw 5, ROLLOUT
+	dbw 9, ENCORE
+	dbw 13, ICE_BALL
+	dbw 17, BRINE
+	dbw 21, AURORA_BEAM
+	dbw 26, BODY_SLAM
+	dbw 31, REST
+	dbw 31, SNORE
+	dbw 36, SWAGGER
+	dbw 41, BLIZZARD
+	dbw 46, FISSURE
+	db 0 ; no more level-up moves
+	
+SealeoEvosAttacks:	
+	dbbw EVOLVE_LEVEL, 44, WALREIN
+	db 0
+	dbw 1, DEFENSE_CURL
+	dbw 1, POWDER_SNOW
+	dbw 1, GROWL
+	dbw 1, WATER_GUN
+	dbw 5, ROLLOUT
+	dbw 9, ENCORE
+	dbw 13, ICE_BALL
+	dbw 17, BRINE
+	dbw 21, AURORA_BEAM
+	dbw 26, BODY_SLAM
+	dbw 31, REST
+	dbw 31, SNORE
+	dbw 38, SWAGGER
+	dbw 45, BLIZZARD
+	dbw 52, FISSURE
+	db 0 ; no more level-up moves
+	
+WalreinEvosAttacks:	
+	db 0
+	dbw 1, DEFENSE_CURL
+	dbw 1, POWDER_SNOW
+	dbw 1, GROWL
+	dbw 1, WATER_GUN
+	dbw 5, ROLLOUT
+	dbw 9, ENCORE
+	dbw 13, ICE_BALL
+	dbw 17, BRINE
+	dbw 21, AURORA_BEAM
+	dbw 26, BODY_SLAM
+	dbw 31, REST
+	dbw 31, SNORE
+	dbw 38, SWAGGER
+	dbw 45, CRUNCH
+	dbw 49, BLIZZARD
+	dbw 60, FISSURE
 	db 0 ; no more level-up moves
 
 BagonEvosAttacks:
@@ -1411,6 +1506,45 @@ ClawitzerEvosAttacks:
 	dbw 63, DRAGON_PULSE
 	dbw 67, AURA_SPHERE
 	db 0 ; no more level-up moves
+	
+AmauraEvosAttacks:	
+	dbbw EVOLVE_LEVEL, 39, AURORUS
+	db 0
+	dbw 1, GROWL
+	dbw 1, POWDER_SNOW
+	dbw 5, THUNDER_WAVE
+	dbw 10, ROCK_THROW
+	dbw 13, ICY_WIND
+	dbw 15, TAKE_DOWN
+	dbw 18, MIST
+	dbw 20, AURORA_BEAM
+	dbw 26, ANCIENTPOWER
+	dbw 30, ENCORE
+	dbw 34, FREEZE_DRY
+	dbw 38, LIGHT_SCREEN
+	dbw 41, ICE_BEAM
+	dbw 44, HYPER_BEAM
+	dbw 47, BLIZZARD
+	db 0 ; no more level-up moves
+	
+AurorusEvosAttacks:	
+	db 0
+	dbw 1, GROWL
+	dbw 1, POWDER_SNOW
+	dbw 5, THUNDER_WAVE
+	dbw 10, ROCK_THROW
+	dbw 13, ICY_WIND
+	dbw 15, TAKE_DOWN
+	dbw 18, MIST
+	dbw 20, AURORA_BEAM
+	dbw 26, ANCIENTPOWER
+	dbw 30, ENCORE
+	dbw 34, FREEZE_DRY
+	dbw 38, LIGHT_SCREEN
+	dbw 43, ICE_BEAM
+	dbw 46, HYPER_BEAM
+	dbw 50, BLIZZARD
+	db 0 ; no more level-up moves
 
 CroagunkEvosAttacks:
 	dbbw EVOLVE_LEVEL, 37, TOXICROAK
@@ -1497,6 +1631,25 @@ GlaceonEvosAttacks:
 	dbw 33, MIRROR_COAT
 	dbw 41, ICE_BEAM ; Replacement for Last Resort, and because Ice Beam isn't a TM this gen, and fuck the postgame tutor.
 	dbw 45, BLIZZARD
+	db 0 ; no more level-up moves
+	
+FroslassEvosAttacks:	
+	db 0
+	dbw 1, POWDER_SNOW
+	dbw 1, LEER
+	dbw 1, DOUBLE_TEAM
+	dbw 1, ICE_SHARD
+	dbw 5, DOUBLE_TEAM
+	dbw 10, ICE_SHARD
+	dbw 14, ICY_WIND
+	dbw 19, ASTONISH
+	dbw 23, DRAININGKISS
+	dbw 28, WILL_O_WISP
+	dbw 32, CONFUSE_RAY
+	dbw 37, WAKE_UP_SLAP
+	dbw 41, SHADOW_BALL
+	dbw 47, BLIZZARD
+	dbw 54, DESTINY_BOND
 	db 0 ; no more level-up moves
 
 SylveonEvosAttacks:

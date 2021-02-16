@@ -2650,52 +2650,6 @@ TruncateHL_BC:
 	ld b, l
 	ret
 
-CheckDamageStatsCritical:
-; Return carry if boosted stats should be used in damage calculations.
-; Unboosted stats should be used if the attack is a critical hit,
-;  and the stage of the opponent's defense is higher than the user's attack.
-
-	ld a, [wCriticalHit]
-	and a
-	scf
-	ret z
-
-	push hl
-	push bc
-	ldh a, [hBattleTurn]
-	and a
-	jr nz, .enemy
-	ld a, [wPlayerMoveStructType]
-	cp SPECIAL
-; special
-	ld a, [wPlayerSAtkLevel]
-	ld b, a
-	ld a, [wEnemySDefLevel]
-	jr nc, .end
-; physical
-	ld a, [wPlayerAtkLevel]
-	ld b, a
-	ld a, [wEnemyDefLevel]
-	jr .end
-
-.enemy
-	ld a, [wEnemyMoveStructType]
-	cp SPECIAL
-; special
-	ld a, [wEnemySAtkLevel]
-	ld b, a
-	ld a, [wPlayerSDefLevel]
-	jr nc, .end
-; physical
-	ld a, [wEnemyAtkLevel]
-	ld b, a
-	ld a, [wPlayerDefLevel]
-.end
-	cp b
-	pop bc
-	pop hl
-	ret
-
 ThickClubBoost:
 ; Return in hl the stat value at hl.
 

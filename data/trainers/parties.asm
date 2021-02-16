@@ -5578,9 +5578,47 @@ AzureGroup:
 
 FCLarryGroup:
 	next_list_item ; LARRY_GREEN
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+	db "LARRY@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 50
+	dw VAPOREON
+	db NO_ITEM
+	dw ICE_BEAM, SURF, WATER_GUN, ACID_ARMOR
+	bigdw $0337
+	bigdw 210
+	bigdw 84
+	bigdw 81
+	bigdw 87
+	bigdw 135
+	bigdw 135
+	db "WEEB@"
+
+	db 25
+	dw FLAREON
+	db NO_ITEM
+	dw TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE
+	bigdw $7260
+	bigdw 71
+	bigdw 73
+	bigdw 36
+	bigdw 40
+	bigdw 60
+	bigdw 60
+	db "GG@"
+
+	db 25
+	dw JOLTEON
+	db NO_ITEM
+	dw TACKLE, SAND_ATTACK, THUNDER_WAVE, NO_MOVE
+	bigdw $AF0E
+	bigdw 48
+	bigdw 25
+	bigdw 26
+	bigdw 46
+	bigdw 24
+	bigdw 24
+	db "SUNRA@"
+	
 	db -1 ; end
 
 	end_list_items

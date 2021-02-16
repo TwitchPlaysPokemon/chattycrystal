@@ -148,21 +148,21 @@ JohtoWaterWildMons:
 
 	map_id ROUTE_41
 	db 6 percent ; encounter rate
-	dbw 20, WINGULL
-	dbw 20, DUCKLETT
-	dbw 20, MANTINE
+	dbw 35, WINGULL
+	dbw 35, DUCKLETT
+	dbw 35, MANTINE
 
 	map_id ROUTE_42
 	db 4 percent ; encounter rate
-	dbw 20, GOLDEEN
-	dbw 15, GOLDEEN
-	dbw 20, SEAKING
+	dbw 45, GOLDEEN
+	dbw 40, GOLDEEN
+	dbw 45, SEAKING
 
 	map_id ROUTE_43
 	db 2 percent ; encounter rate
-	dbw 20, MAGIKARP
-	dbw 15, MAGIKARP
-	dbw 10, MAGIKARP
+	dbw 40, MAGIKARP
+	dbw 35, MAGIKARP
+	dbw 30, MAGIKARP
 
 	map_id ROUTE_44
 	db 2 percent ; encounter rate

@@ -167,10 +167,10 @@ TrainerBugCatcherArnie:
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
 .Fight4:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
 .Fight3:
-	checkevent EVENT_BEAT_ELITE_FOUR
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight3
 .Fight2:
 	checkflag ENGINE_FLYPOINT_BLACKTHORN

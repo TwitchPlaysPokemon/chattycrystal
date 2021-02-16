@@ -962,7 +962,7 @@ DayCareMonCompatibilityText:
 	ret z
 	ld hl, .Incompatible
 	and a
-	ret 
+	ret z
 	ld hl, .HighCompatibility
 	cp 230
 	ret nc

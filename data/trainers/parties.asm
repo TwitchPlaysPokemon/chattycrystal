@@ -2524,19 +2524,19 @@ PokemaniacGroup:
 
 	next_list_item ; POKEMANIAC (5)
 	db "BEN@", TRAINERTYPE_NORMAL
-	db 47
+	db 48
 	dw SLOWBRO
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (6)
 	db "BRENT@", TRAINERTYPE_NORMAL
-	db 47
+	db 48
 	dw LICKITUNG
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (7)
 	db "RON@", TRAINERTYPE_NORMAL
-	db 47
+	db 48
 	dw NIDOKING
 	db -1 ; end
 
@@ -2550,14 +2550,14 @@ PokemaniacGroup:
 
 	next_list_item ; POKEMANIAC (9)
 	db "BRENT@", TRAINERTYPE_NORMAL
-	db 25
+	db 53
 	dw KANGASKHAN
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (10)
 	db "BRENT@", TRAINERTYPE_MOVES
-	db 36
-	dw PORYGON
+	db 69
+	dw PORYGON_Z
 	dw RECOVER, PSYCHIC_M, CONVERSION2, TRI_ATTACK
 	db -1 ; end
 
@@ -2584,9 +2584,9 @@ PokemaniacGroup:
 
 	next_list_item ; POKEMANIAC (14)
 	db "BRENT@", TRAINERTYPE_MOVES
-	db 41
-	dw CHANSEY
-	dw ROLLOUT, ATTRACT, EGG_BOMB, SOFTBOILED
+	db 79
+	dw BLISSEY
+	dw ICE_BEAM, PROTECT, TOXIC, SOFTBOILED
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (15)
@@ -3124,13 +3124,13 @@ FisherGroup:
 
 	next_list_item ; FISHER (6)
 	db "MARVIN@", TRAINERTYPE_NORMAL
-	db 40
+	db 41
 	dw GYARADOS
-	db 40
+	db 41
 	dw GYARADOS
-	db 45
+	db 46
 	dw GYARADOS
-	db 45
+	db 46
 	dw GYARADOS
 	db -1 ; end
 
@@ -4702,16 +4702,16 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (16)
 	db "TIFFANY@", TRAINERTYPE_MOVES
-	db 47
+	db 48
 	dw CLEFAIRY
 	dw MOONLIGHT, SING, DOUBLESLAP, MINIMIZE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (17)
 	db "TIFFANY@", TRAINERTYPE_MOVES
-	db 37
+	db 53
 	dw CLEFAIRY
-	dw MOONLIGHT, DOUBLESLAP, MINIMIZE, METRONOME
+	dw MOONLIGHT, SING, DOUBLESLAP, MINIMIZE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (18)
@@ -4730,9 +4730,9 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (20)
 	db "TIFFANY@", TRAINERTYPE_MOVES
-	db 20
+	db 70
 	dw CLEFAIRY
-	dw ENCORE, SING, DOUBLESLAP, MINIMIZE
+	dw MOONLIGHT, SING, DOUBLESLAP, MINIMIZE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (21)
@@ -4796,9 +4796,9 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (26)
 	db "TIFFANY@", TRAINERTYPE_MOVES
-	db 43
+	db 80
 	dw CLEFAIRY
-	dw METRONOME, ENCORE, MOONLIGHT, MINIMIZE
+	dw MOONLIGHT, SING, DOUBLESLAP, MINIMIZE
 	db -1 ; end
 
 	end_list_items
@@ -4960,11 +4960,11 @@ CamperGroup:
 
 	next_list_item ; CAMPER (19)
 	db "SPENCER@", TRAINERTYPE_NORMAL
-	db 44
+	db 45
 	dw SANDSLASH
-	db 44
+	db 45
 	dw SANDSLASH
-	db 46
+	db 47
 	dw CROBAT
 	db -1 ; end
 

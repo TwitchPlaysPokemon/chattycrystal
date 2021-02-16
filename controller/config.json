@@ -1,0 +1,32 @@
+{
+    "game": "chattycrystal",
+    "console": "gbc",
+    "port": 5430, // controllers port
+    "bizhawk_port": 5337,
+    "core_port": 5000,
+    "poll_rate_ms": 5000, // this is the total time per poll cycle to the core
+    "autosave_frequency": 30, // in seconds
+
+    // HP power = min(hp_base_power + (((chat speed in lines per second) / "hp_chat_unit") * "hp_power_per_unit"), hp_badge_power_max)
+    "hp_base_power": 10,
+    "hp_chat_unit": 0.5, // in chat lines per second
+    "hp_power_per_unit": 10, // how much power to add per unit
+    "chat_speed_endpoint": "http://localhost:5000/chat_messages_per_second",
+
+    // HP max power for scaling based on badge progression
+    // hp_badge_power_max = hp_badge_base + (min(badges_obtained, hp_badge_cap) * hp_power_per_badge)
+    "hp_badge_base": 30,
+    "hp_badge_cap": 8,
+    "hp_power_per_badge": 15,
+
+    "markov_endpoint": "http://localhost:5000/simulate_chat_message/5",
+    "recent_message_endpoint": "http://localhost:5000/random_recent_message",
+    "top_emotes_endpoint": "http://localhost:5000/trending_emotes/20",
+
+    "recent_inputter_endpoint": "http://localhost:5000/random_recent_inputter/20",
+
+    "cry_volume": 50,
+    "espeak_voice": "en",
+
+    "debug": true
+}

@@ -51,3 +51,7 @@ gfx/pokemon/*/frames.asm
 
 #OS Files
 .DS_Store
+
+#Controller related files
+controller/trainer_name_map
+controller/target

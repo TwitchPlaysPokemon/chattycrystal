@@ -1,0 +1,24 @@
+[package]
+name = "chatty_crystal_controller"
+version = "0.1.0"
+authors = ["Aissurteivos <traviz1232@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+maplit = "1.0.1"
+reqwest = "0.8.8"
+strum = "0.10.0"
+strum_macros = "0.10.0"
+textwrap = "0.13.2"
+byteorder = "1.2.7"
+lazy_static = "1.2.0"
+rand = "0.4"
+serde = { version = "1", features = ["derive"] }
+serde-hjson = "*"
+serde_json = "*"
+toml = "0.5"
+rocket = "0.4.0"
+regex = "1"
+chrono = "0.4.19"
+parking_lot = "0.11"
+bincode = "1.3"

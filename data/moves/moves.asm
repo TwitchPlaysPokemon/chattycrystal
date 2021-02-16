@@ -276,7 +276,7 @@ Moves1:
 	move EFFECT_SUPERPOWER,         120, FIGHTING, 100,  5,   0 ;SUPERPOWER
 	move EFFECT_REVENGE,             60, FIGHTING, 100, 10, 100 ;REVENGE
 	move EFFECT_ENDEAVOR,             1, NORMAL,   100,  5,   0 ;ENDEAVOR
-	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;SNATCH
+	move EFFECT_SNATCH,               0, DARK,     100, 10,   0 ;SNATCH
 	move EFFECT_PLACEHOLDER,         70, NORMAL,   100, 20,   0 ;SECRET_POWER
 	move EFFECT_FLY,                 80, WATER,    100, 10,   0 ;DIVE
 	move EFFECT_MULTI_HIT,           15, FIGHTING, 100, 20,   0 ;ARM_THRUST
@@ -314,7 +314,7 @@ Moves1:
 	move EFFECT_ASSURANCE,           60, DARK,     100, 10,   0 ;ASSURANCE
 	move EFFECT_TRUMP_CARD,           1, NORMAL,   100,  5,   0 ;TRUMP_CARD
 	move EFFECT_SUCKER_PUNCH,        70, DARK,     100,  5,   0 ;SUCKER_PUNCH
-	move EFFECT_AQUA_RING,            0, WATER,      0, 20, 100 ;AQUA_RING
+	move EFFECT_AQUA_RING,            0, WATER,    100, 20, 100 ;AQUA_RING
 	move EFFECT_FLARE_BLITZ,        120, FIRE,     100, 15,  10 ;FLARE_BLITZ
 	move EFFECT_ALWAYS_HIT,          80, FIGHTING, 100, 20,   0 ;AURA_SPHERE
 	move EFFECT_NORMAL_HIT,          70, DARK,     100, 15,   0 ;NIGHT_SLASH

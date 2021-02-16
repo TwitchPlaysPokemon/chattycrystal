@@ -213,6 +213,8 @@ ENDM
 	command taunt                   ; ce
 	command burn                    ; cf
 	command suckerpunch             ; d0
+	command snatch                  ; d1
+	command checksnatch             ; d2
 
 	enum_start $fe
 	command endturn                 ; fe

@@ -1172,7 +1172,9 @@ BattleCommand_Stab:
 	ld d, a
 	ld e, [hl]
 
-	call ChangeTypeForRoost
+	push hl
+	farcall ChangeTypeForRoost
+	pop hl
 
 	ldh a, [hBattleTurn]
 	and a

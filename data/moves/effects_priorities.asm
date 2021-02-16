@@ -1,4 +1,5 @@
 MoveEffectPriorities:
+	db EFFECT_SNATCH,       6
 	db EFFECT_PROTECT,      6
 	db EFFECT_ENDURE,       6
 	db EFFECT_FAKE_OUT,     5

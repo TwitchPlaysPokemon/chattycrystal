@@ -1135,7 +1135,7 @@ GeodudeEvosAttacks:
 
 GravelerEvosAttacks:
 	dbbw EVOLVE_TRADE, -1, GOLEM
-	dbbw EVOLVE_LEVEL, 38, GRAVELER
+	dbbw EVOLVE_LEVEL, 38, GOLEM
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, DEFENSE_CURL

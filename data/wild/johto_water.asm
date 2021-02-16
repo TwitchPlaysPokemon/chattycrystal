@@ -4,230 +4,230 @@ JohtoWaterWildMons:
 
 	map_id RUINS_OF_ALPH_OUTSIDE
 	db 2 percent ; encounter rate
-	dbw 27, WOOPER
-	dbw 32, QUAGSIRE
-	dbw 27, QUAGSIRE
+	dbw 25, WOOPER
+	dbw 30, QUAGSIRE
+	dbw 25, QUAGSIRE
 
 	map_id UNION_CAVE_1F
 	db 2 percent ; encounter rate
-	dbw 27, WOOPER
-	dbw 32, QUAGSIRE
-	dbw 27, QUAGSIRE
+	dbw 25, WOOPER
+	dbw 30, QUAGSIRE
+	dbw 25, QUAGSIRE
 
 	map_id UNION_CAVE_B1F
 	db 2 percent ; encounter rate
-	dbw 27, WOOPER
-	dbw 32, QUAGSIRE
-	dbw 27, QUAGSIRE
+	dbw 25, WOOPER
+	dbw 30, QUAGSIRE
+	dbw 25, QUAGSIRE
 
 	map_id UNION_CAVE_B2F
 	db 4 percent ; encounter rate
-	dbw 27, TENTACOOL
-	dbw 32, QUAGSIRE
-	dbw 32, TENTACRUEL
+	dbw 25, TENTACOOL
+	dbw 30, QUAGSIRE
+	dbw 30, TENTACRUEL
 
 	map_id SLOWPOKE_WELL_B1F
 	db 2 percent ; encounter rate
-	dbw 27, SLOWPOKE
-	dbw 32, SLOWPOKE
-	dbw 22, SLOWPOKE
+	dbw 25, SLOWPOKE
+	dbw 30, SLOWPOKE
+	dbw 20, SLOWPOKE
 
 	map_id SLOWPOKE_WELL_B2F
 	db 2 percent ; encounter rate
-	dbw 30, SLOWPOKE
-	dbw 35, SLOWPOKE
-	dbw 35, SLOWBRO
+	dbw 28, SLOWPOKE
+	dbw 33, SLOWPOKE
+	dbw 33, SLOWBRO
 
 	map_id ILEX_FOREST
 	db 2 percent ; encounter rate
-	dbw 27, PSYDUCK
-	dbw 22, PSYDUCK
-	dbw 27, GOLDUCK
+	dbw 25, PSYDUCK
+	dbw 20, PSYDUCK
+	dbw 25, GOLDUCK
 
 	map_id MOUNT_MORTAR_1F_OUTSIDE
 	db 4 percent ; encounter rate
-	dbw 44, GOLDEEN
-	dbw 46, MARILL
-	dbw 46, SEAKING
+	dbw 42, GOLDEEN
+	dbw 44, MARILL
+	dbw 44, SEAKING
 
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 2 percent ; encounter rate
-	dbw 20, GOLDEEN
-	dbw 25, MARILL
-	dbw 25, SEAKING
+	dbw 18, GOLDEEN
+	dbw 23, MARILL
+	dbw 23, SEAKING
 
 	map_id MOUNT_MORTAR_B1F
 	db 2 percent ; encounter rate
-	dbw 45, GOLDEEN
-	dbw 47, MARILL
-	dbw 47, SEAKING
+	dbw 43, GOLDEEN
+	dbw 45, MARILL
+	dbw 45, SEAKING
 
 	map_id WHIRL_ISLAND_SW
 	db 4 percent ; encounter rate
-	dbw 50, TENTACOOL
-	dbw 45, HORSEA
-	dbw 50, TENTACRUEL
+	dbw 48, TENTACOOL
+	dbw 43, HORSEA
+	dbw 48, TENTACRUEL
 
 	map_id WHIRL_ISLAND_B2F
 	db 4 percent ; encounter rate
-	dbw 45, HORSEA
-	dbw 50, HORSEA
-	dbw 50, TENTACRUEL
+	dbw 43, HORSEA
+	dbw 48, HORSEA
+	dbw 48, TENTACRUEL
 
 	map_id WHIRL_ISLAND_LUGIA_CHAMBER
 	db 4 percent ; encounter rate
-	dbw 50, HORSEA
-	dbw 50, TENTACRUEL
-	dbw 50, SEADRA
+	dbw 48, HORSEA
+	dbw 48, TENTACRUEL
+	dbw 48, SEADRA
 
 	map_id SILVER_CAVE_ROOM_2
 	db 2 percent ; encounter rate
-	dbw 35, SEAKING
-	dbw 35, GOLDUCK
-	dbw 35, GOLDEEN
+	dbw 33, SEAKING
+	dbw 33, GOLDUCK
+	dbw 33, GOLDEEN
 
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 2 percent ; encounter rate
-	dbw 27, MAGIKARP
-	dbw 22, MAGIKARP
-	dbw 17, MAGIKARP
+	dbw 25, MAGIKARP
+	dbw 20, MAGIKARP
+	dbw 15, MAGIKARP
 
 	map_id DARK_CAVE_BLACKTHORN_ENTRANCE
 	db 2 percent ; encounter rate
-	dbw 15, MAGIKARP
-	dbw 10, MAGIKARP
-	dbw 5, MAGIKARP
+	dbw 13, MAGIKARP
+	dbw 8, MAGIKARP
+	dbw 3, MAGIKARP
 
 	map_id DRAGONS_DEN_B1F
 	db 4 percent ; encounter rate
-	dbw 15, MAGIKARP
-	dbw 10, MAGIKARP
-	dbw 10, DRATINI
+	dbw 13, MAGIKARP
+	dbw 8, MAGIKARP
+	dbw 8, DRATINI
 
 	map_id OLIVINE_PORT
 	db 2 percent ; encounter rate
-	dbw 20, TENTACOOL
-	dbw 15, WINGULL
-	dbw 20, DUCKLETT
+	dbw 18, TENTACOOL
+	dbw 13, WINGULL
+	dbw 18, DUCKLETT
 
 	map_id ROUTE_30
 	db 2 percent ; encounter rate
-	dbw 32, POLIWAG
-	dbw 27, POLIWAG
-	dbw 32, POLIWHIRL
+	dbw 30, POLIWAG
+	dbw 25, POLIWAG
+	dbw 30, POLIWHIRL
 
 	map_id ROUTE_31
 	db 2 percent ; encounter rate
-	dbw 32, POLIWAG
-	dbw 27, POLIWAG
-	dbw 32, POLIWHIRL
+	dbw 30, POLIWAG
+	dbw 25, POLIWAG
+	dbw 30, POLIWHIRL
 
 	map_id ROUTE_32
 	db 6 percent ; encounter rate
-	dbw 27, TENTACOOL
-	dbw 32, QUAGSIRE
-	dbw 32, TENTACRUEL
+	dbw 25, TENTACOOL
+	dbw 30, QUAGSIRE
+	dbw 30, TENTACRUEL
 
 	map_id ROUTE_34
 	db 6 percent ; encounter rate
-	dbw 32, TENTACOOL
-	dbw 27, WINGULL
-	dbw 32, TENTACRUEL
+	dbw 30, TENTACOOL
+	dbw 25, WINGULL
+	dbw 30, TENTACRUEL
 
 	map_id ROUTE_35
 	db 4 percent ; encounter rate
-	dbw 32, PSYDUCK
-	dbw 27, PSYDUCK
-	dbw 32, GOLDUCK
+	dbw 30, PSYDUCK
+	dbw 25, PSYDUCK
+	dbw 30, GOLDUCK
 
 	map_id ROUTE_40
 	db 6 percent ; encounter rate
-	dbw 34, TENTACOOL
-	dbw 29, WINGULL
-	dbw 34, DUCKLETT
+	dbw 32, TENTACOOL
+	dbw 27, WINGULL
+	dbw 32, DUCKLETT
 
 	map_id ROUTE_41
 	db 6 percent ; encounter rate
-	dbw 35, WINGULL
-	dbw 35, DUCKLETT
-	dbw 35, MANTINE
+	dbw 33, WINGULL
+	dbw 33, DUCKLETT
+	dbw 33, MANTINE
 
 	map_id ROUTE_42
 	db 4 percent ; encounter rate
-	dbw 45, GOLDEEN
-	dbw 40, GOLDEEN
-	dbw 45, SEAKING
+	dbw 43, GOLDEEN
+	dbw 38, GOLDEEN
+	dbw 43, SEAKING
 
 	map_id ROUTE_43
 	db 2 percent ; encounter rate
-	dbw 40, MAGIKARP
-	dbw 35, MAGIKARP
-	dbw 30, MAGIKARP
+	dbw 38, MAGIKARP
+	dbw 33, MAGIKARP
+	dbw 28, MAGIKARP
 
 	map_id ROUTE_44
 	db 2 percent ; encounter rate
-	dbw 25, POLIWAG
-	dbw 20, POLIWAG
-	dbw 25, POLIWHIRL
+	dbw 23, POLIWAG
+	dbw 18, POLIWAG
+	dbw 23, POLIWHIRL
 
 	map_id ROUTE_45
 	db 2 percent ; encounter rate
-	dbw 20, MAGIKARP
-	dbw 15, MAGIKARP
-	dbw 5, MAGIKARP
+	dbw 18, MAGIKARP
+	dbw 13, MAGIKARP
+	dbw 3, MAGIKARP
 
 	map_id NEW_BARK_TOWN
 	db 6 percent ; encounter rate
-	dbw 32, TENTACOOL
-	dbw 27, TENTACOOL
-	dbw 32, TENTACRUEL
+	dbw 30, TENTACOOL
+	dbw 25, TENTACOOL
+	dbw 30, TENTACRUEL
 
 	map_id CHERRYGROVE_CITY
 	db 6 percent ; encounter rate
-	dbw 32, TENTACOOL
-	dbw 27, TENTACOOL
-	dbw 32, TENTACRUEL
+	dbw 30, TENTACOOL
+	dbw 25, TENTACOOL
+	dbw 30, TENTACRUEL
 
 	map_id VIOLET_CITY
 	db 2 percent ; encounter rate
-	dbw 32, POLIWAG
-	dbw 27, POLIWAG
-	dbw 32, POLIWHIRL
+	dbw 30, POLIWAG
+	dbw 25, POLIWAG
+	dbw 30, POLIWHIRL
 
 	map_id CIANWOOD_CITY
 	db 6 percent ; encounter rate
-	dbw 36, TENTACOOL
-	dbw 31, TENTACOOL
-	dbw 36, TENTACRUEL
+	dbw 34, TENTACOOL
+	dbw 29, TENTACOOL
+	dbw 34, TENTACRUEL
 
 	map_id OLIVINE_CITY
 	db 6 percent ; encounter rate
-	dbw 33, TENTACOOL
-	dbw 28, WINGULL
-	dbw 33, TENTACRUEL
+	dbw 31, TENTACOOL
+	dbw 26, WINGULL
+	dbw 31, TENTACRUEL
 
 	map_id ECRUTEAK_CITY
 	db 2 percent ; encounter rate
-	dbw 32, POLIWAG
-	dbw 27, POLIWAG
-	dbw 32, POLIWHIRL
+	dbw 30, POLIWAG
+	dbw 25, POLIWAG
+	dbw 30, POLIWHIRL
 
 	map_id LAKE_OF_RAGE
 	db 6 percent ; encounter rate
-	dbw 45, MAGIKARP
-	dbw 40, MAGIKARP
-	dbw 45, GYARADOS
+	dbw 43, MAGIKARP
+	dbw 38, MAGIKARP
+	dbw 43, GYARADOS
 
 	map_id BLACKTHORN_CITY
 	db 4 percent ; encounter rate
-	dbw 15, MAGIKARP
-	dbw 10, MAGIKARP
-	dbw 5, MAGIKARP
+	dbw 13, MAGIKARP
+	dbw 8, MAGIKARP
+	dbw 3, MAGIKARP
 
 	map_id SILVER_CAVE_OUTSIDE
 	db 2 percent ; encounter rate
-	dbw 35, POLIWHIRL
-	dbw 40, POLIWHIRL
-	dbw 35, POLIWAG
+	dbw 33, POLIWHIRL
+	dbw 38, POLIWHIRL
+	dbw 33, POLIWAG
 
 	db -1 ; end

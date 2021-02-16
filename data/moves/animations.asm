@@ -283,8 +283,8 @@ BattleAnimations::
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_Counter
 	dw BattleAnim_PainSplit
-	dw BattleAnim_Headbutt ; placeholder
-	dw BattleAnim_Headbutt ; placeholder
+	dw BattleAnim_Headbutt ; PLACEHOLDER
+	dw BattleAnim_Headbutt ; PLACEHOLDER
 	dw BattleAnim_Fly
 	dw BattleAnim_Doubleslap
 	dw BattleAnim_PsychUp      ; 108
@@ -314,12 +314,12 @@ BattleAnimations::
 	dw BattleAnim_ThunderWave  ; 120
 	dw BattleAnim_Bubblebeam
 	dw BattleAnim_Recover
-	dw BattleAnim_Headbutt ; placeholder
+	dw BattleAnim_Headbutt ; PLACEHOLDER
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_Waterfall
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_Pursuit
-	dw BattleAnim_Headbutt     ; 128, placeholder
+	dw BattleAnim_Headbutt     ; 128, PLACEHOLDER
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_Waterfall
 	dw BattleAnim_FlameWheel
@@ -346,7 +346,7 @@ BattleAnimations::
 	dw BattleAnim_ThunderWave  ; 140
 	dw BattleAnim_RazorLeaf
 	dw BattleAnim_IronTail
-	dw BattleAnim_Headbutt ; placeholder
+	dw BattleAnim_Headbutt ; PLACEHOLDER
 	dw BattleAnim_Roar
 	dw BattleAnim_HyperBeam
 	dw BattleAnim_VineWhip

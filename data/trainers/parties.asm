@@ -536,12 +536,12 @@ SMUSUMElioGroup:
 	db STAR_PIECE
 	dw FLY, AERIAL_ACE, MIRROR_MOVE, ASSURANCE
 	bigdw $FFFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 106
+	bigdw 95
+	bigdw 53
+	bigdw 107
+	bigdw 60
+	bigdw 67
 	db "cc5cch8ccc@"
 
 	db 38
@@ -549,12 +549,12 @@ SMUSUMElioGroup:
 	db TINYMUSHROOM
 	dw PSYCHO_CUT, PSYCHIC_M, KINESIS, NO_MOVE
 	bigdw $FFFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 79
+	bigdw 42
+	bigdw 36
+	bigdw 98
+	bigdw 105
+	bigdw 60
 	db "cccc55gg11@"
 
 	db 38
@@ -562,12 +562,12 @@ SMUSUMElioGroup:
 	db STAR_PIECE
 	dw POLLEN_PUFF, PSYCHIC_M, DRAININGKISS, DAZZLINGLEAM
 	bigdw $FFFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 101
+	bigdw 57
+	bigdw 68
+	bigdw 107
+	bigdw 83
+	bigdw 58
 	db "Ribombee@"
 
 	db 41
@@ -575,12 +575,12 @@ SMUSUMElioGroup:
 	db NO_ITEM
 	dw SHADOW_SNEAK, SUCKER_PUNCH, AGILITY, NIGHT_SHADE
 	bigdw $0FFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 117
+	bigdw 86
+	bigdw 72
+	bigdw 52
+	bigdw 62
+	bigdw 85
 	db "Ariados@"
 
 	db 39
@@ -588,12 +588,12 @@ SMUSUMElioGroup:
 	db MYSTIC_WATER
 	dw FLY, MIRROR_MOVE, ECHOED_VOICE, AGILITY
 	bigdw $FFFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 102
+	bigdw 84
+	bigdw 64
+	bigdw 78
+	bigdw 54
+	bigdw 59
 	db "Fearow@"
 
 	db 38
@@ -601,12 +601,12 @@ SMUSUMElioGroup:
 	db BURNT_BERRY
 	dw PURSUIT, BUBBLEBEAM, CRABHAMMER, DIZZY_PUNCH
 	bigdw $FFFF
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
-	bigdw 1
+	bigdw 95
+	bigdw 88
+	bigdw 48
+	bigdw 75
+	bigdw 50
+	bigdw 46
 	db "Uuuc77czzp@"
 	db -1 ; end
 

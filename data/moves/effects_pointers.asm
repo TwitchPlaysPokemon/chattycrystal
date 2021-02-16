@@ -188,4 +188,5 @@ MoveEffectsPointers:
 	dw Taunt
 	dw HighRecoil
 	dw DoBurn
+	dw SuckerPunch
 	dw Placeholder

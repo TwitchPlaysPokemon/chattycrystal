@@ -212,6 +212,7 @@ ENDM
 	command tickle                  ; cd
 	command taunt                   ; ce
 	command burn                    ; cf
+	command suckerpunch             ; d0
 
 	enum_start $fe
 	command endturn                 ; fe

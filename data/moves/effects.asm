@@ -2626,3 +2626,24 @@ Tickle:
 	tickle
 	raisesub
 	endmove
+
+SuckerPunch:
+	checkobedience
+	usedmovetext
+	doturn
+	suckerpunch
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

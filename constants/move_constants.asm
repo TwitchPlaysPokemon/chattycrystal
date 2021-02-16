@@ -302,7 +302,7 @@
 	const CLOSE_COMBAT ; 126
 	const ASSURANCE    ; 127
 	const TRUMP_CARD   ; 128
-	const SUCKER_PUNCH ; 129 (PLACEHOLDER)
+	const SUCKER_PUNCH ; 129
 	const AQUA_RING    ; 12a
 	const FLARE_BLITZ  ; 12b
 	const AURA_SPHERE  ; 12c

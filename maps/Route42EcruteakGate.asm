@@ -50,7 +50,6 @@ ROUTE42EVANMoveLeft:
 	step LEFT
 	step LEFT
 	step LEFT
-	step LEFT
 	step_end
 
 ROUTE42EVANLeave:
@@ -71,7 +70,7 @@ Route42EcruteakGateOfficerText:
 	done
 
 Route42EcruteakGateEvanText:
-	text "<......>"
+	text "<...>"
 	done
 
 Route42EcruteakGate_MapEvents:
@@ -84,8 +83,8 @@ Route42EcruteakGate_MapEvents:
 	warp_event  9,  5, ROUTE_42, 2
 
 	db 2 ; coord events
-	coord_event 2, 4, SCENE_DEFAULT, Route42EvanUp
-	coord_event 2, 5, SCENE_DEFAULT, Route42EvanDown
+	coord_event 2, 4, SCENE_DEFAULT, Route42EvanDown
+	coord_event 2, 5, SCENE_DEFAULT, Route42EvanUp
 
 	db 0 ; bg events
 

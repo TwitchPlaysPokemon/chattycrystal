@@ -383,7 +383,7 @@ FramesPointers:
 	dba CrabrawlerFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Crabominable
 	dba PlaceholderFrames ; PLACEHOLDER - Cutiefly
-	dba PlaceholderFrames ; PLACEHOLDER - Ribombee
+	dba RibombeeFrames
 	; Fused Crystal mons
 	dba PlaceholderFrames ; PLACEHOLDER - Onixtret
 	dba PlaceholderFrames ; PLACEHOLDER - Chiquirtle

@@ -383,7 +383,7 @@ BitmasksPointers:
 	dw CrabrawlerBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Crabominable
 	dw PlaceholderBitmasks ; PLACEHOLDER - Cutiefly
-	dw PlaceholderBitmasks ; PLACEHOLDER - Ribombee
+	dw RibombeeBitmasks
 	; Fused Crystal mons
 	dw PlaceholderBitmasks ; PLACEHOLDER - Onixtret
 	dw PlaceholderBitmasks ; PLACEHOLDER - Chiquirtle

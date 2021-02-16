@@ -383,7 +383,7 @@ AnimationPointers:
 	dw CrabrawlerAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Crabominable
 	dw PlaceholderAnimation ; PLACEHOLDER - Cutiefly
-	dw PlaceholderAnimation ; PLACEHOLDER - Ribombee
+	dw RibombeeAnimation
 	; Fused Crystal mons
 	dw OnixAnimation        ; Onixtret
 	dw ChikoritaAnimation   ; Chiquirtle

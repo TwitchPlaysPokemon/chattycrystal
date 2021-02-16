@@ -383,7 +383,7 @@ AnimationIdlePointers:
 	dw CrabrawlerAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Crabominable
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Cutiefly
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Ribombee
+	dw RibombeeAnimationIdle
 	; Fused Crystal mons
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Onixtret
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chiquirtle

@@ -7461,6 +7461,7 @@ GiveExperiencePoints:
 	push bc
 	predef LearnLevelMoves
 	pop bc
+	rst ChattyOff
 	ld a, b
 	cp c
 	jr nz, .level_loop

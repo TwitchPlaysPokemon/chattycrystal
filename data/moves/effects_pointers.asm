@@ -187,4 +187,5 @@ MoveEffectsPointers:
 	dw FoulPlay
 	dw Taunt
 	dw HighRecoil
+	dw DoBurn
 	dw Placeholder

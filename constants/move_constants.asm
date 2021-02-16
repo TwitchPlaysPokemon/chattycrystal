@@ -258,7 +258,7 @@
 	const WHIRLPOOL    ;  fa
 	const BEAT_UP      ;  fb
 	const FAKE_OUT     ;  fc
-	const WILL_O_WISP  ;  fd (PLACEHOLDER)
+	const WILL_O_WISP  ;  fd
 	const CHARGE       ;  fe
 	const TAUNT        ;  ff
 	const ASSIST       ; 100

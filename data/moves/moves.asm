@@ -269,7 +269,7 @@ Moves1:
 	move EFFECT_WHIRLPOOL,           15, WATER,     70, 15,   0 ;WHIRLPOOL
 	move EFFECT_BEAT_UP,             10, DARK,     100, 10,   0 ;BEAT_UP
 	move EFFECT_FAKE_OUT,            40, NORMAL,   100, 10, 100 ;FAKE_OUT
-	move EFFECT_PLACEHOLDER,         40, NORMAL,   100, 10,   0 ;WILL_O_WISP
+	move EFFECT_BURN,                 0, FIRE,     100, 15,   0 ;WILL_O_WISP
 	move EFFECT_CHARGE,               0, ELECTRIC, 100, 20,   0 ;CHARGE
 	move EFFECT_TAUNT,                0, DARK,     100, 20,   0 ;TAUNT
 	move EFFECT_ASSIST,               0, NORMAL,   100, 20,   0 ;ASSIST

@@ -211,6 +211,7 @@ ENDM
 	command resetmiss               ; cc
 	command tickle                  ; cd
 	command taunt                   ; ce
+	command burn                    ; cf
 
 	enum_start $fe
 	command endturn                 ; fe

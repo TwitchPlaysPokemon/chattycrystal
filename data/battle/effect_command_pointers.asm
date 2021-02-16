@@ -211,3 +211,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_ResetMiss
 	effectfn BattleCommand_Tickle
 	effectfn BattleCommand_Taunt
+	effectfn BattleCommand_Burn

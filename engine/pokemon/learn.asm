@@ -1,4 +1,5 @@
 LearnMove:
+	rst ChattyOff
 	call LoadTileMapToTempTileMap
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames
@@ -105,12 +106,14 @@ LearnMove:
 	ld hl, Text_DidNotLearn ; <MON> did not learn <MOVE>.
 	call PrintText
 	ld b, 0
+	rst ChattyOn
 	ret
 
 .learned
 	ld hl, Text_LearnedMove ; <MON> learned <MOVE>!
 	call PrintText
 	ld b, 1
+	rst ChattyOn
 	ret
 
 ForgetMove:

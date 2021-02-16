@@ -356,7 +356,7 @@ Moves1:
 	move EFFECT_WORK_UP,              0, NORMAL,   100, 30, 100 ;WORK_UP
 	move EFFECT_DOUBLE_HIT,          40, DRAGON,    90, 15,   0 ;DUAL_CHOP
 	move EFFECT_LEECH_HIT,           75, GRASS,    100, 10,   0 ;HORN_LEECH
-	move EFFECT_FLINCH_HIT,          65, BUG,      100, 20,  30 ;STEAMROLLER
+	move EFFECT_STOMP,               65, BUG,      100, 20,  30 ;STEAMROLLER
 	move EFFECT_MULTI_HIT,           25, NORMAL,    85, 10,   0 ;TAIL_SLAP
 	move EFFECT_BURN_HIT,           120, FIRE,      85,  5,  20 ;BLUE_FLARE
 	move EFFECT_FREEZE_DRY,          70, NORMAL,   100, 20,  10 ;FREEZE_DRY

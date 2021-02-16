@@ -33,14 +33,14 @@ TrainerGroups:
 	dba PicnickerGroup
 	dba CamperGroup
 	dba SageGroup
-	dba MediumGroup 
+	dba MediumGroup
 	dba BoarderGroup
 	dba PokefanMGroup
 	dba KimonoGirlGroup
 	dba TwinsGroup
 	dba PokefanFGroup
 	dba RedGroup
-	dba OfficerGroup 
+	dba OfficerGroup
 	dba GruntFGroup
 	dba AzureGroup
 	dba FCLarryGroup
@@ -65,7 +65,7 @@ TrainerGroups:
 	dba RedLarryGroup
 	dba GreenMayGroup
 	dba BrownGroup
-	dba BABAGroup  
+	dba BABAGroup
 	dba URFGroup
 	dba RSEORASBrendanLeaderGroup
 	dba GSCHGSSChrisRivalGroup

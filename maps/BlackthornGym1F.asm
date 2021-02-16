@@ -158,12 +158,12 @@ BlackthornGymClairText_League:
 ClairIntroText:
 	text "…"
 	done
-	
+
 BlackthornGymText_ReceivedTM24:
 	text "<PLAYER> received"
 	line "TM24."
 	done
-	
+
 CooltrainermPaulSeenText:
 	text "Your first battle"
 	line "against dragons?"

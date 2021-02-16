@@ -318,7 +318,7 @@ AnimationPointers:
 	dw LatiosAnimation
 	dw GroudonAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Turtwig
-	dw GrotleAnimation 
+	dw GrotleAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Torterra
 	dw PlaceholderAnimation ; PLACEHOLDER - Chimchar
 	dw PlaceholderAnimation ; PLACEHOLDER - Monferno
@@ -331,7 +331,7 @@ AnimationPointers:
 	dw ShinxAnimation
 	dw LuxioAnimation
 	dw LuxrayAnimation
-	dw BudewAnimation 
+	dw BudewAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Roserade
 	dw PlaceholderAnimation ; PLACEHOLDER - Burmy
 	dw PlaceholderAnimation ; PLACEHOLDER - Mothim

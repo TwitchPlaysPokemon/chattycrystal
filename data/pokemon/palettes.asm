@@ -668,7 +668,7 @@ INCBIN "gfx/pokemon/groudon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/groudon/shiny.pal"
 INCBIN "gfx/pokemon/turtwig/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Turtwig
-INCBIN "gfx/pokemon/grotle/front.gbcpal", middle_colors 
+INCBIN "gfx/pokemon/grotle/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Grotle
 INCBIN "gfx/pokemon/torterra/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Torterra
@@ -729,7 +729,7 @@ INCBIN "gfx/pokemon/bonsly/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Bonsly
 INCBIN "gfx/pokemon/chatot/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/chatot/shiny.pal"
-INCBIN "gfx/pokemon/croagunk/front.gbcpal", middle_colors 
+INCBIN "gfx/pokemon/croagunk/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Croagunk
 INCBIN "gfx/pokemon/toxicroak/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Toxicroak
@@ -823,7 +823,7 @@ INCLUDE "gfx/pokemon/togetape/shiny.pal"
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Hopporita
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Hopporita
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Skipleef
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Skipleef 
+INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Skipleef
 INCBIN "gfx/pokemon/jumpanium/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/jumpanium/shiny.pal"
 INCBIN "gfx/pokemon/placeholder/front.gbcpal", middle_colors ; PLACEHOLDER - Woochum

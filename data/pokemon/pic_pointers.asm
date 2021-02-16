@@ -648,7 +648,7 @@ PokemonPicPointers::
 	dba GroudonBackpic
 	dba TurtwigFrontpic
 	dba TurtwigBackpic
-	dba GrotleFrontpic 
+	dba GrotleFrontpic
 	dba GrotleBackpic
 	dba TorterraFrontpic
 	dba TorterraBackpic

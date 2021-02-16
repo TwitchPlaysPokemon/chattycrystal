@@ -331,7 +331,7 @@ BitmasksPointers:
 	dw ShinxBitmasks
 	dw LuxioBitmasks
 	dw LuxrayBitmasks
-	dw BudewBitmasks 
+	dw BudewBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Roserade
 	dw PlaceholderBitmasks ; PLACEHOLDER - Burmy
 	dw PlaceholderBitmasks ; PLACEHOLDER - Mothim

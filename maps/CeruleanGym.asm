@@ -194,7 +194,7 @@ CeruleanGymGruntBacksAwayMovement:
 	slow_step UP
 	remove_fixed_facing
 	step_end
-	
+
 MistyIntroText:
 MistyWinLossText:
 MistyFightDoneText:

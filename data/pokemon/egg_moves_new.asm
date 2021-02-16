@@ -96,7 +96,7 @@ EggMovePointers3::
 	dw NoEggMoves3         ; Skuntank
 	dw NoEggMoves3         ; PLACEHOLDER - Bronzor
 	dw NoEggMoves3         ; Bronzong
-	dw BonslyEggMoves 
+	dw BonslyEggMoves
 	dw ChatotEggMoves
 	dw NoEggMoves3         ; PLACEHOLDER - Croagunk
 	dw NoEggMoves3         ; Toxicroak

@@ -43,9 +43,7 @@ else
 	ld a, [wScriptActive]
 	and a
 	jr nz, .chatty
-	
 	ld a, c
-	
 	ld [wCurSpecies], a
 	ld a, TRAINER_NAME
 	ld [wNamedObjectTypeBuffer], a

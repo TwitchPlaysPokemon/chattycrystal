@@ -610,7 +610,7 @@ CHRIS EQU __enum__
 	const D_GAUNTLETCRYSTAL
 
 	trainerclass GSC_KRIS ; 2e
-	const EWWYPPP 
+	const EWWYPPP
 
 	trainerclass AC_CHRIS ; 30
 	const EVAN1
@@ -638,7 +638,7 @@ CHRIS EQU __enum__
 
 	trainerclass HGSS_LYRA ; 37
 	const AOOOO
-	
+
 	trainerclass B2W2_NATE ; 38
 	const R_BLACK21
 
@@ -686,19 +686,19 @@ CHRIS EQU __enum__
 	const AJDNNW3
 	const AJDNNW4
 	const AJDNNW5
-	
+
 	trainerclass RED_JOHTO_LEADER ; 45
 	const AIIIAAB1
-	
+
 	trainerclass RED_KANTO_LEADER ; 46
 	const RED_RED
-	
+
 	trainerclass NATE_LEADER ; 47
 	const AAAALK
-	
+
 	trainerclass NATE_ELITE_4 ; 48
 	const R_BLACK22
-	
+
 	trainerclass POKEMON_PROF ;49
 
 KRIS EQU __enum__

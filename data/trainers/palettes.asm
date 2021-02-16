@@ -64,7 +64,7 @@ INCBIN "gfx/trainers/nate.gbcpal", middle_colors ;B2W2_NATE
 INCBIN "gfx/trainers/serena2.gbcpal", middle_colors ;XY_SERENA2
 INCBIN "gfx/trainers/elio.gbcpal", middle_colors ;SMUSUM_ELIO
 INCBIN "gfx/trainers/glazed.gbcpal", middle_colors ;GLAZED
-INCBIN "gfx/trainers/nuzlocke.gbcpal", middle_colors 
+INCBIN "gfx/trainers/nuzlocke.gbcpal", middle_colors
 INCBIN "gfx/trainers/cyan.gbcpal", middle_colors
 INCBIN "gfx/trainers/red-snow.gbcpal", middle_colors
 INCBIN "gfx/trainers/greenmay.gbcpal", middle_colors

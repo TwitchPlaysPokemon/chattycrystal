@@ -525,7 +525,7 @@ InitRoamMons:
 	ld hl, RAIKOU
 	call GetPokemonIDFromIndex
 	ld [wRoamMon1Species], a
-	ld hl, ENTEI
+	ld hl, SUICUNE
 	call GetPokemonIDFromIndex
 	ld [wRoamMon2Species], a
 

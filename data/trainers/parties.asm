@@ -231,7 +231,7 @@ FCChrisGroup:
 	bigdw 103
 	bigdw 121
 	db "FOOLK@"
-	
+
 	db 50
 	dw TOGETAPE
 	db SURF_MAIL
@@ -283,7 +283,7 @@ FCChrisGroup:
 	bigdw 86
 	bigdw 76
 	db "IIIRRRJJS@"
-	
+
 	db 52
 	dw NOCTDRIO
 	db SURF_MAIL
@@ -296,7 +296,7 @@ FCChrisGroup:
 	bigdw 109
 	bigdw 99
 	db "T  SS@"
-	
+
 	db -1 ;end
 
 	end_list_items
@@ -490,7 +490,7 @@ ColoWesGroup:
 	bigdw 54
 	bigdw 60
 	db "XNNCCGG@"
-	
+
 	db 44
 	dw HO_OH
 	db SUN_STONE
@@ -5507,19 +5507,19 @@ KimonoGirlGroup:
 	db 32
 	dw JOLTEON
 	db -1 ; end
-	
+
 	next_list_item; KIMONO_GIRL (5)
 	db "LINNEA@", TRAINERTYPE_NORMAL
 	db 32
 	dw LEAFEON
 	db -1 ; end
-	
+
 	next_list_item; KIMONO_GIRL (5)
 	db "REA@", TRAINERTYPE_NORMAL
 	db 32
 	dw GLACEON
 	db -1 ; end
-	
+
 	next_list_item; KIMONO_GIRL (5)
 	db "SAKUYA@", TRAINERTYPE_NORMAL
 	db 32
@@ -5788,7 +5788,7 @@ FCLarryGroup:
 	bigdw 24
 	bigdw 24
 	db "SUNRA@"
-	
+
 	db 4
 	dw PHANCERO
 	db NO_ITEM
@@ -5801,7 +5801,7 @@ FCLarryGroup:
 	bigdw 8
 	bigdw 8
 	db "1@"
-	
+
 	db 20
 	dw PHANCERO
 	db NO_ITEM
@@ -5814,7 +5814,7 @@ FCLarryGroup:
 	bigdw 23
 	bigdw 23
 	db "CUCKO@"
-	
+
 	db -1 ; end
 	end_list_items
 
@@ -6328,7 +6328,7 @@ NuzlockeGroup:
 	bigdw 90
 	bigdw 96
 	db "Piiiv@"
-	
+
 	db 43
 	dw WAILORD
 	db EXP_SHARE
@@ -6354,7 +6354,7 @@ NuzlockeGroup:
 	bigdw 56
 	bigdw 63
 	db "Eeedjjllfn@"
-	
+
 	db 50
 	dw BLAZIKEN
 	db RAGECANDYBAR

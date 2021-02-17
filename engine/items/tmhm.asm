@@ -147,7 +147,7 @@ TeachTMHM:
 	ld a, b
 	and a
 	jr z, .nope
-	
+
 	rst ChattyOn
 	ld a, [wCurItem]
 	call IsHM
@@ -188,7 +188,7 @@ Text_BootedHM:
 	; Booted up an HM.
 	text_far UnknownText_0x1c0384
 	text_end
-	
+
 
 Text_ItContained:
 	; It contained @ . Teach @ to a #MON?

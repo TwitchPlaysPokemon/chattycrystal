@@ -380,7 +380,7 @@ BattleAnimations::
 	dw BattleAnim_Headbutt ; PLACEHOLDER
 	dw BattleAnim_Surf
 	dw BattleAnim_MegaPunch
-	
+
 BattleAnim_0:
 BattleAnim_MirrorMove:
 	anim_ret
@@ -4128,7 +4128,7 @@ BattleAnim_PainSplit:
 	anim_call BattleAnim_ShowMon_0
 	anim_wait 1
 	anim_ret
-	
+
 BattleAnim_WillOWisp:
 	anim_1gfx ANIM_GFX_FIRE
 	anim_bgp $1b
@@ -4137,35 +4137,35 @@ BattleAnim_WillOWisp:
 	anim_wait 40
 	anim_sound 0, 0, SFX_CURSE
 .loop
-    anim_obj ANIM_OBJ_WILL_O_WISP_IMPACT, 132, 68, $0
-    anim_wait 8
-    anim_loop 4, .loop
-    anim_wait 40
-    anim_ret
-	
+	anim_obj ANIM_OBJ_WILL_O_WISP_IMPACT, 132, 68, $0
+	anim_wait 8
+	anim_loop 4, .loop
+	anim_wait 40
+	anim_ret
+
 BattleAnim_Charge:
-    anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_LIGHTNING
-    anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_LIGHTNING
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
-    anim_obj ANIM_OBJ_CHARGE, 44, 88, $30
-    anim_obj ANIM_OBJ_CHARGE, 44, 88, $31
-    anim_obj ANIM_OBJ_CHARGE, 44, 88, $32
-    anim_obj ANIM_OBJ_CHARGE, 44, 88, $33
-    anim_obj ANIM_OBJ_CHARGE, 44, 88, $34
-    anim_obj ANIM_OBJ_CHARGE, 44, 88, $35
-    anim_obj ANIM_OBJ_CHARGE, 44, 88, $36
-    anim_obj ANIM_OBJ_CHARGE, 44, 88, $37
-    anim_wait 1
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $30
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $31
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $32
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $33
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $34
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $35
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $36
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $37
+	anim_wait 1
 .loop
-    anim_sound 0, 0, SFX_WARP_TO
+	anim_sound 0, 0, SFX_WARP_TO
 	anim_wait 16
 	anim_loop 6, .loop
-    anim_wait 40
-    anim_clearobjs
-    anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_wait 40
+	anim_clearobjs
+	anim_sound 0, 0, SFX_ZAP_CANNON
 	anim_obj ANIM_OBJ_31, 44, 88, $0
-    anim_wait 40
-    anim_ret
+	anim_wait 40
+	anim_ret
 
 BattleAnim_SacredFire:
 	anim_1gfx ANIM_GFX_FIRE
@@ -4733,7 +4733,7 @@ BattleAnim_BeatUp:
 	anim_wait 8
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
-	
+
 BattleAnim_FakeOut:
 	anim_1gfx ANIM_GFX_OBJECTS
 	anim_obj ANIM_OBJ_99, 136, 46, $e0

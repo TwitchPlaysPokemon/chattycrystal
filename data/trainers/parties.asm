@@ -1241,24 +1241,8 @@ URFGroup:
 	end_list_items
 
 GSCHGSSChrisRivalGroup:
-	next_list_item ; AJDNNW1 https://youtu.be/AU084AvsMNo?t=15753
-	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	db 13
-	dw TOTODILE
-	db NO_ITEM
-	dw SCRATCH, LEER, WATER_GUN, RAGE
-	bigdw $FFFF
-	bigdw 26
-	bigdw 27
-	bigdw 24
-	bigdw 19
-	bigdw 21
-	bigdw 22
-	db "TOTODILE@"
-	db -1 ; end
-
 	next_list_item
-	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW2
+	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW1
 	db 9
 	dw TOGEPI
 	db NO_ITEM
@@ -1339,7 +1323,7 @@ GSCHGSSChrisRivalGroup:
 	db -1 ; end
 
 	next_list_item
-	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW3
+	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW2
 	db 14
 	dw KOFFING
 	db NO_ITEM
@@ -1419,6 +1403,90 @@ GSCHGSSChrisRivalGroup:
 	db "ABBBDDDDDD@"
 
 	db -1 ; end
+	
+	next_list_item
+	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW3
+	
+	db 20
+	dw SHUCKLE
+	db AMULET_COIN
+	dw STRENGTH, CONSTRICT, WRAP, ENCORE
+	bigdw $FFFF
+	bigdw 42
+	bigdw 15
+	bigdw 98
+	bigdw 10
+	bigdw 12
+	bigdw 100
+	db "SHUCKIE@"
+	
+	db 31
+	dw HOOTHOOT
+	db TINYMUSHROOM
+	dw PECK, HYPNOSIS, REFLECT, TAKE_DOWN
+	bigdw $FFFF
+	bigdw 86
+	bigdw 33
+	bigdw 27
+	bigdw 42
+	bigdw 31
+	bigdw 43
+	db "HOOTHOOT@"
+	
+	db 44
+	dw PIDGEOT
+	db TINYMUSHROOM
+	dw FLY, QUICK_ATTACK, WHIRLWIND, WING_ATTACK
+	bigdw $FFFF
+	bigdw 143
+	bigdw 99
+	bigdw 88
+	bigdw 104
+	bigdw 75
+	bigdw 75
+	db "BBBBBD@"
+
+	db 52
+	dw FERALIGATR
+	db X_SPECIAL
+	dw SURF, WHIRLPOOL, RAGE, CUT
+	bigdw $FFFF
+	bigdw 184
+	bigdw 152
+	bigdw 138
+	bigdw 116
+	bigdw 123
+	bigdw 127
+	db "AAAAAtttta@"
+
+	db 37
+	dw ESPEON
+	db EXP_SHARE
+	dw BITE, TAIL_WHIP, SAND_ATTACK, GROWL
+	bigdw $FFFF
+	bigdw 102
+	bigdw 66
+	bigdw 63
+	bigdw 104
+	bigdw 110
+	bigdw 84
+	db "AAAS  RJ-I@"
+
+	db 15
+	dw DRATINI
+	db NO_ITEM
+	dw WRAP, LEER, THUNDER_WAVE, TWISTER
+	bigdw $0FFF
+	bigdw 38
+	bigdw 24
+	bigdw 19
+	bigdw 22
+	bigdw 20
+	bigdw 20
+	db "KT@"
+	
+	db -1 ; end
+	
 	end_list_items
 
 SECTION "Enemy Trainer Parties 2", ROMX

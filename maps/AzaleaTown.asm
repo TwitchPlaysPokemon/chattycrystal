@@ -62,7 +62,7 @@ AzaleaTownRivalBattleScript:
 	setevent EVENT_RIVAL_AZALEA_TOWN
 	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
 	setlasttalked AZALEATOWN_SILVER
-	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW2
+	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW1
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

@@ -51,7 +51,7 @@ OlivineCityRivalBattle:
 	writetext OlivineCityRivalText
 	waitbutton
 	closetext
-	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW3
+	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW2
 	winlosstext OlivineCityRivalText, OlivineCityRivalText
 	startbattle
 	reloadmapafterbattle

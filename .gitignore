@@ -55,3 +55,4 @@ gfx/pokemon/*/frames.asm
 #Controller related files
 controller/trainer_name_map
 controller/target
+chattycrystal.ss1

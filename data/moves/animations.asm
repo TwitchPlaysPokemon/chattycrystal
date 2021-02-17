@@ -275,7 +275,7 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
-	dw BattleAnim_Headbutt
+	dw BattleAnim_FakeOut
 	dw BattleAnim_Ember
 	dw BattleAnim_CrossChop
 	dw BattleAnim_Metronome
@@ -283,8 +283,8 @@ BattleAnimations::
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_Counter
 	dw BattleAnim_PainSplit
-	dw BattleAnim_Headbutt ; PLACEHOLDER
-	dw BattleAnim_Headbutt ; PLACEHOLDER
+	dw BattleAnim_WillOWisp
+	dw BattleAnim_Charge
 	dw BattleAnim_Fly
 	dw BattleAnim_Doubleslap
 	dw BattleAnim_PsychUp      ; 108
@@ -4126,6 +4126,44 @@ BattleAnim_PainSplit:
 	anim_call BattleAnim_ShowMon_0
 	anim_wait 1
 	anim_ret
+	
+BattleAnim_WillOWisp:
+	anim_1gfx ANIM_GFX_FIRE
+	anim_bgp $1b
+	anim_sound 6, 2, SFX_SLUDGE_BOMB
+	anim_obj ANIM_OBJ_WILL_O_WISP, 64, 92, $0
+	anim_wait 40
+	anim_sound 0, 0, SFX_CURSE
+.loop
+    anim_obj ANIM_OBJ_WILL_O_WISP_IMPACT, 132, 68, $0
+    anim_wait 8
+    anim_loop 4, .loop
+    anim_wait 40
+    anim_ret
+	
+BattleAnim_Charge:
+    anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_LIGHTNING
+    anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+    anim_obj ANIM_OBJ_CHARGE, 44, 88, $30
+    anim_obj ANIM_OBJ_CHARGE, 44, 88, $31
+    anim_obj ANIM_OBJ_CHARGE, 44, 88, $32
+    anim_obj ANIM_OBJ_CHARGE, 44, 88, $33
+    anim_obj ANIM_OBJ_CHARGE, 44, 88, $34
+    anim_obj ANIM_OBJ_CHARGE, 44, 88, $35
+    anim_obj ANIM_OBJ_CHARGE, 44, 88, $36
+    anim_obj ANIM_OBJ_CHARGE, 44, 88, $37
+    anim_wait 1
+.loop
+    anim_sound 0, 0, SFX_WARP_TO
+	anim_wait 16
+	anim_loop 6, .loop
+    anim_wait 40
+    anim_clearobjs
+    anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_31, 44, 88, $0
+    anim_wait 40
+    anim_ret
 
 BattleAnim_SacredFire:
 	anim_1gfx ANIM_GFX_FIRE
@@ -4692,6 +4730,20 @@ BattleAnim_BeatUp:
 	anim_obj ANIM_OBJ_00, 136, 48, $0
 	anim_wait 8
 	anim_call BattleAnim_ShowMon_0
+	anim_ret
+	
+BattleAnim_FakeOut:
+	anim_1gfx ANIM_GFX_OBJECTS
+	anim_obj ANIM_OBJ_99, 136, 46, $e0
+	anim_obj ANIM_OBJ_99, 136, 46, $20
+	anim_wait 16
+	anim_sound 0, 0, SFX_CUT
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2
+	anim_clearobjs
+	anim_wait 1
+	anim_sound 0, 0, SFX_RAGE
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_wait 32
 	anim_ret
 
 BattleAnim_DreamEater_branch_cbab3:

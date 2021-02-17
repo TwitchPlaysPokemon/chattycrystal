@@ -5355,6 +5355,24 @@ KimonoGirlGroup:
 	db 32
 	dw JOLTEON
 	db -1 ; end
+	
+	next_list_item; KIMONO_GIRL (5)
+	db "LINNEA@", TRAINERTYPE_NORMAL
+	db 32
+	dw LEAFEON
+	db -1 ; end
+	
+	next_list_item; KIMONO_GIRL (5)
+	db "REA@", TRAINERTYPE_NORMAL
+	db 32
+	dw GLACEON
+	db -1 ; end
+	
+	next_list_item; KIMONO_GIRL (5)
+	db "SAKUYA@", TRAINERTYPE_NORMAL
+	db 32
+	dw SYLVEON
+	db -1 ; end
 
 	end_list_items
 

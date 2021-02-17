@@ -554,6 +554,9 @@ CHRIS EQU __enum__
 	const ZUKI
 	const KUNI
 	const MIKI
+	const LINNEA
+	const REA
+	const SAKUYA
 
 	trainerclass TWINS ; 24
 	const AMYANDMAY1

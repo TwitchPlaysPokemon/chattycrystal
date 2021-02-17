@@ -4,6 +4,9 @@
 	const DANCETHEATRE_KIMONO_GIRL3
 	const DANCETHEATRE_KIMONO_GIRL4
 	const DANCETHEATRE_KIMONO_GIRL5
+	const DANCETHEATRE_KIMONO_GIRL6
+	const DANCETHEATRE_KIMONO_GIRL7
+	const DANCETHEATRE_KIMONO_GIRL8
 	const DANCETHEATRE_GENTLEMAN
 	const DANCETHEATRE_RHYDON
 	const DANCETHEATRE_COOLTRAINER_M
@@ -68,6 +71,39 @@ TrainerKimonoGirlMiki:
 	waitbutton
 	closetext
 	end
+	
+TrainerKimonoGirlLinnea:
+	trainer KIMONO_GIRL, LINNEA, EVENT_BEAT_KIMONO_GIRL_LINNEA, KimonoGirlPlaceholderText, KimonoGirlPlaceholderText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext KimonoGirlPlaceholderText
+	waitbutton
+	closetext
+	end
+	
+TrainerKimonoGirlRea:
+	trainer KIMONO_GIRL, REA, EVENT_BEAT_KIMONO_GIRL_REA, KimonoGirlPlaceholderText, KimonoGirlPlaceholderText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext KimonoGirlPlaceholderText
+	waitbutton
+	closetext
+	end
+	
+TrainerKimonoGirlSakuya:
+	trainer KIMONO_GIRL, SAKUYA, EVENT_BEAT_KIMONO_GIRL_SAKUYA, KimonoGirlPlaceholderText, KimonoGirlPlaceholderText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext KimonoGirlPlaceholderText
+	waitbutton
+	closetext
+	end
 
 DanceTheaterSurfGuy:
 	faceplayer
@@ -76,6 +112,12 @@ DanceTheaterSurfGuy:
 	buttonsound
 	checkevent EVENT_GOT_HM03_SURF
 	iftrue SurfGuyAlreadyGaveSurf
+	checkevent EVENT_BEAT_KIMONO_GIRL_REA
+	iffalse .KimonoGirlsUndefeated
+	checkevent EVENT_BEAT_KIMONO_GIRL_LINNEA
+	iffalse .KimonoGirlsUndefeated
+	checkevent EVENT_BEAT_KIMONO_GIRL_SAKUYA
+	iffalse .KimonoGirlsUndefeated
 	checkevent EVENT_BEAT_KIMONO_GIRL_NAOKO
 	iffalse .KimonoGirlsUndefeated
 	checkevent EVENT_BEAT_KIMONO_GIRL_SAYO
@@ -135,6 +177,10 @@ DanceTheatreGrannyScript:
 DanceTheatreFancyPanel:
 	jumptext DanceTheatreFancyPanelText
 
+KimonoGirlPlaceholderText:
+	text "<...>"
+	done
+	
 KimonoGirlNaoko2SeenText:
 	text "You have lovely"
 	line "#MON. May I see"
@@ -348,12 +394,15 @@ DanceTheatre_MapEvents:
 	bg_event  5,  6, BGEVENT_UP, DanceTheatreFancyPanel
 	bg_event  6,  6, BGEVENT_UP, DanceTheatreFancyPanel
 
-	db 9 ; object events
+	db 12 ; object events
 	object_event  0,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlNaoko2, -1
 	object_event  2,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlSayo, -1
 	object_event  6,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlZuki, -1
 	object_event  9,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlKuni, -1
 	object_event 11,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlMiki, -1
+	object_event  4,  3, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlLinnea, -1
+	object_event  8,  3, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlSakuya, -1
+	object_event 5,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlRea, -1
 	object_event  7, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheaterSurfGuy, -1
 	object_event  6,  8, SPRITE_RHYDON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DanceTheaterRhydon, -1
 	object_event 10, 10, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, DanceTheatreCooltrainerMScript, -1

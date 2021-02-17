@@ -235,9 +235,9 @@ ScriptCommandTable:
 	dw Script_checksave                  ; a9
 	dw Script_loadmonindex               ; aa
 	dw Script_checkmaplockedmons         ; ab
-	dw Script_givechattymon ;ac
-	dw Script_chattyoff ;ad
-	dw Script_chattyon ; ae
+	dw Script_givechattymon              ; ac
+	dw Script_chattyoff                  ; ad
+	dw Script_chattyon                   ; ae
 
 StartScript:
 	ld hl, wScriptFlags

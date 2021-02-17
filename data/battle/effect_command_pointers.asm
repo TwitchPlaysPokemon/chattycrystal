@@ -215,3 +215,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_SuckerPunch
 	effectfn BattleCommand_Snatch
 	effectfn BattleCommand_CheckSnatch
+	effectfn BattleCommand_WaterSpout

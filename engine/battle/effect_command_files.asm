@@ -67,7 +67,6 @@ INCLUDE "engine/battle/move_effects/sunny_day.asm"
 INCLUDE "engine/battle/move_effects/taunt.asm"
 INCLUDE "engine/battle/move_effects/teleport.asm"
 INCLUDE "engine/battle/move_effects/transform.asm"
-INCLUDE "engine/battle/move_effects/trump_card.asm"
 
 SECTION "Effect Commands Extra", ROMX
 INCLUDE "engine/battle/effect_commands_extra.asm"
@@ -85,3 +84,5 @@ INCLUDE "engine/battle/move_effects/stored_power.asm"
 INCLUDE "engine/battle/move_effects/thief.asm"
 INCLUDE "engine/battle/move_effects/thunder.asm"
 INCLUDE "engine/battle/move_effects/triple_kick.asm"
+INCLUDE "engine/battle/move_effects/trump_card.asm"
+INCLUDE "engine/battle/move_effects/water_spout.asm"

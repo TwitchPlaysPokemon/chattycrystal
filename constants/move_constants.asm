@@ -360,7 +360,7 @@
 	const CHATTY_HP    ; 160
 	const CRYSTAL_BOLT ; 161
 	const KNOCK_OFF    ; 162 (PLACEHOLDER)
-	const WATER_SPOUT  ; 163 (PLACEHOLDER)
+	const WATER_SPOUT  ; 163
 
 NUM_ATTACKS EQU const_value + -1
 

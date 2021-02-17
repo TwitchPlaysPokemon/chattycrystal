@@ -190,4 +190,5 @@ MoveEffectsPointers:
 	dw DoBurn
 	dw SuckerPunch
 	dw Snatch
+	dw WaterSpout
 	dw Placeholder

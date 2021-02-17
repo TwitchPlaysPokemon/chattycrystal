@@ -2686,3 +2686,24 @@ Snatch:
 	doturn
 	snatch
 	endmove
+
+WaterSpout:
+	checkobedience
+	usedmovetext
+	doturn
+	waterspout
+	critical
+	damagestats
+	damagecalc
+	stab
+	checkhit
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

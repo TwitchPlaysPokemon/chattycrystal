@@ -215,6 +215,7 @@ ENDM
 	command suckerpunch             ; d0
 	command snatch                  ; d1
 	command checksnatch             ; d2
+	command waterspout              ; d3
 
 	enum_start $fe
 	command endturn                 ; fe

@@ -357,6 +357,9 @@ MoveDescriptions1:
 	dw PollenPuffDescription
 	dw PowerTripDescription
 	dw ChattyHPDescription
+	dw CrystalBoltDescription
+	dw KnockOffDescription
+	dw WaterSpoutDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -1603,3 +1606,15 @@ MoonblastDescription:
 PlayRoughDescription:
 	db   "An attack that may"
 	next "lower ATTACK.@"
+
+CrystalBoltDescription:
+	db   "Can damage Ground-"
+	next "type foes."
+
+KnockOffDescription:
+	db   "Slaps down the"
+	next "foe's held item.@"
+
+WaterSpoutDescription:
+	db   "Deals more damage"
+	next "for healthy users.@"

@@ -352,3 +352,5 @@ MoveNames::
 	db "POWER TRIP@"
 	db "HIDDEN POWER@"
 	db "CRYSTAL BOLT@"
+	db "KNOCK OFF@"
+	db "WATER SPOUT@"

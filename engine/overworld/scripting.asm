@@ -2894,6 +2894,6 @@ Script_chattyoff:
 	ret
 
 Script_chattyon:
-; script command 0xad
+; script command 0xae
 	rst ChattyOn
 	ret

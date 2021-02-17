@@ -174,7 +174,7 @@ ALL_STATUS EQU (1 << PSN) | (1 << BRN) | (1 << FRZ) | (1 << PAR) | SLP
 ; wPlayerSubStatus2 or wEnemySubStatus2 bit flags
 	enum_start 7, -1
 	enum SUBSTATUS_BLANK1
-	enum SUBSTATUS_BLANK2
+	enum SUBSTATUS_SNATCH
 	enum SUBSTATUS_FLINCHED
 	enum SUBSTATUS_DAMAGED_THIS_TURN
 	enum SUBSTATUS_ROOSTING

@@ -200,8 +200,10 @@ BattleTurn:
 	; Reset "damaged this turn" flag (used by Assurance)
 	ld hl, wPlayerSubStatus2
 	res SUBSTATUS_DAMAGED_THIS_TURN, [hl]
+	res SUBSTATUS_SNATCH, [hl]
 	ld hl, wEnemySubStatus2
 	res SUBSTATUS_DAMAGED_THIS_TURN, [hl]
+	res SUBSTATUS_SNATCH, [hl]
 
 	call DetermineMoveOrder
 	jr c, .false
@@ -7459,6 +7461,7 @@ GiveExperiencePoints:
 	push bc
 	predef LearnLevelMoves
 	pop bc
+	rst ChattyOff
 	ld a, b
 	cp c
 	jr nz, .level_loop

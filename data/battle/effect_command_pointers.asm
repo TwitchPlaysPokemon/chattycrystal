@@ -213,3 +213,5 @@ BattleCommandPointers:
 	effectfn BattleCommand_Taunt
 	effectfn BattleCommand_Burn
 	effectfn BattleCommand_SuckerPunch
+	effectfn BattleCommand_Snatch
+	effectfn BattleCommand_CheckSnatch

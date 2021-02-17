@@ -1040,6 +1040,18 @@ NoLongerTauntedText:
 	line "no longer taunted."
 	prompt
 
+WaitForOpponentMoveText:
+	text "<USER>"
+	line "waits for"
+	cont "<TARGET> to"
+	cont "make a move!"
+	prompt
+
+UserSnatchedOpponentMove:
+	text "<USER>"
+	line "snatched the move!"
+	prompt
+
 CoveredByVeilText:
 	text "<USER>'s"
 	line "covered by a veil!"

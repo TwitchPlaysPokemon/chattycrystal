@@ -151,7 +151,7 @@ EvosAttacksPointers3::
 	dw DummyEvosAttacks ; PLACEHOLDER - Quagynx
 	dw DummyEvosAttacks ; PLACEHOLDER - Steelurret
     ; TPP's signature fakemon
-	dw DummyEvosAttacks ; PLACEHOLDER - Phancero
+	dw PhanceroEvosAttacks
 
 DummyEvosAttacks:
 	db 0
@@ -1942,4 +1942,25 @@ SylveonEvosAttacks:
 	dbw 37, MOONBLAST
 	dbw 41, MOONLIGHT ; replacement for Last Resort
 	dbw 45, PSYCH_UP
+	db 0 ; no more level-up moves
+
+PhanceroEvosAttacks:	
+	db 0
+	dbw 1, POUND
+	dbw 1, TELEPORT
+	dbw 7, GUST
+	dbw 10, LICK
+	dbw 15, WATER_GUN
+	dbw 20, AGILITY
+	dbw 25, WING_ATTACK
+	dbw 30, ACID_ARMOR
+	dbw 35, LEECH_SEED
+	dbw 40, SHADOW_BALL
+	dbw 50, SKY_ATTACK
+	dbw 60, WATER_GUN
+	dbw 70, WRAP
+	dbw 80, SWORDS_DANCE
+	dbw 90, AIR_SLASH
+	dbw 95, TRI_ATTACK
+	dbw 100, HI_JUMP_KICK
 	db 0 ; no more level-up moves

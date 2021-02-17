@@ -46,6 +46,9 @@ pub struct Settings {
     hp_badge_cap: u32,
     hp_power_per_badge: u32,
 
+    hp_hud_power_endpoint: Option<String>,
+    hp_hud_emote_endpoint: Option<String>,
+
     markov_endpoint: String,
     recent_message_endpoint: String,
     top_emotes_endpoint: String,
@@ -382,6 +385,10 @@ fn update_chat_speed() {
 
     let hp_max_power = SETTINGS.hp_badge_base + (min(badge_count, SETTINGS.hp_badge_cap) * SETTINGS.hp_power_per_badge);
     (*HIDDEN_POWER.lock()).power = min((SETTINGS.hp_base_power + ((lines_per_sec / SETTINGS.hp_chat_unit) * SETTINGS.hp_power_per_unit)) as u32, hp_max_power) as u8;
+    
+    if let Some(ip) = &SETTINGS.hp_hud_power_endpoint {
+        HUD.get(format!("{}/{}", ip, (*HIDDEN_POWER.lock()).power).as_str()).send().ok();
+    }
 }
 
 fn update_markov() {

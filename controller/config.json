@@ -19,6 +19,10 @@
     "hp_badge_cap": 8,
     "hp_power_per_badge": 15,
 
+    // extra endpoints for HUD
+    "hp_hud_power_endpoint": "http://localhost:1337/override/chatty_power",
+    "hp_hud_emote_endpoint": "http://localhost:1337/override/chatty_power_type",
+
     "markov_endpoint": "http://localhost:5000/simulate_chat_message/5",
     "recent_message_endpoint": "http://localhost:5000/random_recent_message",
     "top_emotes_endpoint": "http://localhost:5000/trending_emotes/20",

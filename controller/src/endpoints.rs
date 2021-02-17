@@ -38,6 +38,7 @@ lazy_static! {
     pub static ref CURRENT_TRAINER_NAME: Mutex<String> = Mutex::new("".to_string());
     pub static ref CURRENT_TRAINER_IDS: Mutex<TrainerInfo> = Mutex::new(Default::default());
     pub static ref NEXT_TRAINER_NAME: Mutex<String> = Mutex::new(String::new());
+    pub static ref HUD: reqwest::Client = reqwest::Client::builder().timeout(Duration::new(5, 0)).build().unwrap();
 }
 
 pub fn start_endpoints() {
@@ -201,9 +202,14 @@ fn hidden_power() -> &'static str {
     }
 
     let HiddenPowerInfo {type_id, type_name, power} = &*HIDDEN_POWER.lock();
+    let emote_id = CHATTER_EMOTE.lock().emote_id.clone();
 
     BIZHAWK.write_u8_sym(&SYM["wChattyHPType"], *type_id).unwrap();
     BIZHAWK.write_u8_sym(&SYM["wChattyHPPower"], *power).unwrap();
+
+    if let Some(ip) = &SETTINGS.hp_hud_emote_endpoint {
+        HUD.get(format!("{}/{}", ip, emote_id).as_str()).send().ok();
+    }
 
     if SETTINGS.debug { println!("HP Type: {}\nHP Power: {}", type_name, power); }
 

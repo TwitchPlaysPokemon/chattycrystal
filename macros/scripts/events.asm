@@ -1078,7 +1078,6 @@ ENDM
 	enum givechattymon_command ; $ac
 givechattymon: MACRO
 	db givechattymon_command
-	db \1 ;mon
 ENDM
 
 	enum chattyoff_command ; $ad

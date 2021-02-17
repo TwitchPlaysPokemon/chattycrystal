@@ -16,8 +16,6 @@ ElmsLab_MapScripts:
 
 .MeetElm:
 	prioritysjump .WalkUpToElm
-	end
-
 .DummyScene:
 	end
 
@@ -53,7 +51,7 @@ ElmsLab_MapScripts:
 	writetext ElmText_Sprayed
 	waitbutton
 	closetext
-	givechattymon 0
+	givechattymon
 	opentext
 	writetext ElmText_GotAnEgg
 	playsound SFX_CAUGHT_MON

@@ -1,8 +1,6 @@
 _GiveOddEgg:
 	; Figure out which egg to give.
 
-	; Compare a random word to
-	; probabilities out of 0xffff.
 	call Random
 	ld hl, OddEggProbabilities
 	ld c, -1
@@ -70,6 +68,7 @@ _GiveOddEgg:
 	ld hl, wNumItems
 	call TossItem
 
+GiveLoadedEgg:
 	; load species in wcd2a
 	ld a, EGG
 	ld [wMobileMonSpeciesBuffer], a
@@ -107,4 +106,43 @@ _GiveOddEgg:
 .Odd:
 	db "ODD@@@@@@@@@"
 
+GiveChattyMon::
+; Gives a mon with special precalculated stats.
+	ld a, [wPartyCount]
+	cp PARTY_LENGTH
+	ret nc
+	ld hl, ChattyMonData
+	; load the bulk of the mon data into the odd egg slot
+	ld de, wOddEgg
+	ld bc, NICKNAMED_MON_STRUCT_LENGTH
+	call CopyBytes
+	; Loads the actual species and overwrites the zero in wOddEggSpecies
+	ld a, [hli]
+	push hl
+	ld h, [hl]
+	ld l, a
+	call GetPokemonIDFromIndex
+	ld [wOddEggSpecies], a
+	pop hl
+	inc hl
+	; And likewise with moves
+	ld c, NUM_MOVES
+	ld de, wOddEggMoves
+.move_loop
+	ld a, [hli]
+	push hl
+	ld h, [hl]
+	ld l, a
+	call GetMoveIDFromIndex
+	pop hl
+	inc hl
+	ld [de], a
+	inc de
+	dec c
+	jr nz, .move_loop
+	call GiveLoadedEgg
+	scf
+	ret
+
 INCLUDE "data/events/odd_eggs.asm"
+INCLUDE "data/events/chatty_egg.asm"

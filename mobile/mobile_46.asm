@@ -7508,12 +7508,12 @@ AddMobileMonToParty:
 	ld a, [wMobileMonSpeciesPointerBuffer + 1]
 	ld h, a
 	inc hl
-	ld bc, wPartySpecies
-	ld d, e
-.loop1
-	inc bc
-	dec d
-	jr nz, .loop1
+	ld a, e
+	add a, LOW(wPartySpecies)
+	ld c, a
+	adc HIGH(wPartySpecies)
+	sub c
+	ld b, a
 	ld a, e
 	ld [wCurPartyMon], a
 	ld a, [hl]
@@ -7526,11 +7526,7 @@ AddMobileMonToParty:
 	ld bc, PARTYMON_STRUCT_LENGTH
 	ld a, e
 	ld [wMobileMonSpeciesBuffer], a
-.loop2
-	add hl, bc
-	dec a
-	and a
-	jr nz, .loop2
+	call AddNTimes
 	ld e, l
 	ld d, h
 	ld a, [wMobileMonStructurePointerBuffer]
@@ -7543,11 +7539,7 @@ AddMobileMonToParty:
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
 	ld a, [wMobileMonSpeciesBuffer]
-.loop3
-	add hl, bc
-	dec a
-	and a
-	jr nz, .loop3
+	call AddNTimes
 	ld e, l
 	ld d, h
 	ld a, [wMobileMonOTNamePointerBuffer]
@@ -7562,11 +7554,7 @@ AddMobileMonToParty:
 	ld hl, wPartyMonNicknames
 	ld bc, MON_NAME_LENGTH
 	ld a, [wMobileMonSpeciesBuffer]
-.loop4
-	add hl, bc
-	dec a
-	and a
-	jr nz, .loop4
+	call AddNTimes
 	ld e, l
 	ld d, h
 	ld a, [wMobileMonNicknamePointerBuffer]
@@ -7581,11 +7569,7 @@ AddMobileMonToParty:
 	ld hl, sPartyMail
 	ld bc, MAIL_STRUCT_LENGTH
 	ld a, [wMobileMonSpeciesBuffer]
-.loop5
-	add hl, bc
-	dec a
-	and a
-	jr nz, .loop5
+	call AddNTimes
 	ld a, BANK(sPartyMail)
 	call GetSRAMBank
 	ld e, l
@@ -7596,9 +7580,7 @@ AddMobileMonToParty:
 	ld h, a
 	ld bc, MAIL_STRUCT_LENGTH
 	call CopyBytes
-
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 Function11ba38:
 	farcall CheckCurPartyMonFainted

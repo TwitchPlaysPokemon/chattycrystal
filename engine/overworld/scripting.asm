@@ -2879,12 +2879,9 @@ LoadScriptPokemonID:
 Script_givechattymon:
 ; script command 0xac
 ; if no room in the party, return 0 in wScriptVar; else, return 2
-; parameters Mon
-	call GetScriptByte
-	ld b, a
 	farcall GiveChattyMon
-	ret nc
-	ld a, 2
+	sbc a
+	and 2
 	ld [wScriptVar], a
 	ret
 

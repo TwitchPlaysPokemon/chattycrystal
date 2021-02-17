@@ -642,7 +642,7 @@ wEnemyLightScreenCount:: db ; c706
 wEnemyReflectCount:: db ; c707
 wEnemyKnockOff:: db
 
-	ds 1 ; unused
+wBattleEnvironment:: db
 
 wBattleWeather:: ; c70a
 ; 00 normal

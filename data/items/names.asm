@@ -68,7 +68,7 @@ ItemNames::
 	db "SECRETPOTION@"
 	db "S.S.TICKET@"
 	db "MYSTERY EGG@"
-	db "CLEAR BELL@"
+	db "TRIUMPH BELL@"
 	db "SILVER WING@"
 	db "MOOMOO MILK@"
 	db "QUICK CLAW@"

@@ -2691,9 +2691,9 @@ WaterSpout:
 	checkobedience
 	usedmovetext
 	doturn
-	waterspout
 	critical
 	damagestats
+	waterspout
 	damagecalc
 	stab
 	checkhit

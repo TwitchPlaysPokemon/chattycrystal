@@ -1,5 +1,7 @@
 BattleCommand_WaterSpout:
 ; BP = 150 * CurHP/MaxHP
+	push de
+	push bc
 	ldh a, [hBattleTurn]
 	and a
 	ld de, wBattleMonHP
@@ -22,5 +24,57 @@ BattleCommand_WaterSpout:
 	ldh [hMultiplier], a
 	call Multiply
 
-	; divide by max HP, then store in move power
+	ld a, [hli]
+	ld e, a
+	ld h, [hl]
+	ld l, 0
+	ldh a, [hProduct + 1]
+	ld d, a
+	ldh a, [hProduct + 2]
+	ld b, a
+	ldh a, [hProduct + 3]
+	ld c, a
+
+	; compute dbc / eh - starting with an implicit << 8 on the divisor becoming ehl
+	xor a
+	ldh [hMathBuffer], a ; result
+	ld a, 8
+.division_loop
+	ldh [hMathBuffer + 1], a ; bit count
+	srl e
+	rr h
+	rr l
+	ld a, d
+	cp e
+	jr nz, .compared
+	ld a, b
+	cp h
+	jr nz, .compared
+	ld a, c
+	cp l
+.compared
+	ccf
+	jr nc, .no_subtraction
+	ld a, c
+	sub l
+	ld c, a
+	ld a, b
+	sbc h
+	ld b, a
+	ld a, d
+	sbc e
+	ld d, a
+	scf
+.no_subtraction
+	ldh a, [hMathBuffer]
+	rla
+	ldh [hMathBuffer], a
+	ldh a, [hMathBuffer + 1]
+	dec a
+	jr nz, .division_loop
+
+	pop bc
+	pop de
+	ldh a, [hMathBuffer]
+	ld d, a
 	ret

@@ -334,7 +334,7 @@ FramesPointers:
 	dba BudewFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Roserade
 	dba PlaceholderFrames ; PLACEHOLDER - Burmy
-	dba PlaceholderFrames ; PLACEHOLDER - Mothim
+	dba MothimFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Buizel
 	dba PlaceholderFrames ; PLACEHOLDER - Floatzel
 	dba PlaceholderFrames ; PLACEHOLDER - Shellos

@@ -334,7 +334,7 @@ AnimationIdlePointers:
 	dw BudewAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Roserade
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Burmy
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Mothim
+	dw MothimAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Buizel
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Floatzel
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Shellos

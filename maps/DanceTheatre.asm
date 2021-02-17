@@ -71,7 +71,7 @@ TrainerKimonoGirlMiki:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerKimonoGirlLinnea:
 	trainer KIMONO_GIRL, LINNEA, EVENT_BEAT_KIMONO_GIRL_LINNEA, KimonoGirlPlaceholderText, KimonoGirlPlaceholderText, 0, .Script
 
@@ -82,7 +82,7 @@ TrainerKimonoGirlLinnea:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerKimonoGirlRea:
 	trainer KIMONO_GIRL, REA, EVENT_BEAT_KIMONO_GIRL_REA, KimonoGirlPlaceholderText, KimonoGirlPlaceholderText, 0, .Script
 
@@ -93,7 +93,7 @@ TrainerKimonoGirlRea:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerKimonoGirlSakuya:
 	trainer KIMONO_GIRL, SAKUYA, EVENT_BEAT_KIMONO_GIRL_SAKUYA, KimonoGirlPlaceholderText, KimonoGirlPlaceholderText, 0, .Script
 
@@ -180,7 +180,7 @@ DanceTheatreFancyPanel:
 KimonoGirlPlaceholderText:
 	text "<...>"
 	done
-	
+
 KimonoGirlNaoko2SeenText:
 	text "You have lovely"
 	line "#MON. May I see"
@@ -402,6 +402,6 @@ DanceTheatre_MapEvents:
 	object_event 11,  2, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlMiki, -1
 	object_event  4,  3, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlLinnea, -1
 	object_event  8,  3, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlSakuya, -1
-	object_event 5,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlRea, -1
+	object_event  5,  1, SPRITE_KIMONO_GIRL, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_TRAINER, 0, TrainerKimonoGirlRea, -1
 	object_event  7, 10, SPRITE_GENTLEMAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DanceTheaterSurfGuy, -1
 	object_event  6,  8, SPRITE_RHYDON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DanceTheaterRhydon, -1

@@ -310,7 +310,7 @@ GetMoveName::
 .done
 	ld de, wStringBuffer1
 	push de
-	ld bc, MOVE_NAME_LENGTH + 5 ;adjustment to fit in larrys move names
+	ld bc, wStringBuffer2 - wStringBuffer1
 	call CopyBytes
 	pop de
 	pop af

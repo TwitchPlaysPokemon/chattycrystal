@@ -2600,7 +2600,7 @@ AttackDamage:
 	; Screen is ignored on a critical hit
 	ld a, [wCriticalHit]
 	and a
-	jr nz, .no_crit
+	jr z, .no_crit
 	ld h, 0 ; just clear screen flags, we need to pop af anyway.
 
 .no_crit

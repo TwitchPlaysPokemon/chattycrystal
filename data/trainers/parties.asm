@@ -5637,8 +5637,33 @@ FCLarryGroup:
 	bigdw 24
 	db "SUNRA@"
 	
+	db 4
+	dw PHANCERO
+	db NO_ITEM
+	dw CUT, DIG, STRENGTH, NO_MOVE
+	bigdw $AF0E
+	bigdw 115
+	bigdw 8
+	bigdw 12
+	bigdw 7
+	bigdw 8
+	bigdw 8
+	db "1@"
+	
+	db 20
+	dw PHANCERO
+	db NO_ITEM
+	dw PECK, GROWL, FLY, NO_MOVE
+	bigdw $AF0E
+	bigdw 50
+	bigdw 43
+	bigdw 23
+	bigdw 49
+	bigdw 23
+	bigdw 23
+	db "CUCKO@"
+	
 	db -1 ; end
-
 	end_list_items
 
 RedKantoLeaderGroup:

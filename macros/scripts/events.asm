@@ -1089,3 +1089,10 @@ ENDM
 chattyon: MACRO
 	db chattyon_command
 ENDM
+
+	enum resetifuncaught_command ; $af
+resetifuncaught: MACRO
+	db resetifuncaught_command
+	dw \1 ; pokemon
+	dw \2 ; flag index
+ENDM

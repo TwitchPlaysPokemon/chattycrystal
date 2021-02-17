@@ -232,6 +232,7 @@ ScriptCommandTable:
 	dw Script_givechattymon              ; ac
 	dw Script_chattyoff                  ; ad
 	dw Script_chattyon                   ; ae
+	dw Script_resetifuncaught            ; af
 
 StartScript:
 	ld hl, wScriptFlags
@@ -2816,3 +2817,126 @@ Script_chattyon:
 ; script command 0xae
 	rst ChattyOn
 	ret
+
+Script_resetifuncaught:
+; script command 0xaf
+; params: mon index, flag index
+; resets the flag if the mon is not caught in the dex or not existing in the party, PC or daycare
+	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	or l
+	ld a, [wScriptVar]
+	call z, GetPokemonIndexFromID
+	push hl
+	call CheckCaughtMonIndex
+	pop de
+	jp z, Script_clearflag
+	ld a, [wSaveFileExists]
+	and a
+	jr z, .no_other_boxes
+	xor a
+	ld hl, .boxes
+.box_loop
+	ld c, a
+	ld a, [wCurBox]
+	cp c
+	jr z, .next_box
+	push hl
+	call .check_box
+	call CloseSRAM
+	pop hl
+	jr nc, .no_reset
+.next_box
+	ld a, c
+	ld bc, 5
+	add hl, bc
+	inc a
+	cp NUM_BOXES
+	jr c, .box_loop
+.no_other_boxes
+	ld h, d
+	ld l, e
+	call GetPokemonIDFromIndex
+	ld e, a
+	ld a, [wPartyCount]
+	and a
+	jr z, .no_party ; who knows...
+	ld d, a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld hl, wPartyMon1Species
+	ld a, e
+.party_loop
+	cp [hl]
+	jr z, .no_reset
+	add hl, bc
+	dec d
+	jr nz, .party_loop
+.no_party
+	ld a, [wDayCareMan]
+	and 1 << DAYCAREMAN_HAS_MON_F
+	jr z, .no_breed_mon
+	ld a, [wBreedMon1Species]
+	cp e
+	jr z, .no_reset
+.no_breed_mon
+	ld a, [wDayCareLady]
+	and 1 << DAYCARELADY_HAS_MON_F
+	jp z, Script_clearflag
+	ld a, [wBreedMon2Species]
+	cp e
+	jp nz, Script_clearflag
+.no_reset
+	jp SkipTwoScriptBytes
+
+.check_box
+	ld a, [hli]
+	call GetSRAMBank
+	push de
+	ld a, [hli]
+	ld e, a
+	ld a, [hli]
+	ld d, a
+	ld a, [de]
+	pop de
+	ld b, a
+	sub 1
+	ret c
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+.box_mon_loop
+	ld a, [hli]
+	cp e
+	ld a, [hli]
+	jr nz, .next_box_mon
+	cp d
+	ret z ; no carry
+.next_box_mon
+	dec b
+	jr nz, .box_mon_loop
+	scf
+	ret
+
+.boxes
+	dbww BANK(sBox1), sBox1, sBox1PokemonIndexes
+	dbww BANK(sBox2), sBox2, sBox2PokemonIndexes
+	dbww BANK(sBox3), sBox3, sBox3PokemonIndexes
+	dbww BANK(sBox4), sBox4, sBox4PokemonIndexes
+	dbww BANK(sBox5), sBox5, sBox5PokemonIndexes
+	dbww BANK(sBox6), sBox6, sBox6PokemonIndexes
+	dbww BANK(sBox7), sBox7, sBox7PokemonIndexes
+	dbww BANK(sBox8), sBox8, sBox8PokemonIndexes
+	dbww BANK(sBox9), sBox9, sBox9PokemonIndexes
+	dbww BANK(sBox10), sBox10, sBox10PokemonIndexes
+	dbww BANK(sBox11), sBox11, sBox11PokemonIndexes
+	dbww BANK(sBox12), sBox12, sBox12PokemonIndexes
+	dbww BANK(sBox13), sBox13, sBox13PokemonIndexes
+	dbww BANK(sBox14), sBox14, sBox14PokemonIndexes
+	dbww BANK(sBox15), sBox15, sBox15PokemonIndexes
+	dbww BANK(sBox16), sBox16, sBox16PokemonIndexes
+	dbww BANK(sBox17), sBox17, sBox17PokemonIndexes
+	dbww BANK(sBox18), sBox18, sBox18PokemonIndexes
+	dbww BANK(sBox19), sBox19, sBox19PokemonIndexes
+	dbww BANK(sBox20), sBox20, sBox20PokemonIndexes

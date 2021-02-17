@@ -1544,29 +1544,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_44
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 23, TANGELA
-	dbw 22, LICKITUNG
-	dbw 22, BELLSPROUT
-	dbw 24, WEEPINBELL
-	dbw 24, LICKITUNG
-	dbw 26, LICKITUNG
-	dbw 26, LICKITUNG
+	dbw 48, TANGELA
+	dbw 47, LICKITUNG
+	dbw 47, BELLSPROUT
+	dbw 49, WEEPINBELL
+	dbw 49, LICKITUNG
+	dbw 51, LICKITUNG
+	dbw 51, LICKITUNG
 	; day
-	dbw 23, TANGELA
-	dbw 22, LICKITUNG
-	dbw 22, BELLSPROUT
-	dbw 24, WEEPINBELL
-	dbw 24, LICKITUNG
-	dbw 26, LICKITUNG
-	dbw 26, LICKITUNG
+	dbw 48, TANGELA
+	dbw 47, LICKITUNG
+	dbw 47, BELLSPROUT
+	dbw 49, WEEPINBELL
+	dbw 49, LICKITUNG
+	dbw 51, LICKITUNG
+	dbw 51, LICKITUNG
 	; nite
-	dbw 23, TANGELA
-	dbw 22, POLIWAG
-	dbw 22, BELLSPROUT
-	dbw 24, WEEPINBELL
-	dbw 24, POLIWHIRL
-	dbw 26, POLIWHIRL
-	dbw 26, POLIWHIRL
+	dbw 48, TANGELA
+	dbw 47, POLIWAG
+	dbw 47, BELLSPROUT
+	dbw 49, WEEPINBELL
+	dbw 49, POLIWHIRL
+	dbw 51, POLIWHIRL
+	dbw 51, POLIWHIRL
 
 	map_id ROUTE_45
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

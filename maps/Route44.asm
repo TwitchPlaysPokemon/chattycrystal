@@ -53,10 +53,10 @@ TrainerBirdKeeperVance1:
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
 .Fight2:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
-	checkevent EVENT_BEAT_ELITE_FOUR
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight1
 .LoadFight0:
 	loadtrainer BIRD_KEEPER, VANCE1
@@ -197,10 +197,10 @@ TrainerFisherWilton1:
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
 .Fight2:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
-	checkevent EVENT_BEAT_ELITE_FOUR
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight1
 .LoadFight0:
 	loadtrainer FISHER, WILTON1

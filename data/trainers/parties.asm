@@ -2148,10 +2148,10 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (7)
 	db "VANCE@", TRAINERTYPE_NORMAL
-	db 25
-	dw PIDGEOTTO
-	db 25
-	dw PIDGEOTTO
+	db 52
+	dw PIDGEOT
+	db 52
+	dw PIDGEOT
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (8)
@@ -2231,20 +2231,20 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (18)
 	db "VANCE@", TRAINERTYPE_NORMAL
-	db 32
-	dw PIDGEOTTO
-	db 32
-	dw PIDGEOTTO
+	db 69
+	dw PIDGEOT
+	db 69
+	dw PIDGEOT
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (19)
 	db "VANCE@", TRAINERTYPE_MOVES
-	db 38
+	db 79
 	dw PIDGEOT
-	dw TOXIC, QUICK_ATTACK, WHIRLWIND, FLY
-	db 38
+	dw TOXIC, QUICK_ATTACK, RETURN, FLY
+	db 79
 	dw PIDGEOT
-	dw SWIFT, DETECT, STEEL_WING, FLY
+	dw RETURN, DETECT, STEEL_WING, FLY
 	db -1 ; end
 
 	end_list_items
@@ -2593,10 +2593,9 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (19)
-	db "ALLEN@", TRAINERTYPE_MOVES
-	db 27
-	dw CHARMELEON
-	dw EMBER, SMOKESCREEN, RAGE, SCARY_FACE
+	db "ALLEN@", TRAINERTYPE_NORMAL
+	db 53
+	dw CHARIZARD
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (20)
@@ -2744,12 +2743,12 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (16)
 	db "CYBIL@", TRAINERTYPE_MOVES
-	db 25
+	db 52
 	dw BUTTERFREE
-	dw CONFUSION, SLEEP_POWDER, WHIRLWIND, GUST
-	db 25
+	dw PSYCHIC, SLEEP_POWDER, WHIRLWIND, GUST
+	db 52
 	dw BELLOSSOM
-	dw ABSORB, STUN_SPORE, ACID, SOLARBEAM
+	dw SUNNY_DAY, SLEEP_POWDER, SLUDGE_BOMB, SOLARBEAM
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (17)
@@ -3021,8 +3020,8 @@ PokemaniacGroup:
 
 	next_list_item ; POKEMANIAC (13)
 	db "ZACH@", TRAINERTYPE_NORMAL
-	db 27
-	dw RHYHORN
+	db 53
+	dw RHYDON
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (14)
@@ -3603,22 +3602,20 @@ FisherGroup:
 
 	next_list_item ; FISHER (10)
 	db "WILTON@", TRAINERTYPE_NORMAL
-	db 23
-	dw GOLDEEN
-	db 23
-	dw GOLDEEN
-	db 25
+	db 50
+	dw SEAKING
+	db 50
+	dw SEAKING
+	db 52
 	dw SEAKING
 	db -1 ; end
 
 	next_list_item ; FISHER (11)
-	db "EDGAR@", TRAINERTYPE_MOVES
-	db 25
-	dw REMORAID
-	dw LOCK_ON, PSYBEAM, AURORA_BEAM, BUBBLEBEAM
-	db 25
-	dw REMORAID
-	dw LOCK_ON, PSYBEAM, AURORA_BEAM, BUBBLEBEAM
+	db "EDGAR@", TRAINERTYPE_NORMAL
+	db 52
+	dw OCTILLERY
+	db 52
+	dw OCTILLERY
 	db -1 ; end
 
 	next_list_item ; FISHER (12)
@@ -3695,11 +3692,11 @@ FisherGroup:
 
 	next_list_item ; FISHER (20)
 	db "WILTON@", TRAINERTYPE_NORMAL
-	db 29
-	dw GOLDEEN
-	db 29
-	dw GOLDEEN
-	db 32
+	db 67
+	dw SEAKING
+	db 67
+	dw SEAKING
+	db 69
 	dw SEAKING
 	db -1 ; end
 
@@ -3715,15 +3712,15 @@ FisherGroup:
 
 	next_list_item ; FISHER (22)
 	db "WILTON@", TRAINERTYPE_MOVES
-	db 34
+	db 75
 	dw SEAKING
-	dw SUPERSONIC, WATERFALL, FLAIL, FURY_ATTACK
-	db 34
+	dw HORN_DRILL, ICE_BEAM, WATERFALL, AGILITY
+	db 75
 	dw SEAKING
-	dw SUPERSONIC, WATERFALL, FLAIL, FURY_ATTACK
-	db 38
-	dw REMORAID
-	dw PSYBEAM, AURORA_BEAM, BUBBLEBEAM, HYPER_BEAM
+	dw RETURN, WATERFALL, FLAIL, ENDURE
+	db 79
+	dw OCTILLERY
+	dw PSYBEAM, SURF, ICE_BEAM, HYPER_BEAM
 	db -1 ; end
 
 	next_list_item ; FISHER (23)
@@ -4982,12 +4979,12 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (8)
 	db "PHIL@", TRAINERTYPE_MOVES
-	db 24
-	dw NATU
-	dw LEER, NIGHT_SHADE, FUTURE_SIGHT, CONFUSE_RAY
-	db 26
-	dw KADABRA
-	dw DISABLE, PSYBEAM, RECOVER, FUTURE_SIGHT
+	db 50
+	dw XATU
+	dw PSYCHIC, NIGHT_SHADE, FUTURE_SIGHT, CONFUSE_RAY
+	db 52
+	dw ALAKAZAM
+	dw REFLECT, PSYCHIC, RECOVER, FUTURE_SIGHT
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (9)

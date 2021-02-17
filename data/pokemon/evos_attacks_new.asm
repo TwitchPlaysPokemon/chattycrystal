@@ -981,7 +981,7 @@ DuskullEvosAttacks:
 	db 0 ; no more level-up moves
 	
 DusclopsEvosAttacks:	
-	dbbw EVOLVE_ITEM, DUSK_STONE, DUSKNOIR
+	dbbw EVOLVE_ITEM, MOON_STONE, DUSKNOIR
 	db 0
 	dbw 1, BIND
 	dbw 1, LEER

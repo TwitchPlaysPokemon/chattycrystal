@@ -28,6 +28,12 @@ DoTurn:
 	xor a
 	ld [wTurnEnded], a
 
+	; Reset chatty Chatter's move to ID 1 (Pound) just in case it doesn't get overwritten.
+	; This also clears the upper bits from it.
+	ld [wChattyChatterMove], a
+	inc a
+	ld [wChattyChatterMove + 1], a
+
 	; Effect command checkturn is called for every move.
 	call CheckTurn
 
@@ -5525,6 +5531,7 @@ else
 	ld hl, wChattyChatterMove
 	ld a, [hli]
 	ld l, [hl]
+	and $3f ; upper 2 bits are for flags
 	ld h, a
 endc
 	call GetMoveIDFromIndex

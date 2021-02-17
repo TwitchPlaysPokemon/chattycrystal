@@ -265,7 +265,7 @@
 	const SUPERPOWER   ; 101
 	const REVENGE      ; 102
 	const ENDEAVOR     ; 103
-	const SNATCH       ; 104 (PLACEHOLDER)
+	const SNATCH       ; 104
 	const SECRET_POWER ; 105 (PLACEHOLDER)
 	const DIVE         ; 106
 	const ARM_THRUST   ; 107

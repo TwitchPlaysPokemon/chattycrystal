@@ -26,11 +26,11 @@ _PlayBattleAnim:
 
 	ld c, 1
 	ldh a, [rKEY1]
-	bit 7, a
-	jr nz, .asm_cc0ff
+	add a, a
+	jr c, .double_speed
 	ld c, 3
 
-.asm_cc0ff
+.double_speed
 	ld hl, hVBlank
 	ld a, [hl]
 	push af
@@ -41,14 +41,13 @@ _PlayBattleAnim:
 	pop af
 	ldh [hVBlank], a
 
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 
 	call BattleAnimDelayFrame
 	call BattleAnimDelayFrame
 	call BattleAnimDelayFrame
-	call WaitSFX
-	ret
+	jp WaitSFX
 
 BattleAnimRunScript:
 	ld a, [wFXAnimID + 1]
@@ -90,8 +89,7 @@ BattleAnimRunScript:
 	call RunBattleAnimScript
 
 .done
-	call BattleAnim_RevertPals
-	ret
+	jp BattleAnim_RevertPals
 
 RunBattleAnimScript:
 	call ClearBattleAnims
@@ -135,20 +133,18 @@ RunBattleAnimScript:
 	bit BATTLEANIM_STOP_F, a
 	jr z, .playframe
 
-	call BattleAnim_ClearOAM
-	ret
+	jp BattleAnim_ClearOAM
 
 BattleAnimClearHud:
 	call BattleAnimDelayFrame
 	call WaitTop
 	call ClearActorHud
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	call BattleAnimDelayFrame
 	call BattleAnimDelayFrame
 	call BattleAnimDelayFrame
-	call WaitTop
-	ret
+	jp WaitTop
 
 BattleAnimRestoreHuds:
 	call BattleAnimDelayFrame
@@ -159,20 +155,17 @@ BattleAnimRestoreHuds:
 	ld a, BANK(wCurBattleMon) ; aka BANK(wTempMon) and BANK(wPartyMon1) and several others
 	ldh [rSVBK], a
 
-	ld hl, UpdateBattleHuds
-	ld a, BANK(UpdatePlayerHUD)
-	rst FarCall ; Why not "call UpdateBattleHuds"?
+	call UpdateBattleHuds
 
 	pop af
 	ldh [rSVBK], a
 
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	call BattleAnimDelayFrame
 	call BattleAnimDelayFrame
 	call BattleAnimDelayFrame
-	call WaitTop
-	ret
+	jp WaitTop
 
 BattleAnimRequestPals:
 	ldh a, [hCGB]
@@ -248,26 +241,15 @@ endr
 	ret
 
 RunBattleAnimCommand:
-	call .CheckTimer
-	ret nc
-	call .RunScript
-	ret
-
-.CheckTimer:
 	ld a, [wBattleAnimDelay]
 	and a
-	jr z, .done
+	jr z, .loop
 
 	dec a
 	ld [wBattleAnimDelay], a
 	and a
 	ret
 
-.done
-	scf
-	ret
-
-.RunScript:
 .loop
 	call GetBattleAnimByte
 

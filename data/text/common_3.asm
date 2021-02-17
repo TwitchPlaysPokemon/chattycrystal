@@ -1344,11 +1344,6 @@ UnknownText_0x1c5db6::
 	line "effect."
 	prompt
 
-UnknownText_0x1c5dd0::
-	text "The trainer"
-	line "blocked the BALL!"
-	prompt
-
 UnknownText_0x1c5def::
 	text "Don't be a thief!"
 	prompt

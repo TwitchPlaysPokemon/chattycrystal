@@ -2600,24 +2600,6 @@ UseDisposableItem:
 	ld [wItemQuantityChangeBuffer], a
 	jp TossItem
 
-UseBallInTrainerBattle:
-	call ReturnToBattle_UseBall
-	ld de, ANIM_THROW_POKE_BALL
-	ld a, e
-	ld [wFXAnimID], a
-	ld a, d
-	ld [wFXAnimID + 1], a
-	xor a
-	ld [wBattleAnimParam], a
-	ldh [hBattleTurn], a
-	ld [wNumHits], a
-	predef PlayBattleAnim
-	ld hl, BlockedTheBallText
-	call PrintText
-	ld hl, DontBeAThiefText
-	call PrintText
-	jr UseDisposableItem
-
 WontHaveAnyEffect_NotUsedMessage:
 	ld hl, WontHaveAnyEffectText
 	call PrintText
@@ -2692,11 +2674,6 @@ BelongsToSomeoneElseText:
 WontHaveAnyEffectText:
 	; It won't have any effect.
 	text_far UnknownText_0x1c5db6
-	text_end
-
-BlockedTheBallText:
-	; The trainer blocked the BALL!
-	text_far UnknownText_0x1c5dd0
 	text_end
 
 DontBeAThiefText:

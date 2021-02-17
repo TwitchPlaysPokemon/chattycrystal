@@ -516,7 +516,6 @@ CHRIS EQU __enum__
 	const NEAL
 	const GAKU
 	const MASA
-	const KOJI
 
 	trainerclass MEDIUM ; 20
 	const MARTHA
@@ -607,6 +606,7 @@ CHRIS EQU __enum__
 	trainerclass CY_ROBORED ; 2c
 	const X_CHATTYYELLOW1
 	const X_CHATTYYELLOW2
+	const X_CHATTYYELLOW3
 
 	trainerclass GSCHGSS_CHRIS ; 2d
 	const AAEFFFF

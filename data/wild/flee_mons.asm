@@ -30,5 +30,5 @@ OftenFleeMons:
 
 AlwaysFleeMons:
 	dw RAIKOU
-	dw ENTEI
+	dw SUICUNE
 	dw -1

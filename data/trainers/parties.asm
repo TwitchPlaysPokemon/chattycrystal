@@ -5524,26 +5524,18 @@ SageGroup:
 
 	next_list_item ; SAGE (10)
 	db "GAKU@", TRAINERTYPE_NORMAL
-	db 32
+	db 52
 	dw NOCTOWL
-	db 32
+	db 52
 	dw FLAREON
 	db -1 ; end
 
 	next_list_item ; SAGE (11)
 	db "MASA@", TRAINERTYPE_NORMAL
-	db 32
+	db 52
 	dw NOCTOWL
-	db 32
+	db 52
 	dw JOLTEON
-	db -1 ; end
-
-	next_list_item ; SAGE (12)
-	db "KOJI@", TRAINERTYPE_NORMAL
-	db 32
-	dw NOCTOWL
-	db 32
-	dw VAPOREON
 	db -1 ; end
 
 	end_list_items
@@ -6401,6 +6393,89 @@ CYRoboredGroup:
 	db "IIAAAIig--@"
 
 	db -1 ; end
+	
+	next_list_item ; X_CHATTYYELLOW3
+	db "x<MN>(?@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 30
+	dw RAICHU
+	db NO_ITEM
+	dw BODY_SLAM, THUNDERBOLT, QUICK_ATTACK, THUNDER_WAVE
+	bigdw $0FFF
+	bigdw 85
+	bigdw 67
+	bigdw 43
+	bigdw 80
+	bigdw 68
+	bigdw 68
+	db "IAS@"
+
+	db 30
+	dw JIGGLYPUFF
+	db NO_ITEM
+	dw DISABLE, REST, POUND, BUBBLEBEAM
+	bigdw $FFFF
+	bigdw 119
+	bigdw 44
+	bigdw 23
+	bigdw 27
+	bigdw 31
+	bigdw 31
+	db "IZZZZZZZQ@"
+
+	db 32
+	dw DUGTRIO
+	db NO_ITEM
+	dw SAND_ATTACK, GROWL, DIG, CUT
+	bigdw $FFFF
+	bigdw 75
+	bigdw 69
+	bigdw 45
+	bigdw 96
+	bigdw 60
+	bigdw 60
+	db "IGGGGGGFCC@"
+
+	db 36
+	dw VENUSAUR
+	db NO_ITEM
+	dw CUT, RAZOR_LEAF, LEECH_SEED, VINE_WHIP
+	bigdw $2FFF
+	bigdw 115
+	bigdw 74
+	bigdw 75
+	bigdw 77
+	bigdw 92
+	bigdw 92
+	db "-SJJJJx  <MN>@"
+
+	db 31
+	dw GYARADOS
+	db NO_ITEM
+	dw SPLASH, BITE, DRAGON_RAGE, TACKLE
+	bigdw $4FFF
+	bigdw 109
+	bigdw 93
+	bigdw 63
+	bigdw 71
+	bigdw 83
+	bigdw 83
+	db "AJJTUUUUU@"
+
+	db 57
+	dw CHATOT
+	db NO_ITEM
+	dw CHATTER, ROOST, PECK, MIRROR_MOVE
+	bigdw $19B5
+	bigdw 195
+	bigdw 105
+	bigdw 90
+	bigdw 146
+	bigdw 138
+	bigdw 138
+	db "AAAAAAaaaa@"
+
+	db -1 ; end
+	
 	end_list_items
 
 PokemonProfessorGroup:

@@ -2609,8 +2609,8 @@ AttackDamage:
 	and h
 	ret z
 
-	sla b
-	rl c
+	sla c
+	rl b
 	ret
 
 TruncateHL_BC:

@@ -196,8 +196,16 @@ ItemEffects:
 PokeBallEffect:
 	ld a, [wBattleMode]
 	dec a
-	jp nz, UseBallInTrainerBattle
+	jr z, .no_trainer_battle
 
+	; Item wasn't used.
+	ld hl, DontBeAThiefText
+	call PrintText
+	ld a, $2
+	ld [wItemEffectSucceeded], a
+	ret
+
+.no_trainer_battle
 	ld a, [wPartyCount]
 	cp PARTY_LENGTH
 	jr nz, .room_in_party

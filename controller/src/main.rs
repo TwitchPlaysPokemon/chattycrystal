@@ -77,6 +77,7 @@ pub struct ChatterMove {
 #[derive(Deserialize, Serialize, Debug, Default)]
 pub struct ChatterState {
     emote_name: String,
+    emote_id: String,
     player_move_id: u16,
     player_move_name: String,
     enemy_move_id: u16,
@@ -340,6 +341,7 @@ fn update_emote_related_data() {
                     let enemy_move_id = if let Some(move_id) = chatter_data.enemyMoveId { move_id } else { player_move_id };
                     let enemy_move_name = if let Some(name) = &chatter_data.enemyMoveName { name } else { &chatter_data.moveName };
                     *CHATTER_EMOTE.lock() = ChatterState { emote_name: entry.0.emote.name.clone(), 
+                                                           emote_id: entry.0.emote.id.clone(), 
                                                            player_move_id,
                                                            player_move_name: chatter_data.moveName.clone(),
                                                            enemy_move_id,
@@ -354,7 +356,8 @@ fn update_emote_related_data() {
         let player_move_id = chatter_data.moveId;
         let enemy_move_id = if let Some(move_id) = chatter_data.enemyMoveId { move_id } else { player_move_id };
         let enemy_move_name = if let Some(name) = &chatter_data.enemyMoveName { name } else { &chatter_data.moveName };
-        *CHATTER_EMOTE.lock() = ChatterState {emote_name: "Nothing".to_string(), 
+        *CHATTER_EMOTE.lock() = ChatterState {emote_name: "Nothing".to_string(),
+                                              emote_id: "".to_string(), 
                                               player_move_id,
                                               player_move_name: chatter_data.moveName.clone(),
                                               enemy_move_id,
@@ -363,6 +366,7 @@ fn update_emote_related_data() {
         (*HIDDEN_POWER.lock()).type_name = chatter_data.hpTypeName.clone().unwrap_or_else(|| "Normal".to_string());
     } else {
         *CHATTER_EMOTE.lock() = ChatterState {emote_name: "Nothing".to_string(), 
+                                              emote_id: "".to_string(),
                                               player_move_id: 150,
                                               player_move_name: "Splash".to_string(),
                                               enemy_move_id: 150,

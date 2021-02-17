@@ -2900,9 +2900,9 @@ Script_resetifuncaught:
 	ld d, a
 	ld a, [de]
 	pop de
-	ld b, a
-	sub 1
+	cp 1
 	ret c
+	ld b, a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a

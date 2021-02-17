@@ -408,7 +408,7 @@ ColoWesGroup:
 	bigdw 110
 	bigdw 56
 	bigdw 72
-	db "AAAAKLV"
+	db "AAAAKLV@"
 
 	db 44
 	dw BAYLEEF

@@ -124,7 +124,7 @@ pub fn start_endpoints() {
                 .port(SETTINGS.port)
                 .log_level(if SETTINGS.debug { LoggingLevel::Normal } else { LoggingLevel::Off })
                 .finalize().unwrap();
-            rocket::custom(config).mount("/", routes![text_inject, chatter, hidden_power, hidden_power_status, trainer_status, chatter_move_name, get_trainer_name, inject_trainer_name, chatot_cry]).launch();
+            rocket::custom(config).mount("/", routes![text_inject, chatter, hidden_power, hidden_power_status, trainer_status, chatter_move_name, get_trainer_name, inject_trainer_name, chatot_cry, chatter_status]).launch();
         })
         .expect("error: failed to start endpoint_api");
     println!("Endpoints up and running.")
@@ -215,6 +215,11 @@ fn hidden_power() -> &'static str {
 #[get("/hidden_power_status")]
 fn hidden_power_status() -> String {
     to_string(&*HIDDEN_POWER.lock()).unwrap()
+}
+
+#[get("/chatter_status")]
+fn chatter_status() -> String {
+    to_string(&*CHATTER_EMOTE.lock()).unwrap()
 }
 
 #[get("/trainer_status")]

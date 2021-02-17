@@ -74,7 +74,7 @@ pub struct ChatterMove {
     enemyMoveId: Option<u16>,
 }
 
-#[derive(Deserialize, Debug, Default)]
+#[derive(Deserialize, Serialize, Debug, Default)]
 pub struct ChatterState {
     emote_name: String,
     player_move_id: u16,

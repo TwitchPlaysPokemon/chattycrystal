@@ -680,137 +680,137 @@ JohtoGrassWildMons:
 	map_id ICE_PATH_1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 21, SWINUB
-	dbw 22, ZUBAT
-	dbw 22, GOLBAT
-	dbw 23, SWINUB
-	dbw 24, SNORUNT
-	dbw 22, SPHEAL
-	dbw 22, SPHEAL
+	dbw 47, SWINUB
+	dbw 48, ZUBAT
+	dbw 48, GOLBAT
+	dbw 49, SWINUB
+	dbw 50, SNORUNT
+	dbw 48, SPHEAL
+	dbw 48, SEALEO
 	; day
-	dbw 21, SWINUB
-	dbw 22, ZUBAT
-	dbw 22, GOLBAT
-	dbw 23, SWINUB
-	dbw 24, SNORUNT
-	dbw 22, SPHEAL
-	dbw 22, SPHEAL
+	dbw 47, SWINUB
+	dbw 48, ZUBAT
+	dbw 48, GOLBAT
+	dbw 49, SWINUB
+	dbw 50, SNORUNT
+	dbw 48, SPHEAL
+	dbw 48, SEALEO
 	; nite
-	dbw 21, DELIBIRD
-	dbw 22, ZUBAT
-	dbw 22, GOLBAT
-	dbw 23, DELIBIRD
-	dbw 24, SNORUNT
-	dbw 22, SPHEAL
-	dbw 22, SPHEAL
+	dbw 47, DELIBIRD
+	dbw 48, ZUBAT
+	dbw 48, GOLBAT
+	dbw 49, DELIBIRD
+	dbw 50, SNORUNT
+	dbw 48, SPHEAL
+	dbw 48, SEALEO
 
 	map_id ICE_PATH_B1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 22, SWINUB
-	dbw 23, ZUBAT
-	dbw 23, GOLBAT
-	dbw 24, SWINUB
-	dbw 25, SPHEAL
-	dbw 23, SNORUNT
-	dbw 22, JYNX
+	dbw 48, SWINUB
+	dbw 49, ZUBAT
+	dbw 49, GOLBAT
+	dbw 50, PILOSWINE
+	dbw 51, SPHEAL
+	dbw 49, SNORUNT
+	dbw 48, JYNX
 	; day
-	dbw 22, SWINUB
-	dbw 23, ZUBAT
-	dbw 23, GOLBAT
-	dbw 24, SWINUB
-	dbw 25, SPHEAL
-	dbw 23, SNORUNT
-	dbw 22, JYNX
+	dbw 48, SWINUB
+	dbw 49, ZUBAT
+	dbw 49, GOLBAT
+	dbw 50, PILOSWINE
+	dbw 51, SPHEAL
+	dbw 49, SNORUNT
+	dbw 48, JYNX
 	; nite
-	dbw 22, DELIBIRD
-	dbw 23, ZUBAT
-	dbw 23, GOLBAT
-	dbw 24, DELIBIRD
-	dbw 25, SPHEAL
-	dbw 23, SNORUNT
-	dbw 22, SNEASEL
+	dbw 48, DELIBIRD
+	dbw 49, ZUBAT
+	dbw 49, GOLBAT
+	dbw 50, DELIBIRD
+	dbw 51, SPHEAL
+	dbw 49, SNORUNT
+	dbw 48, SNEASEL
 
 	map_id ICE_PATH_B2F_MAHOGANY_SIDE
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 23, SWINUB
-	dbw 24, ZUBAT
-	dbw 24, SWINUB
-	dbw 25, SPHEAL
-	dbw 26, SNORUNT
-	dbw 22, JYNX
-	dbw 24, JYNX
+	dbw 49, SWINUB
+	dbw 50, ZUBAT
+	dbw 50, PILOSWINE
+	dbw 51, SPHEAL
+	dbw 52, SNORUNT
+	dbw 48, JYNX
+	dbw 50, FROSLASS
 	; day
-	dbw 23, SWINUB
-	dbw 24, ZUBAT
-	dbw 24, SWINUB
-	dbw 25, SPHEAL
-	dbw 26, SNORUNT
-	dbw 22, JYNX
-	dbw 24, JYNX
+	dbw 49, SWINUB
+	dbw 50, ZUBAT
+	dbw 50, PILOSWINE
+	dbw 51, SPHEAL
+	dbw 52, SNORUNT
+	dbw 48, JYNX
+	dbw 50, FROSLASS
 	; nite
-	dbw 23, DELIBIRD
-	dbw 24, ZUBAT
-	dbw 24, DELIBIRD
-	dbw 25, SPHEAL
-	dbw 26, SNORUNT
-	dbw 22, SNEASEL
-	dbw 24, SNEASEL
+	dbw 49, DELIBIRD
+	dbw 50, ZUBAT
+	dbw 50, DELIBIRD
+	dbw 51, SPHEAL
+	dbw 52, SNORUNT
+	dbw 48, SNEASEL
+ 	dbw 50, FROSLASS
 
 	map_id ICE_PATH_B2F_BLACKTHORN_SIDE
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 23, SWINUB
-	dbw 24, ZUBAT
-	dbw 24, SWINUB
-	dbw 25, SNORUNT
-	dbw 26, SPHEAL
-	dbw 22, JYNX
-	dbw 24, JYNX
+	dbw 49, SWINUB
+	dbw 50, ZUBAT
+	dbw 50, SWINUB
+	dbw 51, SNORUNT
+	dbw 52, SPHEAL
+	dbw 48, JYNX
+	dbw 50, SEALEO
 	; day
-	dbw 23, SWINUB
-	dbw 24, ZUBAT
-	dbw 24, SWINUB
-	dbw 25, SNORUNT
-	dbw 26, SPHEAL
-	dbw 22, JYNX
-	dbw 24, JYNX
+	dbw 49, SWINUB
+	dbw 50, ZUBAT
+	dbw 50, SWINUB
+	dbw 51, SNORUNT
+	dbw 52, SPHEAL
+	dbw 48, JYNX
+	dbw 50, SEALEO
 	; nite
-	dbw 23, DELIBIRD
-	dbw 24, ZUBAT
-	dbw 24, DELIBIRD
-	dbw 25, SNORUNT
-	dbw 26, SPHEAL
-	dbw 22, SNEASEL
-	dbw 24, SNEASEL
+	dbw 49, DELIBIRD
+	dbw 50, ZUBAT
+	dbw 50, DELIBIRD
+	dbw 51, SNORUNT
+	dbw 52, SPHEAL
+	dbw 48, SNEASEL
+	dbw 50, FROSLASS
 
 	map_id ICE_PATH_B3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 24, SWINUB
-	dbw 25, ZUBAT
-	dbw 25, SWINUB
-	dbw 26, JYNX
-	dbw 22, SNORUNT
-	dbw 24, PIPLUP
-	dbw 26, FROSLASS
+	dbw 50, SWINUB
+	dbw 51, ZUBAT
+	dbw 51, PILOSWINE
+	dbw 52, JYNX
+	dbw 48, SNORUNT
+	dbw 50, PIPLUP
+	dbw 52, FROSLASS
 	; day
-	dbw 24, SWINUB
-	dbw 25, ZUBAT
-	dbw 25, SWINUB
-	dbw 26, JYNX
-	dbw 22, SPHEAL
-	dbw 24, PIPLUP
-	dbw 26, SEALEO
+	dbw 50, SWINUB
+	dbw 51, ZUBAT
+	dbw 51, PILOSWINE
+	dbw 52, JYNX
+	dbw 48, SPHEAL
+	dbw 50, PIPLUP
+	dbw 52, SEALEO
 	; nite
-	dbw 24, DELIBIRD
-	dbw 25, ZUBAT
-	dbw 25, DELIBIRD
-	dbw 26, SNEASEL
-	dbw 22, SPHEAL
-	dbw 24, PIPLUP
-	dbw 26, SEALEO
+	dbw 50, DELIBIRD
+	dbw 51, ZUBAT
+	dbw 51, DELIBIRD
+	dbw 52, SNEASEL
+	dbw 48, SPHEAL
+	dbw 50, PIPLUP
+	dbw 52, SEALEO
 
 	map_id WHIRL_ISLAND_NW
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

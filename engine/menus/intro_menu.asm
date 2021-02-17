@@ -1201,7 +1201,11 @@ Copyright:
 	ld hl, vTiles2 tile $60
 	lb bc, BANK(CopyrightGFX), 29
 	call Request2bpp
-	hlcoord 2, 7
+	ld de, CopyrightTPPGFX
+	ld hl, vTiles1
+	lb bc, BANK(CopyrightTPPGFX), 8
+	call Request2bpp
+	hlcoord 2, 6
 	ld de, CopyrightString
 	jp PlaceString
 
@@ -1217,6 +1221,10 @@ CopyrightString:
 	; ©1995-2001 GAME FREAK inc.
 	next $60, $61, $62, $63, $64, $65, $66
 	db   $73, $74, $75, $76, $77, $78, $79, $7a, $7b, $7c
+
+	; ©2021 TPPDevs
+	next $60, $64, $80, $81
+	db   $82, $83, $84, $85, $86, $87
 
 	db "@"
 

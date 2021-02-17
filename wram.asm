@@ -1155,7 +1155,7 @@ wBGMapBufferEnd::
 
 NEXTU ; cd20
 ; credits
-wCreditsPos:: db
+ds 1; unused
 wCreditsTimer:: db
 
 NEXTU ; cd20
@@ -2244,7 +2244,8 @@ wCurBaseDataEnd::
 
 wCurDamage:: dw ; d256
 
-	ds 2
+; moving credits because chaos is dum
+wCreditsPos:: dw ; d258
 
 wMornEncounterRate::  db ; d25a
 wDayEncounterRate::   db ; d25b

@@ -497,6 +497,11 @@ SECTION "bank39", ROMX
 CopyrightGFX::
 INCBIN "gfx/splash/copyright.2bpp"
 
+CopyrightTPPGFX::
+INCBIN "gfx/splash/copyright_tpp.2bpp"
+
+CopyrightTPPGFXEnd::
+
 INCLUDE "engine/menus/options_menu.asm"
 INCLUDE "engine/movie/crystal_intro.asm"
 

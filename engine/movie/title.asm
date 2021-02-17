@@ -98,6 +98,13 @@ _TitleScreen:
 	ld de, vTiles0
 	call Decompress
 
+; Copy TPP Copyright
+	ld a, BANK(CopyrightTPPGFX)
+	ld bc, CopyrightTPPGFXEnd-CopyrightTPPGFX
+	ld de, $9190
+	ld hl, CopyrightTPPGFX
+	call FarCopyBytes
+
 ; Clear screen tiles
 	hlbgcoord 0, 0
 	ld bc, 64 * BG_MAP_WIDTH

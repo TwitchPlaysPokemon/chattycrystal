@@ -40,6 +40,11 @@ Credits::
 	lb bc, BANK(CreditsBorderGFX), 9
 	call Request2bpp
 
+	ld de, CopyrightTPPGFX
+	ld hl, vTiles1 tile $5a
+	lb bc, BANK(CopyrightTPPGFX), 8
+	call Request2bpp
+
 	ld de, CopyrightGFX
 	ld hl, vTiles2 tile $60
 	lb bc, BANK(CopyrightGFX), 29
@@ -85,6 +90,7 @@ Credits::
 	xor a
 	ldh [hBGMapMode], a
 	ld [wCreditsPos], a
+	ld [wCreditsPos + 1], a
 	ld [wCreditsTimer], a
 
 .execution_loop

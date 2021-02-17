@@ -2707,3 +2707,25 @@ WaterSpout:
 	buildopponentrage
 	kingsrock
 	endmove
+
+KnockOff:
+	checkobedience
+	usedmovetext
+	doturn
+	knockoff_power
+	critical
+	damagestats
+	damagecalc
+	stab
+	checkhit
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	knockoff
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

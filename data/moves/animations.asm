@@ -377,7 +377,7 @@ BattleAnimations::
 	dw BattleAnim_Submission
 	dw BattleAnim_HiddenPower  ; 160
 	dw BattleAnim_ThunderWave
-	dw BattleAnim_Headbutt ; PLACEHOLDER
+	dw BattleAnim_Thief
 	dw BattleAnim_Surf
 	dw BattleAnim_MegaPunch
 

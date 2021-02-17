@@ -359,7 +359,7 @@
 	const POWER_TRIP   ; 15f
 	const CHATTY_HP    ; 160
 	const CRYSTAL_BOLT ; 161
-	const KNOCK_OFF    ; 162 (PLACEHOLDER)
+	const KNOCK_OFF    ; 162
 	const WATER_SPOUT  ; 163
 	const NEEDLE_ARM   ; 164
 

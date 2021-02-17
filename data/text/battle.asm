@@ -1052,6 +1052,14 @@ UserSnatchedOpponentMove:
 	line "snatched the move!"
 	prompt
 
+KnockedOffItemText:
+	text "<USER>"
+	line "knocked off"
+	cont "@"
+	text_ram wStringBuffer1
+	text "!"
+	prompt
+
 CoveredByVeilText:
 	text "<USER>'s"
 	line "covered by a veil!"

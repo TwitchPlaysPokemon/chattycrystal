@@ -6,6 +6,8 @@ DoBattle:
 	ld [wBattleParticipantsIncludingFainted], a
 	ld [wBattlePlayerAction], a
 	ld [wBattleEnded], a
+	ld [wPlayerKnockOff], a
+	ld [wEnemyKnockOff], a
 	inc a
 	ld [wBattleHasJustStarted], a
 	ld hl, wOTPartyMon1HP
@@ -4623,6 +4625,10 @@ HandleStatBoostingHeldItems:
 	push bc
 	ld a, [bc]
 	ld b, a
+	push hl
+	call IsUserItemUsable
+	pop hl
+	jr nz, .finish
 	callfar GetItemHeldEffect
 	ld hl, HeldStatUpItems
 .loop

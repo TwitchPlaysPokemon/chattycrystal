@@ -370,6 +370,6 @@ Moves1:
 	move EFFECT_STORED_POWER,         20, DARK,     100, 10,   0 ;POWER_TRIP
 	move EFFECT_CHATTY_HP,             1, NORMAL,   100, 15,   0 ;CHATTY_HP
 	move EFFECT_CRYSTAL_BOLT,         70, ELECTRIC, 100, 20,   0 ;CRYSTAL_BOLT
-	move EFFECT_PLACEHOLDER,          65, DARK,     100, 20,   0 ;KNOCK_OFF
+	move EFFECT_KNOCK_OFF,            65, DARK,     100, 20,   0 ;KNOCK_OFF
 	move EFFECT_WATER_SPOUT,         150, WATER,    100,  5,   0 ;WATER_SPOUT
 	move EFFECT_FLINCH_HIT,           60, GRASS,    100, 15,  30 ;NEEDLE_ARM

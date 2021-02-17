@@ -216,6 +216,8 @@ ENDM
 	command snatch                  ; d1
 	command checksnatch             ; d2
 	command waterspout              ; d3
+	command knockoff_power          ; d4
+	command knockoff                ; d5
 
 	enum_start $fe
 	command endturn                 ; fe

@@ -216,3 +216,5 @@ BattleCommandPointers:
 	effectfn BattleCommand_Snatch
 	effectfn BattleCommand_CheckSnatch
 	effectfn BattleCommand_WaterSpout
+	effectfn BattleCommand_KnockOffPower
+	effectfn BattleCommand_KnockOff

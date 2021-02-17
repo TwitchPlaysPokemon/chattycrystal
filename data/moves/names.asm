@@ -354,3 +354,4 @@ MoveNames::
 	db "CRYSTAL BOLT@"
 	db "KNOCK OFF@"
 	db "WATER SPOUT@"
+	db "NEEDLE ARM@"

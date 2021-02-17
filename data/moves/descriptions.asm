@@ -360,6 +360,7 @@ MoveDescriptions1:
 	dw CrystalBoltDescription
 	dw KnockOffDescription
 	dw WaterSpoutDescription
+	dw HeadbuttDescription
 
 ChatterDescription:
 InvalidMoveDescription:

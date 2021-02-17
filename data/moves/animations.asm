@@ -379,8 +379,8 @@ BattleAnimations::
 	dw BattleAnim_ThunderWave
 	dw BattleAnim_Headbutt ; PLACEHOLDER
 	dw BattleAnim_Surf
-
-
+	dw BattleAnim_MegaPunch
+	
 BattleAnim_0:
 BattleAnim_MirrorMove:
 	anim_ret

@@ -217,10 +217,87 @@ ACChrisGroup:
 
 FCChrisGroup:
 	next_list_item ; Y_FUSEDCRYSTAL
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
+	db "Y@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 47
+	dw MEGASTOISE
+	db SURF_MAIL
+	dw WATERFALL, PROTECT, POISONPOWDER, WHIRLPOOL
+	bigdw $0FFF
+	bigdw 149
+	bigdw 96
+	bigdw 113
+	bigdw 97
+	bigdw 103
+	bigdw 121
+	db "FOOLK@"
+	
+	db 50
+	dw TOGETAPE
+	db SURF_MAIL
+	dw STRENGTH, FLY, CROSS_CHOP, ROCK_SMASH
+	bigdw $FFFF
+	bigdw 147
+	bigdw 111
+	bigdw 96
+	bigdw 91
+	bigdw 100
+	bigdw 118
+	db "FEB@"
+
+	db 47
+	dw QUAGYNX
+	db SURF_MAIL
+	dw SURF, EARTHQUAKE, ICE_PUNCH, BODY_SLAM
+	bigdw $FFFF
+	bigdw 149
+	bigdw 99
+	bigdw 82
+	bigdw 89
+	bigdw 120
+	bigdw 111
+	db "JKilt@"
+
+	db 50
+	dw JUMPANIUM
+	db SURF_MAIL
+	dw MEGA_DRAIN, CUT, LEECH_SEED, STRENGTH
+	bigdw $FFFF
+	bigdw 160
+	bigdw 103
+	bigdw 120
+	bigdw 123
+	bigdw 94
+	bigdw 108
+	db "bbbii@"
+
+	db 46
+	dw STEELURRET
+	db SURF_MAIL
+	dw STRENGTH, SURF, ROCK_THROW, SLAM
+	bigdw $FFFF
+	bigdw 145
+	bigdw 103
+	bigdw 140
+	bigdw 76
+	bigdw 86
+	bigdw 76
+	db "IIIRRRJJS@"
+	
+	db 52
+	dw NOCTDRIO
+	db SURF_MAIL
+	dw ROCK_SMASH, FLY, PECK, AGILITY
+	bigdw $0FFF
+	bigdw 176
+	bigdw 109
+	bigdw 97
+	bigdw 125
+	bigdw 109
+	bigdw 99
+	db "T  SS@"
+	
+	db -1 ;end
 
 	end_list_items
 
@@ -286,12 +363,12 @@ ColoWesGroup:
 	db BURN_HEAL
 	dw SHADOW_BALL, CONFUSE_RAY, PSYBEAM, MEAN_LOOK
 	bigdw $FFFF
-	bigdw 164
-	bigdw 123
+	bigdw 134
+	bigdw 87
+	bigdw 75
+	bigdw 101
 	bigdw 111
-	bigdw 80
-	bigdw 95
-	bigdw 94
+	bigdw 101
 	db "AAAAAAAAAA@"
 
 	db 37
@@ -299,38 +376,38 @@ ColoWesGroup:
 	db POKE_BALL
 	dw CONFUSION, REFLECT, PSYBEAM, NO_MOVE
 	bigdw $FFFF
-	bigdw 125
-	bigdw 81
-	bigdw 83
-	bigdw 97
-	bigdw 77
-	bigdw 89
+	bigdw 103
+	bigdw 57
+	bigdw 53
+	bigdw 88
+	bigdw 99
+	bigdw 92
 	db "ESPEON@"
 
 	db 44
 	dw UMBREON
 	db NO_ITEM
 	dw MEAN_LOOK, SNATCH, TAUNT, SECRET_POWER
-	bigdw $0FFF
-	bigdw 118
-	bigdw 74
-	bigdw 89
-	bigdw 74
-	bigdw 67
-	bigdw 111
+	bigdw $FFFF
+	bigdw 151
+	bigdw 79
+	bigdw 117
+	bigdw 70
+	bigdw 57
+	bigdw 124
 	db "UMBREON@"
 
 	db 44
 	dw JUMPLUFF
 	db NO_ITEM
 	dw MEGA_DRAIN, COTTON_SPORE, SLEEP_POWDER, SYNTHESIS
-	bigdw $FFFF
-	bigdw 140
-	bigdw 135
-	bigdw 151
-	bigdw 118
-	bigdw 84
-	bigdw 77
+	bigdw $0FFF
+	bigdw 131
+	bigdw 64
+	bigdw 86
+	bigdw 110
+	bigdw 56
+	bigdw 72
 	db "AAAAKLV"
 
 	db 44
@@ -338,19 +415,94 @@ ColoWesGroup:
 	db NO_ITEM
 	dw TOXIC, SYNTHESIS, RAZOR_LEAF, BODY_SLAM
 	bigdw $FFFF
-	bigdw 133
-	bigdw 69
-	bigdw 144
-	bigdw 67
-	bigdw 96
-	bigdw 165
+	bigdw 121
+	bigdw 64
+	bigdw 79
+	bigdw 73
+	bigdw 70
+	bigdw 82
 	db "BAYLEEF@"
 	db -1 ; end
 
 	next_list_item ; ACCC
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+	db "ACCC@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 48
+	dw OCTILLERY
+	db NO_ITEM
+	dw MUDDY_WATER, BUBBLE, MUD_SLAP, TAIL_WHIP
+	bigdw $0FFF
+	bigdw 140
+	bigdw 115
+	bigdw 88
+	bigdw 52
+	bigdw 115
+	bigdw 81
+	db "AA0@"
+
+	db 42
+	dw LUDICOLO
+	db NO_ITEM
+	dw NEEDLE_ARM, SWAGGER, TEETER_DANCE, DISABLE
+	bigdw $FFFF
+	bigdw 132
+	bigdw 76
+	bigdw 76
+	bigdw 77
+	bigdw 93
+	bigdw 102
+	db "AAPGllj@"
+
+	db 44
+	dw PERSIAN
+	db NO_ITEM
+	dw TWINEEDLE, WILL_O_WISP, SYNTHESIS, ROCK_TOMB
+	bigdw $0FFF
+	bigdw 117
+	bigdw 80
+	bigdw 77
+	bigdw 119
+	bigdw 57
+	bigdw 71
+	db "''@"
+
+	db 44
+	dw WALREIN
+	db NO_ITEM
+	dw ICE_BEAM, SOLARBEAM, BATON_PASS, DRAGON_DANCE
+	bigdw $0FFF
+	bigdw 158
+	bigdw 88
+	bigdw 86
+	bigdw 73
+	bigdw 98
+	bigdw 95
+	db "Walrein@"
+
+	db 39
+	dw PILOSWINE
+	db NO_ITEM
+	dw TICKLE, POUND, SURF, ACID_ARMOR
+	bigdw $0FFF
+	bigdw 129
+	bigdw 89
+	bigdw 74
+	bigdw 51
+	bigdw 54
+	bigdw 60
+	db "XNNCCGG@"
+	
+	db 44
+	dw HO_OH
+	db SUN_STONE
+	dw METRONOME, COUNTER, IRON_TAIL, LEER
+	bigdw $0FFF
+	bigdw 162
+	bigdw 136
+	bigdw 102
+	bigdw 100
+	bigdw 118
+	bigdw 155
+	db "Ho-Oh@"
 	db -1 ; end
 
 	end_list_items
@@ -6121,7 +6273,7 @@ NuzlockeGroup:
 	bigdw 96
 	db "Zzzzzz mmg@"
 
-	db 49
+	db 41
 	dw VIBRAVA
 	db AMULET_COIN
 	dw BITE, FEINT_ATTACK, DRAGONBREATH, SAND_TOMB
@@ -6134,7 +6286,7 @@ NuzlockeGroup:
 	bigdw 56
 	db "Piiiv@"
 
-	db 47
+	db 29
 	dw WAILMER
 	db EXP_SHARE
 	dw ASTONISH, ROLLOUT, WATER_GUN, WATER_PULSE
@@ -6180,7 +6332,7 @@ NuzlockeGroup:
 	db 43
 	dw WAILORD
 	db EXP_SHARE
-	dw REST, ROLLOUT, SURF, NO_MOVE; WATER_SPOUT
+	dw REST, ROLLOUT, SURF, WATER_SPOUT
 	bigdw $FFFF
 	bigdw 220
 	bigdw 108
@@ -6193,7 +6345,7 @@ NuzlockeGroup:
 	db 33
 	dw SABLEYE
 	db EXP_SHARE
-	dw SHADOW_BALL, FURY_SWIPES, NIGHT_SHADE, NO_MOVE ;KNOCK_OFF
+	dw SHADOW_BALL, FURY_SWIPES, NIGHT_SHADE, KNOCK_OFF
 	bigdw $0FFF
 	bigdw 88
 	bigdw 63

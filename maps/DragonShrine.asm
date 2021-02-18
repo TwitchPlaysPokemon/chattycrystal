@@ -194,6 +194,8 @@ DragonShrine_MapScripts:
 	waitbutton
 	closetext
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	setevent EVENT_OLIVINE_PORT_SPRITES_BEFORE_CLAIR
+	clearevent EVENT_OLIVINE_PORT_SPRITES_AFTER_CLAIR
 	end
 
 DragonShrineElder1Script:

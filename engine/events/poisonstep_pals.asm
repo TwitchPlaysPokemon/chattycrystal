@@ -2,8 +2,7 @@ LoadPoisonBGPals:
 	call .LoadPals
 	ldh a, [hCGB]
 	and a
-	ret nz
-	ret ; ????
+	ret
 
 .LoadPals:
 	ldh a, [hCGB]

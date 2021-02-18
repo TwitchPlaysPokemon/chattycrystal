@@ -319,6 +319,7 @@ INCLUDE "engine/events/magnet_train.asm"
 INCLUDE "engine/battle/battlestart_copytilemapatonce.asm"
 INCLUDE "engine/gfx/sprites.asm"
 INCLUDE "engine/gfx/mon_icons.asm"
+INCLUDE "engine/events/poisonstep_pals.asm"
 
 
 SECTION "bank24", ROMX
@@ -421,7 +422,6 @@ SECTION "bank32", ROMX
 
 INCLUDE "engine/battle_anims/bg_effects.asm"
 INCLUDE "data/moves/animations.asm"
-INCLUDE "engine/events/poisonstep_pals.asm"
 
 TheEndGFX::
 INCBIN "gfx/credits/theend.2bpp"

@@ -1096,3 +1096,9 @@ resetifuncaught: MACRO
 	dw \1 ; pokemon
 	dw \2 ; flag index
 ENDM
+
+	enum checkcaught_command ; $b0
+checkcaught: MACRO
+	db checkcaught_command
+	dw \1 ; pokemon
+ENDM

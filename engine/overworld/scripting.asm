@@ -233,6 +233,7 @@ ScriptCommandTable:
 	dw Script_chattyoff                  ; ad
 	dw Script_chattyon                   ; ae
 	dw Script_resetifuncaught            ; af
+	dw Script_checkcaught                ; b0
 
 StartScript:
 	ld hl, wScriptFlags
@@ -2318,6 +2319,15 @@ Script_setflag:
 	ld b, SET_FLAG
 	jp _EngineFlagAction
 
+Script_resetifuncaught:
+; script command 0xaf
+; params: mon index, flag index
+; resets the flag if the mon is not caught in the dex or not existing in the party, PC or daycare
+	call LoadScriptPokemonIndex
+	call CheckCaughtAndPresent
+	jp c, SkipTwoScriptBytes
+	; fallthrough
+
 Script_clearflag:
 ; script command 0x35
 ; parameters: bit_number
@@ -2799,6 +2809,16 @@ LoadScriptPokemonID:
 	ld a, [wScriptVar]
 	ret
 
+LoadScriptPokemonIndex:
+	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	or l
+	ret nz
+	ld a, [wScriptVar]
+	jp GetPokemonIndexFromID
+
 Script_givechattymon:
 ; script command 0xac
 ; if no room in the party, return 0 in wScriptVar; else, return 2
@@ -2818,21 +2838,31 @@ Script_chattyon:
 	rst ChattyOn
 	ret
 
-Script_resetifuncaught:
-; script command 0xaf
-; params: mon index, flag index
-; resets the flag if the mon is not caught in the dex or not existing in the party, PC or daycare
-	call GetScriptByte
-	ld l, a
-	call GetScriptByte
-	ld h, a
-	or l
-	ld a, [wScriptVar]
-	call z, GetPokemonIndexFromID
+Script_checkcaught:
+; script command 0xb0
+; parameters: species index
+; sets the script variable to 2 if the mon is caught and present, 1 if caught and lost, or 0 if not caught
+	call LoadScriptPokemonIndex
+	push hl
+	call CheckCaughtAndPresent
+	pop hl
+	ld a, 2
+	jr c, .done
+	call CheckCaughtMonIndex
+	ld a, 1
+	jr nz, .done
+	dec a
+.done
+	ld [wScriptVar], a
+	ret
+
+CheckCaughtAndPresent:
+	; returns carry if the mon in hl is caught and still present
 	push hl
 	call CheckCaughtMonIndex
 	pop de
-	jp z, Script_clearflag
+	and a
+	ret z
 	ld a, [wSaveFileExists]
 	and a
 	jr z, .no_other_boxes
@@ -2847,7 +2877,7 @@ Script_resetifuncaught:
 	call .check_box
 	call CloseSRAM
 	pop hl
-	jr nc, .no_reset
+	ret c
 .next_box
 	ld a, c
 	ld bc, 5
@@ -2869,7 +2899,8 @@ Script_resetifuncaught:
 	ld a, e
 .party_loop
 	cp [hl]
-	jr z, .no_reset
+	scf
+	ret z
 	add hl, bc
 	dec d
 	jr nz, .party_loop
@@ -2879,16 +2910,16 @@ Script_resetifuncaught:
 	jr z, .no_breed_mon
 	ld a, [wBreedMon1Species]
 	cp e
-	jr z, .no_reset
+	scf
+	ret z
 .no_breed_mon
 	ld a, [wDayCareLady]
 	and 1 << DAYCARELADY_HAS_MON_F
-	jp z, Script_clearflag
+	ret z
 	ld a, [wBreedMon2Species]
-	cp e
-	jp nz, Script_clearflag
-.no_reset
-	jp SkipTwoScriptBytes
+	xor e
+	sub 1 ; will set carry if a = e
+	ret
 
 .check_box
 	ld a, [hli]
@@ -2912,11 +2943,12 @@ Script_resetifuncaught:
 	ld a, [hli]
 	jr nz, .next_box_mon
 	cp d
-	ret z ; no carry
+	ccf
+	ret z ; carry set
 .next_box_mon
 	dec b
 	jr nz, .box_mon_loop
-	scf
+	and a
 	ret
 
 .boxes

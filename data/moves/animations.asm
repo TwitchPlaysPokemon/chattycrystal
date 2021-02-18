@@ -314,7 +314,7 @@ BattleAnimations::
 	dw BattleAnim_ThunderWave  ; 120
 	dw BattleAnim_Bubblebeam
 	dw BattleAnim_Recover
-	dw BattleAnim_Headbutt ; PLACEHOLDER
+	dw BattleAnim_Taunt
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_Waterfall
 	dw BattleAnim_MegaPunch
@@ -1736,6 +1736,23 @@ BattleAnim_Recover:
 	anim_wait 64
 	anim_incbgeffect ANIM_BG_18
 	anim_call BattleAnim_ShowMon_0
+	anim_ret
+	
+BattleAnim_Taunt:
+	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_TAUNT
+	anim_obj ANIM_OBJ_TAUNT, 72, 84, $0
+	anim_wait 16
+.loop
+	anim_sound 0, 0, SFX_SQUEAK 
+	anim_wait 32
+	anim_loop 3, .loop
+	anim_clearobjs
+	anim_sound 0, 1, SFX_KINESIS_2
+	anim_obj ANIM_OBJ_ANGER, 112, 50, $0
+	anim_wait 16
+	anim_sound 0, 1, SFX_KINESIS_2
+	anim_obj ANIM_OBJ_ANGER, 148, 32, $0
+	anim_wait 32
 	anim_ret
 
 BattleAnim_Absorb:

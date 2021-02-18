@@ -270,6 +270,7 @@ TilesetOmanyteWordRoomAnim:
 TilesetAerodactylWordRoomAnim:
 TilesetRoute23Anim:
 TilesetMuseumAnim:
+TilesetKantoForestAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation

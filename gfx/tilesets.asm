@@ -354,3 +354,12 @@ INCLUDE "data/tilesets/museum_collision.asm"
 
 TilesetMuseumGFX:
 INCBIN "gfx/tilesets/museum.2bpp.lz"
+
+TilesetKantoForestMeta:
+INCBIN "data/tilesets/kanto_forest_metatiles.bin"
+
+TilesetKantoForestColl:
+INCLUDE "data/tilesets/kanto_forest_collision.asm"
+
+TilesetKantoForestGFX:
+INCBIN "gfx/tilesets/kanto_forest.2bpp.lz"

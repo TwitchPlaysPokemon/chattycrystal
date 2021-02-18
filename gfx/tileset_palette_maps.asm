@@ -111,3 +111,6 @@ INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 
 TilesetRoute23PalMap:
 INCLUDE "gfx/tilesets/route_23_palette_map.asm"
+
+TilesetKantoForestPalMap:
+INCLUDE "gfx/tilesets/kanto_forest_palette_map.asm"

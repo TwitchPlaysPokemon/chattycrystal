@@ -176,6 +176,8 @@ Route40BattleTowerGate_Blocks:
 Route2Gate_Blocks:
 Route29Route46Gate_Blocks:
 Route5SaffronGate_Blocks:
+ViridianForestNorthGate_Blocks:
+ViridianForestSouthGate_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
 
 CinnabarIsland_Blocks:
@@ -913,3 +915,6 @@ PewterMuseum1F_Blocks:
 
 PewterMuseum2F_Blocks:
 	INCBIN "maps/PewterMuseum2F.blk"
+
+ViridianForest_Blocks:
+	INCBIN "maps/ViridianForest.blk"

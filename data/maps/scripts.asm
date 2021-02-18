@@ -492,3 +492,6 @@ SECTION "Map Scripts 26", ROMX
 
 INCLUDE "maps/PewterMuseum1F.asm"
 INCLUDE "maps/PewterMuseum2F.asm"
+INCLUDE "maps/ViridianForest.asm"
+INCLUDE "maps/ViridianForestNorthGate.asm"
+INCLUDE "maps/ViridianForestSouthGate.asm"

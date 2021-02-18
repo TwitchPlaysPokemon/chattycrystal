@@ -51,3 +51,4 @@ Tilesets::
 	tileset TilesetAerodactylWordRoom
 	tileset TilesetRoute23
 	tileset TilesetMuseum
+	tileset TilesetKantoForest

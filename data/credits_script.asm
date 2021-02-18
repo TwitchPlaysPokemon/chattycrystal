@@ -125,18 +125,18 @@ CreditsScript:
 	db         POKEDEX_TEXT, 1
 	db  TOSHINOBU_MATSUMIYA, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db     TOOL_PROGRAMMING, 1
 	db       SOUSUKE_TAMADA, 2
 	db        TAKENORI_OOTA, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db    PARAMETRIC_DESIGN, 1
 	db        KOHJI_NISHINO, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 ; Clear the banner.
 	db CREDITS_CLEAR
@@ -150,37 +150,37 @@ CreditsScript:
 	db         TETSUJI_OOTA, 2
 	db        NOBUHIRO_SEYA, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db      MAP_DATA_DESIGN, 1
 	db         TETSUJI_OOTA, 2
 	db      KAZUHITO_SEKINE, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db           MAP_DESIGN, 0
 	db         TETSUJI_OOTA, 1
 	db        KOHJI_NISHINO, 2
 	db        NOBUHIRO_SEYA, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db         COORDINATION, 1
 	db      HIROYUKI_ZINNAI, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db            PRODUCERS, 0
 	db         SATORU_IWATA, 1
 	db       SATOSHI_YAMATO, 2
 	db     SHIGERU_MIYAMOTO, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db            PRODUCERS, 1
 	db   TSUNEKAZU_ISHIHARA, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 ; Clear the banner.
 	db CREDITS_CLEAR
@@ -323,6 +323,11 @@ CreditsScript:
 	db           SOUPPOTATO, 2
 	db            RED031000, 3
 	db          RAINBOWDEVS, 4
+
+	db CREDITS_WAIT, 9
+
+	db           MAP_DESIGN, 1
+	db              RANGI42, 2
 
 	db CREDITS_WAIT, 9
 

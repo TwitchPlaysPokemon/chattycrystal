@@ -129,6 +129,7 @@
 	const M4_USED_ROLLOUT
 	const FUTURESUSHI
 	const RAINBOWDEVS
+	const RANGI42
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7

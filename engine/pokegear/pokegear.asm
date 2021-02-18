@@ -2307,10 +2307,11 @@ FlyMap:
 	ld a, FLY_PALLET
 	ld [wStartFlypoint], a
 ; ...and end at Indigo Plateau
-	ld a, FLY_VERMILION
+	ld a, FLY_INDIGO
 	ld [wEndFlypoint], a
 ; Because Vermillion is the first flypoint the player
 ; visits, it's made the default flypoint.
+	ld a, FLY_VERMILION
 	ld [wTownMapPlayerIconLandmark], a
 ; Fill out the map
 	call FillKantoMap

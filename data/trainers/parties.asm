@@ -6842,7 +6842,7 @@ NuzlockeGroup:
 	bigdw 115
 	bigdw 111
 	bigdw 66
-	db "b syro .9@"
+	db "b  syro .g@"
 
 	db 49
 	dw BLAZIKEN
@@ -6963,7 +6963,7 @@ NuzlockeGroup:
 	bigdw 129
 	bigdw 123
 	bigdw 73
-	db "b syro .9@"
+	db "b  syro .g@"
 
 	db 27
 	dw DUSKULL

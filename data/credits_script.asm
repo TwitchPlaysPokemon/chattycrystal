@@ -322,6 +322,7 @@ CreditsScript:
 	db          BLOODLESSNS, 1
 	db           SOUPPOTATO, 2
 	db            RED031000, 3
+	db          RAINBOWDEVS, 4
 
 	db CREDITS_WAIT, 9
 

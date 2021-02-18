@@ -128,6 +128,7 @@
 	const RUN_MANAGER
 	const M4_USED_ROLLOUT
 	const FUTURESUSHI
+	const RAINBOWDEVS
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7

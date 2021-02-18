@@ -3849,7 +3849,7 @@ BattleAnim_Sandstorm:
 
 BattleAnim_GigaDrain:
 	anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_SHINE
-	anim_call BattleAnim_FollowEnemyFeet_0
+	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect ANIM_BG_1C, $0, $0, $10
 	anim_setvar $0
 	anim_sound 6, 3, SFX_GIGA_DRAIN
@@ -3864,11 +3864,9 @@ BattleAnim_GigaDrain:
 	anim_if_var_equal $d, .done
 	anim_if_var_equal $4, .spawn
 	anim_jump .loop
-
 .spawn
 	anim_obj ANIM_OBJ_3D, 44, 88, $0
 	anim_jump .loop
-
 .done
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_1C

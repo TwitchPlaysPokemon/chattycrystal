@@ -20,7 +20,7 @@ CeladonGymErikaScript:
 	waitbutton
 	closetext
 	winlosstext ErikaBeatenText, 0
-	loadtrainer RED_KANTO_LEADER, RED_RED
+	loadtrainer URF, URF1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ERIKA
@@ -107,7 +107,7 @@ CeladonGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, RED_KANTO_LEADER, RED_RED
+	gettrainername STRING_BUFFER_4, URF, URF1
 	jumpstd gymstatue2
 
 ErikaAfterBattleText:

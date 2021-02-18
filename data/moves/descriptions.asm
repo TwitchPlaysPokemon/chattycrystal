@@ -361,6 +361,7 @@ MoveDescriptions1:
 	dw KnockOffDescription
 	dw WaterSpoutDescription
 	dw HeadbuttDescription
+	dw DracoMeteorDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -1499,6 +1500,7 @@ IceHammerDescription:
 	db   "Attack that lowers"
 	next "the user's SPEED.@"
 
+DracoMeteorDescription:
 LeafStormDescription:
 OverheatDescription:
 	db   "Harshly lower user"

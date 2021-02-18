@@ -380,6 +380,7 @@ BattleAnimations::
 	dw BattleAnim_Thief
 	dw BattleAnim_Surf
 	dw BattleAnim_MegaPunch
+	dw BattleAnim_RockSlide
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

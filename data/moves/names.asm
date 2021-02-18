@@ -355,3 +355,4 @@ MoveNames::
 	db "KNOCK OFF@"
 	db "WATER SPOUT@"
 	db "NEEDLE ARM@"
+	db "DRACO METEOR@"

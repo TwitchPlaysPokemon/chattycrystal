@@ -189,9 +189,7 @@ DragonShrine_MapScripts:
 	opentext
 	writetext DragonShrineGiveTicket1
 	waitbutton
-	closetext
 	verbosegiveitem S_S_TICKET
-	opentext
 	writetext DragonShrineGiveTicket2
 	waitbutton
 	closetext
@@ -222,7 +220,7 @@ DragonShrineElder1Script:
 	writetext DragonShrinePlayerReceivedDratiniText
 	playsound SFX_CAUGHT_MON
 	waitsfx
-	givepoke DRATINI, 15
+	givepoke GOOMY, 45
 	checkevent EVENT_ANSWERED_DRAGON_MASTER_QUIZ_WRONG
 	special GiveDratini
 	setevent EVENT_GOT_DRATINI
@@ -710,4 +708,4 @@ DragonShrine_MapEvents:
 	object_event  5,  1, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonShrineElder1Script, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	object_event  2,  4, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonShrineElder2Script, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	object_event  7,  4, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonShrineElder3Script, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	object_event  4,  8, SPRITE_CLAIR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DRAGON_SHRINE_CLAIR
+	object_event  4,  8, SPRITE_NATE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_DRAGON_SHRINE_CLAIR

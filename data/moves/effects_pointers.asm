@@ -192,4 +192,5 @@ MoveEffectsPointers:
 	dw Snatch
 	dw WaterSpout
 	dw KnockOff
+	dw SecretPower
 	dw Placeholder

@@ -45,6 +45,11 @@ RockMonEncounter:
 	call SelectTreeMon
 	jr nc, .no_battle
 
+	; set Secret Power environment here since we can't check for rock smash
+	; as part of battle init.
+	ld a, BTLENV_ROCK_SMASH
+	ld [wBattleEnvironment], a
+
 	ret
 
 .no_battle

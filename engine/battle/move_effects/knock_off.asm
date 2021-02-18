@@ -26,7 +26,7 @@ BattleCommand_KnockOff:
 	ld b, SET_FLAG
 	call FlagAction
 
-	call GetOpponentItem
+	farcall GetOpponentItem
 	ld a, [hl]
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
@@ -37,7 +37,7 @@ BattleCommand_KnockOff:
 CheckKnockOff:
 ; Returns z if we can knock off the opponent
 	; Does opponent have an item in first place?
-	call GetOpponentItem
+	farcall GetOpponentItem
 	ld a, [hl]
 .ret
 	and a

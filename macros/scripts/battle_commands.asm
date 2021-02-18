@@ -24,7 +24,7 @@ ENDM
 	command checkfaint              ; 11
 	command buildopponentrage       ; 12
 	command poisontarget            ; 13
-	command sleeptarget             ; 14
+	command sleep                   ; 14
 	command draintarget             ; 15
 	command eatdream                ; 16
 	command burntarget              ; 17
@@ -218,6 +218,7 @@ ENDM
 	command waterspout              ; d3
 	command knockoff_power          ; d4
 	command knockoff                ; d5
+	command secretpower             ; d6
 
 	enum_start $fe
 	command endturn                 ; fe

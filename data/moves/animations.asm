@@ -277,14 +277,14 @@ BattleAnimations::
 	dw BattleAnim_BeatUp
 	dw BattleAnim_FakeOut
 	dw BattleAnim_Ember
-	dw BattleAnim_CrossChop
+	dw BattleAnim_Charge
 	dw BattleAnim_Metronome
 	dw BattleAnim_Metronome    ; 100
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_Counter
 	dw BattleAnim_PainSplit
 	dw BattleAnim_WillOWisp
-	dw BattleAnim_Charge
+	dw BattleAnim_Pound ; Secret Power, not used
 	dw BattleAnim_Fly
 	dw BattleAnim_Doubleslap
 	dw BattleAnim_PsychUp      ; 108

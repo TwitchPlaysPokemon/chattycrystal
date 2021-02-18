@@ -277,7 +277,10 @@ wGlobalAnimYOffset:: db
 wGlobalAnimXOffset:: db
 wSpriteAnimsEnd::
 
-	ds 11
+	ds 10
+
+wBattleEnvironment:: db
+
 
 ; mobile data
 wc3cc:: ds 1
@@ -642,7 +645,7 @@ wEnemyLightScreenCount:: db ; c706
 wEnemyReflectCount:: db ; c707
 wEnemyKnockOff:: db
 
-wBattleEnvironment:: db
+	ds 1
 
 wBattleWeather:: ; c70a
 ; 00 normal

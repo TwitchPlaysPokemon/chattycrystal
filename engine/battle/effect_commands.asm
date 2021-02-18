@@ -3415,7 +3415,7 @@ UpdateMoveData:
 	call GetMoveName
 	jp CopyName1
 
-BattleCommand_SleepTarget:
+BattleCommand_Sleep:
 ; sleeptarget
 
 	call GetOpponentItem
@@ -3453,6 +3453,15 @@ BattleCommand_SleepTarget:
 	jr nz, .fail
 
 	call AnimateCurrentMove
+	jr SetSleepStatus
+
+.fail
+	push hl
+	call AnimateFailedMove
+	pop hl
+	jp StdBattleTextbox
+
+SetSleepStatus:
 	ld b, $7
 	ld a, [wInBattleTowerBattle]
 	and a
@@ -3477,12 +3486,6 @@ BattleCommand_SleepTarget:
 
 	jp z, OpponentCantMove
 	ret
-
-.fail
-	push hl
-	call AnimateFailedMove
-	pop hl
-	jp StdBattleTextbox
 
 BattleCommand_PoisonTarget:
 ; poisontarget
@@ -3769,31 +3772,52 @@ SapHealth:
 	call RefreshBattleHuds
 	jp UpdateBattleMonInParty
 
-BattleCommand_BurnTarget:
-; burntarget
-
+RunStatusTargetChecks:
 	xor a
 	ld [wNumHits], a
+	ret nz
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	and a
+	ret nz
+
+	ld a, [wEffectFailed]
+	and a
+	ret nz
+
+	ld a, [wTypeModifier]
+	and $7f
+	jr z, .ret_nz
+
+	push bc
+	call GetOpponentItem
+	ld a, b
+	pop bc
+	cp b
+	jr z, .ret_nz
+	call CheckSubstituteOpp
+	ret nz
+	call SafeCheckSafeguard
+	ret
+
+.ret_nz
+	or 1
+	ret
+
+BattleCommand_BurnTarget:
+; burntarget
 	call CheckSubstituteOpp
 	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
 	and a
 	jp nz, Defrost
-	ld a, [wTypeModifier]
-	and $7f
-	ret z
+	ld b, HELD_PREVENT_BURN
+	call RunStatusTargetChecks
+	ret nz
 	call CheckMoveTypeMatchesTarget ; Don't burn a Fire-type
 	ret z
-	call GetOpponentItem
-	ld a, b
-	cp HELD_PREVENT_BURN
-	ret z
-	ld a, [wEffectFailed]
-	and a
-	ret nz
-	call SafeCheckSafeguard
-	ret nz
+
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
 	set BRN, [hl]
@@ -3833,34 +3857,27 @@ Defrost:
 	ld hl, DefrostedOpponentText
 	jp StdBattleTextbox
 
-BattleCommand_FreezeTarget:
-; freezetarget
-
-	xor a
-	ld [wNumHits], a
-	call CheckSubstituteOpp
+BattleCommand_SleepTarget:
+	ld b, HELD_PREVENT_SLEEP
+	call RunStatusTargetChecks
 	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
-	and a
+	ld d, h
+	ld e, l
+	jp SetSleepStatus
+
+BattleCommand_FreezeTarget:
+; freezetarget
+	ld b, HELD_PREVENT_FREEZE
+	call RunStatusTargetChecks
 	ret nz
-	ld a, [wTypeModifier]
-	and $7f
-	ret z
 	ld a, [wBattleWeather]
 	cp WEATHER_SUN
 	ret z
 	call CheckMoveTypeMatchesTarget ; Don't freeze an Ice-type
 	ret z
-	call GetOpponentItem
-	ld a, b
-	cp HELD_PREVENT_FREEZE
-	ret z
-	ld a, [wEffectFailed]
-	and a
-	ret nz
-	call SafeCheckSafeguard
-	ret nz
+
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
 	set FRZ, [hl]
@@ -3888,27 +3905,10 @@ BattleCommand_FreezeTarget:
 
 BattleCommand_ParalyzeTarget:
 ; paralyzetarget
+	ld b, HELD_PREVENT_PARALYZE
+	call RunStatusTargetChecks
+	ret nz
 
-	xor a
-	ld [wNumHits], a
-	call CheckSubstituteOpp
-	ret nz
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	and a
-	ret nz
-	ld a, [wTypeModifier]
-	and $7f
-	ret z
-	call GetOpponentItem
-	ld a, b
-	cp HELD_PREVENT_PARALYZE
-	ret z
-	ld a, [wEffectFailed]
-	and a
-	ret nz
-	call SafeCheckSafeguard
-	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVarAddr
 	set PAR, [hl]
@@ -6598,14 +6598,49 @@ PlayUserBattleAnim:
 	ret
 
 SetMoveAnimationID:
+	; Secret Power has a dynamic animation
+	push af
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_SECRET_POWER
+	jr nz, .no_secret_power
+	pop af
+	push hl
+	ld hl, SecretPowerAnims
+	ld a, [wBattleEnvironment]
+	add a
+	add l
+	ld l, a
+	jr nc, .no_carry
+	inc h
+.no_carry
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	jr .got_anim
+
+.no_secret_power
+	pop af
 	push hl
 	call GetMoveIndexFromID
+.got_anim
 	ld a, l
 	ld [wFXAnimID], a
 	ld a, h
 	ld [wFXAnimID + 1], a
 	pop hl
 	ret
+
+SecretPowerAnims:
+	dw SPLASH ; Shouldn't happen
+	dw BODY_SLAM
+	dw ROCK_THROW
+	dw ROCK_SMASH
+	dw RAZOR_LEAF
+	dw SLEEP_POWDER
+	dw SURF
+	dw WATER_PULSE
+	dw BLIZZARD
 
 PlayOpponentBattleAnim:
 	ld a, e

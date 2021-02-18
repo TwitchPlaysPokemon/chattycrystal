@@ -314,8 +314,8 @@ PokedexDataPointerTable:
 	dba BeldumPokedexEntry
 	dba MetangPokedexEntry
 	dba MetagrossPokedexEntry
-	dba LatiasPokedexEntry
 	dba LatiosPokedexEntry
+	dba KyogrePokedexEntry
 	dba GroudonPokedexEntry
 	dba TurtwigPokedexEntry
 	dba GrotlePokedexEntry

@@ -65,8 +65,8 @@ EggMovePointers3::
 	dw NoEggMoves3         ; PLACEHOLDER - Beldum
 	dw NoEggMoves3         ; Metang
 	dw NoEggMoves3         ; Metagross
-	dw NoEggMoves3         ; Latias
 	dw NoEggMoves3         ; Latios
+	dw NoEggMoves3         ; Kyogre
 	dw NoEggMoves3         ; Groudon
 	dw NoEggMoves3         ; PLACEHOLDER - Turtwig
 	dw NoEggMoves3         ; Grotle

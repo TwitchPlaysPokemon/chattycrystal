@@ -315,8 +315,8 @@ FirstEvoStages::
     dw BELDUM       ; Beldum
     dw BELDUM       ; Metang
     dw BELDUM       ; Metagross
-    dw LATIAS       ; Latias
     dw LATIOS       ; Latios
+    dw KYOGRE       ; Kyogre
     dw GROUDON      ; Groudon
     dw TURTWIG      ; Turtwig
     dw TURTWIG      ; Grotle

@@ -314,8 +314,8 @@ BitmasksPointers:
 	dw BeldumBitmasks
 	dw MetangBitmasks
 	dw MetagrossBitmasks
-	dw LatiasBitmasks
 	dw LatiosBitmasks
+	dw KyogreBitmasks
 	dw GroudonBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Turtwig
 	dw GrotleBitmasks
@@ -367,7 +367,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Tynamo
 	dw PlaceholderBitmasks ; PLACEHOLDER - Eelektrik
 	dw PlaceholderBitmasks ; PLACEHOLDER - Eelektross
-	dw PlaceholderBitmasks ; PLACEHOLDER - Litwick
+	dw LitwickBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Lampent
 	dw PlaceholderBitmasks ; PLACEHOLDER - Chandelure
 	dw PlaceholderBitmasks ; PLACEHOLDER - Clauncher

@@ -640,10 +640,10 @@ PokemonPicPointers::
 	dba MetangBackpic
 	dba MetagrossFrontpic
 	dba MetagrossBackpic
-	dba LatiasFrontpic
-	dba LatiasBackpic
 	dba LatiosFrontpic
 	dba LatiosBackpic
+	dba KyogreFrontpic
+	dba KyogreBackpic
 	dba GroudonFrontpic
 	dba GroudonBackpic
 	dba TurtwigFrontpic

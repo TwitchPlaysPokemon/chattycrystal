@@ -172,12 +172,12 @@ AlphabeticalPokedexOrder:
 	dw KRABBY
 	dw KROKOROK
 	dw KROOKODILE
+	dw KYOGRE
 	dw LAIRON
 	dw LAMPENT
 	dw LANTURN
 	dw LAPRAS
 	dw LARVITAR
-	dw LATIAS
 	dw LATIOS
 	dw LEAFEON
 	dw LEDIAN

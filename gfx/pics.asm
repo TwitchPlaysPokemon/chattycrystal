@@ -699,8 +699,8 @@ RoseliaBackpic:      INCBIN "gfx/pokemon/roselia/back.2bpp.lz"
 SphealBackpic:       INCBIN "gfx/pokemon/spheal/back.2bpp.lz"
 SealeoBackpic:       INCBIN "gfx/pokemon/sealeo/back.2bpp.lz"
 WalreinBackpic:      INCBIN "gfx/pokemon/walrein/back.2bpp.lz"
-LatiasBackpic:       INCBIN "gfx/pokemon/latias/back.2bpp.lz"
 LatiosBackpic:       INCBIN "gfx/pokemon/latios/back.2bpp.lz"
+KyogreBackpic:       INCBIN "gfx/pokemon/kyogre/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
@@ -963,7 +963,7 @@ DarkraiFrontpic:     INCBIN "gfx/pokemon/darkrai/front.animated.2bpp.lz"
 PansageBackpic:      INCBIN "gfx/pokemon/pansage/back.2bpp.lz"
 PansageFrontpic:     INCBIN "gfx/pokemon/pansage/front.animated.2bpp.lz"
 SimisageBackpic:     INCBIN "gfx/pokemon/simisage/back.2bpp.lz"
-LatiasFrontpic:      INCBIN "gfx/pokemon/latias/front.animated.2bpp.lz"
+KyogreFrontpic:      INCBIN "gfx/pokemon/kyogre/front.animated.2bpp.lz"
 
 SECTION "Pics 31", ROMX
 

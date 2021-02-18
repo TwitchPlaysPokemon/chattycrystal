@@ -314,8 +314,8 @@ AnimationIdlePointers:
 	dw BeldumAnimationIdle
 	dw MetangAnimationIdle
 	dw MetagrossAnimationIdle
-	dw LatiasAnimationIdle
 	dw LatiosAnimationIdle
+	dw KyogreAnimationIdle
 	dw GroudonAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Turtwig
 	dw GrotleAnimationIdle
@@ -367,7 +367,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Tynamo
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Eelektrik
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Eelektross
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Litwick
+	dw LitwickAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Lampent
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chandelure
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Clauncher

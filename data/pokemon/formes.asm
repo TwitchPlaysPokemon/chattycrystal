@@ -25,14 +25,14 @@ FormeTypeOverrides:
 
 
 BurmyFormes:
-	; plant cloak - animation is PLACEHOLDER
-	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; plant cloak
+	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, BurmyFrames, BurmyBitmasks, BurmyAnimation, BurmyAnimationIdle
 	; sandy cloak - animation is PLACEHOLDER
 	forme BurmySandyFrontpic, BurmySandyBackpic, BurmySandyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
 	; trash cloak - animation is PLACEHOLDER
 	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; plant cloak - animation is PLACEHOLDER
-	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; plant cloak
+	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, BurmyFrames, BurmyBitmasks, BurmyAnimation, BurmyAnimationIdle
 	; sandy cloak - animation is PLACEHOLDER
 	forme BurmySandyFrontpic, BurmySandyBackpic, BurmySandyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
 	; trash cloak - animation is PLACEHOLDER

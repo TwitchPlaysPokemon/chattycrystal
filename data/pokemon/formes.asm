@@ -29,14 +29,14 @@ BurmyFormes:
 	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, BurmyFrames, BurmyBitmasks, BurmyAnimation, BurmyAnimationIdle
 	; sandy cloak
 	forme BurmySandyFrontpic, BurmySandyBackpic, BurmySandyPalette, BurmySandyFrames, BurmySandyBitmasks, BurmySandyAnimation, BurmySandyAnimationIdle
-	; trash cloak - animation is PLACEHOLDER
-	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; trash cloak
+	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, BurmyTrashFrames, BurmyTrashBitmasks, BurmyTrashAnimation, BurmyTrashAnimationIdle
 	; plant cloak
 	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, BurmyFrames, BurmyBitmasks, BurmyAnimation, BurmyAnimationIdle
 	; sandy cloak
 	forme BurmySandyFrontpic, BurmySandyBackpic, BurmySandyPalette, BurmySandyFrames, BurmySandyBitmasks, BurmySandyAnimation, BurmySandyAnimationIdle
-	; trash cloak - animation is PLACEHOLDER
-	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; trash cloak
+	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, BurmyTrashFrames, BurmyTrashBitmasks, BurmyTrashAnimation, BurmyTrashAnimationIdle
 
 ShellosFormes:
 	; west sea - animation is PLACEHOLDER

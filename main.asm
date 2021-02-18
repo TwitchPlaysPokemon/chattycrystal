@@ -176,6 +176,9 @@ INCLUDE "engine/pokedex/pokedex.asm"
 INCLUDE "data/moves/moves.asm"
 INCLUDE "engine/pokemon/evolve.asm"
 
+TheEndGFX::
+INCBIN "gfx/credits/theend.2bpp"
+
 
 SECTION "bank11", ROMX
 
@@ -422,9 +425,6 @@ SECTION "bank32", ROMX
 
 INCLUDE "engine/battle_anims/bg_effects.asm"
 INCLUDE "data/moves/animations.asm"
-
-TheEndGFX::
-INCBIN "gfx/credits/theend.2bpp"
 
 
 SECTION "Move Animations", ROMX

@@ -319,7 +319,7 @@ BattleAnimations::
 	dw BattleAnim_Waterfall
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_Pursuit
-	dw BattleAnim_Headbutt     ; 128, PLACEHOLDER
+	dw BattleAnim_Assist    ; 128, PLACEHOLDER
 	dw BattleAnim_MegaPunch
 	dw BattleAnim_Waterfall
 	dw BattleAnim_FlameWheel
@@ -3342,6 +3342,27 @@ BattleAnim_Nightmare:
 	anim_obj ANIM_OBJ_NIGHTMARE, 132, 40, $a0
 	anim_sound 0, 1, SFX_NIGHTMARE
 	anim_wait 96
+	anim_ret
+	
+BattleAnim_Assist:
+	anim_1gfx ANIM_GFX_HIT
+	anim_call BattleAnim_TargetObj_1Row
+	anim_obj ANIM_OBJ_ASSIST, 44, 88, $0
+	anim_obj ANIM_OBJ_ASSIST, 44, 88, $10
+	anim_obj ANIM_OBJ_ASSIST, 44, 88, $20
+	anim_obj ANIM_OBJ_ASSIST, 44, 88, $30
+.loop
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+	anim_wait 8
+	anim_loop 6, .loop
+	anim_call BattleAnim_ShowMon_0
+	anim_wait 1
+	anim_sound 0, 0, SFX_SWEET_SCENT
+	anim_incobj 2
+	anim_incobj 3
+	anim_incobj 4
+	anim_incobj 5
+	anim_wait 48
 	anim_ret
 
 BattleAnim_FlameWheel:

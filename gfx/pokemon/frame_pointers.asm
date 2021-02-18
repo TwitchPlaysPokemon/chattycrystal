@@ -367,7 +367,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Tynamo
 	dba PlaceholderFrames ; PLACEHOLDER - Eelektrik
 	dba PlaceholderFrames ; PLACEHOLDER - Eelektross
-	dba PlaceholderFrames ; PLACEHOLDER - Litwick
+	dba LitwickFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Lampent
 	dba PlaceholderFrames ; PLACEHOLDER - Chandelure
 	dba PlaceholderFrames ; PLACEHOLDER - Clauncher

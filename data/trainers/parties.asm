@@ -4310,12 +4310,12 @@ SailorGroup:
 
 	next_list_item ; SAILOR (9)
 	db "STANLY@", TRAINERTYPE_NORMAL
-	db 31
-	dw MACHOP
-	db 33
-	dw MACHOKE
-	db 26
-	dw PSYDUCK
+	db 54
+	dw MACHAMP
+	db 55
+	dw MACHAMP
+	db 49
+	dw GOLDUCK
 	db -1 ; end
 
 	next_list_item ; SAILOR (10)

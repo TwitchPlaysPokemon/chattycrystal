@@ -330,7 +330,6 @@ ROMX $7d
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
-	"Mobile Stadium 2"
 	"Pics 24"
 WRAM0
 	"Stack"

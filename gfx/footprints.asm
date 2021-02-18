@@ -313,8 +313,8 @@ INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Salamence
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Beldum
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Metang
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Metagross
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Latias
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Latios
+INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Kyogre
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Groudon
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Turtwig
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Grotle

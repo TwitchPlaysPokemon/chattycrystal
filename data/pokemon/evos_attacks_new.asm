@@ -65,8 +65,8 @@ EvosAttacksPointers3::
 	dw BeldumEvosAttacks
 	dw MetangEvosAttacks
 	dw MetagrossEvosAttacks
-	dw LatiasEvosAttacks
 	dw LatiosEvosAttacks
+	dw KyogreEvosAttacks
 	dw GroudonEvosAttacks
 	dw TurtwigEvosAttacks
 	dw GrotleEvosAttacks
@@ -1175,19 +1175,35 @@ LatiosEvosAttacks:
 	dbw 50, AURA_SPHERE
 	db 0 ; no more level-up moves
 
-LatiasEvosAttacks:
+; LatiasEvosAttacks:
+; 	db 0
+; 	dbw 1, PSYWAVE
+; 	dbw 5, SAFEGUARD
+; 	dbw 10, DRAGONBREATH
+; 	dbw 15, COVET
+; 	dbw 20, PSYCHO_CUT
+; 	dbw 25, RECOVER
+; 	dbw 30, PSYSHOCK
+; 	dbw 35, CHARM
+; 	dbw 40, PSYCHIC_M
+; 	dbw 45, DRAGON_PULSE
+; 	dbw 50, AURA_SPHERE
+; 	db 0 ; no more level-up moves
+
+KyogreEvosAttacks:	
 	db 0
-	dbw 1, PSYWAVE
-	dbw 5, SAFEGUARD
-	dbw 10, DRAGONBREATH
-	dbw 15, COVET
-	dbw 20, PSYCHO_CUT
-	dbw 25, RECOVER
-	dbw 30, PSYSHOCK
-	dbw 35, CHARM
-	dbw 40, PSYCHIC_M
-	dbw 45, DRAGON_PULSE
-	dbw 50, AURA_SPHERE
+	dbw 1, WATER_GUN
+	dbw 5, SCARY_FACE
+	dbw 15, ANCIENTPOWER
+	dbw 20, BODY_SLAM
+	dbw 30, AQUA_RING
+	dbw 35, ICE_BEAM
+	dbw 45, NASTY_PLOT
+	dbw 50, HYDRO_PUMP
+	dbw 60, REST
+	dbw 65, THUNDER
+	dbw 75, MUDDY_WATER
+	dbw 80, WATER_SPOUT
 	db 0 ; no more level-up moves
 
 GroudonEvosAttacks:

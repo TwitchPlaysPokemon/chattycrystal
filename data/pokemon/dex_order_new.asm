@@ -324,8 +324,8 @@ NewPokedexOrder:
 	dw BELDUM
 	dw METANG
 	dw METAGROSS
-	dw LATIAS
 	dw LATIOS
+	dw KYOGRE
 	dw GROUDON
 	dw TURTWIG
 	dw GROTLE

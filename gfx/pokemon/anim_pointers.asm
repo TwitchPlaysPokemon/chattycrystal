@@ -314,8 +314,8 @@ AnimationPointers:
 	dw BeldumAnimation
 	dw MetangAnimation
 	dw MetagrossAnimation
-	dw LatiasAnimation
 	dw LatiosAnimation
+	dw KyogreAnimation
 	dw GroudonAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Turtwig
 	dw GrotleAnimation

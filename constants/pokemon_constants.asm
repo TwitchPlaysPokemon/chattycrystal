@@ -335,8 +335,8 @@ JOHTO_POKEMON EQU const_value
 	const BELDUM       ; 139
 	const METANG       ; 13a
 	const METAGROSS    ; 13b
-	const LATIAS       ; 13c
-	const LATIOS       ; 13d
+	const LATIOS       ; 13c
+	const KYOGRE       ; 13d
 	const GROUDON      ; 13e
 	const TURTWIG      ; 13f
 	const GROTLE       ; 140

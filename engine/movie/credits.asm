@@ -300,7 +300,6 @@ ParseCredits:
 
 .copyright
 	hlcoord 2, 6
-	jr .print
 
 .print
 ; Print strings spaced every two lines.

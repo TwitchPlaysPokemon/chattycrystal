@@ -283,7 +283,7 @@ BattleAnimations::
 	dw BattleAnim_Superpower   ; 100
 	dw BattleAnim_Revenge
 	dw BattleAnim_Endeavor
-	dw BattleAnim_PainSplit    ; PLACEHOLDER
+	dw BattleAnim_Dive
 	dw BattleAnim_Pound        ; Secret Power, not used
 	dw BattleAnim_Fly          ; PLACEHOLDER
 	dw BattleAnim_Doubleslap   ; PLACEHOLDER
@@ -3441,6 +3441,33 @@ BattleAnim_Endeavor:
     anim_incbgeffect ANIM_BG_2C
     anim_call BattleAnim_ShowMon_0
     anim_ret
+	
+BattleAnim_Dive:
+	anim_2gfx ANIM_GFX_SAND, ANIM_GFX_HIT
+	anim_if_param_equal $0, .hit
+	anim_if_param_equal $2, .fail
+	anim_call BattleAnim_TargetObj_2Row
+	anim_bgeffect ANIM_BG_BOUNCE_DOWN, $0, $1, $0
+	anim_sound 0, 0, SFX_WATER_GUN
+	anim_wait 16
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_wait 8
+	anim_incbgeffect ANIM_BG_BOUNCE_DOWN
+	anim_obj ANIM_OBJ_SWEAT, 72, 112, $0
+	anim_call BattleAnim_ShowMon_0
+	anim_wait 40
+	anim_ret
+
+.hit
+	anim_sound 0, 1, SFX_BUBBLEBEAM
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 32
+.fail
+	anim_bgeffect ANIM_BG_ENTER_MON, $0, $1, $0
+	anim_wait 16
+	anim_obj ANIM_OBJ_SWEAT, 72, 112, $0
+	anim_wait 16
+	anim_ret
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE

@@ -8121,9 +8121,9 @@ SetSecretPowerEnvironment:
 	lb de, GROUP_ILEX_FOREST, MAP_ILEX_FOREST
 	call .CheckMap
 	ret z
-;	lb de, GROUP_VIRIDIAN_FOREST, MAP_VIRIDIAN_FOREST
-;	call .CheckMap
-;	ret z
+	lb de, GROUP_VIRIDIAN_FOREST, MAP_VIRIDIAN_FOREST
+	call .CheckMap
+	ret z
 
 	; Check for Ice Path
 	ld a, [wMapTileset]

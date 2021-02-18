@@ -4901,8 +4901,14 @@ BlackbeltGroup:
 
 	next_list_item ; BLACKBELT_T (8)
 	db "KENJI@", TRAINERTYPE_NORMAL
-	db 28
-	dw MACHOKE
+	db 48
+	dw ONIX
+	db 51
+	dw HITMONLEE
+	db 48
+	dw STEELIX
+	db 54
+	dw MACHAMP
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (9)

@@ -3656,6 +3656,50 @@ BugCatcherGroup:
 	dw PARAS
 	db -1 ; end
 
+	next_list_item ; BUG_CATCHER (20)
+	db "DANE@", TRAINERTYPE_NORMAL
+	db 31
+	dw BEEDRILL
+	db 33
+	dw BUTTERFREE
+	db -1 ; end
+
+	next_list_item ; BUG_CATCHER (21)
+	db "DION@", TRAINERTYPE_NORMAL
+	db 34
+	dw ARIADOS
+	db -1 ; end
+
+	next_list_item ; BUG_CATCHER (22)
+	db "STACEY@", TRAINERTYPE_NORMAL
+	db 32
+	dw METAPOD
+	db 34
+	dw METAPOD
+	db 36
+	dw METAPOD
+	db -1 ; end
+
+	next_list_item ; BUG_CATCHER (23)
+	db "ELLIS@", TRAINERTYPE_NORMAL
+	db 14
+	dw WEEDLE
+	db 24
+	dw KAKUNA
+	db 34
+	dw BEEDRILL
+	db -1 ; end
+
+	next_list_item ; BUG_CATCHER (24)
+	db "ABNER@", TRAINERTYPE_NORMAL
+	db 30
+	dw BUTTERFREE
+	db 30
+	dw BEEDRILL
+	db 30
+	dw PIKACHU
+	db -1 ; end
+
 	end_list_items
 
 FisherGroup:

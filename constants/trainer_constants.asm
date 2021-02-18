@@ -263,6 +263,11 @@ CHRIS EQU __enum__
 	const ARNIE4
 	const ARNIE5
 	const WAYNE
+	const DANE
+	const DION
+	const STACEY
+	const ELLIS
+	const ABNER
 
 	trainerclass FISHER ; 10
 	const JUSTIN

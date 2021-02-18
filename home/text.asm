@@ -190,22 +190,24 @@ NextChar::
 CheckDict::
 
 dict: MACRO
-if \1 == "<NULL>"
+if \1 == 0
 	and a
 else
 	cp \1
 endc
 
-if STRSUB("\2", 1, 1) == "\""
+if ISCONST(\2)
 ; Replace a character with another one
 	jr nz, ._\@
 	ld a, \2
 ._\@:
-elif STRSUB("\2", 1, 1) == "."
-; Locals can use a short jump
-	jr z, \2
 else
-	jp z, \2
+	if STRSUB("\2", 1, 1) == "."
+	; Locals can use a short jump
+		jr z, \2
+	else
+		jp z, \2
+	endc
 endc
 ENDM
 

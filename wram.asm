@@ -1237,7 +1237,6 @@ wcd50:: ds 1
 wcd51:: ds 1
 wcd52:: ds 1
 
-wMobileOpponentBattleMessage:: ; ds 12
 wcd53:: ds 1
 wcd54:: ds 1
 wcd55:: ds 1
@@ -3147,10 +3146,7 @@ w5_da00:: ds $200
 w5_dc00:: ds $d
 w5_dc0d:: ds 4
 w5_dc11:: ds 9
-w5_MobileOpponentBattleMessages:: ds $c ; d91a
-w5_MobileOpponentBattleStartMessage:: ds $c ; d926
-w5_MobileOpponentBattleWinMessage:: ds $c ; d932
-w5_MobileOpponentBattleLossMessage:: ds $c ; d93e
+	ds $30 ; d91a
 
 NEXTU ; d500
 wPokedexOrder:: ds 2 * (NUM_POKEMON + 1) ; enough room to expand to 1,407 entries

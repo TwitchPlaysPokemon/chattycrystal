@@ -2449,8 +2449,6 @@ WinTrainerBattle:
 	ld hl, BattleText_EnemyWasDefeated
 	call StdBattleTextbox
 
-	call IsMobileBattle
-	jr z, .mobile
 	ld a, [wLinkMode]
 	and a
 	ret nz
@@ -2471,14 +2469,6 @@ WinTrainerBattle:
 	bit DEBUG_BATTLE_F, a
 	call z, PrintWinLossText
 	jr .GiveMoney
-
-.mobile
-	call BattleWinSlideInEnemyTrainerFrontpic
-	ld c, 40
-	call DelayFrames
-	ld c, $4 ; win
-	farcall Mobile_PrintOpponentBattleMessage
-	ret
 
 .battle_tower
 	call BattleWinSlideInEnemyTrainerFrontpic
@@ -3060,28 +3050,11 @@ LostBattle:
 
 .not_tied
 	ld hl, LostAgainstText
-	call IsMobileBattle
-	jr z, .mobile
 
 .text
 	call StdBattleTextbox
 
 .end
-	scf
-	ret
-
-.mobile
-; Remove the enemy from the screen.
-	hlcoord 0, 0
-	lb bc, 8, 21
-	call ClearBox
-	call BattleWinSlideInEnemyTrainerFrontpic
-
-	ld c, 40
-	call DelayFrames
-
-	ld c, $3 ; lost
-	farcall Mobile_PrintOpponentBattleMessage
 	scf
 	ret
 
@@ -8432,7 +8405,7 @@ ShowLinkBattleParticipantsAfterEnd:
 DisplayLinkBattleResult:
 	farcall CheckMobileBattleError
 	jp c, .Mobile_InvalidBattle
-	call IsMobileBattle2
+	call IsMobileBattle
 	jr nz, .proceed
 
 	ld hl, wcd2a
@@ -8474,7 +8447,7 @@ DisplayLinkBattleResult:
 
 	call CloseSRAM
 
-	call IsMobileBattle2
+	call IsMobileBattle
 	jr z, .mobile
 	call WaitPressAorB_BlinkCursor
 	call ClearTileMap
@@ -8504,11 +8477,6 @@ DisplayLinkBattleResult:
 
 .Invalid:
 	db "INVALID BATTLE@"
-
-IsMobileBattle2:
-	ld a, [wLinkMode]
-	cp LINK_MOBILE
-	ret
 
 _DisplayLinkRecord:
 	ld a, BANK(sLinkBattleStats)
@@ -9192,12 +9160,4 @@ BattleStartMessage:
 	push hl
 	farcall BattleStart_TrainerHuds
 	pop hl
-	call StdBattleTextbox
-
-	call IsMobileBattle2
-	ret nz
-
-	ld c, $2 ; start
-	farcall Mobile_PrintOpponentBattleMessage
-
-	ret
+	jp StdBattleTextbox

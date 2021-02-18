@@ -145,35 +145,34 @@ SpecialsPointers::
 	add_special Function101231
 	add_special MoveTutor
 	add_special OmanyteChamber
-	add_special Function11c1ab
 	add_special BattleTowerAction
 	add_special DisplayUnownWords
 	add_special Menu_ChallengeExplanationCancel
-	add_special Function17d2b6 ; $88
-	add_special Function17d2ce
+	add_special Function17d2b6
+	add_special Function17d2ce ; $88
 	add_special BattleTowerMobileError
 	add_special AskMobileOrCable
 	add_special HoOhChamber
 	add_special Function102142
 	add_special CelebiShrineEvent
 	add_special CheckCaughtCelebi
-	add_special PokeSeer ; $90
-	add_special BuenasPassword
+	add_special PokeSeer
+	add_special BuenasPassword ; $90
 	add_special BuenaPrize
 	add_special GiveDratini
 	add_special SampleKenjiBreakCountdown
 	add_special BeastsCheck
 	add_special MonCheck
 	add_special SetPlayerPalette
-	add_special Mobile_SelectThreeMons ; $98
-	add_special Function1037eb
+	add_special Mobile_SelectThreeMons
+	add_special Function1037eb ; $98
 	add_special Function10383c
 	add_special RefreshSprites
 	add_special Function1037c2
 	add_special Function103780
 	add_special Function10387b
 	add_special AskRememberPassword
-	add_special LoadMapPalettes ; $a0
-	add_special UnusedFindItemInPCOrBag
+	add_special LoadMapPalettes
+	add_special UnusedFindItemInPCOrBag ; $a0
 	add_special InitialSetDSTFlag
 	add_special InitialClearDSTFlag

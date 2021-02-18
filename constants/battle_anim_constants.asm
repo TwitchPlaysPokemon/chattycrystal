@@ -224,6 +224,9 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_WILL_O_WISP_IMPACT
 	const ANIM_OBJ_CHARGE
 	const ANIM_OBJ_TAUNT
+	const ANIM_OBJ_LEECH_LIFE
+	const ANIM_OBJ_DREAM_EATER
+	const ANIM_OBJ_MINIMIZE
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def
@@ -816,6 +819,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_GFX_PLAYERHEAD
 	const ANIM_GFX_ENEMYFEET
 	const ANIM_GFX_TAUNT
+	const ANIM_GFX_MINI
 
 ; battle_bg_effect struct members (see macros/wram.asm)
 	const_def

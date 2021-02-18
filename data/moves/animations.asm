@@ -2705,16 +2705,26 @@ BattleAnim_Substitute_branch_ca77c:
 	anim_ret
 
 BattleAnim_Minimize:
-	anim_sound 0, 0, SFX_SURF
-	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_2Row
-	anim_minimize
-	anim_bgeffect ANIM_BG_WAVE_DEFORM_USER, $0, $1, $0
-	anim_wait 48
-	anim_updateactorpic
-	anim_incbgeffect ANIM_BG_WAVE_DEFORM_USER
-	anim_wait 48
-	anim_call BattleAnim_ShowMon_0
+	anim_1gfx ANIM_GFX_MINI
+.loop
+    anim_sound 0, 1, SFX_SLUDGE_BOMB
+    anim_bgeffect ANIM_BG_RETURN_MON, $0, $1, $0
+    anim_wait 12
+	anim_obj ANIM_OBJ_MINIMIZE, 48, 110, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_MINIMIZE, 48, 110, $0
+	anim_wait 6
+    anim_loop 2, .loop
+    anim_sound 0, 1, SFX_SLUDGE_BOMB
+    anim_bgeffect ANIM_BG_RETURN_MON, $0, $1, $0
+    anim_wait 16
+.mini	
+	anim_obj ANIM_OBJ_MINIMIZE, 48, 110, $0
+	anim_wait 6
+	anim_loop 8, .mini
+	anim_sound 0, 1, SFX_LICK
+    anim_bgeffect ANIM_BG_ENTER_MON, $0, $1, $0
+	anim_wait 12
 	anim_ret
 
 BattleAnim_SkyAttack:
@@ -2795,21 +2805,44 @@ BattleAnim_Psybeam:
 	anim_ret
 
 BattleAnim_DreamEater:
-	anim_1gfx ANIM_GFX_BUBBLE
+	anim_1gfx ANIM_GFX_CHARGE
 	anim_bgp $1b
 	anim_obp0 $27
-	anim_sound 6, 3, SFX_WATER_GUN
-	anim_call BattleAnim_DreamEater_branch_cbab3
-	anim_wait 128
-	anim_wait 48
+	
+.loop
+	anim_sound 6, 3, SFX_WARP_TO
+	anim_obj ANIM_OBJ_DREAM_EATER, 128, 48, $2
+	anim_wait 5
+	anim_sound 6, 3, SFX_WARP_TO
+	anim_obj ANIM_OBJ_DREAM_EATER, 136, 64, $3
+	anim_wait 5
+	anim_sound 6, 3, SFX_WARP_TO
+	anim_obj ANIM_OBJ_DREAM_EATER, 136, 32, $4
+	anim_wait 5
+	anim_loop 7, .loop
+	anim_wait 32
 	anim_ret
 
 BattleAnim_LeechLife:
-	anim_1gfx ANIM_GFX_BUBBLE
+	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
+	anim_obj ANIM_OBJ_60, 64, 92, $14
+	anim_wait 16
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_05, 136, 56, $0
+	anim_wait 12
+	anim_1gfx ANIM_GFX_CHARGE
+.loop
 	anim_sound 6, 3, SFX_WATER_GUN
-	anim_call BattleAnim_LeechLife_branch_cbab3
-	anim_wait 128
-	anim_wait 48
+	anim_obj ANIM_OBJ_LEECH_LIFE, 128, 48, $2
+	anim_wait 6
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_LEECH_LIFE, 136, 64, $3
+	anim_wait 6
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_LEECH_LIFE, 136, 32, $4
+	anim_wait 6
+	anim_loop 4, .loop
+	anim_wait 28
 	anim_ret
 
 BattleAnim_Harden:
@@ -3815,19 +3848,32 @@ BattleAnim_Sandstorm:
 	anim_ret
 
 BattleAnim_GigaDrain:
-	anim_2gfx ANIM_GFX_BUBBLE, ANIM_GFX_CHARGE
-	anim_call BattleAnim_TargetObj_1Row
+	anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_SHINE
+	anim_call BattleAnim_FollowEnemyFeet_0
 	anim_bgeffect ANIM_BG_1C, $0, $0, $10
+	anim_setvar $0
 	anim_sound 6, 3, SFX_GIGA_DRAIN
-	anim_call BattleAnim_GigaDrain_branch_cbab3
-	anim_wait 48
-	anim_wait 128
+.loop
+	anim_obj ANIM_OBJ_ABSORB, 128, 48, $2
+	anim_wait 3
+	anim_obj ANIM_OBJ_ABSORB, 136, 64, $3
+	anim_wait 4
+	anim_obj ANIM_OBJ_ABSORB, 136, 32, $4
+	anim_wait 3
+	anim_incvar
+	anim_if_var_equal $d, .done
+	anim_if_var_equal $4, .spawn
+	anim_jump .loop
+
+.spawn
+	anim_obj ANIM_OBJ_3D, 44, 88, $0
+	anim_jump .loop
+
+.done
+	anim_wait 32
 	anim_incbgeffect ANIM_BG_1C
 	anim_call BattleAnim_ShowMon_0
-	anim_wait 1
-	anim_1gfx ANIM_GFX_SHINE
-	anim_bgeffect ANIM_BG_07, $0, $0, $0
-.loop
+.loop2
 	anim_sound 0, 0, SFX_METRONOME
 	anim_obj ANIM_OBJ_GLIMMER, 24, 64, $0
 	anim_wait 5
@@ -3839,7 +3885,7 @@ BattleAnim_GigaDrain:
 	anim_wait 5
 	anim_obj ANIM_OBJ_GLIMMER, 40, 84, $0
 	anim_wait 5
-	anim_loop 2, .loop
+	anim_loop 2, .loop2
 	anim_wait 32
 	anim_ret
 

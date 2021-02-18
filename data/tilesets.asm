@@ -50,3 +50,4 @@ Tilesets::
 	tileset TilesetOmanyteWordRoom
 	tileset TilesetAerodactylWordRoom
 	tileset TilesetRoute23
+	tileset TilesetMuseum

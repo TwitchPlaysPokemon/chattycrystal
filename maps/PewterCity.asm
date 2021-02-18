@@ -129,12 +129,8 @@ PewterGymSignText:
 	done
 
 PewterMuseumSignText:
-	text "There's a notice"
-	line "here…"
-
-	para "PEWTER MUSEUM OF"
-	line "SCIENCE is closed"
-	cont "for renovations…"
+	text "PEWTER MUSEUM OF"
+	line "SCIENCE"
 	done
 
 PewterCityMtMoonGiftShopSignText:
@@ -153,12 +149,14 @@ PewterCityWelcomeSignText:
 PewterCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 5 ; warp events
+	db 7 ; warp events
 	warp_event 29, 13, PEWTER_NIDORAN_SPEECH_HOUSE, 1
 	warp_event 16, 17, PEWTER_GYM, 1
 	warp_event 23, 17, PEWTER_MART, 2
 	warp_event 13, 25, PEWTER_POKECENTER_1F, 1
 	warp_event  7, 29, PEWTER_SNOOZE_SPEECH_HOUSE, 1
+	warp_event 14,  7, PEWTER_MUSEUM_1F, 1
+	warp_event 20,  5, PEWTER_MUSEUM_1F, 3
 
 	db 0 ; coord events
 

@@ -904,3 +904,12 @@ BattleTowerOutside_Blocks:
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+
+
+SECTION "Map Blocks 4", ROMX
+
+PewterMuseum1F_Blocks:
+	INCBIN "maps/PewterMuseum1F.blk"
+
+PewterMuseum2F_Blocks:
+	INCBIN "maps/PewterMuseum2F.blk"

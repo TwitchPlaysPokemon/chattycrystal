@@ -5,6 +5,7 @@
 	const ROUTE8_SUPER_NERD1
 	const ROUTE8_SUPER_NERD2
 	const ROUTE8_FRUIT_TREE
+	const ROUTE8_BIG_SNORLAX
 
 Route8_MapScripts:
 	db 0 ; scene scripts
@@ -65,6 +66,42 @@ TrainerSupernerdTom:
 	waitbutton
 	closetext
 	end
+	
+Route8Snorlax:
+	opentext
+	special SnorlaxAwake
+	iftrue .Awake
+	writetext Route8SnorlaxSleeping
+	waitbutton
+	closetext
+	end
+
+.Awake:
+	writetext Route8SnorlaxAwake
+	pause 15
+	cry SNORLAX
+	closetext
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon SNORLAX, 70
+	startbattle
+	disappear ROUTE8_BIG_SNORLAX
+	reloadmapafterbattle
+	end
+	
+Route8SnorlaxSleeping:
+	text "SNORLAX is snoring"
+	line "peacefully…"
+	done
+
+Route8SnorlaxAwake:
+	text "The #GEAR was"
+	line "placed near the"
+	cont "sleeping SNORLAX…"
+
+	para "…"
+
+	para "SNORLAX woke up!"
+	done
 
 Route8LockedDoor:
 	jumptext Route8LockedDoorText
@@ -183,10 +220,11 @@ Route8_MapEvents:
 	bg_event 11,  7, BGEVENT_READ, Route8UndergroundPathSign
 	bg_event 10,  5, BGEVENT_READ, Route8LockedDoor
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event 10,  8, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 5, TrainerBikerDwayne, -1
 	object_event 10,  9, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 5, TrainerBikerHarris, -1
 	object_event 10, 10, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 5, TrainerBikerZeke, -1
 	object_event 23,  2, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerSupernerdSam, -1
 	object_event 31, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerSupernerdTom, -1
 	object_event 33,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8FruitTree, -1
+	object_event 6, 4, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route8Snorlax, EVENT_ROUTE_8_SNORLAX

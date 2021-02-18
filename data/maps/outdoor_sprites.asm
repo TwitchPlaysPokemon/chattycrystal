@@ -70,6 +70,7 @@ SaffronGroupSprites:
 	db SPRITE_ROCKET
 	db SPRITE_MISTY
 	; max 9 of 9 walking sprites
+	db SPRITE_BIG_SNORLAX
 	db SPRITE_POKE_BALL
 	db SPRITE_SLOWPOKE
 	db 0 ; end
@@ -115,6 +116,7 @@ FuchsiaGroupSprites:
 	db SPRITE_SUPER_NERD
 	db SPRITE_BIKER
 	; 7 of max 9 walking sprites
+	db SPRITE_BIG_SNORLAX
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
 	db 0 ; end

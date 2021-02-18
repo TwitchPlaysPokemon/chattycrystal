@@ -585,7 +585,7 @@ WhismurEvosAttacks:
 	db 0 ; no more level-up moves
 
 LoudredEvosAttacks:
-	dbbw EVOLVE_LEVEL, 20, LOUDRED
+	dbbw EVOLVE_LEVEL, 40, EXPLOUD
 	db 0
 	dbw 1, POUND
 	dbw 1, ENCORE
@@ -601,7 +601,6 @@ LoudredEvosAttacks:
 	db 0 ; no more level-up moves
 
 ExploudEvosAttacks:
-	dbbw EVOLVE_LEVEL, 20, LOUDRED
 	db 0
 	dbw 1, POUND
 	dbw 1, ENCORE
@@ -666,7 +665,7 @@ AronEvosAttacks:
 	db 0 ; no more level-up moves
 
 LaironEvosAttacks:
-	dbbw EVOLVE_LEVEL, 42, LAIRON
+	dbbw EVOLVE_LEVEL, 42, AGGRON
 	db 0
 	dbw 1, TACKLE
 	dbw 1, HARDEN
@@ -1626,6 +1625,7 @@ TorterraEvosAttacks:
 	dbw 27, MEGA_DRAIN
 	dbw 32, EARTHQUAKE
 	dbw 33, LEECH_SEED
+	dbw 34, EARTHQUAKE
 	dbw 39, SYNTHESIS
 	dbw 45, CRUNCH
 	dbw 51, GIGA_DRAIN

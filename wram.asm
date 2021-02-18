@@ -2671,8 +2671,9 @@ wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
 wRoute35GoldenrodGateSceneID::                    db ; d9c1
+wPewterMuseum1FSceneID::                          db
 
-	ds 48
+	ds 47
 
 ; fight counts
 wJackFightCount::    db ; d9f2

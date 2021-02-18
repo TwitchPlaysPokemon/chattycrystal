@@ -12,6 +12,7 @@ PewterCity_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
 .FlyPoint:
+	setmapscene PEWTER_MUSEUM_1F, SCENE_DEFAULT
 	setflag ENGINE_FLYPOINT_PEWTER
 	return
 

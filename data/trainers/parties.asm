@@ -592,9 +592,86 @@ ColoWesGroup:
 
 XDMichaelGroup:
 	next_list_item ; STARS
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+	db "STARS@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 59
+	dw VAPOREON
+	db BRIGHTPOWDER
+	dw HYDRO_PUMP, FREEZE_DRY, BITE, SCALD
+	bigdw $FFFF
+	bigdw 243
+	bigdw 89
+	bigdw 104
+	bigdw 98
+	bigdw 153
+	bigdw 154
+	db "Vaporeon@"
+
+	db 56
+	dw SCEPTILE
+	db DRAGON_SCALE
+	dw GIGA_DRAIN, DRAGONBREATH, HIDDEN_POWER, STUN_SPORE
+	bigdw $FFFF
+	bigdw 162
+	bigdw 141
+	bigdw 93
+	bigdw 160
+	bigdw 151
+	bigdw 102
+	db "CCC   /@"
+
+	db 58
+	dw SWAMPERT
+	db LEFTOVERS
+	dw WATERFALL, ICE_HAMMER, BULLDOZE, HAMMER_ARM
+	bigdw $FFFF
+	bigdw 216
+	bigdw 164
+	bigdw 129
+	bigdw 95
+	bigdw 125
+	bigdw 134
+	db "AB-@"
+
+	db 61
+	dw BLAZIKEN
+	db NO_ITEM
+	dw HI_JUMP_KICK, BRAVE_BIRD, BLAZE_KICK, OVERHEAT
+	bigdw $FFFF
+	bigdw 188
+	bigdw 200 ; intergrated muscle band
+	bigdw 95
+	bigdw 119
+	bigdw 166
+	bigdw 121
+	db "ABBBBBBBBQ@"
+	
+	db 59
+	dw METAGROSS
+	db AMULET_COIN
+	dw BULLET_PUNCH, IRON_HEAD, METEOR_MASH, PSYCHO_CUT
+	bigdw $FFFF
+	bigdw 194
+	bigdw 192
+	bigdw 184
+	bigdw 121
+	bigdw 102
+	bigdw 128
+	db "BCCMMW@"
+	
+	db 56
+	dw SALAMENCE
+	db BRICK_PIECE
+	dw DRAGON_CLAW, FIRE_FANG, AIR_SLASH, CRUNCH
+	bigdw $FFFF
+	bigdw 202
+	bigdw 183
+	bigdw 115
+	bigdw 128
+	bigdw 128
+	bigdw 134
+	db "BCCMMW@"
+	
 	db -1 ; end
 
 	end_list_items
@@ -1455,11 +1532,72 @@ BABAGroup:
 
 URFGroup:
 	next_list_item ; URF1
-	db "URF@", TRAINERTYPE_MOVES
-	db 46
-	dw SLOWKING
-	dw CURSE, SURF, SWAGGER, STRENGTH
-	db -1 ; end
+	db "URF@", , TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	
+	db 58
+	dw BLASTOISE ;KYOGRE
+	db GOLD_BERRY
+	dw SURF, ICE_BEAM, THUNDER, NO_MOVE ;CALM_MIND
+	bigdw $FFFF
+	bigdw 200
+	bigdw 132
+	bigdw 116
+	bigdw 110
+	bigdw 185
+	bigdw 187
+	db "UwU@"
+
+	db 58
+	dw SWAMPERT
+	db SOFT_SAND
+	dw EARTHQUAKE, WATERFALL, SURF, ICE_BEAM
+	bigdw $FFFF
+	bigdw 201
+	bigdw 169
+	bigdw 136
+	bigdw 98
+	bigdw 128
+	bigdw 123
+	db "BUTT@"
+
+	db 9
+	dw ZIGZAGOON
+	db NO_ITEM
+	dw TACKLE, ROCK_SMASH, CUT, TAIL_WHIP
+	bigdw $0FFF
+	bigdw 26
+	bigdw 14
+	bigdw 11
+	bigdw 16
+	bigdw 12
+	bigdw 14
+	db "Racc@"
+
+	db 22
+	dw LILEEP
+	db LEFTOVERS
+	dw GIGA_DRAIN, PROTECT, TOXIC, NO_MOVE ;INGRAIN
+	bigdw $FFFF
+	bigdw 61
+	bigdw 24
+	bigdw 39
+	bigdw 18
+	bigdw 32
+	bigdw 53
+	db "WAH@"
+
+	db 16
+	dw ARON
+	db MINT_BERRY
+	dw DIG, STRENGTH, MUD_SLAP, HEADBUTT
+	bigdw $FFFF
+	bigdw 44
+	bigdw 30
+	bigdw 41
+	bigdw 15
+	bigdw 21
+	bigdw 21
+	db "Tiny@"
 
 	end_list_items
 
@@ -6105,10 +6243,88 @@ FCLarryGroup:
 
 RedKantoLeaderGroup:
 	next_list_item ;RED_RED
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
+	db "RED@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 35
+	dw VENOMOTH
+	db NO_ITEM
+	dw DISABLE, POISONPOWDER, LEECH_LIFE, STUN_SPORE
+	bigdw $FFFF
+	bigdw 102
+	bigdw 59
+	bigdw 52
+	bigdw 80
+	bigdw 75
+	bigdw 75
+	db "AATTVVV@"
+
+	db 63
+	dw PIDGEOT
+	db NO_ITEM
+	dw MIRROR_MOVE, SAND_ATTACK, QUICK_ATTACK, WHIRLWIND
+	bigdw $FFFF
+	bigdw 205
+	bigdw 149
+	bigdw 141
+	bigdw 157
+	bigdw 125
+	bigdw 125
+	db "aaabaaajss@"
+
+	db 22
+	dw LAPRAS
+	db NO_ITEM
+	dw SING, MIST, SURF, STRENGTH
+	bigdw $0FFF
+	bigdw 94
+	bigdw 44
+	bigdw 43
+	bigdw 36
+	bigdw 49
+	bigdw 49
+	db "AIIIIIIRRR@"
+
+	db 38
+	dw NIDOKING
+	db NO_ITEM
+	dw SURF, POISON_STING, FOCUS_ENERGY, FURY_ATTACK
+	bigdw $FFFF
+	bigdw 115
+	bigdw 88
+	bigdw 75
+	bigdw 79
+	bigdw 76
+	bigdw 76
+	db "AAAAAAAAAA@"
+
+	db 60
+	dw ZAPDOS
+	db NO_ITEM
+	dw THUNDERSHOCK, DRILL_PECK, TAKE_DOWN, THUNDER
+	bigdw $FFFF
+	bigdw 194
+	bigdw 131
+	bigdw 141
+	bigdw 149
+	bigdw 182
+	bigdw 182
+	db "AA-j@"
+
+	db 35
+	dw OMANYTE
+	db NO_ITEM
+	dw WATER_GUN, WITHDRAW, SURF, HORN_ATTACK
+	bigdw $FFFF
+	bigdw 78
+	bigdw 45
+	bigdw 78
+	bigdw 42
+	bigdw 73
+	bigdw 73
+	db "OMANYTE@"
+	
+	db -1
+	
 	end_list_items
 
 RedJohtoLeaderGroup:

@@ -276,111 +276,111 @@ BattleAnimations::
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
 	dw BattleAnim_FakeOut
-	dw BattleAnim_Ember
-	dw BattleAnim_Charge
-	dw BattleAnim_Metronome
-	dw BattleAnim_Metronome    ; 100
-	dw BattleAnim_MegaPunch
-	dw BattleAnim_Counter
-	dw BattleAnim_PainSplit
 	dw BattleAnim_WillOWisp
-	dw BattleAnim_Pound ; Secret Power, not used
-	dw BattleAnim_Fly
-	dw BattleAnim_Doubleslap
-	dw BattleAnim_PsychUp      ; 108
-	dw BattleAnim_HiJumpKick
-	dw BattleAnim_IcePunch
-	dw BattleAnim_Crunch
-	dw BattleAnim_Dynamicpunch
-	dw BattleAnim_FeintAttack
-	dw BattleAnim_Cut
-	dw BattleAnim_SacredFire
-	dw BattleAnim_Detect       ; 110
-	dw BattleAnim_RockThrow
-	dw BattleAnim_Screech
-	dw BattleAnim_TailWhip
-	dw BattleAnim_Psybeam
-	dw BattleAnim_FeintAttack
-	dw BattleAnim_Psywave
-	dw BattleAnim_Twister
-	dw BattleAnim_Surf         ; 118
-	dw BattleAnim_WingAttack
-	dw BattleAnim_Harden
-	dw BattleAnim_Roar
-	dw BattleAnim_Slash
-	dw BattleAnim_Thief
-	dw BattleAnim_Spark
-	dw BattleAnim_Sharpen
-	dw BattleAnim_ThunderWave  ; 120
-	dw BattleAnim_Bubblebeam
-	dw BattleAnim_Recover
+	dw BattleAnim_Charge
 	dw BattleAnim_Taunt
-	dw BattleAnim_MegaPunch
-	dw BattleAnim_Waterfall
-	dw BattleAnim_MegaPunch
-	dw BattleAnim_Pursuit
-	dw BattleAnim_Assist    ; 128, PLACEHOLDER
-	dw BattleAnim_MegaPunch
-	dw BattleAnim_Waterfall
-	dw BattleAnim_FlameWheel
-	dw BattleAnim_ShadowBall
-	dw BattleAnim_Slash
-	dw BattleAnim_Slash
-	dw BattleAnim_Roar
-	dw BattleAnim_ShadowBall   ; 130
-	dw BattleAnim_Ancientpower
-	dw BattleAnim_Dynamicpunch
-	dw BattleAnim_ShadowBall
-	dw BattleAnim_WingAttack
-	dw BattleAnim_Earthquake
-	dw BattleAnim_PsychUp
-	dw BattleAnim_MachPunch
-	dw BattleAnim_PowderSnow   ; 138
-	dw BattleAnim_Bite
-	dw BattleAnim_QuickAttack
-	dw BattleAnim_SludgeBomb
-	dw BattleAnim_Cut
-	dw BattleAnim_Headbutt
-	dw BattleAnim_ShadowBall
-	dw BattleAnim_RockSmash
-	dw BattleAnim_ThunderWave  ; 140
-	dw BattleAnim_RazorLeaf
-	dw BattleAnim_IronTail
-	dw BattleAnim_Headbutt ; PLACEHOLDER
-	dw BattleAnim_Roar
-	dw BattleAnim_HyperBeam
-	dw BattleAnim_VineWhip
-	dw BattleAnim_Waterfall
-	dw BattleAnim_SweetScent   ; 148
-	dw BattleAnim_Hypnosis
-	dw BattleAnim_Sharpen
-	dw BattleAnim_PsychicM
-	dw BattleAnim_Growth
-	dw BattleAnim_Pursuit
-	dw BattleAnim_Roar
-	dw BattleAnim_HydroPump
-	dw BattleAnim_Earthquake   ; 150
-	dw BattleAnim_Meditate
-	dw BattleAnim_CrossChop
-	dw BattleAnim_GigaDrain
-	dw BattleAnim_RapidSpin
-	dw BattleAnim_Doubleslap
-	dw BattleAnim_SacredFire
-	dw BattleAnim_IceBeam
-	dw BattleAnim_MegaDrain    ; 158
-	dw BattleAnim_Submission
-	dw BattleAnim_SeismicToss
-	dw BattleAnim_MorningSun
-	dw BattleAnim_Spark
-	dw BattleAnim_IcePunch
-	dw BattleAnim_Smokescreen
-	dw BattleAnim_Submission
-	dw BattleAnim_HiddenPower  ; 160
-	dw BattleAnim_ThunderWave
-	dw BattleAnim_Thief
-	dw BattleAnim_Surf
-	dw BattleAnim_MegaPunch
-	dw BattleAnim_RockSlide
+	dw BattleAnim_Assist
+	dw BattleAnim_Superpower   ; 100
+	dw BattleAnim_Revenge
+	dw BattleAnim_Endeavor
+	dw BattleAnim_PainSplit    ; PLACEHOLDER
+	dw BattleAnim_Pound        ; Secret Power, not used
+	dw BattleAnim_Fly          ; PLACEHOLDER
+	dw BattleAnim_Doubleslap   ; PLACEHOLDER
+	dw BattleAnim_PsychUp      ; 108, PLACEHOLDER
+	dw BattleAnim_HiJumpKick   ; PLACEHOLDER
+	dw BattleAnim_IcePunch     ; PLACEHOLDER
+	dw BattleAnim_Crunch       ; PLACEHOLDER
+	dw BattleAnim_Dynamicpunch ; PLACEHOLDER
+	dw BattleAnim_FeintAttack  ; PLACEHOLDER
+	dw BattleAnim_Cut          ; PLACEHOLDER
+	dw BattleAnim_SacredFire   ; PLACEHOLDER
+	dw BattleAnim_Detect       ; 110, PLACEHOLDER
+	dw BattleAnim_RockThrow    ; PLACEHOLDER
+	dw BattleAnim_Screech      ; PLACEHOLDER
+	dw BattleAnim_TailWhip     ; PLACEHOLDER
+	dw BattleAnim_Psybeam      ; PLACEHOLDER
+	dw BattleAnim_FeintAttack  ; PLACEHOLDER
+	dw BattleAnim_Psywave      ; PLACEHOLDER
+	dw BattleAnim_Twister      ; PLACEHOLDER
+	dw BattleAnim_Surf         ; 118, PLACEHOLDER
+	dw BattleAnim_WingAttack   ; PLACEHOLDER
+	dw BattleAnim_Harden       ; PLACEHOLDER
+	dw BattleAnim_Roar         ; PLACEHOLDER
+	dw BattleAnim_Slash        ; PLACEHOLDER
+	dw BattleAnim_Thief        ; PLACEHOLDER
+	dw BattleAnim_Spark        ; PLACEHOLDER
+	dw BattleAnim_Sharpen      ; PLACEHOLDER
+	dw BattleAnim_ThunderWave  ; 120, PLACEHOLDER
+	dw BattleAnim_Bubblebeam   ; PLACEHOLDER
+	dw BattleAnim_Recover      ; PLACEHOLDER
+	dw BattleAnim_Recover      ; PLACEHOLDER
+	dw BattleAnim_MegaPunch    ; PLACEHOLDER
+	dw BattleAnim_Waterfall    ; PLACEHOLDER
+	dw BattleAnim_MegaPunch    ; PLACEHOLDER
+	dw BattleAnim_Pursuit      ; PLACEHOLDER
+	dw BattleAnim_Headbutt     ; 128, PLACEHOLDER
+	dw BattleAnim_MegaPunch    ; PLACEHOLDER
+	dw BattleAnim_Waterfall    ; PLACEHOLDER
+	dw BattleAnim_FlameWheel   ; PLACEHOLDER
+	dw BattleAnim_ShadowBall   ; PLACEHOLDER
+	dw BattleAnim_Slash        ; PLACEHOLDER
+	dw BattleAnim_Slash        ; PLACEHOLDER
+	dw BattleAnim_Roar         ; PLACEHOLDER
+	dw BattleAnim_ShadowBall   ; 130, PLACEHOLDER
+	dw BattleAnim_Ancientpower ; PLACEHOLDER
+	dw BattleAnim_Dynamicpunch ; PLACEHOLDER
+	dw BattleAnim_ShadowBall   ; PLACEHOLDER
+	dw BattleAnim_WingAttack   ; PLACEHOLDER
+	dw BattleAnim_Earthquake   ; PLACEHOLDER
+	dw BattleAnim_PsychUp      ; PLACEHOLDER
+	dw BattleAnim_MachPunch    ; PLACEHOLDER
+	dw BattleAnim_PowderSnow   ; 138, PLACEHOLDER
+	dw BattleAnim_Bite         ; PLACEHOLDER
+	dw BattleAnim_QuickAttack  ; PLACEHOLDER
+	dw BattleAnim_SludgeBomb   ; PLACEHOLDER
+	dw BattleAnim_Cut          ; PLACEHOLDER
+	dw BattleAnim_Headbutt     ; PLACEHOLDER
+	dw BattleAnim_ShadowBall   ; PLACEHOLDER
+	dw BattleAnim_RockSmash    ; PLACEHOLDER
+	dw BattleAnim_ThunderWave  ; 140, PLACEHOLDER
+	dw BattleAnim_RazorLeaf    ; PLACEHOLDER
+	dw BattleAnim_IronTail     ; PLACEHOLDER
+	dw BattleAnim_Headbutt     ; PLACEHOLDER
+	dw BattleAnim_Roar         ; PLACEHOLDER
+	dw BattleAnim_HyperBeam    ; PLACEHOLDER
+	dw BattleAnim_VineWhip     ; PLACEHOLDER
+	dw BattleAnim_Waterfall    ; PLACEHOLDER
+	dw BattleAnim_SweetScent   ; 148, PLACEHOLDER
+	dw BattleAnim_Hypnosis     ; PLACEHOLDER
+	dw BattleAnim_Sharpen      ; PLACEHOLDER
+	dw BattleAnim_PsychicM     ; PLACEHOLDER
+	dw BattleAnim_Growth       ; PLACEHOLDER
+	dw BattleAnim_Pursuit      ; PLACEHOLDER
+	dw BattleAnim_Roar         ; PLACEHOLDER
+	dw BattleAnim_HydroPump    ; PLACEHOLDER
+	dw BattleAnim_Earthquake   ; 150, PLACEHOLDER
+	dw BattleAnim_Meditate     ; PLACEHOLDER
+	dw BattleAnim_CrossChop    ; PLACEHOLDER
+	dw BattleAnim_GigaDrain    ; PLACEHOLDER
+	dw BattleAnim_RapidSpin    ; PLACEHOLDER
+	dw BattleAnim_Doubleslap   ; PLACEHOLDER
+	dw BattleAnim_SacredFire   ; PLACEHOLDER
+	dw BattleAnim_IceBeam      ; PLACEHOLDER
+	dw BattleAnim_MegaDrain    ; 158, PLACEHOLDER
+	dw BattleAnim_Submission   ; PLACEHOLDER
+	dw BattleAnim_SeismicToss  ; PLACEHOLDER
+	dw BattleAnim_MorningSun   ; PLACEHOLDER
+	dw BattleAnim_Spark        ; PLACEHOLDER
+	dw BattleAnim_IcePunch     ; PLACEHOLDER
+	dw BattleAnim_Smokescreen  ; PLACEHOLDER
+	dw BattleAnim_Submission   ; PLACEHOLDER
+	dw BattleAnim_HiddenPower  ; 160, PLACEHOLDER
+	dw BattleAnim_ThunderWave  ; PLACEHOLDER
+	dw BattleAnim_Thief        ; PLACEHOLDER
+	dw BattleAnim_Surf         ; PLACEHOLDER
+	dw BattleAnim_MegaPunch    ; PLACEHOLDER
+	dw BattleAnim_RockSlide    ; PLACEHOLDER
 
 BattleAnim_0:
 BattleAnim_MirrorMove:
@@ -3364,6 +3364,83 @@ BattleAnim_Assist:
 	anim_incobj 5
 	anim_wait 48
 	anim_ret
+	
+BattleAnim_Superpower:
+    anim_2gfx ANIM_GFX_HIT, ANIM_GFX_CHARGE
+    anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
+    anim_sound 0, 0, SFX_OUTRAGE
+.loop
+    anim_obj ANIM_OBJ_GROWTH, 48, 108, $0
+    anim_obj ANIM_OBJ_GROWTH, 48, 108, $20
+    anim_wait 4
+    anim_loop 4, .loop
+    anim_wait 48
+    anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $40
+    anim_call BattleAnim_TargetObj_2Row
+    anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+    anim_sound 0, 0, SFX_SPARK
+    anim_wait 8
+    anim_call BattleAnim_ShowMon_0
+    anim_sound 0, 1, SFX_THUNDER
+    anim_bgeffect ANIM_BG_1F, $60, $4, $10
+.loop2
+    anim_obj ANIM_OBJ_00, 136, 48, $0
+    anim_wait 20
+    anim_loop 3, .loop2
+    anim_wait 16
+    anim_ret
+	
+BattleAnim_Revenge:
+	anim_1gfx ANIM_GFX_HIT
+	anim_call BattleAnim_TargetObj_2Row
+	anim_bgeffect ANIM_BG_1A, $0, $1, $20
+.loop
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+	anim_wait 14
+	anim_loop 3, .loop
+	anim_wait 32
+	anim_incbgeffect ANIM_BG_1A
+	anim_bgeffect ANIM_BG_25, $0, $1, $0
+	anim_wait 8
+	anim_call BattleAnim_ShowMon_0
+	anim_clearobjs
+	anim_sound 0, 1, SFX_COMET_PUNCH
+	anim_obj ANIM_OBJ_01, 120, 64, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_COMET_PUNCH
+	anim_obj ANIM_OBJ_01, 126, 56, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_COMET_PUNCH
+	anim_obj ANIM_OBJ_01, 130, 48, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_COMET_PUNCH
+	anim_obj ANIM_OBJ_01, 133, 40, $0
+	anim_wait 1
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_00, 136, 32, $0
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_wait 32
+	anim_ret
+	
+BattleAnim_Endeavor:
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_SAND
+    anim_call BattleAnim_TargetObj_2Row
+    anim_bgeffect ANIM_BG_2C, $0, $1, $0
+    anim_bgeffect ANIM_BG_1A, $0, $1, $20
+    anim_wait 8
+.loop
+    anim_sound 0, 0, SFX_RETURN
+    anim_obj ANIM_OBJ_SWEAT, 56, 80, $0
+    anim_wait 14
+	anim_sound 0, 1, SFX_BITE
+    anim_obj ANIM_OBJ_01, 136, 48, $0
+	anim_wait 14
+    anim_loop 3, .loop
+    anim_wait 32
+    anim_incbgeffect ANIM_BG_2C
+    anim_call BattleAnim_ShowMon_0
+    anim_ret
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE

@@ -1625,6 +1625,7 @@ TorterraEvosAttacks:
 	dbw 27, MEGA_DRAIN
 	dbw 32, EARTHQUAKE
 	dbw 33, LEECH_SEED
+	dbw 34, EARTHQUAKE
 	dbw 39, SYNTHESIS
 	dbw 45, CRUNCH
 	dbw 51, GIGA_DRAIN

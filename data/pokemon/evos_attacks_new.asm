@@ -1177,7 +1177,7 @@ MetagrossEvosAttacks:
 	dbw 77, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-LatiosEvosAttacks:	
+LatiosEvosAttacks:
 	db 0
 	dbw 1, PSYWAVE
 	dbw 5, SAFEGUARD
@@ -1191,8 +1191,8 @@ LatiosEvosAttacks:
 	dbw 45, DRAGON_PULSE
 	dbw 50, AURA_SPHERE
 	db 0 ; no more level-up moves
-	
-LatiasEvosAttacks:	
+
+LatiasEvosAttacks:
 	db 0
 	dbw 1, PSYWAVE
 	dbw 5, SAFEGUARD
@@ -1206,8 +1206,8 @@ LatiasEvosAttacks:
 	dbw 45, DRAGON_PULSE
 	dbw 50, AURA_SPHERE
 	db 0 ; no more level-up moves
-	
-GroudonEvosAttacks:	
+
+GroudonEvosAttacks:
 	db 0
 	dbw 1, MUD_SLAP
 	dbw 5, SCARY_FACE
@@ -1598,7 +1598,7 @@ TurtwigEvosAttacks:
 	db 0 ; no more level-up moves
 
 GrotleEvosAttacks:
-	dbbw EVOLVE_HAPPINESS, 32, TORTERRA
+	dbbw EVOLVE_LEVEL, 32, TORTERRA
 	db 0
 	dbw 1, TACKLE
 	dbw 1, WITHDRAW

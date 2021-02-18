@@ -2,14 +2,67 @@
 	const ICEPATH1F_POKE_BALL1
 	const ICEPATH1F_POKE_BALL2
 	const ICEPATH1F_POKE_BALL3
+	const ICEPATH1F_EVAN
 
 IcePath1F_MapScripts:
-	db 0 ; scene scripts
+	db 2 ; scene scripts
+	scene_script .DummyScene ; SCENE_DEFAULT
+	scene_script .DummyScene ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
+.DummyScene:
+	end
+
 IcePath1FTM_PSYCH_UP:
 	itemball TM_PSYCH_UP
+	
+RouteIcePathEvan:
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	showemote EMOTE_SHOCK, PLAYER, 15
+	applymovement PLAYER, IcePath1fPlayerTurnHead
+	applymovement ICEPATH1F_EVAN, IcePath1fEvanMoveUp
+	opentext
+	writetext IcePathEvanText
+	waitbutton
+	closetext
+	winlosstext IcePathEvanText, IcePathEvanText
+	loadtrainer AC_CHRIS, EVAN3
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	opentext
+	writetext IcePathEvanText
+	waitbutton
+	closetext
+	setscene SCENE_FINISHED
+	applymovement ICEPATH1F_EVAN, IcePath1fEvanMoveDown
+	special FadeOutMusic
+	playsound SFX_EXIT_BUILDING
+	disappear ICEPATH1F_EVAN
+	waitsfx
+	playmapmusic
+	end
+	
+IcePath1fEvanMoveUp:
+	step UP
+	step UP
+	step UP
+	step_end
+	
+IcePath1fEvanMoveDown:
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
+	
+IcePath1fPlayerTurnHead:
+	turn_head DOWN
+	step_end
+	
+IcePathEvanText:
+	text "<...>"
+	done
 
 IcePath1FPPUp:
 	itemball PP_UP
@@ -26,11 +79,13 @@ IcePath1F_MapEvents:
 	warp_event 37,  5, ICE_PATH_B1F, 1
 	warp_event 37, 13, ICE_PATH_B1F, 7
 
-	db 0 ; coord events
-
+	db 1 ; coord events
+	coord_event 36, 23, SCENE_DEFAULT, RouteIcePathEvan
+	
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event 31,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FTM_PSYCH_UP, EVENT_GOT_TM09_PSYCH_UP
 	object_event 32, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FPPUp, EVENT_ICE_PATH_1F_PP_UP
 	object_event 35,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FProtein, EVENT_ICE_PATH_1F_PROTEIN
+	object_event 36, 27, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, ObjectEvent, EVENT_EVAN_AT_ICE_PATH

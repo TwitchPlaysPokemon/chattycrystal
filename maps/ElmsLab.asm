@@ -119,7 +119,6 @@ ElmCheckGotEggAgain:
 	closetext
 	end
 
-
 ElmLetYourMonBattleIt:
 	writetext ElmText_LetYourMonBattleIt
 	waitbutton

@@ -20,7 +20,7 @@ ShoelaceSnorlax:
 	
 ShoelaceSnorlaxText:
 	text "It's a SNORLAX"
-	line "tieing it's"
+	line "tying its"
 	cont "shoelaces"
 	
 	para "You'll have to"

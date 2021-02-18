@@ -2750,3 +2750,25 @@ SecretPower:
 	buildopponentrage
 	secretpower
 	endmove
+
+WakeUpSlap:
+	checkobedience
+	usedmovetext
+	doturn
+	wakeupslap
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	awakenopponent
+	endmove

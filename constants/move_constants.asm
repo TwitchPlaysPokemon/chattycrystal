@@ -296,7 +296,7 @@
 	const SHOCK_WAVE   ; 120
 	const WATER_PULSE  ; 121
 	const ROOST        ; 122
-	const WAKE_UP_SLAP ; 123 (PLACEHOLDER)
+	const WAKE_UP_SLAP ; 123
 	const HAMMER_ARM   ; 124
 	const BRINE        ; 125
 	const CLOSE_COMBAT ; 126

@@ -193,4 +193,5 @@ MoveEffectsPointers:
 	dw WaterSpout
 	dw KnockOff
 	dw SecretPower
+	dw WakeUpSlap
 	dw Placeholder

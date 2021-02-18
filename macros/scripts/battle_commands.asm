@@ -219,6 +219,8 @@ ENDM
 	command knockoff_power          ; d4
 	command knockoff                ; d5
 	command secretpower             ; d6
+	command wakeupslap              ; d7
+	command awakenopponent          ; d8
 
 	enum_start $fe
 	command endturn                 ; fe

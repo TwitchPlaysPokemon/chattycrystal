@@ -147,6 +147,9 @@ ENDM
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 	map_const VICTORY_ROAD,                                10, 36 ; 91
 	map_const VIRIDIAN_FOREST,                             17, 28 ; 92
+	map_const CERULEAN_CAVE_1F,                            20, 11 ; 93
+	map_const CERULEAN_CAVE_2F,                            15,  9 ; 94
+	map_const CERULEAN_CAVE_B1F,                           15,  9 ; 95
 
 	newgroup                                                      ;  4
 

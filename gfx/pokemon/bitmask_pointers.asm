@@ -333,7 +333,7 @@ BitmasksPointers:
 	dw LuxrayBitmasks
 	dw BudewBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Roserade
-	dw PlaceholderBitmasks ; PLACEHOLDER - Burmy
+	dw BurmyBitmasks
 	dw MothimBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Buizel
 	dw PlaceholderBitmasks ; PLACEHOLDER - Floatzel

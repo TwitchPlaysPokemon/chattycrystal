@@ -8109,16 +8109,79 @@ StartBattle:
 	and a
 	ret z
 
+	call SetSecretPowerEnvironment
+
 	ld a, [wTimeOfDayPal]
 	push af
 	rst ChattyOff
 	call BattleIntro
 	call DoBattle
 	rst ChattyOn
+	xor a
+	ld [wBattleEnvironment], a
 	call ExitBattle
 	pop af
 	ld [wTimeOfDayPal], a
 	scf
+	ret
+
+SetSecretPowerEnvironment:
+; Sets the battle environment for Secret Power.
+	; Check if we've already prepared a battle environment.
+	ld a, [wBattleEnvironment]
+	and a
+	ret nz
+
+	; Surf/fishing has priority over general battle environments
+	call CheckOnWater
+	ld b, BTLENV_SURF
+	jr z, .got_env
+	ld a, [wBattleType]
+	cp BATTLETYPE_FISH
+	ld b, BTLENV_FISH
+	jr z, .got_env
+	cp BATTLETYPE_TREE
+	ld b, BTLENV_TREE
+	jr z, .got_env
+
+	; Before the more general "cave", we need to check if we're
+	; in a forest (Ilex/Viridian) or icy (Ice Path) area.
+	; BTLENV_TREE is already set from our previous check.
+	lb de, GROUP_ILEX_FOREST, MAP_ILEX_FOREST
+	call .CheckMap
+	ret z
+;	lb de, GROUP_VIRIDIAN_FOREST, MAP_VIRIDIAN_FOREST
+;	call .CheckMap
+;	ret z
+
+	; Check for Ice Path
+	ld a, [wMapTileset]
+	cp TILESET_ICE_PATH
+	ld b, BTLENV_ICE
+	jr z, .got_env
+
+	; Finally, check the general environment.
+	ld a, [wEnvironment]
+	cp CAVE
+	ld b, BTLENV_CAVE
+	jr z, .got_env
+	cp ROUTE
+	ld b, BTLENV_GRASS ; Tall grass or route trainers
+	jr z, .got_env
+	ld b, BTLENV_PLAIN ; Default, including non-cave dungeons
+	jr .got_env
+
+.CheckMap:
+	ld a, [wMapGroup]
+	cp d
+	ret nz
+	ld a, [wMapNumber]
+	cp e
+	ret nz
+	; fallthrough
+.got_env
+	ld a, b
+	ld [wBattleEnvironment], a
 	ret
 
 BattleIntro:

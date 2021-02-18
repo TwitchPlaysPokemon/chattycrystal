@@ -236,6 +236,18 @@ SEMI_INVULNERABLE EQU 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND | 1 << 
 	const WEATHER_SUN_END
 	const WEATHER_SANDSTORM_END
 
+; battle environment, for Secret Power. Also see SecretPowerAnims
+	const_def ; secondary, animation
+	const BTLENV_NOT_SET ; Flags battle init to set environment.
+	const BTLENV_PLAIN ; Paralysis, Body Slam
+	const BTLENV_CAVE ; Flinch, Rock Throw
+	const BTLENV_ROCK_SMASH ; Flinch, Rock Smash
+	const BTLENV_TREE ; Sleep, Razor Leaf
+	const BTLENV_GRASS ; Sleep, Sleep Powder
+	const BTLENV_SURF ; Attack-1, Surf
+	const BTLENV_FISH ; Attack-1, Water Pulse
+	const BTLENV_ICE ; Freeze, Blizzard
+
 ; wBattleAction
 	const_def
 	const BATTLEACTION_MOVE1

@@ -333,7 +333,7 @@ AnimationPointers:
 	dw LuxrayAnimation
 	dw BudewAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Roserade
-	dw PlaceholderAnimation ; PLACEHOLDER - Burmy
+	dw BurmyAnimation
 	dw MothimAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Buizel
 	dw PlaceholderAnimation ; PLACEHOLDER - Floatzel

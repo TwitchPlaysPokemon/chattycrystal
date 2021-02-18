@@ -405,4 +405,4 @@ ChatotCry::
 	mon_cry CRY_WOOPER,      $093,  $0af ; WOOCHUM
 	mon_cry CRY_WOOPER,     -$0c6,  $140 ; QUAGYNX
 	mon_cry CRY_TYPHLOSION,  $0ef,  $0f7 ; STEELURRET
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; PHANCERO - PLACEHOLDER
+	mon_cry CRY_FEAROW,      $11f,  $200 ; PHANCERO

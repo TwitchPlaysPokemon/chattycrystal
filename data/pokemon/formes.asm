@@ -25,18 +25,18 @@ FormeTypeOverrides:
 
 
 BurmyFormes:
-	; plant cloak - animation is PLACEHOLDER
-	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; sandy cloak - animation is PLACEHOLDER
-	forme BurmySandyFrontpic, BurmySandyBackpic, BurmySandyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; trash cloak - animation is PLACEHOLDER
-	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; plant cloak - animation is PLACEHOLDER
-	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; sandy cloak - animation is PLACEHOLDER
-	forme BurmySandyFrontpic, BurmySandyBackpic, BurmySandyPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; trash cloak - animation is PLACEHOLDER
-	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; plant cloak
+	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, BurmyFrames, BurmyBitmasks, BurmyAnimation, BurmyAnimationIdle
+	; sandy cloak
+	forme BurmySandyFrontpic, BurmySandyBackpic, BurmySandyPalette, BurmySandyFrames, BurmySandyBitmasks, BurmySandyAnimation, BurmySandyAnimationIdle
+	; trash cloak
+	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, BurmyTrashFrames, BurmyTrashBitmasks, BurmyTrashAnimation, BurmyTrashAnimationIdle
+	; plant cloak
+	forme BurmyFrontpic, BurmyBackpic, BurmyPalette, BurmyFrames, BurmyBitmasks, BurmyAnimation, BurmyAnimationIdle
+	; sandy cloak
+	forme BurmySandyFrontpic, BurmySandyBackpic, BurmySandyPalette, BurmySandyFrames, BurmySandyBitmasks, BurmySandyAnimation, BurmySandyAnimationIdle
+	; trash cloak
+	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, BurmyTrashFrames, BurmyTrashBitmasks, BurmyTrashAnimation, BurmyTrashAnimationIdle
 
 ShellosFormes:
 	; west sea - animation is PLACEHOLDER

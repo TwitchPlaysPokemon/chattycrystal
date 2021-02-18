@@ -129,6 +129,7 @@ CreditsStrings:
 	dw .M4UsedRollout
 	dw .FutureSushi
 	dw .RainbowDevs
+	dw .Rangi42
 
 .SatoshiTajiri:       db "   Satoshi Tajiri@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   Junichi Masuda@"         ; "ますだ　じゅんいち@"
@@ -264,6 +265,7 @@ CreditsStrings:
 .M4UsedRollout:       db "  m4_used_rollout@"
 .FutureSushi:         db "    futuresushi@"
 .RainbowDevs:         db "    RainbowDevs@"
+.Rangi42:             db "      Rangi42@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

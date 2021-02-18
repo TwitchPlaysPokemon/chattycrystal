@@ -277,7 +277,7 @@ Moves1:
 	move EFFECT_REVENGE,              60, FIGHTING, 100, 10, 100 ;REVENGE
 	move EFFECT_ENDEAVOR,              1, NORMAL,   100,  5,   0 ;ENDEAVOR
 	move EFFECT_SNATCH,                0, DARK,     100, 10,   0 ;SNATCH
-	move EFFECT_PLACEHOLDER,          70, NORMAL,   100, 20,   0 ;SECRET_POWER
+	move EFFECT_SECRET_POWER,         70, NORMAL,   100, 20,  30 ;SECRET_POWER
 	move EFFECT_FLY,                  80, WATER,    100, 10,   0 ;DIVE
 	move EFFECT_MULTI_HIT,            15, FIGHTING, 100, 20,   0 ;ARM_THRUST
 	move EFFECT_CONFUSE,               0, NORMAL,   100, 20,   0 ;TEETER_DANCE

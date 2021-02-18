@@ -1,12 +1,14 @@
 LSMoveNames::
 	indirect_table 8, 1
 	indirect_entries BEAT_UP, .original_moves
-	indirect_entries WATER_PULSE, .new_moves
+	indirect_entries WATER_PULSE, .new_moves_1
 	indirect_entries CHATTY_HP - 1
 	indirect_entries CHATTY_HP, .hidden_power
+	indirect_entries KNOCK_OFF - 1
+	indirect_entries NEEDLE_ARM, .new_moves_2
 	indirect_table_end
 
-.new_moves
+.new_moves_1
 	db "Dream@@@" ;  fc
 	db "Ghost@@@"
 	db "Charg@@@"
@@ -45,6 +47,11 @@ LSMoveNames::
 	db "Dance@@@"
 	db "Shock@@@" ; 120
 	db "Beam@@@@"
+
+.new_moves_2
+	db "Beat@@@@" ; 162
+	db "Spra@@@@"
+	db "Megneti@"
 
 .original_moves
 	db "fihgt@@@"

@@ -140,29 +140,29 @@ KantoGrassWildMons:
 	map_id TOHJO_FALLS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 22, ZUBAT
-	dbw 22, RATICATE
-	dbw 24, GOLBAT
-	dbw 21, SLOWPOKE
-	dbw 20, RATTATA
-	dbw 23, SLOWPOKE
-	dbw 23, SLOWPOKE
+	dbw 28, ZUBAT
+	dbw 28, RATICATE
+	dbw 30, GOLBAT
+	dbw 27, SLOWPOKE
+	dbw 26, RATTATA
+	dbw 29, SLOWPOKE
+	dbw 29, SLOWPOKE
 	; day
-	dbw 22, ZUBAT
-	dbw 22, RATICATE
-	dbw 24, GOLBAT
-	dbw 21, SLOWPOKE
-	dbw 20, RATTATA
-	dbw 23, SLOWPOKE
-	dbw 23, SLOWPOKE
+	dbw 28, ZUBAT
+	dbw 28, RATICATE
+	dbw 30, GOLBAT
+	dbw 27, SLOWPOKE
+	dbw 26, RATTATA
+	dbw 29, SLOWPOKE
+	dbw 29, SLOWPOKE
 	; nite
-	dbw 22, ZUBAT
-	dbw 22, RATICATE
-	dbw 24, GOLBAT
-	dbw 21, SLOWPOKE
-	dbw 20, RATTATA
-	dbw 23, SLOWPOKE
-	dbw 23, SLOWPOKE
+	dbw 28, ZUBAT
+	dbw 28, RATICATE
+	dbw 30, GOLBAT
+	dbw 27, SLOWPOKE
+	dbw 26, RATTATA
+	dbw 29, SLOWPOKE
+	dbw 29, SLOWPOKE
 
 	map_id ROUTE_1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

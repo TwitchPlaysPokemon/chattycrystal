@@ -1,7 +1,28 @@
+	object_const_def ; object_event constants
+	const CERULEANCAVE1F_POKE_BALL_1
+	const CERULEANCAVE1F_POKE_BALL_2
+	const CERULEANCAVE1F_POKE_BALL_3
+	const CERULEANCAVE1F_POKE_BALL_4
+
 CeruleanCave1F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+
+CeruleanCave1FRareCandy:
+	itemball RARE_CANDY
+
+CeruleanCave1FMaxElixir:
+	itemball MAX_ELIXIR
+
+CeruleanCave1FMaxRevive:
+	itemball MAX_REVIVE
+
+CeruleanCave1FUltraBall:
+	itemball ULTRA_BALL
+
+CeruleanCave1FHiddenPPUp:
+	hiddenitem PP_UP, EVENT_CERULEAN_CAVE_1F_HIDDEN_PP_UP
 
 CeruleanCave1F_MapEvents:
 	db 0, 0 ; filler
@@ -18,6 +39,11 @@ CeruleanCave1F_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event 22,  7, BGEVENT_ITEM, CeruleanCave1FHiddenPPUp
 
-	db 0 ; object events
+	db 4 ; object events
+	object_event 33, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave1FRareCandy, EVENT_CERULEAN_CAVE_1F_RARE_CANDY
+	object_event 11, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave1FMaxElixir, EVENT_CERULEAN_CAVE_1F_MAX_ELIXIR
+	object_event 33, 9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave1FMaxRevive, EVENT_CERULEAN_CAVE_1F_MAX_REVIVE
+	object_event 22, 3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave1FUltraBall, EVENT_CERULEAN_CAVE_1F_ULTRA_BALL

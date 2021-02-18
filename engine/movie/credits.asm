@@ -288,13 +288,10 @@ ParseCredits:
 	ld e, a
 	pop af
 
-; Strings spanning multiple lines have special cases.
+; Some strings spanning multiple lines have special cases.
 
 	cp COPYRIGHT
 	jr z, .copyright
-
-	cp STAFF
-	jr c, .staff
 
 ; The rest start from line 6.
 
@@ -304,9 +301,6 @@ ParseCredits:
 .copyright
 	hlcoord 2, 6
 	jr .print
-
-.staff
-	hlcoord 0, 6
 
 .print
 ; Print strings spaced every two lines.

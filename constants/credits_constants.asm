@@ -103,6 +103,31 @@
 	const US_COORDINATION
 	const TEXT_TRANSLATION
 	const PAAD_TESTING
+	const CHATTY_DEVS
+	const ROM_DEVELOPER
+	const CHAOS_LORD2
+	const RED031000
+	const FROSTED_GEULLEISIA
+	const AX6
+	const GAME_ENGINE
+	const BATTLE_ENGINE
+	const FIQ
+	const PROCESSING_HELP
+	const PIA_CARROT
+	const ARTIST
+	const BLOODLESSNS
+	const KELCYUS
+	const ANIMATION
+	const SOUPPOTATO
+	const ROM_TESTER
+	const MONSTARULES
+	const CHAT_INTEGRATION
+	const AISSURTIEVOS
+	const DATA_COLLECTION
+	const RAVENDWYR
+	const RUN_MANAGER
+	const M4_USED_ROLLOUT
+	const FUTURESUSHI
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7

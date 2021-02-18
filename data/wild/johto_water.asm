@@ -94,15 +94,15 @@ JohtoWaterWildMons:
 
 	map_id DARK_CAVE_BLACKTHORN_ENTRANCE
 	db 2 percent ; encounter rate
-	dbw 13, MAGIKARP
-	dbw 8, MAGIKARP
-	dbw 3, MAGIKARP
+	dbw 25, MAGIKARP
+	dbw 20, MAGIKARP
+	dbw 15, MAGIKARP
 
 	map_id DRAGONS_DEN_B1F
 	db 4 percent ; encounter rate
-	dbw 13, MAGIKARP
-	dbw 8, MAGIKARP
-	dbw 8, DRATINI
+	dbw 53, MAGIKARP
+	dbw 48, MAGIKARP
+	dbw 48, DRATINI
 
 	map_id OLIVINE_PORT
 	db 2 percent ; encounter rate
@@ -172,9 +172,9 @@ JohtoWaterWildMons:
 
 	map_id ROUTE_45
 	db 2 percent ; encounter rate
-	dbw 18, MAGIKARP
-	dbw 13, MAGIKARP
-	dbw 3, MAGIKARP
+	dbw 50, MAGIKARP
+	dbw 45, MAGIKARP
+	dbw 35, MAGIKARP
 
 	map_id NEW_BARK_TOWN
 	db 6 percent ; encounter rate
@@ -220,9 +220,9 @@ JohtoWaterWildMons:
 
 	map_id BLACKTHORN_CITY
 	db 4 percent ; encounter rate
-	dbw 13, MAGIKARP
-	dbw 8, MAGIKARP
-	dbw 3, MAGIKARP
+	dbw 51, MAGIKARP
+	dbw 46, MAGIKARP
+	dbw 41, MAGIKARP
 
 	map_id SILVER_CAVE_OUTSIDE
 	db 2 percent ; encounter rate

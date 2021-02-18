@@ -42,7 +42,7 @@ TrainerBlackbeltKenji:
 	askforphonenumber PHONE_BLACKBELT_KENJI
 	ifequal PHONE_CONTACTS_FULL, Route45PhoneFullM
 	ifequal PHONE_CONTACT_REFUSED, Route45NumberDeclinedM
-	gettrainername STRING_BUFFER_3, BLACKBELT_T, KENJI3
+	gettrainername STRING_BUFFER_3, BLACKBELT_T, KENJI1
 	scall Route45RegisteredNumberM
 	sjump Route45NumberAcceptedM
 
@@ -181,13 +181,13 @@ TrainerHikerParry:
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
 .Fight2:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
-	checkevent EVENT_BEAT_ELITE_FOUR
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight1
 .LoadFight0:
-	loadtrainer HIKER, PARRY3
+	loadtrainer HIKER, PARRY1
 	startbattle
 	reloadmapafterbattle
 	loadmem wParryFightCount, 1
@@ -195,7 +195,7 @@ TrainerHikerParry:
 	end
 
 .LoadFight1:
-	loadtrainer HIKER, PARRY1
+	loadtrainer HIKER, PARRY2
 	startbattle
 	reloadmapafterbattle
 	loadmem wParryFightCount, 2
@@ -203,7 +203,7 @@ TrainerHikerParry:
 	end
 
 .LoadFight2:
-	loadtrainer HIKER, PARRY2
+	loadtrainer HIKER, PARRY3
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_PARRY

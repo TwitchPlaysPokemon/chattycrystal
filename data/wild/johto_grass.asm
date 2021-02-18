@@ -1166,29 +1166,29 @@ JohtoGrassWildMons:
 	map_id DARK_CAVE_BLACKTHORN_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 23, GEODUDE
-	dbw 23, ZUBAT
-	dbw 25, GRAVELER
-	dbw 25, URSARING
-	dbw 20, TEDDIURSA
-	dbw 23, LAIRON
-	dbw 23, GOLBAT
-	; day
-	dbw 23, GEODUDE
-	dbw 23, ZUBAT
-	dbw 25, GRAVELER
-	dbw 25, URSARING
+	dbw 28, GEODUDE
+	dbw 28, ZUBAT
+	dbw 30, GRAVELER
 	dbw 30, URSARING
-	dbw 23, LAIRON
-	dbw 23, GOLBAT
+	dbw 25, TEDDIURSA
+	dbw 28, LAIRON
+	dbw 28, GOLBAT
+	; day
+	dbw 28, GEODUDE
+	dbw 28, ZUBAT
+	dbw 30, GRAVELER
+	dbw 30, URSARING
+	dbw 35, URSARING
+	dbw 28, LAIRON
+	dbw 28, GOLBAT
 	; nite
-	dbw 23, GEODUDE
-	dbw 23, ZUBAT
-	dbw 25, GRAVELER
-	dbw 20, WOBBUFFET
+	dbw 28, GEODUDE
+	dbw 28, ZUBAT
+	dbw 30, GRAVELER
 	dbw 25, WOBBUFFET
-	dbw 23, LAIRON
-	dbw 23, GOLBAT
+	dbw 30, WOBBUFFET
+	dbw 28, LAIRON
+	dbw 28, GOLBAT
 
 	map_id ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1571,29 +1571,29 @@ JohtoGrassWildMons:
 	map_id ROUTE_45
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 23, GEODUDE
-	dbw 23, GRAVELER
-	dbw 24, GLIGAR
-	dbw 25, DONPHAN
-	dbw 20, PHANPY
-	dbw 27, SKARMORY
-	dbw 27, SKARMORY
+	dbw 48, GEODUDE
+	dbw 48, GRAVELER
+	dbw 49, GLIGAR
+	dbw 50, DONPHAN
+	dbw 45, PHANPY
+	dbw 52, SKARMORY
+	dbw 52, SKARMORY
 	; day
-	dbw 23, GEODUDE
-	dbw 23, GRAVELER
-	dbw 24, GLIGAR
-	dbw 25, DONPHAN
-	dbw 30, DONPHAN
-	dbw 27, SKARMORY
-	dbw 27, SKARMORY
+	dbw 48, GEODUDE
+	dbw 48, GRAVELER
+	dbw 49, GLIGAR
+	dbw 50, DONPHAN
+	dbw 55, DONPHAN
+	dbw 52, SKARMORY
+	dbw 52, SKARMORY
 	; nite
-	dbw 23, GEODUDE
-	dbw 23, GRAVELER
-	dbw 24, GLIGAR
-	dbw 25, GRAVELER
-	dbw 27, GRAVELER
-	dbw 27, GRAVELER
-	dbw 27, GRAVELER
+	dbw 48, GEODUDE
+	dbw 48, GRAVELER
+	dbw 49, GLIGAR
+	dbw 50, GRAVELER
+	dbw 52, GRAVELER
+	dbw 52, GRAVELER
+	dbw 53, GRAVELER
 
 	map_id ROUTE_46
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

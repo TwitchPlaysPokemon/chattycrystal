@@ -2428,25 +2428,25 @@ CooltrainerMGroup:
 
 	next_list_item ; COOLTRAINERM (3)
 	db "PAUL@", TRAINERTYPE_NORMAL
-	db 34
-	dw DRATINI
-	db 34
-	dw DRATINI
-	db 34
-	dw DRATINI
+	db 50
+	dw DRAGONAIR
+	db 50
+	dw DRAGONAIR
+	db 50
+	dw DRAGONAIR
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (4)
 	db "CODY@", TRAINERTYPE_NORMAL
-	db 34
-	dw HORSEA
-	db 36
+	db 50
 	dw SEADRA
+	db 52
+	dw KINGDRA
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (5)
 	db "MIKE@", TRAINERTYPE_NORMAL
-	db 37
+	db 53
 	dw DRAGONAIR
 	db -1 ; end
 
@@ -2480,13 +2480,11 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (8)
-	db "RYAN@", TRAINERTYPE_MOVES
-	db 25
+	db "RYAN@", TRAINERTYPE_NORMAL
+	db 52
 	dw PIDGEOT
-	dw SAND_ATTACK, QUICK_ATTACK, WHIRLWIND, WING_ATTACK
-	db 27
+	db 54
 	dw ELECTABUZZ
-	dw THUNDERPUNCH, LIGHT_SCREEN, SWIFT, SCREECH
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (9)
@@ -2599,10 +2597,9 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (20)
-	db "DARIN@", TRAINERTYPE_MOVES
-	db 37
-	dw DRAGONAIR
-	dw WRAP, SURF, DRAGON_RAGE, SLAM
+	db "DARIN@", TRAINERTYPE_NORMAL
+	db 55
+	dw DRAGONITE
 	db -1 ; end
 
 	end_list_items
@@ -2632,15 +2629,15 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (3)
 	db "FRAN@", TRAINERTYPE_NORMAL
-	db 37
-	dw SEADRA
+	db 53
+	dw KINGDRA
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (4)
 	db "LOLA@", TRAINERTYPE_NORMAL
-	db 34
-	dw DRATINI
-	db 36
+	db 50
+	dw SEADRA
+	db 52
 	dw DRAGONAIR
 	db -1 ; end
 
@@ -2662,12 +2659,12 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (7)
 	db "KELLY@", TRAINERTYPE_NORMAL
-	db 33
+	db 54
 	dw AZUMARILL
-	db 31
-	dw WARTORTLE
-	db 31
-	dw WARTORTLE
+	db 52
+	dw BLASTOISE
+	db 52
+	dw BLASTOISE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (8)
@@ -2795,15 +2792,15 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (21)
 	db "CARA@", TRAINERTYPE_MOVES
-	db 33
+	db 52
 	dw HORSEA
-	dw SMOKESCREEN, LEER, WHIRLPOOL, TWISTER
-	db 33
-	dw HORSEA
-	dw SMOKESCREEN, LEER, WHIRLPOOL, TWISTER
-	db 35
+	dw SMOKESCREEN, HYDRO_PUMP, WHIRLPOOL, DRAGONBREATH
+	db 52
 	dw SEADRA
-	dw SWIFT, LEER, WATERFALL, TWISTER
+	dw SMOKESCREEN, HYDRO_PUMP, WHIRLPOOL, DRAGONBREATH
+	db 54
+	dw KINGDRA
+	dw SMOKESCREEN, AGILITY, WATERFALL, DRAGONBREATH
 	db -1 ; end
 
 	end_list_items
@@ -4413,40 +4410,38 @@ HikerGroup:
 
 	next_list_item ; HIKER (7)
 	db "ERIK@", TRAINERTYPE_NORMAL
-	db 24
-	dw MACHOP
-	db 27
-	dw GRAVELER
-	db 27
-	dw MACHOP
+	db 51
+	dw MACHOKE
+	db 53
+	dw GOLEM
+	db 53
+	dw MACHAMP
 	db -1 ; end
 
 	next_list_item ; HIKER (8)
 	db "MICHAEL@", TRAINERTYPE_NORMAL
-	db 25
+	db 53
 	dw GEODUDE
-	db 25
+	db 53
 	dw GRAVELER
-	db 25
+	db 53
 	dw GOLEM
 	db -1 ; end
 
 	next_list_item ; HIKER (9)
 	db "PARRY@", TRAINERTYPE_NORMAL
-	db 35
-	dw ONIX
-	db 33
-	dw SWINUB
+	db 54
+	dw STEELIX
+	db 52
+	dw PILOSWINE
 	db -1 ; end
 
 	next_list_item ; HIKER (10)
-	db "TIMOTHY@", TRAINERTYPE_MOVES
-	db 27
-	dw DIGLETT
-	dw MAGNITUDE, DIG, SAND_ATTACK, SLASH
-	db 27
+	db "TIMOTHY@", TRAINERTYPE_NORMAL
+	db 54
 	dw DUGTRIO
-	dw MAGNITUDE, DIG, SAND_ATTACK, SLASH
+	db 54
+	dw DUGTRIO
 	db -1 ; end
 
 	next_list_item ; HIKER (11)
@@ -4524,22 +4519,26 @@ HikerGroup:
 	db -1 ; end
 
 	next_list_item ; HIKER (19)
-	db "PARRY@", TRAINERTYPE_MOVES
-	db 35
+	db "PARRY@", TRAINERTYPE_NORMAL
+	db 67
 	dw PILOSWINE
-	dw EARTHQUAKE, BLIZZARD, REST, TAKE_DOWN
-	db 35
+	db 67
 	dw DUGTRIO
-	dw MAGNITUDE, DIG, MUD_SLAP, SLASH
-	db 38
+	db 69
 	dw STEELIX
-	dw DIG, IRON_TAIL, SANDSTORM, SLAM
 	db -1 ; end
 
 	next_list_item ; HIKER (20)
-	db "PARRY@", TRAINERTYPE_NORMAL
-	db 29
-	dw ONIX
+	db "PARRY@", TRAINERTYPE_MOVES
+	db 77
+	dw PILOSWINE
+	dw EARTHQUAKE, BLIZZARD, REST, TAKE_DOWN
+	db 77
+	dw DUGTRIO
+	dw EARTHQUAKE, FISSURE, SLASH, SLUDGE_BOMB
+	db 79
+	dw STEELIX
+	dw DIG, IRON_TAIL, SANDSTORM, CRUNCH
 	db -1 ; end
 
 	next_list_item ; HIKER (21)
@@ -4833,14 +4832,14 @@ JugglerGroup:
 BlackbeltGroup:
 	next_list_item ; BLACKBELT_T (1)
 	db "KENJI@", TRAINERTYPE_NORMAL
-	db 27
+	db 48
 	dw ONIX
-	db 30
+	db 51
 	dw HITMONLEE
-	db 27
-	dw ONIX
-	db 32
-	dw MACHOKE
+	db 48
+	dw STEELIX
+	db 54
+	dw MACHAMP
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (2)
@@ -5438,11 +5437,11 @@ CamperGroup:
 
 	next_list_item ; CAMPER (22)
 	db "QUENTIN@", TRAINERTYPE_NORMAL
-	db 30
+	db 53
 	dw FEAROW
-	db 30
+	db 53
 	dw PRIMEAPE
-	db 30
+	db 53
 	dw TAUROS
 	db -1 ; end
 
@@ -5875,22 +5874,22 @@ TwinsGroup:
 
 	next_list_item ; TWINS (9)
 	db "LEA & PIA@", TRAINERTYPE_MOVES
-	db 35
-	dw DRATINI
-	dw THUNDER_WAVE, TWISTER, FLAMETHROWER, HEADBUTT
-	db 35
-	dw DRATINI
-	dw THUNDER_WAVE, TWISTER, ICE_BEAM, HEADBUTT
+	db 54
+	dw DRAGONAIR
+	dw THUNDER_WAVE, DRAGONBREATH, FLAMETHROWER, HEADBUTT
+	db 54
+	dw DRAGONAIR
+	dw THUNDER_WAVE, DRAGONBREATH, ICE_BEAM, HEADBUTT
 	db -1 ; end
 
 	next_list_item ; TWINS (10)
 	db "LEA & PIA@", TRAINERTYPE_MOVES
-	db 38
-	dw DRATINI
-	dw THUNDER_WAVE, TWISTER, ICE_BEAM, HEADBUTT
-	db 38
-	dw DRATINI
-	dw THUNDER_WAVE, TWISTER, FLAMETHROWER, HEADBUTT
+	db 54
+	dw DRAGONAIR
+	dw THUNDER_WAVE, DRAGONBREATH, ICE_BEAM, HEADBUTT
+	db 54
+	dw DRAGONAIR
+	dw THUNDER_WAVE, DRAGONBREATH, FLAMETHROWER, HEADBUTT
 	db -1 ; end
 
 	end_list_items

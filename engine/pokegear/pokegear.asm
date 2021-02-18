@@ -732,16 +732,8 @@ PokegearMap_UpdateCursorPosition:
 	ret
 
 TownMap_GetKantoLandmarkLimits:
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_HALL_OF_FAME_F, a
-	jr z, .not_hof
 	ld d, ROUTE_28
 	ld e, PALLET_TOWN
-	ret
-
-.not_hof
-	ld d, ROUTE_28
-	ld e, VICTORY_ROAD
 	ret
 
 PokegearRadio_Init:
@@ -2302,22 +2294,22 @@ FlyMap:
 ; the flypoint selection has a default starting point that
 ; can be flown to even if none are enabled.
 ; To prevent both of these things from happening when the player
-; enters Kanto, fly access is restricted until Indigo Plateau is
+; enters Kanto, fly access is restricted until Vermillion City is
 ; visited and its flypoint enabled.
 	push af
-	ld c, SPAWN_INDIGO
+	ld c, SPAWN_VERMILION
 	call HasVisitedSpawn
 	and a
 	jr z, .NoKanto
-; Kanto's map is only loaded if we've visited Indigo Plateau
+; Kanto's map is only loaded if we've visited Vermillion
 
 ; Flypoints begin at Pallet Town...
 	ld a, FLY_PALLET
 	ld [wStartFlypoint], a
 ; ...and end at Indigo Plateau
-	ld a, FLY_INDIGO
+	ld a, FLY_VERMILION
 	ld [wEndFlypoint], a
-; Because Indigo Plateau is the first flypoint the player
+; Because Vermillion is the first flypoint the player
 ; visits, it's made the default flypoint.
 	ld [wTownMapPlayerIconLandmark], a
 ; Fill out the map
@@ -2328,7 +2320,7 @@ FlyMap:
 	ret
 
 .NoKanto:
-; If Indigo Plateau hasn't been visited, we use Johto's map instead
+; If Vermillion hasn't been visited, we use Johto's map instead
 
 ; Start from New Bark Town
 	ld a, FLY_NEW_BARK
@@ -2439,9 +2431,6 @@ Pokedex_GetArea:
 	ret
 
 .right
-	ld a, [wStatusFlags]
-	bit STATUSFLAGS_HALL_OF_FAME_F, a
-	ret z
 	ldh a, [hWY]
 	and a
 	ret z

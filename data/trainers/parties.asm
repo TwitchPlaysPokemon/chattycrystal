@@ -213,7 +213,7 @@ ACChrisGroup:
 	bigdw 71
 	db "KENYA@"
 	db -1
-	
+
 	next_list_item ; EVAN4
 	db "EVAN@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
@@ -242,7 +242,7 @@ ACChrisGroup:
 	bigdw 61
 	bigdw 71
 	db "JHH@"
-	
+
 	db 68
 	dw VENUSAUR
 	db GUARD_SPEC
@@ -281,7 +281,7 @@ ACChrisGroup:
 	bigdw 98
 	bigdw 57
 	db "---sxjxKKK@"
-	
+
 	db 30
 	dw JOLTEON
 	db GOLD_LEAF
@@ -294,7 +294,7 @@ ACChrisGroup:
 	bigdw 81
 	bigdw 72
 	db "FOX,/!!!)u@"
-	
+
 	db -1
 	end_list_items
 
@@ -645,7 +645,7 @@ XDMichaelGroup:
 	bigdw 166
 	bigdw 121
 	db "ABBBBBBBBQ@"
-	
+
 	db 59
 	dw METAGROSS
 	db AMULET_COIN
@@ -658,7 +658,7 @@ XDMichaelGroup:
 	bigdw 102
 	bigdw 128
 	db "BCCMMW@"
-	
+
 	db 56
 	dw SALAMENCE
 	db BRICK_PIECE
@@ -671,7 +671,7 @@ XDMichaelGroup:
 	bigdw 128
 	bigdw 134
 	db "BCCMMW@"
-	
+
 	db -1 ; end
 
 	end_list_items
@@ -816,7 +816,7 @@ B2W2NateGroup:
 NateLeaderGroup:
 	next_list_item ; AAAALK
 	db "AAALK'@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 38
 	dw SIMISAGE
 	db NO_ITEM
@@ -881,7 +881,7 @@ NateLeaderGroup:
 	bigdw 101
 	bigdw 130
 	db "Articun@"
-	
+
 	db 51
 	dw LAMPENT
 	db NO_ITEM
@@ -894,7 +894,7 @@ NateLeaderGroup:
 	bigdw 140
 	bigdw 87
 	db "gqvvvqqolq@"
-	
+
 	db -1 ; end
 
 	end_list_items
@@ -1532,8 +1532,8 @@ BABAGroup:
 
 URFGroup:
 	next_list_item ; URF1
-	db "URF@", , TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+	db "URF@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
 	db 58
 	dw BLASTOISE ;KYOGRE
 	db GOLD_BERRY
@@ -1764,10 +1764,10 @@ GSCHGSSChrisRivalGroup:
 	db "ABBBDDDDDD@"
 
 	db -1 ; end
-	
+
 	next_list_item
 	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW3
-	
+
 	db 20
 	dw SHUCKLE
 	db AMULET_COIN
@@ -1780,7 +1780,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 12
 	bigdw 100
 	db "SHUCKIE@"
-	
+
 	db 31
 	dw HOOTHOOT
 	db TINYMUSHROOM
@@ -1793,7 +1793,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 31
 	bigdw 43
 	db "HOOTHOOT@"
-	
+
 	db 44
 	dw PIDGEOT
 	db TINYMUSHROOM
@@ -1845,9 +1845,9 @@ GSCHGSSChrisRivalGroup:
 	bigdw 20
 	bigdw 20
 	db "KT@"
-	
+
 	db -1 ; end
-	
+
 	end_list_items
 
 SECTION "Enemy Trainer Parties 2", ROMX
@@ -6322,9 +6322,9 @@ RedKantoLeaderGroup:
 	bigdw 73
 	bigdw 73
 	db "OMANYTE@"
-	
+
 	db -1
-	
+
 	end_list_items
 
 RedJohtoLeaderGroup:
@@ -6611,7 +6611,7 @@ CYRoboredGroup:
 	db "IIAAAIig--@"
 
 	db -1 ; end
-	
+
 	next_list_item ; X_CHATTYYELLOW3
 	db "x<MN>(?@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 30
@@ -6693,7 +6693,7 @@ CYRoboredGroup:
 	db "AAAAAAaaaa@"
 
 	db -1 ; end
-	
+
 	end_list_items
 
 PokemonProfessorGroup:

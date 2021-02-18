@@ -5,6 +5,7 @@
 	const CERULEANCITY_COOLTRAINER_F
 	const CERULEANCITY_FISHER
 	const CERULEANCITY_YOUNGSTER
+	const CERULEANCITY_COOLTRAINER_M_2
 
 CeruleanCity_MapScripts:
 	db 0 ; scene scripts
@@ -120,6 +121,9 @@ CeruleanCityYoungsterScript:
 	closetext
 	end
 
+CeruleanCityCooltrainerM2Script:
+	jumptextfaceplayer CeruleanCityCooltrainerM2Text
+
 CeruleanCitySign:
 	jumptext CeruleanCitySignText
 
@@ -212,11 +216,11 @@ CeruleanCityFisherRocketTipText:
 	done
 
 CeruleanCityYoungsterText1:
-	text "There used to be a"
-	line "cave here that had"
+	text "There's a cave"
+	line "here with scary-"
 
-	para "horribly powerful"
-	line "#MON in it."
+	para "powerful #MON"
+	line "in it."
 	done
 
 CeruleanCityYoungsterText2:
@@ -224,6 +228,22 @@ CeruleanCityYoungsterText2:
 
 	para "My ITEMFINDER is"
 	line "responding…"
+	done
+
+CeruleanCityCooltrainerM2Text:
+	text "This is…"
+
+	para "The notorious"
+	line "CERULEAN CAVE!"
+
+	para "Horribly powerful"
+	line "#MON live here."
+
+	para "Only those who"
+	line "have defeated the"
+
+	para "ELITE FOUR are"
+	line "allowed inside."
 	done
 
 CeruleanCitySignText:
@@ -296,12 +316,13 @@ CeruleanCity_MapEvents:
 	bg_event 14, 29, BGEVENT_READ, CeruleanLockedDoor
 	bg_event 20, 21, BGEVENT_READ, CeruleanCityPokecenterSign
 	bg_event 26, 29, BGEVENT_READ, CeruleanCityMartSign
-	bg_event  2, 14, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
+	bg_event  3, 14, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event 15, 23, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerMScript, -1
 	object_event 23, 15, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCitySuperNerdScript, -1
 	object_event 20, 24, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbro, -1
 	object_event 21, 24, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
 	object_event 30, 26, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
 	object_event  6, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityYoungsterScript, -1
+	object_event  2, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerM2Script, EVENT_BEAT_ELITE_FOUR

@@ -52,3 +52,4 @@ Tilesets::
 	tileset TilesetRoute23
 	tileset TilesetMuseum
 	tileset TilesetKantoForest
+	tileset TilesetSafari

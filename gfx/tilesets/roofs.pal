@@ -105,3 +105,7 @@
 ; group 26 (Cherrygrove)
 	RGB 31,14,28, 31,05,21 ; morn/day
 	RGB 14,07,17, 13,00,08 ; nite
+
+; group 27 (Safari Zone)
+	RGB 30,30,20, 25,23,17 ; morn/day
+	RGB 15,14,24, 11,11,19 ; nite

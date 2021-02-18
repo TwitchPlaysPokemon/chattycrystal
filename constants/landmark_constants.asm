@@ -88,20 +88,21 @@ KANTO_LANDMARK EQU const_value
 	const ROUTE_17          ; 51
 	const ROUTE_18          ; 52
 	const FUCHSIA_CITY      ; 53
-	const ROUTE_19          ; 54
-	const ROUTE_20          ; 55
-	const SEAFOAM_ISLANDS   ; 56
-	const CINNABAR_ISLAND   ; 57
-	const ROUTE_21          ; 58
-	const ROUTE_22          ; 59
-	const VICTORY_ROAD      ; 5a
-	const ROUTE_23          ; 5b
-	const INDIGO_PLATEAU    ; 5c
-	const ROUTE_26          ; 5d
-	const ROUTE_27          ; 5e
-	const TOHJO_FALLS       ; 5f
-	const ROUTE_28          ; 60
-	const FAST_SHIP         ; 61
+	const SAFARI_ZONE       ; 54
+	const ROUTE_19          ; 55
+	const ROUTE_20          ; 56
+	const SEAFOAM_ISLANDS   ; 57
+	const CINNABAR_ISLAND   ; 58
+	const ROUTE_21          ; 59
+	const ROUTE_22          ; 5a
+	const VICTORY_ROAD      ; 5b
+	const ROUTE_23          ; 5c
+	const INDIGO_PLATEAU    ; 5d
+	const ROUTE_26          ; 5e
+	const ROUTE_27          ; 5f
+	const TOHJO_FALLS       ; 60
+	const ROUTE_28          ; 61
+	const FAST_SHIP         ; 62
 
 ; used in CaughtData
 GIFT_LOCATION  EQU $7e

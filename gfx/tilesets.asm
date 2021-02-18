@@ -367,3 +367,12 @@ INCBIN "data/tilesets/cave_metatiles.bin"
 TilesetCaveColl:
 TilesetDarkCaveColl:
 INCLUDE "data/tilesets/cave_collision.asm"
+
+TilesetSafariGFX:
+INCBIN "gfx/tilesets/safari.2bpp.lz"
+
+TilesetSafariMeta:
+INCBIN "data/tilesets/safari_metatiles.bin"
+
+TilesetSafariColl:
+INCLUDE "data/tilesets/safari_collision.asm"

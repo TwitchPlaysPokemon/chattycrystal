@@ -29,6 +29,7 @@ OutdoorSprites:
 	dw NewBarkGroupSprites
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
+	dw SafariZoneGroupSprites
 
 ; Route1 and ViridianCity are connected
 ; Route2 and PewterCity are connected
@@ -307,6 +308,12 @@ DungeonsGroupSprites:
 	; 9 of max 9 walking sprites
 	db SPRITE_GAMEBOY_KID
 	db SPRITE_GROWLITHE
+	db SPRITE_POKE_BALL
+	db 0 ; end
+
+SafariZoneGroupSprites:
+; SafariZoneCenter, SafariZoneEast, SafariZoneNorth, SafariZoneWest
+	; 0 of max 9 walking sprites
 	db SPRITE_POKE_BALL
 	db 0 ; end
 

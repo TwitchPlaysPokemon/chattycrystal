@@ -143,13 +143,11 @@ ENDM
 	map_const UNDERGROUND_PATH,                             3, 14 ; 86
 	map_const ROCK_TUNNEL_1F,                              15, 18 ; 87
 	map_const ROCK_TUNNEL_B1F,                             15, 18 ; 88
-	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
-	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
-	map_const VICTORY_ROAD,                                10, 36 ; 91
-	map_const VIRIDIAN_FOREST,                             17, 28 ; 92
-	map_const CERULEAN_CAVE_1F,                            20, 11 ; 93
-	map_const CERULEAN_CAVE_2F,                            15,  9 ; 94
-	map_const CERULEAN_CAVE_B1F,                           15,  9 ; 95
+	map_const VICTORY_ROAD,                                10, 36 ; 89
+	map_const VIRIDIAN_FOREST,                             17, 28 ; 90
+	map_const CERULEAN_CAVE_1F,                            20, 11 ; 91
+	map_const CERULEAN_CAVE_2F,                            15,  9 ; 92
+	map_const CERULEAN_CAVE_B1F,                           15,  9 ; 93
 
 	newgroup                                                      ;  4
 
@@ -353,6 +351,7 @@ ENDM
 	map_const FUCHSIA_POKECENTER_2F_BETA,                   8,  4 ; 11
 	map_const SAFARI_ZONE_WARDENS_HOME,                     5,  4 ; 12
 	map_const ROUTE_15_FUCHSIA_GATE,                        5,  4 ; 13
+	map_const SAFARI_ZONE_FUCHSIA_GATE,                     5,  4 ; 14
 
 	newgroup                                                      ; 18
 
@@ -500,3 +499,10 @@ ENDM
 	map_const ROUTE_30_BERRY_HOUSE,                         4,  4 ;  9
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
+
+	newgroup                                                      ; 27
+
+	map_const SAFARI_ZONE_CENTER,                          15, 15 ;  1
+	map_const SAFARI_ZONE_EAST,                            15, 13 ;  2
+	map_const SAFARI_ZONE_NORTH,                           20, 18 ;  3
+	map_const SAFARI_ZONE_WEST,                            15, 13 ;  4

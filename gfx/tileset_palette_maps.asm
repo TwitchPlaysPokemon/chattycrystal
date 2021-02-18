@@ -114,3 +114,6 @@ INCLUDE "gfx/tilesets/route_23_palette_map.asm"
 
 TilesetKantoForestPalMap:
 INCLUDE "gfx/tilesets/kanto_forest_palette_map.asm"
+
+TilesetSafariPalMap:
+INCLUDE "gfx/tilesets/safari_palette_map.asm"

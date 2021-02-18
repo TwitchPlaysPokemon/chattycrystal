@@ -39,6 +39,7 @@
 	const TILESET_ROUTE_23             ; 25
 	const TILESET_MUSEUM               ; 26
 	const TILESET_KANTO_FOREST         ; 27
+	const TILESET_SAFARI               ; 28
 
 ; bg palette values (see gfx/tilesets/*_palette_map.asm)
 ; TilesetBGPalette indexes (see gfx/tilesets/bg_tiles.pal)

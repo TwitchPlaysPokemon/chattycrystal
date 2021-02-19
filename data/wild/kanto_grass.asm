@@ -545,83 +545,83 @@ KantoGrassWildMons:
 	map_id ROUTE_16
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 26, GRIMER
-	dbw 27, FEAROW
-	dbw 28, GRIMER
-	dbw 29, SHELLOS
-	dbw 29, FEAROW
-	dbw 30, MUK
-	dbw 30, GASTRODON
+	dbw 52, GRIMER
+	dbw 53, FEAROW
+	dbw 54, GRIMER
+	dbw 55, SHELLOS
+	dbw 55, FEAROW
+	dbw 56, MUK
+	dbw 56, GASTRODON
 	; day
-	dbw 26, GRIMER
-	dbw 27, FEAROW
-	dbw 28, GRIMER
-	dbw 29, SHELLOS
-	dbw 29, SLUGMA
-	dbw 30, MUK
-	dbw 30, GASTRODON
+	dbw 52, GRIMER
+	dbw 53, FEAROW
+	dbw 54, GRIMER
+	dbw 55, SHELLOS
+	dbw 55, SLUGMA
+	dbw 56, MUK
+	dbw 56, GASTRODON
 	; nite
-	dbw 26, GRIMER
-	dbw 27, GRIMER
-	dbw 28, GRIMER
-	dbw 29, MURKROW
-	dbw 29, MURKROW
-	dbw 30, MUK
-	dbw 30, MUK
+	dbw 52, GRIMER
+	dbw 53, GRIMER
+	dbw 54, GRIMER
+	dbw 55, MURKROW
+	dbw 55, MURKROW
+	dbw 56, MUK
+	dbw 56, MUK
 
 	map_id ROUTE_17
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 30, SHELLOS
-	dbw 29, GRIMER
-	dbw 31, GRIMER
-	dbw 32, FEAROW
-	dbw 33, GRIMER
-	dbw 33, MUK
-	dbw 33, GASTRODON
+	dbw 53, SHELLOS
+	dbw 52, GRIMER
+	dbw 54, GRIMER
+	dbw 55, FEAROW
+	dbw 56, GRIMER
+	dbw 56, MUK
+	dbw 56, GASTRODON
 	; day
-	dbw 30, SHELLOS
-	dbw 29, SLUGMA
-	dbw 29, GRIMER
-	dbw 32, FEAROW
-	dbw 32, SLUGMA
-	dbw 33, MUK
-	dbw 33, GASTRODON
+	dbw 53, SHELLOS
+	dbw 52, SLUGMA
+	dbw 52, GRIMER
+	dbw 55, FEAROW
+	dbw 55, SLUGMA
+	dbw 56, MUK
+	dbw 56, GASTRODON
 	; nite
-	dbw 30, GRIMER
-	dbw 29, GRIMER
-	dbw 31, GRIMER
-	dbw 32, GRIMER
-	dbw 33, GRIMER
-	dbw 33, MUK
-	dbw 33, MUK
+	dbw 53, GRIMER
+	dbw 52, GRIMER
+	dbw 54, GRIMER
+	dbw 55, GRIMER
+	dbw 56, GRIMER
+	dbw 56, MUK
+	dbw 56, MUK
 
 	map_id ROUTE_18
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 26, GRIMER
-	dbw 27, SHELLOS
-	dbw 28, GRIMER
-	dbw 29, FEAROW
-	dbw 29, FEAROW
-	dbw 30, MUK
-	dbw 30, GASTRODON
+	dbw 52, GRIMER
+	dbw 53, SHELLOS
+	dbw 54, GRIMER
+	dbw 55, FEAROW
+	dbw 55, FEAROW
+	dbw 56, MUK
+	dbw 56, GASTRODON
 	; day
-	dbw 26, GRIMER
-	dbw 27, SHELLOS
-	dbw 28, GRIMER
-	dbw 29, FEAROW
-	dbw 29, SLUGMA
-	dbw 30, MUK
-	dbw 30, GASTRODON
+	dbw 52, GRIMER
+	dbw 53, SHELLOS
+	dbw 54, GRIMER
+	dbw 55, FEAROW
+	dbw 55, SLUGMA
+	dbw 56, MUK
+	dbw 56, GASTRODON
 	; nite
-	dbw 26, GRIMER
-	dbw 27, GRIMER
-	dbw 28, GRIMER
-	dbw 29, GRIMER
-	dbw 29, GRIMER
-	dbw 30, MUK
-	dbw 30, MUK
+	dbw 52, GRIMER
+	dbw 53, GRIMER
+	dbw 54, GRIMER
+	dbw 55, GRIMER
+	dbw 55, GRIMER
+	dbw 56, MUK
+	dbw 56, MUK
 
 	map_id ROUTE_21
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

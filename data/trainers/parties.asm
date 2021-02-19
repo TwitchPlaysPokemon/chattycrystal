@@ -2312,17 +2312,17 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (10)
 	db "BORIS@", TRAINERTYPE_NORMAL
-	db 30
-	dw DODUO
-	db 28
-	dw DODUO
-	db 32
+	db 59
+	dw DODRIO
+	db 57
+	dw DODRIO
+	db 61
 	dw DODRIO
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (11)
 	db "BOB@", TRAINERTYPE_NORMAL
-	db 34
+	db 62
 	dw NOCTOWL
 	db -1 ; end
 
@@ -4811,35 +4811,35 @@ BikerGroup:
 
 	next_list_item ; BIKER (6)
 	db "CHARLES@", TRAINERTYPE_NORMAL
-	db 30
-	dw KOFFING
-	db 30
-	dw CHARMELEON
-	db 30
+	db 59
+	dw WEEZING
+	db 59
+	dw CHARIZARD
+	db 59
 	dw WEEZING
 	db -1 ; end
 
 	next_list_item ; BIKER (7)
 	db "RILEY@", TRAINERTYPE_NORMAL
-	db 34
+	db 61
 	dw WEEZING
 	db -1 ; end
 
 	next_list_item ; BIKER (8)
 	db "JOEL@", TRAINERTYPE_NORMAL
-	db 32
+	db 60
 	dw MAGMAR
-	db 32
+	db 60
 	dw MAGMAR
 	db -1 ; end
 
 	next_list_item ; BIKER (9)
 	db "GLENN@", TRAINERTYPE_NORMAL
-	db 28
-	dw KOFFING
-	db 30
+	db 56
+	dw WEEZING
+	db 58
 	dw MAGMAR
-	db 32
+	db 60
 	dw WEEZING
 	db -1 ; end
 

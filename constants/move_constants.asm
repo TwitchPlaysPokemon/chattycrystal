@@ -363,6 +363,7 @@
 	const WATER_SPOUT  ; 163
 	const NEEDLE_ARM   ; 164
 	const DRACO_METEOR ; 165
+	const CALM_MIND    ; 166
 
 NUM_ATTACKS EQU const_value + -1
 

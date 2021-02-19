@@ -356,3 +356,4 @@ MoveNames::
 	db "WATER SPOUT@"
 	db "NEEDLE ARM@"
 	db "DRACO METEOR@"
+	db "CALM MIND@"

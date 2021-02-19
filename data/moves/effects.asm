@@ -2627,6 +2627,23 @@ DragonDance:
 	raisesub
 	endmove
 
+CalmMind:
+	checkobedience
+	usedmovetext
+	doturn
+	lowersub
+	specialattackup
+	statupanim
+	statupmessage
+	statupfailtext
+	resetmiss
+	specialdefenseup
+	statupanim
+	statupmessage
+	statupfailtext
+	raisesub
+	endmove
+
 QuiverDance:
 	checkobedience
 	usedmovetext

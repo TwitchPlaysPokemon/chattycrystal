@@ -194,4 +194,5 @@ MoveEffectsPointers:
 	dw KnockOff
 	dw SecretPower
 	dw WakeUpSlap
+	dw CalmMind
 	dw Placeholder

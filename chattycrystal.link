@@ -57,6 +57,7 @@ ROMX $0a
 	"Map Blocks 4"
 ROMX $0b
 	"bankB"
+	"Map Blocks 5"
 ROMX $0c
 	"Tileset Data 4"
 ROMX $0d
@@ -79,6 +80,7 @@ ROMX $12
 	"Evolutions and Attacks 2"
 ROMX $13
 	"bank13"
+	"Map Scripts 27"
 ROMX $14
 	"bank14"
 	"Map Scripts 26"
@@ -333,6 +335,7 @@ ROMX $7c
 	"Pics 25"
 ROMX $7d
 	"Sprites 3"
+	"Tileset Data 11"
 ROMX $7e
 	"Crystal Events"
 ROMX $7f

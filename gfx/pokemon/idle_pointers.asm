@@ -323,7 +323,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chimchar
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Monferno
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Infernape
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Piplup
+	dw PiplupAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Prinplup
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Empoleon
 	dw BidoofAnimationIdle

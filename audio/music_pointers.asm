@@ -106,3 +106,10 @@ Music:
 	dba Music_SuicuneBattle
 	dba Music_BattleTowerLobby
 	dba Music_MobileCenter
+; added
+	dba Music_KantoLegendBattleXY
+	dba Music_PokemonTowerRBY
+	dba Music_CinnabarMansionRBY
+	dba Music_DiglettsCaveRBY
+	dba Music_CeruleanCaveRBY
+	dba Music_VsWCS

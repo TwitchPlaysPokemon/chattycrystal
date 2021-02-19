@@ -140,6 +140,14 @@ SECTION "Extra Songs 2", ROMX
 
 INCLUDE "audio/music/postcredits.asm"
 
+SECTION "Extra Songs 3", ROMX
+
+INCLUDE "audio/music/custom/diglettscave.asm"
+INCLUDE "audio/music/custom/cinnabarmansion.asm"
+INCLUDE "audio/music/custom/pokemontower.asm"
+INCLUDE "audio/music/custom/ceruleancave.asm"
+INCLUDE "audio/music/custom/kantolegendbattle.asm"
+INCLUDE "audio/music/custom/vsWCS.asm"
 
 SECTION "Sound Effects", ROMX
 

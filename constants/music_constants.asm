@@ -107,6 +107,13 @@
 	const MUSIC_SUICUNE_BATTLE               ; 64
 	const MUSIC_BATTLE_TOWER_LOBBY           ; 65
 	const MUSIC_MOBILE_CENTER                ; 66
+; added
+	const MUSIC_KANTO_LEGEND                 ; 67
+	const MUSIC_POKEMON_TOWER                ; 68
+	const MUSIC_POKEMON_MANSION              ; 69
+	const MUSIC_DIGLETTS_CAVE                ; 6a
+	const MUSIC_CERULEAN_CAVE                ; 6b
+	const MUSIC_VS_WCS                       ; 6c
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64

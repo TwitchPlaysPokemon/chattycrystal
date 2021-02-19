@@ -49,7 +49,7 @@ Moves1:
 	move EFFECT_NORMAL_HIT,           65, NORMAL,   100, 25,   0 ;HORN_ATTACK
 	move EFFECT_MULTI_HIT,            15, NORMAL,    85, 20,   0 ;FURY_ATTACK
 	move EFFECT_OHKO,                  1, NORMAL,    30,  5,   0 ;HORN_DRILL
-	move EFFECT_NORMAL_HIT,           35, NORMAL,    95, 35,   0 ;TACKLE
+	move EFFECT_MULTI_HIT,           15, NORMAL,    95, 35,   0 ;TACKLE
 	move EFFECT_PARALYZE_HIT,         85, NORMAL,   100, 15,  30 ;BODY_SLAM
 	move EFFECT_TRAP_TARGET,          15, NORMAL,    85, 20,   0 ;WRAP
 	move EFFECT_RECOIL_HIT,           90, NORMAL,    85, 20,   0 ;TAKE_DOWN

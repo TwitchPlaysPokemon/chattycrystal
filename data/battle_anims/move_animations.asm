@@ -260,7 +260,7 @@ MoveAnimations:
 	dw BattleAnim_Revenge
 	dw BattleAnim_Endeavor
 	dw BattleAnim_Dive
-	dw BattleAnim_Dummy
+	dw BattleAnim_ArmThrust
 	dw BattleAnim_Fly          ; PLACEHOLDER
 	dw BattleAnim_Doubleslap   ; PLACEHOLDER
 	dw BattleAnim_PsychUp      ; 108, PLACEHOLDER
@@ -3078,6 +3078,24 @@ BattleAnim_Dive:
 	anim_wait 16
 	anim_obj ANIM_OBJ_SWEAT, 72, 112, $0
 	anim_wait 16
+	anim_ret
+	
+BattleAnim_ArmThrust:
+	anim_1gfx ANIM_GFX_HIT
+	anim_if_param_equal $1, BattleAnim_ArmThrust_branch
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_08, 144, 48, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_00, 144, 48, $0
+	anim_wait 8
+	anim_ret
+	
+BattleAnim_ArmThrust_branch:
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_HAND_REVERSE, 120, 48, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_00, 120, 48, $0
+	anim_wait 8
 	anim_ret
 
 BattleAnim_FlameWheel:

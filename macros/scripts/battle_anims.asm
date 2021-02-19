@@ -195,6 +195,7 @@ ENDM
 	enum anim_if_param_and_command ; $ee
 anim_if_param_and: MACRO
 	db anim_if_param_and_command
+	assert (BANK(@) == BANK(\2)) || !BANK(\2), "Jumping to animation in another bank"
 	db \1 ; value
 	dw \2 ; address
 ENDM
@@ -255,6 +256,7 @@ ENDM
 	enum anim_if_param_equal_command ; $f8
 anim_if_param_equal: MACRO
 	db anim_if_param_equal_command
+	assert (BANK(@) == BANK(\2)) || !BANK(\2), "Jumping to animation in another bank"
 	db \1 ; value
 	dw \2 ; address
 ENDM
@@ -273,6 +275,7 @@ ENDM
 	enum anim_if_var_equal_command ; $fb
 anim_if_var_equal: MACRO
 	db anim_if_var_equal_command
+	assert (BANK(@) == BANK(\2)) || !BANK(\2), "Jumping to animation in another bank"
 	db \1 ; value
 	dw \2 ; address
 ENDM
@@ -280,6 +283,7 @@ ENDM
 	enum anim_jump_command ; $fc
 anim_jump: MACRO
 	db anim_jump_command
+	assert (BANK(@) == BANK(\1)) || !BANK(\1), "Jumping to animation in another bank"
 	dw \1 ; address
 ENDM
 
@@ -293,6 +297,7 @@ ENDM
 	enum anim_call_command ; $fe
 anim_call: MACRO
 	db anim_call_command
+	assert (BANK(@) == BANK(\1)) || !BANK(\1), "Calling animation in another bank"
 	dw \1 ; address
 ENDM
 

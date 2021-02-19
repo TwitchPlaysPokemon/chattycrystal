@@ -1306,8 +1306,7 @@ BattleAnimAssignPals:
 	ld [wOBP1], a
 	call DmgToCgbBGPals
 	lb de, %11100100, %11100100
-	call DmgToCgbObjPals
-	ret
+	jp DmgToCgbObjPals
 
 ClearBattleAnims::
 ; Clear animation block
@@ -1322,15 +1321,30 @@ ClearBattleAnims::
 	jr nz, .loop
 
 	ld hl, wFXAnimID
-	ld e, [hl]
-	inc hl
-	ld d, [hl]
-	ld hl, BattleAnimations
-	add hl, de
-	add hl, de
+	ld a, [hli]
+	ld c, a
+	ld b, [hl]
 	call GetBattleAnimPointer
 	call BattleAnimAssignPals
-	call BattleAnimDelayFrame
+	jp BattleAnimDelayFrame
+
+GetBattleAnimPointer:
+	inc b
+	jr nz, .ok
+	ld b, HIGH(SPECIAL_ANIM_OFFSET)
+.ok
+	dec b
+	ld hl, BattleAnimations
+	ld a, BANK(BattleAnimations)
+	call LoadDoubleIndirectPointer
+	jr nz, .found
+	ld hl, BattleAnim_Dummy
+.found
+	ld [wBattleAnimBank], a
+	ld a, l
+	ld [wBattleAnimAddress], a
+	ld a, h
+	ld [wBattleAnimAddress + 1], a
 	ret
 
 BattleAnim_RevertPals:

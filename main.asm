@@ -424,7 +424,9 @@ INCLUDE "engine/events/trainer_scripts.asm"
 SECTION "bank32", ROMX
 
 INCLUDE "engine/battle_anims/bg_effects.asm"
-INCLUDE "data/moves/animations.asm"
+INCLUDE "data/battle_anims/animation_pointers.asm"
+INCLUDE "data/battle_anims/move_animations.asm"
+INCLUDE "data/battle_anims/special_animations.asm"
 
 
 SECTION "Move Animations", ROMX

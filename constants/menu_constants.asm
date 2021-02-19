@@ -86,6 +86,7 @@ HMENURETURN_ASM    EQU %11111111
 	const PARTYMENUACTION_GIVE_MON_FEMALE ; unused
 	const PARTYMENUACTION_GIVE_ITEM
 	const PARTYMENUACTION_MOBILE ; mobile
+	const PARTYMENUACTION_BATTLE_TOWER
 ; PrintPartyMenuActionText arguments (see engine/pokemon/party_menu.asm)
 	const_def $f0
 	const PARTYMENUTEXT_HEAL_PSN

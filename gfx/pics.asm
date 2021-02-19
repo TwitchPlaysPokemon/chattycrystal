@@ -719,7 +719,7 @@ LarryPic:           INCBIN "gfx/trainers/larry.2bpp.lz"
 LyraPic:            INCBIN "gfx/trainers/lyra.2bpp.lz"
 URFPic:
 GreenMayPic:
-MayPic:
+MayPic:             INCBIN "gfx/trainers/may.2bpp.lz"
 MichaelPic:         INCBIN "gfx/trainers/michael.2bpp.lz"
 NatePic:            INCBIN "gfx/trainers/nate.2bpp.lz"
 RoboRedPic:         INCBIN "gfx/trainers/robored.2bpp.lz"

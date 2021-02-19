@@ -74,7 +74,7 @@ ReturnFromMapSetupScript::
 	ret z
 	cp RADIO_TOWER
 	ret z
-	cp LAV_RADIO_TOWER
+	cp KANTO_RADIO_TOWER
 	ret z
 	cp UNDERGROUND_PATH
 	ret z

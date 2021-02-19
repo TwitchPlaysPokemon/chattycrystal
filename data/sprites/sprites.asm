@@ -15,7 +15,7 @@ OverworldSprites:
 	overworld_sprite BlueSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite BillSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite ElderSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
-	overworld_sprite JanineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite LucasSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite KurtSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite MomSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite BlaineSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
@@ -118,7 +118,6 @@ OverworldSprites:
 	overworld_sprite HilbertSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite HildaSpriteGFX, 12, WALKING_SPRITE, PAL_OW_PINK
 	overworld_sprite LeafSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
-	overworld_sprite LucasSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite LyraSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite MaySpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite MichaelSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE

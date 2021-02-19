@@ -10,9 +10,9 @@ KantoWaterWildMons:
 
 	map_id VERMILION_PORT
 	db 2 percent ; encounter rate
-	dbw 35, TENTACOOL
-	dbw 30, TENTACOOL
-	dbw 35, TENTACRUEL
+	dbw 52, TENTACOOL
+	dbw 47, TENTACOOL
+	dbw 52, TENTACRUEL
 
 	map_id ROUTE_4
 	db 4 percent ; encounter rate
@@ -22,9 +22,9 @@ KantoWaterWildMons:
 
 	map_id ROUTE_6
 	db 2 percent ; encounter rate
-	dbw 10, PSYDUCK
-	dbw 5, PSYDUCK
-	dbw 10, GOLDUCK
+	dbw 53, PSYDUCK
+	dbw 48, PSYDUCK
+	dbw 53, GOLDUCK
 
 	map_id ROUTE_9
 	db 4 percent ; encounter rate
@@ -46,9 +46,9 @@ KantoWaterWildMons:
 
 	map_id ROUTE_13
 	db 6 percent ; encounter rate
-	dbw 25, TENTACOOL
-	dbw 25, QUAGSIRE
-	dbw 25, TENTACRUEL
+	dbw 57, TENTACOOL
+	dbw 57, QUAGSIRE
+	dbw 57, TENTACRUEL
 
 	map_id ROUTE_19
 	db 6 percent ; encounter rate
@@ -124,21 +124,21 @@ KantoWaterWildMons:
 
 	map_id VERMILION_CITY
 	db 6 percent ; encounter rate
-	dbw 35, TENTACOOL
-	dbw 30, TENTACOOL
-	dbw 35, TENTACRUEL
+	dbw 52, TENTACOOL
+	dbw 47, TENTACOOL
+	dbw 52, TENTACRUEL
 
 	map_id CELADON_CITY
 	db 2 percent ; encounter rate
-	dbw 20, GRIMER
-	dbw 15, SHELLOS
-	dbw 15, MUK
+	dbw 49, GRIMER
+	dbw 49, SHELLOS
+	dbw 54, MUK
 
 	map_id FUCHSIA_CITY
 	db 2 percent ; encounter rate
-	dbw 20, SHELLOS
-	dbw 15, SHELLOS
-	dbw 10, GASTRODON
+	dbw 56, SHELLOS
+	dbw 51, SHELLOS
+	dbw 56, GASTRODON
 
 	map_id CINNABAR_ISLAND
 	db 6 percent ; encounter rate

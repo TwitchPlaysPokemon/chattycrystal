@@ -84,17 +84,6 @@ INCBIN "data/tilesets/mansion_metatiles.bin"
 TilesetMansionColl:
 INCLUDE "data/tilesets/mansion_collision.asm"
 
-TilesetCaveGFX:
-INCBIN "gfx/tilesets/cave.2bpp.lz"
-
-TilesetCaveMeta:
-TilesetDarkCaveMeta:
-INCBIN "data/tilesets/cave_metatiles.bin"
-
-TilesetCaveColl:
-TilesetDarkCaveColl:
-INCLUDE "data/tilesets/cave_collision.asm"
-
 
 SECTION "Tileset Data 3", ROMX
 
@@ -343,3 +332,56 @@ INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"
 
 TilesetAerodactylWordRoomMeta:
 INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
+
+
+SECTION "Tileset Data 9", ROMX
+
+TilesetMuseumMeta:
+INCBIN "data/tilesets/museum_metatiles.bin"
+
+TilesetMuseumColl:
+INCLUDE "data/tilesets/museum_collision.asm"
+
+TilesetMuseumGFX:
+INCBIN "gfx/tilesets/museum.2bpp.lz"
+
+TilesetKantoForestMeta:
+INCBIN "data/tilesets/kanto_forest_metatiles.bin"
+
+TilesetKantoForestColl:
+INCLUDE "data/tilesets/kanto_forest_collision.asm"
+
+TilesetKantoForestGFX:
+INCBIN "gfx/tilesets/kanto_forest.2bpp.lz"
+
+
+SECTION "Tileset Data 10", ROMX
+
+TilesetCaveGFX:
+INCBIN "gfx/tilesets/cave.2bpp.lz"
+
+TilesetCaveMeta:
+TilesetDarkCaveMeta:
+INCBIN "data/tilesets/cave_metatiles.bin"
+
+TilesetCaveColl:
+TilesetDarkCaveColl:
+INCLUDE "data/tilesets/cave_collision.asm"
+
+TilesetSafariGFX:
+INCBIN "gfx/tilesets/safari.2bpp.lz"
+
+TilesetSafariMeta:
+INCBIN "data/tilesets/safari_metatiles.bin"
+
+TilesetSafariColl:
+INCLUDE "data/tilesets/safari_collision.asm"
+
+TilesetPkmnMansionGFX:
+INCBIN "gfx/tilesets/pkmn_mansion.2bpp.lz"
+
+TilesetPkmnMansionMeta:
+INCBIN "data/tilesets/pkmn_mansion_metatiles.bin"
+
+TilesetPkmnMansionColl:
+INCLUDE "data/tilesets/pkmn_mansion_collision.asm"

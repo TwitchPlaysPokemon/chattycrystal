@@ -91,8 +91,8 @@ INCLUDE "gfx/tilesets/lighthouse_palette_map.asm"
 TilesetPlayersRoomPalMap:
 INCLUDE "gfx/tilesets/players_room_palette_map.asm"
 
-UnusedMuseumPalMap:
-INCLUDE "gfx/tilesets/unused_museum_palette_map.asm"
+TilesetMuseumPalMap:
+INCLUDE "gfx/tilesets/museum_palette_map.asm"
 
 TilesetIcePathPalMap:
 INCLUDE "gfx/tilesets/ice_path_palette_map.asm"
@@ -111,3 +111,12 @@ INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 
 TilesetRoute23PalMap:
 INCLUDE "gfx/tilesets/route_23_palette_map.asm"
+
+TilesetKantoForestPalMap:
+INCLUDE "gfx/tilesets/kanto_forest_palette_map.asm"
+
+TilesetSafariPalMap:
+INCLUDE "gfx/tilesets/safari_palette_map.asm"
+
+TilesetPkmnMansionPalMap:
+INCLUDE "gfx/tilesets/pkmn_mansion_palette_map.asm"

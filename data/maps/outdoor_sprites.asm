@@ -29,6 +29,7 @@ OutdoorSprites:
 	dw NewBarkGroupSprites
 	dw SaffronGroupSprites
 	dw CherrygroveGroupSprites
+	dw SafariZoneGroupSprites
 
 ; Route1 and ViridianCity are connected
 ; Route2 and PewterCity are connected
@@ -294,7 +295,7 @@ SilverGroupSprites:
 	db 0 ; end
 
 DungeonsGroupSprites:
-; NationalPark, NationalParkBugContest, RuinsOfAlphOutside
+; NationalPark, NationalParkBugContest, RuinsOfAlphOutside, ViridianForest
 	db SPRITE_LASS
 	db SPRITE_POKEFAN_F
 	db SPRITE_TEACHER
@@ -303,9 +304,16 @@ DungeonsGroupSprites:
 	db SPRITE_ROCKER
 	db SPRITE_FISHER
 	db SPRITE_SCIENTIST
-	; 8 of max 9 walking sprites
+	db SPRITE_BUG_CATCHER
+	; 9 of max 9 walking sprites
 	db SPRITE_GAMEBOY_KID
 	db SPRITE_GROWLITHE
+	db SPRITE_POKE_BALL
+	db 0 ; end
+
+SafariZoneGroupSprites:
+; SafariZoneCenter, SafariZoneEast, SafariZoneNorth, SafariZoneWest
+	; 0 of max 9 walking sprites
 	db SPRITE_POKE_BALL
 	db 0 ; end
 

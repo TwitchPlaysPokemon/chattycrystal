@@ -85,4 +85,5 @@ MapScenes::
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	scene_var ROUTE_35_GOLDENROD_GATE,                     wRoute35GoldenrodGateSceneID
+	scene_var PEWTER_MUSEUM_1F,                            wPewterMuseum1FSceneID
 	db -1 ; end

@@ -102,11 +102,8 @@ CeladonGameCornerGrampsScript:
 	turnobject CELADONGAMECORNER_GRAMPS, LEFT
 	end
 
-CeladonGameCornerPoster1Script:
-	jumptext CeladonGameCornerPoster1Text
-
-CeladonGameCornerPoster2Script:
-	jumptext CeladonGameCornerPoster2Text
+CeladonGameCornerPosterScript:
+	jumptext CeladonGameCornerPosterText
 
 CeladonGameCornerLuckySlotMachineScript:
 	random 6
@@ -241,16 +238,7 @@ CeladonGameCornerGrampsText:
 	line "but… What to do?"
 	done
 
-CeladonGameCornerPoster1Text:
-	text "Hey!"
-
-	para "Underneath this"
-	line "poster…"
-
-	para "There's nothing!"
-	done
-
-CeladonGameCornerPoster2Text:
+CeladonGameCornerPosterText:
 	text "Hey!"
 
 	para "Underneath this"
@@ -276,13 +264,14 @@ CeladonGameCornerSodaCanText:
 CeladonGameCorner_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
+	db 3 ; warp events
 	warp_event 14, 13, CELADON_CITY, 6
 	warp_event 15, 13, CELADON_CITY, 6
+	warp_event 15,  0, ROCKET_HIDEOUT_B1F, 1
 
 	db 0 ; coord events
 
-	db 38 ; bg events
+	db 37 ; bg events
 	bg_event  1,  6, BGEVENT_READ, CeladonGameCornerCardFlipScript
 	bg_event  1,  7, BGEVENT_READ, CeladonGameCornerCardFlipScript
 	bg_event  1,  8, BGEVENT_READ, CeladonGameCornerCardFlipScript
@@ -319,8 +308,7 @@ CeladonGameCorner_MapEvents:
 	bg_event 18,  9, BGEVENT_READ, CeladonGameCornerLuckySlotMachineScript
 	bg_event 18, 10, BGEVENT_READ, CeladonGameCornerLuckySlotMachineScript
 	bg_event 18, 11, BGEVENT_RIGHT, CeladonGameCornerLuckySlotMachineScript
-	bg_event 15,  0, BGEVENT_READ, CeladonGameCornerPoster1Script
-	bg_event  9,  0, BGEVENT_READ, CeladonGameCornerPoster2Script
+	bg_event  9,  0, BGEVENT_READ, CeladonGameCornerPosterScript
 
 	db 9 ; object events
 	object_event  5,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerClerkScript, -1

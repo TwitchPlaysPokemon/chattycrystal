@@ -243,6 +243,8 @@ RunBattleTowerTrainer:
 
 	xor a
 	ld [wLinkMode], a
+	call LoadBattleTowerParticipants
+	call SetBattleTowerPartyLevel
 	farcall HealParty
 	call ReadBTTrainerParty
 	call Clears5_a89a
@@ -1594,6 +1596,139 @@ LoadOpponentTrainerAndPokemonWithOTSprite:
 
 INCLUDE "data/trainers/sprites.asm"
 
+SelectBTParticipants:
+; Selects participants for entering Battle Tower
+	; Clear old participants selection.
+	xor a
+	ld [wBT_PartySelectCounter], a
+
+	; Select 3 mons to enter.
+	farcall BT_PartySelect
+
+	; Return false (i.e. 0) if the player aborted the selection.
+	ld hl, wScriptVar
+	ld [hl], 0
+	ret c
+	inc [hl]
+	ret
+
+NewBattleTowerSession:
+; Writes party selections to SRAM and initializes the BT party.
+	ld a, BANK(sBTPartySelection)
+	call GetSRAMBank
+	ld hl, wBT_PartySelections
+	ld de, sBTPartySelection
+	ld bc, BATTLETOWER_PARTY_LENGTH
+	call CopyBytes
+	; Initialize party here for the benefit of Uber checks.
+LoadBattleTowerParticipants:
+; Loads battle tower participants. Assumes current party setup is regular.
+	; Loads seleections from SRAM
+	ld a, BANK(sBTPartySelection)
+	call GetSRAMBank
+	ld hl, sBTPartySelection
+	ld de, wBT_PartySelections
+	ld bc, BATTLETOWER_PARTY_LENGTH
+	call CopyBytes
+	ld a, BATTLETOWER_PARTY_LENGTH
+	ld [wBT_PartySelectCounter], a
+
+	; Loads selections from player party into OT party.
+	call BT_SetPlayerOT
+
+	; Copies OT party to main party.
+	ld hl, wOTPartyCount
+	ld de, wPartyCount
+	ld bc, wOTPartyDataEnd - wOTPartyCount
+	call CopyBytes
+	jp CloseSRAM
+
+SetBattleTowerPartyLevel:
+	; Figure out level setting
+	ld a, [rSVBK]
+	push af
+	ld a, BANK(wBTChoiceOfLvlGroup)
+	ld [rSVBK], a
+	ld a, [wBTChoiceOfLvlGroup]
+	add a
+	ld b, a
+	add a
+	add a
+	add b
+	ld d, a
+	pop af
+	ld [rSVBK], a
+
+	ld a, [wPartyCount]
+	ld hl, wPartyMon1
+	dec a
+	ld e, a
+.loop
+	push hl
+	ld a, e
+	push de
+	call GetPartyLocation
+
+	; Get base stats and experience group
+	ld bc, wPartyMon1Species - wPartyMon1
+	add hl, bc
+	ld a, [hl]
+	ld [wCurSpecies], a
+	ld [wCurPartySpecies], a
+	call GetBaseData
+
+	ld bc, wPartyMon1Level - wPartyMon1Species
+	add hl, bc
+	pop de
+	push de
+	ld a, d
+	ld [hl], a
+	ld [wCurPartyLevel], a ; for stat calculation
+
+	; Set up Exp properly
+	ld bc, wPartyMon1Exp - wPartyMon1Level
+	add hl, bc
+	push hl
+	farcall CalcExpAtLevel
+	pop hl
+	ldh a, [hProduct + 1]
+	ld [hli], a
+	ldh a, [hProduct + 2]
+	ld [hli], a
+	ldh a, [hProduct + 3]
+	ld [hl], a
+	pop de
+	push de
+
+	; Calculate stats
+	ld bc, wPartyMon1MaxHP - wPartyMon1Exp - 2
+	add hl, bc
+	push hl
+	ld bc, wPartyMon1StatExp - wPartyMon1MaxHP - 1
+	add hl, bc ; 'hl' now points to Stat Exp - 1, needed by CalcPkmnStats
+	pop de
+
+	ld b, TRUE
+	push de
+	predef CalcMonStats
+	pop hl
+	push hl
+	ld bc, wOTPartyMon1HP - wOTPartyMon1MaxHP
+	add hl, bc
+	pop de
+	ld a, [de]
+	ld [hli], a
+	inc de
+	ld a, [de]
+	ld [hl], a
+	pop de
+	pop hl
+	ld a, e
+	and a
+	ret z
+	dec e
+	jr .loop
+
 CheckForBattleTowerRules:
 	farcall _CheckForBattleTowerRules
 	jr c, .ready
@@ -1605,4 +1740,171 @@ CheckForBattleTowerRules:
 
 .end
 	ld [wScriptVar], a
+	ret
+
+BT_SetPlayerOT:
+; Interprets the selected party mons for entering and populates wOTParty
+; with the chosen Pokémon from the player. Used for 2 things: legality
+; checking and to fix the party order according to player choices.
+	; Number of party mons
+	ld a, [wBT_PartySelectCounter]
+	ld [wOTPartyCount], a
+
+	; The rest is iterated
+	ld bc, 0
+	ld d, a
+.loop
+	; Party species array
+	push de
+	ld hl, wPartySpecies
+	ld de, wOTPartySpecies
+	ld a, 1 ; just a single byte to copy each iteration
+	call .CopyPartyData
+
+	; Main party struct
+	ld hl, wPartyMons
+	ld de, wOTPartyMons
+	ld a, PARTYMON_STRUCT_LENGTH
+	call .CopyPartyData
+
+	; Nickname struct
+	ld hl, wPartyMonNicknames
+	ld de, wOTPartyMonNicknames
+	ld a, MON_NAME_LENGTH
+	call .CopyPartyData
+
+	; OT name struct
+	ld hl, wPartyMonOT
+	ld de, wOTPartyMonOT
+	ld a, NAME_LENGTH
+	call .CopyPartyData
+	pop de
+
+	inc c
+	ld a, c
+	cp d
+	jr nz, .loop
+
+	; Add party species terminator, then we're done
+	ld hl, wOTPartySpecies
+	add hl, bc
+	ld [hl], -1
+	ret
+
+.CopyPartyData:
+; Copy a bytes from hl to de, with relative addresses depending on
+; which mon we're currently working on. Preserves bc.
+	; First, correct de to the current mon target index we're adding.
+	; Just add a*bc (struct length * loop iterator)
+	push hl
+	ld h, d
+	ld l, e
+	push af
+	call AddNTimes
+	pop af
+	ld d, h
+	ld e, l
+	pop hl
+
+	; Now, correct hl to the current mon source index.
+	; Get the source index from party selection
+	push bc
+	push hl
+	ld hl, wBT_PartySelections
+	add hl, bc
+	ld c, [hl] ; b always remains zero, no need to mess with it
+	pop hl
+
+	; Now bc holds party index, so we can AddNTimes like with de earlier
+	push af
+	call AddNTimes
+	pop af
+
+	; Now copy the data
+	ld c, a
+	call CopyBytes
+	pop bc
+	ret
+
+BT_LegalityCheck:
+; Check OT party for violations of Species or Item Clause. Used to verify
+; both the player team when entering after copying to OT data, and the
+; generated AI team. Returns z if the team is legal, otherwise nz and the error
+; in e (1: 2+ share species, 2: 2+ share item)
+; Species Clause: more than 1 Pokémon are the same species
+; Item Clause: more than 1 Pokémon holds the same item
+	ld a, [wOTPartyCount]
+	ld e, a
+
+	; Do nothing if we have no mons at all
+	and a
+	ret z
+
+	; Nor if we have a single mon (since we have nothing to compare with)
+	dec e
+	ret z
+
+	ld hl, wOTPartyMon1
+.outer_loop
+	push de
+	ld c, [hl]
+	ld a, MON_ITEM
+	call .GetPartyValue
+	ld d, a
+	push hl
+	call .NextPartyMon
+.inner_loop
+	; Compare species
+	ld a, [hl]
+	cp c
+	ld a, 1
+	jr z, .identical
+
+	ld a, MON_ITEM
+	call .GetPartyValue
+
+	; Allow several mons with no item
+	and a
+	jr z, .item_not_identical
+	cp d
+	ld a, 2
+	jr z, .identical
+
+.item_not_identical
+	call .NextPartyMon
+	dec e
+	jr nz, .inner_loop
+	pop hl
+	call .NextPartyMon
+	pop de
+	dec e
+	jr nz, .outer_loop
+	ret
+
+.identical
+	pop hl
+	pop de
+	ld e, a
+	and a
+	ret
+
+.NextPartyMon:
+; Advance to next party mon.
+	push bc
+	ld bc, PARTYMON_STRUCT_LENGTH
+	add hl, bc
+	pop bc
+	ret
+
+.GetPartyValue:
+; From party field in a, get value for current partymon in hl.
+; Preserves hl.
+	push hl
+	add l
+	ld l, a
+	adc h
+	sub l
+	ld h, a
+	ld a, [hl]
+	pop hl
 	ret

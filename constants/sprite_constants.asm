@@ -11,7 +11,7 @@
 	const SPRITE_BLUE ; 07
 	const SPRITE_BILL ; 08
 	const SPRITE_ELDER ; 09
-	const SPRITE_JANINE ; 0a
+	const SPRITE_LUCAS ; 0a
 	const SPRITE_KURT ; 0b
 	const SPRITE_MOM ; 0c
 	const SPRITE_BLAINE ; 0d
@@ -114,27 +114,26 @@
 	const SPRITE_HILBERT ; 6E
 	const SPRITE_HILDA ; 6F
 	const SPRITE_LEAF ; 70
-	const SPRITE_LUCAS ; 71
-	const SPRITE_LYRA ; 72
-	const SPRITE_MAY ; 73
-	const SPRITE_MICHAEL ; 74
-	const SPRITE_NATE ; 75
-	const SPRITE_ROBORED ; 76
-	const SPRITE_ROSA ; 77
-	const SPRITE_SELENE ; 78
-	const SPRITE_SERENA ; 79
-	const SPRITE_SERENA2 ; 7A
-	const SPRITE_WES ; 7B
-	const SPRITE_BLUE_MAY ; 7C
-	const SPRITE_LARRY ; 7D
-	const SPRITE_GLAZED ;7E
-	const SPRITE_MARIBEL  ;7F
-	const SPRITE_NUZLOCKE ;80
-	const SPRITE_SIRIUS ;81
-	const SPRITE_EVAN ;82
-	const SPRITE_BRONZE ;83
-	const SPRITE_ELECTRIC_FENCE_LEFT ;84
-	const SPRITE_ELECTRIC_FENCE_RIGHT ;85
+	const SPRITE_LYRA ; 71
+	const SPRITE_MAY ; 72
+	const SPRITE_MICHAEL ; 73
+	const SPRITE_NATE ; 74
+	const SPRITE_ROBORED ; 75
+	const SPRITE_ROSA ; 76
+	const SPRITE_SELENE ; 77
+	const SPRITE_SERENA ; 78
+	const SPRITE_SERENA2 ; 79
+	const SPRITE_WES ; 7A
+	const SPRITE_BLUE_MAY ; 7B
+	const SPRITE_LARRY ; 7C
+	const SPRITE_GLAZED ;7D
+	const SPRITE_MARIBEL  ;7E
+	const SPRITE_NUZLOCKE ;7F
+	const SPRITE_SIRIUS ;80
+	const SPRITE_EVAN ;81
+	const SPRITE_BRONZE ;82
+	const SPRITE_ELECTRIC_FENCE_LEFT ;83
+	const SPRITE_ELECTRIC_FENCE_RIGHT ;84
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $90

@@ -54,6 +54,7 @@ ROMX $09
 	"bank9"
 ROMX $0a
 	"bankA"
+	"Map Blocks 4"
 ROMX $0b
 	"bankB"
 ROMX $0c
@@ -80,6 +81,7 @@ ROMX $13
 	"bank13"
 ROMX $14
 	"bank14"
+	"Map Scripts 26"
 ROMX $15
 	"Map Scripts 1"
 ROMX $16
@@ -136,6 +138,7 @@ ROMX $2e
 	"bank2E"
 ROMX $2f
 	"Phone Scripts 2"
+	"Tileset Data 9"
 ROMX $30
 	"Sprites 1"
 ROMX $31
@@ -196,6 +199,7 @@ ROMX $46
 	"Mobile 46 ASCII"
 ROMX $47
 	"Battle Tower"
+	"Tileset Data 10"
 ROMX $48
 	"Pic Pointers"
 	"Pics 1"
@@ -382,8 +386,9 @@ SRAM 1
 	"Link Battle Data"
 	"SRAM Hall of Fame"
 	"SRAM Crystal Data"
-	"SRAM Battle Tower"
+	org $b6f4
 	"Boxes 19-20"
+	"SRAM Battle Tower"
 SRAM 2
 	"Boxes 1-7"
 SRAM 3

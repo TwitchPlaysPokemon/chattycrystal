@@ -113,8 +113,9 @@ CinnabarGymSignText:
 Route20_MapEvents:
 	db 0, 0 ; filler
 
-	db 1 ; warp events
-	warp_event 38,  7, SEAFOAM_GYM, 1
+	db 2 ; warp events
+	warp_event 38,  7, SEAFOAM_ISLANDS_1F, 1
+	warp_event 30,  5, SEAFOAM_ISLANDS_1F, 4
 
 	db 0 ; coord events
 

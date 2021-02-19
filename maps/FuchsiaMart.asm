@@ -25,7 +25,7 @@ FuchsiaMartFisherText:
 	line "buy some SAFARI"
 
 	para "ZONE souvenirs,"
-	line "but it's closed…"
+	line "but it's abandoned…"
 	done
 
 FuchsiaMartCooltrainerFText:

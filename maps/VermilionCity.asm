@@ -24,13 +24,8 @@ VermilionMachopOwner:
 
 VermilionMachop:
 	opentext
-	writetext VermilionMachopText1
+	writetext VermilionMachopText
 	cry MACHOP
-	waitbutton
-	closetext
-	earthquake 30
-	opentext
-	writetext VermilionMachopText2
 	waitbutton
 	closetext
 	end
@@ -114,6 +109,9 @@ VermilionCityDiglettsCaveSign:
 VermilionCityPortSign:
 	jumptext VermilionCityPortSignText
 
+KantoRadioStationSign:
+	jumptext KantoRadioStationSignText
+
 VermilionCityPokecenterSign:
 	jumpstd pokecentersign
 
@@ -134,24 +132,20 @@ VermilionCityTeacherText:
 	done
 
 VermilionMachopOwnerText:
-	text "My #MON is"
-	line "preparing the land"
-	cont "for construction."
+	text "That's quite some"
+	line "building, eh?"
 
-	para "But I have no"
-	line "money to start the"
-	cont "project…"
+	para "It's KANTO's RADIO"
+	line "TOWER."
+
+	para "My #MON"
+	line "prepared the land"
+	cont "to build it!"
 	done
 
-VermilionMachopText1:
+VermilionMachopText:
 	text "MACHOP: Guooh"
 	line "gogogoh!"
-	done
-
-VermilionMachopText2:
-	text "A MACHOP is growl-"
-	line "ing while stomping"
-	cont "the ground flat."
 	done
 
 VermilionCitySuperNerdText:
@@ -265,10 +259,19 @@ VermilionCityPortSignText:
 	line "ENTRANCE"
 	done
 
+KantoRadioStationSignText:
+	text "KANTO RADIO"
+	line "STATION"
+
+	para "Your Favorite"
+	line "Programs On-Air"
+	cont "Around the Clock!"
+	done
+
 VermilionCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 10 ; warp events
+	db 11 ; warp events
 	warp_event  5,  5, VERMILION_FISHING_SPEECH_HOUSE, 1
 	warp_event  9,  5, VERMILION_POKECENTER_1F, 1
 	warp_event  7, 13, POKEMON_FAN_CLUB, 1
@@ -279,23 +282,25 @@ VermilionCity_MapEvents:
 	warp_event 19, 31, VERMILION_PORT_PASSAGE, 1
 	warp_event 20, 31, VERMILION_PORT_PASSAGE, 2
 	warp_event 34,  7, DIGLETTS_CAVE, 1
+	warp_event 25,  9, KANTO_RADIO_TOWER_1F, 1
 
 	db 0 ; coord events
 
-	db 8 ; bg events
-	bg_event 25,  3, BGEVENT_READ, VermilionCitySign
+	db 9 ; bg events
+	bg_event 19,  7, BGEVENT_READ, VermilionCitySign
 	bg_event  5, 19, BGEVENT_READ, VermilionGymSign
 	bg_event  5, 13, BGEVENT_READ, PokemonFanClubSign
 	bg_event 33,  9, BGEVENT_READ, VermilionCityDiglettsCaveSign
 	bg_event 27, 15, BGEVENT_READ, VermilionCityPortSign
 	bg_event 10,  5, BGEVENT_READ, VermilionCityPokecenterSign
 	bg_event 22, 13, BGEVENT_READ, VermilionCityMartSign
+	bg_event 29, 11, BGEVENT_READ, KantoRadioStationSign
 	bg_event 12, 19, BGEVENT_ITEM, VermilionCityHiddenFullHeal
 
 	db 6 ; object events
 	object_event 18,  9, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityTeacherScript, -1
-	object_event 23,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionMachopOwner, -1
-	object_event 26,  7, SPRITE_MACHOP, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VermilionMachop, -1
+	object_event 24, 13, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionMachopOwner, -1
+	object_event 24, 12, SPRITE_MACHOP, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VermilionMachop, -1
 	object_event 14, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionCitySuperNerdScript, -1
 	object_event 34,  8, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionSnorlax, EVENT_VERMILION_CITY_SNORLAX
 	object_event 31, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VermilionGymBadgeGuy, -1

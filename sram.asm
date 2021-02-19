@@ -159,6 +159,7 @@ sBTMonPrevTrainer3:: dw
 sBTMonPrevPrevTrainer1:: dw
 sBTMonPrevPrevTrainer2:: dw
 sBTMonPrevPrevTrainer3:: dw
+sBTPartySelection:: ds 3
 
 
 SECTION "Boxes 1-7", SRAM

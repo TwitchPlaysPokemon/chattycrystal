@@ -5892,16 +5892,16 @@ PokefanMGroup:
 
 	next_list_item ; POKEFANM (13)
 	db "REX@", TRAINERTYPE_ITEM
-	db 35
+	db 77
 	dw PHANPY
-	db BERRY
+	db GOLD_BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (14)
 	db "ALLAN@", TRAINERTYPE_ITEM
-	db 35
+	db 77
 	dw TEDDIURSA
-	db BERRY
+	db GOLD_BERRY
 	db -1 ; end
 
 	end_list_items

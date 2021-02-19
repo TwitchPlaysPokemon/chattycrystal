@@ -302,29 +302,29 @@ KantoGrassWildMons:
 	map_id ROUTE_6
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 13, RATTATA
-	dbw 13, SNUBBULL
-	dbw 14, MAGNEMITE
-	dbw 15, RATICATE
-	dbw 12, JIGGLYPUFF
-	dbw 15, GRANBULL
-	dbw 15, GRANBULL
+	dbw 50, RATTATA
+	dbw 50, SNUBBULL
+	dbw 51, MAGNEMITE
+	dbw 52, RATICATE
+	dbw 49, JIGGLYPUFF
+	dbw 52, GRANBULL
+	dbw 52, GRANBULL
 	; day
-	dbw 13, RATTATA
-	dbw 13, SNUBBULL
-	dbw 14, MAGNEMITE
-	dbw 15, RATICATE
-	dbw 12, JIGGLYPUFF
-	dbw 15, GRANBULL
-	dbw 15, GRANBULL
+	dbw 50, RATTATA
+	dbw 50, SNUBBULL
+	dbw 51, MAGNEMITE
+	dbw 52, RATICATE
+	dbw 49, JIGGLYPUFF
+	dbw 52, GRANBULL
+	dbw 52, GRANBULL
 	; nite
-	dbw 13, MEOWTH
-	dbw 13, DROWZEE
-	dbw 14, MAGNEMITE
-	dbw 15, PSYDUCK
-	dbw 12, JIGGLYPUFF
-	dbw 15, RATICATE
-	dbw 15, RATICATE
+	dbw 50, MEOWTH
+	dbw 50, DROWZEE
+	dbw 51, MAGNEMITE
+	dbw 52, PSYDUCK
+	dbw 49, JIGGLYPUFF
+	dbw 52, RATICATE
+	dbw 52, RATICATE
 
 	map_id ROUTE_7
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

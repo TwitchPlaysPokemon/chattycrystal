@@ -1598,6 +1598,8 @@ URFGroup:
 	bigdw 21
 	bigdw 21
 	db "Tiny@"
+	
+	db -1
 
 	end_list_items
 

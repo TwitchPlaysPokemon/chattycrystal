@@ -179,11 +179,16 @@ ENDM
 	map_const CINNABAR_POKECENTER_1F,                       5,  4 ;  1
 	map_const CINNABAR_POKECENTER_2F_BETA,                  8,  4 ;  2
 	map_const ROUTE_19_FUCHSIA_GATE,                        5,  4 ;  3
-	map_const SEAFOAM_GYM,                                  5,  4 ;  4
-	map_const ROUTE_19,                                    10, 18 ;  5
-	map_const ROUTE_20,                                    30,  9 ;  6
-	map_const ROUTE_21,                                    10, 18 ;  7
-	map_const CINNABAR_ISLAND,                             10,  9 ;  8
+	map_const SEAFOAM_ISLANDS_1F,                          12,  5 ;  4
+	map_const SEAFOAM_ISLANDS_B1F,                         20, 10 ;  5
+	map_const SEAFOAM_ISLANDS_B2F,                         20, 10 ;  6
+	map_const SEAFOAM_ISLANDS_B3F,                         20, 10 ;  7
+	map_const SEAFOAM_ISLANDS_B4F,                         20, 10 ;  8
+	map_const SEAFOAM_GYM,                                  5,  5 ;  9
+	map_const ROUTE_19,                                    10, 18 ; 10
+	map_const ROUTE_20,                                    30,  9 ; 11
+	map_const ROUTE_21,                                    10, 18 ; 12
+	map_const CINNABAR_ISLAND,                             10,  9 ; 13
 
 	newgroup                                                      ;  7
 

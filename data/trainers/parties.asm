@@ -3457,6 +3457,12 @@ SkierGroup:
 	dw DEWGONG
 	db -1 ; end
 
+	next_list_item ; SKIER (3)
+	db "CADY@", TRAINERTYPE_NORMAL
+	db 53
+	dw DELIBIRD
+	db -1 ; end
+
 	end_list_items
 
 TeacherGroup:
@@ -5814,6 +5820,22 @@ BoarderGroup:
 	dw CLOYSTER
 	db 48
 	dw SHELLDER
+	db -1 ; end
+
+	next_list_item ; BOARDER (4)
+	db "SHAUN@", TRAINERTYPE_NORMAL
+	db 55
+	dw CLOYSTER
+	db 50
+	dw DEWGONG
+	db -1 ; end
+
+	next_list_item ; BOARDER (5)
+	db "BRYCE@", TRAINERTYPE_NORMAL
+	db 55
+	dw DEWGONG
+	db 50
+	dw LAPRAS
 	db -1 ; end
 
 	end_list_items

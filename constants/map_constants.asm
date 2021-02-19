@@ -157,6 +157,13 @@ ENDM
 	map_const ROCKET_HIDEOUT_B3F,                          11, 12 ; 100
 	map_const ROCKET_HIDEOUT_B4F,                          11, 12 ; 101
 	map_const ROCKET_HIDEOUT_ELEVATOR,                      3,  3 ; 102
+	map_const POKEMON_TOWER_1F,                             9,  9 ; 103
+	map_const POKEMON_TOWER_2F,                             9,  9 ; 104
+	map_const POKEMON_TOWER_3F,                             9,  9 ; 105
+	map_const POKEMON_TOWER_4F,                             9,  9 ; 106
+	map_const POKEMON_TOWER_5F,                             9,  9 ; 107
+	map_const POKEMON_TOWER_6F,                             9,  9 ; 108
+	map_const POKEMON_TOWER_7F,                             9,  9 ; 109
 
 	newgroup                                                      ;  4
 
@@ -380,9 +387,8 @@ ENDM
 	map_const LAVENDER_SPEECH_HOUSE,                        4,  4 ;  8
 	map_const LAVENDER_NAME_RATER,                          4,  4 ;  9
 	map_const LAVENDER_MART,                                6,  4 ; 10
-	map_const SOUL_HOUSE,                                   5,  4 ; 11
-	map_const ROUTE_8_SAFFRON_GATE,                         5,  4 ; 12
-	map_const ROUTE_12_SUPER_ROD_HOUSE,                     4,  4 ; 13
+	map_const ROUTE_8_SAFFRON_GATE,                         5,  4 ; 11
+	map_const ROUTE_12_SUPER_ROD_HOUSE,                     4,  4 ; 12
 
 	newgroup                                                      ; 19
 

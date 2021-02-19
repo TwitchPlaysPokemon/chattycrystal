@@ -385,3 +385,15 @@ INCBIN "data/tilesets/pkmn_mansion_metatiles.bin"
 
 TilesetPkmnMansionColl:
 INCLUDE "data/tilesets/pkmn_mansion_collision.asm"
+
+
+SECTION "Tileset Data 11", ROMX
+
+TilesetCemeteryGFX:
+INCBIN "gfx/tilesets/cemetery.2bpp.lz"
+
+TilesetCemeteryMeta:
+INCBIN "data/tilesets/cemetery_metatiles.bin"
+
+TilesetCemeteryColl:
+INCLUDE "data/tilesets/cemetery_collision.asm"

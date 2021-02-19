@@ -102,7 +102,7 @@ LavenderTown_MapEvents:
 	warp_event  3, 13, LAVENDER_SPEECH_HOUSE, 1
 	warp_event  7, 13, LAVENDER_NAME_RATER, 1
 	warp_event 15, 13, LAVENDER_MART, 2
-	warp_event 14,  5, SOUL_HOUSE, 1
+	warp_event 14,  5, POKEMON_TOWER_1F, 1
 
 	db 0 ; coord events
 

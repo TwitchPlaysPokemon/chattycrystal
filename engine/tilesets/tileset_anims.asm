@@ -273,6 +273,7 @@ TilesetRoute23Anim:
 TilesetMuseumAnim:
 TilesetKantoForestAnim:
 TilesetPkmnMansionAnim:
+TilesetCemeteryAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation

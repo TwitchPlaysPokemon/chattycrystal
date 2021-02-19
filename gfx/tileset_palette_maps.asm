@@ -120,3 +120,6 @@ INCLUDE "gfx/tilesets/safari_palette_map.asm"
 
 TilesetPkmnMansionPalMap:
 INCLUDE "gfx/tilesets/pkmn_mansion_palette_map.asm"
+
+TilesetCemeteryPalMap:
+INCLUDE "gfx/tilesets/cemetery_palette_map.asm"

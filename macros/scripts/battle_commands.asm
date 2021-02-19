@@ -221,6 +221,7 @@ ENDM
 	command secretpower             ; d6
 	command wakeupslap              ; d7
 	command awakenopponent          ; d8
+	command grassknot               ; d9
 
 	enum_start $fe
 	command endturn                 ; fe

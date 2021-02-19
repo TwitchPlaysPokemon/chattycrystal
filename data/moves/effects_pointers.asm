@@ -195,4 +195,5 @@ MoveEffectsPointers:
 	dw SecretPower
 	dw WakeUpSlap
 	dw CalmMind
+	dw GrassKnot
 	dw Placeholder

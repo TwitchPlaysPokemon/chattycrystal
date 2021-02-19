@@ -263,7 +263,7 @@ MoveAnimations:
 	dw BattleAnim_ArmThrust
 	dw BattleAnim_TeeterDance
 	dw BattleAnim_BlazeKick
-	dw BattleAnim_PsychUp      ; 108, PLACEHOLDER
+	dw BattleAnim_IceBall      ; 108
 	dw BattleAnim_HiJumpKick   ; PLACEHOLDER
 	dw BattleAnim_IcePunch     ; PLACEHOLDER
 	dw BattleAnim_Crunch       ; PLACEHOLDER
@@ -3130,6 +3130,18 @@ BattleAnim_BlazeKick:
 	anim_obj ANIM_OBJ_00, 136, 48, $0
 	anim_wait 16
 	anim_loop 3, .loop
+	anim_wait 32
+	anim_ret
+	
+BattleAnim_IceBall:
+	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_HIT
+	anim_sound 6, 2, SFX_THROW_BALL
+	anim_obj ANIM_OBJ_ICE_BALL, 64, 92, $10
+	anim_wait 36
+	anim_sound 0, 1, SFX_TACKLE
+	anim_obj ANIM_OBJ_00, 136, 56, $0
+	anim_wait 8
+	anim_call BattleAnim_IcePunch_branch_cbbdf
 	anim_wait 32
 	anim_ret
 

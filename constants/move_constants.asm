@@ -328,7 +328,7 @@
 	const DISCHARGE    ; 140
 	const LEAF_STORM   ; 141
 	const IRON_HEAD    ; 142
-	const GRASS_KNOT   ; 143 (PLACEHOLDER)
+	const GRASS_KNOT   ; 143
 	const CHATTER      ; 144
 	const CHARGE_BEAM  ; 145
 	const WOOD_HAMMER  ; 146

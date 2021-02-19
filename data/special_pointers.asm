@@ -176,3 +176,6 @@ SpecialsPointers::
 	add_special UnusedFindItemInPCOrBag ; $a0
 	add_special InitialSetDSTFlag
 	add_special InitialClearDSTFlag
+	add_special SelectBTParticipants
+	add_special NewBattleTowerSession
+	add_special LoadPokemonData

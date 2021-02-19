@@ -74,8 +74,9 @@ Script_Menu_ChallengeExplanationCancel:
 Script_ChooseChallenge:
 	setval BATTLETOWERACTION_RESETDATA ; ResetBattleTowerTrainerSRAM
 	special BattleTowerAction
-	special CheckForBattleTowerRules
-	ifnotequal FALSE, Script_WaitButton
+	writetext .ChooseMonToEnter
+	special SelectBTParticipants
+	iffalse Script_Menu_ChallengeExplanationCancel
 	writetext Text_SaveBeforeEnteringBattleRoom
 	yesorno
 	iffalse Script_Menu_ChallengeExplanationCancel
@@ -85,17 +86,28 @@ Script_ChooseChallenge:
 	setscene SCENE_FINISHED
 	setval BATTLETOWERACTION_SET_EXPLANATION_READ ; set 1, [sBattleTowerSaveFileFlags]
 	special BattleTowerAction
+	special NewBattleTowerSession
 	special BattleTowerRoomMenu
-	ifequal $a, Script_Menu_ChallengeExplanationCancel
+	ifequal $a, .ResetPartyAndReturn
 	ifnotequal $0, Script_MobileError
 	setval BATTLETOWERACTION_11
 	special BattleTowerAction
+	special LoadPokemonData
 	writetext Text_RightThisWayToYourBattleRoom
 	waitbutton
 	closetext
 	setval BATTLETOWERACTION_CHOOSEREWARD
 	special BattleTowerAction
 	sjump Script_WalkToBattleTowerElevator
+
+.ResetPartyAndReturn:
+	special LoadPokemonData
+	sjump Script_Menu_ChallengeExplanationCancel
+
+.ChooseMonToEnter:
+	text "Choose #MON"
+	line "to enter."
+	prompt
 
 Script_ResumeBattleTowerChallenge:
 	closetext

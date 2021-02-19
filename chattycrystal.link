@@ -386,8 +386,9 @@ SRAM 1
 	"Link Battle Data"
 	"SRAM Hall of Fame"
 	"SRAM Crystal Data"
-	"SRAM Battle Tower"
+	org $b6f4
 	"Boxes 19-20"
+	"SRAM Battle Tower"
 SRAM 2
 	"Boxes 1-7"
 SRAM 3

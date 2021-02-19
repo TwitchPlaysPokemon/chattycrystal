@@ -1920,8 +1920,13 @@ wAssistMoveIterator:: db
 ENDU
 wStringBuffer2:: ds 19 ; d086
 wStringBuffer3:: ds 19 ; d099
+UNION
 wStringBuffer4:: ds 19 ; d0ac
 wStringBuffer5:: ds 19 ; d0bf
+NEXTU
+wBT_PartySelectCounter:: db
+wBT_PartySelections:: ds BATTLETOWER_PARTY_LENGTH
+ENDU
 
 wBattleMenuCursorBuffer:: dw ; d0d2
 

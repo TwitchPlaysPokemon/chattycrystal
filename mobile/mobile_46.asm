@@ -1266,8 +1266,6 @@ BattleTowerRoomMenu_UpdatePickLevelMenu:
 	ld a, [wcd38]
 	and a
 	jr nz, .asm_118a30
-	call BattleTower_LevelCheck
-	ret c
 	call BattleTower_UbersCheck
 	ret c
 

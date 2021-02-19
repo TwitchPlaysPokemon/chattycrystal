@@ -25,20 +25,14 @@ CeladonPokecenter1FPharmacistScript:
 CeladonEusine:
 	faceplayer
 	opentext
-	writetext CeladonEusineText1
+	writetext CeladonEusineText
 	buttonsound
-	loadmonindex 1, SUICUNE
-	special MonCheck
-	iffalse .NoSuicune
-	special BeastsCheck
-	iftrue .HoOh
-	writetext NoBeastsText
-	waitbutton
-.NoSuicune:
 	closetext
-	end
-
-.HoOh:
+	winlosstext CeladonEusineText, 0
+	loadtrainer CY_ROBORED, X_CHATTYYELLOW4
+	startbattle
+	reloadmapafterbattle
+	opentext
 	writetext EusineLeavesCeladonText
 	waitbutton
 	closetext
@@ -90,58 +84,11 @@ CeladonPokecenter1FPharmacistText:
 	line "three years ago."
 	done
 
-CeladonEusineText1:
-	text "EUSINE: Hi!"
-
-	para "I'm back visiting"
-	line "my hometown."
-
-	para "It's been quite a"
-	line "while."
-	done
-
 EusineLeavesCeladonText:
-	text "<PLAYER>, have you"
-	line "heard?"
-
-	para "There have been"
-	line "fresh rumors of a"
-
-	para "rainbow-colored"
-	line "#MON appearing"
-	cont "at TIN TOWER."
-
-	para "I've just had my"
-	line "party healed, so"
-
-	para "now I'm headed to"
-	line "ECRUTEAK."
-
-	para "I'll be seeing"
-	line "you, <PLAYER>!"
+CeladonEusineText:
+	text "<...>"
 	done
 
-NoBeastsText:
-	text "Oh, by the way,"
-	line "<PLAYER>."
-
-	para "Have you caught"
-	line "the legendary"
-
-	para "#MON RAIKOU and"
-	line "ENTEI?"
-
-	para "<……><……><……>"
-
-	para "Okay…"
-
-	para "If you catch even"
-	line "one, I hope that"
-	cont "you'll inform me."
-
-	para "I'm counting on"
-	line "you, <PLAYER>!"
-	done
 
 CeladonPokecenter1F_MapEvents:
 	db 0, 0 ; filler
@@ -160,4 +107,4 @@ CeladonPokecenter1F_MapEvents:
 	object_event  1,  5, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonPokecenter1FGentlemanScript, -1
 	object_event  0,  3, SPRITE_PHARMACIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonPokecenter1FPharmacistScript, -1
 	object_event  8,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonPokecenter1FCooltrainerFScript, -1
-	object_event  4,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonEusine, EVENT_SET_WHEN_FOUGHT_HO_OH
+	object_event  4,  3, SPRITE_ROBORED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonEusine, EVENT_SET_WHEN_FOUGHT_HO_OH

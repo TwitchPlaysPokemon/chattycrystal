@@ -611,7 +611,7 @@ XDMichaelGroup:
 	dw SCEPTILE
 	db DRAGON_SCALE
 	dw GIGA_DRAIN, DRAGONBREATH, HIDDEN_POWER, STUN_SPORE
-	bigdw $FFFF
+	bigdw $ecfe
 	bigdw 162
 	bigdw 141
 	bigdw 93
@@ -3422,9 +3422,9 @@ GentlemanGroup:
 
 	next_list_item ; GENTLEMAN (3)
 	db "GREGORY@", TRAINERTYPE_NORMAL
-	db 56
+	db 57
 	dw RAICHU
-	db 54
+	db 55
 	dw AMPHAROS
 	db -1 ; end
 
@@ -4479,13 +4479,13 @@ GuitaristGroup:
 
 	next_list_item ; GUITARIST (2)
 	db "VINCENT@", TRAINERTYPE_NORMAL
-	db 53
+	db 54
+	dw MAGNETON
+	db 57
+	dw ELECTRODE
+	db 56
 	dw MAGNETON
 	db 56
-	dw ELECTRODE
-	db 55
-	dw MAGNETON
-	db 55
 	dw MAGNETON
 	db -1 ; end
 	
@@ -4925,13 +4925,13 @@ JugglerGroup:
 
 	next_list_item ; JUGGLER (3)
 	db "HORTON@", TRAINERTYPE_NORMAL
-	db 54
+	db 55
 	dw ELECTRODE
-	db 54
+	db 55
 	dw ELECTRODE
-	db 54
+	db 55
 	dw ELECTRODE
-	db 54
+	db 55
 	dw ELECTRODE
 	db -1 ; end
 
@@ -5076,7 +5076,7 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (2)
 	db "FRANKLIN@", TRAINERTYPE_NORMAL
-	db 59
+	db 60
 	dw ALAKAZAM
 	db -1 ; end
 
@@ -5154,11 +5154,11 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (11)
 	db "JARED@", TRAINERTYPE_NORMAL
-	db 55
+	db 56
 	dw MR__MIME
-	db 55
+	db 56
 	dw EXEGGUTOR
-	db 58
+	db 59
 	dw EXEGGUTOR
 	db -1 ; end
 
@@ -5725,17 +5725,17 @@ MediumGroup:
 
 	next_list_item ; MEDIUM (6)
 	db "REBECCA@", TRAINERTYPE_NORMAL
-	db 58
+	db 59
 	dw HYPNO
-	db 58
+	db 59
 	dw HYPNO
 	db -1 ; end
 
 	next_list_item ; MEDIUM (7)
 	db "DORIS@", TRAINERTYPE_NORMAL
-	db 58
+	db 59
 	dw SLOWKING
-	db 58
+	db 59
 	dw SLOWBRO
 	db -1 ; end
 
@@ -6696,6 +6696,89 @@ CYRoboredGroup:
 	bigdw 146
 	bigdw 138
 	bigdw 138
+	db "AAAAAAaaaa@"
+
+	db -1 ; end
+	
+	next_list_item ; X_CHATTYYELLOW4
+	db "x<MN>(?@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	
+	db 50
+	dw VENUSAUR
+	db NO_ITEM
+	dw CUT, RAZOR_LEAF, LEECH_SEED, SOLARBEAM
+	bigdw $2FFF
+	bigdw 160
+	bigdw 106
+	bigdw 108
+	bigdw 109
+	bigdw 130
+	bigdw 130
+	db "-SJJJJx  <MN>@"
+	
+	db 54
+	dw RAICHU
+	db NO_ITEM
+	dw BODY_SLAM, THUNDERBOLT, QUICK_ATTACK, THUNDER_WAVE
+	bigdw $0FFF
+	bigdw 154
+	bigdw 124
+	bigdw 81
+	bigdw 148
+	bigdw 127
+	bigdw 127
+	db "IAS@"
+	
+	db 55
+	dw DUGTRIO
+	db NO_ITEM
+	dw EARTHQUAKE, SLASH, DIG, CUT
+	bigdw $FFFF
+	bigdw 134
+	bigdw 124
+	bigdw 84
+	bigdw 170
+	bigdw 107
+	bigdw 107
+	db "IGGGGGGFCC@"
+	
+	db 58
+	dw GYARADOS
+	db NO_ITEM
+	dw STRENGTH, BITE, HYDRO_PUMP, SURF
+	bigdw $4FFF
+	bigdw 208
+	bigdw 180
+	bigdw 124
+	bigdw 137
+	bigdw 160
+	bigdw 160
+	db "AJJTUUUUU@"
+
+	db 62
+	dw WIGGLYTUFF
+	db NO_ITEM
+	dw STRENGTH, REST, DOUBLE_TEAM, PSYCHIC
+	bigdw $FFFF
+	bigdw 278
+	bigdw 130
+	bigdw 86
+	bigdw 93
+	bigdw 100
+	bigdw 100
+	db "IZZZZZZZQ@"
+
+	db 66
+	dw CHATOT
+	db NO_ITEM
+	dw CHATTER, FLY, PECK, MIRROR_MOVE
+	bigdw $19B5
+	bigdw 228
+	bigdw 125
+	bigdw 107
+	bigdw 173
+	bigdw 163
+	bigdw 163
 	db "AAAAAAaaaa@"
 
 	db -1 ; end

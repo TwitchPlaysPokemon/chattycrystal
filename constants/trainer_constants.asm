@@ -608,6 +608,7 @@ CHRIS EQU __enum__
 	const X_CHATTYYELLOW1
 	const X_CHATTYYELLOW2
 	const X_CHATTYYELLOW3
+	const X_CHATTYYELLOW4
 
 	trainerclass GSCHGSS_CHRIS ; 2d
 	const AAEFFFF

@@ -492,6 +492,11 @@ ENDM
 	map_attributes PokemonMansion2F, POKEMON_MANSION_2F, $2e, 0
 	map_attributes PokemonMansion3F, POKEMON_MANSION_3F, $2e, 0
 	map_attributes PokemonMansionB1F, POKEMON_MANSION_B1F, $2e, 0
+	map_attributes RocketHideoutB1F, ROCKET_HIDEOUT_B1F, $2e, 0
+	map_attributes RocketHideoutB2F, ROCKET_HIDEOUT_B2F, $2e, 0
+	map_attributes RocketHideoutB3F, ROCKET_HIDEOUT_B3F, $2e, 0
+	map_attributes RocketHideoutB4F, ROCKET_HIDEOUT_B4F, $2e, 0
+	map_attributes RocketHideoutElevator, ROCKET_HIDEOUT_ELEVATOR, $2e, 0
 	map_attributes EcruteakTinTowerEntrance, ECRUTEAK_TIN_TOWER_ENTRANCE, $00, 0
 	map_attributes WiseTriosRoom, WISE_TRIOS_ROOM, $00, 0
 	map_attributes EcruteakPokecenter1F, ECRUTEAK_POKECENTER_1F, $00, 0

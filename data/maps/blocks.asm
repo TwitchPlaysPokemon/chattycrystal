@@ -963,3 +963,18 @@ PokemonMansion3F_Blocks:
 
 PokemonMansionB1F_Blocks:
 	INCBIN "maps/PokemonMansionB1F.blk"
+
+RocketHideoutB1F_Blocks:
+	INCBIN "maps/RocketHideoutB1F.blk"
+
+RocketHideoutB2F_Blocks:
+	INCBIN "maps/RocketHideoutB2F.blk"
+
+RocketHideoutB3F_Blocks:
+	INCBIN "maps/RocketHideoutB3F.blk"
+
+RocketHideoutB4F_Blocks:
+	INCBIN "maps/RocketHideoutB4F.blk"
+
+RocketHideoutElevator_Blocks:
+	INCBIN "maps/RocketHideoutElevator.blk"

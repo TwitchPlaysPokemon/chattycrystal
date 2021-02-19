@@ -152,6 +152,11 @@ ENDM
 	map_const POKEMON_MANSION_2F,                          15, 14 ; 95
 	map_const POKEMON_MANSION_3F,                          15,  9 ; 96
 	map_const POKEMON_MANSION_B1F,                         15, 14 ; 97
+	map_const ROCKET_HIDEOUT_B1F,                          15, 14 ; 98
+	map_const ROCKET_HIDEOUT_B2F,                          15, 14 ; 99
+	map_const ROCKET_HIDEOUT_B3F,                          15, 14 ; 100
+	map_const ROCKET_HIDEOUT_B4F,                          15, 12 ; 101
+	map_const ROCKET_HIDEOUT_ELEVATOR,                      3,  3 ; 102
 
 	newgroup                                                      ;  4
 

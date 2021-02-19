@@ -329,29 +329,29 @@ KantoGrassWildMons:
 	map_id ROUTE_7
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 17, RATTATA
-	dbw 17, SPEAROW
-	dbw 18, SNUBBULL
-	dbw 18, VULPIX
-	dbw 18, JIGGLYPUFF
-	dbw 16, ABRA
-	dbw 16, ABRA
+	dbw 52, RATTATA
+	dbw 52, SPEAROW
+	dbw 53, SNUBBULL
+	dbw 53, VULPIX
+	dbw 53, JIGGLYPUFF
+	dbw 51, ABRA
+	dbw 51, ABRA
 	; day
-	dbw 17, RATTATA
-	dbw 17, SPEAROW
-	dbw 18, SNUBBULL
-	dbw 18, VULPIX
-	dbw 18, JIGGLYPUFF
-	dbw 16, ABRA
-	dbw 16, ABRA
+	dbw 52, RATTATA
+	dbw 52, SPEAROW
+	dbw 53, SNUBBULL
+	dbw 53, VULPIX
+	dbw 53, JIGGLYPUFF
+	dbw 51, ABRA
+	dbw 51, ABRA
 	; nite
-	dbw 17, MEOWTH
-	dbw 17, MURKROW
-	dbw 18, HOUNDOUR
-	dbw 18, PERSIAN
-	dbw 18, JIGGLYPUFF
-	dbw 16, ABRA
-	dbw 16, ABRA
+	dbw 52, MEOWTH
+	dbw 52, MURKROW
+	dbw 53, HOUNDOUR
+	dbw 53, PERSIAN
+	dbw 53, JIGGLYPUFF
+	dbw 51, ABRA
+	dbw 51, ABRA
 
 	map_id ROUTE_8
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

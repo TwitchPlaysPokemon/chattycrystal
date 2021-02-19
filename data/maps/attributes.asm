@@ -585,6 +585,7 @@ ENDM
 	map_attributes VermilionGym, VERMILION_GYM, $00, 0
 	map_attributes Route6SaffronGate, ROUTE_6_SAFFRON_GATE, $00, 0
 	map_attributes Route6UndergroundPathEntrance, ROUTE_6_UNDERGROUND_PATH_ENTRANCE, $00, 0
+	map_attributes KantoRadioTower1F, KANTO_RADIO_TOWER_1F, $00, 0
 	map_attributes RedsHouse1F, REDS_HOUSE_1F, $00, 0
 	map_attributes RedsHouse2F, REDS_HOUSE_2F, $00, 0
 	map_attributes BluesHouse, BLUES_HOUSE, $00, 0
@@ -636,7 +637,6 @@ ENDM
 	map_attributes LavenderNameRater, LAVENDER_NAME_RATER, $00, 0
 	map_attributes LavenderMart, LAVENDER_MART, $00, 0
 	map_attributes SoulHouse, SOUL_HOUSE, $00, 0
-	map_attributes LavRadioTower1F, LAV_RADIO_TOWER_1F, $00, 0
 	map_attributes Route8SaffronGate, ROUTE_8_SAFFRON_GATE, $00, 0
 	map_attributes Route12SuperRodHouse, ROUTE_12_SUPER_ROD_HOUSE, $00, 0
 	map_attributes SilverCavePokecenter1F, SILVER_CAVE_POKECENTER_1F, $00, 0

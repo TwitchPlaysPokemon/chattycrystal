@@ -70,6 +70,7 @@ Landmarks:
 	landmark 108,  76, UndergroundName
 	landmark 100,  76, Route6Name
 	landmark 100,  84, VermilionCityName
+	landmark 104,  80, KantoRadioTowerName
 	landmark  88,  60, DiglettsCaveName
 	landmark  88,  68, Route7Name
 	landmark 116,  68, Route8Name
@@ -78,7 +79,6 @@ Landmarks:
 	landmark 132,  56, Route10Name
 	landmark 132,  60, PowerPlantName
 	landmark 132,  68, LavenderTownName
-	landmark 140,  68, LavRadioTowerName
 	landmark  76,  68, CeladonCityName
 	landmark 100,  68, SaffronCityName
 	landmark 116,  84, Route11Name
@@ -147,7 +147,7 @@ IndigoPlateauName:   db "INDIGO¯PLATEAU@"
 VictoryRoadName:     db "VICTORY¯ROAD@"
 MtMoonName:          db "MT.MOON@"
 RockTunnelName:      db "ROCK TUNNEL@"
-LavRadioTowerName:   db "LAV¯RADIO TOWER@"
+KantoRadioTowerName: db "KANTO¯RADIO TOWER@"
 SilphCoName:         db "SILPH CO.@"
 SafariZoneName:      db "SAFARI ZONE@"
 SeafoamIslandsName:  db "SEAFOAM¯ISLANDS@"

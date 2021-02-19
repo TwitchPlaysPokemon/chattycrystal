@@ -68,15 +68,15 @@ KANTO_LANDMARK EQU const_value
 	const UNDERGROUND_PATH  ; 3d
 	const ROUTE_6           ; 3e
 	const VERMILION_CITY    ; 3f
-	const DIGLETTS_CAVE     ; 40
-	const ROUTE_7           ; 41
-	const ROUTE_8           ; 42
-	const ROUTE_9           ; 43
-	const ROCK_TUNNEL       ; 44
-	const ROUTE_10          ; 45
-	const POWER_PLANT       ; 46
-	const LAVENDER_TOWN     ; 47
-	const LAV_RADIO_TOWER   ; 48
+	const KANTO_RADIO_TOWER ; 40
+	const DIGLETTS_CAVE     ; 41
+	const ROUTE_7           ; 42
+	const ROUTE_8           ; 43
+	const ROUTE_9           ; 44
+	const ROCK_TUNNEL       ; 45
+	const ROUTE_10          ; 46
+	const POWER_PLANT       ; 47
+	const LAVENDER_TOWN     ; 48
 	const CELADON_CITY      ; 49
 	const SAFFRON_CITY      ; 4a
 	const ROUTE_11          ; 4b

@@ -3554,7 +3554,7 @@ TeacherGroup:
 	db 62
 	dw AIPOM
 	db 64
-	dw MAROWHAK
+	dw MAROWAK
 	db -1 ; end
 
 	next_list_item ; TEACHER (3)

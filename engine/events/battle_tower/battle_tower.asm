@@ -1705,7 +1705,7 @@ SetBattleTowerPartyLevel:
 	add hl, bc
 	push hl
 	ld bc, wPartyMon1StatExp - wPartyMon1MaxHP - 1
-	add hl, bc ; 'hl' now points to EVs - 1, needed by CalcPkmnStats
+	add hl, bc ; 'hl' now points to Stat Exp - 1, needed by CalcPkmnStats
 	pop de
 
 	ld b, TRUE

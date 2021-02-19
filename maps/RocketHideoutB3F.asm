@@ -7,8 +7,8 @@ RocketHideoutB3F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 25,  6, ROCKET_HIDEOUT_B2F, 3
-	warp_event 19, 18, ROCKET_HIDEOUT_B4F, 1
+	warp_event 17,  2, ROCKET_HIDEOUT_B2F, 3
+	warp_event 11, 14, ROCKET_HIDEOUT_B4F, 1
 
 	db 0 ; coord events
 

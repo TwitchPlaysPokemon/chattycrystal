@@ -269,10 +269,11 @@ TilesetHoOhWordRoomAnim:
 TilesetKabutoWordRoomAnim:
 TilesetOmanyteWordRoomAnim:
 TilesetAerodactylWordRoomAnim:
-TilesetRoute23Anim:
+TilesetIndigoPlateauAnim:
 TilesetMuseumAnim:
 TilesetKantoForestAnim:
 TilesetPkmnMansionAnim:
+TilesetCemeteryAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation

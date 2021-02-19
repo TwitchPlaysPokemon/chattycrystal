@@ -79,6 +79,7 @@ Landmarks:
 	landmark 132,  56, Route10Name
 	landmark 132,  60, PowerPlantName
 	landmark 132,  68, LavenderTownName
+	landmark 140,  68, PokemonTowerName
 	landmark  76,  68, CeladonCityName
 	landmark 100,  68, SaffronCityName
 	landmark 116,  84, Route11Name
@@ -146,8 +147,9 @@ CinnabarIslandName:  db "CINNABAR¯ISLAND@"
 IndigoPlateauName:   db "INDIGO¯PLATEAU@"
 VictoryRoadName:     db "VICTORY¯ROAD@"
 MtMoonName:          db "MT.MOON@"
-RockTunnelName:      db "ROCK TUNNEL@"
 KantoRadioTowerName: db "KANTO¯RADIO TOWER@"
+RockTunnelName:      db "ROCK TUNNEL@"
+PokemonTowerName:    db "#MON¯TOWER@"
 SilphCoName:         db "SILPH CO.@"
 SafariZoneName:      db "SAFARI ZONE@"
 SeafoamIslandsName:  db "SEAFOAM¯ISLANDS@"

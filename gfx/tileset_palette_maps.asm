@@ -109,8 +109,8 @@ INCLUDE "gfx/tilesets/battle_tower_palette_map.asm"
 TilesetBattleTowerOutsidePalMap:
 INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 
-TilesetRoute23PalMap:
-INCLUDE "gfx/tilesets/route_23_palette_map.asm"
+TilesetIndigoPlateauPalMap:
+INCLUDE "gfx/tilesets/indigo_plateau_palette_map.asm"
 
 TilesetKantoForestPalMap:
 INCLUDE "gfx/tilesets/kanto_forest_palette_map.asm"
@@ -120,3 +120,6 @@ INCLUDE "gfx/tilesets/safari_palette_map.asm"
 
 TilesetPkmnMansionPalMap:
 INCLUDE "gfx/tilesets/pkmn_mansion_palette_map.asm"
+
+TilesetCemeteryPalMap:
+INCLUDE "gfx/tilesets/cemetery_palette_map.asm"

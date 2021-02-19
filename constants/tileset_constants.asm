@@ -36,11 +36,12 @@
 	const TILESET_KABUTO_WORD_ROOM     ; 22
 	const TILESET_OMANYTE_WORD_ROOM    ; 23
 	const TILESET_AERODACTYL_WORD_ROOM ; 24
-	const TILESET_ROUTE_23             ; 25
+	const TILESET_INDIGO_PLATEAU       ; 25
 	const TILESET_MUSEUM               ; 26
 	const TILESET_KANTO_FOREST         ; 27
 	const TILESET_SAFARI               ; 28
 	const TILESET_PKMN_MANSION         ; 29
+	const TILESET_CEMETERY             ; 2a
 
 ; bg palette values (see gfx/tilesets/*_palette_map.asm)
 ; TilesetBGPalette indexes (see gfx/tilesets/bg_tiles.pal)

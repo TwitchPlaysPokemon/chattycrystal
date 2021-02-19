@@ -2,7 +2,6 @@ INCLUDE "data/moves/effects_pointers.asm"
 
 MoveEffects: ; used only for BANK(MoveEffects)
 
-Placeholder:
 CrystalBolt: ; special cased in type matchup checking
 FoulPlay: ; special cased in damagestats
 Psyshock: ; special cased in damagestats
@@ -2627,6 +2626,23 @@ DragonDance:
 	raisesub
 	endmove
 
+CalmMind:
+	checkobedience
+	usedmovetext
+	doturn
+	lowersub
+	specialattackup
+	statupanim
+	statupmessage
+	statupfailtext
+	resetmiss
+	specialdefenseup
+	statupanim
+	statupmessage
+	statupfailtext
+	raisesub
+	endmove
+
 QuiverDance:
 	checkobedience
 	usedmovetext
@@ -2749,4 +2765,47 @@ SecretPower:
 	checkfaint
 	buildopponentrage
 	secretpower
+	endmove
+
+WakeUpSlap:
+	checkobedience
+	usedmovetext
+	doturn
+	wakeupslap
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	awakenopponent
+	endmove
+
+GrassKnot:
+	checkobedience
+	usedmovetext
+	doturn
+	grassknot
+	critical
+	damagestats
+	damagecalc
+	stab
+	checkhit
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
 	endmove

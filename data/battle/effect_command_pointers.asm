@@ -219,3 +219,6 @@ BattleCommandPointers:
 	effectfn BattleCommand_KnockOffPower
 	effectfn BattleCommand_KnockOff
 	effectfn BattleCommand_SecretPower
+	effectfn BattleCommand_WakeUpSlap
+	effectfn BattleCommand_AwakenOpponent
+	effectfn BattleCommand_GrassKnot

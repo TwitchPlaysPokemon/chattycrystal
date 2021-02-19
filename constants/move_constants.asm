@@ -296,7 +296,7 @@
 	const SHOCK_WAVE   ; 120
 	const WATER_PULSE  ; 121
 	const ROOST        ; 122
-	const WAKE_UP_SLAP ; 123 (PLACEHOLDER)
+	const WAKE_UP_SLAP ; 123
 	const HAMMER_ARM   ; 124
 	const BRINE        ; 125
 	const CLOSE_COMBAT ; 126
@@ -328,7 +328,7 @@
 	const DISCHARGE    ; 140
 	const LEAF_STORM   ; 141
 	const IRON_HEAD    ; 142
-	const GRASS_KNOT   ; 143 (PLACEHOLDER)
+	const GRASS_KNOT   ; 143
 	const CHATTER      ; 144
 	const CHARGE_BEAM  ; 145
 	const WOOD_HAMMER  ; 146
@@ -363,6 +363,7 @@
 	const WATER_SPOUT  ; 163
 	const NEEDLE_ARM   ; 164
 	const DRACO_METEOR ; 165
+	const CALM_MIND    ; 166
 
 NUM_ATTACKS EQU const_value + -1
 
@@ -371,7 +372,6 @@ NUM_ATTACKS EQU const_value + -1
 	endc
 
 ; Battle animations use the same constants as the moves
-	const ANIM_SWEET_SCENT_2     ; 162
 ; Animations with negative IDs will play even when animations are disabled
 const_value = -$16 ;fix if more negative values are added
 	const ANIM_THROW_POKE_BALL   ; -16 (ffea)

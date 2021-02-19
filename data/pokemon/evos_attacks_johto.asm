@@ -1118,6 +1118,7 @@ KingdraEvosAttacks:
 	dbw 29, TWISTER
 	dbw 40, AGILITY
 	dbw 51, HYDRO_PUMP
+	dbw 60, DRAGON_PULSE
 	db 0 ; no more level-up moves
 
 PhanpyEvosAttacks:
@@ -1286,6 +1287,7 @@ RaikouEvosAttacks:
 	dbw 51, REFLECT
 	dbw 61, CRUNCH
 	dbw 71, THUNDER
+	dbw 81, CALM_MIND
 	db 0 ; no more level-up moves
 
 EnteiEvosAttacks:
@@ -1299,6 +1301,7 @@ EnteiEvosAttacks:
 	dbw 51, FLAMETHROWER
 	dbw 61, SWAGGER
 	dbw 71, FIRE_BLAST
+	dbw 81, CALM_MIND
 	db 0 ; no more level-up moves
 
 SuicuneEvosAttacks:
@@ -1312,6 +1315,7 @@ SuicuneEvosAttacks:
 	dbw 51, MIST
 	dbw 61, MIRROR_COAT
 	dbw 71, HYDRO_PUMP
+	dbw 81, CALM_MIND
 	db 0 ; no more level-up moves
 
 LarvitarEvosAttacks:

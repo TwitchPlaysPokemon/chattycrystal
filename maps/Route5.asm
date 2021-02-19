@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
 	const ROUTE5_POKEFAN_M
+	const ROUTE5_BIG_SNORLAX
 
 Route5_MapScripts:
 	db 0 ; scene scripts
@@ -14,6 +15,27 @@ Route5UndergroundPathSign:
 
 HouseForSaleSign:
 	jumptext HouseForSaleSignText
+	
+Route5Snorlax:
+	opentext
+	special SnorlaxAwake
+	iftrue .Awake
+	writetext Route5SnorlaxSleeping
+	waitbutton
+	closetext
+	end
+
+.Awake:
+	writetext Route5SnorlaxAwake
+	pause 15
+	cry SNORLAX
+	closetext
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon SNORLAX, 70
+	startbattle
+	disappear ROUTE5_BIG_SNORLAX
+	reloadmapafterbattle
+	end
 
 Route5PokefanMText:
 	text "The road is closed"
@@ -36,6 +58,21 @@ HouseForSaleSignText:
 	para "House for Sale…"
 	line "Nobody lives here."
 	done
+	
+Route5SnorlaxSleeping:
+	text "SNORLAX is snoring"
+	line "peacefully…"
+	done
+
+Route5SnorlaxAwake:
+	text "The #GEAR was"
+	line "placed near the"
+	cont "sleeping SNORLAX…"
+
+	para "…"
+
+	para "SNORLAX woke up!"
+	done
 
 Route5_MapEvents:
 	db 0, 0 ; filler
@@ -52,5 +89,6 @@ Route5_MapEvents:
 	bg_event 17, 17, BGEVENT_READ, Route5UndergroundPathSign
 	bg_event 10, 11, BGEVENT_READ, HouseForSaleSign
 
-	db 1 ; object events
+	db 2 ; object events
 	object_event 17, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5PokefanMScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
+	object_event 8, 14, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route5Snorlax, EVENT_ROUTE_5_SNORLAX

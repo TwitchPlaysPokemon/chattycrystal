@@ -6,6 +6,8 @@ LSMoveNames::
 	indirect_entries CHATTY_HP, .hidden_power
 	indirect_entries KNOCK_OFF - 1
 	indirect_entries NEEDLE_ARM, .new_moves_2
+	indirect_entries CALM_MIND - 1
+	indirect_entries CALM_MIND, .new_moves_3
 	indirect_table_end
 
 .new_moves_1
@@ -52,6 +54,9 @@ LSMoveNames::
 	db "Beat@@@@" ; 162
 	db "Spra@@@@"
 	db "Megneti@"
+
+.new_moves_3
+	db "Soud@@@@" ; 166
 
 .original_moves
 	db "fihgt@@@"

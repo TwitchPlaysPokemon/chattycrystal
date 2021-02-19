@@ -360,8 +360,9 @@ MoveDescriptions1:
 	dw CrystalBoltDescription
 	dw KnockOffDescription
 	dw WaterSpoutDescription
-	dw HeadbuttDescription
+	dw NeedleArmDescription
 	dw DracoMeteorDescription
+	dw CalmMindDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -487,6 +488,7 @@ SandAttackDescription:
 AirSlashDescription:
 HeadbuttDescription:
 IronHeadDescription:
+NeedleArmDescription:
 SteamrollerDescription:
 ZenHeadbuttDescription:
 	db   "An attack that may"
@@ -1490,6 +1492,10 @@ WorkUpDescription:
 DragonDanceDescription:
 	db   "Boosts both ATTACK"
 	next "and SPEED.@"
+
+CalmMindDescription:
+	db   "Boosts SPCL.ATK."
+	next "and SPCL.DEF.@"
 
 DragonPulseDescription:
 	db   "Fires a ball of"

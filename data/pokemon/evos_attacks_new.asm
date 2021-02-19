@@ -491,6 +491,7 @@ RaltsEvosAttacks:
 	dbw 11, DOUBLE_TEAM
 	dbw 16, TELEPORT
 	dbw 21, PSYCHIC_M
+	dbw 26, CALM_MIND
 	dbw 36, FUTURE_SIGHT
 	dbw 41, HYPNOSIS
 	dbw 46, DREAM_EATER
@@ -504,6 +505,7 @@ KirliaEvosAttacks:
 	dbw 1, DOUBLE_TEAM
 	dbw 1, TELEPORT
 	dbw 26, PSYCHIC_M
+	dbw 32, CALM_MIND
 	dbw 40, FUTURE_SIGHT
 	dbw 47, HYPNOSIS
 	dbw 54, DREAM_EATER
@@ -516,6 +518,7 @@ GardevoirEvosAttacks:
 	dbw 1, DOUBLE_TEAM
 	dbw 1, TELEPORT
 	dbw 26, PSYCHIC_M
+	dbw 32, CALM_MIND
 	dbw 42, FUTURE_SIGHT
 	dbw 51, HYPNOSIS
 	dbw 60, DREAM_EATER
@@ -610,6 +613,7 @@ MakuhitaEvosAttacks:
 	dbw 13, VITAL_THROW
 	dbw 19, FAKE_OUT
 	dbw 22, WHIRLWIND
+	dbw 28, KNOCK_OFF
 	dbw 31, SECRET_POWER
 	dbw 37, BELLY_DRUM
 	dbw 40, ENDURE
@@ -626,6 +630,7 @@ HariyamaEvosAttacks:
 	dbw 13, VITAL_THROW
 	dbw 19, FAKE_OUT
 	dbw 22, WHIRLWIND
+	dbw 29, KNOCK_OFF
 	dbw 33, SECRET_POWER
 	dbw 40, BELLY_DRUM
 	dbw 44, ENDURE
@@ -680,6 +685,7 @@ SableyeEvosAttacks:
 	dbw 21, FAKE_OUT
 	dbw 25, DETECT
 	dbw 29, FEINT_ATTACK
+	dbw 33, KNOCK_OFF
 	dbw 37, CONFUSE_RAY
 	dbw 41, SHADOW_BALL
 	dbw 45, MEAN_LOOK
@@ -853,6 +859,7 @@ FlygonEvosAttacks:
 	dbw 41, SCREECH
 	dbw 53, SANDSTORM
 	dbw 65, HYPER_BEAM
+	dbw 72, DRAGON_PULSE
 	db 0 ; no more level-up moves
 
 SwabluEvosAttacks:
@@ -886,6 +893,7 @@ AltariaEvosAttacks:
 	dbw 45, HEAL_BELL
 	dbw 54, PERISH_SONG
 	dbw 59, SKY_ATTACK
+	dbw 66, DRAGON_PULSE
 	db 0 ; no more level-up moves
 
 LileepEvosAttacks:
@@ -1123,6 +1131,7 @@ SalamenceEvosAttacks:
 	dbw 61, CRUNCH
 	dbw 79, DRAGON_CLAW
 	dbw 93, DOUBLE_EDGE
+	dbw 100, DRACO_METEOR
 	db 0 ; no more level-up moves
 
 BeldumEvosAttacks:
@@ -1173,6 +1182,7 @@ LatiosEvosAttacks:
 	dbw 40, PSYCHIC_M
 	dbw 45, DRAGON_PULSE
 	dbw 50, AURA_SPHERE
+	dbw 55, DRACO_METEOR
 	db 0 ; no more level-up moves
 
 KyogreEvosAttacks:
@@ -1183,7 +1193,7 @@ KyogreEvosAttacks:
 	dbw 20, BODY_SLAM
 	dbw 30, AQUA_RING
 	dbw 35, ICE_BEAM
-	dbw 45, NASTY_PLOT
+	dbw 45, CALM_MIND
 	dbw 50, HYDRO_PUMP
 	dbw 60, REST
 	dbw 65, THUNDER
@@ -1199,7 +1209,7 @@ GroudonEvosAttacks:
 	dbw 20, SLASH
 	dbw 30, HAMMER_ARM
 	dbw 35, EARTHQUAKE
-	dbw 45, SWORDS_DANCE
+	dbw 45, CURSE
 	dbw 50, FIRE_BLAST
 	dbw 60, REST
 	dbw 65, SOLARBEAM
@@ -1817,6 +1827,7 @@ PansageEvosAttacks:
 	dbw 19, BITE
 	dbw 22, RAZOR_LEAF
 	dbw 25, SWAGGER
+	dbw 32, NEEDLE_ARM
 	dbw 44, CRUNCH
 	dbw 52, LEAF_STORM
 	db 0 ; no more level-up moves

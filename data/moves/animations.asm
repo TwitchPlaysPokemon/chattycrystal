@@ -381,6 +381,7 @@ BattleAnimations::
 	dw BattleAnim_Surf         ; PLACEHOLDER
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_RockSlide    ; PLACEHOLDER
+	dw BattleAnim_Amnesia      ; PLACEHOLDER
 
 BattleAnim_0:
 BattleAnim_MirrorMove:

@@ -193,4 +193,6 @@ MoveEffectsPointers:
 	dw WaterSpout
 	dw KnockOff
 	dw SecretPower
-	dw Placeholder
+	dw WakeUpSlap
+	dw CalmMind
+	dw GrassKnot

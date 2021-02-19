@@ -11,10 +11,10 @@ OlivinePortPassagePokefanMScript:
 
 OlivinePortPassagePokefanMText:
 	text "FAST SHIP S.S.AQUA"
-	line "sails to KANTO on"
+	line "sails to KANTO "
 
-	para "Mondays and Fri-"
-	line "days."
+	para "every day of the"
+	line "week."
 	done
 
 OlivinePortPassage_MapEvents:

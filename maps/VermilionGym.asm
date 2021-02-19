@@ -19,7 +19,7 @@ VermilionGymSurgeScript:
 	waitbutton
 	closetext
 	winlosstext LtSurgeWinLossText, 0
-	loadtrainer URF, URF1
+	loadtrainer RED_KANTO_LEADER, RED_RED
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_LTSURGE
@@ -99,7 +99,7 @@ VermilionGymStatue:
 	iftrue .Beaten
 	jumpstd gymstatue1
 .Beaten:
-	gettrainername STRING_BUFFER_4, URF, URF1
+	gettrainername STRING_BUFFER_4, RED_KANTO_LEADER, RED_RED
 	jumpstd gymstatue2
 
 LtSurgeWinLossText:

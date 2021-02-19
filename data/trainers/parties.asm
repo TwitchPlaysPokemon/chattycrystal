@@ -1518,7 +1518,7 @@ BABAGroup:
 	dw GYARADOS
 	db NO_ITEM
 	dw THRASH, BITE, DRAGON_RAGE, LEER
-	bigdw $0FFF
+	bigdw $0AAA
 	bigdw 97
 	bigdw 88
 	bigdw 58
@@ -3422,10 +3422,10 @@ GentlemanGroup:
 
 	next_list_item ; GENTLEMAN (3)
 	db "GREGORY@", TRAINERTYPE_NORMAL
-	db 37
-	dw PIKACHU
-	db 33
-	dw FLAAFFY
+	db 56
+	dw RAICHU
+	db 54
+	dw AMPHAROS
 	db -1 ; end
 
 	next_list_item ; GENTLEMAN (4)
@@ -4479,14 +4479,20 @@ GuitaristGroup:
 
 	next_list_item ; GUITARIST (2)
 	db "VINCENT@", TRAINERTYPE_NORMAL
-	db 27
-	dw MAGNEMITE
-	db 33
-	dw VOLTORB
-	db 32
-	dw MAGNEMITE
-	db 32
-	dw MAGNEMITE
+	db 53
+	dw MAGNETON
+	db 56
+	dw ELECTRODE
+	db 55
+	dw MAGNETON
+	db 55
+	dw MAGNETON
+	db -1 ; end
+	
+	next_list_item ; GUITARIST (2)
+	db "JAMIE@", TRAINERTYPE_NORMAL
+	db 57
+	dw MANECTRIC
 	db -1 ; end
 
 	end_list_items
@@ -4919,13 +4925,13 @@ JugglerGroup:
 
 	next_list_item ; JUGGLER (3)
 	db "HORTON@", TRAINERTYPE_NORMAL
-	db 33
+	db 54
 	dw ELECTRODE
-	db 33
+	db 54
 	dw ELECTRODE
-	db 33
+	db 54
 	dw ELECTRODE
-	db 33
+	db 54
 	dw ELECTRODE
 	db -1 ; end
 
@@ -6843,7 +6849,6 @@ NuzlockeGroup:
 	bigdw 111
 	bigdw 66
 	db "b  syro .g@"
-
 	db 49
 	dw BLAZIKEN
 	db RAGECANDYBAR
@@ -6964,7 +6969,6 @@ NuzlockeGroup:
 	bigdw 123
 	bigdw 73
 	db "b  syro .g@"
-
 	db 27
 	dw DUSKULL
 	db NO_ITEM

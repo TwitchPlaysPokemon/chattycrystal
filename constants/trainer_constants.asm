@@ -369,6 +369,7 @@ CHRIS EQU __enum__
 	trainerclass GUITARIST ; 15
 	const CLYDE
 	const VINCENT
+	const JAMIE
 
 	trainerclass HIKER ; 16
 	const ANTHONY1

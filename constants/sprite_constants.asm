@@ -133,6 +133,8 @@
 	const SPRITE_SIRIUS ;81
 	const SPRITE_EVAN ;82
 	const SPRITE_BRONZE ;83
+	const SPRITE_ELECTRIC_FENCE_LEFT ;84
+	const SPRITE_ELECTRIC_FENCE_RIGHT ;85
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $90

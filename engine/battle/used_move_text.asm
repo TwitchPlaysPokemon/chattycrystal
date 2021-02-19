@@ -114,9 +114,9 @@ LSAlternateMessage:
 	text_asm
 	ld hl, .no_line_break
 	push bc
-.loop
 	ld c, 5 + 1 ; if the name is longer than this, we'll need a line break
 	ld de, wEnemyMonNick
+.loop
 	ld a, [de]
 	inc de
 	cp "@"

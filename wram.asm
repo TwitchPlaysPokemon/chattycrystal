@@ -3100,27 +3100,28 @@ wLastAnimObjectIndex:: db ; d40e
 
 wBattleAnimFlags:: db ; d40f
 wBattleAnimAddress:: dw ; d410
-wBattleAnimDelay:: db ; d412
-wBattleAnimParent:: dw ; d413
-wBattleAnimLoops:: db ; d415
-wBattleAnimVar:: db ; d416
-wBattleAnimByte:: db ; d417
-wBattleAnimOAMPointerLo:: db ; d418
+wBattleAnimBank:: db ; d412
+wBattleAnimDelay:: db ; d413
+wBattleAnimParent:: dw ; d414
+wBattleAnimLoops:: db ; d416
+wBattleAnimVar:: db ; d417
+wBattleAnimByte:: db ; d418
+wBattleAnimOAMPointerLo:: db ; d419
 
-UNION ; d419
+UNION ; d41a
 ; unidentified
 wBattleAnimTemp0:: db
 wBattleAnimTemp1:: db
 wBattleAnimTemp2:: db
 wBattleAnimTemp3:: db
 
-NEXTU ; d419
+NEXTU ; d41a
 wBattleObjectTempID:: db
 wBattleObjectTempXCoord:: db
 wBattleObjectTempYCoord:: db
 wBattleObjectTempParam:: db
 
-NEXTU ; d419
+NEXTU ; d41a
 wBattleAnimTempOAMFlags:: db
 wBattleAnimTempField02:: db
 wBattleAnimTempTileID:: db
@@ -3130,16 +3131,16 @@ wBattleAnimTempXOffset:: db
 wBattleAnimTempYOffset:: db
 wBattleAnimTempFrameOAMFlags:: db
 wBattleAnimTempPalette:: db
-ENDU ; d422
+ENDU ; d423
 
-UNION ; d422
+UNION ; d423
 	ds $32
 wBattleAnimEnd::
 
-NEXTU ; d422
+NEXTU ; d423
 wSurfWaveBGEffect:: ds $40
 wSurfWaveBGEffectEnd::
-ENDU ; d462
+ENDU ; d463
 
 SECTION "Mobile RAM and Pokedex Listings", WRAMX
 

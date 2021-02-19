@@ -387,19 +387,6 @@ BattleAnim_0:
 BattleAnim_MirrorMove:
 	anim_ret
 
-BattleAnim_SweetScent2:
-	anim_2gfx ANIM_GFX_FLOWER, ANIM_GFX_MISC
-	anim_obj ANIM_OBJ_FLOWER, 64, 96, $2
-	anim_wait 2
-	anim_obj ANIM_OBJ_FLOWER, 64, 80, $2
-	anim_wait 64
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $15
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $2a
-	anim_obj ANIM_OBJ_COTTON, 136, 40, $3f
-	anim_bgeffect ANIM_BG_06, $0, $2, $0
-	anim_wait 128
-	anim_ret
-
 BattleAnim_ThrowPokeBall:
 	anim_if_param_equal NO_ITEM, .TheTrainerBlockedTheBall
 	anim_if_param_equal MASTER_BALL, .MasterBall

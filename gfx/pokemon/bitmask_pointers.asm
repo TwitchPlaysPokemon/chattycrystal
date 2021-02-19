@@ -323,7 +323,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Chimchar
 	dw PlaceholderBitmasks ; PLACEHOLDER - Monferno
 	dw PlaceholderBitmasks ; PLACEHOLDER - Infernape
-	dw PlaceholderBitmasks ; PLACEHOLDER - Piplup
+	dw PiplupBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Prinplup
 	dw PlaceholderBitmasks ; PLACEHOLDER - Empoleon
 	dw BidoofBitmasks
@@ -342,7 +342,7 @@ BitmasksPointers:
 	dw BunearyBitmasks
 	dw LopunnyBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Stunky
-	dw PlaceholderBitmasks ; PLACEHOLDER - Skuntank
+	dw SkuntankBitmasks
 	dw BronzorBitmasks
 	dw BronzongBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Bonsly

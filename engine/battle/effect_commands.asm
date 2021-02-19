@@ -5790,6 +5790,8 @@ BattleCommand_FinishConfusingTarget:
 	jr z, .got_effect
 	cp EFFECT_SWAGGER
 	jr z, .got_effect
+	cp EFFECT_CHATTER
+	jr z, .got_effect
 	call AnimateCurrentMove
 
 .got_effect

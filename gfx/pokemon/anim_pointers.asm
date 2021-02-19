@@ -323,7 +323,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Chimchar
 	dw PlaceholderAnimation ; PLACEHOLDER - Monferno
 	dw PlaceholderAnimation ; PLACEHOLDER - Infernape
-	dw PlaceholderAnimation ; PLACEHOLDER - Piplup
+	dw PiplupAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Prinplup
 	dw PlaceholderAnimation ; PLACEHOLDER - Empoleon
 	dw BidoofAnimation
@@ -342,7 +342,7 @@ AnimationPointers:
 	dw BunearyAnimation
 	dw LopunnyAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Stunky
-	dw PlaceholderAnimation ; PLACEHOLDER - Skuntank
+	dw SkuntankAnimation
 	dw BronzorAnimation
 	dw BronzongAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Bonsly

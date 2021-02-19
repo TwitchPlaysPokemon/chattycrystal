@@ -5076,8 +5076,8 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (2)
 	db "FRANKLIN@", TRAINERTYPE_NORMAL
-	db 37
-	dw KADABRA
+	db 59
+	dw ALAKAZAM
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (3)
@@ -5154,12 +5154,12 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (11)
 	db "JARED@", TRAINERTYPE_NORMAL
-	db 32
+	db 55
 	dw MR__MIME
-	db 32
-	dw EXEGGCUTE
-	db 35
-	dw EXEGGCUTE
+	db 55
+	dw EXEGGUTOR
+	db 58
+	dw EXEGGUTOR
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (12)
@@ -5725,17 +5725,17 @@ MediumGroup:
 
 	next_list_item ; MEDIUM (6)
 	db "REBECCA@", TRAINERTYPE_NORMAL
-	db 35
-	dw DROWZEE
-	db 35
+	db 58
+	dw HYPNO
+	db 58
 	dw HYPNO
 	db -1 ; end
 
 	next_list_item ; MEDIUM (7)
 	db "DORIS@", TRAINERTYPE_NORMAL
-	db 34
-	dw SLOWPOKE
-	db 36
+	db 58
+	dw SLOWKING
+	db 58
 	dw SLOWBRO
 	db -1 ; end
 

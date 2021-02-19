@@ -356,7 +356,7 @@ BitmasksPointers:
 	dw FroslassBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Darkrai
 	dw PlaceholderBitmasks ; PLACEHOLDER - Pansage
-	dw PlaceholderBitmasks ; PLACEHOLDER - Simisage
+	dw SimisageBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Drilbur
 	dw PlaceholderBitmasks ; PLACEHOLDER - Excadrill
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sandile

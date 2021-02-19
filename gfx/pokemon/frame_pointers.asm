@@ -356,7 +356,7 @@ FramesPointers:
 	dba FroslassFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Darkai
 	dba PlaceholderFrames ; PLACEHOLDER - Pansage
-	dba PlaceholderFrames ; PLACEHOLDER - Simisage
+	dba SimisageFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Drilbur
 	dba PlaceholderFrames ; PLACEHOLDER - Excadrill
 	dba PlaceholderFrames ; PLACEHOLDER - Sandile

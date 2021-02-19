@@ -808,62 +808,33 @@ HandleEncore:
 	jp StdBattleTextbox
 
 TryEnemyFlee:
-	ld a, [wBattleMode]
-	dec a
-	jr nz, .Stay
-
-	ld a, [wPlayerSubStatus5]
-	bit SUBSTATUS_CANT_RUN, a
-	jr nz, .Stay
-
-	ld a, [wEnemySubStatus5]
-	bit SUBSTATUS_AQUA_RING, a
-	jr nz, .Stay
-
 	ld a, [wEnemyWrapCount]
 	and a
-	jr nz, .Stay
+	ret nz
 
 	ld a, [wEnemyMonStatus]
 	and 1 << FRZ | SLP
-	jr nz, .Stay
+	ret nz
+
+	ld a, [wBattleMode]
+	dec a
+	ret nz
+
+	ld a, [wPlayerSubStatus5]
+	bit SUBSTATUS_CANT_RUN, a
+	ret nz
+
+	ld a, [wEnemySubStatus5]
+	bit SUBSTATUS_AQUA_RING, a
+	ret nz
 
 	ld a, [wTempEnemyMonSpecies]
 	call GetPokemonIndexFromID
 	ld b, h
 	ld c, l
 	ld de, 2
-	ld hl, AlwaysFleeMons
-	call IsInHalfwordArray
-	jr c, .Flee
-
-	call BattleRandom
-	add a, a
-	jr nc, .Stay
-
-	push af
-	; de preserved from last call
-	ld hl, OftenFleeMons
-	call IsInHalfwordArray
-	pop de
-	jr c, .Flee
-
-	ld a, d
-	cp 20 percent ; double the value because of the previous add a, a
-	jr nc, .Stay
-
-	ld de, 2
-	ld hl, SometimesFleeMons
-	call IsInHalfwordArray
-	jr c, .Flee
-
-.Stay:
-	and a
-	ret
-
-.Flee:
-	scf
-	ret
+	ld hl, FleeMons
+	jp IsInHalfwordArray
 
 INCLUDE "data/wild/flee_mons.asm"
 

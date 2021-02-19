@@ -678,10 +678,87 @@ XDMichaelGroup:
 
 PTLucasGroup:
 	next_list_item ; NQPPPNL
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
+	db "nqpppnl@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 58
+	dw SHINX
+	db FLOWER_MAIL
+	dw THUNDERBOLT, RETURN, DISCHARGE, ROAR
+	bigdw $0FFF
+	bigdw 149
+	bigdw 97
+	bigdw 47
+	bigdw 90
+	bigdw 86
+	bigdw 90
+	db "0''? ?0???@"
+
+	db 59
+	dw BIBAREL
+	db EXP_SHARE
+	dw HEADBUTT, SUPERPOWER, SURF, ROCK_CLIMB
+	bigdw $0FFF
+	bigdw 176
+	bigdw 122
+	bigdw 86
+	bigdw 132
+	bigdw 91
+	bigdw 87
+	db "00 00 06@"
+
+	db 66
+	dw FLAREON
+	db LOVELY_MAIL
+	dw ROCK_SMASH, FIRE_BLAST, STRENGTH, FIRE_FANG
+	bigdw $FFFF
+	bigdw 184
+	bigdw 193
+	bigdw 107
+	bigdw 130
+	bigdw 145
+	bigdw 130
+	db "FLAREON@"
+
+	db 62
+	dw ROSERADE
+	db FLOWER_MAIL
+	dw STUN_SPORE, ABSORB, PETAL_DANCE, CUT
+	bigdw $0FFF
+	bigdw 169
+	bigdw 136
+	bigdw 84
+	bigdw 137
+	bigdw 174
+	bigdw 145
+	db "!?!!?! !:1@"
+	
+	db 54
+	dw BRONZONG
+	db FLOWER_MAIL
+	dw CONFUSE_RAY, FUTURE_SIGHT, EXTRASENSORY, FEINT_ATTACK
+	bigdw $0FFF
+	bigdw 159
+	bigdw 124
+	bigdw 172
+	bigdw 67
+	bigdw 97
+	bigdw 145
+	db "BRONZONG@"
+	
+	db 50
+	dw GOLBAT
+	db BLUESKY_MAIL
+	dw CONFUSE_RAY, AERIAL_ACE, LEECH_LIFE, AIR_CUTTER
+	bigdw $FFFF
+	bigdw 148
+	bigdw 98
+	bigdw 100
+	bigdw 124
+	bigdw 80
+	bigdw 96
+	db "GOLBAT@"
+	
+	db -1
 	end_list_items
 
 HGSSLyraGroup:
@@ -2408,12 +2485,12 @@ LassGroup:
 
 	next_list_item ; LASS (3)
 	db "ALICE@", TRAINERTYPE_NORMAL
-	db 30
-	dw GLOOM
-	db 34
+	db 59
+	dw VILEPLUME
+	db 63
 	dw ARBOK
-	db 30
-	dw GLOOM
+	db 59
+	dw VILEPLUME
 	db -1 ; end
 
 	next_list_item ; LASS (4)
@@ -2432,11 +2509,11 @@ LassGroup:
 
 	next_list_item ; LASS (6)
 	db "LINDA@", TRAINERTYPE_NORMAL
-	db 30
-	dw BULBASAUR
-	db 32
-	dw IVYSAUR
-	db 34
+	db 59
+	dw VENUSAUR
+	db 61
+	dw VENUSAUR
+	db 63
 	dw VENUSAUR
 	db -1 ; end
 
@@ -5255,7 +5332,7 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (5)
 	db "CINDY@", TRAINERTYPE_NORMAL
-	db 36
+	db 64
 	dw NIDOQUEEN
 	db -1 ; end
 
@@ -5477,7 +5554,7 @@ CamperGroup:
 
 	next_list_item ; CAMPER (5)
 	db "BARRY@", TRAINERTYPE_NORMAL
-	db 36
+	db 64
 	dw NIDOKING
 	db -1 ; end
 

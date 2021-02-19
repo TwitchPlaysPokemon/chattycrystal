@@ -137,19 +137,18 @@ BattleAnim_SendOutMon:
 	anim_if_param_equal $1, .Shiny
 	anim_if_param_equal $2, .Unknown
 	anim_1gfx ANIM_GFX_SMOKE
-	anim_call BattleAnim_TargetObj_1Row
+	anim_call .TargetObj_1Row
 	anim_bgeffect ANIM_BG_2B, $0, $1, $0
 	anim_sound 0, 0, SFX_BALL_POOF
 	anim_obj ANIM_OBJ_1B, 48, 96, $0
 	anim_bgeffect ANIM_BG_ENTER_MON, $0, $1, $0
-	anim_wait 128
-	anim_wait 4
-	anim_call BattleAnim_ShowMon_0
+	anim_wait 132
+	anim_jump .show_mon
 	anim_ret
 
 .Unknown:
 	anim_1gfx ANIM_GFX_SMOKE
-	anim_call BattleAnim_TargetObj_1Row
+	anim_call .TargetObj_1Row
 	anim_bgeffect ANIM_BG_2A, $0, $1, $0
 	anim_wait 1
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
@@ -159,7 +158,12 @@ BattleAnim_SendOutMon:
 	anim_incbgeffect ANIM_BG_2A
 	anim_wait 96
 	anim_incbgeffect ANIM_BG_2A
-	anim_call BattleAnim_ShowMon_0
+.show_mon
+	anim_wait 1
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
+	anim_wait 5
+	anim_incobj 1
+	anim_wait 1
 	anim_ret
 
 .Shiny:
@@ -199,6 +203,12 @@ BattleAnim_SendOutMon:
 	anim_wait 4
 	anim_bgeffect ANIM_BG_ENTER_MON, $0, $1, $0
 	anim_wait 32
+	anim_ret
+
+.TargetObj_1Row
+	anim_battlergfx_2row
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $0, $0
+	anim_wait 6
 	anim_ret
 
 BattleAnim_ReturnMon:
@@ -330,19 +340,23 @@ BattleAnim_EnemyDamage:
 	anim_ret
 
 BattleAnim_EnemyStatDown:
-	anim_call BattleAnim_UserObj_1Row
+	anim_battlergfx_2row
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
+	anim_wait 6
 	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
-	anim_wait 40
-	anim_call BattleAnim_ShowMon_1
-	anim_wait 1
-	anim_ret
+	anim_jump BattleAnim_PlayerStatDown.show_mon
 
 BattleAnim_PlayerStatDown:
-	anim_call BattleAnim_UserObj_1Row
+	anim_battlergfx_2row
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
+	anim_wait 6
 	anim_bgeffect ANIM_BG_WOBBLE_MON, $0, $0, $0
-	anim_wait 40
-	anim_call BattleAnim_ShowMon_1
-	anim_wait 1
+.show_mon
+	anim_wait 41
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_wait 4
+	anim_incobj 1
+	anim_wait 2
 	anim_ret
 
 BattleAnim_PlayerDamage:

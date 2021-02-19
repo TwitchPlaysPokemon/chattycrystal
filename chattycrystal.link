@@ -141,7 +141,7 @@ ROMX $30
 ROMX $31
 	"Sprites 2"
 ROMX $32
-	"bank32"
+	"Move Animation Scripts"
 ROMX $33
 	"Move Animations"
 	"Extra Songs 2"
@@ -298,6 +298,7 @@ ROMX $71
 	"Effect Commands Extra"
 ROMX $72
 	"Miscellaneous Text"
+	"Animation Scripts and Pointers"
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74

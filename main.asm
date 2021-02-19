@@ -421,12 +421,10 @@ INCLUDE "engine/phone/scripts/generic_callee.asm"
 INCLUDE "engine/events/trainer_scripts.asm"
 
 
-SECTION "bank32", ROMX
+SECTION "Move Animation Scripts", ROMX
 
 INCLUDE "engine/battle_anims/bg_effects.asm"
-INCLUDE "data/battle_anims/animation_pointers.asm"
 INCLUDE "data/battle_anims/move_animations.asm"
-INCLUDE "data/battle_anims/special_animations.asm"
 
 
 SECTION "Move Animations", ROMX
@@ -670,6 +668,13 @@ INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
 INCLUDE "data/moves/vc_names.asm"
+
+
+SECTION "Animation Scripts and Pointers", ROMX
+
+INCLUDE "data/battle_anims/animation_pointers.asm"
+INCLUDE "data/battle_anims/special_animations.asm"
+
 
 SECTION "Chatty Handling", ROMX
 

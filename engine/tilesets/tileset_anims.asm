@@ -269,7 +269,7 @@ TilesetHoOhWordRoomAnim:
 TilesetKabutoWordRoomAnim:
 TilesetOmanyteWordRoomAnim:
 TilesetAerodactylWordRoomAnim:
-TilesetRoute23Anim:
+TilesetIndigoPlateauAnim:
 TilesetMuseumAnim:
 TilesetKantoForestAnim:
 TilesetPkmnMansionAnim:

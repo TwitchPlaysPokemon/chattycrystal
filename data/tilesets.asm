@@ -49,7 +49,7 @@ Tilesets::
 	tileset TilesetKabutoWordRoom
 	tileset TilesetOmanyteWordRoom
 	tileset TilesetAerodactylWordRoom
-	tileset TilesetRoute23
+	tileset TilesetIndigoPlateau
 	tileset TilesetMuseum
 	tileset TilesetKantoForest
 	tileset TilesetSafari

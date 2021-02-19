@@ -36,7 +36,7 @@
 	const TILESET_KABUTO_WORD_ROOM     ; 22
 	const TILESET_OMANYTE_WORD_ROOM    ; 23
 	const TILESET_AERODACTYL_WORD_ROOM ; 24
-	const TILESET_ROUTE_23             ; 25
+	const TILESET_INDIGO_PLATEAU       ; 25
 	const TILESET_MUSEUM               ; 26
 	const TILESET_KANTO_FOREST         ; 27
 	const TILESET_SAFARI               ; 28

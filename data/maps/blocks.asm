@@ -821,7 +821,7 @@ Route23_Blocks:
 	INCBIN "maps/Route23.blk"
 
 IndigoPlateauOutside_Blocks:
-	INCBIN "maps/IndegoPlateauOutside.blk"
+	INCBIN "maps/IndigoPlateauOutside.blk"
 
 LancesRoom_Blocks:
 	INCBIN "maps/LancesRoom.blk"

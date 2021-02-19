@@ -474,7 +474,7 @@ INCLUDE "maps/Route3.asm"
 INCLUDE "maps/Route4.asm"
 INCLUDE "maps/Route10South.asm"
 INCLUDE "maps/Route23.asm"
-INCLUDE "maps/IndegoPlateauOutside.asm"
+INCLUDE "maps/IndigoPlateauOutside.asm"
 INCLUDE "maps/SilverCavePokecenter1F.asm"
 INCLUDE "maps/Route28SteelWingHouse.asm"
 

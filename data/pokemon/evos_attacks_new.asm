@@ -859,7 +859,7 @@ FlygonEvosAttacks:
 	dbw 41, SCREECH
 	dbw 53, SANDSTORM
 	dbw 65, HYPER_BEAM
-	dbw 72, DRACO_METEOR
+	dbw 72, DRAGON_PULSE
 	db 0 ; no more level-up moves
 
 SwabluEvosAttacks:
@@ -893,7 +893,7 @@ AltariaEvosAttacks:
 	dbw 45, HEAL_BELL
 	dbw 54, PERISH_SONG
 	dbw 59, SKY_ATTACK
-	dbw 66, DRACO_METEOR
+	dbw 66, DRAGON_PULSE
 	db 0 ; no more level-up moves
 
 LileepEvosAttacks:

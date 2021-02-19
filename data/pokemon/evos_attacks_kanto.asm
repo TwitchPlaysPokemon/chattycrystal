@@ -2179,7 +2179,7 @@ DragoniteEvosAttacks:
 	dbw 55, WING_ATTACK
 	dbw 61, OUTRAGE
 	dbw 75, HYPER_BEAM
-	dbw 82, DRACO_METEOR
+	dbw 82, DRAGON_PULSE
 	db 0 ; no more level-up moves
 
 MewtwoEvosAttacks:

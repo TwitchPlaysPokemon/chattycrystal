@@ -1118,7 +1118,7 @@ KingdraEvosAttacks:
 	dbw 29, TWISTER
 	dbw 40, AGILITY
 	dbw 51, HYDRO_PUMP
-	dbw 60, DRACO_METEOR
+	dbw 60, DRAGON_PULSE
 	db 0 ; no more level-up moves
 
 PhanpyEvosAttacks:

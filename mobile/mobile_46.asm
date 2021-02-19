@@ -3934,6 +3934,9 @@ BattleTower_UbersCheck:
 	push de
 	push bc
 	push hl
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
 	ld hl, .ubers
 	ld de, 2
 	call IsInHalfwordArray

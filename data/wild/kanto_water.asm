@@ -46,9 +46,9 @@ KantoWaterWildMons:
 
 	map_id ROUTE_13
 	db 6 percent ; encounter rate
-	dbw 25, TENTACOOL
-	dbw 25, QUAGSIRE
-	dbw 25, TENTACRUEL
+	dbw 57, TENTACOOL
+	dbw 57, QUAGSIRE
+	dbw 57, TENTACRUEL
 
 	map_id ROUTE_19
 	db 6 percent ; encounter rate
@@ -136,9 +136,9 @@ KantoWaterWildMons:
 
 	map_id FUCHSIA_CITY
 	db 2 percent ; encounter rate
-	dbw 20, SHELLOS
-	dbw 15, SHELLOS
-	dbw 10, GASTRODON
+	dbw 56, SHELLOS
+	dbw 51, SHELLOS
+	dbw 56, GASTRODON
 
 	map_id CINNABAR_ISLAND
 	db 6 percent ; encounter rate

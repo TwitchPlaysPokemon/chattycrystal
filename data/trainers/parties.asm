@@ -2091,13 +2091,13 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (2)
 	db "KIPP@", TRAINERTYPE_NORMAL
-	db 27
+	db 59
 	dw VOLTORB
-	db 27
+	db 59
 	dw MAGNEMITE
-	db 31
-	dw VOLTORB
-	db 31
+	db 63
+	dw ELECTRODE
+	db 63
 	dw MAGNETON
 	db -1 ; end
 
@@ -2109,11 +2109,11 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (4)
 	db "JOHNNY@", TRAINERTYPE_NORMAL
-	db 29
-	dw BELLSPROUT
-	db 31
+	db 60
 	dw WEEPINBELL
-	db 33
+	db 62
+	dw VICTREEBEL
+	db 64
 	dw VICTREEBEL
 	db -1 ; end
 
@@ -2129,9 +2129,9 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (6)
 	db "TOMMY@", TRAINERTYPE_NORMAL
-	db 32
+	db 63
 	dw XATU
-	db 34
+	db 65
 	dw ALAKAZAM
 	db -1 ; end
 
@@ -2151,13 +2151,13 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (9)
 	db "BILLY@", TRAINERTYPE_NORMAL
-	db 27
-	dw PARAS
-	db 27
-	dw PARAS
-	db 27
-	dw POLIWHIRL
-	db 35
+	db 63
+	dw PARASECT
+	db 63
+	dw PARASECT
+	db 63
+	dw POLITOED
+	db 80
 	dw DITTO
 	db -1 ; end
 
@@ -2381,9 +2381,9 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (9)
 	db "ROY@", TRAINERTYPE_NORMAL
-	db 29
+	db 59
 	dw FEAROW
-	db 35
+	db 65
 	dw FEAROW
 	db -1 ; end
 
@@ -2427,15 +2427,15 @@ BirdKeeperGroup:
 
 	next_list_item ; BIRD_KEEPER (15)
 	db "PERRY@", TRAINERTYPE_NORMAL
-	db 34
+	db 80
 	dw FARFETCH_D
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (16)
 	db "BRET@", TRAINERTYPE_NORMAL
-	db 32
-	dw PIDGEOTTO
-	db 32
+	db 65
+	dw PIDGEOT
+	db 65
 	dw FEAROW
 	db -1 ; end
 
@@ -3545,16 +3545,16 @@ SkierGroup:
 TeacherGroup:
 	next_list_item ; TEACHER (1)
 	db "COLETTE@", TRAINERTYPE_NORMAL
-	db 36
-	dw CLEFAIRY
+	db 65
+	dw CLEFABLE
 	db -1 ; end
 
 	next_list_item ; TEACHER (2)
 	db "HILLARY@", TRAINERTYPE_NORMAL
-	db 32
+	db 62
 	dw AIPOM
-	db 36
-	dw CUBONE
+	db 64
+	dw MAROWHAK
 	db -1 ; end
 
 	next_list_item ; TEACHER (3)
@@ -4769,14 +4769,14 @@ HikerGroup:
 
 	next_list_item ; HIKER (16)
 	db "KENNY@", TRAINERTYPE_NORMAL
-	db 27
+	db 61
 	dw SANDSLASH
-	db 29
-	dw GRAVELER
-	db 31
+	db 63
 	dw GOLEM
-	db 29
-	dw GRAVELER
+	db 65
+	dw GOLEM
+	db 63
+	dw GOLEM
 	db -1 ; end
 
 	next_list_item ; HIKER (17)
@@ -5941,44 +5941,44 @@ PokefanMGroup:
 
 	next_list_item ; POKEFANM (4)
 	db "JOSHUA@", TRAINERTYPE_ITEM
-	db 23
+	db 61
 	dw PIKACHU
-	db BERRY
-	db 23
+	db LIGHT_BALL
+	db 61
 	dw PIKACHU
-	db BERRY
-	db 23
+	db LIGHT_BALL
+	db 61
 	dw PIKACHU
-	db BERRY
-	db 23
+	db LIGHT_BALL
+	db 61
 	dw PIKACHU
-	db BERRY
-	db 23
+	db LIGHT_BALL
+	db 61
 	dw PIKACHU
-	db BERRY
-	db 23
+	db LIGHT_BALL
+	db 61
 	dw PIKACHU
-	db BERRY
+	db LIGHT_BALL
 	db -1 ; end
 
 	next_list_item ; POKEFANM (5)
 	db "CARTER@", TRAINERTYPE_ITEM
-	db 29
-	dw BULBASAUR
-	db BERRY
-	db 29
-	dw CHARMANDER
-	db BERRY
-	db 29
-	dw SQUIRTLE
-	db BERRY
+	db 63
+	dw VENUSAUR
+	db GOLD_BERRY
+	db 63
+	dw CHARIZARD
+	db GOLD_BERRY
+	db 63
+	dw BLASTOISE
+	db GOLD_BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (6)
 	db "TREVOR@", TRAINERTYPE_ITEM
-	db 33
-	dw PSYDUCK
-	db BERRY
+	db 65
+	dw GOLDUCK
+	db GOLD_BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (7)
@@ -6024,15 +6024,15 @@ PokefanMGroup:
 
 	next_list_item ; POKEFANM (12)
 	db "ALEX@", TRAINERTYPE_ITEM
-	db 29
+	db 64
 	dw NIDOKING
-	db BERRY
-	db 29
+	db GOLD_BERRY
+	db 64
 	dw SLOWKING
-	db BERRY
-	db 29
+	db GOLD_BERRY
+	db 64
 	dw SEAKING
-	db BERRY
+	db GOLD_BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (13)

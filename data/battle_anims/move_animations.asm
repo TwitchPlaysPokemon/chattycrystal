@@ -264,7 +264,7 @@ MoveAnimations:
 	dw BattleAnim_TeeterDance
 	dw BattleAnim_BlazeKick
 	dw BattleAnim_IceBall      ; 108
-	dw BattleAnim_HiJumpKick   ; PLACEHOLDER
+	dw BattleAnim_PoisonFang
 	dw BattleAnim_IcePunch     ; PLACEHOLDER
 	dw BattleAnim_Crunch       ; PLACEHOLDER
 	dw BattleAnim_Dynamicpunch ; PLACEHOLDER
@@ -3144,6 +3144,31 @@ BattleAnim_IceBall:
 	anim_call BattleAnim_IcePunch_branch_cbbdf
 	anim_wait 32
 	anim_ret
+	
+BattleAnim_PoisonFang:
+	anim_3gfx ANIM_GFX_CUT, ANIM_GFX_HIT, ANIM_GFX_POISON
+    anim_obj ANIM_OBJ_BITE, 136, 56, $98
+    anim_obj ANIM_OBJ_BITE, 136, 56, $18
+    anim_wait 8
+    anim_sound 0, 1, SFX_BITE
+    anim_obj ANIM_OBJ_01, 144, 48, $18
+    anim_bgeffect ANIM_BG_1F, $14, $2, $0
+    anim_wait 4
+    anim_clearobjs
+    anim_wait 8
+.loop
+    anim_sound 0, 1, SFX_TOXIC
+    anim_obj ANIM_OBJ_1A, 132, 72, $0
+    anim_wait 8
+    anim_sound 0, 1, SFX_TOXIC
+    anim_obj ANIM_OBJ_1A, 116, 72, $0
+    anim_wait 8
+    anim_sound 0, 1, SFX_TOXIC
+    anim_obj ANIM_OBJ_1A, 148, 72, $0
+    anim_wait 8
+    anim_loop 2, .loop
+    anim_wait 48
+    anim_ret
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE

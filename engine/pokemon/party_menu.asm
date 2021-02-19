@@ -66,7 +66,7 @@ BT_PartySelect:
 	jp ReturnToMapWithSpeechTextbox
 
 .Menu:
-	; 3 menu headers; eggs (implicitly banned), banned, regular
+	; 2 menu headers; eggs (banned), regular
 	; Check if mon is banned.
 	ld a, [wCurPartyMon]
 	call BT_CheckEnterState

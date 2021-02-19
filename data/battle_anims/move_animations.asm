@@ -262,7 +262,7 @@ MoveAnimations:
 	dw BattleAnim_Dive
 	dw BattleAnim_ArmThrust
 	dw BattleAnim_TeeterDance
-	dw BattleAnim_Doubleslap   ; PLACEHOLDER
+	dw BattleAnim_BlazeKick
 	dw BattleAnim_PsychUp      ; 108, PLACEHOLDER
 	dw BattleAnim_HiJumpKick   ; PLACEHOLDER
 	dw BattleAnim_IcePunch     ; PLACEHOLDER
@@ -3115,6 +3115,23 @@ BattleAnim_TeeterDance:
 	anim_incbgeffect ANIM_BG_2C
     anim_call BattleAnim_ShowMon_0
     anim_ret
+	
+BattleAnim_BlazeKick:
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_FIRE
+	anim_bgeffect ANIM_BG_1F, $05, $2, $0
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $3
+	anim_obj ANIM_OBJ_07, 136, 48, $43
+	anim_sound 0, 1, SFX_EMBER
+.loop
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $1
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $4
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $5
+	anim_obj ANIM_OBJ_07, 136, 48, $0
+	anim_obj ANIM_OBJ_00, 136, 48, $0
+	anim_wait 16
+	anim_loop 3, .loop
+	anim_wait 32
+	anim_ret
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE

@@ -342,7 +342,7 @@ BitmasksPointers:
 	dw BunearyBitmasks
 	dw LopunnyBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Stunky
-	dw PlaceholderBitmasks ; PLACEHOLDER - Skuntank
+	dw SkuntankBitmasks
 	dw BronzorBitmasks
 	dw BronzongBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Bonsly

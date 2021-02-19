@@ -342,7 +342,7 @@ FramesPointers:
 	dba BunearyFrames
 	dba LopunnyFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Stunky
-	dba PlaceholderFrames ; PLACEHOLDER - Skuntank
+	dba SkuntankFrames
 	dba BronzorFrames
 	dba BronzongFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Bonsly

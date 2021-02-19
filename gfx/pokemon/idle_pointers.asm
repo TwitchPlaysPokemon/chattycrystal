@@ -342,7 +342,7 @@ AnimationIdlePointers:
 	dw BunearyAnimationIdle
 	dw LopunnyAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Stunky
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Skuntank
+	dw SkuntankAnimationIdle
 	dw BronzorAnimationIdle
 	dw BronzongAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Bonsly

@@ -342,7 +342,7 @@ AnimationPointers:
 	dw BunearyAnimation
 	dw LopunnyAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Stunky
-	dw PlaceholderAnimation ; PLACEHOLDER - Skuntank
+	dw SkuntankAnimation
 	dw BronzorAnimation
 	dw BronzongAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Bonsly

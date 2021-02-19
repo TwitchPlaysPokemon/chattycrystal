@@ -95,6 +95,7 @@ Landmarks:
 	landmark  76, 132, Route20Name
 	landmark  68, 132, SeafoamIslandsName
 	landmark  52, 132, CinnabarIslandName
+	landmark  48, 128, PokemonMansionName
 	landmark  52, 120, Route21Name
 	landmark  36,  68, Route22Name
 	landmark  28,  52, VictoryRoadName

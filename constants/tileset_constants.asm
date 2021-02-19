@@ -40,6 +40,7 @@
 	const TILESET_MUSEUM               ; 26
 	const TILESET_KANTO_FOREST         ; 27
 	const TILESET_SAFARI               ; 28
+	const TILESET_PKMN_MANSION         ; 29
 
 ; bg palette values (see gfx/tilesets/*_palette_map.asm)
 ; TilesetBGPalette indexes (see gfx/tilesets/bg_tiles.pal)

@@ -272,6 +272,7 @@ TilesetAerodactylWordRoomAnim:
 TilesetRoute23Anim:
 TilesetMuseumAnim:
 TilesetKantoForestAnim:
+TilesetPkmnMansionAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation

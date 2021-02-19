@@ -53,3 +53,4 @@ Tilesets::
 	tileset TilesetMuseum
 	tileset TilesetKantoForest
 	tileset TilesetSafari
+	tileset TilesetPkmnMansion

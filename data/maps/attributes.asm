@@ -488,6 +488,10 @@ ENDM
 	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $1d, 0
 	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $1d, 0
 	map_attributes CeruleanCaveB1F, CERULEAN_CAVE_B1F, $1d, 0
+	map_attributes PokemonMansion1F, POKEMON_MANSION_1F, $2e, 0
+	map_attributes PokemonMansion2F, POKEMON_MANSION_2F, $2e, 0
+	map_attributes PokemonMansion3F, POKEMON_MANSION_3F, $2e, 0
+	map_attributes PokemonMansionB1F, POKEMON_MANSION_B1F, $2e, 0
 	map_attributes EcruteakTinTowerEntrance, ECRUTEAK_TIN_TOWER_ENTRANCE, $00, 0
 	map_attributes WiseTriosRoom, WISE_TRIOS_ROOM, $00, 0
 	map_attributes EcruteakPokecenter1F, ECRUTEAK_POKECENTER_1F, $00, 0

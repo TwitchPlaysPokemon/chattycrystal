@@ -148,6 +148,10 @@ ENDM
 	map_const CERULEAN_CAVE_1F,                            20, 11 ; 91
 	map_const CERULEAN_CAVE_2F,                            15,  9 ; 92
 	map_const CERULEAN_CAVE_B1F,                           15,  9 ; 93
+	map_const POKEMON_MANSION_1F,                          15, 14 ; 94
+	map_const POKEMON_MANSION_2F,                          15, 14 ; 95
+	map_const POKEMON_MANSION_3F,                          15,  9 ; 96
+	map_const POKEMON_MANSION_B1F,                         15, 14 ; 97
 
 	newgroup                                                      ;  4
 

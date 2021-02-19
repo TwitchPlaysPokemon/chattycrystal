@@ -376,3 +376,12 @@ INCBIN "data/tilesets/safari_metatiles.bin"
 
 TilesetSafariColl:
 INCLUDE "data/tilesets/safari_collision.asm"
+
+TilesetPkmnMansionGFX:
+INCBIN "gfx/tilesets/pkmn_mansion.2bpp.lz"
+
+TilesetPkmnMansionMeta:
+INCBIN "data/tilesets/pkmn_mansion_metatiles.bin"
+
+TilesetPkmnMansionColl:
+INCLUDE "data/tilesets/pkmn_mansion_collision.asm"

@@ -1535,9 +1535,9 @@ URFGroup:
 	db "URF@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
 	db 58
-	dw BLASTOISE ;KYOGRE
+	dw KYOGRE
 	db GOLD_BERRY
-	dw SURF, ICE_BEAM, THUNDER, NO_MOVE ;CALM_MIND
+	dw SURF, ICE_BEAM, THUNDER, CALM_MIND
 	bigdw $FFFF
 	bigdw 200
 	bigdw 132
@@ -2460,11 +2460,11 @@ LassGroup:
 
 	next_list_item ; LASS (9)
 	db "MICHELLE@", TRAINERTYPE_NORMAL
-	db 32
-	dw SKIPLOOM
-	db 33
-	dw HOPPIP
-	db 34
+	db 59
+	dw JUMPLUFF
+	db 59
+	dw JUMPLUFF
+	db 59
 	dw JUMPLUFF
 	db -1 ; end
 
@@ -3038,11 +3038,11 @@ BeautyGroup:
 
 	next_list_item ; BEAUTY (14)
 	db "JULIA@", TRAINERTYPE_NORMAL
-	db 32
-	dw PARAS
-	db 32
-	dw EXEGGCUTE
-	db 35
+	db 59
+	dw PARASECT
+	db 59
+	dw EXEGGUTOR
+	db 59
 	dw PARASECT
 	db -1 ; end
 
@@ -5313,7 +5313,7 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (19)
 	db "TANYA@", TRAINERTYPE_NORMAL
-	db 37
+	db 61
 	dw EXEGGUTOR
 	db -1 ; end
 
@@ -5992,17 +5992,17 @@ TwinsGroup:
 
 	next_list_item ; TWINS (5)
 	db "JO & ZOE@", TRAINERTYPE_NORMAL
-	db 35
+	db 60
 	dw VICTREEBEL
-	db 35
+	db 60
 	dw VILEPLUME
 	db -1 ; end
 
 	next_list_item ; TWINS (6)
 	db "JO & ZOE@", TRAINERTYPE_NORMAL
-	db 35
+	db 60
 	dw VILEPLUME
-	db 35
+	db 60
 	dw VICTREEBEL
 	db -1 ; end
 

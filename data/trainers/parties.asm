@@ -5906,6 +5906,16 @@ SageGroup:
 	db 65
 	dw CHANDELURE
 	db -1 ; end
+	
+	next_list_item ; SAGE (12)
+	db "YANG@", TRAINERTYPE_NORMAL
+	db 63
+	dw DUSKULL
+	db 64
+	dw DUSCLOPS
+	db 65
+	dw DUSKNOIR
+	db -1 ; end
 
 	end_list_items
 

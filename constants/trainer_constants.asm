@@ -524,6 +524,7 @@ CHRIS EQU __enum__
 	const GAKU
 	const MASA
 	const YIN
+	const YANG
 
 	trainerclass MEDIUM ; 20
 	const MARTHA

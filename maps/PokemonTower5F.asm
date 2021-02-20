@@ -29,6 +29,26 @@ PokemonTower5F_HealPad:
 	para "<PLAYER>'s #MON"
 	line "are fully healed!"
 	done
+	
+TrainerSageYang:
+	trainer SAGE, YANG, EVENT_BEAT_SAGE_YANG, SageYangSeenText, SageYangBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SageYangAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+SageYangSeenText:
+SageYangBeatenText:
+SageYangAfterBattleText:
+	text "<...>"
+	done
+	
+PokemonTower5fMaxRevive:
+	itemball MAX_REVIVE
 
 PokemonTower5F_EnableHealPad:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
@@ -55,4 +75,6 @@ PokemonTower5F_MapEvents:
 
 	db 0 ; bg events
 
-	db 0 ; object events
+	db 2 ; object events
+	object_event 12,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageYang, -1
+	object_event 13,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower5fMaxRevive, EVENT_POKEMON_TOWER_5F_MAX_REVIVE

@@ -358,6 +358,7 @@ MoveAnimations:
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_RockSlide    ; PLACEHOLDER
 	dw BattleAnim_Amnesia      ; PLACEHOLDER
+	dw BattleAnim_HeldItemTrigger
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -1332,10 +1333,17 @@ BattleAnim_DoubleTeam:
 	anim_ret
 
 BattleAnim_Recover:
-	anim_1gfx ANIM_GFX_BUBBLE
-	anim_call BattleAnim_TargetObj_1Row
-	anim_sound 0, 0, SFX_FULL_HEAL
+	anim_2gfx ANIM_GFX_BUBBLE, ANIM_GFX_SHINE
+	anim_sound 0, 0, SFX_SHARPEN
 	anim_bgeffect ANIM_BG_18, $0, $1, $40
+	anim_call BattleAnim_Recover_branch
+	anim_wait 32
+	anim_incbgeffect ANIM_BG_18
+	anim_bgeffect ANIM_BG_07, $0, $0, $0
+	anim_call BattleAnim_Recover_branch_cbc6a
+	anim_ret
+
+BattleAnim_Recover_branch:	
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $30
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $31
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $32
@@ -1345,8 +1353,6 @@ BattleAnim_Recover:
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $36
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $37
 	anim_wait 64
-	anim_incbgeffect ANIM_BG_18
-	anim_call BattleAnim_ShowMon_0
 	anim_ret
 	
 BattleAnim_Taunt:
@@ -3737,6 +3743,8 @@ BattleAnim_GigaDrain:
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_1C
 	anim_call BattleAnim_ShowMon_0
+	anim_wait 1
+	anim_bgeffect ANIM_BG_07, $0, $0, $0
 .loop2
 	anim_sound 0, 0, SFX_METRONOME
 	anim_obj ANIM_OBJ_GLIMMER, 24, 64, $0
@@ -4864,6 +4872,7 @@ BattleAnim_SandAttack_branch_cbc5b:
 BattleAnim_Moonlight_branch_cbc6a:
 BattleAnim_MorningSun_branch_cbc6a:
 BattleAnim_Synthesis_branch_cbc6a:
+BattleAnim_Recover_branch_cbc6a:
 	anim_sound 0, 0, SFX_METRONOME
 	anim_obj ANIM_OBJ_GLIMMER, 44, 64, $0
 	anim_wait 5
@@ -4890,6 +4899,14 @@ BattleAnim_Synthesis_branch_cbc80:
 	anim_wait 5
 	anim_loop 2, .loop
 	anim_wait 16
+	anim_ret
+	
+BattleAnim_HeldItemTrigger:
+	anim_1gfx ANIM_GFX_BUBBLE
+	anim_sound 0, 0, SFX_FULL_HEAL
+	anim_bgeffect ANIM_BG_18, $0, $1, $40
+	anim_call BattleAnim_Recover_branch
+	anim_incbgeffect ANIM_BG_18
 	anim_ret
 
 BattleAnim_TargetObj_1Row:

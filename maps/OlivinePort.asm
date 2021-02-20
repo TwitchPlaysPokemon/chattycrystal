@@ -329,25 +329,6 @@ OlivinePortSailorBeforeHOFText:
 	line "allowed in."
 	done
 
-ShoelaceSnorlax:
-	chattyoff
-	opentext
-	writetext ShoelaceSnorlaxText
-	waitbutton
-	closetext
-	chattyon
-	end
-	
-ShoelaceSnorlaxText:
-	text "It's a SNORLAX"
-	line "tying its"
-	cont "shoelaces."
-	
-	para "You'll have to"
-	line "wait until it is"
-	cont "done<...>"
-	done
-
 OlivinePort_MapEvents:
 	db 0, 0 ; filler
 
@@ -361,7 +342,7 @@ OlivinePort_MapEvents:
 	db 1 ; bg events
 	bg_event  1, 22, BGEVENT_ITEM, OlivinePortHiddenProtein
 
-	db 8 ; object events
+	db 7 ; object events
 	object_event  7, 23, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivinePortSailorAtGangwayScript, EVENT_OLIVINE_PORT_SAILOR_AT_GANGWAY
 	object_event  7, 15, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivinePortSailorBeforeHOFScript, EVENT_OLIVINE_PORT_SPRITES_BEFORE_CLAIR
 	object_event  6, 15, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivinePortSailorAfterHOFScript, EVENT_OLIVINE_PORT_SPRITES_AFTER_CLAIR
@@ -369,4 +350,3 @@ OlivinePort_MapEvents:
 	object_event 13, 14, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivinePortFishingGuru2Script, EVENT_OLIVINE_PORT_SPRITES_BEFORE_CLAIR
 	object_event  4, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivinePortYoungsterScript, EVENT_OLIVINE_PORT_SPRITES_AFTER_CLAIR
 	object_event 11, 15, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivinePortCooltrainerFScript, EVENT_OLIVINE_PORT_SPRITES_AFTER_CLAIR
-	object_event  7, 14, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ShoelaceSnorlax, EVENT_OLIVINE_PORT_SPRITES_AFTER_CLAIR

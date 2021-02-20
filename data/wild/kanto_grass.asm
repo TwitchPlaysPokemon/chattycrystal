@@ -920,4 +920,166 @@ KantoGrassWildMons:
 	dbw 58, SWAMPERT
 	dbw 58, CHANSEY
 	
+	map_id POKEMON_TOWER_2F
+	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 58, LITWICK 
+	dbw 58, ZUBAT
+	dbw 60, KANGASKHAN
+	dbw 60, GOLBAT
+	dbw 62, LAMPENT
+	dbw 62, CHANDELURE
+	dbw 60, CHANDELURE
+	; day
+	dbw 58, LITWICK 
+	dbw 58, ZUBAT
+	dbw 60, KANGASKHAN
+	dbw 60, GOLBAT
+	dbw 62, LAMPENT
+	dbw 62, CHANDELURE
+	dbw 60, CHANDELURE
+	; nite
+	dbw 58, GASTLY
+	dbw 58, DUSKULL
+	dbw 60, DUSCLOPS
+	dbw 60, MISDREAVUS
+	dbw 60, HAUNTER
+	dbw 60, GENGAR
+	dbw 60, DUSKNOIR
+	
+	map_id POKEMON_TOWER_3F
+	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 58, LITWICK 
+	dbw 58, ZUBAT
+	dbw 60, MAROWAK
+	dbw 60, GOLBAT
+	dbw 62, LAMPENT
+	dbw 62, CHANDELURE
+	dbw 60, CHANDELURE
+	; day
+	dbw 58, LITWICK 
+	dbw 58, ZUBAT
+	dbw 60, MAROWAK
+	dbw 60, GOLBAT
+	dbw 62, LAMPENT
+	dbw 62, CHANDELURE
+	dbw 60, CHANDELURE
+	; nite
+	dbw 58, GASTLY
+	dbw 58, DUSKULL
+	dbw 60, DUSCLOPS
+	dbw 60, MISDREAVUS
+	dbw 60, HAUNTER
+	dbw 60, GENGAR
+	dbw 60, DUSKNOIR
+	
+	map_id POKEMON_TOWER_4F
+	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 58, LITWICK 
+	dbw 58, CUBONE
+	dbw 60, MAROWAK
+	dbw 60, HAUNTER
+	dbw 62, LAMPENT
+	dbw 62, CHANDELURE
+	dbw 60, CHANDELURE
+	; day
+	dbw 58, LITWICK 
+	dbw 58, CUBONE
+	dbw 60, MAROWAK
+	dbw 60, HAUNTER
+	dbw 62, LAMPENT
+	dbw 62, CHANDELURE
+	dbw 60, CHANDELURE
+	; nite
+	dbw 58, GASTLY
+	dbw 58, DUSKULL
+	dbw 60, DUSCLOPS
+	dbw 60, MISDREAVUS
+	dbw 60, HAUNTER
+	dbw 60, GENGAR
+	dbw 60, DUSKNOIR
+	
+	map_id POKEMON_TOWER_5F
+	db 2 percent, 2 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 56, LITWICK 
+	dbw 56, CUBONE
+	dbw 58, ZUBAT
+	dbw 58, GASTLY
+	dbw 60, LAMPENT
+	dbw 60, CHANDELURE
+	dbw 58, CHANDELURE
+	; day
+	dbw 56, LITWICK 
+	dbw 56, CUBONE
+	dbw 58, ZUBAT
+	dbw 58, GASTLY
+	dbw 60, LAMPENT
+	dbw 60, CHANDELURE
+	dbw 58, CHANDELURE
+	; nite
+	dbw 56, GASTLY
+	dbw 56, DUSKULL
+	dbw 58, GASTLY
+	dbw 58, MISDREAVUS
+	dbw 58, CUBONE
+	dbw 58, DUSKNOIR
+	dbw 58, GENGAR
+	
+	map_id POKEMON_TOWER_6F
+	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 58, LITWICK 
+	dbw 58, MAROWAK
+	dbw 60, LAMPENT
+	dbw 60, MISDREAVUS
+	dbw 62, CHANDELURE
+	dbw 62, DUSCLOPS
+	dbw 60, CHANDELURE
+	; day
+	dbw 58, LITWICK 
+	dbw 58, MAROWAK
+	dbw 60, LAMPENT
+	dbw 60, MISDREAVUS
+	dbw 62, CHANDELURE
+	dbw 62, DUSCLOPS
+	dbw 60, CHANDELURE
+	; nite
+	dbw 58, DUSKULL
+	dbw 58, MISDREAVUS
+	dbw 60, DUSCLOPS
+	dbw 60, HAUNTER
+	dbw 60, DUSKNOIR
+	dbw 60, GENGAR
+	dbw 60, DUSKNOIR
+	
+	map_id POKEMON_TOWER_7F
+	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 59, LITWICK 
+	dbw 59, MAROWAK
+	dbw 61, LAMPENT
+	dbw 61, MISDREAVUS
+	dbw 63, CHANDELURE
+	dbw 63, DUSCLOPS
+	dbw 61, CHANDELURE
+	; day
+	dbw 59, LITWICK 
+	dbw 59, MAROWAK
+	dbw 61, LAMPENT
+	dbw 61, MISDREAVUS
+	dbw 63, CHANDELURE
+	dbw 63, DUSCLOPS
+	dbw 61, CHANDELURE
+	; nite
+	dbw 59, DUSKULL
+	dbw 59, MISDREAVUS
+	dbw 61, DUSCLOPS
+	dbw 61, HAUNTER
+	dbw 61, DUSKNOIR
+	dbw 61, GENGAR
+	dbw 61, DUSKNOIR
+	
 	db -1 ; end

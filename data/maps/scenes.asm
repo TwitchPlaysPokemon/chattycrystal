@@ -86,4 +86,5 @@ MapScenes::
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	scene_var ROUTE_35_GOLDENROD_GATE,                     wRoute35GoldenrodGateSceneID
 	scene_var PEWTER_MUSEUM_1F,                            wPewterMuseum1FSceneID
+	scene_var POKEMON_TOWER_2F,                            wPokemonTower2FSceneID
 	db -1 ; end

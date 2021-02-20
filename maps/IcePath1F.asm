@@ -16,8 +16,8 @@ IcePath1F_MapScripts:
 
 IcePath1FTM_PSYCH_UP:
 	itemball TM_PSYCH_UP
-	
-RouteIcePathEvan:
+
+IcePathEvan:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, IcePath1fPlayerTurnHead
@@ -40,6 +40,7 @@ RouteIcePathEvan:
 	special FadeOutMusic
 	playsound SFX_EXIT_BUILDING
 	disappear ICEPATH1F_EVAN
+	setflag EVENT_EVAN_AT_ICE_PATH
 	waitsfx
 	playmapmusic
 	end
@@ -80,7 +81,7 @@ IcePath1F_MapEvents:
 	warp_event 37, 13, ICE_PATH_B1F, 7
 
 	db 1 ; coord events
-	coord_event 36, 23, SCENE_DEFAULT, RouteIcePathEvan
+	coord_event 36, 23, SCENE_DEFAULT, IcePathEvan
 	
 	db 0 ; bg events
 

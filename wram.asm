@@ -2677,8 +2677,9 @@ wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
 wRoute35GoldenrodGateSceneID::                    db ; d9c1
 wPewterMuseum1FSceneID::                          db
+wPokemonTower2FSceneID::                          db
 
-	ds 47
+	ds 46
 
 ; fight counts
 wJackFightCount::    db ; d9f2

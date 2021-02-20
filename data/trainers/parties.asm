@@ -214,7 +214,7 @@ ACChrisGroup:
 	db "KENYA@"
 	db -1
 
-	next_list_item ; EVAN4
+	next_list_item ; EVAN3
 	db "EVAN@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
 	db 43
@@ -296,6 +296,90 @@ ACChrisGroup:
 	db "FOX,/!!!)u@"
 
 	db -1
+	
+	next_list_item ; EVAN4
+	db "EVAN@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 61
+	dw AERODACTYL
+	db SURF_MAIL
+	dw STEEL_WING, SUPERSONIC, ROCK_THROW, SKY_ATTACK
+	bigdw $FFFF
+	bigdw 210
+	bigdw 164
+	bigdw 111
+	bigdw 194
+	bigdw 113
+	bigdw 131
+	db "JHH@"
+	
+	db 61
+	dw MILTANK
+	db GOLD_LEAF
+	dw SURF, STRENGTH, ROLLOUT, BODY_SLAM
+	bigdw $0FFF
+	bigdw 212
+	bigdw 142
+	bigdw 170
+	bigdw 158
+	bigdw 80
+	bigdw 158
+	db "!L@"
+	
+	db 38
+	dw JOLTEON
+	db ULTRA_BALL
+	dw HYPER_BEAM, FLAIL, BATON_PASS, CHARM
+	bigdw $FFFF
+	bigdw 108
+	bigdw 80
+	bigdw 69
+	bigdw 119
+	bigdw 103
+	bigdw 92
+	db "FOX,/!!!)u@"
+	
+	db 52
+	dw SEADRA
+	db NUGGET
+	dw OCTAZOOKA, HYDRO_PUMP, DRAGONBREATH, ICY_WIND
+	bigdw $0FFF
+	bigdw 142
+	bigdw 92
+	bigdw 122
+	bigdw 124
+	bigdw 128
+	bigdw 76
+	db "---sxjxKKK@"
+	
+	db 63
+	dw NOCTOWL
+	db FLOWER_MAIL
+	dw THIEF, HYPER_BEAM, WING_ATTACK, SUNNY_DAY
+	bigdw $0FFF
+	bigdw 237
+	bigdw 120
+	bigdw 105
+	bigdw 128
+	bigdw 151
+	bigdw 164
+	db "KENYA@"
+
+	db 75
+	dw VENUSAUR
+	db SUN_STONE
+	dw FLASH, CUT, FURY_CUTTER, BODY_SLAM
+	bigdw $FFFF
+	bigdw 265
+	bigdw 183
+	bigdw 193
+	bigdw 167
+	bigdw 205
+	bigdw 205
+	db "ul:::utx@"
+
+	db -1
+	
 	end_list_items
 
 FCChrisGroup:
@@ -5866,6 +5950,12 @@ MediumGroup:
 	dw SLOWKING
 	db 59
 	dw SLOWBRO
+	db -1 ; end
+	
+	next_list_item ; MEDIUM (8)
+	db "CARLY@", TRAINERTYPE_NORMAL
+	db 67
+	dw GENGAR
 	db -1 ; end
 
 	end_list_items

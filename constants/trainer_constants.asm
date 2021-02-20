@@ -532,6 +532,7 @@ CHRIS EQU __enum__
 	const ETHEL
 	const REBECCA
 	const DORIS
+	const CARLY
 
 	trainerclass BOARDER ; 21
 	const RONALD
@@ -629,6 +630,7 @@ CHRIS EQU __enum__
 	const EVAN1
 	const EVAN2
 	const EVAN3
+	const EVAN4
 
 	trainerclass FC_CHRIS ; 31
 	const Y_FUSEDCRYSTAL

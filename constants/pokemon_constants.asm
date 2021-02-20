@@ -408,20 +408,20 @@ JOHTO_POKEMON EQU const_value
 ; Fused Crystal mons
 	const ONIXTRET     ; 182 - MISSING
 	const CHIQUIRTLE   ; 183 - MISSING
-	const BAYTORTLE    ; 184 - MISSING
+	const BAYTORTLE    ; 184
 	const MEGASTOISE   ; 185
 	const HOOTDUO      ; 186 - MISSING
 	const NOCTDRIO     ; 187
 	const TOGEKEY      ; 188 - MISSING
 	const TOGETAPE     ; 189
 	const HOPPORITA    ; 18a - MISSING
-	const SKIPLEEF     ; 18b - MISSING
+	const SKIPLEEF     ; 18b
 	const JUMPANIUM    ; 18c
 	const WOOCHUM      ; 18d - MISSING
 	const QUAGYNX      ; 18e
 	const STEELURRET   ; 18f
 ; TPP's signature fakemon
-	const PHANCERO     ; 190 - MISSING
+	const PHANCERO     ; 190
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

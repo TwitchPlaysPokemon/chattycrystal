@@ -1,3 +1,6 @@
+	object_const_def ; object_event constants
+	const SAFARIZONENORTH_LATIOS
+
 SafariZoneNorth_MapScripts:
 	db 0 ; scene scripts
 
@@ -47,6 +50,23 @@ SafariZoneNorthRestHouseScript:
 .Text:
 	text "It's locked…"
 	done
+	
+Latios:
+	faceplayer
+	opentext
+	writetext LatiosText
+	cry LATIOS
+	pause 15
+	closetext
+	loadwildmon LATIOS, 65
+	startbattle
+	disappear SAFARIZONENORTH_LATIOS
+	reloadmapafterbattle
+	end
+
+LatiosText:
+	text "Laaati!"
+	done
 
 SafariZoneNorth_MapEvents:
 	db 0, 0 ; filler
@@ -71,4 +91,6 @@ SafariZoneNorth_MapEvents:
 	bg_event 36,  4, BGEVENT_READ, SafariZoneNorthRestHouseSignScript
 	bg_event 35,  3, BGEVENT_READ, SafariZoneNorthRestHouseScript
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event 30,  2, SPRITE_DRAGON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Latios, EVENT_LATIOS_IN_SAFARI_ZONE
+

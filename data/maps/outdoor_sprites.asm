@@ -313,7 +313,8 @@ DungeonsGroupSprites:
 
 SafariZoneGroupSprites:
 ; SafariZoneCenter, SafariZoneEast, SafariZoneNorth, SafariZoneWest
-	; 0 of max 9 walking sprites
+	db SPRITE_DRAGON
+	; 1 of max 9 walking sprites
 	db SPRITE_POKE_BALL
 	db 0 ; end
 

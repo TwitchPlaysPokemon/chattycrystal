@@ -406,18 +406,18 @@ JOHTO_POKEMON EQU const_value
 	const CUTIEFLY     ; 180
 	const RIBOMBEE     ; 181
 ; Fused Crystal mons
-	const ONIXTRET     ; 182 - MISSING
-	const CHIQUIRTLE   ; 183 - MISSING
+	const ONIXTRET     ; 182
+	const CHIQUIRTLE   ; 183
 	const BAYTORTLE    ; 184
 	const MEGASTOISE   ; 185
-	const HOOTDUO      ; 186 - MISSING
+	const HOOTDUO      ; 186
 	const NOCTDRIO     ; 187
-	const TOGEKEY      ; 188 - MISSING
+	const TOGEKEY      ; 188
 	const TOGETAPE     ; 189
-	const HOPPORITA    ; 18a - MISSING
+	const HOPPORITA    ; 18a
 	const SKIPLEEF     ; 18b
 	const JUMPANIUM    ; 18c
-	const WOOCHUM      ; 18d - MISSING
+	const WOOCHUM      ; 18d
 	const QUAGYNX      ; 18e
 	const STEELURRET   ; 18f
 ; TPP's signature fakemon

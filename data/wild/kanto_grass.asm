@@ -59,56 +59,56 @@ KantoGrassWildMons:
 	map_id ROCK_TUNNEL_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 10, CUBONE
-	dbw 11, GEODUDE
-	dbw 12, ARON
-	dbw 12, ZUBAT
-	dbw 15, MACHOKE
-	dbw 12, MAROWAK
-	dbw 12, SANDILE
+	dbw 57, CUBONE
+	dbw 58, GEODUDE
+	dbw 59, ARON
+	dbw 59, ZUBAT
+	dbw 62, MACHOKE
+	dbw 59, MAROWAK
+	dbw 59, SANDILE
 	; day
-	dbw 10, CUBONE
-	dbw 11, GEODUDE
-	dbw 12, MACHOP
-	dbw 12, ZUBAT
-	dbw 15, LAIRON
-	dbw 12, MAROWAK
-	dbw 12, SANDILE
+	dbw 57, CUBONE
+	dbw 58, GEODUDE
+	dbw 59, MACHOP
+	dbw 59, ZUBAT
+	dbw 62, LAIRON
+	dbw 59, MAROWAK
+	dbw 59, SANDILE
 	; nite
-	dbw 12, ZUBAT
-	dbw 11, SANDILE
-	dbw 12, ARON
-	dbw 17, HAUNTER
-	dbw 15, ZUBAT
-	dbw 15, SABLEYE
-	dbw 15, SABLEYE
+	dbw 59, ZUBAT
+	dbw 58, SANDILE
+	dbw 59, ARON
+	dbw 64, HAUNTER
+	dbw 62, ZUBAT
+	dbw 62, SABLEYE
+	dbw 62, SABLEYE
 
 	map_id ROCK_TUNNEL_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 12, CUBONE
-	dbw 14, GEODUDE
-	dbw 16, ARON
-	dbw 12, ZUBAT
-	dbw 15, MAROWAK
-	dbw 15, KANGASKHAN
-	dbw 15, KANGASKHAN
+	dbw 59, CUBONE
+	dbw 61, GEODUDE
+	dbw 63, ARON
+	dbw 59, ZUBAT
+	dbw 62, MAROWAK
+	dbw 62, KANGASKHAN
+	dbw 62, KANGASKHAN
 	; day
-	dbw 12, CUBONE
-	dbw 14, GEODUDE
-	dbw 16, LAIRON
-	dbw 12, ZUBAT
-	dbw 15, MAROWAK
-	dbw 15, KANGASKHAN
-	dbw 15, KANGASKHAN
+	dbw 59, CUBONE
+	dbw 61, GEODUDE
+	dbw 63, LAIRON
+	dbw 59, ZUBAT
+	dbw 62, MAROWAK
+	dbw 62, KANGASKHAN
+	dbw 62, KANGASKHAN
 	; nite
-	dbw 12, ZUBAT
-	dbw 14, SANDILE
-	dbw 16, SANDILE
-	dbw 15, ZUBAT
-	dbw 15, SABLEYE
-	dbw 15, SABLEYE
-	dbw 15, SABLEYE
+	dbw 59, ZUBAT
+	dbw 61, SANDILE
+	dbw 63, SANDILE
+	dbw 62, ZUBAT
+	dbw 62, SABLEYE
+	dbw 62, SABLEYE
+	dbw 62, SABLEYE
 
 	map_id VICTORY_ROAD
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -410,29 +410,29 @@ KantoGrassWildMons:
 	map_id ROUTE_10_NORTH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 15, SPEAROW
-	dbw 17, MAREEP
-	dbw 15, RATICATE
-	dbw 15, FEAROW
-	dbw 15, TYNAMO
-	dbw 16, ELECTABUZZ
-	dbw 16, ELECTABUZZ
+	dbw 61, SPEAROW
+	dbw 63, MAREEP
+	dbw 61, RATICATE
+	dbw 61, FEAROW
+	dbw 61, TYNAMO
+	dbw 62, ELECTABUZZ
+	dbw 62, ELECTABUZZ
 	; day
-	dbw 15, SPEAROW
-	dbw 17, HELIOPTILE
-	dbw 15, RATICATE
-	dbw 15, HELIOPTILE
-	dbw 15, TYNAMO
-	dbw 18, ELECTABUZZ
-	dbw 18, ELECTABUZZ
+	dbw 61, SPEAROW
+	dbw 63, HELIOPTILE
+	dbw 61, RATICATE
+	dbw 61, HELIOPTILE
+	dbw 61, TYNAMO
+	dbw 64, ELECTABUZZ
+	dbw 64, ELECTABUZZ
 	; nite
-	dbw 15, TYNAMO
-	dbw 17, VOLTORB
-	dbw 15, RATICATE
-	dbw 15, TYNAMO
-	dbw 15, TYNAMO
-	dbw 16, ELECTABUZZ
-	dbw 16, ELECTABUZZ
+	dbw 61, TYNAMO
+	dbw 63, VOLTORB
+	dbw 61, RATICATE
+	dbw 61, TYNAMO
+	dbw 61, TYNAMO
+	dbw 62, ELECTABUZZ
+	dbw 62, ELECTABUZZ
 
 	map_id ROUTE_11
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

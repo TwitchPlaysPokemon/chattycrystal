@@ -34,9 +34,9 @@ KantoWaterWildMons:
 
 	map_id ROUTE_10_NORTH
 	db 4 percent ; encounter rate
-	dbw 15, BUIZEL
-	dbw 10, REMORAID
-	dbw 15, OCTILLERY
+	dbw 60, BUIZEL
+	dbw 55, REMORAID
+	dbw 60, OCTILLERY
 
 	map_id ROUTE_12
 	db 6 percent ; encounter rate

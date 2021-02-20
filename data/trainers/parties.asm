@@ -4948,7 +4948,7 @@ HikerGroup:
 
 	next_list_item ; HIKER (17)
 	db "JIM@", TRAINERTYPE_NORMAL
-	db 35
+	db 67
 	dw MACHAMP
 	db -1 ; end
 
@@ -6143,9 +6143,9 @@ PokefanMGroup:
 
 	next_list_item ; POKEFANM (3)
 	db "ROBERT@", TRAINERTYPE_ITEM
-	db 33
+	db 67
 	dw QUAGSIRE
-	db BERRY
+	db GOLD_BERRY
 	db -1 ; end
 
 	next_list_item ; POKEFANM (4)

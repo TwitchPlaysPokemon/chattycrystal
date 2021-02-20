@@ -190,6 +190,7 @@ BattleAnimFrameData:
 	dw .Frameset_bb ; BATTLEANIMFRAMESET_BB
 	dw .Frameset_bc ; BATTLEANIMFRAMESET_BC
 	dw .Frameset_bd ; BATTLEANIMFRAMESET_BD
+	dw .Frameset_be ; BATTLEANIMFRAMESET_BE
 
 .Frameset_00:
 	frame BATTLEANIMOAMSET_00,  6
@@ -1292,3 +1293,8 @@ BattleAnimFrameData:
 .Frameset_bd:
 	frame BATTLEANIMOAMSET_DA,  8
 	endanim
+	
+.Frameset_be:
+	frame BATTLEANIMOAMSET_03,  4
+	frame BATTLEANIMOAMSET_01,  1
+	dorestart

@@ -49,3 +49,5 @@ AnimObjGFX:
 	anim_obj_gfx  1, NULL
 	anim_obj_gfx  1, NULL
 	anim_obj_gfx 13, AnimObjTauntGFX
+	anim_obj_gfx 18, AnimObjMiniGFX
+	anim_obj_gfx  5, AnimObjStarsGFX

@@ -196,7 +196,7 @@ ZigzagoonEggMoves:
 	dw CHARM
 	dw PURSUIT
 	dw SUBSTITUTE
-;	dw TICKLE ;TODO: add when tickle is added
+	dw TICKLE
 	dw THIEF
 	dw -1 ; end
 

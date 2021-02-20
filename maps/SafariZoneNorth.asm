@@ -14,21 +14,7 @@ SafariZoneNorthSignScript:
 	done
 
 SafariZoneNorthTrainerTips1Script:
-	jumptext .Text
-
-.Text:
-	text "The sign is"
-	line "faded…"
-	done
-
 SafariZoneNorthTrainerTips2Script:
-	jumptext .Text
-
-.Text:
-	text "The sign is"
-	line "faded…"
-	done
-
 SafariZoneNorthTrainerTips3Script:
 	jumptext .Text
 
@@ -58,6 +44,7 @@ Latios:
 	cry LATIOS
 	pause 15
 	closetext
+	setevent EVENT_LATIOS_IN_SAFARI_ZONE
 	loadwildmon LATIOS, 65
 	startbattle
 	disappear SAFARIZONENORTH_LATIOS

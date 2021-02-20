@@ -150,24 +150,24 @@ KantoWaterWildMons:
 	db 6 percent ; encounter rate
 	dbw 56, SHELLOS
 	dbw 51, BUIZEL
-	dbw 56, GASTRODON
+	dbw 56, SQUIRTLE
 
 	map_id SAFARI_ZONE_EAST
 	db 6 percent ; encounter rate
 	dbw 56, SHELLOS
 	dbw 51, BUIZEL
-	dbw 56, GASTRODON
+	dbw 56, TOTODILE
 	
 	map_id SAFARI_ZONE_NORTH
 	db 6 percent ; encounter rate
 	dbw 56, SHELLOS
 	dbw 51, BUIZEL
-	dbw 56, GASTRODON
+	dbw 56, PIPLUP
 
 	map_id SAFARI_ZONE_WEST
 	db 6 percent ; encounter rate
 	dbw 56, REMORAID
 	dbw 51, BUIZEL
-	dbw 56, OCTILLERY
+	dbw 56, MUDKIP
 
 	db -1 ; end

@@ -523,6 +523,7 @@ CHRIS EQU __enum__
 	const NEAL
 	const GAKU
 	const MASA
+	const YIN
 
 	trainerclass MEDIUM ; 20
 	const MARTHA

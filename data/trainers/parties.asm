@@ -5896,6 +5896,16 @@ SageGroup:
 	db 52
 	dw JOLTEON
 	db -1 ; end
+	
+	next_list_item ; SAGE (12)
+	db "YIN@", TRAINERTYPE_NORMAL
+	db 63
+	dw LITWICK
+	db 64
+	dw LAMPENT
+	db 65
+	dw CHANDELURE
+	db -1 ; end
 
 	end_list_items
 

@@ -83,6 +83,7 @@ Route8Snorlax:
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon SNORLAX, 70
+	setflag EVENT_ROUTE_8_SNORLAX
 	startbattle
 	disappear ROUTE8_BIG_SNORLAX
 	reloadmapafterbattle

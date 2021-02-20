@@ -722,7 +722,7 @@ KantoGrassWildMons:
 	dbw 65, BUTTERFREE
 	dbw 64, WEEPINBELL
 	dbw 67, ROSELIA
-	dbw 67, RIMBOMBEE
+	dbw 67, RIBOMBEE
 	; nite
 	dbw 64, GLOOM
 	dbw 64, NOCTOWL

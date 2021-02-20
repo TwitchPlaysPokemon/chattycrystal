@@ -386,6 +386,7 @@ AI_Smart:
 	dbw EFFECT_THUNDER,          AI_Smart_Thunder
 	dbw EFFECT_FLY,              AI_Smart_Fly
 	dbw EFFECT_FAKE_OUT,         AI_Smart_FakeOut
+	dbw EFFECT_CHATTER,          AI_Smart_Chatter
 	db -1 ; end
 
 AI_Smart_Sleep:
@@ -2686,6 +2687,21 @@ AI_Smart_FakeOut:
 	and a
 	ret nz
 
+	dec [hl]
+	dec [hl]
+	dec [hl]
+	ret
+
+AI_Smart_Chatter:
+; Strongly encourage this move if TPP's chatter effect is enabled
+	; Check if the chatter script is enabled. If not, do nothing.
+	; We don't want to outright discourage it, since it might still
+	; be a decent Flying move in some cases.
+	ld a, [wScriptActive]
+	and a
+	ret z
+
+	; Strongly encourage the move
 	dec [hl]
 	dec [hl]
 	dec [hl]

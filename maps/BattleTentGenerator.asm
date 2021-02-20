@@ -5,10 +5,6 @@ BattleTentGenerator_MapScripts:
 	; callbacks
 	db 0
 
-; <scripts go here>
-
-; <text goes here>
-
 BattleTentGenerator_MapEvents:
 	; filler
 	db 0, 0

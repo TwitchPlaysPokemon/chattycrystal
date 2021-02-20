@@ -5,20 +5,17 @@ BattleTentRuins_MapScripts: ; -- Required
 	; callback count
 	db 0
 
-; <scripts go here>
 MapBattleTentRuinsDoorScript:
 	loadfont
 	writetext MapBattleTentRuinsDoorText
 	closetext
 	end
 
-
-; <text goes here>
 MapBattleTentRuinsDoorText:
 	text "It's locked<...>"
 	done
 
-BattleTentRuins_MapEvents: ; -- Required
+BattleTentRuins_MapEvents:
 	db 0, 0 ; Filler
 
 	; warps

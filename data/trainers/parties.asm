@@ -2009,15 +2009,15 @@ YoungsterGroup:
 
 	next_list_item ; YOUNGSTER (11)
 	db "OWEN@", TRAINERTYPE_NORMAL
-	db 35
-	dw GROWLITHE
+	db 66
+	dw ARCANINE
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (12)
 	db "JASON@", TRAINERTYPE_NORMAL
-	db 33
+	db 65
 	dw SANDSLASH
-	db 33
+	db 65
 	dw CROBAT
 	db -1 ; end
 
@@ -3812,11 +3812,11 @@ FisherGroup:
 
 	next_list_item ; FISHER (4)
 	db "KYLE@", TRAINERTYPE_NORMAL
-	db 28
+	db 62
 	dw SEAKING
-	db 31
-	dw POLIWHIRL
-	db 31
+	db 65
+	dw POLITOED
+	db 65
 	dw SEAKING
 	db -1 ; end
 
@@ -3896,31 +3896,31 @@ FisherGroup:
 
 	next_list_item ; FISHER (13)
 	db "MARTIN@", TRAINERTYPE_NORMAL
-	db 32
-	dw REMORAID
-	db 32
-	dw REMORAID
+	db 65
+	dw OCTILLERY
+	db 65
+	dw OCTILLERY
 	db -1 ; end
 
 	next_list_item ; FISHER (14)
 	db "STEPHEN@", TRAINERTYPE_NORMAL
-	db 25
+	db 90
 	dw MAGIKARP
-	db 25
+	db 90
 	dw MAGIKARP
-	db 31
+	db 65
 	dw QWILFISH
-	db 31
+	db 65
 	dw TENTACRUEL
 	db -1 ; end
 
 	next_list_item ; FISHER (15)
 	db "BARNEY@", TRAINERTYPE_NORMAL
-	db 30
+	db 64
 	dw GYARADOS
-	db 30
+	db 64
 	dw GYARADOS
-	db 30
+	db 64
 	dw GYARADOS
 	db -1 ; end
 
@@ -4522,20 +4522,20 @@ SuperNerdGroup:
 
 	next_list_item ; SUPER_NERD (6)
 	db "SAM@", TRAINERTYPE_NORMAL
-	db 34
-	dw GRIMER
-	db 34
+	db 65
+	dw MUK
+	db 65
 	dw MUK
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (7)
 	db "TOM@", TRAINERTYPE_NORMAL
-	db 32
-	dw MAGNEMITE
-	db 32
-	dw MAGNEMITE
-	db 32
-	dw MAGNEMITE
+	db 64
+	dw MAGNETON
+	db 64
+	dw MAGNETON
+	db 64
+	dw MAGNETON
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (8)
@@ -4862,28 +4862,28 @@ BikerGroup:
 
 	next_list_item ; BIKER (3)
 	db "DWAYNE@", TRAINERTYPE_NORMAL
-	db 27
-	dw KOFFING
-	db 28
-	dw KOFFING
-	db 29
-	dw KOFFING
-	db 30
-	dw KOFFING
+	db 62
+	dw WEEZING
+	db 63
+	dw WEEZING
+	db 64
+	dw WEEZING
+	db 65
+	dw WEEZING
 	db -1 ; end
 
 	next_list_item ; BIKER (4)
 	db "HARRIS@", TRAINERTYPE_NORMAL
-	db 34
+	db 66
 	dw FLAREON
 	db -1 ; end
 
 	next_list_item ; BIKER (5)
 	db "ZEKE@", TRAINERTYPE_NORMAL
-	db 32
-	dw KOFFING
-	db 32
-	dw KOFFING
+	db 65
+	dw WEEZING
+	db 65
+	dw WEEZING
 	db -1 ; end
 
 	next_list_item ; BIKER (6)
@@ -5211,17 +5211,17 @@ PsychicGroup:
 
 	next_list_item ; PSYCHIC_T (3)
 	db "HERMAN@", TRAINERTYPE_NORMAL
-	db 30
+	db 75
 	dw EXEGGCUTE
-	db 30
-	dw EXEGGCUTE
-	db 30
+	db 64
+	dw EXEGGUTOR
+	db 64
 	dw EXEGGUTOR
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (4)
 	db "FIDEL@", TRAINERTYPE_NORMAL
-	db 34
+	db 66
 	dw XATU
 	db -1 ; end
 

@@ -1,7 +1,7 @@
 	tilecoll WALL, WALL, WALL, WALL ; 00
 	tilecoll WALL, WALL, WALL, WALL ; 01
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 02
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 03
+	tilecoll FLOOR, SPIN_DOWN, SPIN_UP, FLOOR ; 02
+	tilecoll FLOOR, SPIN_RIGHT, SPIN_RIGHT, FLOOR ; 03
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 04
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 05
 	tilecoll WALL, WALL, WALL, WALL ; 06
@@ -13,19 +13,19 @@
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 0c
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 0d
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 0e
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 0f
+	tilecoll FLOOR, SPIN_LEFT, FLOOR, SPIN_LEFT ; 0f
 	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; 10
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 11
 	tilecoll WALL, WALL, WALL, WALL ; 12
-	tilecoll WALL, WALL, FLOOR, FLOOR ; 13
+	tilecoll WALL, WALL, BRAKE, FLOOR ; 13
 	tilecoll WALL, WALL, WALL, WALL ; 14
-	tilecoll FLOOR, WALL, FLOOR, WALL ; 15
+	tilecoll BRAKE, WALL, FLOOR, WALL ; 15
 	tilecoll WALL, WALL, WALL, WALL ; 16
-	tilecoll FLOOR, WALL, FLOOR, WALL ; 17
+	tilecoll SPIN_UP, WALL, FLOOR, WALL ; 17
 	tilecoll WALL, WALL, WALL, FLOOR ; 18
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 19
 	tilecoll WALL, WALL, FLOOR, WALL ; 1a
-	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 1b
+	tilecoll WALL, FLOOR, SPIN_LEFT, FLOOR ; 1b
 	tilecoll WALL, FLOOR, WALL, WALL ; 1c
 	tilecoll FLOOR, FLOOR, WALL, WALL ; 1d
 	tilecoll FLOOR, WALL, WALL, WALL ; 1e
@@ -36,10 +36,10 @@
 	tilecoll FLOOR, LADDER, FLOOR, FLOOR ; 23
 	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; 24
 	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; 25
-	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 26
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 27
+	tilecoll FLOOR, WALL, SPIN_RIGHT, FLOOR ; 26
+	tilecoll FLOOR, SPIN_RIGHT, SPIN_UP, FLOOR ; 27
 	tilecoll FLOOR, LADDER, FLOOR, FLOOR ; 28
-	tilecoll FLOOR, FLOOR, WALL, WALL ; 29
+	tilecoll FLOOR, BRAKE, WALL, WALL ; 29
 	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 2a
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 2b
 	tilecoll FLOOR, FLOOR, WALL, WALL ; 2c

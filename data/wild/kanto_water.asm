@@ -40,9 +40,9 @@ KantoWaterWildMons:
 
 	map_id ROUTE_12
 	db 6 percent ; encounter rate
-	dbw 25, TENTACOOL
-	dbw 25, QUAGSIRE
-	dbw 25, TENTACRUEL
+	dbw 58, TENTACOOL
+	dbw 58, QUAGSIRE
+	dbw 58, TENTACRUEL
 
 	map_id ROUTE_13
 	db 6 percent ; encounter rate
@@ -145,5 +145,29 @@ KantoWaterWildMons:
 	dbw 35, TENTACOOL
 	dbw 30, TENTACOOL
 	dbw 35, TENTACRUEL
+	
+	map_id SAFARI_ZONE_CENTER
+	db 6 percent ; encounter rate
+	dbw 56, SHELLOS
+	dbw 51, BUIZEL
+	dbw 56, SQUIRTLE
+
+	map_id SAFARI_ZONE_EAST
+	db 6 percent ; encounter rate
+	dbw 56, SHELLOS
+	dbw 51, BUIZEL
+	dbw 56, TOTODILE
+	
+	map_id SAFARI_ZONE_NORTH
+	db 6 percent ; encounter rate
+	dbw 56, SHELLOS
+	dbw 51, BUIZEL
+	dbw 56, PIPLUP
+
+	map_id SAFARI_ZONE_WEST
+	db 6 percent ; encounter rate
+	dbw 56, REMORAID
+	dbw 51, BUIZEL
+	dbw 56, MUDKIP
 
 	db -1 ; end

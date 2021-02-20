@@ -173,7 +173,7 @@ KantoGrassWildMons:
 	dbw 3, PIDGEY
 	dbw 6, FURRET
 	dbw 4, PIDGEY
-	dbw 4, CHARMANDER
+	dbw 4, BULBASAUR
 	; day
 	dbw 2, PIDGEY
 	dbw 2, RATTATA
@@ -181,7 +181,7 @@ KantoGrassWildMons:
 	dbw 3, PIDGEY
 	dbw 6, FURRET
 	dbw 4, PIDGEY
-	dbw 4, BULBASAUR
+	dbw 4, CHARMANDER
 	; nite
 	dbw 2, HOOTHOOT
 	dbw 2, RATTATA
@@ -356,29 +356,29 @@ KantoGrassWildMons:
 	map_id ROUTE_8
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 17, VULPIX
-	dbw 19, PIDGEOTTO
-	dbw 16, ABRA
-	dbw 17, GROWLITHE
-	dbw 16, JIGGLYPUFF
-	dbw 18, VULPIX
-	dbw 18, KADABRA
+	dbw 58, VULPIX
+	dbw 60, PIDGEOTTO
+	dbw 57, ABRA
+	dbw 58, GROWLITHE
+	dbw 57, JIGGLYPUFF
+	dbw 59, NINETALES
+	dbw 59, KADABRA
 	; day
-	dbw 17, SNUBBULL
-	dbw 19, PIDGEOTTO
-	dbw 16, ABRA
-	dbw 17, GROWLITHE
-	dbw 16, JIGGLYPUFF
-	dbw 18, VULPIX
-	dbw 18, KADABRA
+	dbw 58, SNUBBULL
+	dbw 60, PIDGEOTTO
+	dbw 57, ABRA
+	dbw 58, GROWLITHE
+	dbw 57, JIGGLYPUFF
+	dbw 59, VULPIX
+	dbw 59, KADABRA
 	; nite
-	dbw 17, MEOWTH
-	dbw 20, NOCTOWL
-	dbw 16, ABRA
-	dbw 17, HAUNTER
-	dbw 16, JIGGLYPUFF
-	dbw 18, KADABRA
-	dbw 18, KADABRA
+	dbw 58, MEOWTH
+	dbw 61, NOCTOWL
+	dbw 57, ABRA
+	dbw 58, HAUNTER
+	dbw 57, JIGGLYPUFF
+	dbw 59, KADABRA
+	dbw 59, ALAKAZAM
 
 	map_id ROUTE_9
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -630,7 +630,7 @@ KantoGrassWildMons:
 	dbw 25, RATTATA
 	dbw 35, TANGELA
 	dbw 20, RATICATE
-	dbw 30, CHARMANDER
+	dbw 30, BULBASAUR
 	dbw 28, MR__MIME
 	dbw 28, MR__MIME
 	; day
@@ -638,7 +638,7 @@ KantoGrassWildMons:
 	dbw 25, RATTATA
 	dbw 35, TANGELA
 	dbw 20, PANSAGE
-	dbw 28, BULBASAUR
+	dbw 28, CHARMANDER
 	dbw 30, MR__MIME
 	dbw 30, MR__MIME
 	; nite
@@ -811,5 +811,113 @@ KantoGrassWildMons:
 	dbw 42, GOLBAT
 	dbw 42, GOLBAT
 	dbw 42, GOLBAT
-
+	
+	map_id SAFARI_ZONE_CENTER
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, RHYHORN
+	dbw 58, KANGASKHAN
+	dbw 60, VENUSAUR
+	dbw 60, CRABRAWLER
+	dbw 58, CHANSEY
+	; day
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, RHYHORN
+	dbw 58, KANGASKHAN
+	dbw 60, CHARIZARD
+	dbw 60, CRABRAWLER
+	dbw 58, CHANSEY
+	; nite
+	dbw 56, VENONAT
+	dbw 56, GASTRODON
+	dbw 58, RHYHORN
+	dbw 58, VENOMOTH
+	dbw 58, BLASTOISE
+	dbw 58, QUAGSIRE
+	dbw 58, CHANSEY
+	
+	map_id SAFARI_ZONE_EAST
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, DODUO
+	dbw 58, SCYTHER
+	dbw 60, BAYLEEF
+	dbw 60, MEGANIUM
+	dbw 58, CHANSEY
+	; day
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, DODUO
+	dbw 58, SCYTHER
+	dbw 60, QUILAVA
+	dbw 60, TYPHLOSION
+	dbw 58, CHANSEY
+	; nite
+	dbw 56, VENONAT
+	dbw 56, QUAGSIRE
+	dbw 58, NOCTOWL
+	dbw 58, PINSIR
+	dbw 58, CROCONAW
+	dbw 58, FERALIGATR
+	dbw 58, CHANSEY
+	
+	map_id SAFARI_ZONE_NORTH
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, KANGASKHAN
+	dbw 58, GROTLE
+	dbw 60, HOPPIP
+	dbw 60, TORTERRA
+	dbw 58, CHANSEY
+	; day
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, KANGASKHAN
+	dbw 58, MONFERNO
+	dbw 60, PANSAGE
+	dbw 60, INFERNAPE
+	dbw 58, CHANSEY
+	; nite
+	dbw 56, VENONAT
+	dbw 56, QUAGSIRE
+	dbw 58, NOCTOWL
+	dbw 58, PRINPLUP
+	dbw 58, QUAGSIRE
+	dbw 58, EMPOLEON
+	dbw 58, CHANSEY
+	
+	map_id SAFARI_ZONE_WEST
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, TAUROS
+	dbw 58, EXEGGCUTE
+	dbw 60, GROVYLE
+	dbw 60, SCEPTILE
+	dbw 58, CHANSEY
+	; day
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, TAUROS
+	dbw 58, EXEGGCUTE
+	dbw 60, COMBUSKEN
+	dbw 60, BLAZIKEN
+	dbw 58, CHANSEY
+	; nite
+	dbw 56, VENONAT
+	dbw 56, QUAGSIRE
+	dbw 58, TAUROS
+	dbw 58, VENOMOTH
+	dbw 58, MARSHTOMP
+	dbw 58, SWAMPERT
+	dbw 58, CHANSEY
+	
 	db -1 ; end

@@ -207,7 +207,7 @@ wTilePermissions:: ; c2fe
 ; bit 0: right
 	db
 
-	ds 1
+wSpinning:: db ; c2ff
 
 
 SECTION "wSpriteAnims", WRAM0

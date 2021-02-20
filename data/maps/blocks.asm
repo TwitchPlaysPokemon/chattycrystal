@@ -771,9 +771,6 @@ SilverCaveItemRooms_Blocks:
 DayCare_Blocks:
 	INCBIN "maps/DayCare.blk"
 
-SoulHouse_Blocks:
-	INCBIN "maps/SoulHouse.blk"
-
 PewterGym_Blocks:
 	INCBIN "maps/PewterGym.blk"
 
@@ -824,7 +821,7 @@ Route23_Blocks:
 	INCBIN "maps/Route23.blk"
 
 IndigoPlateauOutside_Blocks:
-	INCBIN "maps/IndegoPlateauOutside.blk"
+	INCBIN "maps/IndigoPlateauOutside.blk"
 
 LancesRoom_Blocks:
 	INCBIN "maps/LancesRoom.blk"
@@ -978,3 +975,27 @@ RocketHideoutB4F_Blocks:
 
 RocketHideoutElevator_Blocks:
 	INCBIN "maps/RocketHideoutElevator.blk"
+
+
+SECTION "Map Blocks 5", ROMX
+
+PokemonTower1F_Blocks:
+	INCBIN "maps/PokemonTower1F.blk"
+
+PokemonTower2F_Blocks:
+	INCBIN "maps/PokemonTower2F.blk"
+
+PokemonTower3F_Blocks:
+	INCBIN "maps/PokemonTower3F.blk"
+
+PokemonTower4F_Blocks:
+	INCBIN "maps/PokemonTower4F.blk"
+
+PokemonTower5F_Blocks:
+	INCBIN "maps/PokemonTower5F.blk"
+
+PokemonTower6F_Blocks:
+	INCBIN "maps/PokemonTower6F.blk"
+
+PokemonTower7F_Blocks:
+	INCBIN "maps/PokemonTower7F.blk"

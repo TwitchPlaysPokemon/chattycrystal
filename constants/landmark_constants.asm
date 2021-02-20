@@ -77,33 +77,34 @@ KANTO_LANDMARK EQU const_value
 	const ROUTE_10          ; 46
 	const POWER_PLANT       ; 47
 	const LAVENDER_TOWN     ; 48
-	const CELADON_CITY      ; 49
-	const SAFFRON_CITY      ; 4a
-	const ROUTE_11          ; 4b
-	const ROUTE_12          ; 4c
-	const ROUTE_13          ; 4d
-	const ROUTE_14          ; 4e
-	const ROUTE_15          ; 4f
-	const ROUTE_16          ; 50
-	const ROUTE_17          ; 51
-	const ROUTE_18          ; 52
-	const FUCHSIA_CITY      ; 53
-	const SAFARI_ZONE       ; 54
-	const ROUTE_19          ; 55
-	const ROUTE_20          ; 56
-	const SEAFOAM_ISLANDS   ; 57
-	const CINNABAR_ISLAND   ; 58
-	const POKEMON_MANSION   ; 59
-	const ROUTE_21          ; 5a
-	const ROUTE_22          ; 5b
-	const VICTORY_ROAD      ; 5c
-	const ROUTE_23          ; 5d
-	const INDIGO_PLATEAU    ; 5e
-	const ROUTE_26          ; 5f
-	const ROUTE_27          ; 60
-	const TOHJO_FALLS       ; 61
-	const ROUTE_28          ; 62
-	const FAST_SHIP         ; 63
+	const POKEMON_TOWER     ; 49
+	const CELADON_CITY      ; 4a
+	const SAFFRON_CITY      ; 4b
+	const ROUTE_11          ; 4c
+	const ROUTE_12          ; 4d
+	const ROUTE_13          ; 4e
+	const ROUTE_14          ; 4f
+	const ROUTE_15          ; 50
+	const ROUTE_16          ; 51
+	const ROUTE_17          ; 52
+	const ROUTE_18          ; 53
+	const FUCHSIA_CITY      ; 54
+	const SAFARI_ZONE       ; 55
+	const ROUTE_19          ; 56
+	const ROUTE_20          ; 57
+	const SEAFOAM_ISLANDS   ; 58
+	const CINNABAR_ISLAND   ; 59
+	const POKEMON_MANSION   ; 5a
+	const ROUTE_21          ; 5b
+	const ROUTE_22          ; 5c
+	const VICTORY_ROAD      ; 5d
+	const ROUTE_23          ; 5e
+	const INDIGO_PLATEAU    ; 5f
+	const ROUTE_26          ; 60
+	const ROUTE_27          ; 61
+	const TOHJO_FALLS       ; 62
+	const ROUTE_28          ; 63
+	const FAST_SHIP         ; 64
 
 ; used in CaughtData
 GIFT_LOCATION  EQU $7e

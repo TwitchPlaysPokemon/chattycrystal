@@ -1828,9 +1828,9 @@ BT_SetPlayerOT:
 
 BT_LegalityCheck:
 ; Check OT party for violations of Species or Item Clause. Used to verify
-; both the player team when entering after copying to OT data, and the
-; generated AI team. Returns z if the team is legal, otherwise nz and the error
-; in e (1: 2+ share species, 2: 2+ share item)
+; the player team when entering after copying to OT data.
+; Returns z if the team is legal, otherwise nz and the error in e
+; (1: 2+ share species, 2: 2+ share item).
 ; Species Clause: more than 1 Pokémon are the same species
 ; Item Clause: more than 1 Pokémon holds the same item
 	ld a, [wOTPartyCount]

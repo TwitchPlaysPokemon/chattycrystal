@@ -51,7 +51,13 @@ LearnMove:
 	ld [wPlayerDisableCount], a
 .not_disabled
 
+	ldh a, [hBattleTurn]
+	ld l, a
+	xor a
+	ldh [hBattleTurn], a
 	call GetMoveName
+	ld a, l
+	ldh [hBattleTurn], a
 	ld hl, Text_1_2_and_Poof ; 1, 2 and…
 	call PrintText
 	pop de

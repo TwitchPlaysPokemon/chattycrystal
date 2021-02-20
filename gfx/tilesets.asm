@@ -310,14 +310,15 @@ INCBIN "data/tilesets/ruins_of_alph_metatiles.bin"
 TilesetRuinsOfAlphColl:
 INCLUDE "data/tilesets/ruins_of_alph_collision.asm"
 
-TilesetRoute23Meta:
-INCBIN "data/tilesets/route_23_metatiles.bin"
+TilesetIndigoPlateauMeta:
+INCBIN "data/tilesets/indigo_plateau_metatiles.bin"
 
-TilesetRoute23Coll:
-INCLUDE "data/tilesets/route_23_collision.asm"
+TilesetIndigoPlateauColl:
+INCLUDE "data/tilesets/indigo_plateau_collision.asm"
 
-TilesetRoute23GFX:
-INCBIN "gfx/tilesets/route_23.2bpp.lz"
+TilesetIndigoPlateauGFX:
+INCBIN "gfx/tilesets/indigo_plateau.2bpp.lz"
+
 
 SECTION "Tileset Data 8", ROMX
 
@@ -385,3 +386,15 @@ INCBIN "data/tilesets/pkmn_mansion_metatiles.bin"
 
 TilesetPkmnMansionColl:
 INCLUDE "data/tilesets/pkmn_mansion_collision.asm"
+
+
+SECTION "Tileset Data 11", ROMX
+
+TilesetCemeteryGFX:
+INCBIN "gfx/tilesets/cemetery.2bpp.lz"
+
+TilesetCemeteryMeta:
+INCBIN "data/tilesets/cemetery_metatiles.bin"
+
+TilesetCemeteryColl:
+INCLUDE "data/tilesets/cemetery_collision.asm"

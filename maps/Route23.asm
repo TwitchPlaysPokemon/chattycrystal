@@ -152,6 +152,7 @@ EarthRisingBadgeCheckScript:
 DontHaveBadges:
 	writetext NoBadgeText
 	waitbutton
+	closetext
 	applymovement PLAYER, Route23StepDownMovement
 	end
 
@@ -194,7 +195,7 @@ CascadeHiveBadgeCheckText:
 HaveCascadeHiveBadgeText:
 	text "Oh! You have the"
 	line "CASCADEBADGE"
-	text "and HIVEBADGE!"
+	cont "and HIVEBADGE!"
 
 	para "Please, go right"
 	line "on through!"
@@ -212,7 +213,7 @@ ThunderPlainBadgeCheckText:
 HaveThunderPlainBadgeText:
 	text "Oh! You have the"
 	line "THUNDERBADGE"
-	text "and PLAINBADGE!"
+	cont "and PLAINBADGE!"
 
 	para "Please, go right"
 	line "on through!"
@@ -230,7 +231,7 @@ RainbowFogBadgeCheckText:
 HaveRainbowFogBadgeText:
 	text "Oh! You have the"
 	line "RAINBOWBADGE"
-	text "and FOGBADGE!"
+	cont "and FOGBADGE!"
 
 	para "Please, go right"
 	line "on through!"
@@ -248,7 +249,7 @@ MarshGlacierBadgeCheckText:
 HaveMarshGlacierBadgeText:
 	text "Oh! You have the"
 	line "MARSHBADGE"
-	text "and GLACIERBADGE!"
+	cont "and GLACIERBADGE!"
 
 	para "Please, go right"
 	line "on through!"
@@ -284,7 +285,7 @@ VolcanoMineralBadgeCheckText:
 HaveVolcanoMineralBadgeText:
 	text "Oh! You have the"
 	line "VOLCANOBADGE"
-	text "and MINERALBADGE!"
+	cont "and MINERALBADGE!"
 
 	para "Please, go right"
 	line "on through!"
@@ -302,7 +303,7 @@ EarthRisingBadgeCheckText:
 HaveEarthRisingBadgeText:
 	text "Oh! You have the"
 	line "EARTHBADGE and"
-	text "RISINGBADGE!"
+	cont "RISINGBADGE!"
 
 	para "Please, go right"
 	line "on through!"
@@ -314,7 +315,7 @@ Route23_MapEvents:
 	db 4 ; warp events
 	warp_event  7, 139, VICTORY_ROAD_GATE, 5
 	warp_event  8, 139, VICTORY_ROAD_GATE, 6
-	warp_event  4, 31, VICTORY_ROAD, 10
+	warp_event  4, 31, VICTORY_ROAD, 1
 	warp_event 14, 31, VICTORY_ROAD, 10
 
 	db 9 ; coord events

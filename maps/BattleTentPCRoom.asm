@@ -1,29 +1,29 @@
 BattleTentPCRoom_MapScripts:
-	db 0
+	db 0 ; scene scripts
 
-	db 0
+	db 0 ; callbacks
 
 LeaguePCScript:
 	loadfont
-	writetext tppPcOffText
+	writetext .off_text
 	closetext
 	end
 
-tppPcOffText:
+.off_text
 	text "It appears to be"
 	line "broken…"
 	done
 
 BattleTentPCRoom_MapEvents:
-	db 0, 0
+	db 0, 0 ; filler
 
-	db 2
-	warp_def 7, 3, 3, BATTLE_TENT_BATTLE_ROOM
-	warp_def 7, 4, 3, BATTLE_TENT_BATTLE_ROOM
+	db 2 ; warp events
+	warp_event 3, 7, BATTLE_TENT_BATTLE_ROOM, 3
+	warp_event 4, 7, BATTLE_TENT_BATTLE_ROOM, 3
 
-	db 0
+	db 0 ; coord events
 
-	db 1
-	signpost 2, 3, 1, LeaguePCScript
+	db 1 ; bg events
+	bg_event 3, 2, BGEVENT_UP, LeaguePCScript
 
-	db 0
+	db 0 ; object events

@@ -1,9 +1,7 @@
-BattleTentRuins_MapScripts: ; -- Required
-	; trigger count
-	db 0
+BattleTentRuins_MapScripts:
+	db 0 ; scene scripts
 
-	; callback count
-	db 0
+	db 0 ; callbacks
 
 MapBattleTentRuinsDoorScript:
 	loadfont
@@ -16,22 +14,17 @@ MapBattleTentRuinsDoorText:
 	done
 
 BattleTentRuins_MapEvents:
-	db 0, 0 ; Filler
+	db 0, 0 ; filler
 
-	; warps
-	db 4
-	warp_def $7, $1, 10, CELADON_CITY
-	warp_def $7, $2, 10, CELADON_CITY
-	warp_def $7, $a, 1, BATTLE_TENT_GENERATOR
-	warp_def $0, $5, 1, BATTLE_TENT_BATTLE_ROOM
+	db 4 ; warp events
+	warp_event  1,  7, CELADON_CITY, 10
+	warp_event  2,  7, CELADON_CITY, 10
+	warp_event 10,  7, BATTLE_TENT_GENERATOR, 1
+	warp_event  5,  0, BATTLE_TENT_BATTLE_ROOM, 1
 
-	; coord events
-	db 0
+	db 0 ; coord events
 
-	; bg events
-	db 1
-	signpost $0, $5, $6, MapBattleTentRuinsDoorScript
+	db 1 ; bg events
+	bg_event 5, 0, BGEVENT_READ, MapBattleTentRuinsDoorScript
 
-	; object events
-	db 0
-
+	db 0 ; object events

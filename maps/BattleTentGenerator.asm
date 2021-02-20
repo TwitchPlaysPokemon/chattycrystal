@@ -1,26 +1,18 @@
 BattleTentGenerator_MapScripts:
-	; triggers
-	db 0
+	db 0 ; scene scripts
 
-	; callbacks
-	db 0
+	db 0 ; callbacks
 
 BattleTentGenerator_MapEvents:
-	; filler
-	db 0, 0
+	db 0, 0 ; filler
 
-	; warps
-	db 3
-	warp_def 14, 13, 3, BATTLE_TENT_RUINS ;to b tent upper ruins
-	warp_def 08, 1, 1, ROCKET_HIDEOUT_B4F ;to b4 rocket maze lower stairs right
-	warp_def 14, 1, 2, ROCKET_HIDEOUT_B4F ;to b4 rocket maze upper office right
+	db 3 ; warp events
+	warp_event 13, 14, BATTLE_TENT_RUINS, 3
+	warp_event  1,  8, ROCKET_HIDEOUT_B4F, 1
+	warp_event  1, 14, ROCKET_HIDEOUT_B4F, 2
 
-	; coord events
-	db 0
+	db 0 ; coord events
 
-	; bg events
-	db 0
+	db 0 ; bg events
 
-	; object events
-	db 0
-
+	db 0 ; object events

@@ -198,5 +198,9 @@
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; c5
 	tilecoll FLOOR, FLOOR, WALL, WALL ; c6
 	tilecoll FLOOR, FLOOR, WALL, WALL ; c7
-	tilecoll WALL, WALL, WALL, WALL ; c8
-	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; c9
+	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; c8
+	tilecoll WATER, WALL, WATER, WALL ; c9
+	tilecoll WALL, WALL, WALL, WALL ; ca
+	tilecoll WALL, WATER, WALL, WATER ; cb
+	tilecoll WATER, WATER, WATER, WATER ; cc
+	tilecoll WATER, WATER, WATER, WATER ; cd

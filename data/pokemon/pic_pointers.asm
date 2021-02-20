@@ -780,30 +780,30 @@ PokemonPicPointers::
 	dba CutieflyBackpic
 	dba RibombeeFrontpic
 	dba RibombeeBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Onixtret
-	dba PlaceholderBackpic ; PLACEHOLDER - Onixtret
-	dba PlaceholderFrontpic ; PLACEHOLDER - Chiquirtle
-	dba PlaceholderBackpic ; PLACEHOLDER - Chiquirtle
-	dba PlaceholderFrontpic ; PLACEHOLDER - Baytortle
-	dba PlaceholderBackpic ; PLACEHOLDER - Baytortle
+	dba OnixtretFrontpic
+	dba OnixtretBackpic
+	dba ChiquirtleFrontpic
+	dba ChiquirtleBackpic
+	dba BaytortleFrontpic
+	dba BaytortleBackpic
 	dba MegastoiseFrontpic
 	dba MegastoiseBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Hootduo
-	dba PlaceholderBackpic ; PLACEHOLDER - Hootduo
+	dba HootduoFrontpic
+	dba HootduoBackpic
 	dba NoctdrioFrontpic
 	dba NoctdrioBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Togekey
-	dba PlaceholderBackpic ; PLACEHOLDER - Togekey
+	dba TogekeyFrontpic
+	dba TogekeyBackpic
 	dba TogetapeFrontpic
 	dba TogetapeBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Hopporita
-	dba PlaceholderBackpic ; PLACEHOLDER - Hopporita
-	dba PlaceholderFrontpic ; PLACEHOLDER - Skipleef
-	dba PlaceholderBackpic ; PLACEHOLDER - Skipleef
+	dba HopporitaFrontpic
+	dba HopporitaBackpic
+	dba SkipleefFrontpic
+	dba SkipleefBackpic
 	dba JumpaniumFrontpic
 	dba JumpaniumBackpic
-	dba PlaceholderFrontpic ; PLACEHOLDER - Woochum
-	dba PlaceholderBackpic ; PLACEHOLDER - Woochum
+	dba WoochumFrontpic
+	dba WoochumBackpic
 	dba QuagynxFrontpic
 	dba QuagynxBackpic
 	dba SteelurretFrontpic

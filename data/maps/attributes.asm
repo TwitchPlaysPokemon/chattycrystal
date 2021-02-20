@@ -675,6 +675,10 @@ ENDM
 	map_attributes Route16Gate, ROUTE_16_GATE, $00, 0
 	map_attributes Route7SaffronGate, ROUTE_7_SAFFRON_GATE, $00, 0
 	map_attributes Route17Route18Gate, ROUTE_17_ROUTE_18_GATE, $00, 0
+	map_attributes BattleTentRuins, BATTLE_TENT_RUINS, $00, 0
+	map_attributes BattleTentBattleRoom, BATTLE_TENT_BATTLE_ROOM, $00, 0
+	map_attributes BattleTentGenerator, BATTLE_TENT_GENERATOR, $00, 0
+	map_attributes BattleTentPCRoom, BATTLE_TENT_PC_ROOM, $00, 0
 	map_attributes ManiasHouse, MANIAS_HOUSE, $00, 0
 	map_attributes CianwoodGym, CIANWOOD_GYM, $00, 0
 	map_attributes CianwoodPokecenter1F, CIANWOOD_POKECENTER_1F, $00, 0

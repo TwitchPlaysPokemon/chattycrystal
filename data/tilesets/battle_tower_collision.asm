@@ -44,3 +44,6 @@
 	tilecoll WALL, WALL, FLOOR, WALL ; 2b
 	tilecoll FLOOR, FLOOR, FLOOR, DOOR ; 2c
 	tilecoll FLOOR, FLOOR, DOOR, FLOOR ; 2d
+	tilecoll , , ,  ; 2e
+	tilecoll , , ,  ; 2f
+	tilecoll , , ,  ; 30

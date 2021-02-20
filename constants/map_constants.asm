@@ -434,6 +434,10 @@ ENDM
 	map_const ROUTE_16_GATE,                                5,  4 ; 24
 	map_const ROUTE_7_SAFFRON_GATE,                         5,  4 ; 25
 	map_const ROUTE_17_ROUTE_18_GATE,                       5,  4 ; 26
+	map_const BATTLE_TENT_RUINS,                            6,  4 ; 27
+	map_const BATTLE_TENT_BATTLE_ROOM,                      6,  4 ; 28
+	map_const BATTLE_TENT_GENERATOR,                       10, 10 ; 29
+	map_const BATTLE_TENT_PC_ROOM,                          4,  4 ; 30
 
 	newgroup                                                      ; 22
 

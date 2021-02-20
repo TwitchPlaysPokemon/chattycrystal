@@ -475,7 +475,13 @@ LearnLevelMoves:
 	ld a, d
 	ld [wPutativeTMHMMove], a
 	ld [wNamedObjectIndexBuffer], a
+	ldh a, [hBattleTurn]
+	ld l, a
+	xor a
+	ldh [hBattleTurn], a
 	call GetMoveName
+	ld a, l
+	ldh [hBattleTurn], a
 	call CopyName1
 	predef LearnMove
 	pop hl

@@ -188,7 +188,7 @@ PoochyenaEggMoves:
 	dw ASTONISH
 	dw COVET
 	dw LEER
-;	dw POISON_FANG ;TODO: add when poison fang is added
+	dw POISON_FANG
 	dw HYPNOSIS
 	dw -1 ; end
 

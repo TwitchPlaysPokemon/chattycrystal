@@ -1403,6 +1403,9 @@ CheckTypeMatchup:
 	ld b, [hl]
 	inc hl
 	ld c, [hl]
+
+	farcall ChangeTypeForOpponentRoost
+
 	ld a, 10 ; 1.0
 	ld [wTypeMatchup], a
 	ld hl, TypeMatchups

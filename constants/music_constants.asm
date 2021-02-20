@@ -114,6 +114,7 @@
 	const MUSIC_DIGLETTS_CAVE                ; 6a
 	const MUSIC_CERULEAN_CAVE                ; 6b
 	const MUSIC_VS_WCS                       ; 6c
+	const MUSIC_BATTLE_TENT_RUINS            ; 6d
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64

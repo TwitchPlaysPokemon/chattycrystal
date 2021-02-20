@@ -61,7 +61,7 @@ KantoGrassWildMons:
 	; morn
 	dbw 10, CUBONE
 	dbw 11, GEODUDE
-	dbw 12, MACHOP
+	dbw 12, ARON
 	dbw 12, ZUBAT
 	dbw 15, MACHOKE
 	dbw 12, MAROWAK
@@ -71,24 +71,24 @@ KantoGrassWildMons:
 	dbw 11, GEODUDE
 	dbw 12, MACHOP
 	dbw 12, ZUBAT
-	dbw 15, MACHOKE
+	dbw 15, LAIRON
 	dbw 12, MAROWAK
 	dbw 12, SANDILE
 	; nite
 	dbw 12, ZUBAT
 	dbw 11, SANDILE
-	dbw 12, SANDILE
+	dbw 12, ARON
 	dbw 17, HAUNTER
 	dbw 15, ZUBAT
-	dbw 15, ZUBAT
-	dbw 15, ZUBAT
+	dbw 15, SABLEYE
+	dbw 15, SABLEYE
 
 	map_id ROCK_TUNNEL_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 12, CUBONE
 	dbw 14, GEODUDE
-	dbw 16, ONIX
+	dbw 16, ARON
 	dbw 12, ZUBAT
 	dbw 15, MAROWAK
 	dbw 15, KANGASKHAN
@@ -96,7 +96,7 @@ KantoGrassWildMons:
 	; day
 	dbw 12, CUBONE
 	dbw 14, GEODUDE
-	dbw 16, ONIX
+	dbw 16, LAIRON
 	dbw 12, ZUBAT
 	dbw 15, MAROWAK
 	dbw 15, KANGASKHAN
@@ -106,9 +106,9 @@ KantoGrassWildMons:
 	dbw 14, SANDILE
 	dbw 16, SANDILE
 	dbw 15, ZUBAT
-	dbw 15, HAUNTER
-	dbw 15, GOLBAT
-	dbw 15, GOLBAT
+	dbw 15, SABLEYE
+	dbw 15, SABLEYE
+	dbw 15, SABLEYE
 
 	map_id VICTORY_ROAD
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -302,27 +302,27 @@ KantoGrassWildMons:
 	map_id ROUTE_6
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 50, RATTATA
-	dbw 50, SNUBBULL
+	dbw 50, BIDOOF
+	dbw 50, SKITTY
 	dbw 51, MAGNEMITE
 	dbw 52, RATICATE
 	dbw 49, JIGGLYPUFF
 	dbw 52, GRANBULL
 	dbw 52, GRANBULL
 	; day
-	dbw 50, RATTATA
-	dbw 50, SNUBBULL
+	dbw 50, BIDOOF
+	dbw 50, RALTS
 	dbw 51, MAGNEMITE
 	dbw 52, RATICATE
 	dbw 49, JIGGLYPUFF
 	dbw 52, GRANBULL
 	dbw 52, GRANBULL
 	; nite
-	dbw 50, MEOWTH
+	dbw 50, ELECTRIKE
 	dbw 50, DROWZEE
 	dbw 51, MAGNEMITE
 	dbw 52, PSYDUCK
-	dbw 49, JIGGLYPUFF
+	dbw 49, RALTS
 	dbw 52, RATICATE
 	dbw 52, RATICATE
 
@@ -330,20 +330,20 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 52, RATTATA
-	dbw 52, SPEAROW
+	dbw 52, TAILLOW
 	dbw 53, SNUBBULL
 	dbw 53, VULPIX
-	dbw 53, JIGGLYPUFF
+	dbw 53, RALTS
 	dbw 51, ABRA
-	dbw 51, ABRA
+	dbw 51, PORYGON
 	; day
 	dbw 52, RATTATA
-	dbw 52, SPEAROW
+	dbw 52, TAILLOW
 	dbw 53, SNUBBULL
 	dbw 53, VULPIX
 	dbw 53, JIGGLYPUFF
 	dbw 51, ABRA
-	dbw 51, ABRA
+	dbw 51, PORYGON
 	; nite
 	dbw 52, MEOWTH
 	dbw 52, MURKROW
@@ -351,7 +351,7 @@ KantoGrassWildMons:
 	dbw 53, PERSIAN
 	dbw 53, JIGGLYPUFF
 	dbw 51, ABRA
-	dbw 51, ABRA
+	dbw 51, PORYGON
 
 	map_id ROUTE_8
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -464,20 +464,20 @@ KantoGrassWildMons:
 	map_id ROUTE_13
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 57, NIDORINO
-	dbw 57, NIDORINA
+	dbw 57, CUTIEFLY
+	dbw 57, BUDEW
 	dbw 59, PIDGEOTTO
 	dbw 59, HOPPIP
-	dbw 61, SKIPLOOM
+	dbw 61, RIBOMBEE
 	dbw 61, JUMPLUFF
 	dbw 59, CHANSEY
 	; day
 	dbw 57, NIDORINO
 	dbw 57, NIDORINA
 	dbw 59, PIDGEOTTO
-	dbw 59, HOPPIP
-	dbw 61, SKIPLOOM
-	dbw 61, JUMPLUFF
+	dbw 59, ROSELIA
+	dbw 61, SIMISAGE
+	dbw 61, CRABRAWLER
 	dbw 59, CHANSEY
 	; nite
 	dbw 57, VENONAT
@@ -491,12 +491,12 @@ KantoGrassWildMons:
 	map_id ROUTE_14
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 56, NIDORINO
-	dbw 56, NIDORINA
+	dbw 56, CUTIEFLY
+	dbw 56, RIBOMBEE
 	dbw 58, CRABRAWLER
 	dbw 58, HOPPIP
 	dbw 60, SKIPLOOM
-	dbw 60, SKIPLOOM
+	dbw 60, PINSIR
 	dbw 58, CHANSEY
 	; day
 	dbw 56, NIDORINO
@@ -510,7 +510,7 @@ KantoGrassWildMons:
 	dbw 56, VENONAT
 	dbw 56, QUAGSIRE
 	dbw 58, NOCTOWL
-	dbw 58, VENOMOTH
+	dbw 58, PINSIR
 	dbw 58, QUAGSIRE
 	dbw 58, GASTRODON
 	dbw 58, CHANSEY
@@ -518,8 +518,8 @@ KantoGrassWildMons:
 	map_id ROUTE_15
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 56, NIDORINO
-	dbw 56, NIDORINA
+	dbw 56, CUTIEFLY
+	dbw 56, CUTIEFLY
 	dbw 58, PIDGEOTTO
 	dbw 58, HOPPIP
 	dbw 60, HOPPIP
@@ -549,7 +549,7 @@ KantoGrassWildMons:
 	dbw 53, FEAROW
 	dbw 54, GRIMER
 	dbw 55, SHELLOS
-	dbw 55, FEAROW
+	dbw 55, SWELLOW
 	dbw 56, MUK
 	dbw 56, GASTRODON
 	; day
@@ -563,11 +563,11 @@ KantoGrassWildMons:
 	; nite
 	dbw 52, GRIMER
 	dbw 53, GRIMER
-	dbw 54, GRIMER
+	dbw 54, CROAGUNK
 	dbw 55, MURKROW
 	dbw 55, MURKROW
 	dbw 56, MUK
-	dbw 56, MUK
+	dbw 56, TOXICROAK
 
 	map_id ROUTE_17
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -588,40 +588,40 @@ KantoGrassWildMons:
 	dbw 56, MUK
 	dbw 56, GASTRODON
 	; nite
-	dbw 53, GRIMER
-	dbw 52, GRIMER
+	dbw 53, CROAGUNK
+	dbw 52, CROAGUNK
 	dbw 54, GRIMER
 	dbw 55, GRIMER
 	dbw 56, GRIMER
 	dbw 56, MUK
-	dbw 56, MUK
+	dbw 56, TOXICROAK
 
 	map_id ROUTE_18
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 52, GRIMER
+	dbw 52, DUCKLETT
 	dbw 53, SHELLOS
 	dbw 54, GRIMER
 	dbw 55, FEAROW
-	dbw 55, FEAROW
+	dbw 55, SWANNA
 	dbw 56, MUK
 	dbw 56, GASTRODON
 	; day
 	dbw 52, GRIMER
 	dbw 53, SHELLOS
 	dbw 54, GRIMER
-	dbw 55, FEAROW
+	dbw 55, SWANNA
 	dbw 55, SLUGMA
 	dbw 56, MUK
 	dbw 56, GASTRODON
 	; nite
-	dbw 52, GRIMER
-	dbw 53, GRIMER
+	dbw 52, CROAGUNK
+	dbw 53, CROAGUNK
 	dbw 54, GRIMER
 	dbw 55, GRIMER
 	dbw 55, GRIMER
 	dbw 56, MUK
-	dbw 56, MUK
+	dbw 56, TOXICROAK
 
 	map_id ROUTE_21
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

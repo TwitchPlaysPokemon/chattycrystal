@@ -310,15 +310,6 @@ INCBIN "data/tilesets/ruins_of_alph_metatiles.bin"
 TilesetRuinsOfAlphColl:
 INCLUDE "data/tilesets/ruins_of_alph_collision.asm"
 
-TilesetIndigoPlateauMeta:
-INCBIN "data/tilesets/indigo_plateau_metatiles.bin"
-
-TilesetIndigoPlateauColl:
-INCLUDE "data/tilesets/indigo_plateau_collision.asm"
-
-TilesetIndigoPlateauGFX:
-INCBIN "gfx/tilesets/indigo_plateau.2bpp.lz"
-
 
 SECTION "Tileset Data 8", ROMX
 

@@ -999,3 +999,15 @@ PokemonTower6F_Blocks:
 
 PokemonTower7F_Blocks:
 	INCBIN "maps/PokemonTower7F.blk"
+
+BattleTentRuins_Blocks:
+	INCBIN "maps/BattleTentRuins.blk"
+
+BattleTentBattleRoom_Blocks:
+	INCBIN "maps/BattleTentBattleRoom.blk"
+
+BattleTentGenerator_Blocks:
+	INCBIN "maps/BattleTentGenerator.blk"
+
+BattleTentPCRoom_Blocks:
+	INCBIN "maps/BattleTentPCRoom.blk"

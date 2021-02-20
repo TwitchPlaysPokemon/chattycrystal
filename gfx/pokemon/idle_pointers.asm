@@ -385,18 +385,18 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Cutiefly
 	dw RibombeeAnimationIdle
 	; Fused Crystal mons
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Onixtret
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chiquirtle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Baytortle
+	dw OnixtretAnimationIdle
+	dw ChiquirtleAnimationIdle
+	dw BaytortleAnimationIdle
 	dw MegastoiseAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Hootduo
+	dw HootduoAnimationIdle
 	dw NoctdrioAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Togekey
+	dw TogekeyAnimationIdle
 	dw TogetapeAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Hopporita
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Skipleef
+	dw HopporitaAnimationIdle
+	dw SkipleefAnimationIdle
 	dw JumpaniumAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Woochum
+	dw WoochumAnimationIdle
 	dw QuagynxAnimationIdle
 	dw SteelurretAnimationIdle
 	; TPP's signature fakemon

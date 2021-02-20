@@ -49,7 +49,6 @@ Tilesets::
 	tileset TilesetKabutoWordRoom
 	tileset TilesetOmanyteWordRoom
 	tileset TilesetAerodactylWordRoom
-	tileset TilesetIndigoPlateau
 	tileset TilesetMuseum
 	tileset TilesetKantoForest
 	tileset TilesetSafari

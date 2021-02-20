@@ -136,18 +136,18 @@ EggMovePointers3::
 	dw NoEggMoves3         ; PLACEHOLDER - Cutiefly
 	dw NoEggMoves3         ; Ribombee
 	; Fused Crystal mons
-	dw NoEggMoves3         ; PLACEHOLDER - Onixtret
-	dw NoEggMoves3         ; PLACEHOLDER - Chiquirtle
+	dw OnixtretEggMoves
+	dw ChiquirtleEggMoves
 	dw NoEggMoves3         ; Baytortle
 	dw NoEggMoves3         ; Megastoise
-	dw NoEggMoves3         ; PLACEHOLDER - Hootduo
+	dw HootduoEggMoves
 	dw NoEggMoves3         ; Noctdrio
-	dw NoEggMoves3         ; PLACEHOLDER - Togekey
+	dw TogekeyEggMoves
 	dw NoEggMoves3         ; Togetape
-	dw NoEggMoves3         ; PLACEHOLDER - Hopporita
+	dw HopporitaEggMoves
 	dw NoEggMoves3         ; Skipleef
 	dw NoEggMoves3         ; Jumpanium
-	dw NoEggMoves3         ; PLACEHOLDER - Woochum
+	dw WoochumEggMoves
 	dw NoEggMoves3         ; Quagynx
 	dw NoEggMoves3         ; Steelurret
 	; TPP's signature fakemon
@@ -188,7 +188,7 @@ PoochyenaEggMoves:
 	dw ASTONISH
 	dw COVET
 	dw LEER
-;	dw POISON_FANG ;TODO: add when poison fang is added
+	dw POISON_FANG
 	dw HYPNOSIS
 	dw -1 ; end
 
@@ -196,7 +196,7 @@ ZigzagoonEggMoves:
 	dw CHARM
 	dw PURSUIT
 	dw SUBSTITUTE
-;	dw TICKLE ;TODO: add when tickle is added
+	dw TICKLE
 	dw THIEF
 	dw -1 ; end
 
@@ -212,6 +212,53 @@ WhismurEggMoves:
 	dw SNORE
 	dw SWAGGER
 	dw TAKE_DOWN
+	dw -1 ; end
+
+OnixtretEggMoves:
+	dw ROCK_SLIDE
+	dw FLAIL
+	dw -1 ; end
+
+ChiquirtleEggMoves:
+	dw VINE_WHIP
+	dw LEECH_SEED
+	dw COUNTER
+	dw ANCIENTPOWER
+	dw FLAIL
+	dw SWORDS_DANCE
+	dw -1 ; end
+
+HootduoEggMoves:
+	dw MIRROR_MOVE
+	dw SUPERSONIC
+	dw FEINT_ATTACK
+	dw WING_ATTACK
+	dw WHIRLWIND
+	dw SKY_ATTACK
+	dw -1 ; end
+
+TogekeyEggMoves:
+	dw PRESENT
+	dw MIRROR_MOVE
+	dw PECK
+	dw FORESIGHT
+	dw FUTURE_SIGHT
+	dw -1 ; end
+
+HopporitaEggMoves:
+	dw CONFUSION
+	dw GROWL
+	dw ENCORE
+	dw DOUBLE_EDGE
+	dw REFLECT
+	dw AMNESIA
+	dw PAY_DAY
+	dw -1 ; end
+
+WoochumEggMoves:
+	dw BODY_SLAM
+	dw ANCIENTPOWER
+	dw SAFEGUARD
 	dw -1 ; end
 
 NoEggMoves3:

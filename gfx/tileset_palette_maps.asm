@@ -109,9 +109,6 @@ INCLUDE "gfx/tilesets/battle_tower_palette_map.asm"
 TilesetBattleTowerOutsidePalMap:
 INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 
-TilesetIndigoPlateauPalMap:
-INCLUDE "gfx/tilesets/indigo_plateau_palette_map.asm"
-
 TilesetKantoForestPalMap:
 INCLUDE "gfx/tilesets/kanto_forest_palette_map.asm"
 

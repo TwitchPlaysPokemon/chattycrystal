@@ -113,3 +113,4 @@ Music:
 	dba Music_DiglettsCaveRBY
 	dba Music_CeruleanCaveRBY
 	dba Music_VsWCS
+	dba Music_BattleTentRuins

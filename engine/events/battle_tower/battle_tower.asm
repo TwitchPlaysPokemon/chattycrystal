@@ -252,6 +252,7 @@ RunBattleTowerTrainer:
 	predef StartBattle
 
 	farcall LoadPokemonData
+	farcall LoadIndexTables
 	farcall HealParty
 	ld a, [wBattleResult]
 	ld [wScriptVar], a

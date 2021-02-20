@@ -26,13 +26,14 @@ BASE_TMHM        EQUS "(wBaseTMHM - wCurBaseData)"
 BASE_DATA_SIZE   EQUS "(wCurBaseDataEnd - wCurBaseData)"
 
 ; gender ratio constants
-GENDER_F0      EQU 0 percent
-GENDER_F12_5   EQU 12 percent + 1
-GENDER_F25     EQU 25 percent
-GENDER_F50     EQU 50 percent
-GENDER_F75     EQU 75 percent
-GENDER_F100    EQU 100 percent - 1
-GENDER_UNKNOWN EQU -1
+GENDER_F0      EQU $00
+GENDER_F12_5   EQU $1f
+GENDER_F25     EQU $3f
+GENDER_F31_25  EQU $4f
+GENDER_F50     EQU $7f
+GENDER_F75     EQU $bf
+GENDER_F100    EQU $fe
+GENDER_UNKNOWN EQU $ff
 
 ; wBaseGrowthRate values
 ; GrowthRates indexes (see data/growth_rates.asm)

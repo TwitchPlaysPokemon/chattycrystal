@@ -133,18 +133,18 @@ INCLUDE "data/pokemon/base_stats/crabrawler.asm"
 INCLUDE "data/pokemon/base_stats/crabominable.asm"
 INCLUDE "data/pokemon/base_stats/cutiefly.asm"
 INCLUDE "data/pokemon/base_stats/ribombee.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Onixtret
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Chiquirtle
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Baytortle
+INCLUDE "data/pokemon/base_stats/onixtret.asm"
+INCLUDE "data/pokemon/base_stats/chiquirtle.asm"
+INCLUDE "data/pokemon/base_stats/baytortle.asm"
 INCLUDE "data/pokemon/base_stats/megastoise.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Hootduo
+INCLUDE "data/pokemon/base_stats/hootduo.asm"
 INCLUDE "data/pokemon/base_stats/noctdrio.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Togekey
+INCLUDE "data/pokemon/base_stats/togekey.asm"
 INCLUDE "data/pokemon/base_stats/togetape.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Hipporita
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Skipleef
+INCLUDE "data/pokemon/base_stats/hopporita.asm"
+INCLUDE "data/pokemon/base_stats/skipleef.asm"
 INCLUDE "data/pokemon/base_stats/jumpanium.asm"
-INCLUDE "data/pokemon/base_stats/placeholder.asm" ; PLACEHOLDER - Woochum
+INCLUDE "data/pokemon/base_stats/woochum.asm"
 INCLUDE "data/pokemon/base_stats/quagynx.asm"
 INCLUDE "data/pokemon/base_stats/steelurret.asm"
 INCLUDE "data/pokemon/base_stats/phancero.asm"

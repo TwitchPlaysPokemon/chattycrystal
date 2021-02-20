@@ -385,18 +385,18 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Cutiefly
 	dw RibombeeBitmasks
 	; Fused Crystal mons
-	dw PlaceholderBitmasks ; PLACEHOLDER - Onixtret
-	dw PlaceholderBitmasks ; PLACEHOLDER - Chiquirtle
-	dw PlaceholderBitmasks ; PLACEHOLDER - Baytortle
+	dw OnixtretBitmasks
+	dw ChiquirtleBitmasks
+	dw BaytortleBitmasks
 	dw MegastoiseBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Hootduo
+	dw HootduoBitmasks
 	dw NoctdrioBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Togekey
+	dw TogekeyBitmasks
 	dw TogetapeBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Hopporita
-	dw PlaceholderBitmasks ; PLACEHOLDER - Skipleef
+	dw HopporitaBitmasks
+	dw SkipleefBitmasks
 	dw JumpaniumBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Woochum
+	dw WoochumBitmasks
 	dw QuagynxBitmasks
 	dw SteelurretBitmasks
 	; TPP's signature fakemon

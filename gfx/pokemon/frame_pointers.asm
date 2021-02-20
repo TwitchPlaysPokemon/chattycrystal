@@ -385,18 +385,18 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Cutiefly
 	dba RibombeeFrames
 	; Fused Crystal mons
-	dba PlaceholderFrames ; PLACEHOLDER - Onixtret
-	dba PlaceholderFrames ; PLACEHOLDER - Chiquirtle
-	dba PlaceholderFrames ; PLACEHOLDER - Baytortle
+	dba OnixtretFrames
+	dba ChiquirtleFrames
+	dba BaytortleFrames
 	dba MegastoiseFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Hootduo
+	dba HootduoFrames
 	dba NoctdrioFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Togekey
+	dba TogekeyFrames
 	dba TogetapeFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Hopporita
-	dba PlaceholderFrames ; PLACEHOLDER - Skipleef
+	dba HopporitaFrames
+	dba SkipleefFrames
 	dba JumpaniumFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Woochum
+	dba WoochumFrames
 	dba QuagynxFrames
 	dba SteelurretFrames
 	; TPP's signature fakemon

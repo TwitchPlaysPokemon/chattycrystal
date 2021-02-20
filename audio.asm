@@ -148,6 +148,7 @@ INCLUDE "audio/music/custom/pokemontower.asm"
 INCLUDE "audio/music/custom/ceruleancave.asm"
 INCLUDE "audio/music/custom/kantolegendbattle.asm"
 INCLUDE "audio/music/custom/vsWCS.asm"
+INCLUDE "audio/music/custom/battletentruins.asm"
 
 SECTION "Sound Effects", ROMX
 

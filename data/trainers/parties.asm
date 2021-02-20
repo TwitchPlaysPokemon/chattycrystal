@@ -523,7 +523,7 @@ FRLGLeafGroup:
 	end_list_items
 
 ColoWesGroup:
-	next_list_item ; AAAAAAA
+	next_list_item ; AAAAAAA1
 	db "AAAAAAA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	db 51
 	dw MISDREAVUS
@@ -670,6 +670,89 @@ ColoWesGroup:
 	bigdw 118
 	bigdw 155
 	db "Ho-Oh@"
+	db -1 ; end
+	
+	next_list_item ; AAAAAAA2
+	db "AAAAAAA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	
+	db 65
+	dw MEGANIUM
+	db ULTRA_BALL
+	dw TOXIC, SYNTHESIS, RAZOR_LEAF, SOLARBEAM
+	bigdw $FFFF
+	bigdw 211
+	bigdw 128
+	bigdw 148
+	bigdw 147
+	bigdw 137
+	bigdw 148
+	db "MEGANIUM@"
+	
+	db 65
+	dw ESPEON
+	db POKE_BALL
+	dw MORNING_SUN, REFLECT, PSYCHIC_M, NO_MOVE
+	bigdw $FFFF
+	bigdw 189
+	bigdw 106
+	bigdw 99
+	bigdw 165
+	bigdw 181
+	bigdw 163
+	db "ABLLVVWW♀@"
+	
+	db 50
+	dw JUMPLUFF
+	db SPELL_TAG
+	dw MEGA_DRAIN, COTTON_SPORE, SLEEP_POWDER, SYNTHESIS
+	bigdw $0FFF
+	bigdw 150
+	bigdw 76
+	bigdw 101
+	bigdw 127
+	bigdw 66
+	bigdw 83
+	db "AAAAKLV@"
+	
+	db 67
+	dw MISDREAVUS
+	db BURN_HEAL
+	dw SHADOW_BALL, CONFUSE_RAY, PSYBEAM, MEAN_LOOK
+	bigdw $FFFF
+	bigdw 183
+	bigdw 119
+	bigdw 102
+	bigdw 140
+	bigdw 152
+	bigdw 140
+	db "AAAAAAAAAA@"
+
+	db 59
+	dw UMBREON
+	db TM_GIGA_DRAIN
+	dw MEAN_LOOK, SCREECH, TAUNT, SECRET_POWER
+	bigdw $FFFF
+	bigdw 206
+	bigdw 111
+	bigdw 160
+	bigdw 104
+	bigdw 81
+	bigdw 169
+	db "UMBREON@"
+	
+	db 50
+	dw QUAGSIRE
+	db TM_RAIN_DANCE
+	dw SURF, MUD_SHOT, AMNESIA, EARTHQUAKE
+	bigdw $0FFF
+	bigdw 171
+	bigdw 88
+	bigdw 106
+	bigdw 61
+	bigdw 79
+	bigdw 95
+	db "UUUUV???@"
+
 	db -1 ; end
 
 	end_list_items

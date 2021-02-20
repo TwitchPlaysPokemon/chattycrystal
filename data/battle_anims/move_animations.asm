@@ -358,6 +358,7 @@ MoveAnimations:
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_RockSlide    ; PLACEHOLDER
 	dw BattleAnim_Amnesia      ; PLACEHOLDER
+	dw BattleAnim_MudSlap      ; PLACEHOLDER
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT

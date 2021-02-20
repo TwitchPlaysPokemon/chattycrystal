@@ -646,8 +646,9 @@ CHRIS EQU __enum__
 	const A_FIRERED
 
 	trainerclass COLO_WES ; 34
-	const AAAAAAA
+	const AAAAAAA1
 	const ACCC
+	const AAAAAAA2
 
 	trainerclass XD_MICHAEL ; 35
 	const STARS

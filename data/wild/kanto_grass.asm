@@ -173,7 +173,7 @@ KantoGrassWildMons:
 	dbw 3, PIDGEY
 	dbw 6, FURRET
 	dbw 4, PIDGEY
-	dbw 4, CHARMANDER
+	dbw 4, BULBASAUR
 	; day
 	dbw 2, PIDGEY
 	dbw 2, RATTATA
@@ -181,7 +181,7 @@ KantoGrassWildMons:
 	dbw 3, PIDGEY
 	dbw 6, FURRET
 	dbw 4, PIDGEY
-	dbw 4, BULBASAUR
+	dbw 4, CHARMANDER
 	; nite
 	dbw 2, HOOTHOOT
 	dbw 2, RATTATA
@@ -630,7 +630,7 @@ KantoGrassWildMons:
 	dbw 25, RATTATA
 	dbw 35, TANGELA
 	dbw 20, RATICATE
-	dbw 30, CHARMANDER
+	dbw 30, BULBASAUR
 	dbw 28, MR__MIME
 	dbw 28, MR__MIME
 	; day
@@ -638,7 +638,7 @@ KantoGrassWildMons:
 	dbw 25, RATTATA
 	dbw 35, TANGELA
 	dbw 20, PANSAGE
-	dbw 28, BULBASAUR
+	dbw 28, CHARMANDER
 	dbw 30, MR__MIME
 	dbw 30, MR__MIME
 	; nite
@@ -819,7 +819,7 @@ KantoGrassWildMons:
 	dbw 56, NIDORINA
 	dbw 58, PIDGEOTTO
 	dbw 58, HOPPIP
-	dbw 60, HOPPIP
+	dbw 60, VENUSAUR
 	dbw 60, CRABRAWLER
 	dbw 58, CHANSEY
 	; day
@@ -827,15 +827,15 @@ KantoGrassWildMons:
 	dbw 56, NIDORINA
 	dbw 58, PIDGEOTTO
 	dbw 58, PANSAGE
-	dbw 60, PANSAGE
+	dbw 60, CHARIZARD
 	dbw 60, CRABRAWLER
 	dbw 58, CHANSEY
 	; nite
 	dbw 56, VENONAT
-	dbw 56, QUAGSIRE
+	dbw 56, GASTRODON
 	dbw 58, NOCTOWL
 	dbw 58, VENOMOTH
-	dbw 58, QUAGSIRE
+	dbw 58, BLASTOISE
 	dbw 58, QUAGSIRE
 	dbw 58, CHANSEY
 	
@@ -845,8 +845,8 @@ KantoGrassWildMons:
 	dbw 56, NIDORINO
 	dbw 56, NIDORINA
 	dbw 58, PIDGEOTTO
-	dbw 58, HOPPIP
-	dbw 60, HOPPIP
+	dbw 58, SCYTHER
+	dbw 60, BAYLEEF
 	dbw 60, CRABRAWLER
 	dbw 58, CHANSEY
 	; day
@@ -854,15 +854,15 @@ KantoGrassWildMons:
 	dbw 56, NIDORINA
 	dbw 58, PIDGEOTTO
 	dbw 58, PANSAGE
-	dbw 60, PANSAGE
+	dbw 60, QUILAVA
 	dbw 60, CRABRAWLER
 	dbw 58, CHANSEY
 	; nite
 	dbw 56, VENONAT
 	dbw 56, QUAGSIRE
 	dbw 58, NOCTOWL
-	dbw 58, VENOMOTH
-	dbw 58, QUAGSIRE
+	dbw 58, PINSIR
+	dbw 58, TYPHLOSION
 	dbw 58, QUAGSIRE
 	dbw 58, CHANSEY
 	
@@ -872,7 +872,7 @@ KantoGrassWildMons:
 	dbw 56, NIDORINO
 	dbw 56, NIDORINA
 	dbw 58, PIDGEOTTO
-	dbw 58, HOPPIP
+	dbw 58, GROTLE
 	dbw 60, HOPPIP
 	dbw 60, CRABRAWLER
 	dbw 58, CHANSEY
@@ -880,7 +880,7 @@ KantoGrassWildMons:
 	dbw 56, NIDORINO
 	dbw 56, NIDORINA
 	dbw 58, PIDGEOTTO
-	dbw 58, PANSAGE
+	dbw 58, MONFERNO
 	dbw 60, PANSAGE
 	dbw 60, CRABRAWLER
 	dbw 58, CHANSEY
@@ -888,7 +888,7 @@ KantoGrassWildMons:
 	dbw 56, VENONAT
 	dbw 56, QUAGSIRE
 	dbw 58, NOCTOWL
-	dbw 58, VENOMOTH
+	dbw 58, PRINPLUP
 	dbw 58, QUAGSIRE
 	dbw 58, QUAGSIRE
 	dbw 58, CHANSEY
@@ -898,25 +898,25 @@ KantoGrassWildMons:
 	; morn
 	dbw 56, NIDORINO
 	dbw 56, NIDORINA
-	dbw 58, PIDGEOTTO
+	dbw 58, OCTILLERY
 	dbw 58, HOPPIP
-	dbw 60, HOPPIP
+	dbw 60, GROVYLE
 	dbw 60, CRABRAWLER
 	dbw 58, CHANSEY
 	; day
 	dbw 56, NIDORINO
 	dbw 56, NIDORINA
-	dbw 58, PIDGEOTTO
+	dbw 58, OCTILLERY
 	dbw 58, PANSAGE
-	dbw 60, PANSAGE
+	dbw 60, COMBUSKEN
 	dbw 60, CRABRAWLER
 	dbw 58, CHANSEY
 	; nite
 	dbw 56, VENONAT
 	dbw 56, QUAGSIRE
-	dbw 58, NOCTOWL
+	dbw 58, OCTILLERY
 	dbw 58, VENOMOTH
-	dbw 58, QUAGSIRE
+	dbw 58, MARSHTOMP
 	dbw 58, QUAGSIRE
 	dbw 58, CHANSEY
 	

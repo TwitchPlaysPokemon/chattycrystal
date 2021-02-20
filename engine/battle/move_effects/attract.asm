@@ -60,6 +60,9 @@ CheckOppositeGender:
 	pop bc
 	ret c
 
+	ld hl, wChattyChatterMove
+	bit 6, [hl]
+	jr nz, .ignore_genders
 	ld a, 0
 	jr z, .got_enemy_gender
 	dec a
@@ -67,10 +70,16 @@ CheckOppositeGender:
 .got_enemy_gender
 	xor b
 	ld b, a ; 0 or $FF
-	ld a, [wChattyChatterMove]
+	ld a, [hl]
 	add a, a
 	sbc a ; $FF if the flag is set
 	xor b ; will invert the result if a = $FF
 	ret nz
 	scf
+	ret
+
+.ignore_genders
+	; works on both male and female mons, but at half accuracy
+	call BattleRandom
+	add a, a
 	ret

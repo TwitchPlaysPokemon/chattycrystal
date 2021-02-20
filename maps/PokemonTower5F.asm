@@ -2,10 +2,10 @@ PokemonTower5F_MapScripts:
 	db 1 ; scene scripts
 	scene_script .dummy
 
+	db 0 ; callbacks
+
 .dummy
 	end
-
-	db 0 ; callbacks
 
 PokemonTower5F_HealPad:
 	special HealParty

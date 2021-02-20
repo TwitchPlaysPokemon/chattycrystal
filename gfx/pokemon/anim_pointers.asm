@@ -385,19 +385,19 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Cutiefly
 	dw RibombeeAnimation
 	; Fused Crystal mons
-	dw OnixAnimation        ; Onixtret
-	dw ChikoritaAnimation   ; Chiquirtle
-	dw BayleefAnimation     ; Baytortle
-	dw MeganiumAnimation    ; Megastoise
-	dw HoothootAnimation    ; Hootduo
-	dw NoctowlAnimation     ; Noctdrio
-	dw TogepiAnimation      ; Togekey
-	dw TogeticAnimation     ; Togetape
-	dw HoppipAnimation      ; Hopporita
-	dw SkiploomAnimation    ; Skipleef
-	dw JumpluffAnimation    ; Jumpanium
-	dw WooperAnimation      ; Woochum
-	dw QuagsireAnimation    ; Quagynx
-	dw SteelixAnimation     ; Steelurret
+	dw OnixtretAnimation
+	dw ChiquirtleAnimation
+	dw BaytortleAnimation
+	dw MegastoiseAnimation
+	dw HootduoAnimation
+	dw NoctdrioAnimation
+	dw TogekeyAnimation
+	dw TogetapeAnimation
+	dw HopporitaAnimation
+	dw SkipleefAnimation
+	dw JumpaniumAnimation
+	dw WoochumAnimation
+	dw QuagynxAnimation
+	dw SteelurretAnimation
 	; TPP's signature fakemon
 	dw PhanceroAnimation

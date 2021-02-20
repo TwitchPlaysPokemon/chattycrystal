@@ -11,7 +11,7 @@ KantoWaterWildMons:
 	map_id VERMILION_PORT
 	db 2 percent ; encounter rate
 	dbw 52, TENTACOOL
-	dbw 47, TENTACOOL
+	dbw 47, WAILMER
 	dbw 52, TENTACRUEL
 
 	map_id ROUTE_4
@@ -22,8 +22,8 @@ KantoWaterWildMons:
 
 	map_id ROUTE_6
 	db 2 percent ; encounter rate
-	dbw 53, PSYDUCK
-	dbw 48, PSYDUCK
+	dbw 53, SURSKIT
+	dbw 48, BUIZEL
 	dbw 53, GOLDUCK
 
 	map_id ROUTE_9
@@ -52,8 +52,8 @@ KantoWaterWildMons:
 
 	map_id ROUTE_19
 	db 6 percent ; encounter rate
-	dbw 35, TENTACOOL
-	dbw 30, TENTACOOL
+	dbw 35, SPHEAL
+	dbw 30, WAILMER
 	dbw 35, TENTACRUEL
 
 	map_id ROUTE_20
@@ -125,8 +125,8 @@ KantoWaterWildMons:
 	map_id VERMILION_CITY
 	db 6 percent ; encounter rate
 	dbw 52, TENTACOOL
-	dbw 47, TENTACOOL
-	dbw 52, TENTACRUEL
+	dbw 47, WAILMER
+	dbw 52, WAILORD
 
 	map_id CELADON_CITY
 	db 2 percent ; encounter rate

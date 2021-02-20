@@ -5967,6 +5967,22 @@ MediumGroup:
 	db 67
 	dw GENGAR
 	db -1 ; end
+	
+	next_list_item ; MEDIUM (8)
+	db "LAUREL@", TRAINERTYPE_NORMAL
+	db 65
+	dw GENGAR
+	db 65
+	dw KANGASKHAN
+	db 65
+	dw MAROWAK
+	db -1 ; end
+	
+	next_list_item ; MEDIUM (8)
+	db "PATRICIA@", TRAINERTYPE_NORMAL
+	db 67
+	dw MISDREAVUS
+	db -1 ; end
 
 	end_list_items
 

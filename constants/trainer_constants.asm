@@ -534,6 +534,8 @@ CHRIS EQU __enum__
 	const REBECCA
 	const DORIS
 	const CARLY
+	const LAUREL
+	const PATRICIA
 
 	trainerclass BOARDER ; 21
 	const RONALD

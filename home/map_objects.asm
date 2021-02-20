@@ -179,6 +179,22 @@ CheckWaterfallTile::
 	cp COLL_CURRENT_DOWN
 	ret
 
+GetSpinTileDirection::
+	cp COLL_SPIN_UP
+	ld c, UP
+	ret z
+	cp COLL_SPIN_UP
+	ld c, DOWN
+	ret z
+	cp COLL_SPIN_LEFT
+	ld c, LEFT
+	ret z
+	cp COLL_SPIN_RIGHT
+	ld c, RIGHT
+	ret z
+	ld c, STANDING
+	ret
+
 CheckStandingOnEntrance::
 	ld a, [wPlayerStandingTile]
 	cp COLL_DOOR

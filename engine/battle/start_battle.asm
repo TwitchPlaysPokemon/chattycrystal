@@ -61,29 +61,38 @@ PlayBattleMusic:
 	ld a, [wBattleType]
 	cp BATTLETYPE_SUICUNE
 	ld de, MUSIC_SUICUNE_BATTLE
-	jp z, .done
+	jr z, .set
 	cp BATTLETYPE_ROAMING
-	jp z, .done
+	jr z, .set
 
 	; Are we fighting a trainer?
 	ld a, [wOtherTrainerClass]
 	and a
 	jr nz, .trainermusic
 
+	ld a, [wCurPartySpecies]
+	call GetPokemonIndexFromID
+	ld a, l
+	cp LOW(PHANCERO)
+	jr nz, .not_phancero
+	assert HIGH(PHANCERO) == 1
+	dec h
+	ld de, MUSIC_KANTO_LEGEND
+	jr z, .set
+.not_phancero
+
 	farcall RegionCheck
 	ld a, e
 	and a
-	jr nz, .kantowild
+	ld de, MUSIC_KANTO_WILD_BATTLE
+	jr nz, .done
 
 	ld de, MUSIC_JOHTO_WILD_BATTLE
 	ld a, [wTimeOfDay]
 	cp NITE_F
 	jr nz, .done
 	ld de, MUSIC_JOHTO_WILD_BATTLE_NIGHT
-	jr .done
-
-.kantowild
-	ld de, MUSIC_KANTO_WILD_BATTLE
+.set
 	jr .done
 
 .trainermusic

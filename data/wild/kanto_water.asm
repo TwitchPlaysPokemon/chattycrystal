@@ -40,9 +40,9 @@ KantoWaterWildMons:
 
 	map_id ROUTE_12
 	db 6 percent ; encounter rate
-	dbw 25, TENTACOOL
-	dbw 25, QUAGSIRE
-	dbw 25, TENTACRUEL
+	dbw 58, TENTACOOL
+	dbw 58, QUAGSIRE
+	dbw 58, TENTACRUEL
 
 	map_id ROUTE_13
 	db 6 percent ; encounter rate

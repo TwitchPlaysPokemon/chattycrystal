@@ -356,29 +356,29 @@ KantoGrassWildMons:
 	map_id ROUTE_8
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 17, VULPIX
-	dbw 19, PIDGEOTTO
-	dbw 16, ABRA
-	dbw 17, GROWLITHE
-	dbw 16, JIGGLYPUFF
-	dbw 18, VULPIX
-	dbw 18, KADABRA
+	dbw 58, VULPIX
+	dbw 60, PIDGEOTTO
+	dbw 57, ABRA
+	dbw 58, GROWLITHE
+	dbw 57, JIGGLYPUFF
+	dbw 59, NINETALES
+	dbw 59, KADABRA
 	; day
-	dbw 17, SNUBBULL
-	dbw 19, PIDGEOTTO
-	dbw 16, ABRA
-	dbw 17, GROWLITHE
-	dbw 16, JIGGLYPUFF
-	dbw 18, VULPIX
-	dbw 18, KADABRA
+	dbw 58, SNUBBULL
+	dbw 60, PIDGEOTTO
+	dbw 57, ABRA
+	dbw 58, GROWLITHE
+	dbw 57, JIGGLYPUFF
+	dbw 59, VULPIX
+	dbw 59, KADABRA
 	; nite
-	dbw 17, MEOWTH
-	dbw 20, NOCTOWL
-	dbw 16, ABRA
-	dbw 17, HAUNTER
-	dbw 16, JIGGLYPUFF
-	dbw 18, KADABRA
-	dbw 18, KADABRA
+	dbw 58, MEOWTH
+	dbw 61, NOCTOWL
+	dbw 57, ABRA
+	dbw 58, HAUNTER
+	dbw 57, JIGGLYPUFF
+	dbw 59, KADABRA
+	dbw 59, ALAKAZAM
 
 	map_id ROUTE_9
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

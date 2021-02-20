@@ -1,38 +1,34 @@
-SilverCaveOutside_MapScripts:
-	db 0 ; scene scripts
+SilverCaveOutside_MapScripts: ; 0x1b2042
+	; trigger count
+	db 0
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_NEWMAP, .FlyPoint
+	; callback count
+	db 0
 
-.FlyPoint:
-	setflag ENGINE_FLYPOINT_SILVER_CAVE
-	return
+	; callbacks
 
-MtSilverPokecenterSign:
-	jumpstd pokecentersign
+SilverCaveOutside_MapEvents: ; 0x1b205f
+	; filler
+	db 0, 0
 
-MtSilverSign:
-	jumptext MtSilverSignText
+	; warps
+	db 2
+	warp_def $13, $17, 1, SILVER_CAVE_POKECENTER_1F
+	warp_def $b, $12, 1, SILVER_CAVE_ROOM_1
 
-SilverCaveOutsideHiddenFullRestore:
-	hiddenitem FULL_RESTORE, EVENT_SILVER_CAVE_OUTSIDE_HIDDEN_FULL_RESTORE
+	; xy triggers
+	db 0
+;	xy_trigger 0, 12, 18, 0, MtSilverRedScript, 0, 0
 
-MtSilverSignText:
-	text "MT.SILVER"
-	done
+	; signposts
+	db 0
+;	signpost 19, 24, $0, MapSilverCaveOutsideSignpost0Script
+;	signpost 13, 17, $0, MapSilverCaveOutsideSignpost1Script
+;	signpost 25, 9, $7, MapSilverCaveOutsideSignpostItem2
 
-SilverCaveOutside_MapEvents:
-	db 0, 0 ; filler
+	; people-events
+	db 0
+;	person_event SPRITE_COOLTRAINER_M, 16, 22, $6, 0, 0, -1, -1, 0, 0, 0, SilverCaveOutsideCooltrainerMScript, EVENT_ENABLE_DIPLOMA_PRINTING
+;	person_event SPRITE_RED, 15, 22, $6, 0, 0, -1, -1, 0, 0, 0, ObjectEvent, EVENT_RED_IN_FRONT_OF_MT_SILVER
+; 0x1b207e
 
-	db 2 ; warp events
-	warp_event 23, 19, SILVER_CAVE_POKECENTER_1F, 1
-	warp_event 18, 11, SILVER_CAVE_ROOM_1, 1
-
-	db 0 ; coord events
-
-	db 3 ; bg events
-	bg_event 24, 19, BGEVENT_READ, MtSilverPokecenterSign
-	bg_event 17, 13, BGEVENT_READ, MtSilverSign
-	bg_event  9, 25, BGEVENT_ITEM, SilverCaveOutsideHiddenFullRestore
-
-	db 0 ; object events

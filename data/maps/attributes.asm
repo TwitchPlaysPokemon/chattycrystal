@@ -504,6 +504,8 @@ ENDM
 	map_attributes PokemonTower5F, POKEMON_TOWER_5F, $00, 0
 	map_attributes PokemonTower6F, POKEMON_TOWER_6F, $00, 0
 	map_attributes PokemonTower7F, POKEMON_TOWER_7F, $00, 0
+	map_attributes MtSilverRuins, MT_SILVER_RUINS, $00, 0
+	map_attributes MtSilverRuinsB1F, MT_SILVER_RUINS_B1F, $09, 0
 	map_attributes EcruteakTinTowerEntrance, ECRUTEAK_TIN_TOWER_ENTRANCE, $00, 0
 	map_attributes WiseTriosRoom, WISE_TRIOS_ROOM, $00, 0
 	map_attributes EcruteakPokecenter1F, ECRUTEAK_POKECENTER_1F, $00, 0

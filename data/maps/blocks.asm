@@ -1011,3 +1011,9 @@ BattleTentGenerator_Blocks:
 
 BattleTentPCRoom_Blocks:
 	INCBIN "maps/BattleTentPCRoom.blk"
+
+MtSilverRuins_Blocks:
+	INCBIN "maps/MtSilverRuins.blk"
+
+MtSilverRuinsB1F_Blocks:
+	INCBIN "maps/MtSilverRuinsB1F.blk"

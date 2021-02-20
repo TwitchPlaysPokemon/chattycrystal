@@ -164,6 +164,8 @@ ENDM
 	map_const POKEMON_TOWER_5F,                             9,  9 ; 107
 	map_const POKEMON_TOWER_6F,                             9,  9 ; 108
 	map_const POKEMON_TOWER_7F,                             9,  9 ; 109
+	map_const MT_SILVER_RUINS,                             16, 24 ; 110
+	map_const MT_SILVER_RUINS_B1F,                         16, 16 ; 111
 
 	newgroup                                                      ;  4
 

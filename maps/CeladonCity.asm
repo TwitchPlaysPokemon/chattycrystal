@@ -218,6 +218,7 @@ CeladonCityBattleTentWallOff:
 	faceplayer
 	opentext
 	writetext .text
+	waitbutton
 	closetext
 	chattyon
 	end

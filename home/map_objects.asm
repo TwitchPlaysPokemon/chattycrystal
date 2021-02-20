@@ -183,7 +183,7 @@ GetSpinTileDirection::
 	cp COLL_SPIN_UP
 	ld c, UP
 	ret z
-	cp COLL_SPIN_UP
+	cp COLL_SPIN_DOWN
 	ld c, DOWN
 	ret z
 	cp COLL_SPIN_LEFT

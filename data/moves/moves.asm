@@ -184,7 +184,7 @@ Moves1:
 	move EFFECT_RECOIL_HIT,           50, NORMAL,   100,  1,   0 ;STRUGGLE
 	move EFFECT_SKETCH,                0, NORMAL,   100,  1,   0 ;SKETCH
 	move EFFECT_TRIPLE_KICK,          10, FIGHTING,  90, 10,   0 ;TRIPLE_KICK
-	move EFFECT_THIEF,                40, DARK,     100, 25, 100 ;THIEF
+	move EFFECT_THIEF,                60, DARK,     100, 25, 100 ;THIEF
 	move EFFECT_MEAN_LOOK,             0, BUG,      100, 10,   0 ;SPIDER_WEB
 	move EFFECT_LOCK_ON,               0, NORMAL,   100,  5,   0 ;MIND_READER
 	move EFFECT_NIGHTMARE,             0, GHOST,    100, 15,   0 ;NIGHTMARE

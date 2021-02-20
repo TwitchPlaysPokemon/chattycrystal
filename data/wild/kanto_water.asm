@@ -145,5 +145,29 @@ KantoWaterWildMons:
 	dbw 35, TENTACOOL
 	dbw 30, TENTACOOL
 	dbw 35, TENTACRUEL
+	
+	map_id SAFARI_ZONE_CENTER
+	db 6 percent ; encounter rate
+	dbw 56, SHELLOS
+	dbw 51, SHELLOS
+	dbw 56, GASTRODON
+
+	map_id SAFARI_ZONE_EAST
+	db 6 percent ; encounter rate
+	dbw 56, SHELLOS
+	dbw 51, SHELLOS
+	dbw 56, GASTRODON
+	
+	map_id SAFARI_ZONE_NORTH
+	db 6 percent ; encounter rate
+	dbw 56, SHELLOS
+	dbw 51, SHELLOS
+	dbw 56, GASTRODON
+
+	map_id SAFARI_ZONE_WEST
+	db 6 percent ; encounter rate
+	dbw 56, SHELLOS
+	dbw 51, SHELLOS
+	dbw 56, GASTRODON
 
 	db -1 ; end

@@ -811,5 +811,113 @@ KantoGrassWildMons:
 	dbw 42, GOLBAT
 	dbw 42, GOLBAT
 	dbw 42, GOLBAT
-
+	
+	map_id SAFARI_ZONE_CENTER
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, PIDGEOTTO
+	dbw 58, HOPPIP
+	dbw 60, HOPPIP
+	dbw 60, CRABRAWLER
+	dbw 58, CHANSEY
+	; day
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, PIDGEOTTO
+	dbw 58, PANSAGE
+	dbw 60, PANSAGE
+	dbw 60, CRABRAWLER
+	dbw 58, CHANSEY
+	; nite
+	dbw 56, VENONAT
+	dbw 56, QUAGSIRE
+	dbw 58, NOCTOWL
+	dbw 58, VENOMOTH
+	dbw 58, QUAGSIRE
+	dbw 58, QUAGSIRE
+	dbw 58, CHANSEY
+	
+	map_id SAFARI_ZONE_EAST
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, PIDGEOTTO
+	dbw 58, HOPPIP
+	dbw 60, HOPPIP
+	dbw 60, CRABRAWLER
+	dbw 58, CHANSEY
+	; day
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, PIDGEOTTO
+	dbw 58, PANSAGE
+	dbw 60, PANSAGE
+	dbw 60, CRABRAWLER
+	dbw 58, CHANSEY
+	; nite
+	dbw 56, VENONAT
+	dbw 56, QUAGSIRE
+	dbw 58, NOCTOWL
+	dbw 58, VENOMOTH
+	dbw 58, QUAGSIRE
+	dbw 58, QUAGSIRE
+	dbw 58, CHANSEY
+	
+	map_id SAFARI_ZONE_NORTH
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, PIDGEOTTO
+	dbw 58, HOPPIP
+	dbw 60, HOPPIP
+	dbw 60, CRABRAWLER
+	dbw 58, CHANSEY
+	; day
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, PIDGEOTTO
+	dbw 58, PANSAGE
+	dbw 60, PANSAGE
+	dbw 60, CRABRAWLER
+	dbw 58, CHANSEY
+	; nite
+	dbw 56, VENONAT
+	dbw 56, QUAGSIRE
+	dbw 58, NOCTOWL
+	dbw 58, VENOMOTH
+	dbw 58, QUAGSIRE
+	dbw 58, QUAGSIRE
+	dbw 58, CHANSEY
+	
+	map_id SAFARI_ZONE_WEST
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, PIDGEOTTO
+	dbw 58, HOPPIP
+	dbw 60, HOPPIP
+	dbw 60, CRABRAWLER
+	dbw 58, CHANSEY
+	; day
+	dbw 56, NIDORINO
+	dbw 56, NIDORINA
+	dbw 58, PIDGEOTTO
+	dbw 58, PANSAGE
+	dbw 60, PANSAGE
+	dbw 60, CRABRAWLER
+	dbw 58, CHANSEY
+	; nite
+	dbw 56, VENONAT
+	dbw 56, QUAGSIRE
+	dbw 58, NOCTOWL
+	dbw 58, VENOMOTH
+	dbw 58, QUAGSIRE
+	dbw 58, QUAGSIRE
+	dbw 58, CHANSEY
+	
 	db -1 ; end

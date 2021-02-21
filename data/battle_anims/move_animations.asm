@@ -1807,6 +1807,7 @@ BattleAnim_Tackle:
 	anim_wait 4
 	anim_sound 0, 1, SFX_TACKLE
 	anim_obj ANIM_OBJ_00, 136, 48, $0
+	anim_wait 8
 	anim_jump BattleAnim_ShowMon_0
 
 BattleAnim_BodySlam:

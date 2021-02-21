@@ -4910,12 +4910,12 @@ HikerGroup:
 
 	next_list_item ; HIKER (13)
 	db "TIM@", TRAINERTYPE_NORMAL
-	db 31
-	dw GRAVELER
-	db 31
-	dw GRAVELER
-	db 31
-	dw GRAVELER
+	db 66
+	dw GOLEM
+	db 66
+	dw GOLEM
+	db 66
+	dw GOLEM
 	db -1 ; end
 
 	next_list_item ; HIKER (14)

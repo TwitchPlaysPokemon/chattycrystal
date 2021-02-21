@@ -248,56 +248,56 @@ KantoGrassWildMons:
 	map_id ROUTE_4
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 5, SPEAROW
-	dbw 5, RATTATA
-	dbw 8, EKANS
-	dbw 10, RATICATE
-	dbw 10, ARBOK
-	dbw 10, SANDSHREW
-	dbw 10, SANDSHREW
+	dbw 61, SPEAROW
+	dbw 61, RATTATA
+	dbw 62, EKANS
+	dbw 63, RATICATE
+	dbw 63, ARBOK
+	dbw 63, SANDSHREW
+	dbw 63, SANDSHREW
 	; day
-	dbw 5, SPEAROW
-	dbw 5, RATTATA
-	dbw 8, EKANS
-	dbw 10, RATICATE
-	dbw 10, ARBOK
-	dbw 10, SANDSHREW
-	dbw 10, SANDSHREW
+	dbw 61, SPEAROW
+	dbw 61, RATTATA
+	dbw 62, EKANS
+	dbw 63, RATICATE
+	dbw 63, ARBOK
+	dbw 63, SANDSHREW
+	dbw 63, SANDSHREW
 	; nite
-	dbw 5, RATTATA
-	dbw 10, RATTATA
-	dbw 10, RATICATE
-	dbw 6, ZUBAT
-	dbw 5, RATTATA
-	dbw 6, CLEFAIRY
-	dbw 6, CLEFAIRY
+	dbw 61, RATTATA
+	dbw 63, RATTATA
+	dbw 63, RATICATE
+	dbw 62, ZUBAT
+	dbw 61, RATTATA
+	dbw 62, CLEFAIRY
+	dbw 62, CLEFAIRY
 
 	map_id ROUTE_5
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 13, PIDGEY
-	dbw 13, SNUBBULL
-	dbw 15, PIDGEOTTO
-	dbw 12, MANKEY
-	dbw 14, JIGGLYPUFF
-	dbw 14, ABRA
-	dbw 14, ABRA
+	dbw 61, PIDGEY
+	dbw 61, SNUBBULL
+	dbw 63, PIDGEOTTO
+	dbw 60, MANKEY
+	dbw 62, JIGGLYPUFF
+	dbw 62, ABRA
+	dbw 62, ABRA
 	; day
-	dbw 13, PIDGEY
-	dbw 13, SNUBBULL
-	dbw 15, PIDGEOTTO
-	dbw 12, MANKEY
-	dbw 14, JIGGLYPUFF
-	dbw 14, ABRA
-	dbw 14, ABRA
+	dbw 61, PIDGEY
+	dbw 61, SNUBBULL
+	dbw 63, PIDGEOTTO
+	dbw 60, MANKEY
+	dbw 62, JIGGLYPUFF
+	dbw 62, ABRA
+	dbw 62, ABRA
 	; nite
-	dbw 13, HOOTHOOT
-	dbw 13, MEOWTH
-	dbw 15, NOCTOWL
-	dbw 12, MANKEY
-	dbw 14, JIGGLYPUFF
-	dbw 14, ABRA
-	dbw 14, ABRA
+	dbw 61, HOOTHOOT
+	dbw 61, MEOWTH
+	dbw 63, NOCTOWL
+	dbw 60, MANKEY
+	dbw 62, JIGGLYPUFF
+	dbw 62, ABRA
+	dbw 62, ABRA
 
 	map_id ROUTE_6
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

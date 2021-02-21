@@ -114,3 +114,8 @@ Music:
 	dba Music_CeruleanCaveRBY
 	dba Music_VsWCS
 	dba Music_BattleTentRuins
+	dba Music_PhanceroBattle
+	dba Music_HoOhBattleHGSS
+	dba Music_LugiaBattleHGSS
+	dba Music_CeruleanGSC
+	dba Music_NuggetBridge

@@ -3273,7 +3273,7 @@ BattleAnim_Overheat:
 	anim_obj ANIM_OBJ_OVERHEAT, 44, 88, $30
 	anim_obj ANIM_OBJ_OVERHEAT, 44, 88, $38
 	anim_wait 8
-	anim_loop 7, .loop
+	anim_loop 6, .loop
 .loop2
 	anim_sound 0, 0, SFX_BURN 
 	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $1

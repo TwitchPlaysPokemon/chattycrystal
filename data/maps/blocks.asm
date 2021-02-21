@@ -1010,3 +1010,6 @@ BattleTentGenerator_Blocks:
 
 BattleTentPCRoom_Blocks:
 	INCBIN "maps/BattleTentPCRoom.blk"
+
+PowerPlantB1F_Blocks:
+	INCBIN "maps/PowerPlantB1F.blk"

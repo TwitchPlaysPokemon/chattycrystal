@@ -700,7 +700,6 @@ KantoGrassWildMons:
 	dbw 65, GLOOM
 	dbw 64, ODDISH
 	dbw 64, RALTS
-	dbw 64, BELDUM
 	dbw 64, WEEPINBELL
 	dbw 66, ROSELIA
 	dbw 66, VILEPLUME

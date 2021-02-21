@@ -98,18 +98,13 @@ DoBattleAnimFrame:
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
-.anon_dw
-	dw .zero
-	dw .one
-.one
-	call DeinitBattleAnimation
-.zero
-	ret
+
+	dw GenericDummyFunction
+	dw DeinitBattleAnimation
 
 BattleAnimFunction_ThrowFromPlayerToEnemyAndDisappear:
 	call BattleAnimFunction_ThrowFromPlayerToEnemy
-	ret c
-	call DeinitBattleAnimation
+	jp nc, DeinitBattleAnimation
 	ret
 
 BattleAnimFunction_ThrowFromPlayerToEnemy:
@@ -120,7 +115,7 @@ BattleAnimFunction_ThrowFromPlayerToEnemy:
 	cp $88
 	ret nc
 	; Move right 2 pixels
-	add $2
+	add 2
 	ld [hl], a
 	; Move down 1 pixel
 	ld hl, BATTLEANIMSTRUCT_YCOORD
@@ -149,12 +144,9 @@ BattleAnimFunction_04:
 	add hl, bc
 	ld a, [hl]
 	cp $88
-	jr c, .asm_cd0b3
-	call DeinitBattleAnimation
-	ret
+	jp nc, DeinitBattleAnimation
 
-.asm_cd0b3
-	add $2
+	add 2
 	ld [hl], a
 	ld hl, BATTLEANIMSTRUCT_YCOORD
 	add hl, bc
@@ -187,9 +179,10 @@ BattleAnimFunction_04:
 
 BattleAnimFunction_03:
 	call BattleAnim_AnonJumptable
-.anon_dw
+
 	dw .zero
 	dw .one
+
 .zero
 	call BattleAnim_IncAnonJumptableIndex
 	ld hl, BATTLEANIMSTRUCT_PARAM
@@ -233,12 +226,9 @@ BattleAnimFunction_03:
 
 BattleAnimFunction_01:
 	call BattleAnim_AnonJumptable
-.anon_dw
+
 	dw .zero
-	dw .one
-.one
-	call DeinitBattleAnimation
-	ret
+	dw DeinitBattleAnimation
 
 .zero
 	ld hl, BATTLEANIMSTRUCT_XCOORD
@@ -249,44 +239,38 @@ BattleAnimFunction_01:
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
 	ld a, [hl]
-	call Functionce70a
-	ret
+	jp Functionce70a
 
 BattleAnimFunction_02:
 	ld hl, BATTLEANIMSTRUCT_XCOORD
 	add hl, bc
 	ld a, [hl]
 	cp $84
-	jr nc, .asm_cd158
+	jp nc, DeinitBattleAnimation
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
 	ld a, [hl]
-	call Functionce70a
-	ret
-
-.asm_cd158
-	call DeinitBattleAnimation
-	ret
+	jp Functionce70a
 
 BattleAnimFunction_PokeBall:
 	call BattleAnim_AnonJumptable
-.anon_dw
+
 	dw .zero
 	dw .one
-	dw .two
+	dw GenericDummyFunction
 	dw .three
 	dw .four
-	dw .five
+	dw GenericDummyFunction
 	dw .six
 	dw .seven
 	dw .eight
-	dw .nine
+	dw GenericDummyFunction
 	dw .ten
-	dw .eleven
+	dw DeinitBattleAnimation
+
 .zero ; init
 	call GetBallAnimPal
-	call BattleAnim_IncAnonJumptableIndex
-	ret
+	jp BattleAnim_IncAnonJumptableIndex
 
 .one
 	call BattleAnimFunction_ThrowFromPlayerToEnemy
@@ -300,8 +284,7 @@ BattleAnimFunction_PokeBall:
 	ld [hl], a
 	ld a, BATTLEANIMFRAMESET_0B
 	call ReinitBattleAnimFrameset
-	call BattleAnim_IncAnonJumptableIndex
-	ret
+	jp BattleAnim_IncAnonJumptableIndex
 
 .three
 	call BattleAnim_IncAnonJumptableIndex
@@ -309,7 +292,7 @@ BattleAnimFunction_PokeBall:
 	call ReinitBattleAnimFrameset
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
-	ld [hl], $0
+	ld [hl], 0
 	inc hl
 	ld [hl], $10
 .four
@@ -332,13 +315,12 @@ BattleAnimFunction_PokeBall:
 	ld hl, BATTLEANIMSTRUCT_10
 	add hl, bc
 	ld a, [hl]
-	sub $4
+	sub 4
 	ld [hl], a
 	ret nz
 	ld a, BATTLEANIMFRAMESET_0C
 	call ReinitBattleAnimFrameset
-	call BattleAnim_IncAnonJumptableIndex
-	ret
+	jp BattleAnim_IncAnonJumptableIndex
 
 .six
 	ld a, BATTLEANIMFRAMESET_0D
@@ -346,9 +328,6 @@ BattleAnimFunction_PokeBall:
 	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
 	add hl, bc
 	dec [hl]
-.two
-.five
-.nine
 	ret
 
 .seven
@@ -375,54 +354,41 @@ BattleAnimFunction_PokeBall:
 	dec a
 	ld [hl], a
 	and $1f
-	jr z, .eleven
+	jp z, DeinitBattleAnimation
 	and $f
-	ret nz
-	call BattleAnim_IncAnonJumptableIndex
-	ret
-
-.eleven
-	call DeinitBattleAnimation
+	call z, BattleAnim_IncAnonJumptableIndex
 	ret
 
 BattleAnimFunction_PokeBallBlocked:
 	call BattleAnim_AnonJumptable
-.anon_dw
+
 	dw .zero
 	dw .one
 	dw .two
+
 .zero
 	call GetBallAnimPal
-	call BattleAnim_IncAnonJumptableIndex
-	ret
+	jp BattleAnim_IncAnonJumptableIndex
 
 .one
 	ld hl, BATTLEANIMSTRUCT_XCOORD
 	add hl, bc
 	ld a, [hl]
 	cp $70
-	jr nc, .next
-	call BattleAnimFunction_ThrowFromPlayerToEnemy
-	ret
-
-.next
+	jp c, BattleAnimFunction_ThrowFromPlayerToEnemy
 	call BattleAnim_IncAnonJumptableIndex
 .two
 	ld hl, BATTLEANIMSTRUCT_YCOORD
 	add hl, bc
 	ld a, [hl]
 	cp $80
-	jr nc, .done
+	jp nc, DeinitBattleAnimation
 	add $4
 	ld [hl], a
 	ld hl, BATTLEANIMSTRUCT_XCOORD
 	add hl, bc
 	dec [hl]
 	dec [hl]
-	ret
-
-.done
-	call DeinitBattleAnimation
 	ret
 
 GetBallAnimPal:

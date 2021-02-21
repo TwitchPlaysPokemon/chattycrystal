@@ -11,6 +11,7 @@ _hl_::
 
 _de_::
 	push de
+GenericDummyFunction::
 	ret
 
 SECTION "rst8", ROM0 ; rst FarCall

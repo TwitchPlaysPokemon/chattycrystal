@@ -92,17 +92,13 @@ TrainerBirdKeeperJose2:
 	scall .Rematch
 	winlosstext BirdKeeperJose2BeatenText, 0
 	readmem wJoseFightCount
-	ifequal 2, .Fight2
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
-.Fight2:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight2
 .Fight1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
 .LoadFight0:
-	loadtrainer BIRD_KEEPER, JOSE2
+	loadtrainer BIRD_KEEPER, JOSE1
 	startbattle
 	reloadmapafterbattle
 	loadmem wJoseFightCount, 1
@@ -110,15 +106,7 @@ TrainerBirdKeeperJose2:
 	end
 
 .LoadFight1:
-	loadtrainer BIRD_KEEPER, JOSE1
-	startbattle
-	reloadmapafterbattle
-	loadmem wJoseFightCount, 2
-	clearflag ENGINE_JOSE
-	end
-
-.LoadFight2:
-	loadtrainer BIRD_KEEPER, JOSE3
+	loadtrainer BIRD_KEEPER, JOSE2
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_JOSE
@@ -225,12 +213,8 @@ TrainerCooltrainerfReena:
 	scall .Rematch
 	winlosstext CooltrainerfReenaBeatenText, 0
 	readmem wReenaFightCount
-	ifequal 2, .Fight2
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
-.Fight2:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight2
 .Fight1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
@@ -244,14 +228,6 @@ TrainerCooltrainerfReena:
 
 .LoadFight1:
 	loadtrainer COOLTRAINERF, REENA2
-	startbattle
-	reloadmapafterbattle
-	loadmem wReenaFightCount, 2
-	clearflag ENGINE_REENA
-	end
-
-.LoadFight2:
-	loadtrainer COOLTRAINERF, REENA3
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_REENA

@@ -95,7 +95,6 @@ CHRIS EQU __enum__
 	const JOSE2
 	const PERRY
 	const BRET
-	const JOSE3
 	const VANCE2
 	const VANCE3
 
@@ -160,7 +159,6 @@ CHRIS EQU __enum__
 	const JENN
 	const BETH3
 	const REENA2
-	const REENA3
 	const CARA
 
 	trainerclass BEAUTY ; 9

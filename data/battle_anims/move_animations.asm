@@ -266,8 +266,8 @@ MoveAnimations:
 	dw BattleAnim_IceBall      ; 108
 	dw BattleAnim_PoisonFang
 	dw BattleAnim_MeteorMash
-	dw BattleAnim_Crunch       ; PLACEHOLDER
-	dw BattleAnim_Dynamicpunch ; PLACEHOLDER
+	dw BattleAnim_Astonish
+	dw BattleAnim_AirCutter
 	dw BattleAnim_FeintAttack  ; PLACEHOLDER
 	dw BattleAnim_Cut          ; PLACEHOLDER
 	dw BattleAnim_SacredFire   ; PLACEHOLDER
@@ -3214,6 +3214,47 @@ BattleAnim_MeteorMash:
 	anim_wait 3
 	anim_obj ANIM_OBJ_STAR_BURST, 136, 56, $90
 	anim_wait 32
+	anim_ret
+	
+BattleAnim_Astonish:
+	anim_2gfx ANIM_GFX_SHINE, ANIM_GFX_HIT
+	anim_call BattleAnim_TargetObj_2Row
+	anim_bgeffect ANIM_BG_07, $0, $0, $0
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_sound 0, 1, SFX_TACKLE
+	anim_wait 4
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_FORESIGHT, 140, 56, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_FORESIGHT, 146, 50, $0
+	anim_wait 20
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
+	
+BattleAnim_AirCutter:
+	anim_2gfx ANIM_GFX_WHIP, ANIM_GFX_HIT
+	anim_call BattleAnim_UserObj_2Row
+	anim_bgeffect ANIM_BG_26, $0, $0, $0
+.loop
+	anim_sound 3, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_AIR_CUTTER, 64, 80, $18
+	anim_wait 4
+	anim_sound 3, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_AIR_CUTTER, 64, 96, $18
+	anim_wait 4
+	anim_sound 3, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_AIR_CUTTER, 64, 88, $18
+	anim_wait 4
+	anim_sound 3, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_AIR_CUTTER, 64, 104, $18
+	anim_wait 4
+	anim_loop 3, .loop
+	anim_wait 32
+	anim_incbgeffect ANIM_BG_26
+	anim_call BattleAnim_ShowMon_1
 	anim_ret
 
 BattleAnim_FlameWheel:

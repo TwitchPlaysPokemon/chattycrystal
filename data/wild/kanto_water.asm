@@ -4,9 +4,9 @@ KantoWaterWildMons:
 
 	map_id TOHJO_FALLS
 	db 4 percent ; encounter rate
-	dbw 28, GOLDEEN
-	dbw 28, REMORAID
-	dbw 28, BUIZEL
+	dbw 68, GOLDEEN
+	dbw 68, REMORAID
+	dbw 68, BUIZEL
 
 	map_id VERMILION_PORT
 	db 2 percent ; encounter rate
@@ -16,9 +16,9 @@ KantoWaterWildMons:
 
 	map_id ROUTE_4
 	db 4 percent ; encounter rate
-	dbw 10, BUIZEL
-	dbw 5, GOLDEEN
-	dbw 10, FLOATZEL
+	dbw 65, SHELLOS
+	dbw 60, GOLDEEN
+	dbw 65, SEAKING
 
 	map_id ROUTE_6
 	db 2 percent ; encounter rate
@@ -52,27 +52,27 @@ KantoWaterWildMons:
 
 	map_id ROUTE_19
 	db 6 percent ; encounter rate
-	dbw 35, SPHEAL
-	dbw 30, WAILMER
-	dbw 35, TENTACRUEL
+	dbw 65, SPHEAL
+	dbw 60, WAILORD
+	dbw 65, TENTACRUEL
 
 	map_id ROUTE_20
 	db 6 percent ; encounter rate
-	dbw 35, TENTACOOL
-	dbw 30, TENTACOOL
-	dbw 35, TENTACRUEL
+	dbw 65, TENTACRUEL
+	dbw 60, WAILORD
+	dbw 65, SEALEO
 
 	map_id ROUTE_21
 	db 6 percent ; encounter rate
-	dbw 35, TENTACOOL
-	dbw 30, TENTACOOL
-	dbw 35, TENTACRUEL
+	dbw 65, TENTACRUEL
+	dbw 60, WAILORD
+	dbw 65, BLASTOISE
 
 	map_id ROUTE_22
 	db 2 percent ; encounter rate
-	dbw 60, SURSKIT
-	dbw 58, POLIWAG
-	dbw 60, POLIWHIRL
+	dbw 60, MASQUERAIN
+	dbw 58, POLIWRATH
+	dbw 60, SWANNA
 
 	map_id ROUTE_24
 	db 4 percent ; encounter rate
@@ -88,33 +88,33 @@ KantoWaterWildMons:
 
 	map_id ROUTE_26
 	db 6 percent ; encounter rate
-	dbw 30, TENTACOOL
-	dbw 25, TENTACOOL
-	dbw 30, TENTACRUEL
+	dbw 70, TENTACRUEL
+	dbw 75, WAILORD
+	dbw 70, TENTACRUEL
 
 	map_id ROUTE_27
 	db 6 percent ; encounter rate
-	dbw 28, TENTACOOL
-	dbw 23, TENTACOOL
-	dbw 28, TENTACRUEL
+	dbw 68, TENTACRUEL
+	dbw 73, WAILORD
+	dbw 68, TENTACRUEL
 
 	map_id ROUTE_28
 	db 2 percent ; encounter rate
-	dbw 40, SURSKIT
-	dbw 35, POLIWAG
-	dbw 40, POLIWHIRL
+	dbw 80, MASQUERAIN
+	dbw 83, POLITOED
+	dbw 50, FEEBAS
 
 	map_id PALLET_TOWN
 	db 6 percent ; encounter rate
-	dbw 35, TENTACOOL
-	dbw 30, TENTACOOL
-	dbw 35, TENTACRUEL
+	dbw 75, TENTACOOL
+	dbw 70, TENTACOOL
+	dbw 75, LAPRAS
 
 	map_id VIRIDIAN_CITY
 	db 2 percent ; encounter rate
-	dbw 10, SURSKIT
-	dbw 5, SURSKIT
-	dbw 10, POLIWHIRL
+	dbw 70, SURSKIT
+	dbw 75, MASQUERAIN
+	dbw 80, POLIWRATH
 
 	map_id CERULEAN_CITY
 	db 4 percent ; encounter rate

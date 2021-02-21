@@ -192,47 +192,47 @@ CreditsScript:
 
 	db     US_VERSION_STAFF, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db      US_COORDINATION, 1
 	db          GAIL_TILDEN, 2
 	db        HIRO_NAKAMURA, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db      US_COORDINATION, 1
 	db       JUNICHI_MASUDA, 2
 	db        SETH_MCMAHILL, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db      US_COORDINATION, 1
 	db     HIROTO_ALEXANDER, 2
 	db     TERESA_LILLYGREN, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db     TEXT_TRANSLATION, 1
 	db        NOB_OGASAWARA, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db          PROGRAMMERS, 1
 	db      TERUKI_MURAKAWA, 2
 	db      KAZUYOSHI_OSAWA, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db         PAAD_TESTING, 1
 	db       THOMAS_HERTZOG, 2
 	db         ERIK_JOHNSON, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db      PRODUCT_TESTING, 0
 	db             PLANNING, 1
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db      PRODUCT_TESTING, 0
 	db       KEITA_NAKAMURA, 1
@@ -240,7 +240,7 @@ CreditsScript:
 	db       HIROAKI_TAMURA, 3
 	db    NORIAKI_SAKAGUCHI, 4
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db      PRODUCT_TESTING, 0
 	db NCL_SUPER_MARIO_CLUB, 1
@@ -248,13 +248,13 @@ CreditsScript:
 	db         ATSUSHI_TADA, 3
 	db          MIYUKI_SATO, 4
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db       SPECIAL_THANKS, 0
 	db     KIMIKO_NAKAMICHI, 1
 	db           AKITO_MORI, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db       SPECIAL_THANKS, 0
 	db        GAKUZI_NOMOTO, 1
@@ -310,6 +310,12 @@ CreditsScript:
 	db               ARTIST, 1
 	db          BLOODLESSNS, 2
 	db              KELCYUS, 3
+
+	db CREDITS_WAIT, 9
+
+	db         CREDIT_MUSIC, 1
+	db    MMMMMMMMMMMMMMMMM, 2
+	db                 PIGU, 3
 
 	db CREDITS_WAIT, 9
 

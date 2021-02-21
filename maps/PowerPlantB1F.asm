@@ -13,6 +13,7 @@ PowerPlantB1FZapdos:
 	cry ZAPDOS
 	pause 15
 	closetext
+	setevent EVENT_POWER_PLANT_B1F_ZAPDOS
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon ZAPDOS, 60
 	startbattle

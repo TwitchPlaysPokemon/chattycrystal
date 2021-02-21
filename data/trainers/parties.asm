@@ -296,7 +296,7 @@ ACChrisGroup:
 	db "FOX,/!!!)u@"
 
 	db -1
-	
+
 	next_list_item ; EVAN4
 	db "EVAN@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
@@ -312,7 +312,7 @@ ACChrisGroup:
 	bigdw 113
 	bigdw 131
 	db "JHH@"
-	
+
 	db 61
 	dw MILTANK
 	db GOLD_LEAF
@@ -325,7 +325,7 @@ ACChrisGroup:
 	bigdw 80
 	bigdw 158
 	db "!L@"
-	
+
 	db 38
 	dw JOLTEON
 	db ULTRA_BALL
@@ -338,7 +338,7 @@ ACChrisGroup:
 	bigdw 103
 	bigdw 92
 	db "FOX,/!!!)u@"
-	
+
 	db 52
 	dw SEADRA
 	db NUGGET
@@ -351,7 +351,7 @@ ACChrisGroup:
 	bigdw 128
 	bigdw 76
 	db "---sxjxKKK@"
-	
+
 	db 63
 	dw NOCTOWL
 	db FLOWER_MAIL
@@ -379,7 +379,7 @@ ACChrisGroup:
 	db "ul:::utx@"
 
 	db -1
-	
+
 	end_list_items
 
 FCChrisGroup:
@@ -671,10 +671,10 @@ ColoWesGroup:
 	bigdw 155
 	db "Ho-Oh@"
 	db -1 ; end
-	
+
 	next_list_item ; AAAAAAA2
 	db "AAAAAAA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 65
 	dw MEGANIUM
 	db ULTRA_BALL
@@ -687,7 +687,7 @@ ColoWesGroup:
 	bigdw 137
 	bigdw 148
 	db "MEGANIUM@"
-	
+
 	db 65
 	dw ESPEON
 	db POKE_BALL
@@ -700,7 +700,7 @@ ColoWesGroup:
 	bigdw 181
 	bigdw 163
 	db "ABLLVVWW♀@"
-	
+
 	db 50
 	dw JUMPLUFF
 	db SPELL_TAG
@@ -713,7 +713,7 @@ ColoWesGroup:
 	bigdw 66
 	bigdw 83
 	db "AAAAKLV@"
-	
+
 	db 67
 	dw MISDREAVUS
 	db BURN_HEAL
@@ -739,7 +739,7 @@ ColoWesGroup:
 	bigdw 81
 	bigdw 169
 	db "UMBREON@"
-	
+
 	db 50
 	dw QUAGSIRE
 	db TM_RAIN_DANCE
@@ -785,7 +785,7 @@ XDMichaelGroup:
 	bigdw 160
 	bigdw 151
 	bigdw 102
-	db "CCC   /@"
+	db "CCC    /@"
 
 	db 58
 	dw SWAMPERT
@@ -811,7 +811,7 @@ XDMichaelGroup:
 	bigdw 119
 	bigdw 166
 	bigdw 121
-	db "ABBBBBBBBQ@"
+	db "ABBBBBBBQ@"
 
 	db 59
 	dw METAGROSS
@@ -824,7 +824,7 @@ XDMichaelGroup:
 	bigdw 121
 	bigdw 102
 	bigdw 128
-	db "BCCMMW@"
+	db "BCCMMW   @"
 
 	db 56
 	dw SALAMENCE
@@ -837,7 +837,7 @@ XDMichaelGroup:
 	bigdw 128
 	bigdw 128
 	bigdw 134
-	db "BCCMMW@"
+	db "Salamence@"
 
 	db -1 ; end
 
@@ -5979,7 +5979,7 @@ SageGroup:
 	db 52
 	dw JOLTEON
 	db -1 ; end
-	
+
 	next_list_item ; SAGE (12)
 	db "YIN@", TRAINERTYPE_NORMAL
 	db 63
@@ -5989,7 +5989,7 @@ SageGroup:
 	db 65
 	dw CHANDELURE
 	db -1 ; end
-	
+
 	next_list_item ; SAGE (12)
 	db "YANG@", TRAINERTYPE_NORMAL
 	db 63
@@ -6054,13 +6054,13 @@ MediumGroup:
 	db 59
 	dw SLOWBRO
 	db -1 ; end
-	
+
 	next_list_item ; MEDIUM (8)
 	db "CARLY@", TRAINERTYPE_NORMAL
 	db 67
 	dw GENGAR
 	db -1 ; end
-	
+
 	next_list_item ; MEDIUM (8)
 	db "LAUREL@", TRAINERTYPE_NORMAL
 	db 65
@@ -6070,7 +6070,7 @@ MediumGroup:
 	db 65
 	dw MAROWAK
 	db -1 ; end
-	
+
 	next_list_item ; MEDIUM (8)
 	db "PATRICIA@", TRAINERTYPE_NORMAL
 	db 67

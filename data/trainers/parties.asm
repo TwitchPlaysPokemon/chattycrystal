@@ -7148,9 +7148,86 @@ GSCHGSSChrisGroup:
 	db -1 ; end
 
 	next_list_item ; D_GAUNTLETCRYSTAL
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+	db "D<PK>@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 61
+	dw ENTEI
+	db FOCUS_BAND
+	dw SWAGGER, FIRE_SPIN, ROAR, FLAMETHROWER
+	bigdw $2FFF
+	bigdw 236
+	bigdw 166
+	bigdw 148
+	bigdw 161
+	bigdw 148
+	bigdw 130
+	db "BBBBLLlrk@"
+
+	db 59
+	dw MEGANIUM
+	db LEFTOVERS
+	dw GIGA_DRAIN, RAZOR_LEAF, BODY_SLAM, FURY_CUTTER
+	bigdw $FFFF
+	bigdw 201
+	bigdw 131
+	bigdw 154
+	bigdw 135
+	bigdw 133
+	bigdw 153
+	db "    ZZZZY@"
+
+	db 58
+	dw POLITOED
+	db MYSTIC_WATER
+	dw SURF, WATERFALL, WHIRLPOOL, ATTRACT
+	bigdw $0FFF
+	bigdw 204
+	bigdw 117
+	bigdw 128
+	bigdw 112
+	bigdw 145
+	bigdw 156
+	db "AAAxtux@"
+
+	db 62
+	dw MACHAMP
+	db PINK_BOW
+	dw STRENGTH, KARATE_CHOP, VITAL_THROW, CROSS_CHOP
+	bigdw $FFFF
+	bigdw 222
+	bigdw 202
+	bigdw 137
+	bigdw 104
+	bigdw 111
+	bigdw 135
+	db "JJJJSSS??S@"
+
+	db 71
+	dw STEELIX
+	db METAL_COAT
+	dw IRON_TAIL, STRENGTH, EARTHQUAKE, CRUNCH
+	bigdw $FFFF
+	bigdw 223
+	bigdw 164
+	bigdw 323
+	bigdw 81
+	bigdw 117
+	bigdw 131
+	db "ROCKY@"
+
+	db 71
+	dw URSARING
+	db KINGS_ROCK
+	dw SLASH, CUT, FURY_SWIPES, STRENGTH
+	bigdw $F9B5
+	bigdw 259
+	bigdw 235
+	bigdw 159
+	bigdw 116
+	bigdw 148
+	bigdw 148
+	db "CA.XX@"
+	
 	db -1 ; end
 	end_list_items
 

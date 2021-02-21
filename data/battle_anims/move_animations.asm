@@ -270,7 +270,7 @@ MoveAnimations:
 	dw BattleAnim_AirCutter
 	dw BattleAnim_Overheat
 	dw BattleAnim_OdorSleuth
-	dw BattleAnim_SacredFire   ; PLACEHOLDER
+	dw BattleAnim_RockTomb
 	dw BattleAnim_Detect       ; 110, PLACEHOLDER
 	dw BattleAnim_RockThrow    ; PLACEHOLDER
 	dw BattleAnim_Screech      ; PLACEHOLDER
@@ -3271,6 +3271,27 @@ BattleAnim_OdorSleuth:
 	anim_obj ANIM_OBJ_FORESIGHT, 64, 88, $0
 	anim_wait 24
 	anim_ret	
+	
+BattleAnim_RockTomb:
+	anim_1gfx ANIM_GFX_ROCKS
+	anim_obj ANIM_OBJ_ROCK_TOMB, 128, 70, $30
+	anim_wait 18
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_bgeffect ANIM_BG_1F, $4, $2, $0
+	anim_obj ANIM_OBJ_ROCK_TOMB, 152, 68, $30
+	anim_wait 18
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_bgeffect ANIM_BG_1F, $4, $2, $0
+	anim_obj ANIM_OBJ_ROCK_TOMB, 112, 68, $30
+	anim_wait 18
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_bgeffect ANIM_BG_1F, $4, $2, $0
+	anim_obj ANIM_OBJ_ROCK_TOMB, 136, 66, $30
+	anim_wait 18
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_bgeffect ANIM_BG_1F, $20, $2, $0
+	anim_wait 32
+	anim_ret
 	
 BattleAnim_MuddyWater:
 	anim_1gfx ANIM_GFX_BUBBLE

@@ -319,7 +319,7 @@ AnimationIdlePointers:
 	dw GroudonAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Turtwig
 	dw GrotleAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Torterra
+	dw TorterraAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chimchar
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Monferno
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Infernape

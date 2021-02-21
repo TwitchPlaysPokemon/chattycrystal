@@ -5,7 +5,6 @@ KantoGrassWildMons:
 	map_id DIGLETTS_CAVE
 	db 4 percent, 2 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
-<<<<<<< Updated upstream
 	dbw 12, DIGLETT
 	dbw 37, DIGLETT
 	dbw 50, DIGLETT
@@ -29,58 +28,33 @@ KantoGrassWildMons:
 	dbw 66, DUGTRIO
 	dbw 72, DUGTRIO
 	dbw 75, DUGTRIO
-=======
-	dbw 63, DIGLETT
-	dbw 66, DIGLETT
-	dbw 72, DIGLETT
-	dbw 74, DIGLETT
-	dbw 78, DUGTRIO
-	dbw 78, DUGTRIO
-	dbw 78, DUGTRIO
-	; day
-	dbw 62, DIGLETT
-	dbw 64, DIGLETT
-	dbw 68, DIGLETT
-	dbw 76, DIGLETT
-	dbw 76, DUGTRIO
-	dbw 76, DUGTRIO
-	dbw 76, DUGTRIO
-	; nite
-	dbw 64, DIGLETT
-	dbw 68, DIGLETT
-	dbw 72, DIGLETT
-	dbw 78, DIGLETT
-	dbw 78, DUGTRIO
-	dbw 78, DUGTRIO
-	dbw 78, DUGTRIO
->>>>>>> Stashed changes
 
 	map_id MOUNT_MOON
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 66, ZUBAT
-	dbw 68, GEODUDE
-	dbw 68, SANDSHREW
-	dbw 72, PARAS
-	dbw 70, GEODUDE
+	dbw 66, CROBAT
+	dbw 68, GOLEM
+	dbw 68, EXCADRILL
+	dbw 72, PARASECT
+	dbw 70, LAIRON
 	dbw 68, CLEFAIRY
 	dbw 68, CLEFAIRY
 	; day
-	dbw 66, ZUBAT
-	dbw 68, GEODUDE
-	dbw 68, SANDSHREW
-	dbw 72, PARAS
-	dbw 70, GEODUDE
+	dbw 66, CROBAT
+	dbw 68, GOLEM
+	dbw 68, EXCADRILL
+	dbw 72, PARASECT
+	dbw 70, LAIRON
 	dbw 68, CLEFAIRY
 	dbw 68, CLEFAIRY
 	; nite
-	dbw 66, ZUBAT
-	dbw 68, GEODUDE
-	dbw 68, CLEFAIRY
-	dbw 72, PARAS
-	dbw 70, GEODUDE
+	dbw 66, CROBAT
+	dbw 68, GOLEM
+	dbw 68, CLEFABLE
+	dbw 72, PARASECT
+	dbw 70, LAIRON
 	dbw 72, CLEFAIRY
-	dbw 72, CLEFAIRY
+	dbw 72, CLEFABLE
 
 	map_id ROCK_TUNNEL_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

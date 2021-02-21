@@ -4376,12 +4376,12 @@ SwimmerMGroup:
 
 	next_list_item ; SWIMMERM (21)
 	db "PARKER@", TRAINERTYPE_NORMAL
-	db 32
-	dw HORSEA
-	db 32
-	dw HORSEA
-	db 35
-	dw SEADRA
+	db 66
+	dw KINGDRA
+	db 66
+	dw KINGDRA
+	db 69
+	dw KINGDRA
 	db -1 ; end
 
 	end_list_items
@@ -4519,15 +4519,15 @@ SwimmerFGroup:
 
 	next_list_item ; SWIMMERF (18)
 	db "DIANA@", TRAINERTYPE_NORMAL
-	db 37
+	db 70
 	dw GOLDUCK
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (19)
 	db "BRIANA@", TRAINERTYPE_NORMAL
-	db 35
+	db 69
 	dw SEAKING
-	db 35
+	db 69
 	dw SEAKING
 	db -1 ; end
 

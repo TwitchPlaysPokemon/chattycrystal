@@ -1800,7 +1800,7 @@ BattleAnim_Headbutt:
 	anim_wait 8
 	anim_jump BattleAnim_ShowMon_0
 
-BattleAnim_Tickle:
+BattleAnim_Tackle:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0

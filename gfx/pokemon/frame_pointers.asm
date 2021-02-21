@@ -324,7 +324,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Monferno
 	dba PlaceholderFrames ; PLACEHOLDER - Infernape
 	dba PiplupFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Prinplup
+	dba PrinplupFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Empoleon
 	dba BidoofFrames
 	dba BibarelFrames

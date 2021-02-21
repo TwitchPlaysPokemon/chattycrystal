@@ -964,6 +964,7 @@ PansageBackpic:      INCBIN "gfx/pokemon/pansage/back.2bpp.lz"
 PansageFrontpic:     INCBIN "gfx/pokemon/pansage/front.animated.2bpp.lz"
 SimisageBackpic:     INCBIN "gfx/pokemon/simisage/back.2bpp.lz"
 KyogreFrontpic:      INCBIN "gfx/pokemon/kyogre/front.animated.2bpp.lz"
+GoomyFrontpic:       INCBIN "gfx/pokemon/goomy/front.animated.2bpp.lz"
 
 SECTION "Pics 31", ROMX
 
@@ -1012,7 +1013,6 @@ AmauraFrontpic:      INCBIN "gfx/pokemon/amaura/front.animated.2bpp.lz"
 AurorusBackpic:      INCBIN "gfx/pokemon/aurorus/back.2bpp.lz"
 AurorusFrontpic:     INCBIN "gfx/pokemon/aurorus/front.animated.2bpp.lz"
 GoomyBackpic:        INCBIN "gfx/pokemon/goomy/back.2bpp.lz"
-GoomyFrontpic:       INCBIN "gfx/pokemon/goomy/front.animated.2bpp.lz"
 SliggooBackpic:      INCBIN "gfx/pokemon/sliggoo/back.2bpp.lz"
 SliggooFrontpic:     INCBIN "gfx/pokemon/sliggoo/front.animated.2bpp.lz"
 GoodraBackpic:       INCBIN "gfx/pokemon/goodra/back.2bpp.lz"

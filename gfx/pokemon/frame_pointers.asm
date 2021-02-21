@@ -377,7 +377,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Amaura
 	dba PlaceholderFrames ; PLACEHOLDER - Aurorus
 	dba SylveonFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Goomy
+	dba GoomyFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Sliggoo
 	dba PlaceholderFrames ; PLACEHOLDER - Goodra
 	dba CrabrawlerFrames

@@ -377,7 +377,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Amaura
 	dw PlaceholderBitmasks ; PLACEHOLDER - Aurorus
 	dw SylveonBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Goomy
+	dw GoomyBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sliggoo
 	dw PlaceholderBitmasks ; PLACEHOLDER - Goodra
 	dw CrabrawlerBitmasks

@@ -377,7 +377,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Amaura
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Aurorus
 	dw SylveonAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Goomy
+	dw GoomyAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sliggoo
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Goodra
 	dw CrabrawlerAnimationIdle

@@ -377,7 +377,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Amaura
 	dw PlaceholderAnimation ; PLACEHOLDER - Aurorus
 	dw SylveonAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Goomy
+	dw GoomyAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Sliggoo
 	dw PlaceholderAnimation ; PLACEHOLDER - Goodra
 	dw CrabrawlerAnimation

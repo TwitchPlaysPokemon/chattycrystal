@@ -1,3 +1,12 @@
+specialtrainer: MACRO
+	if _NARG > 1
+		db TRAINERTYPE_SPECIAL | (\2)
+	else
+		db TRAINERTYPE_SPECIAL | BANK(\1)
+	endc
+	dw \1
+ENDM
+
 SECTION "Enemy Trainer Parties 1", ROMX
 
 GSCKrisGroup:

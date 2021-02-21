@@ -277,7 +277,7 @@ MoveAnimations:
 	dw BattleAnim_TailWhip     ; PLACEHOLDER
 	dw BattleAnim_Psybeam      ; PLACEHOLDER
 	dw BattleAnim_FeintAttack  ; PLACEHOLDER
-	dw BattleAnim_Psywave      ; PLACEHOLDER
+	dw BattleAnim_MuddyWater
 	dw BattleAnim_Twister      ; PLACEHOLDER
 	dw BattleAnim_Surf         ; 118, PLACEHOLDER
 	dw BattleAnim_WingAttack   ; PLACEHOLDER
@@ -1812,7 +1812,7 @@ BattleAnim_Headbutt:
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
-BattleAnim_Tackle:
+BattleAnim_MuddyWater:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
@@ -3302,6 +3302,20 @@ BattleAnim_OdorSleuth:
     anim_obj ANIM_OBJ_FORESIGHT, 64, 88, $0
     anim_wait 24
     anim_ret	
+	
+	
+BattleAnim_MuddyWater:
+	anim_1gfx ANIM_GFX_BUBBLE
+	anim_bgp $f8
+	anim_bgeffect ANIM_BG_SURF, $0, $0, $0
+	anim_obj ANIM_OBJ_MUDDY_WATER, 88, 104, $8
+.loop
+	anim_sound 0, 1, SFX_SURF
+	anim_wait 32
+	anim_loop 4, .loop
+	anim_incobj 1
+	anim_wait 56
+	anim_ret
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE

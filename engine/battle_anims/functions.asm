@@ -94,6 +94,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_4E ; 4e
 	dw BattleAnimFunction_4F ; 4f
 	dw BattleAnimFunction_50 ; 50
+	dw BattleAnimFunction_51 ; 51
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -4209,4 +4210,23 @@ BattleAnimFunction_50:
 	add hl, bc
 	ld a, [hl]
 	call Functionce70a
+	ret
+	
+BattleAnimFunction_51:
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld a, [hl]
+	cp $40
+	jr nc, .asm_ce58b
+	ld d, a
+	add $8
+	ld [hl], a
+	ld hl, BATTLEANIMSTRUCT_PARAM
+	add hl, bc
+	ld a, [hl]
+	call Functionce6f1
+	ret
+
+.asm_ce58b
+	call DeinitBattleAnimation
 	ret

@@ -268,7 +268,7 @@ MoveAnimations:
 	dw BattleAnim_MeteorMash
 	dw BattleAnim_Astonish
 	dw BattleAnim_AirCutter
-	dw BattleAnim_FeintAttack  ; PLACEHOLDER
+	dw BattleAnim_Overheat
 	dw BattleAnim_Cut          ; PLACEHOLDER
 	dw BattleAnim_SacredFire   ; PLACEHOLDER
 	dw BattleAnim_Detect       ; 110, PLACEHOLDER
@@ -3250,6 +3250,38 @@ BattleAnim_AirCutter:
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_26
 	anim_call BattleAnim_ShowMon_1
+	anim_ret
+	
+BattleAnim_Overheat:
+	anim_1gfx ANIM_GFX_FIRE
+	anim_bgeffect ANIM_BG_18, $0, $1, $40
+	anim_sound 0, 0, SFX_OUTRAGE
+	anim_wait 72
+	anim_incbgeffect ANIM_BG_18
+	anim_wait 1
+	anim_bgeffect ANIM_BG_1F, $44, $2, $0
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_08, $0, $4, $0
+	anim_sound 0, 0, SFX_EMBER
+.loop
+	anim_obj ANIM_OBJ_OVERHEAT, 44, 88, $0
+	anim_obj ANIM_OBJ_OVERHEAT, 44, 88, $8
+	anim_obj ANIM_OBJ_OVERHEAT, 44, 88, $10
+	anim_obj ANIM_OBJ_OVERHEAT, 44, 88, $18
+	anim_obj ANIM_OBJ_OVERHEAT, 44, 88, $20
+	anim_obj ANIM_OBJ_OVERHEAT, 44, 88, $28
+	anim_obj ANIM_OBJ_OVERHEAT, 44, 88, $30
+	anim_obj ANIM_OBJ_OVERHEAT, 44, 88, $38
+	anim_wait 8
+	anim_loop 7, .loop
+.loop2
+	anim_sound 0, 0, SFX_BURN 
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $1
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $4
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $5
+	anim_wait 4
+	anim_loop 3, .loop2
+	anim_wait 32
 	anim_ret
 
 BattleAnim_FlameWheel:

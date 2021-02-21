@@ -360,6 +360,21 @@ PokeBallEffect:
 .max_2
 
 .skip_hp_calc
+	push af
+	ld hl, wPokedexCaught
+	ld bc, wEndPokedexCaught - wPokedexCaught
+	call CountSetBits16
+	ld a, c
+	swap a
+	and $f
+	swap b
+	or b
+	pop bc
+	add a, b
+	jr nc, .calculated_dex_bonus
+	ld a, $ff
+
+.calculated_dex_bonus
 	ld b, a
 	ld [wBuffer1], a
 	call Random

@@ -1812,7 +1812,7 @@ BattleAnim_Headbutt:
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
-BattleAnim_MuddyWater:
+BattleAnim_Tackle:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
@@ -3302,8 +3302,7 @@ BattleAnim_OdorSleuth:
     anim_obj ANIM_OBJ_FORESIGHT, 64, 88, $0
     anim_wait 24
     anim_ret	
-	
-	
+		
 BattleAnim_MuddyWater:
 	anim_1gfx ANIM_GFX_BUBBLE
 	anim_bgp $f8

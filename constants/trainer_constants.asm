@@ -678,7 +678,8 @@ CHRIS EQU __enum__
 	const CYAN
 
 	trainerclass RED_LARRY ; 3e
-	const LARRY_R
+	const LARRY_R1
+	const LARRY_R2
 
 	trainerclass GREEN_MAY ; 3f
 	const A_EMERALD

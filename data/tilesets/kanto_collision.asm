@@ -205,3 +205,5 @@
 	tilecoll WATER, WATER, WATER, WATER ; cc
 	tilecoll WATER, WATER, WATER, WATER ; cd
 	tilecoll WALL, WALL, DOOR, WALL ; ce
+	tilecoll FLOOR, FLOOR, WARP_CARPET_DOWN, WARP_CARPET_DOWN ; cf
+	tilecoll WALL, WALL, WALL, WALL ; d0

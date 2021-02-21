@@ -252,9 +252,10 @@ UnknownText_0x750a6:
 VermilionPort_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
-	warp_event  9,  5, VERMILION_PORT_PASSAGE, 5
+	db 3 ; warp events
+	warp_event  8,  4, VERMILION_CITY, 8
 	warp_event  7, 17, FAST_SHIP_1F, 1
+	warp_event  9,  4, VERMILION_CITY, 9
 
 	db 1 ; coord events
 	coord_event  7, 11, SCENE_DEFAULT, VermilionPortWalkUpToShipScript

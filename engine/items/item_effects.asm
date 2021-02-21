@@ -229,6 +229,7 @@ PokeBallEffect:
 	ld hl, UsedItemText
 	call PrintText
 
+.load_catch_rate
 	ld a, [wEnemyMonCatchRate]
 	ld b, a
 	ld a, [wBattleType]
@@ -326,17 +327,12 @@ PokeBallEffect:
 	jr nz, .statuscheck
 	ld a, 1
 .statuscheck
-; This routine is buggy. It was intended that SLP and FRZ provide a higher
-; catch rate than BRN/PSN/PAR, which in turn provide a higher catch rate than
-; no status effect at all. But instead, it makes BRN/PSN/PAR provide no
-; benefit.
-; Uncomment the line below to fix this.
 	ld b, a
 	ld a, [wEnemyMonStatus]
 	and 1 << FRZ | SLP
 	ld c, 10
 	jr nz, .addstatus
-	; ld a, [wEnemyMonStatus]
+	ld a, [wEnemyMonStatus]
 	and a
 	ld c, 5
 	jr nz, .addstatus
@@ -364,6 +360,21 @@ PokeBallEffect:
 .max_2
 
 .skip_hp_calc
+	push af
+	ld hl, wPokedexCaught
+	ld bc, wEndPokedexCaught - wPokedexCaught
+	call CountSetBits16
+	ld a, c
+	swap a
+	and $f
+	swap b
+	or b
+	pop bc
+	add a, b
+	jr nc, .calculated_dex_bonus
+	ld a, $ff
+
+.calculated_dex_bonus
 	ld b, a
 	ld [wBuffer1], a
 	call Random

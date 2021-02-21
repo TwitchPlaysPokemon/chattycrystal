@@ -4,6 +4,6 @@ ResetUniqueMons::
 	clearifuncaught LATIOS, EVENT_LATIOS_IN_SAFARI_ZONE
 	clearifuncaught DARKRAI, EVENT_DARKRAI_IN_POKEMON_TOWER
 	clearifuncaught ZAPDOS, EVENT_POWER_PLANT_B1F_ZAPDOS
-	; TODO: Entei, Raikou, Suicune, Celebi, and one of the Snorlax
+	; TODO: Entei, Raikou, Suicune, Celebi
 	; TODO: any unique mons we add
 	end

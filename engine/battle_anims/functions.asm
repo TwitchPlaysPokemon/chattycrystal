@@ -3969,4 +3969,3 @@ BattleAnimFunction_52:
 	and $3f
 	ret nz
 	jp BattleAnim_IncAnonJumptableIndex
-	ret

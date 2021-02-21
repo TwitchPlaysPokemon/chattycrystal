@@ -320,7 +320,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Turtwig
 	dw GrotleAnimation
 	dw TorterraAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Chimchar
+	dw ChimcharAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Monferno
 	dw PlaceholderAnimation ; PLACEHOLDER - Infernape
 	dw PiplupAnimation

@@ -320,7 +320,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Turtwig
 	dw GrotleBitmasks
 	dw TorterraBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Chimchar
+	dw ChimcharBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Monferno
 	dw PlaceholderBitmasks ; PLACEHOLDER - Infernape
 	dw PiplupBitmasks

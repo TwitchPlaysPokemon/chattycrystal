@@ -165,7 +165,6 @@ ROMX $38
 ROMX $39
 	"bank39"
 ROMX $3a
-	"Audio"
 	"Songs 1"
 ROMX $3b
 	"Songs 2"
@@ -311,6 +310,7 @@ ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
 	"Pokedex Entries 193-251"
+	"Extra Songs 5"
 ROMX $75
 	"16-bit ID stuff"
 	"Pics 27"
@@ -318,6 +318,7 @@ ROMX $76
 	"Chatty Handling"
 	"Egg Moves 3"
 	"Evolutions and Attacks 3"
+	"Audio"
 ROMX $77
 	"bank77"
 	"Tileset Data 7"

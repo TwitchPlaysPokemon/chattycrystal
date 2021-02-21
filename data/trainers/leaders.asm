@@ -9,7 +9,8 @@ GymLeaders:
 	db SMUSUM_ELIO
 	db FC_CHRIS
 	db RED_JOHTO_LEADER
-	db B2W2_NATE
+	db NATE_ELITE_4
+	db NATE_LEADER
 	db GREEN_MAY
 	db XY_SERENA2
 	db URF

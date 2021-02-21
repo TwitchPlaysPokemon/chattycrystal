@@ -83,6 +83,22 @@ ReadTrainerParty:
 ReadTrainerPartyPieces:
 	ld h, d
 	ld l, e
+	ld a, [wOtherTrainerType]
+	add a, a
+	jr nc, .loop
+	call GetNextTrainerDataByte
+	ld c, a
+	call GetNextTrainerDataByte
+	ld h, a
+	ld l, c
+	inc de
+	inc de
+	ld a, [wTrainerGroupBank]
+	ld b, a
+	ld a, [wOtherTrainerType]
+	and $7f
+	rst FarCall
+	ret
 
 .loop
 	call GetNextTrainerDataByte

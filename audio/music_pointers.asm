@@ -120,3 +120,8 @@ Music:
 	dba Music_CeruleanGSC
 	dba Music_NuggetBridge
 	dba Music_SilphCo
+	dba Music_ChampionBattleRSE
+	dba Music_ChampionBattleB2W2
+	dba Music_GymLeaderBattleXY
+	dba Music_ChampionRB
+	dba Music_GymLeaderBattlePrism

@@ -130,6 +130,8 @@ CreditsStrings:
 	dw .FutureSushi
 	dw .RainbowDevs
 	dw .Rangi42
+	dw .Mmmmmmmmmmmmmmmmm
+	dw .Pigu
 
 .SatoshiTajiri:       db "   Satoshi Tajiri@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   Junichi Masuda@"         ; "ますだ　じゅんいち@"
@@ -266,6 +268,8 @@ CreditsStrings:
 .FutureSushi:         db "    futuresushi@"
 .RainbowDevs:         db "    RainbowDevs@"
 .Rangi42:             db "      Rangi42@"
+.Mmmmmmmmmmmmmmmmm    db " Mmmmmmmmmmmmmmmmm@"
+.Pigu                 db "       Pigu@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

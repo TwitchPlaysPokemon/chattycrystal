@@ -1332,9 +1332,8 @@ BattleAnim_DoubleTeam:
 	anim_jump BattleAnim_ShowMon_0
 
 BattleAnim_Recover:
-	anim_1gfx ANIM_GFX_BUBBLE
-	anim_call BattleAnim_TargetObj_1Row
-	anim_sound 0, 0, SFX_FULL_HEAL
+	anim_2gfx ANIM_GFX_BUBBLE, ANIM_GFX_SHINE
+	anim_sound 0, 0, SFX_SHARPEN
 	anim_bgeffect ANIM_BG_18, $0, $1, $40
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $30
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $31
@@ -1344,9 +1343,10 @@ BattleAnim_Recover:
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $35
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $36
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $37
-	anim_wait 64
+	anim_wait 96
 	anim_incbgeffect ANIM_BG_18
-	anim_jump BattleAnim_ShowMon_0
+	anim_bgeffect ANIM_BG_07, $0, $0, $0
+	anim_jump BattleAnim_Recover_branch_cbc6a
 	
 BattleAnim_Taunt:
 	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_TAUNT
@@ -4914,6 +4914,7 @@ BattleAnim_SandAttack_branch_cbc5b:
 BattleAnim_Moonlight_branch_cbc6a:
 BattleAnim_MorningSun_branch_cbc6a:
 BattleAnim_Synthesis_branch_cbc6a:
+BattleAnim_Recover_branch_cbc6a:
 	anim_sound 0, 0, SFX_METRONOME
 	anim_obj ANIM_OBJ_GLIMMER, 44, 64, $0
 	anim_wait 5

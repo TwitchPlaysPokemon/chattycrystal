@@ -13,7 +13,7 @@ Darkrai:
 	cry DARKRAI
 	pause 15
 	closetext
-	setevent EVENT_DAKRAI_IN_POKEMON_TOWER
+	setevent EVENT_DARKRAI_IN_POKEMON_TOWER
 	loadwildmon DARKRAI, 70
 	startbattle
 	disappear POKEMONTOWER7F_DARKRAI
@@ -35,4 +35,4 @@ PokemonTower7F_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  8,  3, SPRITE_GENGAR, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Darkrai, EVENT_DAKRAI_IN_POKEMON_TOWER
+	object_event  8,  3, SPRITE_GENGAR, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Darkrai, EVENT_DARKRAI_IN_POKEMON_TOWER

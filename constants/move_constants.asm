@@ -364,6 +364,7 @@
 	const NEEDLE_ARM   ; 164
 	const DRACO_METEOR ; 165
 	const CALM_MIND    ; 166
+	const MUD_SHOT     ; 167
 
 NUM_ATTACKS EQU const_value + -1
 

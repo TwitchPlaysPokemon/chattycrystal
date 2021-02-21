@@ -8,6 +8,28 @@ IndigoPlateauOutside_MapScripts:
 	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
 	return
 
+IndigoPlateauOutsideLeftSign:
+	jumptext .Text
+
+.Text:
+	text "INDIGO PLATEAU"
+	line "#MON LEAGUE HQ"
+
+	para "The ultimate goal"
+	line "of trainers!"
+	done
+
+IndigoPlateauOutsideRightSign:
+	jumptext .Text
+
+.Text:
+	text "INDIGO PLATEAU"
+	line "#MON LEAGUE HQ"
+
+	para "The highest"
+	line "#MON authority"
+	done
+
 IndigoPlateauOutside_MapEvents:
 	db 0, 0 ; filler
 
@@ -17,6 +39,8 @@ IndigoPlateauOutside_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 2 ; bg events
+	bg_event  8,  6, BGEVENT_READ, IndigoPlateauOutsideLeftSign
+	bg_event 11,  6, BGEVENT_READ, IndigoPlateauOutsideRightSign
 
 	db 0 ; object events

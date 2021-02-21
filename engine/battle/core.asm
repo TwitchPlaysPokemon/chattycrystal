@@ -342,11 +342,13 @@ HandleRoost:
 .CheckPlayer:
 	ld a, [wPlayerSubStatus2]
 	res SUBSTATUS_ROOSTING, a
+	ld [wPlayerSubStatus2], a
 	ret
 
 .CheckEnemy:
 	ld a, [wEnemySubStatus2]
 	res SUBSTATUS_ROOSTING, a
+	ld [wEnemySubStatus2], a
 	ret
 
 HandleCharge:
@@ -2630,13 +2632,8 @@ PlayVictoryMusic:
 	pop de
 	ret
 
-IsKantoGymLeader:
-	ld hl, KantoGymLeaders
-	jr IsGymLeaderCommon
-
 IsGymLeader:
 	ld hl, GymLeaders
-IsGymLeaderCommon:
 	push de
 	ld a, [wOtherTrainerClass]
 	ld de, 1

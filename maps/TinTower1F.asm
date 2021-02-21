@@ -22,8 +22,6 @@ TinTower1F_MapScripts:
 
 .FaceSuicune:
 	prioritysjump .SuicuneBattle
-	end
-
 .DummyScene:
 	end
 

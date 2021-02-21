@@ -150,6 +150,14 @@ INCLUDE "audio/music/custom/kantolegendbattle.asm"
 INCLUDE "audio/music/custom/vsWCS.asm"
 INCLUDE "audio/music/custom/battletentruins.asm"
 
+SECTION "Extra Songs 4", ROMX
+
+INCLUDE "audio/music/custom/phancerobattle.asm"
+INCLUDE "audio/music/custom/hoohbattle.asm"
+INCLUDE "audio/music/custom/lugiabattle.asm"
+INCLUDE "audio/music/custom/ceruleanGSC.asm"
+INCLUDE "audio/music/custom/nuggetbridge.asm"
+
 SECTION "Sound Effects", ROMX
 
 INCLUDE "audio/sfx.asm"

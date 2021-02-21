@@ -45,6 +45,7 @@ VictoryRoadGateBadgeCheckScript:
 .DontHaveBadges:
 	writetext NoZephyrBoulderBadgeText
 	waitbutton
+	closetext
 	applymovement PLAYER, VictoryRoadGateStepDownMovement
 	end
 

@@ -363,6 +363,7 @@ MoveDescriptions1:
 	dw NeedleArmDescription
 	dw DracoMeteorDescription
 	dw CalmMindDescription
+	dw MudShotDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -1221,6 +1222,7 @@ IcyWindDescription:
 	db   "An icy attack that"
 	next "lowers SPEED.@"
 
+MudShotDescription:
 BulldozeDescription:
 RockTombDescription:
 	db   "Lowers foe's SPEED"

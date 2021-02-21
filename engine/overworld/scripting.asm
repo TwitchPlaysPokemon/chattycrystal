@@ -232,7 +232,7 @@ ScriptCommandTable:
 	dw Script_givechattymon              ; ac
 	dw Script_chattyoff                  ; ad
 	dw Script_chattyon                   ; ae
-	dw Script_resetifuncaught            ; af
+	dw Script_clearifuncaught            ; af
 	dw Script_checkcaught                ; b0
 
 StartScript:
@@ -2319,7 +2319,7 @@ Script_setflag:
 	ld b, SET_FLAG
 	jp _EngineFlagAction
 
-Script_resetifuncaught:
+Script_clearifuncaught:
 ; script command 0xaf
 ; params: mon index, flag index
 ; resets the flag if the mon is not caught in the dex or not existing in the party, PC or daycare

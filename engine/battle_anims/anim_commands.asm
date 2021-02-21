@@ -317,13 +317,13 @@ BattleAnimCommands::
 	dw BattleAnimCmd_OAMOff
 	dw BattleAnimCmd_ClearObjs
 	dw BattleAnimCmd_BeatUp
-	dw BattleAnimCmd_E7
+	dw GenericDummyFunction
 	dw BattleAnimCmd_UpdateActorPic
 	dw BattleAnimCmd_Minimize
-	dw BattleAnimCmd_EA ; dummy
-	dw BattleAnimCmd_EB ; dummy
-	dw BattleAnimCmd_EC ; dummy
-	dw BattleAnimCmd_ED ; dummy
+	dw GenericDummyFunction
+	dw GenericDummyFunction
+	dw GenericDummyFunction
+	dw GenericDummyFunction
 	dw BattleAnimCmd_IfParamAnd
 	dw BattleAnimCmd_JumpUntil
 	dw BattleAnimCmd_BGEffect
@@ -331,9 +331,9 @@ BattleAnimCommands::
 	dw BattleAnimCmd_OBP0
 	dw BattleAnimCmd_OBP1
 	dw BattleAnimCmd_KeepSprites
-	dw BattleAnimCmd_F5
-	dw BattleAnimCmd_F6
-	dw BattleAnimCmd_F7
+	dw GenericDummyFunction
+	dw GenericDummyFunction
+	dw GenericDummyFunction
 	dw BattleAnimCmd_IfParamEqual
 	dw BattleAnimCmd_SetVar
 	dw BattleAnimCmd_IncVar
@@ -342,12 +342,6 @@ BattleAnimCommands::
 	dw BattleAnimCmd_Loop
 	dw BattleAnimCmd_Call
 	dw BattleAnimCmd_Ret
-
-BattleAnimCmd_EA:
-BattleAnimCmd_EB:
-BattleAnimCmd_EC:
-BattleAnimCmd_ED:
-	ret
 
 BattleAnimCmd_Ret:
 	ld hl, wBattleAnimFlags
@@ -571,8 +565,7 @@ BattleAnimCmd_Obj:
 	ld [wBattleObjectTempYCoord], a
 	call GetBattleAnimByte
 	ld [wBattleObjectTempParam], a
-	call QueueBattleAnimation
-	ret
+	jp QueueBattleAnimation
 
 BattleAnimCmd_BGEffect:
 	call GetBattleAnimByte
@@ -583,8 +576,7 @@ BattleAnimCmd_BGEffect:
 	ld [wBattleAnimTemp2], a
 	call GetBattleAnimByte
 	ld [wBattleAnimTemp3], a
-	call _QueueBGEffect
-	ret
+	jp _QueueBGEffect
 
 BattleAnimCmd_BGP:
 	call GetBattleAnimByte
@@ -766,8 +758,6 @@ BattleAnimCmd_BattlerGFX_1Row:
 	ld a, 6 tiles ; Player pic height
 	ld [wBattleAnimTemp0], a
 	ld a, 6 ; Copy 6x1 tiles
-	call .LoadFeet
-	ret
 
 .LoadFeet:
 	push af
@@ -820,8 +810,6 @@ BattleAnimCmd_BattlerGFX_2Row:
 	ld a, 6 tiles ; Player pic height
 	ld [wBattleAnimTemp0], a
 	ld a, 6 ; Copy 6x2 tiles
-	call .LoadHead
-	ret
 
 .LoadHead:
 	push af
@@ -848,9 +836,6 @@ BattleAnimCmd_CheckPokeball:
 	callfar GetPokeBallWobble
 	ld a, c
 	ld [wBattleAnimVar], a
-	ret
-
-BattleAnimCmd_E7:
 	ret
 
 BattleAnimCmd_Transform:
@@ -897,15 +882,13 @@ BattleAnimCmd_UpdateActorPic:
 	ld hl, vTiles2 tile $00
 	ld b, 0
 	ld c, 7 * 7
-	call Request2bpp
-	ret
+	jp Request2bpp
 
 .player
 	ld hl, vTiles2 tile $31
 	ld b, 0
 	ld c, 6 * 6
-	call Request2bpp
-	ret
+	jp Request2bpp
 
 BattleAnimCmd_RaiseSub:
 	ldh a, [rSVBK]
@@ -978,8 +961,7 @@ GetSubstitutePic: ; used only for BANK(GetSubstitutePic)
 .CopyTile:
 	ld bc, 1 tiles
 	ld a, BANK(MonsterSpriteGFX)
-	call FarCopyBytes
-	ret
+	jp FarCopyBytes
 
 BattleAnimCmd_MinimizeOpp:
 	ldh a, [rSVBK]
@@ -1029,8 +1011,7 @@ CopyMinimizePic:
 	ld hl, MinimizePic
 	ld bc, $10
 	ld a, BANK(MinimizePic)
-	call FarCopyBytes
-	ret
+	jp FarCopyBytes
 
 MinimizePic:
 INCBIN "gfx/battle/minimize.2bpp"
@@ -1124,15 +1105,6 @@ BattleAnimCmd_OAMOff:
 BattleAnimCmd_KeepSprites:
 	ld hl, wBattleAnimFlags
 	set BATTLEANIM_KEEPSPRITES_F, [hl]
-	ret
-
-BattleAnimCmd_F5:
-	ret
-
-BattleAnimCmd_F6:
-	ret
-
-BattleAnimCmd_F7:
 	ret
 
 BattleAnimCmd_Sound:
@@ -1279,8 +1251,7 @@ PlayHitSound:
 	ld de, SFX_NOT_VERY_EFFECTIVE
 
 .play
-	call PlaySFX
-	ret
+	jp PlaySFX
 
 BattleAnimAssignPals:
 	ldh a, [hCGB]
@@ -1360,7 +1331,7 @@ BattleAnim_RevertPals:
 	ldh [hSCX], a
 	ldh [hSCY], a
 	call BattleAnimDelayFrame
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	ret
 
@@ -1387,7 +1358,7 @@ BattleAnim_SetBGPals:
 	call CopyPals
 	pop af
 	ldh [rSVBK], a
-	ld a, $1
+	ld a, 1
 	ldh [hCGBPalUpdate], a
 	ret
 
@@ -1408,7 +1379,7 @@ BattleAnim_SetOBPals:
 	call CopyPals
 	pop af
 	ldh [rSVBK], a
-	ld a, $1
+	ld a, 1
 	ldh [hCGBPalUpdate], a
 	ret
 
@@ -1429,7 +1400,7 @@ BattleAnim_UpdateOAM_All:
 	call BattleAnimOAMUpdate
 	pop de
 	pop hl
-	jr c, .done
+	ret c
 
 .next
 	ld bc, BATTLEANIMSTRUCT_LENGTH
@@ -1442,10 +1413,7 @@ BattleAnim_UpdateOAM_All:
 .loop2
 	ld a, l
 	cp LOW(wVirtualOAMEnd)
-	jr nc, .done
+	ret nc
 	xor a
 	ld [hli], a
 	jr .loop2
-
-.done
-	ret

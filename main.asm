@@ -66,6 +66,7 @@ INCLUDE "engine/events/std_collision.asm"
 INCLUDE "engine/events/bug_contest/judging.asm"
 INCLUDE "engine/events/pokerus/apply_pokerus_tick.asm"
 INCLUDE "engine/events/bug_contest/contest_2.asm"
+INCLUDE "engine/events/reset_unique_mons.asm"
 INCLUDE "engine/math/get_square_root.asm"
 
 
@@ -419,6 +420,7 @@ INCLUDE "engine/phone/scripts/parry.asm"
 INCLUDE "engine/phone/scripts/erin.asm"
 INCLUDE "engine/phone/scripts/generic_callee.asm"
 INCLUDE "engine/events/trainer_scripts.asm"
+INCLUDE "engine/events/bug_contest/display_stats.asm"
 
 
 SECTION "Move Animation Scripts", ROMX
@@ -429,7 +431,6 @@ INCLUDE "data/battle_anims/move_animations.asm"
 
 SECTION "Move Animations", ROMX
 
-INCLUDE "engine/events/bug_contest/display_stats.asm"
 INCLUDE "engine/battle_anims/anim_commands.asm"
 INCLUDE "engine/battle_anims/core.asm"
 INCLUDE "data/battle_anims/objects.asm"

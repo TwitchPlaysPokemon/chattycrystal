@@ -68,20 +68,13 @@ IsInArray::
 .loop
 	ld a, [hl]
 	cp -1
-	jr z, .NotInArray
+	ret z
 	cp c
-	jr z, .InArray
+	scf
+	ret z
 	inc b
 	add hl, de
 	jr .loop
-
-.NotInArray:
-	and a
-	ret
-
-.InArray:
-	scf
-	ret
 
 IsInHalfwordArray_NextItem:
 	add hl, de

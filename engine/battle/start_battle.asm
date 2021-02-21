@@ -61,9 +61,9 @@ PlayBattleMusic:
 	ld a, [wBattleType]
 	cp BATTLETYPE_SUICUNE
 	ld de, MUSIC_SUICUNE_BATTLE
-	jr z, .set
+	jr z, .done
 	cp BATTLETYPE_ROAMING
-	jr z, .set
+	jr z, .done
 
 	; Are we fighting a trainer?
 	ld a, [wOtherTrainerClass]
@@ -72,14 +72,13 @@ PlayBattleMusic:
 
 	ld a, [wCurPartySpecies]
 	call GetPokemonIndexFromID
-	ld a, l
-	cp LOW(PHANCERO)
-	jr nz, .not_phancero
-	assert HIGH(PHANCERO) == 1
-	dec h
-	ld de, MUSIC_KANTO_LEGEND
-	jr z, .set
-.not_phancero
+	ld b, h
+	ld c, l
+	ld hl, SpecialBattleMusicPokemon
+	ld de, 4
+	call IsInHalfwordArray
+	inc hl
+	jr c, .load_from_array
 
 	farcall RegionCheck
 	ld a, e
@@ -92,53 +91,19 @@ PlayBattleMusic:
 	cp NITE_F
 	jr nz, .done
 	ld de, MUSIC_JOHTO_WILD_BATTLE_NIGHT
-.set
 	jr .done
 
 .trainermusic
-	ld de, MUSIC_CHAMPION_BATTLE
-	cp P_CYAN
-	jr z, .done
-
-	; They should have included EXECUTIVEM, EXECUTIVEF, and SCIENTIST too...
-	ld de, MUSIC_ROCKET_BATTLE
-	cp SCIENTIST
-	jr z, .done
-	cp GRUNTM
-	jr z, .done
-	cp GRUNTF
-	jr z, .done
-	cp NUZLOCKE
-	jr z, .done
-	cp COLO_WES
-	jr z, .done
-	cp FC_LARRY
-	jr z, .done
-	cp RED_LARRY
-	jr z, .done
-
-	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
-	farcall IsKantoGymLeader
-	jr c, .done
-
-	; IsGymLeader also counts CHAMPION, RED, and the Kanto gym leaders
-	; but they have been taken care of before this
-	ld de, MUSIC_JOHTO_GYM_LEADER_BATTLE
-	farcall IsGymLeader
-	jr c, .done
-
-	ld de, MUSIC_RIVAL_BATTLE
-	ld a, [wOtherTrainerClass]
-	cp GSCHGSS_CHRIS_RIVAL
-	jr z, .done
-	cp BABA
-	jr z, .done
-	cp AC_CHRIS
-	jr z, .done
-
-	ld de, MUSIC_CHAMPION_BATTLE
-	cp P_CYAN
-	jr z, .done
+	ld hl, SpecialBattleMusicTrainers
+	ld de, 3
+	call IsInArray
+	jr nc, .othertrainer
+.load_from_array
+	inc hl
+	ld a, [hli]
+	ld d, [hl]
+	ld e, a
+	jr .done
 
 .othertrainer
 	ld a, [wLinkMode]
@@ -164,6 +129,8 @@ PlayBattleMusic:
 	pop de
 	pop hl
 	ret
+
+INCLUDE "data/battle/special_battle_music.asm"
 
 ClearBattleRAM:
 	xor a

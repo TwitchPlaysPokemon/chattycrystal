@@ -90,4 +90,4 @@ Route42EcruteakGate_MapEvents:
 
 	db 2 ; object events
 	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route42EcruteakGateOfficerScript, -1
-	object_event 7, 4, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, ObjectEvent, EVENT_EVAN_AT_ROUTE_42
+	object_event 7, 4, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 1, ObjectEvent, EVENT_EVAN_AT_ROUTE_42

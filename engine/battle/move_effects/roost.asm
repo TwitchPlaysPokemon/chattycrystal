@@ -11,35 +11,38 @@ ChangeTypeForRoost:
 ; applies roost to enemy types in de and player types in bc
 	ld a, [wPlayerSubStatus2]
 	bit SUBSTATUS_ROOSTING, a
-	jr z, .playerDone
+	call nz, SetRoostBC
+	push bc
+	ld b, d
+	ld c, e
+	ld a, [wEnemySubStatus2]
+	bit SUBSTATUS_ROOSTING, a
+	call nz, SetRoostBC
+	ld d, b
+	ld e, c
+	pop bc
+	ret
+
+ChangeTypeForOpponentRoost:
+; Removes flying type from opponent types in bc if roosting.
+	ld a, BATTLE_VARS_SUBSTATUS2_OPP
+	call GetBattleVar
+	bit SUBSTATUS_ROOSTING, a
+	ret z
+	; fallthrough
+SetRoostBC:
+; Removes flying type from types in bc.
 	ld a, b
 	cp FLYING
-	jr nz, .playerType1NotFly
+	jr nz, .NotFly
 	ld b, CURSE_T ;typeless
-.playerType1NotFly
+.NotFly
 	ld a, c
 	cp FLYING
-	jr nz, .playerDone
+	ret nz
 	ld c, CURSE_T ;typeless
 	ld a, c
 	cp b
-	jr nz, .playerDone
+	ret nz
 	ld b, NORMAL ;load in normal if would be typeless
-.playerDone
-	ld a, [wEnemySubStatus2]
-	bit SUBSTATUS_ROOSTING, a
-	ret z
-	ld a, d
-	cp FLYING
-	jr nz, .enemyType1NotFly
-	ld d, CURSE_T ;typeless
-.enemyType1NotFly
-	ld a, e
-	cp FLYING
-	ret nz
-	ld e, CURSE_T ;typeless
-	ld a, e
-	cp d
-	ret nz
-	ld d, NORMAL ;load in normal if would be typeless
 	ret

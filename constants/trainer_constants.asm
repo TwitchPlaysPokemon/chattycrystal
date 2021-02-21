@@ -523,6 +523,8 @@ CHRIS EQU __enum__
 	const NEAL
 	const GAKU
 	const MASA
+	const YIN
+	const YANG
 
 	trainerclass MEDIUM ; 20
 	const MARTHA
@@ -532,6 +534,9 @@ CHRIS EQU __enum__
 	const ETHEL
 	const REBECCA
 	const DORIS
+	const CARLY
+	const LAUREL
+	const PATRICIA
 
 	trainerclass BOARDER ; 21
 	const RONALD
@@ -629,6 +634,7 @@ CHRIS EQU __enum__
 	const EVAN1
 	const EVAN2
 	const EVAN3
+	const EVAN4
 
 	trainerclass FC_CHRIS ; 31
 	const Y_FUSEDCRYSTAL
@@ -640,8 +646,9 @@ CHRIS EQU __enum__
 	const A_FIRERED
 
 	trainerclass COLO_WES ; 34
-	const AAAAAAA
+	const AAAAAAA1
 	const ACCC
+	const AAAAAAA2
 
 	trainerclass XD_MICHAEL ; 35
 	const STARS

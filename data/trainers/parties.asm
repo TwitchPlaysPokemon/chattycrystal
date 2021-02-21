@@ -2304,15 +2304,15 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (7)
 	db "DUDLEY@", TRAINERTYPE_NORMAL
-	db 35
-	dw ODDISH
+	db 69
+	dw VILEPLUME
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (8)
 	db "JOE@", TRAINERTYPE_NORMAL
-	db 33
+	db 68
 	dw TANGELA
-	db 33
+	db 68
 	dw VAPOREON
 	db -1 ; end
 
@@ -2686,21 +2686,21 @@ LassGroup:
 
 	next_list_item ; LASS (7)
 	db "LAURA@", TRAINERTYPE_NORMAL
-	db 28
-	dw GLOOM
-	db 31
-	dw PIDGEOTTO
-	db 31
+	db 65
+	dw BELLOSSOM
+	db 68
+	dw PIDGEOT
+	db 68
 	dw BELLOSSOM
 	db -1 ; end
 
 	next_list_item ; LASS (8)
 	db "SHANNON@", TRAINERTYPE_NORMAL
-	db 29
-	dw PARAS
-	db 29
-	dw PARAS
-	db 32
+	db 65
+	dw PARASECT
+	db 65
+	dw PARASECT
+	db 68
 	dw PARASECT
 	db -1 ; end
 
@@ -2726,9 +2726,9 @@ LassGroup:
 
 	next_list_item ; LASS (11)
 	db "ELLEN@", TRAINERTYPE_NORMAL
-	db 30
+	db 64
 	dw WIGGLYTUFF
-	db 34
+	db 68
 	dw GRANBULL
 	db -1 ; end
 
@@ -2956,12 +2956,12 @@ CooltrainerMGroup:
 
 	next_list_item ; COOLTRAINERM (17)
 	db "KEVIN@", TRAINERTYPE_NORMAL
-	db 38
-	dw RHYHORN
-	db 35
-	dw CHARMELEON
-	db 35
-	dw WARTORTLE
+	db 68
+	dw RHYDON
+	db 65
+	dw CHARIZARD
+	db 65
+	dw BLASTOISE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (18)
@@ -4707,8 +4707,8 @@ SuperNerdGroup:
 
 	next_list_item ; SUPER_NERD (8)
 	db "PAT@", TRAINERTYPE_NORMAL
-	db 36
-	dw PORYGON
+	db 69
+	dw PORYGON_Z
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (9)
@@ -4878,9 +4878,9 @@ HikerGroup:
 
 	next_list_item ; HIKER (10)
 	db "TIMOTHY@", TRAINERTYPE_NORMAL
-	db 54
+	db 67
 	dw DUGTRIO
-	db 54
+	db 67
 	dw DUGTRIO
 	db -1 ; end
 
@@ -4928,10 +4928,10 @@ HikerGroup:
 
 	next_list_item ; HIKER (15)
 	db "SIDNEY@", TRAINERTYPE_NORMAL
-	db 34
+	db 67
 	dw DUGTRIO
-	db 32
-	dw ONIX
+	db 65
+	dw STEELIX
 	db -1 ; end
 
 	next_list_item ; HIKER (16)
@@ -5561,17 +5561,17 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (13)
 	db "HEIDI@", TRAINERTYPE_NORMAL
-	db 32
-	dw SKIPLOOM
-	db 32
-	dw SKIPLOOM
+	db 67
+	dw JUMPLUFF
+	db 67
+	dw JUMPLUFF
 	db -1 ; end
 
 	next_list_item ; PICNICKER (14)
 	db "EDNA@", TRAINERTYPE_NORMAL
-	db 30
+	db 63
 	dw NIDORINA
-	db 34
+	db 67
 	dw RAICHU
 	db -1 ; end
 
@@ -5727,25 +5727,25 @@ CamperGroup:
 
 	next_list_item ; CAMPER (6)
 	db "LLOYD@", TRAINERTYPE_NORMAL
-	db 34
+	db 69
 	dw NIDOKING
 	db -1 ; end
 
 	next_list_item ; CAMPER (7)
 	db "DEAN@", TRAINERTYPE_NORMAL
-	db 33
+	db 67
 	dw GOLDUCK
-	db 31
+	db 65
 	dw SANDSLASH
 	db -1 ; end
 
 	next_list_item ; CAMPER (8)
 	db "SID@", TRAINERTYPE_NORMAL
-	db 32
+	db 67
 	dw DUGTRIO
-	db 29
+	db 64
 	dw PRIMEAPE
-	db 29
+	db 64
 	dw POLIWRATH
 	db -1 ; end
 

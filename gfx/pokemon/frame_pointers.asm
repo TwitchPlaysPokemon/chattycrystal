@@ -320,7 +320,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Turtwig
 	dba GrotleFrames
 	dba TorterraFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Chimchar
+	dba ChimcharFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Monferno
 	dba PlaceholderFrames ; PLACEHOLDER - Infernape
 	dba PiplupFrames

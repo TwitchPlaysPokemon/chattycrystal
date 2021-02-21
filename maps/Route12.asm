@@ -69,25 +69,6 @@ Route12Nugget:
 
 Route12HiddenElixir:
 	hiddenitem ELIXIR, EVENT_ROUTE_12_HIDDEN_ELIXIR
-	
-ShoelaceSnorlax:
-	chattyoff
-	opentext
-	writetext ShoelaceSnorlaxText
-	waitbutton
-	closetext
-	chattyon
-	end
-
-ShoelaceSnorlaxText:
-	text "It's a SNORLAX"
-	line "tying its"
-	cont "shoelaces."
-
-	para "You'll have to"
-	line "wait until it is"
-	cont "done<...>"
-	done
 
 FisherMartinSeenText:
 	text "Patience is the"
@@ -203,4 +184,3 @@ Route12_MapEvents:
 	object_event  6,  7, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerFisherKyle, -1
 	object_event  5, 43, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route12Calcium, EVENT_ROUTE_12_CALCIUM
 	object_event  5, 51, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route12Nugget, EVENT_ROUTE_12_NUGGET
-	object_event  8,  2, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ShoelaceSnorlax, EVENT_ROUTE_5_SNORLAX

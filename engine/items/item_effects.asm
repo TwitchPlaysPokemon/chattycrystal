@@ -229,6 +229,7 @@ PokeBallEffect:
 	ld hl, UsedItemText
 	call PrintText
 
+.load_catch_rate
 	ld a, [wEnemyMonCatchRate]
 	ld b, a
 	ld a, [wBattleType]

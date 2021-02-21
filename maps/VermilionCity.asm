@@ -279,8 +279,8 @@ VermilionCity_MapEvents:
 	warp_event 21, 13, VERMILION_MART, 2
 	warp_event 21, 17, VERMILION_DIGLETTS_CAVE_SPEECH_HOUSE, 1
 	warp_event 10, 19, VERMILION_GYM, 1
-	warp_event 19, 31, VERMILION_PORT_PASSAGE, 1
-	warp_event 20, 31, VERMILION_PORT_PASSAGE, 2
+	warp_event 18, 31, VERMILION_PORT, 1
+	warp_event 19, 31, VERMILION_PORT, 3
 	warp_event 34,  7, DIGLETTS_CAVE, 1
 	warp_event 25,  9, KANTO_RADIO_TOWER_1F, 1
 

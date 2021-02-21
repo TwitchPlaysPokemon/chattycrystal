@@ -374,10 +374,10 @@ ENDM
 	connection north, Route10North, ROUTE_10_NORTH, 0
 	connection south, LavenderTown, LAVENDER_TOWN, 0
 
-	map_attributes Route23, ROUTE_23, $2f, NORTH
+	map_attributes Route23, ROUTE_23, $0f, NORTH
 	connection north, IndigoPlateauOutside, INDIGO_PLATEAU_OUTSIDE, 0
 
-	map_attributes IndigoPlateauOutside, ROUTE_23, $2f, SOUTH
+	map_attributes IndigoPlateauOutside, INDIGO_PLATEAU_OUTSIDE, $0f, SOUTH
 	connection south, Route23, ROUTE_23, 0
 
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
@@ -613,7 +613,6 @@ ENDM
 	map_attributes FastShipCabins_SE_SSE_CaptainsCabin, FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN, $00, 0
 	map_attributes FastShipB1F, FAST_SHIP_B1F, $00, 0
 	map_attributes OlivinePortPassage, OLIVINE_PORT_PASSAGE, $00, 0
-	map_attributes VermilionPortPassage, VERMILION_PORT_PASSAGE, $00, 0
 	map_attributes MountMoonSquare, MOUNT_MOON_SQUARE, $2d, 0
 	map_attributes MountMoonGiftShop, MOUNT_MOON_GIFT_SHOP, $00, 0
 	map_attributes TinTowerRoof, TIN_TOWER_ROOF, $00, 0

@@ -14,7 +14,7 @@ Route24RocketScript:
 	waitbutton
 	closetext
 	winlosstext Route24RocketBeatenText, -1
-	loadtrainer GRUNTM, GRUNTM_31
+	loadtrainer COLO_WES, AAAAAAA2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -126,4 +126,4 @@ Route24_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  8,  7, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route24RocketScript, EVENT_ROUTE_24_ROCKET
+	object_event  8,  7, SPRITE_WES, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route24RocketScript, EVENT_ROUTE_24_ROCKET

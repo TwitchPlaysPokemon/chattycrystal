@@ -37,7 +37,7 @@ FakeDirectorScript:
 	closetext
 	winlosstext FakeDirectorWinText, 0
 	setlasttalked RADIOTOWER5F_DIRECTOR
-	loadtrainer COLO_WES, AAAAAAA
+	loadtrainer COLO_WES, AAAAAAA1
 	startbattle
 	reloadmapafterbattle
 	opentext

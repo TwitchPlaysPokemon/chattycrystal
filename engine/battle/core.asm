@@ -4433,11 +4433,11 @@ ItemRecoveryAnim:
 	call SwitchTurnCore
 	xor a
 	ld [wNumHits], a
-	if HIGH(HELD_ITEM)
-		ld a, HIGH(HELD_ITEM)
+	if HIGH(RECOVER)
+		ld a, HIGH(RECOVER)
 	endc
 	ld [wFXAnimID + 1], a
-	ld a, LOW(HELD_ITEM)
+	ld a, LOW(RECOVER)
 	ld [wFXAnimID], a
 	predef PlayBattleAnim
 	call SwitchTurnCore

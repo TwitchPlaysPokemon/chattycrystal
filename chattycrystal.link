@@ -165,7 +165,6 @@ ROMX $38
 ROMX $39
 	"bank39"
 ROMX $3a
-	"Audio"
 	"Songs 1"
 ROMX $3b
 	"Songs 2"
@@ -318,6 +317,7 @@ ROMX $76
 	"Chatty Handling"
 	"Egg Moves 3"
 	"Evolutions and Attacks 3"
+	"Audio"
 ROMX $77
 	"bank77"
 	"Tileset Data 7"

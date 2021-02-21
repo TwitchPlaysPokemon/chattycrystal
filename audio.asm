@@ -157,6 +157,7 @@ INCLUDE "audio/music/custom/hoohbattle.asm"
 INCLUDE "audio/music/custom/lugiabattle.asm"
 INCLUDE "audio/music/custom/ceruleanGSC.asm"
 INCLUDE "audio/music/custom/nuggetbridge.asm"
+INCLUDE "audio/music/custom/silphco.asm"
 
 SECTION "Sound Effects", ROMX
 

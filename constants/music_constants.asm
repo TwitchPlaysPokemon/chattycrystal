@@ -120,6 +120,7 @@
 	const MUSIC_LUGIA_BATTLE                 ; 6f
 	const MUSIC_CERULEAN_CITY                ; 70
 	const MUSIC_NUGGET_BRIDGE                ; 71
+	const MUSIC_SILPH_CO                     ; 72
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64

@@ -16,7 +16,7 @@ Music:
 	dba Music_LookLass
 	dba Music_LookOfficer
 	dba Music_HealPokemon
-	dba Music_LavenderTown
+	dba Music_LavenderTownRBY
 	dba Music_Route2
 	dba Music_MtMoon
 	dba Music_ShowMeAround
@@ -119,3 +119,4 @@ Music:
 	dba Music_LugiaBattleHGSS
 	dba Music_CeruleanGSC
 	dba Music_NuggetBridge
+	dba Music_SilphCo

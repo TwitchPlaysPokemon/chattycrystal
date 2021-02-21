@@ -5,29 +5,29 @@ KantoGrassWildMons:
 	map_id DIGLETTS_CAVE
 	db 4 percent, 2 percent, 8 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, DIGLETT
-	dbw 6, DIGLETT
 	dbw 12, DIGLETT
-	dbw 24, DIGLETT
-	dbw 24, DUGTRIO
-	dbw 24, DUGTRIO
-	dbw 24, DUGTRIO
+	dbw 37, DIGLETT
+	dbw 50, DIGLETT
+	dbw 64, DIGLETT
+	dbw 65, DUGTRIO
+	dbw 70, DUGTRIO
+	dbw 70, DUGTRIO
 	; day
-	dbw 2, DIGLETT
-	dbw 4, DIGLETT
 	dbw 8, DIGLETT
-	dbw 16, DIGLETT
-	dbw 16, DUGTRIO
-	dbw 16, DUGTRIO
-	dbw 16, DUGTRIO
+	dbw 28, DIGLETT
+	dbw 46, DIGLETT
+	dbw 60, DIGLETT
+	dbw 63, DUGTRIO
+	dbw 69, DUGTRIO
+	dbw 70, DUGTRIO
 	; nite
-	dbw 4, DIGLETT
-	dbw 8, DIGLETT
-	dbw 16, DIGLETT
-	dbw 32, DIGLETT
-	dbw 32, DUGTRIO
-	dbw 32, DUGTRIO
-	dbw 32, DUGTRIO
+	dbw 17, DIGLETT
+	dbw 33, DIGLETT
+	dbw 52, DIGLETT
+	dbw 64, DIGLETT
+	dbw 66, DUGTRIO
+	dbw 72, DUGTRIO
+	dbw 75, DUGTRIO
 
 	map_id MOUNT_MOON
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

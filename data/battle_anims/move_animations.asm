@@ -269,7 +269,7 @@ MoveAnimations:
 	dw BattleAnim_Astonish
 	dw BattleAnim_AirCutter
 	dw BattleAnim_Overheat
-	dw BattleAnim_Cut          ; PLACEHOLDER
+	dw BattleAnim_OdorSleuth
 	dw BattleAnim_SacredFire   ; PLACEHOLDER
 	dw BattleAnim_Detect       ; 110, PLACEHOLDER
 	dw BattleAnim_RockThrow    ; PLACEHOLDER
@@ -3283,6 +3283,25 @@ BattleAnim_Overheat:
 	anim_loop 3, .loop2
 	anim_wait 32
 	anim_ret
+	
+BattleAnim_OdorSleuth:
+    anim_1gfx ANIM_GFX_SHINE
+    anim_call BattleAnim_UserObj_2Row
+    anim_sound 0, 0, SFX_TAIL_WHIP
+    anim_bgeffect ANIM_BG_26, $0, $0, $0
+.loop
+    anim_sound 0, 0, SFX_RAZOR_WIND
+    anim_wait 8
+    anim_loop 4, .loop
+    anim_wait 64
+    anim_incbgeffect ANIM_BG_26
+    anim_call BattleAnim_ShowMon_1
+    anim_wait 24
+	anim_bgeffect ANIM_BG_07, $0, $0, $0
+    anim_sound 0, 0, SFX_FORESIGHT
+    anim_obj ANIM_OBJ_FORESIGHT, 64, 88, $0
+    anim_wait 24
+    anim_ret	
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE

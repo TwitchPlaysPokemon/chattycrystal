@@ -7066,8 +7066,8 @@ GiveExperiencePoints:
 	ret nz
 
 	ld a, [wInBattleTowerBattle]
-	bit 0, a
-	ret nz
+	rra
+	ret c
 
 	call .EvenlyDivideExpAmongParticipants
 	xor a

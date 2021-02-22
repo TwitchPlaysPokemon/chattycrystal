@@ -52,9 +52,9 @@ JohtoWaterWildMons:
 
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 2 percent ; encounter rate
-	dbw 18, GOLDEEN
-	dbw 23, MARILL
-	dbw 23, SEAKING
+	dbw 62, GOLDEEN
+	dbw 67, MARILL
+	dbw 67, SEAKING
 
 	map_id MOUNT_MORTAR_B1F
 	db 2 percent ; encounter rate

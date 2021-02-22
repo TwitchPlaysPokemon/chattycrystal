@@ -626,29 +626,29 @@ JohtoGrassWildMons:
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 31, GRAVELER
-	dbw 32, MACHOKE
-	dbw 31, SABLEYE
-	dbw 30, RATICATE
-	dbw 28, MACHOP
-	dbw 30, GEODUDE
-	dbw 30, GOLBAT
+	dbw 67, GRAVELER
+	dbw 68, MACHOKE
+	dbw 67, SABLEYE
+	dbw 66, RATICATE
+	dbw 64, MACHOP
+	dbw 66, GEODUDE
+	dbw 66, GOLBAT
 	; day
-	dbw 31, GRAVELER
-	dbw 32, MACHOKE
-	dbw 31, SABLEYE
-	dbw 30, RATICATE
-	dbw 28, MACHOP
-	dbw 30, GEODUDE
-	dbw 30, GOLBAT
+	dbw 67, GRAVELER
+	dbw 68, MACHOKE
+	dbw 67, SABLEYE
+	dbw 66, RATICATE
+	dbw 64, MACHOP
+	dbw 66, GEODUDE
+	dbw 66, GOLBAT
 	; nite
-	dbw 31, GRAVELER
-	dbw 31, SABLEYE
-	dbw 30, RATICATE
-	dbw 30, GOLBAT
-	dbw 28, MARILL
-	dbw 32, GEODUDE
-	dbw 32, GOLBAT
+	dbw 67, GRAVELER
+	dbw 67, SABLEYE
+	dbw 66, RATICATE
+	dbw 66, GOLBAT
+	dbw 64, MARILL
+	dbw 68, GEODUDE
+	dbw 68, GOLBAT
 
 	map_id MOUNT_MORTAR_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

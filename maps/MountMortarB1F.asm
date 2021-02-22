@@ -37,7 +37,7 @@ MountMortarB1FKiyoScript:
 	writetext UnknownText_0x7e355
 	playsound SFX_CAUGHT_MON
 	waitsfx
-	givepoke TYROGUE, 10
+	givepoke HITMONTOP, 70
 	setevent EVENT_GOT_TYROGUE_FROM_KIYO
 .GotTyrogue:
 	writetext UnknownText_0x7e36a
@@ -110,17 +110,11 @@ UnknownText_0x7e2c0:
 
 UnknownText_0x7e355:
 	text "<PLAYER> received"
-	line "TYROGUE."
+	line "HITMONTOP."
 	done
 
 UnknownText_0x7e36a:
-	text "TYROGUE is a"
-	line "fighting-type."
-
-	para "It evolves into a"
-	line "tougher #MON."
-
-	para "Keep up the hard"
+	text "Keep up the hard"
 	line "work. I'll keep"
 	cont "training too."
 

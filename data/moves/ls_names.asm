@@ -7,7 +7,7 @@ LSMoveNames::
 	indirect_entries KNOCK_OFF - 1
 	indirect_entries NEEDLE_ARM, .new_moves_2
 	indirect_entries CALM_MIND - 1
-	indirect_entries MUD_SHOT, .new_moves_3
+	indirect_entries MEMENTO, .new_moves_3
 	indirect_table_end
 
 .new_moves_1
@@ -58,6 +58,7 @@ LSMoveNames::
 .new_moves_3
 	db "Soud@@@@" ; 166
 	db "Force@@@"
+	db "Gift@@@@" ; 168
 
 .original_moves
 	db "fihgt@@@"

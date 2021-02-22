@@ -359,6 +359,10 @@ MoveAnimations:
 	dw BattleAnim_RockSlide    ; PLACEHOLDER
 	dw BattleAnim_Amnesia      ; PLACEHOLDER
 	dw BattleAnim_DracoMeteor
+	dw BattleAnim_Pound        ; PLACEHOLDER
+	dw BattleAnim_Pound        ; PLACEHOLDER
+	dw BattleAnim_Pound        ; PLACEHOLDER
+	dw BattleAnim_Pound        ; PLACEHOLDER
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT

@@ -364,6 +364,8 @@ MoveDescriptions1:
 	dw DracoMeteorDescription
 	dw CalmMindDescription
 	dw MudShotDescription
+	dw MementoDescription
+	dw PoisonJabDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -543,6 +545,7 @@ TailWhipDescription:
 	next "DEFENSE.@"
 
 PoisonStingDescription:
+PoisonJabDescription:
 	db   "An attack that may"
 	next "poison the target.@"
 
@@ -1629,3 +1632,7 @@ KnockOffDescription:
 WaterSpoutDescription:
 	db   "Deals more damage"
 	next "for healthy users.@"
+
+MementoDescription:
+	db   "Faints, lowering"
+	next "ATK and SPCL.ATK.@"

@@ -47,6 +47,13 @@ SelectApricornForKurt:
 	ld [wKurtApricornQuantity], a
 	call Kurt_GiveUpSelectedQuantityOfSelectedApricorn
 
+	; Multiply wKurtApricornQuantity so he makes 8 balls per Apricorn
+	ld a, [wKurtApricornQuantity]
+	add a
+	add a
+	add a
+	ld [wKurtApricornQuantity], a
+
 .done
 	call ExitMenu
 	ret
@@ -194,9 +201,9 @@ Kurt_GetQuantityOfApricorn:
 
 .done
 	ld a, b
-	sub 99
+	sub 12
 	jr c, .done2
-	ld b, 99
+	ld b, 12
 
 .done2
 	ld a, b

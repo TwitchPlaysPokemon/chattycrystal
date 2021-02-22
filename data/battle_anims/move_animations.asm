@@ -347,7 +347,7 @@ MoveAnimations:
 	dw BattleAnim_Submission   ; PLACEHOLDER
 	dw BattleAnim_SeismicToss  ; PLACEHOLDER
 	dw BattleAnim_MorningSun   ; PLACEHOLDER
-	dw BattleAnim_Spark        ; PLACEHOLDER
+	dw BattleAnim_Nuzzle
 	dw BattleAnim_IceHammer
 	dw BattleAnim_PollenPuff
 	dw BattleAnim_PowerTrip
@@ -3331,6 +3331,24 @@ BattleAnim_MuddyWater:
 	anim_loop 4, .loop
 	anim_incobj 1
 	anim_wait 56
+	anim_ret
+	
+BattleAnim_Nuzzle:
+	anim_1gfx ANIM_GFX_LIGHTNING
+	anim_call BattleAnim_TargetObj_2Row
+	anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_31, 44, 88, $0
+	anim_wait 16
+	anim_bgeffect ANIM_BG_26, $0, $1, $0
+	anim_wait 24
+	anim_incbgeffect ANIM_BG_26
+	anim_call BattleAnim_ShowMon_0
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
+	anim_sound 0, 1, SFX_THUNDERSHOCK
+	anim_obj ANIM_OBJ_THUNDER_WAVE, 136, 56, $0
+	anim_wait 16
+	anim_incobj 3
+	anim_wait 32
 	anim_ret
 	
 BattleAnim_IceHammer:

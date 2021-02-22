@@ -1,9 +1,22 @@
 BattleCommand_Roost:
 ; roost
 
+	ld de, wBattleMonHP
+	ld hl, wBattleMonMaxHP
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_hp
+	ld de, wEnemyMonHP
+	ld hl, wEnemyMonMaxHP
+.got_hp
+	ld c, 2
+	call CompareBytes
+	jr z, .fail
 	ld a, BATTLE_VARS_SUBSTATUS2
 	call GetBattleVarAddr
 	set SUBSTATUS_ROOSTING, [hl]
+.fail
+	; This will print the fail message.
 	farcall BattleCommand_Heal
 	ret
 

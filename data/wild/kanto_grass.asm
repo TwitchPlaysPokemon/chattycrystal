@@ -761,29 +761,29 @@ KantoGrassWildMons:
 	map_id ROUTE_27
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 28, DODUO
-	dbw 28, ARBOK
-	dbw 30, RATICATE
-	dbw 30, LUXIO
-	dbw 32, PONYTA
-	dbw 30, DODRIO
-	dbw 30, DODRIO
+	dbw 68, DODUO
+	dbw 68, ARBOK
+	dbw 70, RATICATE
+	dbw 70, LUXIO
+	dbw 72, PONYTA
+	dbw 70, DODRIO
+	dbw 70, DODRIO
 	; day
-	dbw 28, DODUO
-	dbw 28, ARBOK
-	dbw 30, RATICATE
-	dbw 30, LUXIO
-	dbw 32, PONYTA
-	dbw 30, DODRIO
-	dbw 30, DODRIO
+	dbw 68, DODUO
+	dbw 68, ARBOK
+	dbw 70, RATICATE
+	dbw 70, LUXIO
+	dbw 72, PONYTA
+	dbw 70, DODRIO
+	dbw 70, DODRIO
 	; nite
-	dbw 28, QUAGSIRE
-	dbw 28, NOCTOWL
-	dbw 30, RATICATE
-	dbw 30, HOUNDOOM
-	dbw 32, NOCTOWL
-	dbw 32, NOCTOWL
-	dbw 32, NOCTOWL
+	dbw 68, QUAGSIRE
+	dbw 68, NOCTOWL
+	dbw 70, RATICATE
+	dbw 70, HOUNDOOM
+	dbw 72, NOCTOWL
+	dbw 72, NOCTOWL
+	dbw 72, NOCTOWL
 
 	map_id ROUTE_28
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

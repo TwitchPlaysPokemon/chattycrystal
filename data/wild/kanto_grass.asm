@@ -653,29 +653,29 @@ KantoGrassWildMons:
 	map_id ROUTE_22
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 73, RATICATE
-	dbw 73, NIDORINA
-	dbw 75, NIDORINO
-	dbw 74, DODRIO
-	dbw 76, RAPIDASH
-	dbw 77, ALTARIA
-	dbw 77, FEAROW
+	dbw 63, RATICATE
+	dbw 63, NIDORINA
+	dbw 65, NIDORINO
+	dbw 64, DODRIO
+	dbw 66, RAPIDASH
+	dbw 67, ALTARIA
+	dbw 67, FEAROW
 	; day
-	dbw 73, RATICATE
-	dbw 73, NIDORINA
-	dbw 75, NIDORINO
-	dbw 74, DODRIO
-	dbw 76, RAPIDASH
-	dbw 77, ALTARIA
-	dbw 77, FEAROW
+	dbw 63, RATICATE
+	dbw 63, NIDORINA
+	dbw 65, NIDORINO
+	dbw 64, DODRIO
+	dbw 66, RAPIDASH
+	dbw 67, ALTARIA
+	dbw 67, FEAROW
 	; nite
-	dbw 73, RATICATE
-	dbw 73, POLIWRATH
-	dbw 75, HOUNDOOM
-	dbw 74, POLITOED
-	dbw 76, KROKOROK
-	dbw 77, MIGHTYENA
-	dbw 77, ABSOL
+	dbw 63, RATICATE
+	dbw 63, POLIWRATH
+	dbw 65, HOUNDOOM
+	dbw 64, POLITOED
+	dbw 66, KROKOROK
+	dbw 67, MIGHTYENA
+	dbw 67, ABSOL
 
 	map_id ROUTE_24
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

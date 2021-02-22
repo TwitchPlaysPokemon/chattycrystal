@@ -15,7 +15,7 @@ PowerPlantB1FZapdos:
 	closetext
 	setevent EVENT_POWER_PLANT_B1F_ZAPDOS
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon ZAPDOS, 60
+	loadwildmon ZAPDOS, 75
 	startbattle
 	disappear POWERPLANTB1F_ZAPDOS
 	reloadmapafterbattle

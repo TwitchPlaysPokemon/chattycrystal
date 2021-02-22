@@ -1031,7 +1031,7 @@ KantoGrassWildMons:
 	map_id POKEMON_TOWER_6F
 	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 58, LITWICK 
+	dbw 58, LITWICK
 	dbw 58, MAROWAK
 	dbw 60, LAMPENT
 	dbw 60, MISDREAVUS
@@ -1082,4 +1082,166 @@ KantoGrassWildMons:
 	dbw 61, GENGAR
 	dbw 61, DUSKNOIR
 	
+	map_id VIRIDIAN_FOREST
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, BUTTERFREE
+	dbw 66, BEEDRILL
+	dbw 66, RIBOMBEE
+	dbw 66, SIMISAGE
+	dbw 67, IVYSAUR
+	dbw 62, PIKACHU
+	dbw 63, RAICHU
+	; day
+	dbw 65, BUTTERFREE
+	dbw 66, BEEDRILL
+	dbw 66, RIBOMBEE
+	dbw 66, SIMISAGE
+	dbw 67, CHARMELEON
+	dbw 62, PIKACHU
+	dbw 63, RAICHU
+	; nite
+	dbw 65, BUTTERFREE
+	dbw 66, BEEDRILL
+	dbw 66, RIBOMBEE
+	dbw 66, SIMISAGE
+	dbw 67, WARTORTLE
+	dbw 62, PIKACHU
+	dbw 63, RAICHU	
+	
+	map_id PALLET_TOWN
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, BULBASAUR
+	dbw 65, SQUIRTLE
+	dbw 65, CHARMANDER
+	dbw 70, MEW
+	dbw 67, SYLVEON
+	dbw 62, GLACEON
+	dbw 63, SNORLAX
+	; day
+	dbw 65, BULBASAUR
+	dbw 65, SQUIRTLE
+	dbw 65, CHARMANDER
+	dbw 70, MEW
+	dbw 67, LEAFEON
+	dbw 62, EMPOLEON
+	dbw 63, SNORLAX
+	; nite
+	dbw 65, BULBASAUR
+	dbw 65, SQUIRTLE
+	dbw 65, CHARMANDER
+	dbw 70, MEW
+	dbw 67, DELCATTY
+	dbw 62, AZUMARILL
+	dbw 63, SNORLAX
+	
+	map_id POKEMON_MANSION_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, GROWLITHE
+	dbw 66, WEEZING
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, COMBUSKEN
+	dbw 63, COMBUSKEN
+	; day
+	dbw 65, VULPIX
+	dbw 66, WEEZING
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, COMBUSKEN
+	dbw 63, COMBUSKEN
+	; nite
+	dbw 65, HOUNDOUR
+	dbw 66, WEEZING
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, LAMPENT
+	dbw 63, LAMPENT
+	
+	map_id POKEMON_MANSION_2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, GROWLITHE
+	dbw 66, WEEZING
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, COMBUSKEN
+	dbw 63, COMBUSKEN
+	; day
+	dbw 65, VULPIX
+	dbw 66, WEEZING
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, COMBUSKEN
+	dbw 63, COMBUSKEN
+	; nite
+	dbw 65, HOUNDOUR
+	dbw 66, WEEZING
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, LAMPENT
+	dbw 63, LAMPENT
+	
+	map_id POKEMON_MANSION_3F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, ARCANINE
+	dbw 66, WEEZING
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, COMBUSKEN
+	dbw 63, BLAZIKEN
+	; day
+	dbw 65, NINETALES
+	dbw 66, WEEZING
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, COMBUSKEN
+	dbw 63, BLAZIKEN
+	; nite
+	dbw 65, HOUNDOOM
+	dbw 66, WEEZING
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, CHANDELURE
+	dbw 63, CHANDELURE
+	
+	map_id POKEMON_MANSION_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, HYPNO
+	dbw 66, ARCANINE
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, DITTO
+	dbw 63, DITTO
+	; day
+	dbw 65, HYPNO
+	dbw 66, NINETALES
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, DITTO
+	dbw 63, DITTO
+	; nite
+	dbw 65, HYPNO
+	dbw 66, HOUNDOOM
+	dbw 66, MAGCARGO
+	dbw 66, MUK
+	dbw 67, MAGMAR
+	dbw 62, DITTO
+	dbw 63, DITTO
+
 	db -1 ; end

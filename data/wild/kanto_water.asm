@@ -88,9 +88,9 @@ KantoWaterWildMons:
 
 	map_id ROUTE_26
 	db 6 percent ; encounter rate
-	dbw 70, TENTACRUEL
-	dbw 75, WAILORD
-	dbw 70, TENTACRUEL
+	dbw 65, TENTACRUEL
+	dbw 70, WAILORD
+	dbw 65, TENTACRUEL
 
 	map_id ROUTE_27
 	db 6 percent ; encounter rate
@@ -100,21 +100,21 @@ KantoWaterWildMons:
 
 	map_id ROUTE_28
 	db 2 percent ; encounter rate
-	dbw 80, MASQUERAIN
-	dbw 83, POLITOED
+	dbw 90, MASQUERAIN
+	dbw 93, POLITOED
 	dbw 50, FEEBAS
 
 	map_id PALLET_TOWN
 	db 6 percent ; encounter rate
-	dbw 75, TENTACOOL
-	dbw 70, TENTACOOL
-	dbw 75, LAPRAS
+	dbw 65, TENTACOOL
+	dbw 60, TENTACOOL
+	dbw 65, LAPRAS
 
 	map_id VIRIDIAN_CITY
 	db 2 percent ; encounter rate
-	dbw 70, SURSKIT
-	dbw 75, MASQUERAIN
-	dbw 80, POLIWRATH
+	dbw 60, SURSKIT
+	dbw 65, MASQUERAIN
+	dbw 60, POLIWRATH
 
 	map_id CERULEAN_CITY
 	db 4 percent ; encounter rate

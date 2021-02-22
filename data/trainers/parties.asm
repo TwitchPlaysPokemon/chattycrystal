@@ -1839,7 +1839,7 @@ BABAGroup:
 	bigdw 191
 	db "BEST@"
 	
-	db 20
+	db 45
 	dw SUICUNE
 	db NO_ITEM
 	dw SURF, ICY_WIND, AURORA_BEAM, CUT

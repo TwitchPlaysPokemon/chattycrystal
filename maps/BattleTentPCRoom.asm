@@ -12,6 +12,7 @@ LeaguePCScript:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	winlosstext .win_text, .lose_text
 	loadtrainer BATTLE_PC, MIRROR_PC
+	startbattle
 	reloadmap
 	end
 

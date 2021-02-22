@@ -1351,5 +1351,34 @@ KantoGrassWildMons:
 	dbw 67, SNORUNT
 	dbw 62, AURORUS
 	dbw 63, FROSLASS
+	
+	map_id ROUTE_23
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 69, NIDOKING
+	dbw 69, NIDOQUEEN
+	dbw 71, EXEGGUTOR
+	dbw 71, LUXRAY
+	dbw 73, RAPIDASH
+	dbw 71, PIDGEOT
+	dbw 71, PIDGEOT
+	; day
+	dbw 69, NIDOKING
+	dbw 69, NIDOQUEEN
+	dbw 71, EXEGGUTOR
+	dbw 71, LUXRAY
+	dbw 73, RAPIDASH
+	dbw 71, PIDGEOT
+	dbw 71, PIDGEOT
+	; nite
+	dbw 69, NIDOKING
+	dbw 69, NIDOQUEEN
+	dbw 71, SLOWBRO
+	dbw 71, LUXRAY
+	dbw 73, HOUNDOOM
+	dbw 73, MURKROW
+	dbw 73, MURKROW
 
 	db -1 ; end
+
+	

@@ -175,5 +175,11 @@ KantoWaterWildMons:
 	dbw 66, STARMIE
 	dbw 66, OMASTAR
 	dbw 66, KABUTOPS
+	
+	map_id ROUTE_23
+	db 4 percent ; encounter rate
+	dbw 69, GOLDUCK
+	dbw 71, SWANNA
+	dbw 69, POLIWRATH
 
 	db -1 ; end

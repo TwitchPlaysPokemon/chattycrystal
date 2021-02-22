@@ -4,14 +4,48 @@ BattleTentPCRoom_MapScripts:
 	db 0 ; callbacks
 
 LeaguePCScript:
-	loadfont
-	writetext .off_text
+	opentext
+	writetext .mirror_battle_text
+	yesorno
+	iffalse .log_off
+	writetext .loading_text
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	winlosstext .win_text, .lose_text
+	loadtrainer BATTLE_PC, MIRROR_PC
+	reloadmap
+	end
+
+.log_off
+	writetext .logging_off_text
+	waitbutton
 	closetext
 	end
 
-.off_text
-	text "It appears to be"
-	line "broken…"
+.mirror_battle_text
+	text "Welcome to the"
+	line "BATTLE PC system."
+
+	para "Do you want to"
+	line "challenge the PC"
+	cont "to a mirror match?"
+	done
+
+.logging_off_text
+	text "Logging off<...>"
+	done
+
+.loading_text
+	text "Loading team<...>"
+	prompt
+
+.win_text
+	text "Battle results:"
+	line "Player wins."
+	done
+
+.lose_text
+	text "Battle results:"
+	line "Player loses."
 	done
 
 BattleTentPCRoom_MapEvents:

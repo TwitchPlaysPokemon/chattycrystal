@@ -255,31 +255,31 @@ MoveAnimations:
 	dw BattleAnim_WillOWisp
 	dw BattleAnim_Charge
 	dw BattleAnim_Taunt
-	dw BattleAnim_Assist
-	dw BattleAnim_Superpower   ; 100
+	dw BattleAnim_Assist       ; 100
+	dw BattleAnim_Superpower
 	dw BattleAnim_Revenge
 	dw BattleAnim_Endeavor
+	dw BattleAnim_Thief        ; PLACEHOLDER
+	dw BattleAnim_HiddenPower  ; PLACEHOLDER
 	dw BattleAnim_Dive
 	dw BattleAnim_ArmThrust
-	dw BattleAnim_TeeterDance
+	dw BattleAnim_TeeterDance  ; 108
 	dw BattleAnim_BlazeKick
-	dw BattleAnim_IceBall      ; 108
+	dw BattleAnim_IceBall
 	dw BattleAnim_PoisonFang
 	dw BattleAnim_MeteorMash
 	dw BattleAnim_Astonish
 	dw BattleAnim_AirCutter
 	dw BattleAnim_Overheat
-	dw BattleAnim_OdorSleuth
+	dw BattleAnim_OdorSleuth   ; 110
 	dw BattleAnim_RockTomb
-	dw BattleAnim_MetalSound   ; 110
+	dw BattleAnim_MetalSound
 	dw BattleAnim_Tickle
-	dw BattleAnim_Screech      ; PLACEHOLDER
-	dw BattleAnim_TailWhip     ; PLACEHOLDER
 	dw BattleAnim_Psybeam      ; PLACEHOLDER
 	dw BattleAnim_FeintAttack  ; PLACEHOLDER
-	dw BattleAnim_MuddyWater
+	dw BattleAnim_Psywave      ; PLACEHOLDER
 	dw BattleAnim_Twister      ; PLACEHOLDER
-	dw BattleAnim_Surf         ; 118, PLACEHOLDER
+	dw BattleAnim_MuddyWater   ; 118
 	dw BattleAnim_WingAttack   ; PLACEHOLDER
 	dw BattleAnim_Harden       ; PLACEHOLDER
 	dw BattleAnim_Roar         ; PLACEHOLDER
@@ -349,20 +349,18 @@ MoveAnimations:
 	dw BattleAnim_MorningSun   ; PLACEHOLDER
 	dw BattleAnim_Spark        ; PLACEHOLDER
 	dw BattleAnim_IcePunch     ; PLACEHOLDER
-	dw BattleAnim_Smokescreen  ; PLACEHOLDER
-	dw BattleAnim_Pound        ; PLACEHOLDER
-	dw BattleAnim_PollenPuff   ; 160
+	dw BattleAnim_PollenPuff
 	dw BattleAnim_PowerTrip
+	dw BattleAnim_HiddenPower  ; 160
+	dw BattleAnim_ThunderWave  ; PLACEHOLDER
 	dw BattleAnim_Thief        ; PLACEHOLDER
 	dw BattleAnim_Surf         ; PLACEHOLDER
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
-	dw BattleAnim_RockSlide    ; PLACEHOLDER
-	dw BattleAnim_Amnesia      ; PLACEHOLDER
 	dw BattleAnim_DracoMeteor
-	dw BattleAnim_Pound        ; PLACEHOLDER
-	dw BattleAnim_Pound        ; PLACEHOLDER
-	dw BattleAnim_Pound        ; PLACEHOLDER
-	dw BattleAnim_Pound        ; PLACEHOLDER
+	dw BattleAnim_Amnesia      ; PLACEHOLDER
+	dw BattleAnim_MudSlap      ; PLACEHOLDER
+	dw BattleAnim_Pound        ; 168, PLACEHOLDER
+	dw BattleAnim_PoisonSting  ; PLACEHOLDER
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT

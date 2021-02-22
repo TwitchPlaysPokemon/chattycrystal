@@ -3,15 +3,8 @@ BattleTentRuins_MapScripts:
 
 	db 0 ; callbacks
 
-MapBattleTentRuinsDoorScript:
-	loadfont
-	writetext MapBattleTentRuinsDoorText
-	closetext
-	end
-
-MapBattleTentRuinsDoorText:
-	text "It's locked<...>"
-	done
+BattleTentRuinsPC:
+	jumpstd pcscript
 
 BattleTentRuins_MapEvents:
 	db 0, 0 ; filler
@@ -25,6 +18,6 @@ BattleTentRuins_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event 5, 0, BGEVENT_READ, MapBattleTentRuinsDoorScript
+	bg_event 4, 4, BGEVENT_UP, BattleTentRuinsPC
 
 	db 0 ; object events

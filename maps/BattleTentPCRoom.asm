@@ -9,11 +9,13 @@ LeaguePCScript:
 	yesorno
 	iffalse .log_off
 	writetext .loading_text
+	special HealParty
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	winlosstext .win_text, .lose_text
 	loadtrainer BATTLE_PC, MIRROR_PC
 	startbattle
 	reloadmap
+	special HealParty
 	end
 
 .log_off

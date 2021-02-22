@@ -72,3 +72,4 @@ TrainerClassNames::
 	db "LEADER@" ; NATE_LEADER
 	db "ELITE 4@" ; NATE_ELITE_4
 	db "PROFESSOR" ; POKEMON_PROF
+	db "BATTLE" ; BATTLE PC

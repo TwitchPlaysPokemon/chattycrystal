@@ -7702,3 +7702,12 @@ NuzlockeGroup:
 
 	db -1 ; end
 	end_list_items
+
+BattlePCGroup:
+	next_list_item ; BATTLE_PC (1)
+	db "COMPUTER@", TRAINERTYPE_NORMAL
+	db 100
+	dw PIKACHU
+	db -1 ; end
+
+	end_list_items

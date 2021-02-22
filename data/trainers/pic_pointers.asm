@@ -74,3 +74,4 @@ TrainerPicPointers::
 	dba NatePic
 	dba NatePic
 	dba PokemonProfPic
+	dba BattlePCPic

@@ -73,3 +73,4 @@ TrainerClassDVs:
 	dn 15, 13, 13, 14 ; NATE_LEADER
 	dn 15, 13, 13, 14 ; NATE_ELITE_4
 	dn 15, 13, 13, 14 ; POKEMON_PROF
+	dn 15, 13, 13, 14 ; BATTLE_PC

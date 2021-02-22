@@ -716,7 +716,10 @@ CHRIS EQU __enum__
 	trainerclass NATE_ELITE_4 ; 48
 	const R_BLACK22
 
-	trainerclass POKEMON_PROF ;49
+	trainerclass POKEMON_PROF ; 49
+
+	trainerclass BATTLE_PC    ; 4a
+	const BATTLE_PC1
 
 KRIS EQU __enum__
 

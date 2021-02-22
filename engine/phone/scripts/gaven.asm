@@ -1,5 +1,5 @@
 GavenPhoneCalleeScript:
-	gettrainername STRING_BUFFER_3, COOLTRAINERM, GAVEN3
+	gettrainername STRING_BUFFER_3, COOLTRAINERM, GAVEN1
 	checkflag ENGINE_GAVEN
 	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Male
@@ -18,7 +18,7 @@ GavenPhoneCalleeScript:
 	farsjump UnknownScript_0xa0a37
 
 GavenPhoneCallerScript:
-	gettrainername STRING_BUFFER_3, COOLTRAINERM, GAVEN3
+	gettrainername STRING_BUFFER_3, COOLTRAINERM, GAVEN1
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_GAVEN
 	iftrue .WaitingForBattle

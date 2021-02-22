@@ -25,7 +25,7 @@ TrainerCooltrainermJake:
 	end
 
 TrainerCooltrainermGaven3:
-	trainer COOLTRAINERM, GAVEN3, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainermGaven3SeenText, CooltrainermGaven3BeatenText, 0, .Script
+	trainer COOLTRAINERM, GAVEN1, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainermGaven3SeenText, CooltrainermGaven3BeatenText, 0, .Script
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_COOLTRAINERM_GAVEN
@@ -49,7 +49,7 @@ TrainerCooltrainermGaven3:
 	askforphonenumber PHONE_COOLTRAINERM_GAVEN
 	ifequal PHONE_CONTACTS_FULL, .PhoneFull
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
-	gettrainername STRING_BUFFER_3, COOLTRAINERM, GAVEN3
+	gettrainername STRING_BUFFER_3, COOLTRAINERM, GAVEN1
 	scall .RegisteredNumber
 	sjump .NumberAccepted
 
@@ -57,17 +57,13 @@ TrainerCooltrainermGaven3:
 	scall .Rematch
 	winlosstext CooltrainermGaven3BeatenText, 0
 	readmem wGavenFightCount
-	ifequal 2, .Fight2
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
-.Fight2:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight2
 .Fight1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
 .LoadFight0:
-	loadtrainer COOLTRAINERM, GAVEN3
+	loadtrainer COOLTRAINERM, GAVEN1
 	startbattle
 	reloadmapafterbattle
 	loadmem wGavenFightCount, 1
@@ -75,14 +71,6 @@ TrainerCooltrainermGaven3:
 	end
 
 .LoadFight1:
-	loadtrainer COOLTRAINERM, GAVEN1
-	startbattle
-	reloadmapafterbattle
-	loadmem wGavenFightCount, 2
-	clearflag ENGINE_GAVEN
-	end
-
-.LoadFight2:
 	loadtrainer COOLTRAINERM, GAVEN2
 	startbattle
 	reloadmapafterbattle
@@ -161,12 +149,8 @@ TrainerCooltrainerfBeth1:
 	scall .Rematch
 	winlosstext CooltrainerfBeth1BeatenText, 0
 	readmem wBethFightCount
-	ifequal 2, .Fight2
 	ifequal 1, .Fight1
 	ifequal 0, .LoadFight0
-.Fight2:
-	checkevent EVENT_RESTORED_POWER_TO_KANTO
-	iftrue .LoadFight2
 .Fight1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
@@ -180,14 +164,6 @@ TrainerCooltrainerfBeth1:
 
 .LoadFight1:
 	loadtrainer COOLTRAINERF, BETH2
-	startbattle
-	reloadmapafterbattle
-	loadmem wBethFightCount, 2
-	clearflag ENGINE_BETH
-	end
-
-.LoadFight2:
-	loadtrainer COOLTRAINERF, BETH3
 	startbattle
 	reloadmapafterbattle
 	clearflag ENGINE_BETH

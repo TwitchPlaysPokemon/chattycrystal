@@ -58,7 +58,7 @@ TrainerPsychicGilbert:
 	end
 
 TrainerBirdKeeperJose2:
-	trainer BIRD_KEEPER, JOSE2, EVENT_BEAT_BIRD_KEEPER_JOSE2, BirdKeeperJose2SeenText, BirdKeeperJose2BeatenText, 0, .Script
+	trainer BIRD_KEEPER, JOSE1, EVENT_BEAT_BIRD_KEEPER_JOSE2, BirdKeeperJose2SeenText, BirdKeeperJose2BeatenText, 0, .Script
 
 .Script:
 	loadvar VAR_CALLERID, PHONE_BIRDKEEPER_JOSE

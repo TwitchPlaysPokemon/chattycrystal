@@ -127,7 +127,6 @@ CHRIS EQU __enum__
 	const GAVEN2
 	const RYAN
 	const JAKE
-	const GAVEN3
 	const BLAKE
 	const BRIAN
 	const ERICK
@@ -157,7 +156,6 @@ CHRIS EQU __enum__
 	const EMMA
 	const CYBIL
 	const JENN
-	const BETH3
 	const REENA2
 	const CARA
 

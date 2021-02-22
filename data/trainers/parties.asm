@@ -7705,9 +7705,17 @@ NuzlockeGroup:
 
 BattlePCGroup:
 	next_list_item ; BATTLE_PC (1)
-	db "COMPUTER@", TRAINERTYPE_NORMAL
-	db 100
-	dw PIKACHU
-	db -1 ; end
+	db "COMPUTER@"
+	specialtrainer .mirrormatch
+
+.mirrormatch
+	ld hl, wPartyCount
+	ld de, wOTPartyCount
+	ld bc, 2 + PARTY_LENGTH
+	call CopyBytes
+	ld hl, wPartyMons
+	ld de, wOTPartyMons
+	ld bc, PARTY_LENGTH * (PARTYMON_STRUCT_LENGTH + NAME_LENGTH + MON_NAME_LENGTH)
+	jp CopyBytes
 
 	end_list_items

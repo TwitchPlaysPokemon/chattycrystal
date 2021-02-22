@@ -7069,6 +7069,10 @@ GiveExperiencePoints:
 	rra
 	ret c
 
+	ld a, [wOtherTrainerClass]
+	cp BATTLE_PC
+	ret z
+
 	call .EvenlyDivideExpAmongParticipants
 	xor a
 	ld [wCurPartyMon], a

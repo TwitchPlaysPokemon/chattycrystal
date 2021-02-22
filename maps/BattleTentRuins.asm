@@ -4,7 +4,14 @@ BattleTentRuins_MapScripts:
 	db 0 ; callbacks
 
 BattleTentRuinsPC:
-	jumpstd pcscript
+	jumptext .status_text
+
+.status_text
+	text "BATTLE PC status:"
+
+	para "Mirror match"
+	line "module loaded."
+	done
 
 BattleTentRuins_MapEvents:
 	db 0, 0 ; filler

@@ -16,7 +16,7 @@ SeafoamIslandsB4FArticuno:
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon ARTICUNO, 60
+	loadwildmon ARTICUNO, 75
 	startbattle
 	disappear SEAFOAMISLANDSB4F_ARTICUNO
 	reloadmapafterbattle

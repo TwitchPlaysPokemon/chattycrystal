@@ -1243,5 +1243,113 @@ KantoGrassWildMons:
 	dbw 67, MAGMAR
 	dbw 62, DITTO
 	dbw 63, DITTO
+	
+	map_id SEAFOAM_ISLANDS_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, SEALEO
+	dbw 66, CRABRAWLER
+	dbw 66, DEWGONG
+	dbw 66, GOLBAT
+	dbw 67, CLOYSTER
+	dbw 62, AMAURA
+	dbw 63, OMANYTE
+	; day
+	dbw 65, SEALEO
+	dbw 66, CRABRAWLER
+	dbw 66, DEWGONG
+	dbw 66, GOLBAT
+	dbw 67, CLOYSTER
+	dbw 62, AMAURA
+	dbw 63, OMANYTE
+	; nite
+	dbw 65, SEALEO
+	dbw 66, CRABRAWLER
+	dbw 66, DEWGONG
+	dbw 66, GOLBAT
+	dbw 67, CLOYSTER
+	dbw 62, AMAURA
+	dbw 63, KABUTO
+	
+	map_id SEAFOAM_ISLANDS_B2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, SEALEO
+	dbw 66, CRABRAWLER
+	dbw 66, DEWGONG
+	dbw 66, AMAURA
+	dbw 67, CLOYSTER
+	dbw 62, OMANYTE
+	dbw 63, OMANYTE
+	; day
+	dbw 65, SEALEO
+	dbw 66, CRABRAWLER
+	dbw 66, DEWGONG
+	dbw 66, AMAURA
+	dbw 67, CLOYSTER
+	dbw 62, OMANYTE
+	dbw 63, OMANYTE
+	; nite
+	dbw 65, SEALEO
+	dbw 66, CRABRAWLER
+	dbw 66, DEWGONG
+	dbw 66, AMAURA
+	dbw 67, CLOYSTER
+	dbw 62, KABUTO
+	dbw 63, KABUTO
+	
+	map_id SEAFOAM_ISLANDS_B3F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, WALREIN
+	dbw 66, CRABOMINABLE
+	dbw 66, DEWGONG
+	dbw 66, AMAURA
+	dbw 67, SNORUNT
+	dbw 62, OMANYTE
+	dbw 63, OMASTAR
+	; day
+	dbw 65, WALREIN
+	dbw 66, CRABOMINABLE
+	dbw 66, DEWGONG
+	dbw 66, AMAURA
+	dbw 67, SNORUNT
+	dbw 62, OMANYTE
+	dbw 63, OMASTAR
+	; nite
+	dbw 65, WALREIN
+	dbw 66, CRABOMINABLE
+	dbw 66, DEWGONG
+	dbw 66, AMAURA
+	dbw 67, SNORUNT
+	dbw 62, KABUTO
+	dbw 63, KABUTOPS
+	
+	map_id SEAFOAM_ISLANDS_B4F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, WALREIN
+	dbw 66, CRABOMINABLE
+	dbw 66, DEWGONG
+	dbw 66, AMAURA
+	dbw 67, SNORUNT
+	dbw 62, AURORUS
+	dbw 63, FROSLASS
+	; day
+	dbw 65, WALREIN
+	dbw 66, CRABOMINABLE
+	dbw 66, DEWGONG
+	dbw 66, AMAURA
+	dbw 67, SNORUNT
+	dbw 62, AURORUS
+	dbw 63, FROSLASS
+	; nite
+	dbw 65, WALREIN
+	dbw 66, CRABOMINABLE
+	dbw 66, DEWGONG
+	dbw 66, AMAURA
+	dbw 67, SNORUNT
+	dbw 62, AURORUS
+	dbw 63, FROSLASS
 
 	db -1 ; end

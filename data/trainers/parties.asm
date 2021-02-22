@@ -3850,7 +3850,7 @@ SkierGroup:
 
 	next_list_item ; SKIER (3)
 	db "CADY@", TRAINERTYPE_NORMAL
-	db 53
+	db 90
 	dw DELIBIRD
 	db -1 ; end
 
@@ -4337,10 +4337,10 @@ FisherGroup:
 SwimmerMGroup:
 	next_list_item ; SWIMMERM (1)
 	db "HAROLD@", TRAINERTYPE_NORMAL
-	db 32
-	dw REMORAID
-	db 30
-	dw SEADRA
+	db 72
+	dw OCTILLERY
+	db 70
+	dw KINGDRA
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (2)
@@ -4457,21 +4457,21 @@ SwimmerMGroup:
 
 	next_list_item ; SWIMMERM (14)
 	db "JEROME@", TRAINERTYPE_NORMAL
-	db 26
-	dw SEADRA
-	db 28
-	dw TENTACOOL
-	db 30
+	db 68
+	dw KINGDRA
+	db 70
 	dw TENTACRUEL
-	db 28
-	dw GOLDEEN
+	db 72
+	dw TENTACRUEL
+	db 70
+	dw SEAKING
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (15)
 	db "TUCKER@", TRAINERTYPE_NORMAL
-	db 30
+	db 72
 	dw SHELLDER
-	db 34
+	db 72
 	dw CLOYSTER
 	db -1 ; end
 
@@ -4618,7 +4618,7 @@ SwimmerFGroup:
 
 	next_list_item ; SWIMMERF (12)
 	db "DAWN@", TRAINERTYPE_NORMAL
-	db 34
+	db 73
 	dw SEAKING
 	db -1 ; end
 
@@ -6257,17 +6257,17 @@ BoarderGroup:
 
 	next_list_item ; BOARDER (4)
 	db "SHAUN@", TRAINERTYPE_NORMAL
-	db 55
+	db 72
 	dw CLOYSTER
-	db 50
+	db 67
 	dw DEWGONG
 	db -1 ; end
 
 	next_list_item ; BOARDER (5)
 	db "BRYCE@", TRAINERTYPE_NORMAL
-	db 55
+	db 72
 	dw DEWGONG
-	db 50
+	db 67
 	dw LAPRAS
 	db -1 ; end
 

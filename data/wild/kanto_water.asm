@@ -169,5 +169,11 @@ KantoWaterWildMons:
 	dbw 56, REMORAID
 	dbw 51, BUIZEL
 	dbw 56, MUDKIP
+	
+	map_id SEAFOAM_ISLANDS_B4F
+	db 4 percent ; encounter rate
+	dbw 66, STARMIE
+	dbw 66, OMASTAR
+	dbw 66, KABUTOPS
 
 	db -1 ; end

@@ -4898,10 +4898,9 @@ SuperNerdGroup:
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (13)
-	db "HUGH@", TRAINERTYPE_MOVES
-	db 39
-	dw SEADRA
-	dw SMOKESCREEN, TWISTER, SURF, WATERFALL
+	db "HUGH@", TRAINERTYPE_NORMAL
+	db 72
+	dw KINGDRA
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (14)
@@ -5470,10 +5469,12 @@ BlackbeltGroup:
 
 	next_list_item ; BLACKBELT_T (6)
 	db "KIYO@", TRAINERTYPE_NORMAL
-	db 34
+	db 71
 	dw HITMONLEE
-	db 34
+	db 71
 	dw HITMONCHAN
+	db 71
+	dw HITMONTOP
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (7)
@@ -7307,7 +7308,7 @@ GSCHGSSChrisGroup:
 	db 42
 	dw SKUNTANK
 	db BLUESKY_MAIL
-	dw CUT, FURY_SWIPES, NO_MOVE, NO_MOVE ; POISON_JAB, MEMENTO
+	dw CUT, FURY_SWIPES, POISON_JAB, MEMENTO
 	bigdw $0FFF
 	bigdw 141
 	bigdw 96

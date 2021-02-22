@@ -29,6 +29,7 @@ BattleCommand_Memento:
 	ret
 
 .failed
-	call AnimateFailedMove
-	call TryPrintButItFailed
-	jp EndMoveEffect
+	farcall AnimateFailedMove
+	farcall TryPrintButItFailed
+	farcall EndMoveEffect
+	ret

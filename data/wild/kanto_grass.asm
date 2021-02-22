@@ -1378,6 +1378,33 @@ KantoGrassWildMons:
 	dbw 73, HOUNDOOM
 	dbw 73, MURKROW
 	dbw 73, MURKROW
+	
+	map_id POWER_PLANT_B1F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, HELIOPTILE
+	dbw 66, VOLTORB
+	dbw 66, MAGNETON
+	dbw 66, ELECTABUZZ
+	dbw 67, TYNAMO
+	dbw 62, HELIOLISK
+	dbw 63, EELEKTRIK
+	; day
+	dbw 65, HELIOPTILE
+	dbw 66, VOLTORB
+	dbw 66, MAGNETON
+	dbw 66, ELECTABUZZ
+	dbw 67, TYNAMO
+	dbw 62, HELIOLISK
+	dbw 63, EELEKTRIK
+	; nite
+	dbw 65, SHINX
+	dbw 66, MAGNEMITE
+	dbw 66, ELECTRODE
+	dbw 66, ELECTABUZZ
+	dbw 67, TYNAMO
+	dbw 62, LUXRAY
+	dbw 63, EELEKTRIK
 
 	db -1 ; end
 

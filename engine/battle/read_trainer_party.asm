@@ -98,6 +98,25 @@ ReadTrainerPartyPieces:
 	ld a, [wOtherTrainerType]
 	and $7f
 	rst FarCall
+	ld a, [wOTPartyCount]
+	ld c, a
+	ld b, 0
+	and a
+	jr z, .empty_party
+	ld de, PARTYMON_STRUCT_LENGTH
+	ld hl, wOTPartyMon1Level
+.level_loop
+	ld a, [hl]
+	add hl, de
+	cp b
+	jr c, .no_level_update
+	ld b, a
+.no_level_update
+	dec c
+	jr nz, .level_loop
+.empty_party
+	ld a, b
+	ld [wCurPartyLevel], a
 	ret
 
 .loop

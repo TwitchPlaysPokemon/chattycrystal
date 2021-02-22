@@ -5,6 +5,12 @@ ResetUniqueMons::
 	clearifuncaught LATIOS, EVENT_LATIOS_IN_SAFARI_ZONE
 	clearifuncaught LUGIA, EVENT_FOUGHT_LUGIA
 	clearifuncaught ZAPDOS, EVENT_POWER_PLANT_B1F_ZAPDOS
-	; TODO: Entei, Raikou, Suicune, Celebi
+
+	checkevent EVENT_RELEASED_THE_BEASTS
+	iffalse .no_beasts
+	; TODO: Entei, Raikou, Suicune
+.no_beasts
+
+	; TODO: Celebi
 	; TODO: any unique mons we add
 	end

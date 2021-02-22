@@ -47,3 +47,5 @@
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 2e
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 2f
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 30
+	tilecoll FLOOR, FLOOR, LADDER, FLOOR ; 31
+	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 32

@@ -1006,7 +1006,20 @@ PartyMenuAttributes:
 PartyMenuSelect:
 ; sets carry if exitted menu.
 	call StaticMenuJoypad
-	call PlaceHollowCursor
+	ldh a, [hJoyLast]
+	ld b, a
+	bit B_BUTTON_F, b
+	jr z, .no_b_button
+
+	; If TPP is in the Battle Tower selection, ignore the B button
+	ld a, [wPartyMenuActionText]
+	cp PARTYMENUACTION_BATTLE_TOWER
+	jr nz, .exitmenu
+	ld a, [wTPPFeatureLock]
+	cp TPP_FEATURE_LOCK_VALUE
+	jr nz, .exitmenu
+	jr PartyMenuSelect
+.no_b_button
 	ld a, [wPartyCount]
 	inc a
 	ld b, a
@@ -1014,10 +1027,7 @@ PartyMenuSelect:
 	cp b
 	jr z, .exitmenu ; CANCEL
 	ld [wPartyMenuCursor], a
-	ldh a, [hJoyLast]
-	ld b, a
-	bit B_BUTTON_F, b
-	jr nz, .exitmenu ; B button
+	call PlaceHollowCursor
 	ld a, [wMenuCursorY]
 	dec a
 	ld [wCurPartyMon], a
@@ -1035,6 +1045,8 @@ PartyMenuSelect:
 	ret
 
 .exitmenu
+	; unsure if necessary, but replicate vanilla behaviour just in case
+	call PlaceHollowCursor
 	ld de, SFX_READ_TEXT_2
 	call PlaySFX
 	call WaitSFX

@@ -140,5 +140,5 @@ CinnabarIsland_MapEvents:
 	bg_event  7,  7, BGEVENT_READ, CinnabarIslandSign
 	bg_event  7,  1, BGEVENT_ITEM, CinnabarIslandHiddenRareCandy
 
-	db 1 ; object events
+	db 0 ; object events
 	object_event  9,  6, SPRITE_BRENDAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CinnabarIslandBlue, EVENT_BLUE_IN_CINNABAR

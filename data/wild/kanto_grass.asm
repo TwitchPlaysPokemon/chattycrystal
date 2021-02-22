@@ -140,29 +140,29 @@ KantoGrassWildMons:
 	map_id TOHJO_FALLS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 68, GOLBAT
-	dbw 68, FLOATZEL
-	dbw 70, CROBAT
-	dbw 67, SLOWPOKE
-	dbw 66, BUIZEL
-	dbw 69, SLOWBRO
-	dbw 69, SLOWBRO
+	dbw 22, GOLBAT
+	dbw 22, BUIZEL
+	dbw 24, GOLBAT
+	dbw 21, SLOWPOKE
+	dbw 24, BIBAREL
+	dbw 25, SLOWBRO
+	dbw 25, SLOWBRO
 	; day
-	dbw 68, GOLBAT
-	dbw 68, FLOATZEL
-	dbw 70, CROBAT
-	dbw 67, SLOWPOKE
-	dbw 66, BUIZEL
-	dbw 69, SLOWBRO
-	dbw 69, SLOWBRO
+	dbw 22, GOLBAT
+	dbw 22, BUIZEL
+	dbw 24, GOLBAT
+	dbw 21, SLOWPOKE
+	dbw 24, BIBAREL
+	dbw 25, SLOWPOKE
+	dbw 25, SLOWPOKE
 	; nite
-	dbw 68, GOLBAT
-	dbw 68, FLOATZEL
-	dbw 70, CROBAT
-	dbw 67, SLOWPOKE
-	dbw 66, BUIZEL
-	dbw 69, SLOWBRO
-	dbw 69, SLOWBRO
+	dbw 22, GOLBAT
+	dbw 22, FLOATZEL
+	dbw 24, CROBAT
+	dbw 21, SLOWPOKE
+	dbw 24, BUIZEL
+	dbw 25, SLOWPOKE
+	dbw 25, SLOWPOKE
 
 	map_id ROUTE_1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -761,29 +761,29 @@ KantoGrassWildMons:
 	map_id ROUTE_27
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 68, DODUO
-	dbw 68, ARBOK
-	dbw 70, RATICATE
-	dbw 70, DODUO
-	dbw 72, PONYTA
-	dbw 70, DODRIO
-	dbw 70, DODRIO
+	dbw 28, DODUO
+	dbw 28, ARBOK
+	dbw 30, RATICATE
+	dbw 30, LUXIO
+	dbw 32, PONYTA
+	dbw 30, DODRIO
+	dbw 30, DODRIO
 	; day
-	dbw 68, DODUO
-	dbw 68, ARBOK
-	dbw 70, RATICATE
-	dbw 70, DODUO
-	dbw 72, PONYTA
-	dbw 70, DODRIO
-	dbw 70, DODRIO
+	dbw 28, DODUO
+	dbw 28, ARBOK
+	dbw 30, RATICATE
+	dbw 30, LUXIO
+	dbw 32, PONYTA
+	dbw 30, DODRIO
+	dbw 30, DODRIO
 	; nite
-	dbw 68, QUAGSIRE
-	dbw 68, NOCTOWL
-	dbw 70, RATICATE
-	dbw 70, QUAGSIRE
-	dbw 72, NOCTOWL
-	dbw 72, NOCTOWL
-	dbw 72, NOCTOWL
+	dbw 28, QUAGSIRE
+	dbw 28, NOCTOWL
+	dbw 30, RATICATE
+	dbw 30, HOUNDOOM
+	dbw 32, NOCTOWL
+	dbw 32, NOCTOWL
+	dbw 32, NOCTOWL
 
 	map_id ROUTE_28
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

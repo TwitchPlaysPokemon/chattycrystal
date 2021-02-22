@@ -220,6 +220,7 @@ BattleAnimOAMData:
 	dbbw $15,  4, .OAMData_04 ; BATTLEANIMOAMSET_D8
 	dbbw $0f,  4, .OAMData_cd ; BATTLEANIMOAMSET_D9
 	dbbw $06,  9, .OAMData_ce ; BATTLEANIMOAMSET_DA
+	dbbw $17,  4, .OAMData_03 ; BATTLEANIMOAMSET_DB
 
 .OAMData_11:
 	dsprite  -1, 0,  -1, 4, $00, $0

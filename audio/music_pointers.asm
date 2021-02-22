@@ -125,3 +125,4 @@ Music:
 	dba Music_GymLeaderBattleXY
 	dba Music_ChampionRB
 	dba Music_GymLeaderBattlePrism
+	dba Music_BattleArcadeBattle

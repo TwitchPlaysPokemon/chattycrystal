@@ -8,6 +8,7 @@
 	const BURNEDTOWERB1F_SUICUNE2
 	const BURNEDTOWERB1F_POKE_BALL
 	const BURNEDTOWERB1F_EUSINE
+	const BURNEDTOWERB1F_ENTEI_REMATCH
 
 BurnedTowerB1F_MapScripts:
 	db 2 ; scene scripts
@@ -186,6 +187,18 @@ BurnedTowerB1FEusineText:
 	text "…"
 	done
 
+BurnedTowerB1F_RematchEntei:
+	faceplayer
+	cry ENTEI
+	pause 20
+	setevent EVENT_REMATCH_ENTEI
+	loadwildmon ENTEI, 55
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SUICUNE
+	startbattle
+	reloadmapafterbattle
+	disappear BURNEDTOWERB1F_ENTEI_REMATCH
+	end
+
 BurnedTowerB1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -202,7 +215,7 @@ BurnedTowerB1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 9 ; object events
+	db 10 ; object events
 	object_event 17,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FBoulder, -1
 	object_event  7,  3, SPRITE_RAIKOU, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_1
 	object_event 12,  3, SPRITE_SUICUNE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_1
@@ -212,3 +225,4 @@ BurnedTowerB1F_MapEvents:
 	object_event 10,  4, SPRITE_ENTEI, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BURNED_TOWER_B1F_BEASTS_2
 	object_event 16,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BurnedTowerB1FTMEndure, EVENT_BURNED_TOWER_B1F_TM_ENDURE
 	object_event 10, 12, SPRITE_ROBORED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1FEusine, EVENT_EUSINE_IN_BURNED_TOWER
+	object_event 10,  2, SPRITE_ENTEI, SPRITEMOVEDATA_POKEMON, 0, 0, 1, 1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BurnedTowerB1F_RematchEntei, EVENT_REMATCH_ENTEI

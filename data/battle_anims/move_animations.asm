@@ -359,7 +359,7 @@ MoveAnimations:
 	dw BattleAnim_DracoMeteor
 	dw BattleAnim_Amnesia      ; PLACEHOLDER
 	dw BattleAnim_MudShot
-	dw BattleAnim_Memento
+	dw BattleAnim_Memento      ; 168
 	dw BattleAnim_PoisonJab
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
 

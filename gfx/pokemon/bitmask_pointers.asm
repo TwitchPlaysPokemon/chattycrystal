@@ -379,7 +379,7 @@ BitmasksPointers:
 	dw SylveonBitmasks
 	dw GoomyBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sliggoo
-	dw PlaceholderBitmasks ; PLACEHOLDER - Goodra
+	dw GoodraBitmasks
 	dw CrabrawlerBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Crabominable
 	dw PlaceholderBitmasks ; PLACEHOLDER - Cutiefly

@@ -28,7 +28,7 @@ INCLUDE "audio/music/titlescreen.asm"
 INCLUDE "audio/music/ruinsofalphinterior.asm"
 INCLUDE "audio/music/lookpokemaniac.asm"
 INCLUDE "audio/music/trainervictory.asm"
-
+INCLUDE "audio/music/custom/battlearcadebattle.asm"
 
 SECTION "Songs 2", ROMX
 

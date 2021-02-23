@@ -130,7 +130,7 @@ KantoGrassWildMons:
 	dbw 85, RHYDON
 	; nite
 	dbw 84, CROBAT
-	dbw 84, GOLEM
+	dbw 84, KROOKODILE
 	dbw 82, STEELIX
 	dbw 86, HARIYAMA
 	dbw 88, EXPLOUD
@@ -790,18 +790,18 @@ KantoGrassWildMons:
 	; morn
 	dbw 79, TANGELA
 	dbw 80, RAPIDASH
-	dbw 80, RAPIDASH
+	dbw 80, DODRIO
 	dbw 82, SLIGGOO
 	dbw 81, ARBOK
-	dbw 83, DODRIO
+	dbw 83, SKARMORY
 	dbw 83, SKARMORY
 	; day
 	dbw 79, TANGELA
 	dbw 80, RAPIDASH
-	dbw 80, RAPIDASH
+	dbw 80, DODRIO
 	dbw 82, SLIGGOO
 	dbw 81, ARBOK
-	dbw 83, DODRIO
+	dbw 83, SKARMORY
 	dbw 83, SKARMORY
 	; nite
 	dbw 79, TANGELA
@@ -1086,27 +1086,27 @@ KantoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 65, BUTTERFREE
-	dbw 66, BEEDRILL
+	dbw 66, PIKACHU
 	dbw 66, RIBOMBEE
 	dbw 66, SIMISAGE
 	dbw 67, IVYSAUR
-	dbw 62, PIKACHU
+	dbw 62, RAICHU
 	dbw 63, RAICHU
 	; day
 	dbw 65, BUTTERFREE
-	dbw 66, BEEDRILL
+	dbw 66, PIKACHU
 	dbw 66, RIBOMBEE
 	dbw 66, SIMISAGE
 	dbw 67, CHARMELEON
-	dbw 62, PIKACHU
+	dbw 62, RAICHU
 	dbw 63, RAICHU
 	; nite
-	dbw 65, BUTTERFREE
-	dbw 66, BEEDRILL
+	dbw 65, BEEDRILL
+	dbw 66, PIKACHU
 	dbw 66, RIBOMBEE
 	dbw 66, SIMISAGE
 	dbw 67, WARTORTLE
-	dbw 62, PIKACHU
+	dbw 62, RAICHU
 	dbw 63, RAICHU	
 	
 	map_id PALLET_TOWN
@@ -1198,7 +1198,7 @@ KantoGrassWildMons:
 	dbw 66, MAGCARGO
 	dbw 66, MUK
 	dbw 67, MAGMAR
-	dbw 62, COMBUSKEN
+	dbw 62, BLAZIKEN
 	dbw 63, BLAZIKEN
 	; day
 	dbw 65, NINETALES
@@ -1206,7 +1206,7 @@ KantoGrassWildMons:
 	dbw 66, MAGCARGO
 	dbw 66, MUK
 	dbw 67, MAGMAR
-	dbw 62, COMBUSKEN
+	dbw 62, BLAZIKEN
 	dbw 63, BLAZIKEN
 	; nite
 	dbw 65, HOUNDOOM
@@ -1378,6 +1378,33 @@ KantoGrassWildMons:
 	dbw 73, HOUNDOOM
 	dbw 73, MURKROW
 	dbw 73, MURKROW
+	
+	map_id POWER_PLANT_B1F
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 65, HELIOPTILE
+	dbw 66, VOLTORB
+	dbw 66, MAGNETON
+	dbw 66, ELECTABUZZ
+	dbw 67, HELIOLISK
+	dbw 62, EELEKTRIK
+	dbw 63, EELEKTRIK
+	; day
+	dbw 65, HELIOPTILE
+	dbw 66, VOLTORB
+	dbw 66, MAGNETON
+	dbw 66, ELECTABUZZ
+	dbw 67, HELIOLISK
+	dbw 62, EELEKTRIK
+	dbw 63, EELEKTRIK
+	; nite
+	dbw 65, SHINX
+	dbw 66, MAGNEMITE
+	dbw 66, ELECTRODE
+	dbw 66, ELECTABUZZ
+	dbw 67, LUXRAY
+	dbw 62, EELEKTRIK
+	dbw 63, EELEKTRIK
 
 	db -1 ; end
 

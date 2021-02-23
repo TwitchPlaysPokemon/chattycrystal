@@ -9,7 +9,7 @@ BattleTentGenerator_MapEvents:
 	db 3 ; warp events
 	warp_event 13, 14, BATTLE_TENT_RUINS, 3
 	warp_event  1,  8, ROCKET_HIDEOUT_B4F, 1
-	warp_event  1, 14, ROCKET_HIDEOUT_B4F, 2
+	warp_event  1, 14, ROCKET_HIDEOUT_B4F, 4
 
 	db 0 ; coord events
 

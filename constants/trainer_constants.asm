@@ -719,7 +719,7 @@ CHRIS EQU __enum__
 	trainerclass POKEMON_PROF ; 49
 
 	trainerclass BATTLE_PC    ; 4a
-	const BATTLE_PC1
+	const MIRROR_PC
 
 KRIS EQU __enum__
 

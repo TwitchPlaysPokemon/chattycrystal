@@ -12,6 +12,8 @@ LoadSpecialMapPalette:
 	jr z, .radio_tower
 	cp TILESET_MANSION
 	jr z, .mansion_mobile
+	cp TILESET_PKMN_MANSION
+	jr z, .pkmn_mansion
 	jr .do_nothing
 
 .pokecom_2f
@@ -45,6 +47,14 @@ LoadSpecialMapPalette:
 
 .mansion_mobile
 	call LoadMansionPalette
+	scf
+	ret
+
+.pkmn_mansion
+	ld a, [wTimeOfDayPal]
+	cp NITE_F
+	jr nz, .do_nothing
+	call LoadPkmnMansionPalette
 	scf
 	ret
 
@@ -135,3 +145,14 @@ LoadMansionPalette:
 
 MansionPalette2:
 INCLUDE "gfx/tilesets/mansion_2.pal"
+
+LoadPkmnMansionPalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, PkmnMansionPalette
+	ld bc, 8 palettes
+	call FarCopyWRAM
+	ret
+
+PkmnMansionPalette:
+INCLUDE "gfx/tilesets/pkmn_mansion.pal"

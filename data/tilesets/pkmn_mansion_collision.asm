@@ -110,3 +110,5 @@
 	tilecoll WALL, WALL, WALL, WALL ; 6d
 	tilecoll WALL, WALL, WALL, WALL ; 6e
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 6f
+	tilecoll SPIN_UP, SPIN_UP, FLOOR, FLOOR ; 70
+	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 71

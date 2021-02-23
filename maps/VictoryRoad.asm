@@ -1,10 +1,10 @@
 	object_const_def ; object_event constants
 	const VICTORYROAD_SILVER
+	const VICTORYROAD_MOLTRES
 	const VICTORYROAD_POKE_BALL1
 	const VICTORYROAD_POKE_BALL2
 	const VICTORYROAD_POKE_BALL3
 	const VICTORYROAD_POKE_BALL4
-	const VICTORYROAD_POKE_BALL5
 
 VictoryRoad_MapScripts:
 	db 2 ; scene scripts
@@ -68,6 +68,24 @@ VictoryRoadRivalNext:
 	waitbutton
 	closetext
 	end
+	
+Moltres:
+	faceplayer
+	opentext
+	writetext MoltresText
+	cry MOLTRES
+	pause 15
+	closetext
+	setevent EVENT_MOLTRES_IN_VICTORY_ROAD
+	loadwildmon MOLTRES, 75
+	startbattle
+	disappear VICTORYROAD_MOLTRES
+	reloadmapafterbattle
+	end
+
+MoltresText:
+	text "Kyoooo!"
+	done
 
 VictoryRoadTMEarthquake:
 	itemball TM_EARTHQUAKE
@@ -75,8 +93,6 @@ VictoryRoadTMEarthquake:
 VictoryRoadMaxRevive:
 	itemball MAX_REVIVE
 
-VictoryRoadFullRestore:
-	itemball FULL_RESTORE
 
 VictoryRoadFullHeal:
 	itemball FULL_HEAL
@@ -236,8 +252,8 @@ VictoryRoad_MapEvents:
 
 	db 6 ; object events
 	object_event 18, 13, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_VICTORY_ROAD
+	object_event 18, 29, SPRITE_BIRD, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Moltres, EVENT_MOLTRES_IN_VICTORY_ROAD
 	object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
 	object_event 12, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadMaxRevive, EVENT_VICTORY_ROAD_MAX_REVIVE
-	object_event 18, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadFullRestore, EVENT_VICTORY_ROAD_FULL_RESTORE
 	object_event 15, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadFullHeal, EVENT_VICTORY_ROAD_FULL_HEAL
 	object_event  7, 38, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadHPUp, EVENT_VICTORY_ROAD_HP_UP

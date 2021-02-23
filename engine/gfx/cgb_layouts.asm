@@ -269,6 +269,14 @@ _CGB_Pokedex:
 
 .is_pokemon
 	call GetMonPalettePointer
+	ld a, [wTPPFeatureLock]
+	cp TPP_FEATURE_LOCK_SHINY_TEST_VALUE
+	jr nz, .not_shiny
+	inc hl
+	inc hl
+	inc hl
+	inc hl
+.not_shiny
 	call LoadPalette_White_Col1_Col2_Black ; mon palette
 .got_palette
 	call WipeAttrMap

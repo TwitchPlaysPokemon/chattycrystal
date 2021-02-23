@@ -49,7 +49,7 @@ KogaScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KogaScript_KogaBeatenText, 0
-	loadtrainer XY_SERENA2, ETR
+	loadtrainer NATE_ELITE_4, R_BLACK22
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KOGA
@@ -98,4 +98,4 @@ KogasRoom_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  5,  7, SPRITE_SERENA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, KogaScript_Battle, -1
+	object_event  5,  7, SPRITE_NATE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KogaScript_Battle, -1

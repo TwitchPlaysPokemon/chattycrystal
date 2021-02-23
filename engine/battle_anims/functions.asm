@@ -97,6 +97,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_51 ; 51
 	dw BattleAnimFunction_52 ; 52
 	dw BattleAnimFunction_53 ; 53
+	dw BattleAnimFunction_54 ; 54
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -916,6 +917,12 @@ Functioncd557:
 	ld de, -$100
 	ret
 
+BattleAnimFunction_54:
+	call BattleAnim_AnonJumptable
+
+	dw BattleAnimFunction_4E.after_frameset
+	dw BattleAnimFunction_4E.one
+
 BattleAnimFunction_4E:
 	call BattleAnim_AnonJumptable
 
@@ -933,6 +940,7 @@ BattleAnimFunction_4E:
 	ld hl, BATTLEANIMSTRUCT_FRAMESET_ID
 	add hl, bc
 	ld [hl], a
+.after_frameset
 	call BattleAnim_IncAnonJumptableIndex
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc

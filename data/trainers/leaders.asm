@@ -13,6 +13,7 @@ GymLeaders:
 	db NATE_LEADER
 	db GREEN_MAY
 	db XY_SERENA2
+	db P_CYAN
 	db URF
 	db XD_MICHAEL
 	db RED_KANTO_LEADER

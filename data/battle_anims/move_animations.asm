@@ -362,6 +362,7 @@ MoveAnimations:
 	dw BattleAnim_Memento      ; 168
 	dw BattleAnim_PoisonJab
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
+	dw BattleAnim_Barrage      ; PLACEHOLDER
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT

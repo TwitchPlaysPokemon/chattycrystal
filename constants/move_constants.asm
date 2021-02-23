@@ -368,6 +368,7 @@
 	const MEMENTO      ; 168
 	const POISON_JAB   ; 169
 	const DARK_PULSE   ; 16a
+	const ROCK_BLAST   ; 16b
 
 NUM_ATTACKS EQU const_value + -1
 

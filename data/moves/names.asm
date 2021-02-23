@@ -361,3 +361,4 @@ MoveNames::
 	db "MEMENTO@"
 	db "POISON JAB@"
 	db "DARK PULSE@"
+	db "ROCK BLAST@"

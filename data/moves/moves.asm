@@ -379,3 +379,4 @@ Moves1:
 	move EFFECT_MEMENTO,               0, DARK,     100, 10,   0 ;MEMENTO
 	move EFFECT_POISON_HIT,           80, POISON,   100, 20,  30 ;POISON_JAB
 	move EFFECT_FLINCH_HIT,           80, DARK,     100, 15,  20 ;DARK_PULSE
+	move EFFECT_MULTI_HIT,            25, ROCK,      90, 10,   0 ;ROCK_BLAST

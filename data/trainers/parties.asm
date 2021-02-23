@@ -1514,6 +1514,58 @@ GreenMayGroup:
 	next_list_item ; A_EMERALD
 	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	
+	db 40
+	dw TENTACRUEL
+	db NO_ITEM
+	dw ACID, DIVE, ICE_BEAM, WATERFALL
+	bigdw $FFFF
+	bigdw 126
+	bigdw 66
+	bigdw 79
+	bigdw 93
+	bigdw 74
+	bigdw 110
+	db "GJKLFFZ@"
+	
+	db 32
+	dw MIGHTYENA
+	db NO_ITEM
+	dw STRENGTH, BITE, SAND_ATTACK, ROAR
+	bigdw $0FFF
+	bigdw 95
+	bigdw 73
+	bigdw 45
+	bigdw 54
+	bigdw 56
+	bigdw 52
+	db "MIGHTYENA@"
+	
+	db 34
+	dw VILEPLUME
+	db NO_ITEM
+	dw SLUDGE_BOMB, ACID, GIGA_DRAIN, SLEEP_POWDER
+	bigdw $0FFF
+	bigdw 104
+	bigdw 68
+	bigdw 66
+	bigdw 43
+	bigdw 65
+	bigdw 67
+	db "VILEPLUME@"
+	
+	db 46
+	dw GRAVELER
+	db NO_ITEM
+	dw EARTHQUAKE, ROLLOUT, ROCK_THROW, ROCK_BLAST
+	bigdw $0FFF
+	bigdw 119
+	bigdw 87
+	bigdw 129
+	bigdw 55
+	bigdw 56
+	bigdw 61
+	db " -5'''7''Y@"
+	
 	db 96
 	dw AZUMARILL
 	db NO_ITEM
@@ -1526,58 +1578,6 @@ GreenMayGroup:
 	bigdw 155
 	bigdw 176
 	db "M ---/'/'4@"
-	
-	db 40
-	dw TENTACRUEL
-	db POTION
-	dw TELEPORT, NO_MOVE, NO_MOVE, NO_MOVE
-	bigdw $FFFF
-	bigdw 22
-	bigdw 8
-	bigdw 9
-	bigdw 20
-	bigdw 19
-	bigdw 14
-	db "apf uojkyy@"
-
-	db 32
-	dw MIGHTYENA
-	db NO_ITEM
-	dw SAND_ATTACK, TACKLE, HOWL, NO_MOVE
-	bigdw $0FFF
-	bigdw 28
-	bigdw 17
-	bigdw 14
-	bigdw 12
-	bigdw 13
-	bigdw 11
-	db "POOCHYENA@"
-	
-	db 34
-	dw VILEPLUME
-	db NO_ITEM
-	dw SAND_ATTACK, TACKLE, HOWL, NO_MOVE
-	bigdw $0FFF
-	bigdw 28
-	bigdw 17
-	bigdw 14
-	bigdw 12
-	bigdw 13
-	bigdw 11
-	db "POOCHYENA@"
-	
-	db 46
-	dw GRAVELER
-	db NO_ITEM
-	dw SAND_ATTACK, TACKLE, HOWL, NO_MOVE
-	bigdw $0FFF
-	bigdw 28
-	bigdw 17
-	bigdw 14
-	bigdw 12
-	bigdw 13
-	bigdw 11
-	db "POOCHYENA@"
 	
 	db -1 ; end
 

@@ -367,6 +367,7 @@ MoveDescriptions1:
 	dw MementoDescription
 	dw PoisonJabDescription
 	dw DarkPulseDescription
+	dw RockBlastDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -1237,6 +1238,7 @@ DetectDescription:
 	db   "Evades attack that"
 	next "turn. It may fail.@"
 
+RockBlastDescription:
 BoneRushDescription:
 	db   "An attack that"
 	next "hits 2-5 times.@"

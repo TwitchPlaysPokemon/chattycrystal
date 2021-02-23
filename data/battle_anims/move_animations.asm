@@ -261,7 +261,7 @@ MoveAnimations:
 	dw BattleAnim_Endeavor
 	dw BattleAnim_Thief        ; PLACEHOLDER
 	dw BattleAnim_HiddenPower  ; PLACEHOLDER
-	dw BattleAnim_Dive
+	dw BattleAnim_Dive         ; incomplete?
 	dw BattleAnim_ArmThrust
 	dw BattleAnim_TeeterDance  ; 108
 	dw BattleAnim_BlazeKick
@@ -357,7 +357,7 @@ MoveAnimations:
 	dw BattleAnim_Surf         ; PLACEHOLDER
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_DracoMeteor
-	dw BattleAnim_Amnesia      ; PLACEHOLDER
+	dw BattleAnim_CalmMind
 	dw BattleAnim_MudShot
 	dw BattleAnim_Memento      ; 168
 	dw BattleAnim_PoisonJab
@@ -3492,6 +3492,26 @@ BattleAnim_PowerTrip:
 	anim_obj ANIM_OBJ_01, 144, 56, $0
 	anim_wait 8
 	anim_jump BattleAnim_ShowMon_0
+	
+BattleAnim_CalmMind:
+	anim_1gfx ANIM_GFX_MISC
+	anim_bgp $1b
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_sound 0, 0, SFX_GAME_FREAK_LOGO_GS
+.loop
+	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $3
+	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $12
+	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $20
+	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $31
+	anim_wait 8
+	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $3
+	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $12
+	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $20
+	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $31
+	anim_wait 42
+	anim_clearobjs
+	anim_loop 2, .loop
+	anim_ret
 	
 BattleAnim_DracoMeteor:
 	anim_3gfx ANIM_GFX_METEOR, ANIM_GFX_EXPLOSION, ANIM_GFX_WATER

@@ -179,7 +179,7 @@ TuscanyScript:
 .MetTuscany:
 	writetext TuscanyGivesGiftText
 	buttonsound
-	verbosegiveitem PINK_BOW
+	verbosegiveitem POLKADOT_BOW
 	iffalse TuscanyDoneScript
 	setevent EVENT_GOT_PINK_BOW_FROM_TUSCANY
 	writetext TuscanyGaveGiftText

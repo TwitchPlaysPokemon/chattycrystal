@@ -187,7 +187,6 @@ ROMX $40
 	"Pics 34"
 ROMX $41
 	"bank41"
-	"Enemy Trainer Parties 1"
 ROMX $42
 	"Mobile 42"
 	"Intro Logo"
@@ -327,12 +326,12 @@ ROMX $76
 ROMX $77
 	"bank77"
 	"Tileset Data 7"
-	"Enemy Trainer Parties 3"
 ROMX $78
 	"Tileset Data 8"
 	"Pics 29"
 ROMX $79
 	"Events"
+	"Enemy Trainer Parties 1"
 ROMX $7a
 	"Pics 26"
 ROMX $7b

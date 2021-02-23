@@ -4,6 +4,7 @@ ResetUniqueMons::
 	clearifuncaught HO_OH, EVENT_FOUGHT_HO_OH
 	clearifuncaught LATIOS, EVENT_LATIOS_IN_SAFARI_ZONE
 	clearifuncaught LUGIA, EVENT_FOUGHT_LUGIA
+	clearifuncaught MOLTRES, EVENT_MOLTRES_IN_VICTORY_ROAD
 	clearifuncaught ZAPDOS, EVENT_POWER_PLANT_B1F_ZAPDOS
 
 	checkevent EVENT_RELEASED_THE_BEASTS

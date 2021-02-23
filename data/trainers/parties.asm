@@ -1920,7 +1920,7 @@ URFGroup:
 	bigdw 185
 	bigdw 187
 	db "UwU@"
-/*
+
 	db 58
 	dw SWAMPERT
 	db SOFT_SAND
@@ -1971,7 +1971,7 @@ URFGroup:
 	bigdw 15
 	bigdw 21
 	bigdw 21
-	db "Tiny@"*/
+	db "Tiny@"
 
 	db -1
 

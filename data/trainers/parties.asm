@@ -2394,6 +2394,28 @@ ScientistGroup:
 	db 51
 	dw PORYGON2
 	db -1 ; end
+	
+	next_list_item ; SCIENTIST (6)
+	db "BRAYDON@", TRAINERTYPE_NORMAL
+	db 71
+	dw PORYGON_Z
+	db 71
+	dw MAGNETON
+	db 71
+	dw EELEKTROSS
+	db -1 ; end
+	
+	next_list_item ; SCIENTIST (7)
+	db "GIDEON@", TRAINERTYPE_NORMAL
+	db 100
+	dw DITTO
+	db -1 ; end
+	
+	next_list_item ; SCIENTIST (8)
+	db "TAYLOR@", TRAINERTYPE_NORMAL
+	db 73
+	dw MAGMAR
+	db -1 ; end
 
 	end_list_items
 
@@ -3114,6 +3136,12 @@ CooltrainerMGroup:
 	db "DARIN@", TRAINERTYPE_NORMAL
 	db 55
 	dw DRAGONITE
+	db -1 ; end
+	
+	next_list_item ; COOLTRAINERM (20)
+	db "YUJI@", TRAINERTYPE_NORMAL
+	db 73
+	dw RHYDON
 	db -1 ; end
 
 	end_list_items
@@ -5230,6 +5258,32 @@ BurglarGroup:
 	dw WEEZING
 	db 55
 	dw WEEZING
+	db -1 ; end
+	
+	next_list_item ; BURGLAR (4)
+	db "JAC@", TRAINERTYPE_NORMAL
+	db 72
+	dw WEEZING
+	db 72
+	dw MAGMAR
+	db -1 ; end
+	
+	next_list_item ; BURGLAR (5)
+	db "DUSTY@", TRAINERTYPE_NORMAL
+	db 70
+	dw MUK
+	db 70
+	dw CHANDELURE
+	db 70
+	dw HOUNDOOM
+	db 70
+	dw MURKROW
+	db -1 ; end
+	
+	next_list_item ; BURGLAR (6)
+	db "SIMON@", TRAINERTYPE_NORMAL
+	db 73
+	dw NINETALES
 	db -1 ; end
 
 	end_list_items

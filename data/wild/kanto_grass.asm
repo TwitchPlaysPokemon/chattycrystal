@@ -1137,7 +1137,7 @@ KantoGrassWildMons:
 	dbw 63, SNORLAX
 	
 	map_id POKEMON_MANSION_1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 65, GROWLITHE
 	dbw 66, WEEZING
@@ -1164,7 +1164,7 @@ KantoGrassWildMons:
 	dbw 63, LAMPENT
 	
 	map_id POKEMON_MANSION_2F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 65, GROWLITHE
 	dbw 66, WEEZING
@@ -1191,7 +1191,7 @@ KantoGrassWildMons:
 	dbw 63, LAMPENT
 	
 	map_id POKEMON_MANSION_3F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 65, ARCANINE
 	dbw 66, WEEZING
@@ -1218,7 +1218,7 @@ KantoGrassWildMons:
 	dbw 63, CHANDELURE
 	
 	map_id POKEMON_MANSION_B1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 65, HYPNO
 	dbw 66, ARCANINE

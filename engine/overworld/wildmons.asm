@@ -519,38 +519,35 @@ LookUpWildmonsForMapDE:
 	ret
 
 InitRoamMons:
-; initialize wRoamMon structs
+	call InitRoamRaikou
+	; fallthrough
 
-; species
-	ld hl, RAIKOU
-	call GetPokemonIDFromIndex
-	ld [wRoamMon1Species], a
+InitRoamSuicune::
 	ld hl, SUICUNE
 	call GetPokemonIDFromIndex
 	ld [wRoamMon2Species], a
-
-; level
 	ld a, 55
-	ld [wRoamMon1Level], a
 	ld [wRoamMon2Level], a
-
-; raikou starting map
-	ld a, GROUP_ROUTE_42
-	ld [wRoamMon1MapGroup], a
-	ld a, MAP_ROUTE_42
-	ld [wRoamMon1MapNumber], a
-
-; entei starting map
 	ld a, GROUP_ROUTE_37
 	ld [wRoamMon2MapGroup], a
 	ld a, MAP_ROUTE_37
 	ld [wRoamMon2MapNumber], a
+	xor a ; generate new stats
+	ld [wRoamMon2HP], a
+	ret
 
-; hp
+InitRoamRaikou::
+	ld hl, RAIKOU
+	call GetPokemonIDFromIndex
+	ld [wRoamMon1Species], a
+	ld a, 55
+	ld [wRoamMon1Level], a
+	ld a, GROUP_ROUTE_42
+	ld [wRoamMon1MapGroup], a
+	ld a, MAP_ROUTE_42
+	ld [wRoamMon1MapNumber], a
 	xor a ; generate new stats
 	ld [wRoamMon1HP], a
-	ld [wRoamMon2HP], a
-
 	ret
 
 CheckEncounterRoamMon:

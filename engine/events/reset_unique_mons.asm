@@ -9,8 +9,19 @@ ResetUniqueMons::
 
 	checkevent EVENT_RELEASED_THE_BEASTS
 	iffalse .no_beasts
+	readmem wRoamMon1Species
+	iftrue .no_raikou ; still roaming
+	checkcaught RAIKOU
+	ifequal 2, .no_raikou
+	callasm InitRoamRaikou
+.no_raikou
+	readmem wRoamMon2Species
+	iftrue .no_suicune ; still roaming
+	checkcaught SUICUNE
+	ifequal 2, .no_suicune
+	callasm InitRoamSuicune
+.no_suicune
 	clearifuncaught ENTEI, EVENT_REMATCH_ENTEI
-	; TODO: Raikou, Suicune
 .no_beasts
 
 	checkevent EVENT_TRIGGERED_CELEBI_EVENT

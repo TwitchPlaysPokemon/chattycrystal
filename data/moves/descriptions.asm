@@ -366,6 +366,7 @@ MoveDescriptions1:
 	dw MudShotDescription
 	dw MementoDescription
 	dw PoisonJabDescription
+	dw DarkPulseDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -494,6 +495,7 @@ IronHeadDescription:
 NeedleArmDescription:
 SteamrollerDescription:
 ZenHeadbuttDescription:
+DarkPulseDescription:
 	db   "An attack that may"
 	next "make foe flinch.@"
 

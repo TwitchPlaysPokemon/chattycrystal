@@ -361,6 +361,7 @@ MoveAnimations:
 	dw BattleAnim_MudShot
 	dw BattleAnim_Memento
 	dw BattleAnim_PoisonJab
+	dw BattleAnim_ShadowBall   ; PLACEHOLDER
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT

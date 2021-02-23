@@ -360,3 +360,4 @@ MoveNames::
 	db "MUD SHOT@"
 	db "MEMENTO@"
 	db "POISON JAB@"
+	db "DARK PULSE@"

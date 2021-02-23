@@ -1110,23 +1110,6 @@ NateLeaderGroup:
 
 	end_list_items
 
-NateElite4Group:
-	next_list_item ; R_BLACK22
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
-	end_list_items
-
-XYSerena2Group:
-	next_list_item ; ETR
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
-
-	end_list_items
-
 SMUSUMElioGroup:
 	next_list_item ; L_SUN
 	db "9'l@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -7702,6 +7685,100 @@ NuzlockeGroup:
 
 	db -1 ; end
 	end_list_items
+
+NateElite4Group:
+	next_list_item ; GAUNTLET_BLACK2
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	end_list_items
+
+XYSerena2Group:
+	next_list_item ; ETR
+	db "Etr@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 78
+	dw HELIOLISK
+	db MAGNET
+	dw SURF, HYPER_BEAM, GRASS_KNOT, THUNDERBOLT
+	bigdw $FFFF
+	bigdw 205
+	bigdw 131
+	bigdw 106
+	bigdw 208
+	bigdw 215
+	bigdw 182
+	db "Herrrdliop@"
+
+	db 77
+	dw AURORUS
+	db MAGNET
+	dw ICE_BEAM, ANCIENTPOWER, FREEZE_DRY, THUNDERBOLT
+	bigdw $FFFF
+	bigdw 304
+	bigdw 156
+	bigdw 137
+	bigdw 132
+	bigdw 207
+	bigdw 153
+	db "Amééépura2@"
+
+	db 70
+	dw MOTHIM
+	db SHARP_BEAK
+	dw BUG_BUZZ, AIR_SLASH, PSYCHIC_M, QUIVER_DANCE
+	bigdw $FFFF
+	bigdw 203
+	bigdw 162
+	bigdw 88
+	bigdw 118
+	bigdw 157
+	bigdw 90
+	db "Moth@"
+
+	db 65
+	dw GOODRA
+	db POKE_DOLL
+	dw FLAMETHROWER, DRAGON_PULSE, THUNDERBOLT, EARTHQUAKE
+	bigdw $FFFF
+	bigdw 213
+	bigdw 172
+	bigdw 113
+	bigdw 135
+	bigdw 181
+	bigdw 222
+	db "R6@"
+
+	db 61
+	dw DUCKLETT
+	db EVERSTONE
+	dw FLY, AQUA_RING, ROOST, BRAVE_BIRD
+	bigdw $0FFF
+	bigdw 165
+	bigdw 91
+	bigdw 84
+	bigdw 75
+	bigdw 78
+	bigdw 101
+	db "dfuucck@"
+
+	db 56
+	dw CLAWITZER
+	db KINGS_ROCK
+	dw SURF, AURA_SPHERE, WATERFALL, DARK_PULSE
+	bigdw $0FFF
+	bigdw 164
+	bigdw 128
+	bigdw 112
+	bigdw 82
+	bigdw 153
+	bigdw 123
+	db "8d b9 'bmp@"
+	db -1 ; end
+
+	end_list_items
+
 
 BattlePCGroup:
 	next_list_item ; BATTLE_PC (1)

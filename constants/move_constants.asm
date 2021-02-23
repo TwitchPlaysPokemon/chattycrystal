@@ -367,6 +367,7 @@
 	const MUD_SHOT     ; 167
 	const MEMENTO      ; 168
 	const POISON_JAB   ; 169
+	const DARK_PULSE   ; 169
 
 NUM_ATTACKS EQU const_value + -1
 

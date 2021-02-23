@@ -378,3 +378,4 @@ Moves1:
 	move EFFECT_SPEED_DOWN_HIT,       55, GROUND,    95, 15, 100 ;MUD_SHOT
 	move EFFECT_MEMENTO,               0, DARK,     100, 10,   0 ;MEMENTO
 	move EFFECT_POISON_HIT,           80, POISON,   100, 20,  30 ;POISON_JAB
+	move EFFECT_FLINCH_HIT,           80, DARK,     100, 15,  20 ;DARK_PULSE

@@ -96,6 +96,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_50 ; 50
 	dw BattleAnimFunction_51 ; 51
 	dw BattleAnimFunction_52 ; 52
+	dw BattleAnimFunction_53 ; 53
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -3969,3 +3970,32 @@ BattleAnimFunction_52:
 	and $3f
 	ret nz
 	jp BattleAnim_IncAnonJumptableIndex
+	
+BattleAnimFunction_53:
+    ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld a, [hl]
+	cp $e0
+	jr nz, .asm_extra
+	call BattleAnim_IncAnonJumptableIndex
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld [hl], $2
+	ret
+	
+.asm_extra
+	ld d, a
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld e, [hl]
+	ld hl, -$80
+	add hl, de
+	ld e, l
+	ld d, h
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], d
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld [hl], e
+	ret

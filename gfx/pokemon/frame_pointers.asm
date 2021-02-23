@@ -379,7 +379,7 @@ FramesPointers:
 	dba SylveonFrames
 	dba GoomyFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Sliggoo
-	dba PlaceholderFrames ; PLACEHOLDER - Goodra
+	dba GoodraFrames
 	dba CrabrawlerFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Crabominable
 	dba PlaceholderFrames ; PLACEHOLDER - Cutiefly

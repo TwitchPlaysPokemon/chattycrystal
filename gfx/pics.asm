@@ -965,6 +965,7 @@ PansageFrontpic:     INCBIN "gfx/pokemon/pansage/front.animated.2bpp.lz"
 SimisageBackpic:     INCBIN "gfx/pokemon/simisage/back.2bpp.lz"
 KyogreFrontpic:      INCBIN "gfx/pokemon/kyogre/front.animated.2bpp.lz"
 GoomyFrontpic:       INCBIN "gfx/pokemon/goomy/front.animated.2bpp.lz"
+GoodraFrontpic:      INCBIN "gfx/pokemon/goodra/front.animated.2bpp.lz"
 
 SECTION "Pics 31", ROMX
 
@@ -1016,7 +1017,6 @@ GoomyBackpic:        INCBIN "gfx/pokemon/goomy/back.2bpp.lz"
 SliggooBackpic:      INCBIN "gfx/pokemon/sliggoo/back.2bpp.lz"
 SliggooFrontpic:     INCBIN "gfx/pokemon/sliggoo/front.animated.2bpp.lz"
 GoodraBackpic:       INCBIN "gfx/pokemon/goodra/back.2bpp.lz"
-GoodraFrontpic:      INCBIN "gfx/pokemon/goodra/front.animated.2bpp.lz"
 CrabrawlerBackpic:   INCBIN "gfx/pokemon/crabrawler/back.2bpp.lz"
 CrabrawlerFrontpic:  INCBIN "gfx/pokemon/crabrawler/front.animated.2bpp.lz"
 CrabominableBackpic: INCBIN "gfx/pokemon/crabominable/back.2bpp.lz"

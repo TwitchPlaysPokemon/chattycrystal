@@ -12,6 +12,12 @@ ResetUniqueMons::
 	; TODO: Raikou, Suicune
 .no_beasts
 
-	; TODO: Celebi
+	checkevent EVENT_TRIGGERED_CELEBI_EVENT
+	iffalse .no_celebi
+	checkcaught CELEBI
+	ifequal 2, .no_celebi
+	setevent EVENT_CELEBI_REMATCH_READY
+.no_celebi
+
 	; TODO: any unique mons we add
 	end

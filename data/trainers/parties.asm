@@ -8003,7 +8003,7 @@ BrendanKantoLeaderGroup:
 	bigdw 162
 	bigdw 113
 	bigdw 121
-	db "CEO'(+~##~@" ; - ax gotta add in the characters
+	db "CEO'(?????@" ; "CEO'(+~##~@" - ax gotta add in the characters
 
 	db 67
 	dw DELCATTY

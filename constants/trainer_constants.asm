@@ -643,7 +643,7 @@ CHRIS EQU __enum__
 	const Y_FUSEDCRYSTAL
 
 	trainerclass BRENDAN_KANTO_LEADER ; 32
-	const RTHASZS
+	const EEBNERT
 
 	trainerclass FRLG_LEAF ; 33
 	const A_FIRERED

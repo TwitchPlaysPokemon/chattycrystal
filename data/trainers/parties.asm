@@ -435,15 +435,6 @@ FCChrisGroup:
 
 	end_list_items
 
-BrendanKantoLeaderGroup:
-	next_list_item ; RTHASZS
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
-	db -1 ; end
-
-	end_list_items
-
 FRLGLeafGroup:
 	next_list_item ; A_FIRERED
 	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
@@ -7955,6 +7946,90 @@ PCyanGroup:
 	bigdw 127
 	bigdw 178
 	db "YYYYXOOOOO@"
+	db -1 ; end
+
+	end_list_items
+
+BrendanKantoLeaderGroup:
+	next_list_item ; EEBNERT
+	db "ébneert@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 75
+	dw KINGDRA
+	db MYSTIC_WATER
+	dw SURF, ICE_BEAM, BRINE, DRAGON_PULSE
+	bigdw $0FFF
+	bigdw 219
+	bigdw 187
+	bigdw 161
+	bigdw 162
+	bigdw 182
+	bigdw 171
+	db "fish@"
+
+	db 71
+	dw DUNSPARCE
+	db LEFTOVERS
+	dw SECRET_POWER, ICE_BEAM, ANCIENTPOWER, PLAY_ROUGH
+	bigdw $0FFF
+	bigdw 251
+	bigdw 143
+	bigdw 142
+	bigdw 97
+	bigdw 115
+	bigdw 118
+	db "noob@"
+
+	db 70
+	dw LATIOS
+	db EVERSTONE
+	dw DIVE, FLY, SHADOW_BALL, PSYCHIC
+	bigdw $FFFF
+	bigdw 207
+	bigdw 207
+	bigdw 180
+	bigdw 180
+	bigdw 266
+	bigdw 206
+	db "!edr@"
+
+	db 74
+	dw EXCADRILL
+	db SCOPE_LENS
+	dw EARTHQUAKE, ROCK_SLIDE, IRON_HEAD, ROCK_SMASH
+	bigdw $0FFF
+	bigdw 262
+	bigdw 249
+	bigdw 108
+	bigdw 162
+	bigdw 113
+	bigdw 121
+	db "CEO'(+~##~@" ; - ax gotta add in the characters
+
+	db 67
+	dw DELCATTY
+	db MIRACLEBERRY
+	dw ASSIST, STRENGTH, HIDDEN_POWER, MOONBLAST
+	bigdw $A6FF
+	bigdw 210
+	bigdw 134
+	bigdw 115
+	bigdw 139
+	bigdw 136
+	bigdw 103
+	db "!whhy@"
+
+	db 74
+	dw CRADILY
+	db LEFTOVERS
+	dw RECOVER, GIGA_DRAIN, ANCIENTPOWER, EARTH_POWER
+	bigdw $FFFF
+	bigdw 249
+	bigdw 159
+	bigdw 179
+	bigdw 114
+	bigdw 142
+	bigdw 197
+	db "Lg@"
 	db -1 ; end
 
 	end_list_items

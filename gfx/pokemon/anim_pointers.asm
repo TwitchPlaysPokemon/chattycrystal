@@ -368,7 +368,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Eelektrik
 	dw PlaceholderAnimation ; PLACEHOLDER - Eelektross
 	dw LitwickAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Lampent
+	dw LampentAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Chandelure
 	dw PlaceholderAnimation ; PLACEHOLDER - Clauncher
 	dw PlaceholderAnimation ; PLACEHOLDER - Clawitzer

@@ -1,5 +1,5 @@
 	tilecoll WALL, WALL, WALL, WALL ; 00
-	tilecoll WALL, WALL, WALL, WALL ; 01
+	tilecoll PIT, PIT, WALL, WALL ; 01
 	tilecoll FLOOR, SPIN_DOWN, SPIN_UP, FLOOR ; 02
 	tilecoll FLOOR, SPIN_RIGHT, SPIN_RIGHT, FLOOR ; 03
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 04
@@ -112,3 +112,4 @@
 	tilecoll WALL, FLOOR, WALL, FLOOR ; 6f
 	tilecoll SPIN_UP, SPIN_UP, FLOOR, FLOOR ; 70
 	tilecoll WALL, FLOOR, FLOOR, FLOOR ; 71
+	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 72

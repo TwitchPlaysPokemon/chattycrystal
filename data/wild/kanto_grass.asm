@@ -113,29 +113,29 @@ KantoGrassWildMons:
 	map_id VICTORY_ROAD
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 84, TRAPINCH
-	dbw 82, RHYDON
-	dbw 83, STEELIX
-	dbw 84, HARIYAMA
-	dbw 85, SANDSLASH
-	dbw 85, EXPLOUD
-	dbw 85, RHYDON
+	dbw 74, TRAPINCH
+	dbw 72, RHYDON
+	dbw 73, STEELIX
+	dbw 74, HARIYAMA
+	dbw 75, SANDSLASH
+	dbw 75, EXPLOUD
+	dbw 75, RHYDON
 	; day
-	dbw 84, TRAPINCH
-	dbw 82, RHYDON
-	dbw 83, STEELIX
-	dbw 84, HARIYAMA
-	dbw 85, SANDSLASH
-	dbw 85, EXPLOUD
-	dbw 85, RHYDON
+	dbw 74, TRAPINCH
+	dbw 72, RHYDON
+	dbw 73, STEELIX
+	dbw 74, HARIYAMA
+	dbw 75, SANDSLASH
+	dbw 75, EXPLOUD
+	dbw 75, RHYDON
 	; nite
-	dbw 84, CROBAT
-	dbw 84, KROOKODILE
-	dbw 82, STEELIX
-	dbw 86, HARIYAMA
-	dbw 88, EXPLOUD
-	dbw 90, ABSOL
-	dbw 90, KROOKODILE
+	dbw 74, CROBAT
+	dbw 74, KROOKODILE
+	dbw 72, STEELIX
+	dbw 76, HARIYAMA
+	dbw 78, EXPLOUD
+	dbw 80, ABSOL
+	dbw 80, KROOKODILE
 
 	map_id TOHJO_FALLS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -1137,7 +1137,7 @@ KantoGrassWildMons:
 	dbw 63, SNORLAX
 	
 	map_id POKEMON_MANSION_1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 65, GROWLITHE
 	dbw 66, WEEZING
@@ -1164,7 +1164,7 @@ KantoGrassWildMons:
 	dbw 63, LAMPENT
 	
 	map_id POKEMON_MANSION_2F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 65, GROWLITHE
 	dbw 66, WEEZING
@@ -1191,7 +1191,7 @@ KantoGrassWildMons:
 	dbw 63, LAMPENT
 	
 	map_id POKEMON_MANSION_3F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 65, ARCANINE
 	dbw 66, WEEZING
@@ -1218,7 +1218,7 @@ KantoGrassWildMons:
 	dbw 63, CHANDELURE
 	
 	map_id POKEMON_MANSION_B1F
-	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 65, HYPNO
 	dbw 66, ARCANINE

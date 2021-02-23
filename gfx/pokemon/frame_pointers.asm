@@ -368,7 +368,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Eelektrik
 	dba PlaceholderFrames ; PLACEHOLDER - Eelektross
 	dba LitwickFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Lampent
+	dba LampentFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Chandelure
 	dba PlaceholderFrames ; PLACEHOLDER - Clauncher
 	dba PlaceholderFrames ; PLACEHOLDER - Clawitzer

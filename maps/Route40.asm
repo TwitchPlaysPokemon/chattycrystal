@@ -52,7 +52,7 @@ TrainerSwimmerfPaula:
 	end
 
 TrainerSwimmermSimon:
-	trainer SWIMMERM, SIMON, EVENT_BEAT_SWIMMERM_SIMON, SwimmermSimonSeenText, SwimmermSimonBeatenText, 0, .Script
+	trainer SWIMMERM, SIMON_S, EVENT_BEAT_SWIMMERM_SIMON, SwimmermSimonSeenText, SwimmermSimonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

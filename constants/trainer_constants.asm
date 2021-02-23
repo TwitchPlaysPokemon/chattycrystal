@@ -35,6 +35,9 @@ CHRIS EQU __enum__
 	const JED
 	const MARC
 	const RICH
+	const BRAYDON
+	const GIDEON
+	const TAYLOR
 
 	trainerclass YOUNGSTER ; 3
 	const JOEY1
@@ -137,6 +140,7 @@ CHRIS EQU __enum__
 	const STEVE
 	const ALLEN
 	const DARIN
+	const YUJI
 
 	trainerclass COOLTRAINERF ; 8
 	const GWEN
@@ -295,7 +299,7 @@ CHRIS EQU __enum__
 
 	trainerclass SWIMMERM ; 11
 	const HAROLD
-	const SIMON
+	const SIMON_S
 	const RANDALL
 	const CHARLIE
 	const GEORGE
@@ -412,6 +416,9 @@ CHRIS EQU __enum__
 	const DUNCAN
 	const EDDIE
 	const COREY
+	const JAC
+	const DUSTY
+	const SIMON_B
 
 	trainerclass FIREBREATHER ; 19
 	const OTIS
@@ -636,7 +643,7 @@ CHRIS EQU __enum__
 	const Y_FUSEDCRYSTAL
 
 	trainerclass BRENDAN_KANTO_LEADER ; 32
-	const RTHASZS
+	const EEBNERT
 
 	trainerclass FRLG_LEAF ; 33
 	const A_FIRERED

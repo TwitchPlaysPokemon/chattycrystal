@@ -432,6 +432,8 @@ IlexForestShrineScript:
 	checkitem GS_BALL
 	iftrue .AskCelebiEvent
 .DontDoCelebiEvent:
+	checkevent EVENT_CELEBI_REMATCH_READY
+	iftrue .CelebiRematch
 	jumptext Text_IlexForestShrine
 
 .AskCelebiEvent:
@@ -450,7 +452,9 @@ IlexForestShrineScript:
 	clearevent EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS
 	writetext Text_InsertGSBall
 	waitbutton
+.do_rematch
 	closetext
+	clearevent EVENT_CELEBI_REMATCH_READY
 	pause 20
 	showemote EMOTE_SHOCK, PLAYER, 20
 	special FadeOutMusic
@@ -460,6 +464,7 @@ IlexForestShrineScript:
 	pause 20
 	clearflag ENGINE_FOREST_IS_RESTLESS
 	special CelebiShrineEvent
+	setevent EVENT_TRIGGERED_CELEBI_EVENT
 	loadwildmon CELEBI, 30
 	startbattle
 	reloadmapafterbattle
@@ -475,6 +480,14 @@ IlexForestShrineScript:
 	applymovement ILEXFOREST_KURT, MovementData_0x6ef53
 	disappear ILEXFOREST_KURT
 .DidntCatchCelebi:
+	end
+
+.CelebiRematch:
+	opentext
+	writetext Text_ShrineCelebiRematch
+	yesorno
+	iftrue .do_rematch
+	closetext
 	end
 
 MovementData_Farfetchd_Pos1_Pos2:
@@ -878,6 +891,20 @@ Text_ShrineCelebiEvent:
 
 	para "Want to put the GS"
 	line "BALL here?"
+	done
+
+Text_ShrineCelebiRematch:
+	text "ILEX FOREST"
+	line "SHRINE…"
+
+	para "It's in honor of"
+	line "the forest's"
+	cont "protector…"
+
+	para "Do you want to"
+	line "wait for the"
+	para "protector to come"
+	line "back?"
 	done
 
 Text_InsertGSBall:

@@ -7763,7 +7763,7 @@ NateElite4Group:
 	bigdw 203
 	bigdw 209
 	bigdw 144
-	db "??w@" ; swap to "<DX><DX>w@" when character's implemented
+	db "<DX><DX>w@"
 
 	db 59
 	dw KROOKODILE
@@ -8003,7 +8003,7 @@ BrendanKantoLeaderGroup:
 	bigdw 162
 	bigdw 113
 	bigdw 121
-	db "CEO'(?????@" ; "CEO'(+~##~@" - ax gotta add in the characters
+	db "CEO'(+~<HASH><HASH>~@"
 
 	db 67
 	dw DELCATTY

@@ -184,6 +184,7 @@ ROMX $3f
 ROMX $40
 	"mobile_40"
 	"Pics 34"
+	"Pics 35"
 ROMX $41
 	"bank41"
 	"Enemy Trainer Parties 1"

@@ -42,16 +42,8 @@ IndigoPlateauPokecenter1F_MapScripts:
 	return
 
 PlateauRivalBattle1:
-	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
-	iffalse PlateauRivalScriptDone
-	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
+	checkevent EVENT_BEAT_RIVAL_IN_INDIGO
 	iftrue PlateauRivalScriptDone
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, PlateauRivalScriptDone
-	ifequal TUESDAY, PlateauRivalScriptDone
-	ifequal THURSDAY, PlateauRivalScriptDone
-	ifequal FRIDAY, PlateauRivalScriptDone
-	ifequal SATURDAY, PlateauRivalScriptDone
 	moveobject INDIGOPLATEAUPOKECENTER1F_SILVER, 17, 9
 	appear INDIGOPLATEAUPOKECENTER1F_SILVER
 	turnobject PLAYER, DOWN
@@ -64,16 +56,8 @@ PlateauRivalBattle1:
 	sjump PlateauRivalBattleCommon
 
 PlateauRivalBattle2:
-	checkevent EVENT_BEAT_RIVAL_IN_MT_MOON
-	iffalse PlateauRivalScriptDone
-	checkflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
+	checkevent EVENT_BEAT_RIVAL_IN_INDIGO
 	iftrue PlateauRivalScriptDone
-	readvar VAR_WEEKDAY
-	ifequal SUNDAY, PlateauRivalScriptDone
-	ifequal TUESDAY, PlateauRivalScriptDone
-	ifequal THURSDAY, PlateauRivalScriptDone
-	ifequal FRIDAY, PlateauRivalScriptDone
-	ifequal SATURDAY, PlateauRivalScriptDone
 	appear INDIGOPLATEAUPOKECENTER1F_SILVER
 	turnobject PLAYER, DOWN
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -90,7 +74,7 @@ PlateauRivalBattleCommon:
 	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	winlosstext PlateauRivalWinText, PlateauRivalLoseText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
-	loadtrainer BABA, BABA4
+	loadtrainer AC_CHRIS, EVAN5
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -104,7 +88,7 @@ PlateauRivalBattleCommon:
 	disappear INDIGOPLATEAUPOKECENTER1F_SILVER
 	setscene SCENE_DEFAULT
 	playmapmusic
-	setflag ENGINE_INDIGO_PLATEAU_RIVAL_FIGHT
+	setflag EVENT_BEAT_RIVAL_IN_INDIGO
 PlateauRivalScriptDone:
 	end
 

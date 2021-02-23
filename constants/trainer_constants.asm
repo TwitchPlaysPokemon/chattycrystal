@@ -638,6 +638,7 @@ CHRIS EQU __enum__
 	const EVAN2
 	const EVAN3
 	const EVAN4
+	const EVAN5
 
 	trainerclass FC_CHRIS ; 31
 	const Y_FUSEDCRYSTAL

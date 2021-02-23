@@ -346,6 +346,89 @@ ACChrisGroup:
 	db "ul:::utx@"
 
 	db -1
+	
+	next_list_item ; EVAN5
+	db "EVAN@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 62
+	dw JOLTEON
+	db AWAKENING
+	dw THUNDERBOLT, FLAIL, BATON_PASS, BITE
+	bigdw $FFFF
+	bigdw 178
+	bigdw 132
+	bigdw 113
+	bigdw 196
+	bigdw 170
+	bigdw 151
+	db "FOX,/!!!)u@"
+	
+	db 69
+	dw AERODACTYL
+	db SURF_MAIL
+	dw ROCK_SLIDE, SUPERSONIC, ROCK_THROW, SKY_ATTACK
+	bigdw $FFFF
+	bigdw 240
+	bigdw 187
+	bigdw 136
+	bigdw 220
+	bigdw 129
+	bigdw 150
+	db "JHH@"
+	
+	db 62
+	dw KINGDRA
+	db NUGGET
+	dw WATERFALL, HYDRO_PUMP, DRAGONBREATH, ICY_WIND
+	bigdw $0FFF
+	bigdw 195
+	bigdw 148
+	bigdw 146
+	bigdw 148
+	bigdw 154
+	bigdw 154
+	db "---sxjxKKK@"
+
+	db 66
+	dw MILTANK
+	db GOLD_LEAF
+	dw SURF, STRENGTH, ROLLOUT, BODY_SLAM
+	bigdw $0FFF
+	bigdw 231
+	bigdw 154
+	bigdw 184
+	bigdw 172
+	bigdw 88
+	bigdw 127
+	db "!L@"
+
+	db 72
+	dw NOCTOWL
+	db FLOWER_MAIL
+	dw NIGHTMARE, HYPER_BEAM, WING_ATTACK, SUNNY_DAY
+	bigdw $0FFF
+	bigdw 272
+	bigdw 138
+	bigdw 120
+	bigdw 147
+	bigdw 174
+	bigdw 188
+	db "KENYA@"
+
+	db 75
+	dw VENUSAUR
+	db MASTER_BALL
+	dw FLASH, CUT, FURY_CUTTER, PETAL_DANCE
+	bigdw $FFFF
+	bigdw 288
+	bigdw 199
+	bigdw 214
+	bigdw 183
+	bigdw 222
+	bigdw 222
+	db "ul:::utx@"
+
+	db -1
 
 	end_list_items
 

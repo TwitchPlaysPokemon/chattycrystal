@@ -56,7 +56,7 @@ VictoryRoadRivalNext:
 	setevent EVENT_RIVAL_VICTORY_ROAD
 	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
 	setlasttalked VICTORYROAD_SILVER
-	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW5
+	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW4
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -249,7 +249,7 @@ VictoryRoad_MapEvents:
 	bg_event  3, 65, BGEVENT_ITEM, VictoryRoadHiddenFullHeal
 
 	db 6 ; object events
-	object_event 18, 13, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_VICTORY_ROAD
+	object_event 18, 13, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_VICTORY_ROAD
 	object_event 18, 29, SPRITE_BIRD, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Moltres, EVENT_MOLTRES_IN_VICTORY_ROAD
 	object_event  3, 28, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadTMEarthquake, EVENT_VICTORY_ROAD_TM_EARTHQUAKE
 	object_event 12, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadMaxRevive, EVENT_VICTORY_ROAD_MAX_REVIVE

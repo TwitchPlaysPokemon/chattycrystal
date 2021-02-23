@@ -1513,8 +1513,22 @@ RedLarryGroup:
 GreenMayGroup:
 	next_list_item ; A_EMERALD
 	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	db 8
-	dw ABRA
+	
+	db 96
+	dw AZUMARILL
+	db NO_ITEM
+	dw ROLLOUT, SURF, STRENGTH, ROCK_SMASH
+	bigdw $0FFF
+	bigdw 330
+	bigdw 141
+	bigdw 191
+	bigdw 166
+	bigdw 155
+	bigdw 176
+	db "M ---/'/'4@"
+	
+	db 40
+	dw TENTACRUEL
 	db POTION
 	dw TELEPORT, NO_MOVE, NO_MOVE, NO_MOVE
 	bigdw $FFFF
@@ -1526,8 +1540,8 @@ GreenMayGroup:
 	bigdw 14
 	db "apf uojkyy@"
 
-	db 10
-	dw POOCHYENA
+	db 32
+	dw MIGHTYENA
 	db NO_ITEM
 	dw SAND_ATTACK, TACKLE, HOWL, NO_MOVE
 	bigdw $0FFF
@@ -1538,19 +1552,33 @@ GreenMayGroup:
 	bigdw 13
 	bigdw 11
 	db "POOCHYENA@"
-
-	db 15
-	dw MARILL
+	
+	db 34
+	dw VILEPLUME
 	db NO_ITEM
-	dw ROLLOUT, DEFENSE_CURL, TAIL_WHIP, TACKLE
+	dw SAND_ATTACK, TACKLE, HOWL, NO_MOVE
 	bigdw $0FFF
-	bigdw 48
+	bigdw 28
+	bigdw 17
 	bigdw 14
-	bigdw 23
-	bigdw 24
-	bigdw 19
-	bigdw 26
-	db "MARILL@"
+	bigdw 12
+	bigdw 13
+	bigdw 11
+	db "POOCHYENA@"
+	
+	db 46
+	dw GRAVELER
+	db NO_ITEM
+	dw SAND_ATTACK, TACKLE, HOWL, NO_MOVE
+	bigdw $0FFF
+	bigdw 28
+	bigdw 17
+	bigdw 14
+	bigdw 12
+	bigdw 13
+	bigdw 11
+	db "POOCHYENA@"
+	
 	db -1 ; end
 
 	end_list_items
@@ -2221,13 +2249,91 @@ GSCHGSSChrisRivalGroup:
 	bigdw 20
 	bigdw 20
 	db "KT@"
+	
+	next_list_item
+	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW4
+	
+	db 51
+	dw ESPEON
+	db POKE_BALL
+	dw BITE, ATTRACT, SAND_ATTACK, PSYCHIC_M
+	bigdw $FFFF
+	bigdw 140
+	bigdw 93
+	bigdw 89
+	bigdw 145
+	bigdw 154
+	bigdw 119
+	db "AAAS  RJ-I@"
+	
+	db 49
+	dw STEELIX
+	db NO_ITEM
+	dw STRENGTH, ROCK_THROW, EARTHQUAKE, IRON_TAIL
+	bigdw $FFFF
+	bigdw 145
+	bigdw 104
+	bigdw 218
+	bigdw 54
+	bigdw 83
+	bigdw 93
+	db "AAJRR RRR@"
+	
+	db 78
+	dw FERALIGATR
+	db TINYMUSHROOM
+	dw SURF, CUT, ICY_WIND, NO_MOVE
+	bigdw $FFFF
+	bigdw 281
+	bigdw 238
+	bigdw 217
+	bigdw 181
+	bigdw 192
+	bigdw 198
+	db "AAAAAtttta@"
+	
+	db 49
+	dw DRAGONAIR
+	db EXP_SHARE
+	dw WATERFALL, DRAGONBREATH, TWISTER, SAFEGUARD
+	bigdw $0FFF
+	bigdw 131
+	bigdw 103
+	bigdw 84
+	bigdw 93
+	bigdw 85
+	bigdw 85
+	db "KT @"
 
+	db 37
+	dw RATICATE
+	db ICE_BERRY
+	dw QUICK_ATTACK, HYPER_FANG, SCARY_FACE, PURSUIT
+	bigdw $FFFF
+	bigdw 96
+	bigdw 77
+	bigdw 60
+	bigdw 82
+	bigdw 53
+	bigdw 68
+	db "A@"
+
+	db 62
+	dw PIDGEOT
+	db SLOWPOKETAIL
+	dw FLY, QUICK_ATTACK, MIRROR_MOVE, WING_ATTACK
+	bigdw $FFFF
+	bigdw 205
+	bigdw 145
+	bigdw 129
+	bigdw 151
+	bigdw 112
+	bigdw 112
+	db "BBBBBD@"
 	db -1 ; end
 
 	end_list_items
 	
-	
-
 AzureGroup:
 	next_list_item ; AZURE1
 	db "AZURE@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES

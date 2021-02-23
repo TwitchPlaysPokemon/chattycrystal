@@ -710,7 +710,6 @@ CHRIS EQU __enum__
 	const AJDNNW2
 	const AJDNNW3
 	const AJDNNW4
-	const AJDNNW5
 
 	trainerclass RED_JOHTO_LEADER ; 45
 	const AIIIAAB1

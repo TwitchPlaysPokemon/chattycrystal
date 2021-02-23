@@ -7,8 +7,9 @@
 	const INDIGOPLATEAUPOKECENTER1F_ABRA
 
 IndigoPlateauPokecenter1F_MapScripts:
-	db 1 ; scene scripts
+	db 2 ; scene scripts
 	scene_script .DummyScene ; SCENE_DEFAULT
+	scene_script .DummyScene ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .PrepareElite4
@@ -42,8 +43,6 @@ IndigoPlateauPokecenter1F_MapScripts:
 	return
 
 PlateauRivalBattle1:
-	checkevent EVENT_BEAT_RIVAL_IN_INDIGO
-	iftrue PlateauRivalScriptDone
 	moveobject INDIGOPLATEAUPOKECENTER1F_SILVER, 17, 9
 	appear INDIGOPLATEAUPOKECENTER1F_SILVER
 	turnobject PLAYER, DOWN
@@ -56,8 +55,6 @@ PlateauRivalBattle1:
 	sjump PlateauRivalBattleCommon
 
 PlateauRivalBattle2:
-	checkevent EVENT_BEAT_RIVAL_IN_INDIGO
-	iftrue PlateauRivalScriptDone
 	appear INDIGOPLATEAUPOKECENTER1F_SILVER
 	turnobject PLAYER, DOWN
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -86,7 +83,7 @@ PlateauRivalBattleCommon:
 	turnobject PLAYER, DOWN
 	applymovement INDIGOPLATEAUPOKECENTER1F_SILVER, PlateauRivalLeavesMovement
 	disappear INDIGOPLATEAUPOKECENTER1F_SILVER
-	setscene SCENE_DEFAULT
+	setscene SCENE_FINISHED
 	playmapmusic
 	setflag EVENT_BEAT_RIVAL_IN_INDIGO
 PlateauRivalScriptDone:
@@ -277,6 +274,6 @@ IndigoPlateauPokecenter1F_MapEvents:
 	object_event  3,  7, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FNurseScript, -1
 	object_event 11,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScript, -1
 	object_event 11, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FCooltrainerMScript, -1
-	object_event 16,  9, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
+	object_event 16,  9, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	object_event  1,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, EVENT_TELEPORT_GUY
 	object_event  0,  9, SPRITE_JYNX, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, AbraScript, EVENT_TELEPORT_GUY

@@ -9,7 +9,7 @@ ResetUniqueMons::
 	checkevent EVENT_RELEASED_THE_BEASTS
 	iffalse .no_beasts
 	clearifuncaught ENTEI, EVENT_REMATCH_ENTEI
-	; TODO: Entei, Raikou, Suicune
+	; TODO: Raikou, Suicune
 .no_beasts
 
 	; TODO: Celebi

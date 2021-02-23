@@ -420,10 +420,6 @@ IlexForestHiddenSuperPotion:
 IlexForestHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_ILEX_FOREST_HIDDEN_FULL_HEAL
 
-IlexForestBoulder:
-; unused
-	jumpstd strengthboulder
-
 IlexForestSignpost:
 	jumptext IlexForestSignpostText
 

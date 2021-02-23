@@ -317,7 +317,7 @@ BitmasksPointers:
 	dw LatiosBitmasks
 	dw KyogreBitmasks
 	dw GroudonBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Turtwig
+	dw TurtwigBitmasks
 	dw GrotleBitmasks
 	dw TorterraBitmasks
 	dw ChimcharBitmasks

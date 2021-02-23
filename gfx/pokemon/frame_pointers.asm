@@ -317,7 +317,7 @@ FramesPointers:
 	dba LatiosFrames
 	dba KyogreFrames
 	dba GroudonFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Turtwig
+	dba TurtwigFrames
 	dba GrotleFrames
 	dba TorterraFrames
 	dba ChimcharFrames

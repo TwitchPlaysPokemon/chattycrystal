@@ -317,7 +317,7 @@ AnimationIdlePointers:
 	dw LatiosAnimationIdle
 	dw KyogreAnimationIdle
 	dw GroudonAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Turtwig
+	dw TurtwigAnimationIdle
 	dw GrotleAnimationIdle
 	dw TorterraAnimationIdle
 	dw ChimcharAnimationIdle

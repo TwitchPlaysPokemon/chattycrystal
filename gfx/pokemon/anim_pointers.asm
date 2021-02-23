@@ -317,7 +317,7 @@ AnimationPointers:
 	dw LatiosAnimation
 	dw KyogreAnimation
 	dw GroudonAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Turtwig
+	dw TurtwigAnimation
 	dw GrotleAnimation
 	dw TorterraAnimation
 	dw ChimcharAnimation

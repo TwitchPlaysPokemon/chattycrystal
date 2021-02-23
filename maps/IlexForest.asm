@@ -454,6 +454,7 @@ IlexForestShrineScript:
 	waitbutton
 .do_rematch
 	closetext
+	clearevent EVENT_CELEBI_REMATCH_READY
 	pause 20
 	showemote EMOTE_SHOCK, PLAYER, 20
 	special FadeOutMusic

@@ -343,7 +343,7 @@ MoveAnimations:
 	dw BattleAnim_Doubleslap   ; PLACEHOLDER
 	dw BattleAnim_SacredFire   ; PLACEHOLDER
 	dw BattleAnim_FreezeDry
-	dw BattleAnim_MegaDrain    ; 158, PLACEHOLDER
+	dw BattleAnim_DrainingKiss ; 158
 	dw BattleAnim_Submission   ; PLACEHOLDER
 	dw BattleAnim_MoonBlast
 	dw BattleAnim_DazzlingGleam
@@ -358,9 +358,9 @@ MoveAnimations:
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_DracoMeteor
 	dw BattleAnim_Amnesia      ; PLACEHOLDER
-	dw BattleAnim_MudSlap      ; PLACEHOLDER
-	dw BattleAnim_Pound        ; 168, PLACEHOLDER
-	dw BattleAnim_PoisonSting  ; PLACEHOLDER
+	dw BattleAnim_MudShot      ; incomplete
+	dw BattleAnim_Memento
+	dw BattleAnim_PoisonJab
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -3351,6 +3351,26 @@ BattleAnim_FreezeDry:
 	anim_wait 24
 	anim_ret
 	
+BattleAnim_DrainingKiss:
+	anim_3gfx ANIM_GFX_OBJECTS, ANIM_GFX_CHARGE, ANIM_GFX_SHINE
+	anim_sound 0, 1, SFX_SWEET_KISS
+	anim_obj ANIM_OBJ_HEART, 120, 40, $0
+	anim_wait 8
+.loop
+	anim_sound 0, 1, SFX_SWEET_KISS_2
+	anim_obj ANIM_OBJ_DREAM_EATER, 128, 48, $2
+	anim_wait 5
+	anim_sound 0, 1, SFX_SWEET_KISS_2
+	anim_obj ANIM_OBJ_DREAM_EATER, 136, 64, $3
+	anim_wait 5
+	anim_sound 0, 1, SFX_SWEET_KISS_2
+	anim_obj ANIM_OBJ_DREAM_EATER, 136, 32, $4
+	anim_wait 5
+	anim_loop 5, .loop
+	anim_wait 32
+	anim_bgeffect ANIM_BG_07, $0, $0, $0
+	anim_jump BattleAnim_DrainingKiss_branch_cbc6a
+	
 BattleAnim_MoonBlast:
 	anim_3gfx ANIM_GFX_MOON, ANIM_GFX_SHINE, ANIM_GFX_CHARGE
 	anim_bgp $1b
@@ -3521,6 +3541,66 @@ BattleAnim_DracoMeteor:
 	anim_wait 12
 	anim_sound 0, 1, SFX_EGG_BOMB
 	anim_obj ANIM_OBJ_18, 146, 64, $0
+	anim_wait 32
+	anim_ret
+	
+BattleAnim_MudShot:
+	anim_1gfx ANIM_GFX_POISON
+.loop
+	anim_sound 6, 2, SFX_BUBBLEBEAM
+	anim_obj ANIM_OBJ_MUD_SHOT, 64, 92, $4
+	anim_wait 4
+	anim_obj ANIM_OBJ_MUD_SHOT, 64, 92, $4
+	anim_wait 4
+	anim_obj ANIM_OBJ_MUD_SPLASH, 128, 60, $5c
+    anim_obj ANIM_OBJ_MUD_SPLASH, 128, 60, $e8
+    anim_obj ANIM_OBJ_MUD_SPLASH, 128, 60, $d0
+    anim_obj ANIM_OBJ_MUD_SPLASH, 128, 60, $50
+	anim_loop 8, .loop
+	anim_wait 16
+	anim_ret
+	
+BattleAnim_Memento:
+	anim_1gfx ANIM_GFX_ANGELS
+	anim_sound 6, 2, SFX_SLUDGE_BOMB
+	anim_bgeffect ANIM_BG_19, $0, $1, $40
+	anim_wait 64
+	anim_incbgeffect ANIM_BG_19
+	anim_bgp $1b
+	anim_obp0 $f
+	anim_obj ANIM_OBJ_SPITE, 124, 16, $0
+	anim_sound 0, 1, SFX_SPITE
+	anim_wait 96
+	anim_ret
+	
+BattleAnim_PoisonJab:
+	anim_3gfx ANIM_GFX_HORN, ANIM_GFX_HIT, ANIM_GFX_POISON
+	anim_obp0 $7c
+	anim_bgeffect ANIM_BG_1F, $55, $1, $0
+.loop
+	anim_sound 0, 1, SFX_HORN_ATTACK
+	anim_obj ANIM_OBJ_01, 132, 40, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_HORN_ATTACK
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_HORN_ATTACK
+	anim_obj ANIM_OBJ_01, 126, 50, $0
+	anim_wait 8
+	anim_loop 3, .loop
+	anim_clearobjs
+	anim_obp0 $e4
+.loop2
+	anim_sound 0, 1, SFX_TOXIC
+	anim_obj ANIM_OBJ_1A, 132, 72, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_TOXIC
+	anim_obj ANIM_OBJ_1A, 116, 72, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_TOXIC
+	anim_obj ANIM_OBJ_1A, 148, 72, $0
+	anim_wait 8
+	anim_loop 2, .loop2
 	anim_wait 32
 	anim_ret
 
@@ -5154,6 +5234,7 @@ BattleAnim_Moonlight_branch_cbc6a:
 BattleAnim_MorningSun_branch_cbc6a:
 BattleAnim_Synthesis_branch_cbc6a:
 BattleAnim_Recover_branch_cbc6a:
+BattleAnim_DrainingKiss_branch_cbc6a:
 	anim_sound 0, 0, SFX_METRONOME
 	anim_obj ANIM_OBJ_GLIMMER, 44, 64, $0
 	anim_wait 5

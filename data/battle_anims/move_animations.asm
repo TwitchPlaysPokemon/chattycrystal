@@ -358,7 +358,7 @@ MoveAnimations:
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_DracoMeteor
 	dw BattleAnim_Amnesia      ; PLACEHOLDER
-	dw BattleAnim_MudShot      ; incomplete
+	dw BattleAnim_MudShot
 	dw BattleAnim_Memento
 	dw BattleAnim_PoisonJab
 

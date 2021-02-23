@@ -269,10 +269,6 @@ _CGB_Pokedex:
 
 .is_pokemon
 	call GetMonPalettePointer
-	inc hl
-	inc hl
-	inc hl
-	inc hl
 	call LoadPalette_White_Col1_Col2_Black ; mon palette
 .got_palette
 	call WipeAttrMap

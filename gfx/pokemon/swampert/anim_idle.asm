@@ -1,4 +1,4 @@
-    setrepeat 22
+	setrepeat 22
 	frame 0, 06
 	frame 1, 06
 	dorepeat 1

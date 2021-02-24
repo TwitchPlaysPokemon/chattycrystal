@@ -3981,7 +3981,7 @@ BattleAnimFunction_52:
 	jp BattleAnim_IncAnonJumptableIndex
 	
 BattleAnimFunction_53:
-    ld hl, BATTLEANIMSTRUCT_YOFFSET
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld a, [hl]
 	cp $e0

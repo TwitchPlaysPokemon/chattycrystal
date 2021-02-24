@@ -90,7 +90,7 @@ hPrintNumBuffer:: ds 10 ; ffb3
 
 NEXTU ; ffb3
 ; miscellaneous
-    ds 9
+	ds 9
 hMGStatusFlags:: db ; ffbc
 ENDU ; ffbd
 

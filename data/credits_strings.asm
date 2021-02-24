@@ -132,6 +132,8 @@ CreditsStrings:
 	dw .Rangi42
 	dw .Mmmmmmmmmmmmmmmmm
 	dw .Pigu
+	dw .Scarlax
+	dw .Nuuk
 
 .SatoshiTajiri:       db "   Satoshi Tajiri@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   Junichi Masuda@"         ; "ますだ　じゅんいち@"
@@ -270,6 +272,8 @@ CreditsStrings:
 .Rangi42:             db "      Rangi42@"
 .Mmmmmmmmmmmmmmmmm    db " Mmmmmmmmmmmmmmmmm@"
 .Pigu                 db "       Pigu@"
+.Scarlax              db "      Scarlax@"
+.Nuuk                 db "       Nuuk@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

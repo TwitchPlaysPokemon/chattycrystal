@@ -307,9 +307,11 @@ CreditsScript:
 
 	db CREDITS_WAIT, 9
 
-	db               ARTIST, 1
-	db          BLOODLESSNS, 2
-	db              KELCYUS, 3
+	db               ARTIST, 0
+	db          BLOODLESSNS, 1
+	db              KELCYUS, 2
+	db              SCARLAX, 3
+	db                 NUUK, 4
 
 	db CREDITS_WAIT, 9
 

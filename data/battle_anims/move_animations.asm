@@ -361,7 +361,7 @@ MoveAnimations:
 	dw BattleAnim_MudShot
 	dw BattleAnim_Memento      ; 168
 	dw BattleAnim_PoisonJab
-	dw BattleAnim_ShadowBall   ; PLACEHOLDER
+	dw BattleAnim_DarkPulse
 	dw BattleAnim_RockBlast
 
 BattleAnim_Pound:
@@ -3649,6 +3649,31 @@ BattleAnim_PoisonJab:
 	anim_wait 8
 	anim_loop 2, .loop2
 	anim_wait 32
+	anim_ret
+	
+BattleAnim_DarkPulse:
+	anim_1gfx ANIM_GFX_CHARGE
+	anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
+	anim_bgp $1b
+	anim_sound 0, 1, SFX_SPITE
+	anim_obj ANIM_OBJ_DARK_PULSE, 44, 88, $0
+	anim_obj ANIM_OBJ_DARK_PULSE, 44, 88, $8
+	anim_obj ANIM_OBJ_DARK_PULSE, 44, 88, $10
+	anim_obj ANIM_OBJ_DARK_PULSE, 44, 88, $18
+	anim_obj ANIM_OBJ_DARK_PULSE, 44, 88, $20
+	anim_obj ANIM_OBJ_DARK_PULSE, 44, 88, $28
+	anim_obj ANIM_OBJ_DARK_PULSE, 44, 88, $30
+	anim_obj ANIM_OBJ_DARK_PULSE, 44, 88, $38
+	anim_incobj 1
+	anim_incobj 2
+	anim_incobj 3
+	anim_incobj 4
+	anim_incobj 5
+	anim_incobj 6
+	anim_incobj 7
+	anim_incobj 8
+	anim_wait 96
+	anim_incbgeffect ANIM_BG_WHIRLPOOL
 	anim_ret
 	
 BattleAnim_RockBlast:

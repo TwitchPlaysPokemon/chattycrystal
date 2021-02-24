@@ -385,7 +385,7 @@ PokemonNames::
 	db "SLIGGOO@@@"
 	db "GOODRA@@@@"
 	db "CRABRAWLER"
-	db "CRABOM<IN>AB<LE>"
+	db "<CRAB1><CRAB2><CRAB3><CRAB4><CRAB5><CRAB6><CRAB7><CRAB8><CRAB9><CRAB10>"
 	db "CUTIEFLY@@"
 	db "RIBOMBEE@@"
 	; Fused Crystal mons

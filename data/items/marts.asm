@@ -326,10 +326,14 @@ MartCeladon3F:
 	db -1 ; end
 
 MartCeladon4F:
-	db 3 ; # items
+	db 7 ; # items
 	db POKE_DOLL
 	db LOVELY_MAIL
 	db SURF_MAIL
+	db METAL_COAT
+	db KINGS_ROCK
+	db UP_GRADE
+	db DRAGON_SCALE
 	db -1 ; end
 
 MartCeladon5F1:

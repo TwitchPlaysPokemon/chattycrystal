@@ -25,6 +25,7 @@ ViridianGymBlueScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_EARTHBADGE
+	clearevent EVENT_TM_BLACK_MARKET_BATTLE_TENT
 	writetext LeaderBlueAfterText
 	waitbutton
 	closetext

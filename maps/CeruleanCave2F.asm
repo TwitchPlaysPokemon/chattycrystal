@@ -12,8 +12,8 @@ CeruleanCave2F_MapScripts:
 CeruleanCave2FRareCandy:
 	itemball RARE_CANDY
 
-CeruleanCave2FUltraBall:
-	itemball ULTRA_BALL
+CeruleanCave2FLightBall:
+	itemball LIGHT_BALL
 
 CeruleanCave2FMaxRevive:
 	itemball MAX_REVIVE
@@ -42,6 +42,6 @@ CeruleanCave2F_MapEvents:
 
 	db 4 ; object events
 	object_event  0, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave2FRareCandy, EVENT_CERULEAN_CAVE_2F_RARE_CANDY
-	object_event 16,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave2FUltraBall, EVENT_CERULEAN_CAVE_2F_ULTRA_BALL
+	object_event 16,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave2FLightBall, EVENT_CERULEAN_CAVE_2F_LIGHT_BALL
 	object_event 19, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave2FMaxRevive, EVENT_CERULEAN_CAVE_2F_MAX_REVIVE
 	object_event 27,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCave2FFullRestore, EVENT_CERULEAN_CAVE_2F_FULL_RESTORE

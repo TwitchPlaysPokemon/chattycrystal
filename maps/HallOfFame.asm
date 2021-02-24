@@ -10,8 +10,6 @@ HallOfFame_MapScripts:
 
 .EnterHallOfFame:
 	prioritysjump .EnterHallOfFameScript
-	end
-
 .DummyScene:
 	end
 
@@ -34,9 +32,9 @@ HallOfFame_MapScripts:
 	setevent EVENT_TELEPORT_GUY
 	setevent EVENT_RIVAL_SPROUT_TOWER
 	clearevent EVENT_RED_IN_MT_SILVER
+	farscall ResetUniqueMons
 	setmapscene SPROUT_TOWER_3F, SCENE_FINISHED
 	special HealParty
-.SkipPhoneCall:
 	halloffame
 	end
 

@@ -12,7 +12,7 @@
 	tilepal 0, BROWN, BROWN, BROWN, BROWN, BROWN, BROWN, BROWN, BROWN
 
 rept 16
-	db $00
+	db $ff
 endr
 
 	tilepal 1, BROWN, BROWN, BROWN, BROWN, BROWN, BROWN, BROWN, BROWN

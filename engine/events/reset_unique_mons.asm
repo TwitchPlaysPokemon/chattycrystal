@@ -10,21 +10,6 @@ ResetUniqueMons::
 	clearifuncaught MOLTRES, EVENT_MOLTRES_IN_VICTORY_ROAD
 	clearifuncaught ZAPDOS, EVENT_POWER_PLANT_B1F_ZAPDOS
 
-	checkcaught PORYGON2
-	ifnotequal 2, .missing_porygon_2
-	checkcaught PORYGON_Z
-	ifequal 2, .no_up_grade
-	jump .one_missing
-.missing_porygon_2
-	checkcaught PORYGON_Z
-	ifnotequal 2, .two_missing
-.one_missing
-	; TODO: check which one to clear if both are set
-.two_missing
-	; TODO: clear other Up-Grade when added to the game
-	clearevent EVENT_GOT_UP_GRADE
-.no_up_grade
-
 	checkevent EVENT_RELEASED_THE_BEASTS
 	iffalse .no_beasts
 	readmem wRoamMon1Species

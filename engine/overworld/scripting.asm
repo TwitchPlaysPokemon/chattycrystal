@@ -2279,6 +2279,17 @@ Script_setevent:
 	ld b, SET_FLAG
 	jp EventFlagAction
 
+Script_clearifuncaught:
+; script command 0xaf
+; params: mon index, flag index
+; resets the flag if the mon is not caught in the dex or not existing in the party, PC or daycare
+	call LoadScriptPokemonIndex
+	ld d, h
+	ld e, l
+	call CheckCaughtAndPresent
+	jp c, SkipTwoScriptBytes
+	; fallthrough
+
 Script_clearevent:
 ; script command 0x32
 ; parameters: bit_number
@@ -2318,15 +2329,6 @@ Script_setflag:
 	ld d, a
 	ld b, SET_FLAG
 	jp _EngineFlagAction
-
-Script_clearifuncaught:
-; script command 0xaf
-; params: mon index, flag index
-; resets the flag if the mon is not caught in the dex or not existing in the party, PC or daycare
-	call LoadScriptPokemonIndex
-	call CheckCaughtAndPresent
-	jp c, SkipTwoScriptBytes
-	; fallthrough
 
 Script_clearflag:
 ; script command 0x35
@@ -2843,9 +2845,11 @@ Script_checkcaught:
 ; parameters: species index
 ; sets the script variable to 2 if the mon is caught and present, 1 if caught and lost, or 0 if not caught
 	call LoadScriptPokemonIndex
-	push hl
+	ld d, h
+	ld e, l
+	push de
 	call CheckCaughtAndPresent
-	pop hl
+	pop de
 	ld a, 2
 	jr c, .done
 	call CheckCaughtMonIndex
@@ -2857,8 +2861,8 @@ Script_checkcaught:
 	ret
 
 CheckCaughtAndPresent:
-	; returns carry if the mon in hl is caught and still present
-	push hl
+	; returns carry if the mon in de is caught and still present
+	push de
 	call CheckCaughtMonIndex
 	pop de
 	and a
@@ -2890,6 +2894,11 @@ CheckCaughtAndPresent:
 	ld l, e
 	call GetPokemonIDFromIndex
 	ld e, a
+	ld a, BANK(sBox)
+	call GetSRAMBank
+	call .check_current_box
+	call CloseSRAM
+	ret c
 	ld a, [wPartyCount]
 	and a
 	jr z, .no_party ; who knows...
@@ -2931,8 +2940,8 @@ CheckCaughtAndPresent:
 	ld d, a
 	ld a, [de]
 	pop de
-	cp 1
-	ret c
+	and a
+	ret z
 	ld b, a
 	ld a, [hli]
 	ld h, [hl]
@@ -2943,11 +2952,29 @@ CheckCaughtAndPresent:
 	ld a, [hli]
 	jr nz, .next_box_mon
 	cp d
-	ccf
-	ret z ; carry set
+	scf
+	ret z
 .next_box_mon
 	dec b
 	jr nz, .box_mon_loop
+	and a
+	ret
+
+.check_current_box
+	ld a, [sBox]
+	and a
+	ret z
+	ld d, a
+	ld hl, sBoxMon1Species
+	ld bc, BOXMON_STRUCT_LENGTH
+.current_box_loop
+	ld a, [hl]
+	cp e
+	scf
+	ret z
+	add hl, bc
+	dec d
+	jr nz, .current_box_loop
 	and a
 	ret
 

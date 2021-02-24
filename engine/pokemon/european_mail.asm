@@ -28,7 +28,7 @@ IsMailEuropean:
 
 ; The regular font.
 StandardEnglishFont:
-INCBIN "gfx/font/english.1bpp"
+INCBIN "gfx/font/font.1bpp"
 
 ; An extended font.
 FrenchGermanFont:

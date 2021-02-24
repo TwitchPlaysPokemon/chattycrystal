@@ -2,7 +2,7 @@ PokemonMansion3F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
 TrainerScientistGideon:
 	trainer SCIENTIST, GIDEON, EVENT_BEAT_SCIENTIST_GIDEON, ScientistGideonSeenText, ScientistGideonBeatenText, 0, .Script
 
@@ -13,7 +13,7 @@ TrainerScientistGideon:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerBurglarSimon:
 	trainer BURGLAR, SIMON_B, EVENT_BEAT_BURGLAR_SIMON, BurglarSimonSeenText, BurglarSimonBeatenText, 0, .Script
 
@@ -24,13 +24,13 @@ TrainerBurglarSimon:
 	waitbutton
 	closetext
 	end
-	
+
 PokemonMansion3FNugget:
 	itemball NUGGET
-	
+
 PokemonMansion3FFireBlast:
 	itemball TM_FIRE_BLAST
-	
+
 BurglarSimonSeenText:
 BurglarSimonBeatenText:
 BurglarSimonAfterBattleText:
@@ -39,7 +39,7 @@ ScientistGideonBeatenText:
 ScientistGideonSeenText:
 	text "<...>"
 	done
-	
+
 PokemonMansion3FHiddenEscapeRope:
 	hiddenitem ESCAPE_ROPE, EVENT_POKEMON_MANSION_3F_ESCAPE_ROPE
 
@@ -64,4 +64,4 @@ PokemonMansion3F_MapEvents:
 	object_event  8,  9, SPRITE_PHARMACIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerBurglarSimon, -1
 	object_event  9, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonMansion3FNugget, EVENT_POKEMON_MANSION_3F_NUGGET
 	object_event 26,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonMansion3FFireBlast, EVENT_POKEMON_MANSION_3F_FIRE_BLAST
-	
+

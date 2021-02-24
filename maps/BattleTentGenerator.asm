@@ -2,29 +2,29 @@ BattleTentGenerator_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
-BattleTentGeneratorStoneClerk1:	
+
+BattleTentGeneratorStoneClerk1:
 	faceplayer
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_GYM_TMS
 	closetext
 	end
-	
-BattleTentGeneratorStoneClerk2:	
+
+BattleTentGeneratorStoneClerk2:
 	faceplayer
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_EVENT_TMS
 	closetext
 	end
-	
-BattleTentGeneratorStoneClerk3:	
+
+BattleTentGeneratorStoneClerk3:
 	faceplayer
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_SINGLE_TMS_1
 	closetext
 	end
-	
-BattleTentGeneratorStoneClerk4:	
+
+BattleTentGeneratorStoneClerk4:
 	faceplayer
 	opentext
 	pokemart MARTTYPE_STANDARD, MART_SINGLE_TMS_2

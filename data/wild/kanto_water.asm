@@ -145,7 +145,7 @@ KantoWaterWildMons:
 	dbw 35, TENTACOOL
 	dbw 30, TENTACOOL
 	dbw 35, TENTACRUEL
-	
+
 	map_id SAFARI_ZONE_CENTER
 	db 6 percent ; encounter rate
 	dbw 56, SHELLOS
@@ -157,7 +157,7 @@ KantoWaterWildMons:
 	dbw 56, SHELLOS
 	dbw 51, BUIZEL
 	dbw 56, TOTODILE
-	
+
 	map_id SAFARI_ZONE_NORTH
 	db 6 percent ; encounter rate
 	dbw 56, SHELLOS
@@ -169,19 +169,19 @@ KantoWaterWildMons:
 	dbw 56, REMORAID
 	dbw 51, BUIZEL
 	dbw 56, MUDKIP
-	
+
 	map_id SEAFOAM_ISLANDS_B4F
 	db 4 percent ; encounter rate
 	dbw 66, STARMIE
 	dbw 66, OMASTAR
 	dbw 66, KABUTOPS
-	
+
 	map_id ROUTE_23
 	db 4 percent ; encounter rate
 	dbw 69, GOLDUCK
 	dbw 71, SWANNA
 	dbw 69, POLIWRATH
-	
+
 	map_id CERULEAN_CAVE_1F
 	db 4 percent ; encounter rate
 	dbw 81, GOLDUCK

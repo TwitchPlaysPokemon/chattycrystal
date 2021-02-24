@@ -384,7 +384,7 @@ PokedexDataPointerTable:
 	dba CrabominablePokedexEntry
 	dba CutieflyPokedexEntry
 	dba RibombeePokedexEntry
-	; Fused Crystal mons 
+	; Fused Crystal mons
 	dba OnixtretPokedexEntry
 	dba ChiquirtlePokedexEntry
 	dba BaytortlePokedexEntry

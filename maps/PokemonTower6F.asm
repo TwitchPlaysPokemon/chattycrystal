@@ -2,10 +2,10 @@ PokemonTower6F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
 PokemonTower6fTwistedspoon:
 	itemball TWISTEDSPOON
-	
+
 PokemonTower6fThickClub:
 	itemball THICK_CLUB
 

@@ -1526,7 +1526,7 @@ GreenMayGroup:
 	bigdw 76
 	bigdw 111
 	db "A♀Nllllc33@"
-	
+
 	db 50
 	dw MIGHTYENA
 	db DRAGON_SCALE
@@ -1539,7 +1539,7 @@ GreenMayGroup:
 	bigdw 86
 	bigdw 88
 	db "MIGHTYENA@"
-	
+
 	db 49
 	dw VILEPLUME
 	db POKE_BALL
@@ -1552,7 +1552,7 @@ GreenMayGroup:
 	bigdw 93
 	bigdw 102
 	db "VILEPLUME@"
-	
+
 	db 68
 	dw GRAVELER
 	db TM_CURSE
@@ -1565,7 +1565,7 @@ GreenMayGroup:
 	bigdw 81
 	bigdw 91
 	db " -5'''7''Y@"
-	
+
 	db 80
 	dw TENTACRUEL
 	db MYSTIC_WATER

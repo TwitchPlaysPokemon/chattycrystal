@@ -277,7 +277,7 @@ MoveAnimations:
 	dw BattleAnim_Tickle
 	dw BattleAnim_Psybeam      ; PLACEHOLDER
 	dw BattleAnim_FeintAttack  ; PLACEHOLDER
-	dw BattleAnim_Psywave      ; PLACEHOLDER
+	dw BattleAnim_Extrasensory
 	dw BattleAnim_Twister      ; PLACEHOLDER
 	dw BattleAnim_MuddyWater   ; 118
 	dw BattleAnim_WingAttack   ; PLACEHOLDER
@@ -3322,6 +3322,31 @@ BattleAnim_Tickle:
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_26
 	anim_jump BattleAnim_ShowMon_1
+	
+BattleAnim_Extrasensory:
+	anim_1gfx ANIM_GFX_SHINE
+    anim_sound 0, 1, SFX_CUT
+    anim_bgp $1b
+    anim_obj ANIM_OBJ_GLIMMER, 64, 88, $0
+    anim_wait 16
+    anim_call BattleAnim_UserObj_2Row
+    anim_sound 0, 1, SFX_CUT
+    anim_bgeffect ANIM_BG_NIGHT_SHADE, $0, $0, $8
+    anim_obj ANIM_OBJ_GLIMMER, 64, 88, $0
+    anim_wait 16
+    anim_incbgeffect ANIM_BG_NIGHT_SHADE
+    anim_wait 8
+    anim_clearobjs
+    anim_call BattleAnim_UserObj_2Row
+    anim_sound 0, 1, SFX_CUT
+    anim_bgeffect ANIM_BG_TELEPORT, $0, $0, $0
+    anim_obj ANIM_OBJ_GLIMMER, 64, 88, $0
+    anim_wait 4
+    anim_sound 0, 1, SFX_PSYCHIC
+    anim_wait 64
+    anim_incbgeffect ANIM_BG_TELEPORT
+    anim_call BattleAnim_ShowMon_1
+    anim_ret
 	
 BattleAnim_Roost:
 	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_SHINE

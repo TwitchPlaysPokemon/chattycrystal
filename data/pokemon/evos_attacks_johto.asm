@@ -1147,6 +1147,8 @@ DonphanEvosAttacks:
 	db 0 ; no more level-up moves
 
 Porygon2EvosAttacks:
+	dbbw EVOLVE_TRADE, UP_GRADE, PORYGON_Z
+	dbbw EVOLVE_ITEM, UP_GRADE, PORYGON_Z
 	db 0 ; no more evolutions
 	dbw 1, CONVERSION2
 	dbw 1, TACKLE

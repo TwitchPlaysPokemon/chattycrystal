@@ -3157,6 +3157,7 @@ BattleAnim_MeteorMash:
 	anim_obj ANIM_OBJ_RAIN, 88, 0, $2
 	anim_wait 64
 	anim_clearobjs
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_bgeffect ANIM_BG_1F, $28, $2, $0
 	anim_sound 0, 1, SFX_EGG_BOMB
 	anim_obj ANIM_OBJ_LONG_PUNCH, 136, 56, $0

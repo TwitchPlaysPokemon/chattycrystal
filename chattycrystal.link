@@ -34,6 +34,7 @@ ROMX $02
 	"bank2"
 ROMX $03
 	"bank3"
+	"Pics 38"
 ROMX $04
 	"bank4"
 	"Formes"

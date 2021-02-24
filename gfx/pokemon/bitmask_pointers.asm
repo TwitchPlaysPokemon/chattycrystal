@@ -369,7 +369,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Eelektross
 	dw LitwickBitmasks
 	dw LampentBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Chandelure
+	dw ChandelureBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Clauncher
 	dw PlaceholderBitmasks ; PLACEHOLDER - Clawitzer
 	dw PlaceholderBitmasks ; PLACEHOLDER - Helioptile

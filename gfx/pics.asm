@@ -977,7 +977,6 @@ ChandelureBackpic:   INCBIN "gfx/pokemon/chandelure/back.2bpp.lz"
 SECTION "Pics 32", ROMX
 
 LampentFrontpic:     INCBIN "gfx/pokemon/lampent/front.animated.2bpp.lz"
-ChandelureFrontpic:  INCBIN "gfx/pokemon/chandelure/front.animated.2bpp.lz"
 ClauncherBackpic:    INCBIN "gfx/pokemon/clauncher/back.2bpp.lz"
 ClauncherFrontpic:   INCBIN "gfx/pokemon/clauncher/front.animated.2bpp.lz"
 ClawitzerBackpic:    INCBIN "gfx/pokemon/clawitzer/back.2bpp.lz"
@@ -1063,3 +1062,7 @@ CelebiFrontpic:      INCBIN "gfx/pokemon/celebi/front.animated.2bpp.lz"
 EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
 MudkipBackpic:       INCBIN "gfx/pokemon/mudkip/back.2bpp.lz"
+
+SECTION "Pics 38", ROMX
+
+ChandelureFrontpic:  INCBIN "gfx/pokemon/chandelure/front.animated.2bpp.lz"

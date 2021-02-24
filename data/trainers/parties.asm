@@ -346,7 +346,7 @@ ACChrisGroup:
 	db "ul:::utx@"
 
 	db -1
-	
+
 	next_list_item ; EVAN5
 	db "EVAN@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
@@ -362,7 +362,7 @@ ACChrisGroup:
 	bigdw 170
 	bigdw 151
 	db "FOX,/!!!)u@"
-	
+
 	db 69
 	dw AERODACTYL
 	db SURF_MAIL
@@ -375,7 +375,7 @@ ACChrisGroup:
 	bigdw 129
 	bigdw 150
 	db "JHH@"
-	
+
 	db 62
 	dw KINGDRA
 	db NUGGET
@@ -1424,7 +1424,7 @@ RedLarryGroup:
 	db "CUCKO@"
 
 	db -1 ; end
-	
+
 	next_list_item ; LARRY_R2
 	db "LARRY@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
@@ -1440,7 +1440,7 @@ RedLarryGroup:
 	bigdw 260
 	bigdw 260
 	db "MOM@"
-	
+
 	db 57
 	dw VAPOREON
 	db NO_ITEM
@@ -1505,15 +1505,15 @@ RedLarryGroup:
 	bigdw 23
 	bigdw 23
 	db "CUCKO@"
-	
+
 	db -1 ; end
-	
+
 	end_list_items
 
 GreenMayGroup:
 	next_list_item ; A_EMERALD
 	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 40
 	dw TENTACRUEL
 	db NO_ITEM
@@ -1526,7 +1526,7 @@ GreenMayGroup:
 	bigdw 74
 	bigdw 110
 	db "GJKLFFZ@"
-	
+
 	db 32
 	dw MIGHTYENA
 	db NO_ITEM
@@ -1539,7 +1539,7 @@ GreenMayGroup:
 	bigdw 56
 	bigdw 52
 	db "MIGHTYENA@"
-	
+
 	db 34
 	dw VILEPLUME
 	db NO_ITEM
@@ -1552,7 +1552,7 @@ GreenMayGroup:
 	bigdw 65
 	bigdw 67
 	db "VILEPLUME@"
-	
+
 	db 46
 	dw GRAVELER
 	db NO_ITEM
@@ -1565,7 +1565,7 @@ GreenMayGroup:
 	bigdw 56
 	bigdw 61
 	db " -5'''7''Y@"
-	
+
 	db 96
 	dw AZUMARILL
 	db NO_ITEM
@@ -1578,7 +1578,7 @@ GreenMayGroup:
 	bigdw 155
 	bigdw 176
 	db "M ---/'/'4@"
-	
+
 	db -1 ; end
 
 	end_list_items
@@ -1846,10 +1846,10 @@ BABAGroup:
 	bigdw 71
 	db "DADA@"
 	db -1 ; end
-	
+
 	next_list_item ; BABA4
 	db "BABA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 76
 	dw TYPHLOSION
 	db LEFTOVERS
@@ -1862,7 +1862,7 @@ BABAGroup:
 	bigdw 228
 	bigdw 191
 	db "BEST@"
-	
+
 	db 45
 	dw SUICUNE
 	db NO_ITEM
@@ -1875,7 +1875,7 @@ BABAGroup:
 	bigdw 91
 	bigdw 113
 	db "DONG@"
-	
+
 	db 10
 	dw PIDGEY
 	db NO_ITEM
@@ -1888,7 +1888,7 @@ BABAGroup:
 	bigdw 14
 	bigdw 14
 	db "EVER@"
-	
+
 	db 31
 	dw GYARADOS
 	db NO_ITEM
@@ -2249,10 +2249,10 @@ GSCHGSSChrisRivalGroup:
 	bigdw 20
 	bigdw 20
 	db "KT@"
-	
+
 	next_list_item
 	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW4
-	
+
 	db 51
 	dw ESPEON
 	db POKE_BALL
@@ -2265,7 +2265,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 154
 	bigdw 119
 	db "AAAS  RJ-I@"
-	
+
 	db 49
 	dw STEELIX
 	db NO_ITEM
@@ -2278,7 +2278,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 83
 	bigdw 93
 	db "AAJRR RRR@"
-	
+
 	db 78
 	dw FERALIGATR
 	db TINYMUSHROOM
@@ -2291,7 +2291,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 192
 	bigdw 198
 	db "AAAAAtttta@"
-	
+
 	db 49
 	dw DRAGONAIR
 	db EXP_SHARE
@@ -2333,7 +2333,7 @@ GSCHGSSChrisRivalGroup:
 	db -1 ; end
 
 	end_list_items
-	
+
 AzureGroup:
 	next_list_item ; AZURE1
 	db "AZURE@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
@@ -3144,7 +3144,7 @@ GSCHGSSChrisGroup:
 	bigdw 148
 	bigdw 148
 	db "CA.XX@"
-	
+
 	db -1 ; end
 	end_list_items
 
@@ -3639,7 +3639,7 @@ PCyanGroup:
 	bigdw 183
 	bigdw 171
 	db "IMmMMLLIR@"
-	
+
 	db 76
 	dw TYRANITAR
 	db BLACKGLASSES
@@ -3701,7 +3701,7 @@ BrendanKantoLeaderGroup:
 	db 70
 	dw LATIOS
 	db EVERSTONE
-	dw DIVE, FLY, SHADOW_BALL, PSYCHIC
+	dw DIVE, FLY, SHADOW_BALL, PSYCHIC_M
 	bigdw $FFFF
 	bigdw 207
 	bigdw 207
@@ -3951,7 +3951,7 @@ ScientistGroup:
 	db 51
 	dw PORYGON2
 	db -1 ; end
-	
+
 	next_list_item ; SCIENTIST (6)
 	db "BRAYDON@", TRAINERTYPE_NORMAL
 	db 71
@@ -3961,13 +3961,13 @@ ScientistGroup:
 	db 71
 	dw EELEKTROSS
 	db -1 ; end
-	
+
 	next_list_item ; SCIENTIST (7)
 	db "GIDEON@", TRAINERTYPE_NORMAL
 	db 100
 	dw DITTO
 	db -1 ; end
-	
+
 	next_list_item ; SCIENTIST (8)
 	db "TAYLOR@", TRAINERTYPE_NORMAL
 	db 73
@@ -4694,7 +4694,7 @@ CooltrainerMGroup:
 	db 55
 	dw DRAGONITE
 	db -1 ; end
-	
+
 	next_list_item ; COOLTRAINERM (20)
 	db "YUJI@", TRAINERTYPE_NORMAL
 	db 73
@@ -6816,7 +6816,7 @@ BurglarGroup:
 	db 55
 	dw WEEZING
 	db -1 ; end
-	
+
 	next_list_item ; BURGLAR (4)
 	db "JAC@", TRAINERTYPE_NORMAL
 	db 72
@@ -6824,7 +6824,7 @@ BurglarGroup:
 	db 72
 	dw MAGMAR
 	db -1 ; end
-	
+
 	next_list_item ; BURGLAR (5)
 	db "DUSTY@", TRAINERTYPE_NORMAL
 	db 70
@@ -6836,7 +6836,7 @@ BurglarGroup:
 	db 70
 	dw MURKROW
 	db -1 ; end
-	
+
 	next_list_item ; BURGLAR (6)
 	db "SIMON@", TRAINERTYPE_NORMAL
 	db 73

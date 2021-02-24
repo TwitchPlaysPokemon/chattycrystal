@@ -66,7 +66,7 @@ TrainerSupernerdTom:
 	waitbutton
 	closetext
 	end
-	
+
 Route8Snorlax:
 	opentext
 	special SnorlaxAwake
@@ -88,7 +88,7 @@ Route8Snorlax:
 	disappear ROUTE8_BIG_SNORLAX
 	reloadmapafterbattle
 	end
-	
+
 Route8SnorlaxSleeping:
 	text "SNORLAX is snoring"
 	line "peacefully…"

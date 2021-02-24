@@ -36,7 +36,7 @@ SafariZoneNorthRestHouseScript:
 .Text:
 	text "It's locked…"
 	done
-	
+
 Latios:
 	faceplayer
 	opentext

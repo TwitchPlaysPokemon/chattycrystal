@@ -356,7 +356,7 @@ SnorlaxAwake:
 	ld a, [wMapMusic]
 	cp MUSIC_POKE_FLUTE_CHANNEL
 	jr nz, .nope
-	
+
 	ld a, TRUE
 	jr .done
 

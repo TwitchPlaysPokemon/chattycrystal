@@ -3888,7 +3888,7 @@ BattleAnim_AbsCosinePrecise:
 
 BattleAnimSineWave:
 	sine_table 32
-	
+
 BattleAnimFunction_50:
 	call BattleAnim_AnonJumptable
 
@@ -3934,7 +3934,7 @@ BattleAnimFunction_50:
 	add hl, bc
 	ld a, [hl]
 	jp BattleAnim_StepToTarget
-	
+
 BattleAnimFunction_51:
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
@@ -3948,7 +3948,7 @@ BattleAnimFunction_51:
 	add hl, bc
 	ld a, [hl]
 	jp BattleAnim_StepCircle
-	
+
 BattleAnimFunction_52:
 	call BattleAnim_AnonJumptable
 
@@ -3979,7 +3979,7 @@ BattleAnimFunction_52:
 	and $3f
 	ret nz
 	jp BattleAnim_IncAnonJumptableIndex
-	
+
 BattleAnimFunction_53:
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
@@ -3991,7 +3991,7 @@ BattleAnimFunction_53:
 	add hl, bc
 	ld [hl], $2
 	ret
-	
+
 .asm_extra
 	ld d, a
 	ld hl, BATTLEANIMSTRUCT_0F

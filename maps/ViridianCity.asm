@@ -30,7 +30,7 @@ ViridianCityCoffeeGramps:
 	waitbutton
 	closetext
 	end
-	
+
 ShoelaceBoy:
 	faceplayer
 	chattyoff
@@ -40,7 +40,7 @@ ShoelaceBoy:
 	closetext
 	chattyon
 	end
-	
+
 ShoelaceBoyText:
 	text "Do you mind?"
 	line "I'm trying to tie"
@@ -49,11 +49,11 @@ ShoelaceBoyText:
 	para "They haven't fit"
 	line "ever since that"
 	cont "SNORLAX took them<...>"
-	
+
 	para "I might be here"
 	line "for a while<...>"
 	done
-	
+
 ViridianCityGrampsNearGym:
 	faceplayer
 	opentext

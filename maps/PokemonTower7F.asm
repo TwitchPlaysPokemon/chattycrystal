@@ -23,7 +23,7 @@ Darkrai:
 DarikraiText:
 	text "<...><...><...><...>!"
 	done
-	
+
 PokemonTower7F_MapEvents:
 	db 0, 0 ; filler
 

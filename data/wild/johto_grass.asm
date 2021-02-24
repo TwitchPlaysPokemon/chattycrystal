@@ -756,7 +756,7 @@ JohtoGrassWildMons:
 	dbw 51, SPHEAL
 	dbw 52, SNORUNT
 	dbw 48, SNEASEL
- 	dbw 50, FROSLASS
+	dbw 50, FROSLASS
 
 	map_id ICE_PATH_B2F_BLACKTHORN_SIDE
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite

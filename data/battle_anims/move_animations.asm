@@ -303,7 +303,7 @@ MoveAnimations:
 	dw BattleAnim_Slash        ; PLACEHOLDER
 	dw BattleAnim_Slash        ; PLACEHOLDER
 	dw BattleAnim_Roar         ; PLACEHOLDER
-	dw BattleAnim_ShadowBall   ; 130, PLACEHOLDER
+	dw BattleAnim_DragonPulse  ; 130
 	dw BattleAnim_Ancientpower ; PLACEHOLDER
 	dw BattleAnim_Dynamicpunch ; PLACEHOLDER
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
@@ -3347,6 +3347,21 @@ BattleAnim_Roost:
     anim_wait 21
     anim_ret
 	
+BattleAnim_DragonPulse:
+	anim_1gfx ANIM_GFX_CHARGE
+	anim_bgeffect ANIM_BG_1F, $55, $1, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+.loop
+	anim_sound 0, 0, SFX_AEROBLAST
+	anim_obj ANIM_OBJ_DRAGON_PULSE, 64, 88, $4
+	anim_wait 4
+	anim_loop 16, .loop
+	anim_wait 16
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_wait 4
+	anim_incobj 1
+	anim_ret
+	
 BattleAnim_MuddyWater:
 	anim_1gfx ANIM_GFX_BUBBLE
 	anim_bgp $f8
@@ -3599,10 +3614,10 @@ BattleAnim_MudShot:
 	anim_wait 4
 	anim_obj ANIM_OBJ_MUD_SHOT, 64, 92, $4
 	anim_wait 4
-	anim_obj ANIM_OBJ_MUD_SPLASH, 128, 60, $5c
-    anim_obj ANIM_OBJ_MUD_SPLASH, 128, 60, $e8
-    anim_obj ANIM_OBJ_MUD_SPLASH, 128, 60, $d0
-    anim_obj ANIM_OBJ_MUD_SPLASH, 128, 60, $50
+	anim_obj ANIM_OBJ_MUD_SPLASH, 136, 56, $5c
+    anim_obj ANIM_OBJ_MUD_SPLASH, 136, 56, $e8
+    anim_obj ANIM_OBJ_MUD_SPLASH, 136, 56, $d0
+    anim_obj ANIM_OBJ_MUD_SPLASH, 136, 56, $50
 	anim_loop 8, .loop
 	anim_wait 16
 	anim_ret
@@ -3682,11 +3697,11 @@ BattleAnim_RockBlast:
     anim_obj ANIM_OBJ_ROCK_BLAST, 64, 92, $4
     anim_wait 16
     anim_sound 0, 1, SFX_KARATE_CHOP
-    anim_obj ANIM_OBJ_01, 128, 56, $0
-    anim_obj ANIM_OBJ_ROCK_SMASH, 128, 56, $5c
-    anim_obj ANIM_OBJ_ROCK_SMASH, 128, 56, $e8
-    anim_obj ANIM_OBJ_ROCK_SMASH, 128, 56, $d0
-    anim_obj ANIM_OBJ_ROCK_SMASH, 128, 56, $50
+    anim_obj ANIM_OBJ_01, 136, 56, $0
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 56, $5c
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 56, $e8
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 56, $d0
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 56, $50
     anim_wait 32
     anim_ret
 

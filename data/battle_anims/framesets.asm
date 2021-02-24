@@ -1331,4 +1331,5 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_1E,  3
 	frame BATTLEANIMOAMSET_55,  3
 	frame BATTLEANIMOAMSET_54,  3
+	frame BATTLEANIMOAMSET_53,  3
 	delanim

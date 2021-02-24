@@ -35,6 +35,10 @@ Marts:
 	dw MartIndigoPlateau
 	dw MartUnderground
 	dw MartGoldenrodStones
+	dw MartGymTMs
+	dw MartEventTMs
+	dw MartSingleTMs1
+	dw MartSingleTMs2
 .End
 
 MartCherrygrove:
@@ -409,6 +413,56 @@ MartGoldenrodStones:
 	db SUN_STONE
 	db WATER_STONE
 	db THUNDERSTONE
+	db -1 ; end
+
+MartGymTMs:
+	db 10 ; # items
+	db TM_MUD_SLAP
+	db TM_FURY_CUTTER
+	db TM_ATTRACT
+	db TM_SHADOW_BALL
+	db TM_IRON_TAIL
+	db TM_DYNAMICPUNCH
+	db TM_ICY_WIND
+	db TM_DRAGONBREATH
+	db TM_GIGA_DRAIN
+	db TM_TOXIC
+	db -1 ; end
+
+MartEventTMs:
+	db 9 ; # items
+	db TM_ROAR
+	db TM_SWEET_SCENT
+	db TM_RETURN
+	db TM_FRUSTRATION
+	db TM_SNORE
+	db TM_SLUDGE_BOMB
+	db TM_CURSE
+	db TM_DREAM_EATER
+	db TM_STEEL_WING
+	db -1 ; end
+
+MartSingleTMs1:
+	db 8 ; # items
+	db TM_SWIFT
+	db TM_DIG
+	db TM_SWAGGER
+	db TM_DETECT
+	db TM_SLEEP_TALK
+	db TM_REST
+	db TM_ZAP_CANNON
+	db TM_EARTHQUAKE
+	db -1 ; end
+
+MartSingleTMs2:
+	db 7 ; # items
+	db TM_ROLLOUT
+	db TM_ENDURE
+	db TM_DEFENSE_CURL
+	db TM_THIEF
+	db TM_PSYCH_UP
+	db TM_NIGHTMARE
+	db TM_SOLARBEAM
 	db -1 ; end
 
 DefaultMart:

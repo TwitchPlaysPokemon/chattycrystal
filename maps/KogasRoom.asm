@@ -49,7 +49,7 @@ KogaScript_Battle:
 	waitbutton
 	closetext
 	winlosstext KogaScript_KogaBeatenText, 0
-	loadtrainer XY_SERENA2, ETR
+	loadtrainer NATE_ELITE_4, R_BLACK22
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KOGA
@@ -79,52 +79,9 @@ KogasRoom_EnterMovement:
 	step_end
 
 KogaScript_KogaBeforeText:
-	text "Fwahahahaha!"
-
-	para "I am KOGA of the"
-	line "ELITE FOUR."
-
-	para "I live in shadows,"
-	line "a ninja!"
-
-	para "My intricate style"
-	line "will confound and"
-	cont "destroy you!"
-
-	para "Confusion, sleep,"
-	line "poison…"
-
-	para "Prepare to be the"
-	line "victim of my sin-"
-	cont "ister technique!"
-
-	para "Fwahahahaha!"
-
-	para "#MON is not"
-	line "merely about brute"
-
-	para "force--you shall"
-	line "see soon enough!"
-	done
-
 KogaScript_KogaBeatenText:
-	text "Ah!"
-	line "You have proven"
-	cont "your worth!"
-	done
-
 KogaScript_KogaDefeatText:
-	text "I subjected you to"
-	line "everything I could"
-	cont "muster."
-
-	para "But my efforts"
-	line "failed. I must"
-	cont "hone my skills."
-
-	para "Go on to the next"
-	line "room, and put your"
-	cont "abilities to test!"
+	text "<...>"
 	done
 
 KogasRoom_MapEvents:
@@ -141,4 +98,4 @@ KogasRoom_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  5,  7, SPRITE_KOGA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, KogaScript_Battle, -1
+	object_event  5,  7, SPRITE_NATE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, KogaScript_Battle, -1

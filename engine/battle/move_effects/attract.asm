@@ -60,14 +60,14 @@ CheckOppositeGender:
 	pop bc
 	ret c
 
-	ld hl, wChattyChatterMove
-	bit 6, [hl]
-	jr nz, .ignore_genders
 	ld a, 0
 	jr z, .got_enemy_gender
 	dec a
 
 .got_enemy_gender
+	ld hl, wChattyChatterMove
+	bit 6, [hl]
+	jr nz, .ignore_genders
 	xor b
 	ld b, a ; 0 or $FF
 	ld a, [hl]

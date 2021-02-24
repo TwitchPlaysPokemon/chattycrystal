@@ -115,11 +115,18 @@
 	const MUSIC_CERULEAN_CAVE                ; 6b
 	const MUSIC_VS_WCS                       ; 6c
 	const MUSIC_BATTLE_TENT_RUINS            ; 6d
-	const MUSIC_PHANCERO_BATTLE              ; 6d
-	const MUSIC_HO_OH_BATTLE                 ; 6e
-	const MUSIC_LUGIA_BATTLE                 ; 6f
-	const MUSIC_CERULEAN_CITY                ; 70
-	const MUSIC_NUGGET_BRIDGE                ; 71
+	const MUSIC_PHANCERO_BATTLE              ; 6e
+	const MUSIC_HO_OH_BATTLE                 ; 6f
+	const MUSIC_LUGIA_BATTLE                 ; 70
+	const MUSIC_CERULEAN_CITY                ; 71
+	const MUSIC_NUGGET_BRIDGE                ; 72
+	const MUSIC_SILPH_CO                     ; 73
+	const MUSIC_RSE_CHAMPION                 ; 74
+	const MUSIC_B2W2_CHAMPION                ; 75
+	const MUSIC_XY_GYM_LEADER                ; 76
+	const MUSIC_RBY_CHAMPION                 ; 77
+	const MUSIC_PRISM_GYM_LEADER             ; 78
+	const MUSIC_BATTLE_ARCADE_BATTLE         ; 79
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64

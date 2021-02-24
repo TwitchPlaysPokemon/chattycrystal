@@ -384,20 +384,20 @@ PokedexDataPointerTable:
 	dba CrabominablePokedexEntry
 	dba CutieflyPokedexEntry
 	dba RibombeePokedexEntry
-	; Fused Crystal mons used their base mon's entry
-	dba OnixPokedexEntry        ; Onixtret
-	dba ChikoritaPokedexEntry   ; Chiquirtle
-	dba BayleefPokedexEntry     ; Baytortle
-	dba MeganiumPokedexEntry    ; Megastoise
-	dba HoothootPokedexEntry    ; Hootduo
-	dba NoctowlPokedexEntry     ; Noctdrio
-	dba TogepiPokedexEntry      ; Togekey
-	dba TogeticPokedexEntry     ; Togetape
-	dba HoppipPokedexEntry      ; Hopporita
-	dba SkiploomPokedexEntry    ; Skipleef
-	dba JumpluffPokedexEntry    ; Jumpanium
-	dba WooperPokedexEntry      ; Woochum
-	dba QuagsirePokedexEntry    ; Quagynx
-	dba SteelixPokedexEntry     ; Steelurret
+	; Fused Crystal mons 
+	dba OnixtretPokedexEntry
+	dba ChiquirtlePokedexEntry
+	dba BaytortlePokedexEntry
+	dba MegastoisePokedexEntry
+	dba HootduoPokedexEntry
+	dba NoctdrioPokedexEntry
+	dba TogekeyPokedexEntry
+	dba TogetapePokedexEntry
+	dba HopporitaPokedexEntry
+	dba SkipleefPokedexEntry
+	dba JumpaniumPokedexEntry
+	dba WoochumPokedexEntry
+	dba QuagynxPokedexEntry
+	dba SteelurretPokedexEntry
 	; TPP's signature fakemon
 	dba PhanceroPokedexEntry

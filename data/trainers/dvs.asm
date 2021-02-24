@@ -41,7 +41,7 @@ TrainerClassDVs:
 	dn 15, 13, 13, 14 ; RED
 	dn  9,  8,  8,  8 ; OFFICER
 	dn  7, 14, 10,  8 ; GRUNTF
-	dn 15, 13, 13, 14 ; AZURE
+	dn 14, 14, 15, 15 ; AZURE
 	dn 15, 13, 13, 14 ; FC_LARRY
 	dn 15, 13, 13, 14 ; RBY_GREEN
 	dn 15, 13, 13, 14 ; CY_ROBORED
@@ -73,3 +73,4 @@ TrainerClassDVs:
 	dn 15, 13, 13, 14 ; NATE_LEADER
 	dn 15, 13, 13, 14 ; NATE_ELITE_4
 	dn 15, 13, 13, 14 ; POKEMON_PROF
+	dn 15, 13, 13, 14 ; BATTLE_PC

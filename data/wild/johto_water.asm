@@ -52,9 +52,9 @@ JohtoWaterWildMons:
 
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 2 percent ; encounter rate
-	dbw 18, GOLDEEN
-	dbw 23, MARILL
-	dbw 23, SEAKING
+	dbw 62, GOLDEEN
+	dbw 67, MARILL
+	dbw 67, SEAKING
 
 	map_id MOUNT_MORTAR_B1F
 	db 2 percent ; encounter rate
@@ -82,9 +82,9 @@ JohtoWaterWildMons:
 
 	map_id SILVER_CAVE_ROOM_2
 	db 2 percent ; encounter rate
-	dbw 33, SEAKING
-	dbw 33, GOLDUCK
-	dbw 33, GOLDEEN
+	dbw 83, FLOATZEL
+	dbw 83, CLAUNCHER
+	dbw 83, MILOTIC
 
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 2 percent ; encounter rate
@@ -226,8 +226,8 @@ JohtoWaterWildMons:
 
 	map_id SILVER_CAVE_OUTSIDE
 	db 2 percent ; encounter rate
-	dbw 33, POLIWHIRL
-	dbw 38, POLIWHIRL
-	dbw 33, POLIWAG
+	dbw 83, POLIWRATH
+	dbw 88, POLITOED
+	dbw 53, FEEBAS
 
 	db -1 ; end

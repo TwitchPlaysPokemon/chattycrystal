@@ -86,7 +86,7 @@ RadioTower5FRocketBossScene:
 	closetext
 	winlosstext RadioTower5FRocketBossWinText, 0
 	setlasttalked RADIOTOWER5F_ROCKET
-	loadtrainer RED_LARRY, LARRY_R
+	loadtrainer RED_LARRY, LARRY_R1
 	startbattle
 	reloadmapafterbattle
 	opentext

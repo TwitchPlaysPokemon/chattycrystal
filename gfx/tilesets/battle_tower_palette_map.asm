@@ -15,4 +15,5 @@ rept 16
 	db $ff
 endr
 
-	tilepal 1, GRAY, WATER, WATER, WATER
+	tilepal 1, GRAY, WATER, WATER, WATER, GRAY, GRAY, GRAY, GRAY
+	tilepal 1, GRAY, GRAY, RED, RED, RED, RED

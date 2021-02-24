@@ -317,14 +317,14 @@ FramesPointers:
 	dba LatiosFrames
 	dba KyogreFrames
 	dba GroudonFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Turtwig
+	dba TurtwigFrames
 	dba GrotleFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Torterra
-	dba PlaceholderFrames ; PLACEHOLDER - Chimchar
+	dba TorterraFrames
+	dba ChimcharFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Monferno
 	dba PlaceholderFrames ; PLACEHOLDER - Infernape
 	dba PiplupFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Prinplup
+	dba PrinplupFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Empoleon
 	dba BidoofFrames
 	dba BibarelFrames
@@ -368,7 +368,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Eelektrik
 	dba PlaceholderFrames ; PLACEHOLDER - Eelektross
 	dba LitwickFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Lampent
+	dba LampentFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Chandelure
 	dba PlaceholderFrames ; PLACEHOLDER - Clauncher
 	dba PlaceholderFrames ; PLACEHOLDER - Clawitzer
@@ -377,9 +377,9 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Amaura
 	dba PlaceholderFrames ; PLACEHOLDER - Aurorus
 	dba SylveonFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Goomy
+	dba GoomyFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Sliggoo
-	dba PlaceholderFrames ; PLACEHOLDER - Goodra
+	dba GoodraFrames
 	dba CrabrawlerFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Crabominable
 	dba PlaceholderFrames ; PLACEHOLDER - Cutiefly

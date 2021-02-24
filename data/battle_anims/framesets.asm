@@ -191,6 +191,11 @@ BattleAnimFrameData:
 	dw .Frameset_bc ; BATTLEANIMFRAMESET_BC
 	dw .Frameset_bd ; BATTLEANIMFRAMESET_BD
 	dw .Frameset_be ; BATTLEANIMFRAMESET_BE
+	dw .Frameset_bf ; BATTLEANIMFRAMESET_BF
+	dw .Frameset_c0 ; BATTLEANIMFRAMESET_C0
+	dw .Frameset_c1 ; BATTLEANIMFRAMESET_C1
+	dw .Frameset_c2 ; BATTLEANIMFRAMESET_C2
+	dw .Frameset_c3 ; BATTLEANIMFRAMESET_C3
 
 .Frameset_00:
 	frame BATTLEANIMOAMSET_00,  6
@@ -1298,3 +1303,33 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_03,  4
 	frame BATTLEANIMOAMSET_01,  1
 	dorestart
+	
+.Frameset_bf:
+	frame BATTLEANIMOAMSET_CD,  1
+	frame BATTLEANIMOAMSET_CE,  1
+	frame BATTLEANIMOAMSET_CD,  1
+	frame BATTLEANIMOAMSET_CE,  1
+	frame BATTLEANIMOAMSET_CD,  1
+	frame BATTLEANIMOAMSET_CE,  1
+	frame BATTLEANIMOAMSET_CD,  1
+	frame BATTLEANIMOAMSET_CE,  2
+	delanim
+	
+.Frameset_c0:
+	frame BATTLEANIMOAMSET_DB,  8
+	endanim
+	
+.Frameset_c1:    
+    frame BATTLEANIMOAMSET_54, 40
+    endanim
+	
+.Frameset_c2:
+	frame BATTLEANIMOAMSET_DC,  8
+	endanim
+	
+.Frameset_c3:
+	frame BATTLEANIMOAMSET_1E,  3
+	frame BATTLEANIMOAMSET_55,  3
+	frame BATTLEANIMOAMSET_54,  3
+	frame BATTLEANIMOAMSET_53,  3
+	delanim

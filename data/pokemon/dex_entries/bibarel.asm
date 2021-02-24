@@ -2,7 +2,7 @@
 	dw 303, 694 ; height, weight
 
 	db   "It busily makes"
-	next "its next with"
+	next "its nest with"
 	next "stacks of branches"
 
 	page "and roots it has"

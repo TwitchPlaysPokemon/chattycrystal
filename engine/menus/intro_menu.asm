@@ -168,7 +168,7 @@ _ResetWRAM:
 	ld [wRoamMon1Species], a
 	ld [wRoamMon2Species], a
 	ld [wRoamMon3Species], a
-	ld a, -1
+	dec a
 	ld [wRoamMon1MapGroup], a
 	ld [wRoamMon2MapGroup], a
 	ld [wRoamMon3MapGroup], a

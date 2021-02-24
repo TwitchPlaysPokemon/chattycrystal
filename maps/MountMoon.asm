@@ -28,7 +28,7 @@ MountMoon_MapScripts:
 	closetext
 	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
 	setlasttalked MOUNTMOON_SILVER
-	loadtrainer AC_CHRIS, EVAN3
+	loadtrainer BABA, BABA4
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
@@ -151,4 +151,4 @@ MountMoon_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  7,  3, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL
+	object_event  7,  3, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL

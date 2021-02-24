@@ -4428,11 +4428,10 @@ ItemRecoveryAnim:
 	call SwitchTurnCore
 	xor a
 	ld [wNumHits], a
-	if HIGH(RECOVER)
-		ld a, HIGH(RECOVER)
-	endc
+	assert HIGH(ANIM_HELD_ITEM_TRIGGER) == $FF
+	dec a
 	ld [wFXAnimID + 1], a
-	ld a, LOW(RECOVER)
+	ld a, LOW(ANIM_HELD_ITEM_TRIGGER)
 	ld [wFXAnimID], a
 	predef PlayBattleAnim
 	call SwitchTurnCore
@@ -7067,8 +7066,12 @@ GiveExperiencePoints:
 	ret nz
 
 	ld a, [wInBattleTowerBattle]
-	bit 0, a
-	ret nz
+	rra
+	ret c
+
+	ld a, [wOtherTrainerClass]
+	cp BATTLE_PC
+	ret z
 
 	call .EvenlyDivideExpAmongParticipants
 	xor a

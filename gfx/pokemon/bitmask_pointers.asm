@@ -317,14 +317,14 @@ BitmasksPointers:
 	dw LatiosBitmasks
 	dw KyogreBitmasks
 	dw GroudonBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Turtwig
+	dw TurtwigBitmasks
 	dw GrotleBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Torterra
-	dw PlaceholderBitmasks ; PLACEHOLDER - Chimchar
+	dw TorterraBitmasks
+	dw ChimcharBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Monferno
 	dw PlaceholderBitmasks ; PLACEHOLDER - Infernape
 	dw PiplupBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Prinplup
+	dw PrinplupBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Empoleon
 	dw BidoofBitmasks
 	dw BibarelBitmasks
@@ -368,7 +368,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Eelektrik
 	dw PlaceholderBitmasks ; PLACEHOLDER - Eelektross
 	dw LitwickBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Lampent
+	dw LampentBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Chandelure
 	dw PlaceholderBitmasks ; PLACEHOLDER - Clauncher
 	dw PlaceholderBitmasks ; PLACEHOLDER - Clawitzer
@@ -377,9 +377,9 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Amaura
 	dw PlaceholderBitmasks ; PLACEHOLDER - Aurorus
 	dw SylveonBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Goomy
+	dw GoomyBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sliggoo
-	dw PlaceholderBitmasks ; PLACEHOLDER - Goodra
+	dw GoodraBitmasks
 	dw CrabrawlerBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Crabominable
 	dw PlaceholderBitmasks ; PLACEHOLDER - Cutiefly

@@ -49,7 +49,7 @@ WillScript_Battle:
 	waitbutton
 	closetext
 	winlosstext WillScript_WillBeatenText, 0
-	loadtrainer GREEN_MAY, A_EMERALD
+	loadtrainer XY_SERENA2, ETR
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_WILL
@@ -79,51 +79,9 @@ WillsRoom_EnterMovement:
 	step_end
 
 WillScript_WillBeforeText:
-	text "Welcome to #MON"
-	line "LEAGUE, <PLAYER>."
-
-	para "Allow me to intro-"
-	line "duce myself. I am"
-	cont "WILL."
-
-	para "I have trained all"
-	line "around the world,"
-
-	para "making my psychic"
-	line "#MON powerful."
-
-	para "And, at last, I've"
-	line "been accepted into"
-	cont "the ELITE FOUR."
-
-	para "I can only keep"
-	line "getting better!"
-
-	para "Losing is not an"
-	line "option!"
-	done
-
 WillScript_WillBeatenText:
-	text "I… I can't…"
-	line "believe it…"
-	done
-
 WillScript_WillDefeatText:
-	text "Even though I was"
-	line "defeated, I won't"
-	cont "change my course."
-
-	para "I will continue"
-	line "battling until I"
-
-	para "stand above all"
-	line "trainers!"
-
-	para "Now, <PLAYER>, move"
-	line "on and experience"
-
-	para "the true ferocity"
-	line "of the ELITE FOUR."
+	text "<...>"
 	done
 
 WillsRoom_MapEvents:
@@ -139,4 +97,4 @@ WillsRoom_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  5,  7, SPRITE_WILL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, WillScript_Battle, -1
+	object_event  5,  7, SPRITE_SERENA2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WillScript_Battle, -1

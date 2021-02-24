@@ -1016,3 +1016,6 @@ MtSilverRuins_Blocks:
 
 MtSilverRuinsB1F_Blocks:
 	INCBIN "maps/MtSilverRuinsB1F.blk"
+
+PowerPlantB1F_Blocks:
+	INCBIN "maps/PowerPlantB1F.blk"

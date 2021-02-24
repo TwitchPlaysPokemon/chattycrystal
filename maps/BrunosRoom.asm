@@ -49,7 +49,7 @@ BrunoScript_Battle:
 	waitbutton
 	closetext
 	winlosstext BrunoScript_BrunoBeatenText, 0
-	loadtrainer NATE_ELITE_4, R_BLACK22
+	loadtrainer BROWN, PAUL_B
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_BRUNO
@@ -98,4 +98,4 @@ BrunosRoom_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  5,  7, SPRITE_BRUNO, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BrunoScript_Battle, -1
+	object_event  5,  7, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BrunoScript_Battle, -1

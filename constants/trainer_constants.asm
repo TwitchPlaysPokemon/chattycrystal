@@ -35,6 +35,9 @@ CHRIS EQU __enum__
 	const JED
 	const MARC
 	const RICH
+	const BRAYDON
+	const GIDEON
+	const TAYLOR
 
 	trainerclass YOUNGSTER ; 3
 	const JOEY1
@@ -95,7 +98,6 @@ CHRIS EQU __enum__
 	const JOSE2
 	const PERRY
 	const BRET
-	const JOSE3
 	const VANCE2
 	const VANCE3
 
@@ -128,7 +130,6 @@ CHRIS EQU __enum__
 	const GAVEN2
 	const RYAN
 	const JAKE
-	const GAVEN3
 	const BLAKE
 	const BRIAN
 	const ERICK
@@ -139,6 +140,7 @@ CHRIS EQU __enum__
 	const STEVE
 	const ALLEN
 	const DARIN
+	const YUJI
 
 	trainerclass COOLTRAINERF ; 8
 	const GWEN
@@ -158,9 +160,7 @@ CHRIS EQU __enum__
 	const EMMA
 	const CYBIL
 	const JENN
-	const BETH3
 	const REENA2
-	const REENA3
 	const CARA
 
 	trainerclass BEAUTY ; 9
@@ -299,7 +299,7 @@ CHRIS EQU __enum__
 
 	trainerclass SWIMMERM ; 11
 	const HAROLD
-	const SIMON
+	const SIMON_S
 	const RANDALL
 	const CHARLIE
 	const GEORGE
@@ -416,6 +416,9 @@ CHRIS EQU __enum__
 	const DUNCAN
 	const EDDIE
 	const COREY
+	const JAC
+	const DUSTY
+	const SIMON_B
 
 	trainerclass FIREBREATHER ; 19
 	const OTIS
@@ -635,12 +638,13 @@ CHRIS EQU __enum__
 	const EVAN2
 	const EVAN3
 	const EVAN4
+	const EVAN5
 
 	trainerclass FC_CHRIS ; 31
 	const Y_FUSEDCRYSTAL
 
 	trainerclass BRENDAN_KANTO_LEADER ; 32
-	const RTHASZS
+	const EEBNERT
 
 	trainerclass FRLG_LEAF ; 33
 	const A_FIRERED
@@ -680,7 +684,8 @@ CHRIS EQU __enum__
 	const CYAN
 
 	trainerclass RED_LARRY ; 3e
-	const LARRY_R
+	const LARRY_R1
+	const LARRY_R2
 
 	trainerclass GREEN_MAY ; 3f
 	const A_EMERALD
@@ -705,7 +710,6 @@ CHRIS EQU __enum__
 	const AJDNNW2
 	const AJDNNW3
 	const AJDNNW4
-	const AJDNNW5
 
 	trainerclass RED_JOHTO_LEADER ; 45
 	const AIIIAAB1
@@ -719,7 +723,10 @@ CHRIS EQU __enum__
 	trainerclass NATE_ELITE_4 ; 48
 	const R_BLACK22
 
-	trainerclass POKEMON_PROF ;49
+	trainerclass POKEMON_PROF ; 49
+
+	trainerclass BATTLE_PC    ; 4a
+	const MIRROR_PC
 
 KRIS EQU __enum__
 

@@ -364,6 +364,10 @@ MoveDescriptions1:
 	dw DracoMeteorDescription
 	dw CalmMindDescription
 	dw MudShotDescription
+	dw MementoDescription
+	dw PoisonJabDescription
+	dw DarkPulseDescription
+	dw RockBlastDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -492,6 +496,7 @@ IronHeadDescription:
 NeedleArmDescription:
 SteamrollerDescription:
 ZenHeadbuttDescription:
+DarkPulseDescription:
 	db   "An attack that may"
 	next "make foe flinch.@"
 
@@ -543,6 +548,7 @@ TailWhipDescription:
 	next "DEFENSE.@"
 
 PoisonStingDescription:
+PoisonJabDescription:
 	db   "An attack that may"
 	next "poison the target.@"
 
@@ -1232,6 +1238,7 @@ DetectDescription:
 	db   "Evades attack that"
 	next "turn. It may fail.@"
 
+RockBlastDescription:
 BoneRushDescription:
 	db   "An attack that"
 	next "hits 2-5 times.@"
@@ -1629,3 +1636,7 @@ KnockOffDescription:
 WaterSpoutDescription:
 	db   "Deals more damage"
 	next "for healthy users.@"
+
+MementoDescription:
+	db   "Faints, lowering"
+	next "ATK and SPCL.ATK.@"

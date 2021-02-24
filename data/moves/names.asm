@@ -358,3 +358,7 @@ MoveNames::
 	db "DRACO METEOR@"
 	db "CALM MIND@"
 	db "MUD SHOT@"
+	db "MEMENTO@"
+	db "POISON JAB@"
+	db "DARK PULSE@"
+	db "ROCK BLAST@"

@@ -74,3 +74,4 @@ TrainerGroups:
 	dba NateLeaderGroup
 	dba NateElite4Group
 	dba PokemonProfessorGroup
+	dba BattlePCGroup

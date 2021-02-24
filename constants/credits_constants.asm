@@ -130,6 +130,10 @@
 	const FUTURESUSHI
 	const RAINBOWDEVS
 	const RANGI42
+	const MMMMMMMMMMMMMMMMM
+	const PIGU
+	const SCARLAX
+	const NUUK
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7

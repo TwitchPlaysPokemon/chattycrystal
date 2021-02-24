@@ -236,7 +236,21 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_STAR_BURST
 	const ANIM_OBJ_AIR_CUTTER
 	const ANIM_OBJ_OVERHEAT
+	const ANIM_OBJ_ROCK_TOMB
 	const ANIM_OBJ_MUDDY_WATER
+	const ANIM_OBJ_METEOR
+	const ANIM_OBJ_POLLEN_PUFF
+	const ANIM_OBJ_BALL_POOF_YELLOW
+	const ANIM_OBJ_HAMMER_ARM
+	const ANIM_OBJ_DAZZLE
+	const ANIM_OBJ_MOONBLAST
+	const ANIM_OBJ_MOON
+	const ANIM_OBJ_MUD_SHOT
+	const ANIM_OBJ_MUD_SPLASH
+	const ANIM_OBJ_ROOST
+	const ANIM_OBJ_ROCK_BLAST
+	const ANIM_OBJ_DARK_PULSE
+	const ANIM_OBJ_DRAGON_PULSE
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def
@@ -322,6 +336,9 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMFUNC_4F
 	const BATTLEANIMFUNC_50
 	const BATTLEANIMFUNC_51
+	const BATTLEANIMFUNC_52
+	const BATTLEANIMFUNC_53
+	const BATTLEANIMFUNC_54
 
 ; BattleAnimFrameData indexes (see data/battle_anims/framesets.asm)
 	const_def
@@ -516,6 +533,11 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMFRAMESET_BC
 	const BATTLEANIMFRAMESET_BD
 	const BATTLEANIMFRAMESET_BE
+	const BATTLEANIMFRAMESET_BF
+	const BATTLEANIMFRAMESET_C0
+	const BATTLEANIMFRAMESET_C1
+	const BATTLEANIMFRAMESET_C2
+	const BATTLEANIMFRAMESET_C3
 
 ; BattleAnimOAMData indexes (see data/battle_anims/oam.asm)
 	const_def
@@ -738,6 +760,8 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMOAMSET_D8
 	const BATTLEANIMOAMSET_D9
 	const BATTLEANIMOAMSET_DA
+	const BATTLEANIMOAMSET_DB
+	const BATTLEANIMOAMSET_DC
 
 ; BattleBGEffects indexes (see engine/battle_anims/bg_effects.asm)
 	const_def 1
@@ -841,6 +865,8 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_GFX_TAUNT
 	const ANIM_GFX_MINI
 	const ANIM_GFX_STARS
+	const ANIM_GFX_METEOR
+	const ANIM_GFX_MOON
 
 ; battle_bg_effect struct members (see macros/wram.asm)
 	const_def

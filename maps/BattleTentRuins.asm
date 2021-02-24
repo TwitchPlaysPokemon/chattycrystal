@@ -3,14 +3,14 @@ BattleTentRuins_MapScripts:
 
 	db 0 ; callbacks
 
-MapBattleTentRuinsDoorScript:
-	loadfont
-	writetext MapBattleTentRuinsDoorText
-	closetext
-	end
+BattleTentRuinsPC:
+	jumptext .status_text
 
-MapBattleTentRuinsDoorText:
-	text "It's locked<...>"
+.status_text
+	text "BATTLE PC status:"
+
+	para "Mirror match"
+	line "module loaded."
 	done
 
 BattleTentRuins_MapEvents:
@@ -25,6 +25,6 @@ BattleTentRuins_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event 5, 0, BGEVENT_READ, MapBattleTentRuinsDoorScript
+	bg_event 4, 4, BGEVENT_UP, BattleTentRuinsPC
 
 	db 0 ; object events

@@ -3,6 +3,7 @@
 	const POWERPLANT_GYM_GUY1
 	const POWERPLANT_GYM_GUY2
 	const POWERPLANT_OFFICER2
+	const POWERPLANT_OFFICER3
 	const POWERPLANT_GYM_GUY3
 	const POWERPLANT_MANAGER
 	const POWERPLANT_FOREST
@@ -114,6 +115,14 @@ PowerPlantOfficer2Script:
 	waitbutton
 	closetext
 	end
+	
+PowerPlantOfficer3Script:
+	faceplayer
+	opentext
+	writetext PowerPlantOfficer3Text
+	waitbutton
+	closetext
+	end
 
 PowerPlantGymGuy4Script:
 	faceplayer
@@ -165,6 +174,7 @@ PowerPlantManager:
 	setevent EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH
 	setevent EVENT_ROUTE_24_ROCKET
 	setevent EVENT_RESTORED_POWER_TO_KANTO
+	disappear POWERPLANT_OFFICER3
 	clearevent EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
 .ReturnedMachinePart:
 	checkevent EVENT_GOT_HM07_WATERFALL
@@ -379,13 +389,26 @@ PowerPlantManagerMyBelovedGeneratorText:
 	para "Keep pumping the"
 	line "electricity out!"
 	done
+	
+PowerPlantOfficer3Text:
+	text "There's strong"
+	line "wild #MON in"
+	cont "the basement."
+	
+	para "It's best not"
+	line "to go inside"
+	cont "right now."
+	
+	done
 
 PowerPlant_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
+	db 4 ; warp events
 	warp_event  2, 17, ROUTE_10_NORTH, 2
 	warp_event  3, 17, ROUTE_10_NORTH, 2
+	warp_event 19,  3, POWER_PLANT_B1F, 1
+	warp_event  1,  3, POWER_PLANT_B1F, 2
 
 	db 1 ; coord events
 	coord_event  5, 12, SCENE_POWERPLANT_GUARD_GETS_PHONE_CALL, PowerPlantGuardPhoneScript
@@ -394,11 +417,12 @@ PowerPlant_MapEvents:
 	bg_event  0,  1, BGEVENT_READ, PowerPlantBookshelf
 	bg_event  1,  1, BGEVENT_READ, PowerPlantBookshelf
 
-	db 7 ; object events
+	db 8 ; object events
 	object_event  4, 14, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PowerPlantOfficerScript, -1
 	object_event  2,  9, SPRITE_GYM_GUY, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PowerPlantGymGuy1Script, -1
 	object_event  6, 11, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PowerPlantGymGuy2Script, -1
 	object_event  9,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PowerPlantOfficer2Script, -1
+	object_event  19,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PowerPlantOfficer3Script, EVENT_RESTORED_POWER_TO_KANTO
 	object_event  7,  2, SPRITE_GYM_GUY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PowerPlantGymGuy4Script, -1
-	object_event 14, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PowerPlantManager, EVENT_MET_ROCKET_GRUNT_AT_CERULEAN_GYM
+	object_event 14, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PowerPlantManager, -1
 	object_event  5,  5, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Forest, -1

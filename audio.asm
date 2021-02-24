@@ -28,7 +28,7 @@ INCLUDE "audio/music/titlescreen.asm"
 INCLUDE "audio/music/ruinsofalphinterior.asm"
 INCLUDE "audio/music/lookpokemaniac.asm"
 INCLUDE "audio/music/trainervictory.asm"
-
+INCLUDE "audio/music/custom/battlearcadebattle.asm"
 
 SECTION "Songs 2", ROMX
 
@@ -157,6 +157,15 @@ INCLUDE "audio/music/custom/hoohbattle.asm"
 INCLUDE "audio/music/custom/lugiabattle.asm"
 INCLUDE "audio/music/custom/ceruleanGSC.asm"
 INCLUDE "audio/music/custom/nuggetbridge.asm"
+INCLUDE "audio/music/custom/silphco.asm"
+
+SECTION "Extra Songs 5", ROMX
+
+INCLUDE "audio/music/custom/championbattleRSE.asm"
+INCLUDE "audio/music/custom/championbattleB2W2.asm"
+INCLUDE "audio/music/custom/championRB.asm"
+INCLUDE "audio/music/custom/gymleaderbattleXY.asm"
+INCLUDE "audio/music/custom/gymleaderprism.asm"
 
 SECTION "Sound Effects", ROMX
 

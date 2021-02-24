@@ -16,9 +16,9 @@ KantoWaterWildMons:
 
 	map_id ROUTE_4
 	db 4 percent ; encounter rate
-	dbw 10, BUIZEL
-	dbw 5, GOLDEEN
-	dbw 10, FLOATZEL
+	dbw 65, SHELLOS
+	dbw 60, GOLDEEN
+	dbw 65, SEAKING
 
 	map_id ROUTE_6
 	db 2 percent ; encounter rate
@@ -52,27 +52,27 @@ KantoWaterWildMons:
 
 	map_id ROUTE_19
 	db 6 percent ; encounter rate
-	dbw 35, SPHEAL
-	dbw 30, WAILMER
-	dbw 35, TENTACRUEL
+	dbw 65, SPHEAL
+	dbw 60, WAILORD
+	dbw 65, TENTACRUEL
 
 	map_id ROUTE_20
 	db 6 percent ; encounter rate
-	dbw 35, TENTACOOL
-	dbw 30, TENTACOOL
-	dbw 35, TENTACRUEL
+	dbw 65, TENTACRUEL
+	dbw 60, WAILORD
+	dbw 65, SEALEO
 
 	map_id ROUTE_21
 	db 6 percent ; encounter rate
-	dbw 35, TENTACOOL
-	dbw 30, TENTACOOL
-	dbw 35, TENTACRUEL
+	dbw 65, TENTACRUEL
+	dbw 60, WAILORD
+	dbw 65, BLASTOISE
 
 	map_id ROUTE_22
 	db 2 percent ; encounter rate
-	dbw 60, SURSKIT
-	dbw 58, POLIWAG
-	dbw 60, POLIWHIRL
+	dbw 60, MASQUERAIN
+	dbw 58, POLIWRATH
+	dbw 60, SWANNA
 
 	map_id ROUTE_24
 	db 4 percent ; encounter rate
@@ -88,33 +88,33 @@ KantoWaterWildMons:
 
 	map_id ROUTE_26
 	db 6 percent ; encounter rate
-	dbw 30, TENTACOOL
-	dbw 25, TENTACOOL
-	dbw 30, TENTACRUEL
+	dbw 65, TENTACRUEL
+	dbw 70, WAILORD
+	dbw 65, TENTACRUEL
 
 	map_id ROUTE_27
 	db 6 percent ; encounter rate
-	dbw 28, TENTACOOL
-	dbw 23, TENTACOOL
+	dbw 28, TENTACRUEL
+	dbw 33, WAILORD
 	dbw 28, TENTACRUEL
 
 	map_id ROUTE_28
 	db 2 percent ; encounter rate
-	dbw 40, SURSKIT
-	dbw 35, POLIWAG
-	dbw 40, POLIWHIRL
+	dbw 90, MASQUERAIN
+	dbw 93, POLITOED
+	dbw 50, FEEBAS
 
 	map_id PALLET_TOWN
 	db 6 percent ; encounter rate
-	dbw 35, TENTACOOL
-	dbw 30, TENTACOOL
-	dbw 35, TENTACRUEL
+	dbw 65, TENTACOOL
+	dbw 60, TENTACOOL
+	dbw 65, LAPRAS
 
 	map_id VIRIDIAN_CITY
 	db 2 percent ; encounter rate
-	dbw 10, SURSKIT
-	dbw 5, SURSKIT
-	dbw 10, POLIWHIRL
+	dbw 60, SURSKIT
+	dbw 65, MASQUERAIN
+	dbw 60, POLIWRATH
 
 	map_id CERULEAN_CITY
 	db 4 percent ; encounter rate
@@ -169,5 +169,17 @@ KantoWaterWildMons:
 	dbw 56, REMORAID
 	dbw 51, BUIZEL
 	dbw 56, MUDKIP
+	
+	map_id SEAFOAM_ISLANDS_B4F
+	db 4 percent ; encounter rate
+	dbw 66, STARMIE
+	dbw 66, OMASTAR
+	dbw 66, KABUTOPS
+	
+	map_id ROUTE_23
+	db 4 percent ; encounter rate
+	dbw 69, GOLDUCK
+	dbw 71, SWANNA
+	dbw 69, POLIWRATH
 
 	db -1 ; end

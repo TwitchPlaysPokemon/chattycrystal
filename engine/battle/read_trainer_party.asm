@@ -30,12 +30,12 @@ ReadTrainerParty:
 	dec a
 	ld c, a
 	ld b, 0
-	ld hl, TrainerGroups ;go to correct trainer group pointer
+	ld hl, TrainerGroups
 	add hl, bc
 	add hl, bc
 	add hl, bc
 	ld a, [hli]
-	ld [wTrainerGroupBank], a ;load in the bank
+	ld [wTrainerGroupBank], a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -46,24 +46,24 @@ ReadTrainerParty:
 	dec b
 	jr z, .got_trainer
 .loop
-	ld a, [wTrainerGroupBank] ;jump forward the number of bytes equal to the size of the struct
+	ld a, [wTrainerGroupBank]
 	call GetFarByte
 	add a, l
 	ld l, a
 	jr nc, .skip_trainer
-	inc h ;if carry inc h
+	inc h
 	jr .skip_trainer
 .got_trainer
-	inc hl ;move to next byte once found
+	inc hl
 
 .skip_name
-	call GetNextTrainerDataByte ;go to the end of the name
+	call GetNextTrainerDataByte
 	cp "@"
 	jr nz, .skip_name
 
 	call GetNextTrainerDataByte
-	ld [wOtherTrainerType], a ;holds what kind of data the trainer uses
-	ld d, h ;put the current pointer in de
+	ld [wOtherTrainerType], a
+	ld d, h
 	ld e, l
 	call ReadTrainerPartyPieces
 
@@ -83,13 +83,48 @@ ReadTrainerParty:
 ReadTrainerPartyPieces:
 	ld h, d
 	ld l, e
+	ld a, [wOtherTrainerType]
+	add a, a
+	jr nc, .loop
+	call GetNextTrainerDataByte
+	ld c, a
+	call GetNextTrainerDataByte
+	ld h, a
+	ld l, c
+	inc de
+	inc de
+	ld a, [wTrainerGroupBank]
+	ld b, a
+	ld a, [wOtherTrainerType]
+	and $7f
+	rst FarCall
+	ld a, [wOTPartyCount]
+	ld c, a
+	ld b, 0
+	and a
+	jr z, .empty_party
+	ld de, PARTYMON_STRUCT_LENGTH
+	ld hl, wOTPartyMon1Level
+.level_loop
+	ld a, [hl]
+	add hl, de
+	cp b
+	jr c, .no_level_update
+	ld b, a
+.no_level_update
+	dec c
+	jr nz, .level_loop
+.empty_party
+	ld a, b
+	ld [wCurPartyLevel], a
+	ret
 
 .loop
 	call GetNextTrainerDataByte
 	cp $ff
-	ret z ;if FF, done
+	ret z
 
-	ld [wCurPartyLevel], a ;load in level
+	ld [wCurPartyLevel], a
 	call GetNextTrainerDataByte
 	push hl
 	push af
@@ -98,13 +133,13 @@ ReadTrainerPartyPieces:
 	pop af
 	ld l, a
 	call GetPokemonIDFromIndex
-	ld [wCurPartySpecies], a ;load in species ID
+	ld [wCurPartySpecies], a
 
 	ld a, OTPARTYMON
 	ld [wMonType], a
 	predef TryAddMonToParty
 	pop hl
-	inc hl ;because hl was pushed before the last call to GetNextTrainerDataByte
+	inc hl
 
 	ld a, [wOtherTrainerType]
 	and TRAINERTYPE_ITEM
@@ -117,7 +152,7 @@ ReadTrainerPartyPieces:
 	ld d, h
 	ld e, l
 	pop hl
-	call GetNextTrainerDataByte ;load in item if TRAINERTYPE_ITEM is on
+	call GetNextTrainerDataByte
 	ld [de], a
 .no_item
 
@@ -187,7 +222,7 @@ ReadTrainerPartyPieces:
 	pop hl
 .no_moves
 
-	push hl ;we need to get DV location regardless of branch, so do that before the check
+	push hl
 	ld a, [wOTPartyCount]
 	dec a
 	ld hl, wOTPartyMon1DVs
@@ -195,10 +230,10 @@ ReadTrainerPartyPieces:
 	ld d, h
 	ld e, l
 	pop hl
-	ld a, [wOtherTrainerType] ;TODO if skipped load in DVs via GetTrainerDVs instead
+	ld a, [wOtherTrainerType]
 	and TRAINERTYPE_DVS
-	jr z, .no_dvs ;if DVs not specified, load in defaults
-	call GetNextTrainerDataByte ;load in DVs if TRAINERTYPE_DVs is on
+	jr z, .no_dvs
+	call GetNextTrainerDataByte
 	ld [de], a
 	inc de
 	call GetNextTrainerDataByte
@@ -279,9 +314,6 @@ ReadTrainerPartyPieces:
 	pop hl
 
 .nickname_done
-
-;TODO happiness flag
-
 	jp .loop
 
 ComputeTrainerReward:
@@ -304,13 +336,14 @@ ComputeTrainerReward:
 	ld [hl], a
 	ret
 
-Battle_GetTrainerName:: ;copy trainers name into wStringBuffer1
+Battle_GetTrainerName::
+; copy trainers name into wStringBuffer1
 	ld a, [wInBattleTowerBattle]
 	bit 0, a
 	ld hl, wOTPlayerName
 	ld a, BANK(@)
 	ld [wTrainerGroupBank], a
-	jp nz, CopyTrainerName ;if in battle tower, skip this and get name directly
+	jp nz, CopyTrainerName
 
 	ld a, [wOtherTrainerID]
 	ld b, a
@@ -318,7 +351,8 @@ Battle_GetTrainerName:: ;copy trainers name into wStringBuffer1
 	ld c, a
 	; fallthrough
 
-GetTrainerName:: ;copy trainer class c ID b's name into wStringBuffer1
+GetTrainerName::
+; copy trainer class c ID b's name into wStringBuffer1
 	ld hl, wChattyTrainerClass
 	ld [hl], c
 	ld hl, wChattyTrainerID
@@ -335,7 +369,7 @@ AissCollectClassAndID::
 	call CloseSRAM
 	jr z, .not_cal2
 
-	ld a, BANK(sMysteryGiftPartnerName) ;if trainer house has data, pull name from save data, then leave
+	ld a, BANK(sMysteryGiftPartnerName)
 	call GetSRAMBank
 	ld hl, sMysteryGiftPartnerName
 	call CopyTrainerName
@@ -345,12 +379,12 @@ AissCollectClassAndID::
 	dec c
 	push bc
 	ld b, 0
-	ld hl, TrainerGroups ;go to 3 byte pointer
+	ld hl, TrainerGroups
 	add hl, bc
 	add hl, bc
 	add hl, bc
 	ld a, [hli]
-	ld [wTrainerGroupBank], a ;store trainer bank here and pointer in hl
+	ld [wTrainerGroupBank], a
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
@@ -358,11 +392,11 @@ AissCollectClassAndID::
 
 .loop
 	dec b
-	jr z, .done ;if ID is 0, we're there already, otherwise loop ID times to get the correct party
+	jr z, .done
 
 	ld a, [wTrainerGroupBank]
 	call GetFarByte
-	add a, l ;otherwise, add the distance to the next party to hl
+	add a, l
 	ld l, a
 	jr nc, .loop
 	inc h

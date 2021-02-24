@@ -222,6 +222,7 @@ ENDM
 	command wakeupslap              ; d7
 	command awakenopponent          ; d8
 	command grassknot               ; d9
+	command memento                 ; da
 
 	enum_start $fe
 	command endturn                 ; fe

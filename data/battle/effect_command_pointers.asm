@@ -222,3 +222,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_WakeUpSlap
 	effectfn BattleCommand_AwakenOpponent
 	effectfn BattleCommand_GrassKnot
+	effectfn BattleCommand_Memento

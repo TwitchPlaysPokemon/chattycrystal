@@ -2809,3 +2809,11 @@ GrassKnot:
 	buildopponentrage
 	kingsrock
 	endmove
+
+Memento:
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	memento
+	endmove

@@ -1,11 +1,12 @@
 SpecialAnimations:
-	dw BattleAnim_ThrowPokeBall  ; -16
+	dw BattleAnim_HeldItemTrigger ; -17
+	dw BattleAnim_ThrowPokeBall
 	dw BattleAnim_SendOutMon
 	dw BattleAnim_ReturnMon
 	dw BattleAnim_Confused
 	dw BattleAnim_Slp
 	dw BattleAnim_Brn
-	dw BattleAnim_Psn            ; -10
+	dw BattleAnim_Psn             ; -10
 	dw BattleAnim_Sap
 	dw BattleAnim_Frz
 	dw BattleAnim_Par
@@ -13,7 +14,7 @@ SpecialAnimations:
 	dw BattleAnim_InSandstorm
 	dw BattleAnim_InNightmare
 	dw BattleAnim_InWhirlpool
-	dw BattleAnim_Dummy          ;  -8
+	dw BattleAnim_Dummy           ;  -8
 	dw BattleAnim_EnemyDamage
 	dw BattleAnim_EnemyStatDown
 	dw BattleAnim_PlayerStatDown
@@ -21,6 +22,22 @@ SpecialAnimations:
 	dw BattleAnim_Wobble
 	dw BattleAnim_Shake
 	dw BattleAnim_HitConfusion
+
+BattleAnim_HeldItemTrigger:
+	anim_1gfx ANIM_GFX_BUBBLE
+	anim_sound 0, 0, SFX_FULL_HEAL
+	anim_bgeffect ANIM_BG_18, $0, $1, $40
+	anim_obj ANIM_OBJ_RECOVER, 44, 88, $30
+	anim_obj ANIM_OBJ_RECOVER, 44, 88, $31
+	anim_obj ANIM_OBJ_RECOVER, 44, 88, $32
+	anim_obj ANIM_OBJ_RECOVER, 44, 88, $33
+	anim_obj ANIM_OBJ_RECOVER, 44, 88, $34
+	anim_obj ANIM_OBJ_RECOVER, 44, 88, $35
+	anim_obj ANIM_OBJ_RECOVER, 44, 88, $36
+	anim_obj ANIM_OBJ_RECOVER, 44, 88, $37
+	anim_wait 64
+	anim_incbgeffect ANIM_BG_18
+	anim_ret
 
 BattleAnim_ThrowPokeBall:
 	anim_if_param_equal NO_ITEM, .TheTrainerBlockedTheBall

@@ -317,14 +317,14 @@ AnimationIdlePointers:
 	dw LatiosAnimationIdle
 	dw KyogreAnimationIdle
 	dw GroudonAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Turtwig
+	dw TurtwigAnimationIdle
 	dw GrotleAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Torterra
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chimchar
+	dw TorterraAnimationIdle
+	dw ChimcharAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Monferno
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Infernape
 	dw PiplupAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Prinplup
+	dw PrinplupAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Empoleon
 	dw BidoofAnimationIdle
 	dw BibarelAnimationIdle
@@ -368,7 +368,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Eelektrik
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Eelektross
 	dw LitwickAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Lampent
+	dw LampentAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Chandelure
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Clauncher
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Clawitzer
@@ -377,9 +377,9 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Amaura
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Aurorus
 	dw SylveonAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Goomy
+	dw GoomyAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sliggoo
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Goodra
+	dw GoodraAnimationIdle
 	dw CrabrawlerAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Crabominable
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Cutiefly

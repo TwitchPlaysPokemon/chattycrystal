@@ -196,3 +196,4 @@ MoveEffectsPointers:
 	dw WakeUpSlap
 	dw CalmMind
 	dw GrassKnot
+	dw Memento

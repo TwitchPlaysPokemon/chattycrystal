@@ -17,6 +17,7 @@ CeruleanCaveB1FMewtwo:
 	cry MEWTWO
 	pause 15
 	closetext
+	setevent EVENT_CERULEAN_CAVE_B1F_MEWTWO
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon MEWTWO, 70
 	startbattle

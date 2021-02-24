@@ -59,218 +59,218 @@ JohtoGrassWildMons:
 	map_id TIN_TOWER_2F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; day
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; nite
-	dbw 20, GASTLY
-	dbw 21, GASTLY
-	dbw 22, GASTLY
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, GENGAR
+	dbw 81, DUSKNOIR
+	dbw 82, GENGAR
+	dbw 82, BRONZONG
+	dbw 83, BRONZONG
+	dbw 84, MURKROW
+	dbw 84, MURKROW
 
 	map_id TIN_TOWER_3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; day
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; nite
-	dbw 20, GASTLY
-	dbw 21, GASTLY
-	dbw 22, GASTLY
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, GENGAR
+	dbw 81, DUSKNOIR
+	dbw 82, GENGAR
+	dbw 82, BRONZONG
+	dbw 83, BRONZONG
+	dbw 84, MURKROW
+	dbw 84, MURKROW
 
 	map_id TIN_TOWER_4F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; day
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; nite
-	dbw 20, GASTLY
-	dbw 21, GASTLY
-	dbw 22, GASTLY
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, GENGAR
+	dbw 81, DUSKNOIR
+	dbw 82, GENGAR
+	dbw 82, BRONZONG
+	dbw 83, BRONZONG
+	dbw 84, MURKROW
+	dbw 84, MURKROW
 
 	map_id TIN_TOWER_5F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; day
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; nite
-	dbw 20, GASTLY
-	dbw 21, GASTLY
-	dbw 22, GASTLY
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, GENGAR
+	dbw 81, DUSKNOIR
+	dbw 82, GENGAR
+	dbw 82, BRONZONG
+	dbw 83, BRONZONG
+	dbw 84, MURKROW
+	dbw 84, MURKROW
 
 	map_id TIN_TOWER_6F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; day
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; nite
-	dbw 20, GASTLY
-	dbw 21, GASTLY
-	dbw 22, GASTLY
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, GENGAR
+	dbw 81, DUSKNOIR
+	dbw 82, GENGAR
+	dbw 82, BRONZONG
+	dbw 83, BRONZONG
+	dbw 84, MURKROW
+	dbw 84, MURKROW
 
 	map_id TIN_TOWER_7F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; day
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; nite
-	dbw 20, GASTLY
-	dbw 21, GASTLY
-	dbw 22, GASTLY
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, GENGAR
+	dbw 81, DUSKNOIR
+	dbw 82, GENGAR
+	dbw 82, BRONZONG
+	dbw 83, BRONZONG
+	dbw 84, MURKROW
+	dbw 84, MURKROW
 
 	map_id TIN_TOWER_8F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; day
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, NATU
+	dbw 81, SWABLU
+	dbw 82, NATU
+	dbw 82, BRONZOR
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; nite
-	dbw 20, GASTLY
-	dbw 21, GASTLY
-	dbw 22, GASTLY
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, GENGAR
+	dbw 81, DUSKNOIR
+	dbw 82, GENGAR
+	dbw 82, BRONZONG
+	dbw 83, BRONZONG
+	dbw 84, MURKROW
+	dbw 84, MURKROW
 
 	map_id TIN_TOWER_9F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, ALTARIA
+	dbw 81, ALTARIA
+	dbw 82, XATU
+	dbw 82, BRONZONG
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; day
-	dbw 20, RATTATA
-	dbw 21, RATTATA
-	dbw 22, RATTATA
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, ALTARIA
+	dbw 81, ALTARIA
+	dbw 82, XATU
+	dbw 82, BRONZONG
+	dbw 83, BRONZONG
+	dbw 84, XATU
+	dbw 84, XATU
 	; nite
-	dbw 20, GASTLY
-	dbw 21, GASTLY
-	dbw 22, GASTLY
-	dbw 22, RATTATA
-	dbw 23, RATTATA
-	dbw 24, RATTATA
-	dbw 24, RATTATA
+	dbw 80, GENGAR
+	dbw 81, DUSKNOIR
+	dbw 82, GENGAR
+	dbw 82, BRONZONG
+	dbw 83, BRONZONG
+	dbw 84, MURKROW
+	dbw 84, MURKROW
 
 	map_id BURNED_TOWER_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -626,29 +626,29 @@ JohtoGrassWildMons:
 	map_id MOUNT_MORTAR_2F_INSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 31, GRAVELER
-	dbw 32, MACHOKE
-	dbw 31, SABLEYE
-	dbw 30, RATICATE
-	dbw 28, MACHOP
-	dbw 30, GEODUDE
-	dbw 30, GOLBAT
+	dbw 67, GRAVELER
+	dbw 68, MACHOKE
+	dbw 67, SABLEYE
+	dbw 66, RATICATE
+	dbw 64, MACHOP
+	dbw 66, GEODUDE
+	dbw 66, GOLBAT
 	; day
-	dbw 31, GRAVELER
-	dbw 32, MACHOKE
-	dbw 31, SABLEYE
-	dbw 30, RATICATE
-	dbw 28, MACHOP
-	dbw 30, GEODUDE
-	dbw 30, GOLBAT
+	dbw 67, GRAVELER
+	dbw 68, MACHOKE
+	dbw 67, SABLEYE
+	dbw 66, RATICATE
+	dbw 64, MACHOP
+	dbw 66, GEODUDE
+	dbw 66, GOLBAT
 	; nite
-	dbw 31, GRAVELER
-	dbw 31, SABLEYE
-	dbw 30, RATICATE
-	dbw 30, GOLBAT
-	dbw 28, MARILL
-	dbw 32, GEODUDE
-	dbw 32, GOLBAT
+	dbw 67, GRAVELER
+	dbw 67, SABLEYE
+	dbw 66, RATICATE
+	dbw 66, GOLBAT
+	dbw 64, MARILL
+	dbw 68, GEODUDE
+	dbw 68, GOLBAT
 
 	map_id MOUNT_MORTAR_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -1031,110 +1031,110 @@ JohtoGrassWildMons:
 	map_id SILVER_CAVE_ROOM_1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 43, GRAVELER
-	dbw 44, URSARING
-	dbw 42, ONIX
-	dbw 45, MAGMAR
-	dbw 45, GOLBAT
-	dbw 20, LARVITAR
-	dbw 15, BELDUM
+	dbw 83, GRAVELER
+	dbw 84, URSARING
+	dbw 82, STEELIX
+	dbw 85, MAGMAR
+	dbw 85, GOLBAT
+	dbw 50, BELDUM
+	dbw 45, BELDUM
 	; day
-	dbw 43, GRAVELER
-	dbw 44, URSARING
-	dbw 42, ONIX
-	dbw 45, MAGMAR
-	dbw 45, GOLBAT
-	dbw 20, LARVITAR
-	dbw 15, BELDUM
+	dbw 83, GRAVELER
+	dbw 84, EXPLOUD
+	dbw 82, STEELIX
+	dbw 85, MAGMAR
+	dbw 85, GOLBAT
+	dbw 50, BELDUM
+	dbw 45, BELDUM
 	; nite
-	dbw 43, GRAVELER
-	dbw 44, GOLBAT
-	dbw 42, ONIX
-	dbw 42, GOLBAT
-	dbw 45, GOLDUCK
+	dbw 83, GRAVELER
+	dbw 84, CROBAT
+	dbw 82, STEELIX
+	dbw 82, GOLBAT
+	dbw 85, EELEKTROSS
 	dbw 46, METANG
 	dbw 46, METANG
 
 	map_id SILVER_CAVE_ROOM_2
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 48, GOLBAT
-	dbw 48, MACHOKE
-	dbw 47, URSARING
-	dbw 46, PARASECT
-	dbw 48, AGGRON
-	dbw 15, LARVITAR
-	dbw 20, TRAPINCH
+	dbw 88, CROBAT
+	dbw 88, MACHAMP
+	dbw 87, URSARING
+	dbw 86, TRAPINCH
+	dbw 88, AGGRON
+	dbw 55, LARVITAR
+	dbw 50, LARVITAR
 	; day
-	dbw 48, GOLBAT
-	dbw 48, MACHOKE
-	dbw 47, URSARING
-	dbw 46, PARASECT
-	dbw 48, AGGRON
-	dbw 15, LARVITAR
-	dbw 20, TRAPINCH
+	dbw 88, CROBAT
+	dbw 88, MACHAMP
+	dbw 87, EXPLOUD
+	dbw 86, TRAPINCH
+	dbw 88, AGGRON
+	dbw 45, LARVITAR
+	dbw 50, LARVITAR
 	; nite
-	dbw 48, GOLBAT
-	dbw 48, GOLDUCK
-	dbw 46, AGGRON
-	dbw 46, PARASECT
-	dbw 48, BRONZONG
-	dbw 45, MISDREAVUS
-	dbw 45, VIBRAVA
+	dbw 88, CROBAT
+	dbw 88, EELEKTROSS
+	dbw 86, AGGRON
+	dbw 86, FLYGON
+	dbw 88, BRONZONG
+	dbw 85, MISDREAVUS
+	dbw 85, MISDREAVUS
 
 	map_id SILVER_CAVE_ROOM_3
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 51, GOLBAT
-	dbw 48, ONIX
-	dbw 48, GRAVELER
-	dbw 50, URSARING
-	dbw 49, CRADILY
-	dbw 50, ALTARIA
-	dbw 20, PUPITAR
+	dbw 91, CROBAT
+	dbw 88, STEELIX
+	dbw 88, URSARING
+	dbw 80, ALTARIA
+	dbw 89, CRADILY
+	dbw 50, PUPITAR
+	dbw 50, PUPITAR
 	; day
-	dbw 51, GOLBAT
-	dbw 48, ONIX
-	dbw 48, GOLEM
-	dbw 50, URSARING
-	dbw 49, CRADILY
-	dbw 50, ALTARIA
-	dbw 20, PUPITAR
+	dbw 91, CROBAT
+	dbw 88, STEELIX
+	dbw 88, EXPLOUD
+	dbw 90, ALTARIA
+	dbw 89, CRADILY
+	dbw 50, PUPITAR
+	dbw 50, PUPITAR
 	; nite
-	dbw 51, GOLBAT
-	dbw 48, ONIX
-	dbw 48, GOLEM
-	dbw 49, GOLBAT
-	dbw 45, GOLDUCK
-	dbw 53, ALTARIA
-	dbw 53, GOLBAT
+	dbw 91, CROBAT
+	dbw 88, STEELIX
+	dbw 88, AGGRON
+	dbw 89, ALTARIA
+	dbw 85, GOLDUCK
+	dbw 93, CROBAT
+	dbw 93, CROBAT
 
 	map_id SILVER_CAVE_ITEM_ROOMS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 48, LILEEP
-	dbw 46, SWABLU
-	dbw 50, AMAURA
-	dbw 46, ALTARIA
-	dbw 48, CRADILY
-	dbw 50, AURORUS
-	dbw 52, ALTARIA
+	dbw 88, LILEEP
+	dbw 86, SWABLU
+	dbw 90, AURORUS
+	dbw 86, ALTARIA
+	dbw 88, CRADILY
+	dbw 90, AURORUS
+	dbw 92, ALTARIA
 	; day
-	dbw 48, LILEEP
-	dbw 46, SWABLU
-	dbw 50, AMAURA
-	dbw 46, ALTARIA
-	dbw 48, CRADILY
-	dbw 50, AURORUS
-	dbw 52, ALTARIA
+	dbw 88, LILEEP
+	dbw 86, SWABLU
+	dbw 90, AURORUS
+	dbw 86, ALTARIA
+	dbw 88, CRADILY
+	dbw 90, AURORUS
+	dbw 92, ALTARIA
 	; nite
-	dbw 48, LILEEP
-	dbw 46, SWABLU
-	dbw 50, AMAURA
-	dbw 46, ALTARIA
-	dbw 48, CRADILY
-	dbw 50, AURORUS
-	dbw 52, ALTARIA
+	dbw 88, LILEEP
+	dbw 86, SWABLU
+	dbw 90, AURORUS
+	dbw 86, ALTARIA
+	dbw 88, CRADILY
+	dbw 90, AURORUS
+	dbw 92, ALTARIA
 
 	map_id DARK_CAVE_VIOLET_ENTRANCE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1625,28 +1625,28 @@ JohtoGrassWildMons:
 	map_id SILVER_CAVE_OUTSIDE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 41, TANGELA
-	dbw 42, PONYTA
-	dbw 42, ARBOK
-	dbw 44, RAPIDASH
-	dbw 41, DODUO
-	dbw 43, ABSOL
-	dbw 43, DODRIO
+	dbw 81, TANGELA
+	dbw 82, PONYTA
+	dbw 82, SLIGGOO
+	dbw 84, RAPIDASH
+	dbw 81, ARBOK
+	dbw 83, SHELGON
+	dbw 83, SHELGON
 	; day
-	dbw 41, TANGELA
-	dbw 42, PONYTA
-	dbw 42, ARBOK
-	dbw 44, RAPIDASH
-	dbw 41, DODUO
-	dbw 43, DODRIO
-	dbw 43, ABSOL
+	dbw 81, TANGELA
+	dbw 82, PONYTA
+	dbw 82, SLIGGOO
+	dbw 84, RAPIDASH
+	dbw 81, ARBOK
+	dbw 83, SHELGON
+	dbw 83, SHELGON
 	; nite
-	dbw 41, TANGELA
-	dbw 42, ABSOL
-	dbw 42, POLIWHIRL
-	dbw 44, POLIWHIRL
-	dbw 40, GOLBAT
-	dbw 44, GOLBAT
-	dbw 44, GOLBAT
+	dbw 81, TANGELA
+	dbw 82, ABSOL
+	dbw 82, POLIWRATH
+	dbw 84, POLITOED
+	dbw 80, CROBAT
+	dbw 84, HOUNDOOM
+	dbw 84, ABSOL
 
 	db -1 ; end

@@ -425,8 +425,11 @@ INCLUDE "engine/events/bug_contest/display_stats.asm"
 
 SECTION "Move Animation Scripts", ROMX
 
-INCLUDE "engine/battle_anims/bg_effects.asm"
 INCLUDE "data/battle_anims/move_animations.asm"
+
+SECTION "Move Animation BG effects", ROMX
+
+INCLUDE "engine/battle_anims/bg_effects.asm"
 
 
 SECTION "Move Animations", ROMX

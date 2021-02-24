@@ -317,14 +317,14 @@ AnimationPointers:
 	dw LatiosAnimation
 	dw KyogreAnimation
 	dw GroudonAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Turtwig
+	dw TurtwigAnimation
 	dw GrotleAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Torterra
-	dw PlaceholderAnimation ; PLACEHOLDER - Chimchar
+	dw TorterraAnimation
+	dw ChimcharAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Monferno
 	dw PlaceholderAnimation ; PLACEHOLDER - Infernape
 	dw PiplupAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Prinplup
+	dw PrinplupAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Empoleon
 	dw BidoofAnimation
 	dw BibarelAnimation
@@ -368,7 +368,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Eelektrik
 	dw PlaceholderAnimation ; PLACEHOLDER - Eelektross
 	dw LitwickAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Lampent
+	dw LampentAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Chandelure
 	dw PlaceholderAnimation ; PLACEHOLDER - Clauncher
 	dw PlaceholderAnimation ; PLACEHOLDER - Clawitzer
@@ -377,9 +377,9 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Amaura
 	dw PlaceholderAnimation ; PLACEHOLDER - Aurorus
 	dw SylveonAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Goomy
+	dw GoomyAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Sliggoo
-	dw PlaceholderAnimation ; PLACEHOLDER - Goodra
+	dw GoodraAnimation
 	dw CrabrawlerAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Crabominable
 	dw PlaceholderAnimation ; PLACEHOLDER - Cutiefly

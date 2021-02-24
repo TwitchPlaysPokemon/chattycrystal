@@ -3325,57 +3325,52 @@ BattleAnim_Tickle:
 	
 BattleAnim_Extrasensory:
 	anim_1gfx ANIM_GFX_SHINE
-    anim_sound 0, 1, SFX_CUT
-    anim_bgp $1b
-    anim_obj ANIM_OBJ_GLIMMER, 64, 88, $0
-    anim_wait 16
-    anim_call BattleAnim_UserObj_2Row
-    anim_sound 0, 1, SFX_CUT
-    anim_bgeffect ANIM_BG_NIGHT_SHADE, $0, $0, $8
-    anim_obj ANIM_OBJ_GLIMMER, 64, 88, $0
-    anim_wait 16
-    anim_incbgeffect ANIM_BG_NIGHT_SHADE
-    anim_wait 8
-    anim_clearobjs
-    anim_call BattleAnim_UserObj_2Row
-    anim_sound 0, 1, SFX_CUT
-    anim_bgeffect ANIM_BG_TELEPORT, $0, $0, $0
-    anim_obj ANIM_OBJ_GLIMMER, 64, 88, $0
-    anim_wait 4
-    anim_sound 0, 1, SFX_PSYCHIC
-    anim_wait 64
-    anim_incbgeffect ANIM_BG_TELEPORT
-    anim_call BattleAnim_ShowMon_1
-    anim_ret
+	anim_sound 0, 1, SFX_CUT
+	anim_bgp $1b
+	anim_obj ANIM_OBJ_GLIMMER, 64, 88, $0
+	anim_wait 16
+	anim_call BattleAnim_UserObj_2Row
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_NIGHT_SHADE, $0, $0, $8
+	anim_obj ANIM_OBJ_GLIMMER, 64, 88, $0
+	anim_wait 16
+	anim_incbgeffect ANIM_BG_NIGHT_SHADE
+	anim_wait 8
+	anim_clearobjs
+	anim_call BattleAnim_UserObj_2Row
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_TELEPORT, $0, $0, $0
+	anim_obj ANIM_OBJ_GLIMMER, 64, 88, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_PSYCHIC
+	anim_wait 64
+	anim_incbgeffect ANIM_BG_TELEPORT
+	anim_call BattleAnim_ShowMon_1
+	anim_ret
 	
 BattleAnim_WaterPulse:
 	anim_2gfx ANIM_GFX_BUBBLE, ANIM_GFX_PSYCHIC
-    anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
-    anim_sound 6, 2, SFX_BUBBLEBEAM
-    anim_wait 64
+	anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
+	anim_sound 6, 2, SFX_BUBBLEBEAM
+	anim_wait 64
 .loop
-    anim_sound 0, 1, SFX_TOXIC
-    anim_obj ANIM_OBJ_WATER_PULSE, 64, 88, $2
-    anim_wait 6
-    anim_loop 3, .loop
-    anim_wait 18
-    anim_clearobjs
-    anim_incbgeffect ANIM_BG_WHIRLPOOL
-    anim_bgeffect ANIM_BG_30, $0, $0, $0
-    anim_wait 1
-    anim_call BattleAnim_UserObj_1Row
-    anim_bgeffect ANIM_BG_31, $1c, $0, $0
-    anim_sound 0, 1, SFX_LICK
-    anim_wait 3
-    anim_sound 0, 1, SFX_LICK
-    anim_wait 3
-    anim_sound 0, 1, SFX_LICK
-    anim_wait 3
-    anim_wait 19
-    anim_call BattleAnim_ShowMon_1
-    anim_bgeffect ANIM_BG_32, $0, $0, $0
-    anim_wait 8
-    anim_ret
+	anim_sound 0, 1, SFX_TOXIC
+	anim_obj ANIM_OBJ_WATER_PULSE, 64, 88, $2
+	anim_wait 6
+	anim_loop 3, .loop
+	anim_wait 6
+	anim_incbgeffect ANIM_BG_WHIRLPOOL
+	anim_wait 12
+	anim_call BattleAnim_UserObj_2Row
+	anim_bgeffect ANIM_BG_NIGHT_SHADE, $0, $0, $8
+.loop2
+	anim_sound 0, 1, SFX_LICK
+	anim_wait 3
+	anim_loop 3, .loop2
+	anim_wait 24
+	anim_incbgeffect ANIM_BG_NIGHT_SHADE
+	anim_jump BattleAnim_ShowMon_1
+	anim_ret
 	
 BattleAnim_Roost:
 	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_SHINE

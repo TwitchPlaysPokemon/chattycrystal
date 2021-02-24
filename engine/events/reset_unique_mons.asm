@@ -50,4 +50,5 @@ ResetUniqueMons::
 .no_celebi
 
 	; TODO: Phancero when added
+	; TODO: fused mons when added
 	end

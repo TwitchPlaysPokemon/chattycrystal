@@ -98,6 +98,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_52 ; 52
 	dw BattleAnimFunction_53 ; 53
 	dw BattleAnimFunction_54 ; 54
+	dw BattleAnimFunction_55 ; 55
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -3531,7 +3532,7 @@ BattleAnimFunction_45:
 	dw .two
 
 .zero
-	ld d, $18
+	ld d, 24
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
 	ld a, [hl]
@@ -3542,12 +3543,12 @@ BattleAnimFunction_45:
 	call BattleAnim_IncAnonJumptableIndex
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
-	ld [hl], $18
+	ld [hl], 24
 .two
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
 	ld a, [hl]
-	cp $80
+	cp 128
 	jp nc, DeinitBattleAnimation
 	ld d, a
 	add 8
@@ -4007,3 +4008,37 @@ BattleAnimFunction_53:
 	add hl, bc
 	ld [hl], e
 	ret
+
+BattleAnimFunction_55:
+	call BattleAnim_AnonJumptable
+
+	dw .zero
+	dw .one
+	dw .two
+
+.zero
+	ld d, 24
+	ld hl, BATTLEANIMSTRUCT_PARAM
+	add hl, bc
+	ld a, [hl]
+	inc [hl]
+	jp BattleAnim_StepCircle
+
+.one
+	call BattleAnim_IncAnonJumptableIndex
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld [hl], 24
+.two
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld a, [hl]
+	cp 160
+	jp nc, DeinitBattleAnimation
+	ld d, a
+	add 3
+	ld [hl], a
+	ld hl, BATTLEANIMSTRUCT_PARAM
+	add hl, bc
+	ld a, [hl]
+	jp BattleAnim_StepCircle

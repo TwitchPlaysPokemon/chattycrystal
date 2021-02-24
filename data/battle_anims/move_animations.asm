@@ -353,7 +353,7 @@ MoveAnimations:
 	dw BattleAnim_PowerTrip
 	dw BattleAnim_HiddenPower  ; 160
 	dw BattleAnim_ThunderWave  ; PLACEHOLDER
-	dw BattleAnim_Thief        ; PLACEHOLDER
+	dw BattleAnim_KnockOff
 	dw BattleAnim_Surf         ; PLACEHOLDER
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_DracoMeteor
@@ -3554,6 +3554,32 @@ BattleAnim_CalmMind:
 	anim_clearobjs
 	anim_loop 2, .loop
 	anim_ret
+	
+BattleAnim_KnockOff:
+	anim_1gfx ANIM_GFX_HIT
+    anim_sound 3, 0, SFX_RAZOR_WIND
+    anim_obj ANIM_OBJ_08, 136, 08, $0
+    anim_wait 1
+    anim_obj ANIM_OBJ_08, 136, 16, $0
+    anim_wait 1
+    anim_obj ANIM_OBJ_08, 136, 24, $0
+    anim_wait 1
+    anim_obj ANIM_OBJ_08, 136, 32, $0
+    anim_wait 1
+    anim_obj ANIM_OBJ_08, 136, 40, $0
+    anim_wait 1
+    anim_obj ANIM_OBJ_08, 136, 48, $0
+    anim_wait 1
+    anim_bgeffect ANIM_BG_20, $10, $1, $20
+    anim_sound 0, 1, SFX_TACKLE
+    anim_obj ANIM_OBJ_00, 136, 48, $0
+    anim_obj ANIM_OBJ_08, 136, 56, $0
+    anim_wait 1
+    anim_obj ANIM_OBJ_08, 136, 64, $0
+    anim_wait 1
+    anim_obj ANIM_OBJ_08, 136, 72, $0
+    anim_wait 8
+    anim_ret
 	
 BattleAnim_DracoMeteor:
 	anim_3gfx ANIM_GFX_METEOR, ANIM_GFX_EXPLOSION, ANIM_GFX_WATER

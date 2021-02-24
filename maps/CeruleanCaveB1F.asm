@@ -19,7 +19,7 @@ CeruleanCaveB1FMewtwo:
 	closetext
 	setevent EVENT_CERULEAN_CAVE_B1F_MEWTWO
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon MEWTWO, 70
+	loadwildmon MEWTWO, 80
 	startbattle
 	disappear CERULEANCAVEB1F_MEWTWO
 	reloadmapafterbattle
@@ -29,11 +29,11 @@ CeruleanCaveB1FMewtwo:
 	text "Mew!"
 	done
 
-CeruleanCaveB1FUltraBall1:
-	itemball ULTRA_BALL
+CeruleanCaveB1FBerserkGene:
+	itemball BERSERK_GENE
 
-CeruleanCaveB1FUltraBall2:
-	itemball ULTRA_BALL
+CeruleanCaveB1FKingsRock:
+	itemball KINGS_ROCK
 
 CeruleanCaveB1FMaxRevive:
 	itemball MAX_REVIVE
@@ -57,7 +57,7 @@ CeruleanCaveB1F_MapEvents:
 
 	db 5 ; object events
 	object_event 27, 13, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCaveB1FMewtwo, EVENT_CERULEAN_CAVE_B1F_MEWTWO
-	object_event 26,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCaveB1FUltraBall1, EVENT_CERULEAN_CAVE_B1F_ULTRA_BALL_1
-	object_event  2, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCaveB1FUltraBall2, EVENT_CERULEAN_CAVE_B1F_ULTRA_BALL_2
+	object_event 26,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCaveB1FBerserkGene, EVENT_CERULEAN_CAVE_B1F_BERSERK_GENE
+	object_event  2, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCaveB1FKingsRock, EVENT_CERULEAN_CAVE_B1F_KINGS_ROCK
 	object_event  3, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCaveB1FMaxRevive, EVENT_CERULEAN_CAVE_B1F_MAX_REVIVE
 	object_event 15,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, CeruleanCaveB1FMaxElixir, EVENT_CERULEAN_CAVE_B1F_MAX_ELIXIR

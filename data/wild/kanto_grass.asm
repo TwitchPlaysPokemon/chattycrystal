@@ -1405,7 +1405,86 @@ KantoGrassWildMons:
 	dbw 67, LUXRAY
 	dbw 62, EELEKTRIK
 	dbw 63, EELEKTRIK
+	
+	map_id CERULEAN_CAVE_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 85, PRIMEAPE
+	dbw 86, HYPNO
+	dbw 86, WOBBUFFET
+	dbw 86, VICTREEBEL
+	dbw 87, BRONZONG
+	dbw 82, RAICHU
+	dbw 83, DITTO
+	; day
+	dbw 85, ARBOK
+	dbw 86, DODRIO
+	dbw 86, WOBBUFFET
+	dbw 86, EXEGGUTOR
+	dbw 87, BRONZONG
+	dbw 82, MACHAMP
+	dbw 83, DITTO
+	; nite
+	dbw 85, PERSIAN
+	dbw 86, SANDSLASH
+	dbw 86, WOBBUFFET
+	dbw 86, VILEPLUME
+	dbw 87, BRONZONG
+	dbw 82, ABSOL
+	dbw 83, DITTO
+	
+	map_id CERULEAN_CAVE_2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 85, WIGGLYTUFF
+	dbw 86, EXCADRILL
+	dbw 66, BAGON
+	dbw 86, KADABRA
+	dbw 87, BLISSEY
+	dbw 82, SHELGON
+	dbw 83, SNORLAX
+	; day
+	dbw 85, WIGGLYTUFF
+	dbw 86, EXCADRILL
+	dbw 66, BAGON
+	dbw 86, BLISSEY
+	dbw 87, SHELGON
+	dbw 82, KADABRA
+	dbw 83, SNORLAX
+	; nite
+	dbw 85, WIGGLYTUFF
+	dbw 86, EXCADRILL
+	dbw 66, BAGON
+	dbw 86, SHELGON
+	dbw 87, KADABRA
+	dbw 82, BLISSEY
+	dbw 83, SNORLAX
+	
+	map_id CERULEAN_CAVE_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 85, GOLDUCK
+	dbw 83, GOOMY
+	dbw 86, PARASECT
+	dbw 86, EELEKTROSS
+	dbw 87, SLIGGOO
+	dbw 82, CROAGUNK
+	dbw 86, DITTO
+	; day
+	dbw 85, GOLDUCK
+	dbw 83, GOOMY
+	dbw 86, PARASECT
+	dbw 86, EELEKTROSS
+	dbw 87, SLIGGOO
+	dbw 82, CROAGUNK
+	dbw 86, DITTO
+	; nite
+	dbw 85, GOLDUCK
+	dbw 83, SLIGGOO
+	dbw 86, PARASECT
+	dbw 86, EELEKTROSS
+	dbw 87, DITTO
+	dbw 82, DITTO
+	dbw 86, DITTO
 
 	db -1 ; end
-
-	

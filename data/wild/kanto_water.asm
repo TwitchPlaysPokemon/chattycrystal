@@ -181,5 +181,17 @@ KantoWaterWildMons:
 	dbw 69, GOLDUCK
 	dbw 71, SWANNA
 	dbw 69, POLIWRATH
+	
+	map_id CERULEAN_CAVE_1F
+	db 4 percent ; encounter rate
+	dbw 81, GOLDUCK
+	dbw 83, SWAMPERT
+	dbw 81, MILOTIC
+
+	map_id CERULEAN_CAVE_B1F
+	db 4 percent ; encounter rate
+	dbw 81, GOLDUCK
+	dbw 83, SWAMPERT
+	dbw 81, MILOTIC
 
 	db -1 ; end

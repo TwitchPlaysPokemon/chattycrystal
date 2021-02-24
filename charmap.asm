@@ -169,17 +169,6 @@
 	charmap "ö",         $c4
 	charmap "ü",         $c5
 
-	charmap "<CRAB1>",   $c6
-	charmap "<CRAB2>",   $c7
-	charmap "<CRAB3>",   $c8
-	charmap "<CRAB4>",   $c9
-	charmap "<CRAB5>",   $ca
-	charmap "<CRAB6>",   $cb
-	charmap "<CRAB7>",   $cc
-	charmap "<CRAB8>",   $cd
-	charmap "<CRAB9>",   $ce
-	charmap "<CRAB10>",  $cf
-
 	charmap "'d",        $d0
 	charmap "'l",        $d1
 	charmap "'m",        $d2
@@ -187,6 +176,8 @@
 	charmap "'s",        $d4
 	charmap "'t",        $d5
 	charmap "'v",        $d6
+	charmap "<IN>",      $d7
+	charmap "<LE>",      $d8
 
 	charmap "<DX>",      $dc
 	charmap "<HASH>",    $dd

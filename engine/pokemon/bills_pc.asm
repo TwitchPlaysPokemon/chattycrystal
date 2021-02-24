@@ -1021,7 +1021,7 @@ PCMonInfo:
 	call ClearBox
 
 	hlcoord 8, 14
-	lb bc, 1, 3
+	lb bc, 1, 5
 	call ClearBox
 
 	call BillsPC_GetSelectedPokemonSpecies
@@ -1067,14 +1067,14 @@ PCMonInfo:
 	cp EGG
 	ret z
 
-	call GetBasePokemonName
+	call .get_base_name
 	hlcoord 1, 14
 	call PlaceString
 
 	hlcoord 1, 12
 	call PrintLevel
 
-	ld a, $3
+	ld a, 3
 	ld [wMonType], a
 	farcall GetGender
 	jr c, .skip_gender
@@ -1103,6 +1103,31 @@ PCMonInfo:
 	hlcoord 7, 12
 	ld [hl], a
 	ret
+
+.get_base_name
+	call GetPokemonIndexFromID
+	ld a, l
+	cp LOW(CRABOMINABLE)
+	jr nz, .normal_base_name
+	ld a, h
+	assert HIGH(CRABOMINABLE) == 1
+	dec h
+	jr z, .get_crabominable_name
+.normal_base_name
+	jp GetBasePokemonName
+
+.get_crabominable_name
+	ld hl, .crabominable
+	ld de, wStringBuffer1
+	ld bc, .crabominable_end - .crabominable
+	push de
+	call CopyBytes
+	pop de
+	ret
+
+.crabominable
+	db "CRABOMINABLE@"
+.crabominable_end
 
 BillsPC_LoadMonStats:
 	ld a, [wBillsPC_CursorPosition]

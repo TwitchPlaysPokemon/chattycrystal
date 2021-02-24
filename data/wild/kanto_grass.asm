@@ -1116,25 +1116,25 @@ KantoGrassWildMons:
 	dbw 65, SQUIRTLE
 	dbw 65, CHARMANDER
 	dbw 70, MEW
-	dbw 67, SYLVEON
-	dbw 62, GLACEON
 	dbw 63, SNORLAX
+	dbw 62, GLACEON
+	dbw 67, SYLVEON
 	; day
 	dbw 65, BULBASAUR
 	dbw 65, SQUIRTLE
 	dbw 65, CHARMANDER
 	dbw 70, MEW
-	dbw 67, LEAFEON
-	dbw 62, EMPOLEON
 	dbw 63, SNORLAX
+	dbw 62, EMPOLEON
+	dbw 67, LEAFEON
 	; nite
 	dbw 65, BULBASAUR
 	dbw 65, SQUIRTLE
 	dbw 65, CHARMANDER
 	dbw 70, MEW
-	dbw 67, DELCATTY
-	dbw 62, AZUMARILL
 	dbw 63, SNORLAX
+	dbw 62, AZUMARILL
+	dbw 67, DELCATTY
 	
 	map_id POKEMON_MANSION_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite

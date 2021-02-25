@@ -291,6 +291,9 @@ SECTION "bank20", ROMX
 
 INCLUDE "engine/overworld/player_movement.asm"
 INCLUDE "engine/overworld/variables.asm"
+
+SECTION "Battle Text", ROMX
+
 INCLUDE "data/text/battle.asm"
 
 

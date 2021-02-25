@@ -369,6 +369,7 @@
 	const POISON_JAB   ; 169
 	const DARK_PULSE   ; 16a
 	const ROCK_BLAST   ; 16b
+	const BRICK_BREAK  ; 16c
 
 NUM_ATTACKS EQU const_value + -1
 

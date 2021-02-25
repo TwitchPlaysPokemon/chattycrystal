@@ -368,6 +368,7 @@ MoveDescriptions1:
 	dw PoisonJabDescription
 	dw DarkPulseDescription
 	dw RockBlastDescription
+	dw BrickBreakDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -1640,3 +1641,7 @@ WaterSpoutDescription:
 MementoDescription:
 	db   "Faints, lowering"
 	next "ATK and SPCL.ATK.@"
+
+BrickBreakDescription:
+	db   "Removes Reflect"
+	next "and Light Screen.@"

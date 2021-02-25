@@ -912,6 +912,7 @@ BibarelFrontpic:     INCBIN "gfx/pokemon/bibarel/front.animated.2bpp.lz"
 BudewBackpic:        INCBIN "gfx/pokemon/budew/back.2bpp.lz"
 RoseradeBackpic:     INCBIN "gfx/pokemon/roserade/back.2bpp.lz"
 RoseradeFrontpic:    INCBIN "gfx/pokemon/roserade/front.animated.2bpp.lz"
+BonslyFrontpic:      INCBIN "gfx/pokemon/bonsly/front.animated.2bpp.lz"
 
 SECTION "Pics 30", ROMX
 
@@ -931,7 +932,6 @@ StunkyBackpic:       INCBIN "gfx/pokemon/stunky/back.2bpp.lz"
 StunkyFrontpic:      INCBIN "gfx/pokemon/stunky/front.animated.2bpp.lz"
 SkuntankBackpic:     INCBIN "gfx/pokemon/skuntank/back.2bpp.lz"
 BonslyBackpic:       INCBIN "gfx/pokemon/bonsly/back.2bpp.lz"
-BonslyFrontpic:      INCBIN "gfx/pokemon/bonsly/front.animated.2bpp.lz"
 CroagunkBackpic:     INCBIN "gfx/pokemon/croagunk/back.2bpp.lz"
 ToxicroakBackpic:    INCBIN "gfx/pokemon/toxicroak/back.2bpp.lz"
 ToxicroakFrontpic:   INCBIN "gfx/pokemon/toxicroak/front.animated.2bpp.lz"

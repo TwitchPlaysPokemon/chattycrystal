@@ -134,6 +134,10 @@
 	const PIGU
 	const SCARLAX
 	const NUUK
+	const PUM
+	const FROGGEST_SPIRIT
+	const GRONNOC
+	const GACT
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7

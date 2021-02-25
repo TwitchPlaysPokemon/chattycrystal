@@ -57,7 +57,7 @@ tools:
 	$(MAKE) -C tools/
 
 
-$(crystal_obj): RGBASMFLAGS = -DTESTMODE=$(TESTMODE)
+$(crystal_obj): RGBASMFLAGS = -Weverything -DTESTMODE=$(TESTMODE)
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.

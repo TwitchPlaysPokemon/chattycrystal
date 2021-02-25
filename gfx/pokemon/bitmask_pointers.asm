@@ -345,7 +345,7 @@ BitmasksPointers:
 	dw SkuntankBitmasks
 	dw BronzorBitmasks
 	dw BronzongBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Bonsly
+	dw BonslyBitmasks
 	dw ChatotBitmasks
 	dw CroagunkBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Toxicroak

@@ -345,7 +345,7 @@ AnimationPointers:
 	dw SkuntankAnimation
 	dw BronzorAnimation
 	dw BronzongAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Bonsly
+	dw BonslyAnimation
 	dw ChatotAnimation
 	dw CroagunkAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Toxicroak

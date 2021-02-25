@@ -261,18 +261,18 @@ CreditsScript:
 	db           AI_MASHIMA, 2
 	db      KUNIMI_KAWAMURA, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db       SPECIAL_THANKS, 0
 	db    MIKIHIRO_ISHIKAWA, 1
 	db   HIDEYUKI_HASHIMOTO, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db   EXECUTIVE_PRODUCER, 1
 	db     HIROSHI_YAMAUCHI, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db CREDITS_CLEAR
 	db CREDITS_WAIT, 1
@@ -305,7 +305,7 @@ CreditsScript:
 	db           PIA_CARROT, 2
 	db          FUTURESUSHI, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db               ARTIST, 0
 	db          BLOODLESSNS, 1
@@ -313,18 +313,26 @@ CreditsScript:
 	db              SCARLAX, 3
 	db                 NUUK, 4
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
-	db         CREDIT_MUSIC, 1
-	db    MMMMMMMMMMMMMMMMM, 2
-	db                 PIGU, 3
+	db         CREDIT_MUSIC, 0
+	db    MMMMMMMMMMMMMMMMM, 1
+	db                 PIGU, 2
+	db                  PUM, 3
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
+
+	db         CREDIT_MUSIC, 0
+	db      FROGGEST_SPIRIT, 1
+	db              GRONNOC, 2
+	db                 GACT, 3
+
+	db CREDITS_WAIT, 8
 
 	db CREDIT_SOUND_EFFECTS, 1
 	db          MONSTARULES, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db            ANIMATION, 0
 	db          BLOODLESSNS, 1
@@ -337,7 +345,7 @@ CreditsScript:
 	db           MAP_DESIGN, 1
 	db              RANGI42, 2
 
-	db CREDITS_WAIT, 9
+	db CREDITS_WAIT, 8
 
 	db           ROM_TESTER, 1
 	db          CHAOS_LORD2, 2

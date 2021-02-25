@@ -345,7 +345,7 @@ FramesPointers:
 	dba SkuntankFrames
 	dba BronzorFrames
 	dba BronzongFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Bonsly
+	dba BonslyFrames
 	dba ChatotFrames
 	dba CroagunkFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Toxicroak

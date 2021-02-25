@@ -1,14 +1,7 @@
 	object_const_def ; object_event constants
-	const ROCKETHIFROUTB1F_GRUNT_31
-	const ROCKETHIFROUTB1F_WOOPER_GMMTMT
-	const ROCKETHIFROUTB1F_SODA_POP
-	const ROCKETHIFROUTB1F_NORMAL_BOX_1
-	const ROCKETHIFROUTB1F_NORMAL_BOX_2
-	const ROCKETHIFROUTB1F_NORMAL_BOX_3
-	const ROCKETHIFROUTB1F_NORMAL_BOX_4
-	const ROCKETHIFROUTB1F_NORMAL_BOX_5
-	const ROCKETHIFROUTB1F_NORMAL_BOX_6
-	const ROCKETHIFROUTB1F_GS_BALL
+	const ROCKETHIDEOUTB1F_GRUNT_31
+	const ROCKETHIDEOUTB1F_SODA_POP
+	const ROCKETHIDEOUTB1F_ONIXTRET
 
 RocketHideoutB1F_MapScripts:
 	db 0 ; scene scripts
@@ -26,26 +19,51 @@ TrainerGruntM31:
 	waitbutton
 	closetext
 	end
-
-TrainerWooper:
-	trainer WOOPER_T, GMMTMT, EVENT_BEAT_GMMTMT, GMMTMTSeenText, GMMTMTBeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext GMMTMTAfterBattleText
+	
+RocketHideoutB1FOnixtret:
+	refreshscreen
+	pokepic ONIXTRET
+	cry ONIXTRET
 	waitbutton
+	closepokepic
+	opentext
+	writetext RocketHideoutB1FDoYouWantOnixtretText
+	yesorno
+	iffalse .Refused
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .NoRoom
+	writetext ReceivedOnixtretText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	givepoke ONIXTRET, 50
+	setevent EVENT_ONIXTRET_IN_ROCKET_HIDEOUT
+	disappear ROCKETHIDEOUTB1F_ONIXTRET
 	closetext
-	applymovement ROCKETHIFROUTB1F_WOOPER_GMMTMT, GMMTMTLeavesMovement
 	end
 	
-GMMTMTLeavesMovement:
-	teleport_from
-	step_end
+.NoRoom:
+	writetext RocketHideoutB1FPartyFullText
+	waitbutton
+.Refused:
+	closetext
+	end
 	
-GMMTMTSeenText:
-GMMTMTBeatenText:
-GMMTMTAfterBattleText:
+RocketHideoutB1FDoYouWantOnixtretText:
+	text "It's an ONIXTRET."
+	line "Do you want to"
+	cont "raise it?"
+	done
+	
+ReceivedOnixtretText:
+	text "<PLAYER> received"
+	line "ONIXTRET!"
+	done
+	
+RocketHideoutB1FPartyFullText:
+	text "Your party"
+	line "is full<...>"
+	done
+
 GruntM31SeenText:
 GruntM31BeatenText:
 GruntM31AfterBattleText:
@@ -54,12 +72,6 @@ GruntM31AfterBattleText:
 
 RocketHideoutB1FSodaPop:
 	itemball SODA_POP
-
-RocketHideoutB1FNormalBox:
-	itemball NORMAL_BOX
-
-RocketHideoutB1FGSBall:
-	itemball GS_BALL
 
 RocketHideoutB1F_MapEvents:
 	db 0, 0 ; filler
@@ -75,15 +87,9 @@ RocketHideoutB1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 11 ; object events
+	db 3 ; object events
 	object_event 10,  7, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerGruntM31, -1
-	object_event 10, 24, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerWooper, EVENT_BEAT_GMMTMT
 	object_event  3, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FSodaPop, EVENT_ROCKET_HIDEOUT_B1F_SODA_POP
-	object_event 12, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FNormalBox, EVENT_ROCKET_HIDEOUT_B1F_NORMAL_BOX_1
-	object_event 13, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FNormalBox, EVENT_ROCKET_HIDEOUT_B1F_NORMAL_BOX_2
-	object_event 12, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FNormalBox, EVENT_ROCKET_HIDEOUT_B1F_NORMAL_BOX_3
-	object_event 11, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FNormalBox, EVENT_ROCKET_HIDEOUT_B1F_NORMAL_BOX_4
-	object_event 14, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FNormalBox, EVENT_ROCKET_HIDEOUT_B1F_NORMAL_BOX_5
-	object_event  9, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FNormalBox, EVENT_ROCKET_HIDEOUT_B1F_NORMAL_BOX_6
-	object_event 13, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FGSBall, EVENT_ROCKET_HIDEOUT_B1F_GS_BALL
+	object_event  9, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketHideoutB1FOnixtret, EVENT_ONIXTRET_IN_ROCKET_HIDEOUT
+
 

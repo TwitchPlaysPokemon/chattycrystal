@@ -264,6 +264,11 @@ INCLUDE "maps/TinTower8F.asm"
 INCLUDE "maps/TinTower9F.asm"
 INCLUDE "maps/BurnedTower1F.asm"
 INCLUDE "maps/BurnedTowerB1F.asm"
+INCLUDE "maps/RocketHideoutB1F.asm"
+INCLUDE "maps/RocketHideoutB2F.asm"
+INCLUDE "maps/RocketHideoutB3F.asm"
+INCLUDE "maps/RocketHideoutB4F.asm"
+INCLUDE "maps/RocketHideoutElevator.asm"
 
 
 SECTION "Map Scripts 15", ROMX
@@ -508,12 +513,6 @@ INCLUDE "maps/PokemonMansion1F.asm"
 INCLUDE "maps/PokemonMansion2F.asm"
 INCLUDE "maps/PokemonMansion3F.asm"
 INCLUDE "maps/PokemonMansionB1F.asm"
-INCLUDE "maps/RocketHideoutB1F.asm"
-INCLUDE "maps/RocketHideoutB2F.asm"
-INCLUDE "maps/RocketHideoutB3F.asm"
-INCLUDE "maps/RocketHideoutB4F.asm"
-INCLUDE "maps/RocketHideoutElevator.asm"
-
 
 SECTION "Map Scripts 27", ROMX
 

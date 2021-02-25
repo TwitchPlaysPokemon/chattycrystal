@@ -88,5 +88,6 @@ MapScenes::
 	scene_var PEWTER_MUSEUM_1F,                            wPewterMuseum1FSceneID
 	scene_var POKEMON_TOWER_2F,                            wPokemonTower2FSceneID
 	scene_var POKEMON_TOWER_5F,                            wPokemonTower5FSceneID
-	scene_var BATTLE_TENT_GENERATOR,                       wBattleTentGeneratorSceneID
+	scene_var ROCKET_HIDEOUT_B3F,                          wRocketHideoutB3FSceneID
+	scene_var ROCKET_HIDEOUT_B4F,                          wRocketHideoutB4FSceneID
 	db -1 ; end

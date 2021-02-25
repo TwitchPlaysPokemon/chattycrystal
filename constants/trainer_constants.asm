@@ -200,7 +200,6 @@ CHRIS EQU __enum__
 	const MILLER
 
 	trainerclass GRUNTM ; b
-	const GRUNTM_1
 	const GRUNTM_2
 	const GRUNTM_3
 	const GRUNTM_4

@@ -34,6 +34,34 @@ ResetUniqueMons::
 	setevent EVENT_CELEBI_REMATCH_READY
 .no_celebi
 
+	checkcaught STEELURRET
+	ifequal 2, .no_onixtret
+	clearifuncaught ONIXTRET, EVENT_ONIXTRET_IN_BATTLE_TENT
+.no_onixtret
+	checkcaught MEGASTOISE
+	ifequal 2, .no_chiquirtle
+	checkcaught BAYTORTLE
+	ifequal 2, .no_chiquirtle
+	clearifuncaught CHIQUIRTLE, EVENT_CHIQUIRTLE_IN_BATTLE_TENT
+.no_chiquirtle
+	checkcaught NOCTDRIO
+	ifequal 2, .no_hootduo
+	clearifuncaught HOOTDUO, EVENT_HOOTDUO_IN_BATTLE_TENT
+.no_hootduo
+	checkcaught TOGETAPE
+	ifequal 2, .no_togekey
+	clearifuncaught TOGEKEY, EVENT_TOGEKEY_IN_BATTLE_TENT
+.no_togekey
+	checkcaught JUMPANIUM
+	ifequal 2, .no_hopporita
+	checkcaught SKIPLEEF
+	ifequal 2, .no_hopporita
+	clearifuncaught HOPPORITA, EVENT_HOPPORITA_IN_BATTLE_TENT
+.no_hopporita
+	checkcaught QUAGYNX
+	ifequal 2, .no_woochum
+	clearifuncaught WOOCHUM, EVENT_WOOCHUM_IN_BATTLE_TENT
+.no_woochum
+
 	; TODO: Phancero when added
-	; TODO: fused mons when added
 	end

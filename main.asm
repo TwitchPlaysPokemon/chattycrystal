@@ -15,6 +15,7 @@ INCLUDE "engine/overworld/npc_movement.asm"
 INCLUDE "engine/events/happiness_egg.asm"
 INCLUDE "engine/events/shuckle.asm"
 INCLUDE "engine/events/haircut.asm"
+INCLUDE "engine/events/engine_flags.asm"
 
 INCLUDE "data/moves/ls_names.asm"
 
@@ -289,7 +290,6 @@ INCLUDE "data/phone/text/erin_caller.asm"
 SECTION "bank20", ROMX
 
 INCLUDE "engine/overworld/player_movement.asm"
-INCLUDE "engine/events/engine_flags.asm"
 INCLUDE "engine/overworld/variables.asm"
 INCLUDE "data/text/battle.asm"
 

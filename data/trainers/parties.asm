@@ -3784,7 +3784,7 @@ WooperTGroup:
 	db "Nidorino"
 	
 	db 22
-	dw DIGGLET
+	dw DIGLETT
 	db NO_ITEM
 	dw FURY_SWIPES, GROWL, MAGNITUDE, DIG
 	bigdw $0FFF

@@ -16,7 +16,11 @@ BattleTentGenerator_MapScripts:
 	scene_script .DummyScene ; SCENE_DEFAULT
 	scene_script .DummyScene ; SCENE_FINISHED
 	
+.DummyScene
+	end
+	
 	db 0 ; callbacks
+	
 
 BattleTentGeneratorStoneClerk1:
 	faceplayer
@@ -64,7 +68,7 @@ BattleTentGeneratorLarryBattleContinue:
 	writetext BattleTentGeneratorLarryBeforeBattleText
 	waitbutton
 	closetext
-	winlosstext BattleTentGeneratorLarryWinText, BattleGeneratorLarryLoseText
+	winlosstext BattleTentGeneratorLarryWinText, BattleTentGeneratorLarryLoseText
 	loadtrainer RED_LARRY, LARRY_R2
 	startbattle
 	dontrestartmapmusic
@@ -297,7 +301,7 @@ BattleTentGenerator_MapEvents:
 	object_event 14,  5, SPRITE_LARRY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LARRY_IN_BATTLE_TENT
 	object_event 17,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BattleTentGeneratorOnixtret, EVENT_ONIXTRET_IN_BATTLE_TENT
 	object_event 18,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BattleTentGeneratorChiquirtle, EVENT_CHIQUIRTLE_IN_BATTLE_TENT
-	object_event 19,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BattleTentGeneratorHoorduo, EVENT_HOOTDUO_IN_BATTLE_TENT
+	object_event 19,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BattleTentGeneratorHootduo, EVENT_HOOTDUO_IN_BATTLE_TENT
 	object_event 17,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BattleTentGeneratorTogekey, EVENT_TOGEKEY_IN_BATTLE_TENT
 	object_event 18,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BattleTentGeneratorHopporita, EVENT_HOPPORITA_IN_BATTLE_TENT
 	object_event 19,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, BattleTentGeneratorWoochum, EVENT_WOOCHUM_IN_BATTLE_TENT

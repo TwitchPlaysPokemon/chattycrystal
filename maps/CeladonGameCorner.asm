@@ -12,7 +12,15 @@
 CeladonGameCorner_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_TILES, .HideoutStairs
+	
+.HideoutStairs:
+	checkevent EVENT_OPENED_ROCKET_HIDEOUT
+	iffalse .CloseStairs
+	changeblock 15, 0, 49
+.CloseStairs
+	return
 
 CeladonGameCornerClerkScript:
 	jumpstd gamecornercoinvendor
@@ -103,7 +111,33 @@ CeladonGameCornerGrampsScript:
 	end
 
 CeladonGameCornerPosterScript:
-	jumptext CeladonGameCornerPosterText
+	opentext
+	checkevent EVENT_OPENED_ROCKET_HIDEOUT
+	iftrue .AlreadyOpen
+	writetext CeladonGameCornerPosterText
+	yesorno
+	iffalse .Done
+	writetext CeladonGameCornerPressButtonText
+	waitbutton
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iffalse .NoPower
+	changeblock 15, 0, 49
+	playsound SFX_ENTER_DOOR
+	waitsfx
+	setevent EVENT_OPENED_ROCKET_HIDEOUT
+	sjump .Done
+	
+.AlreadyOpen
+	writetext CeladonGameCornerButtonAlreadyPressedText
+	waitbutton
+	sjump .Done
+
+.NoPower
+	writetext CeladonGameCornerNoPowerText
+	waitbutton
+.Done
+	closetext
+	end
 
 CeladonGameCornerLuckySlotMachineScript:
 	random 6
@@ -244,7 +278,25 @@ CeladonGameCornerPosterText:
 	para "Underneath this"
 	line "poster…"
 
-	para "There's nothing!"
+	para "There's a switch!"
+	line "Press it?"
+	done
+	
+CeladonGameCornerPressButtonText:
+	text "Who wouldn't!"
+	done
+	
+CeladonGameCornerButtonAlreadyPressedText:
+	text "This button is"
+	line "sufficiently"
+	cont "pushed."
+	done
+	
+CeladonGameCornerNoPowerText:
+	text "Nothing Happened<...>"
+	
+	para "Looks like there's"
+	line "no power<...>"
 	done
 
 CeladonGameCornerLighterText:

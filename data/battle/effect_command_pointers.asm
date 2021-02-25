@@ -223,3 +223,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_AwakenOpponent
 	effectfn BattleCommand_GrassKnot
 	effectfn BattleCommand_Memento
+	effectfn BattleCommand_BrickBreak

@@ -363,6 +363,7 @@ MoveAnimations:
 	dw BattleAnim_PoisonJab
 	dw BattleAnim_DarkPulse
 	dw BattleAnim_RockBlast
+	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT

@@ -110,6 +110,7 @@ ROMX $1f
 ROMX $20
 	"bank20"
 	"Pics 31"
+	"Battle Text"
 ROMX $21
 	"bank21"
 ROMX $22

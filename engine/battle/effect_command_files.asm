@@ -70,6 +70,7 @@ SECTION "Effect Commands Extra", ROMX
 INCLUDE "engine/battle/effect_commands_extra.asm"
 
 INCLUDE "engine/battle/move_effects/assurance.asm"
+INCLUDE "engine/battle/move_effects/brick_break.asm"
 INCLUDE "engine/battle/move_effects/brine.asm"
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 INCLUDE "engine/battle/move_effects/grass_knot.asm"

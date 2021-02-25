@@ -99,6 +99,18 @@ BattleText_UserRecoveredWithSomething:
 	text "."
 	prompt
 
+BrokeLightScreenText:
+	text "<USER>"
+	line "broke the target's"
+	cont "Light Screen!"
+	prompt
+
+BrokeReflectText:
+	text "<USER>"
+	line "broke the target's"
+	cont "Reflect!"
+	prompt
+
 BattleText_UserRecoveredPPUsing:
 	text "<USER>"
 	line "recovered PP using"

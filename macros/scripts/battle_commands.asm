@@ -223,6 +223,7 @@ ENDM
 	command awakenopponent          ; d8
 	command grassknot               ; d9
 	command memento                 ; da
+	command brickbreak              ; db
 
 	enum_start $fe
 	command endturn                 ; fe

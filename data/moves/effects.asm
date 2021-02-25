@@ -2817,3 +2817,24 @@ Memento:
 	checkhit
 	memento
 	endmove
+
+BrickBreak:
+	checkobedience
+	usedmovetext
+	doturn
+	brickbreak
+	critical
+	damagestats
+	damagecalc
+	stab
+	checkhit
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

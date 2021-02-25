@@ -23,6 +23,7 @@ PokemonMansionBlue:
 	applymovement POKEMONMANSION2F_BLUE, PokemonMansionBlueTeleport
 	disappear POKEMONMANSION2F_BLUE
 	clearevent EVENT_VIRIDIAN_GYM_BLUE
+	setevent EVENT_BLUE_IN_CINNABAR
 	end
 
 TrainerCooltrainermYuji:

@@ -73,3 +73,4 @@ TrainerClassNames::
 	db "ELITE 4@" ; NATE_ELITE_4
 	db "PROFESSOR@" ; POKEMON_PROF
 	db "BATTLE@" ; BATTLE PC
+	db "ROCKET@" ; WOOPER_T

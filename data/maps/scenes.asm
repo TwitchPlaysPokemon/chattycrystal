@@ -88,4 +88,5 @@ MapScenes::
 	scene_var PEWTER_MUSEUM_1F,                            wPewterMuseum1FSceneID
 	scene_var POKEMON_TOWER_2F,                            wPokemonTower2FSceneID
 	scene_var POKEMON_TOWER_5F,                            wPokemonTower5FSceneID
+	scene_var BATTLE_TENT_GENERATOR,                       wBattleTentGeneratorSceneID
 	db -1 ; end

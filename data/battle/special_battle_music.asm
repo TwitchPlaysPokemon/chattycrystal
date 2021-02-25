@@ -49,4 +49,5 @@ SpecialBattleMusicTrainers:
 	dbw URF,                  MUSIC_KANTO_GYM_LEADER_BATTLE
 	dbw XD_MICHAEL,           MUSIC_KANTO_GYM_LEADER_BATTLE
 	dbw XY_SERENA2,           MUSIC_XY_GYM_LEADER
+	dbw WOOPER_T,             MUSIC_ROCKET_BATTLE
 	db -1

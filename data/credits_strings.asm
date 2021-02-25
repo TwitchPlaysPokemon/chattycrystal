@@ -134,6 +134,7 @@ CreditsStrings:
 	dw .Pigu
 	dw .Scarlax
 	dw .Nuuk
+	dw .PurnPum
 
 .SatoshiTajiri:       db "   Satoshi Tajiri@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   Junichi Masuda@"         ; "ますだ　じゅんいち@"
@@ -274,6 +275,7 @@ CreditsStrings:
 .Pigu                 db "       Pigu@"
 .Scarlax              db "      Scarlax@"
 .Nuuk                 db "       Nuuk@"
+.PurnPum              db "      PurnPum@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

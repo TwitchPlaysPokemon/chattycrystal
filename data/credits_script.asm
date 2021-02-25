@@ -315,9 +315,10 @@ CreditsScript:
 
 	db CREDITS_WAIT, 9
 
-	db         CREDIT_MUSIC, 1
-	db    MMMMMMMMMMMMMMMMM, 2
-	db                 PIGU, 3
+	db         CREDIT_MUSIC, 0
+	db    MMMMMMMMMMMMMMMMM, 1
+	db                 PIGU, 2
+	db              PURNPUM, 3
 
 	db CREDITS_WAIT, 9
 

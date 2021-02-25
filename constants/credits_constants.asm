@@ -134,6 +134,7 @@
 	const PIGU
 	const SCARLAX
 	const NUUK
+	const PURNPUM
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -7

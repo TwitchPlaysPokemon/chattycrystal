@@ -82,6 +82,8 @@ BattleTentGeneratorLarryBattleContinue:
 	disappear BATTLETENTGENERATOR_LARRY
 	setevent EVENT_LARRY_IN_BATTLE_TENT
 	setscene SCENE_FINISHED
+	musicfadeout MUSIC_NONE, 20
+	playmapmusic
 	end
 
 BattleTentGeneratorOnixtret:

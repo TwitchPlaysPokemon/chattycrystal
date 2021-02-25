@@ -328,14 +328,14 @@ MoveAnimations:
 	dw BattleAnim_VineWhip     ; PLACEHOLDER
 	dw BattleAnim_Waterfall    ; PLACEHOLDER
 	dw BattleAnim_SweetScent   ; 148, PLACEHOLDER
-	dw BattleAnim_Hypnosis     ; PLACEHOLDER
+	dw BattleAnim_DarkVoid     ; incomplete
 	dw BattleAnim_Sharpen      ; PLACEHOLDER
 	dw BattleAnim_PsychicM     ; PLACEHOLDER
 	dw BattleAnim_Growth       ; PLACEHOLDER
 	dw BattleAnim_Pursuit      ; PLACEHOLDER
 	dw BattleAnim_Roar         ; PLACEHOLDER
 	dw BattleAnim_HydroPump    ; PLACEHOLDER
-	dw BattleAnim_Bulldoze     ; 150, PLACEHOLDER
+	dw BattleAnim_Bulldoze     ; 150
 	dw BattleAnim_Meditate     ; PLACEHOLDER
 	dw BattleAnim_CrossChop    ; PLACEHOLDER
 	dw BattleAnim_GigaDrain    ; PLACEHOLDER
@@ -1807,7 +1807,7 @@ BattleAnim_Headbutt:
 BattleAnim_Tackle:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
-	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_bgeffect ANIM_BG_TACKLE, $0, $0, $0
 	anim_wait 4
 	anim_sound 0, 1, SFX_TACKLE
 	anim_obj ANIM_OBJ_00, 136, 48, $0
@@ -3423,6 +3423,25 @@ BattleAnim_MuddyWater:
 	anim_loop 4, .loop
 	anim_incobj 1
 	anim_wait 56
+	anim_ret
+	
+BattleAnim_DarkVoid:
+	anim_1gfx ANIM_GFX_ANGELS
+	anim_bgp $f8
+	anim_sound 6, 2, SFX_CURSE
+	anim_obj ANIM_OBJ_DESTINY_BOND, 44, 120, $2
+	anim_wait 48
+	anim_call BattleAnim_UserObj_1Row
+	anim_bgeffect ANIM_BG_DIG, $0, $0, $1
+.loop
+	anim_sound 0, 0, SFX_SLUDGE_BOMB
+	anim_wait 16
+	anim_loop 6, .loop
+	anim_wait 32
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $0, $0
+	anim_wait 8
+	anim_incbgeffect ANIM_BG_DIG
+	anim_jump BattleAnim_ShowMon_1
 	anim_ret
 
 BattleAnim_Bulldoze:

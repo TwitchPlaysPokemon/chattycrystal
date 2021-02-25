@@ -3781,7 +3781,7 @@ WooperTGroup:
 	bigdw 118
 	bigdw 97
 	bigdw 88
-	db "Nidorino"
+	db "Nidorino@"
 	
 	db 22
 	dw DIGLETT

@@ -916,7 +916,7 @@ MusicMailDesc:
 MewMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
-	
+
 LiftKeyDesc:
 	db   "Starts the lift"
 	next "under CELADON.@"

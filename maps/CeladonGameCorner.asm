@@ -14,7 +14,7 @@ CeladonGameCorner_MapScripts:
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .HideoutStairs
-	
+
 .HideoutStairs:
 	checkevent EVENT_OPENED_ROCKET_HIDEOUT
 	iffalse .CloseStairs
@@ -126,7 +126,7 @@ CeladonGameCornerPosterScript:
 	waitsfx
 	setevent EVENT_OPENED_ROCKET_HIDEOUT
 	sjump .Done
-	
+
 .AlreadyOpen
 	writetext CeladonGameCornerButtonAlreadyPressedText
 	waitbutton
@@ -281,20 +281,20 @@ CeladonGameCornerPosterText:
 	para "There's a switch!"
 	line "Press it?"
 	done
-	
+
 CeladonGameCornerPressButtonText:
 	text "Who wouldn't!"
 	done
-	
+
 CeladonGameCornerButtonAlreadyPressedText:
 	text "This button is"
 	line "sufficiently"
 	cont "pushed."
 	done
-	
+
 CeladonGameCornerNoPowerText:
 	text "Nothing happened."
-	
+
 	para "Looks like there's"
 	line "no power<...>"
 	done

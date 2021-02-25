@@ -15,12 +15,12 @@ BattleTentGenerator_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene ; SCENE_DEFAULT
 	scene_script .DummyScene ; SCENE_FINISHED
-	
+
 	db 0 ; callbacks
 
 .DummyScene
 	end
-	
+
 
 BattleTentGeneratorStoneClerk1:
 	faceplayer
@@ -49,7 +49,7 @@ BattleTentGeneratorStoneClerk4:
 	pokemart MARTTYPE_STANDARD, MART_SINGLE_TMS_2
 	closetext
 	end
-	
+
 BattleTentGeneratorLarryBattleRight:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
@@ -83,7 +83,7 @@ BattleTentGeneratorLarryBattleContinue:
 	setevent EVENT_LARRY_IN_BATTLE_TENT
 	setscene SCENE_FINISHED
 	end
-	
+
 BattleTentGeneratorOnixtret:
 	getmonname STRING_BUFFER_4, ONIXTRET
 	opentext
@@ -134,7 +134,7 @@ BattleTentGeneratorHootduo:
 	disappear BATTLETENTGENERATOR_HOOTDUO
 	closetext
 	end
-	
+
 BattleTentGeneratorTogekey:
 	getmonname STRING_BUFFER_4, TOGEKEY
 	opentext
@@ -192,20 +192,20 @@ BattleTentGeneratorNoRoom:
 BattleTentGeneratorRefused:
 	closetext
 	end
-	
+
 BattleTentGenerator_DoYouWantOnixtretText:
 	text "It's an @"
 	text_asm
 	ld hl, BattleTentGenerator_DoYouWantMonText.before_species_name
 	ret
-	
+
 BattleTentGenerator_ReceivedMonText:
 	text "<PLAYER> received"
 	line "@"
 	text_ram wStringBuffer4
 	text "!"
 	done
-	
+
 BattleTentGenerator_DoYouWantMonText:
 	text "It's a @"
 .before_species_name
@@ -219,7 +219,7 @@ BattleTentGeneratorPartyFullText:
 	text "Your party"
 	line "is full<...>"
 	done
-	
+
 BattleTentGeneratorLarryBeforeBattleText:
 BattleTentGeneratorLarryWinText:
 BattleTentGeneratorLarryLoseText:

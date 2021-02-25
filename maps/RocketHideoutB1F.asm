@@ -14,8 +14,8 @@ RocketHideoutB1F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
-	
+
+
 TrainerGruntM31:
 	trainer GRUNTM, GRUNTM_31, EVENT_BEAT_ROCKET_GRUNTM_31, GruntM31SeenText, GruntM31BeatenText, 0, .Script
 
@@ -26,7 +26,7 @@ TrainerGruntM31:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerWooper:
 	trainer WOOPER_T, GMMTMT, EVENT_BEAT_GMMTMT, GMMTMTSeenText, GMMTMTBeatenText, 0, .Script
 
@@ -38,7 +38,7 @@ TrainerWooper:
 	closetext
 	applymovement BATTLETENTGENERATOR_LARRY, BattleTentGeneratorLarryLeavesMovement
 	end
-	
+
 GMMTMTSeenText:
 GMMTMTBeatenText:
 GMMTMTAfterBattleText:
@@ -46,14 +46,14 @@ GruntM31SeenText:
 GruntM31BeatenText:
 GruntM31AfterBattleText:
 	text "<...>"
-	done 
-	
+	done
+
 RocketHideoutB1FSodaPop:
 	itemball SODA_POP
-	
+
 RocketHideoutB1FNormalBox:
 	itemball NORMAL_BOX
-	
+
 RocketHideoutB1FGSBall:
 	itemball GS_BALL
 
@@ -82,4 +82,4 @@ RocketHideoutB1F_MapEvents:
 	object_event 14, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FNormalBox, EVENT_ROCKET_HIDEOUT_B1F_NORMAL_BOX_5
 	object_event  9, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FNormalBox, EVENT_ROCKET_HIDEOUT_B1F_NORMAL_BOX_6
 	object_event 13, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FGSBall, EVENT_ROCKET_HIDEOUT_B1F_GS_BALL
-	
+

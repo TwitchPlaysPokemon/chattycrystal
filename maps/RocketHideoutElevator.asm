@@ -23,14 +23,14 @@ RocketHideoutElevatorScript:
 	waitbutton
 	closetext
 	end
-	
+
 .ElevatorData:
 	db 3 ; floors
 	elevfloor FLOOR_B1F, 4, ROCKET_HIDEOUT_B1F
 	elevfloor FLOOR_B2F, 4, ROCKET_HIDEOUT_B2F
 	elevfloor FLOOR_B4F, 2, ROCKET_HIDEOUT_B4F
 	db -1 ; end
-	
+
 RocketHideoutElevatorNeedAKeyText:
 	text "It won't work!"
 	line "This lift needs"

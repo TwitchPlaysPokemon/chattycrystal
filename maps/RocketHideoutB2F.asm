@@ -2,13 +2,13 @@ RocketHideoutB2F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
 RocketHideoutB2FUpGrade:
 	itemball UP_GRADE
 
 RocketHideoutB2FRareCandy:
 	itemball RARE_CANDY
-	
+
 RocketHideoutB2FHardStone:
 	itemball HARD_STONE
 

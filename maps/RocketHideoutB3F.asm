@@ -2,7 +2,7 @@ RocketHideoutB3F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
 TrainerGruntF6:
 	trainer GRUNTF, GRUNTF_6, EVENT_BEAT_ROCKET_GRUNTF_6, GruntF6SeenText, GruntF6BeatenText, 0, .Script
 
@@ -13,13 +13,13 @@ TrainerGruntF6:
 	waitbutton
 	closetext
 	end
-	
+
 GruntF6SeenText:
 GruntF6BeatenText:
 GruntF6AfterBattleText:
 	text "<...>"
-	done 
-	
+	done
+
 RocketHideoutB3FPPUp:
 	itemball PP_UP
 

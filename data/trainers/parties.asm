@@ -3765,11 +3765,11 @@ BrendanKantoLeaderGroup:
 	db -1 ; end
 
 	end_list_items
-	
+
 WooperTGroup:
 	next_list_item ; GMMTMT
 	db "GMMTMT@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 71
 	dw NIDORINO
 	db NO_ITEM
@@ -3782,7 +3782,7 @@ WooperTGroup:
 	bigdw 97
 	bigdw 88
 	db "Nidorino@"
-	
+
 	db 22
 	dw DIGLETT
 	db NO_ITEM
@@ -3847,7 +3847,7 @@ WooperTGroup:
 	bigdw 37
 	bigdw 29
 	db "A, ,,.gkk…@"
-	
+
 	db -1
 
 	end_list_items
@@ -5442,7 +5442,7 @@ GruntMGroup:
 	db 72
 	dw CROBAT
 	db -1 ; end
-	
+
 	next_list_item ; GRUNTM (32)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 70
@@ -8345,7 +8345,7 @@ GruntFGroup:
 	db 47
 	dw VILEPLUME
 	db -1 ; end
-	
+
 	next_list_item ; GRUNTF (6)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 71

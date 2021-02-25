@@ -730,7 +730,7 @@ CHRIS EQU __enum__
 
 	trainerclass BATTLE_PC    ; 4a
 	const MIRROR_PC
-	
+
 	trainerclass WOOPER_T     ; 4b
 	const GMMTMT
 

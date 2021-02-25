@@ -2,7 +2,7 @@ RocketHideoutB4F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
 TrainerGruntM32:
 	trainer GRUNTM, GRUNTM_32, EVENT_BEAT_ROCKET_GRUNTM_32, GruntM32SeenText, GruntM32BeatenText, 0, .Script
 
@@ -13,22 +13,22 @@ TrainerGruntM32:
 	waitbutton
 	closetext
 	end
-	
+
 GruntM32SeenText:
 GruntM32BeatenText:
 GruntM32AfterBattleText:
 	text "<...>"
-	done 
-	
+	done
+
 RocketHideoutB4FLiftKey:
 	itemball LIFT_KEY
-	
+
 RocketHideoutB4FRevivalHerb:
 	itemball REVIVAL_HERB
-	
+
 RocketHideoutB4FLevelBall:
 	itemball LEVEL_BALL
-	
+
 RocketHideoutB4FBlackglasses:
 	itemball BLACKGLASSES
 

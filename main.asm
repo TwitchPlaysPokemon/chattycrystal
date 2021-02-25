@@ -302,7 +302,6 @@ SECTION "bank21", ROMX
 INCLUDE "engine/printer/printer_serial.asm"
 INCLUDE "engine/printer/printer.asm"
 INCLUDE "gfx/battle_anims.asm"
-INCLUDE "engine/events/halloffame.asm"
 
 INCLUDE "data/pokemon/base_stats_new.asm"
 
@@ -497,6 +496,7 @@ INCLUDE "engine/games/card_flip.asm"
 INCLUDE "engine/games/unown_puzzle.asm"
 INCLUDE "engine/games/dummy_game.asm"
 INCLUDE "engine/pokemon/bills_pc.asm"
+INCLUDE "engine/events/halloffame.asm"
 
 
 SECTION "bank39", ROMX

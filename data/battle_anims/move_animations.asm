@@ -3441,7 +3441,8 @@ BattleAnim_DarkVoid:
 	anim_bgeffect ANIM_BG_HIDE_MON, $0, $0, $0
 	anim_wait 8
 	anim_incbgeffect ANIM_BG_DIG
-	anim_jump BattleAnim_ShowMon_1
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
 
 BattleAnim_Bulldoze:

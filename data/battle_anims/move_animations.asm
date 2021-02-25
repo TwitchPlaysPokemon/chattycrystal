@@ -2694,19 +2694,19 @@ BattleAnim_Waterfall:
 	anim_wait 16
 	anim_call BattleAnim_ShowMon_0
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 56, $0
 	anim_wait 3
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_01, 136, 48, $0
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 48, $0
 	anim_wait 3
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_01, 136, 40, $0
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 40, $0
 	anim_wait 3
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_01, 136, 32, $0
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 32, $0
 	anim_wait 3
 	anim_sound 0, 1, SFX_LICK
-	anim_obj ANIM_OBJ_01, 136, 24, $0
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 24, $0
 	anim_wait 8
 	anim_ret
 

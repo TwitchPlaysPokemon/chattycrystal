@@ -16,10 +16,10 @@ BattleTentGenerator_MapScripts:
 	scene_script .DummyScene ; SCENE_DEFAULT
 	scene_script .DummyScene ; SCENE_FINISHED
 	
+	db 0 ; callbacks
+
 .DummyScene
 	end
-	
-	db 0 ; callbacks
 	
 
 BattleTentGeneratorStoneClerk1:

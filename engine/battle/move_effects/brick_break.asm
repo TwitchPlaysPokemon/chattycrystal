@@ -6,17 +6,18 @@ BattleCommand_BrickBreak:
 	ld hl, wPlayerScreens
 .got_screens
 	ld a, [hl]
-	and a
-	ret z
-	ld [hl], 0
+	res SCREENS_REFLECT, [hl]
+	res SCREENS_LIGHT_SCREEN, [hl]
+
+	; Screens are removed, now we just need to figure out messaging.
 	push af
-	and SCREENS_REFLECT
+	and 1 << SCREENS_REFLECT
 	jr z, .reflect_done
 	ld hl, BrokeReflectText
 	call StdBattleTextbox
 .reflect_done
 	pop af
-	and SCREENS_LIGHT_SCREEN
+	and 1 << SCREENS_LIGHT_SCREEN
 	ret z
 	ld hl, BrokeLightScreenText
 	jp StdBattleTextbox

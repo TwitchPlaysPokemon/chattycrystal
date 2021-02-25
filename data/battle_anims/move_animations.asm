@@ -363,7 +363,7 @@ MoveAnimations:
 	dw BattleAnim_PoisonJab
 	dw BattleAnim_DarkPulse
 	dw BattleAnim_RockBlast
-	dw BattleAnim_MegaPunch    ; PLACEHOLDER
+	dw BattleAnim_BrickBreak
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -3884,6 +3884,22 @@ BattleAnim_RockBlast:
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 56, $d0
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 56, $50
 	anim_wait 32
+	anim_ret
+	
+BattleAnim_BrickBreak:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 6, 2, SFX_SHINE
+	anim_obj ANIM_OBJ_VERTICLE_CHOP_STILL, 136, 24, $30
+	anim_wait 16
+	anim_bgeffect ANIM_BG_1F, $55, $2, $0
+	anim_wait 64
+	anim_clearobjs
+	anim_obj ANIM_OBJ_VERTICLE_CHOP, 136, 82, $30
+	anim_wait 8
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 34
 	anim_ret
 
 BattleAnim_FlameWheel:

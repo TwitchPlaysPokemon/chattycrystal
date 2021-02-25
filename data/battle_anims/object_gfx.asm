@@ -7,7 +7,7 @@ ENDM
 AnimObjGFX:
 ; entries correspond to ANIM_GFX_* constants
 	anim_obj_gfx  0, AnimObj00GFX
-	anim_obj_gfx 27, AnimObjHitGFX
+	anim_obj_gfx 31, AnimObjHitGFX
 	anim_obj_gfx  6, AnimObjCutGFX
 	anim_obj_gfx  6, AnimObjFireGFX
 	anim_obj_gfx 20, AnimObjWaterGFX

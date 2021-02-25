@@ -354,7 +354,7 @@ MoveAnimations:
 	dw BattleAnim_HiddenPower  ; 160
 	dw BattleAnim_ThunderWave  ; PLACEHOLDER
 	dw BattleAnim_KnockOff
-	dw BattleAnim_Surf         ; PLACEHOLDER
+	dw BattleAnim_WaterSpout
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_DracoMeteor
 	dw BattleAnim_CalmMind
@@ -3650,6 +3650,68 @@ BattleAnim_KnockOff:
 	anim_wait 1
 	anim_obj ANIM_OBJ_08, 136, 72, $0
 	anim_wait 8
+	anim_ret
+	
+BattleAnim_WaterSpout:
+	anim_2gfx ANIM_GFX_WATER, ANIM_GFX_HIT
+.loop
+	anim_sound 0, 0, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 52, 96, $6
+	anim_wait 2
+	anim_sound 0, 0, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 46, 96, $6
+	anim_wait 2
+	anim_sound 0, 0, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 54, 96, $6
+	anim_wait 2
+	anim_sound 0, 0, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 32
+	anim_sound 0, 0, SFX_BUBBLEBEAM
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 108, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 156, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 116, 10, $6
+	anim_wait 2
+	anim_bgeffect ANIM_BG_1F, $55, $1, $0
+.loop2
+	anim_obj ANIM_OBJ_WATER_HIT, 108, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 150, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 156, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 124, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 116, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 140, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 150, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 132, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 124, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 108, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 140, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 156, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 132, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 116, 10, $6
+	anim_wait 2
+	anim_loop 2, .loop2
+	anim_obj ANIM_OBJ_WATER_HIT, 108, 68, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 156, 68, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 116, 68, $0
+	anim_wait 2
+	anim_wait 32
 	anim_ret
 	
 BattleAnim_DracoMeteor:

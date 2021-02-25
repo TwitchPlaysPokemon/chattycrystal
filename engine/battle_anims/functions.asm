@@ -99,6 +99,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_53 ; 53
 	dw BattleAnimFunction_54 ; 54
 	dw BattleAnimFunction_55 ; 55
+	dw BattleAnimFunction_56 ; 56
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -4042,3 +4043,20 @@ BattleAnimFunction_55:
 	add hl, bc
 	ld a, [hl]
 	jp BattleAnim_StepCircle
+	
+BattleAnimFunction_56:
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld a, [hl]
+	cp $38
+	jp nc, DeinitBattleAnimation
+	
+	ld hl, BATTLEANIMSTRUCT_PARAM
+	add hl, bc
+	ld d, [hl]
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld a, [hl]
+	add d
+	ld [hl], a
+	ret

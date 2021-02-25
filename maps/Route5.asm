@@ -15,7 +15,7 @@ Route5UndergroundPathSign:
 
 HouseForSaleSign:
 	jumptext HouseForSaleSignText
-	
+
 Route5Snorlax:
 	opentext
 	special SnorlaxAwake
@@ -59,7 +59,7 @@ HouseForSaleSignText:
 	para "House for Sale…"
 	line "Nobody lives here."
 	done
-	
+
 Route5SnorlaxSleeping:
 	text "SNORLAX is snoring"
 	line "peacefully…"

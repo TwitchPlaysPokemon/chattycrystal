@@ -66,7 +66,7 @@ VictoryRoadRivalNext:
 	waitbutton
 	closetext
 	end
-	
+
 Moltres:
 	faceplayer
 	opentext

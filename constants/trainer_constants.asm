@@ -200,6 +200,7 @@ CHRIS EQU __enum__
 	const MILLER
 
 	trainerclass GRUNTM ; b
+	const GRUNTM_1
 	const GRUNTM_2
 	const GRUNTM_3
 	const GRUNTM_4
@@ -226,6 +227,7 @@ CHRIS EQU __enum__
 	const GRUNTM_29
 	const GRUNTM_30
 	const GRUNTM_31
+	const GRUNTM_32
 
 	trainerclass GENTLEMAN ; c
 	const PRESTON
@@ -610,6 +612,7 @@ CHRIS EQU __enum__
 	const GRUNTF_3
 	const GRUNTF_4
 	const GRUNTF_5
+	const GRUNTF_6
 
 	trainerclass AZURE ; 29
 	const AZURE1
@@ -727,6 +730,9 @@ CHRIS EQU __enum__
 
 	trainerclass BATTLE_PC    ; 4a
 	const MIRROR_PC
+
+	trainerclass WOOPER_T     ; 4b
+	const GMMTMT
 
 KRIS EQU __enum__
 

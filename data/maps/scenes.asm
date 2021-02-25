@@ -73,7 +73,7 @@ MapScenes::
 	scene_var TEAM_ROCKET_BASE_B2F,                        wTeamRocketBaseB2FSceneID
 	scene_var TEAM_ROCKET_BASE_B3F,                        wTeamRocketBaseB3FSceneID
 	scene_var GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, wGoldenrodUndergroundSwitchRoomEntrancesSceneID
-	scene_var ICE_PATH_1F,                                 wIcePath1fSceneID 
+	scene_var ICE_PATH_1F,                                 wIcePath1fSceneID
 	scene_var VICTORY_ROAD,                                wVictoryRoadSceneID
 	scene_var DRAGONS_DEN_B1F,                             wDragonsDenB1FSceneID
 	scene_var DRAGON_SHRINE,                               wDragonShrineSceneID
@@ -88,4 +88,5 @@ MapScenes::
 	scene_var PEWTER_MUSEUM_1F,                            wPewterMuseum1FSceneID
 	scene_var POKEMON_TOWER_2F,                            wPokemonTower2FSceneID
 	scene_var POKEMON_TOWER_5F,                            wPokemonTower5FSceneID
+	scene_var BATTLE_TENT_GENERATOR,                       wBattleTentGeneratorSceneID
 	db -1 ; end

@@ -3,6 +3,15 @@ RocketHideoutB2F_MapScripts:
 
 	db 0 ; callbacks
 
+RocketHideoutB2FUpGrade:
+	itemball UP_GRADE
+
+RocketHideoutB2FRareCandy:
+	itemball RARE_CANDY
+
+RocketHideoutB2FHardStone:
+	itemball HARD_STONE
+
 RocketHideoutB2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -17,4 +26,7 @@ RocketHideoutB2F_MapEvents:
 
 	db 0 ; bg events
 
-	db 0 ; object events
+	db 3 ; object events
+	object_event  3, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB2FUpGrade, EVENT_ROCKET_HIDEOUT_B2F_UP_GRADE
+	object_event 16,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB2FRareCandy, EVENT_ROCKET_HIDEOUT_B2F_RARE_CANDY
+	object_event 26, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB2FHardStone, EVENT_ROCKET_HIDEOUT_B2F_HARD_ROCK

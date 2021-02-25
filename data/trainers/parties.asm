@@ -1526,7 +1526,7 @@ GreenMayGroup:
 	bigdw 76
 	bigdw 111
 	db "A♀Nllllc33@"
-	
+
 	db 50
 	dw MIGHTYENA
 	db DRAGON_SCALE
@@ -1539,7 +1539,7 @@ GreenMayGroup:
 	bigdw 86
 	bigdw 88
 	db "MIGHTYENA@"
-	
+
 	db 49
 	dw VILEPLUME
 	db POKE_BALL
@@ -1552,7 +1552,7 @@ GreenMayGroup:
 	bigdw 93
 	bigdw 102
 	db "VILEPLUME@"
-	
+
 	db 68
 	dw GRAVELER
 	db TM_CURSE
@@ -1565,7 +1565,7 @@ GreenMayGroup:
 	bigdw 81
 	bigdw 91
 	db " -5'''7''Y@"
-	
+
 	db 80
 	dw TENTACRUEL
 	db MYSTIC_WATER
@@ -3766,6 +3766,92 @@ BrendanKantoLeaderGroup:
 
 	end_list_items
 
+WooperTGroup:
+	next_list_item ; GMMTMT
+	db "GMMTMT@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 71
+	dw NIDORINO
+	db NO_ITEM
+	dw HORN_DRILL, POISON_STING, HORN_ATTACK, NO_MOVE
+	bigdw $FFFF
+	bigdw 188
+	bigdw 121
+	bigdw 103
+	bigdw 118
+	bigdw 97
+	bigdw 88
+	db "Nidorino@"
+
+	db 22
+	dw DIGLETT
+	db NO_ITEM
+	dw FURY_SWIPES, GROWL, MAGNITUDE, DIG
+	bigdw $0FFF
+	bigdw 40
+	bigdw 35
+	bigdw 17
+	bigdw 47
+	bigdw 23
+	bigdw 30
+	db "Diglett@"
+
+	db 21
+	dw DIGLETT
+	db NO_ITEM
+	dw SCRATCH, GROWL, MAGNITUDE, DIG
+	bigdw $FFFF
+	bigdw 39
+	bigdw 30
+	bigdw 17
+	bigdw 49
+	bigdw 21
+	bigdw 23
+	db "GGGHH@"
+
+	db 100
+	dw QUAGSIRE
+	db STAR_PIECE
+	dw HIDDEN_POWER, AMNESIA, EARTHQUAKE, RAIN_DANCE
+	bigdw $0200
+	bigdw 313
+	bigdw 195
+	bigdw 187
+	bigdw 91
+	bigdw 132
+	bigdw 174
+	db "Wooper@"
+
+	db 19
+	dw WOOPER
+	db NO_ITEM
+	dw WATER_GUN, TAIL_WHIP, SLAM, MUD_SHOT
+	bigdw $0FFF
+	bigdw 53
+	bigdw 25
+	bigdw 22
+	bigdw 14
+	bigdw 17
+	bigdw 16
+	db "Wooper@"
+
+	db 34
+	dw MACHOP
+	db NO_ITEM
+	dw SEISMIC_TOSS, REVENGE, FORESIGHT, VITAL_THROW
+	bigdw $0FFF
+	bigdw 94
+	bigdw 66
+	bigdw 47
+	bigdw 29
+	bigdw 37
+	bigdw 29
+	db "A, ,,.gkk…@"
+
+	db -1
+
+	end_list_items
+
 BattlePCGroup:
 	next_list_item ; BATTLE_PC (1)
 	db "COMPUTER@"
@@ -5353,8 +5439,18 @@ GruntMGroup:
 
 	next_list_item ; GRUNTM (31)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 30
-	dw GOLBAT
+	db 72
+	dw CROBAT
+	db -1 ; end
+
+	next_list_item ; GRUNTM (32)
+	db "GRUNT@", TRAINERTYPE_NORMAL
+	db 70
+	dw RATICATE
+	db 70
+	dw MURKROW
+	db 70
+	dw SKUNTANK
 	db -1 ; end
 
 	end_list_items
@@ -8248,6 +8344,14 @@ GruntFGroup:
 	dw ARBOK
 	db 47
 	dw VILEPLUME
+	db -1 ; end
+
+	next_list_item ; GRUNTF (6)
+	db "GRUNT@", TRAINERTYPE_NORMAL
+	db 71
+	dw TOXICROAK
+	db 71
+	dw ABSOL
 	db -1 ; end
 
 	end_list_items

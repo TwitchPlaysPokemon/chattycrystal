@@ -811,7 +811,7 @@ KantoGrassWildMons:
 	dbw 82, MURKROW
 	dbw 82, ABSOL
 	dbw 82, ABSOL
-	
+
 	map_id SAFARI_ZONE_CENTER
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -838,7 +838,7 @@ KantoGrassWildMons:
 	dbw 58, BLASTOISE
 	dbw 58, QUAGSIRE
 	dbw 58, CHANSEY
-	
+
 	map_id SAFARI_ZONE_EAST
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -865,7 +865,7 @@ KantoGrassWildMons:
 	dbw 58, CROCONAW
 	dbw 58, FERALIGATR
 	dbw 58, CHANSEY
-	
+
 	map_id SAFARI_ZONE_NORTH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -892,7 +892,7 @@ KantoGrassWildMons:
 	dbw 58, QUAGSIRE
 	dbw 58, EMPOLEON
 	dbw 58, CHANSEY
-	
+
 	map_id SAFARI_ZONE_WEST
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -919,11 +919,11 @@ KantoGrassWildMons:
 	dbw 58, MARSHTOMP
 	dbw 58, SWAMPERT
 	dbw 58, CHANSEY
-	
+
 	map_id POKEMON_TOWER_2F
 	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 58, LITWICK 
+	dbw 58, LITWICK
 	dbw 58, ZUBAT
 	dbw 60, KANGASKHAN
 	dbw 60, GOLBAT
@@ -931,7 +931,7 @@ KantoGrassWildMons:
 	dbw 62, CHANDELURE
 	dbw 60, CHANDELURE
 	; day
-	dbw 58, LITWICK 
+	dbw 58, LITWICK
 	dbw 58, ZUBAT
 	dbw 60, KANGASKHAN
 	dbw 60, GOLBAT
@@ -946,11 +946,11 @@ KantoGrassWildMons:
 	dbw 60, HAUNTER
 	dbw 60, GENGAR
 	dbw 60, DUSKNOIR
-	
+
 	map_id POKEMON_TOWER_3F
 	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 58, LITWICK 
+	dbw 58, LITWICK
 	dbw 58, ZUBAT
 	dbw 60, MAROWAK
 	dbw 60, GOLBAT
@@ -958,7 +958,7 @@ KantoGrassWildMons:
 	dbw 62, CHANDELURE
 	dbw 60, CHANDELURE
 	; day
-	dbw 58, LITWICK 
+	dbw 58, LITWICK
 	dbw 58, ZUBAT
 	dbw 60, MAROWAK
 	dbw 60, GOLBAT
@@ -973,11 +973,11 @@ KantoGrassWildMons:
 	dbw 60, HAUNTER
 	dbw 60, GENGAR
 	dbw 60, DUSKNOIR
-	
+
 	map_id POKEMON_TOWER_4F
 	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 58, LITWICK 
+	dbw 58, LITWICK
 	dbw 58, CUBONE
 	dbw 60, MAROWAK
 	dbw 60, HAUNTER
@@ -985,7 +985,7 @@ KantoGrassWildMons:
 	dbw 62, CHANDELURE
 	dbw 60, CHANDELURE
 	; day
-	dbw 58, LITWICK 
+	dbw 58, LITWICK
 	dbw 58, CUBONE
 	dbw 60, MAROWAK
 	dbw 60, HAUNTER
@@ -1000,11 +1000,11 @@ KantoGrassWildMons:
 	dbw 60, HAUNTER
 	dbw 60, GENGAR
 	dbw 60, DUSKNOIR
-	
+
 	map_id POKEMON_TOWER_5F
 	db 2 percent, 2 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 56, LITWICK 
+	dbw 56, LITWICK
 	dbw 56, CUBONE
 	dbw 58, ZUBAT
 	dbw 58, GASTLY
@@ -1012,7 +1012,7 @@ KantoGrassWildMons:
 	dbw 60, CHANDELURE
 	dbw 58, CHANDELURE
 	; day
-	dbw 56, LITWICK 
+	dbw 56, LITWICK
 	dbw 56, CUBONE
 	dbw 58, ZUBAT
 	dbw 58, GASTLY
@@ -1027,7 +1027,7 @@ KantoGrassWildMons:
 	dbw 58, CUBONE
 	dbw 58, DUSKNOIR
 	dbw 58, GENGAR
-	
+
 	map_id POKEMON_TOWER_6F
 	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1039,7 +1039,7 @@ KantoGrassWildMons:
 	dbw 62, DUSCLOPS
 	dbw 60, CHANDELURE
 	; day
-	dbw 58, LITWICK 
+	dbw 58, LITWICK
 	dbw 58, MAROWAK
 	dbw 60, LAMPENT
 	dbw 60, MISDREAVUS
@@ -1054,11 +1054,11 @@ KantoGrassWildMons:
 	dbw 60, DUSKNOIR
 	dbw 60, GENGAR
 	dbw 60, DUSKNOIR
-	
+
 	map_id POKEMON_TOWER_7F
 	db 4 percent, 4 percent, 7 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 59, LITWICK 
+	dbw 59, LITWICK
 	dbw 59, MAROWAK
 	dbw 61, LAMPENT
 	dbw 61, MISDREAVUS
@@ -1066,7 +1066,7 @@ KantoGrassWildMons:
 	dbw 63, DUSCLOPS
 	dbw 61, CHANDELURE
 	; day
-	dbw 59, LITWICK 
+	dbw 59, LITWICK
 	dbw 59, MAROWAK
 	dbw 61, LAMPENT
 	dbw 61, MISDREAVUS
@@ -1081,7 +1081,7 @@ KantoGrassWildMons:
 	dbw 61, DUSKNOIR
 	dbw 61, GENGAR
 	dbw 61, DUSKNOIR
-	
+
 	map_id VIRIDIAN_FOREST
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1107,8 +1107,8 @@ KantoGrassWildMons:
 	dbw 66, SIMISAGE
 	dbw 67, WARTORTLE
 	dbw 62, RAICHU
-	dbw 63, RAICHU	
-	
+	dbw 63, RAICHU
+
 	map_id PALLET_TOWN
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1135,7 +1135,7 @@ KantoGrassWildMons:
 	dbw 63, SNORLAX
 	dbw 62, AZUMARILL
 	dbw 67, DELCATTY
-	
+
 	map_id POKEMON_MANSION_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1162,7 +1162,7 @@ KantoGrassWildMons:
 	dbw 67, MAGMAR
 	dbw 62, LAMPENT
 	dbw 63, LAMPENT
-	
+
 	map_id POKEMON_MANSION_2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1189,7 +1189,7 @@ KantoGrassWildMons:
 	dbw 67, MAGMAR
 	dbw 62, LAMPENT
 	dbw 63, LAMPENT
-	
+
 	map_id POKEMON_MANSION_3F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1216,7 +1216,7 @@ KantoGrassWildMons:
 	dbw 67, MAGMAR
 	dbw 62, CHANDELURE
 	dbw 63, CHANDELURE
-	
+
 	map_id POKEMON_MANSION_B1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1243,7 +1243,7 @@ KantoGrassWildMons:
 	dbw 67, MAGMAR
 	dbw 62, DITTO
 	dbw 63, DITTO
-	
+
 	map_id SEAFOAM_ISLANDS_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1270,7 +1270,7 @@ KantoGrassWildMons:
 	dbw 67, CLOYSTER
 	dbw 62, AMAURA
 	dbw 63, KABUTO
-	
+
 	map_id SEAFOAM_ISLANDS_B2F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1297,7 +1297,7 @@ KantoGrassWildMons:
 	dbw 67, CLOYSTER
 	dbw 62, KABUTO
 	dbw 63, KABUTO
-	
+
 	map_id SEAFOAM_ISLANDS_B3F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1324,7 +1324,7 @@ KantoGrassWildMons:
 	dbw 67, SNORUNT
 	dbw 62, KABUTO
 	dbw 63, KABUTOPS
-	
+
 	map_id SEAFOAM_ISLANDS_B4F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1351,7 +1351,7 @@ KantoGrassWildMons:
 	dbw 67, SNORUNT
 	dbw 62, AURORUS
 	dbw 63, FROSLASS
-	
+
 	map_id ROUTE_23
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1378,7 +1378,7 @@ KantoGrassWildMons:
 	dbw 73, HOUNDOOM
 	dbw 73, MURKROW
 	dbw 73, MURKROW
-	
+
 	map_id POWER_PLANT_B1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1405,7 +1405,7 @@ KantoGrassWildMons:
 	dbw 67, LUXRAY
 	dbw 62, EELEKTRIK
 	dbw 63, EELEKTRIK
-	
+
 	map_id CERULEAN_CAVE_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1432,7 +1432,7 @@ KantoGrassWildMons:
 	dbw 87, BRONZONG
 	dbw 82, ABSOL
 	dbw 83, DITTO
-	
+
 	map_id CERULEAN_CAVE_2F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
@@ -1459,7 +1459,7 @@ KantoGrassWildMons:
 	dbw 87, KADABRA
 	dbw 82, BLISSEY
 	dbw 83, SNORLAX
-	
+
 	map_id CERULEAN_CAVE_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn

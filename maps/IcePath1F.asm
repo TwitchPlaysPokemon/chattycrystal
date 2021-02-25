@@ -44,23 +44,23 @@ IcePathEvan:
 	waitsfx
 	playmapmusic
 	end
-	
+
 IcePath1fEvanMoveUp:
 	step UP
 	step UP
 	step UP
 	step_end
-	
+
 IcePath1fEvanMoveDown:
 	step DOWN
 	step DOWN
 	step DOWN
 	step_end
-	
+
 IcePath1fPlayerTurnHead:
 	turn_head DOWN
 	step_end
-	
+
 IcePathEvanText:
 	text "<...>"
 	done
@@ -82,7 +82,7 @@ IcePath1F_MapEvents:
 
 	db 1 ; coord events
 	coord_event 36, 23, SCENE_DEFAULT, IcePathEvan
-	
+
 	db 0 ; bg events
 
 	db 4 ; object events

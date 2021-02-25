@@ -22,7 +22,7 @@ TrainerSupernerdHugh:
 	waitbutton
 	closetext
 	end
-	
+
 Kyogre:
 	faceplayer
 	opentext

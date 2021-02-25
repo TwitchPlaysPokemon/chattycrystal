@@ -9,7 +9,7 @@ PokemonMansionB1F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
 Groudon:
 	faceplayer
 	opentext
@@ -27,7 +27,7 @@ Groudon:
 GroudonText:
 	text "GRAHH!"
 	done
-	
+
 TrainerScientistTaylor:
 	trainer SCIENTIST, TAYLOR, EVENT_BEAT_SCIENTIST_TAYLOR, ScientistTaylorSeenText, ScientistTaylorBeatenText, 0, .Script
 
@@ -38,16 +38,16 @@ TrainerScientistTaylor:
 	waitbutton
 	closetext
 	end
-	
+
 PokemonMansionB1FBlizzard:
 	itemball TM_BLIZZARD
-	
+
 PokemonMansionB1FAwakening:
 	itemball AWAKENING
 
 PokemonMansionB1FHeavyBall:
 	itemball HEAVY_BALL
-	
+
 ScientistTaylorSeenText:
 ScientistTaylorBeatenText:
 ScientistTaylorAfterBattleText:

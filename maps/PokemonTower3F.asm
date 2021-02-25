@@ -2,7 +2,7 @@ PokemonTower3F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
 TrainerSageYin:
 	trainer SAGE, YIN, EVENT_BEAT_SAGE_YIN, SageYinSeenText, SageYinBeatenText, 0, .Script
 
@@ -13,10 +13,10 @@ TrainerSageYin:
 	waitbutton
 	closetext
 	end
-	
+
 PokemonTower3fNightmare:
 	itemball TM_NIGHTMARE
-	
+
 SageYinSeenText:
 SageYinBeatenText:
 SageYinAfterBattleText:

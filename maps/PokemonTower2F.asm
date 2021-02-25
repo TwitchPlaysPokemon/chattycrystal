@@ -7,7 +7,7 @@ PokemonTower2F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
 TrainerMediumCarly:
 	trainer MEDIUM, CARLY, EVENT_BEAT_MEDIUM_CARLY, MediumCarlySeenText, MediumCarlyBeatenText, 0, .Script
 
@@ -18,7 +18,7 @@ TrainerMediumCarly:
 	waitbutton
 	closetext
 	end
-	
+
 PokemonTowerEvan:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -45,7 +45,7 @@ PokemonTowerEvan:
 	waitsfx
 	playmapmusic
 	end
-	
+
 PokemonTower2fEvanMoveToPlayer:
 	step RIGHT
 	step RIGHT
@@ -54,7 +54,7 @@ PokemonTower2fEvanMoveToPlayer:
 	step UP
 	step RIGHT
 	step_end
-	
+
 PokemonTower2fEvanLeave:
 	step LEFT
 	step DOWN
@@ -64,10 +64,10 @@ PokemonTower2fEvanLeave:
 	step LEFT
 	step LEFT
 	step_end
-	
+
 PokemonTower2fEscapeRope:
 	itemball ESCAPE_ROPE
-	
+
 MediumCarlySeenText:
 MediumCarlyBeatenText:
 MediumCarlyAfterBattleText:
@@ -84,7 +84,7 @@ PokemonTower2F_MapEvents:
 
 	db 1 ; coord events
 	coord_event 5, 5, SCENE_DEFAULT, PokemonTowerEvan
-	
+
 	db 0 ; bg events
 
 	db 3 ; object events

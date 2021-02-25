@@ -115,7 +115,7 @@ PowerPlantOfficer2Script:
 	waitbutton
 	closetext
 	end
-	
+
 PowerPlantOfficer3Script:
 	faceplayer
 	opentext
@@ -389,16 +389,16 @@ PowerPlantManagerMyBelovedGeneratorText:
 	para "Keep pumping the"
 	line "electricity out!"
 	done
-	
+
 PowerPlantOfficer3Text:
 	text "There's strong"
 	line "wild #MON in"
 	cont "the basement."
-	
+
 	para "It's best not"
 	line "to go inside"
 	cont "right now."
-	
+
 	done
 
 PowerPlant_MapEvents:

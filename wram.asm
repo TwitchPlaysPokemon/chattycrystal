@@ -2679,8 +2679,9 @@ wRoute35GoldenrodGateSceneID::                    db ; d9c1
 wPewterMuseum1FSceneID::                          db ; d9c2
 wPokemonTower2FSceneID::                          db ; d9c3
 wPokemonTower5FSceneID::                          db ; d9c4
+wBattleTentGeneratorSceneID::                     db ; d9c5
 
-	ds 45
+	ds 44
 
 ; fight counts
 wJackFightCount::    db ; d9f2

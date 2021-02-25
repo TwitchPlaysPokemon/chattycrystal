@@ -2,7 +2,7 @@ PokemonMansion1F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
 TrainerScientistBraydon:
 	trainer SCIENTIST, BRAYDON, EVENT_BEAT_SCIENTIST_BRAYDON, ScientistBraydonSeenText, ScientistBraydonBeatenText, 0, .Script
 
@@ -24,7 +24,7 @@ TrainerBurglarDusty:
 	waitbutton
 	closetext
 	end
-	
+
 BurglarDustySeenText:
 BurglarDustyBeatenText:
 BurglarDustyAfterBattleText:
@@ -36,10 +36,10 @@ ScientistBraydonAfterBattleText:
 
 PokemonMansion1FElixir:
 	itemball ELIXIR
-	
+
 PokemonMansion1FPinkBow:
 	itemball PINK_BOW
-	
+
 PokemonMansion1FFireStone:
 	itemball FIRE_STONE
 

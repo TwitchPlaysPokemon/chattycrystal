@@ -11,8 +11,8 @@ PokemonMansion2F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
-	
+
+
 PokemonMansionBlue:
 	faceplayer
 	opentext
@@ -23,8 +23,9 @@ PokemonMansionBlue:
 	applymovement POKEMONMANSION2F_BLUE, PokemonMansionBlueTeleport
 	disappear POKEMONMANSION2F_BLUE
 	clearevent EVENT_VIRIDIAN_GYM_BLUE
+	setevent EVENT_BLUE_IN_CINNABAR
 	end
-	
+
 TrainerCooltrainermYuji:
 	trainer COOLTRAINERM, YUJI, EVENT_BEAT_COOLTRAINERM_YUJI, CooltrainermYujiSeenText, CooltrainermYujiBeatenText, 0, .Script
 
@@ -35,7 +36,7 @@ TrainerCooltrainermYuji:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerBurglarJac:
 	trainer BURGLAR, JAC, EVENT_BEAT_BURGLAR_JAC, BurglarJacSeenText, BurglarJacBeatenText, 0, .Script
 
@@ -46,19 +47,19 @@ TrainerBurglarJac:
 	waitbutton
 	closetext
 	end
-	
+
 PokemonMansion2FRareCandy:
 	itemball RARE_CANDY
-	
+
 PokemonMansion2FBrightpowder:
 	itemball BRIGHTPOWDER
-	
+
 PokemonMansion2FLemonade:
 	itemball LEMONADE
-	
+
 PokemonMansion2FPokeDoll:
 	itemball POKE_DOLL
-	
+
 BurglarJacSeenText:
 BurglarJacBeatenText:
 BurglarJacAfterBattleText:
@@ -68,7 +69,7 @@ CooltrainermYujiSeenText:
 PokemonMansionBlueText:
 	text "<...>"
 	done
-	
+
 PokemonMansionBlueTeleport:
 	teleport_from
 	step_end

@@ -24,6 +24,7 @@ INCLUDE "engine/overworld/player_object.asm"
 INCLUDE "engine/math/sine.asm"
 INCLUDE "engine/predef.asm"
 INCLUDE "engine/gfx/color.asm"
+INCLUDE "data/moves/vc_names.asm"
 
 
 SECTION "bank3", ROMX
@@ -671,7 +672,6 @@ INCLUDE "data/items/names.asm"
 INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
-INCLUDE "data/moves/vc_names.asm"
 
 
 SECTION "Animation Scripts and Pointers", ROMX

@@ -9,4 +9,4 @@
 	frame 0, 04
 	dorepeat 5
 	endanim
-	
+

@@ -29,7 +29,7 @@ PokemonTower5F_HealPad:
 	para "<PLAYER>'s #MON"
 	line "are fully healed!"
 	done
-	
+
 TrainerSageYang:
 	trainer SAGE, YANG, EVENT_BEAT_SAGE_YANG, SageYangSeenText, SageYangBeatenText, 0, .Script
 
@@ -40,13 +40,13 @@ TrainerSageYang:
 	waitbutton
 	closetext
 	end
-	
+
 SageYangSeenText:
 SageYangBeatenText:
 SageYangAfterBattleText:
 	text "<...>"
 	done
-	
+
 PokemonTower5fMaxRevive:
 	itemball MAX_REVIVE
 

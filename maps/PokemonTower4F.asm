@@ -2,7 +2,7 @@ PokemonTower4F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
 TrainerMediumLaurel:
 	trainer MEDIUM, LAUREL, EVENT_BEAT_MEDIUM_LAUREL, MediumLaurelSeenText, MediumLaurelBeatenText, 0, .Script
 
@@ -13,7 +13,7 @@ TrainerMediumLaurel:
 	waitbutton
 	closetext
 	end
-	
+
 TrainerMediumPatricia:
 	trainer MEDIUM, PATRICIA, EVENT_BEAT_MEDIUM_PATRICIA, MediumPatriciaSeenText, MediumPatriciaBeatenText, 0, .Script
 

@@ -362,7 +362,7 @@ CreditsScript:
 
 	db CREDITS_CLEAR
 	db CREDITS_WAIT, 1
-	
+
 	db CREDITS_SCENE, 3
 
 	db            COPYRIGHT, 1

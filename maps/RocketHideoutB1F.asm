@@ -36,9 +36,13 @@ TrainerWooper:
 	writetext GMMTMTAfterBattleText
 	waitbutton
 	closetext
-	applymovement BATTLETENTGENERATOR_LARRY, BattleTentGeneratorLarryLeavesMovement
+	applymovement ROCKETHIFROUTB1F_WOOPER_GMMTMT, GMMTMTLeavesMovement
 	end
-
+	
+GMMTMTLeavesMovement:
+	teleport_from
+	step_end
+	
 GMMTMTSeenText:
 GMMTMTBeatenText:
 GMMTMTAfterBattleText:
@@ -73,7 +77,7 @@ RocketHideoutB1F_MapEvents:
 
 	db 11 ; object events
 	object_event 10,  7, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerGruntM31, -1
-	object_event 13, 20, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 4, TrainerWooper, EVENT_BEAT_GMMTMT
+	object_event 10, 24, SPRITE_MONSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerWooper, EVENT_BEAT_GMMTMT
 	object_event  3, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FSodaPop, EVENT_ROCKET_HIDEOUT_B1F_SODA_POP
 	object_event 12, 19, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FNormalBox, EVENT_ROCKET_HIDEOUT_B1F_NORMAL_BOX_1
 	object_event 13, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FNormalBox, EVENT_ROCKET_HIDEOUT_B1F_NORMAL_BOX_2

@@ -85,13 +85,14 @@ BattleTentGeneratorLarryBattleContinue:
 	end
 	
 BattleTentGeneratorOnixtret:
+	getmonname STRING_BUFFER_4, ONIXTRET
 	opentext
-	writetext BattleTentGeneratorDoYouWantOnixtretText
+	writetext BattleTentGenerator_DoYouWantOnixtretText
 	yesorno
 	iffalse BattleTentGeneratorRefused
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, BattleTentGeneratorNoRoom
-	writetext ReceivedOnixtretText
+	writetext BattleTentGenerator_ReceivedMonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke ONIXTRET, 50
@@ -99,15 +100,16 @@ BattleTentGeneratorOnixtret:
 	disappear BATTLETENTGENERATOR_ONIXTRET
 	closetext
 	end
-	
+
 BattleTentGeneratorChiquirtle:
+	getmonname STRING_BUFFER_4, CHIQUIRTLE
 	opentext
-	writetext BattleTentGeneratorDoYouWantChiquirtleText
+	writetext BattleTentGenerator_DoYouWantMonText
 	yesorno
 	iffalse BattleTentGeneratorRefused
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, BattleTentGeneratorNoRoom
-	writetext ReceivedChiquirtleText
+	writetext BattleTentGenerator_ReceivedMonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke CHIQUIRTLE, 50
@@ -115,15 +117,16 @@ BattleTentGeneratorChiquirtle:
 	disappear BATTLETENTGENERATOR_CHIQUIRTLE
 	closetext
 	end
-	
+
 BattleTentGeneratorHootduo:
+	getmonname STRING_BUFFER_4, HOOTDUO
 	opentext
-	writetext BattleTentGeneratorDoYouWantHootduoText
+	writetext BattleTentGenerator_DoYouWantMonText
 	yesorno
 	iffalse BattleTentGeneratorRefused
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, BattleTentGeneratorNoRoom
-	writetext ReceivedHootduoText
+	writetext BattleTentGenerator_ReceivedMonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke HOOTDUO, 50
@@ -133,13 +136,14 @@ BattleTentGeneratorHootduo:
 	end
 	
 BattleTentGeneratorTogekey:
+	getmonname STRING_BUFFER_4, TOGEKEY
 	opentext
-	writetext BattleTentGeneratorDoYouWantTogekeyText
+	writetext BattleTentGenerator_DoYouWantMonText
 	yesorno
 	iffalse BattleTentGeneratorRefused
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, BattleTentGeneratorNoRoom
-	writetext ReceivedTogekeyText
+	writetext BattleTentGenerator_ReceivedMonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke TOGEKEY, 50
@@ -147,15 +151,16 @@ BattleTentGeneratorTogekey:
 	disappear BATTLETENTGENERATOR_TOGEKEY
 	closetext
 	end
-	
+
 BattleTentGeneratorHopporita:
+	getmonname STRING_BUFFER_4, HOPPORITA
 	opentext
-	writetext BattleTentGeneratorDoYouWantHopporitaText
+	writetext BattleTentGenerator_DoYouWantMonText
 	yesorno
 	iffalse BattleTentGeneratorRefused
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, BattleTentGeneratorNoRoom
-	writetext ReceivedHopporitaText
+	writetext BattleTentGenerator_ReceivedMonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke HOPPORITA, 50
@@ -163,15 +168,16 @@ BattleTentGeneratorHopporita:
 	disappear BATTLETENTGENERATOR_HOPPORITA
 	closetext
 	end
-	
+
 BattleTentGeneratorWoochum:
+	getmonname STRING_BUFFER_4, WOOCHUM
 	opentext
-	writetext BattleTentGeneratorDoYouWantWoochumText
+	writetext BattleTentGenerator_DoYouWantMonText
 	yesorno
 	iffalse BattleTentGeneratorRefused
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, BattleTentGeneratorNoRoom
-	writetext ReceivedWoochumText
+	writetext BattleTentGenerator_ReceivedMonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke WOOCHUM, 50
@@ -187,70 +193,26 @@ BattleTentGeneratorRefused:
 	closetext
 	end
 	
-BattleTentGeneratorDoYouWantOnixtretText:
-	text "It's an ONIXTRET."
+BattleTentGenerator_DoYouWantOnixtretText:
+	text "It's an @"
+	text_asm
+	ld hl, BattleTentGenerator_DoYouWantMonText.before_species_name
+	ret
+	
+BattleTentGenerator_ReceivedMonText:
+	text "<PLAYER> received"
+	line "@"
+	text_ram wStringBuffer4
+	text "!"
+	done
+	
+BattleTentGenerator_DoYouWantMonText:
+	text "It's a @"
+.before_species_name
+	text_ram wStringBuffer4
+	text "."
 	line "Do you want to"
 	cont "raise it?"
-	done
-	
-ReceivedOnixtretText:
-	text "<PLAYER> received"
-	line "ONIXTRET!"
-	done
-	
-BattleTentGeneratorDoYouWantChiquirtleText:
-	text "It's a CHIQUIRTLE."
-	line "Do you want to"
-	cont "raise it?"
-	done
-	
-ReceivedChiquirtleText:
-	text "<PLAYER> received"
-	line "CHIQUIRTLE!"
-	done
-	
-BattleTentGeneratorDoYouWantHootduoText:
-	text "It's a HOOTDUO."
-	line "Do you want to"
-	cont "raise it?"
-	done
-	
-ReceivedHootduoText:
-	text "<PLAYER> received"
-	line "HOOTDUO!"
-	done
-	
-BattleTentGeneratorDoYouWantTogekeyText:
-	text "It's a TOGEKEY."
-	line "Do you want to"
-	cont "raise it?"
-	done
-	
-ReceivedTogekeyText:
-	text "<PLAYER> received"
-	line "TOGEKEY!"
-	done
-
-BattleTentGeneratorDoYouWantHopporitaText:
-	text "It's a HOPPORITA."
-	line "Do you want to"
-	cont "raise it?"
-	done
-	
-ReceivedHopporitaText:
-	text "<PLAYER> received"
-	line "HOPPORITA!"
-	done
-	
-BattleTentGeneratorDoYouWantWoochumText:
-	text "It's a WOOCHUM."
-	line "Do you want to"
-	cont "raise it?"
-	done
-	
-ReceivedWoochumText:
-	text "<PLAYER> received"
-	line "WOOCHUM!"
 	done
 
 BattleTentGeneratorPartyFullText:

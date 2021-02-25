@@ -293,7 +293,7 @@ CeladonGameCornerButtonAlreadyPressedText:
 	done
 	
 CeladonGameCornerNoPowerText:
-	text "Nothing Happened<...>"
+	text "Nothing happened."
 	
 	para "Looks like there's"
 	line "no power<...>"

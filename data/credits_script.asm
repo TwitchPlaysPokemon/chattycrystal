@@ -318,7 +318,7 @@ CreditsScript:
 	db         CREDIT_MUSIC, 0
 	db    MMMMMMMMMMMMMMMMM, 1
 	db                 PIGU, 2
-	db              PURNPUM, 3
+	db                  PUM, 3
 
 	db CREDITS_WAIT, 9
 

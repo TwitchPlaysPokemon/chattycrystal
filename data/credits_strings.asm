@@ -135,6 +135,9 @@ CreditsStrings:
 	dw .Scarlax
 	dw .Nuuk
 	dw .Pum
+	dw .FroggestSpirit
+	dw .GRonnoc
+	dw .Gact
 
 .SatoshiTajiri:       db "   Satoshi Tajiri@"         ; "たじり　さとし@"
 .JunichiMasuda:       db "   Junichi Masuda@"         ; "ますだ　じゅんいち@"
@@ -276,6 +279,9 @@ CreditsStrings:
 .Scarlax              db "      Scarlax@"
 .Nuuk                 db "       Nuuk@"
 .Pum                  db "        Pum@"
+.FroggestSpirit       db "   FroggestSpirit@"
+.GRonnoc              db "      GRonnoc@"
+.Gact                 db "       GACT@"
 
 .Copyright:
 	;    (C) 1  9  9  5 - 2  0  0  1     N  i  n  t  e  n  d  o

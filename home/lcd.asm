@@ -17,6 +17,7 @@ LCD::
 	ld c, a
 	ld a, b
 	ldh [c], a
+	call wCustomLCDHandler
 	pop bc
 
 .done

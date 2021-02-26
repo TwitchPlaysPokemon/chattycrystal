@@ -1296,6 +1296,8 @@ ClearBattleAnims::
 	ld a, c
 	or b
 	jr nz, .loop
+	ld a, $c9 ; ret instruction
+	ld [wCustomLCDHandler], a
 
 	ld hl, wFXAnimID
 	ld a, [hli]

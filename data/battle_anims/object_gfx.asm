@@ -53,3 +53,4 @@ AnimObjGFX:
 	anim_obj_gfx  5, AnimObjStarsGFX
 	anim_obj_gfx 18, AnimObjMeteorGFX
 	anim_obj_gfx 16, AnimObjMoonGFX
+	anim_obj_gfx 32, AnimObjS_RollerGFX

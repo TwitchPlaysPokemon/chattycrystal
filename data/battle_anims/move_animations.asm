@@ -339,7 +339,7 @@ MoveAnimations:
 	dw BattleAnim_Meditate     ; PLACEHOLDER
 	dw BattleAnim_CrossChop    ; PLACEHOLDER
 	dw BattleAnim_GigaDrain    ; PLACEHOLDER
-	dw BattleAnim_RapidSpin    ; PLACEHOLDER
+	dw BattleAnim_SteamRoller
 	dw BattleAnim_Doubleslap   ; PLACEHOLDER
 	dw BattleAnim_BlueFlare
 	dw BattleAnim_FreezeDry
@@ -3466,6 +3466,24 @@ BattleAnim_Bulldoze:
 	anim_loop 12, .loop2
 	anim_wait 48
 	anim_incbgeffect ANIM_BG_1F
+	anim_ret
+	
+BattleAnim_SteamRoller:
+	anim_1gfx ANIM_GFX_S_ROLLER
+	anim_obj ANIM_OBJ_S_ROLLER, 130, 56, $30
+	anim_wait 18
+	anim_bgeffect ANIM_BG_1F, $4, $2, $0
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_wait 30
+	anim_clearobjs
+	anim_bgeffect ANIM_BG_1F, $55, $2, $0
+	anim_obj ANIM_OBJ_S_ROLLER_SPIN, 130, 49, $30
+.loop
+	anim_sound 0, 1, SFX_SPARK
+	anim_wait 8
+	anim_loop 10, .loop
+	anim_clearobjs
+	anim_wait 16
 	anim_ret
 	
 BattleAnim_BlueFlare:

@@ -341,7 +341,7 @@ MoveAnimations:
 	dw BattleAnim_GigaDrain    ; PLACEHOLDER
 	dw BattleAnim_RapidSpin    ; PLACEHOLDER
 	dw BattleAnim_Doubleslap   ; PLACEHOLDER
-	dw BattleAnim_SacredFire   ; PLACEHOLDER
+	dw BattleAnim_BlueFlare
 	dw BattleAnim_FreezeDry
 	dw BattleAnim_DrainingKiss ; 158
 	dw BattleAnim_Submission   ; PLACEHOLDER
@@ -3466,6 +3466,31 @@ BattleAnim_Bulldoze:
 	anim_loop 12, .loop2
 	anim_wait 48
 	anim_incbgeffect ANIM_BG_1F
+	anim_ret
+	
+BattleAnim_BlueFlare:
+	anim_1gfx ANIM_GFX_FIRE
+	anim_bgeffect ANIM_BG_08, $0, $4, $0
+.loop
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_BLUE_FLARE_1, 64, 88, $63
+	anim_wait 2
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_BLUE_FLARE_1, 64, 80, $64
+	anim_wait 2
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_BLUE_FLARE_1, 64, 96, $63
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 116
+	anim_clearobjs
+	anim_sound 0, 1, SFX_EMBER
+	anim_obj ANIM_OBJ_BLUE_FLARE_2, 136, 56, $1
+	anim_obj ANIM_OBJ_BLUE_FLARE_2, 136, 56, $2
+	anim_obj ANIM_OBJ_BLUE_FLARE_2, 136, 56, $3
+	anim_obj ANIM_OBJ_BLUE_FLARE_2, 136, 56, $4
+	anim_obj ANIM_OBJ_BLUE_FLARE_2, 136, 56, $5
+	anim_wait 64
 	anim_ret
 
 BattleAnim_FreezeDry:

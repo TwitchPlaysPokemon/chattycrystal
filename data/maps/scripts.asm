@@ -514,6 +514,7 @@ INCLUDE "maps/PokemonMansion2F.asm"
 INCLUDE "maps/PokemonMansion3F.asm"
 INCLUDE "maps/PokemonMansionB1F.asm"
 
+
 SECTION "Map Scripts 27", ROMX
 
 INCLUDE "maps/PokemonTower1F.asm"
@@ -530,3 +531,17 @@ INCLUDE "maps/BattleTentPCRoom.asm"
 INCLUDE "maps/MtSilverRuins.asm"
 INCLUDE "maps/MtSilverRuinsB1F.asm"
 INCLUDE "maps/PowerPlantB1F.asm"
+
+
+SECTION "Map Scripts 28", ROMX
+
+INCLUDE "maps/TrickHouseEntrance.asm"
+INCLUDE "maps/TrickHouseExit.asm"
+INCLUDE "maps/TrickHouseHallway.asm"
+INCLUDE "maps/TrickHousePuzzle1.asm"
+INCLUDE "maps/TrickHousePuzzle2.asm"
+INCLUDE "maps/TrickHousePuzzle3.asm"
+INCLUDE "maps/TrickHousePuzzle4.asm"
+INCLUDE "maps/TrickHousePuzzle5.asm"
+INCLUDE "maps/TrickHousePuzzle6.asm"
+INCLUDE "maps/TrickHousePuzzle7.asm"

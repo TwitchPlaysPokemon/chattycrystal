@@ -477,6 +477,16 @@ ENDM
 	map_const VICTORY_ROAD_GATE,                           10,  9 ; 13
 	map_const VIRIDIAN_FOREST_NORTH_GATE,                   5,  4 ; 14
 	map_const VIRIDIAN_FOREST_SOUTH_GATE,                   5,  4 ; 15
+	map_const TRICK_HOUSE_ENTRANCE,                         6,  4 ; 16
+	map_const TRICK_HOUSE_EXIT,                             4,  4 ; 17
+	map_const TRICK_HOUSE_HALLWAY,                          6, 10 ; 18
+	map_const TRICK_HOUSE_PUZZLE_1,                        10, 10 ; 19
+	map_const TRICK_HOUSE_PUZZLE_2,                        10, 10 ; 20
+	map_const TRICK_HOUSE_PUZZLE_3,                        10, 10 ; 21
+	map_const TRICK_HOUSE_PUZZLE_4,                        10, 10 ; 22
+	map_const TRICK_HOUSE_PUZZLE_5,                        10, 10 ; 23
+	map_const TRICK_HOUSE_PUZZLE_6,                        10, 10 ; 24
+	map_const TRICK_HOUSE_PUZZLE_7,                        10, 10 ; 25
 
 	newgroup                                                      ; 24
 

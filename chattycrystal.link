@@ -30,6 +30,7 @@ ROM0
 	"Home"
 ROMX $01
 	"bank1"
+	"Map Scripts 28"
 ROMX $02
 	"bank2"
 ROMX $03
@@ -40,6 +41,7 @@ ROMX $04
 	"Formes"
 ROMX $05
 	"bank5"
+	"Map Blocks 6"
 ROMX $06
 	"Tileset Data 1"
 ROMX $07

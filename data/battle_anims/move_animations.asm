@@ -3428,6 +3428,7 @@ BattleAnim_MuddyWater:
 	
 BattleAnim_DarkVoid:
 	anim_1gfx ANIM_GFX_ANGELS
+	anim_clearenemyhud
 	anim_bgp $f8
 	anim_sound 6, 2, SFX_CURSE
 	anim_obj ANIM_OBJ_DESTINY_BOND, 44, 120, $2

@@ -93,10 +93,6 @@ Init::
 	ldh [hSRAMBank], a
 
 	call ClearWRAM
-	ld a, BANK(wCustomLCDHandler)
-	ldh [rSVBK], a
-	ld a, $c9 ; ret instruction
-	ld [wCustomLCDHandler], a
 	ld a, 1
 	ldh [rSVBK], a
 	call ClearVRAM

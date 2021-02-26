@@ -3075,10 +3075,7 @@ wMagnetTrainHoldPosition:: db
 wMagnetTrainFinalPosition:: db
 wMagnetTrainPlayerSpriteInitX:: db
 
-	ds 58
-
-wCustomLCDHandler:: ds 48 ; d1d0
-wCustomLCDHandlerEnd::
+	ds 106
 
 wLYOverridesBackup:: ds SCREEN_HEIGHT_PX ; d200
 wLYOverridesBackupEnd::

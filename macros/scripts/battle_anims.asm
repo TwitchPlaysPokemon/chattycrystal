@@ -238,9 +238,9 @@ anim_keepsprites: MACRO
 	db anim_keepsprites_command
 ENDM
 
-	enum anim_0xf5_command ; $f5
-anim_0xf5: MACRO
-	db anim_0xf5_command
+	enum anim_clearenemyhud_command ; $f5
+anim_clearenemyhud: MACRO
+	db anim_clearenemyhud_command
 ENDM
 
 	enum anim_0xf6_command ; $f6

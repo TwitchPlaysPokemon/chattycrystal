@@ -196,9 +196,15 @@ BattleAnimDelayFrame:
 	jr nz, .wait
 	ret
 
+ClearEnemyHud:
+	ldh a, [hBattleTurn]
+	xor 1
+	jr ClearActorHud.continue
+
 ClearActorHud:
 	ldh a, [hBattleTurn]
 	and a
+.continue
 	jr z, .player
 
 	hlcoord 1, 0
@@ -331,7 +337,7 @@ BattleAnimCommands::
 	dw BattleAnimCmd_OBP0
 	dw BattleAnimCmd_OBP1
 	dw BattleAnimCmd_KeepSprites
-	dw GenericDummyFunction
+	dw ClearEnemyHud
 	dw GenericDummyFunction
 	dw GenericDummyFunction
 	dw BattleAnimCmd_IfParamEqual

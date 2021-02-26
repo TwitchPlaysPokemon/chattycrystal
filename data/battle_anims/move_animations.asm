@@ -328,7 +328,7 @@ MoveAnimations:
 	dw BattleAnim_VineWhip     ; PLACEHOLDER
 	dw BattleAnim_Waterfall    ; PLACEHOLDER
 	dw BattleAnim_SweetScent   ; 148, PLACEHOLDER
-	dw BattleAnim_DarkVoid     ; incomplete
+	dw BattleAnim_DarkVoid
 	dw BattleAnim_Sharpen      ; PLACEHOLDER
 	dw BattleAnim_PsychicM     ; PLACEHOLDER
 	dw BattleAnim_Growth       ; PLACEHOLDER
@@ -3429,11 +3429,13 @@ BattleAnim_MuddyWater:
 BattleAnim_DarkVoid:
 	anim_1gfx ANIM_GFX_ANGELS
 	anim_clearenemyhud
+	anim_sound 0, 0, SFX_WARP_TO
+	anim_bgeffect ANIM_BG_RETURN_MON, $0, $1, $0
+	anim_wait 16
 	anim_bgp $f8
 	anim_sound 6, 2, SFX_CURSE
 	anim_obj ANIM_OBJ_DESTINY_BOND, 44, 120, $2
 	anim_wait 48
-	anim_call BattleAnim_UserObj_1Row
 	anim_bgeffect ANIM_BG_DIG, $0, $0, $1
 .loop
 	anim_sound 0, 0, SFX_SLUDGE_BOMB

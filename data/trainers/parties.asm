@@ -4149,6 +4149,50 @@ ScientistGroup:
 	db BRIGHTPOWDER
 	db -1 ; end
 
+	next_list_item ; SCIENTIST (12)
+	db "DEMIT@", TRAINERTYPE_ITEM
+	db 78
+	dw MASQUERAIN
+	db SILVERPOWDER
+	db 77
+	dw VIBRAVA
+	db BRIGHTPOWDER
+	db 78
+	dw CHATOT
+	db KINGS_ROCK
+	db 78
+	dw SWELLOW
+	db SHARP_BEAK
+	db 77
+	dw GIRAFARIG
+	db POLKADOTBOW
+	db 78
+	dw GOLBAT
+	db BLACKGLASSES
+	db -1 ; end
+
+	next_list_item ; SCIENTIST (13)
+	db "NANOT@", TRAINERTYPE_ITEM
+	db 81
+	dw MANECTRIC
+	db GOLD_BERRY
+	db 80
+	dw ROSERADE
+	db BRIGHTPOWDER
+	db 81
+	dw PILOSWINE
+	db NEVERMELTICE
+	db 81
+	dw ARBOK
+	db BRIGHTPOWDER
+	db 80
+	dw SIMISAGE
+	db LEFTOVERS
+	db 81
+	dw SMEARGLE
+	db LEFTOVERS
+	db -1 ; end
+
 	end_list_items
 
 SchoolboyGroup:
@@ -5364,6 +5408,28 @@ BeautyGroup:
 	dw DELIBIRD
 	db -1 ; end
 
+	next_list_item ; BEAUTY (20)
+	db "RENE@", TRAINERTYPE_ITEM
+	db 79
+	dw FURRET
+	db MINT_BERRY
+	db 78
+	dw DUNSPARCE
+	db POLKADOTBOW
+	db 79
+	dw LINOONE
+	db GOLD_BERRY
+	db 79
+	dw WIGGLYTUFF
+	db GOLD_BERRY
+	db 78
+	dw SIMISAGE
+	db FOCUS_BAND
+	db 79
+	dw LEAFEON
+	db GOLD_BERRY
+	db -1 ; end
+
 	end_list_items
 
 PokemaniacGroup:
@@ -5789,6 +5855,27 @@ SkierGroup:
 	db GOLD_BERRY
 	db -1 ; end
 
+	next_list_item ; SKIER (5)
+	db "VIUM@", TRAINERTYPE_ITEM
+	db 80
+	dw PELIPPER
+	db BRIGHTPOWDER
+	db 79
+	dw LAIRON
+	db GOLD_BERRY
+	db 80
+	dw DUSCLOPS
+	db SPELL_TAG
+	db 80
+	dw FORRETRESS
+	db LEFTOVERS
+	db 79
+	dw SANDSLASH
+	db QUICK_CLAW
+	db 80
+	dw SKARMORY
+	db GOLD_BERRY
+	db -1 ; end
 
 	end_list_items
 
@@ -5883,6 +5970,27 @@ TeacherGroup:
 	db BITTER_BERRY
 	db -1 ; end
 
+	next_list_item ; TEACHER (9)
+	db "AMEIL@", TRAINERTYPE_ITEM
+	db 80
+	dw SUNFLORA
+	db GOLD_BERRY
+	db 79
+	dw QUAGSIRE
+	db GOLD_BERRY
+	db 80
+	dw GLIGAR
+	db GOLD_BERRY
+	db 80
+	dw SNEASEL
+	db MYSTERYBERRY
+	db 79
+	dw QWILFISH
+	db MYSTIC_WATER
+	db 80
+	dw NOCTOWL
+	db SHARP_BEAK
+	db -1 ; end
 
 	end_list_items
 
@@ -6558,6 +6666,28 @@ SwimmerMGroup:
 	db 71
 	dw BELDUM
 	db TWISTEDSPOON
+	db -1 ; end
+
+	next_list_item ; SWIMMERM (23)
+	db "GULOR@", TRAINERTYPE_ITEM
+	db 79
+	dw DUCKLETT
+	db MYSTIC_WATER
+	db 78
+	dw NATU
+	db GOLD_BERRY
+	db 79
+	dw WAILMER
+	db GOLD_BERRY
+	db 79
+	dw METANG
+	db METAL_COAT
+	db 78
+	dw SHELGON
+	db MIRACLEBERRY
+	db 79
+	dw MIGHTYENA
+	db GOLD_BERRY
 	db -1 ; end
 
 	end_list_items
@@ -7375,6 +7505,28 @@ HikerGroup:
 	dw HORN_ATTACK, STOMP, SCARY_FACE, ROCK_SMASH
 	db -1 ; end
 
+	next_list_item ; HIKER (24)
+	db "CRAG@", TRAINERTYPE_ITEM
+	db 78
+	dw TOGETIC
+	db GOLD_BERRY
+	db 77
+	dw MAGCARGO
+	db QUICK_CLAW
+	db 78
+	dw AZUMARILL
+	db MYSTIC_WATER
+	db 78
+	dw SUDOWOODO
+	db BRIGHTPOWDER
+	db 77
+	dw MASQUERAIN
+	db SILVERPOWDER
+	db 78
+	dw PUPITAR
+	db BITTER_BERRY
+	db -1 ; end
+
 	end_list_items
 
 BikerGroup:
@@ -7732,6 +7884,28 @@ JugglerGroup:
 	dw BRONZOR
 	db 66
 	dw COMBUSKEN
+	db -1 ; end
+
+	next_list_item ; JUGGLER (8)
+	db "LIREL@", TRAINERTYPE_ITEM
+	db 78
+	dw PANSAGE
+	db NO_ITEM
+	db 77
+	dw LOUDRED
+	db GOLD_BERRY
+	db 78
+	dw DELCATTY
+	db MYSTERYBERRY
+	db 78
+	dw ROSELIA
+	db BRIGHTPOWDER
+	db 77
+	dw SKUNTANK
+	db SCOPE_LENS
+	db 78
+	dw BRONZONG
+	db MINT_BERRY
 	db -1 ; end
 
 	end_list_items
@@ -8833,6 +9007,28 @@ BoarderGroup:
 	db GOLD_BERRY
 	db -1 ; end
 
+	next_list_item ; BOARDER (10)
+	db "BIDIX@", TRAINERTYPE_ITEM
+	db 81
+	dw KROOKODILE
+	db LEFTOVERS
+	db 80
+	dw JUMPLUFF
+	db MIRACLE_SEED
+	db 81
+	dw VIBRAVA
+	db GOLD_BERRY
+	db 81
+	dw SEADRA
+	db GOLD_BERRY
+	db 80
+	dw MISDREAVUS
+	db GOLD_BERRY
+	db 81
+	dw SEAKING
+	db BRIGHTPOWDER
+	db -1 ; end
+
 	end_list_items
 
 PokefanMGroup:
@@ -9237,6 +9433,35 @@ PokefanFGroup:
 	dw REMORAID
 	db GOLD_BERRY
 	db -1 ; end
+
+	next_list_item ; POKEFANF (9)
+	db "GLYDIN@", TRAINERTYPE_ITEM_MOVES
+	db 82
+	dw SNEASEL
+	db SCOPE_LENS
+	dw FEINT_ATTACK, SLASH, METAL_CLAW, HIDDEN_POWER
+	db 81
+	dw CLAWITZER
+	db FOCUS_BAND
+	dw VICEGRIP, WATER_PULSE, CRABHAMMER, HIDDEN_POWER
+	db 82
+	dw SEADRA
+	db LEFTOVERS
+	dw WATER_PULSE, AURORA_BEAM, FACADE, HIDDEN_POWER
+	db 82
+	dw GOLBAT
+	db BRIGHTPOWDER
+	dw WING_ATTACK, BITE, GIGA_DRAIN, HIDDEN_POWER
+	db 81
+	dw HITMONTOP
+	db KINGS_ROCK
+	dw ROLLING_KICK, DIG, STRENGTH, HIDDEN_POWER
+	db 82
+	dw GIRAFARIG
+	db BRIGHTPOWDER
+	dw STOMP, PSYBEAM, SHADOW_BALL, HIDDEN_POWER
+	db -1 ; end
+
 
 	end_list_items
 

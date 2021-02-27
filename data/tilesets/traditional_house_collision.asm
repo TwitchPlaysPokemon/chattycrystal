@@ -105,7 +105,7 @@
 	tilecoll CUT_TREE, WALL, FLOOR, WALL ; 68
 	tilecoll CUT_TREE, FLOOR, WALL, FLOOR ; 69
 	tilecoll CUT_TREE, WALL, FLOOR, FLOOR ; 6a
-	tilecoll WALL, WALL, WALL, STAIRCASE ; 6b
+	tilecoll WALL, WALL, WALL, WALL ; 6b
 	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 6c
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 6d
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 6e
@@ -206,3 +206,24 @@
 	tilecoll SPIN_RIGHT, SPIN_RIGHT, SPIN_DOWN, FLOOR ; cd
 	tilecoll SPIN_DOWN, FLOOR, BRAKE, WALL ; ce
 	tilecoll SPIN_LEFT, SPIN_DOWN, SPIN_UP, FLOOR ; cf
+	tilecoll WALL, WALL, FLOOR, FLOOR ; d0
+	tilecoll WALL, WALL, WALL, WALL ; d1
+	tilecoll WALL, WALL, WALL, FLOOR ; d2
+	tilecoll ICE, ICE, ICE, ICE ; d3
+	tilecoll WALL, ICE, ICE, ICE ; d4
+	tilecoll ICE, WALL, ICE, ICE ; d5
+	tilecoll ICE, ICE, WALL, ICE ; d6
+	tilecoll ICE, ICE, ICE, WALL ; d7
+	tilecoll WALL, WALL, ICE, WALL ; d8
+	tilecoll ICE, WALL, ICE, WALL ; d9
+	tilecoll WALL, ICE, ICE, WALL ; da
+	tilecoll WALL, WALL, ICE, ICE ; db
+	tilecoll WALL, FLOOR, ICE, ICE ; dc
+	tilecoll WALL, WALL, ICE, WALL ; dd
+	tilecoll FLOOR, WALL, ICE, ICE ; de
+	tilecoll FLOOR, WALL, ICE, WALL ; df
+	tilecoll ICE, WALL, FLOOR, FLOOR ; e0
+	tilecoll WALL, WALL, FLOOR, WALL ; e1
+	tilecoll WALL, WALL, FLOOR, WALL ; e2
+	tilecoll FLOOR, FLOOR, ICE, ICE ; e3
+	tilecoll WALL, WALL, WALL, WALL ; e4

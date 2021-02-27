@@ -337,7 +337,7 @@ AnimationPointers:
 	dw MothimAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Buizel
 	dw PlaceholderAnimation ; PLACEHOLDER - Floatzel
-	dw PlaceholderAnimation ; PLACEHOLDER - Shellos
+	dw ShellosAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Gastrodon
 	dw BunearyAnimation
 	dw LopunnyAnimation

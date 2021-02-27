@@ -744,7 +744,6 @@ SECTION "Pics 21", ROMX
 GrovyleFrontpic:    INCBIN "gfx/pokemon/grovyle/front.animated.2bpp.lz"
 GrovyleBackpic:     INCBIN "gfx/pokemon/grovyle/back.2bpp.lz"
 SceptileBackpic:    INCBIN "gfx/pokemon/sceptile/back.2bpp.lz"
-PlaceholderFrontpic:: INCBIN "gfx/pokemon/placeholder/front.animated.2bpp.lz"
 
 SECTION "Pics 22", ROMX
 
@@ -762,7 +761,6 @@ LotadFrontpic:      INCBIN "gfx/pokemon/lotad/front.animated.2bpp.lz"
 LotadBackpic:       INCBIN "gfx/pokemon/lotad/back.2bpp.lz"
 WingullFrontpic:    INCBIN "gfx/pokemon/wingull/front.animated.2bpp.lz"
 WingullBackpic:     INCBIN "gfx/pokemon/wingull/back.2bpp.lz"
-PlaceholderBackpic:: INCBIN "gfx/pokemon/placeholder/back.2bpp.lz"
 ElectrikeBackpic:   INCBIN "gfx/pokemon/electrike/back.2bpp.lz"
 SphealFrontpic:     INCBIN "gfx/pokemon/spheal/front.animated.2bpp.lz"
 

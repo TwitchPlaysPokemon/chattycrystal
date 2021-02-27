@@ -482,11 +482,11 @@ ENDM
 	map_const TRICK_HOUSE_HALLWAY,                          6, 10 ; 18
 	map_const TRICK_HOUSE_PUZZLE_1,                         8, 11 ; 19
 	map_const TRICK_HOUSE_PUZZLE_2,                         8, 11 ; 20
-	map_const TRICK_HOUSE_PUZZLE_3,                        10, 10 ; 21
-	map_const TRICK_HOUSE_PUZZLE_4,                        10, 10 ; 22
-	map_const TRICK_HOUSE_PUZZLE_5,                        10, 10 ; 23
-	map_const TRICK_HOUSE_PUZZLE_6,                        10, 10 ; 24
-	map_const TRICK_HOUSE_PUZZLE_7,                        10, 10 ; 25
+	map_const TRICK_HOUSE_PUZZLE_3,                         8, 11 ; 21
+	map_const TRICK_HOUSE_PUZZLE_4,                         8, 11 ; 22
+	map_const TRICK_HOUSE_PUZZLE_5,                         8, 11 ; 23
+	map_const TRICK_HOUSE_PUZZLE_6,                         8, 11 ; 24
+	map_const TRICK_HOUSE_PUZZLE_7,                         8, 11 ; 25
 
 	newgroup                                                      ; 24
 

@@ -340,7 +340,7 @@ MoveAnimations:
 	dw BattleAnim_CrossChop    ; PLACEHOLDER
 	dw BattleAnim_GigaDrain    ; PLACEHOLDER
 	dw BattleAnim_SteamRoller
-	dw BattleAnim_TailSlap
+	dw BattleAnim_Doubleslap   ; PLACEHOLDER
 	dw BattleAnim_BlueFlare
 	dw BattleAnim_FreezeDry
 	dw BattleAnim_DrainingKiss ; 158
@@ -852,16 +852,15 @@ BattleAnim_Surf:
 	anim_ret
 
 BattleAnim_VineWhip:
-	anim_2gfx ANIM_GFX_WHIP, ANIM_GFX_HIT
+	anim_1gfx ANIM_GFX_WHIP
 	anim_sound 0, 1, SFX_VINE_WHIP
-	anim_obj ANIM_OBJ_VINE_WHIP_2, 116, 48, $80
+	anim_obj ANIM_OBJ_40, 116, 52, $80
 	anim_wait 4
 	anim_sound 0, 1, SFX_VINE_WHIP
-	anim_obj ANIM_OBJ_VINE_WHIP_1, 128, 54, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_01, 136, 56, $0
-	anim_incobj  1
-	anim_wait 16
+	anim_obj ANIM_OBJ_3F, 128, 60, $0
+	anim_wait 4
+	anim_incobj 1
+	anim_wait 4
 	anim_ret
 
 BattleAnim_LeechSeed:
@@ -948,7 +947,6 @@ BattleAnim_Solarbeam:
 .FireSolarBeam
 	anim_1gfx ANIM_GFX_BEAM
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
-	anim_bgp $90
 	anim_call BattleAnim_Solarbeam_branch_cbb39
 	anim_wait 48
 	anim_ret
@@ -3490,23 +3488,6 @@ BattleAnim_SteamRoller:
 	anim_clearobjs
 	anim_wait 16
 	anim_ret
-	
-BattleAnim_TailSlap:
-	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_2Row
-	anim_bgeffect ANIM_BG_TACKLE, $0, $0, $0
-	anim_wait 4
-	anim_2gfx ANIM_GFX_WHIP, ANIM_GFX_HIT
-	anim_sound 0, 1, SFX_DOUBLESLAP
-	anim_obj ANIM_OBJ_40, 116, 48, $80
-	anim_wait 4
-	anim_obj ANIM_OBJ_3F, 128, 54, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_01, 136, 56, $0
-	anim_incobj  1
-	anim_wait 16
-	anim_ret
-	anim_jump BattleAnim_ShowMon_0	
 	
 BattleAnim_BlueFlare:
 	anim_1gfx ANIM_GFX_FIRE

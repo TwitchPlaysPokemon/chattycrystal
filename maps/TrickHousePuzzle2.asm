@@ -7,9 +7,9 @@ TrickHousePuzzle2_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  2, 19, TRICK_HOUSE_ENTRANCE, 3
-	warp_event  3, 19, TRICK_HOUSE_ENTRANCE, 3
-	warp_event 17,  0, TRICK_HOUSE_EXIT, 2
+	warp_event  0, 21, TRICK_HOUSE_ENTRANCE, 3
+	warp_event  1, 21, TRICK_HOUSE_ENTRANCE, 3
+	warp_event 13,  1, TRICK_HOUSE_EXIT, 2
 
 	db 0 ; coord events
 

@@ -481,7 +481,7 @@ ENDM
 	map_const TRICK_HOUSE_EXIT,                             4,  4 ; 17
 	map_const TRICK_HOUSE_HALLWAY,                          6, 10 ; 18
 	map_const TRICK_HOUSE_PUZZLE_1,                         8, 11 ; 19
-	map_const TRICK_HOUSE_PUZZLE_2,                        10, 10 ; 20
+	map_const TRICK_HOUSE_PUZZLE_2,                         8, 11 ; 20
 	map_const TRICK_HOUSE_PUZZLE_3,                        10, 10 ; 21
 	map_const TRICK_HOUSE_PUZZLE_4,                        10, 10 ; 22
 	map_const TRICK_HOUSE_PUZZLE_5,                        10, 10 ; 23

@@ -273,6 +273,7 @@ ROMX $60
 	"Pics 23"
 ROMX $61
 	"Map Scripts 14"
+	"Tileset Data 12"
 ROMX $62
 	"Map Scripts 15"
 ROMX $63

@@ -30,7 +30,6 @@ ROM0
 	"Home"
 ROMX $01
 	"bank1"
-	"Map Scripts 28"
 ROMX $02
 	"bank2"
 ROMX $03

@@ -269,6 +269,16 @@ INCLUDE "maps/RocketHideoutB2F.asm"
 INCLUDE "maps/RocketHideoutB3F.asm"
 INCLUDE "maps/RocketHideoutB4F.asm"
 INCLUDE "maps/RocketHideoutElevator.asm"
+INCLUDE "maps/TrickHouseEntrance.asm"
+INCLUDE "maps/TrickHouseExit.asm"
+INCLUDE "maps/TrickHouseHallway.asm"
+INCLUDE "maps/TrickHousePuzzle1.asm"
+INCLUDE "maps/TrickHousePuzzle2.asm"
+INCLUDE "maps/TrickHousePuzzle3.asm"
+INCLUDE "maps/TrickHousePuzzle4.asm"
+INCLUDE "maps/TrickHousePuzzle5.asm"
+INCLUDE "maps/TrickHousePuzzle6.asm"
+INCLUDE "maps/TrickHousePuzzle7.asm"
 
 
 SECTION "Map Scripts 15", ROMX
@@ -531,17 +541,3 @@ INCLUDE "maps/BattleTentPCRoom.asm"
 INCLUDE "maps/MtSilverRuins.asm"
 INCLUDE "maps/MtSilverRuinsB1F.asm"
 INCLUDE "maps/PowerPlantB1F.asm"
-
-
-SECTION "Map Scripts 28", ROMX
-
-INCLUDE "maps/TrickHouseEntrance.asm"
-INCLUDE "maps/TrickHouseExit.asm"
-INCLUDE "maps/TrickHouseHallway.asm"
-INCLUDE "maps/TrickHousePuzzle1.asm"
-INCLUDE "maps/TrickHousePuzzle2.asm"
-INCLUDE "maps/TrickHousePuzzle3.asm"
-INCLUDE "maps/TrickHousePuzzle4.asm"
-INCLUDE "maps/TrickHousePuzzle5.asm"
-INCLUDE "maps/TrickHousePuzzle6.asm"
-INCLUDE "maps/TrickHousePuzzle7.asm"

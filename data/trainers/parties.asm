@@ -8526,6 +8526,8 @@ MediumGroup:
 
 	end_list_items
 
+SECTION "Enemy Trainer Parties 3", ROMX
+
 BoarderGroup:
 	next_list_item ; BOARDER (1)
 	db "RONALD@", TRAINERTYPE_NORMAL
@@ -9079,4 +9081,3 @@ GruntFGroup:
 	db -1 ; end
 
 	end_list_items
-

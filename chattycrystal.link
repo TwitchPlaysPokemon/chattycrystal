@@ -347,6 +347,7 @@ ROMX $7d
 	"Tileset Data 11"
 ROMX $7e
 	"Crystal Events"
+	"Enemy Trainer Parties 3"
 ROMX $7f
 	"Pics 24"
 WRAM0

@@ -338,7 +338,7 @@ MoveAnimations:
 	dw BattleAnim_Bulldoze     ; 150
 	dw BattleAnim_Meditate     ; PLACEHOLDER
 	dw BattleAnim_CrossChop    ; PLACEHOLDER
-	dw BattleAnim_GigaDrain    ; PLACEHOLDER
+	dw BattleAnim_HornLeech
 	dw BattleAnim_SteamRoller
 	dw BattleAnim_TailSlap
 	dw BattleAnim_BlueFlare
@@ -3471,6 +3471,28 @@ BattleAnim_Bulldoze:
 	anim_loop 12, .loop2
 	anim_wait 48
 	anim_incbgeffect ANIM_BG_1F
+	anim_ret
+	
+BattleAnim_HornLeech:
+	anim_3gfx ANIM_GFX_HORN_LEECH, ANIM_GFX_HIT, ANIM_GFX_CHARGE
+	anim_obj ANIM_OBJ_HORN_LEECH, 72, 80, $1
+	anim_wait 16
+	anim_sound 0, 1, SFX_HORN_ATTACK
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_setvar $0
+.loop
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_ABSORB, 128, 48, $2
+	anim_wait 3
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_ABSORB, 136, 64, $3
+	anim_wait 4
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_ABSORB, 136, 32, $4
+	anim_wait 3
+	anim_loop 6, .loop
+	anim_wait 32
 	anim_ret
 	
 BattleAnim_SteamRoller:

@@ -137,3 +137,4 @@ OverworldSprites:
 	overworld_sprite EvanSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite ElectricFenceLeftSpriteGFX, 4, STILL_SPRITE, PAL_OW_TREE
 	overworld_sprite ElectricFenceRightSpriteGFX, 4, STILL_SPRITE, PAL_OW_TREE
+	overworld_sprite ScrollSpriteGFX, 4, STILL_SPRITE, PAL_OW_SILVER

@@ -134,6 +134,7 @@
 	const SPRITE_BRONZE ;82
 	const SPRITE_ELECTRIC_FENCE_LEFT ;83
 	const SPRITE_ELECTRIC_FENCE_RIGHT ;84
+	const SPRITE_SCROLL ;85
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $90

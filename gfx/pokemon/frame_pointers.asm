@@ -381,7 +381,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Sliggoo
 	dba GoodraFrames
 	dba CrabrawlerFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Crabominable
+	dba CrabominableFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Cutiefly
 	dba RibombeeFrames
 	; Fused Crystal mons

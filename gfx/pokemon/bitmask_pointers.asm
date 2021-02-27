@@ -381,7 +381,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sliggoo
 	dw GoodraBitmasks
 	dw CrabrawlerBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Crabominable
+	dw CrabominableBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Cutiefly
 	dw RibombeeBitmasks
 	; Fused Crystal mons

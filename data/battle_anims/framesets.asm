@@ -1344,19 +1344,19 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_55,  8
 	frame BATTLEANIMOAMSET_54,  20
 	delanim
-	
+
 .Frameset_c5:
 	frame BATTLEANIMOAMSET_DE,  8
 	endanim
-	
+
 .Frameset_c6:
 	frame BATTLEANIMOAMSET_DF,  8
 	endanim
-	
+
 .Frameset_c7:
 	frame BATTLEANIMOAMSET_E0,  8
 	endanim
-	
+
 .Frameset_c8:
 	frame BATTLEANIMOAMSET_A3,  6
 	frame BATTLEANIMOAMSET_B8,  6

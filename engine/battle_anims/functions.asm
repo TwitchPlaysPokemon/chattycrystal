@@ -4043,14 +4043,14 @@ BattleAnimFunction_55:
 	add hl, bc
 	ld a, [hl]
 	jp BattleAnim_StepCircle
-	
+
 BattleAnimFunction_56:
 	ld hl, BATTLEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld a, [hl]
 	cp $38
 	jp nc, DeinitBattleAnimation
-	
+
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc
 	ld d, [hl]

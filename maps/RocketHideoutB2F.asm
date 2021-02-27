@@ -20,7 +20,7 @@ GruntF6BeatenText:
 GruntF6AfterBattleText:
 	text "<...>"
 	done
-	
+
 TrainerGruntF6:
 	trainer GRUNTF, GRUNTF_6, EVENT_BEAT_ROCKET_GRUNTF_6, GruntF6SeenText, GruntF6BeatenText, 0, .Script
 
@@ -31,7 +31,7 @@ TrainerGruntF6:
 	waitbutton
 	closetext
 	end
-	
+
 RocketHideoutB2FChiquirtle:
 	refreshscreen
 	pokepic CHIQUIRTLE
@@ -52,7 +52,7 @@ RocketHideoutB2FChiquirtle:
 	disappear ROCKETHIDEOUTB2F_CHIQUIRTLE
 	closetext
 	end
-	
+
 RocketHideoutB2FHootduo:
 	refreshscreen
 	pokepic HOOTDUO
@@ -73,36 +73,36 @@ RocketHideoutB2FHootduo:
 	disappear ROCKETHIDEOUTB2F_HOOTDUO
 	closetext
 	end
-	
+
 RocketHideoutB2FNoRoom:
 	writetext RocketHideoutB2FPartyFullText
 	waitbutton
 RocketHideoutB2FRefused:
 	closetext
 	end
-	
+
 RocketHideoutB2FDoYouWantChiquirtleText:
 	text "It's a CHIQUIRTLE."
 	line "Do you want to"
 	cont "raise it?"
 	done
-	
+
 ReceivedChiquirtleText:
 	text "<PLAYER> received"
 	line "CHIQUIRTLE!"
 	done
-	
+
 RocketHideoutB2FDoYouWantHootduoText:
 	text "It's a HOOTDUO."
 	line "Do you want to"
 	cont "raise it?"
 	done
-	
+
 ReceivedHootduoText:
 	text "<PLAYER> received"
 	line "HOOTDUO!"
 	done
-	
+
 RocketHideoutB2FPartyFullText:
 	text "Your party"
 	line "is full<...>"

@@ -19,7 +19,7 @@ TrainerGruntM31:
 	waitbutton
 	closetext
 	end
-	
+
 RocketHideoutB1FOnixtret:
 	refreshscreen
 	pokepic ONIXTRET
@@ -40,25 +40,25 @@ RocketHideoutB1FOnixtret:
 	disappear ROCKETHIDEOUTB1F_ONIXTRET
 	closetext
 	end
-	
+
 .NoRoom:
 	writetext RocketHideoutB1FPartyFullText
 	waitbutton
 .Refused:
 	closetext
 	end
-	
+
 RocketHideoutB1FDoYouWantOnixtretText:
 	text "It's an ONIXTRET."
 	line "Do you want to"
 	cont "raise it?"
 	done
-	
+
 ReceivedOnixtretText:
 	text "<PLAYER> received"
 	line "ONIXTRET!"
 	done
-	
+
 RocketHideoutB1FPartyFullText:
 	text "Your party"
 	line "is full<...>"

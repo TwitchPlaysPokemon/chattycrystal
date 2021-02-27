@@ -14,12 +14,12 @@ RocketHideoutB3F_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene ; SCENE_DEFAULT
 	scene_script .DummyScene ; SCENE_FINISHED
-	
+
 	db 0 ; callbacks
-	
+
 .DummyScene
 	end
-	
+
 RocketHideoutB3FWooperTBattleLeft:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	showemote EMOTE_SHOCK, ROCKETHIDEOUTB3F_WOOPER_GMMTMT, 15
@@ -57,7 +57,7 @@ RocketHideoutB3FWooperBattleContinue:
 	musicfadeout MUSIC_NONE, 20
 	playmapmusic
 	end
-	
+
 RocketHideoutB3FWooperMovementLeft:
 	step LEFT
 	step_end
@@ -70,7 +70,7 @@ RocketHideoutB3FWooperMovement:
 RocketHideoutB3FWooperLeavesMovement:
 	teleport_from
 	step_end
-	
+
 RocketHideoutB3FPlayerFaceRight:
 	turn_head RIGHT
 	step_end
@@ -87,7 +87,7 @@ RocketHideoutB3FUpGrade:
 
 RocketHideoutB3FMaxEther:
 	itemball MAX_ETHER
-	
+
 RocketHideoutB3FNormalBox:
 	itemball NORMAL_BOX
 

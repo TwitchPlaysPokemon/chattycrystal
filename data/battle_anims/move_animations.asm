@@ -336,8 +336,8 @@ MoveAnimations:
 	dw BattleAnim_Roar         ; PLACEHOLDER
 	dw BattleAnim_HydroPump    ; PLACEHOLDER
 	dw BattleAnim_Bulldoze     ; 150
-	dw BattleAnim_Meditate     ; PLACEHOLDER
-	dw BattleAnim_CrossChop    ; PLACEHOLDER
+	dw BattleAnim_WorkUp
+	dw BattleAnim_DualChop
 	dw BattleAnim_HornLeech
 	dw BattleAnim_SteamRoller
 	dw BattleAnim_TailSlap
@@ -3471,6 +3471,36 @@ BattleAnim_Bulldoze:
 	anim_loop 12, .loop2
 	anim_wait 48
 	anim_incbgeffect ANIM_BG_1F
+	anim_ret
+	
+BattleAnim_WorkUp:
+	anim_1gfx ANIM_GFX_WIND
+	anim_call BattleAnim_TargetObj_2Row
+	anim_sound 0, 0, SFX_AEROBLAST
+	anim_bgeffect ANIM_BG_18, $0, $1, $40
+.loop
+	anim_bgeffect ANIM_BG_WITHDRAW, $0, $1, $50
+	anim_wait 3
+	anim_incbgeffect ANIM_BG_WITHDRAW
+	anim_loop 16, .loop
+	anim_wait 32
+	anim_sound 0, 0, SFX_MENU
+	anim_obj ANIM_OBJ_SWAGGER, 72, 88, $44	
+	anim_wait 32
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
+	
+BattleAnim_DualChop:
+	anim_1gfx ANIM_GFX_CUT
+	anim_sound 0, 1, SFX_CUT
+	anim_obj ANIM_OBJ_3A, 152, 40, $0
+	anim_sound 0, 1, SFX_VICEGRIP
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_wait 24
+	anim_obj ANIM_OBJ_3B, 112, 40, $0
+	anim_sound 0, 1, SFX_VICEGRIP
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_wait 32
 	anim_ret
 	
 BattleAnim_HornLeech:

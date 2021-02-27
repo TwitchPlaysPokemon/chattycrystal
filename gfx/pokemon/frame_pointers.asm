@@ -337,7 +337,7 @@ FramesPointers:
 	dba MothimFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Buizel
 	dba PlaceholderFrames ; PLACEHOLDER - Floatzel
-	dba PlaceholderFrames ; PLACEHOLDER - Shellos
+	dba ShellosFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Gastrodon
 	dba BunearyFrames
 	dba LopunnyFrames
@@ -381,7 +381,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Sliggoo
 	dba GoodraFrames
 	dba CrabrawlerFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Crabominable
+	dba CrabominableFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Cutiefly
 	dba RibombeeFrames
 	; Fused Crystal mons

@@ -337,7 +337,7 @@ AnimationPointers:
 	dw MothimAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Buizel
 	dw PlaceholderAnimation ; PLACEHOLDER - Floatzel
-	dw PlaceholderAnimation ; PLACEHOLDER - Shellos
+	dw ShellosAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Gastrodon
 	dw BunearyAnimation
 	dw LopunnyAnimation
@@ -381,7 +381,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Sliggoo
 	dw GoodraAnimation
 	dw CrabrawlerAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Crabominable
+	dw CrabominableAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Cutiefly
 	dw RibombeeAnimation
 	; Fused Crystal mons

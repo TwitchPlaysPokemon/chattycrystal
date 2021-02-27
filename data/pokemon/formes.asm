@@ -39,18 +39,18 @@ BurmyFormes:
 	forme BurmyTrashFrontpic, BurmyTrashBackpic, BurmyTrashPalette, BurmyTrashFrames, BurmyTrashBitmasks, BurmyTrashAnimation, BurmyTrashAnimationIdle
 
 ShellosFormes:
-	; west sea - animation is PLACEHOLDER
-	forme ShellosFrontpic, ShellosBackpic, ShellosPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; east sea - animation is PLACEHOLDER
-	forme ShellosEastFrontpic, ShellosEastBackpic, ShellosEastPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; west sea - animation is PLACEHOLDER
-	forme ShellosFrontpic, ShellosBackpic, ShellosPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; east sea - animation is PLACEHOLDER
-	forme ShellosEastFrontpic, ShellosEastBackpic, ShellosEastPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; west sea - animation is PLACEHOLDER
-	forme ShellosFrontpic, ShellosBackpic, ShellosPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
-	; east sea - animation is PLACEHOLDER
-	forme ShellosEastFrontpic, ShellosEastBackpic, ShellosEastPalette, PlaceholderFrames, PlaceholderBitmasks, PlaceholderAnimation, PlaceholderAnimationIdle
+	; west sea
+	forme ShellosFrontpic, ShellosBackpic, ShellosPalette, ShellosFrames, ShellosBitmasks, ShellosAnimation, ShellosAnimationIdle
+	; east sea
+	forme ShellosEastFrontpic, ShellosEastBackpic, ShellosEastPalette, ShellosEastFrames, ShellosEastBitmasks, ShellosEastAnimation, ShellosEastAnimationIdle
+	; west sea
+	forme ShellosFrontpic, ShellosBackpic, ShellosPalette, ShellosFrames, ShellosBitmasks, ShellosAnimation, ShellosAnimationIdle
+	; east sea
+	forme ShellosEastFrontpic, ShellosEastBackpic, ShellosEastPalette, ShellosEastFrames, ShellosEastBitmasks, ShellosEastAnimation, ShellosEastAnimationIdle
+	; west sea
+	forme ShellosFrontpic, ShellosBackpic, ShellosPalette, ShellosFrames, ShellosBitmasks, ShellosAnimation, ShellosAnimationIdle
+	; east sea
+	forme ShellosEastFrontpic, ShellosEastBackpic, ShellosEastPalette, ShellosEastFrames, ShellosEastBitmasks, ShellosEastAnimation, ShellosEastAnimationIdle
 
 GastrodonFormes:
 	; west sea - animation is PLACEHOLDER

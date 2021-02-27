@@ -337,7 +337,7 @@ BitmasksPointers:
 	dw MothimBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Buizel
 	dw PlaceholderBitmasks ; PLACEHOLDER - Floatzel
-	dw PlaceholderBitmasks ; PLACEHOLDER - Shellos
+	dw ShellosBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Gastrodon
 	dw BunearyBitmasks
 	dw LopunnyBitmasks

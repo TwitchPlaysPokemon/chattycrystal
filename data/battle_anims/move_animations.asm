@@ -3427,7 +3427,7 @@ BattleAnim_MuddyWater:
 	anim_incobj 1
 	anim_wait 56
 	anim_ret
-	
+
 BattleAnim_DarkVoid:
 	anim_1gfx ANIM_GFX_ANGELS
 	anim_clearenemyhud
@@ -3472,7 +3472,7 @@ BattleAnim_Bulldoze:
 	anim_wait 48
 	anim_incbgeffect ANIM_BG_1F
 	anim_ret
-	
+
 BattleAnim_WorkUp:
 	anim_1gfx ANIM_GFX_WIND
 	anim_call BattleAnim_TargetObj_2Row
@@ -3485,11 +3485,11 @@ BattleAnim_WorkUp:
 	anim_loop 16, .loop
 	anim_wait 32
 	anim_sound 0, 0, SFX_MENU
-	anim_obj ANIM_OBJ_SWAGGER, 72, 88, $44	
+	anim_obj ANIM_OBJ_SWAGGER, 72, 88, $44
 	anim_wait 32
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
-	
+
 BattleAnim_DualChop:
 	anim_1gfx ANIM_GFX_CUT
 	anim_sound 0, 1, SFX_CUT
@@ -3502,7 +3502,7 @@ BattleAnim_DualChop:
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
 	anim_wait 32
 	anim_ret
-	
+
 BattleAnim_HornLeech:
 	anim_3gfx ANIM_GFX_HORN_LEECH, ANIM_GFX_HIT, ANIM_GFX_CHARGE
 	anim_obj ANIM_OBJ_HORN_LEECH, 72, 80, $1
@@ -3524,7 +3524,7 @@ BattleAnim_HornLeech:
 	anim_loop 6, .loop
 	anim_wait 32
 	anim_ret
-	
+
 BattleAnim_SteamRoller:
 	anim_1gfx ANIM_GFX_S_ROLLER
 	anim_obj ANIM_OBJ_S_ROLLER, 130, 56, $30
@@ -3542,7 +3542,7 @@ BattleAnim_SteamRoller:
 	anim_clearobjs
 	anim_wait 16
 	anim_ret
-	
+
 BattleAnim_TailSlap:
 	anim_2gfx ANIM_GFX_WHIP, ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
@@ -3559,7 +3559,7 @@ BattleAnim_TailSlap:
 	anim_obj ANIM_OBJ_01, 136, 56, $0
 	anim_wait 16
 	anim_ret
-	
+
 BattleAnim_BlueFlare:
 	anim_1gfx ANIM_GFX_FIRE
 	anim_bgeffect ANIM_BG_08, $0, $4, $0
@@ -3789,7 +3789,7 @@ BattleAnim_KnockOff:
 	anim_obj ANIM_OBJ_08, 136, 72, $0
 	anim_wait 8
 	anim_ret
-	
+
 BattleAnim_WaterSpout:
 	anim_2gfx ANIM_GFX_WATER, ANIM_GFX_HIT
 .loop
@@ -4002,7 +4002,7 @@ BattleAnim_RockBlast:
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 56, $50
 	anim_wait 32
 	anim_ret
-	
+
 BattleAnim_BrickBreak:
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 6, 2, SFX_SHINE

@@ -38,6 +38,9 @@ CHRIS EQU __enum__
 	const BRAYDON
 	const GIDEON
 	const TAYLOR
+	const MT_BATTLE_18 ; DOIMO
+	const MT_BATTLE_29 ; WAGEL
+	const MT_BATTLE_31 ; HILDON
 
 	trainerclass YOUNGSTER ; 3
 	const JOEY1
@@ -54,6 +57,7 @@ CHRIS EQU __enum__
 	const JASON
 	const JOEY4
 	const JOEY5
+	const MT_BATTLE_20 ; ERBEN
 
 	trainerclass SCHOOLBOY ; 4
 	const JACK1
@@ -80,6 +84,7 @@ CHRIS EQU __enum__
 	const ALAN5
 	const CHAD4
 	const CHAD5
+	const MT_BATTLE_34 ; ROEX
 
 	trainerclass BIRD_KEEPER ; 5
 	const ROD
@@ -100,6 +105,7 @@ CHRIS EQU __enum__
 	const BRET
 	const VANCE2
 	const VANCE3
+	const MT_BATTLE_10 ; ELION
 
 	trainerclass LASS ; 6
 	const CARRIE
@@ -141,6 +147,8 @@ CHRIS EQU __enum__
 	const ALLEN
 	const DARIN
 	const YUJI
+	const MT_BATTLE_19 ; HEBEL
+	const MT_BATTLE_37 ; MORIL
 
 	trainerclass COOLTRAINERF ; 8
 	const GWEN
@@ -162,6 +170,7 @@ CHRIS EQU __enum__
 	const JENN
 	const REENA2
 	const CARA
+	const MT_BATTLE_24 ; RATEIS
 
 	trainerclass BEAUTY ; 9
 	const VICTORIA
@@ -181,6 +190,8 @@ CHRIS EQU __enum__
 	const THERESA
 	const VALERIE
 	const OLIVIA
+	const MT_BATTLE_4 ; ZOILA
+	const MT_BATTLE_28 ; BRENA
 
 	trainerclass POKEMANIAC ; a
 	const LARRY
@@ -244,6 +255,9 @@ CHRIS EQU __enum__
 	const COLETTE
 	const HILLARY
 	const SHIRLEY
+	const MT_BATTLE_5 ; SECORT
+	const MT_BATTLE_16 ; FEREN
+	const MT_BATTLE_26 ; ISETTE
 
 	trainerclass BUG_CATCHER ; f
 	const DON
@@ -320,6 +334,7 @@ CHRIS EQU __enum__
 	const JAMES
 	const LEWIS
 	const PARKER
+	const MT_BATTLE_35 ; DERON
 
 	trainerclass SWIMMERF ; 12
 	const ELAINE
@@ -341,6 +356,9 @@ CHRIS EQU __enum__
 	const NIKKI
 	const DIANA
 	const BRIANA
+	const MT_BATTLE_2 ; SANO
+	const MT_BATTLE_22 ; KIMBER
+	const MT_BATTLE_36 ; TIANA
 
 	trainerclass SAILOR ; 13
 	const EUGENE
@@ -372,11 +390,15 @@ CHRIS EQU __enum__
 	const NORTON
 	const HUGH
 	const MARKUS
+	const MT_BATTLE_1 ; ROOD
+	const MT_BATTLE_40 ; SLEWIS
 
 	trainerclass GUITARIST ; 15
 	const CLYDE
 	const VINCENT
 	const JAMIE
+	const MT_BATTLE_15 ; ARDO
+	const MT_BATTLE_27 ; NOREL
 
 	trainerclass HIKER ; 16
 	const ANTHONY1
@@ -401,6 +423,7 @@ CHRIS EQU __enum__
 	const PARRY3
 	const ANTHONY4
 	const ANTHONY5
+	const MT_BATTLE_30 ; LEVEN
 
 	trainerclass BIKER ; 17
 	const BIKER_BENNY
@@ -412,6 +435,8 @@ CHRIS EQU __enum__
 	const RILEY
 	const JOEL
 	const GLENN
+	const MT_BATTLE_3 ; EARGLE
+	const MT_BATTLE_39 ; LOHON
 
 	trainerclass BURGLAR ; 18
 	const DUNCAN
@@ -430,6 +455,7 @@ CHRIS EQU __enum__
 	const WALT
 	const RAY
 	const LYLE
+	const MT_BATTLE_25 ; HOGLO
 
 	trainerclass JUGGLER ; 1a
 	const IRWIN1
@@ -438,6 +464,7 @@ CHRIS EQU __enum__
 	const IRWIN2
 	const IRWIN3
 	const IRWIN4
+	const MT_BATTLE_21 ; SIDO
 
 	trainerclass BLACKBELT_T ; 1b
 	const KENJI1
@@ -449,6 +476,8 @@ CHRIS EQU __enum__
 	const LUNG
 	const KENJI3
 	const WAI
+	const MT_BATTLE_9 ; RAPOZ
+	const MT_BATTLE_14 ; ROGEN
 
 	trainerclass PSYCHIC_T ; 1c
 	const NATHAN
@@ -491,6 +520,7 @@ CHRIS EQU __enum__
 	const GINA4
 	const GINA5
 	const TIFFANY4
+	const MT_BATTLE_17 ; MALOO
 
 	trainerclass CAMPER ; 1e
 	const ROLAND
@@ -515,6 +545,7 @@ CHRIS EQU __enum__
 	const TODD4
 	const TODD5
 	const QUENTIN
+	const MT_BATTLE_12 ; DENC
 
 	trainerclass SAGE ; 1f
 	const CHOW
@@ -529,6 +560,7 @@ CHRIS EQU __enum__
 	const MASA
 	const YIN
 	const YANG
+	const MT_BATTLE_6 ; GRUND
 
 	trainerclass MEDIUM ; 20
 	const MARTHA
@@ -541,6 +573,8 @@ CHRIS EQU __enum__
 	const CARLY
 	const LAUREL
 	const PATRICIA
+	const MT_BATTLE_13 ; MYOG
+	const MT_BATTLE_38 ; GRENAY
 
 	trainerclass BOARDER ; 21
 	const RONALD
@@ -548,6 +582,9 @@ CHRIS EQU __enum__
 	const DOUGLAS
 	const SHAUN
 	const BRYCE
+	const MT_BATTLE_7 ; GARS
+	const MT_BATTLE_23 ; RENFAR
+	const MT_BATTLE_32 ; TARY
 
 	trainerclass POKEFANM ; 22
 	const WILLIAM
@@ -564,6 +601,7 @@ CHRIS EQU __enum__
 	const ALEX
 	const REX
 	const ALLAN
+	const MT_BATTLE_11 ; GIROD
 
 	trainerclass KIMONO_GIRL ; 23
 	const NAOKO
@@ -594,6 +632,8 @@ CHRIS EQU __enum__
 	const BEVERLY3
 	const GEORGIA
 	const JAIME
+	const MT_BATTLE_8 ; LADIN
+	const MT_BATTLE_33 ; SASON
 
 	trainerclass RED ; 26
 	const GF_RED

@@ -9,12 +9,12 @@ RocketHideoutB4F_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DummyScene ; SCENE_DEFAULT
 	scene_script .DummyScene ; SCENE_FINISHED
-	
+
 	db 0 ; callbacks
-	
+
 .DummyScene
 	end
-	
+
 RocketHideoutB4FLarryBattleDown:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
@@ -53,7 +53,7 @@ RocketHideoutB4FLarryBattleContinue:
 	musicfadeout MUSIC_NONE, 20
 	playmapmusic
 	end
-	
+
 RocketHideoutB4FLarryMovementDown:
 	step DOWN
 	step_end
@@ -92,7 +92,7 @@ RocketHideoutB4FLarryAfterBattleText:
 RocketHideoutB4FLarryAfterLiftKeyText:
 	text "<...>"
 	done
-	
+
 RocketHideoutB4FHopporita:
 	refreshscreen
 	pokepic HOPPORITA
@@ -113,7 +113,7 @@ RocketHideoutB4FHopporita:
 	disappear ROCKETHIDEOUTB4F_HOPPORITA
 	closetext
 	end
-	
+
 RocketHideoutB4FTogekey:
 	refreshscreen
 	pokepic TOGEKEY
@@ -134,36 +134,36 @@ RocketHideoutB4FTogekey:
 	disappear ROCKETHIDEOUTB4F_TOGEKEY
 	closetext
 	end
-	
+
 RocketHideoutB4FNoRoom:
 	writetext RocketHideoutB4FPartyFullText
 	waitbutton
 RocketHideoutB4FRefused:
 	closetext
 	end
-	
+
 RocketHideoutB4FDoYouWantHopporitaText:
 	text "It's a HOPPORITA."
 	line "Do you want to"
 	cont "raise it?"
 	done
-	
+
 ReceivedHopporitaText:
 	text "<PLAYER> received"
 	line "HOPPORITA!"
 	done
-	
+
 RocketHideoutB4FDoYouWantTogekeyText:
 	text "It's a TOGEKEY."
 	line "Do you want to"
 	cont "raise it?"
 	done
-	
+
 ReceivedTogekeyText:
 	text "<PLAYER> received"
 	line "TOGEKEY!"
 	done
-	
+
 RocketHideoutB4FPartyFullText:
 	text "Your party"
 	line "is full<...>"

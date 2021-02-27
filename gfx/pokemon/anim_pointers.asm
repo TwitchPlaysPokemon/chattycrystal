@@ -381,7 +381,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Sliggoo
 	dw GoodraAnimation
 	dw CrabrawlerAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Crabominable
+	dw CrabominableAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Cutiefly
 	dw RibombeeAnimation
 	; Fused Crystal mons

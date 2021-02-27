@@ -16,6 +16,7 @@ INCLUDE "engine/events/happiness_egg.asm"
 INCLUDE "engine/events/shuckle.asm"
 INCLUDE "engine/events/haircut.asm"
 INCLUDE "engine/events/engine_flags.asm"
+INCLUDE "engine/events/poisonstep.asm"
 
 INCLUDE "data/moves/ls_names.asm"
 
@@ -247,7 +248,6 @@ INCLUDE "engine/events/poke_seer.asm"
 SECTION "bank14", ROMX
 
 INCLUDE "engine/pokemon/party_menu.asm"
-INCLUDE "engine/events/poisonstep.asm"
 INCLUDE "engine/events/sweet_scent.asm"
 INCLUDE "engine/events/squirtbottle.asm"
 INCLUDE "engine/events/card_key.asm"

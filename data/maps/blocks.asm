@@ -1049,6 +1049,3 @@ TrickHousePuzzle5_Blocks:
 
 TrickHousePuzzle6_Blocks:
 	INCBIN "maps/TrickHousePuzzle6.blk"
-
-TrickHousePuzzle7_Blocks:
-	INCBIN "maps/TrickHousePuzzle7.blk"

@@ -278,7 +278,6 @@ INCLUDE "maps/TrickHousePuzzle3.asm"
 INCLUDE "maps/TrickHousePuzzle4.asm"
 INCLUDE "maps/TrickHousePuzzle5.asm"
 INCLUDE "maps/TrickHousePuzzle6.asm"
-INCLUDE "maps/TrickHousePuzzle7.asm"
 
 
 SECTION "Map Scripts 15", ROMX

@@ -486,7 +486,6 @@ ENDM
 	map_const TRICK_HOUSE_PUZZLE_4,                         8, 11 ; 22
 	map_const TRICK_HOUSE_PUZZLE_5,                         8, 11 ; 23
 	map_const TRICK_HOUSE_PUZZLE_6,                         8, 11 ; 24
-	map_const TRICK_HOUSE_PUZZLE_7,                         8, 11 ; 25
 
 	newgroup                                                      ; 24
 

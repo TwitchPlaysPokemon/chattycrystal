@@ -715,7 +715,6 @@ ENDM
 	map_attributes TrickHousePuzzle4, TRICK_HOUSE_PUZZLE_4, $00, 0
 	map_attributes TrickHousePuzzle5, TRICK_HOUSE_PUZZLE_5, $00, 0
 	map_attributes TrickHousePuzzle6, TRICK_HOUSE_PUZZLE_6, $00, 0
-	map_attributes TrickHousePuzzle7, TRICK_HOUSE_PUZZLE_7, $00, 0
 	map_attributes ElmsLab, ELMS_LAB, $00, 0
 	map_attributes PlayersHouse1F, PLAYERS_HOUSE_1F, $00, 0
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0

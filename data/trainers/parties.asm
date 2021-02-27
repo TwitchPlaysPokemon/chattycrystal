@@ -4127,6 +4127,28 @@ ScientistGroup:
 	dw ROSELIA
 	db -1 ; end
 
+	next_list_item ; SCIENTIST (11)
+	db "HILDON@", TRAINERTYPE_ITEM
+	db 70
+	dw HOPPIP
+	db MIRACLE_SEED
+	db 69
+	dw SMEARGLE
+	db GOLD_BERRY
+	db 70
+	dw WOBBUFFET
+	db LEFTOVERS
+	db 70
+	dw SURSKIT
+	db BERRY
+	db 69
+	dw KIRLIA
+	db MINT_BERRY
+	db 70
+	dw CRABRAWLER
+	db BRIGHTPOWDER
+	db -1 ; end
+
 	end_list_items
 
 SchoolboyGroup:
@@ -4351,6 +4373,28 @@ SchoolboyGroup:
 	db 80
 	dw MAGNETON
 	dw ZAP_CANNON, THUNDER_WAVE, LOCK_ON, SWIFT
+	db -1 ; end
+
+	next_list_item ; SCHOOLBOY (25)
+	db "ROEX@", TRAINERTYPE_ITEM
+	db 71
+	dw BAGON
+	db SCOPE_LENS
+	db 70
+	dw GOLDEEN
+	db BERRY
+	db 71
+	dw BAYLEEF
+	db GOLD_BERRY
+	db 71
+	dw MURKROW
+	db BLACKGLASSES
+	db 70
+	dw GOOMY
+	db EXP_SHARE
+	db 71
+	dw MACHOP
+	db MIRACLEBERRY
 	db -1 ; end
 
 	end_list_items
@@ -4890,6 +4934,28 @@ CooltrainerMGroup:
 	dw ARIADOS
 	db 65
 	dw YANMA
+	db -1 ; end
+
+	next_list_item ; COOLTRAINERM (22)
+	db "MORIL@", TRAINERTYPE_ITEM
+	db 72
+	dw VOLTORB
+	db SCOPE_LENS
+	db 71
+	dw LOMBRE
+	db GOLD_BERRY
+	db 72
+	dw SHELLDER
+	db MYSTIC_WATER
+	db 72
+	dw PANSAGE
+	db GOLD_BERRY
+	db 71
+	dw VIBRAVA
+	db GOLD_BERRY
+	db 72
+	dw TEDDIURSA
+	db MIRACLEBERRY
 	db -1 ; end
 
 	end_list_items
@@ -6376,6 +6442,28 @@ SwimmerMGroup:
 	dw KINGDRA
 	db -1 ; end
 
+	next_list_item ; SWIMMERM (22)
+	db "DERON@", TRAINERTYPE_ITEM
+	db 71
+	dw CLAUNCHER
+	db GOLD_BERRY
+	db 70
+	dw PANSAGE
+	db GOLD_BERRY
+	db 71
+	dw WAILMER
+	db GOLD_BERRY
+	db 71
+	dw PHANPY
+	db BRIGHTPOWDER
+	db 70
+	dw ELECTRIKE
+	db LEFTOVERS
+	db 71
+	dw BELDUM
+	db TWISTEDSPOON
+	db -1 ; end
+
 	end_list_items
 
 SwimmerFGroup:
@@ -6553,6 +6641,28 @@ SwimmerFGroup:
 	dw KADABRA
 	db 66
 	dw SPHEAL
+	db -1 ; end
+
+	next_list_item ; SWIMMERF (22)
+	db "TIANA@", TRAINERTYPE_ITEM
+	db 72
+	dw MUDKIP
+	db GOLD_BERRY
+	db 71
+	dw TOTODILE
+	db BRIGHTPOWDER
+	db 72
+	dw PSYDUCK
+	db GOLD_BERRY
+	db 72
+	dw CHINCHOU
+	db GOLD_BERRY
+	db 71
+	dw DUCKLETT
+	db MIRACLEBERRY
+	db 72
+	dw STARYU
+	db GOLD_BERRY
 	db -1 ; end
 
 	end_list_items
@@ -6801,6 +6911,34 @@ SuperNerdGroup:
 	dw RALTS
 	db 58
 	dw MAREEP
+	db -1 ; end
+
+	next_list_item ; SUPER_NERD (16)
+	db "SLEWIS@", TRAINERTYPE_ITEM_MOVES
+	db 74
+	dw KADABRA
+	db BRIGHTPOWDER
+	dw REFLECT, THIEF, CONFUSION, AMNESIA
+	db 73
+	dw BRONZOR
+	db GOLD_BERRY
+	dw CONFUSE_RAY, EXTRASENSORY, FEINT_ATTACK, IRON_DEFENSE
+	db 74
+	dw MOTHIM
+	db LEFTOVERS
+	dw MOONLIGHT, PSYBEAM, PSYCHIC_M, TOXIC
+	db 74
+	dw SWELLOW
+	db SCOPE_LENS
+	dw GROWL, QUICK_ATTACK, WING_ATTACK, DOUBLE_TEAM
+	db 73
+	dw GROVYLE
+	db GOLD_BERRY
+	dw LEAF_BLADE, SCREECH, PURSUIT, CUT
+	db 74
+	dw MARSHTOMP
+	db MYSTIC_WATER
+	dw TACKLE, WATER_GUN, MUD_SHOT, ENDEAVOR
 	db -1 ; end
 
 	end_list_items
@@ -7194,6 +7332,28 @@ BikerGroup:
 	dw HOPPIP
 	db 58
 	dw ZIGZAGOON
+	db -1 ; end
+
+	next_list_item ; BIKER (11)
+	db "LOHON@", TRAINERTYPE_ITEM
+	db 73
+	dw CORSOLA
+	db GOLD_BERRY
+	db 72
+	dw SKIPLOOM
+	db GOLD_BERRY
+	db 73
+	dw MACHOKE
+	db LEFTOVERS
+	db 73
+	dw SHINX
+	db MIRACLEBERRY
+	db 72
+	dw MOTHIM
+	db GOLD_BERRY
+	db 73
+	dw LINOONE
+	db MINT_BERRY
 	db -1 ; end
 
 	end_list_items
@@ -8342,6 +8502,28 @@ MediumGroup:
 	dw NATU
 	db -1 ; end
 
+	next_list_item ; MEDIUM (12)
+	db "GRENAY@", TRAINERTYPE_ITEM
+	db 73
+	dw GRAVELER
+	db MIRACLEBERRY
+	db 72
+	dw AIPOM
+	db GOLD_BERRY
+	db 73
+	dw HELIOPTILE
+	db BERRY
+	db 73
+	dw OMANYTE
+	db MYSTERYBERRY
+	db 72
+	dw LILEEP
+	db BITTER_BERRY
+	db 73
+	dw DUNSPARCE
+	db MIRACLEBERRY
+	db -1 ; end
+
 	end_list_items
 
 BoarderGroup:
@@ -8419,6 +8601,28 @@ BoarderGroup:
 	dw LOTAD
 	db 66
 	dw WHISMUR
+	db -1 ; end
+
+	next_list_item ; BOARDER (8)
+	db "TARY@", TRAINERTYPE_ITEM
+	db 70
+	dw PANSAGE
+	db GOLD_BERRY
+	db 69
+	dw MAGNEMITE
+	db GOLD_BERRY
+	db 70
+	dw DUSKULL
+	db SPELL_TAG
+	db 70
+	dw ARON
+	db GOLD_BERRY
+	db 69
+	dw CLAUNCHER
+	db GOLD_BERRY
+	db 70
+	dw MAREEP
+	db MIRACLEBERRY
 	db -1 ; end
 
 	end_list_items
@@ -8780,6 +8984,28 @@ PokefanFGroup:
 	dw BELDUM
 	db 61
 	dw HORSEA
+	db -1 ; end
+
+	next_list_item ; POKEFANF (8)
+	db "SASON@", TRAINERTYPE_ITEM
+	db 70
+	dw DUSKULL
+	db SCOPE_LENS
+	db 69
+	dw TREECKO
+	db MIRACLEBERRY
+	db 70
+	dw HORSEA
+	db GOLD_BERRY
+	db 70
+	dw SNORUNT
+	db GOLD_BERRY
+	db 69
+	dw ABRA
+	db GOLD_BERRY
+	db 70
+	dw REMORAID
+	db GOLD_BERRY
 	db -1 ; end
 
 	end_list_items

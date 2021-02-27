@@ -40,6 +40,7 @@ CHRIS EQU __enum__
 	const TAYLOR
 	const MT_BATTLE_18 ; DOIMO
 	const MT_BATTLE_29 ; WAGEL
+	const MT_BATTLE_31 ; HILDON
 
 	trainerclass YOUNGSTER ; 3
 	const JOEY1
@@ -83,6 +84,7 @@ CHRIS EQU __enum__
 	const ALAN5
 	const CHAD4
 	const CHAD5
+	const MT_BATTLE_34 ; ROEX
 
 	trainerclass BIRD_KEEPER ; 5
 	const ROD
@@ -146,6 +148,7 @@ CHRIS EQU __enum__
 	const DARIN
 	const YUJI
 	const MT_BATTLE_19 ; HEBEL
+	const MT_BATTLE_37 ; MORIL
 
 	trainerclass COOLTRAINERF ; 8
 	const GWEN
@@ -331,6 +334,7 @@ CHRIS EQU __enum__
 	const JAMES
 	const LEWIS
 	const PARKER
+	const MT_BATTLE_35 ; DERON
 
 	trainerclass SWIMMERF ; 12
 	const ELAINE
@@ -354,6 +358,7 @@ CHRIS EQU __enum__
 	const BRIANA
 	const MT_BATTLE_2 ; SANO
 	const MT_BATTLE_22 ; KIMBER
+	const MT_BATTLE_36 ; TIANA
 
 	trainerclass SAILOR ; 13
 	const EUGENE
@@ -386,6 +391,7 @@ CHRIS EQU __enum__
 	const HUGH
 	const MARKUS
 	const MT_BATTLE_1 ; ROOD
+	const MT_BATTLE_40 ; SLEWIS
 
 	trainerclass GUITARIST ; 15
 	const CLYDE
@@ -430,6 +436,7 @@ CHRIS EQU __enum__
 	const JOEL
 	const GLENN
 	const MT_BATTLE_3 ; EARGLE
+	const MT_BATTLE_39 ; LOHON
 
 	trainerclass BURGLAR ; 18
 	const DUNCAN
@@ -567,6 +574,7 @@ CHRIS EQU __enum__
 	const LAUREL
 	const PATRICIA
 	const MT_BATTLE_13 ; MYOG
+	const MT_BATTLE_38 ; GRENAY
 
 	trainerclass BOARDER ; 21
 	const RONALD
@@ -576,6 +584,7 @@ CHRIS EQU __enum__
 	const BRYCE
 	const MT_BATTLE_7 ; GARS
 	const MT_BATTLE_23 ; RENFAR
+	const MT_BATTLE_32 ; TARY
 
 	trainerclass POKEFANM ; 22
 	const WILLIAM
@@ -624,6 +633,7 @@ CHRIS EQU __enum__
 	const GEORGIA
 	const JAIME
 	const MT_BATTLE_8 ; LADIN
+	const MT_BATTLE_33 ; SASON
 
 	trainerclass RED ; 26
 	const GF_RED

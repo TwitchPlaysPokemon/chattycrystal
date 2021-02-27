@@ -145,6 +145,7 @@ ROMX $2d
 	"Tileset Data 5"
 ROMX $2e
 	"bank2E"
+	"Extra Songs 2"
 ROMX $2f
 	"Phone Scripts 2"
 	"Tileset Data 9"
@@ -156,7 +157,6 @@ ROMX $32
 	"Move Animation Scripts"
 ROMX $33
 	"Move Animations"
-	"Extra Songs 2"
 ROMX $34
 	"Pic Animations 1"
 ROMX $35

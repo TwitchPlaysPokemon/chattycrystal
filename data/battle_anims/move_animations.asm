@@ -328,7 +328,7 @@ MoveAnimations:
 	dw BattleAnim_VineWhip     ; PLACEHOLDER
 	dw BattleAnim_Waterfall    ; PLACEHOLDER
 	dw BattleAnim_SweetScent   ; 148, PLACEHOLDER
-	dw BattleAnim_DarkVoid     ; incomplete
+	dw BattleAnim_DarkVoid
 	dw BattleAnim_Sharpen      ; PLACEHOLDER
 	dw BattleAnim_PsychicM     ; PLACEHOLDER
 	dw BattleAnim_Growth       ; PLACEHOLDER
@@ -336,11 +336,11 @@ MoveAnimations:
 	dw BattleAnim_Roar         ; PLACEHOLDER
 	dw BattleAnim_HydroPump    ; PLACEHOLDER
 	dw BattleAnim_Bulldoze     ; 150
-	dw BattleAnim_Meditate     ; PLACEHOLDER
-	dw BattleAnim_CrossChop    ; PLACEHOLDER
-	dw BattleAnim_GigaDrain    ; PLACEHOLDER
+	dw BattleAnim_WorkUp
+	dw BattleAnim_DualChop
+	dw BattleAnim_HornLeech
 	dw BattleAnim_SteamRoller
-	dw BattleAnim_Doubleslap   ; PLACEHOLDER
+	dw BattleAnim_TailSlap
 	dw BattleAnim_BlueFlare
 	dw BattleAnim_FreezeDry
 	dw BattleAnim_DrainingKiss ; 158
@@ -852,15 +852,16 @@ BattleAnim_Surf:
 	anim_ret
 
 BattleAnim_VineWhip:
-	anim_1gfx ANIM_GFX_WHIP
+	anim_2gfx ANIM_GFX_WHIP, ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_VINE_WHIP
-	anim_obj ANIM_OBJ_40, 116, 52, $80
+	anim_obj ANIM_OBJ_VINE_WHIP_2, 116, 48, $80
 	anim_wait 4
 	anim_sound 0, 1, SFX_VINE_WHIP
-	anim_obj ANIM_OBJ_3F, 128, 60, $0
-	anim_wait 4
-	anim_incobj 1
-	anim_wait 4
+	anim_obj ANIM_OBJ_VINE_WHIP_1, 128, 54, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_incobj  1
+	anim_wait 16
 	anim_ret
 
 BattleAnim_LeechSeed:
@@ -947,6 +948,7 @@ BattleAnim_Solarbeam:
 .FireSolarBeam
 	anim_1gfx ANIM_GFX_BEAM
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgp $90
 	anim_call BattleAnim_Solarbeam_branch_cbb39
 	anim_wait 48
 	anim_ret
@@ -1808,7 +1810,7 @@ BattleAnim_Headbutt:
 BattleAnim_Tackle:
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
-	anim_bgeffect ANIM_BG_TACKLE, $0, $0, $0
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
 	anim_wait 4
 	anim_sound 0, 1, SFX_TACKLE
 	anim_obj ANIM_OBJ_00, 136, 48, $0
@@ -3429,11 +3431,13 @@ BattleAnim_MuddyWater:
 BattleAnim_DarkVoid:
 	anim_1gfx ANIM_GFX_ANGELS
 	anim_clearenemyhud
+	anim_sound 0, 0, SFX_WARP_TO
+	anim_bgeffect ANIM_BG_RETURN_MON, $0, $1, $0
+	anim_wait 16
 	anim_bgp $f8
 	anim_sound 6, 2, SFX_CURSE
 	anim_obj ANIM_OBJ_DESTINY_BOND, 44, 120, $2
 	anim_wait 48
-	anim_call BattleAnim_UserObj_1Row
 	anim_bgeffect ANIM_BG_DIG, $0, $0, $1
 .loop
 	anim_sound 0, 0, SFX_SLUDGE_BOMB
@@ -3469,6 +3473,58 @@ BattleAnim_Bulldoze:
 	anim_incbgeffect ANIM_BG_1F
 	anim_ret
 	
+BattleAnim_WorkUp:
+	anim_1gfx ANIM_GFX_WIND
+	anim_call BattleAnim_TargetObj_2Row
+	anim_sound 0, 0, SFX_AEROBLAST
+	anim_bgeffect ANIM_BG_18, $0, $1, $40
+.loop
+	anim_bgeffect ANIM_BG_WITHDRAW, $0, $1, $50
+	anim_wait 3
+	anim_incbgeffect ANIM_BG_WITHDRAW
+	anim_loop 16, .loop
+	anim_wait 32
+	anim_sound 0, 0, SFX_MENU
+	anim_obj ANIM_OBJ_SWAGGER, 72, 88, $44	
+	anim_wait 32
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
+	
+BattleAnim_DualChop:
+	anim_1gfx ANIM_GFX_CUT
+	anim_sound 0, 1, SFX_CUT
+	anim_obj ANIM_OBJ_3A, 152, 40, $0
+	anim_sound 0, 1, SFX_VICEGRIP
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_wait 24
+	anim_obj ANIM_OBJ_3B, 112, 40, $0
+	anim_sound 0, 1, SFX_VICEGRIP
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_wait 32
+	anim_ret
+	
+BattleAnim_HornLeech:
+	anim_3gfx ANIM_GFX_HORN_LEECH, ANIM_GFX_HIT, ANIM_GFX_CHARGE
+	anim_obj ANIM_OBJ_HORN_LEECH, 72, 80, $1
+	anim_wait 16
+	anim_sound 0, 1, SFX_HORN_ATTACK
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 16
+	anim_setvar $0
+.loop
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_ABSORB, 128, 48, $2
+	anim_wait 3
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_ABSORB, 136, 64, $3
+	anim_wait 4
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_ABSORB, 136, 32, $4
+	anim_wait 3
+	anim_loop 6, .loop
+	anim_wait 32
+	anim_ret
+	
 BattleAnim_SteamRoller:
 	anim_1gfx ANIM_GFX_S_ROLLER
 	anim_obj ANIM_OBJ_S_ROLLER, 130, 56, $30
@@ -3484,6 +3540,23 @@ BattleAnim_SteamRoller:
 	anim_wait 8
 	anim_loop 10, .loop
 	anim_clearobjs
+	anim_wait 16
+	anim_ret
+	
+BattleAnim_TailSlap:
+	anim_2gfx ANIM_GFX_WHIP, ANIM_GFX_HIT
+	anim_call BattleAnim_TargetObj_2Row
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_wait 12
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
+	anim_wait 1
+	anim_incobj 1
+	anim_sound 0, 1, SFX_DOUBLESLAP
+	anim_obj ANIM_OBJ_40, 116, 48, $80
+	anim_wait 4
+	anim_obj ANIM_OBJ_3F, 128, 54, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_01, 136, 56, $0
 	anim_wait 16
 	anim_ret
 	

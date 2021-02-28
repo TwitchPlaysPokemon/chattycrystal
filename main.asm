@@ -315,18 +315,18 @@ INCLUDE "engine/events/unown_walls.asm"
 INCLUDE "engine/events/buena.asm"
 INCLUDE "engine/events/dratini.asm"
 INCLUDE "engine/events/battle_tower/rules.asm"
-INCLUDE "engine/battle/battle_transition.asm"
+INCLUDE "engine/events/field_moves.asm"
 
 
 SECTION "bank23", ROMX
 
 INCLUDE "engine/tilesets/timeofday_pals.asm"
-INCLUDE "engine/events/field_moves.asm"
 INCLUDE "engine/events/magnet_train.asm"
 INCLUDE "engine/battle/battlestart_copytilemapatonce.asm"
 INCLUDE "engine/gfx/sprites.asm"
 INCLUDE "engine/gfx/mon_icons.asm"
 INCLUDE "engine/events/poisonstep_pals.asm"
+INCLUDE "engine/battle/battle_transition.asm"
 
 
 SECTION "bank24", ROMX

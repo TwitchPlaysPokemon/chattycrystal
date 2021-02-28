@@ -354,7 +354,7 @@ FramesPointers:
 	dba PorygonZFrames
 	dba DusknoirFrames
 	dba FroslassFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Darkai
+	dba DarkraiFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Pansage
 	dba SimisageFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Drilbur

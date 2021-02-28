@@ -250,77 +250,6 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_01,  1
 	delanim
 
-.Frameset_3e:
-	frame BATTLEANIMOAMSET_4B,  2
-	frame BATTLEANIMOAMSET_4C,  2
-	frame BATTLEANIMOAMSET_4D,  4
-	frame BATTLEANIMOAMSET_4E,  2
-	dowait 2
-	frame BATTLEANIMOAMSET_4E,  2
-	dowait 2
-	frame BATTLEANIMOAMSET_4E,  2
-	dowait 2
-	frame BATTLEANIMOAMSET_4E,  2
-	delanim
-
-.Frameset_3f:
-	frame BATTLEANIMOAMSET_4B,  2, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4C,  2, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4D,  4, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
-	dowait 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
-	dowait 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
-	dowait 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
-	delanim
-
-.Frameset_40:
-	frame BATTLEANIMOAMSET_4B,  2, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4C,  2, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4D,  4, OAM_X_FLIP, OAM_Y_FLIP
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	dowait 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	dowait 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	dowait 2
-	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
-	delanim
-
-.Frameset_41:
-	frame BATTLEANIMOAMSET_4B,  1
-	frame BATTLEANIMOAMSET_4C,  1
-	frame BATTLEANIMOAMSET_4D,  1
-	frame BATTLEANIMOAMSET_4F,  1
-	frame BATTLEANIMOAMSET_50,  1
-	frame BATTLEANIMOAMSET_51,  1
-	frame BATTLEANIMOAMSET_52,  2
-	dowait 2
-	frame BATTLEANIMOAMSET_52,  2
-	dowait 2
-	frame BATTLEANIMOAMSET_52,  2
-	dowait 2
-	frame BATTLEANIMOAMSET_52,  2
-	delanim
-
-.Frameset_42:
-	frame BATTLEANIMOAMSET_4B,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4C,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4D,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_4F,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_50,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_51,  1, OAM_X_FLIP
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
-	dowait 2
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
-	dowait 2
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
-	dowait 2
-	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
-	delanim
-
 .Frameset_08:
 	frame BATTLEANIMOAMSET_00,  3
 	frame BATTLEANIMOAMSET_07,  3
@@ -427,23 +356,6 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_15,  8, OAM_X_FLIP
 	frame BATTLEANIMOAMSET_16,  8, OAM_X_FLIP
 	frame BATTLEANIMOAMSET_17,  4
-	dorestart
-
-.Frameset_56:
-	frame BATTLEANIMOAMSET_69,  8
-	endanim
-
-.Frameset_57:
-	frame BATTLEANIMOAMSET_69, 32
-	frame BATTLEANIMOAMSET_6A,  4
-	frame BATTLEANIMOAMSET_6B,  4
-	frame BATTLEANIMOAMSET_6D,  4
-	frame BATTLEANIMOAMSET_6C,  4
-	endanim
-
-.Frameset_58:
-	frame BATTLEANIMOAMSET_6C,  8
-	frame BATTLEANIMOAMSET_6D,  8
 	dorestart
 
 .Frameset_18:
@@ -651,16 +563,81 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_4A,  8
 	endanim
 
+.Frameset_3e:
+	frame BATTLEANIMOAMSET_4B,  2
+	frame BATTLEANIMOAMSET_4C,  2
+	frame BATTLEANIMOAMSET_4D,  4
+	frame BATTLEANIMOAMSET_4E,  2
+	dowait 2
+	frame BATTLEANIMOAMSET_4E,  2
+	dowait 2
+	frame BATTLEANIMOAMSET_4E,  2
+	dowait 2
+	frame BATTLEANIMOAMSET_4E,  2
+	delanim
+
+.Frameset_3f:
+	frame BATTLEANIMOAMSET_4B,  2, OAM_X_FLIP
+	frame BATTLEANIMOAMSET_4C,  2, OAM_X_FLIP
+	frame BATTLEANIMOAMSET_4D,  4, OAM_X_FLIP
+	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
+	dowait 2
+	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
+	dowait 2
+	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
+	dowait 2
+	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP
+	delanim
+
+.Frameset_40:
+	frame BATTLEANIMOAMSET_4B,  2, OAM_X_FLIP, OAM_Y_FLIP
+	frame BATTLEANIMOAMSET_4C,  2, OAM_X_FLIP, OAM_Y_FLIP
+	frame BATTLEANIMOAMSET_4D,  4, OAM_X_FLIP, OAM_Y_FLIP
+	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
+	dowait 2
+	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
+	dowait 2
+	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
+	dowait 2
+	frame BATTLEANIMOAMSET_4E,  2, OAM_X_FLIP, OAM_Y_FLIP
+	delanim
+
+.Frameset_41:
+	frame BATTLEANIMOAMSET_4B,  1
+	frame BATTLEANIMOAMSET_4C,  1
+	frame BATTLEANIMOAMSET_4D,  1
+	frame BATTLEANIMOAMSET_4F,  1
+	frame BATTLEANIMOAMSET_50,  1
+	frame BATTLEANIMOAMSET_51,  1
+	frame BATTLEANIMOAMSET_52,  2
+	dowait 2
+	frame BATTLEANIMOAMSET_52,  2
+	dowait 2
+	frame BATTLEANIMOAMSET_52,  2
+	dowait 2
+	frame BATTLEANIMOAMSET_52,  2
+	delanim
+
+.Frameset_42:
+	frame BATTLEANIMOAMSET_4B,  1, OAM_X_FLIP
+	frame BATTLEANIMOAMSET_4C,  1, OAM_X_FLIP
+	frame BATTLEANIMOAMSET_4D,  1, OAM_X_FLIP
+	frame BATTLEANIMOAMSET_4F,  1, OAM_X_FLIP
+	frame BATTLEANIMOAMSET_50,  1, OAM_X_FLIP
+	frame BATTLEANIMOAMSET_51,  1, OAM_X_FLIP
+	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
+	dowait 2
+	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
+	dowait 2
+	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
+	dowait 2
+	frame BATTLEANIMOAMSET_52,  2, OAM_X_FLIP
+	delanim
+
 .Frameset_43:
 	frame BATTLEANIMOAMSET_20, 16
 	frame BATTLEANIMOAMSET_1F, 16
 	frame BATTLEANIMOAMSET_1E, 16
-	endanim
-
-.Frameset_4c:
-	frame BATTLEANIMOAMSET_20,  8
-	frame BATTLEANIMOAMSET_1F,  8
-	frame BATTLEANIMOAMSET_1E,  8
 	endanim
 
 .Frameset_44:
@@ -674,12 +651,6 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_53,  4
 	dowait 4
 	frame BATTLEANIMOAMSET_53,  4
-	delanim
-
-.Frameset_7e:
-	frame BATTLEANIMOAMSET_1E,  8
-	frame BATTLEANIMOAMSET_1F,  8
-	frame BATTLEANIMOAMSET_20,  8
 	delanim
 
 .Frameset_45:
@@ -734,6 +705,13 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_5B,  1
 	frame BATTLEANIMOAMSET_5C,  2
 	delanim
+
+.Frameset_4c:
+	frame BATTLEANIMOAMSET_20,  8
+	frame BATTLEANIMOAMSET_1F,  8
+	frame BATTLEANIMOAMSET_1E,  8
+	endanim
+
 
 .Frameset_4d:
 	frame BATTLEANIMOAMSET_0A, 10
@@ -790,6 +768,23 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_68,  7
 	dorestart
 
+.Frameset_56:
+	frame BATTLEANIMOAMSET_69,  8
+	endanim
+
+.Frameset_57:
+	frame BATTLEANIMOAMSET_69, 32
+	frame BATTLEANIMOAMSET_6A,  4
+	frame BATTLEANIMOAMSET_6B,  4
+	frame BATTLEANIMOAMSET_6D,  4
+	frame BATTLEANIMOAMSET_6C,  4
+	endanim
+
+.Frameset_58:
+	frame BATTLEANIMOAMSET_6C,  8
+	frame BATTLEANIMOAMSET_6D,  8
+	dorestart
+
 .Frameset_59:
 	frame BATTLEANIMOAMSET_6E,  8
 	endanim
@@ -818,22 +813,6 @@ BattleAnimFrameData:
 .Frameset_5e:
 	frame BATTLEANIMOAMSET_14,  8
 	endanim
-
-.Frameset_7a:
-	frame BATTLEANIMOAMSET_74,  3
-	frame BATTLEANIMOAMSET_14,  3
-	frame BATTLEANIMOAMSET_15,  3
-	frame BATTLEANIMOAMSET_14,  3
-	frame BATTLEANIMOAMSET_15,  3
-	delanim
-
-.Frameset_af:
-	frame BATTLEANIMOAMSET_14,  0
-	frame BATTLEANIMOAMSET_15,  0
-	frame BATTLEANIMOAMSET_14,  0
-	frame BATTLEANIMOAMSET_15,  0
-	frame BATTLEANIMOAMSET_74, 12
-	delanim
 
 .Frameset_5f:
 	frame BATTLEANIMOAMSET_76,  8
@@ -987,6 +966,14 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_9A,  8
 	endanim
 
+.Frameset_7a:
+	frame BATTLEANIMOAMSET_74,  3
+	frame BATTLEANIMOAMSET_14,  3
+	frame BATTLEANIMOAMSET_15,  3
+	frame BATTLEANIMOAMSET_14,  3
+	frame BATTLEANIMOAMSET_15,  3
+	delanim
+
 .Frameset_7b:
 	frame BATTLEANIMOAMSET_9B,  8
 	endanim
@@ -1006,6 +993,12 @@ BattleAnimFrameData:
 .Frameset_7d:
 	frame BATTLEANIMOAMSET_9F,  8
 	endanim
+
+.Frameset_7e:
+	frame BATTLEANIMOAMSET_1E,  8
+	frame BATTLEANIMOAMSET_1F,  8
+	frame BATTLEANIMOAMSET_20,  8
+	delanim
 
 .Frameset_7f:
 	frame BATTLEANIMOAMSET_0F,  8
@@ -1247,6 +1240,14 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_03, 32, OAM_Y_FLIP
 	endanim
 
+.Frameset_af:
+	frame BATTLEANIMOAMSET_14,  0
+	frame BATTLEANIMOAMSET_15,  0
+	frame BATTLEANIMOAMSET_14,  0
+	frame BATTLEANIMOAMSET_15,  0
+	frame BATTLEANIMOAMSET_74, 12
+	delanim
+
 .Frameset_b0:
 	frame BATTLEANIMOAMSET_CC, 32
 	endanim
@@ -1374,31 +1375,31 @@ BattleAnimFrameData:
 .Frameset_c9:
 	frame BATTLEANIMOAMSET_1F, 16
 	endanim
-	
+
 .Frameset_ca:
 	frame BATTLEANIMOAMSET_1E, 16
 	endanim
-	
+
 .Frameset_cb:
 	frame BATTLEANIMOAMSET_20, 16
 	endanim
-	
+
 .Frameset_cc:
 	frame BATTLEANIMOAMSET_E1, 16
 	endanim
-	
+
 .Frameset_cd:
 	frame BATTLEANIMOAMSET_E2, 16
 	endanim
-	
+
 .Frameset_ce:
 	frame BATTLEANIMOAMSET_E3, 16
 	endanim
-	
+
 .Frameset_cf:
 	frame BATTLEANIMOAMSET_E4, 16
 	endanim
-	
+
 .Frameset_d0:
 	frame BATTLEANIMOAMSET_E5, 16
 	endanim

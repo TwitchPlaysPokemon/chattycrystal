@@ -209,12 +209,7 @@ BattleAnimFrameData:
 	dw .Frameset_ce ; BATTLEANIMFRAMESET_CE
 	dw .Frameset_cf ; BATTLEANIMFRAMESET_CF
 	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D0
-	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D1
-	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D2
-	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D3
-	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D4
-	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D5
-	dw .Frameset_d1 ; BATTLEANIMFRAMESET_D5
+	dw .Frameset_d1 ; BATTLEANIMFRAMESET_D1
 
 .Frameset_00:
 	frame BATTLEANIMOAMSET_00,  6

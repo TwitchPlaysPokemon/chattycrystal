@@ -142,7 +142,9 @@ TrickHouseEntrance_Scroll:
 TrickHouseEntrance_PrepareTrickMasterReveal:
 	playsound SFX_READ_TEXT_2
 	waitsfx
-	; TODO: emote, open text, etc.
+	showemote EMOTE_SHOCK, PLAYER, 30
+	pause 5
+	opentext
 	end
 
 TrickHouseEntrance_HidingSpot_1:
@@ -151,8 +153,17 @@ TrickHouseEntrance_HidingSpot_1:
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
 	iftrue TrickHouseEntrance_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
-	; TODO: print puzzle-specific text
+	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
+
+.text
+	text "Hah? Grrr<...>"
+
+	para "How did you know I"
+	line "concealed myself"
+	para "beneath this desk?"
+	line "You're sharp!"
+	prompt
 
 TrickHouseEntrance_HidingSpot_2:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
@@ -162,8 +173,17 @@ TrickHouseEntrance_HidingSpot_2:
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_2
 	iftrue TrickHouseEntrance_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
-	; TODO: print puzzle-specific text
+	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
+
+.text
+	text "Hah? Grrr<...>"
+
+	para "How did you know I"
+	line "concealed myself"
+	para "behind this tree?"
+	line "You're sharp!"
+	prompt
 
 TrickHouseEntrance_HidingSpot_3:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
@@ -173,8 +193,17 @@ TrickHouseEntrance_HidingSpot_3:
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_3
 	iftrue TrickHouseEntrance_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
-	; TODO: print puzzle-specific text
+	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
+
+.text
+	text "Hah? Grrr<...>"
+
+	para "How did you know I"
+	line "concealed myself"
+	para "in this dresser?"
+	line "You're sharp!"
+	prompt
 
 TrickHouseEntrance_HidingSpot_4:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
@@ -184,8 +213,18 @@ TrickHouseEntrance_HidingSpot_4:
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_4
 	iftrue TrickHouseEntrance_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
-	; TODO: print puzzle-specific text
+	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
+
+.text
+	text "Hah? Grrr<...>"
+
+	para "How did you know I"
+	line "concealed myself"
+	para "beyond this"
+	line "window?"
+	cont "You're sharp!"
+	prompt
 
 TrickHouseEntrance_HidingSpot_5:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
@@ -195,8 +234,17 @@ TrickHouseEntrance_HidingSpot_5:
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
 	iftrue TrickHouseEntrance_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
-	; TODO: print puzzle-specific text
+	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
+
+.text
+	text "Hah? Grrr<...>"
+
+	para "How did you know I"
+	line "concealed myself"
+	para "in this cupboard?"
+	line "You're sharp!"
+	prompt
 
 TrickHouseEntrance_HidingSpot_6:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
@@ -204,13 +252,24 @@ TrickHouseEntrance_HidingSpot_6:
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
 	iffalse TrickHouseEntrance_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
-	; TODO: print puzzle-specific text
+	writetext TrickHouseEntrance_HidingSpot_6_Text
 TrickHouseEntrance_DoTrickMasterReveal:
+	closetext
 	; TODO: close text, warp, show Trick Master, etc.
 	clearevent TRICKHOUSEEVENT_PUZZLE_READY
 	setevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
 TrickHouseEntrance_End:
 	end
+
+TrickHouseEntrance_HidingSpot_6_Text:
+	text "Hah? Grrr<...>"
+
+	para "How did you know I"
+	line "concealed myself"
+	para "beneath this"
+	line "cushion?"
+	cont "You're sharp!"
+	prompt
 
 TrickHouseEntrance_MapEvents:
 	db 0, 0 ; filler

@@ -2684,8 +2684,9 @@ wRocketHideoutB4FSceneID::                        db ; d9c6
 wSilverCaveRoom3ID::                              db ; d9c7
 wMtSilverRuinsSceneID::                           db ; d9c8
 wMtSilverRuinsB1FSceneID::                        db ; d9c9
+wTrickHouseEntranceSceneID::                      db ; d9ca
 
-	ds 40
+	ds 39
 
 ; fight counts
 wJackFightCount::    db ; d9f2

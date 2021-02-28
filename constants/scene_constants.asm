@@ -182,4 +182,7 @@ SCENE_FINISHED EQU 1
 	const SCENE_BEAT_XMAN ; 2
 	const SCENE_BEAT_DUAL_HOSTS ; 3
 	const SCENE_BEAT_REDO ; 4
-	
+
+; wTrickHouseEntranceSceneID
+	const_def 1
+	const SCENE_TRICKHOUSEENTRANCE_WATCHED

@@ -4,7 +4,9 @@
 	const TRICKHOUSEEVENT_PUZZLE_FINISHED
 
 TrickHouseEntrance_MapScripts:
-	db 0 ; scene scripts
+	db 2 ; scene scripts
+	scene_script TrickHouseEntrance_End
+	scene_script TrickHouseEntrance_End
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .check_ready
@@ -25,6 +27,7 @@ TrickHouseEntrance_MapScripts:
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
 	iftrue .two
 .ready
+	setscene SCENE_TRICKHOUSEENTRANCE_WATCHED
 	setevent TRICKHOUSEEVENT_PUZZLE_READY
 .active
 	return
@@ -57,6 +60,21 @@ TrickHouseEntrance_MapScripts:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .ready
 	return
+
+TrickHouseEntrance_Watched:
+	chattyoff
+	opentext
+	writetext .text
+	waitbutton
+	closetext
+	chattyon
+	setscene SCENE_DEFAULT
+	end
+
+.text
+	text "You're being"
+	line "watched<...>"
+	done
 
 TrickHouseEntrance_Scroll:
 	checkevent TRICKHOUSEEVENT_PUZZLE_FINISHED
@@ -279,7 +297,11 @@ TrickHouseEntrance_MapEvents:
 	warp_event  6,  7, VIRIDIAN_CITY, 3
 	warp_event  5,  1, TRICK_HOUSE_ENTRANCE, 3
 
-	db 0 ; coord events
+	db 4 ; coord events
+	coord_event  4,  7, SCENE_TRICKHOUSEENTRANCE_WATCHED, TrickHouseEntrance_Watched
+	coord_event  5,  6, SCENE_TRICKHOUSEENTRANCE_WATCHED, TrickHouseEntrance_Watched
+	coord_event  6,  6, SCENE_TRICKHOUSEENTRANCE_WATCHED, TrickHouseEntrance_Watched
+	coord_event  7,  7, SCENE_TRICKHOUSEENTRANCE_WATCHED, TrickHouseEntrance_Watched
 
 	db 7 ; bg events
 	bg_event  5,  0, BGEVENT_UP, TrickHouseEntrance_Scroll

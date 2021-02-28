@@ -4030,6 +4030,28 @@ YoungsterGroup:
 	dw LOW_KICK, SEISMIC_TOSS, KARATE_CHOP, FORESIGHT
 	db -1 ; end
 
+	next_list_item ; YOUNGSTER (16)
+	db "PERC@", TRAINERTYPE_ITEM
+	db 93
+	dw STARMIE
+	db LEFTOVERS
+	db 92
+	dw SWANNA
+	db GOLD_BERRY
+	db 93
+	dw CLAWITZER
+	db GOLD_BERRY
+	db 93
+	dw OCTILLERY
+	db QUICK_CLAW
+	db 92
+	dw EMPOLEON
+	db MYSTIC_WATER
+	db 93
+	dw CRABOMINABLE
+	db MYSTERYBERRY
+	db -1 ; end
+
 	end_list_items
 
 ScientistGroup:
@@ -4213,6 +4235,28 @@ ScientistGroup:
 	db 89
 	dw LAIRON
 	db GOLD_BERRY
+	db -1 ; end
+
+	next_list_item ; SCIENTIST (15)
+	db "REMAN@", TRAINERTYPE_ITEM
+	db 90
+	dw BRONZONG
+	db MYSTERYBERRY
+	db 89
+	dw WIGGLYTUFF
+	db LEFTOVERS
+	db 90
+	dw AZUMARILL
+	db FOCUS_BAND
+	db 90
+	dw QWILFISH
+	db SCOPE_LENS
+	db 89
+	dw SUNFLORA
+	db BITTER_BERRY
+	db 90
+	dw PELIPPER
+	db KINGS_ROCK
 	db -1 ; end
 
 	end_list_items
@@ -4811,6 +4855,28 @@ LassGroup:
 	db 79
 	dw GOLDUCK
 	dw SURF, PSYCH_UP, DISABLE, PSYCHIC_M
+	db -1 ; end
+
+	next_list_item ; LASS (18)
+	db "SANOL@", TRAINERTYPE_ITEM
+	db 92
+	dw METAGROSS
+	db BRIGHTPOWDER
+	db 91
+	dw CHANDELURE
+	db GOLD_BERRY
+	db 92
+	dw RAICHU
+	db MIRACLEBERRY
+	db 92
+	dw CROBAT
+	db FOCUS_BAND
+	db 91
+	dw MANTINE
+	db MYSTIC_WATER
+	db 92
+	dw HITMONTOP
+	db BLACKBELT
 	db -1 ; end
 
 	end_list_items
@@ -6844,6 +6910,28 @@ SwimmerMGroup:
 	db GOLD_BERRY
 	db -1 ; end
 
+	next_list_item ; SWIMMERM (24)
+	db "MENZON@", TRAINERTYPE_ITEM
+	db 91
+	dw SIMISAGE
+	db LEFTOVERS
+	db 90
+	dw SEADRA
+	db MYSTIC_WATER
+	db 91
+	dw QUAGSIRE
+	db MYSTIC_WATER
+	db 91
+	dw NOCTOWL
+	db SHARP_BEAK
+	db 90
+	dw CRABOMINABLE
+	db MYSTERYBERRY
+	db 91
+	dw MISDREAVUS
+	db QUICK_CLAW
+	db -1 ; end
+
 	end_list_items
 
 SwimmerFGroup:
@@ -7474,6 +7562,57 @@ GuitaristGroup:
 	db GOLD_BERRY
 	db -1 ; end
 
+	next_list_item ; GUITARIST (7)
+	db "FEEK@", TRAINERTYPE_ITEM
+	db 90
+	dw METANG
+	db BRIGHTPOWDER
+	db 89
+	dw SEALEO
+	db GOLD_BERRY
+	db 90
+	dw FURRET
+	db FOCUS_BAND
+	db 90
+	dw SUDOWOODO
+	db QUICK_CLAW
+	db 89
+	dw PILOSWINE
+	db GOLD_BERRY
+	db 90
+	dw MONFERNO
+	db MYSTERYBERRY
+	db -1 ; end
+
+	next_list_item ; GUITARIST (8)
+	db "NEBLEK@", TRAINERTYPE_ITEM_MOVES
+	db 94
+	dw STARMIE
+	db MIRACLEBERRY
+	dw WATERFALL, RAIN_DANCE, THUNDER, PROTECT
+	db 93
+	dw ARTICUNO
+	db LEFTOVERS
+	dw ICE_BEAM, THUNDER, REST, RAIN_DANCE
+	db 94
+	dw PORYGON_Z
+	db GOLD_BERRY
+	dw TRI_ATTACK, RECOVER, LOCK_ON, ZAP_CANNON
+	db 94
+	dw ELECTRODE
+	db GOLD_BERRY
+	dw THUNDER, SCREECH, PROTECT, SWIFT
+	db 93
+	dw MAGNETON
+	db BRIGHTPOWDER
+	dw SUPERSONIC, THUNDER, SCREECH, TRI_ATTACK
+	db 94
+	dw GROUDON
+	db POLKADOT_BOW
+	dw FIRE_BLAST, REST, EARTHQUAKE, CURSE
+	db -1 ; end
+
+
 	end_list_items
 
 HikerGroup:
@@ -7731,6 +7870,28 @@ HikerGroup:
 	db BITTER_BERRY
 	db -1 ; end
 
+	next_list_item ; HIKER (25)
+	db "WILER@", TRAINERTYPE_ITEM
+	db 91
+	dw SNEASEL
+	db QUICK_CLAW
+	db 90
+	dw AURORUS
+	db NEVERMELTICE
+	db 91
+	dw KROKOROK
+	db HARD_STONE
+	db 91
+	dw CHATOT
+	db MIRACLEBERRY
+	db 90
+	dw ARBOK
+	db GOLD_BERRY
+	db 91
+	dw LAIRON
+	db METAL_COAT
+	db -1 ; end
+
 	end_list_items
 
 BikerGroup:
@@ -7872,6 +8033,28 @@ BikerGroup:
 	db 82
 	dw SABLEYE
 	db PSNCUREBERRY
+	db -1 ; end
+
+	next_list_item ; BIKER (13)
+	db "REBIN@", TRAINERTYPE_ITEM
+	db 93
+	dw BLAZIKEN
+	db BLACKBELT
+	db 92
+	dw VILEPLUME
+	db BITTER_BERRY
+	db 93
+	dw LANTURN
+	db LEFTOVERS
+	db 93
+	dw FROSLASS
+	db NEVERMELTICE
+	db 92
+	dw GRANBULL
+	db GOLD_BERRY
+	db 93
+	dw SABLEYE
+	db SPELL_TAG
 	db -1 ; end
 
 	end_list_items
@@ -9680,6 +9863,28 @@ CamperGroup:
 	dw SWABLU
 	db -1 ; end
 
+	next_list_item ; CAMPER (24)
+	db "AICH@", TRAINERTYPE_ITEM
+	db 90
+	dw SCEPTILE
+	db MIRACLE_SEED
+	db 89
+	dw PUPITAR
+	db GOLD_BERRY
+	db 90
+	dw SHELGON
+	db POLKADOT_BOW
+	db 90
+	dw JUMPLUFF
+	db LEFTOVERS
+	db 89
+	dw SANDSLASH
+	db KINGS_ROCK
+	db 90
+	dw GLIGAR
+	db SOFT_SAND
+	db -1 ; end
+
 	end_list_items
 
 SageGroup:
@@ -9825,6 +10030,28 @@ SageGroup:
 	db 74
 	dw GLOOM
 	db SILVERPOWDER
+	db -1 ; end
+
+	next_list_item ; SAGE (15)
+	db "BERLO@", TRAINERTYPE_ITEM
+	db 92
+	dw ESPEON
+	db BRIGHTPOWDER
+	db 91
+	dw TENTACRUEL
+	db LEFTOVERS
+	db 92
+	dw FLAREON
+	db GOLD_BERRY
+	db 92
+	dw STANTLER
+	db MIRACLEBERRY
+	db 91
+	dw SEAKING
+	db MIRACLEBERRY
+	db 92
+	dw MAGCARGO
+	db CHARCOAL
 	db -1 ; end
 
 	next_list_item ; POKEFANF (9)

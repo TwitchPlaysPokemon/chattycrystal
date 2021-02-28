@@ -44,6 +44,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_51 ; DEMIT
 	const MT_BATTLE_59 ; NANOT
 	const MT_BATTLE_78 ; ORDO
+	const MT_BATTLE_81 ; REMAN
 
 	trainerclass YOUNGSTER ; 3
 	const JOEY1
@@ -61,6 +62,7 @@ CHRIS EQU __enum__
 	const JOEY4
 	const JOEY5
 	const MT_BATTLE_20 ; ERBEN
+	const MT_BATTLE_89 ; PERC
 
 	trainerclass SCHOOLBOY ; 4
 	const JACK1
@@ -129,6 +131,7 @@ CHRIS EQU __enum__
 	const DANA3
 	const DANA4
 	const DANA5
+	const MT_BATTLE_87 ; SANOL
 
 	trainerclass COOLTRAINERM ; 7
 	const NICK
@@ -352,6 +355,7 @@ CHRIS EQU __enum__
 	const PARKER
 	const MT_BATTLE_35 ; DERON
 	const MT_BATTLE_55 ; GULOR
+	const MT_BATTLE_85 ; MENZON
 
 	trainerclass SWIMMERF ; 12
 	const ELAINE
@@ -420,6 +424,8 @@ CHRIS EQU __enum__
 	const MT_BATTLE_15 ; ARDO
 	const MT_BATTLE_27 ; NOREL
 	const MT_BATTLE_43 ; DEATS
+	const MT_BATTLE_82 ; FEEK
+	const MT_BATTLE_90 ; NEBLEK
 
 	trainerclass HIKER ; 16
 	const ANTHONY1
@@ -446,6 +452,7 @@ CHRIS EQU __enum__
 	const ANTHONY5
 	const MT_BATTLE_30 ; LEVEN
 	const MT_BATTLE_53 ; CRAG
+	const MT_BATTLE_84 ; WILER
 
 	trainerclass BIKER ; 17
 	const BIKER_BENNY
@@ -460,6 +467,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_3 ; EARGLE
 	const MT_BATTLE_39 ; LOHON
 	const MT_BATTLE_63 ; ROGIN
+	const MT_BATTLE_88 ; REBIN
 
 	trainerclass BURGLAR ; 18
 	const DUNCAN
@@ -575,6 +583,7 @@ CHRIS EQU __enum__
 	const TODD5
 	const QUENTIN
 	const MT_BATTLE_12 ; DENC
+	const MT_BATTLE_83 ; AICH
 
 	trainerclass SAGE ; 1f
 	const CHOW
@@ -591,6 +600,7 @@ CHRIS EQU __enum__
 	const YANG
 	const MT_BATTLE_6 ; GRUND
 	const MT_BATTLE_41 ; ORSAK
+	const MT_BATTLE_86 ; BERLO
 
 	trainerclass MEDIUM ; 20
 	const MARTHA

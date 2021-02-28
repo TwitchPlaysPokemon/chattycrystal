@@ -3115,7 +3115,7 @@ CYRoboredGroup:
 
 	db -1 ; end
 	
-; 	next_list_item ; X_CHATTYYELLOW5 TODO new team
+	next_list_item ; X_CHATTYYELLOW5 TODO new team
 	db "x<MN>(?@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
 	db 50

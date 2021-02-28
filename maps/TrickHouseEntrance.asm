@@ -2,7 +2,6 @@
 	const_def
 	const TRICKHOUSEEVENT_PUZZLE_READY
 	const TRICKHOUSEEVENT_PUZZLE_FINISHED
-	const TRICKHOUSEEVENT_SCROLL_ACTIVE
 
 TrickHouseEntrance_MapScripts:
 	db 0 ; scene scripts
@@ -11,6 +10,8 @@ TrickHouseEntrance_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .check_ready
 
 .check_ready
+	checkevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
+	iftrue .active
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_6
 	iftrue .finished
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
@@ -25,7 +26,7 @@ TrickHouseEntrance_MapScripts:
 	iftrue .two
 .ready
 	setevent TRICKHOUSEEVENT_PUZZLE_READY
-	setevent TRICKHOUSEEVENT_SCROLL_ACTIVE ; TODO: make the Trick Master activate it
+.active
 	return
 
 .finished
@@ -60,7 +61,7 @@ TrickHouseEntrance_MapScripts:
 TrickHouseEntrance_Scroll:
 	checkevent TRICKHOUSEEVENT_PUZZLE_FINISHED
 	iftrue .finished
-	checkevent TRICKHOUSEEVENT_SCROLL_ACTIVE
+	checkevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
 	iffalse .not_active
 	opentext
 	writetext .big_hole_text
@@ -130,6 +131,79 @@ TrickHouseEntrance_Scroll:
 	line "TRICK MASTER"
 	done
 
+TrickHouseEntrance_PrepareTrickMasterReveal:
+	playsound SFX_READ_TEXT_2
+	waitsfx
+	; TODO: emote, open text, etc.
+	end
+
+TrickHouseEntrance_HidingSpot_1:
+	checkevent TRICKHOUSEEVENT_PUZZLE_READY
+	iffalse TrickHouseEntrance_End
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
+	iftrue TrickHouseEntrance_End
+	scall TrickHouseEntrance_PrepareTrickMasterReveal
+	; TODO: print puzzle-specific text
+	sjump TrickHouseEntrance_DoTrickMasterReveal
+
+TrickHouseEntrance_HidingSpot_2:
+	checkevent TRICKHOUSEEVENT_PUZZLE_READY
+	iffalse TrickHouseEntrance_End
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
+	iffalse TrickHouseEntrance_End
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_2
+	iftrue TrickHouseEntrance_End
+	scall TrickHouseEntrance_PrepareTrickMasterReveal
+	; TODO: print puzzle-specific text
+	sjump TrickHouseEntrance_DoTrickMasterReveal
+
+TrickHouseEntrance_HidingSpot_3:
+	checkevent TRICKHOUSEEVENT_PUZZLE_READY
+	iffalse TrickHouseEntrance_End
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_2
+	iffalse TrickHouseEntrance_End
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_3
+	iftrue TrickHouseEntrance_End
+	scall TrickHouseEntrance_PrepareTrickMasterReveal
+	; TODO: print puzzle-specific text
+	sjump TrickHouseEntrance_DoTrickMasterReveal
+
+TrickHouseEntrance_HidingSpot_4:
+	checkevent TRICKHOUSEEVENT_PUZZLE_READY
+	iffalse TrickHouseEntrance_End
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_3
+	iffalse TrickHouseEntrance_End
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_4
+	iftrue TrickHouseEntrance_End
+	scall TrickHouseEntrance_PrepareTrickMasterReveal
+	; TODO: print puzzle-specific text
+	sjump TrickHouseEntrance_DoTrickMasterReveal
+
+TrickHouseEntrance_HidingSpot_5:
+	checkevent TRICKHOUSEEVENT_PUZZLE_READY
+	iffalse TrickHouseEntrance_End
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_4
+	iffalse TrickHouseEntrance_End
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
+	iftrue TrickHouseEntrance_End
+	scall TrickHouseEntrance_PrepareTrickMasterReveal
+	; TODO: print puzzle-specific text
+	sjump TrickHouseEntrance_DoTrickMasterReveal
+
+TrickHouseEntrance_HidingSpot_6:
+	checkevent TRICKHOUSEEVENT_PUZZLE_READY
+	iffalse TrickHouseEntrance_End
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
+	iffalse TrickHouseEntrance_End
+	scall TrickHouseEntrance_PrepareTrickMasterReveal
+	; TODO: print puzzle-specific text
+TrickHouseEntrance_DoTrickMasterReveal:
+	; TODO: close text, warp, show Trick Master, etc.
+	clearevent TRICKHOUSEEVENT_PUZZLE_READY
+	setevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
+TrickHouseEntrance_End:
+	end
+
 TrickHouseEntrance_MapEvents:
 	db 0, 0 ; filler
 
@@ -140,7 +214,13 @@ TrickHouseEntrance_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
-	bg_event 5, 0, BGEVENT_UP, TrickHouseEntrance_Scroll
+	db 7 ; bg events
+	bg_event  5,  0, BGEVENT_UP, TrickHouseEntrance_Scroll
+	bg_event  6,  3, BGEVENT_SILENT, TrickHouseEntrance_HidingSpot_1
+	bg_event 11,  5, BGEVENT_SILENT, TrickHouseEntrance_HidingSpot_2
+	bg_event 10,  1, BGEVENT_SILENT, TrickHouseEntrance_HidingSpot_3
+	bg_event  3,  0, BGEVENT_SILENT, TrickHouseEntrance_HidingSpot_4
+	bg_event  9,  1, BGEVENT_SILENT, TrickHouseEntrance_HidingSpot_5
+	bg_event  4,  4, BGEVENT_SILENT, TrickHouseEntrance_HidingSpot_6
 
 	db 0 ; object events

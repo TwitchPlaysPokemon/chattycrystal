@@ -108,6 +108,7 @@ CHRIS EQU __enum__
 	const VANCE2
 	const VANCE3
 	const MT_BATTLE_10 ; ELION
+	const MT_BATTLE_61 ; BENIT
 
 	trainerclass LASS ; 6
 	const CARRIE
@@ -152,6 +153,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_19 ; HEBEL
 	const MT_BATTLE_37 ; MORIL
 	const MT_BATTLE_50 ; CRYAL
+	const MT_BATTLE_66 ; DAZON
 
 	trainerclass COOLTRAINERF ; 8
 	const GWEN
@@ -384,6 +386,7 @@ CHRIS EQU __enum__
 	const HUEY2
 	const HUEY3
 	const HUEY4
+	const MT_BATTLE_70 ; VARIO
 
 	trainerclass SUPER_NERD ; 14
 	const STAN
@@ -403,6 +406,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_1 ; ROOD
 	const MT_BATTLE_40 ; SLEWIS
 	const MT_BATTLE_45 ; ACRON
+	const MT_BATTLE_69 ; DUNOR
 
 	trainerclass GUITARIST ; 15
 	const CLYDE
@@ -450,6 +454,7 @@ CHRIS EQU __enum__
 	const GLENN
 	const MT_BATTLE_3 ; EARGLE
 	const MT_BATTLE_39 ; LOHON
+	const MT_BATTLE_63 ; ROGIN
 
 	trainerclass BURGLAR ; 18
 	const DUNCAN
@@ -493,6 +498,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_9 ; RAPOZ
 	const MT_BATTLE_14 ; ROGEN
 	const MT_BATTLE_47 ; RAWLES
+	const MT_BATTLE_62 ; HELMIN
 
 	trainerclass PSYCHIC_T ; 1c
 	const NATHAN
@@ -536,6 +542,7 @@ CHRIS EQU __enum__
 	const GINA5
 	const TIFFANY4
 	const MT_BATTLE_17 ; MALOO
+	const MT_BATTLE_67 ; ZIALE
 
 	trainerclass CAMPER ; 1e
 	const ROLAND
@@ -591,6 +598,7 @@ CHRIS EQU __enum__
 	const PATRICIA
 	const MT_BATTLE_13 ; MYOG
 	const MT_BATTLE_38 ; GRENAY
+	const MT_BATTLE_65 ; PERSTIN
 
 	trainerclass BOARDER ; 21
 	const RONALD
@@ -621,6 +629,7 @@ CHRIS EQU __enum__
 	const ALLAN
 	const MT_BATTLE_11 ; GIROD
 	const MT_BATTLE_42 ; GOHN
+	const MT_BATTLE_68 ; CORVIN
 
 	trainerclass KIMONO_GIRL ; 23
 	const NAOKO
@@ -654,6 +663,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_8 ; LADIN
 	const MT_BATTLE_33 ; SASON
 	const MT_BATTLE_60 ; GLYDIN
+	const MT_BATTLE_64 ; CEWAN
 
 	trainerclass RED ; 26
 	const GF_RED

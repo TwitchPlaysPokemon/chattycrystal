@@ -4616,6 +4616,28 @@ BirdKeeperGroup:
 	dw TWISTER, GROWL, WATER_GUN, SUPERSONIC
 	db -1 ; end
 
+	next_list_item ; BIRD_KEEPER (21)
+	db "BENIT@", TRAINERTYPE_ITEM
+	db 82
+	dw CHATOT
+	db GOLD_BERRY
+	db 81
+	dw DODRIO
+	db MYSTERYBERRY
+	db 82
+	dw SWANNA
+	db LEFTOVERS
+	db 82
+	dw MANTINE
+	db GOLD_BERRY
+	db 81
+	dw XATU
+	db GOLD_BERRY
+	db 82
+	dw SALAMENCE
+	db LEFTOVERS
+	db -1 ; end
+
 	end_list_items
 
 LassGroup:
@@ -5028,6 +5050,28 @@ CooltrainerMGroup:
 	dw SEALEO
 	db NEVERMELTICE
 	dw AURORA_BEAM, REST, SNORE, BODY_SLAM
+	db -1 ; end
+
+	next_list_item ; COOLTRAINERM (24)
+	db "DAZON@", TRAINERTYPE_ITEM
+	db 84
+	dw BELLOSSOM
+	db MIRACLE_SEED
+	db 83
+	dw RHYDON
+	db MIRACLEBERRY
+	db 84
+	dw EMPOLEON
+	db GOLD_BERRY
+	db 84
+	dw WEEZING
+	db LEFTOVERS
+	db 83
+	dw MAGNETON
+	db MAGNET
+	db 84
+	dw ALAKAZAM
+	db TWISTEDSPOON
 	db -1 ; end
 
 	end_list_items
@@ -7006,6 +7050,34 @@ SailorGroup:
 	dw SURF, STRENGTH, ICE_PUNCH, SUBMISSION
 	db -1 ; end
 
+	next_list_item ; SAILOR (14)
+	db "VARIO@", TRAINERTYPE_ITEM_MOVES
+	db 86
+	dw VAPOREON
+	db MIRACLEBERRY
+	dw SURF, HYDRO_PUMP, AURORA_BEAM, ACID_ARMOR
+	db 85
+	dw GYARADOS
+	db BITTER_BERRY
+	dw THRASH, BITE, DRAGON_DANCE, WATERFALL
+	db 86
+	dw AGGRON
+	db METAL_COAT
+	dw IRON_DEFENSE, METAL_CLAW, ROAR, TAKE_DOWN
+	db 86
+	dw WALREIN
+	db LEFTOVERS
+	dw BODY_SLAM, AURORA_BEAM, BLIZZARD, WATER_PULSE
+	db 85
+	dw MANECTRIC
+	db SCOPE_LENS
+	dw QUICK_ATTACK, SPARK, BITE, IRON_TAIL
+	db 86
+	dw SCEPTILE
+	db BRIGHTPOWDER
+	dw SANDSTORM, LEECH_SEED, WOOD_HAMMER, FEINT_ATTACK
+	db -1 ; end
+
 	end_list_items
 
 SuperNerdGroup:
@@ -7187,6 +7259,28 @@ SuperNerdGroup:
 	db 75
 	dw LARVITAR
 	db BITTER_BERRY
+	db -1 ; end
+
+	next_list_item ; SUPER_NERD (18)
+	db "DUNOR@", TRAINERTYPE_ITEM
+	db 85
+	dw MUK
+	db POISON_BARB
+	db 84
+	dw KROKOROK
+	db BITTER_BERRY
+	db 85
+	dw NINETALES
+	db QUICK_CLAW
+	db 85
+	dw PORYGON2
+	db GOLD_BERRY
+	db 84
+	dw MACHAMP
+	db GOLD_BERRY
+	db 85
+	dw GARDEVOIR
+	db MYSTERYBERRY
 	db -1 ; end
 
 	end_list_items
@@ -7648,6 +7742,28 @@ BikerGroup:
 	db MINT_BERRY
 	db -1 ; end
 
+	next_list_item ; BIKER (12)
+	db "ROGIN@", TRAINERTYPE_ITEM
+	db 82
+	dw LOUDRED
+	db BITTER_BERRY
+	db 81
+	dw OCTILLERY
+	db GOLD_BERRY
+	db 82
+	dw CROBAT
+	db PRZCUREBERRY
+	db 82
+	dw QUAGSIRE
+	db MIRACLEBERRY
+	db 81
+	dw RHYDON
+	db GOLD_BERRY
+	db 82
+	dw SABLEYE
+	db PSNCUREBERRY
+	db -1 ; end
+
 	end_list_items
 
 
@@ -8058,6 +8174,28 @@ BlackbeltGroup:
 	db BRIGHTPOWDER
 	db -1 ; end
 
+	next_list_item ; BLACKBELT (13)
+	db "HELMIN@", TRAINERTYPE_ITEM
+	db 82
+	dw MAGCARGO
+	db GOLD_BERRY
+	db 81
+	dw LANTURN
+	db MIRACLEBERRY
+	db 82
+	dw VILEPLUME
+	db BITTER_BERRY
+	db 82
+	dw GASTRODON
+	db LEFTOVERS
+	db 81
+	dw ABSOL
+	db SCOPE_LENS
+	db 82
+	dw STANTLER
+	db BRIGHTPOWDER
+	db -1 ; end
+
 	end_list_items
 
 PsychicGroup:
@@ -8399,6 +8537,28 @@ PicnickerGroup:
 	dw GROVYLE
 	db -1 ; end
 
+	next_list_item ; PICNICKER (28)
+	db "ZIALE@", TRAINERTYPE_ITEM
+	db 84
+	dw CRADILY
+	db BRIGHTPOWDER
+	db 83
+	dw PINSIR
+	db LEFTOVERS
+	db 84
+	dw OMANYTE
+	db GOLD_BERRY
+	db 84
+	dw MILTANK
+	db MIRACLEBERRY
+	db 83
+	dw KROKOROK
+	db BRIGHTPOWDER
+	db 84
+	dw WAILORD
+	db GOLD_BERRY
+	db -1 ; end
+
 	end_list_items
 
 SECTION "Enemy Trainer Parties 3", ROMX
@@ -8718,6 +8878,28 @@ PokefanMGroup:
 	db PRZCUREBERRY
 	db -1 ; end
 
+	next_list_item ; POKEFANM (17)
+	db "CORVIN@", TRAINERTYPE_ITEM
+	db 85
+	dw DONPHAN
+	db BITTER_BERRY
+	db 84
+	dw GOLDUCK
+	db MIRACLEBERRY
+	db 85
+	dw CRABOMINABLE
+	db GOLD_BERRY
+	db 85
+	dw AMPHAROS
+	db GOLD_BERRY
+	db 84
+	dw HERACROSS
+	db SCOPE_LENS
+	db 85
+	dw HOUNDOOM
+	db GOLD_BERRY
+	db -1 ; end
+
 	end_list_items
 
 KimonoGirlGroup:
@@ -8964,7 +9146,7 @@ PokefanFGroup:
 	db 82
 	dw SEADRA
 	db LEFTOVERS
-	dw WATER_PULSE, AURORA_BEAM, FACADE, HIDDEN_POWER
+	dw WATER_PULSE, AURORA_BEAM, HYDRO_PUMP, HIDDEN_POWER
 	db 82
 	dw GOLBAT
 	db BRIGHTPOWDER
@@ -8978,7 +9160,6 @@ PokefanFGroup:
 	db BRIGHTPOWDER
 	dw STOMP, PSYBEAM, SHADOW_BALL, HIDDEN_POWER
 	db -1 ; end
-
 
 	end_list_items
 
@@ -9448,6 +9629,28 @@ SageGroup:
 	dw STOMP, PSYBEAM, SHADOW_BALL, HIDDEN_POWER
 	db -1 ; end
 
+	next_list_item ; POKEFANF (10)
+	db "CEWAN@", TRAINERTYPE_ITEM
+	db 83
+	dw BRONZONG
+	db MIRACLEBERRY
+	db 82
+	dw HARIYAMA
+	db FOCUS_BAND
+	db 83
+	dw GRANBULL
+	db GOLD_BERRY
+	db 83
+	dw SABLEYE
+	db GOLD_BERRY
+	db 82
+	dw INFERNAPE
+	db BRIGHTPOWDER
+	db 83
+	dw RAICHU
+	db LEFTOVERS
+	db -1 ; end
+
 	end_list_items
 
 MediumGroup:
@@ -9561,6 +9764,28 @@ MediumGroup:
 	db 73
 	dw DUNSPARCE
 	db MIRACLEBERRY
+	db -1 ; end
+
+	next_list_item ; POKEFANF (13)
+	db "PERSTIN@", TRAINERTYPE_ITEM
+	db 83
+	dw TORTERRA
+	db SCOPE_LENS
+	db 82
+	dw ELECTRODE
+	db MAGNET
+	db 83
+	dw EXPLOUD
+	db GOLD_BERRY
+	db 83
+	dw TENTACRUEL
+	db MYSTIC_WATER
+	db 82
+	dw GOLEM
+	db MIRACLEBERRY
+	db 83
+	dw FROSLASS
+	db NEVERMELTICE
 	db -1 ; end
 
 	end_list_items

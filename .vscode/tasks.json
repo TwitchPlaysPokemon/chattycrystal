@@ -12,6 +12,18 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "test build",
+            "type": "shell",
+            "command": "make -j",
+            "problemMatcher": [
+                "$rgbdserror"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         }
     ]
 }

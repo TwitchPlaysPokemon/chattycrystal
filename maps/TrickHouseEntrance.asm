@@ -68,7 +68,10 @@ TrickHouseEntrance_Scroll:
 	yesorno
 	closetext
 	iffalse .end
-	; TODO: some movement effect
+	changeblock 4, 0, $41 ; open door
+	reloadmappart
+	pause 10
+	applymovement PLAYER, .movement
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
 	iftrue .six
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_4
@@ -102,6 +105,11 @@ TrickHouseEntrance_Scroll:
 .six
 	warp TRICK_HOUSE_PUZZLE_6, 0, 21
 	end
+
+.movement
+	step UP
+	remove_object
+	step_end
 
 .big_hole_text
 	text "There's a big hole"

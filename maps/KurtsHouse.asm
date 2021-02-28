@@ -86,9 +86,10 @@ Kurt1:
 	iftrue .GiveHeavyBall
 	checkevent EVENT_GAVE_KURT_PNK_APRICORN
 	iftrue .GiveLoveBall
-	checkevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
+	checkevent EVENT_GAVE_GS_BALL_TO_KURT
+	iftrue .GaveGSBallToKurt
+	checkitem GS_BALL
 	iftrue .CanGiveGSBallToKurt
-.NoGSBall:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	iftrue .CheckApricorns
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
@@ -247,10 +248,6 @@ Kurt1:
 	sjump ._ThatTurnedOutGreat
 
 .CanGiveGSBallToKurt:
-	checkevent EVENT_GAVE_GS_BALL_TO_KURT
-	iftrue .GaveGSBallToKurt
-	checkitem GS_BALL
-	iffalse .NoGSBall
 	writetext KurtsHouseKurtWhatIsThatText
 	waitbutton
 	closetext
@@ -274,7 +271,6 @@ Kurt1:
 	waitbutton
 	closetext
 	setevent EVENT_FOREST_IS_RESTLESS
-	clearevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
 	clearevent EVENT_GAVE_GS_BALL_TO_KURT
 	special FadeOutMusic
 	pause 20

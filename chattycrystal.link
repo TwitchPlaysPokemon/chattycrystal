@@ -40,6 +40,7 @@ ROMX $04
 	"Formes"
 ROMX $05
 	"bank5"
+	"Map Blocks 6"
 ROMX $06
 	"Tileset Data 1"
 ROMX $07
@@ -87,6 +88,7 @@ ROMX $14
 	"Map Scripts 26"
 ROMX $15
 	"Map Scripts 1"
+	"Tileset Data 13"
 ROMX $16
 	"Map Scripts 2"
 ROMX $17
@@ -271,6 +273,7 @@ ROMX $60
 	"Pics 23"
 ROMX $61
 	"Map Scripts 14"
+	"Tileset Data 12"
 ROMX $62
 	"Map Scripts 15"
 ROMX $63

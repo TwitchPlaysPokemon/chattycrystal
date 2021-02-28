@@ -706,6 +706,15 @@ ENDM
 	map_attributes VictoryRoadGate, VICTORY_ROAD_GATE, $00, 0
 	map_attributes ViridianForestNorthGate, VIRIDIAN_FOREST_NORTH_GATE, $00, 0
 	map_attributes ViridianForestSouthGate, VIRIDIAN_FOREST_SOUTH_GATE, $00, 0
+	map_attributes TrickHouseEntrance, TRICK_HOUSE_ENTRANCE, $00, 0
+	map_attributes TrickHouseExit, TRICK_HOUSE_EXIT, $00, 0
+	map_attributes TrickHouseHallway, TRICK_HOUSE_HALLWAY, $00, 0
+	map_attributes TrickHousePuzzle1, TRICK_HOUSE_PUZZLE_1, $00, 0
+	map_attributes TrickHousePuzzle2, TRICK_HOUSE_PUZZLE_2, $00, 0
+	map_attributes TrickHousePuzzle3, TRICK_HOUSE_PUZZLE_3, $00, 0
+	map_attributes TrickHousePuzzle4, TRICK_HOUSE_PUZZLE_4, $00, 0
+	map_attributes TrickHousePuzzle5, TRICK_HOUSE_PUZZLE_5, $00, 0
+	map_attributes TrickHousePuzzle6, TRICK_HOUSE_PUZZLE_6, $00, 0
 	map_attributes ElmsLab, ELMS_LAB, $00, 0
 	map_attributes PlayersHouse1F, PLAYERS_HOUSE_1F, $00, 0
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0

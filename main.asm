@@ -306,7 +306,7 @@ INCLUDE "gfx/battle_anims.asm"
 INCLUDE "data/pokemon/base_stats_new.asm"
 
 
-SECTION "Crystal Features 2", ROMX
+SECTION "bank22", ROMX
 
 INCLUDE "engine/events/kurt.asm"
 INCLUDE "engine/gfx/player_gfx.asm"
@@ -315,12 +315,12 @@ INCLUDE "engine/events/unown_walls.asm"
 INCLUDE "engine/events/buena.asm"
 INCLUDE "engine/events/dratini.asm"
 INCLUDE "engine/events/battle_tower/rules.asm"
+INCLUDE "engine/battle/battle_transition.asm"
 
 
 SECTION "bank23", ROMX
 
 INCLUDE "engine/tilesets/timeofday_pals.asm"
-INCLUDE "engine/battle/battle_transition.asm"
 INCLUDE "engine/events/field_moves.asm"
 INCLUDE "engine/events/magnet_train.asm"
 INCLUDE "engine/battle/battlestart_copytilemapatonce.asm"

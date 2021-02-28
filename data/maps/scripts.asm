@@ -269,6 +269,15 @@ INCLUDE "maps/RocketHideoutB2F.asm"
 INCLUDE "maps/RocketHideoutB3F.asm"
 INCLUDE "maps/RocketHideoutB4F.asm"
 INCLUDE "maps/RocketHideoutElevator.asm"
+INCLUDE "maps/TrickHouseEntrance.asm"
+INCLUDE "maps/TrickHouseExit.asm"
+INCLUDE "maps/TrickHouseHallway.asm"
+INCLUDE "maps/TrickHousePuzzle1.asm"
+INCLUDE "maps/TrickHousePuzzle2.asm"
+INCLUDE "maps/TrickHousePuzzle3.asm"
+INCLUDE "maps/TrickHousePuzzle4.asm"
+INCLUDE "maps/TrickHousePuzzle5.asm"
+INCLUDE "maps/TrickHousePuzzle6.asm"
 
 
 SECTION "Map Scripts 15", ROMX
@@ -513,6 +522,7 @@ INCLUDE "maps/PokemonMansion1F.asm"
 INCLUDE "maps/PokemonMansion2F.asm"
 INCLUDE "maps/PokemonMansion3F.asm"
 INCLUDE "maps/PokemonMansionB1F.asm"
+
 
 SECTION "Map Scripts 27", ROMX
 

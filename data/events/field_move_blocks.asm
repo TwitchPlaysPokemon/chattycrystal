@@ -1,10 +1,11 @@
 CutTreeBlockPointers:
 ; tileset, block list pointer
-	dbw TILESET_JOHTO,        .johto
-	dbw TILESET_JOHTO_MODERN, .johto_modern
-	dbw TILESET_KANTO,        .kanto
-	dbw TILESET_PARK,         .park
-	dbw TILESET_FOREST,       .forest
+	dbw TILESET_JOHTO,             .johto
+	dbw TILESET_JOHTO_MODERN,      .johto_modern
+	dbw TILESET_KANTO,             .kanto
+	dbw TILESET_PARK,              .park
+	dbw TILESET_FOREST,            .forest
+	dbw TILESET_TRADITIONAL_HOUSE, .traditional_house
 	db -1 ; end
 
 .johto:
@@ -39,7 +40,16 @@ CutTreeBlockPointers:
 
 .forest:
 ; facing block, replacement block, animation
-	db $0f, $17, 0
+	db $0f, $17, 0 ; tree
+	db -1 ; end
+
+.traditional_house:
+; facing block, replacement block, animation
+	db $66, $4f, 0 ; tree
+	db $67, $52, 0 ; tree
+	db $68, $49, 0 ; tree
+	db $69, $59, 0 ; tree
+	db $6a, $63, 0 ; tree
 	db -1 ; end
 
 WhirlpoolBlockPointers:

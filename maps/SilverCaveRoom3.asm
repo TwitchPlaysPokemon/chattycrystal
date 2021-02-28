@@ -49,16 +49,20 @@ Red:
 	playsound SFX_STRENGTH
 	changeblock 9, 7, 98
 	changeblock 10, 7, 99
+	reloadmappart
+	waitsfx
 	special PlayMapMusic
 	end
 	
+RuinsEntranceSignScript:
+	jumptext RuinsEntranceSignText
 	
 RedSeenText:
 	text "<……>"
 	line "<……>"
 	done
 
-RuinsEntranceSignScript:
+RuinsEntranceSignText:
 RedWinLossText:
 	text "…"
 	done
@@ -82,11 +86,11 @@ SilverCaveRoom3_MapEvents: ; 0x18c644
 	db 0
 
 	; signposts
-	db 0
+	db 2
 	bg_event 8, 8, BGEVENT_READ, RuinsEntranceSignScript
-	bg_event 8, 11, BGEVENT_READ, RuinsEntranceSignScript
+	bg_event 11, 8, BGEVENT_READ, RuinsEntranceSignScript
 
 	; object_event
-	db 0
+	db 1
 	object_event  9, 10, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Red, EVENT_RED_IN_MT_SILVER
 

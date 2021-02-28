@@ -334,7 +334,7 @@ MoveAnimations:
 	dw BattleAnim_Growth       ; PLACEHOLDER
 	dw BattleAnim_Pursuit      ; PLACEHOLDER
 	dw BattleAnim_Roar         ; PLACEHOLDER
-	dw BattleAnim_HydroPump    ; PLACEHOLDER
+	dw BattleAnim_Scald
 	dw BattleAnim_Bulldoze     ; 150
 	dw BattleAnim_WorkUp
 	dw BattleAnim_DualChop
@@ -3450,6 +3450,38 @@ BattleAnim_DarkVoid:
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
+	
+BattleAnim_Scald:
+	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_HIT, ANIM_GFX_HAZE
+	anim_bgp $90
+	anim_sound 0, 1, SFX_SURF
+	anim_obj ANIM_OBJ_SCALD, 64, 88, $4
+	anim_wait 4
+	anim_obj ANIM_OBJ_SCALD, 64, 88, $4
+	anim_wait 4
+	anim_obj ANIM_OBJ_SCALD, 64, 88, $4
+	anim_wait 4	
+.loop
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 52, $0
+	anim_obj ANIM_OBJ_SCALD, 64, 88, $4
+	anim_wait 4
+	anim_loop 15, .loop
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 52, $0
+	anim_wait 4
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 52, $0
+	anim_wait 4
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 52, $0
+	anim_wait 32
+	anim_1gfx ANIM_GFX_HAZE
+	anim_bgeffect ANIM_BG_18, $0, $0, $40
+	anim_sound 0, 1, SFX_POISON_STING
+.loop2
+	anim_obj ANIM_OBJ_STEAM, 136, 52, $0
+	anim_wait 8
+	anim_loop 5, .loop2
+	anim_wait 32	
+	anim_incbgeffect ANIM_BG_18
+	anim_jump BattleAnim_ShowMon_1
 
 BattleAnim_Bulldoze:
 	anim_1gfx ANIM_GFX_HIT

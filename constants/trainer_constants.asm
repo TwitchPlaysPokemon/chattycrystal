@@ -28,6 +28,7 @@ CHRIS EQU __enum__
 	const CAL1
 	const CAL2
 	const CAL3
+	const MT_BATTLE_100 ; CAL4
 
 	trainerclass SCIENTIST ; 2
 	const ROSS
@@ -158,6 +159,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_37 ; MORIL
 	const MT_BATTLE_50 ; CRYAL
 	const MT_BATTLE_66 ; DAZON
+	const MT_BATTLE_91 ; CRUIK
 
 	trainerclass COOLTRAINERF ; 8
 	const GWEN
@@ -182,6 +184,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_24 ; RATEIS
 	const MT_BATTLE_48 ; ROSNO
 	const MT_BATTLE_73 ; GILLY
+	const MT_BATTLE_99 ; TYNAN
 
 	trainerclass BEAUTY ; 9
 	const VICTORIA
@@ -270,13 +273,14 @@ CHRIS EQU __enum__
 	const COLETTE
 	const HILLARY
 	const SHIRLEY
-	const MT_BATTLE_5 ; SECORT
+	const MT_BATTLE_5  ; SECORT
 	const MT_BATTLE_16 ; FEREN
 	const MT_BATTLE_26 ; ISETTE
 	const MT_BATTLE_44 ; TASH
 	const MT_BATTLE_56 ; AMEIL
 	const MT_BATTLE_71 ; LISOT
 	const MT_BATTLE_79 ; JODIN
+	const MT_BATTLE_98 ; MASSI
 
 	trainerclass BUG_CATCHER ; f
 	const DON
@@ -377,7 +381,7 @@ CHRIS EQU __enum__
 	const NIKKI
 	const DIANA
 	const BRIANA
-	const MT_BATTLE_2 ; SANO
+	const MT_BATTLE_2  ; SANO
 	const MT_BATTLE_22 ; KIMBER
 	const MT_BATTLE_36 ; TIANA
 
@@ -412,10 +416,11 @@ CHRIS EQU __enum__
 	const NORTON
 	const HUGH
 	const MARKUS
-	const MT_BATTLE_1 ; ROOD
+	const MT_BATTLE_1  ; ROOD
 	const MT_BATTLE_40 ; SLEWIS
 	const MT_BATTLE_45 ; ACRON
 	const MT_BATTLE_69 ; DUNOR
+	const MT_BATTLE_95 ; ELDAN
 
 	trainerclass GUITARIST ; 15
 	const CLYDE
@@ -514,6 +519,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_47 ; RAWLES
 	const MT_BATTLE_62 ; HELMIN
 	const MT_BATTLE_74 ; CHIOD
+	const MT_BATTLE_96 ; ELDOR
 
 	trainerclass PSYCHIC_T ; 1c
 	const NATHAN
@@ -558,6 +564,7 @@ CHRIS EQU __enum__
 	const TIFFANY4
 	const MT_BATTLE_17 ; MALOO
 	const MT_BATTLE_67 ; ZIALE
+	const MT_BATTLE_93 ; NOMOL
 
 	trainerclass CAMPER ; 1e
 	const ROLAND
@@ -616,6 +623,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_13 ; MYOG
 	const MT_BATTLE_38 ; GRENAY
 	const MT_BATTLE_65 ; PERSTIN
+	const MT_BATTLE_94 ; DESOR
 
 	trainerclass BOARDER ; 21
 	const RONALD
@@ -648,6 +656,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_11 ; GIROD
 	const MT_BATTLE_42 ; GOHN
 	const MT_BATTLE_68 ; CORVIN
+	const MT_BATTLE_92 ; PAREL
 
 	trainerclass KIMONO_GIRL ; 23
 	const NAOKO
@@ -679,10 +688,11 @@ CHRIS EQU __enum__
 	const BEVERLY3
 	const GEORGIA
 	const JAIME
-	const MT_BATTLE_8 ; LADIN
+	const MT_BATTLE_8  ; LADIN
 	const MT_BATTLE_33 ; SASON
 	const MT_BATTLE_60 ; GLYDIN
 	const MT_BATTLE_64 ; CEWAN
+	const MT_BATTLE_97 ; LISAN
 
 	trainerclass RED ; 26
 	const GF_RED

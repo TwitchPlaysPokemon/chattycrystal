@@ -8401,489 +8401,6 @@ PicnickerGroup:
 
 	end_list_items
 
-CamperGroup:
-	next_list_item ; CAMPER (1)
-	db "ROLAND@", TRAINERTYPE_NORMAL
-	db 16
-	dw NIDORAN_M
-	db -1 ; end
-
-	next_list_item ; CAMPER (2)
-	db "TODD@", TRAINERTYPE_NORMAL
-	db 25
-	dw PSYDUCK
-	db -1 ; end
-
-	next_list_item ; CAMPER (3)
-	db "IVAN@", TRAINERTYPE_NORMAL
-	db 21
-	dw DIGLETT
-	db 21
-	dw ZUBAT
-	db 25
-	dw DIGLETT
-	db -1 ; end
-
-	next_list_item ; CAMPER (4)
-	db "ELLIOT@", TRAINERTYPE_NORMAL
-	db 22
-	dw SANDSLASH
-	db 24
-	dw AZUMARILL
-	db -1 ; end
-
-	next_list_item ; CAMPER (5)
-	db "BARRY@", TRAINERTYPE_NORMAL
-	db 64
-	dw NIDOKING
-	db -1 ; end
-
-	next_list_item ; CAMPER (6)
-	db "LLOYD@", TRAINERTYPE_NORMAL
-	db 69
-	dw NIDOKING
-	db -1 ; end
-
-	next_list_item ; CAMPER (7)
-	db "DEAN@", TRAINERTYPE_NORMAL
-	db 67
-	dw GOLDUCK
-	db 65
-	dw SANDSLASH
-	db -1 ; end
-
-	next_list_item ; CAMPER (8)
-	db "SID@", TRAINERTYPE_NORMAL
-	db 67
-	dw DUGTRIO
-	db 64
-	dw PRIMEAPE
-	db 64
-	dw POLIWRATH
-	db -1 ; end
-
-	next_list_item ; CAMPER (9)
-	db "HARVEY@", TRAINERTYPE_NORMAL
-	db 15
-	dw NIDORINO
-	db -1 ; end
-
-	next_list_item ; CAMPER (10)
-	db "DALE@", TRAINERTYPE_NORMAL
-	db 15
-	dw NIDORINO
-	db -1 ; end
-
-	next_list_item ; CAMPER (11)
-	db "TED@", TRAINERTYPE_NORMAL
-	db 30
-	dw PRIMEAPE
-	db -1 ; end
-
-	next_list_item ; CAMPER (12)
-	db "TODD@", TRAINERTYPE_NORMAL
-	db 36
-	dw GRAVELER
-	db 36
-	dw GRAVELER
-	db 40
-	dw GOLDUCK
-	db -1 ; end
-
-	next_list_item ; CAMPER (13)
-	db "TODD@", TRAINERTYPE_NORMAL
-	db 51
-	dw GOLEM
-	db 51
-	dw GRAVELER
-	db 51
-	dw MAGCARGO
-	db 53
-	dw GOLDUCK
-	db -1 ; end
-
-	next_list_item ; CAMPER (14)
-	db "THOMAS@", TRAINERTYPE_NORMAL
-	db 33
-	dw GRAVELER
-	db 36
-	dw GRAVELER
-	db 40
-	dw GOLBAT
-	db 42
-	dw GOLDUCK
-	db -1 ; end
-
-	next_list_item ; CAMPER (15)
-	db "LEROY@", TRAINERTYPE_NORMAL
-	db 33
-	dw GRAVELER
-	db 36
-	dw GRAVELER
-	db 40
-	dw GOLBAT
-	db 42
-	dw GOLDUCK
-	db -1 ; end
-
-	next_list_item ; CAMPER (16)
-	db "DAVID@", TRAINERTYPE_NORMAL
-	db 33
-	dw GRAVELER
-	db 36
-	dw GRAVELER
-	db 40
-	dw GOLBAT
-	db 42
-	dw GOLDUCK
-	db -1 ; end
-
-	next_list_item ; CAMPER (17)
-	db "JOHN@", TRAINERTYPE_NORMAL
-	db 33
-	dw GRAVELER
-	db 36
-	dw GRAVELER
-	db 40
-	dw GOLBAT
-	db 42
-	dw GOLDUCK
-	db -1 ; end
-
-	next_list_item ; CAMPER (18)
-	db "JERRY@", TRAINERTYPE_NORMAL
-	db 72
-	dw SANDSLASH
-	db -1 ; end
-
-	next_list_item ; CAMPER (19)
-	db "SPENCER@", TRAINERTYPE_NORMAL
-	db 45
-	dw SANDSLASH
-	db 45
-	dw SANDSLASH
-	db 47
-	dw CROBAT
-	db -1 ; end
-
-	next_list_item ; CAMPER (20)
-	db "TODD@", TRAINERTYPE_NORMAL
-	db 67
-	dw GOLEM
-	db 67
-	dw GOLEM
-	db 67
-	dw MAGCARGO
-	db 69
-	dw GOLDUCK
-	db -1 ; end
-
-	next_list_item ; CAMPER (21)
-	db "TODD@", TRAINERTYPE_MOVES
-	db 75
-	dw GOLEM
-	dw EXPLOSION, ROLLOUT, DEFENSE_CURL, EARTHQUAKE
-	db 75
-	dw GOLEM
-	dw EXPLOSION, ROCK_SLIDE, STRENGTH, EARTHQUAKE
-	db 79
-	dw MAGCARGO
-	dw ROCK_SLIDE, EARTHQUAKE, AMNESIA, FLAMETHROWER
-	db 77
-	dw GOLDUCK
-	dw DISABLE, PSYCHIC_M, SURF, PSYCH_UP
-	db -1 ; end
-
-	next_list_item ; CAMPER (22)
-	db "QUENTIN@", TRAINERTYPE_NORMAL
-	db 53
-	dw FEAROW
-	db 53
-	dw PRIMEAPE
-	db 53
-	dw TAUROS
-	db -1 ; end
-
-	next_list_item ; CAMPER (23)
-	db "DENC@", TRAINERTYPE_NORMAL
-	db 62
-	dw CYNDAQUIL
-	db 61
-	dw ABRA
-	db 62
-	dw DODUO
-	db 62
-	dw MACHOP
-	db 61
-	dw TOTODILE
-	db 62
-	dw SWABLU
-	db -1 ; end
-
-	end_list_items
-
-SageGroup:
-	next_list_item ; SAGE (1)
-	db "CHOW@", TRAINERTYPE_NORMAL
-	db 6
-	dw BELLSPROUT
-	db 6
-	dw BELLSPROUT
-	db 6
-	dw BELLSPROUT
-	db -1 ; end
-
-	next_list_item ; SAGE (2)
-	db "NICO@", TRAINERTYPE_NORMAL
-	db 6
-	dw BELLSPROUT
-	db 6
-	dw BELLSPROUT
-	db 6
-	dw BELLSPROUT
-	db -1 ; end
-
-	next_list_item ; SAGE (3)
-	db "JIN@", TRAINERTYPE_NORMAL
-	db 9
-	dw BELLSPROUT
-	db -1 ; end
-
-	next_list_item ; SAGE (4)
-	db "TROY@", TRAINERTYPE_NORMAL
-	db 10
-	dw BELLSPROUT
-	db 10
-	dw HOOTHOOT
-	db -1 ; end
-
-	next_list_item ; SAGE (5)
-	db "JEFFREY@", TRAINERTYPE_NORMAL
-	db 31
-	dw MISDREAVUS
-	db -1 ; end
-
-	next_list_item ; SAGE (6)
-	db "PING@", TRAINERTYPE_NORMAL
-	db 28
-	dw GASTLY
-	db 28
-	dw GASTLY
-	db 28
-	dw GASTLY
-	db 28
-	dw GASTLY
-	db 28
-	dw GASTLY
-	db -1 ; end
-
-	next_list_item ; SAGE (7)
-	db "EDMOND@", TRAINERTYPE_NORMAL
-	db 6
-	dw BELLSPROUT
-	db 6
-	dw BELLSPROUT
-	db 6
-	dw BELLSPROUT
-	db -1 ; end
-
-	next_list_item ; SAGE (8)
-	db "NEAL@", TRAINERTYPE_NORMAL
-	db 11
-	dw BELLSPROUT
-	db -1 ; end
-
-	next_list_item ; SAGE (10)
-	db "GAKU@", TRAINERTYPE_NORMAL
-	db 52
-	dw NOCTOWL
-	db 52
-	dw FLAREON
-	db -1 ; end
-
-	next_list_item ; SAGE (11)
-	db "MASA@", TRAINERTYPE_NORMAL
-	db 52
-	dw NOCTOWL
-	db 52
-	dw JOLTEON
-	db -1 ; end
-
-	next_list_item ; SAGE (12)
-	db "YIN@", TRAINERTYPE_NORMAL
-	db 63
-	dw LITWICK
-	db 64
-	dw LAMPENT
-	db 65
-	dw CHANDELURE
-	db -1 ; end
-
-	next_list_item ; SAGE (12)
-	db "YANG@", TRAINERTYPE_NORMAL
-	db 63
-	dw DUSKULL
-	db 64
-	dw DUSCLOPS
-	db 65
-	dw DUSKNOIR
-	db -1 ; end
-
-	next_list_item ; SAGE (13)
-	db "GRUND@", TRAINERTYPE_NORMAL
-	db 60
-	dw WOBBUFFET
-	db 59
-	dw SWINUB
-	db 60
-	dw SENTRET
-	db 60
-	dw HOOTHOOT
-	db 59
-	dw KIRLIA
-	db 60
-	dw WINGULL
-	db -1 ; end
-
-	next_list_item ; SAGE (14)
-	db "ORSAK@", TRAINERTYPE_ITEM
-	db 74
-	dw LEDIAN
-	db GOLD_BERRY
-	db 73
-	dw SABLEYE
-	db GOLD_BERRY
-	db 74
-	dw FLAAFFY
-	db BRIGHTPOWDER
-	db 74
-	dw YANMA
-	db GOLD_BERRY
-	db 73
-	dw RIBOMBEE
-	db ICE_BERRY
-	db 74
-	dw GLOOM
-	db SILVERPOWDER
-	db -1 ; end
-
-	end_list_items
-
-MediumGroup:
-	next_list_item ; MEDIUM (1)
-	db "MARTHA@", TRAINERTYPE_NORMAL
-	db 28
-	dw GASTLY
-	db 30
-	dw HAUNTER
-	db 30
-	dw GENGAR
-	db -1 ; end
-
-	next_list_item ; MEDIUM (2)
-	db "GRACE@", TRAINERTYPE_NORMAL
-	db 30
-	dw HAUNTER
-	db 30
-	dw HAUNTER
-	db -1 ; end
-
-	next_list_item ; MEDIUM (3)
-	db "BETHANY@", TRAINERTYPE_NORMAL
-	db 25
-	dw HAUNTER
-	db -1 ; end
-
-	next_list_item ; MEDIUM (4)
-	db "MARGRET@", TRAINERTYPE_NORMAL
-	db 25
-	dw HAUNTER
-	db -1 ; end
-
-	next_list_item ; MEDIUM (5)
-	db "ETHEL@", TRAINERTYPE_NORMAL
-	db 25
-	dw HAUNTER
-	db -1 ; end
-
-	next_list_item ; MEDIUM (6)
-	db "REBECCA@", TRAINERTYPE_NORMAL
-	db 59
-	dw HYPNO
-	db 59
-	dw HYPNO
-	db -1 ; end
-
-	next_list_item ; MEDIUM (7)
-	db "DORIS@", TRAINERTYPE_NORMAL
-	db 59
-	dw SLOWKING
-	db 59
-	dw SLOWBRO
-	db -1 ; end
-
-	next_list_item ; MEDIUM (8)
-	db "CARLY@", TRAINERTYPE_NORMAL
-	db 67
-	dw GENGAR
-	db -1 ; end
-
-	next_list_item ; MEDIUM (9)
-	db "LAUREL@", TRAINERTYPE_NORMAL
-	db 65
-	dw GENGAR
-	db 65
-	dw KANGASKHAN
-	db 65
-	dw MAROWAK
-	db -1 ; end
-
-	next_list_item ; MEDIUM (10)
-	db "PATRICIA@", TRAINERTYPE_NORMAL
-	db 67
-	dw MISDREAVUS
-	db -1 ; end
-
-	next_list_item ; MEDIUM (11)
-	db "MYOG@", TRAINERTYPE_NORMAL
-	db 62
-	dw MUDKIP
-	db 61
-	dw CHIKORITA
-	db 62
-	dw GOLDEEN
-	db 62
-	dw ODDISH
-	db 61
-	dw PSYDUCK
-	db 62
-	dw NATU
-	db -1 ; end
-
-	next_list_item ; MEDIUM (12)
-	db "GRENAY@", TRAINERTYPE_ITEM
-	db 73
-	dw GRAVELER
-	db MIRACLEBERRY
-	db 72
-	dw AIPOM
-	db GOLD_BERRY
-	db 73
-	dw HELIOPTILE
-	db BERRY
-	db 73
-	dw OMANYTE
-	db MYSTERYBERRY
-	db 72
-	dw LILEEP
-	db BITTER_BERRY
-	db 73
-	dw DUNSPARCE
-	db MIRACLEBERRY
-	db -1 ; end
-
-	end_list_items
-
 SECTION "Enemy Trainer Parties 3", ROMX
 
 BoarderGroup:
@@ -9447,7 +8964,7 @@ PokefanFGroup:
 	db 82
 	dw SEADRA
 	db LEFTOVERS
-	dw WATER_PULSE, AURORA_BEAM, HYDRO_PUMP, HIDDEN_POWER
+	dw WATER_PULSE, AURORA_BEAM, FACADE, HIDDEN_POWER
 	db 82
 	dw GOLBAT
 	db BRIGHTPOWDER
@@ -9531,6 +9048,519 @@ GruntFGroup:
 	dw TOXICROAK
 	db 71
 	dw ABSOL
+	db -1 ; end
+
+	end_list_items
+
+SECTION "Enemy Trainer Parties 4", ROMX
+
+CamperGroup:
+	next_list_item ; CAMPER (1)
+	db "ROLAND@", TRAINERTYPE_NORMAL
+	db 16
+	dw NIDORAN_M
+	db -1 ; end
+
+	next_list_item ; CAMPER (2)
+	db "TODD@", TRAINERTYPE_NORMAL
+	db 25
+	dw PSYDUCK
+	db -1 ; end
+
+	next_list_item ; CAMPER (3)
+	db "IVAN@", TRAINERTYPE_NORMAL
+	db 21
+	dw DIGLETT
+	db 21
+	dw ZUBAT
+	db 25
+	dw DIGLETT
+	db -1 ; end
+
+	next_list_item ; CAMPER (4)
+	db "ELLIOT@", TRAINERTYPE_NORMAL
+	db 22
+	dw SANDSLASH
+	db 24
+	dw AZUMARILL
+	db -1 ; end
+
+	next_list_item ; CAMPER (5)
+	db "BARRY@", TRAINERTYPE_NORMAL
+	db 64
+	dw NIDOKING
+	db -1 ; end
+
+	next_list_item ; CAMPER (6)
+	db "LLOYD@", TRAINERTYPE_NORMAL
+	db 69
+	dw NIDOKING
+	db -1 ; end
+
+	next_list_item ; CAMPER (7)
+	db "DEAN@", TRAINERTYPE_NORMAL
+	db 67
+	dw GOLDUCK
+	db 65
+	dw SANDSLASH
+	db -1 ; end
+
+	next_list_item ; CAMPER (8)
+	db "SID@", TRAINERTYPE_NORMAL
+	db 67
+	dw DUGTRIO
+	db 64
+	dw PRIMEAPE
+	db 64
+	dw POLIWRATH
+	db -1 ; end
+
+	next_list_item ; CAMPER (9)
+	db "HARVEY@", TRAINERTYPE_NORMAL
+	db 15
+	dw NIDORINO
+	db -1 ; end
+
+	next_list_item ; CAMPER (10)
+	db "DALE@", TRAINERTYPE_NORMAL
+	db 15
+	dw NIDORINO
+	db -1 ; end
+
+	next_list_item ; CAMPER (11)
+	db "TED@", TRAINERTYPE_NORMAL
+	db 30
+	dw PRIMEAPE
+	db -1 ; end
+
+	next_list_item ; CAMPER (12)
+	db "TODD@", TRAINERTYPE_NORMAL
+	db 36
+	dw GRAVELER
+	db 36
+	dw GRAVELER
+	db 40
+	dw GOLDUCK
+	db -1 ; end
+
+	next_list_item ; CAMPER (13)
+	db "TODD@", TRAINERTYPE_NORMAL
+	db 51
+	dw GOLEM
+	db 51
+	dw GRAVELER
+	db 51
+	dw MAGCARGO
+	db 53
+	dw GOLDUCK
+	db -1 ; end
+
+	next_list_item ; CAMPER (14)
+	db "THOMAS@", TRAINERTYPE_NORMAL
+	db 33
+	dw GRAVELER
+	db 36
+	dw GRAVELER
+	db 40
+	dw GOLBAT
+	db 42
+	dw GOLDUCK
+	db -1 ; end
+
+	next_list_item ; CAMPER (15)
+	db "LEROY@", TRAINERTYPE_NORMAL
+	db 33
+	dw GRAVELER
+	db 36
+	dw GRAVELER
+	db 40
+	dw GOLBAT
+	db 42
+	dw GOLDUCK
+	db -1 ; end
+
+	next_list_item ; CAMPER (16)
+	db "DAVID@", TRAINERTYPE_NORMAL
+	db 33
+	dw GRAVELER
+	db 36
+	dw GRAVELER
+	db 40
+	dw GOLBAT
+	db 42
+	dw GOLDUCK
+	db -1 ; end
+
+	next_list_item ; CAMPER (17)
+	db "JOHN@", TRAINERTYPE_NORMAL
+	db 33
+	dw GRAVELER
+	db 36
+	dw GRAVELER
+	db 40
+	dw GOLBAT
+	db 42
+	dw GOLDUCK
+	db -1 ; end
+
+	next_list_item ; CAMPER (18)
+	db "JERRY@", TRAINERTYPE_NORMAL
+	db 72
+	dw SANDSLASH
+	db -1 ; end
+
+	next_list_item ; CAMPER (19)
+	db "SPENCER@", TRAINERTYPE_NORMAL
+	db 45
+	dw SANDSLASH
+	db 45
+	dw SANDSLASH
+	db 47
+	dw CROBAT
+	db -1 ; end
+
+	next_list_item ; CAMPER (20)
+	db "TODD@", TRAINERTYPE_NORMAL
+	db 67
+	dw GOLEM
+	db 67
+	dw GOLEM
+	db 67
+	dw MAGCARGO
+	db 69
+	dw GOLDUCK
+	db -1 ; end
+
+	next_list_item ; CAMPER (21)
+	db "TODD@", TRAINERTYPE_MOVES
+	db 75
+	dw GOLEM
+	dw EXPLOSION, ROLLOUT, DEFENSE_CURL, EARTHQUAKE
+	db 75
+	dw GOLEM
+	dw EXPLOSION, ROCK_SLIDE, STRENGTH, EARTHQUAKE
+	db 79
+	dw MAGCARGO
+	dw ROCK_SLIDE, EARTHQUAKE, AMNESIA, FLAMETHROWER
+	db 77
+	dw GOLDUCK
+	dw DISABLE, PSYCHIC_M, SURF, PSYCH_UP
+	db -1 ; end
+
+	next_list_item ; CAMPER (22)
+	db "QUENTIN@", TRAINERTYPE_NORMAL
+	db 53
+	dw FEAROW
+	db 53
+	dw PRIMEAPE
+	db 53
+	dw TAUROS
+	db -1 ; end
+
+	next_list_item ; CAMPER (23)
+	db "DENC@", TRAINERTYPE_NORMAL
+	db 62
+	dw CYNDAQUIL
+	db 61
+	dw ABRA
+	db 62
+	dw DODUO
+	db 62
+	dw MACHOP
+	db 61
+	dw TOTODILE
+	db 62
+	dw SWABLU
+	db -1 ; end
+
+	end_list_items
+
+SageGroup:
+	next_list_item ; SAGE (1)
+	db "CHOW@", TRAINERTYPE_NORMAL
+	db 6
+	dw BELLSPROUT
+	db 6
+	dw BELLSPROUT
+	db 6
+	dw BELLSPROUT
+	db -1 ; end
+
+	next_list_item ; SAGE (2)
+	db "NICO@", TRAINERTYPE_NORMAL
+	db 6
+	dw BELLSPROUT
+	db 6
+	dw BELLSPROUT
+	db 6
+	dw BELLSPROUT
+	db -1 ; end
+
+	next_list_item ; SAGE (3)
+	db "JIN@", TRAINERTYPE_NORMAL
+	db 9
+	dw BELLSPROUT
+	db -1 ; end
+
+	next_list_item ; SAGE (4)
+	db "TROY@", TRAINERTYPE_NORMAL
+	db 10
+	dw BELLSPROUT
+	db 10
+	dw HOOTHOOT
+	db -1 ; end
+
+	next_list_item ; SAGE (5)
+	db "JEFFREY@", TRAINERTYPE_NORMAL
+	db 31
+	dw MISDREAVUS
+	db -1 ; end
+
+	next_list_item ; SAGE (6)
+	db "PING@", TRAINERTYPE_NORMAL
+	db 28
+	dw GASTLY
+	db 28
+	dw GASTLY
+	db 28
+	dw GASTLY
+	db 28
+	dw GASTLY
+	db 28
+	dw GASTLY
+	db -1 ; end
+
+	next_list_item ; SAGE (7)
+	db "EDMOND@", TRAINERTYPE_NORMAL
+	db 6
+	dw BELLSPROUT
+	db 6
+	dw BELLSPROUT
+	db 6
+	dw BELLSPROUT
+	db -1 ; end
+
+	next_list_item ; SAGE (8)
+	db "NEAL@", TRAINERTYPE_NORMAL
+	db 11
+	dw BELLSPROUT
+	db -1 ; end
+
+	next_list_item ; SAGE (10)
+	db "GAKU@", TRAINERTYPE_NORMAL
+	db 52
+	dw NOCTOWL
+	db 52
+	dw FLAREON
+	db -1 ; end
+
+	next_list_item ; SAGE (11)
+	db "MASA@", TRAINERTYPE_NORMAL
+	db 52
+	dw NOCTOWL
+	db 52
+	dw JOLTEON
+	db -1 ; end
+
+	next_list_item ; SAGE (12)
+	db "YIN@", TRAINERTYPE_NORMAL
+	db 63
+	dw LITWICK
+	db 64
+	dw LAMPENT
+	db 65
+	dw CHANDELURE
+	db -1 ; end
+
+	next_list_item ; SAGE (12)
+	db "YANG@", TRAINERTYPE_NORMAL
+	db 63
+	dw DUSKULL
+	db 64
+	dw DUSCLOPS
+	db 65
+	dw DUSKNOIR
+	db -1 ; end
+
+	next_list_item ; SAGE (13)
+	db "GRUND@", TRAINERTYPE_NORMAL
+	db 60
+	dw WOBBUFFET
+	db 59
+	dw SWINUB
+	db 60
+	dw SENTRET
+	db 60
+	dw HOOTHOOT
+	db 59
+	dw KIRLIA
+	db 60
+	dw WINGULL
+	db -1 ; end
+
+	next_list_item ; SAGE (14)
+	db "ORSAK@", TRAINERTYPE_ITEM
+	db 74
+	dw LEDIAN
+	db GOLD_BERRY
+	db 73
+	dw SABLEYE
+	db GOLD_BERRY
+	db 74
+	dw FLAAFFY
+	db BRIGHTPOWDER
+	db 74
+	dw YANMA
+	db GOLD_BERRY
+	db 73
+	dw RIBOMBEE
+	db ICE_BERRY
+	db 74
+	dw GLOOM
+	db SILVERPOWDER
+	db -1 ; end
+
+	next_list_item ; POKEFANF (9)
+	db "GLYDIN@", TRAINERTYPE_ITEM_MOVES
+	db 82
+	dw SNEASEL
+	db SCOPE_LENS
+	dw FEINT_ATTACK, SLASH, METAL_CLAW, HIDDEN_POWER
+	db 81
+	dw CLAWITZER
+	db FOCUS_BAND
+	dw VICEGRIP, WATER_PULSE, CRABHAMMER, HIDDEN_POWER
+	db 82
+	dw SEADRA
+	db LEFTOVERS
+	dw WATER_PULSE, AURORA_BEAM, HYDRO_PUMP, HIDDEN_POWER
+	db 82
+	dw GOLBAT
+	db BRIGHTPOWDER
+	dw WING_ATTACK, BITE, GIGA_DRAIN, HIDDEN_POWER
+	db 81
+	dw HITMONTOP
+	db KINGS_ROCK
+	dw ROLLING_KICK, DIG, STRENGTH, HIDDEN_POWER
+	db 82
+	dw GIRAFARIG
+	db BRIGHTPOWDER
+	dw STOMP, PSYBEAM, SHADOW_BALL, HIDDEN_POWER
+	db -1 ; end
+
+	end_list_items
+
+MediumGroup:
+	next_list_item ; MEDIUM (1)
+	db "MARTHA@", TRAINERTYPE_NORMAL
+	db 28
+	dw GASTLY
+	db 30
+	dw HAUNTER
+	db 30
+	dw GENGAR
+	db -1 ; end
+
+	next_list_item ; MEDIUM (2)
+	db "GRACE@", TRAINERTYPE_NORMAL
+	db 30
+	dw HAUNTER
+	db 30
+	dw HAUNTER
+	db -1 ; end
+
+	next_list_item ; MEDIUM (3)
+	db "BETHANY@", TRAINERTYPE_NORMAL
+	db 25
+	dw HAUNTER
+	db -1 ; end
+
+	next_list_item ; MEDIUM (4)
+	db "MARGRET@", TRAINERTYPE_NORMAL
+	db 25
+	dw HAUNTER
+	db -1 ; end
+
+	next_list_item ; MEDIUM (5)
+	db "ETHEL@", TRAINERTYPE_NORMAL
+	db 25
+	dw HAUNTER
+	db -1 ; end
+
+	next_list_item ; MEDIUM (6)
+	db "REBECCA@", TRAINERTYPE_NORMAL
+	db 59
+	dw HYPNO
+	db 59
+	dw HYPNO
+	db -1 ; end
+
+	next_list_item ; MEDIUM (7)
+	db "DORIS@", TRAINERTYPE_NORMAL
+	db 59
+	dw SLOWKING
+	db 59
+	dw SLOWBRO
+	db -1 ; end
+
+	next_list_item ; MEDIUM (8)
+	db "CARLY@", TRAINERTYPE_NORMAL
+	db 67
+	dw GENGAR
+	db -1 ; end
+
+	next_list_item ; MEDIUM (9)
+	db "LAUREL@", TRAINERTYPE_NORMAL
+	db 65
+	dw GENGAR
+	db 65
+	dw KANGASKHAN
+	db 65
+	dw MAROWAK
+	db -1 ; end
+
+	next_list_item ; MEDIUM (10)
+	db "PATRICIA@", TRAINERTYPE_NORMAL
+	db 67
+	dw MISDREAVUS
+	db -1 ; end
+
+	next_list_item ; MEDIUM (11)
+	db "MYOG@", TRAINERTYPE_NORMAL
+	db 62
+	dw MUDKIP
+	db 61
+	dw CHIKORITA
+	db 62
+	dw GOLDEEN
+	db 62
+	dw ODDISH
+	db 61
+	dw PSYDUCK
+	db 62
+	dw NATU
+	db -1 ; end
+
+	next_list_item ; MEDIUM (12)
+	db "GRENAY@", TRAINERTYPE_ITEM
+	db 73
+	dw GRAVELER
+	db MIRACLEBERRY
+	db 72
+	dw AIPOM
+	db GOLD_BERRY
+	db 73
+	dw HELIOPTILE
+	db BERRY
+	db 73
+	dw OMANYTE
+	db MYSTERYBERRY
+	db 72
+	dw LILEEP
+	db BITTER_BERRY
+	db 73
+	dw DUNSPARCE
+	db MIRACLEBERRY
 	db -1 ; end
 
 	end_list_items

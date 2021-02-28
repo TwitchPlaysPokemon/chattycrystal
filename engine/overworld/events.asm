@@ -639,6 +639,7 @@ TryBGEvent:
 	dw .ifnotset
 	dw .itemifset
 	dw .copy
+	dw .silent
 
 .up
 	ld b, OW_UP
@@ -661,6 +662,7 @@ TryBGEvent:
 
 .read
 	call PlayTalkObject
+.silent
 	ld hl, wCurBGEventScriptAddr
 	ld a, [hli]
 	ld h, [hl]

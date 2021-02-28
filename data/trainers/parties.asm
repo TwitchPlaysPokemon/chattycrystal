@@ -2628,9 +2628,38 @@ RedJohtoLeaderGroup:
 
 RedGroup:
 	next_list_item ;GF_RED
-	db "?@", TRAINERTYPE_NORMAL
-	db 5
-	dw CHIKORITA
+	db "RED@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	
+	db 100
+	dw PIKACHU
+	db LIGHT_BALL
+	dw CHARM, QUICK_ATTACK, THUNDERBOLT, THUNDER
+	
+	db 100
+	dw ESPEON
+	db NO_ITEM
+	dw MUD_SLAP, REFLECT, SWIFT, PSYCHIC_M
+	
+	db 100
+	dw SNORLAX
+	db NO_ITEM
+	dw AMNESIA, SNORE, REST, BODY_SLAM
+	
+	db 100
+	dw VENUSAUR
+	db NO_ITEM
+	dw SUNNY_DAY, GIGA_DRAIN, SYNTHESIS, SOLARBEAM
+	
+	db 100
+	dw CHARIZARD
+	db NO_ITEM
+	dw FLAMETHROWER, WING_ATTACK, SLASH, FIRE_SPIN
+	
+	db 100
+	dw BLASTOISE
+	db NO_ITEM
+	dw RAIN_DANCE, SURF, BLIZZARD, WHIRLPOOL
+	
 	db -1 ; end
 
 	next_list_item ;CCC_DUALRED
@@ -2646,6 +2675,18 @@ RedGroup:
 	db -1 ; end
 
 	next_list_item ;RED_GAUNTLETRED
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ;RED_RED2
+	db "?@", TRAINERTYPE_NORMAL
+	db 5
+	dw CHIKORITA
+	db -1 ; end
+	
+	next_list_item ;ABE2
 	db "?@", TRAINERTYPE_NORMAL
 	db 5
 	dw CHIKORITA

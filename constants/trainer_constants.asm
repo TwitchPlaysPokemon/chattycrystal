@@ -640,6 +640,8 @@ CHRIS EQU __enum__
 	const CCC_DUALRED
 	const KAY
 	const RED_GAUNTLETRED
+	const RED_RED2
+	const ABE2
 
 	trainerclass OFFICER ; 27
 	const KEITH
@@ -667,6 +669,7 @@ CHRIS EQU __enum__
 	const X_CHATTYYELLOW2
 	const X_CHATTYYELLOW3
 	const X_CHATTYYELLOW4
+	const X_CHATTYYELLOW5
 
 	trainerclass GSCHGSS_CHRIS ; 2d
 	const AAEFFFF
@@ -681,6 +684,7 @@ CHRIS EQU __enum__
 	const EVAN3
 	const EVAN4
 	const EVAN5
+	const EVAN6
 
 	trainerclass FC_CHRIS ; 31
 	const Y_FUSEDCRYSTAL

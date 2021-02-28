@@ -2681,8 +2681,11 @@ wPokemonTower2FSceneID::                          db ; d9c3
 wPokemonTower5FSceneID::                          db ; d9c4
 wRocketHideoutB3FSceneID::                        db ; d9c5
 wRocketHideoutB4FSceneID::                        db ; d9c6
+wSilverCaveRoom3ID::                              db ; d9c7
+wMtSilverRuinsSceneID::                           db ; d9c8
+wMtSilverRuinsB1FSceneID::                        db ; d9c9
 
-	ds 43
+	ds 40
 
 ; fight counts
 wJackFightCount::    db ; d9f2

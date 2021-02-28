@@ -139,4 +139,4 @@ SiriusSpriteGFX::             INCBIN "gfx/sprites/sirius.2bpp"
 EvanSpriteGFX::               INCBIN "gfx/sprites/evan.2bpp"
 ElectricFenceLeftSpriteGFX::  INCBIN "gfx/sprites/electric_fence_left.2bpp"
 ElectricFenceRightSpriteGFX:: INCBIN "gfx/sprites/electric_fence_right.2bpp"
-
+ScrollSpriteGFX::             INCBIN "gfx/sprites/scroll.2bpp"

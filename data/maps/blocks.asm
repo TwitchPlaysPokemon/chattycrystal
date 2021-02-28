@@ -1019,3 +1019,33 @@ MtSilverRuinsB1F_Blocks:
 
 PowerPlantB1F_Blocks:
 	INCBIN "maps/PowerPlantB1F.blk"
+
+
+SECTION "Map Blocks 6", ROMX
+
+TrickHouseEntrance_Blocks:
+	INCBIN "maps/TrickHouseEntrance.blk"
+
+TrickHouseExit_Blocks:
+	INCBIN "maps/TrickHouseExit.blk"
+
+TrickHouseHallway_Blocks:
+	INCBIN "maps/TrickHouseHallway.blk"
+
+TrickHousePuzzle1_Blocks:
+	INCBIN "maps/TrickHousePuzzle1.blk"
+
+TrickHousePuzzle2_Blocks:
+	INCBIN "maps/TrickHousePuzzle2.blk"
+
+TrickHousePuzzle3_Blocks:
+	INCBIN "maps/TrickHousePuzzle3.blk"
+
+TrickHousePuzzle4_Blocks:
+	INCBIN "maps/TrickHousePuzzle4.blk"
+
+TrickHousePuzzle5_Blocks:
+	INCBIN "maps/TrickHousePuzzle5.blk"
+
+TrickHousePuzzle6_Blocks:
+	INCBIN "maps/TrickHousePuzzle6.blk"

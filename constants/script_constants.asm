@@ -113,6 +113,7 @@ OBJECT_EVENT_SIZE EQU 13 ; object_event
 	const BGEVENT_IFNOTSET
 	const BGEVENT_ITEM
 	const BGEVENT_COPY
+	const BGEVENT_SILENT
 
 ; object_event types
 ; TryObjectEvent arguments (see engine/overworld/events.asm)

@@ -355,7 +355,7 @@ MoveAnimations:
 	dw BattleAnim_ThunderWave  ; PLACEHOLDER
 	dw BattleAnim_KnockOff
 	dw BattleAnim_WaterSpout
-	dw BattleAnim_MegaPunch    ; PLACEHOLDER
+	dw BattleAnim_NeedleArm    ; incomplete
 	dw BattleAnim_DracoMeteor
 	dw BattleAnim_CalmMind
 	dw BattleAnim_MudShot
@@ -3903,6 +3903,21 @@ BattleAnim_WaterSpout:
 	anim_obj ANIM_OBJ_WATER_HIT, 116, 68, $0
 	anim_wait 2
 	anim_wait 32
+	anim_ret
+	
+BattleAnim_NeedleArm:
+	anim_1gfx ANIM_GFX_HORN
+.loop
+	anim_obj ANIM_OBJ_NEEDLE_ARM_N, 48, 84, $30
+	anim_obj ANIM_OBJ_NEEDLE_ARM_NE, 48, 84, $38
+	anim_obj ANIM_OBJ_NEEDLE_ARM_E, 48, 84, $0
+	anim_obj ANIM_OBJ_NEEDLE_ARM_SE, 48, 84, $8
+	anim_obj ANIM_OBJ_NEEDLE_ARM_S, 48, 84, $10
+	anim_obj ANIM_OBJ_NEEDLE_ARM_SW, 48, 84, $18
+	anim_obj ANIM_OBJ_NEEDLE_ARM_W, 48, 84, $20
+	anim_obj ANIM_OBJ_NEEDLE_ARM_NW, 48, 84, $28
+	anim_loop 6, .loop
+	anim_wait 64
 	anim_ret
 
 BattleAnim_DracoMeteor:

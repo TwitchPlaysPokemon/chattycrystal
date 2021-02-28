@@ -266,6 +266,14 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_HORN_LEECH
 	const ANIM_OBJ_SCALD
 	const ANIM_OBJ_STEAM
+	const ANIM_OBJ_NEEDLE_ARM_N
+	const ANIM_OBJ_NEEDLE_ARM_NE
+	const ANIM_OBJ_NEEDLE_ARM_E
+	const ANIM_OBJ_NEEDLE_ARM_SE
+	const ANIM_OBJ_NEEDLE_ARM_S
+	const ANIM_OBJ_NEEDLE_ARM_SW
+	const ANIM_OBJ_NEEDLE_ARM_W
+	const ANIM_OBJ_NEEDLE_ARM_NW
 	const ANIM_OBJ_ECHOED_VOICE
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
@@ -561,7 +569,15 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMFRAMESET_C6
 	const BATTLEANIMFRAMESET_C7
 	const BATTLEANIMFRAMESET_C8
+	const BATTLEANIMFRAMESET_C9
 	const BATTLEANIMFRAMESET_CA
+	const BATTLEANIMFRAMESET_CB
+	const BATTLEANIMFRAMESET_CC
+	const BATTLEANIMFRAMESET_CD
+	const BATTLEANIMFRAMESET_CE
+	const BATTLEANIMFRAMESET_CF
+	const BATTLEANIMFRAMESET_D0
+	const BATTLEANIMFRAMESET_D1
 
 ; BattleAnimOAMData indexes (see data/battle_anims/oam.asm)
 	const_def
@@ -789,6 +805,11 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMOAMSET_DE
 	const BATTLEANIMOAMSET_DF
 	const BATTLEANIMOAMSET_E0
+	const BATTLEANIMOAMSET_E1
+	const BATTLEANIMOAMSET_E2
+	const BATTLEANIMOAMSET_E3
+	const BATTLEANIMOAMSET_E4
+	const BATTLEANIMOAMSET_E5
 	const BATTLEANIMOAMSET_E6
 
 ; BattleBGEffects indexes (see engine/battle_anims/bg_effects.asm)

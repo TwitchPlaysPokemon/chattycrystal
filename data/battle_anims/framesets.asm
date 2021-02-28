@@ -201,7 +201,20 @@ BattleAnimFrameData:
 	dw .Frameset_c6 ; BATTLEANIMFRAMESET_C6
 	dw .Frameset_c7 ; BATTLEANIMFRAMESET_C7
 	dw .Frameset_c8 ; BATTLEANIMFRAMESET_C8
+	dw .Frameset_c9 ; BATTLEANIMFRAMESET_C9
 	dw .Frameset_ca ; BATTLEANIMFRAMESET_CA
+	dw .Frameset_cb ; BATTLEANIMFRAMESET_CB
+	dw .Frameset_cc ; BATTLEANIMFRAMESET_CC
+	dw .Frameset_cd ; BATTLEANIMFRAMESET_CD
+	dw .Frameset_ce ; BATTLEANIMFRAMESET_CE
+	dw .Frameset_cf ; BATTLEANIMFRAMESET_CF
+	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D0
+	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D1
+	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D2
+	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D3
+	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D4
+	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D5
+	dw .Frameset_d1 ; BATTLEANIMFRAMESET_D5
 
 .Frameset_00:
 	frame BATTLEANIMOAMSET_00,  6
@@ -1362,8 +1375,40 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_A3,  6
 	frame BATTLEANIMOAMSET_B8,  6
 	dorestart
+
+.Frameset_c9:
+	frame BATTLEANIMOAMSET_1F, 16
+	endanim
 	
 .Frameset_ca:
+	frame BATTLEANIMOAMSET_1E, 16
+	endanim
+	
+.Frameset_cb:
+	frame BATTLEANIMOAMSET_20, 16
+	endanim
+	
+.Frameset_cc:
+	frame BATTLEANIMOAMSET_E1, 16
+	endanim
+	
+.Frameset_cd:
+	frame BATTLEANIMOAMSET_E2, 16
+	endanim
+	
+.Frameset_ce:
+	frame BATTLEANIMOAMSET_E3, 16
+	endanim
+	
+.Frameset_cf:
+	frame BATTLEANIMOAMSET_E4, 16
+	endanim
+	
+.Frameset_d0:
+	frame BATTLEANIMOAMSET_E5, 16
+	endanim
+
+.Frameset_d1:
 	frame BATTLEANIMOAMSET_18,  0
 	frame BATTLEANIMOAMSET_70,  0
 	frame BATTLEANIMOAMSET_71,  0

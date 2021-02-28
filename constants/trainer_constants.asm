@@ -43,6 +43,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_31 ; HILDON
 	const MT_BATTLE_51 ; DEMIT
 	const MT_BATTLE_59 ; NANOT
+	const MT_BATTLE_78 ; ORDO
 
 	trainerclass YOUNGSTER ; 3
 	const JOEY1
@@ -177,6 +178,7 @@ CHRIS EQU __enum__
 	const CARA
 	const MT_BATTLE_24 ; RATEIS
 	const MT_BATTLE_48 ; ROSNO
+	const MT_BATTLE_73 ; GILLY
 
 	trainerclass BEAUTY ; 9
 	const VICTORIA
@@ -259,6 +261,7 @@ CHRIS EQU __enum__
 	const CADY
 	const MT_BATTLE_46 ; KIMERY
 	const MT_BATTLE_57 ; VIUM
+	const MT_BATTLE_77 ; ZALLA
 
 	trainerclass TEACHER ; e
 	const COLETTE
@@ -269,6 +272,8 @@ CHRIS EQU __enum__
 	const MT_BATTLE_26 ; ISETTE
 	const MT_BATTLE_44 ; TASH
 	const MT_BATTLE_56 ; AMEIL
+	const MT_BATTLE_71 ; LISOT
+	const MT_BATTLE_79 ; JODIN
 
 	trainerclass BUG_CATCHER ; f
 	const DON
@@ -484,6 +489,7 @@ CHRIS EQU __enum__
 	const IRWIN4
 	const MT_BATTLE_21 ; SIDO
 	const MT_BATTLE_52 ; LIREL
+	const MT_BATTLE_76 ; SIRKO
 
 	trainerclass BLACKBELT_T ; 1b
 	const KENJI1
@@ -499,6 +505,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_14 ; ROGEN
 	const MT_BATTLE_47 ; RAWLES
 	const MT_BATTLE_62 ; HELMIN
+	const MT_BATTLE_74 ; CHIOD
 
 	trainerclass PSYCHIC_T ; 1c
 	const NATHAN
@@ -611,6 +618,7 @@ CHRIS EQU __enum__
 	const MT_BATTLE_32 ; TARY
 	const MT_BATTLE_49 ; MANDEV
 	const MT_BATTLE_58 ; BIDIX
+	const MT_BATTLE_72 ; FAUL
 
 	trainerclass POKEFANM ; 22
 	const WILLIAM
@@ -640,6 +648,7 @@ CHRIS EQU __enum__
 	const LINNEA
 	const REA
 	const SAKUYA
+	const MT_BATTLE_80 ; DESSA
 
 	trainerclass TWINS ; 24
 	const AMYANDMAY1
@@ -674,6 +683,7 @@ CHRIS EQU __enum__
 	trainerclass OFFICER ; 27
 	const KEITH
 	const DIRK
+	const MT_BATTLE_75 ; MATON
 
 	trainerclass GRUNTF ; 28
 	const GRUNTF_1

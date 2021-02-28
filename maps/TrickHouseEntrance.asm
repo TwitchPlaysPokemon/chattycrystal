@@ -204,39 +204,6 @@ TrickHouseEntrance_DoTrickMasterReveal:
 TrickHouseEntrance_End:
 	end
 
-TrickHouse_FoundPuzzleScroll:
-	checkevent EVENT_TRICK_HOUSE_FOUND_PUZZLE_SCROLL
-	iftrue .found
-	opentext
-	writetext .scroll_text
-	playsound SFX_ITEM
-	waitsfx
-	writetext .memorized_text
-	waitbutton
-	closetext
-	setevent EVENT_TRICK_HOUSE_FOUND_PUZZLE_SCROLL
-	end
-
-.scroll_text
-	text "<PLAYER> found a"
-	line "scroll!"
-	done
-
-.memorized_text
-	text "<PLAYER> memorized"
-	line "the secret code"
-	para "written on the"
-	line "scroll."
-	done
-
-.found
-	jumptext .found_text
-
-.found_text
-	text "A secret code is"
-	line "written on it."
-	done
-
 TrickHouseEntrance_MapEvents:
 	db 0, 0 ; filler
 

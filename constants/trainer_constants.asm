@@ -641,7 +641,7 @@ CHRIS EQU __enum__
 	const KAY
 	const RED_GAUNTLETRED
 	const RED_RED2
-	const ABE2
+	const AIIIAAB2
 
 	trainerclass OFFICER ; 27
 	const KEITH

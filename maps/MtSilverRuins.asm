@@ -31,7 +31,7 @@ MtSilverRuinsAbe:
 	waitbutton
 	closetext
 	winlosstext MtSilverRuinsDotsText, MtSilverRuinsDotsText
-	loadtrainer RED, ABE2
+	loadtrainer RED, AIIIAAB2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

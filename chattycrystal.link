@@ -116,7 +116,7 @@ ROMX $20
 ROMX $21
 	"bank21"
 ROMX $22
-	"Crystal Features 2"
+	"bank22"
 ROMX $23
 	"bank23"
 ROMX $24

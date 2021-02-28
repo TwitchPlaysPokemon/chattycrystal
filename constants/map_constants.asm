@@ -514,12 +514,24 @@ ENDM
 	map_const SAFFRON_POKECENTER_2F_BETA,                   8,  4 ;  7
 	map_const MR_PSYCHICS_HOUSE,                            4,  4 ;  8
 	map_const SAFFRON_MAGNET_TRAIN_STATION,                10,  9 ;  9
-	map_const SILPH_CO_1F,                                  8,  4 ; 10
-	map_const COPYCATS_HOUSE_1F,                            4,  4 ; 11
-	map_const COPYCATS_HOUSE_2F,                            5,  3 ; 12
-	map_const ROUTE_5_UNDERGROUND_PATH_ENTRANCE,            4,  4 ; 13
-	map_const ROUTE_5_SAFFRON_GATE,                         5,  4 ; 14
-	map_const ROUTE_5_CLEANSE_TAG_HOUSE,                    4,  4 ; 15
+	map_const COPYCATS_HOUSE_1F,                            4,  4 ; 10
+	map_const COPYCATS_HOUSE_2F,                            5,  3 ; 11
+	map_const ROUTE_5_UNDERGROUND_PATH_ENTRANCE,            4,  4 ; 12
+	map_const ROUTE_5_SAFFRON_GATE,                         5,  4 ; 13
+	map_const ROUTE_5_CLEANSE_TAG_HOUSE,                    4,  4 ; 14
+	map_const SILPH_CO_1F,                                  8,  4 ; 15
+	map_const SILPH_CO_2F,                                  8,  4 ; 16
+	map_const SILPH_CO_3F,                                  8,  4 ; 17
+	map_const SILPH_CO_4F,                                  8,  4 ; 18
+	map_const SILPH_CO_5F,                                  8,  4 ; 19
+	map_const SILPH_CO_6F,                                  8,  4 ; 20
+	map_const SILPH_CO_7F,                                  8,  4 ; 21
+	map_const SILPH_CO_8F,                                  8,  4 ; 22
+	map_const SILPH_CO_9F,                                  8,  4 ; 23
+	map_const SILPH_CO_10F,                                 8,  4 ; 24
+	map_const SILPH_CO_11F,                                 8,  4 ; 25
+	map_const SILPH_CO_ROOF,                                8,  4 ; 25
+	map_const SILPH_CO_ELEVATOR,                            2,  2 ; 27
 
 	newgroup                                                      ; 26
 

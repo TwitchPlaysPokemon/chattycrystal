@@ -34,15 +34,15 @@ SilphCoReceptionistText:
 	done
 
 SilphCoOfficerText:
-	text "Only employees are"
-	line "permitted to go"
-	cont "upstairs."
+	text "Welcome. This is"
+	line "SILPH CO.'s HEAD"
+	cont "OFFICE BUILDING."
 
-	para "But since you came"
+	para "Since you came"
 	line "such a long way,"
 
 	para "have this neat"
-	line "little souvenir."
+	line "little souvenir!"
 	done
 
 SilphCoOfficerText_GotUpGrade:
@@ -56,9 +56,11 @@ SilphCoOfficerText_GotUpGrade:
 SilphCo1F_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
+	db 4 ; warp events
 	warp_event  2,  7, SAFFRON_CITY, 7
 	warp_event  3,  7, SAFFRON_CITY, 7
+	warp_event  0,  0, SILPH_CO_ELEVATOR, 2
+	warp_event 13,  0, SILPH_CO_2F, 3
 
 	db 0 ; coord events
 

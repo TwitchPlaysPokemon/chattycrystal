@@ -62,3 +62,35 @@
 	tilecoll WALL, WALL, FLOOR, WALL ; 3d
 	tilecoll WALL, FLOOR, WALL, WALL ; 3e
 	tilecoll FLOOR, COUNTER, COUNTER, COUNTER ; 3f
+	tilecoll STAIRCASE, WALL, FLOOR, FLOOR ; 40
+	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 41
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 42
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 43
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 44
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 45
+	tilecoll FLOOR, FLOOR, FLOOR, WALL ; 46
+	tilecoll FLOOR, WALL, FLOOR, FLOOR ; 47
+	tilecoll WALL, WALL, WALL, WALL ; 48
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 49
+	tilecoll WALL, WALL, WALL, WALL ; 4a
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 4b
+	tilecoll WALL, WALL, WALL, WALL ; 4c
+	tilecoll WALL, WALL, WALL, WALL ; 4d
+	tilecoll , , ,  ; 4e
+	tilecoll , , ,  ; 4f
+	tilecoll , , ,  ; 50
+	tilecoll , , ,  ; 51
+	tilecoll , , ,  ; 52
+	tilecoll , , ,  ; 53
+	tilecoll , , ,  ; 54
+	tilecoll , , ,  ; 55
+	tilecoll , , ,  ; 56
+	tilecoll , , ,  ; 57
+	tilecoll , , ,  ; 58
+	tilecoll , , ,  ; 59
+	tilecoll , , ,  ; 5a
+	tilecoll , , ,  ; 5b
+	tilecoll , , ,  ; 5c
+	tilecoll , , ,  ; 5d
+	tilecoll , , ,  ; 5e
+	tilecoll , , ,  ; 5f

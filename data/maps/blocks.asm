@@ -741,6 +741,42 @@ FightingDojo_Blocks:
 SilphCo1F_Blocks:
 	INCBIN "maps/SilphCo1F.blk"
 
+SilphCo2F_Blocks:
+	INCBIN "maps/SilphCo2F.blk"
+
+SilphCo3F_Blocks:
+	INCBIN "maps/SilphCo3F.blk"
+
+SilphCo4F_Blocks:
+	INCBIN "maps/SilphCo4F.blk"
+
+SilphCo5F_Blocks:
+	INCBIN "maps/SilphCo5F.blk"
+
+SilphCo6F_Blocks:
+	INCBIN "maps/SilphCo6F.blk"
+
+SilphCo7F_Blocks:
+	INCBIN "maps/SilphCo7F.blk"
+
+SilphCo8F_Blocks:
+	INCBIN "maps/SilphCo9F.blk"
+
+SilphCo9F_Blocks:
+	INCBIN "maps/SilphCo9F.blk"
+
+SilphCo10F_Blocks:
+	INCBIN "maps/SilphCo10F.blk"
+
+SilphCo11F_Blocks:
+	INCBIN "maps/SilphCo11F.blk"
+
+SilphCoRoof_Blocks:
+	INCBIN "maps/SilphCoRoof.blk"
+
+SilphCoElevator_Blocks:
+	INCBIN "maps/SilphCoElevator.blk"
+
 ViridianGym_Blocks:
 	INCBIN "maps/ViridianGym.blk"
 

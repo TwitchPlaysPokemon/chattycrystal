@@ -20,8 +20,6 @@ FastShipB1F_MapScripts:
 	db 0 ; callbacks
 
 .DummyScene0:
-	end
-
 .DummyScene1:
 	end
 
@@ -43,8 +41,6 @@ FastShipB1FSailorBlocksRight:
 	appear FASTSHIPB1F_SAILOR2
 	pause 5
 	disappear FASTSHIPB1F_SAILOR1
-	end
-
 FastShipB1FAlreadyBlocked:
 	end
 

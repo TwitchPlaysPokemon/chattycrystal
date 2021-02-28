@@ -926,9 +926,7 @@ ShellosBackpic::     INCBIN "gfx/pokemon/shellos/back.2bpp.lz"
 ShellosFrontpic::    INCBIN "gfx/pokemon/shellos/front.animated.2bpp.lz"
 GastrodonBackpic::   INCBIN "gfx/pokemon/gastrodon/back.2bpp.lz"
 GastrodonFrontpic::  INCBIN "gfx/pokemon/gastrodon/front.animated.2bpp.lz"
-StunkyBackpic:       INCBIN "gfx/pokemon/stunky/back.2bpp.lz"
 StunkyFrontpic:      INCBIN "gfx/pokemon/stunky/front.animated.2bpp.lz"
-SkuntankBackpic:     INCBIN "gfx/pokemon/skuntank/back.2bpp.lz"
 BonslyBackpic:       INCBIN "gfx/pokemon/bonsly/back.2bpp.lz"
 CroagunkBackpic:     INCBIN "gfx/pokemon/croagunk/back.2bpp.lz"
 ToxicroakBackpic:    INCBIN "gfx/pokemon/toxicroak/back.2bpp.lz"
@@ -1020,6 +1018,7 @@ ButterfreeFrontpic:  INCBIN "gfx/pokemon/butterfree/front.animated.2bpp.lz"
 JumpluffBackpic:     INCBIN "gfx/pokemon/jumpluff/back.2bpp.lz"
 TeddiursaBackpic:    INCBIN "gfx/pokemon/teddiursa/back.2bpp.lz"
 GastlyBackpic:       INCBIN "gfx/pokemon/gastly/back.2bpp.lz"
+StunkyBackpic:       INCBIN "gfx/pokemon/stunky/back.2bpp.lz"
 
 SECTION "Pics 34", ROMX
 
@@ -1065,3 +1064,4 @@ MudkipBackpic:       INCBIN "gfx/pokemon/mudkip/back.2bpp.lz"
 SECTION "Pics 38", ROMX
 
 ChandelureFrontpic:  INCBIN "gfx/pokemon/chandelure/front.animated.2bpp.lz"
+SkuntankBackpic:     INCBIN "gfx/pokemon/skuntank/back.2bpp.lz"

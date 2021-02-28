@@ -354,7 +354,7 @@ BitmasksPointers:
 	dw PorygonZBitmasks
 	dw DusknoirBitmasks
 	dw FroslassBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Darkrai
+	dw DarkraiBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Pansage
 	dw SimisageBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Drilbur

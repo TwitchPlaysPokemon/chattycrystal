@@ -355,7 +355,7 @@ MoveAnimations:
 	dw BattleAnim_ThunderWave  ; PLACEHOLDER
 	dw BattleAnim_KnockOff
 	dw BattleAnim_WaterSpout
-	dw BattleAnim_NeedleArm    ; incomplete
+	dw BattleAnim_NeedleArm
 	dw BattleAnim_DracoMeteor
 	dw BattleAnim_CalmMind
 	dw BattleAnim_MudShot
@@ -3906,18 +3906,22 @@ BattleAnim_WaterSpout:
 	anim_ret
 	
 BattleAnim_NeedleArm:
-	anim_1gfx ANIM_GFX_HORN
+	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
+	anim_obj ANIM_OBJ_LONG_PUNCH, 136, 56, $0
 .loop
-	anim_obj ANIM_OBJ_NEEDLE_ARM_N, 48, 84, $30
-	anim_obj ANIM_OBJ_NEEDLE_ARM_NE, 48, 84, $38
-	anim_obj ANIM_OBJ_NEEDLE_ARM_E, 48, 84, $0
-	anim_obj ANIM_OBJ_NEEDLE_ARM_SE, 48, 84, $8
-	anim_obj ANIM_OBJ_NEEDLE_ARM_S, 48, 84, $10
-	anim_obj ANIM_OBJ_NEEDLE_ARM_SW, 48, 84, $18
-	anim_obj ANIM_OBJ_NEEDLE_ARM_W, 48, 84, $20
-	anim_obj ANIM_OBJ_NEEDLE_ARM_NW, 48, 84, $28
+	anim_sound 0, 1, SFX_MEGA_PUNCH
+	anim_obj ANIM_OBJ_NEEDLE_ARM_N, 136, 56, $30
+	anim_obj ANIM_OBJ_NEEDLE_ARM_NE, 136, 56, $38
+	anim_obj ANIM_OBJ_NEEDLE_ARM_E, 136, 56, $0
+	anim_obj ANIM_OBJ_NEEDLE_ARM_SE, 136, 56, $8
+	anim_obj ANIM_OBJ_NEEDLE_ARM_S, 136, 56, $10
+	anim_obj ANIM_OBJ_NEEDLE_ARM_SW, 136, 56, $18
+	anim_obj ANIM_OBJ_NEEDLE_ARM_W, 136, 56, $20
+	anim_obj ANIM_OBJ_NEEDLE_ARM_NW, 136, 56, $28
+	anim_wait 8
+	anim_sound 0, 1, SFX_POISON_STING
 	anim_loop 6, .loop
-	anim_wait 64
+	anim_wait 32
 	anim_ret
 
 BattleAnim_DracoMeteor:

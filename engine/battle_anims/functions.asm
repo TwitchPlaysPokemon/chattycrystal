@@ -4099,7 +4099,7 @@ BattleAnimFunction_57:
 	ld a, [hli]
 	ld d, a
 	ld e, [hl]
-	ld hl, -$180
+	ld hl, -$480
 	add hl, de
 	jp nc, DeinitBattleAnimation
 	ld e, l

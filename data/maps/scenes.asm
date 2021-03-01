@@ -94,4 +94,5 @@ MapScenes::
 	scene_var MT_SILVER_RUINS,                             wMtSilverRuinsSceneID
 	scene_var MT_SILVER_RUINS_B1F,                         wMtSilverRuinsB1FSceneID
 	scene_var TRICK_HOUSE_ENTRANCE,                        wTrickHouseEntranceSceneID
+	scene_var TRICK_HOUSE_EXIT,                            wTrickHouseExitSceneID
 	db -1 ; end

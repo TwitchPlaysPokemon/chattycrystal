@@ -1,5 +1,8 @@
 TrickHouseExit_MapScripts:
-	db 0 ; scene scripts
+	db 3 ; scene scripts
+	scene_script TrickHouse_End ; SCENE_DEFAULT
+	scene_script TrickHouse_End ; SCENE_TRICKHOUSEEXIT_LOCKED
+	scene_script TrickHouse_End ; SCENE_TRICKHOUSEEXIT_GOT_REWARD
 
 	db 0 ; callbacks
 

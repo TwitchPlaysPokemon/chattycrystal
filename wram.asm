@@ -2685,8 +2685,9 @@ wSilverCaveRoom3ID::                              db ; d9c7
 wMtSilverRuinsSceneID::                           db ; d9c8
 wMtSilverRuinsB1FSceneID::                        db ; d9c9
 wTrickHouseEntranceSceneID::                      db ; d9ca
+wTrickHouseExitSceneID::                          db ; d9cb
 
-	ds 39
+	ds 38
 
 ; fight counts
 wJackFightCount::    db ; d9f2

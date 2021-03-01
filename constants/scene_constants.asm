@@ -186,3 +186,8 @@ SCENE_FINISHED EQU 1
 ; wTrickHouseEntranceSceneID
 	const_def 1
 	const SCENE_TRICKHOUSEENTRANCE_WATCHED
+
+; wTrickHouseExitSceneID
+	const_def 1
+	const SCENE_TRICKHOUSEEXIT_LOCKED
+	const SCENE_TRICKHOUSEEXIT_GOT_REWARD

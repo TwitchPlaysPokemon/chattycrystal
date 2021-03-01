@@ -29,7 +29,7 @@ MtSilverRuinsB1FRed:
 	waitsfx
 	pause 30
 	appear MTSILVERRUINFB1F_RED
-	applymovement MTSILVERRUINFB1F_RED, MtSilverRuinsB1FLeftApprochMovement
+	applymovement MTSILVERRUINFB1F_RED, MtSilverRuinsB1FLeftApproachMovement
 	opentext
 	writetext MtSilverRuinsB1FDotsText
 	waitbutton
@@ -59,7 +59,7 @@ MtSilverRuinsB1FXman:
 	waitsfx
 	pause 30
 	appear MTSILVERRUINFB1F_XMAN
-	applymovement MTSILVERRUINFB1F_XMAN, MtSilverRuinsB1FXmanApprochMovement
+	applymovement MTSILVERRUINFB1F_XMAN, MtSilverRuinsB1FXmanApproachMovement
 	opentext
 	writetext MtSilverRuinsB1FDotsText
 	waitbutton
@@ -92,7 +92,7 @@ MtSilverRuinsB1FDualHosts:
 	waitsfx
 	pause 30
 	appear MTSILVERRUINFB1F_BRACKETS
-	applymovement MTSILVERRUINFB1F_BRACKETS, MtSilverRuinsB1FRightApprochMovement
+	applymovement MTSILVERRUINFB1F_BRACKETS, MtSilverRuinsB1FRightApproachMovement
 	opentext
 	writetext MtSilverRuinsB1FDotsText
 	waitbutton
@@ -108,7 +108,7 @@ MtSilverRuinsB1FDualHosts:
 	closetext
 	playsound SFX_ENTER_DOOR
 	appear MTSILVERRUINFB1F_XXWWNN
-	applymovement MTSILVERRUINFB1F_XXWWNN, MtSilverRuinsB1FXxwwnnApprochMovement
+	applymovement MTSILVERRUINFB1F_XXWWNN, MtSilverRuinsB1FXxwwnnApproachMovement
 	opentext
 	writetext MtSilverRuinsB1FDotsText
 	waitbutton
@@ -140,7 +140,7 @@ MtSilverRuinsB1FRedo:
 	waitsfx
 	pause 30
 	appear MTSILVERRUINFB1F_REDO
-	applymovement MTSILVERRUINFB1F_REDO, MtSilverRuinsB1FRedoApprochMovement
+	applymovement MTSILVERRUINFB1F_REDO, MtSilverRuinsB1FRedoApproachMovement
 	applymovement PLAYER, MtSilverRuinsB1FFaceLeft
 	applymovement MTSILVERRUINFB1F_REDO, MtSilverRuinsB1FRedoFinishMovement
 	opentext
@@ -170,7 +170,7 @@ MtSilverRuinsB1FFaceLeft:
 	turn_head LEFT
 	step_end
 	
-MtSilverRuinsB1FLeftApprochMovement:
+MtSilverRuinsB1FLeftApproachMovement:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -178,14 +178,14 @@ MtSilverRuinsB1FLeftApprochMovement:
 	step LEFT
 	step_end
 	
-MtSilverRuinsB1FRightApprochMovement:
+MtSilverRuinsB1FRightApproachMovement:
 	step RIGHT
 	step RIGHT
 	step RIGHT
 	step RIGHT
 	step_end
 	
-MtSilverRuinsB1FXmanApprochMovement:
+MtSilverRuinsB1FXmanApproachMovement:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -194,7 +194,7 @@ MtSilverRuinsB1FXmanApprochMovement:
 	step LEFT
 	step_end
 	
-MtSilverRuinsB1FRedoApprochMovement:
+MtSilverRuinsB1FRedoApproachMovement:
 	step UP
 	step LEFT
 	step LEFT
@@ -216,7 +216,7 @@ MtSilverRuinsB1FWarpOutMovement:
 	teleport_from
 	step_end
 	
-MtSilverRuinsB1FXxwwnnApprochMovement:
+MtSilverRuinsB1FXxwwnnApproachMovement:
 	step LEFT
 	step LEFT
 MtSilverRuinsB1FFaceDown:

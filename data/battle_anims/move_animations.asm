@@ -326,7 +326,7 @@ MoveAnimations:
 	dw BattleAnim_Roar         ; PLACEHOLDER
 	dw BattleAnim_HyperBeam    ; PLACEHOLDER
 	dw BattleAnim_VineWhip     ; PLACEHOLDER
-	dw BattleAnim_Waterfall    ; PLACEHOLDER
+	dw BattleAnim_AquaJet
 	dw BattleAnim_SweetScent   ; 148, PLACEHOLDER
 	dw BattleAnim_DarkVoid
 	dw BattleAnim_HoneClaws
@@ -1808,7 +1808,7 @@ BattleAnim_Headbutt:
 	anim_jump BattleAnim_ShowMon_0
 
 BattleAnim_Tackle:
-    anim_1gfx ANIM_GFX_HIT
+	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
 	anim_wait 4
@@ -3426,6 +3426,50 @@ BattleAnim_MuddyWater:
 	anim_loop 4, .loop
 	anim_incobj 1
 	anim_wait 56
+	anim_ret
+	
+BattleAnim_AquaJet:
+	anim_1gfx ANIM_GFX_SPEED
+	anim_sound 0, 1, SFX_BUBBLEBEAM
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 24, 88, $2
+	anim_obj ANIM_OBJ_SPEED_LINE, 32, 88, $1
+	anim_obj ANIM_OBJ_SPEED_LINE, 40, 88, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 48, 88, $80
+	anim_obj ANIM_OBJ_SPEED_LINE, 56, 88, $81
+	anim_obj ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_wait 6
+	anim_2gfx ANIM_GFX_WATER, ANIM_GFX_HIT
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 64, 96, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 74, 92, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 84, 88, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 94, 84, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 104, 80, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 114, 76, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_HYDRO_PUMP, 124, 72, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 56, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 48, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 40, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 32, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 24, $0
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_wait 16
 	anim_ret
 
 BattleAnim_DarkVoid:

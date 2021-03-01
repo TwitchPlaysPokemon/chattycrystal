@@ -152,6 +152,7 @@ PhanceroFliesDown:
 Phancero:
 	disappear MTSILVERRUINFB1F_PHANCERO_STATUE
 	appear MTSILVERRUINFB1F_PHANCERO_ALIVE
+	applymovement PLAYER, MtSilverRuinsShowObject
 	setlasttalked MTSILVERRUINFB1F_PHANCERO_ALIVE
 	faceplayer
 PhanceroContinue:
@@ -244,6 +245,10 @@ MtSilverRuinsFaceDown:
 MtSilverRuinsStepDown:
 	step DOWN
 	step_end
+	
+MtSilverRuinsShowObject:
+	show_object
+	step_end
 
 MtSilverRuins_MapEvents:
 	; filler
@@ -290,4 +295,4 @@ MtSilverRuins_MapEvents:
 	object_event 21, 29, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
 	object_event 21, 9, SPRITE_AZURE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
 	object_event 21, 2, SPRITE_PHANCERO, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Phancero, -1
-	object_event 21, 2, SPRITE_PHANCERO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Phancero, EVENT_INITIALIZED_EVENTS
+	object_event 21, 2, SPRITE_PHANCERO, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Phancero, EVENT_INITIALIZED_EVENTS

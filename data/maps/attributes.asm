@@ -747,7 +747,7 @@ ENDM
 	map_attributes SilphCo9F, SILPH_CO_9F, $00, 0
 	map_attributes SilphCo10F, SILPH_CO_10F, $00, 0
 	map_attributes SilphCo11F, SILPH_CO_11F, $00, 0
-	map_attributes SilphCoRoof, SILPH_CO_ROOF, $00, 0
+	map_attributes SilphCoRoof, SILPH_CO_ROOF, $24, 0
 	map_attributes SilphCoElevator, SILPH_CO_ELEVATOR, $00, 0
 	map_attributes CherrygroveMart, CHERRYGROVE_MART, $00, 0
 	map_attributes CherrygrovePokecenter1F, CHERRYGROVE_POKECENTER_1F, $00, 0

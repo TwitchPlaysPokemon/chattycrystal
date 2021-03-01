@@ -331,7 +331,7 @@ MoveAnimations:
 	dw BattleAnim_DarkVoid
 	dw BattleAnim_HoneClaws
 	dw BattleAnim_Psyshock
-	dw BattleAnim_Growth       ; PLACEHOLDER
+	dw BattleAnim_QuiverDance
 	dw BattleAnim_Pursuit      ; PLACEHOLDER
 	dw BattleAnim_EchoedVoice
 	dw BattleAnim_Scald
@@ -1808,7 +1808,7 @@ BattleAnim_Headbutt:
 	anim_jump BattleAnim_ShowMon_0
 
 BattleAnim_Tackle:
-	anim_1gfx ANIM_GFX_HIT
+    anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
 	anim_wait 4
@@ -3503,6 +3503,29 @@ BattleAnim_Psyshock:
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_TELEPORT
 	anim_jump BattleAnim_ShowMon_1
+	
+BattleAnim_QuiverDance:
+	anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_SHINE
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect ANIM_BG_26, $0, $1, $0
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+.loop
+	anim_sound 0, 0, SFX_FORESIGHT
+	anim_obj ANIM_OBJ_QUIVER_DANCE, 48, 104, $0
+	anim_wait 12
+	anim_loop 8, .loop
+	anim_wait 16
+	anim_incbgeffect ANIM_BG_26
+	anim_bgeffect ANIM_BG_18, $0, $1, $40
+	anim_sound 0, 1, SFX_FLASH
+	anim_obj ANIM_OBJ_GLIMMER, 44, 64, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMER, 24, 96, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMER, 56, 104, $0    
+	anim_wait 32
+	anim_incbgeffect ANIM_BG_18
+	anim_jump BattleAnim_ShowMon_0
 	
 BattleAnim_EchoedVoice:
 	anim_2gfx ANIM_GFX_PSYCHIC, ANIM_GFX_NOISE

@@ -2,6 +2,7 @@
 	const_def
 	const TRICKHOUSEEVENT_PUZZLE_READY
 	const TRICKHOUSEEVENT_PUZZLE_FINISHED
+	const TRICKHOUSEEVENT_TRICK_MASTER_HIDDEN
 
 	object_const_def
 	const TRICKHOUSEENTRANCE_TRICK_MASTER
@@ -33,10 +34,12 @@ TrickHouseEntrance_MapScripts:
 	setscene SCENE_TRICKHOUSEENTRANCE_WATCHED
 	setevent TRICKHOUSEEVENT_PUZZLE_READY
 .active
+	setevent TRICKHOUSEEVENT_TRICK_MASTER_HIDDEN
 	return
 
 .finished
 	setevent TRICKHOUSEEVENT_PUZZLE_FINISHED
+	setevent TRICKHOUSEEVENT_TRICK_MASTER_HIDDEN
 	return
 
 .two
@@ -166,7 +169,7 @@ TrickHouseEntrance_TrickMaster:
 	closetext
 	faceobject TRICKHOUSEENTRANCE_TRICK_MASTER, PLAYER
 	showemote EMOTE_SHOCK, TRICKHOUSEENTRANCE_TRICK_MASTER, 30
-	pause 15
+	pause 10
 	opentext
 	writetext .after_spotting_player_text
 	waitbutton
@@ -181,10 +184,11 @@ TrickHouseEntrance_TrickMaster:
 	line "scheme, and those"
 	cont "ruses<...>"
 
-	para "Mufufufu<...> If I may"
-	line "say so, it's bril-"
-	para "liantly difficult,"
-	line "even for me!"
+	para "Mufufufu<...>"
+	line "If I may say so,"
+	para "it's brilliantly"
+	line "difficult, even"
+	cont "for me!"
 	prompt
 
 .after_spotting_player_text
@@ -327,8 +331,21 @@ TrickHouseEntrance_DoTrickMasterReveal:
 	special FadeOutPalettes
 	callasm TrickHouseEntrance_CalculateMovement
 	applymovement PLAYER, wStringBuffer1
+	appear TRICKHOUSEENTRANCE_TRICK_MASTER
+	faceobject TRICKHOUSEENTRANCE_TRICK_MASTER, PLAYER
 	special FadeInPalettes
-	; TODO: show Trick Master, etc.
+	pause 3
+	opentext
+	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
+	iftrue .no_intro
+	writetext TrickHouseEntrance_TrickMasterIntroductionText
+.no_intro
+	writetext TrickHouseEntrance_TrickMasterChallengeText
+	waitbutton
+	closetext
+	pause 10
+	applymovement TRICKHOUSEENTRANCE_TRICK_MASTER, TrickHouseEntrance_DisappearingMovement
+	disappear TRICKHOUSEENTRANCE_TRICK_MASTER
 	clearevent TRICKHOUSEEVENT_PUZZLE_READY
 	setevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
 TrickHouseEntrance_End:
@@ -343,6 +360,48 @@ TrickHouseEntrance_HidingSpot_6_Text:
 	line "cushion?"
 	cont "You're sharp!"
 	prompt
+
+TrickHouseEntrance_TrickMasterIntroductionText:
+	text "Behold!"
+
+	para "For I am the"
+	line "greatest living"
+	para "mystery of a man"
+	line "in all of KANTO!"
+
+	para "They call me<...>"
+
+	para "The TRICK MASTER!"
+
+	para "Wahahaha! Glad to"
+	line "meet you!"
+	prompt
+
+TrickHouseEntrance_TrickMasterChallengeText:
+	text "You, you've come to"
+	line "challenge my TRICK"
+	cont "HOUSE, haven't you?"
+
+	para "That's why you're"
+	line "here, isn't it?"
+
+	para "Yes, it is!"
+
+	para "Consider your cha-"
+	line "llenge accepted!"
+
+	para "Enter through the"
+	line "scroll there, and"
+	para "let your challenge"
+	line "commence!"
+
+	para "I shall be waiting"
+	line "in the back!"
+	done
+
+TrickHouseEntrance_DisappearingMovement:
+	teleport_from
+	step_end
 
 TrickHouseEntrance_CalculateMovement:
 	; generates a movement script that will land you in (6, 1) and writes it to wStringBuffer1
@@ -423,4 +482,4 @@ TrickHouseEntrance_MapEvents:
 	bg_event  4,  4, BGEVENT_SILENT, TrickHouseEntrance_HidingSpot_6
 
 	db 1 ; object events
-	object_event  5,  1, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrickHouseEntrance_TrickMaster, -1
+	object_event  5,  1, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrickHouseEntrance_TrickMaster, TRICKHOUSEEVENT_TRICK_MASTER_HIDDEN

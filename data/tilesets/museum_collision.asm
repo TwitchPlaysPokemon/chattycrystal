@@ -120,5 +120,7 @@
 	tilecoll WALL, WALL, WALL, STAIRCASE ; 77
 	tilecoll WALL, WALL, WALL, WALL ; 78
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 79
-	tilecoll , , ,  ; 7a
-	tilecoll , , ,  ; 7b
+	tilecoll WALL, COUNTER, FLOOR, COUNTER ; 7a
+	tilecoll COUNTER, WALL, COUNTER, FLOOR ; 7b
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 7c
+	tilecoll WALL, WALL, FLOOR, FLOOR ; 7d

@@ -529,8 +529,8 @@ ENDM
 	map_const SILPH_CO_8F,                                  8,  4 ; 22
 	map_const SILPH_CO_9F,                                  8,  4 ; 23
 	map_const SILPH_CO_10F,                                 8,  4 ; 24
-	map_const SILPH_CO_11F,                                 8,  4 ; 25
-	map_const SILPH_CO_ROOF,                                8,  4 ; 25
+	map_const SILPH_CO_11F,                                 8,  5 ; 25
+	map_const SILPH_CO_ROOF,                                4,  8 ; 25
 	map_const SILPH_CO_ELEVATOR,                            2,  2 ; 27
 
 	newgroup                                                      ; 26

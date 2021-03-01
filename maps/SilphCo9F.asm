@@ -1,0 +1,21 @@
+	object_const_def ; object_event constants
+
+
+SilphCo9F_MapScripts:
+	db 0 ; scene scripts
+
+	db 0 ; callbacks
+
+SilphCo9F_MapEvents:
+	db 0, 0 ; filler
+
+	db 3 ; warp events
+	warp_event  0,  0, SILPHCO_ELEVATOR, 2
+	warp_event  3,  0, SILPH_CO_10F, 3 
+	warp_event 13,  0, SILPH_CO_8F, 2
+
+	db 0 ; coord events
+
+	db 0 ; bg events
+
+	db 0 ; object events

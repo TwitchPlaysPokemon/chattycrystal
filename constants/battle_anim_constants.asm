@@ -279,6 +279,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_HONE_CLAWS_L
 	const ANIM_OBJ_PSYSHOCK
 	const ANIM_OBJ_QUIVER_DANCE
+	const ANIM_OBJ_ROCK_CLIMB
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def

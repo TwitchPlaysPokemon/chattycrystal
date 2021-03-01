@@ -3430,38 +3430,46 @@ BattleAnim_MuddyWater:
 	
 BattleAnim_RockClimb:
 	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_2Row
+    anim_call BattleAnim_TargetObj_2Row
+    anim_bgeffect ANIM_BG_BOUNCE_DOWN, $0, $1, $0
+    anim_wait 8
 .loop
-	anim_sound 0, 0, SFX_SPARK
-	anim_bgeffect ANIM_BG_WITHDRAW, $0, $1, $50
-	anim_wait 6
-	anim_incbgeffect ANIM_BG_WITHDRAW
-	anim_loop 2, .loop
-	anim_wait 6
-	anim_bgeffect ANIM_BG_25, $0, $1, $0
-	anim_wait 16
-	anim_call BattleAnim_ShowMon_0
-	anim_sound 0, 1, SFX_HEADBUTT
-	anim_obj ANIM_OBJ_ROCK_SMASH, 140, 56, $50
-	anim_obj ANIM_OBJ_01, 136, 56, $0
-	anim_wait 3
-	anim_sound 0, 1, SFX_HEADBUTT
-	anim_obj ANIM_OBJ_ROCK_SMASH, 132, 56, $d0
-	anim_obj ANIM_OBJ_01, 136, 48, $0
-	anim_wait 3
-	anim_sound 0, 1, SFX_HEADBUTT
-	anim_obj ANIM_OBJ_ROCK_SMASH, 140, 40, $50
-	anim_obj ANIM_OBJ_01, 136, 40, $0
-	anim_wait 3
-	anim_sound 0, 1, SFX_HEADBUTT
-	anim_obj ANIM_OBJ_ROCK_SMASH, 132, 56, $d0
-	anim_obj ANIM_OBJ_01, 136, 32, $0
-	anim_wait 3
-	anim_sound 0, 1, SFX_HEADBUTT
-	anim_obj ANIM_OBJ_ROCK_SMASH, 140, 24, $50
-	anim_obj ANIM_OBJ_01, 136, 24, $0
-	anim_wait 8
-	anim_ret
+    anim_obj ANIM_OBJ_ROCK_CLIMB, 56, 112, $5c
+    anim_obj ANIM_OBJ_ROCK_CLIMB, 40, 112, $e8
+    anim_sound 6, 2, SFX_SPARK
+    anim_wait 28
+    anim_loop 2, .loop
+    anim_incbgeffect ANIM_BG_BOUNCE_DOWN
+    anim_wait 8
+    anim_bgeffect ANIM_BG_25, $0, $1, $0
+    anim_wait 16
+    anim_call BattleAnim_ShowMon_0
+    anim_sound 0, 1, SFX_KARATE_CHOP
+    anim_obj ANIM_OBJ_01, 136, 56, $0
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 56, $5c
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 56, $e8
+    anim_wait 3
+    anim_sound 0, 1, SFX_KARATE_CHOP
+    anim_obj ANIM_OBJ_01, 136, 48, $0
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 48, $5c
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 48, $e8
+    anim_wait 3
+    anim_sound 0, 1, SFX_KARATE_CHOP
+    anim_obj ANIM_OBJ_01, 136, 40, $0
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 40, $5c
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 40, $e8
+    anim_wait 3
+    anim_sound 0, 1, SFX_KARATE_CHOP
+    anim_obj ANIM_OBJ_01, 136, 32, $0
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 32, $5c
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 32, $e8
+    anim_wait 3
+    anim_sound 0, 1, SFX_KARATE_CHOP
+    anim_obj ANIM_OBJ_01, 136, 24, $0
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $5c
+    anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $e8
+    anim_wait 8
+    anim_ret
 	
 BattleAnim_AquaJet:
 	anim_1gfx ANIM_GFX_SPEED

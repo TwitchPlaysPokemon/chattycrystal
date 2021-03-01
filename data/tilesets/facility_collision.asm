@@ -97,3 +97,12 @@
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 60
 	tilecoll WALL, WALL, WALL, WALL ; 61
 	tilecoll WALL, WALL, FLOOR, FLOOR ; 62
+	tilecoll STAIRCASE, WALL, FLOOR, FLOOR ; 63
+	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 64
+	tilecoll WALL, STAIRCASE, FLOOR, FLOOR ; 65
+	tilecoll WALL, WALL, WALL, FLOOR ; 66
+	tilecoll WALL, WALL, FLOOR, WALL ; 67
+	tilecoll WALL, FLOOR, WALL, FLOOR ; 68
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 69
+	tilecoll WALL, WALL, WALL, WALL ; 6a
+	tilecoll WALL, WALL, WALL, WALL ; 6b

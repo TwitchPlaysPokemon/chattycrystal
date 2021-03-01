@@ -16,18 +16,18 @@ SilphCoElevatorScript:
 	end
 
 SilphCoElevatorData:
-	db 1 ; floors
+	db 11 ; floors
 	elevfloor FLOOR_1F,  3, SILPH_CO_1F
-	; elevfloor FLOOR_2F,  1, SILPH_CO_2F
-	; elevfloor FLOOR_3F,  1, SILPH_CO_3F
-	; elevfloor FLOOR_4F,  1, SILPH_CO_4F
-	; elevfloor FLOOR_5F,  1, SILPH_CO_5F
-	; elevfloor FLOOR_6F,  1, SILPH_CO_6F
-	; elevfloor FLOOR_7F,  1, SILPH_CO_7F
-	; elevfloor FLOOR_8F,  1, SILPH_CO_8F
-	; elevfloor FLOOR_9F,  1, SILPH_CO_9F
-	; elevfloor FLOOR_10F, 1, SILPH_CO_10F
-	; elevfloor FLOOR_11F, 1, SILPH_CO_11F
+	elevfloor FLOOR_2F,  1, SILPH_CO_2F
+	elevfloor FLOOR_3F,  1, SILPH_CO_3F
+	elevfloor FLOOR_4F,  1, SILPH_CO_4F
+	elevfloor FLOOR_5F,  1, SILPH_CO_5F
+	elevfloor FLOOR_6F,  1, SILPH_CO_6F
+	elevfloor FLOOR_7F,  1, SILPH_CO_7F
+	elevfloor FLOOR_8F,  1, SILPH_CO_8F
+	elevfloor FLOOR_9F,  1, SILPH_CO_9F
+	elevfloor FLOOR_10F, 1, SILPH_CO_10F
+	elevfloor FLOOR_11F, 1, SILPH_CO_11F
 	db -1 ; end
 
 SilphCoElevator_MapEvents:

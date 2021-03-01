@@ -269,6 +269,7 @@ INCLUDE "maps/RocketHideoutB2F.asm"
 INCLUDE "maps/RocketHideoutB3F.asm"
 INCLUDE "maps/RocketHideoutB4F.asm"
 INCLUDE "maps/RocketHideoutElevator.asm"
+; linked, do not separate
 INCLUDE "maps/TrickHouseEntrance.asm"
 INCLUDE "maps/TrickHouseExit.asm"
 INCLUDE "maps/TrickHouseHallway.asm"
@@ -278,6 +279,7 @@ INCLUDE "maps/TrickHousePuzzle3.asm"
 INCLUDE "maps/TrickHousePuzzle4.asm"
 INCLUDE "maps/TrickHousePuzzle5.asm"
 INCLUDE "maps/TrickHousePuzzle6.asm"
+; end of linked section
 
 
 SECTION "Map Scripts 15", ROMX

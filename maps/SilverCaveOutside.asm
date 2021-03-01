@@ -18,7 +18,6 @@ SilverCaveOutside_MapEvents: ; 0x1b205f
 
 	; xy triggers
 	db 0
-;	xy_trigger 0, 12, 18, 0, MtSilverRedScript, 0, 0
 
 	; signposts
 	db 0
@@ -28,7 +27,3 @@ SilverCaveOutside_MapEvents: ; 0x1b205f
 
 	; people-events
 	db 0
-;	person_event SPRITE_COOLTRAINER_M, 16, 22, $6, 0, 0, -1, -1, 0, 0, 0, SilverCaveOutsideCooltrainerMScript, EVENT_ENABLE_DIPLOMA_PRINTING
-;	person_event SPRITE_RED, 15, 22, $6, 0, 0, -1, -1, 0, 0, 0, ObjectEvent, EVENT_RED_IN_FRONT_OF_MT_SILVER
-; 0x1b207e
-

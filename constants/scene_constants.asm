@@ -168,3 +168,21 @@ SCENE_FINISHED EQU 1
 	const SCENE_SHOWN_SOUL    ; 5
 	const SCENE_SHOWN_VOLCANO ; 6
 	const SCENE_SHOWN_EARTH   ; 7
+	
+; wMtSilverRuinsSceneID
+	const_def 1
+	const SCENE_BEAT_ABE ; 1
+	const SCENE_BEAT_EVAN ; 2
+	const SCENE_BEAT_KAY ; 3
+	const SCENE_BEAT_AZURE ; 4
+	
+; wMtSilverRuinsB1FSceneID
+	const_def 1
+	const SCENE_BEAT_RED ; 1
+	const SCENE_BEAT_XMAN ; 2
+	const SCENE_BEAT_DUAL_HOSTS ; 3
+	const SCENE_BEAT_REDO ; 4
+
+; wTrickHouseEntranceSceneID
+	const_def 1
+	const SCENE_TRICKHOUSEENTRANCE_WATCHED

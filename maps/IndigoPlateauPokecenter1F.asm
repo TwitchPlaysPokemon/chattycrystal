@@ -8,14 +8,11 @@
 
 IndigoPlateauPokecenter1F_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script PlateauRivalScriptDone ; SCENE_DEFAULT
+	scene_script PlateauRivalScriptDone ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .PrepareElite4
-
-.DummyScene:
-	end
 
 .PrepareElite4:
 	setmapscene WILLS_ROOM, SCENE_DEFAULT

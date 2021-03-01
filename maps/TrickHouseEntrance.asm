@@ -3,6 +3,9 @@
 	const TRICKHOUSEEVENT_PUZZLE_READY
 	const TRICKHOUSEEVENT_PUZZLE_FINISHED
 
+	object_const_def
+	const TRICKHOUSEENTRANCE_TRICK_MASTER
+
 TrickHouseEntrance_MapScripts:
 	db 2 ; scene scripts
 	scene_script TrickHouseEntrance_End
@@ -155,6 +158,54 @@ TrickHouseEntrance_Scroll:
 	line "journey. Don't look"
 	para "for me."
 	line "TRICK MASTER"
+	done
+
+TrickHouseEntrance_TrickMaster:
+	opentext
+	writetext .before_spotting_player_text
+	closetext
+	faceobject TRICKHOUSEENTRANCE_TRICK_MASTER, PLAYER
+	showemote EMOTE_SHOCK, TRICKHOUSEENTRANCE_TRICK_MASTER, 30
+	pause 15
+	opentext
+	writetext .after_spotting_player_text
+	waitbutton
+	closetext
+	turnobject TRICKHOUSEENTRANCE_TRICK_MASTER, UP
+	end
+
+.before_spotting_player_text
+	text "For the next time,"
+	line "I'll use this"
+	para "trick, and that"
+	line "scheme, and those"
+	cont "ruses<...>"
+
+	para "Mufufufu<...> If I may"
+	line "say so, it's bril-"
+	para "liantly difficult,"
+	line "even for me!"
+	prompt
+
+.after_spotting_player_text
+	text "Hah? What!?"
+	line "Oh, it's you!"
+
+	para "I'm in the midst of"
+	line "devising new"
+	cont "tricky challenges!"
+
+	para "It's not too much"
+	line "to ask for a bit"
+	para "more time for me"
+	line "to think, is it"
+	cont "now?"
+
+	para "You wouldn't"
+	line "begrudge me that?"
+
+	para "Come back in a"
+	line "little while!"
 	done
 
 TrickHouseEntrance_PrepareTrickMasterReveal:
@@ -371,4 +422,5 @@ TrickHouseEntrance_MapEvents:
 	bg_event  9,  1, BGEVENT_SILENT, TrickHouseEntrance_HidingSpot_5
 	bg_event  4,  4, BGEVENT_SILENT, TrickHouseEntrance_HidingSpot_6
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event  5,  1, SPRITE_TRICK_MASTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrickHouseEntrance_TrickMaster, -1

@@ -525,7 +525,7 @@ ENDM
 	map_const SILPH_CO_4F,                                 12,  8 ; 18
 	map_const SILPH_CO_5F,                                 12,  8 ; 19
 	map_const SILPH_CO_6F,                                 12,  8 ; 20
-	map_const SILPH_CO_7F,                                  8,  4 ; 21
+	map_const SILPH_CO_7F,                                 12,  8 ; 21
 	map_const SILPH_CO_8F,                                  8,  4 ; 22
 	map_const SILPH_CO_9F,                                  8,  4 ; 23
 	map_const SILPH_CO_10F,                                 8,  4 ; 24

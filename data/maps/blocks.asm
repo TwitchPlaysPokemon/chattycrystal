@@ -760,7 +760,7 @@ SilphCo7F_Blocks:
 	INCBIN "maps/SilphCo7F.blk"
 
 SilphCo8F_Blocks:
-	INCBIN "maps/SilphCo9F.blk"
+	INCBIN "maps/SilphCo8F.blk"
 
 SilphCo9F_Blocks:
 	INCBIN "maps/SilphCo9F.blk"

@@ -2432,36 +2432,80 @@ GSCHGSSChrisRivalGroup:
 
 AzureGroup:
 	next_list_item ; AZURE1
-	db "AZURE@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES
+	db "AZURE@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS
+	
 	db 100
 	dw ARTICUNO
 	db LEFTOVERS
 	dw ICE_BEAM, HIDDEN_POWER, BUBBLEBEAM, REFLECT
+	bigdw $FFFF
+	bigdw 383
+	bigdw 268
+	bigdw 298
+	bigdw 268
+	bigdw 288
+	bigdw 348
 
 	db 100
 	dw ZAPDOS
 	db LEFTOVERS
 	dw THUNDERBOLT, DRILL_PECK, HIDDEN_POWER, THUNDER_WAVE
+	bigdw $FFFF
+	bigdw 383
+	bigdw 278
+	bigdw 268
+	bigdw 298
+	bigdw 348
+	bigdw 278
 
 	db 100
 	dw MOLTRES
 	db LEFTOVERS
 	dw FIRE_BLAST, FLAMETHROWER, HIDDEN_POWER, DOUBLE_EDGE
+	bigdw $FFFF
+	bigdw 383
+	bigdw 298
+	bigdw 278
+	bigdw 278
+	bigdw 348
+	bigdw 268
 
 	db 100
 	dw SNORLAX
 	db LEFTOVERS
 	dw CURSE, EARTHQUAKE, BODY_SLAM, REST
-
+	bigdw $FFFF
+	bigdw 523
+	bigdw 318
+	bigdw 228
+	bigdw 158
+	bigdw 228
+	bigdw 318
+	
 	db 100
 	dw LAPRAS
 	db LEFTOVERS
 	dw ICE_BEAM, SURF, THUNDERBOLT, CONFUSE_RAY
-
+	bigdw $FFFF
+	bigdw 463
+	bigdw 268
+	bigdw 258
+	bigdw 218
+	bigdw 268
+	bigdw 288
+	
 	db 100
 	dw MEW
 	db LEFTOVERS
 	dw PSYCHIC_M, SOFTBOILED, ICE_BEAM, EARTHQUAKE
+	bigdw $FFFF
+	bigdw 403
+	bigdw 298
+	bigdw 298
+	bigdw 298
+	bigdw 298
+	bigdw 298
+	
 	db -1 ; end
 
 	end_list_items

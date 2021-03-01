@@ -10,7 +10,7 @@ SilphCo4F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  0,  0, SILPHCO_ELEVATOR, 2
+	warp_event  0,  0, SILPH_CO_ELEVATOR, 2
 	warp_event  3,  0, SILPH_CO_5F, 3 
 	warp_event 13,  0, SILPH_CO_3F, 2
 

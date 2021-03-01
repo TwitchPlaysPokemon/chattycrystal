@@ -6,11 +6,11 @@ SilphCo11F_MapScripts:
 
 	db 0 ; callbacks
 
-SilphCo1F_MapEvents:
+SilphCo11F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  0,  0, SILPHCO_ELEVATOR, 2
+	warp_event  0,  0, SILPH_CO_ELEVATOR, 2
 	warp_event  3,  0, SILPH_CO_ROOF, 1
 	warp_event 13,  0, SILPH_CO_10F, 2
 

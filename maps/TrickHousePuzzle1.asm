@@ -1,19 +1,25 @@
 TrickHousePuzzle1_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_NEWMAP, .check_door
+
+.check_door
+	checkevent EVENT_TRICK_HOUSE_DOOR_OPEN
+	iffalse .return
+	changeblock 12, 0, $43 ; stairs going up
+.return
+	return
 
 TrickHousePuzzle1_Door:
 	scall TrickHouse_Door
 	iffalse .end
 	writetext .code
 	writetext TrickHouse_DoorUnlockText
-	playsound SFX_ITEM
+	playsound SFX_DEX_FANFARE_50_79
+	waitsfx
 	changeblock 12, 0, $43 ; stairs going up
 	reloadmappart
-	waitsfx
-	waitbutton
-	closetext
 .end
 	end
 

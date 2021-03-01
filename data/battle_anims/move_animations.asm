@@ -364,7 +364,8 @@ MoveAnimations:
 	dw BattleAnim_DarkPulse
 	dw BattleAnim_RockBlast
 	dw BattleAnim_BrickBreak
-
+	dw BattleAnim_Flamethrower  ; PLACEHOLDER
+	
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 0, 1, SFX_POUND

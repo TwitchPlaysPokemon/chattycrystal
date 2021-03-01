@@ -55,17 +55,17 @@ SilphCo11F_MapEvents:
 	db 0, 0 ; filler
 
 	db 3 ; warp events
-	warp_event  0,  0, SILPH_CO_ELEVATOR, 2
-	warp_event  3,  0, SILPH_CO_ROOF, 3 
-	warp_event 13,  0, SILPH_CO_10F, 2
+	warp_event  0,  1, SILPH_CO_ELEVATOR, 2
+	warp_event  3,  1, SILPH_CO_ROOF, 3 
+	warp_event 13,  1, SILPH_CO_10F, 2
 
 	db 1 ; coord events
-	coord_event 13, 1, SCENE_DEFAULT, SilphCo11F_CheckForHeal
+	coord_event 13, 2, SCENE_DEFAULT, SilphCo11F_CheckForHeal
 
 	db 0 ; bg events
 
 	db 10 ; object events
-	object_event  12,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo11F_CheckForHeal, -1
+	object_event  12,  2, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo11F_CheckForHeal, -1
 	object_event  15,  5, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, MtBattleTrainer91, -1
 	object_event  11,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, MtBattleTrainer92, -1
 	object_event   9,  7, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, MtBattleTrainer93, -1

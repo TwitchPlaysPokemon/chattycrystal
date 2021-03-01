@@ -318,7 +318,7 @@ MoveAnimations:
 	dw BattleAnim_Cut          ; PLACEHOLDER
 	dw BattleAnim_Headbutt     ; PLACEHOLDER
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
-	dw BattleAnim_RockSmash    ; PLACEHOLDER
+	dw BattleAnim_RockClimb
 	dw BattleAnim_ThunderWave  ; 140, PLACEHOLDER
 	dw BattleAnim_RazorLeaf    ; PLACEHOLDER
 	dw BattleAnim_IronTail     ; PLACEHOLDER
@@ -3426,6 +3426,41 @@ BattleAnim_MuddyWater:
 	anim_loop 4, .loop
 	anim_incobj 1
 	anim_wait 56
+	anim_ret
+	
+BattleAnim_RockClimb:
+	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
+	anim_call BattleAnim_TargetObj_2Row
+.loop
+	anim_sound 0, 0, SFX_SPARK
+	anim_bgeffect ANIM_BG_WITHDRAW, $0, $1, $50
+	anim_wait 6
+	anim_incbgeffect ANIM_BG_WITHDRAW
+	anim_loop 2, .loop
+	anim_wait 6
+	anim_bgeffect ANIM_BG_25, $0, $1, $0
+	anim_wait 16
+	anim_call BattleAnim_ShowMon_0
+	anim_sound 0, 1, SFX_HEADBUTT
+	anim_obj ANIM_OBJ_ROCK_SMASH, 140, 56, $50
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_HEADBUTT
+	anim_obj ANIM_OBJ_ROCK_SMASH, 132, 56, $d0
+	anim_obj ANIM_OBJ_01, 136, 48, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_HEADBUTT
+	anim_obj ANIM_OBJ_ROCK_SMASH, 140, 40, $50
+	anim_obj ANIM_OBJ_01, 136, 40, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_HEADBUTT
+	anim_obj ANIM_OBJ_ROCK_SMASH, 132, 56, $d0
+	anim_obj ANIM_OBJ_01, 136, 32, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_HEADBUTT
+	anim_obj ANIM_OBJ_ROCK_SMASH, 140, 24, $50
+	anim_obj ANIM_OBJ_01, 136, 24, $0
+	anim_wait 8
 	anim_ret
 	
 BattleAnim_AquaJet:

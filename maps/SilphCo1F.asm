@@ -1,3 +1,5 @@
+NUM_SILPH_FLAGS EQU 110
+
 	object_const_def ; object_event constants
 	const SILPHCO1F_RECEPTIONIST
 	const SILPHCO1F_OFFICER
@@ -83,6 +85,26 @@ MtBattleNurseFinished:
 	waitbutton
 	closetext
 	end
+
+MtBattleGotReward:
+	callasm .resetTrainers
+	warp SILPH_CO_1F, 2, 0 	; Warp to the 1F Elevator door
+	end
+
+.resetTrainers
+	ld b, NUM_SILPH_FLAGS / 8
+	ld hl, wEventFlags + EVENT_BEAT_MT_BATTLE_1 / 8
+	xor a
+.loop
+	ld [hli], a
+	dec b
+	jr nz, .loop
+	if NUM_SILPH_FLAGS % 8
+		ld a, [hl]
+		and $100 - (1 << (NUM_SILPH_FLAGS % 8))
+		ld [hl], a
+	endc
+	ret
 
 MtBattleDefaultScene:
 	end

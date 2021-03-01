@@ -251,7 +251,6 @@ INCLUDE "maps/BurnedTowerB1F.asm"
 
 SECTION "Map Scripts 14", ROMX
 
-INCLUDE "maps/CeruleanCity.asm"
 INCLUDE "maps/SproutTower1F.asm"
 INCLUDE "maps/SproutTower2F.asm"
 INCLUDE "maps/SproutTower3F.asm"
@@ -524,6 +523,7 @@ INCLUDE "maps/PokemonMansion1F.asm"
 INCLUDE "maps/PokemonMansion2F.asm"
 INCLUDE "maps/PokemonMansion3F.asm"
 INCLUDE "maps/PokemonMansionB1F.asm"
+INCLUDE "maps/CeruleanCity.asm"
 
 
 SECTION "Map Scripts 27", ROMX

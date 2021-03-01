@@ -101,20 +101,81 @@ TrickHouseExit_Finished_6:
 	end
 
 TrickHouseExit_Finished_5:
-	; ...
+	writetext .text
+	writetext TrickHouseExit_EarnedRewardText
+	waitbutton
+	closetext
+	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
+	; TODO: reward
 	end
+
+.text
+	text "It took me all"
+	line "night setting up"
+	cont "arrows<...>"
+
+	para "You're my equal"
+	line "in greatness!"
+	prompt
 
 TrickHouseExit_Finished_4:
-	; ...
+	writetext .text
+	writetext TrickHouseExit_EarnedRewardText
+	waitbutton
+	closetext
+	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_4
+	; TODO: reward
 	end
+
+.text
+	text "It took me all"
+	line "night to prepare"
+	cont "the teleporters<...>"
+
+	para "You're almost my"
+	line "equal in"
+	cont "greatness!"
+	prompt
 
 TrickHouseExit_Finished_3:
-	; ...
+	writetext .text
+	writetext TrickHouseExit_EarnedRewardText
+	waitbutton
+	closetext
+	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_3
+	; TODO: reward
 	end
 
+.text
+	text "It took me all"
+	line "night to shove in"
+	cont "those boulders<...>"
+
+	para "You're almost my"
+	line "equal in greatness"
+	para "by one, two"
+	line "places!"
+	prompt
+
 TrickHouseExit_Finished_2:
-	; ...
+	writetext .text
+	writetext TrickHouseExit_EarnedRewardText
+	waitbutton
+	closetext
+	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_2
+	; TODO: reward
 	end
+
+.text
+	text "It took me all"
+	line "night to make the"
+	cont "maze<...>"
+
+	para "You're almost my"
+	line "equal in greatness"
+	para "by one, two,"
+	line "three places!"
+	prompt
 
 TrickHouseExit_Finished_1:
 	writetext .text

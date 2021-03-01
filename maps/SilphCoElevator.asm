@@ -12,7 +12,7 @@ SilphCoElevatorScript:
 	playsound SFX_ELEVATOR
 	earthquake 60
 	waitsfx
-.Done
+.Done:
 	end
 
 SilphCoElevatorData:

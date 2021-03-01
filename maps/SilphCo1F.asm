@@ -53,6 +53,66 @@ SilphCoOfficerText_GotUpGrade:
 	line "anywhere yet."
 	done
 
+MtBattleFinishBattle:
+	endifjustbattled
+	opentext
+	writetext MtBattleAfterBattleText
+	waitbutton
+	closetext
+	end
+
+MtBattleNurseHeal:
+	faceplayer
+	opentext
+	writetext MtBattleNurseText
+	waitbutton
+	closetext
+	special FadeBlackQuickly
+	special ReloadSpritesNoPalettes
+	playmusic MUSIC_HEAL
+	special HealParty
+	pause 60
+	special FadeInQuickly
+	special RestartMapMusic
+	; fallthrough
+
+MtBattleNurseFinished:
+	faceplayer
+	opentext
+	writetext MtBattleAfterHealText
+	waitbutton
+	closetext
+	end
+
+MtBattleDefaultScene:
+	end
+
+MtBattleSeenText:
+	text "Will you battle"
+	line "with me?"
+	done
+
+MtBattleBeatenText:
+	text "Zoinks!"
+	done
+
+MtBattleAfterBattleText:
+	text "I did my best but"
+	line "came up short."
+
+	para "No excuses--I"
+	line "admit I lost."
+	done
+
+MtBattleNurseText:
+	text "Here, let me heal"
+	line "your team."
+	done
+
+MtBattleAfterHealText:
+	text "We hope you excel!"
+	done
+
 SilphCo1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -68,4 +128,4 @@ SilphCo1F_MapEvents:
 
 	db 2 ; object events
 	object_event  4,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoReceptionistScript, -1
-	object_event 13,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoOfficerScript, -1
+	object_event 14,  1, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoOfficerScript, -1

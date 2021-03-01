@@ -423,4 +423,4 @@ TrickHouseEntrance_MapEvents:
 	bg_event  4,  4, BGEVENT_SILENT, TrickHouseEntrance_HidingSpot_6
 
 	db 1 ; object events
-	object_event  5,  1, SPRITE_TRICK_MASTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, TrickHouseEntrance_TrickMaster, -1
+	object_event  5,  1, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrickHouseEntrance_TrickMaster, -1

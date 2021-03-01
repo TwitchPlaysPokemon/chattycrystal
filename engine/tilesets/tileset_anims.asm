@@ -232,9 +232,11 @@ TilesetTowerAnim:
 	dw NULL,  WaitTileAnimation
 	dw NULL,  DoneTileAnimation
 
-UnusedTilesetAnim_fc2bf:
+TilesetFacilityAnim:
 	dw vTiles2 tile $4f, WriteTileToBuffer
+	dw NULL,  WaitTileAnimation
 	dw wTileAnimBuffer, ScrollTileRightLeft
+	dw NULL,  WaitTileAnimation
 	dw vTiles2 tile $4f, WriteTileFromBuffer
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
@@ -250,7 +252,6 @@ TilesetPlayersHouseAnim:
 TilesetPokecenterAnim:
 TilesetGateAnim:
 TilesetLabAnim:
-TilesetFacilityAnim:
 TilesetMartAnim:
 TilesetMansionAnim:
 TilesetGameCornerAnim:

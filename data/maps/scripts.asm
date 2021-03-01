@@ -245,6 +245,8 @@ INCLUDE "maps/BrunosRoom.asm"
 INCLUDE "maps/KarensRoom.asm"
 INCLUDE "maps/LancesRoom.asm"
 INCLUDE "maps/HallOfFame.asm"
+INCLUDE "maps/BurnedTower1F.asm"
+INCLUDE "maps/BurnedTowerB1F.asm"
 
 
 SECTION "Map Scripts 14", ROMX
@@ -262,8 +264,6 @@ INCLUDE "maps/TinTower6F.asm"
 INCLUDE "maps/TinTower7F.asm"
 INCLUDE "maps/TinTower8F.asm"
 INCLUDE "maps/TinTower9F.asm"
-INCLUDE "maps/BurnedTower1F.asm"
-INCLUDE "maps/BurnedTowerB1F.asm"
 INCLUDE "maps/RocketHideoutB1F.asm"
 INCLUDE "maps/RocketHideoutB2F.asm"
 INCLUDE "maps/RocketHideoutB3F.asm"

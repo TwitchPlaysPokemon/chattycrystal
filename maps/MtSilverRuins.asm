@@ -21,9 +21,9 @@ MtSilverRuins_MapScripts:
 	end
 
 MtSilverRuinsAbe:
+	special FadeOutMusic
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, MtSilverRuinsFaceRight
-	waitsfx
 	appear MTSILVERRUINFB1F_ABE
 	applymovement MTSILVERRUINFB1F_ABE, MtSilverRuinsAbeApprochMovement
 	opentext
@@ -46,11 +46,11 @@ MtSilverRuinsAbe:
 	end
 	
 MtSilverRuinsEvanDown:
-	moveobject MTSILVERRUINFB1F_EVAN, 17, 41
+	moveobject MTSILVERRUINFB1F_EVAN, 18, 41
 MtSilverRuinsEvanUp:
+	special FadeOutMusic
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, MtSilverRuinsFaceLeft
-	waitsfx
 	appear MTSILVERRUINFB1F_EVAN
 	applymovement MTSILVERRUINFB1F_EVAN, MtSilverRuinsRightApprochMovement
 	opentext
@@ -73,11 +73,11 @@ MtSilverRuinsEvanUp:
 	end
 	
 MtSilverRuinsKayDown:
-	moveobject MTSILVERRUINFB1F_KAY, 20, 30
+	moveobject MTSILVERRUINFB1F_KAY, 21, 30
 MtSilverRuinsKayUp:
+	special FadeOutMusic
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, MtSilverRuinsFaceLeft
-	waitsfx
 	appear MTSILVERRUINFB1F_KAY
 	applymovement MTSILVERRUINFB1F_KAY, MtSilverRuinsRightApprochMovement
 	opentext
@@ -106,8 +106,8 @@ MtSilverRuinsAzureRight:
 MtSilverRuinsAzureLeft:
 	applymovement PLAYER, MtSilverRuinsStepRightMovement
 MtSilverRuinsAzureMiddle:
+	special FadeOutMusic
 	applymovement PLAYER, MtSilverRuinsFaceDown
-	waitsfx
 	appear MTSILVERRUINFB1F_AZURE
 	applymovement MTSILVERRUINFB1F_AZURE, MtSilverRuinsUpApprochMovement
 	opentext
@@ -137,7 +137,7 @@ MtSilverRuinsAzureMiddle:
 	waitbutton
 	closetext
 	checkcaught PHANCERO
-	ifless 2, MtSilverRuinsStartCredits
+	ifequal 2, MtSilverRuinsStartCredits
 	applymovement MTSILVERRUINFB1F_AZURE, MtSilverRuinsWarpOutMovement
 	disappear MTSILVERRUINFB1F_AZURE
 	setscene SCENE_BEAT_AZURE
@@ -152,6 +152,7 @@ PhanceroFliesDown:
 Phancero:
 	disappear MTSILVERRUINFB1F_PHANCERO_STATUE
 	appear MTSILVERRUINFB1F_PHANCERO_ALIVE
+	setlasttalked MTSILVERRUINFB1F_PHANCERO_ALIVE
 	faceplayer
 PhanceroContinue:
 	opentext
@@ -162,7 +163,7 @@ PhanceroContinue:
 	loadwildmon PHANCERO, 95
 	startbattle
 	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	ifequal 2, PhanceroContinue
 	iffalse MtSilverRuinsStartCredits
 	disappear MTSILVERRUINFB1F_PHANCERO_ALIVE
@@ -202,13 +203,11 @@ MtSilverRuinsRightApprochMovement:
 	step RIGHT
 	step RIGHT
 	step RIGHT
-	step RIGHT
 MtSilverRuinsStepRightMovement:
 	step RIGHT
 	step_end
 	
 MtSilverRuinsUpApprochMovement:
-	step UP
 	step UP
 	step UP
 	step UP
@@ -286,9 +285,9 @@ MtSilverRuins_MapEvents:
 
 	; object events
 	db 6
-	object_event 17, 46, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
-	object_event 17, 40, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
-	object_event 20, 29, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
-	object_event 21, 10, SPRITE_AZURE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
-	object_event 21, 10, SPRITE_PHANCERO, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Phancero, -1
-	object_event 21, 10, SPRITE_PHANCERO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Phancero, EVENT_INITIALIZED_EVENTS
+	object_event 15, 46, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
+	object_event 18, 40, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
+	object_event 21, 29, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
+	object_event 21, 9, SPRITE_AZURE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
+	object_event 21, 2, SPRITE_PHANCERO, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_SILVER, OBJECTTYPE_SCRIPT, 0, Phancero, -1
+	object_event 21, 2, SPRITE_PHANCERO, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Phancero, EVENT_INITIALIZED_EVENTS

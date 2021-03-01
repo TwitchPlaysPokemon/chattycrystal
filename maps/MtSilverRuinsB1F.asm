@@ -92,7 +92,7 @@ MtSilverRuinsB1FDualHosts:
 	waitsfx
 	pause 30
 	appear MTSILVERRUINFB1F_BRACKETS
-	applymovement MTSILVERRUINFB1F_BRACKETS, MtSilverRuinsB1FLeftApprochMovement
+	applymovement MTSILVERRUINFB1F_BRACKETS, MtSilverRuinsB1FRightApprochMovement
 	opentext
 	writetext MtSilverRuinsB1FDotsText
 	waitbutton
@@ -108,7 +108,7 @@ MtSilverRuinsB1FDualHosts:
 	closetext
 	playsound SFX_ENTER_DOOR
 	appear MTSILVERRUINFB1F_XXWWNN
-	applymovement MTSILVERRUINFB1F_BRACKETS, MtSilverRuinsB1FXxwwnnApprochMovement
+	applymovement MTSILVERRUINFB1F_XXWWNN, MtSilverRuinsB1FXxwwnnApprochMovement
 	opentext
 	writetext MtSilverRuinsB1FDotsText
 	waitbutton
@@ -176,6 +176,13 @@ MtSilverRuinsB1FLeftApprochMovement:
 	step LEFT
 	step LEFT
 	step LEFT
+	step_end
+	
+MtSilverRuinsB1FRightApprochMovement:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
 	step_end
 	
 MtSilverRuinsB1FXmanApprochMovement:
@@ -256,6 +263,6 @@ MtSilverRuinsB1F_MapEvents:
 	db 5
 	object_event 25, 28, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
 	object_event 14, 18, SPRITE_ROBORED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
-	object_event  9, 12, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
+	object_event 10, 12, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
 	object_event 17, 11, SPRITE_GREEN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
 	object_event 28, 7, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS

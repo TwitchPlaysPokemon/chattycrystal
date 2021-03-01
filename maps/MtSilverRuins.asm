@@ -129,6 +129,8 @@ MtSilverRuinsAzureMiddle:
 	writetext MtSilverRuinsDotsText
 	waitbutton
 	closetext
+	checkcaught PHANCERO
+	ifequal 2, MtSilverRuinsStartCredits
 	special HealParty
 	playsound SFX_POTION
 	waitsfx
@@ -136,8 +138,6 @@ MtSilverRuinsAzureMiddle:
 	writetext MtSilverRuinsDotsText
 	waitbutton
 	closetext
-	checkcaught PHANCERO
-	ifequal 2, MtSilverRuinsStartCredits
 	applymovement MTSILVERRUINFB1F_AZURE, MtSilverRuinsWarpOutMovement
 	disappear MTSILVERRUINFB1F_AZURE
 	setscene SCENE_BEAT_AZURE

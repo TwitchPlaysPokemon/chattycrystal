@@ -273,7 +273,11 @@ TrickHouseEntrance_HidingSpot_6:
 	writetext TrickHouseEntrance_HidingSpot_6_Text
 TrickHouseEntrance_DoTrickMasterReveal:
 	closetext
-	; TODO: close text, warp, show Trick Master, etc.
+	special FadeOutPalettes
+	callasm TrickHouseEntrance_CalculateMovement
+	applymovement PLAYER, wStringBuffer1
+	special FadeInPalettes
+	; TODO: show Trick Master, etc.
 	clearevent TRICKHOUSEEVENT_PUZZLE_READY
 	setevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
 TrickHouseEntrance_End:
@@ -288,6 +292,61 @@ TrickHouseEntrance_HidingSpot_6_Text:
 	line "cushion?"
 	cont "You're sharp!"
 	prompt
+
+TrickHouseEntrance_CalculateMovement:
+	; generates a movement script that will land you in (6, 1) and writes it to wStringBuffer1
+	ld hl, wYCoord
+	ld a, [hli]
+	ld b, [hl]
+	ld hl, wStringBuffer1
+	and a
+	jr nz, .not_down
+	ld a, movement_fast_slide_step | DOWN
+	ld [hli], a
+	jr .handled_vertical
+
+.not_down
+	dec a
+	jr z, .handled_vertical
+	ld c, a
+	ld a, movement_fast_slide_step | UP
+.up
+	ld [hli], a
+	dec c
+	jr nz, .up
+.handled_vertical
+
+	ld a, b
+	sub 6
+	ld b, a
+	ld a, movement_fast_slide_step | RIGHT
+	jr c, .right
+	jr z, .done
+	assert LEFT == (RIGHT - 1)
+	dec a
+.left
+	ld [hli], a
+	dec b
+	jr nz, .left
+	jr .done
+
+.right
+	ld [hli], a
+	inc b
+	jr nz, .right
+
+.done
+	ld [hl], movement_step_end
+	; delay to complete 60 frames, so the movement isn't visible to the player
+	ld a, LOW(wStringBuffer1 + 15)
+	sub l
+	ret z
+	cp 16
+	ret nc ; overflow
+	add a, a
+	add a, a
+	ld c, a
+	jp DelayFrames
 
 TrickHouseEntrance_MapEvents:
 	db 0, 0 ; filler

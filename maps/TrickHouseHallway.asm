@@ -52,3 +52,48 @@ TrickHouse_FoundPuzzleScroll:
 	text "A secret code is"
 	line "written on it."
 	done
+
+TrickHouse_Door:
+	; returns with text open if the door unlocks!
+	checkevent EVENT_TRICK_HOUSE_DOOR_OPEN
+	iftrue .nothing
+	playsound SFX_READ_TEXT_2
+	waitsfx
+	checkevent EVENT_TRICK_HOUSE_FOUND_PUZZLE_SCROLL
+	iffalse .locked
+	setevent EVENT_TRICK_HOUSE_DOOR_OPEN
+	opentext
+	writetext .unlock_text
+	end
+
+.nothing
+	setval FALSE
+	end
+
+.locked
+	jumptext .locked_text
+
+.locked_text
+	text "The door is"
+	line "locked."
+
+	para "<...>On closer"
+	line "inspection, this"
+	cont "is written on it:"
+
+	para "Write the secret"
+	line "code here."
+	done
+
+.unlock_text
+	text "<PLAYER> wrote down"
+	line "the secret code on"
+	cont "the door:"
+	prompt
+
+TrickHouse_DoorUnlockText:
+	text "<...> <...> <...> <...> <...> <...>"
+
+	para "The lock clicked"
+	line "open!"
+	done

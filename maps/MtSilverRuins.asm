@@ -1,10 +1,10 @@
 	object_const_def ; object_event constants
-	const MTSILVERRUINFB1F_ABE
-	const MTSILVERRUINFB1F_EVAN
-	const MTSILVERRUINFB1F_KAY
-	const MTSILVERRUINFB1F_AZURE
-	const MTSILVERRUINFB1F_PHANCERO_STATUE
-	const MTSILVERRUINFB1F_PHANCERO_ALIVE
+	const MTSILVERRUINSB1F_ABE
+	const MTSILVERRUINSB1F_EVAN
+	const MTSILVERRUINSB1F_KAY
+	const MTSILVERRUINSB1F_AZURE
+	const MTSILVERRUINSB1F_PHANCERO_STATUE
+	const MTSILVERRUINSB1F_PHANCERO_ALIVE
 
 MtSilverRuins_MapScripts:
 	db 5 ; scene scripts
@@ -24,8 +24,8 @@ MtSilverRuinsAbe:
 	special FadeOutMusic
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, MtSilverRuinsFaceRight
-	appear MTSILVERRUINFB1F_ABE
-	applymovement MTSILVERRUINFB1F_ABE, MtSilverRuinsAbeApprochMovement
+	appear MTSILVERRUINSB1F_ABE
+	applymovement MTSILVERRUINSB1F_ABE, MtSilverRuinsAbeApprochMovement
 	opentext
 	writetext MtSilverRuinsDotsText
 	waitbutton
@@ -39,20 +39,20 @@ MtSilverRuinsAbe:
 	writetext MtSilverRuinsDotsText
 	waitbutton
 	closetext
-	applymovement MTSILVERRUINFB1F_ABE, MtSilverRuinsWarpOutMovement
-	disappear MTSILVERRUINFB1F_ABE
+	applymovement MTSILVERRUINSB1F_ABE, MtSilverRuinsWarpOutMovement
+	disappear MTSILVERRUINSB1F_ABE
 	setscene SCENE_BEAT_ABE
 	playmapmusic
 	end
 	
 MtSilverRuinsEvanDown:
-	moveobject MTSILVERRUINFB1F_EVAN, 18, 41
+	moveobject MTSILVERRUINSB1F_EVAN, 18, 41
 MtSilverRuinsEvanUp:
 	special FadeOutMusic
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, MtSilverRuinsFaceLeft
-	appear MTSILVERRUINFB1F_EVAN
-	applymovement MTSILVERRUINFB1F_EVAN, MtSilverRuinsRightApprochMovement
+	appear MTSILVERRUINSB1F_EVAN
+	applymovement MTSILVERRUINSB1F_EVAN, MtSilverRuinsRightApprochMovement
 	opentext
 	writetext MtSilverRuinsDotsText
 	waitbutton
@@ -66,20 +66,20 @@ MtSilverRuinsEvanUp:
 	writetext MtSilverRuinsDotsText
 	waitbutton
 	closetext
-	applymovement MTSILVERRUINFB1F_EVAN, MtSilverRuinsWarpOutMovement
-	disappear MTSILVERRUINFB1F_EVAN
+	applymovement MTSILVERRUINSB1F_EVAN, MtSilverRuinsWarpOutMovement
+	disappear MTSILVERRUINSB1F_EVAN
 	setscene SCENE_BEAT_EVAN
 	playmapmusic
 	end
 	
 MtSilverRuinsKayDown:
-	moveobject MTSILVERRUINFB1F_KAY, 21, 30
+	moveobject MTSILVERRUINSB1F_KAY, 21, 30
 MtSilverRuinsKayUp:
 	special FadeOutMusic
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, MtSilverRuinsFaceLeft
-	appear MTSILVERRUINFB1F_KAY
-	applymovement MTSILVERRUINFB1F_KAY, MtSilverRuinsRightApprochMovement
+	appear MTSILVERRUINSB1F_KAY
+	applymovement MTSILVERRUINSB1F_KAY, MtSilverRuinsRightApprochMovement
 	opentext
 	writetext MtSilverRuinsDotsText
 	waitbutton
@@ -93,8 +93,8 @@ MtSilverRuinsKayUp:
 	writetext MtSilverRuinsDotsText
 	waitbutton
 	closetext
-	applymovement MTSILVERRUINFB1F_KAY, MtSilverRuinsWarpOutMovement
-	disappear MTSILVERRUINFB1F_KAY
+	applymovement MTSILVERRUINSB1F_KAY, MtSilverRuinsWarpOutMovement
+	disappear MTSILVERRUINSB1F_KAY
 	setscene SCENE_BEAT_KAY
 	playmapmusic
 	end
@@ -108,13 +108,13 @@ MtSilverRuinsAzureLeft:
 MtSilverRuinsAzureMiddle:
 	special FadeOutMusic
 	applymovement PLAYER, MtSilverRuinsFaceDown
-	appear MTSILVERRUINFB1F_AZURE
-	applymovement MTSILVERRUINFB1F_AZURE, MtSilverRuinsUpApprochMovement
+	appear MTSILVERRUINSB1F_AZURE
+	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsUpApprochMovement
 	opentext
 	writetext MtSilverRuinsDotsText
 	waitbutton
 	closetext
-	applymovement MTSILVERRUINFB1F_AZURE, MtSilverRuinsAzureMovesToArena
+	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsAzureMovesToArena
 	applymovement PLAYER, MtSilverRuinsPlayerMovesToArena
 	opentext
 	writetext MtSilverRuinsDotsText
@@ -138,22 +138,22 @@ MtSilverRuinsAzureMiddle:
 	writetext MtSilverRuinsDotsText
 	waitbutton
 	closetext
-	applymovement MTSILVERRUINFB1F_AZURE, MtSilverRuinsWarpOutMovement
-	disappear MTSILVERRUINFB1F_AZURE
+	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsWarpOutMovement
+	disappear MTSILVERRUINSB1F_AZURE
 	setscene SCENE_BEAT_AZURE
 	end
 	
 PhanceroFliesDown:
-	disappear MTSILVERRUINFB1F_PHANCERO_STATUE
-	appear MTSILVERRUINFB1F_PHANCERO_ALIVE
-	applymovement MTSILVERRUINFB1F_PHANCERO_ALIVE, MtSilverRuinsStepDown
+	disappear MTSILVERRUINSB1F_PHANCERO_STATUE
+	appear MTSILVERRUINSB1F_PHANCERO_ALIVE
+	applymovement MTSILVERRUINSB1F_PHANCERO_ALIVE, MtSilverRuinsStepDown
 	sjump PhanceroContinue
 	
 Phancero:
-	disappear MTSILVERRUINFB1F_PHANCERO_STATUE
-	appear MTSILVERRUINFB1F_PHANCERO_ALIVE
+	disappear MTSILVERRUINSB1F_PHANCERO_STATUE
+	appear MTSILVERRUINSB1F_PHANCERO_ALIVE
 	;applymovement PLAYER, MtSilverRuinsShowObject
-	;setlasttalked MTSILVERRUINFB1F_PHANCERO_ALIVE
+	;setlasttalked MTSILVERRUINSB1F_PHANCERO_ALIVE
 	;faceplayer
 PhanceroContinue:
 	opentext
@@ -167,7 +167,7 @@ PhanceroContinue:
 	reloadmapafterbattle
 	ifequal 2, PhanceroContinue
 	iffalse MtSilverRuinsStartCredits
-	disappear MTSILVERRUINFB1F_PHANCERO_ALIVE
+	disappear MTSILVERRUINSB1F_PHANCERO_ALIVE
 	opentext
 	writetext PhanceroFledText
 	waitbutton

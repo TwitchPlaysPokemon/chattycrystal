@@ -152,9 +152,9 @@ PhanceroFliesDown:
 Phancero:
 	disappear MTSILVERRUINFB1F_PHANCERO_STATUE
 	appear MTSILVERRUINFB1F_PHANCERO_ALIVE
-	applymovement PLAYER, MtSilverRuinsShowObject
-	setlasttalked MTSILVERRUINFB1F_PHANCERO_ALIVE
-	faceplayer
+	;applymovement PLAYER, MtSilverRuinsShowObject
+	;setlasttalked MTSILVERRUINFB1F_PHANCERO_ALIVE
+	;faceplayer
 PhanceroContinue:
 	opentext
 	writetext PhanceroText

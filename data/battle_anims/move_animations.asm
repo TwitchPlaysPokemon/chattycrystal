@@ -330,7 +330,7 @@ MoveAnimations:
 	dw BattleAnim_SweetScent   ; 148, PLACEHOLDER
 	dw BattleAnim_DarkVoid
 	dw BattleAnim_HoneClaws
-	dw BattleAnim_PsychicM     ; PLACEHOLDER
+	dw BattleAnim_Psyshock
 	dw BattleAnim_Growth       ; PLACEHOLDER
 	dw BattleAnim_Pursuit      ; PLACEHOLDER
 	dw BattleAnim_EchoedVoice
@@ -3454,24 +3454,55 @@ BattleAnim_DarkVoid:
 BattleAnim_HoneClaws:
 	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_SHINE
 .loop
-    anim_sound 0, 1, SFX_SCRATCH
-    anim_obj ANIM_OBJ_HONE_CLAWS_R, 80, 92, $1
-    anim_obj ANIM_OBJ_HONE_CLAWS_R, 76, 88, $1
-    anim_obj ANIM_OBJ_HONE_CLAWS_R, 72, 84, $1
-    anim_wait 16
-    anim_sound 0, 1, SFX_SCRATCH
-    anim_obj ANIM_OBJ_HONE_CLAWS_L, 28, 92, $1
-    anim_obj ANIM_OBJ_HONE_CLAWS_L, 32, 88, $1
-    anim_obj ANIM_OBJ_HONE_CLAWS_L, 36, 84, $1
-    anim_wait 32
-    anim_loop 3, .loop
-    anim_sound 0, 1, SFX_SHINE
-    anim_obj ANIM_OBJ_GLIMMER, 76, 88, $0
-    anim_wait 16
-    anim_sound 0, 1, SFX_SHINE
-    anim_obj ANIM_OBJ_GLIMMER, 32, 88, $0
-    anim_wait 24
-    anim_ret
+	anim_sound 0, 1, SFX_SCRATCH
+	anim_obj ANIM_OBJ_HONE_CLAWS_R, 80, 92, $1
+	anim_obj ANIM_OBJ_HONE_CLAWS_R, 76, 88, $1
+	anim_obj ANIM_OBJ_HONE_CLAWS_R, 72, 84, $1
+	anim_wait 16
+	anim_sound 0, 1, SFX_SCRATCH
+	anim_obj ANIM_OBJ_HONE_CLAWS_L, 28, 92, $1
+	anim_obj ANIM_OBJ_HONE_CLAWS_L, 32, 88, $1
+	anim_obj ANIM_OBJ_HONE_CLAWS_L, 36, 84, $1
+	anim_wait 32
+	anim_loop 3, .loop
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_GLIMMER, 76, 88, $0
+	anim_wait 16
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_GLIMMER, 32, 88, $0
+	anim_wait 24
+	anim_ret
+	
+BattleAnim_Psyshock:
+	anim_2gfx ANIM_GFX_SHINE, ANIM_GFX_CHARGE 	
+	anim_call BattleAnim_UserObj_1Row
+	anim_sound 0, 0, SFX_RAGE
+	anim_obj ANIM_OBJ_GLIMMER, 44, 96, $0
+	anim_wait 32
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_sound 0, 1, SFX_PSYCHIC
+	anim_bgeffect ANIM_BG_TELEPORT, $0, $0, $0
+.loop
+	anim_obj ANIM_OBJ_PSYSHOCK, 136, 56, $38
+	anim_wait 4
+	anim_obj ANIM_OBJ_PSYSHOCK, 136, 56, $20
+	anim_wait 4
+	anim_obj ANIM_OBJ_PSYSHOCK, 136, 56, $8
+	anim_wait 4
+	anim_obj ANIM_OBJ_PSYSHOCK, 136, 56, $10
+	anim_wait 4
+	anim_obj ANIM_OBJ_PSYSHOCK, 136, 56, $28
+	anim_wait 4
+	anim_obj ANIM_OBJ_PSYSHOCK, 136, 56, $0
+	anim_wait 4
+	anim_obj ANIM_OBJ_PSYSHOCK, 136, 56, $18
+	anim_wait 4
+	anim_obj ANIM_OBJ_PSYSHOCK, 136, 56, $30
+	anim_wait 4
+	anim_loop 2, .loop
+	anim_wait 32
+	anim_incbgeffect ANIM_BG_TELEPORT
+	anim_jump BattleAnim_ShowMon_1
 	
 BattleAnim_EchoedVoice:
 	anim_2gfx ANIM_GFX_PSYCHIC, ANIM_GFX_NOISE

@@ -275,6 +275,8 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_NEEDLE_ARM_W
 	const ANIM_OBJ_NEEDLE_ARM_NW
 	const ANIM_OBJ_ECHOED_VOICE
+	const ANIM_OBJ_HONE_CLAWS_R
+	const ANIM_OBJ_HONE_CLAWS_L
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def

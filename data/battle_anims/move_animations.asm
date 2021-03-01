@@ -329,7 +329,7 @@ MoveAnimations:
 	dw BattleAnim_Waterfall    ; PLACEHOLDER
 	dw BattleAnim_SweetScent   ; 148, PLACEHOLDER
 	dw BattleAnim_DarkVoid
-	dw BattleAnim_Sharpen      ; PLACEHOLDER
+	dw BattleAnim_HoneClaws
 	dw BattleAnim_PsychicM     ; PLACEHOLDER
 	dw BattleAnim_Growth       ; PLACEHOLDER
 	dw BattleAnim_Pursuit      ; PLACEHOLDER
@@ -3450,6 +3450,28 @@ BattleAnim_DarkVoid:
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
+	
+BattleAnim_HoneClaws:
+	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_SHINE
+.loop
+    anim_sound 0, 1, SFX_SCRATCH
+    anim_obj ANIM_OBJ_HONE_CLAWS_R, 80, 92, $1
+    anim_obj ANIM_OBJ_HONE_CLAWS_R, 76, 88, $1
+    anim_obj ANIM_OBJ_HONE_CLAWS_R, 72, 84, $1
+    anim_wait 16
+    anim_sound 0, 1, SFX_SCRATCH
+    anim_obj ANIM_OBJ_HONE_CLAWS_L, 28, 92, $1
+    anim_obj ANIM_OBJ_HONE_CLAWS_L, 32, 88, $1
+    anim_obj ANIM_OBJ_HONE_CLAWS_L, 36, 84, $1
+    anim_wait 32
+    anim_loop 3, .loop
+    anim_sound 0, 1, SFX_SHINE
+    anim_obj ANIM_OBJ_GLIMMER, 76, 88, $0
+    anim_wait 16
+    anim_sound 0, 1, SFX_SHINE
+    anim_obj ANIM_OBJ_GLIMMER, 32, 88, $0
+    anim_wait 24
+    anim_ret
 	
 BattleAnim_EchoedVoice:
 	anim_2gfx ANIM_GFX_PSYCHIC, ANIM_GFX_NOISE

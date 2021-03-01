@@ -293,7 +293,7 @@ MoveAnimations:
 	dw BattleAnim_Recover      ; PLACEHOLDER
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_Waterfall    ; PLACEHOLDER
-	dw BattleAnim_MegaPunch    ; PLACEHOLDER
+	dw BattleAnim_CloseCombat
 	dw BattleAnim_Pursuit      ; PLACEHOLDER
 	dw BattleAnim_Headbutt     ; 128, PLACEHOLDER
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
@@ -310,7 +310,7 @@ MoveAnimations:
 	dw BattleAnim_WingAttack   ; PLACEHOLDER
 	dw BattleAnim_Earthquake   ; PLACEHOLDER
 	dw BattleAnim_PsychUp      ; PLACEHOLDER
-	dw BattleAnim_MachPunch    ; PLACEHOLDER
+	dw BattleAnim_BulletPunch
 	dw BattleAnim_PowderSnow   ; 138, PLACEHOLDER
 	dw BattleAnim_FireFang
 	dw BattleAnim_QuickAttack  ; PLACEHOLDER
@@ -3399,6 +3399,50 @@ BattleAnim_Roost:
 	anim_obj ANIM_OBJ_GLIMMER, 56, 104, $0
 	anim_wait 21
 	anim_ret
+	
+BattleAnim_CloseCombat:
+	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_AGILITY, 8, 24, $10
+	anim_obj ANIM_OBJ_AGILITY, 8, 48, $2
+	anim_obj ANIM_OBJ_AGILITY, 8, 88, $8
+	anim_wait 4
+	anim_obj ANIM_OBJ_AGILITY, 8, 32, $6
+	anim_obj ANIM_OBJ_AGILITY, 8, 56, $c
+	anim_obj ANIM_OBJ_AGILITY, 8, 80, $4
+	anim_obj ANIM_OBJ_AGILITY, 8, 104, $e
+	anim_wait 12
+	anim_bgeffect ANIM_BG_1F, $60, $2, $0
+	anim_bgp $90
+.loop
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_06, 148, 56, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_01, 148, 56, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_06, 122, 34, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_01, 122, 34, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_06, 132, 64, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_01, 132, 64, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_06, 140, 42, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_01, 140, 42, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_06, 114, 52, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_01, 114, 52, $0
+	anim_wait 2    
+	anim_loop 4, .loop
+	anim_wait 16
+	anim_ret
 
 BattleAnim_DragonPulse:
 	anim_1gfx ANIM_GFX_CHARGE
@@ -3426,6 +3470,33 @@ BattleAnim_MuddyWater:
 	anim_loop 4, .loop
 	anim_incobj 1
 	anim_wait 56
+	anim_ret
+	
+BattleAnim_BulletPunch:
+	anim_1gfx ANIM_GFX_HIT
+	anim_call BattleAnim_UserObj_1Row
+	anim_resetobp0
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
+	anim_obj ANIM_OBJ_BULLET_PUNCH, 140, 44, $0
+	anim_sound 0, 1, SFX_TACKLE
+	anim_wait 3
+	anim_obj ANIM_OBJ_BULLET_PUNCH, 112, 46, $0
+	anim_sound 0, 1, SFX_TACKLE
+	anim_wait 3
+	anim_obj ANIM_OBJ_BULLET_PUNCH, 148, 60, $0
+	anim_sound 0, 1, SFX_TACKLE
+	anim_wait 3
+	anim_obj ANIM_OBJ_BULLET_PUNCH, 120, 30, $0
+	anim_sound 0, 1, SFX_TACKLE
+	anim_wait 3
+	anim_obj ANIM_OBJ_BULLET_PUNCH, 116, 64, $0
+	anim_sound 0, 1, SFX_TACKLE
+	anim_wait 3
+	anim_obj ANIM_OBJ_BULLET_PUNCH, 132, 68, $0
+	anim_sound 0, 1, SFX_TACKLE
+	anim_wait 3
+	anim_wait 32
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
 	
 BattleAnim_FireFang:

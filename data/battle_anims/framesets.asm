@@ -1415,5 +1415,12 @@ BattleAnimFrameData:
 	delanim	
 	
 .Frameset_d2:
-	frame BATTLEANIMOAMSET_E7,  8
-	endanim
+	frame BATTLEANIMOAMSET_E7,  4
+	frame BATTLEANIMOAMSET_02,  1
+	frame BATTLEANIMOAMSET_E7,  4
+	frame BATTLEANIMOAMSET_02,  1
+	frame BATTLEANIMOAMSET_E7,  4
+	frame BATTLEANIMOAMSET_02,  1
+	frame BATTLEANIMOAMSET_E7,  4
+	frame BATTLEANIMOAMSET_02,  1
+	delanim	

@@ -333,6 +333,7 @@ TrickHouseEntrance_DoTrickMasterReveal:
 	applymovement PLAYER, wStringBuffer1
 	appear TRICKHOUSEENTRANCE_TRICK_MASTER
 	faceobject TRICKHOUSEENTRANCE_TRICK_MASTER, PLAYER
+	turnobject PLAYER, LEFT
 	callasm FadeFromBlack
 	pause 3
 	opentext

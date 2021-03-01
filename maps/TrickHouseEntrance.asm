@@ -347,7 +347,7 @@ TrickHouseEntrance_DoTrickMasterReveal:
 	closetext
 	pause 10
 	playsound SFX_WARP_TO
-	applymovement TRICKHOUSEENTRANCE_TRICK_MASTER, TrickHouseEntrance_DisappearingMovement
+	applymovement TRICKHOUSEENTRANCE_TRICK_MASTER, TrickHouse_DisappearingMovement
 	disappear TRICKHOUSEENTRANCE_TRICK_MASTER
 	clearevent TRICKHOUSEEVENT_PUZZLE_READY
 	setevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
@@ -402,7 +402,7 @@ TrickHouseEntrance_TrickMasterChallengeText:
 	line "in the back!"
 	done
 
-TrickHouseEntrance_DisappearingMovement:
+TrickHouse_DisappearingMovement:
 	teleport_from
 	step_end
 

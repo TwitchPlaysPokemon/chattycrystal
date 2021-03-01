@@ -328,12 +328,12 @@ TrickHouseEntrance_HidingSpot_6:
 	writetext TrickHouseEntrance_HidingSpot_6_Text
 TrickHouseEntrance_DoTrickMasterReveal:
 	closetext
-	special FadeOutPalettes
+	callasm FadeToBlack
 	callasm TrickHouseEntrance_CalculateMovement
 	applymovement PLAYER, wStringBuffer1
 	appear TRICKHOUSEENTRANCE_TRICK_MASTER
 	faceobject TRICKHOUSEENTRANCE_TRICK_MASTER, PLAYER
-	special FadeInPalettes
+	callasm FadeFromBlack
 	pause 3
 	opentext
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1

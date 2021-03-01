@@ -97,7 +97,106 @@ TrickHouseExit_TrickMaster:
 	; fallthrough
 
 TrickHouseExit_Finished_6:
-	; ...
+	writetext .after_puzzle_text
+	waitbutton
+	closetext
+	pause 5
+	scall .face_away
+	opentext
+	writetext .defeated_text
+	waitbutton
+	closetext
+	pause 5
+	faceobject TRICKHOUSEEXIT_TRICK_MASTER, PLAYER
+	opentext
+	writetext .reward_text
+	waitbutton
+	closetext
+	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_6
+	; TODO: reward
+	jumptext .leaving_text
+
+.after_puzzle_text
+	text "It took me all"
+	line "night polishing"
+	cont "floors<...>"
+
+	para "You're above me in"
+	line "greatness!"
+	cont "Possibly<...>"
+	prompt
+
+.defeated_text
+	text "Wh-what should I"
+	line "do? My fountain of"
+	para "ideas for tricks"
+	line "has run dry<...>"
+
+	para "Perhaps it is time"
+	line "I toured the"
+	para "country on a quest"
+	line "to devise new"
+	cont "tricks<...>"
+	done
+
+.reward_text
+	text "I hate to admit"
+	line "defeat, but you"
+	cont "have bested me!"
+
+	para "Still, you must"
+	line "have been reeled"
+	para "in by my charisma"
+	line "for you to visit"
+	para "me again and"
+	line "again. Yes, you"
+	cont "must have!"
+
+	para "But that has"
+	line "nothing to do with"
+	cont "my losing!"
+
+	para "In recognition of"
+	line "the friendship"
+	para "between you, the"
+	line "driven, and the"
+	para "genius that is"
+	line "myself, I demand"
+	para "that you take this"
+	line "keepsake!"
+	done
+
+.leaving_text
+	text "<...> <...> <...> <...> <...> <...>"
+
+	para "I am leaving on a"
+	line "journey of"
+	para "discovery. A quest"
+	line "in search of new"
+	cont "tricks."
+
+	para "I wish that you"
+	line "will one day visit"
+	para "and entertain me"
+	line "again."
+
+	para "And now, farewell!"
+	done
+
+.face_away
+	readvar VAR_FACING
+	assert !DOWN
+	iffalse .face_up
+	ifequal UP, .face_down
+	turnobject TRICKHOUSEEXIT_TRICK_MASTER, RIGHT
+	end
+
+.face_up
+	turnobject TRICKHOUSEEXIT_TRICK_MASTER, UP
+	end
+
+.face_down
+	turnobject TRICKHOUSEEXIT_TRICK_MASTER, DOWN
 	end
 
 TrickHouseExit_Finished_5:

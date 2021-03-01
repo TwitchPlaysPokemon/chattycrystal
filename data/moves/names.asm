@@ -363,3 +363,4 @@ MoveNames::
 	db "DARK PULSE@"
 	db "ROCK BLAST@"
 	db "BRICK BREAK@"
+	db "HEAT_WAVE@"

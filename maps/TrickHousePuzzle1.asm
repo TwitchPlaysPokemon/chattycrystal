@@ -2,7 +2,7 @@ TrickHousePuzzle1_MapScripts:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
-	callback MAPCALLBACK_NEWMAP, .check_door
+	callback MAPCALLBACK_TILES, .check_door
 
 .check_door
 	checkevent EVENT_TRICK_HOUSE_DOOR_OPEN

@@ -408,6 +408,10 @@ GetDecorationData:
 	ld bc, 6
 	jp AddNTimes
 
+FarDecorationName:
+	ld h, d
+	ld l, e
+	ld a, c
 GetDecorationName:
 	push hl
 	call GetDecorationData

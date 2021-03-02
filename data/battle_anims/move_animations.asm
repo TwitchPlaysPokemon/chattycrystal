@@ -344,7 +344,7 @@ MoveAnimations:
 	dw BattleAnim_BlueFlare
 	dw BattleAnim_FreezeDry
 	dw BattleAnim_DrainingKiss ; 158
-	dw BattleAnim_Submission   ; PLACEHOLDER
+	dw BattleAnim_PlayRough
 	dw BattleAnim_MoonBlast
 	dw BattleAnim_DazzlingGleam
 	dw BattleAnim_Nuzzle
@@ -4007,6 +4007,52 @@ BattleAnim_DrainingKiss:
 	anim_wait 32
 	anim_bgeffect ANIM_BG_07, $0, $0, $0
 	anim_jump BattleAnim_DrainingKiss_branch_cbc6a
+	
+BattleAnim_PlayRough:
+	anim_1gfx ANIM_GFX_SPEED
+	anim_sound 6, 2, SFX_THROW_BALL
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 24, 88, $2
+	anim_obj ANIM_OBJ_SPEED_LINE, 32, 88, $1
+	anim_obj ANIM_OBJ_SPEED_LINE, 40, 88, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 48, 88, $80
+	anim_obj ANIM_OBJ_SPEED_LINE, 56, 88, $81
+	anim_obj ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_wait 12
+	anim_3gfx ANIM_GFX_STARS, ANIM_GFX_HIT, ANIM_GFX_HEARTS
+	anim_bgeffect ANIM_BG_1F, $55, $2, $0
+.loop
+	anim_sound 0, 1, SFX_BONE_CLUB
+	anim_obj ANIM_OBJ_STAR_BURST, 128, 48, $28
+	anim_obj ANIM_OBJ_01, 128, 48, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_HEART_BURST, 144, 64, $5c
+	anim_wait 3
+	anim_obj ANIM_OBJ_STAR_BURST, 144, 64, $10
+	anim_obj ANIM_OBJ_01, 144, 64, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_DOUBLESLAP
+	anim_obj ANIM_OBJ_HEART_BURST, 120, 52, $e8
+	anim_wait 3
+	anim_obj ANIM_OBJ_STAR_BURST, 120, 52, $9c
+	anim_obj ANIM_OBJ_01, 120, 52, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_STAR_BURST, 152, 48, $d0
+	anim_wait 3
+	anim_sound 6, 2, SFX_SLUDGE_BOMB
+	anim_obj ANIM_OBJ_HEART_BURST, 152, 48, $1c
+	anim_obj ANIM_OBJ_01, 152, 48, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_STAR_BURST, 136, 56, $50
+	anim_wait 3
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_HEART_BURST, 136, 56, $dc
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_STAR_BURST, 128, 48, $90
+	anim_loop 2, .loop
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
 
 BattleAnim_MoonBlast:
 	anim_3gfx ANIM_GFX_MOON, ANIM_GFX_SHINE, ANIM_GFX_CHARGE

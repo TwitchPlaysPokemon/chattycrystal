@@ -55,3 +55,4 @@ AnimObjGFX:
 	anim_obj_gfx 16, AnimObjMoonGFX
 	anim_obj_gfx 32, AnimObjS_RollerGFX
 	anim_obj_gfx 16, AnimObjHornLeechGFX
+	anim_obj_gfx  5, AnimObjHeartsGFX

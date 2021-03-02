@@ -4179,8 +4179,6 @@ PowerGemFunction3:
     ret nc
     ld a, $8
     jp BattleAnim_StepToTarget
-    call Functionce70a
-    ret
 
 .asm_ce35b
     call DeinitBattleAnimation

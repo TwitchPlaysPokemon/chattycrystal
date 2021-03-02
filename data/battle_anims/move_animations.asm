@@ -346,7 +346,7 @@ MoveAnimations:
 	dw BattleAnim_DrainingKiss ; 158
 	dw BattleAnim_PlayRough
 	dw BattleAnim_MoonBlast
-	dw BattleAnim_MorningSun   ; PLACEHOLDER
+	dw BattleAnim_DazzlingGleam
 	dw BattleAnim_Nuzzle
 	dw BattleAnim_IceHammer
 	dw BattleAnim_PollenPuff

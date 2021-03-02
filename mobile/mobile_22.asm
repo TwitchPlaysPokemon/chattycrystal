@@ -2158,6 +2158,7 @@ Function89dab:
 	ret
 
 Function89de0:
+	; unreferenced
 	call ClearSprites
 	call Function89e0a
 	jr c, .asm_89e00

@@ -3488,9 +3488,7 @@ BattleAnim_PowerGem:
 	anim_wait 2
 	anim_sound 0, 1, SFX_SHINE
 	anim_incobj  3
-	anim_wait 2
-	anim_incobj  10
-	anim_wait 2
+	anim_wait 4
 	anim_sound 0, 1, SFX_SHINE
 	anim_incobj  8
 	anim_wait 2
@@ -3504,7 +3502,6 @@ BattleAnim_PowerGem:
 	anim_sound 0, 1, SFX_SHINE
 	anim_incobj  7
 	anim_wait 2
-	anim_incobj  9
 	anim_wait 32
 	anim_ret
 

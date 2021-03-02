@@ -67,7 +67,7 @@ SilphCo7F_MapEvents:
 	warp_event 19,  0, SILPH_CO_6F, 2
 
 	db 1 ; coord events
-	coord_event 19,  1, -1, SilphCo7F_CheckForHeal
+	coord_event 19,  1, SCENE_ALWAYS, SilphCo7F_CheckForHeal
 
 	db 0 ; bg events
 

@@ -94,7 +94,7 @@ SilphCo11F_MapEvents:
 	warp_event 19,  1, SILPH_CO_10F, 2
 
 	db 1 ; coord events
-	coord_event 19,  2, -1, SilphCo11F_CheckForHeal
+	coord_event 19,  2, SCENE_ALWAYS, SilphCo11F_CheckForHeal
 
 	db 3 ; bg events
 	bg_event  7, 3, BGEVENT_UP, SilphCoTelescope1

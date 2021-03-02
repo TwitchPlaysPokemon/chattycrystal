@@ -23,8 +23,13 @@ MtBattleBeatBtlMaster:
 	end
 
 MtBattleMasterBall:
-	verbosegiveitem2 MASTER_BALL, 5
-	iftrue MtBattleGotReward
+	opentext
+	verbosegiveitemvar MASTER_BALL, 5
+	iffalse .BagFull
+	closetext
+	sjump MtBattleGotReward
+
+.BagFull
 	opentext
 	writetext MtBattleBagFullText
 	closetext
@@ -84,12 +89,12 @@ SilphCoRoof_MapEvents:
 	db 0 ; bg events
 	bg_event 13, 3, BGEVENT_RIGHT, SilphCoBinoculars3
 	bg_event 13, 9, BGEVENT_RIGHT, SilphCoBinoculars3
-	bg_event 13, 12, BGEVENT_RIGHT, SilphCoBinoculars4
-	bg_event 19, 12, BGEVENT_RIGHT, SilphCoBinoculars4
+	bg_event 13, 14, BGEVENT_RIGHT, SilphCoBinoculars4
+	bg_event 19, 14, BGEVENT_RIGHT, SilphCoBinoculars4
 
 	db 4 ; object events
 	object_event  8,  4, SPRITE_CAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, MtBattleTrainer100, -1
 	object_event  7,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtBattleMasterBall, -1
-	object_event 10,  0, SPRITE_RAIKOU, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_BATTLE_HIDE_RAIKOU
-	object_event 12,  3, SPRITE_SUICUNE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_BATTLE_HIDE_SUICUNE
+	object_event  9,  1, SPRITE_RAIKOU, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_BATTLE_HIDE_RAIKOU
+	object_event 11,  1, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_BATTLE_HIDE_SUICUNE
 

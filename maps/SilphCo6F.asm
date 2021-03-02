@@ -60,7 +60,7 @@ SilphCo6F_MapEvents:
 
 	db 3 ; warp events
 	warp_event  2,  0, SILPH_CO_ELEVATOR, 2
-	warp_event  5,  0, SILPH_CO_7F, 3 
+	warp_event  5,  0, SILPH_CO_7F, 3
 	warp_event 19,  0, SILPH_CO_5F, 2
 
 	db 1 ; coord events
@@ -70,7 +70,7 @@ SilphCo6F_MapEvents:
 
 	db 11 ; object events
 	object_event 18,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo6F_CheckForHeal, -1
-	object_event 12,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, MtBattleTrainer41, -1
+	object_event 12,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, MtBattleTrainer41, -1
 	object_event 17, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, MtBattleTrainer42, -1
 	object_event 20,  6, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, MtBattleTrainer43, -1
 	object_event 23, 11, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, MtBattleTrainer44, -1

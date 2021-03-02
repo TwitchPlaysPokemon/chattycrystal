@@ -87,7 +87,7 @@ SilphCo11F_MapEvents:
 
 	db 3 ; warp events
 	warp_event  2,  1, SILPH_CO_ELEVATOR, 2
-	warp_event  4,  1, SILPH_CO_ROOF, 3
+	warp_event  4,  1, SILPH_CO_ROOF, 1
 	warp_event 19,  1, SILPH_CO_10F, 2
 
 	db 1 ; coord events

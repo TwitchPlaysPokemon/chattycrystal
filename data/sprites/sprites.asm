@@ -68,7 +68,7 @@ OverworldSprites:
 	overworld_sprite ScientistSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite KimonoGirlSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite SageSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
-	overworld_sprite UnusedGuySpriteGFX, 12, STANDING_SPRITE, PAL_OW_RED
+	overworld_sprite GamblerSpriteGFX, 12, STANDING_SPRITE, PAL_OW_RED
 	overworld_sprite GentlemanSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite BlackBeltSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite ReceptionistSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
@@ -135,6 +135,9 @@ OverworldSprites:
 	overworld_sprite NuzlockeSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite SiriusSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
 	overworld_sprite EvanSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
+	overworld_sprite BronzeSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BROWN
 	overworld_sprite ElectricFenceLeftSpriteGFX, 4, STILL_SPRITE, PAL_OW_TREE
 	overworld_sprite ElectricFenceRightSpriteGFX, 4, STILL_SPRITE, PAL_OW_TREE
 	overworld_sprite ScrollSpriteGFX, 4, STILL_SPRITE, PAL_OW_SILVER
+	overworld_sprite PhanceroSpriteGFX, 12, WALKING_SPRITE, PAL_OW_BLUE
+

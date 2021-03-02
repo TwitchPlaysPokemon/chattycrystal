@@ -64,7 +64,7 @@
 	const SPRITE_SCIENTIST ; 3c
 	const SPRITE_KIMONO_GIRL ; 3d
 	const SPRITE_SAGE ; 3e
-	const SPRITE_UNUSED_GUY ; 3f
+	const SPRITE_GAMBLER ; 3f
 	const SPRITE_GENTLEMAN ; 40
 	const SPRITE_BLACK_BELT ; 41
 	const SPRITE_RECEPTIONIST ; 42
@@ -174,6 +174,7 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_GYARADOS ; a0
 	const SPRITE_LUGIA ; a1
 	const SPRITE_HO_OH ; a2
+	const SPRITE_PHANCERO ; a3
 
 ; special GetMonSprite values (see engine/overworld/overworld.asm)
 	const_def $e0

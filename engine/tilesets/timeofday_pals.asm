@@ -385,3 +385,125 @@ GetTimePalFade:
 	dc 2,1,0,0, 2,1,0,0, 2,1,0,0
 	dc 1,0,0,0, 1,0,0,0, 1,0,0,0
 	dc 0,0,0,0, 0,0,0,0, 0,0,0,0
+
+FadeToBlack::
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wBGPals1)
+	ldh [rSVBK], a
+	call DelayFrame
+	ld a, 4
+.loop
+	dec a
+	push af
+	call BlackFadeStep
+	ld c, 2
+	call DelayFrames
+	pop af
+	jr nz, .loop
+	pop af
+	ldh [rSVBK], a
+	ret
+
+FadeFromBlack::
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wBGPals1)
+	ldh [rSVBK], a
+	call DelayFrame
+	xor a
+.loop
+	inc a
+	push af
+	call BlackFadeStep
+	ld c, 2
+	call DelayFrames
+	pop af
+	cp 3
+	jr c, .loop
+	ld hl, wBGPals1
+	ld bc, 16 palettes
+	ld de, wBGPals2
+	call CopyBytes
+	pop af
+	ldh [rSVBK], a
+	ld a, 1
+	ldh [hCGBPalUpdate], a
+	ld c, 2
+	jp DelayFrames
+
+BlackFadeStep:
+	ld c, a
+	inc c
+	ld hl, wBGPals1
+	ld b, (16 palettes) / 2
+	assert !LOW(wBGPals1)
+	assert wBGPals2 == (wBGPals1 + 16 palettes)
+.loop
+	inc l
+	ld d, [hl]
+	srl d
+	srl d
+	ld e, c
+	xor a
+.blue
+	add a, d
+	dec e
+	jr nz, .blue
+	sub d
+	add a, 2
+	and $7c
+	ld d, a
+	ld a, [hld]
+	and 3
+	ld e, a
+	ld a, [hli]
+	and $e0
+	or e
+	swap a
+	and $3e
+	ld h, a
+	xor a
+	ld e, c
+.green
+	add a, h
+	dec e
+	jr nz, .green
+	sub h
+	add a, 4
+	rlca
+	rlca
+	and $e3
+	ld h, a
+	and $e0
+	ld e, a
+	xor e
+	or d
+	ld h, HIGH(wBGPals1)
+	set 7, l
+	ld [hld], a
+	res 7, l
+	ld a, [hl]
+	and $1f
+	ld d, a
+	xor a
+	ld h, c
+.red
+	add a, d
+	dec h
+	jr nz, .red
+	sub d
+	add a, 2
+	srl a
+	srl a
+	or e
+	ld h, HIGH(wBGPals1)
+	set 7, l
+	ld [hli], a
+	res 7, l
+	inc l
+	dec b
+	jr nz, .loop
+	ld a, 1
+	ldh [hCGBPalUpdate], a
+	ret

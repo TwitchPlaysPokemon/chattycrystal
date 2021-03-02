@@ -305,6 +305,9 @@ INCLUDE "maps/CopycatsHouse2F.asm"
 INCLUDE "maps/Route5UndergroundPathEntrance.asm"
 INCLUDE "maps/Route5SaffronGate.asm"
 INCLUDE "maps/Route5CleanseTagHouse.asm"
+
+SECTION "Map Scripts Mt Battle", ROMX
+
 INCLUDE "maps/SilphCo1F.asm"
 INCLUDE "maps/SilphCo2F.asm"
 INCLUDE "maps/SilphCo3F.asm"

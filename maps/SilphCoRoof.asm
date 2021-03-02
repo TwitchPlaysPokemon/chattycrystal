@@ -30,20 +30,42 @@ MtBattleMasterBall:
 	closetext
 	end
 
+SilphCoBinoculars3:
+	jumptext SilphCoBinoculars3Text
+
+SilphCoBinoculars4:
+	jumptext SilphCoBinoculars4Text
+
+SilphCoBinoculars3Text:
+	text "Someone slapped"
+	line "TEAM SKULL logo"
+
+	para "stickers over the"
+	line "lenses."
+	done
+
+SilphCoBinoculars4Text:
+	text "The S.S. AQUA"	
+	line "is pulling into"
+	cont "the harbor."
+
+	para "What a fast ship!"
+	done
+
 MtBattleBeatBtlMasterText:
 	text "You beat every one"
 	line "of us! Good work!"
 
 	para "Your reward is up"
-	line "the stairs behind"
-	cont "me."
+	line "those stairs."
 
 	para "But once you take"
 	line "it, you'll have"
 
 	para "to beat us all"
 	line "over again to"
-	cont "get another!"
+	
+	para "get another!"
 	done
 
 MtBattleBagFullText:
@@ -60,6 +82,10 @@ SilphCoRoof_MapEvents:
 	db 0 ; coord events
 
 	db 0 ; bg events
+	bg_event 13, 3, BGEVENT_RIGHT, SilphCoBinoculars3
+	bg_event 13, 9, BGEVENT_RIGHT, SilphCoBinoculars3
+	bg_event 13, 12, BGEVENT_RIGHT, SilphCoBinoculars4
+	bg_event 19, 12, BGEVENT_RIGHT, SilphCoBinoculars4
 
 	db 4 ; object events
 	object_event  8,  4, SPRITE_CAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, MtBattleTrainer100, -1

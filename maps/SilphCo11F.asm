@@ -50,6 +50,37 @@ MtBattleTrainer98:
 MtBattleTrainer99:
 	trainer COOLTRAINERF, MT_BATTLE_99, EVENT_BEAT_MT_BATTLE_99, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
+SilphCoTelescope1:
+	jumptext SilphCoTelescope1Text
+
+SilphCoBinoculars1:
+	jumptext SilphCoBinoculars1Text
+
+SilphCoBinoculars2:
+	jumptext SilphCoBinoculars2Text
+
+SilphCoTelescope1Text:
+	text "You can just about"	
+	line "see MT. SILVER"
+	cont "from here."
+
+	para "Who's that at the"
+	line "top?"
+	done
+
+SilphCoBinoculars1Text:
+	text "CERULEAN CITY"	
+	line "sits up the hill."
+	done
+
+SilphCoBinoculars2Text:
+	text "SAFFRON CITY is so"	
+	line "big, it has two"
+	cont "GYMs!"
+
+	para "Oh wait, that's"
+	line "the DOJO."
+	done
 
 SilphCo11F_MapEvents:
 	db 0, 0 ; filler
@@ -62,7 +93,10 @@ SilphCo11F_MapEvents:
 	db 1 ; coord events
 	coord_event 19,  2, SCENE_DEFAULT, SilphCo11F_CheckForHeal
 
-	db 0 ; bg events
+	db 3 ; bg events
+	bg_event  7, 3, BGEVENT_UP, SilphCoTelescope1
+	bg_event  9, 3, BGEVENT_UP, SilphCoBinoculars1
+	bg_event 14, 3, BGEVENT_UP, SilphCoBinoculars2
 
 	db 10 ; object events
 	object_event 18,  2, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo11F_CheckForHeal, -1

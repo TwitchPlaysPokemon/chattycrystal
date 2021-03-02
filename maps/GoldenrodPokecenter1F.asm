@@ -13,6 +13,119 @@ GoldenrodPokecenter1F_MapScripts:
 GoldenrodPokecenter1FNurseScript:
 	jumpstd pokecenternurse
 
+GoldenrodPokecenter1F_SilverWingSceneLeft:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .silverwing
+	end
+
+.silverwing
+	checkevent EVENT_GOT_SILVER_WING_FROM_POKECOM_CENTER
+	iftrue .cancel
+	playsound SFX_EXIT_BUILDING
+	moveobject GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST, 0, 7
+	disappear GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST
+	appear GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST
+	playmusic MUSIC_SHOW_ME_AROUND
+	applymovement GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST, GoldenrodPokeCenter1FLinkReceptionistApproachPlayerAtLeftDoorwayTileMovement
+	turnobject PLAYER, UP
+	opentext
+	writetext GoldenrodPokeCenter1FLinkReceptionistPleaseAcceptSilverWingText
+	waitbutton
+	verbosegiveitem SILVER_WING
+	setevent EVENT_GOT_SILVER_WING_FROM_POKECOM_CENTER
+	writetext GoldenrodPokeCenter1FLinkReceptionistPleaseDoComeAgainText
+	waitbutton
+	closetext
+	applymovement GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST, GoldenrodPokeCenter1FLinkReceptionistWalkToStairsFromLeftDoorwayTileMovement
+	special RestartMapMusic
+	disappear GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST
+	playsound SFX_EXIT_BUILDING
+.cancel
+	end
+
+GoldenrodPokecenter1F_SilverWingSceneRight:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iftrue .silverwing
+	end
+
+.silverwing
+	checkevent EVENT_GOT_SILVER_WING_FROM_POKECOM_CENTER
+	iftrue .cancel
+	playsound SFX_EXIT_BUILDING
+	moveobject GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST, 0, 7
+	disappear GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST
+	appear GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST
+	playmusic MUSIC_SHOW_ME_AROUND
+	applymovement GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST, GoldenrodPokeCenter1FLinkReceptionistApproachPlayerAtRightDoorwayTileMovement
+	turnobject PLAYER, UP
+	opentext
+	writetext GoldenrodPokeCenter1FLinkReceptionistPleaseAcceptSilverWingText
+	waitbutton
+	verbosegiveitem SILVER_WING
+	setevent EVENT_GOT_SILVER_WING_FROM_POKECOM_CENTER
+	writetext GoldenrodPokeCenter1FLinkReceptionistPleaseDoComeAgainText
+	waitbutton
+	closetext
+	applymovement GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST, GoldenrodPokeCenter1FLinkReceptionistWalkToStairsFromRightDoorwayTileMovement
+	special RestartMapMusic
+	disappear GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST
+	playsound SFX_EXIT_BUILDING
+.cancel
+	end
+
+GoldenrodPokeCenter1FLinkReceptionistApproachPlayerAtLeftDoorwayTileMovement:
+	step UP
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head DOWN
+	step_end
+
+GoldenrodPokeCenter1FLinkReceptionistWalkToStairsFromLeftDoorwayTileMovement:
+	step LEFT
+	step LEFT
+	step LEFT
+	step DOWN
+	step_end
+
+GoldenrodPokeCenter1FLinkReceptionistApproachPlayerAtRightDoorwayTileMovement:
+	step UP
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head DOWN
+	step_end
+
+GoldenrodPokeCenter1FLinkReceptionistWalkToStairsFromRightDoorwayTileMovement:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step DOWN
+	step_end
+
+GoldenrodPokeCenter1FLinkReceptionistPleaseAcceptSilverWingText:
+	text "<PLAYER>,"
+	line "isn't it?"
+
+	para "Congratulations!"
+
+	para "Courtesy of the"
+	line "KANTO champion,"
+
+	para "This SILVER WING"
+	line "has been sent"
+	cont "just for you!"
+
+	para "Please accept it!"
+	done
+
+GoldenrodPokeCenter1FLinkReceptionistPleaseDoComeAgainText:
+	text "Please do come"
+	line "again!"
+	done
+
 GoldenrodPokecenter1FGameboyKidScript:
 	jumptextfaceplayer GoldenrodPokecenter1FGameboyKidText
 
@@ -138,7 +251,9 @@ GoldenrodPokecenter1F_MapEvents:
 	warp_event  0,  6, POKECOM_CENTER_ADMIN_OFFICE_MOBILE, 1
 	warp_event  0,  7, POKECENTER_2F, 1
 
-	db 0 ; coord events
+	db 2 ; coord events		 	db 0 ; coord events
+ 	coord_event  3,  7, SCENE_ALWAYS, GoldenrodPokecenter1F_SilverWingSceneLeft
+ 	coord_event  4,  7, SCENE_ALWAYS, GoldenrodPokecenter1F_SilverWingSceneRight
 
 	db 0 ; bg events
 

@@ -4113,73 +4113,69 @@ BattleAnimFunction_57:
 	ret
 	
 BattleAnimFunction_58:
-    call BattleAnim_AnonJumptable
-.anon_dw
-    dw PowerGemFunction1
-    dw PowerGemFunction2
-    dw PowerGemFunction3
+	call BattleAnim_AnonJumptable
 
-PowerGemFunction1:
-    ld hl, BATTLEANIMSTRUCT_YOFFSET
-    add hl, bc
-    ld a, [hl]
-    cp $ff
-    jr nz, .asm_ce319
-    call BattleAnim_IncAnonJumptableIndex
-    ld hl, BATTLEANIMSTRUCT_0F
-    add hl, bc
-    ld [hl], $2
-    ret
+	dw .zero
+	dw .one
+	dw .two
 
-.asm_ce319
-    ld d, a
-    ld hl, BATTLEANIMSTRUCT_0F
-    add hl, bc
-    ld e, [hl]
-    ld hl, hTransferVirtualOAM ; $ff80
-    add hl, de
-    ld e, l
-    ld d, h
-    ld hl, BATTLEANIMSTRUCT_YOFFSET
-    add hl, bc
-    ld [hl], d
-    ld hl, BATTLEANIMSTRUCT_0F
-    add hl, bc
-    ld [hl], e
-    ret
+.zero
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld a, [hl]
+	cp -1
+	jr nz, .not_done_climbing
+	call BattleAnim_IncAnonJumptableIndex
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld [hl], 2
+	ret
 
-PowerGemFunction2:
-    ld hl, BATTLEANIMSTRUCT_10
-    add hl, bc
-    ld a, [hl]
-    and a
-    jr z, .asm_ce33a
-    dec [hl]
-    ret
+.not_done_climbing
+	ld d, a
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld e, [hl]
+	ld hl, -$80
+	add hl, de
+	ld e, l
+	ld d, h
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], d
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld [hl], e
+	ret
 
-.asm_ce33a
-    ld [hl], $4
-    ld hl, BATTLEANIMSTRUCT_0F
-    add hl, bc
-    ld a, [hl]
-    xor $ff
-    inc a
-    ld [hl], a
-    ld hl, BATTLEANIMSTRUCT_YOFFSET
-    add hl, bc
-    add [hl]
-    ld [hl], a
-    ret
+.one
+	ld hl, BATTLEANIMSTRUCT_10
+	add hl, bc
+	ld a, [hl]
+	and a
+	jr z, .delay_done
+	dec [hl]
+	ret
 
-PowerGemFunction3:
-    ld hl, BATTLEANIMSTRUCT_XCOORD
-    add hl, bc
-    ld a, [hl]
-    cp $c0
-    ret nc
-    ld a, $8
-    jp BattleAnim_StepToTarget
+.delay_done
+	ld [hl], 4
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld a, [hl]
+	cpl
+	inc a
+	ld [hl], a
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	add [hl]
+	ld [hl], a
+	ret
 
-.asm_ce35b
-    call DeinitBattleAnimation
-    ret
+.two
+	ld hl, BATTLEANIMSTRUCT_XCOORD
+	add hl, bc
+	ld a, [hl]
+	cp $c0
+	ret nc
+	ld a, 8
+	jp BattleAnim_StepToTarget

@@ -177,7 +177,6 @@ PhanceroContinue:
 MtSilverRuinsStartCredits:
 	pause 30
 	setscene SCENE_DEFAULT
-	setmapscene SILVER_CAVE_ROOM_3, SCENE_DEFAULT
 	setmapscene MT_SILVER_RUINS_B1F, SCENE_DEFAULT
 	clearevent EVENT_RED_IN_MT_SILVER
 	special HealParty

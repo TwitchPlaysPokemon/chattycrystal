@@ -28,34 +28,34 @@ SilphCo5F_CheckForHeal:
 	end
 
 MtBattleTrainer31:
-	trainer JUGGLER, MT_BATTLE_31, EVENT_BEAT_MT_BATTLE_31, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer SCIENTIST, MT_BATTLE_31, EVENT_BEAT_MT_BATTLE_31, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
 MtBattleTrainer32:
-	trainer SWIMMERF, MT_BATTLE_32, EVENT_BEAT_MT_BATTLE_32, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer BOARDER, MT_BATTLE_32, EVENT_BEAT_MT_BATTLE_32, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
 MtBattleTrainer33:
-	trainer BOARDER, MT_BATTLE_33, EVENT_BEAT_MT_BATTLE_33, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer POKEFANF, MT_BATTLE_33, EVENT_BEAT_MT_BATTLE_33, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
 MtBattleTrainer34:
-	trainer COOLTRAINERF, MT_BATTLE_34, EVENT_BEAT_MT_BATTLE_34, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer SCHOOLBOY, MT_BATTLE_34, EVENT_BEAT_MT_BATTLE_34, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
 MtBattleTrainer35:
-	trainer FIREBREATHER, MT_BATTLE_35, EVENT_BEAT_MT_BATTLE_35, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer SWIMMERM, MT_BATTLE_35, EVENT_BEAT_MT_BATTLE_35, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
 MtBattleTrainer36:
-	trainer TEACHER, MT_BATTLE_36, EVENT_BEAT_MT_BATTLE_36, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer SWIMMERF, MT_BATTLE_36, EVENT_BEAT_MT_BATTLE_36, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
 MtBattleTrainer37:
-	trainer GUITARIST, MT_BATTLE_37, EVENT_BEAT_MT_BATTLE_37, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer COOLTRAINERM, MT_BATTLE_37, EVENT_BEAT_MT_BATTLE_37, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
 MtBattleTrainer38:
-	trainer BEAUTY, MT_BATTLE_38, EVENT_BEAT_MT_BATTLE_38, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer MEDIUM, MT_BATTLE_38, EVENT_BEAT_MT_BATTLE_38, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
 MtBattleTrainer39:
-	trainer SCIENTIST, MT_BATTLE_39, EVENT_BEAT_MT_BATTLE_39, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer BIKER, MT_BATTLE_39, EVENT_BEAT_MT_BATTLE_39, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
 MtBattleTrainer40:
-	trainer HIKER, MT_BATTLE_40, EVENT_BEAT_MT_BATTLE_40, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer SUPER_NERD, MT_BATTLE_40, EVENT_BEAT_MT_BATTLE_40, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 
 
 SilphCo5F_MapEvents:

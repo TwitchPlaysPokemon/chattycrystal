@@ -101,6 +101,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_55 ; 55
 	dw BattleAnimFunction_56 ; 56
 	dw BattleAnimFunction_57 ; 57
+	dw BattleAnimFunction_58 ; 57
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -4110,3 +4111,76 @@ BattleAnimFunction_57:
 	ld [hld], a
 	ld [hl], d
 	ret
+	
+BattleAnimFunction_58:
+    call BattleAnim_AnonJumptable
+.anon_dw
+    dw PowerGemFunction1
+    dw PowerGemFunction2
+    dw PowerGemFunction3
+
+PowerGemFunction1:
+    ld hl, BATTLEANIMSTRUCT_YOFFSET
+    add hl, bc
+    ld a, [hl]
+    cp $ff
+    jr nz, .asm_ce319
+    call BattleAnim_IncAnonJumptableIndex
+    ld hl, BATTLEANIMSTRUCT_0F
+    add hl, bc
+    ld [hl], $2
+    ret
+
+.asm_ce319
+    ld d, a
+    ld hl, BATTLEANIMSTRUCT_0F
+    add hl, bc
+    ld e, [hl]
+    ld hl, hTransferVirtualOAM ; $ff80
+    add hl, de
+    ld e, l
+    ld d, h
+    ld hl, BATTLEANIMSTRUCT_YOFFSET
+    add hl, bc
+    ld [hl], d
+    ld hl, BATTLEANIMSTRUCT_0F
+    add hl, bc
+    ld [hl], e
+    ret
+
+PowerGemFunction2:
+    ld hl, BATTLEANIMSTRUCT_10
+    add hl, bc
+    ld a, [hl]
+    and a
+    jr z, .asm_ce33a
+    dec [hl]
+    ret
+
+.asm_ce33a
+    ld [hl], $4
+    ld hl, BATTLEANIMSTRUCT_0F
+    add hl, bc
+    ld a, [hl]
+    xor $ff
+    inc a
+    ld [hl], a
+    ld hl, BATTLEANIMSTRUCT_YOFFSET
+    add hl, bc
+    add [hl]
+    ld [hl], a
+    ret
+
+PowerGemFunction3:
+    ld hl, BATTLEANIMSTRUCT_XCOORD
+    add hl, bc
+    ld a, [hl]
+    cp $c0
+    ret nc
+    ld a, $8
+    call Functionce70a
+    ret
+
+.asm_ce35b
+    call DeinitBattleAnimation
+    ret

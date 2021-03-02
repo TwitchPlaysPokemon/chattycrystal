@@ -42,6 +42,12 @@ SilphCoRoofRaikou:
 	startbattle
 	disappear SILPH_CO_RAIKOU
 	reloadmapafterbattle
+	setval 0
+	writemem wRoamMon1Species
+	writemem wRoamMon1HP
+	setval -1
+	writemem wRoamMon1MapGroup
+	writemem wRoamMon1MapNumber
 	sjump MtBattleGotReward
 
 SilphCoRoofSuicune:
@@ -56,6 +62,12 @@ SilphCoRoofSuicune:
 	startbattle
 	disappear SILPH_CO_SUICUNE
 	reloadmapafterbattle
+	setval 0
+	writemem wRoamMon2Species
+	writemem wRoamMon2HP
+	setval -1
+	writemem wRoamMon2MapGroup
+	writemem wRoamMon2MapNumber
 	sjump MtBattleGotReward
 
 SilphCoRoofLegendaryText:

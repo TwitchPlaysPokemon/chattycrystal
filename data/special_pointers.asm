@@ -173,8 +173,7 @@ SpecialsPointers::
 	add_special Function10387b
 	add_special AskRememberPassword
 	add_special LoadMapPalettes
-	add_special UnusedFindItemInPCOrBag ; $a0
-	add_special InitialSetDSTFlag
+	add_special InitialSetDSTFlag ; $a0
 	add_special InitialClearDSTFlag
 	add_special SelectBTParticipants
 	add_special NewBattleTowerSession

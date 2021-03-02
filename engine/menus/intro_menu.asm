@@ -60,7 +60,7 @@ NewGame:
 	ld [wDebugFlags], a
 	call ResetWRAM
 	call NewGame_ClearTileMapEtc
-	call AreYouABoyOrAreYouAGirl
+	farcall InitGender
 	call OakSpeech
 	call InitializeWorld
 	ld a, 1
@@ -72,17 +72,6 @@ NewGame:
 	ld a, MAPSETUP_WARP
 	ldh [hMapEntryMethod], a
 	jp FinishContinueFunction
-
-AreYouABoyOrAreYouAGirl:
-	farcall Mobile_AlwaysReturnNotCarry ; some mobile stuff
-	jr c, .ok
-	farcall InitGender
-	ret
-
-.ok
-	ld c, 0
-	farcall InitMobileProfile ; mobile
-	ret
 
 ResetWRAM:
 	xor a

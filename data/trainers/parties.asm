@@ -9972,6 +9972,50 @@ PokefanFGroup:
 	dw STOMP, PSYBEAM, SHADOW_BALL, HIDDEN_POWER
 	db -1 ; end
 
+	next_list_item ; POKEFANF (10)
+	db "CEWAN@", TRAINERTYPE_ITEM
+	db 83
+	dw BRONZONG
+	db MIRACLEBERRY
+	db 82
+	dw HARIYAMA
+	db FOCUS_BAND
+	db 83
+	dw GRANBULL
+	db GOLD_BERRY
+	db 83
+	dw SABLEYE
+	db GOLD_BERRY
+	db 82
+	dw INFERNAPE
+	db BRIGHTPOWDER
+	db 83
+	dw RAICHU
+	db LEFTOVERS
+	db -1 ; end
+
+	next_list_item ; POKEFANF (11)
+	db "LISAN@", TRAINERTYPE_ITEM
+	db 97
+	dw METAGROSS
+	db METAL_COAT
+	db 96
+	dw CRADILY
+	db HARD_STONE
+	db 97
+	dw MACHAMP
+	db BLACKBELT
+	db 97
+	dw SKARMORY
+	db SHARP_BEAK
+	db 96
+	dw RHYDON
+	db SOFT_SAND
+	db 97
+	dw HARIYAMA
+	db MINT_BERRY
+	db -1 ; end
+
 	end_list_items
 
 OfficerGroup:
@@ -10425,56 +10469,6 @@ SageGroup:
 	db CHARCOAL
 	db -1 ; end
 
-	next_list_item ; POKEFANF (9)
-	db "GLYDIN@", TRAINERTYPE_ITEM_MOVES
-	db 82
-	dw SNEASEL
-	db SCOPE_LENS
-	dw FEINT_ATTACK, SLASH, METAL_CLAW, HIDDEN_POWER
-	db 81
-	dw CLAWITZER
-	db FOCUS_BAND
-	dw VICEGRIP, WATER_PULSE, CRABHAMMER, HIDDEN_POWER
-	db 82
-	dw SEADRA
-	db LEFTOVERS
-	dw WATER_PULSE, AURORA_BEAM, HYDRO_PUMP, HIDDEN_POWER
-	db 82
-	dw GOLBAT
-	db BRIGHTPOWDER
-	dw WING_ATTACK, BITE, GIGA_DRAIN, HIDDEN_POWER
-	db 81
-	dw HITMONTOP
-	db KINGS_ROCK
-	dw ROLLING_KICK, DIG, STRENGTH, HIDDEN_POWER
-	db 82
-	dw GIRAFARIG
-	db BRIGHTPOWDER
-	dw STOMP, PSYBEAM, SHADOW_BALL, HIDDEN_POWER
-	db -1 ; end
-
-	next_list_item ; POKEFANF (10)
-	db "CEWAN@", TRAINERTYPE_ITEM
-	db 83
-	dw BRONZONG
-	db MIRACLEBERRY
-	db 82
-	dw HARIYAMA
-	db FOCUS_BAND
-	db 83
-	dw GRANBULL
-	db GOLD_BERRY
-	db 83
-	dw SABLEYE
-	db GOLD_BERRY
-	db 82
-	dw INFERNAPE
-	db BRIGHTPOWDER
-	db 83
-	dw RAICHU
-	db LEFTOVERS
-	db -1 ; end
-
 	end_list_items
 
 MediumGroup:
@@ -10591,28 +10585,6 @@ MediumGroup:
 	db -1 ; end
 
 	next_list_item ; MEDIUM (13)
-	db "DESOR@", TRAINERTYPE_ITEM
-	db 96
-	dw MEGANIUM
-	db GOLD_BERRY
-	db 95
-	dw TYPHLOSION
-	db FOCUS_BAND
-	db 96
-	dw FERALIGATR
-	db SCOPE_LENS
-	db 96
-	dw ESPEON
-	db BRIGHTPOWDER
-	db 95
-	dw UMBREON
-	db LEFTOVERS
-	db 96
-	dw PINSIR
-	db MIRACLEBERRY
-	db -1 ; end
-
-	next_list_item ; POKEFANF (13)
 	db "PERSTIN@", TRAINERTYPE_ITEM
 	db 83
 	dw TORTERRA
@@ -10634,26 +10606,26 @@ MediumGroup:
 	db NEVERMELTICE
 	db -1 ; end
 
-	next_list_item ; POKEFANF (14)
-	db "LISAN@", TRAINERTYPE_ITEM
-	db 97
-	dw METAGROSS
-	db METAL_COAT
+	next_list_item ; MEDIUM (14)
+	db "DESOR@", TRAINERTYPE_ITEM
 	db 96
-	dw CRADILY
-	db HARD_STONE
-	db 97
-	dw MACHAMP
-	db BLACKBELT
-	db 97
-	dw SKARMORY
-	db SHARP_BEAK
+	dw MEGANIUM
+	db GOLD_BERRY
+	db 95
+	dw TYPHLOSION
+	db FOCUS_BAND
 	db 96
-	dw RHYDON
-	db SOFT_SAND
-	db 97
-	dw HARIYAMA
-	db MINT_BERRY
+	dw FERALIGATR
+	db SCOPE_LENS
+	db 96
+	dw ESPEON
+	db BRIGHTPOWDER
+	db 95
+	dw UMBREON
+	db LEFTOVERS
+	db 96
+	dw PINSIR
+	db MIRACLEBERRY
 	db -1 ; end
 
 	end_list_items

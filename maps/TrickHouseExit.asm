@@ -3,11 +3,16 @@
 
 TrickHouseExit_MapScripts:
 	db 3 ; scene scripts
-	scene_script TrickHouse_End ; SCENE_DEFAULT
+	scene_script .lock ; SCENE_DEFAULT
 	scene_script TrickHouse_End ; SCENE_TRICKHOUSEEXIT_LOCKED
 	scene_script TrickHouse_End ; SCENE_TRICKHOUSEEXIT_GOT_REWARD
 
 	db 0 ; callbacks
+
+.lock
+	applymovement PLAYER, TrickHouseExit_PushDownMovement
+	setscene SCENE_TRICKHOUSEEXIT_LOCKED
+	end
 
 TrickHouseExit_PreventEscape:
 	showemote EMOTE_SHOCK, TRICKHOUSEEXIT_TRICK_MASTER, 30
@@ -17,7 +22,7 @@ TrickHouseExit_PreventEscape:
 	writetext .text
 	waitbutton
 	closetext
-	applymovement PLAYER, .down
+	applymovement PLAYER, TrickHouseExit_PushDownMovement
 	pause 2
 	turnobject TRICKHOUSEEXIT_TRICK_MASTER, RIGHT
 	end
@@ -30,14 +35,9 @@ TrickHouseExit_PreventEscape:
 	cont "heartbreaking!"
 	done
 
-.down
+TrickHouseExit_PushDownMovement:
 	step DOWN
 	step_end
-
-TrickHouseExit_Lock:
-	changeblock 0, 6, $40 ; scroll
-	setscene SCENE_TRICKHOUSEEXIT_LOCKED
-	end
 
 TrickHouseExit_TrickMaster:
 	faceplayer
@@ -310,9 +310,8 @@ TrickHouseExit_MapEvents:
 	warp_event  1,  0, TRICK_HOUSE_HALLWAY, 1
 	warp_event  7,  0, TRICK_HOUSE_PUZZLE_1, 3
 
-	db 2 ; coord events
+	db 1 ; coord events
 	coord_event  1,  1, SCENE_TRICKHOUSEEXIT_LOCKED, TrickHouseExit_PreventEscape
-	coord_event  7,  1, SCENE_DEFAULT, TrickHouseExit_Lock
 
 	db 0 ; bg events
 

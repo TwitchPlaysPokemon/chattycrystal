@@ -4085,7 +4085,7 @@ BattleAnim_MoonBlast:
 	anim_ret
 
 BattleAnim_DazzlingGleam:
-	anim_3gfx ANIM_GFX_SPEED, ANIM_GFX_HIT, ANIM_GFX_SHINE
+	anim_1gfx ANIM_GFX_SPEED
 	anim_sound 0, 1, SFX_MOONLIGHT
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
@@ -4097,7 +4097,8 @@ BattleAnim_DazzlingGleam:
 	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $28
 	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $30
 	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $38
-	anim_wait 64
+	anim_wait 48
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_SHINE
 	anim_incbgeffect ANIM_BG_ALTERNATE_HUES
 	anim_sound 0, 1, SFX_FLASH
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $6, $20

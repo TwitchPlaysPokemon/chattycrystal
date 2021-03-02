@@ -63,7 +63,7 @@ SilphCoBinoculars2:
 	jumptext SilphCoBinoculars2Text
 
 SilphCoTelescope1Text:
-	text "You can just about"	
+	text "You can just about"
 	line "see MT. SILVER"
 	cont "from here."
 
@@ -72,12 +72,12 @@ SilphCoTelescope1Text:
 	done
 
 SilphCoBinoculars1Text:
-	text "CERULEAN CITY"	
+	text "CERULEAN CITY"
 	line "sits up the hill."
 	done
 
 SilphCoBinoculars2Text:
-	text "SAFFRON CITY is so"	
+	text "SAFFRON CITY is so"
 	line "big, it has two"
 	cont "GYMs!"
 

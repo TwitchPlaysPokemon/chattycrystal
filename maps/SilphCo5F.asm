@@ -63,7 +63,7 @@ SilphCo5F_MapEvents:
 
 	db 3 ; warp events
 	warp_event  2,  0, SILPH_CO_ELEVATOR, 2
-	warp_event  5,  0, SILPH_CO_6F, 3 
+	warp_event  5,  0, SILPH_CO_6F, 3
 	warp_event 19,  0, SILPH_CO_4F, 2
 
 	db 1 ; coord events

@@ -129,10 +129,10 @@ SilphCoElevatorScript:
 	ld de, wOTPartyMons
 	ld [de], a ; Write number of floors
 	inc de
-	add a 
+	add a
 	add a ; multiply a by 4 (size of elevfloor entry)
 	ld b, 0
-	ld c, a 
+	ld c, a
 	call CopyBytes
 	ld a, -1
 	ld [de], a ; write end value

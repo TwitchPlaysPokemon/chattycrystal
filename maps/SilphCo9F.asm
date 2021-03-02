@@ -26,7 +26,7 @@ SilphCo9F_CheckForHeal:
 
 .Done
 	end
-	
+
 MtBattleTrainer71:
 	trainer TEACHER, MT_BATTLE_71, EVENT_BEAT_MT_BATTLE_71, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
 

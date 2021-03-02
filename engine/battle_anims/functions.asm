@@ -4111,7 +4111,7 @@ BattleAnimFunction_57:
 	ld [hld], a
 	ld [hl], d
 	ret
-	
+
 BattleAnimFunction_58:
 	call BattleAnim_AnonJumptable
 

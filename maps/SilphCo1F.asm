@@ -106,9 +106,6 @@ MtBattleGotReward:
 	endc
 	ret
 
-MtBattleDefaultScene:
-	end
-
 MtBattleSeenText:
 	text "Will you battle"
 	line "with me?"

@@ -307,23 +307,6 @@ INCLUDE "maps/Route5UndergroundPathEntrance.asm"
 INCLUDE "maps/Route5SaffronGate.asm"
 INCLUDE "maps/Route5CleanseTagHouse.asm"
 
-SECTION "Map Scripts Mt Battle", ROMX
-
-INCLUDE "maps/SilphCo1F.asm"
-INCLUDE "maps/SilphCo2F.asm"
-INCLUDE "maps/SilphCo3F.asm"
-INCLUDE "maps/SilphCo4F.asm"
-INCLUDE "maps/SilphCo5F.asm"
-INCLUDE "maps/SilphCo6F.asm"
-INCLUDE "maps/SilphCo7F.asm"
-INCLUDE "maps/SilphCo8F.asm"
-INCLUDE "maps/SilphCo9F.asm"
-INCLUDE "maps/SilphCo10F.asm"
-INCLUDE "maps/SilphCo11F.asm"
-INCLUDE "maps/SilphCoRoof.asm"
-INCLUDE "maps/SilphCoElevator.asm"
-
-
 SECTION "Map Scripts 16", ROMX
 
 INCLUDE "maps/PewterCity.asm"
@@ -557,3 +540,22 @@ INCLUDE "maps/BattleTentPCRoom.asm"
 INCLUDE "maps/MtSilverRuins.asm"
 INCLUDE "maps/MtSilverRuinsB1F.asm"
 INCLUDE "maps/PowerPlantB1F.asm"
+
+
+SECTION "Map Scripts Mt. Battle", ROMX
+
+; DO NOT SPLIT INTO SECTIONS
+INCLUDE "maps/SilphCo1F.asm"
+INCLUDE "maps/SilphCo2F.asm"
+INCLUDE "maps/SilphCo3F.asm"
+INCLUDE "maps/SilphCo4F.asm"
+INCLUDE "maps/SilphCo5F.asm"
+INCLUDE "maps/SilphCo6F.asm"
+INCLUDE "maps/SilphCo7F.asm"
+INCLUDE "maps/SilphCo8F.asm"
+INCLUDE "maps/SilphCo9F.asm"
+INCLUDE "maps/SilphCo10F.asm"
+INCLUDE "maps/SilphCo11F.asm"
+INCLUDE "maps/SilphCoRoof.asm"
+INCLUDE "maps/SilphCoElevator.asm"
+; DO NOT ADD OTHER MAPS HERE

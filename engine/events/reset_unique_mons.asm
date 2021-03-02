@@ -63,5 +63,4 @@ ResetUniqueMons::
 	clearifuncaught WOOCHUM, EVENT_WOOCHUM_IN_ROCKET_HIDEOUT
 .no_woochum
 
-	; TODO: Phancero when added
 	end

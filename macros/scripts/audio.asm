@@ -98,11 +98,7 @@ vibrato: MACRO
 	db \2 ; extent
 ENDM
 
-	enum unknownmusic0xe2_cmd ; $e2
-unknownmusic0xe2: MACRO
-	db unknownmusic0xe2_cmd
-	db \1 ; unknown
-ENDM
+	enum skip ; $e2
 
 	enum togglenoise_cmd ; $e3
 togglenoise: MACRO
@@ -128,17 +124,8 @@ tone: MACRO
 	bigdw \1 ; tone
 ENDM
 
-	enum unknownmusic0xe7_cmd ; $e7
-unknownmusic0xe7: MACRO
-	db unknownmusic0xe7_cmd
-	db \1 ; unknown
-ENDM
-
-	enum unknownmusic0xe8_cmd ; $e8
-unknownmusic0xe8: MACRO
-	db unknownmusic0xe8_cmd
-	db \1 ; unknown
-ENDM
+	enum skip ; $e7
+	enum skip ; $e8
 
 	enum tempo_relative_cmd ; $e9
 tempo_relative: MACRO
@@ -186,50 +173,15 @@ sfxtogglenoise: MACRO
 	db \1 ; id
 ENDM
 
-	enum music0xf1_cmd ; $f1
-music0xf1: MACRO
-	db music0xf1_cmd
-ENDM
-
-	enum music0xf2_cmd ; $f2
-music0xf2: MACRO
-	db music0xf2_cmd
-ENDM
-
-	enum music0xf3_cmd ; $f3
-music0xf3: MACRO
-	db music0xf3_cmd
-ENDM
-
-	enum music0xf4_cmd ; $f4
-music0xf4: MACRO
-	db music0xf4_cmd
-ENDM
-
-	enum music0xf5_cmd ; $f5
-music0xf5: MACRO
-	db music0xf5_cmd
-ENDM
-
-	enum music0xf6_cmd ; $f6
-music0xf6: MACRO
-	db music0xf6_cmd
-ENDM
-
-	enum music0xf7_cmd ; $f7
-music0xf7: MACRO
-	db music0xf7_cmd
-ENDM
-
-	enum music0xf8_cmd ; $f8
-music0xf8: MACRO
-	db music0xf8_cmd
-ENDM
-
-	enum unknownmusic0xf9_cmd ; $f9
-unknownmusic0xf9: MACRO
-	db unknownmusic0xf9_cmd
-ENDM
+	enum skip ; $f1
+	enum skip ; $f2
+	enum skip ; $f3
+	enum skip ; $f4
+	enum skip ; $f5
+	enum skip ; $f6
+	enum skip ; $f7
+	enum skip ; $f8
+	enum skip ; $f9
 
 	enum setcondition_cmd ; $fa
 setcondition: MACRO

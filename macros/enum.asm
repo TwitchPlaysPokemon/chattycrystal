@@ -14,7 +14,9 @@ endc
 ENDM
 
 enum: MACRO
+if STRCMP("\1", "skip")
 \1 EQU __enum__
+endc
 __enum__ = __enum__ + __enumdir__
 ENDM
 
@@ -33,7 +35,9 @@ endc
 ENDM
 
 const: MACRO
+if STRCMP("\1", "skip")
 \1 EQU const_value
+endc
 const_value = const_value + 1
 ENDM
 

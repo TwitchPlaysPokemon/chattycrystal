@@ -7,7 +7,8 @@ IF TESTMODE
 endc
 ds $400
 
-HandleChattyText:: ;places the chatty string. if carry flag is not set, redirect de to a TX_END command.
+HandleChattyText::
+	; Places the chatty string. If carry flag is not set, redirect de to a TX_END command.
 	jr c, .noDone
 	ld de, TX_ENDText - 1 ;if the terminator is a <DONE> or <PROMPT>, emulate <DONE>'s text redirection
 .noDone
@@ -15,7 +16,7 @@ HandleChattyText:: ;places the chatty string. if carry flag is not set, redirect
 	push hl ;store the text pointer
 	ld bc, (-(FIRST_TEXTBOX_TILE + wTileMap)) & $ffff
 	add hl, bc
-	ld bc, CharsAvalibleTable
+	ld bc, CharsAvailableTable
 	add hl, bc
 	ld a, [hl]
 	ld [wChattySpace], a
@@ -32,13 +33,15 @@ endc
 	xor a
 	ld [wScriptActive], a
 	pop hl
-AissInjectTextHere:: ;place text block WITHOUT A START CHARACTER in ChattyText, including any line or cont characters and end with a done character, aslo set wScriptActive
+AissInjectTextHere::
+	; When execution reaches this point, place a text block WITHOUT A START CHARACTER in ChattyText,
+	; including any line or cont characters; end with a done character. Set wScriptActive when done.
 	call PlaceString
 	pop hl
 	inc hl
 	ret
 
-CharsAvalibleTable:
+CharsAvailableTable:
 	db 0
 	db 1
 	db 2

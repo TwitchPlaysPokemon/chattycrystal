@@ -101,6 +101,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_55 ; 55
 	dw BattleAnimFunction_56 ; 56
 	dw BattleAnimFunction_57 ; 57
+	dw BattleAnimFunction_58 ; 57
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -4110,3 +4111,71 @@ BattleAnimFunction_57:
 	ld [hld], a
 	ld [hl], d
 	ret
+	
+BattleAnimFunction_58:
+	call BattleAnim_AnonJumptable
+
+	dw .zero
+	dw .one
+	dw .two
+
+.zero
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld a, [hl]
+	cp -1
+	jr nz, .not_done_climbing
+	call BattleAnim_IncAnonJumptableIndex
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld [hl], 2
+	ret
+
+.not_done_climbing
+	ld d, a
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld e, [hl]
+	ld hl, -$80
+	add hl, de
+	ld e, l
+	ld d, h
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], d
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld [hl], e
+	ret
+
+.one
+	ld hl, BATTLEANIMSTRUCT_10
+	add hl, bc
+	ld a, [hl]
+	and a
+	jr z, .delay_done
+	dec [hl]
+	ret
+
+.delay_done
+	ld [hl], 4
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld a, [hl]
+	cpl
+	inc a
+	ld [hl], a
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	add [hl]
+	ld [hl], a
+	ret
+
+.two
+	ld hl, BATTLEANIMSTRUCT_XCOORD
+	add hl, bc
+	ld a, [hl]
+	cp $c0
+	ret nc
+	ld a, 8
+	jp BattleAnim_StepToTarget

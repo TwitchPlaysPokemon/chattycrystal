@@ -304,11 +304,11 @@ MoveAnimations:
 	dw BattleAnim_Slash        ; PLACEHOLDER
 	dw BattleAnim_Roar         ; PLACEHOLDER
 	dw BattleAnim_DragonPulse  ; 130
-	dw BattleAnim_Ancientpower ; PLACEHOLDER
+	dw BattleAnim_PowerGem
 	dw BattleAnim_Dynamicpunch ; PLACEHOLDER
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
 	dw BattleAnim_WingAttack   ; PLACEHOLDER
-	dw BattleAnim_Earthquake   ; PLACEHOLDER
+	dw BattleAnim_EarthPower
 	dw BattleAnim_PsychUp      ; PLACEHOLDER
 	dw BattleAnim_BulletPunch
 	dw BattleAnim_PowderSnow   ; 138, PLACEHOLDER
@@ -3459,6 +3459,51 @@ BattleAnim_DragonPulse:
 	anim_wait 4
 	anim_incobj 1
 	anim_ret
+	
+BattleAnim_PowerGem:
+	anim_1gfx ANIM_GFX_SHINE
+	anim_bgp $1b
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_sound 0, 0, SFX_METRONOME
+	anim_obj ANIM_OBJ_POWER_GEM, 46, 88, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_POWER_GEM, 24, 90, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_POWER_GEM, 36, 72, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_POWER_GEM, 44, 112, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_POWER_GEM, 30, 106, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_POWER_GEM, 64, 104, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_POWER_GEM, 54, 68, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_POWER_GEM, 72, 82, $0
+	anim_wait 80
+	anim_sound 0, 1, SFX_SHINE
+	anim_incobj  5
+	anim_wait 2
+	anim_incobj  1
+	anim_wait 2
+	anim_sound 0, 1, SFX_SHINE
+	anim_incobj  3
+	anim_wait 4
+	anim_sound 0, 1, SFX_SHINE
+	anim_incobj  8
+	anim_wait 2
+	anim_incobj  2
+	anim_wait 2
+	anim_sound 0, 1, SFX_SHINE
+	anim_incobj  4
+	anim_wait 2
+	anim_incobj  6
+	anim_wait 2
+	anim_sound 0, 1, SFX_SHINE
+	anim_incobj  7
+	anim_wait 2
+	anim_wait 32
+	anim_ret
 
 BattleAnim_MuddyWater:
 	anim_1gfx ANIM_GFX_BUBBLE
@@ -3471,6 +3516,39 @@ BattleAnim_MuddyWater:
 	anim_loop 4, .loop
 	anim_incobj 1
 	anim_wait 56
+	anim_ret
+
+BattleAnim_EarthPower:
+	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_ROCKS
+	anim_sound 0, 0, SFX_EGG_BOMB
+	anim_bgp $1b
+	anim_bgeffect ANIM_BG_1F, $28, $2, $0
+	anim_obj ANIM_OBJ_ROCK_SMASH, 120, 68, $5c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 120, 68, $e8
+	anim_obj ANIM_OBJ_ROCK_SMASH, 120, 68, $9c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 120, 68, $50
+	anim_obj ANIM_OBJ_EMBER, 120, 68, $30
+	anim_wait 40
+	anim_clearobjs
+	anim_wait 8
+	anim_sound 0, 0, SFX_EGG_BOMB
+	anim_bgeffect ANIM_BG_1F, $28, $2, $0
+	anim_obj ANIM_OBJ_ROCK_SMASH, 144, 68, $5c
+	anim_obj ANIM_OBJ_ROCK_SMASH, 144, 68, $e8
+	anim_obj ANIM_OBJ_ROCK_SMASH, 144, 68, $d0
+	anim_obj ANIM_OBJ_ROCK_SMASH, 144, 68, $10
+	anim_obj ANIM_OBJ_EMBER, 144, 68, $30
+	anim_wait 40
+	anim_clearobjs
+	anim_wait 8
+	anim_sound 0, 0, SFX_EGG_BOMB
+	anim_bgeffect ANIM_BG_1F, $28, $2, $0
+	anim_obj ANIM_OBJ_ROCK_SMASH, 132, 68, $28
+	anim_obj ANIM_OBJ_ROCK_SMASH, 132, 68, $e8
+	anim_obj ANIM_OBJ_ROCK_SMASH, 132, 68, $d0
+	anim_obj ANIM_OBJ_ROCK_SMASH, 132, 68, $50
+	anim_obj ANIM_OBJ_EMBER, 132, 68, $30
+	anim_wait 48
 	anim_ret
 
 BattleAnim_BulletPunch:

@@ -9,13 +9,16 @@
 
 TrickHouseEntrance_MapScripts:
 	db 2 ; scene scripts
-	scene_script TrickHouseEntrance_End
-	scene_script TrickHouseEntrance_End
+	scene_script TrickHouse_End ; SCENE_DEFAULT
+	scene_script TrickHouse_End ; SCENE_TRICKHOUSEENTRANCE_WATCHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .check_ready
 
 .check_ready
+	checkevent EVENT_TRICK_HOUSE_EXITING_PUZZLE
+	clearevent EVENT_TRICK_HOUSE_EXITING_PUZZLE
+	iftrue .active
 	checkevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
 	iftrue .active
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_6
@@ -92,6 +95,7 @@ TrickHouseEntrance_Scroll:
 	yesorno
 	closetext
 	iffalse .end
+	setmapscene TRICK_HOUSE_EXIT, SCENE_DEFAULT
 	changeblock 4, 0, $41 ; open door
 	reloadmappart
 	pause 10
@@ -222,9 +226,9 @@ TrickHouseEntrance_PrepareTrickMasterReveal:
 
 TrickHouseEntrance_HidingSpot_1:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
-	iftrue TrickHouseEntrance_End
+	iftrue TrickHouse_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
@@ -240,11 +244,11 @@ TrickHouseEntrance_HidingSpot_1:
 
 TrickHouseEntrance_HidingSpot_2:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_2
-	iftrue TrickHouseEntrance_End
+	iftrue TrickHouse_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
@@ -260,11 +264,11 @@ TrickHouseEntrance_HidingSpot_2:
 
 TrickHouseEntrance_HidingSpot_3:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_2
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_3
-	iftrue TrickHouseEntrance_End
+	iftrue TrickHouse_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
@@ -280,11 +284,11 @@ TrickHouseEntrance_HidingSpot_3:
 
 TrickHouseEntrance_HidingSpot_4:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_3
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_4
-	iftrue TrickHouseEntrance_End
+	iftrue TrickHouse_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
@@ -301,11 +305,11 @@ TrickHouseEntrance_HidingSpot_4:
 
 TrickHouseEntrance_HidingSpot_5:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_4
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
-	iftrue TrickHouseEntrance_End
+	iftrue TrickHouse_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
@@ -321,9 +325,9 @@ TrickHouseEntrance_HidingSpot_5:
 
 TrickHouseEntrance_HidingSpot_6:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
-	iffalse TrickHouseEntrance_End
+	iffalse TrickHouse_End
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext TrickHouseEntrance_HidingSpot_6_Text
 TrickHouseEntrance_DoTrickMasterReveal:
@@ -346,11 +350,11 @@ TrickHouseEntrance_DoTrickMasterReveal:
 	closetext
 	pause 10
 	playsound SFX_WARP_TO
-	applymovement TRICKHOUSEENTRANCE_TRICK_MASTER, TrickHouseEntrance_DisappearingMovement
+	applymovement TRICKHOUSEENTRANCE_TRICK_MASTER, TrickHouse_DisappearingMovement
 	disappear TRICKHOUSEENTRANCE_TRICK_MASTER
 	clearevent TRICKHOUSEEVENT_PUZZLE_READY
 	setevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
-TrickHouseEntrance_End:
+TrickHouse_End:
 	end
 
 TrickHouseEntrance_HidingSpot_6_Text:
@@ -401,7 +405,7 @@ TrickHouseEntrance_TrickMasterChallengeText:
 	line "in the back!"
 	done
 
-TrickHouseEntrance_DisappearingMovement:
+TrickHouse_DisappearingMovement:
 	teleport_from
 	step_end
 

@@ -937,7 +937,7 @@ BattleAnimOAMData:
 	dsprite   1, 4,   0, 4, $01, X_FLIP | Y_FLIP
 	dsprite   1, 4,   1, 4, $00, $0
 	dsprite   2, 4,   1, 4, $01, X_FLIP | Y_FLIP
-	
+
 ;.OAMDATA_7e:
 
 ;.OAMDATA_7f:
@@ -1196,7 +1196,7 @@ BattleAnimOAMData:
 	dsprite  -1, 4,   0, 0, $02, X_FLIP
 	dsprite  -1, 4,   1, 0, $01, X_FLIP
 	dsprite  -1, 4,   2, 0, $00, X_FLIP
-	
+
 ;.OAMDATA_bd:
 
 ;.OAMDATA_be:
@@ -1265,7 +1265,7 @@ BattleAnimOAMData:
 	dsprite  -1, 0,   0, 0, $01, X_FLIP | Y_FLIP
 	dsprite   0, 0,  -1, 0, $01, $0
 	dsprite   0, 0,   0, 0, $01, X_FLIP
-	
+
 .OAMData_cb:
 	dsprite  -3, 0,   0, 0, $00, $0
 	dsprite  -2, 0,   0, 0, $01, $0

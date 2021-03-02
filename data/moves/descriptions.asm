@@ -369,6 +369,7 @@ MoveDescriptions1:
 	dw DarkPulseDescription
 	dw RockBlastDescription
 	dw BrickBreakDescription
+	dw HeatWaveDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -606,6 +607,7 @@ EmberDescription:
 	next "inflict a burn.@"
 
 FlamethrowerDescription:
+HeatWaveDescription:
 ScaldDescription:
 	db   "An attack that may"
 	next "inflict a burn.@"

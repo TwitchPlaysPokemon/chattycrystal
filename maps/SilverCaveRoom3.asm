@@ -1,15 +1,13 @@
 	object_const_def ; object_event constants
 	const SILVERCAVEROOM3_RED
 
-SilverCaveRoom3_MapScripts: ; 0x18c601
-	db 2 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+SilverCaveRoom3_MapScripts:
+	db 0 ; scene scripts
 
 	; callback count
 	db 1
 	callback MAPCALLBACK_TILES, .RuinWall
-	
+
 .RuinWall:
 	checkevent EVENT_RED_IN_MT_SILVER
 	iffalse .CloseWall
@@ -17,10 +15,7 @@ SilverCaveRoom3_MapScripts: ; 0x18c601
 	changeblock 10, 7, 99
 .CloseWall
 	return
-	
-.DummyScene
-	end
-	
+
 Red:
 	special FadeOutMusic
 	faceplayer
@@ -41,7 +36,7 @@ Red:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear SILVERCAVEROOM3_RED
-	setflag EVENT_RED_IN_MT_SILVER
+	setevent EVENT_RED_IN_MT_SILVER
 	pause 15
 	special FadeInQuickly
 	pause 30
@@ -53,10 +48,10 @@ Red:
 	waitsfx
 	special PlayMapMusic
 	end
-	
+
 RuinsEntranceSignScript:
 	jumptext RuinsEntranceSignText
-	
+
 RedSeenText:
 	text "<……>"
 	line "<……>"
@@ -72,25 +67,20 @@ RedLeavesText:
 	line "<……>"
 	done
 
-SilverCaveRoom3_MapEvents: ; 0x18c644
+SilverCaveRoom3_MapEvents:
 	; filler
 	db 0, 0
 
-	; warps
-	db 3
-	warp_def $21, $9, 2, SILVER_CAVE_ROOM_2
-	warp_def 7, 9, 1, MT_SILVER_RUINS
-	warp_def 7, 10, 2, MT_SILVER_RUINS
+	db 3 ; warp events
+	warp_event  9, 33, SILVER_CAVE_ROOM_2, 2
+	warp_event  9,  7, MT_SILVER_RUINS, 1
+	warp_event 10,  7, MT_SILVER_RUINS, 2
 
-	; xy triggers
-	db 0
+	db 0 ; coord events
 
-	; signposts
-	db 2
-	bg_event 8, 8, BGEVENT_READ, RuinsEntranceSignScript
-	bg_event 11, 8, BGEVENT_READ, RuinsEntranceSignScript
+	db 2 ; bg events
+	bg_event  8,  8, BGEVENT_READ, RuinsEntranceSignScript
+	bg_event 11,  8, BGEVENT_READ, RuinsEntranceSignScript
 
-	; object_event
-	db 1
+	db 1 ; object events
 	object_event  9, 10, SPRITE_RED, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Red, EVENT_RED_IN_MT_SILVER
-

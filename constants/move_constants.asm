@@ -370,6 +370,7 @@
 	const DARK_PULSE   ; 16a
 	const ROCK_BLAST   ; 16b
 	const BRICK_BREAK  ; 16c
+	const HEAT_WAVE    ; 16d
 
 NUM_ATTACKS EQU const_value + -1
 

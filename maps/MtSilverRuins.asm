@@ -16,7 +16,7 @@ MtSilverRuins_MapScripts:
 
 	; callbacks
 	db 0
-	
+
 .DummyScene
 	end
 
@@ -25,7 +25,7 @@ MtSilverRuinsAbe:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, MtSilverRuinsFaceRight
 	appear MTSILVERRUINSB1F_ABE
-	applymovement MTSILVERRUINSB1F_ABE, MtSilverRuinsAbeApprochMovement
+	applymovement MTSILVERRUINSB1F_ABE, MtSilverRuinsAbeApproachMovement
 	opentext
 	writetext MtSilverRuinsDotsText
 	waitbutton
@@ -44,7 +44,7 @@ MtSilverRuinsAbe:
 	setscene SCENE_BEAT_ABE
 	playmapmusic
 	end
-	
+
 MtSilverRuinsEvanDown:
 	moveobject MTSILVERRUINSB1F_EVAN, 18, 41
 MtSilverRuinsEvanUp:
@@ -52,7 +52,7 @@ MtSilverRuinsEvanUp:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, MtSilverRuinsFaceLeft
 	appear MTSILVERRUINSB1F_EVAN
-	applymovement MTSILVERRUINSB1F_EVAN, MtSilverRuinsRightApprochMovement
+	applymovement MTSILVERRUINSB1F_EVAN, MtSilverRuinsRightApproachMovement
 	opentext
 	writetext MtSilverRuinsDotsText
 	waitbutton
@@ -71,7 +71,7 @@ MtSilverRuinsEvanUp:
 	setscene SCENE_BEAT_EVAN
 	playmapmusic
 	end
-	
+
 MtSilverRuinsKayDown:
 	moveobject MTSILVERRUINSB1F_KAY, 21, 30
 MtSilverRuinsKayUp:
@@ -79,7 +79,7 @@ MtSilverRuinsKayUp:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, MtSilverRuinsFaceLeft
 	appear MTSILVERRUINSB1F_KAY
-	applymovement MTSILVERRUINSB1F_KAY, MtSilverRuinsRightApprochMovement
+	applymovement MTSILVERRUINSB1F_KAY, MtSilverRuinsRightApproachMovement
 	opentext
 	writetext MtSilverRuinsDotsText
 	waitbutton
@@ -98,18 +98,18 @@ MtSilverRuinsKayUp:
 	setscene SCENE_BEAT_KAY
 	playmapmusic
 	end
-	
+
 MtSilverRuinsAzureRight:
 	applymovement PLAYER, MtSilverRuinsStepLeftMovement
 	sjump MtSilverRuinsAzureMiddle
-	
+
 MtSilverRuinsAzureLeft:
 	applymovement PLAYER, MtSilverRuinsStepRightMovement
 MtSilverRuinsAzureMiddle:
 	special FadeOutMusic
 	applymovement PLAYER, MtSilverRuinsFaceDown
 	appear MTSILVERRUINSB1F_AZURE
-	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsUpApprochMovement
+	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsUpApproachMovement
 	opentext
 	writetext MtSilverRuinsDotsText
 	waitbutton
@@ -142,13 +142,13 @@ MtSilverRuinsAzureMiddle:
 	disappear MTSILVERRUINSB1F_AZURE
 	setscene SCENE_BEAT_AZURE
 	end
-	
+
 PhanceroFliesDown:
 	disappear MTSILVERRUINSB1F_PHANCERO_STATUE
 	appear MTSILVERRUINSB1F_PHANCERO_ALIVE
 	applymovement MTSILVERRUINSB1F_PHANCERO_ALIVE, MtSilverRuinsStepDown
 	sjump PhanceroContinue
-	
+
 Phancero:
 	disappear MTSILVERRUINSB1F_PHANCERO_STATUE
 	appear MTSILVERRUINSB1F_PHANCERO_ALIVE
@@ -173,7 +173,7 @@ PhanceroContinue:
 	waitbutton
 	closetext
 	;fallthrough
-	
+
 MtSilverRuinsStartCredits:
 	pause 30
 	setscene SCENE_DEFAULT
@@ -183,14 +183,14 @@ MtSilverRuinsStartCredits:
 	refreshscreen
 	credits
 	end
-	
+
 PhanceroFledText:
 PhanceroText:
 MtSilverRuinsDotsText:
 	text "<...>"
 	done
-	
-MtSilverRuinsAbeApprochMovement:
+
+MtSilverRuinsAbeApproachMovement:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -198,22 +198,22 @@ MtSilverRuinsAbeApprochMovement:
 MtSilverRuinsStepLeftMovement:
 	step LEFT
 	step_end
-	
-MtSilverRuinsRightApprochMovement:
+
+MtSilverRuinsRightApproachMovement:
 	step RIGHT
 	step RIGHT
 	step RIGHT
 MtSilverRuinsStepRightMovement:
 	step RIGHT
 	step_end
-	
-MtSilverRuinsUpApprochMovement:
+
+MtSilverRuinsUpApproachMovement:
 	step UP
 	step UP
 	step UP
 	step UP
 	step_end
-	
+
 MtSilverRuinsAzureMovesToArena:
 	step RIGHT
 	step RIGHT
@@ -222,7 +222,7 @@ MtSilverRuinsAzureMovesToArena:
 MtSilverRuinsFaceLeft:
 	turn_head LEFT
 	step_end
-	
+
 MtSilverRuinsPlayerMovesToArena:
 	step LEFT
 	step LEFT
@@ -232,19 +232,19 @@ MtSilverRuinsPlayerMovesToArena:
 MtSilverRuinsFaceRight:
 	turn_head RIGHT
 	step_end
-	
+
 MtSilverRuinsWarpOutMovement:
 	teleport_from
 	step_end
-	
+
 MtSilverRuinsFaceDown:
 	turn_head DOWN
 	step_end
-	
+
 MtSilverRuinsStepDown:
 	step DOWN
 	step_end
-	
+
 MtSilverRuinsShowObject:
 	show_object
 	step_end
@@ -271,7 +271,7 @@ MtSilverRuins_MapEvents:
 	warp_def 4, 4, 12, MT_SILVER_RUINS_B1F
 	warp_def 1, 3, 13, MT_SILVER_RUINS_B1F
 	warp_def 1, 4, 14, MT_SILVER_RUINS_B1F
-	
+
 	; coord events
 	db 8
 	coord_event  9, 46, SCENE_DEFAULT, MtSilverRuinsAbe
@@ -282,7 +282,7 @@ MtSilverRuins_MapEvents:
 	coord_event 20,  4, SCENE_BEAT_KAY, MtSilverRuinsAzureLeft
 	coord_event 21,  4, SCENE_BEAT_KAY, MtSilverRuinsAzureMiddle
 	coord_event 22,  4, SCENE_BEAT_KAY, MtSilverRuinsAzureRight
-	
+
 	; bg events
 	db 1
 	bg_event 21,  3, BGEVENT_UP, PhanceroFliesDown

@@ -48,10 +48,10 @@ Red:
 	waitsfx
 	special PlayMapMusic
 	end
-	
+
 RuinsEntranceSignScript:
 	jumptext RuinsEntranceSignText
-	
+
 RedSeenText:
 	text "<……>"
 	line "<……>"

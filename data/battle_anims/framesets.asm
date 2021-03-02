@@ -1412,8 +1412,8 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_72,  0
 	frame BATTLEANIMOAMSET_73,  0
 	frame BATTLEANIMOAMSET_E6,  0
-	delanim	
-	
+	delanim
+
 .Frameset_d2:
 	frame BATTLEANIMOAMSET_E7,  4
 	frame BATTLEANIMOAMSET_02,  1
@@ -1423,4 +1423,4 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_02,  1
 	frame BATTLEANIMOAMSET_E7,  4
 	frame BATTLEANIMOAMSET_02,  1
-	delanim	
+	delanim

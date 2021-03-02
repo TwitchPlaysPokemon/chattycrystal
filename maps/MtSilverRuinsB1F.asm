@@ -15,7 +15,7 @@ MtSilverRuinsB1F_MapScripts:
 
 	; callbacks
 	db 0
-	
+
 .DummyScene
 	end
 
@@ -48,7 +48,7 @@ MtSilverRuinsB1FRed:
 	setscene SCENE_BEAT_RED
 	playmapmusic
 	end
-	
+
 MtSilverRuinsB1FXman:
 	special FadeOutMusic
 	pause 15
@@ -78,7 +78,7 @@ MtSilverRuinsB1FXman:
 	setscene SCENE_BEAT_XMAN
 	playmapmusic
 	end
-	
+
 MtSilverRuinsB1FDualHosts:
 	special FadeOutMusic
 	pause 15
@@ -129,7 +129,7 @@ MtSilverRuinsB1FDualHosts:
 	setscene SCENE_BEAT_DUAL_HOSTS
 	playmapmusic
 	end
-	
+
 MtSilverRuinsB1FRedo:
 	special FadeOutMusic
 	pause 15
@@ -161,15 +161,15 @@ MtSilverRuinsB1FRedo:
 	setscene SCENE_BEAT_REDO
 	playmapmusic
 	end
-	
+
 MtSilverRuinsB1FFaceRight:
 	turn_head RIGHT
 	step_end
-	
+
 MtSilverRuinsB1FFaceLeft:
 	turn_head LEFT
 	step_end
-	
+
 MtSilverRuinsB1FLeftApproachMovement:
 	step LEFT
 	step LEFT
@@ -177,14 +177,14 @@ MtSilverRuinsB1FLeftApproachMovement:
 	step LEFT
 	step LEFT
 	step_end
-	
+
 MtSilverRuinsB1FRightApproachMovement:
 	step RIGHT
 	step RIGHT
 	step RIGHT
 	step RIGHT
 	step_end
-	
+
 MtSilverRuinsB1FXmanApproachMovement:
 	step LEFT
 	step LEFT
@@ -193,7 +193,7 @@ MtSilverRuinsB1FXmanApproachMovement:
 	step LEFT
 	step LEFT
 	step_end
-	
+
 MtSilverRuinsB1FRedoApproachMovement:
 	step UP
 	step LEFT
@@ -206,23 +206,22 @@ MtSilverRuinsB1FRedoApproachMovement:
 	step UP
 	step UP
 	step_end
-	
+
 MtSilverRuinsB1FRedoFinishMovement:
 	step RIGHT
 	step RIGHT
 	step_end
-	
+
 MtSilverRuinsB1FWarpOutMovement:
 	teleport_from
 	step_end
-	
+
 MtSilverRuinsB1FXxwwnnApproachMovement:
 	step LEFT
 	step LEFT
 MtSilverRuinsB1FFaceDown:
 	turn_head DOWN
 	step_end
-
 
 MtSilverRuinsB1FDotsText:
 	text "<...>"

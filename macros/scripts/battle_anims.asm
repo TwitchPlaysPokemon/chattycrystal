@@ -132,7 +132,7 @@ anim_cry: MACRO
 	db \1 ; pitch
 ENDM
 
-	enum anim_minimizeopp_command ; $e2
+	enum skip ; $e2
 
 	enum anim_oamon_command ; $e3
 anim_oamon: MACRO
@@ -166,13 +166,10 @@ anim_minimize: MACRO
 	db anim_minimize_command
 ENDM
 
-	enum anim_0xea_command ; $ea
-
-	enum anim_0xeb_command ; $eb
-
-	enum anim_0xec_command ; $ec
-
-	enum anim_0xed_command ; $ed
+	enum skip ; $ea
+	enum skip ; $eb
+	enum skip ; $ec
+	enum skip ; $ed
 
 	enum anim_if_param_and_command ; $ee
 anim_if_param_and: MACRO
@@ -225,9 +222,8 @@ anim_clearenemyhud: MACRO
 	db anim_clearenemyhud_command
 ENDM
 
-	enum anim_0xf6_command ; $f6
-
-	enum anim_0xf7_command ; $f7
+	enum skip ; $f6
+	enum skip ; $f7
 
 	enum anim_if_param_equal_command ; $f8
 anim_if_param_equal: MACRO

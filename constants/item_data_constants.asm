@@ -57,10 +57,10 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const HELD_BERRY
 	const HELD_2
 	const HELD_LEFTOVERS
-	const HELD_4
+	const skip
 	const HELD_5
 	const HELD_RESTORE_PP
-	const HELD_7
+	const skip
 	const HELD_CLEANSE_TAG
 
 	const_def 10
@@ -92,8 +92,8 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const HELD_38
 
 	const_def 40
-	const HELD_40
-	const HELD_41
+	const skip
+	const skip
 	const HELD_METAL_POWDER
 
 	const_def 50
@@ -125,5 +125,5 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const HELD_FLINCH
 	const HELD_AMULET_COIN
 	const HELD_BRIGHTPOWDER
-	const HELD_78
+	const skip
 	const HELD_FOCUS_BAND

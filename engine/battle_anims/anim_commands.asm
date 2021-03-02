@@ -318,7 +318,7 @@ BattleAnimCommands::
 	dw BattleAnimCmd_ResetObp0
 	dw BattleAnimCmd_Sound
 	dw BattleAnimCmd_Cry
-	dw BattleAnimCmd_MinimizeOpp
+	dw GenericDummyFunction
 	dw BattleAnimCmd_OAMOn
 	dw BattleAnimCmd_OAMOff
 	dw BattleAnimCmd_ClearObjs
@@ -968,20 +968,6 @@ GetSubstitutePic: ; used only for BANK(GetSubstitutePic)
 	ld bc, 1 tiles
 	ld a, BANK(MonsterSpriteGFX)
 	jp FarCopyBytes
-
-BattleAnimCmd_MinimizeOpp:
-	ldh a, [rSVBK]
-	push af
-	ld a, 1 ; unnecessary bankswitch?
-	ldh [rSVBK], a
-	xor a ; sScratch
-	call GetSRAMBank
-	call GetMinimizePic
-	call Request2bpp
-	call CloseSRAM
-	pop af
-	ldh [rSVBK], a
-	ret
 
 GetMinimizePic:
 	ld hl, sScratch

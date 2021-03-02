@@ -3465,11 +3465,7 @@ BattleAnim_PowerGem:
 	anim_bgp $1b
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_sound 0, 0, SFX_METRONOME
-	anim_obj ANIM_OBJ_POWER_GEM, 70, 108, $0
-	anim_wait 1
 	anim_obj ANIM_OBJ_POWER_GEM, 46, 88, $0
-	anim_wait 1
-	anim_obj ANIM_OBJ_POWER_GEM, 64, 92, $0
 	anim_wait 1
 	anim_obj ANIM_OBJ_POWER_GEM, 24, 90, $0
 	anim_wait 1
@@ -3479,11 +3475,11 @@ BattleAnim_PowerGem:
 	anim_wait 1
 	anim_obj ANIM_OBJ_POWER_GEM, 30, 106, $0
 	anim_wait 1
-	anim_obj ANIM_OBJ_POWER_GEM, 56, 104, $0
+	anim_obj ANIM_OBJ_POWER_GEM, 64, 104, $0
 	anim_wait 1
 	anim_obj ANIM_OBJ_POWER_GEM, 54, 68, $0
 	anim_wait 1
-	anim_obj ANIM_OBJ_POWER_GEM, 76, 78, $0
+	anim_obj ANIM_OBJ_POWER_GEM, 72, 82, $0
 	anim_wait 80
 	anim_sound 0, 1, SFX_SHINE
 	anim_incobj  5

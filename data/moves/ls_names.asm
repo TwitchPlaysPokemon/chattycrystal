@@ -8,6 +8,8 @@ LSMoveNames::
 	indirect_entries NEEDLE_ARM, .new_moves_2
 	indirect_entries CALM_MIND - 1
 	indirect_entries MEMENTO, .new_moves_3
+	indirect_entries ROCK_BLAST - 1
+	indirect_entries HEAT_WAVE, .new_moves_4
 	indirect_table_end
 
 .new_moves_1
@@ -59,6 +61,11 @@ LSMoveNames::
 	db "Soud@@@@" ; 166
 	db "Force@@@"
 	db "Gift@@@@" ; 168
+
+.new_moves_4
+	db "Kujisi@@" ; 16b
+	db "Fixed@@@"
+	db "Hot@@@@@"
 
 .original_moves
 	db "fihgt@@@"

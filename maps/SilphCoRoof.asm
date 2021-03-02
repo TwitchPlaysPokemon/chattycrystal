@@ -12,7 +12,7 @@ SilphCoRoof_MapScripts:
 
 
 .SetUpRoof
-	checkcaught CHATOT
+	checkcaught SUICUNE
 	ifequal 2, .noSuicune
 	readmem wRoamMon2Species
 	iffalse .noSuicune

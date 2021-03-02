@@ -90,8 +90,8 @@ MapScenes::
 	scene_var POKEMON_TOWER_5F,                            wPokemonTower5FSceneID
 	scene_var ROCKET_HIDEOUT_B3F,                          wRocketHideoutB3FSceneID
 	scene_var ROCKET_HIDEOUT_B4F,                          wRocketHideoutB4FSceneID
-	scene_var SILVER_CAVE_ROOM_3,                          wSilverCaveRoom3ID
 	scene_var MT_SILVER_RUINS,                             wMtSilverRuinsSceneID
 	scene_var MT_SILVER_RUINS_B1F,                         wMtSilverRuinsB1FSceneID
 	scene_var TRICK_HOUSE_ENTRANCE,                        wTrickHouseEntranceSceneID
+	scene_var TRICK_HOUSE_EXIT,                            wTrickHouseExitSceneID
 	db -1 ; end

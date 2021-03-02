@@ -142,6 +142,9 @@ MarowakFrontpic:     INCBIN "gfx/pokemon/marowak/front.animated.2bpp.lz"
 VulpixFrontpic:      INCBIN "gfx/pokemon/vulpix/front.animated.2bpp.lz"
 GligarFrontpic:      INCBIN "gfx/pokemon/gligar/front.animated.2bpp.lz"
 DunsparceFrontpic:   INCBIN "gfx/pokemon/dunsparce/front.animated.2bpp.lz"
+BurmyBackpic::       INCBIN "gfx/pokemon/burmy/back.2bpp.lz"
+BurmyFrontpic::      INCBIN "gfx/pokemon/burmy/front.animated.2bpp.lz"
+MothimBackpic:       INCBIN "gfx/pokemon/mothim/back.2bpp.lz"
 
 SECTION "Pics 7", ROMX
 
@@ -914,9 +917,6 @@ BonslyFrontpic:      INCBIN "gfx/pokemon/bonsly/front.animated.2bpp.lz"
 
 SECTION "Pics 30", ROMX
 
-BurmyBackpic::       INCBIN "gfx/pokemon/burmy/back.2bpp.lz"
-BurmyFrontpic::      INCBIN "gfx/pokemon/burmy/front.animated.2bpp.lz"
-MothimBackpic:       INCBIN "gfx/pokemon/mothim/back.2bpp.lz"
 MothimFrontpic:      INCBIN "gfx/pokemon/mothim/front.animated.2bpp.lz"
 BuizelBackpic:       INCBIN "gfx/pokemon/buizel/back.2bpp.lz"
 BuizelFrontpic:      INCBIN "gfx/pokemon/buizel/front.animated.2bpp.lz"

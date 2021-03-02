@@ -3459,7 +3459,7 @@ BattleAnim_DragonPulse:
 	anim_wait 4
 	anim_incobj 1
 	anim_ret
-	
+
 BattleAnim_PowerGem:
 	anim_1gfx ANIM_GFX_SHINE
 	anim_bgp $1b

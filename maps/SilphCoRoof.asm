@@ -98,7 +98,7 @@ SilphCoBinoculars3Text:
 	done
 
 SilphCoBinoculars4Text:
-	text "The S.S. AQUA"	
+	text "The S.S. AQUA"
 	line "is pulling into"
 	cont "the harbor."
 
@@ -117,7 +117,7 @@ MtBattleBeatBtlMasterText:
 
 	para "to beat us all"
 	line "over again to"
-	
+
 	para "get another!"
 	done
 

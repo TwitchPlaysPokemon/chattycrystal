@@ -101,6 +101,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_55 ; 55
 	dw BattleAnimFunction_56 ; 56
 	dw BattleAnimFunction_57 ; 57
+	dw BattleAnimFunction_58 ; 57
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -4178,6 +4179,8 @@ PowerGemFunction3:
     ret nc
     ld a, $8
     jp BattleAnim_StepToTarget
+    call Functionce70a
+    ret
 
 .asm_ce35b
     call DeinitBattleAnimation

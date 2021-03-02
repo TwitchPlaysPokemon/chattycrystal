@@ -42,6 +42,8 @@ SilphCoRoofRaikou:
 	startbattle
 	disappear SILPH_CO_RAIKOU
 	reloadmapafterbattle
+	readvar VAR_BATTLERESULT
+	iftrue MtBattleGotReward
 	setval 0
 	writemem wRoamMon1Species
 	writemem wRoamMon1HP
@@ -62,6 +64,8 @@ SilphCoRoofSuicune:
 	startbattle
 	disappear SILPH_CO_SUICUNE
 	reloadmapafterbattle
+	readvar VAR_BATTLERESULT
+	iftrue MtBattleGotReward
 	setval 0
 	writemem wRoamMon2Species
 	writemem wRoamMon2HP

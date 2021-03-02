@@ -84,6 +84,7 @@ trainer: MACRO
 ;\5: win text
 ;\6: loss text
 ;\7: after-battle text
+	assert \2_TRAINER_GROUP == \1, "Trainer class mismatch!"
 	dw \3
 	db \1, \2
 	dw \4, \5, \6, \7

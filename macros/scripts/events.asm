@@ -603,6 +603,7 @@ ENDM
 
 	enum loadtrainer_command ; $5e
 loadtrainer: MACRO
+	assert \2_TRAINER_GROUP == \1, "Trainer class mismatch!"
 	db loadtrainer_command
 	db \1 ; trainer_group
 	db \2 ; trainer_id

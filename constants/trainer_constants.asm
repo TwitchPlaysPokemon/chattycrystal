@@ -3,6 +3,11 @@ trainerclass: MACRO
 const_value = 1
 ENDM
 
+trainervalue: MACRO
+	const \1
+\1_TRAINER_GROUP EQU __enum__ - 1
+ENDM
+
 ; trainer class ids
 ; `trainerclass` indexes are for:
 ; - TrainerClassNames (see data/trainers/class_names.asm)
@@ -18,824 +23,824 @@ ENDM
 	enum_start
 CHRIS EQU __enum__
 	trainerclass TRAINER_NONE ; 0
-	const PHONECONTACT_MOM
-	const PHONECONTACT_BIKESHOP
-	const PHONECONTACT_BILL
-	const PHONECONTACT_ELM
-	const PHONECONTACT_BUENA
+	trainervalue PHONECONTACT_MOM
+	trainervalue PHONECONTACT_BIKESHOP
+	trainervalue PHONECONTACT_BILL
+	trainervalue PHONECONTACT_ELM
+	trainervalue PHONECONTACT_BUENA
 
 	trainerclass CAL ; 1
-	const CAL1
-	const CAL2
-	const CAL3
-	const MT_BATTLE_100 ; CAL4
+	trainervalue CAL1
+	trainervalue CAL2
+	trainervalue CAL3
+	trainervalue MT_BATTLE_100 ; CAL4
 
 	trainerclass SCIENTIST ; 2
-	const ROSS
-	const MITCH
-	const JED
-	const MARC
-	const RICH
-	const BRAYDON
-	const GIDEON
-	const TAYLOR
-	const MT_BATTLE_18 ; DOIMO
-	const MT_BATTLE_29 ; WAGEL
-	const MT_BATTLE_31 ; HILDON
-	const MT_BATTLE_51 ; DEMIT
-	const MT_BATTLE_59 ; NANOT
-	const MT_BATTLE_78 ; ORDO
-	const MT_BATTLE_81 ; REMAN
+	trainervalue ROSS
+	trainervalue MITCH
+	trainervalue JED
+	trainervalue MARC
+	trainervalue RICH
+	trainervalue BRAYDON
+	trainervalue GIDEON
+	trainervalue TAYLOR
+	trainervalue MT_BATTLE_18 ; DOIMO
+	trainervalue MT_BATTLE_29 ; WAGEL
+	trainervalue MT_BATTLE_31 ; HILDON
+	trainervalue MT_BATTLE_51 ; DEMIT
+	trainervalue MT_BATTLE_59 ; NANOT
+	trainervalue MT_BATTLE_78 ; ORDO
+	trainervalue MT_BATTLE_81 ; REMAN
 
 	trainerclass YOUNGSTER ; 3
-	const JOEY1
-	const MIKEY
-	const ALBERT
-	const GORDON
-	const SAMUEL
-	const IAN
-	const JOEY2
-	const JOEY3
-	const WARREN
-	const JIMMY
-	const OWEN
-	const JASON
-	const JOEY4
-	const JOEY5
-	const MT_BATTLE_20 ; ERBEN
-	const MT_BATTLE_89 ; PERC
+	trainervalue JOEY1
+	trainervalue MIKEY
+	trainervalue ALBERT
+	trainervalue GORDON
+	trainervalue SAMUEL
+	trainervalue IAN
+	trainervalue JOEY2
+	trainervalue JOEY3
+	trainervalue WARREN
+	trainervalue JIMMY
+	trainervalue OWEN
+	trainervalue JASON
+	trainervalue JOEY4
+	trainervalue JOEY5
+	trainervalue MT_BATTLE_20 ; ERBEN
+	trainervalue MT_BATTLE_89 ; PERC
 
 	trainerclass SCHOOLBOY ; 4
-	const JACK1
-	const KIPP
-	const ALAN1
-	const JOHNNY
-	const DANNY
-	const TOMMY
-	const DUDLEY
-	const JOE
-	const BILLY
-	const CHAD1
-	const NATE
-	const RICKY
-	const JACK2
-	const JACK3
-	const ALAN2
-	const ALAN3
-	const CHAD2
-	const CHAD3
-	const JACK4
-	const JACK5
-	const ALAN4
-	const ALAN5
-	const CHAD4
-	const CHAD5
-	const MT_BATTLE_34 ; ROEX
+	trainervalue JACK1
+	trainervalue KIPP
+	trainervalue ALAN1
+	trainervalue JOHNNY
+	trainervalue DANNY
+	trainervalue TOMMY
+	trainervalue DUDLEY
+	trainervalue JOE
+	trainervalue BILLY
+	trainervalue CHAD1
+	trainervalue NATE
+	trainervalue RICKY
+	trainervalue JACK2
+	trainervalue JACK3
+	trainervalue ALAN2
+	trainervalue ALAN3
+	trainervalue CHAD2
+	trainervalue CHAD3
+	trainervalue JACK4
+	trainervalue JACK5
+	trainervalue ALAN4
+	trainervalue ALAN5
+	trainervalue CHAD4
+	trainervalue CHAD5
+	trainervalue MT_BATTLE_34 ; ROEX
 
 	trainerclass BIRD_KEEPER ; 5
-	const ROD
-	const ABE
-	const BRYAN
-	const THEO
-	const TOBY
-	const DENIS
-	const VANCE1
-	const HANK
-	const ROY
-	const BORIS
-	const BOB
-	const JOSE1
-	const PETER
-	const JOSE2
-	const PERRY
-	const BRET
-	const VANCE2
-	const VANCE3
-	const MT_BATTLE_10 ; ELION
-	const MT_BATTLE_61 ; BENIT
+	trainervalue ROD
+	trainervalue ABE
+	trainervalue BRYAN
+	trainervalue THEO
+	trainervalue TOBY
+	trainervalue DENIS
+	trainervalue VANCE1
+	trainervalue HANK
+	trainervalue ROY
+	trainervalue BORIS
+	trainervalue BOB
+	trainervalue JOSE1
+	trainervalue PETER
+	trainervalue JOSE2
+	trainervalue PERRY
+	trainervalue BRET
+	trainervalue VANCE2
+	trainervalue VANCE3
+	trainervalue MT_BATTLE_10 ; ELION
+	trainervalue MT_BATTLE_61 ; BENIT
 
 	trainerclass LASS ; 6
-	const CARRIE
-	const BRIDGET
-	const ALICE
-	const KRISE
-	const CONNIE1
-	const LINDA
-	const LAURA
-	const SHANNON
-	const MICHELLE
-	const DANA1
-	const ELLEN
-	const CONNIE2
-	const CONNIE3
-	const DANA2
-	const DANA3
-	const DANA4
-	const DANA5
-	const MT_BATTLE_87 ; SANOL
+	trainervalue CARRIE
+	trainervalue BRIDGET
+	trainervalue ALICE
+	trainervalue KRISE
+	trainervalue CONNIE1
+	trainervalue LINDA
+	trainervalue LAURA
+	trainervalue SHANNON
+	trainervalue MICHELLE
+	trainervalue DANA1
+	trainervalue ELLEN
+	trainervalue CONNIE2
+	trainervalue CONNIE3
+	trainervalue DANA2
+	trainervalue DANA3
+	trainervalue DANA4
+	trainervalue DANA5
+	trainervalue MT_BATTLE_87 ; SANOL
 
 	trainerclass COOLTRAINERM ; 7
-	const NICK
-	const AARON
-	const PAUL
-	const CODY
-	const MIKE
-	const GAVEN1
-	const GAVEN2
-	const RYAN
-	const JAKE
-	const BLAKE
-	const BRIAN
-	const ERICK
-	const ANDY
-	const TYLER
-	const SEAN
-	const KEVIN
-	const STEVE
-	const ALLEN
-	const DARIN
-	const YUJI
-	const MT_BATTLE_19 ; HEBEL
-	const MT_BATTLE_37 ; MORIL
-	const MT_BATTLE_50 ; CRYAL
-	const MT_BATTLE_66 ; DAZON
-	const MT_BATTLE_91 ; CRUIK
+	trainervalue NICK
+	trainervalue AARON
+	trainervalue PAUL
+	trainervalue CODY
+	trainervalue MIKE
+	trainervalue GAVEN1
+	trainervalue GAVEN2
+	trainervalue RYAN
+	trainervalue JAKE
+	trainervalue BLAKE
+	trainervalue BRIAN
+	trainervalue ERICK
+	trainervalue ANDY
+	trainervalue TYLER
+	trainervalue SEAN
+	trainervalue KEVIN
+	trainervalue STEVE
+	trainervalue ALLEN
+	trainervalue DARIN
+	trainervalue YUJI
+	trainervalue MT_BATTLE_19 ; HEBEL
+	trainervalue MT_BATTLE_37 ; MORIL
+	trainervalue MT_BATTLE_50 ; CRYAL
+	trainervalue MT_BATTLE_66 ; DAZON
+	trainervalue MT_BATTLE_91 ; CRUIK
 
 	trainerclass COOLTRAINERF ; 8
-	const GWEN
-	const LOIS
-	const FRAN
-	const LOLA
-	const KATE
-	const IRENE
-	const KELLY
-	const JOYCE
-	const BETH1
-	const REENA1
-	const MEGAN
-	const BETH2
-	const CAROL
-	const QUINN
-	const EMMA
-	const CYBIL
-	const JENN
-	const REENA2
-	const CARA
-	const MT_BATTLE_24 ; RATEIS
-	const MT_BATTLE_48 ; ROSNO
-	const MT_BATTLE_73 ; GILLY
-	const MT_BATTLE_99 ; TYNAN
+	trainervalue GWEN
+	trainervalue LOIS
+	trainervalue FRAN
+	trainervalue LOLA
+	trainervalue KATE
+	trainervalue IRENE
+	trainervalue KELLY
+	trainervalue JOYCE
+	trainervalue BETH1
+	trainervalue REENA1
+	trainervalue MEGAN
+	trainervalue BETH2
+	trainervalue CAROL
+	trainervalue QUINN
+	trainervalue EMMA
+	trainervalue CYBIL
+	trainervalue JENN
+	trainervalue REENA2
+	trainervalue CARA
+	trainervalue MT_BATTLE_24 ; RATEIS
+	trainervalue MT_BATTLE_48 ; ROSNO
+	trainervalue MT_BATTLE_73 ; GILLY
+	trainervalue MT_BATTLE_99 ; TYNAN
 
 	trainerclass BEAUTY ; 9
-	const VICTORIA
-	const SAMANTHA
-	const JULIE
-	const JACLYN
-	const BRENDA
-	const CASSIE
-	const CAROLINE
-	const CARLENE
-	const JESSICA
-	const RACHAEL
-	const ANGELICA
-	const KENDRA
-	const VERONICA
-	const JULIA
-	const THERESA
-	const VALERIE
-	const OLIVIA
-	const MT_BATTLE_4 ; ZOILA
-	const MT_BATTLE_28 ; BRENA
-	const MT_BATTLE_54 ; RENE
+	trainervalue VICTORIA
+	trainervalue SAMANTHA
+	trainervalue JULIE
+	trainervalue JACLYN
+	trainervalue BRENDA
+	trainervalue CASSIE
+	trainervalue CAROLINE
+	trainervalue CARLENE
+	trainervalue JESSICA
+	trainervalue RACHAEL
+	trainervalue ANGELICA
+	trainervalue KENDRA
+	trainervalue VERONICA
+	trainervalue JULIA
+	trainervalue THERESA
+	trainervalue VALERIE
+	trainervalue OLIVIA
+	trainervalue MT_BATTLE_4 ; ZOILA
+	trainervalue MT_BATTLE_28 ; BRENA
+	trainervalue MT_BATTLE_54 ; RENE
 
 	trainerclass POKEMANIAC ; a
-	const LARRY
-	const ANDREW
-	const CALVIN
-	const SHANE
-	const BEN
-	const BRENT1
-	const RON
-	const ETHAN
-	const BRENT2
-	const BRENT3
-	const ISSAC
-	const DONALD
-	const ZACH
-	const BRENT4
-	const MILLER
+	trainervalue LARRY
+	trainervalue ANDREW
+	trainervalue CALVIN
+	trainervalue SHANE
+	trainervalue BEN
+	trainervalue BRENT1
+	trainervalue RON
+	trainervalue ETHAN
+	trainervalue BRENT2
+	trainervalue BRENT3
+	trainervalue ISSAC
+	trainervalue DONALD
+	trainervalue ZACH
+	trainervalue BRENT4
+	trainervalue MILLER
 
 	trainerclass GRUNTM ; b
-	const GRUNTM_2
-	const GRUNTM_3
-	const GRUNTM_4
-	const GRUNTM_5
-	const GRUNTM_6
-	const GRUNTM_7
-	const GRUNTM_8
-	const GRUNTM_9
-	const GRUNTM_10
-	const GRUNTM_11
-	const GRUNTM_13
-	const GRUNTM_14
-	const GRUNTM_15
-	const GRUNTM_16
-	const GRUNTM_17
-	const GRUNTM_18
-	const GRUNTM_19
-	const GRUNTM_20
-	const GRUNTM_21
-	const GRUNTM_24
-	const GRUNTM_25
-	const GRUNTM_26
-	const GRUNTM_28
-	const GRUNTM_29
-	const GRUNTM_30
-	const GRUNTM_31
-	const GRUNTM_32
+	trainervalue GRUNTM_2
+	trainervalue GRUNTM_3
+	trainervalue GRUNTM_4
+	trainervalue GRUNTM_5
+	trainervalue GRUNTM_6
+	trainervalue GRUNTM_7
+	trainervalue GRUNTM_8
+	trainervalue GRUNTM_9
+	trainervalue GRUNTM_10
+	trainervalue GRUNTM_11
+	trainervalue GRUNTM_13
+	trainervalue GRUNTM_14
+	trainervalue GRUNTM_15
+	trainervalue GRUNTM_16
+	trainervalue GRUNTM_17
+	trainervalue GRUNTM_18
+	trainervalue GRUNTM_19
+	trainervalue GRUNTM_20
+	trainervalue GRUNTM_21
+	trainervalue GRUNTM_24
+	trainervalue GRUNTM_25
+	trainervalue GRUNTM_26
+	trainervalue GRUNTM_28
+	trainervalue GRUNTM_29
+	trainervalue GRUNTM_30
+	trainervalue GRUNTM_31
+	trainervalue GRUNTM_32
 
 	trainerclass GENTLEMAN ; c
-	const PRESTON
-	const EDWARD
-	const GREGORY
-	const VIRGIL
-	const ALFRED
+	trainervalue PRESTON
+	trainervalue EDWARD
+	trainervalue GREGORY
+	trainervalue VIRGIL
+	trainervalue ALFRED
 
 	trainerclass SKIER ; d
-	const ROXANNE
-	const CLARISSA
-	const CADY
-	const MT_BATTLE_46 ; KIMERY
-	const MT_BATTLE_57 ; VIUM
-	const MT_BATTLE_77 ; ZALLA
+	trainervalue ROXANNE
+	trainervalue CLARISSA
+	trainervalue CADY
+	trainervalue MT_BATTLE_46 ; KIMERY
+	trainervalue MT_BATTLE_57 ; VIUM
+	trainervalue MT_BATTLE_77 ; ZALLA
 
 	trainerclass TEACHER ; e
-	const COLETTE
-	const HILLARY
-	const SHIRLEY
-	const MT_BATTLE_5  ; SECORT
-	const MT_BATTLE_16 ; FEREN
-	const MT_BATTLE_26 ; ISETTE
-	const MT_BATTLE_44 ; TASH
-	const MT_BATTLE_56 ; AMEIL
-	const MT_BATTLE_71 ; LISOT
-	const MT_BATTLE_79 ; JODIN
-	const MT_BATTLE_98 ; MASSI
+	trainervalue COLETTE
+	trainervalue HILLARY
+	trainervalue SHIRLEY
+	trainervalue MT_BATTLE_5  ; SECORT
+	trainervalue MT_BATTLE_16 ; FEREN
+	trainervalue MT_BATTLE_26 ; ISETTE
+	trainervalue MT_BATTLE_44 ; TASH
+	trainervalue MT_BATTLE_56 ; AMEIL
+	trainervalue MT_BATTLE_71 ; LISOT
+	trainervalue MT_BATTLE_79 ; JODIN
+	trainervalue MT_BATTLE_98 ; MASSI
 
 	trainerclass BUG_CATCHER ; f
-	const DON
-	const ROB
-	const ED
-	const WADE1
-	const BUG_CATCHER_BENNY
-	const AL
-	const JOSH
-	const ARNIE1
-	const KEN
-	const WADE2
-	const WADE3
-	const DOUG
-	const ARNIE2
-	const ARNIE3
-	const WADE4
-	const WADE5
-	const ARNIE4
-	const ARNIE5
-	const WAYNE
-	const DANE
-	const DION
-	const STACEY
-	const ELLIS
-	const ABNER
+	trainervalue DON
+	trainervalue ROB
+	trainervalue ED
+	trainervalue WADE1
+	trainervalue BUG_CATCHER_BENNY
+	trainervalue AL
+	trainervalue JOSH
+	trainervalue ARNIE1
+	trainervalue KEN
+	trainervalue WADE2
+	trainervalue WADE3
+	trainervalue DOUG
+	trainervalue ARNIE2
+	trainervalue ARNIE3
+	trainervalue WADE4
+	trainervalue WADE5
+	trainervalue ARNIE4
+	trainervalue ARNIE5
+	trainervalue WAYNE
+	trainervalue DANE
+	trainervalue DION
+	trainervalue STACEY
+	trainervalue ELLIS
+	trainervalue ABNER
 
 	trainerclass FISHER ; 10
-	const JUSTIN
-	const RALPH1
-	const ARNOLD
-	const KYLE
-	const HENRY
-	const MARVIN
-	const TULLY1
-	const ANDRE
-	const RAYMOND
-	const WILTON1
-	const EDGAR
-	const JONAH
-	const MARTIN
-	const STEPHEN
-	const BARNEY
-	const RALPH2
-	const RALPH3
-	const TULLY2
-	const TULLY3
-	const WILTON2
-	const SCOTT
-	const WILTON3
-	const RALPH4
-	const RALPH5
-	const TULLY4
+	trainervalue JUSTIN
+	trainervalue RALPH1
+	trainervalue ARNOLD
+	trainervalue KYLE
+	trainervalue HENRY
+	trainervalue MARVIN
+	trainervalue TULLY1
+	trainervalue ANDRE
+	trainervalue RAYMOND
+	trainervalue WILTON1
+	trainervalue EDGAR
+	trainervalue JONAH
+	trainervalue MARTIN
+	trainervalue STEPHEN
+	trainervalue BARNEY
+	trainervalue RALPH2
+	trainervalue RALPH3
+	trainervalue TULLY2
+	trainervalue TULLY3
+	trainervalue WILTON2
+	trainervalue SCOTT
+	trainervalue WILTON3
+	trainervalue RALPH4
+	trainervalue RALPH5
+	trainervalue TULLY4
 
 	trainerclass SWIMMERM ; 11
-	const HAROLD
-	const SIMON_S
-	const RANDALL
-	const CHARLIE
-	const GEORGE
-	const BERKE
-	const KIRK
-	const MATHEW
-	const HAL
-	const PATON
-	const DARYL
-	const WALTER
-	const TONY
-	const JEROME
-	const TUCKER
-	const RICK
-	const CAMERON
-	const SETH
-	const JAMES
-	const LEWIS
-	const PARKER
-	const MT_BATTLE_35 ; DERON
-	const MT_BATTLE_55 ; GULOR
-	const MT_BATTLE_85 ; MENZON
+	trainervalue HAROLD
+	trainervalue SIMON_S
+	trainervalue RANDALL
+	trainervalue CHARLIE
+	trainervalue GEORGE
+	trainervalue BERKE
+	trainervalue KIRK
+	trainervalue MATHEW
+	trainervalue HAL
+	trainervalue PATON
+	trainervalue DARYL
+	trainervalue WALTER
+	trainervalue TONY
+	trainervalue JEROME
+	trainervalue TUCKER
+	trainervalue RICK
+	trainervalue CAMERON
+	trainervalue SETH
+	trainervalue JAMES
+	trainervalue LEWIS
+	trainervalue PARKER
+	trainervalue MT_BATTLE_35 ; DERON
+	trainervalue MT_BATTLE_55 ; GULOR
+	trainervalue MT_BATTLE_85 ; MENZON
 
 	trainerclass SWIMMERF ; 12
-	const ELAINE
-	const PAULA
-	const KAYLEE
-	const SUSIE
-	const DENISE
-	const KARA
-	const WENDY
-	const LISA
-	const JILL
-	const MARY
-	const KATIE
-	const DAWN
-	const TARA
-	const NICOLE
-	const LORI
-	const JODY
-	const NIKKI
-	const DIANA
-	const BRIANA
-	const MT_BATTLE_2  ; SANO
-	const MT_BATTLE_22 ; KIMBER
-	const MT_BATTLE_36 ; TIANA
+	trainervalue ELAINE
+	trainervalue PAULA
+	trainervalue KAYLEE
+	trainervalue SUSIE
+	trainervalue DENISE
+	trainervalue KARA
+	trainervalue WENDY
+	trainervalue LISA
+	trainervalue JILL
+	trainervalue MARY
+	trainervalue KATIE
+	trainervalue DAWN
+	trainervalue TARA
+	trainervalue NICOLE
+	trainervalue LORI
+	trainervalue JODY
+	trainervalue NIKKI
+	trainervalue DIANA
+	trainervalue BRIANA
+	trainervalue MT_BATTLE_2  ; SANO
+	trainervalue MT_BATTLE_22 ; KIMBER
+	trainervalue MT_BATTLE_36 ; TIANA
 
 	trainerclass SAILOR ; 13
-	const EUGENE
-	const HUEY1
-	const TERRELL
-	const KENT
-	const ERNEST
-	const JEFF
-	const GARRETT
-	const KENNETH
-	const STANLY
-	const HARRY
-	const HUEY2
-	const HUEY3
-	const HUEY4
-	const MT_BATTLE_70 ; VARIO
+	trainervalue EUGENE
+	trainervalue HUEY1
+	trainervalue TERRELL
+	trainervalue KENT
+	trainervalue ERNEST
+	trainervalue JEFF
+	trainervalue GARRETT
+	trainervalue KENNETH
+	trainervalue STANLY
+	trainervalue HARRY
+	trainervalue HUEY2
+	trainervalue HUEY3
+	trainervalue HUEY4
+	trainervalue MT_BATTLE_70 ; VARIO
 
 	trainerclass SUPER_NERD ; 14
-	const STAN
-	const ERIC
-	const GREGG
-	const JAY
-	const DAVE
-	const SAM
-	const TOM
-	const PAT
-	const SHAWN
-	const TERU
-	const RUSS
-	const NORTON
-	const HUGH
-	const MARKUS
-	const MT_BATTLE_1  ; ROOD
-	const MT_BATTLE_40 ; SLEWIS
-	const MT_BATTLE_45 ; ACRON
-	const MT_BATTLE_69 ; DUNOR
-	const MT_BATTLE_95 ; ELDAN
+	trainervalue STAN
+	trainervalue ERIC
+	trainervalue GREGG
+	trainervalue JAY
+	trainervalue DAVE
+	trainervalue SAM
+	trainervalue TOM
+	trainervalue PAT
+	trainervalue SHAWN
+	trainervalue TERU
+	trainervalue RUSS
+	trainervalue NORTON
+	trainervalue HUGH
+	trainervalue MARKUS
+	trainervalue MT_BATTLE_1  ; ROOD
+	trainervalue MT_BATTLE_40 ; SLEWIS
+	trainervalue MT_BATTLE_45 ; ACRON
+	trainervalue MT_BATTLE_69 ; DUNOR
+	trainervalue MT_BATTLE_95 ; ELDAN
 
 	trainerclass GUITARIST ; 15
-	const CLYDE
-	const VINCENT
-	const JAMIE
-	const MT_BATTLE_15 ; ARDO
-	const MT_BATTLE_27 ; NOREL
-	const MT_BATTLE_43 ; DEATS
-	const MT_BATTLE_82 ; FEEK
-	const MT_BATTLE_90 ; NEBLEK
+	trainervalue CLYDE
+	trainervalue VINCENT
+	trainervalue JAMIE
+	trainervalue MT_BATTLE_15 ; ARDO
+	trainervalue MT_BATTLE_27 ; NOREL
+	trainervalue MT_BATTLE_43 ; DEATS
+	trainervalue MT_BATTLE_82 ; FEEK
+	trainervalue MT_BATTLE_90 ; NEBLEK
 
 	trainerclass HIKER ; 16
-	const ANTHONY1
-	const RUSSELL
-	const PHILLIP
-	const LEONARD
-	const ANTHONY2
-	const BENJAMIN
-	const ERIK
-	const MICHAEL
-	const PARRY1
-	const TIMOTHY
-	const BAILEY
-	const ANTHONY3
-	const TIM
-	const NOLAND
-	const SIDNEY
-	const KENNY
-	const JIM
-	const DANIEL
-	const PARRY2
-	const PARRY3
-	const ANTHONY4
-	const ANTHONY5
-	const MT_BATTLE_30 ; LEVEN
-	const MT_BATTLE_53 ; CRAG
-	const MT_BATTLE_84 ; WILER
+	trainervalue ANTHONY1
+	trainervalue RUSSELL
+	trainervalue PHILLIP
+	trainervalue LEONARD
+	trainervalue ANTHONY2
+	trainervalue BENJAMIN
+	trainervalue ERIK
+	trainervalue MICHAEL
+	trainervalue PARRY1
+	trainervalue TIMOTHY
+	trainervalue BAILEY
+	trainervalue ANTHONY3
+	trainervalue TIM
+	trainervalue NOLAND
+	trainervalue SIDNEY
+	trainervalue KENNY
+	trainervalue JIM
+	trainervalue DANIEL
+	trainervalue PARRY2
+	trainervalue PARRY3
+	trainervalue ANTHONY4
+	trainervalue ANTHONY5
+	trainervalue MT_BATTLE_30 ; LEVEN
+	trainervalue MT_BATTLE_53 ; CRAG
+	trainervalue MT_BATTLE_84 ; WILER
 
 	trainerclass BIKER ; 17
-	const BIKER_BENNY
-	const KAZU
-	const DWAYNE
-	const HARRIS
-	const ZEKE
-	const CHARLES
-	const RILEY
-	const JOEL
-	const GLENN
-	const MT_BATTLE_3 ; EARGLE
-	const MT_BATTLE_39 ; LOHON
-	const MT_BATTLE_63 ; ROGIN
-	const MT_BATTLE_88 ; REBIN
+	trainervalue BIKER_BENNY
+	trainervalue KAZU
+	trainervalue DWAYNE
+	trainervalue HARRIS
+	trainervalue ZEKE
+	trainervalue CHARLES
+	trainervalue RILEY
+	trainervalue JOEL
+	trainervalue GLENN
+	trainervalue MT_BATTLE_3 ; EARGLE
+	trainervalue MT_BATTLE_39 ; LOHON
+	trainervalue MT_BATTLE_63 ; ROGIN
+	trainervalue MT_BATTLE_88 ; REBIN
 
 	trainerclass BURGLAR ; 18
-	const DUNCAN
-	const EDDIE
-	const COREY
-	const JAC
-	const DUSTY
-	const SIMON_B
+	trainervalue DUNCAN
+	trainervalue EDDIE
+	trainervalue COREY
+	trainervalue JAC
+	trainervalue DUSTY
+	trainervalue SIMON_B
 
 	trainerclass FIREBREATHER ; 19
-	const OTIS
-	const DICK
-	const NED
-	const BURT
-	const BILL
-	const WALT
-	const RAY
-	const LYLE
-	const MT_BATTLE_25 ; HOGLO
+	trainervalue OTIS
+	trainervalue DICK
+	trainervalue NED
+	trainervalue BURT
+	trainervalue BILL
+	trainervalue WALT
+	trainervalue RAY
+	trainervalue LYLE
+	trainervalue MT_BATTLE_25 ; HOGLO
 
 	trainerclass JUGGLER ; 1a
-	const IRWIN1
-	const FRITZ
-	const HORTON
-	const IRWIN2
-	const IRWIN3
-	const IRWIN4
-	const MT_BATTLE_21 ; SIDO
-	const MT_BATTLE_52 ; LIREL
-	const MT_BATTLE_76 ; SIRKO
+	trainervalue IRWIN1
+	trainervalue FRITZ
+	trainervalue HORTON
+	trainervalue IRWIN2
+	trainervalue IRWIN3
+	trainervalue IRWIN4
+	trainervalue MT_BATTLE_21 ; SIDO
+	trainervalue MT_BATTLE_52 ; LIREL
+	trainervalue MT_BATTLE_76 ; SIRKO
 
 	trainerclass BLACKBELT_T ; 1b
-	const KENJI1
-	const YOSHI
-	const KENJI2
-	const LAO
-	const NOB
-	const KIYO
-	const LUNG
-	const KENJI3
-	const WAI
-	const MT_BATTLE_9 ; RAPOZ
-	const MT_BATTLE_14 ; ROGEN
-	const MT_BATTLE_47 ; RAWLES
-	const MT_BATTLE_62 ; HELMIN
-	const MT_BATTLE_74 ; CHIOD
-	const MT_BATTLE_96 ; ELDOR
+	trainervalue KENJI1
+	trainervalue YOSHI
+	trainervalue KENJI2
+	trainervalue LAO
+	trainervalue NOB
+	trainervalue KIYO
+	trainervalue LUNG
+	trainervalue KENJI3
+	trainervalue WAI
+	trainervalue MT_BATTLE_9 ; RAPOZ
+	trainervalue MT_BATTLE_14 ; ROGEN
+	trainervalue MT_BATTLE_47 ; RAWLES
+	trainervalue MT_BATTLE_62 ; HELMIN
+	trainervalue MT_BATTLE_74 ; CHIOD
+	trainervalue MT_BATTLE_96 ; ELDOR
 
 	trainerclass PSYCHIC_T ; 1c
-	const NATHAN
-	const FRANKLIN
-	const HERMAN
-	const FIDEL
-	const GREG
-	const NORMAN
-	const MARK
-	const PHIL
-	const RICHARD
-	const GILBERT
-	const JARED
-	const RODNEY
+	trainervalue NATHAN
+	trainervalue FRANKLIN
+	trainervalue HERMAN
+	trainervalue FIDEL
+	trainervalue GREG
+	trainervalue NORMAN
+	trainervalue MARK
+	trainervalue PHIL
+	trainervalue RICHARD
+	trainervalue GILBERT
+	trainervalue JARED
+	trainervalue RODNEY
 
 	trainerclass PICNICKER ; 1d
-	const LIZ1
-	const GINA1
-	const BROOKE
-	const KIM
-	const CINDY
-	const HOPE
-	const SHARON
-	const DEBRA
-	const GINA2
-	const ERIN1
-	const LIZ2
-	const LIZ3
-	const HEIDI
-	const EDNA
-	const GINA3
-	const TIFFANY1
-	const TIFFANY2
-	const ERIN2
-	const TANYA
-	const TIFFANY3
-	const ERIN3
-	const LIZ4
-	const LIZ5
-	const GINA4
-	const GINA5
-	const TIFFANY4
-	const MT_BATTLE_17 ; MALOO
-	const MT_BATTLE_67 ; ZIALE
-	const MT_BATTLE_93 ; NOMOL
+	trainervalue LIZ1
+	trainervalue GINA1
+	trainervalue BROOKE
+	trainervalue KIM
+	trainervalue CINDY
+	trainervalue HOPE
+	trainervalue SHARON
+	trainervalue DEBRA
+	trainervalue GINA2
+	trainervalue ERIN1
+	trainervalue LIZ2
+	trainervalue LIZ3
+	trainervalue HEIDI
+	trainervalue EDNA
+	trainervalue GINA3
+	trainervalue TIFFANY1
+	trainervalue TIFFANY2
+	trainervalue ERIN2
+	trainervalue TANYA
+	trainervalue TIFFANY3
+	trainervalue ERIN3
+	trainervalue LIZ4
+	trainervalue LIZ5
+	trainervalue GINA4
+	trainervalue GINA5
+	trainervalue TIFFANY4
+	trainervalue MT_BATTLE_17 ; MALOO
+	trainervalue MT_BATTLE_67 ; ZIALE
+	trainervalue MT_BATTLE_93 ; NOMOL
 
 	trainerclass CAMPER ; 1e
-	const ROLAND
-	const TODD1
-	const IVAN
-	const ELLIOT
-	const BARRY
-	const LLOYD
-	const DEAN
-	const SID
-	const HARVEY
-	const DALE
-	const TED
-	const TODD2
-	const TODD3
-	const THOMAS
-	const LEROY
-	const DAVID
-	const JOHN
-	const JERRY
-	const SPENCER
-	const TODD4
-	const TODD5
-	const QUENTIN
-	const MT_BATTLE_12 ; DENC
-	const MT_BATTLE_83 ; AICH
+	trainervalue ROLAND
+	trainervalue TODD1
+	trainervalue IVAN
+	trainervalue ELLIOT
+	trainervalue BARRY
+	trainervalue LLOYD
+	trainervalue DEAN
+	trainervalue SID
+	trainervalue HARVEY
+	trainervalue DALE
+	trainervalue TED
+	trainervalue TODD2
+	trainervalue TODD3
+	trainervalue THOMAS
+	trainervalue LEROY
+	trainervalue DAVID
+	trainervalue JOHN
+	trainervalue JERRY
+	trainervalue SPENCER
+	trainervalue TODD4
+	trainervalue TODD5
+	trainervalue QUENTIN
+	trainervalue MT_BATTLE_12 ; DENC
+	trainervalue MT_BATTLE_83 ; AICH
 
 	trainerclass SAGE ; 1f
-	const CHOW
-	const NICO
-	const JIN
-	const TROY
-	const JEFFREY
-	const PING
-	const EDMOND
-	const NEAL
-	const GAKU
-	const MASA
-	const YIN
-	const YANG
-	const MT_BATTLE_6 ; GRUND
-	const MT_BATTLE_41 ; ORSAK
-	const MT_BATTLE_86 ; BERLO
+	trainervalue CHOW
+	trainervalue NICO
+	trainervalue JIN
+	trainervalue TROY
+	trainervalue JEFFREY
+	trainervalue PING
+	trainervalue EDMOND
+	trainervalue NEAL
+	trainervalue GAKU
+	trainervalue MASA
+	trainervalue YIN
+	trainervalue YANG
+	trainervalue MT_BATTLE_6 ; GRUND
+	trainervalue MT_BATTLE_41 ; ORSAK
+	trainervalue MT_BATTLE_86 ; BERLO
 
 	trainerclass MEDIUM ; 20
-	const MARTHA
-	const GRACE
-	const BETHANY
-	const MARGRET
-	const ETHEL
-	const REBECCA
-	const DORIS
-	const CARLY
-	const LAUREL
-	const PATRICIA
-	const MT_BATTLE_13 ; MYOG
-	const MT_BATTLE_38 ; GRENAY
-	const MT_BATTLE_65 ; PERSTIN
-	const MT_BATTLE_94 ; DESOR
+	trainervalue MARTHA
+	trainervalue GRACE
+	trainervalue BETHANY
+	trainervalue MARGRET
+	trainervalue ETHEL
+	trainervalue REBECCA
+	trainervalue DORIS
+	trainervalue CARLY
+	trainervalue LAUREL
+	trainervalue PATRICIA
+	trainervalue MT_BATTLE_13 ; MYOG
+	trainervalue MT_BATTLE_38 ; GRENAY
+	trainervalue MT_BATTLE_65 ; PERSTIN
+	trainervalue MT_BATTLE_94 ; DESOR
 
 	trainerclass BOARDER ; 21
-	const RONALD
-	const BRAD
-	const DOUGLAS
-	const SHAUN
-	const BRYCE
-	const MT_BATTLE_7 ; GARS
-	const MT_BATTLE_23 ; RENFAR
-	const MT_BATTLE_32 ; TARY
-	const MT_BATTLE_49 ; MANDEV
-	const MT_BATTLE_58 ; BIDIX
-	const MT_BATTLE_72 ; FAUL
+	trainervalue RONALD
+	trainervalue BRAD
+	trainervalue DOUGLAS
+	trainervalue SHAUN
+	trainervalue BRYCE
+	trainervalue MT_BATTLE_7 ; GARS
+	trainervalue MT_BATTLE_23 ; RENFAR
+	trainervalue MT_BATTLE_32 ; TARY
+	trainervalue MT_BATTLE_49 ; MANDEV
+	trainervalue MT_BATTLE_58 ; BIDIX
+	trainervalue MT_BATTLE_72 ; FAUL
 
 	trainerclass POKEFANM ; 22
-	const WILLIAM
-	const DEREK1
-	const ROBERT
-	const JOSHUA
-	const CARTER
-	const TREVOR
-	const BRANDON
-	const JEREMY
-	const COLIN
-	const DEREK2
-	const DEREK3
-	const ALEX
-	const REX
-	const ALLAN
-	const MT_BATTLE_11 ; GIROD
-	const MT_BATTLE_42 ; GOHN
-	const MT_BATTLE_68 ; CORVIN
-	const MT_BATTLE_92 ; PAREL
+	trainervalue WILLIAM
+	trainervalue DEREK1
+	trainervalue ROBERT
+	trainervalue JOSHUA
+	trainervalue CARTER
+	trainervalue TREVOR
+	trainervalue BRANDON
+	trainervalue JEREMY
+	trainervalue COLIN
+	trainervalue DEREK2
+	trainervalue DEREK3
+	trainervalue ALEX
+	trainervalue REX
+	trainervalue ALLAN
+	trainervalue MT_BATTLE_11 ; GIROD
+	trainervalue MT_BATTLE_42 ; GOHN
+	trainervalue MT_BATTLE_68 ; CORVIN
+	trainervalue MT_BATTLE_92 ; PAREL
 
 	trainerclass KIMONO_GIRL ; 23
-	const NAOKO
-	const SAYO
-	const ZUKI
-	const KUNI
-	const MIKI
-	const LINNEA
-	const REA
-	const SAKUYA
-	const MT_BATTLE_80 ; DESSA
+	trainervalue NAOKO
+	trainervalue SAYO
+	trainervalue ZUKI
+	trainervalue KUNI
+	trainervalue MIKI
+	trainervalue LINNEA
+	trainervalue REA
+	trainervalue SAKUYA
+	trainervalue MT_BATTLE_80 ; DESSA
 
 	trainerclass TWINS ; 24
-	const AMYANDMAY1
-	const ANNANDANNE1
-	const ANNANDANNE2
-	const AMYANDMAY2
-	const JOANDZOE1
-	const JOANDZOE2
-	const MEGANDPEG1
-	const MEGANDPEG2
-	const LEAANDPIA1
-	const LEAANDPIA2
+	trainervalue AMYANDMAY1
+	trainervalue ANNANDANNE1
+	trainervalue ANNANDANNE2
+	trainervalue AMYANDMAY2
+	trainervalue JOANDZOE1
+	trainervalue JOANDZOE2
+	trainervalue MEGANDPEG1
+	trainervalue MEGANDPEG2
+	trainervalue LEAANDPIA1
+	trainervalue LEAANDPIA2
 
 	trainerclass POKEFANF ; 25
-	const BEVERLY1
-	const RUTH
-	const BEVERLY2
-	const BEVERLY3
-	const GEORGIA
-	const JAIME
-	const MT_BATTLE_8  ; LADIN
-	const MT_BATTLE_33 ; SASON
-	const MT_BATTLE_60 ; GLYDIN
-	const MT_BATTLE_64 ; CEWAN
-	const MT_BATTLE_97 ; LISAN
+	trainervalue BEVERLY1
+	trainervalue RUTH
+	trainervalue BEVERLY2
+	trainervalue BEVERLY3
+	trainervalue GEORGIA
+	trainervalue JAIME
+	trainervalue MT_BATTLE_8  ; LADIN
+	trainervalue MT_BATTLE_33 ; SASON
+	trainervalue MT_BATTLE_60 ; GLYDIN
+	trainervalue MT_BATTLE_64 ; CEWAN
+	trainervalue MT_BATTLE_97 ; LISAN
 
 	trainerclass RED ; 26
-	const GF_RED
-	const CCC_DUALRED
-	const KAY
-	const RED_GAUNTLETRED
-	const RED_RED2
-	const AIIIAAB2
+	trainervalue GF_RED
+	trainervalue CCC_DUALRED
+	trainervalue KAY
+	trainervalue RED_GAUNTLETRED
+	trainervalue RED_RED2
+	trainervalue AIIIAAB2
 
 	trainerclass OFFICER ; 27
-	const KEITH
-	const DIRK
-	const MT_BATTLE_75 ; MATON
+	trainervalue KEITH
+	trainervalue DIRK
+	trainervalue MT_BATTLE_75 ; MATON
 
 	trainerclass GRUNTF ; 28
-	const GRUNTF_1
-	const GRUNTF_2
-	const GRUNTF_3
-	const GRUNTF_4
-	const GRUNTF_5
-	const GRUNTF_6
+	trainervalue GRUNTF_1
+	trainervalue GRUNTF_2
+	trainervalue GRUNTF_3
+	trainervalue GRUNTF_4
+	trainervalue GRUNTF_5
+	trainervalue GRUNTF_6
 
 	trainerclass AZURE ; 29
-	const AZURE1
+	trainervalue AZURE1
 
 	trainerclass FC_LARRY ; 2a
-	const LARRY_GREEN
+	trainervalue LARRY_GREEN
 
 	trainerclass RBY_GREEN ; 2b
-	const XXWWNN
+	trainervalue XXWWNN
 
 	trainerclass CY_ROBORED ; 2c
-	const X_CHATTYYELLOW1
-	const X_CHATTYYELLOW2
-	const X_CHATTYYELLOW3
-	const X_CHATTYYELLOW4
-	const X_CHATTYYELLOW5
+	trainervalue X_CHATTYYELLOW1
+	trainervalue X_CHATTYYELLOW2
+	trainervalue X_CHATTYYELLOW3
+	trainervalue X_CHATTYYELLOW4
+	trainervalue X_CHATTYYELLOW5
 
 	trainerclass GSCHGSS_CHRIS ; 2d
-	const AAEFFFF
-	const D_GAUNTLETCRYSTAL
+	trainervalue AAEFFFF
+	trainervalue D_GAUNTLETCRYSTAL
 
 	trainerclass GSC_KRIS ; 2e
-	const EWWYPPP
+	trainervalue EWWYPPP
 
 	trainerclass AC_CHRIS ; 30
-	const EVAN1
-	const EVAN2
-	const EVAN3
-	const EVAN4
-	const EVAN5
-	const EVAN6
+	trainervalue EVAN1
+	trainervalue EVAN2
+	trainervalue EVAN3
+	trainervalue EVAN4
+	trainervalue EVAN5
+	trainervalue EVAN6
 
 	trainerclass FC_CHRIS ; 31
-	const Y_FUSEDCRYSTAL
+	trainervalue Y_FUSEDCRYSTAL
 
 	trainerclass BRENDAN_KANTO_LEADER ; 32
-	const EEBNERT
+	trainervalue EEBNERT
 
 	trainerclass FRLG_LEAF ; 33
-	const A_FIRERED
+	trainervalue A_FIRERED
 
 	trainerclass COLO_WES ; 34
-	const AAAAAAA1
-	const ACCC
-	const AAAAAAA2
+	trainervalue AAAAAAA1
+	trainervalue ACCC
+	trainervalue AAAAAAA2
 
 	trainerclass XD_MICHAEL ; 35
-	const STARS
+	trainervalue STARS
 
 	trainerclass PT_LUCAS ; 36
-	const NQPPPNL
+	trainervalue NQPPPNL
 
 	trainerclass HGSS_LYRA ; 37
-	const AOOOO
+	trainervalue AOOOO
 
 	trainerclass B2W2_NATE ; 38
-	const R_BLACK21
+	trainervalue R_BLACK21
 
 	trainerclass XY_SERENA2 ; 39
-	const ETR
+	trainervalue ETR
 
 	trainerclass SMUSUM_ELIO ; 3a
-	const L_SUN
+	trainervalue L_SUN
 
 	trainerclass GLAZED ; 3b
-	const AHUNIgg
+	trainervalue AHUNIgg
 
 	trainerclass NUZLOCKE ; 3c
-	const F481
-	const F482
-	const F483
+	trainervalue F481
+	trainervalue F482
+	trainervalue F483
 
 	trainerclass P_CYAN ; 3d
-	const CYAN
+	trainervalue CYAN
 
 	trainerclass RED_LARRY ; 3e
-	const LARRY_R1
-	const LARRY_R2
+	trainervalue LARRY_R1
+	trainervalue LARRY_R2
 
 	trainerclass GREEN_MAY ; 3f
-	const A_EMERALD
+	trainervalue A_EMERALD
 
 	trainerclass BROWN ; 40
-	const PAUL_B
+	trainervalue PAUL_B
 
 	trainerclass BABA ; 41
-	const BABA1
-	const BABA2
-	const BABA3
-	const BABA4
+	trainervalue BABA1
+	trainervalue BABA2
+	trainervalue BABA3
+	trainervalue BABA4
 
 	trainerclass URF ; 42
-	const URF1
+	trainervalue URF1
 
 	trainerclass BRENDAN_JOHTO_LEADER ; 43
-	const ORLANDO
+	trainervalue ORLANDO
 
 	trainerclass GSCHGSS_CHRIS_RIVAL ; 44
-	const AJDNNW1
-	const AJDNNW2
-	const AJDNNW3
-	const AJDNNW4
+	trainervalue AJDNNW1
+	trainervalue AJDNNW2
+	trainervalue AJDNNW3
+	trainervalue AJDNNW4
 
 	trainerclass RED_JOHTO_LEADER ; 45
-	const AIIIAAB1
+	trainervalue AIIIAAB1
 
 	trainerclass RED_KANTO_LEADER ; 46
-	const RED_RED
+	trainervalue RED_RED
 
 	trainerclass NATE_LEADER ; 47
-	const AAAALK
+	trainervalue AAAALK
 
 	trainerclass NATE_ELITE_4 ; 48
-	const R_BLACK22
+	trainervalue R_BLACK22
 
 	trainerclass POKEMON_PROF ; 49
 
 	trainerclass BATTLE_PC    ; 4a
-	const MIRROR_PC
+	trainervalue MIRROR_PC
 
 	trainerclass WOOPER_T     ; 4b
-	const GMMTMT
+	trainervalue GMMTMT
 
 KRIS EQU __enum__
 

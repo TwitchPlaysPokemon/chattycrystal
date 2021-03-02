@@ -16,6 +16,9 @@ TrickHouseEntrance_MapScripts:
 	callback MAPCALLBACK_NEWMAP, .check_ready
 
 .check_ready
+	checkevent EVENT_TRICK_HOUSE_EXITING_PUZZLE
+	clearevent EVENT_TRICK_HOUSE_EXITING_PUZZLE
+	iftrue .active
 	checkevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
 	iftrue .active
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_6

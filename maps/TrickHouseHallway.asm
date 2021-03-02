@@ -1,7 +1,12 @@
 TrickHouseHallway_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_NEWMAP, .set_flag
+
+.set_flag
+	setevent EVENT_TRICK_HOUSE_EXITING_PUZZLE
+	return
 
 TrickHouseHallway_MapEvents:
 	db 0, 0 ; filler

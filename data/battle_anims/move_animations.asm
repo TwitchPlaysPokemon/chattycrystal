@@ -364,7 +364,7 @@ MoveAnimations:
 	dw BattleAnim_DarkPulse
 	dw BattleAnim_RockBlast
 	dw BattleAnim_BrickBreak
-	dw BattleAnim_Flamethrower  ; PLACEHOLDER
+	dw BattleAnim_Flamethrower ; PLACEHOLDER
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -4007,7 +4007,7 @@ BattleAnim_DrainingKiss:
 	anim_wait 32
 	anim_bgeffect ANIM_BG_07, $0, $0, $0
 	anim_jump BattleAnim_DrainingKiss_branch_cbc6a
-	
+
 BattleAnim_PlayRough:
 	anim_1gfx ANIM_GFX_SPEED
 	anim_sound 6, 2, SFX_THROW_BALL

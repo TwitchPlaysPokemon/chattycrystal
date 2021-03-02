@@ -95,7 +95,6 @@ ROMX $17
 	"Map Scripts 3"
 ROMX $18
 	"Events"
-	"Map Scripts 4"
 	"Pics 32"
 ROMX $19
 	"Crystal Phone Text"
@@ -143,6 +142,7 @@ ROMX $2b
 	"Map Blocks 2"
 ROMX $2c
 	"Map Blocks 3"
+	"Map Scripts 4"
 ROMX $2d
 	"Tileset Data 5"
 ROMX $2e

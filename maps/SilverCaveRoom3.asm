@@ -2,14 +2,12 @@
 	const SILVERCAVEROOM3_RED
 
 SilverCaveRoom3_MapScripts: ; 0x18c601
-	db 2 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	db 0 ; scene scripts
 
 	; callback count
 	db 1
 	callback MAPCALLBACK_TILES, .RuinWall
-	
+
 .RuinWall:
 	checkevent EVENT_RED_IN_MT_SILVER
 	iffalse .CloseWall
@@ -17,10 +15,7 @@ SilverCaveRoom3_MapScripts: ; 0x18c601
 	changeblock 10, 7, 99
 .CloseWall
 	return
-	
-.DummyScene
-	end
-	
+
 Red:
 	special FadeOutMusic
 	faceplayer

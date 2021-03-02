@@ -970,6 +970,17 @@ GetSubstitutePic: ; used only for BANK(GetSubstitutePic)
 	jp FarCopyBytes
 
 BattleAnimCmd_MinimizeOpp:
+	ldh a, [rSVBK]
+	push af
+	ld a, 1 ; unnecessary bankswitch?
+	ldh [rSVBK], a
+	xor a ; sScratch
+	call GetSRAMBank
+	call GetMinimizePic
+	call Request2bpp
+	call CloseSRAM
+	pop af
+	ldh [rSVBK], a
 	ret
 
 GetMinimizePic:

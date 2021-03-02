@@ -54,8 +54,6 @@ StdScripts::
 	dba HappinessCheckScript
 
 PokecenterNurseScript:
-; EVENT_WELCOMED_TO_POKECOM_CENTER is never set
-
 	opentext
 	checktime MORN
 	iftrue .morn
@@ -63,45 +61,22 @@ PokecenterNurseScript:
 	iftrue .day
 	checktime NITE
 	iftrue .nite
-	sjump .ok
+	sjump .ask_heal
 
 .morn
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .morn_comcenter
 	farwritetext NurseMornText
-	buttonsound
-	sjump .ok
-.morn_comcenter
-	farwritetext PokeComNurseMornText
-	buttonsound
 	sjump .ok
 
 .day
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .day_comcenter
 	farwritetext NurseDayText
-	buttonsound
-	sjump .ok
-.day_comcenter
-	farwritetext PokeComNurseDayText
-	buttonsound
 	sjump .ok
 
 .nite
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .nite_comcenter
 	farwritetext NurseNiteText
-	buttonsound
-	sjump .ok
-.nite_comcenter
-	farwritetext PokeComNurseNiteText
-	buttonsound
-	sjump .ok
 
 .ok
-	; only do this once
-	clearevent EVENT_WELCOMED_TO_POKECOM_CENTER
-
+	buttonsound
+.ask_heal
 	farwritetext NurseAskHealText
 	yesorno
 	iffalse .done
@@ -143,20 +118,9 @@ PokecenterNurseScript:
 	end
 
 .pokerus
-	; already cleared earlier in the script
-	checkevent EVENT_WELCOMED_TO_POKECOM_CENTER
-	iftrue .pokerus_comcenter
 	farwritetext NursePokerusText
 	waitbutton
 	closetext
-	sjump .pokerus_done
-
-.pokerus_comcenter
-	farwritetext PokeComNursePokerusText
-	waitbutton
-	closetext
-
-.pokerus_done
 	setflag ENGINE_CAUGHT_POKERUS
 	specialphonecall SPECIALCALL_POKERUS
 	end
@@ -483,13 +447,10 @@ InitializeEventsScript:
 	setevent EVENT_MAHOGANY_MART_LANCE_AND_DRAGONITE
 	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
 	setevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
-	setevent EVENT_RIVAL_AZALEA_TOWN
-	setevent EVENT_RIVAL_GOLDENROD_UNDERGROUND
 	setevent EVENT_AZALEA_TOWN_SLOWPOKES
 	setevent EVENT_KURTS_HOUSE_SLOWPOKE
 	setevent EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
 	setevent EVENT_COP_IN_ELMS_LAB
-	setevent EVENT_RUINS_OF_ALPH_OUTSIDE_SCIENTIST
 	setevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	setevent EVENT_BOULDER_IN_ICE_PATH_1A
 	setevent EVENT_BOULDER_IN_ICE_PATH_2A
@@ -516,7 +477,6 @@ InitializeEventsScript:
 	setevent EVENT_BUG_CATCHING_CONTESTANT_8B
 	setevent EVENT_BUG_CATCHING_CONTESTANT_9B
 	setevent EVENT_BUG_CATCHING_CONTESTANT_10B
-	setevent EVENT_FAST_SHIP_1F_GENTLEMAN
 	setevent EVENT_FAST_SHIP_B1F_SAILOR_RIGHT
 	setevent EVENT_FAST_SHIP_CABINS_NNW_NNE_NE_SAILOR
 	setevent EVENT_LAKE_OF_RAGE_CIVILIANS
@@ -535,14 +495,8 @@ InitializeEventsScript:
 	setevent EVENT_MET_BILL
 	setevent EVENT_ECRUTEAK_POKE_CENTER_BILL
 	setevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
-	setevent EVENT_LAKE_OF_RAGE_LANCE
 	setevent EVENT_GOLDENROD_DEPT_STORE_B1F_LAYOUT_1
 	setevent EVENT_GOLDENROD_UNDERGROUND_WAREHOUSE_BLOCKED_OFF
-	setevent EVENT_DRAGONS_DEN_CLAIR
-	setevent EVENT_RIVAL_OLIVINE_CITY
-	setevent EVENT_RIVAL_VICTORY_ROAD
-	setevent EVENT_RIVAL_DRAGONS_DEN
-	setevent EVENT_LANCES_ROOM_OAK_AND_MARY
 	setevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_1
 	setevent EVENT_BURNED_TOWER_B1F_BEASTS_1
 	setevent EVENT_RED_IN_MT_SILVER
@@ -555,15 +509,10 @@ InitializeEventsScript:
 	setevent EVENT_RANG_CLEAR_BELL_1
 	setevent EVENT_FLORIA_AT_FLOWER_SHOP
 	setevent EVENT_FLORIA_AT_SUDOWOODO
-	setevent EVENT_GOLDENROD_CITY_MOVE_TUTOR
 	setevent EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_FISHER
 	setevent EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
-	setevent EVENT_DRAGON_SHRINE_CLAIR
-	setevent EVENT_BATTLE_TOWER_BATTLE_ROOM_YOUNGSTER
 	setevent EVENT_PLAYERS_NEIGHBORS_HOUSE_NEIGHBOR
 	setevent EVENT_AZALEA_TOWN_KURT
-	setevent EVENT_AZALEA_TOWN_KURT
-	setevent EVENT_ILEX_FOREST_KURT
 	setevent EVENT_ROUTE_34_ILEX_FOREST_GATE_TEACHER_IN_WALKWAY
 	setevent EVENT_ILEX_FOREST_LASS
 	setevent EVENT_GOLDENROD_SALE_OFF
@@ -582,6 +531,16 @@ InitializeEventsScript:
 	setevent EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
 	setevent EVENT_REMATCH_ENTEI
 	setevent EVENT_TM_BLACK_MARKET_BATTLE_TENT
+	setevent EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM
+	setevent EVENT_CERULEAN_GYM_ROCKET
+	setevent EVENT_ROUTE_24_ROCKET
+	setevent EVENT_ROUTE_25_MISTY_BOYFRIEND
+	setevent EVENT_TRAINERS_IN_CERULEAN_GYM
+	setevent EVENT_COPYCATS_HOUSE_2F_DOLL
+	setevent EVENT_VIRIDIAN_GYM_BLUE
+	setevent EVENT_SEAFOAM_GYM_GYM_GUY
+	setevent EVENT_MT_MOON_SQUARE_CLEFAIRY
+	setevent EVENT_SAFFRON_TRAIN_STATION_POPULATION
 	setflag ENGINE_ROCKET_SIGNAL_ON_CH20
 	setflag ENGINE_ROCKETS_IN_MAHOGANY
 	variablesprite SPRITE_WEIRD_TREE, SPRITE_SUDOWOODO
@@ -593,17 +552,6 @@ InitializeEventsScript:
 	variablesprite SPRITE_FUCHSIA_GYM_4, SPRITE_LUCAS
 	variablesprite SPRITE_COPYCAT, SPRITE_LASS
 	variablesprite SPRITE_JANINE_IMPERSONATOR, SPRITE_LASS
-	setevent EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM
-	setevent EVENT_CERULEAN_GYM_ROCKET
-	setevent EVENT_ROUTE_24_ROCKET
-	setevent EVENT_ROUTE_25_MISTY_BOYFRIEND
-	setevent EVENT_TRAINERS_IN_CERULEAN_GYM
-	setevent EVENT_COPYCATS_HOUSE_2F_DOLL
-	setevent EVENT_VIRIDIAN_GYM_BLUE
-	setevent EVENT_SEAFOAM_GYM_GYM_GUY
-	setevent EVENT_MT_MOON_SQUARE_CLEFAIRY
-	setevent EVENT_SAFFRON_TRAIN_STATION_POPULATION
-	setevent EVENT_INDIGO_PLATEAU_POKECENTER_RIVAL
 	setevent EVENT_INITIALIZED_EVENTS
 	return
 

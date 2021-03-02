@@ -400,4 +400,4 @@ MonMenuIcons:
 	db ICON_MONSTER     ; QUAGYNX
 	db ICON_SERPENT     ; STEELURRET
 	; TPP's signature Fakemon
-	db ICON_BIRD        ; PHANCERO
+	db ICON_PHANCERO    ; PHANCERO

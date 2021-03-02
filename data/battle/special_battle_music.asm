@@ -50,4 +50,6 @@ SpecialBattleMusicTrainers:
 	dbw WOOPER_T,             MUSIC_ROCKET_BATTLE
 	dbw XD_MICHAEL,           MUSIC_KANTO_GYM_LEADER_BATTLE
 	dbw XY_SERENA2,           MUSIC_XY_GYM_LEADER
+	dbw RED,                  MUSIC_CHAMPION_BATTLE
+	dbw RBY_GREEN,            MUSIC_CHAMPION_BATTLE
 	db -1

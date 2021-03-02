@@ -830,6 +830,14 @@ TryEnemyFlee:
 	bit SUBSTATUS_AQUA_RING, a
 	ret nz
 
+.resample
+	; 5% chance to flee
+	call BattleRandom
+	cp 20 * 12
+	jr nc, .resample
+	cp 12
+	ret nc
+
 	ld a, [wTempEnemyMonSpecies]
 	call GetPokemonIndexFromID
 	ld b, h

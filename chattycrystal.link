@@ -94,6 +94,7 @@ ROMX $16
 ROMX $17
 	"Map Scripts 3"
 ROMX $18
+	"Events"
 	"Map Scripts 4"
 	"Pics 32"
 ROMX $19
@@ -337,7 +338,6 @@ ROMX $78
 	"Tileset Data 8"
 	"Pics 29"
 ROMX $79
-	"Events"
 	"Enemy Trainer Parties 1"
 ROMX $7a
 	"Pics 26"

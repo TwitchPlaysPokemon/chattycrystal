@@ -381,3 +381,4 @@ Moves1:
 	move EFFECT_FLINCH_HIT,           80, DARK,     100, 15,  20 ;DARK_PULSE
 	move EFFECT_MULTI_HIT,            25, ROCK,      90, 10,   0 ;ROCK_BLAST
 	move EFFECT_BRICK_BREAK,          75, FIGHTING, 100, 15,   0 ;BRICK_BREAK
+	move EFFECT_BURN_HIT,             95, FIRE,      90, 10,  10 ;HEAT_WAVE

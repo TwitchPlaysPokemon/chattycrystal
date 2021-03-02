@@ -3772,7 +3772,7 @@ Function17f181:
 	ld a, [hl]
 	ld c, a
 	ld de, wc608
-	farcall Function48c63
+	; unreachable
 	pop hl
 	ld de, wc608
 	call PlaceString
@@ -4050,7 +4050,7 @@ Function17f334:
 	ld c, a
 	call CloseSRAM
 	ld de, wc608
-	farcall Function48c63
+	; unreachable
 	pop hl
 	ld de, wc608
 	call PlaceString

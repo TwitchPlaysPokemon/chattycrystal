@@ -1,125 +1,3 @@
-InitMobileProfile:
-	xor a
-	set 6, a
-	ld [wd002], a
-	ld hl, wd003
-	set 0, [hl]
-	ld a, c
-	and a
-	call z, InitCrystalData
-	call ClearBGPalettes
-	call Function48d3d
-	ld a, [wd479]
-	bit 1, a
-	jr z, .not_yet_initialized
-	ld a, [wd003]
-	set 0, a
-	set 1, a
-	set 2, a
-	set 3, a
-	ld [wd003], a
-.not_yet_initialized
-	call Function486bf
-	call LoadFontsExtra
-	ld de, MobileUpArrowGFX
-	ld hl, vTiles2 tile $10
-	lb bc, BANK(MobileUpArrowGFX), 1
-	call Request1bpp
-	ld de, MobileDownArrowGFX
-	ld hl, vTiles2 tile $11
-	lb bc, BANK(MobileDownArrowGFX), 1
-	call Request1bpp
-	call Function4a3a7
-	call ClearBGPalettes
-	ld a, [wd002]
-	bit 6, a
-	jr z, .asm_4808a
-	call Function48689
-	jr .asm_480d7
-.asm_4808a
-	ld a, $5
-	ld [wMusicFade], a
-	ld a, LOW(MUSIC_MOBILE_ADAPTER_MENU)
-	ld [wMusicFadeID], a
-	ld a, HIGH(MUSIC_MOBILE_ADAPTER_MENU)
-	ld [wMusicFadeID + 1], a
-	ld c, 20
-	call DelayFrames
-	ld b, $1
-	call GetMysteryGift_MobileAdapterLayout
-	call ClearBGPalettes
-	hlcoord 0, 0
-	ld b,  2
-	ld c, 20
-	call ClearBox
-	hlcoord 0, 1
-	ld a, $c
-	ld [hl], a
-	ld bc, $13
-	add hl, bc
-	ld [hl], a
-	ld de, MobileProfileString
-	hlcoord 1, 1
-	call PlaceString
-	hlcoord 0, 2
-	ld b, $a
-	ld c, $12
-	call Function48cdc
-	hlcoord 2, 4
-	ld de, MobileString_Gender
-	call PlaceString
-.asm_480d7
-	hlcoord 2, 6
-	ld de, MobileString_Age
-	call PlaceString
-	hlcoord 2, 8
-	ld de, MobileString_Address
-	call PlaceString
-	hlcoord 2, 10
-	ld de, MobileString_ZipCode
-	call PlaceString
-	hlcoord 2, 12
-	ld de, MobileString_OK
-	call PlaceString
-	ld a, [wd002]
-	bit 6, a
-	jr nz, .asm_48113
-	ld a, [wPlayerGender]
-	ld hl, Strings_484fb
-	call GetNthString
-	ld d, h
-	ld e, l
-	hlcoord 11, 4
-	call PlaceString
-.asm_48113
-	hlcoord 11, 6
-	call Function487ec
-	ld a, [wd474]
-	dec a
-	ld hl, Prefectures
-	call GetNthString
-	ld d, h
-	ld e, l
-	hlcoord 11, 8
-	call PlaceString
-	hlcoord 11, 10
-	call Function489ea
-	hlcoord 0, 14
-	ld b, $2
-	ld c, $12
-	call Textbox
-	hlcoord 1, 16
-	ld de, MobileString_PersonalInfo
-	call PlaceString
-	call Function48187
-	call WaitBGMap2
-	call SetPalettes
-	call StaticMenuJoypad
-	ld hl, wMenuCursorY
-	ld b, [hl]
-	push bc
-	jr asm_4815f
-
 Function48157:
 	call ScrollingMenuJoypad
 	ld hl, wMenuCursorY
@@ -138,7 +16,7 @@ asm_4815f:
 	bit B_BUTTON_F, b
 	jr nz, .b_button
 .dont_check_b_button
-	jp Function48272
+	jp Function4840c
 
 .b_button
 	call ClearBGPalettes
@@ -228,8 +106,6 @@ Function4820d:
 	jr z, asm_4828d
 	cp $2
 	jp z, Function4876f
-	cp $3
-	jp z, Function48304
 	cp $4
 	jp z, Function488d3
 	ld a, $2
@@ -261,9 +137,6 @@ Function4820d:
 	set 1, [hl]
 	xor a
 	ret
-
-Function48272:
-	jp Function4840c
 
 MobileString_PersonalInfo:
 	db "Personal Info@"
@@ -326,158 +199,6 @@ asm_4828d:
 	ld [wd003], a
 	jp Function4840c
 
-Function48304:
-	call Function48283
-	hlcoord 1, 16
-	ld de, MobileDesc_Address
-	call PlaceString
-	ld hl, MenuHeader_0x48504
-	call LoadMenuHeader
-	ld hl, MenuHeader_0x48513
-	call LoadMenuHeader
-	hlcoord 10, 0
-	ld b, $c
-	ld c, $8
-	call Function48cdc
-	ld a, [wMenuCursorBuffer]
-	ld b, a
-	ld a, [wMenuScrollPosition]
-	ld c, a
-	push bc
-	ld a, [wd474]
-	dec a
-	cp $29
-	jr c, .asm_4833f
-	sub $29
-	inc a
-	ld [wMenuCursorBuffer], a
-	ld a, $29
-.asm_4833f
-	ld [wMenuScrollPosition], a
-	farcall Mobile_OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
-.asm_48348
-	call ScrollingMenu
-	ld de, $629
-	call Function48383
-	jr c, .asm_48348
-	ld d, a
-	pop bc
-	ld a, b
-	ld [wMenuCursorBuffer], a
-	ld a, c
-	ld [wMenuScrollPosition], a
-	ld a, d
-	push af
-	call ExitMenu
-	call ExitMenu
-	pop af
-	ldh a, [hJoyPressed]
-	bit 0, a
-	jr z, .asm_48377
-	call Function483bb
-	ld a, [wd003]
-	set 2, a
-	ld [wd003], a
-.asm_48377
-	call Function48187
-	farcall Mobile_OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
-	jp Function4840c
-
-Function48383:
-	push bc
-	push af
-	bit 5, a
-	jr nz, .asm_48390
-	bit 4, a
-	jr nz, .asm_4839f
-	and a
-	jr .asm_483b7
-.asm_48390
-	ld a, [wMenuScrollPosition]
-	sub d
-	ld [wMenuScrollPosition], a
-	jr nc, .asm_483af
-	xor a
-	ld [wMenuScrollPosition], a
-	jr .asm_483af
-.asm_4839f
-	ld a, [wMenuScrollPosition]
-	add d
-	ld [wMenuScrollPosition], a
-	cp e
-	jr c, .asm_483af
-	ld a, e
-	ld [wMenuScrollPosition], a
-	jr .asm_483af
-.asm_483af
-	ld hl, wMenuCursorY
-	ld a, [hl]
-	ld [wMenuCursorBuffer], a
-	scf
-.asm_483b7
-	pop bc
-	ld a, b
-	pop bc
-	ret
-
-Function483bb:
-	ld hl, wScrollingMenuCursorPosition
-	ld a, [hl]
-	inc a
-	ld [wd474], a
-	dec a
-	ld b, a
-	ld hl, Prefectures
-.asm_483c8
-	and a
-	jr z, .asm_483d5
-.asm_483cb
-	ld a, [hli]
-	cp "@"
-	jr nz, .asm_483cb
-	ld a, b
-	dec a
-	ld b, a
-	jr .asm_483c8
-.asm_483d5
-	ld d, h
-	ld e, l
-	ld b, $2
-	ld c, $8
-	hlcoord 11, 7
-	call ClearBox
-	hlcoord 11, 8
-	call PlaceString
-	ret
-
-Function483e8:
-	push de
-	ld hl, Prefectures
-	ld a, [wMenuSelection]
-	cp $ff
-	jr nz, .asm_483f8
-	ld hl, Wakayama ; last string
-	jr .asm_48405
-
-.asm_483f8
-	ld d, a
-	and a
-	jr z, .asm_48405
-.asm_483fc
-	ld a, [hli]
-	cp "@"
-	jr nz, .asm_483fc
-	ld a, d
-	dec a
-	jr .asm_483f8
-
-.asm_48405
-	ld d, h
-	ld e, l
-	pop hl
-	call PlaceString
-	ret
-
 Function4840c:
 	call Function48187
 	call Function48283
@@ -539,16 +260,10 @@ Mobile12_Bin2Dec:
 	db "8@"
 	db "9@"
 
-MobileProfileString:         db "  Mobile Profile@"
-MobileString_Gender:         db "Gender@"
-MobileString_Age:            db "Age@"
-MobileString_Address:        db "Address@"
-MobileString_ZipCode:        db "Zip Code@"
 MobileString_OK:             db "OK@"
 MobileString_ProfileChanged: db "Profile Changed@"
 MobileDesc_Gender:           db "Boy or girl?@"
 MobileDesc_Age:              db "How old are you?@"
-MobileDesc_Address:          db "Where do you live?@"
 MobileDesc_ZipCode:          db "Your zip code?@"
 
 MenuHeader_0x484f1:
@@ -564,10 +279,6 @@ Strings_484fb:
 String_484fb: db "Boy@"
 String_484ff: db "Girl@"
 
-MenuHeader_0x48504:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 10, 0, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
-
 MenuHeader_0x48509:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 10, 5, SCREEN_WIDTH - 1, 7
@@ -575,104 +286,6 @@ MenuHeader_0x48509:
 MenuHeader_0x4850e:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 10, 9, SCREEN_WIDTH - 1, TEXTBOX_Y - 1
-
-MenuHeader_0x48513:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 11, 1, 18, 12
-	dw MenuData_0x4851b
-	db 1 ; default option
-
-MenuData_0x4851b:
-	db SCROLLINGMENU_DISPLAY_ARROWS | SCROLLINGMENU_ENABLE_RIGHT | SCROLLINGMENU_ENABLE_LEFT | SCROLLINGMENU_CALL_FUNCTION1_CANCEL ; flags
-	db 6, 0 ; rows, columns
-	db SCROLLINGMENU_ITEMS_NORMAL ; item format
-	dba .Items
-	dba Function483e8
-	dba NULL
-	dba NULL
-
-.Items:
-	db 46
-x = 0
-rept 46
-	db x
-x = x + 1
-endr
-	db -1
-
-Prefectures:
-Aichi:     db "あいちけん@"   ; Aichi
-Aomori:    db "あおもりけん@" ; Aomori
-Akita:     db "あきたけん@"   ; Akita
-Ishikawa:  db "いしかわけん@" ; Ishikawa
-Ibaraki:   db "いばらきけん@" ; Ibaraki
-Iwate:     db "いわてけん@"   ; Iwate
-Ehime:     db "えひめけん@"   ; Ehime
-Oita:      db "おおいたけん@" ; Oita
-Osakafu:   db "おおさかふ@"   ; Osakafu
-Okayama:   db "おかやまけん@" ; Okayama
-Okinawa:   db "おきなわけん@" ; Okinawa
-Kagawa:    db "かがわけん@"   ; Kagawa
-Kagoshima: db "かごしまけん@" ; Kagoshima
-Kanagawa:  db "かながわけん@" ; Kanagawa
-Gifu:      db "ぎふけん@"     ; Gifu
-Kyotofu:   db "きょうとふ@"   ; Kyotofu
-Kumamoto:  db "くまもとけん@" ; Kumamoto
-Gunma:     db "ぐんまけん@"   ; Gunma
-Kochi:     db "こうちけん@"   ; Kochi
-Saitama:   db "さいたまけん@" ; Saitama
-Saga:      db "さがけん@"     ; Saga
-Shiga:     db "しがけん@"     ; Shiga
-Shizuoka:  db "しずおかけん@" ; Shizuoka
-Shimane:   db "しまねけん@"   ; Shimane
-Chiba:     db "ちばけん@"     ; Chiba
-Tokyo:     db "とうきょうと@" ; Tokyo
-Tokushima: db "とくしまけん@" ; Tokushima
-Tochigi:   db "とちぎけん@"   ; Tochigi
-Tottori:   db "とっとりけん@" ; Tottori
-Toyama:    db "とやまけん@"   ; Toyama
-Nagasaki:  db "ながさきけん@" ; Nagasaki
-Nagano:    db "ながのけん@"   ; Nagano
-Naraken:   db "ならけん@"     ; Naraken
-Niigata:   db "にいがたけん@" ; Niigata
-Hyogo:     db "ひょうごけん@" ; Hyogo
-Hiroshima: db "ひろしまけん@" ; Hiroshima
-Fukui:     db "ふくいけん@"   ; Fukui
-Fukuoka:   db "ふくおかけん@" ; Fukuoka
-Fukushima: db "ふくしまけん@" ; Fukushima
-Hokkaido:  db "ほっかいどう@" ; Hokkaido
-Mie:       db "みえけん@"     ; Mie
-Miyagi:    db "みやぎけん@"   ; Miyagi
-Miyazaki:  db "みやざきけん@" ; Miyazaki
-Yamagata:  db "やまがたけん@" ; Yamagata
-Yamaguchi: db "やまぐちけん@" ; Yamaguchi
-Yamanashi: db "やまなしけん@" ; Yamanashi
-Wakayama:  db "わかやまけん@" ; Wakayama
-
-Function48689:
-	ld c, 7
-	call DelayFrames
-	ld b, $1
-	call GetMysteryGift_MobileAdapterLayout
-	call ClearBGPalettes
-	hlcoord 0, 0
-	ld b, 4
-	ld c, SCREEN_WIDTH
-	call ClearBox
-	hlcoord 0, 2
-	ld a, $c
-	ld [hl], a
-	ld bc, SCREEN_WIDTH - 1
-	add hl, bc
-	ld [hl], a
-	ld de, MobileProfileString
-	hlcoord 1, 2
-	call PlaceString
-	hlcoord 0, 4
-	ld b, $8
-	ld c, $12
-	call Function48cdc
-	ret
 
 Function486bf:
 	ld hl, w2DMenuCursorInitY
@@ -1004,12 +617,6 @@ Function488b9:
 	ld [wd003], a
 	scf
 	ret
-
-MobileUpArrowGFX:
-INCBIN "gfx/mobile/up_arrow.2bpp"
-
-MobileDownArrowGFX:
-INCBIN "gfx/mobile/down_arrow.2bpp"
 
 Function488d3:
 	call Function48283
@@ -1562,52 +1169,6 @@ Function48c5a:
 	ld [hl], a
 	ret
 
-Function48c63:
-	ld a, "@"
-	ld [de], a
-	ld a, c
-	cp $30
-	jr nc, .asm_48c8c
-	and a
-	jr z, .asm_48c8c
-	dec c
-	push de
-	ld h, d
-	ld l, e
-	ld a, "@"
-	ld b, 7
-.asm_48c76
-	ld [hli], a
-	dec b
-	jr nz, .asm_48c76
-	ld hl, Prefectures
-	ld a, c
-	call GetNthString
-.asm_48c81
-	ld a, [hli]
-	ld [de], a
-	inc de
-	ld a, [hl]
-	cp "@"
-	jr nz, .asm_48c81
-	and a
-	pop de
-	ret
-
-.asm_48c8c
-	scf
-	ret
-
-Unreferenced_Function48c8e:
-	ld hl, wd019 + $11
-	ld d, h
-	ld e, l
-	farcall Function48c63
-	hlcoord 10, 7
-	call PlaceString
-	call WaitBGMap
-	ret
-
 Function48ca3:
 	push af
 	push bc
@@ -1729,13 +1290,6 @@ Function48d30:
 	call Function48d4a
 	ret
 
-Function48d3d:
-	ld hl, wd475
-	call Function48d94
-	ld hl, wd477
-	call Function48d94
-	ret
-
 Function48d4a:
 	inc hl
 	ld a, [hl]
@@ -1784,38 +1338,6 @@ Function48d4a:
 	ld a, c
 	ld [hld], a
 	ld [hl], b
-	ret
-
-Function48d94:
-	xor a
-	ldh [hDividend + 0], a
-	ldh [hDividend + 1], a
-	ld a, [hli]
-	ldh [hDividend + 0], a
-	ld a, [hl]
-	ldh [hDividend + 1], a
-	ld a, 100
-	ldh [hDivisor], a
-	ld b, 2
-	call Divide
-	ldh a, [hRemainder]
-	ld c, 10
-	call SimpleDivide
-	sla b
-	sla b
-	sla b
-	sla b
-	or b
-	ld [hld], a
-	ldh a, [hQuotient + 3]
-	ld c, 10
-	call SimpleDivide
-	sla b
-	sla b
-	sla b
-	sla b
-	or b
-	ld [hl], a
 	ret
 
 MobilePhoneTilesGFX:
@@ -1967,28 +1489,6 @@ MobileCheckOwnMonAnywhere:
 	ld b, h
 	ld c, l
 	pop hl
-	ret
-
-UnusedFindItemInPCOrBag:
-	ld a, [wScriptVar]
-	ld [wCurItem], a
-	ld hl, wNumPCItems
-	call CheckItem
-	jr c, .found
-
-	ld a, [wScriptVar]
-	ld [wCurItem], a
-	ld hl, wNumItems
-	call CheckItem
-	jr c, .found
-
-	xor a
-	ld [wScriptVar], a
-	ret
-
-.found
-	ld a, 1
-	ld [wScriptVar], a
 	ret
 
 Function4a94e:

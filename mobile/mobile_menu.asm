@@ -184,7 +184,7 @@ Function4a0c2:
 	ld c, 2
 	call DelayFrames
 	ld c, $1
-	call InitMobileProfile
+	; unreachable
 	push af
 	call ClearBGPalettes
 	pop af

@@ -8,33 +8,28 @@ SilphCoRoof_MapScripts:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
-	callback MAPCALLBACK_NEWMAP, .SetUpRoof
+	callback MAPCALLBACK_OBJECTS, .SetUpRoof
 
-
-.SetUpRoof
-	checkcaught SUICUNE
-	ifequal 2, .noSuicune
-	readmem wRoamMon2Species
-	iffalse .noSuicune
-.checkRaikou
-	checkcaught RAIKOU
-	ifequal 2, .noRaikou
-	readmem wRoamMon1Species
-	iffalse .noRaikou
-.done
-	return
-
+.SetUpRoof:
+	setevent EVENT_MT_BATTLE_HIDE_RAIKOU
+	setevent EVENT_MT_BATTLE_HIDE_SUICUNE
+    disappear SILPH_CO_SUICUNE
+    checkcaught SUICUNE
+    ifequal 2, .noSuicune
+    readmem wRoamMon2Species
+    iffalse .noSuicune
+    appear SILPH_CO_SUICUNE
+	clearevent EVENT_MT_BATTLE_HIDE_SUICUNE
 .noSuicune
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	disappear SILPH_CO_SUICUNE
-	reloadmap
-	sjump .checkRaikou
-
+    disappear SILPH_CO_RAIKOU
+    checkcaught RAIKOU
+    ifequal 2, .noRaikou
+    readmem wRoamMon1Species
+    iffalse .noRaikou
+    appear SILPH_CO_RAIKOU
+	clearevent EVENT_MT_BATTLE_HIDE_RAIKOU
 .noRaikou
-	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	disappear SILPH_CO_RAIKOU
-	reloadmap
-	return
+    return
 
 MtBattleTrainer100:
 	trainer CAL, MT_BATTLE_100, EVENT_BEAT_MT_BATTLE_100, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleBeatBtlMaster
@@ -154,6 +149,6 @@ SilphCoRoof_MapEvents:
 	db 4 ; object events
 	object_event 12,  8, SPRITE_CAL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, MtBattleTrainer100, -1
 	object_event  7,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtBattleMasterBall, -1
-	object_event  9,  1, SPRITE_RAIKOU, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SilphCoRoofRaikou, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	object_event 11,  1, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoRoofSuicune, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	object_event  9,  1, SPRITE_RAIKOU, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SilphCoRoofRaikou, EVENT_MT_BATTLE_HIDE_RAIKOU
+	object_event 11,  1, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SilphCoRoofSuicune, EVENT_MT_BATTLE_HIDE_SUICUNE
 

@@ -1102,3 +1102,9 @@ checkcaught: MACRO
 	db checkcaught_command
 	dw \1 ; pokemon
 ENDM
+
+	enum givedecoration_command ; $b1
+givedecoration: MACRO
+	db givedecoration_command
+	db \1 ; decoration
+ENDM

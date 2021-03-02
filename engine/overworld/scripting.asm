@@ -234,6 +234,7 @@ ScriptCommandTable:
 	dw Script_chattyon                   ; ae
 	dw Script_clearifuncaught            ; af
 	dw Script_checkcaught                ; b0
+	dw Script_givedecoration             ; b1
 
 StartScript:
 	ld hl, wScriptFlags
@@ -316,6 +317,7 @@ Script_jumptext:
 	ld [wScriptTextAddr], a
 	call GetScriptByte
 	ld [wScriptTextAddr + 1], a
+JumpText:
 	ld b, BANK(JumpTextScript)
 	ld hl, JumpTextScript
 	jp ScriptJump
@@ -2574,8 +2576,6 @@ Script_writeunusedbytebuffer:
 	ld [wUnusedScriptByteBuffer], a
 	ret
 
-	db closetext_command ; unused
-
 Script_closetext:
 ; script command 0x49
 
@@ -2999,3 +2999,35 @@ CheckCaughtAndPresent:
 	dbww BANK(sBox18), sBox18, sBox18PokemonIndexes
 	dbww BANK(sBox19), sBox19, sBox19PokemonIndexes
 	dbww BANK(sBox20), sBox20, sBox20PokemonIndexes
+
+Script_givedecoration:
+; script command 0xb1
+; parameters: decoration (byte)
+
+	call GetScriptByte
+	ld c, a
+	push bc
+	ld b, SET_FLAG
+	farcall DecorationFlagAction_c
+	pop bc
+	ld de, wStringBuffer1
+	farcall GetDecorationName_c_de
+	ld hl, wScriptTextBank
+	ld a, BANK(@)
+	ld [hli], a
+	ld a, LOW(.text)
+	ld [hli], a
+	ld [hl], HIGH(.text)
+	jp JumpText
+
+.text
+	text "<PLAYER> received"
+	line "@"
+	text_ram wStringBuffer1
+	text "!@"
+	sound_item
+	text ""
+
+	para "<PLAYER> sent the"
+	line "decoration home."
+	done

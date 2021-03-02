@@ -408,10 +408,6 @@ GetDecorationData:
 	ld bc, 6
 	jp AddNTimes
 
-FarDecorationName:
-	ld h, d
-	ld l, e
-	ld a, c
 GetDecorationName:
 	push hl
 	call GetDecorationData
@@ -907,13 +903,13 @@ DecoText_AlreadySetUp:
 	text_far _AlreadySetUpText
 	text_end
 
-GetDecorationName_c_de:
+GetDecorationName_c_de::
 	ld a, c
 	ld h, d
 	ld l, e
 	jp GetDecorationName
 
-DecorationFlagAction_c:
+DecorationFlagAction_c::
 	ld a, c
 	jp DecorationFlagAction
 

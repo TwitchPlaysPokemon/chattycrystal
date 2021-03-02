@@ -113,7 +113,7 @@ TrickHouseExit_Finished_6:
 	waitbutton
 	closetext
 	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_6
-	; TODO: reward
+	givedecoration DECO_GOLD_TROPHY_DOLL
 	jumptext .leaving_text
 
 .after_puzzle_text
@@ -205,7 +205,7 @@ TrickHouseExit_Finished_5:
 	waitbutton
 	closetext
 	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
-	; TODO: reward
+	givedecoration DECO_PIKACHU_BED
 	end
 
 .text
@@ -223,7 +223,7 @@ TrickHouseExit_Finished_4:
 	waitbutton
 	closetext
 	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_4
-	; TODO: reward
+	givedecoration DECO_N64
 	end
 
 .text
@@ -242,7 +242,7 @@ TrickHouseExit_Finished_3:
 	waitbutton
 	closetext
 	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_3
-	; TODO: reward
+	givedecoration DECO_BLUE_CARPET
 	end
 
 .text
@@ -262,7 +262,7 @@ TrickHouseExit_Finished_2:
 	waitbutton
 	closetext
 	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_2
-	; TODO: reward
+	givedecoration DECO_BIG_SNORLAX_DOLL
 	end
 
 .text
@@ -282,7 +282,7 @@ TrickHouseExit_Finished_1:
 	waitbutton
 	closetext
 	setevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
-	; TODO: reward
+	givedecoration DECO_UNOWN_DOLL
 	end
 
 .text

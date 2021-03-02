@@ -11,17 +11,20 @@
 	const MTBATTLETRAINER99
 
 SilphCo11F_MapScripts:
-	db 1 ; scene scripts
-	scene_script MtBattleDefaultScene ; SCENE_DEFAULT
+	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 SilphCo11F_CheckForHeal:
 	checkevent EVENT_MT_BATTLE_HEALED_11F
-	iftrue MtBattleNurseFinished
+	iftrue .Done
 	setevent EVENT_MT_BATTLE_HEALED_11F
+	turnobject SILPHCO11F_NURSE, RIGHT
 	turnobject PLAYER, LEFT
 	sjump MtBattleNurseHeal
+
+.Done
+	end
 
 MtBattleTrainer91:
 	trainer COOLTRAINERM, MT_BATTLE_91, EVENT_BEAT_MT_BATTLE_91, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
@@ -91,7 +94,7 @@ SilphCo11F_MapEvents:
 	warp_event 19,  1, SILPH_CO_10F, 2
 
 	db 1 ; coord events
-	coord_event 19,  2, SCENE_DEFAULT, SilphCo11F_CheckForHeal
+	coord_event 19,  2, -1, SilphCo11F_CheckForHeal
 
 	db 3 ; bg events
 	bg_event  7, 3, BGEVENT_UP, SilphCoTelescope1
@@ -99,7 +102,7 @@ SilphCo11F_MapEvents:
 	bg_event 14, 3, BGEVENT_UP, SilphCoBinoculars2
 
 	db 10 ; object events
-	object_event 18,  2, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo11F_CheckForHeal, -1
+	object_event 18,  2, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtBattleNurseFinished, -1
 	object_event 12,  2, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, MtBattleTrainer91, -1
 	object_event  9,  6, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, MtBattleTrainer92, -1
 	object_event 19,  8, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, MtBattleTrainer93, -1

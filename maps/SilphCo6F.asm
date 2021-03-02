@@ -12,17 +12,20 @@
 	const MTBATTLETRAINER50
 
 SilphCo6F_MapScripts:
-	db 1 ; scene scripts
-	scene_script MtBattleDefaultScene ; SCENE_DEFAULT
+	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
 SilphCo6F_CheckForHeal:
 	checkevent EVENT_MT_BATTLE_HEALED_6F
-	iftrue MtBattleNurseFinished
+	iftrue .Done
 	setevent EVENT_MT_BATTLE_HEALED_6F
+	turnobject SILPHCO6F_NURSE, RIGHT
 	turnobject PLAYER, LEFT
 	sjump MtBattleNurseHeal
+
+.Done
+	end
 
 MtBattleTrainer41:
 	trainer SAGE, MT_BATTLE_41, EVENT_BEAT_MT_BATTLE_41, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
@@ -64,12 +67,12 @@ SilphCo6F_MapEvents:
 	warp_event 19,  0, SILPH_CO_5F, 2
 
 	db 1 ; coord events
-	coord_event 19,  1, SCENE_DEFAULT, SilphCo6F_CheckForHeal
+	coord_event 19,  1, -1, SilphCo6F_CheckForHeal
 
 	db 0 ; bg events
 
 	db 11 ; object events
-	object_event 18,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilphCo6F_CheckForHeal, -1
+	object_event 18,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtBattleNurseFinished, -1
 	object_event 12,  5, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, MtBattleTrainer41, -1
 	object_event 17, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, MtBattleTrainer42, -1
 	object_event 20,  6, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, MtBattleTrainer43, -1

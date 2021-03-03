@@ -17,8 +17,8 @@ INCLUDE "engine/events/shuckle.asm"
 INCLUDE "engine/events/haircut.asm"
 INCLUDE "engine/events/engine_flags.asm"
 INCLUDE "engine/events/poisonstep.asm"
-
 INCLUDE "data/moves/ls_names.asm"
+
 
 SECTION "bank2", ROMX
 

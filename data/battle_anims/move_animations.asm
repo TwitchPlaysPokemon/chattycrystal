@@ -364,7 +364,7 @@ MoveAnimations:
 	dw BattleAnim_DarkPulse
 	dw BattleAnim_RockBlast
 	dw BattleAnim_BrickBreak
-	dw BattleAnim_Flamethrower ; PLACEHOLDER
+	dw BattleAnim_HeatWave
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -4491,6 +4491,25 @@ BattleAnim_BrickBreak:
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
 	anim_obj ANIM_OBJ_01, 136, 56, $0
 	anim_wait 34
+	anim_ret
+	
+BattleAnim_HeatWave:
+	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_FIRE
+	anim_bgp $90
+	anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
+	anim_sound 0, 0, SFX_EMBER
+.loop
+	anim_obj ANIM_OBJ_HEAT_WAVE, 88, 0, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HEAT_WAVE, 56, 16, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HEAT_WAVE, 72, 32, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HEAT_WAVE, 24, 48, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HEAT_WAVE, 40, 64, $1
+	anim_loop 3, .loop
+	anim_incbgeffect ANIM_BG_WHIRLPOOL
 	anim_ret
 
 BattleAnim_FlameWheel:

@@ -94,9 +94,6 @@ BCD2String:
 	ld [hli], a
 	ret
 
-MobileString_Page:
-	db "ぺージ@"
-
 AnimateEZChatCursor:
 	ld hl, SPRITEANIMSTRUCT_0C
 	add hl, bc

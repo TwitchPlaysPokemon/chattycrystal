@@ -6649,33 +6649,7 @@ Function11766b:
 	ret
 
 Function117699:
-	ld a, $5
-	call GetSRAMBank
-	ld hl, wcd49
-	ld de, $b1f3
-	ld bc, $8
-	call CopyBytes
-	ld hl, $c708
-	ld bc, $11
-	call CopyBytes
-	call CloseSRAM
-	xor a
-	ld [wcd49], a
-	ld [wcd4a], a
-	ld [wcd4b], a
-	ld [wcd4c], a
-	ld [wcd4d], a
-	ld [wcd4e], a
-	ld [wcd4f], a
-	ld hl, $c708
-	ld bc, $11
-	call ByteFill
-	call ClearBGPalettes
-	call ClearSprites
-	farcall Function171c87
-	farcall ReloadMapPart
-	farcall ClearSpriteAnims
-	ret
+	; unreachable
 
 Function1176ee:
 .loop
@@ -6777,8 +6751,7 @@ Function117764:
 	ret
 
 Function117764_select:
-	farcall Function171cf0
-	ret
+	; unreachable
 
 Function117764_start:
 	ld a, $2

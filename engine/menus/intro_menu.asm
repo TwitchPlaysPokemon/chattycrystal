@@ -1218,6 +1218,10 @@ CopyrightString:
 	db "@"
 
 GameInit::
+	ld a, 1 ;load a default move, power and type into the script data to avoid crashing in odd situations.
+	ld [wChattyHPType], a
+	ld [wChattyHPPower], a
+	ld [wChattyChatterMove], a
 	farcall TryLoadSaveData
 	call ClearWindowData
 	call ClearBGPalettes

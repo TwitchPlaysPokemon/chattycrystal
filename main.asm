@@ -26,6 +26,7 @@ INCLUDE "engine/overworld/player_object.asm"
 INCLUDE "engine/math/sine.asm"
 INCLUDE "engine/predef.asm"
 INCLUDE "engine/gfx/color.asm"
+INCLUDE "engine/items/held_items.asm"
 INCLUDE "data/moves/vc_names.asm"
 
 

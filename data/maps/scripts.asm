@@ -268,18 +268,6 @@ INCLUDE "maps/RocketHideoutB2F.asm"
 INCLUDE "maps/RocketHideoutB3F.asm"
 INCLUDE "maps/RocketHideoutB4F.asm"
 INCLUDE "maps/RocketHideoutElevator.asm"
-; linked, do not separate
-INCLUDE "maps/TrickHouseEntrance.asm"
-INCLUDE "maps/TrickHouseExit.asm"
-INCLUDE "maps/TrickHouseHallway.asm"
-INCLUDE "maps/TrickHousePuzzle1.asm"
-INCLUDE "maps/TrickHousePuzzle2.asm"
-INCLUDE "maps/TrickHousePuzzle3.asm"
-INCLUDE "maps/TrickHousePuzzle4.asm"
-INCLUDE "maps/TrickHousePuzzle5.asm"
-INCLUDE "maps/TrickHousePuzzle6.asm"
-; end of linked section
-
 
 SECTION "Map Scripts 15", ROMX
 
@@ -558,4 +546,19 @@ INCLUDE "maps/SilphCo10F.asm"
 INCLUDE "maps/SilphCo11F.asm"
 INCLUDE "maps/SilphCoRoof.asm"
 INCLUDE "maps/SilphCoElevator.asm"
+; DO NOT ADD OTHER MAPS HERE
+
+
+SECTION "Map Scripts Trick House", ROMX
+
+; DO NOT SPLIT INTO SECTIONS
+INCLUDE "maps/TrickHouseEntrance.asm"
+INCLUDE "maps/TrickHouseExit.asm"
+INCLUDE "maps/TrickHouseHallway.asm"
+INCLUDE "maps/TrickHousePuzzle1.asm"
+INCLUDE "maps/TrickHousePuzzle2.asm"
+INCLUDE "maps/TrickHousePuzzle3.asm"
+INCLUDE "maps/TrickHousePuzzle4.asm"
+INCLUDE "maps/TrickHousePuzzle5.asm"
+INCLUDE "maps/TrickHousePuzzle6.asm"
 ; DO NOT ADD OTHER MAPS HERE

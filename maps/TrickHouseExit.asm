@@ -12,12 +12,13 @@ TrickHouseExit_MapScripts:
 .lock
 	applymovement PLAYER, TrickHouseExit_PushDownMovement
 	setscene SCENE_TRICKHOUSEEXIT_LOCKED
+	clearevent EVENT_TRICK_HOUSE_FOUND_PUZZLE_SCROLL
 	end
 
 TrickHouseExit_PreventEscape:
 	showemote EMOTE_SHOCK, TRICKHOUSEEXIT_TRICK_MASTER, 30
 	pause 5
-	turnobject TRICKHOUSEEXIT_TRICK_MASTER, LEFT
+	turnobject TRICKHOUSEEXIT_TRICK_MASTER, UP
 	opentext
 	writetext .text
 	waitbutton
@@ -316,4 +317,4 @@ TrickHouseExit_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  2,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrickHouseExit_TrickMaster, -1
+	object_event  2,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrickHouseExit_TrickMaster, -1

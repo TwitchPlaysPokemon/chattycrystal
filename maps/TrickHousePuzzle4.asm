@@ -1,7 +1,27 @@
 TrickHousePuzzle4_MapScripts:
 	db 0 ; scene scripts
 
-	db 0 ; callbacks
+	db 1 ; callbacks
+	callback MAPCALLBACK_TILES, TrickHouse_CheckDoor_Common
+
+TrickHousePuzzle4_Door:
+	scall TrickHouse_Door
+	iffalse .end
+	writetext .code
+	sjump TrickHouse_UnlockDoor_Common
+.end
+	end
+
+.code
+	text "TRICK MASTER is"
+	line "a genius."
+	prompt
+
+TrickHouseEonMail:
+	itemball EON_MAIL
+
+TrickHouseMorphMail:
+	itemball MORPH_MAIL
 
 TrickHousePuzzle4_MapEvents:
 	db 0, 0 ; filler
@@ -48,6 +68,10 @@ TrickHousePuzzle4_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
+	bg_event 13,  1, BGEVENT_SILENT, TrickHousePuzzle4_Door
 
-	db 0 ; object events
+	db 3 ; object events
+	object_event  2,  5, SPRITE_SCROLL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrickHouse_FoundPuzzleScroll, -1
+	object_event  2,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TrickHouseEonMail, EVENT_TRICK_HOUSE_GOT_EON_MAIL
+	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TrickHouseMorphMail, EVENT_TRICK_HOUSE_GOT_MORPH_MAIL

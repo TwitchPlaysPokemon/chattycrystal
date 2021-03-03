@@ -101,3 +101,22 @@ TrickHouse_DoorUnlockText:
 	para "The lock clicked"
 	line "open!"
 	done
+
+
+; All Trick House maps have the door block at 12, 0, so these can live here
+; If a Trick House map doesn't have the door at 12, 0, it should have its own version of these
+TrickHouse_CheckDoor_Common:
+	checkevent EVENT_TRICK_HOUSE_DOOR_OPEN
+	iffalse .return
+	changeblock 12, 0, $43 ; exit door open
+.return
+	return
+
+TrickHouse_UnlockDoor_Common:
+	writetext TrickHouse_DoorUnlockText
+	playsound SFX_DEX_FANFARE_50_79
+	waitsfx
+	changeblock 12, 0, $43 ; exit door open
+	reloadmappart
+.end
+	end

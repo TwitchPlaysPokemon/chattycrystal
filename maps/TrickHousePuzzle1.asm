@@ -2,24 +2,13 @@ TrickHousePuzzle1_MapScripts:
 	db 0 ; scene scripts
 
 	db 1 ; callbacks
-	callback MAPCALLBACK_TILES, .check_door
-
-.check_door
-	checkevent EVENT_TRICK_HOUSE_DOOR_OPEN
-	iffalse .return
-	changeblock 12, 0, $43 ; stairs going up
-.return
-	return
+	callback MAPCALLBACK_TILES, TrickHouse_CheckDoor_Common
 
 TrickHousePuzzle1_Door:
 	scall TrickHouse_Door
 	iffalse .end
 	writetext .code
-	writetext TrickHouse_DoorUnlockText
-	playsound SFX_DEX_FANFARE_50_79
-	waitsfx
-	changeblock 12, 0, $43 ; stairs going up
-	reloadmappart
+	sjump TrickHouse_UnlockDoor_Common
 .end
 	end
 
@@ -27,6 +16,12 @@ TrickHousePuzzle1_Door:
 	text "TRICK MASTER is"
 	line "fabulous."
 	prompt
+
+TrickHouseFlowerMail:
+	itemball FLOWER_MAIL
+
+TrickHouseSurfMail:
+	itemball SURF_MAIL
 
 TrickHousePuzzle1_MapEvents:
 	db 0, 0 ; filler
@@ -41,5 +36,7 @@ TrickHousePuzzle1_MapEvents:
 	db 1 ; bg events
 	bg_event 13,  1, BGEVENT_SILENT, TrickHousePuzzle1_Door
 
-	db 1 ; object events
+	db 3 ; object events
 	object_event  3, 16, SPRITE_SCROLL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrickHouse_FoundPuzzleScroll, -1
+	object_event  6, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TrickHouseFlowerMail, EVENT_TRICK_HOUSE_GOT_FLOWER_MAIL
+	object_event  9,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TrickHouseSurfMail, EVENT_TRICK_HOUSE_GOT_SURF_MAIL

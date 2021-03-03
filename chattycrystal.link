@@ -41,6 +41,7 @@ ROMX $04
 ROMX $05
 	"bank5"
 	"Map Blocks 6"
+	"Extra Songs 6"
 ROMX $06
 	"Tileset Data 1"
 ROMX $07
@@ -302,6 +303,7 @@ ROMX $6b
 ROMX $6c
 	"Phone Text 2"
 	"Map Scripts 25"
+	"Map Scripts Trick House"
 ROMX $6d
 	"Special Phone Text"
 ROMX $6e

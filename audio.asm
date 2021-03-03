@@ -167,6 +167,10 @@ INCLUDE "audio/music/custom/championRB.asm"
 INCLUDE "audio/music/custom/gymleaderbattleXY.asm"
 INCLUDE "audio/music/custom/gymleaderprism.asm"
 
+SECTION "Extra Songs 6", ROMX
+
+INCLUDE "audio/music/custom/trickhouse.asm"
+
 SECTION "Sound Effects", ROMX
 
 INCLUDE "audio/sfx.asm"

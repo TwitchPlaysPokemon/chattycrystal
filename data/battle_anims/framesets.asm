@@ -211,6 +211,7 @@ BattleAnimFrameData:
 	dw .Frameset_d0 ; BATTLEANIMFRAMESET_D0
 	dw .Frameset_d1 ; BATTLEANIMFRAMESET_D1
 	dw .Frameset_d2 ; BATTLEANIMFRAMESET_D2
+	dw .Frameset_d3 ; BATTLEANIMFRAMESET_D3
 
 .Frameset_00:
 	frame BATTLEANIMOAMSET_00,  6
@@ -1424,3 +1425,10 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_E7,  4
 	frame BATTLEANIMOAMSET_02,  1
 	delanim
+	
+.Frameset_d3:
+	frame BATTLEANIMOAMSET_CD,  2
+	frame BATTLEANIMOAMSET_CD,  2, OAM_X_FLIP
+	frame BATTLEANIMOAMSET_CD,  2, OAM_X_FLIP, OAM_Y_FLIP
+	frame BATTLEANIMOAMSET_CD,  2, OAM_Y_FLIP
+	dorestart

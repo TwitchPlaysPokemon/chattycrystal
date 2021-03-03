@@ -361,7 +361,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Excadrill
 	dw PlaceholderAnimation ; PLACEHOLDER - Sandile
 	dw PlaceholderAnimation ; PLACEHOLDER - Krokorok
-	dw PlaceholderAnimation ; PLACEHOLDER - Krookodile
+	dw KrookodileAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Ducklett
 	dw PlaceholderAnimation ; PLACEHOLDER - Swanna
 	dw PlaceholderAnimation ; PLACEHOLDER - Tynamo

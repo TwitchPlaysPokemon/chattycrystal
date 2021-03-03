@@ -361,7 +361,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Excadrill
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sandile
 	dw PlaceholderBitmasks ; PLACEHOLDER - Krokorok
-	dw PlaceholderBitmasks ; PLACEHOLDER - Krookodile
+	dw KrookodileBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Ducklett
 	dw PlaceholderBitmasks ; PLACEHOLDER - Swanna
 	dw PlaceholderBitmasks ; PLACEHOLDER - Tynamo

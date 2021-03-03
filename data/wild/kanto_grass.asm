@@ -305,7 +305,7 @@ KantoGrassWildMons:
 	dbw 50, BIDOOF
 	dbw 50, SKITTY
 	dbw 51, MAGNEMITE
-	dbw 52, RATICATE
+	dbw 52, TURTWIG
 	dbw 49, JIGGLYPUFF
 	dbw 52, GRANBULL
 	dbw 52, GRANBULL
@@ -313,15 +313,15 @@ KantoGrassWildMons:
 	dbw 50, BIDOOF
 	dbw 50, RALTS
 	dbw 51, MAGNEMITE
-	dbw 52, RATICATE
+	dbw 52, TURTWIG
 	dbw 49, JIGGLYPUFF
 	dbw 52, GRANBULL
 	dbw 52, GRANBULL
 	; nite
 	dbw 50, ELECTRIKE
 	dbw 50, DROWZEE
-	dbw 51, MAGNEMITE
 	dbw 52, PSYDUCK
+	dbw 51, TURTWIG
 	dbw 49, RALTS
 	dbw 52, RATICATE
 	dbw 52, RATICATE
@@ -359,7 +359,7 @@ KantoGrassWildMons:
 	dbw 58, VULPIX
 	dbw 60, PIDGEOTTO
 	dbw 57, ABRA
-	dbw 58, GROWLITHE
+	dbw 58, CHIMCHAR
 	dbw 57, JIGGLYPUFF
 	dbw 59, NINETALES
 	dbw 59, KADABRA
@@ -367,7 +367,7 @@ KantoGrassWildMons:
 	dbw 58, SNUBBULL
 	dbw 60, PIDGEOTTO
 	dbw 57, ABRA
-	dbw 58, GROWLITHE
+	dbw 58, CHIMCHAR
 	dbw 57, JIGGLYPUFF
 	dbw 59, VULPIX
 	dbw 59, KADABRA
@@ -375,7 +375,7 @@ KantoGrassWildMons:
 	dbw 58, MEOWTH
 	dbw 61, NOCTOWL
 	dbw 57, ABRA
-	dbw 58, HAUNTER
+	dbw 58, CHIMCHAR
 	dbw 57, JIGGLYPUFF
 	dbw 59, KADABRA
 	dbw 59, ALAKAZAM
@@ -628,24 +628,24 @@ KantoGrassWildMons:
 	; morn
 	dbw 30, TANGELA
 	dbw 25, RATTATA
-	dbw 35, TANGELA
 	dbw 20, RATICATE
+	dbw 35, PIPLUP
 	dbw 30, BULBASAUR
 	dbw 28, MR__MIME
 	dbw 28, MR__MIME
 	; day
 	dbw 30, TANGELA
 	dbw 25, RATTATA
-	dbw 35, TANGELA
 	dbw 20, PANSAGE
+	dbw 35, PIPLUP
 	dbw 28, CHARMANDER
 	dbw 30, MR__MIME
 	dbw 30, MR__MIME
 	; nite
 	dbw 30, TANGELA
 	dbw 25, RATTATA
-	dbw 35, TANGELA
 	dbw 20, RATICATE
+	dbw 35, PIPLUP
 	dbw 30, SQUIRTLE
 	dbw 28, TANGELA
 	dbw 28, TANGELA

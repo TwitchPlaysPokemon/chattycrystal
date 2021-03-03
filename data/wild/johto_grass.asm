@@ -1275,25 +1275,25 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 9, EKANS
-	dbw 10, RATTATA
 	dbw 12, BELLSPROUT
 	dbw 11, LOTAD
+	dbw 10, MUDKIP
 	dbw 12, PIDGEY
 	dbw 12, HOPPIP
 	dbw 12, HOPPIP
 	; day
 	dbw 9, EKANS
-	dbw 10, RATTATA
 	dbw 12, BELLSPROUT
 	dbw 11, LOTAD
+	dbw 10, MUDKIP
 	dbw 12, PIDGEY
 	dbw 12, HOPPIP
 	dbw 12, HOPPIP
 	; nite
 	dbw 9, WOOPER
-	dbw 10, RATTATA
 	dbw 12, BELLSPROUT
 	dbw 11, ZUBAT
+	dbw 10, MUDKIP
 	dbw 12, HOOTHOOT
 	dbw 12, GASTLY
 	dbw 12, GASTLY
@@ -1304,7 +1304,7 @@ JohtoGrassWildMons:
 	dbw 19, CHANSEY
 	dbw 19, SPEAROW
 	dbw 19, GEODUDE
-	dbw 19, HOPPIP
+	dbw 19, TORCHIC
 	dbw 20, EKANS
 	dbw 20, LUXIO
 	dbw 20, HOPPIP
@@ -1312,7 +1312,7 @@ JohtoGrassWildMons:
 	dbw 19, CHANSEY
 	dbw 19, SPEAROW
 	dbw 19, GEODUDE
-	dbw 19, HOPPIP
+	dbw 19, TORCHIC
 	dbw 20, EKANS
 	dbw 20, LUXIO
 	dbw 20, HOPPIP
@@ -1320,7 +1320,7 @@ JohtoGrassWildMons:
 	dbw 19, CHANSEY
 	dbw 19, ZUBAT
 	dbw 19, GEODUDE
-	dbw 19, ZUBAT
+	dbw 19, TORCHIC
 	dbw 20, RATICATE
 	dbw 20, LUXIO
 	dbw 20, RATICATE
@@ -1329,25 +1329,25 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 20, SNUBBULL
-	dbw 21, RATTATA
-	dbw 22, ABRA
 	dbw 20, SWABLU
+	dbw 22, ABRA
+	dbw 21, TREECKO
 	dbw 22, LOMBRE
 	dbw 20, JIGGLYPUFF
 	dbw 20, DITTO
 	; day
 	dbw 20, SNUBBULL
-	dbw 21, RATTATA
-	dbw 22, ABRA
 	dbw 20, SWABLU
+	dbw 22, ABRA
+	dbw 21, TREECKO
 	dbw 22, LOMBRE
 	dbw 20, JIGGLYPUFF
 	dbw 20, DITTO
 	; nite
 	dbw 22, DROWZEE
-	dbw 21, RATTATA
-	dbw 22, HOOTHOOT
 	dbw 20, ABRA
+	dbw 22, HOOTHOOT
+	dbw 21, TREECKO
 	dbw 22, JIGGLYPUFF
 	dbw 20, SWABLU
 	dbw 20, DITTO
@@ -1493,23 +1493,23 @@ JohtoGrassWildMons:
 	dbw 42, EKANS
 	dbw 43, SPEAROW
 	dbw 44, LINOONE
+	dbw 44, CYNDAQUIL
 	dbw 45, ARBOK
-	dbw 44, FEAROW
 	dbw 45, SWELLOW
 	dbw 45, MIGHTYENA
 	; day
 	dbw 42, EKANS
 	dbw 43, LINOONE
 	dbw 44, RATTATA
+	dbw 44, CYNDAQUIL
 	dbw 45, ARBOK
-	dbw 44, FEAROW
 	dbw 45, SWELLOW
 	dbw 45, MIGHTYENA
 	; nite
 	dbw 42, LINOONE
 	dbw 43, TAILLOW
 	dbw 44, MIGHTYENA
-	dbw 45, GOLBAT
+	dbw 44, CYNDAQUIL
 	dbw 44, MARILL
 	dbw 45, SWELLOW
 	dbw 45, GOLBAT
@@ -1520,24 +1520,24 @@ JohtoGrassWildMons:
 	dbw 43, SENTRET
 	dbw 44, CROAGUNK
 	dbw 44, FARFETCH_D
+	dbw 45, TOTODILE
 	dbw 43, FURRET
-	dbw 45, RATICATE
 	dbw 45, GIRAFARIG
 	dbw 45, FURRET
 	; day
 	dbw 43, SENTRET
 	dbw 44, CROAGUNK
 	dbw 44, FARFETCH_D
+	dbw 45, TOTODILE
 	dbw 43, FURRET
-	dbw 45, RATICATE
 	dbw 45, GIRAFARIG
 	dbw 45, FURRET
 	; nite
 	dbw 43, CROAGUNK
 	dbw 44, NOCTOWL
 	dbw 44, GIRAFARIG
+	dbw 45, TOTODILE
 	dbw 45, VENONAT
-	dbw 45, RATICATE
 	dbw 45, TOXICROAK
 	dbw 45, VENOMOTH
 
@@ -1547,23 +1547,23 @@ JohtoGrassWildMons:
 	dbw 48, TANGELA
 	dbw 47, LICKITUNG
 	dbw 47, BELLSPROUT
+	dbw 49, CHIKORITA
 	dbw 49, WEEPINBELL
-	dbw 49, LICKITUNG
 	dbw 51, LICKITUNG
 	dbw 51, LICKITUNG
 	; day
 	dbw 48, TANGELA
 	dbw 47, LICKITUNG
 	dbw 47, BELLSPROUT
+	dbw 49, CHIKORITA
 	dbw 49, WEEPINBELL
-	dbw 49, LICKITUNG
 	dbw 51, LICKITUNG
 	dbw 51, LICKITUNG
 	; nite
 	dbw 48, TANGELA
 	dbw 47, POLIWAG
 	dbw 47, BELLSPROUT
-	dbw 49, WEEPINBELL
+	dbw 49, CHIKORITA
 	dbw 49, POLIWHIRL
 	dbw 51, POLIWHIRL
 	dbw 51, POLIWHIRL

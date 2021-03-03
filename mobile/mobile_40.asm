@@ -307,19 +307,7 @@ Function10020b:
 	ld [wc303], a
 	farcall FadeOutPalettes
 	farcall Function106464
-	call HideSprites
-	call DelayFrame
-
-	ldh a, [rSVBK]
-	push af
-	ld a, $01
-	ldh [rSVBK], a
-
-	farcall DisplayMobileError
-
-	pop af
-	ldh [rSVBK], a
-	ret
+	; unreachable
 
 Function100232:
 	push de

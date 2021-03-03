@@ -7224,12 +7224,7 @@ Function117bb6:
 	cp $a
 	jr z, .asm_117be1
 .asm_117bd0
-	ld a, $2
-	ld [wc303], a
-	farcall DisplayMobileError
-	ld a, $80
-	ld [wJumptableIndex], a
-	ret
+	; unreachable
 
 .asm_117be1
 	ld a, $80

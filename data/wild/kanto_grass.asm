@@ -547,7 +547,7 @@ KantoGrassWildMons:
 	; morn
 	dbw 52, GRIMER
 	dbw 53, FEAROW
-	dbw 54, GRIMER
+	dbw 54, HITMONCHAN
 	dbw 55, SHELLOS
 	dbw 55, SWELLOW
 	dbw 56, MUK
@@ -555,15 +555,15 @@ KantoGrassWildMons:
 	; day
 	dbw 52, GRIMER
 	dbw 53, FEAROW
-	dbw 54, GRIMER
+	dbw 54, HITMONTOP
 	dbw 55, SHELLOS
 	dbw 55, SLUGMA
 	dbw 56, MUK
 	dbw 56, GASTRODON
 	; nite
 	dbw 52, GRIMER
-	dbw 53, GRIMER
 	dbw 54, CROAGUNK
+	dbw 54, HITMONLEE
 	dbw 55, MURKROW
 	dbw 55, MURKROW
 	dbw 56, MUK

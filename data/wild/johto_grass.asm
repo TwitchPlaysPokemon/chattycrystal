@@ -1151,7 +1151,7 @@ JohtoGrassWildMons:
 	dbw 7, ZUBAT
 	dbw 7, GEODUDE
 	dbw 9, LARVITAR
-	dbw 7, ZUBAT
+	dbw 7, TEDDIURSA
 	dbw 9, ARON
 	dbw 9, DUNSPARCE
 	; nite
@@ -1384,23 +1384,23 @@ JohtoGrassWildMons:
 	; morn
 	dbw 8, LEDYBA
 	dbw 8, PIDGEY
-	dbw 9, BELLSPROUT
-	dbw 9, GROWLITHE
 	dbw 9, RALTS
+	dbw 9, GROWLITHE
+	dbw 9, YANMA
 	dbw 10, MAREEP
 	dbw 10, PIDGEY
 	; day
 	dbw 8, PIDGEY
 	dbw 8, RALTS
-	dbw 9, BELLSPROUT
 	dbw 9, GROWLITHE
+	dbw 9, YANMA
 	dbw 9, PIDGEY
 	dbw 10, MAREEP
 	dbw 10, PIDGEY
 	; nite
 	dbw 8, SPINARAK
 	dbw 8, HOOTHOOT
-	dbw 9, BELLSPROUT
+	dbw 9, YANMA
 	dbw 9, RALTS
 	dbw 9, HOOTHOOT
 	dbw 9, GASTLY
@@ -1601,7 +1601,7 @@ JohtoGrassWildMons:
 	dbw 6, GEODUDE
 	dbw 6, SPEAROW
 	dbw 7, GEODUDE
-	dbw 7, RATTATA
+	dbw 7, DUNSPARCE
 	dbw 6, PHANPY
 	dbw 6, RATTATA
 	dbw 6, RATTATA
@@ -1609,7 +1609,7 @@ JohtoGrassWildMons:
 	dbw 6, GEODUDE
 	dbw 6, SPEAROW
 	dbw 7, GEODUDE
-	dbw 7, RATTATA
+	dbw 7, DUNSPARCE
 	dbw 6, RATTATA
 	dbw 6, RATTATA
 	dbw 6, RATTATA
@@ -1617,7 +1617,7 @@ JohtoGrassWildMons:
 	dbw 6, GEODUDE
 	dbw 6, RATTATA
 	dbw 7, GEODUDE
-	dbw 7, RATTATA
+	dbw 7, DUNSPARCE
 	dbw 6, RATTATA
 	dbw 6, RATTATA
 	dbw 6, RATTATA

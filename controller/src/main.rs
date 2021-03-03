@@ -35,6 +35,8 @@ pub struct Settings {
     core_port: u16,
 
     poll_rate_ms: u64,
+
+    enable_autosave: Option<bool>,
     autosave_frequency: u64,
 
     hp_base_power: f32,
@@ -224,7 +226,11 @@ fn main() {
         }
 
         if time::Instant::now() - old_save_time > Duration::from_secs(SETTINGS.autosave_frequency) {
-            make_backup();
+            if let Some(enable) = SETTINGS.enable_autosave {
+                if enable {
+                    make_backup();
+                }
+            }
             let mut f = File::create("trainer_name_map").unwrap();
             bincode::serialize_into(&mut f, &*TRAINER_INDEX.lock()).unwrap();
             old_save_time = time::Instant::now();

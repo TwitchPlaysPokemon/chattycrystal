@@ -132,9 +132,8 @@
 	const SPRITE_SIRIUS ;80
 	const SPRITE_EVAN ;81
 	const SPRITE_BRONZE ;82
-	const SPRITE_ELECTRIC_FENCE_LEFT ;83
-	const SPRITE_ELECTRIC_FENCE_RIGHT ;84
-	const SPRITE_SCROLL ;85
+	const SPRITE_SCROLL ;83
+	const SPRITE_PHANCERO ;84
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_def $90
@@ -174,7 +173,6 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_GYARADOS ; a0
 	const SPRITE_LUGIA ; a1
 	const SPRITE_HO_OH ; a2
-	const SPRITE_PHANCERO ; a3
 
 ; special GetMonSprite values (see engine/overworld/overworld.asm)
 	const_def $e0

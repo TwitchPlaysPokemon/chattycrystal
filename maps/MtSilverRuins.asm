@@ -165,8 +165,9 @@ PhanceroContinue:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	ifequal 2, PhanceroContinue
-	iffalse MtSilverRuinsStartCredits
 	disappear MTSILVERRUINSB1F_PHANCERO_ALIVE
+	checkcaught PHANCERO
+	ifequal 2, MtSilverRuinsStartCredits
 	opentext
 	writetext PhanceroFledText
 	waitbutton

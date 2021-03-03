@@ -275,29 +275,29 @@ KantoGrassWildMons:
 	map_id ROUTE_5
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 61, PIDGEY
-	dbw 61, SNUBBULL
-	dbw 63, PIDGEOTTO
-	dbw 60, MANKEY
-	dbw 62, JIGGLYPUFF
-	dbw 62, ABRA
-	dbw 62, ABRA
+	dbw 8, PICHU
+	dbw 8, MAGBY
+	dbw 11, AZURILL
+	dbw 10, BONSLY
+	dbw 13, BONSLY
+	dbw 12, BUDEW
+	dbw 10, BUDEW
 	; day
-	dbw 61, PIDGEY
-	dbw 61, SNUBBULL
-	dbw 63, PIDGEOTTO
-	dbw 60, MANKEY
-	dbw 62, JIGGLYPUFF
-	dbw 62, ABRA
-	dbw 62, ABRA
+	dbw 8, SMOOCHUM
+	dbw 8, ELEKID
+	dbw 9, BUDEW
+	dbw 5, TOGEPI
+	dbw 7, TOGEPI
+	dbw 12, TYROGUE
+	dbw 15, TYROGUE
 	; nite
-	dbw 61, HOOTHOOT
-	dbw 61, MEOWTH
-	dbw 63, NOCTOWL
-	dbw 60, MANKEY
-	dbw 62, JIGGLYPUFF
-	dbw 62, ABRA
-	dbw 62, ABRA
+	dbw 8, CLEFFA
+	dbw 8, IGGLYBUFF
+	dbw 10, TYROGUE
+	dbw 7, AZURILL
+	dbw 14, BONSLY
+	dbw 9, TOGEPI
+	dbw 6, TOGEPI
 
 	map_id ROUTE_6
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -305,7 +305,7 @@ KantoGrassWildMons:
 	dbw 50, BIDOOF
 	dbw 50, SKITTY
 	dbw 51, MAGNEMITE
-	dbw 52, RATICATE
+	dbw 52, TURTWIG
 	dbw 49, JIGGLYPUFF
 	dbw 52, GRANBULL
 	dbw 52, GRANBULL
@@ -313,15 +313,15 @@ KantoGrassWildMons:
 	dbw 50, BIDOOF
 	dbw 50, RALTS
 	dbw 51, MAGNEMITE
-	dbw 52, RATICATE
+	dbw 52, TURTWIG
 	dbw 49, JIGGLYPUFF
 	dbw 52, GRANBULL
 	dbw 52, GRANBULL
 	; nite
 	dbw 50, ELECTRIKE
 	dbw 50, DROWZEE
-	dbw 51, MAGNEMITE
 	dbw 52, PSYDUCK
+	dbw 51, TURTWIG
 	dbw 49, RALTS
 	dbw 52, RATICATE
 	dbw 52, RATICATE
@@ -359,7 +359,7 @@ KantoGrassWildMons:
 	dbw 58, VULPIX
 	dbw 60, PIDGEOTTO
 	dbw 57, ABRA
-	dbw 58, GROWLITHE
+	dbw 58, CHIMCHAR
 	dbw 57, JIGGLYPUFF
 	dbw 59, NINETALES
 	dbw 59, KADABRA
@@ -367,7 +367,7 @@ KantoGrassWildMons:
 	dbw 58, SNUBBULL
 	dbw 60, PIDGEOTTO
 	dbw 57, ABRA
-	dbw 58, GROWLITHE
+	dbw 58, CHIMCHAR
 	dbw 57, JIGGLYPUFF
 	dbw 59, VULPIX
 	dbw 59, KADABRA
@@ -375,7 +375,7 @@ KantoGrassWildMons:
 	dbw 58, MEOWTH
 	dbw 61, NOCTOWL
 	dbw 57, ABRA
-	dbw 58, HAUNTER
+	dbw 58, CHIMCHAR
 	dbw 57, JIGGLYPUFF
 	dbw 59, KADABRA
 	dbw 59, ALAKAZAM
@@ -465,7 +465,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 57, CUTIEFLY
-	dbw 57, BUDEW
+	dbw 57, MANKEY
 	dbw 59, PIDGEOTTO
 	dbw 59, HOPPIP
 	dbw 61, RIBOMBEE
@@ -547,7 +547,7 @@ KantoGrassWildMons:
 	; morn
 	dbw 52, GRIMER
 	dbw 53, FEAROW
-	dbw 54, GRIMER
+	dbw 54, HITMONCHAN
 	dbw 55, SHELLOS
 	dbw 55, SWELLOW
 	dbw 56, MUK
@@ -555,15 +555,15 @@ KantoGrassWildMons:
 	; day
 	dbw 52, GRIMER
 	dbw 53, FEAROW
-	dbw 54, GRIMER
+	dbw 54, HITMONTOP
 	dbw 55, SHELLOS
 	dbw 55, SLUGMA
 	dbw 56, MUK
 	dbw 56, GASTRODON
 	; nite
 	dbw 52, GRIMER
-	dbw 53, GRIMER
 	dbw 54, CROAGUNK
+	dbw 54, HITMONLEE
 	dbw 55, MURKROW
 	dbw 55, MURKROW
 	dbw 56, MUK
@@ -628,24 +628,24 @@ KantoGrassWildMons:
 	; morn
 	dbw 30, TANGELA
 	dbw 25, RATTATA
-	dbw 35, TANGELA
 	dbw 20, RATICATE
+	dbw 35, PIPLUP
 	dbw 30, BULBASAUR
 	dbw 28, MR__MIME
 	dbw 28, MR__MIME
 	; day
 	dbw 30, TANGELA
 	dbw 25, RATTATA
-	dbw 35, TANGELA
 	dbw 20, PANSAGE
+	dbw 35, PIPLUP
 	dbw 28, CHARMANDER
 	dbw 30, MR__MIME
 	dbw 30, MR__MIME
 	; nite
 	dbw 30, TANGELA
 	dbw 25, RATTATA
-	dbw 35, TANGELA
 	dbw 20, RATICATE
+	dbw 35, PIPLUP
 	dbw 30, SQUIRTLE
 	dbw 28, TANGELA
 	dbw 28, TANGELA
@@ -681,7 +681,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 63, CUTIEFLY
-	dbw 65, BUDEW
+	dbw 65, MANKEY
 	dbw 64, METAPOD
 	dbw 64, RALTS
 	dbw 63, WEEPINBELL
@@ -708,7 +708,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 64, CUTIEFLY
-	dbw 64, BUDEW
+	dbw 64, MANKEY
 	dbw 65, PIDGEOT
 	dbw 65, BUTTERFREE
 	dbw 64, WEEPINBELL
@@ -716,7 +716,7 @@ KantoGrassWildMons:
 	dbw 67, BUTTERFREE
 	; day
 	dbw 64, CUTIEFLY
-	dbw 64, BUDEW
+	dbw 64, MANKEY
 	dbw 65, PIDGEOT
 	dbw 65, BUTTERFREE
 	dbw 64, WEEPINBELL

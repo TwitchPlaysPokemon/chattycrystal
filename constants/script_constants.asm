@@ -71,7 +71,7 @@ NUM_STRING_BUFFERS EQU const_value
 	const VAR_BUENASPASSWORD   ; 19
 	const VAR_KENJI_BREAK      ; 1a
 	const VAR_DEXUNCAUGHT      ; 1b
-NUM_VARS EQU const_value       ; 1c
+NUM_VARS EQU const_value
 
 ; variable action types
 RETVAR_STRBUF2 EQU (0 << 6)

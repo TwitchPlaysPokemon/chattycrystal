@@ -348,7 +348,7 @@ AnimationIdlePointers:
 	dw BonslyAnimationIdle
 	dw ChatotAnimationIdle
 	dw CroagunkAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Toxicroak
+	dw ToxicroakAnimationIdle
 	dw LeafeonAnimationIdle
 	dw GlaceonAnimationIdle
 	dw PorygonZAnimationIdle
@@ -361,7 +361,7 @@ AnimationIdlePointers:
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Excadrill
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sandile
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Krokorok
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Krookodile
+	dw KrookodileAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Ducklett
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Swanna
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Tynamo

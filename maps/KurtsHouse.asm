@@ -202,7 +202,7 @@ Kurt1:
 .GiveLureBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	buttonsound
-	verbosegiveitem2 LURE_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar LURE_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_BLU_APRICORN
 	sjump ._ThatTurnedOutGreat
@@ -210,7 +210,7 @@ Kurt1:
 .GiveMoonBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	buttonsound
-	verbosegiveitem2 MOON_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar MOON_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_YLW_APRICORN
 	sjump ._ThatTurnedOutGreat
@@ -218,7 +218,7 @@ Kurt1:
 .GiveFriendBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	buttonsound
-	verbosegiveitem2 FRIEND_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar FRIEND_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_GRN_APRICORN
 	sjump ._ThatTurnedOutGreat
@@ -226,7 +226,7 @@ Kurt1:
 .GiveFastBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	buttonsound
-	verbosegiveitem2 FAST_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar FAST_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_WHT_APRICORN
 	sjump ._ThatTurnedOutGreat
@@ -234,7 +234,7 @@ Kurt1:
 .GiveHeavyBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	buttonsound
-	verbosegiveitem2 HEAVY_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar HEAVY_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_BLK_APRICORN
 	sjump ._ThatTurnedOutGreat
@@ -242,7 +242,7 @@ Kurt1:
 .GiveLoveBall:
 	writetext KurtsHouseKurtJustFinishedYourBallText
 	buttonsound
-	verbosegiveitem2 LOVE_BALL, VAR_KURT_APRICORNS
+	verbosegiveitemvar LOVE_BALL, VAR_KURT_APRICORNS
 	iffalse .NoRoomForBall
 	clearevent EVENT_GAVE_KURT_PNK_APRICORN
 	sjump ._ThatTurnedOutGreat

@@ -7,7 +7,7 @@ Function17a68f::
 	ld hl, $d088
 	bit 5, [hl]
 	jr z, .asm_17a6a6
-	ld de, wStringBuffer1 ; $d073
+	ld de, wStringBuffer1
 	push de
 	call Function17a721
 	pop de
@@ -21,7 +21,7 @@ Function17a68f::
 Function17a6a8:
 	push de
 	push bc
-	ld hl, wStringBuffer2 ; $d086
+	ld hl, wStringBuffer2
 	ld bc, $a
 	xor a
 	call ByteFill
@@ -413,24 +413,9 @@ Function17a8de:
 	ret
 
 Function17a91e:
-	ld a, [$d08c]
-	cp $7
-	jr c, .asm_17a92c
 	ld a, $3
 	ld [$d087], a
 	xor a
-	ret
-
-.asm_17a92c
-	call LoadStandardMenuHeader
-	call Function17a99e
-	ld hl, $d088
-	set 7, [hl]
-	ld hl, $d088
-	set 6, [hl]
-	ld a, $4
-	ld [$d087], a
-	scf
 	ret
 
 Function17a943:
@@ -487,54 +472,29 @@ Function17a97b:
 	ld a, [de]
 	inc de
 	cp $a
-	jr nc, .asm_17a99d
+	ret nc
 	add $f6
 	ld [hli], a
 	dec c
 	jr nz, .asm_17a990
 	ret
 
-.asm_17a99d
-	ret
-
-Function17a99e:
-	hlcoord 0, 12
-	ld b, $4
-	ld c, $12
-	call Function17ac46
-	hlcoord 2, 14
-	ld de, String_17a9b2
-	call PlaceString
-	ret
-
-String_17a9b2:
-	db   "でんわばんごうが　ただしく"
-	next "はいって　いません！"
-	db   "@"
-
 Function17a9cb:
-	ld de, wVirtualOAM ; $c400
+	ld de, wVirtualOAM
 	ld hl, $d088
 	bit 6, [hl]
-	jr nz, .bit_6_set
+	jp nz, Function17a9e3
 	call Function17a9e3
 	call Function17aa22
-	call Function17a9f5
-	ret
-
-.bit_6_set
-	call Function17a9e3
-	ret
+	jp Function17a9f5
 
 Function17a9e3:
-	ld a, $3
+	ld a, 3
 	ld [$d08e], a
 	ld hl, Unknown_17aa77
-	ld b, $8
-	ld c, $8
-	ld a, $5
-	call Function17aa4a
-	ret
+	lb bc, 8, 8
+	ld a, 5
+	jp Function17aa4a
 
 Function17a9f5:
 	ld a, [$d08c]
@@ -557,8 +517,7 @@ Function17a9f5:
 	ld c, $11
 	ld hl, Unknown_17aa72
 	ld a, $4
-	call Function17aa4a
-	ret
+	jp Function17aa4a
 
 Function17aa22:
 	ld a, $0
@@ -583,8 +542,7 @@ Function17aa22:
 	pop de
 	ld a, $0
 	ld hl, Unknown_17aa77
-	call Function17aa4a
-	ret
+	jp Function17aa4a
 
 Function17aa4a:
 	ld [$d08d], a

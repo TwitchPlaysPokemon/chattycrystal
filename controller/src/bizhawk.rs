@@ -63,6 +63,7 @@ impl Bizhawk {
         if let Ok(mut result) = self.client.get(format!("http://localhost:{}/{}", self.port, command).as_str()).send() {
             let response = result.text().unwrap_or_default();
             if response != "ok" {
+                println!("Error Sending command to bizhawk, Got response: {}", response);
                 return Err(response)
             }
         } else {
@@ -75,6 +76,7 @@ impl Bizhawk {
         if let Ok(mut result) = self.client.get(format!("http://localhost:{}/{}", self.port, command).as_str()).send() {
             let response = result.text().unwrap_or_default();
             if response != "ok" {
+                println!("Error Sending command to bizhawk, Got response: {}", response);
                 return Err(response)
             }
         } else {
@@ -83,10 +85,25 @@ impl Bizhawk {
         Ok(())
     }
 
+    pub fn send_command_callback(&self, command: &str, callback_name: &str) -> Result<(), String> {
+        let _lock = CALLBACK.lock();
+        if let Ok(mut result) = self.client.get(format!("http://localhost:{}/{}", self.port, command).as_str()).send() {
+            let response = result.text().unwrap_or_default();
+            if response != callback_name {
+                println!("Error Sending callback request to bizhawk, Got response: {}", response);
+                return Err(response)
+            }
+        } else {
+            return Err("Error Sending callback request to bizhawk.".to_string())
+        }
+        Ok(())
+    }
+
     pub fn send_command_and_get_response(&self, command: &str) -> Result<String, String> {
         if let Ok(mut result) = self.client.get(format!("http://localhost:{}/{}", self.port, command).as_str()).send() {
             let response = result.text().unwrap_or_default();
             if response.get(0..1) == Some("R") {
+                println!("Error Sending command to bizhawk, Got response: {}", response);
                 return Err(response)
             }
             Ok(response)
@@ -96,30 +113,30 @@ impl Bizhawk {
     }
 
     pub fn on_memory_write(&self, name: &str, address: usize, len: u8, url: &str) -> Result<(), String> {
-        self.send_command_sync(format!("{}/OnMemoryWrite/{:X}/{:X}/{}", name, address, len, url).as_str())
+        self.send_command_callback(format!("{}/OnMemoryWrite/{:X}/{:X}/{}", name, address, len, url).as_str(), name)
     }
 
     pub fn on_memory_write_if(&self, name: &str, address: usize, len: u8, check_addr: usize, check_val: usize, url: &str) -> Result<(), String> {
-        self.send_command_sync(format!("{}/OnMemoryWriteIfValue/{:X}/{:X}/{:X}/{:X}/{}", name, address, len, check_addr, check_val, url).as_str())
+        self.send_command_callback(format!("{}/OnMemoryWriteIfValue/{:X}/{:X}/{:X}/{:X}/{}", name, address, len, check_addr, check_val, url).as_str(), name)
     }
 
     pub fn on_memory_read(&self, name: &str, address: usize, len: u8, url: &str) -> Result<(), String> {
-        self.send_command_sync(format!("{}/OnMemoryRead/{:X}/{:X}/{}", name, address, len, url).as_str())
+        self.send_command_callback(format!("{}/OnMemoryRead/{:X}/{:X}/{}", name, address, len, url).as_str(), name)
     }
 
     pub fn on_memory_read_if(&self, name: &str, address: usize, len: u8, check_addr: usize, check_val: usize, url: &str) -> Result<(), String> {
         println!("{}/OnMemoryReadIfValue/{:X}/{:X}/{:X}/{:X}/{}", name, address, len, check_addr, check_val, url);
-        self.send_command_sync(format!("{}/OnMemoryReadIfValue/{:X}/{:X}/{:X}/{:X}/{}", name, address, len, check_addr, check_val, url).as_str())
+        self.send_command_callback(format!("{}/OnMemoryReadIfValue/{:X}/{:X}/{:X}/{:X}/{}", name, address, len, check_addr, check_val, url).as_str(), name)
     }
 
     pub fn on_memory_execute(&self, name: &str, address: usize, len: u8, url: &str) -> Result<(), String> {
         println!("{}/OnMemoryExecute/{:X}/{:X}/{}", name, address, len, url);
-        self.send_command_sync(format!("{}/OnMemoryExecute/{:X}/{:X}/{}", name, address, len, url).as_str())
+        self.send_command_callback(format!("{}/OnMemoryExecute/{:X}/{:X}/{}", name, address, len, url).as_str(), name)
     }
 
     pub fn on_memory_execute_if(&self, name: &str, address: usize, len: u8, check_addr: usize, check_val: usize, url: &str) -> Result<(), String> {
         println!("{}/OnMemoryExecuteIfValue/{:X}/{:X}/{:X}/{:X}/{}", name, address, len, check_addr, check_val, url);
-        self.send_command_sync(format!("{}/OnMemoryExecuteIfValue/{:X}/{:X}/{:X}/{:X}/{}", name, address, len, check_addr, check_val, url).as_str())
+        self.send_command_callback(format!("{}/OnMemoryExecuteIfValue/{:X}/{:X}/{:X}/{:X}/{}", name, address, len, check_addr, check_val, url).as_str(), name)
     }
 
     pub fn remove_callback(&self, name: &str) -> Result<(), String> {

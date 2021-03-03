@@ -332,7 +332,7 @@ MoveAnimations:
 	dw BattleAnim_HoneClaws
 	dw BattleAnim_Psyshock
 	dw BattleAnim_QuiverDance
-	dw BattleAnim_Pursuit      ; PLACEHOLDER
+	dw BattleAnim_FoulPlay
 	dw BattleAnim_EchoedVoice
 	dw BattleAnim_Scald
 	dw BattleAnim_Bulldoze     ; 150
@@ -364,7 +364,7 @@ MoveAnimations:
 	dw BattleAnim_DarkPulse
 	dw BattleAnim_RockBlast
 	dw BattleAnim_BrickBreak
-	dw BattleAnim_Flamethrower ; PLACEHOLDER
+	dw BattleAnim_HeatWave
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -3805,6 +3805,29 @@ BattleAnim_QuiverDance:
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_18
 	anim_jump BattleAnim_ShowMon_0
+	
+BattleAnim_FoulPlay:
+	anim_call BattleAnim_TargetObj_2Row
+	anim_bgp $f8
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_BEAT_UP
+	anim_wait 4
+	anim_call BattleAnim_ShowMon_0
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_SHINE
+	anim_obj ANIM_OBJ_04, 136, 56, $0
+	anim_wait 2
+	anim_bgeffect ANIM_BG_07, $0, $0, $0
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_FORESIGHT, 134, 40, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_FORESIGHT, 152, 62, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_FORESIGHT, 120, 59, $0
+	anim_wait 24
+	anim_ret
 
 BattleAnim_EchoedVoice:
 	anim_2gfx ANIM_GFX_PSYCHIC, ANIM_GFX_NOISE
@@ -4491,6 +4514,25 @@ BattleAnim_BrickBreak:
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
 	anim_obj ANIM_OBJ_01, 136, 56, $0
 	anim_wait 34
+	anim_ret
+	
+BattleAnim_HeatWave:
+	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_FIRE
+	anim_bgp $90
+	anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
+	anim_sound 0, 0, SFX_EMBER
+.loop
+	anim_obj ANIM_OBJ_HEAT_WAVE, 88, 0, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HEAT_WAVE, 56, 16, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HEAT_WAVE, 72, 32, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HEAT_WAVE, 24, 48, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HEAT_WAVE, 40, 64, $1
+	anim_loop 3, .loop
+	anim_incbgeffect ANIM_BG_WHIRLPOOL
 	anim_ret
 
 BattleAnim_FlameWheel:

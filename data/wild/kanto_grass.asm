@@ -275,29 +275,29 @@ KantoGrassWildMons:
 	map_id ROUTE_5
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 61, PIDGEY
-	dbw 61, SNUBBULL
-	dbw 63, PIDGEOTTO
-	dbw 60, MANKEY
-	dbw 62, JIGGLYPUFF
-	dbw 62, ABRA
-	dbw 62, ABRA
+	dbw 8, PICHU
+	dbw 8, MAGBY
+	dbw 11, AZURILL
+	dbw 10, BONSLY
+	dbw 13, BONSLY
+	dbw 12, BUDEW
+	dbw 10, BUDEW
 	; day
-	dbw 61, PIDGEY
-	dbw 61, SNUBBULL
-	dbw 63, PIDGEOTTO
-	dbw 60, MANKEY
-	dbw 62, JIGGLYPUFF
-	dbw 62, ABRA
-	dbw 62, ABRA
+	dbw 8, SMOOCHUM
+	dbw 8, ELEKID
+	dbw 9, BUDEW
+	dbw 5, TOGEPI
+	dbw 7, TOGEPI
+	dbw 12, TYROGUE
+	dbw 15, TYROGUE
 	; nite
-	dbw 61, HOOTHOOT
-	dbw 61, MEOWTH
-	dbw 63, NOCTOWL
-	dbw 60, MANKEY
-	dbw 62, JIGGLYPUFF
-	dbw 62, ABRA
-	dbw 62, ABRA
+	dbw 8, CLEFFA
+	dbw 8, IGGLYBUFF
+	dbw 10, TYROGUE
+	dbw 7, AZURILL
+	dbw 14, BONSLY
+	dbw 9, TOGEPI
+	dbw 6, TOGEPI
 
 	map_id ROUTE_6
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -465,7 +465,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 57, CUTIEFLY
-	dbw 57, BUDEW
+	dbw 57, MANKEY
 	dbw 59, PIDGEOTTO
 	dbw 59, HOPPIP
 	dbw 61, RIBOMBEE
@@ -681,7 +681,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 63, CUTIEFLY
-	dbw 65, BUDEW
+	dbw 65, MANKEY
 	dbw 64, METAPOD
 	dbw 64, RALTS
 	dbw 63, WEEPINBELL
@@ -708,7 +708,7 @@ KantoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 64, CUTIEFLY
-	dbw 64, BUDEW
+	dbw 64, MANKEY
 	dbw 65, PIDGEOT
 	dbw 65, BUTTERFREE
 	dbw 64, WEEPINBELL
@@ -716,7 +716,7 @@ KantoGrassWildMons:
 	dbw 67, BUTTERFREE
 	; day
 	dbw 64, CUTIEFLY
-	dbw 64, BUDEW
+	dbw 64, MANKEY
 	dbw 65, PIDGEOT
 	dbw 65, BUTTERFREE
 	dbw 64, WEEPINBELL

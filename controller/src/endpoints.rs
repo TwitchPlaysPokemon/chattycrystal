@@ -4,6 +4,16 @@ use crate::*;
 use std::process::Command;
 use std::sync;
 
+pub fn send_hud_data(message: &str) {
+    let message = message.to_owned();
+    thread::Builder::new()
+    .name("hud".to_string())
+    .spawn(move || {
+        HUD.get(&message).send().ok();
+    })
+    .expect("error: failed to start hud thread");
+}
+
 #[derive(Serialize, Debug, Default)]
 pub struct HiddenPowerInfo {
     pub type_id: u8,
@@ -216,7 +226,7 @@ fn hidden_power() -> &'static str {
     BIZHAWK.write_u8_sym(&SYM["wChattyHPPower"], *power).ok();
 
     if let Some(ip) = &SETTINGS.hp_hud_emote_endpoint {
-        HUD.get(format!("{}/{}", ip, emote_id).as_str()).send().ok();
+        send_hud_data(format!("{}/{}", ip, emote_id).as_str());
     }
 
     if SETTINGS.debug { println!("HP Type: {}\nHP Power: {}", type_name, power); }

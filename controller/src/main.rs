@@ -393,16 +393,18 @@ fn update_chat_speed() {
     (*HIDDEN_POWER.lock()).power = min((SETTINGS.hp_base_power + ((lines_per_sec / SETTINGS.hp_chat_unit) * SETTINGS.hp_power_per_unit)) as u32, hp_max_power) as u8;
     
     if let Some(ip) = &SETTINGS.hp_hud_power_endpoint {
-        HUD.get(format!("{}/{}", ip, (*HIDDEN_POWER.lock()).power).as_str()).send().ok();
+        send_hud_data(format!("{}/{}", ip, (*HIDDEN_POWER.lock()).power).as_str());
     }
 }
 
 fn update_markov() {
-    *TEXT_INJECT.lock() = CORE.send(&SETTINGS.markov_endpoint).unwrap_or_else(|_| "oh no!".to_string());
+    let message = CORE.send(&SETTINGS.markov_endpoint).unwrap_or_else(|_| "oh no!".to_string());
+    *TEXT_INJECT.lock() = message;
 }
 
 fn update_recent_message() {
-    *NEXT_MESSAGE.lock() = CORE.send(&SETTINGS.recent_message_endpoint).unwrap_or_else(|_| "oh no!".to_string());
+    let message = CORE.send(&SETTINGS.recent_message_endpoint).unwrap_or_else(|_| "oh no!".to_string());
+    *NEXT_MESSAGE.lock() = message;
     utf8_truncate(&mut *NEXT_MESSAGE.lock(), 150);
 }
 

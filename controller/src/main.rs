@@ -308,7 +308,7 @@ fn utf8_to_ingame(mut string: String, mut current_pos: usize) -> Vec<u8> {
 }
 
 fn update_emote_related_data() {
-    let badge_count = BIZHAWK.read_u16_sym(&SYM["wBadges"]).unwrap().count_ones();
+    let badge_count = BIZHAWK.read_u16_sym(&SYM["wBadges"]).unwrap_or(0).count_ones();
     let mut trending_emotes: Vec<TopEmote> = serde_json::from_str(&CORE.send(&SETTINGS.top_emotes_endpoint).unwrap_or_default()).unwrap_or_default();
 
     if SETTINGS.debug { 
@@ -387,7 +387,7 @@ fn update_emote_related_data() {
 
 fn update_chat_speed() {
     let lines_per_sec: f32 = CORE.send(&SETTINGS.chat_speed_endpoint).unwrap_or_else(|_| "".to_string()).parse().unwrap_or(0.0);
-    let badge_count = BIZHAWK.read_u16_sym(&SYM["wBadges"]).unwrap().count_ones();
+    let badge_count = BIZHAWK.read_u16_sym(&SYM["wBadges"]).unwrap_or(0).count_ones();
 
     let hp_max_power = SETTINGS.hp_badge_base + (min(badge_count, SETTINGS.hp_badge_cap) * SETTINGS.hp_power_per_badge);
     (*HIDDEN_POWER.lock()).power = min((SETTINGS.hp_base_power + ((lines_per_sec / SETTINGS.hp_chat_unit) * SETTINGS.hp_power_per_unit)) as u32, hp_max_power) as u8;

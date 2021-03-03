@@ -29,10 +29,13 @@ DoTurn:
 	ld [wTurnEnded], a
 
 	; Reset chatty Chatter's move to ID 1 (Pound) just in case it doesn't get overwritten.
-	; This also clears the upper bits from it.
+	; This also clears the upper bits from it. Also reset chatty HP to fighting, 30 power.
 	ld [wChattyChatterMove], a
 	inc a
 	ld [wChattyChatterMove + 1], a
+	ld [wChattyHPType], a
+	ld a, 30
+	ld [wChattyHPPower], a
 
 	; Effect command checkturn is called for every move.
 	call CheckTurn

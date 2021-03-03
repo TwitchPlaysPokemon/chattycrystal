@@ -17,8 +17,8 @@ INCLUDE "engine/events/shuckle.asm"
 INCLUDE "engine/events/haircut.asm"
 INCLUDE "engine/events/engine_flags.asm"
 INCLUDE "engine/events/poisonstep.asm"
-
 INCLUDE "data/moves/ls_names.asm"
+
 
 SECTION "bank2", ROMX
 
@@ -26,6 +26,7 @@ INCLUDE "engine/overworld/player_object.asm"
 INCLUDE "engine/math/sine.asm"
 INCLUDE "engine/predef.asm"
 INCLUDE "engine/gfx/color.asm"
+INCLUDE "engine/items/held_items.asm"
 INCLUDE "data/moves/vc_names.asm"
 
 

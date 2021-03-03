@@ -1,10 +1,3 @@
-Function4a13b:
-	call Function4a3a7
-	call MG_Mobile_Layout00
-	call Function4a373
-	ld c, 10
-	call DelayFrames
-
 Function4a195:
 	call ScrollingMenuJoypad
 	ld hl, wMenuCursorY
@@ -52,13 +45,7 @@ Function4a195:
 	jp Function4a195
 
 Function4a20e:
-	ld a, $1
-	call MenuClickSound
-	farcall Function1719c8
-	call ClearBGPalettes
-	call DelayFrame
-	pop bc
-	jp Function4a13b
+	; unreachable
 
 Function4a28a:
 	; unreferenced

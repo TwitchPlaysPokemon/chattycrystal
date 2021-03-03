@@ -88,7 +88,7 @@ MtBattleBeatBtlMaster:
 
 MtBattleMasterBall:
 	opentext
-	verbosegiveitemvar MASTER_BALL, 5
+	verbosegiveitem MASTER_BALL, 5
 	iffalse .BagFull
 	closetext
 	sjump MtBattleGotReward

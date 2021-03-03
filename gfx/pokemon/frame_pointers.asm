@@ -361,7 +361,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Excadrill
 	dba PlaceholderFrames ; PLACEHOLDER - Sandile
 	dba PlaceholderFrames ; PLACEHOLDER - Krokorok
-	dba PlaceholderFrames ; PLACEHOLDER - Krookodile
+	dba KrookodileFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Ducklett
 	dba PlaceholderFrames ; PLACEHOLDER - Swanna
 	dba PlaceholderFrames ; PLACEHOLDER - Tynamo

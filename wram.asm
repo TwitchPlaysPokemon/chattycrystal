@@ -2001,6 +2001,10 @@ wCurMessageIndex:: db
 wMailboxCount:: db
 wMailboxItems:: ds MAILBOX_CAPACITY
 wMailboxEnd:: ; d0fe
+
+NEXTU ; d0f0
+; backup battle data
+wBackupHeldItems:: ds PARTY_LENGTH
 ENDU ; d100
 
 wListPointer:: dw ; d100

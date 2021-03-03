@@ -56,6 +56,7 @@ TrickHouseExit_TrickMaster:
 	closetext
 .skip_parting_message
 	pause 10
+	playsound SFX_EGG_BOMB
 	applymovement TRICKHOUSEEXIT_TRICK_MASTER, TrickHouse_DisappearingMovement
 	disappear TRICKHOUSEEXIT_TRICK_MASTER
 	end

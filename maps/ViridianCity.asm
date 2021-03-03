@@ -31,29 +31,6 @@ ViridianCityCoffeeGramps:
 	closetext
 	end
 
-ShoelaceBoy:
-	faceplayer
-	chattyoff
-	opentext
-	writetext ShoelaceBoyText
-	waitbutton
-	closetext
-	chattyon
-	end
-
-ShoelaceBoyText:
-	text "Do you mind?"
-	line "I'm trying to tie"
-	cont "my shoelaces."
-
-	para "They haven't fit"
-	line "ever since that"
-	cont "SNORLAX took them<...>"
-
-	para "I might be here"
-	line "for a while<...>"
-	done
-
 ViridianCityGrampsNearGym:
 	faceplayer
 	opentext
@@ -259,4 +236,3 @@ ViridianCity_MapEvents:
 	object_event 30,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityGrampsNearGym, -1
 	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityDreamEaterFisher, -1
 	object_event 17, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungsterScript, -1
-	object_event 24, 16, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 3, 3, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ShoelaceBoy, -1

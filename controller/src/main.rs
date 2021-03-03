@@ -220,7 +220,7 @@ fn main() {
                 if SETTINGS.debug { println!("Next Trainer name: {}", *NEXT_TRAINER_NAME.lock()); }
             },
             255 => {
-                BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).unwrap();
+                BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).ok();
             }
             _ => {}
         }

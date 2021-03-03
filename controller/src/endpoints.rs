@@ -139,14 +139,18 @@ fn text_inject() -> &'static str {
         return "ok"
     }
 
-    let w_chatty_space = BIZHAWK.read_u8_sym(&SYM["wChattySpace"]).unwrap() as usize;
+    if let Ok(w_chatty_space) = BIZHAWK.read_u8_sym(&SYM["wChattySpace"]) {
+        let message = (*TEXT_INJECT.lock()).clone();
 
-    let message = (*TEXT_INJECT.lock()).clone();
+        if SETTINGS.debug { println!("Injecting text: {}, space_given: {}", message, w_chatty_space); }
 
-    if SETTINGS.debug { println!("Injecting text: {}, space_given: {}", message, w_chatty_space); }
-
-    BIZHAWK.write_slice_sym(&SYM["ChattyText"], &utf8_to_ingame(message, w_chatty_space)).unwrap();
-    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).unwrap();
+        BIZHAWK.write_slice_sym(&SYM["ChattyText"], &utf8_to_ingame(message, w_chatty_space as usize)).ok();
+    } else {
+        println!("w_chatty_space memory read failed, writing default message");
+        BIZHAWK.write_slice_sym(&SYM["ChattyText"], &utf8_to_ingame("oh no!".to_string(), 0)).ok();
+    }
+    
+    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).ok();
     *CYCLE.lock() = 128;
     "ok"
 }
@@ -163,15 +167,19 @@ fn chatter() -> &'static str {
 
     *CURRENT_EMOTE_NAME.lock() = chatter_info.emote_name.clone();
 
-    let h_battle_turn = BIZHAWK.read_u8_sym(&SYM["hBattleTurn"]).unwrap() as usize;
-
-    if SETTINGS.debug { println!("Player Chatter: {}\nEnemy Chatter: {}\n hBattleTurn: {}", 
-                                 chatter_info.player_move_id, chatter_info.enemy_move_id, h_battle_turn); }
-
-    BIZHAWK.write_u16_be_sym(&SYM["wChattyChatterMove"], if h_battle_turn == 0 {chatter_info.player_move_id} else {chatter_info.enemy_move_id}).unwrap();
-    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).unwrap();
+    if let Ok(h_battle_turn) = BIZHAWK.read_u8_sym(&SYM["hBattleTurn"]) {
+        if SETTINGS.debug { println!("Player Chatter: {}\nEnemy Chatter: {}\n hBattleTurn: {}", 
+                                     chatter_info.player_move_id, chatter_info.enemy_move_id, h_battle_turn); }
+        BIZHAWK.write_u16_be_sym(&SYM["wChattyChatterMove"], if h_battle_turn == 0 {chatter_info.player_move_id} else {chatter_info.enemy_move_id}).ok();
+    } else {
+        println!("hBattleTurn memory read failed, writing default (splash)");
+        BIZHAWK.write_u16_be_sym(&SYM["wChattyChatterMove"], 150).ok();
+    }
+    
+    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).ok();
     *CYCLE.lock() = 0;
     "ok"
+
 }
 
 #[get("/chatter_move_name")]
@@ -188,8 +196,8 @@ fn chatter_move_name() -> &'static str {
 
     if SETTINGS.debug { println!("Chatter Move Name: {}", emote_name); }
 
-    BIZHAWK.write_slice_sym(&SYM["wStringBuffer2"], &utf8_to_ingame(emote_name, 0)).unwrap();
-    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).unwrap();
+    BIZHAWK.write_slice_sym(&SYM["wStringBuffer2"], &utf8_to_ingame(emote_name, 0)).ok();
+    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).ok();
     "ok"
 }
 
@@ -204,8 +212,8 @@ fn hidden_power() -> &'static str {
     let HiddenPowerInfo {type_id, type_name, power} = &*HIDDEN_POWER.lock();
     let emote_id = CHATTER_EMOTE.lock().emote_id.clone();
 
-    BIZHAWK.write_u8_sym(&SYM["wChattyHPType"], *type_id).unwrap();
-    BIZHAWK.write_u8_sym(&SYM["wChattyHPPower"], *power).unwrap();
+    BIZHAWK.write_u8_sym(&SYM["wChattyHPType"], *type_id).ok();
+    BIZHAWK.write_u8_sym(&SYM["wChattyHPPower"], *power).ok();
 
     if let Some(ip) = &SETTINGS.hp_hud_emote_endpoint {
         HUD.get(format!("{}/{}", ip, emote_id).as_str()).send().ok();
@@ -213,7 +221,7 @@ fn hidden_power() -> &'static str {
 
     if SETTINGS.debug { println!("HP Type: {}\nHP Power: {}", type_name, power); }
 
-    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).unwrap();
+    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).ok();
     *CYCLE.lock() = 0;
     "ok"
 }
@@ -247,22 +255,25 @@ fn get_trainer_name() -> &'static str {
         println!("get_trainer_name skipped due to bizhawk lock being in use.");
         return "ok"
     }
-    let trainer = TrainerInfo {
-        class: BIZHAWK.read_u8_sym(&SYM["wChattyTrainerClass"]).unwrap(),
-        id: BIZHAWK.read_u8_sym(&SYM["wChattyTrainerID"]).unwrap()
-    };
 
-    *CURRENT_TRAINER_IDS.lock() = trainer;
+    if let (Ok(class), Ok(id)) = (BIZHAWK.read_u8_sym(&SYM["wChattyTrainerClass"]), BIZHAWK.read_u8_sym(&SYM["wChattyTrainerID"])) {
 
-    *CURRENT_TRAINER_NAME.lock() = "Kappa".to_string();
+        let trainer = TrainerInfo { class, id };
 
-    if trainer.class == 38 || trainer.class >= 41 {
-        *CURRENT_TRAINER_NAME.lock() = "".to_string();
-        if SETTINGS.debug { println!("Excluded trainer, Skipping..."); }
-        return "ok";
+        *CURRENT_TRAINER_IDS.lock() = trainer;
+
+        *CURRENT_TRAINER_NAME.lock() = "Kappa".to_string();
+
+        if trainer.class == 38 || trainer.class >= 41 {
+            *CURRENT_TRAINER_NAME.lock() = "".to_string();
+            if SETTINGS.debug { println!("Excluded trainer, Skipping..."); }
+            return "ok";
+        }
+    } else {
+        println!("Cannot get trainer name, read of wChattyTrainerClass or wChattyTrainerID Failed.");
     }
     
-    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).unwrap();
+    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).ok();
     *CYCLE.lock() = 192;
     "ok"
 }
@@ -280,29 +291,33 @@ fn inject_trainer_name() -> &'static str {
         return "ok";
     }
 
-    let mut current_name_slice = BIZHAWK.read_slice_sym(&SYM["wStringBuffer1"], 0x18).unwrap().split(|a| a == &0x50).next().unwrap().to_vec();
-    let trainer = *CURRENT_TRAINER_IDS.lock();
-    let mut index = TRAINER_INDEX.lock();
+    if let Ok(current_name_slice) = BIZHAWK.read_slice_sym(&SYM["wStringBuffer1"], 0x18) {
+        let mut current_name_slice = current_name_slice.split(|a| a == &0x50).next().unwrap().to_vec();
+        let trainer = *CURRENT_TRAINER_IDS.lock();
+        let mut index = TRAINER_INDEX.lock();
 
-    let mut key = vec!(trainer.id);
-    key.append(&mut current_name_slice);
+        let mut key = vec!(trainer.id);
+        key.append(&mut current_name_slice);
 
-    if let Some(name) = index.get(&key) {
-        *CURRENT_TRAINER_NAME.lock() = name.clone();
-        utf8_truncate(&mut *CURRENT_TRAINER_NAME.lock(), 16);
+        if let Some(name) = index.get(&key) {
+            *CURRENT_TRAINER_NAME.lock() = name.clone();
+            utf8_truncate(&mut *CURRENT_TRAINER_NAME.lock(), 16);
+        } else {
+            let next_name = (*NEXT_TRAINER_NAME.lock()).clone();
+
+            *CURRENT_TRAINER_NAME.lock() = next_name.clone();
+            utf8_truncate(&mut *CURRENT_TRAINER_NAME.lock(), 16);
+
+            index.insert(key, next_name);
+        }
+
+        if SETTINGS.debug { println!("Trainer Name: {}", *CURRENT_TRAINER_NAME.lock()); }
+
+        BIZHAWK.write_slice_sym(&SYM["wStringBuffer1"], &utf8_to_ingame((*CURRENT_TRAINER_NAME.lock()).clone(), 0)).ok();
     } else {
-        let next_name = (*NEXT_TRAINER_NAME.lock()).clone();
-
-        *CURRENT_TRAINER_NAME.lock() = next_name.clone();
-        utf8_truncate(&mut *CURRENT_TRAINER_NAME.lock(), 16);
-
-        index.insert(key, next_name);
+        println!("Cannot inject trainer name, read of wStringBuffer1 Failed.");
     }
-
-    if SETTINGS.debug { println!("Trainer Name: {}", *CURRENT_TRAINER_NAME.lock()); }
-
-    BIZHAWK.write_slice_sym(&SYM["wStringBuffer1"], &utf8_to_ingame((*CURRENT_TRAINER_NAME.lock()).clone(), 0)).unwrap();
-    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).unwrap();
+    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).ok();
     "ok"
 }
 
@@ -361,6 +376,6 @@ fn chatot_cry() -> &'static str {
         })
         .expect("error: failed to start command line for espeak");
 
-    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).unwrap();
+    BIZHAWK.write_u8_sym(&SYM["wScriptActive"], 0x01).ok();
     "ok"
 }

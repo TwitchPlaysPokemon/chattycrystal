@@ -248,9 +248,9 @@
 	tilecoll WALL, FLOOR, WALL, FLOOR ; f7
 	tilecoll FLOOR, WALL, WALL, WALL ; f8
 	tilecoll WALL, WALL, FLOOR, WALL ; f9
-	tilecoll WALL, WALL, FLOOR, WALL ; fa
-	tilecoll FLOOR, WALL, FLOOR, WALL ; fb
-	tilecoll WALL, WALL, FLOOR, FLOOR ; fc
-	tilecoll FLOOR, WALL, FLOOR, WALL ; fd
-	tilecoll WALL, WALL, FLOOR, FLOOR ; fe
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; ff
+	tilecoll WALL, WALL, WARP_PANEL, WALL ; fa
+	tilecoll FLOOR, WALL, WARP_PANEL, WALL ; fb
+	tilecoll WALL, WALL, WARP_PANEL, FLOOR ; fc
+	tilecoll FLOOR, WALL, WARP_PANEL, WALL ; fd
+	tilecoll WALL, WALL, WARP_PANEL, FLOOR ; fe
+	tilecoll FLOOR, FLOOR, WARP_PANEL, FLOOR ; ff

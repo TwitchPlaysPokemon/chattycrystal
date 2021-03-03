@@ -10,9 +10,9 @@ TrickHousePuzzle2_Switch1:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	playsound SFX_WALL_OPEN
 	waitsfx
+	changeblock  4,  6, $8D ; Trapdoor 1 close
 	changeblock  0,  4, $90 ; Switch 1 pressed
-	changeblock  4,  6, $8D ; Trapdoor 1 closed
-	reloadmappart
+	sjump TrickHouse_Finish_ChangeBlock
 .done
 	end
 
@@ -22,9 +22,9 @@ TrickHousePuzzle2_Switch2:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	playsound SFX_WALL_OPEN
 	waitsfx
-	changeblock 14,  4, $92 ; Switch 2 pressed
 	changeblock  6, 14, $8C ; Trapdoor 2 closed
-	reloadmappart
+	changeblock 14,  4, $92 ; Switch 2 pressed
+	sjump TrickHouse_Finish_ChangeBlock
 .done
 	end
 
@@ -34,9 +34,9 @@ TrickHousePuzzle2_Switch3:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 	playsound SFX_WALL_OPEN
 	waitsfx
-	changeblock  6, 10, $8F ; Switch 3 pressed
 	changeblock 14, 12, $8E ; Trapdoor 3 closed
-	reloadmappart
+	changeblock  6, 10, $8F ; Switch 3 pressed
+	sjump TrickHouse_Finish_ChangeBlock
 .done
 	end
 
@@ -46,9 +46,9 @@ TrickHousePuzzle2_Switch4:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
 	playsound SFX_WALL_OPEN
 	waitsfx
-	changeblock 10, 12, $91 ; Switch 4 pressed
 	changeblock  0, 12, $78 ; Trapdoor 4 closed
-	reloadmappart
+	changeblock 10, 12, $91 ; Switch 4 pressed
+	sjump TrickHouse_Finish_ChangeBlock
 .done
 	end
 

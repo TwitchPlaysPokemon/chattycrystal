@@ -103,6 +103,14 @@ TrickHouse_DoorUnlockText:
 	done
 
 
+TrickHouse_Finish_ChangeBlock:
+	; changeblock is causing troublesome screen artifacts
+	; this routine cleans them up
+	; moved to a common place because I got tired of changing all of them
+	refreshscreen
+	end
+
+
 ; All Trick House maps have the door block at 12, 0, so these can live here
 ; If a Trick House map doesn't have the door at 12, 0, it should have its own version of these
 TrickHouse_CheckDoor_Common:
@@ -117,6 +125,6 @@ TrickHouse_UnlockDoor_Common:
 	playsound SFX_DEX_FANFARE_50_79
 	waitsfx
 	changeblock 12, 0, $43 ; exit door open
-	reloadmappart
+	reloadmappart ; This works fine
 .end
 	end

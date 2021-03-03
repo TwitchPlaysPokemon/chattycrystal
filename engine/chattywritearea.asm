@@ -1,11 +1,6 @@
 ChattyText::
-IF TESTMODE
-	db "CHATTY TEXT HERE!!"
-	line "CHATTY TEXT HERE!!"
-	cont "CHATTY TEXT HERE!!"
-	done
-endc
-ds $400
+	db "ERROR@"
+ds $394
 
 HandleChattyText::
 	; Places the chatty string. If carry flag is not set, redirect de to a TX_END command.

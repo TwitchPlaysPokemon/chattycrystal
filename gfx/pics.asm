@@ -309,6 +309,7 @@ KrabbyBackpic:       INCBIN "gfx/pokemon/krabby/back.2bpp.lz"
 BugCatcherPic:       INCBIN "gfx/trainers/bug_catcher.2bpp.lz"
 SnorlaxBackpic:      INCBIN "gfx/pokemon/snorlax/back.2bpp.lz"
 PhanceroBackpic:     INCBIN "gfx/pokemon/phancero/back.2bpp.lz"
+BuizelBackpic:       INCBIN "gfx/pokemon/buizel/back.2bpp.lz"
 
 SECTION "Pics 12", ROMX
 
@@ -889,6 +890,7 @@ WalreinFrontpic:    INCBIN "gfx/pokemon/walrein/front.animated.2bpp.lz"
 LatiosFrontpic:     INCBIN "gfx/pokemon/latios/front.animated.2bpp.lz"
 
 SECTION "Pics 29", ROMX
+
 TurtwigFrontpic:     INCBIN "gfx/pokemon/turtwig/front.animated.2bpp.lz"
 TurtwigBackpic:      INCBIN "gfx/pokemon/turtwig/back.2bpp.lz"
 GrotleBackpic:       INCBIN "gfx/pokemon/grotle/back.2bpp.lz"
@@ -918,7 +920,6 @@ BonslyFrontpic:      INCBIN "gfx/pokemon/bonsly/front.animated.2bpp.lz"
 SECTION "Pics 30", ROMX
 
 MothimFrontpic:      INCBIN "gfx/pokemon/mothim/front.animated.2bpp.lz"
-BuizelBackpic:       INCBIN "gfx/pokemon/buizel/back.2bpp.lz"
 BuizelFrontpic:      INCBIN "gfx/pokemon/buizel/front.animated.2bpp.lz"
 FloatzelBackpic:     INCBIN "gfx/pokemon/floatzel/back.2bpp.lz"
 FloatzelFrontpic:    INCBIN "gfx/pokemon/floatzel/front.animated.2bpp.lz"

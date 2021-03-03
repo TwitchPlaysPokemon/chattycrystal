@@ -348,7 +348,7 @@ BitmasksPointers:
 	dw BonslyBitmasks
 	dw ChatotBitmasks
 	dw CroagunkBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Toxicroak
+	dw ToxicroakBitmasks
 	dw LeafeonBitmasks
 	dw GlaceonBitmasks
 	dw PorygonZBitmasks

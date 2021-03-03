@@ -348,7 +348,7 @@ FramesPointers:
 	dba BonslyFrames
 	dba ChatotFrames
 	dba CroagunkFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Toxicroak
+	dba ToxicroakFrames
 	dba LeafeonFrames
 	dba GlaceonFrames
 	dba PorygonZFrames

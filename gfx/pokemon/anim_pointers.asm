@@ -348,7 +348,7 @@ AnimationPointers:
 	dw BonslyAnimation
 	dw ChatotAnimation
 	dw CroagunkAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Toxicroak
+	dw ToxicroakAnimation
 	dw LeafeonAnimation
 	dw GlaceonAnimation
 	dw PorygonZAnimation

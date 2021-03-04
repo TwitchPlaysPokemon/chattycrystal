@@ -13,6 +13,7 @@ TrickHouseExit_MapScripts:
 	applymovement PLAYER, TrickHouseExit_PushDownMovement
 	setscene SCENE_TRICKHOUSEEXIT_LOCKED
 	clearevent EVENT_TRICK_HOUSE_FOUND_PUZZLE_SCROLL
+	clearevent EVENT_TRICK_HOUSE_DOOR_OPEN
 	end
 
 TrickHouseExit_PreventEscape:

@@ -11287,3 +11287,77 @@ KimonoGirlGroup:
 	db -1 ; end
 
 	end_list_items
+	
+BlueMayGroup:
+	next_list_item ; MARINA
+	db "MARINA@", TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 100
+	dw VENUSAUR
+	bigdw $FFFF
+	bigdw 288
+	bigdw 159
+	bigdw 188
+	bigdw 166
+	bigdw 231
+	bigdw 210
+	db "VVOOOOOOIC@"
+
+	db 100
+	dw MEW
+	bigdw $FFFF
+	bigdw 339
+	bigdw 227
+	bigdw 227
+	bigdw 207
+	bigdw 216
+	bigdw 193
+	db "MMMMMMMMGG@"
+
+	db 100
+	dw SCIZOR
+	bigdw $0FFF
+	bigdw 273
+	bigdw 226
+	bigdw 213
+	bigdw 157
+	bigdw 156
+	bigdw 154
+	db "JJJJJJJJJJ@"
+
+	db 100
+	dw GENGAR
+	bigdw $0FFF
+	bigdw 240
+	bigdw 150
+	bigdw 130
+	bigdw 236
+	bigdw 266
+	bigdw 180
+	db "IIHBAAAMMM@"
+
+	db 100
+	dw SLOWKING
+	bigdw $0FFF
+	bigdw 310
+	bigdw 173
+	bigdw 132
+	bigdw 75
+	bigdw 186
+	bigdw 252
+	db "AAAAAAAAAA@"
+
+	db 100
+	dw GROUDON
+	bigdw $FFFF
+	bigdw 334
+	bigdw 327
+	bigdw 319
+	bigdw 188
+	bigdw 217
+	bigdw 189
+	db "KENNNNNNNN@"
+
+	db -1 ; end
+
+	end_list_items

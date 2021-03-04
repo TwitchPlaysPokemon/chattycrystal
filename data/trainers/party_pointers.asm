@@ -76,3 +76,4 @@ TrainerGroups:
 	dba PokemonProfessorGroup
 	dba BattlePCGroup
 	dba WooperTGroup
+	dba BlueMayGroup

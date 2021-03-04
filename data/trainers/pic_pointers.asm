@@ -76,3 +76,4 @@ TrainerPicPointers::
 	dba PokemonProfPic
 	dba BattlePCPic
 	dba WooperTPic
+	dba URFPic

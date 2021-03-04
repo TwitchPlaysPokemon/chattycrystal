@@ -80,6 +80,7 @@ INCBIN "gfx/trainers/nate.gbcpal", middle_colors
 INCBIN "gfx/trainers/oak.gbcpal", middle_colors
 INCBIN "gfx/trainers/battle-pc.gbcpal", middle_colors
 INCBIN "gfx/trainers/wooper.gbcpal", middle_colors
+INCBIN "gfx/trainers/falkner.gbcpal", middle_colors
 
 KrisPalette:
 INCBIN "gfx/trainers/falkner.gbcpal", middle_colors

@@ -74,3 +74,5 @@ TrainerClassDVs:
 	dn 15, 13, 13, 14 ; NATE_ELITE_4
 	dn 15, 13, 13, 14 ; POKEMON_PROF
 	dn 15, 13, 13, 14 ; BATTLE_PC
+	dn 15, 15, 15, 15 ; WOOPER_T
+	dn 15, 15, 15, 15 ; BLUE_MAY

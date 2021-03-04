@@ -761,7 +761,7 @@ CHRIS EQU __enum__
 	trainerclass GSC_KRIS ; 2e
 	trainervalue EWWYPPP
 
-	trainerclass AC_CHRIS ; 30
+	trainerclass AC_CHRIS ; 2f
 	trainervalue EVAN1
 	trainervalue EVAN2
 	trainervalue EVAN3
@@ -769,96 +769,99 @@ CHRIS EQU __enum__
 	trainervalue EVAN5
 	trainervalue EVAN6
 
-	trainerclass FC_CHRIS ; 31
+	trainerclass FC_CHRIS ; 30
 	trainervalue Y_FUSEDCRYSTAL
 
-	trainerclass BRENDAN_KANTO_LEADER ; 32
+	trainerclass BRENDAN_KANTO_LEADER ; 31
 	trainervalue EEBNERT
 
-	trainerclass FRLG_LEAF ; 33
+	trainerclass FRLG_LEAF ; 32
 	trainervalue A_FIRERED
 
-	trainerclass COLO_WES ; 34
+	trainerclass COLO_WES ; 33
 	trainervalue AAAAAAA1
 	trainervalue ACCC
 	trainervalue AAAAAAA2
 
-	trainerclass XD_MICHAEL ; 35
+	trainerclass XD_MICHAEL ; 34
 	trainervalue STARS
 
-	trainerclass PT_LUCAS ; 36
+	trainerclass PT_LUCAS ; 35
 	trainervalue NQPPPNL
 
-	trainerclass HGSS_LYRA ; 37
+	trainerclass HGSS_LYRA ; 36
 	trainervalue AOOOO
 
-	trainerclass B2W2_NATE ; 38
+	trainerclass B2W2_NATE ; 37
 	trainervalue R_BLACK21
 
-	trainerclass XY_SERENA2 ; 39
+	trainerclass XY_SERENA2 ; 38
 	trainervalue ETR
 
-	trainerclass SMUSUM_ELIO ; 3a
+	trainerclass SMUSUM_ELIO ; 39
 	trainervalue L_SUN
 
-	trainerclass GLAZED ; 3b
+	trainerclass GLAZED ; 3a
 	trainervalue AHUNIgg
 
-	trainerclass NUZLOCKE ; 3c
+	trainerclass NUZLOCKE ; 3b
 	trainervalue F481
 	trainervalue F482
 	trainervalue F483
 
-	trainerclass P_CYAN ; 3d
+	trainerclass P_CYAN ; 3c
 	trainervalue CYAN
 
-	trainerclass RED_LARRY ; 3e
+	trainerclass RED_LARRY ; 3d
 	trainervalue LARRY_R1
 	trainervalue LARRY_R2
 
-	trainerclass GREEN_MAY ; 3f
+	trainerclass GREEN_MAY ; 3e
 	trainervalue A_EMERALD
 
-	trainerclass BROWN ; 40
+	trainerclass BROWN ; 3f
 	trainervalue PAUL_B
 
-	trainerclass BABA ; 41
+	trainerclass BABA ; 40
 	trainervalue BABA1
 	trainervalue BABA2
 	trainervalue BABA3
 	trainervalue BABA4
 
-	trainerclass URF ; 42
+	trainerclass URF ; 41
 	trainervalue URF1
 
-	trainerclass BRENDAN_JOHTO_LEADER ; 43
+	trainerclass BRENDAN_JOHTO_LEADER ; 42
 	trainervalue ORLANDO
 
-	trainerclass GSCHGSS_CHRIS_RIVAL ; 44
+	trainerclass GSCHGSS_CHRIS_RIVAL ; 43
 	trainervalue AJDNNW1
 	trainervalue AJDNNW2
 	trainervalue AJDNNW3
 	trainervalue AJDNNW4
 
-	trainerclass RED_JOHTO_LEADER ; 45
+	trainerclass RED_JOHTO_LEADER ; 44
 	trainervalue AIIIAAB1
 
-	trainerclass RED_KANTO_LEADER ; 46
+	trainerclass RED_KANTO_LEADER ; 45
 	trainervalue RED_RED
 
-	trainerclass NATE_LEADER ; 47
+	trainerclass NATE_LEADER ; 46
 	trainervalue AAAALK
 
-	trainerclass NATE_ELITE_4 ; 48
+	trainerclass NATE_ELITE_4 ; 47
 	trainervalue R_BLACK22
 
-	trainerclass POKEMON_PROF ; 49
+	trainerclass POKEMON_PROF ; 48
 
-	trainerclass BATTLE_PC    ; 4a
+	trainerclass BATTLE_PC    ; 49
 	trainervalue MIRROR_PC
 
-	trainerclass WOOPER_T     ; 4b
+	trainerclass WOOPER_T     ; 4a
 	trainervalue GMMTMT
+	
+	trainerclass BLUE_MAY     ; 4b
+	trainervalue MARINA
 
 KRIS EQU __enum__
 

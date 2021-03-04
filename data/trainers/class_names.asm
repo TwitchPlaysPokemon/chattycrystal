@@ -74,3 +74,4 @@ TrainerClassNames::
 	db "PROFESSOR@" ; POKEMON_PROF
 	db "BATTLE@" ; BATTLE PC
 	db "ROCKET@" ; WOOPER_T
+	db "<PKMN> TRAINER@" ; BLUE_MAY

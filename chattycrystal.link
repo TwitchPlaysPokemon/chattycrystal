@@ -41,12 +41,14 @@ ROMX $04
 ROMX $05
 	"bank5"
 	"Map Blocks 6"
+	"Extra Songs 6"
 ROMX $06
 	"Tileset Data 1"
 ROMX $07
 	"Roofs"
 	"Tileset Data 2"
 	"Extra Songs 1"
+	"Enemy Trainer Parties 3"
 ROMX $08
 	"Clock Reset"
 	"Tileset Data 3"
@@ -302,6 +304,7 @@ ROMX $6b
 ROMX $6c
 	"Phone Text 2"
 	"Map Scripts 25"
+	"Map Scripts Trick House"
 ROMX $6d
 	"Special Phone Text"
 ROMX $6e
@@ -353,7 +356,6 @@ ROMX $7d
 	"Tileset Data 11"
 ROMX $7e
 	"Crystal Events"
-	"Enemy Trainer Parties 3"
 ROMX $7f
 	"Pics 24"
 WRAM0

@@ -126,3 +126,4 @@ Music:
 	dba Music_ChampionRB
 	dba Music_GymLeaderBattlePrism
 	dba Music_BattleArcadeBattle
+	dba Music_TrickHouse

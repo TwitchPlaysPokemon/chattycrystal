@@ -149,10 +149,10 @@
 	tilecoll BRAKE, SPIN_LEFT, SPIN_LEFT, FLOOR ; 94
 	tilecoll SPIN_DOWN, WALL, BRAKE, FLOOR ; 95
 	tilecoll WALL, FLOOR, FLOOR, BRAKE ; 96
-	tilecoll BRAKE, SPIN_LEFT, SPIN_LEFT, WALL ; 97
-	tilecoll SPIN_LEFT, SPIN_LEFT, WALL, WALL ; 98
-	tilecoll SPIN_LEFT, FLOOR, WALL, WALL ; 99
-	tilecoll FLOOR, SPIN_LEFT, WALL, WALL ; 9a
+	tilecoll BRAKE, SPIN_LEFT, SPIN_LEFT, BRAKE ; 97
+	tilecoll SPIN_LEFT, SPIN_LEFT, SPIN_LEFT, SPIN_LEFT ; 98
+	tilecoll SPIN_LEFT, FLOOR, SPIN_LEFT, SPIN_LEFT ; 99
+	tilecoll FLOOR, SPIN_LEFT, SPIN_LEFT, SPIN_LEFT ; 9a
 	tilecoll SPIN_UP, SPIN_UP, FLOOR, FLOOR ; 9b
 	tilecoll SPIN_DOWN, FLOOR, SPIN_DOWN, FLOOR ; 9c
 	tilecoll SPIN_DOWN, SPIN_DOWN, BRAKE, SPIN_DOWN ; 9d
@@ -178,7 +178,7 @@
 	tilecoll SPIN_UP, WALL, SPIN_LEFT, WALL ; b1
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; b2
 	tilecoll FLOOR, FLOOR, SPIN_DOWN, WALL ; b3
-	tilecoll FLOOR, FLOOR, WALL, SPIN_RIGHT ; b4
+	tilecoll SPIN_UP, FLOOR, WALL, SPIN_RIGHT ; b4
 	tilecoll FLOOR, FLOOR, SPIN_UP, FLOOR ; b5
 	tilecoll FLOOR, FLOOR, SPIN_RIGHT, FLOOR ; b6
 	tilecoll FLOOR, SPIN_RIGHT, FLOOR, SPIN_RIGHT ; b7
@@ -189,13 +189,13 @@
 	tilecoll SPIN_LEFT, WALL, FLOOR, WALL ; bc
 	tilecoll BRAKE, SPIN_DOWN, SPIN_UP, SPIN_DOWN ; bd
 	tilecoll WALL, FLOOR, FLOOR, SPIN_DOWN ; be
-	tilecoll SPIN_DOWN, FLOOR, BRAKE, WALL ; bf
+	tilecoll SPIN_DOWN, BRAKE, BRAKE, WALL ; bf
 	tilecoll SPIN_RIGHT, SPIN_DOWN, SPIN_UP, FLOOR ; c0
 	tilecoll WALL, FLOOR, WALL, FLOOR ; c1
 	tilecoll FLOOR, FLOOR, FLOOR, SPIN_DOWN ; c2
 	tilecoll FLOOR, FLOOR, SPIN_LEFT, FLOOR ; c3
 	tilecoll WALL, FLOOR, WALL, SPIN_DOWN ; c4
-	tilecoll WALL, FLOOR, FLOOR, SPIN_LEFT ; c5
+	tilecoll SPIN_DOWN, FLOOR, SPIN_RIGHT, SPIN_RIGHT ; c5
 	tilecoll FLOOR, BRAKE, SPIN_RIGHT, SPIN_UP ; c6
 	tilecoll WALL, SPIN_UP, FLOOR, SPIN_UP ; c7
 	tilecoll BRAKE, WALL, WALL, FLOOR ; c8
@@ -204,7 +204,7 @@
 	tilecoll SPIN_LEFT, WALL, SPIN_UP, WALL ; cb
 	tilecoll WALL, FLOOR, FLOOR, SPIN_DOWN ; cc
 	tilecoll SPIN_RIGHT, SPIN_RIGHT, SPIN_DOWN, FLOOR ; cd
-	tilecoll SPIN_DOWN, FLOOR, BRAKE, WALL ; ce
+	tilecoll SPIN_DOWN, BRAKE, BRAKE, WALL ; ce
 	tilecoll SPIN_LEFT, SPIN_DOWN, SPIN_UP, FLOOR ; cf
 	tilecoll WALL, WALL, FLOOR, FLOOR ; d0
 	tilecoll WALL, WALL, WALL, WALL ; d1
@@ -248,9 +248,9 @@
 	tilecoll WALL, FLOOR, WALL, FLOOR ; f7
 	tilecoll FLOOR, WALL, WALL, WALL ; f8
 	tilecoll WALL, WALL, FLOOR, WALL ; f9
-	tilecoll WALL, WALL, FLOOR, WALL ; fa
-	tilecoll FLOOR, WALL, FLOOR, WALL ; fb
-	tilecoll WALL, WALL, FLOOR, FLOOR ; fc
-	tilecoll FLOOR, WALL, FLOOR, WALL ; fd
-	tilecoll WALL, WALL, FLOOR, FLOOR ; fe
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; ff
+	tilecoll WALL, WALL, WARP_PANEL, WALL ; fa
+	tilecoll FLOOR, WALL, WARP_PANEL, WALL ; fb
+	tilecoll WALL, WALL, WARP_PANEL, FLOOR ; fc
+	tilecoll FLOOR, WALL, WARP_PANEL, WALL ; fd
+	tilecoll WALL, WALL, WARP_PANEL, FLOOR ; fe
+	tilecoll FLOOR, FLOOR, WARP_PANEL, FLOOR ; ff

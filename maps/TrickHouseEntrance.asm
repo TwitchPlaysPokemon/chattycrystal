@@ -349,7 +349,7 @@ TrickHouseEntrance_DoTrickMasterReveal:
 	waitbutton
 	closetext
 	pause 10
-	playsound SFX_WARP_TO
+	playsound SFX_EGG_BOMB
 	applymovement TRICKHOUSEENTRANCE_TRICK_MASTER, TrickHouse_DisappearingMovement
 	disappear TRICKHOUSEENTRANCE_TRICK_MASTER
 	clearevent TRICKHOUSEEVENT_PUZZLE_READY

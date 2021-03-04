@@ -127,6 +127,7 @@
 	const MUSIC_RBY_CHAMPION                 ; 77
 	const MUSIC_PRISM_GYM_LEADER             ; 78
 	const MUSIC_BATTLE_ARCADE_BATTLE         ; 79
+	const MUSIC_TRICKHOUSE                   ; 7a
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64

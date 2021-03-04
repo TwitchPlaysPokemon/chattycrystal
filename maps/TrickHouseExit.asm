@@ -12,12 +12,14 @@ TrickHouseExit_MapScripts:
 .lock
 	applymovement PLAYER, TrickHouseExit_PushDownMovement
 	setscene SCENE_TRICKHOUSEEXIT_LOCKED
+	clearevent EVENT_TRICK_HOUSE_FOUND_PUZZLE_SCROLL
+	clearevent EVENT_TRICK_HOUSE_DOOR_OPEN
 	end
 
 TrickHouseExit_PreventEscape:
 	showemote EMOTE_SHOCK, TRICKHOUSEEXIT_TRICK_MASTER, 30
 	pause 5
-	turnobject TRICKHOUSEEXIT_TRICK_MASTER, LEFT
+	turnobject TRICKHOUSEEXIT_TRICK_MASTER, UP
 	opentext
 	writetext .text
 	waitbutton
@@ -55,6 +57,13 @@ TrickHouseExit_TrickMaster:
 	closetext
 .skip_parting_message
 	pause 10
+	readvar VAR_YCOORD
+	ifnotequal 4, .no_stepping_aside
+	showemote EMOTE_SHOCK, PLAYER, 20
+	pause 5
+	applymovement PLAYER, .step_aside
+.no_stepping_aside
+	playsound SFX_EGG_BOMB
 	applymovement TRICKHOUSEEXIT_TRICK_MASTER, TrickHouse_DisappearingMovement
 	disappear TRICKHOUSEEXIT_TRICK_MASTER
 	end
@@ -82,6 +91,12 @@ TrickHouseExit_TrickMaster:
 	line "next exciting"
 	cont "installment!"
 	done
+
+.step_aside
+	fast_slide_step LEFT
+	fast_slide_step DOWN
+	turn_step RIGHT
+	step_end
 
 .select_puzzle
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
@@ -316,4 +331,4 @@ TrickHouseExit_MapEvents:
 	db 0 ; bg events
 
 	db 1 ; object events
-	object_event  2,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrickHouseExit_TrickMaster, -1
+	object_event  2,  5, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrickHouseExit_TrickMaster, -1

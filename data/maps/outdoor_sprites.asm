@@ -138,17 +138,10 @@ CherrygroveGroupSprites:
 	db SPRITE_EVAN
 	db SPRITE_TEACHER
 	db SPRITE_COOLTRAINER_M
-if TESTMODE
-	db SPRITE_AZURE
-	db SPRITE_LARRY
-	db SPRITE_GREEN
-	db SPRITE_ROBORED
-else
 	db SPRITE_YOUNGSTER
 	db SPRITE_MONSTER
 	db SPRITE_BUG_CATCHER
 	db SPRITE_FISHER
-endc
 	db SPRITE_GRAMPS
 	db SPRITE_COOLTRAINER_F
 	; max 9 of 9 walking sprites
@@ -161,16 +154,6 @@ VioletGroupSprites:
 ; Route32, Route35, Route36, Route37, VioletCity
 EcruteakGroupSprites:
 ; EcruteakCity
-if TESTMODE
-	db SPRITE_LUCAS
-	db SPRITE_LYRA
-	db SPRITE_HILBERT
-	db SPRITE_ROSA
-	db SPRITE_NATE
-	db SPRITE_DAWN
-	db SPRITE_HILDA
-	db SPRITE_CALEM
-else
 	db SPRITE_FISHER
 	db SPRITE_LASS
 	db SPRITE_OFFICER
@@ -178,7 +161,6 @@ else
 	db SPRITE_YOUNGSTER
 	db SPRITE_COOLTRAINER_M
 	db SPRITE_BUG_CATCHER
-endc
 	db SPRITE_SUPER_NERD
 	; 8 of max 9 walking sprites
 	db SPRITE_WEIRD_TREE ; variable sprite: becomes SPRITE_SUDOWOODO and SPRITE_TWIN
@@ -196,9 +178,6 @@ AzaleaGroupSprites:
 	db SPRITE_AZALEA_ROCKET ; variable sprite: becomes SPRITE_ROCKET and SPRITE_SILVER
 	db SPRITE_LASS
 	db SPRITE_CHRIS
-if TESTMODE
-	db SPRITE_GLORIA
-endc
 	; 7 of max 9 walking sprites
 	db SPRITE_FRUIT_TREE
 	db SPRITE_SLOWPOKE

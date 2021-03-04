@@ -5510,14 +5510,11 @@ BattleCommand_ChattyBranch: ;exists only as a stopping point for checkchatty
 
 BattleCommand_CheckChatty:
 ; checkchatty
-if TESTMODE
-else
 	ld a, [wScriptActive]
 	and a
 	ret z
 	xor a
 	ld [wScriptActive], a
-endc
 	ld b, chattybranch_command
 	jp SkipToBattleCommand
 
@@ -5534,15 +5531,11 @@ BattleCommand_Chatter:
 
 .charging
 	call LoadMoveAnim
-if TESTMODE
-	ld hl, CONSTRICT
-else
 	ld hl, wChattyChatterMove
 	ld a, [hli]
 	ld l, [hl]
 	and $3f ; upper 2 bits are for flags
 	ld h, a
-endc
 	call GetMoveIDFromIndex
 	ld b, a
 	ld a, BATTLE_VARS_MOVE

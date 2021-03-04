@@ -31,8 +31,4 @@ ChattyMonData:
 	dw UNOWN
 
 	; moves
-if TESTMODE
-	dw CHATTY_HP, CHATTER, NO_MOVE, NO_MOVE
-else
 	dw CHATTY_HP, NO_MOVE, NO_MOVE, NO_MOVE
-endc

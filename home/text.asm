@@ -687,12 +687,9 @@ TextCommand_START::
 	pop hl
 	pop de
 	jr z, SkipChattyTextInjection
-If TESTMODE
-else
 	ld a, [wScriptActive]
 	and a
 	jr z, SkipChattyTextInjection
-endc
 	ld a, [wChattyOverride]
 	and a
 	jr z, HomeHandleChattyText

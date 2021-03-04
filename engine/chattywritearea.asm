@@ -1,6 +1,7 @@
 ChattyText::
 	db "ERROR@"
-ds $394
+
+	ds $39a
 
 HandleChattyText::
 	; Places the chatty string. If carry flag is not set, redirect de to a TX_END command.
@@ -15,16 +16,7 @@ HandleChattyText::
 	add hl, bc
 	ld a, [hl]
 	ld [wChattySpace], a
-if TESTMODE
-	ld hl, ChattyText
-	ld b, 0
-	ld c, a
-	add hl, bc
-	ld d, h
-	ld e, l
-else
 	ld de, ChattyText
-endc
 	xor a
 	ld [wScriptActive], a
 	pop hl

@@ -416,13 +416,6 @@ CopyTrainerName:
 	ld b, CHECK_FLAG
 	call EventFlagAction
 	jr z, SkipChattyTrainerInjection
-if TESTMODE
-	ld hl, ChattyNameText
-	ld de, wStringBuffer1
-	ld bc, OTNAME_LENGTH
-	ld a, BANK(ChattyNameText)
-	call FarCopyBytes
-else
 	ld a, [wScriptActive]
 	and a
 	jr z, SkipChattyTrainerInjection
@@ -430,15 +423,9 @@ else
 	ld [wScriptActive], a
 AissInjectTrainerNameHere:: ;place name of ID wOtherTrainerID in wStringBuffer1, ending with a @
 	nop
-endc
 SkipChattyTrainerInjection:
 	pop de
 	ret
-
-if TESTMODE
-ChattyNameText:
-	db "ChattyTrainerName!@"
-endc
 
 GetNextTrainerDataByte:
 	ld a, [wTrainerGroupBank]

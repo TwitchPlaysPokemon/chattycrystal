@@ -1,9 +1,5 @@
 roms := chattycrystal.gbc
 
-# TESTMODE replaces some trainers and functionality with easy stubs for testing
-# This should be disabled unless you're testing those things specifically
-TESTMODE := 0
-
 crystal_obj := \
 audio.o \
 home.o \
@@ -57,7 +53,7 @@ tools:
 	$(MAKE) -C tools/
 
 
-$(crystal_obj): RGBASMFLAGS = -Weverything -DTESTMODE=$(TESTMODE)
+$(crystal_obj): RGBASMFLAGS = -Weverything
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.

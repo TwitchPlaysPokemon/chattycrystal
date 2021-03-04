@@ -179,6 +179,7 @@ MtSilverRuinsStartCredits:
 	setscene SCENE_DEFAULT
 	setmapscene MT_SILVER_RUINS_B1F, SCENE_DEFAULT
 	clearevent EVENT_RED_IN_MT_SILVER
+	setevent EVENT_BEAT_MT_SILVER
 	special HealParty
 	refreshscreen
 	credits

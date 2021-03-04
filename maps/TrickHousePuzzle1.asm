@@ -26,11 +26,7 @@ TrickHouseTrainerLassSally:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "I'll hack and slash"
@@ -54,11 +50,7 @@ TrickHouseTrainerLassRobin:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "Just who is the"
@@ -82,11 +74,7 @@ TrickHouseTrainerYoungsterEdd:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "I wandered into"

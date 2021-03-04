@@ -26,11 +26,7 @@ TrickHouseTrainerCoolTrainerFCora:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "It's too much"
@@ -48,12 +44,10 @@ TrickHouseTrainerCoolTrainerFCora:
 	done
 
 .AfterBattleText
-	text "Wouldn't you"
-	line "agree?"
-
-	para "You would go"
-	line "anywhere if there"
-	cont "were TRAINERS."
+	text "Wouldn't you agree?"
+	line "You would go"
+	para "anywhere if there"
+	line "were TRAINERS."
 	done
 
 TrickHouseTrainerBlackBeltYugi:
@@ -61,24 +55,20 @@ TrickHouseTrainerBlackBeltYugi:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "Heh, boulders like"
 	line "this, I can brush"
-	cont "aside with one"
-	cont "finger!"
+	para "aside with one"
+	line "finger!"
 	done
 
 .BeatenText
 	text "I can push these"
 	line "boulders, but I"
-	cont "can't solve the"
-	cont "puzzle<...>"
+	para "can't solve the"
+	line "puzzle<...>"
 	done
 
 .AfterBattleText
@@ -88,8 +78,7 @@ TrickHouseTrainerBlackBeltYugi:
 
 	para "You have to use"
 	line "your head."
-
-	para "Be brainy!"
+	cont "Be brainy!"
 	done
 
 TrickHouseTrainerCoolTrainerFCathy:
@@ -97,11 +86,7 @@ TrickHouseTrainerCoolTrainerFCathy:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "The TRICK HOUSE is"

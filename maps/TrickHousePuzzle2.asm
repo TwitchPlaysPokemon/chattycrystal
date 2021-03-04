@@ -103,11 +103,7 @@ TrickHouseTrainerSchoolBoyTheodore:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "Which switch"
@@ -131,11 +127,7 @@ TrickHouseTrainerSchoolBoyPaulo:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "Oh! You're on your"
@@ -161,11 +153,7 @@ TrickHouseTrainerLassSavannah:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "I want to make my"

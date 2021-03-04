@@ -56,6 +56,12 @@ TrickHouseExit_TrickMaster:
 	closetext
 .skip_parting_message
 	pause 10
+	readvar VAR_YCOORD
+	ifnotequal 4, .no_stepping_aside
+	showemote EMOTE_SHOCK, PLAYER, 20
+	pause 5
+	applymovement PLAYER, .step_aside
+.no_stepping_aside
 	playsound SFX_EGG_BOMB
 	applymovement TRICKHOUSEEXIT_TRICK_MASTER, TrickHouse_DisappearingMovement
 	disappear TRICKHOUSEEXIT_TRICK_MASTER
@@ -84,6 +90,12 @@ TrickHouseExit_TrickMaster:
 	line "next exciting"
 	cont "installment!"
 	done
+
+.step_aside
+	fast_slide_step LEFT
+	fast_slide_step DOWN
+	turn_step RIGHT
+	step_end
 
 .select_puzzle
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1

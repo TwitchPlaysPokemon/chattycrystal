@@ -26,11 +26,7 @@ TrickHouseTrainerPicnickerJessie:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "I don't know what's"
@@ -58,29 +54,23 @@ TrickHouseTrainerCamperJames:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "I keep coming back"
-	line "to the same"
-	cont "place!"
+	line "to the same place!"
 	done
 
 .BeatenText
 	text "I'm already having"
 	line "trouble, and then"
-	cont "you have to beat"
-	cont "me?"
+	para "you have to beat"
+	line "me?"
 
 	para "It's not fair!"
 	done
 
 .AfterBattleText
-	     ;-----------------$
 	text "It's full of"
 	line "teleporters here!"
 
@@ -95,11 +85,7 @@ TrickHouseTrainerCal:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "What's going on?"

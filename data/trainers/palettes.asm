@@ -64,23 +64,20 @@ INCBIN "gfx/trainers/nate.gbcpal", middle_colors ;B2W2_NATE
 INCBIN "gfx/trainers/serena2.gbcpal", middle_colors ;XY_SERENA2
 INCBIN "gfx/trainers/elio.gbcpal", middle_colors ;SMUSUM_ELIO
 INCBIN "gfx/trainers/glazed.gbcpal", middle_colors ;GLAZED
-INCBIN "gfx/trainers/nuzlocke.gbcpal", middle_colors
-INCBIN "gfx/trainers/cyan.gbcpal", middle_colors
-INCBIN "gfx/trainers/red-snow.gbcpal", middle_colors
-INCBIN "gfx/trainers/greenmay.gbcpal", middle_colors
-INCBIN "gfx/trainers/brown.gbcpal", middle_colors
-INCBIN "gfx/trainers/falkner.gbcpal", middle_colors
-INCBIN "gfx/trainers/may.gbcpal", middle_colors
-INCBIN "gfx/trainers/brendan.gbcpal", middle_colors
-INCBIN "gfx/trainers/chris.gbcpal", middle_colors
-INCBIN "gfx/trainers/red.gbcpal", middle_colors
-INCBIN "gfx/trainers/red.gbcpal", middle_colors
-INCBIN "gfx/trainers/nate.gbcpal", middle_colors
-INCBIN "gfx/trainers/nate.gbcpal", middle_colors
-INCBIN "gfx/trainers/oak.gbcpal", middle_colors
-INCBIN "gfx/trainers/battle-pc.gbcpal", middle_colors
-INCBIN "gfx/trainers/wooper.gbcpal", middle_colors
-INCBIN "gfx/trainers/falkner.gbcpal", middle_colors
-
-KrisPalette:
-INCBIN "gfx/trainers/falkner.gbcpal", middle_colors
+INCBIN "gfx/trainers/nuzlocke.gbcpal", middle_colors ;NUZLOCKE
+INCBIN "gfx/trainers/cyan.gbcpal", middle_colors ;P_CYAN
+INCBIN "gfx/trainers/red-snow.gbcpal", middle_colors ;RED_LARRY
+INCBIN "gfx/trainers/greenmay.gbcpal", middle_colors ;GREEN_MAY
+INCBIN "gfx/trainers/brown.gbcpal", middle_colors ;BROWN
+INCBIN "gfx/trainers/falkner.gbcpal", middle_colors ;BABA
+INCBIN "gfx/trainers/may.gbcpal", middle_colors ;URF
+INCBIN "gfx/trainers/brendan.gbcpal", middle_colors ;BRENDAN_JOHTO_LEADER
+INCBIN "gfx/trainers/chris.gbcpal", middle_colors ;GSCHGSS_CHRIS_RIVAL
+INCBIN "gfx/trainers/red.gbcpal", middle_colors ;RED_JOHTO_LEADER
+INCBIN "gfx/trainers/red.gbcpal", middle_colors ;RED_KANTO_LEADER
+INCBIN "gfx/trainers/nate.gbcpal", middle_colors ;NATE_LEADER
+INCBIN "gfx/trainers/nate.gbcpal", middle_colors ;NATE_ELITE_4
+INCBIN "gfx/trainers/oak.gbcpal", middle_colors ;POKEMON_PROF
+INCBIN "gfx/trainers/battle-pc.gbcpal", middle_colors ;BATTLE_PC
+INCBIN "gfx/trainers/wooper.gbcpal", middle_colors ;WOOPER_T
+KrisPalette: INCBIN "gfx/trainers/falkner.gbcpal", middle_colors ;BLUE_MAY

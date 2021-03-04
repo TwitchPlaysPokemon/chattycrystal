@@ -137,6 +137,112 @@ TrickHouseBlueSkyMail:
 TrickHouseMusicMail:
 	itemball MUSIC_MAIL
 
+TrickHouseTrainerPsychicJoshua:
+	trainer PSYCHIC_T, JOSHUA_P, EVENT_TRICK_HOUSE_BEAT_PSYCHIC_JOSHUA, .SeenText, .BeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext .AfterBattleText
+	waitbutton
+	closetext
+	end
+
+.SeenText
+	text "The TRICK MASTER"
+	line "always vanishes"
+	cont "like smoke."
+
+	para "How does he do it?"
+	done
+
+.BeatenText
+	text "Aiyeeeh!"
+
+	para "You're much too"
+	line "strong!"
+
+	para "How do you do it?"
+	done
+
+.AfterBattleText
+	text "I wish I could"
+	line "appear and dis-"
+	cont "appear as if I"
+	cont "were smoke, too."
+	done
+
+TrickHouseTrainerPsychicAlexis:
+	trainer PSYCHIC_T, ALEXIS, EVENT_TRICK_HOUSE_BEAT_ALEXIS, .SeenText, .BeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext .AfterBattleText
+	waitbutton
+	closetext
+	end
+
+.SeenText
+	text "Whoever wins will"
+	line "get through here"
+	cont "first."
+
+	para "That's the feeling"
+	line "I get."
+	done
+
+.BeatenText
+	text "Oh!"
+
+	para "Well, go ahead,"
+	line "then!"
+	done
+
+.AfterBattleText
+	text "You're solving all"
+	line "the puzzles in"
+	cont "the TRICK HOUSE."
+
+	para "That's the feeling"
+	line "I get."
+	done
+
+TrickHouseTrainerMediumPhoebe:
+	trainer MEDIUM, PHOEBE, EVENT_TRICK_HOUSE_BEAT_PHOEBE, .SeenText, .BeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext .AfterBattleText
+	waitbutton
+	closetext
+	end
+
+.SeenText
+	text "Going around the"
+	line "same spot<...>"
+
+	para "It begets ill"
+	line "fortune<...>"
+	done
+
+.BeatenText
+	text "Defeated!"
+
+	para "It's a bad"
+	line "sign<...>"
+	done
+
+.AfterBattleText
+	text "I've circled the"
+	line "same spot over"
+	cont "ten times now."
+
+	para "It's ill"
+	line "fortune<...>"
+	done
+
 TrickHousePuzzle5_MapEvents:
 	db 0, 0 ; filler
 
@@ -156,6 +262,9 @@ TrickHousePuzzle5_MapEvents:
 	bg_event 12, 16, BGEVENT_SILENT, TrickHousePuzzle5_Switch5
 	bg_event  5,  7, BGEVENT_ITEM, TrickHouseBlueSkyMail
 
-	db 2 ; object events
+	db 5 ; object events
 	object_event  7,  2, SPRITE_SCROLL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrickHouse_FoundPuzzleScroll, -1
 	object_event 10, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TrickHouseMusicMail, EVENT_TRICK_HOUSE_GOT_MUSIC_MAIL
+	object_event  0,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrickHouseTrainerPsychicJoshua, -1
+	object_event 14,  3, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrickHouseTrainerPsychicAlexis, -1
+	object_event  9, 10, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrickHouseTrainerMediumPhoebe, -1

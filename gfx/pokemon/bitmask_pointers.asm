@@ -364,7 +364,7 @@ BitmasksPointers:
 	dw KrookodileBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Ducklett
 	dw PlaceholderBitmasks ; PLACEHOLDER - Swanna
-	dw PlaceholderBitmasks ; PLACEHOLDER - Tynamo
+	dw TynamoBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Eelektrik
 	dw PlaceholderBitmasks ; PLACEHOLDER - Eelektross
 	dw LitwickBitmasks

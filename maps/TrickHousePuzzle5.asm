@@ -142,11 +142,7 @@ TrickHouseTrainerPsychicJoshua:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "The TRICK MASTER"
@@ -167,21 +163,16 @@ TrickHouseTrainerPsychicJoshua:
 
 .AfterBattleText
 	text "I wish I could"
-	line "appear and dis-"
-	cont "appear as if I"
-	cont "were smoke, too."
+	line "appear and"
+	para "disappear as if I"
+	line "were smoke, too."
 	done
 
 TrickHouseTrainerPsychicAlexis:
 	trainer PSYCHIC_T, ALEXIS, EVENT_TRICK_HOUSE_BEAT_ALEXIS, .SeenText, .BeatenText, 0, .Script
 
 .Script:
-	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "Whoever wins will"
@@ -201,8 +192,8 @@ TrickHouseTrainerPsychicAlexis:
 
 .AfterBattleText
 	text "You're solving all"
-	line "the puzzles in"
-	cont "the TRICK HOUSE."
+	line "the puzzles in the"
+	cont "TRICK HOUSE."
 
 	para "That's the feeling"
 	line "I get."
@@ -213,11 +204,7 @@ TrickHouseTrainerMediumPhoebe:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterBattleText
 
 .SeenText
 	text "Going around the"
@@ -230,17 +217,15 @@ TrickHouseTrainerMediumPhoebe:
 .BeatenText
 	text "Defeated!"
 
-	para "It's a bad"
-	line "sign<...>"
+	para "It's a bad sign<...>"
 	done
 
 .AfterBattleText
 	text "I've circled the"
-	line "same spot over"
-	cont "ten times now."
+	line "same spot over ten"
+	cont "times now."
 
-	para "It's ill"
-	line "fortune<...>"
+	para "It's ill fortune<...>"
 	done
 
 TrickHousePuzzle5_MapEvents:

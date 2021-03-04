@@ -1064,7 +1064,7 @@ Script_appear:
 	call _CopyObjectStruct
 	ldh a, [hMapObjectIndexBuffer]
 	ld b, 0 ; clear
-	jp ApplyEventActionAppearDisappear
+	jr ApplyEventActionAppearDisappear
 
 Script_disappear:
 ; script command 0x6e
@@ -1089,16 +1089,22 @@ ApplyEventActionAppearDisappear:
 	ld hl, MAPOBJECT_EVENT_FLAG
 	add hl, bc
 	pop bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
+	ld e, a
 	ld d, [hl]
-	ld a, -1
-	cp e
-	jp nz, EventFlagAction
+	cp LOW(EVENT_INITIALIZED_EVENTS)
+	ld a, e
+	jr nz, .go
+	assert !HIGH(EVENT_INITIALIZED_EVENTS)
+	and a
+	ret z
+.go
 	cp d
-	jp nz, EventFlagAction
-	xor a
-	ret
+	jr nz, .do_action
+	inc a
+	ret z
+.do_action
+	jp EventFlagAction
 
 Script_follow:
 ; script command 0x70

@@ -11026,9 +11026,9 @@ PicnickerGroup:
 	next_list_item ; PICNICKER (30)
 	db "JESSIE@", TRAINERTYPE_NORMAL
 	db 76
-	dw SKITTY
+	dw DELCATTY
 	db 76
-	dw SWABLU
+	dw ALTARIA
 	db -1 ; end
 
 	end_list_items

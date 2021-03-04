@@ -21,6 +21,105 @@ TrickHouseEonMail:
 TrickHouseMorphMail:
 	itemball MORPH_MAIL
 
+TrickHouseTrainerPicnickerJessie:
+	trainer PICNICKER, JESSIE, EVENT_TRICK_HOUSE_BEAT_JESSIE, .SeenText, .BeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext .AfterBattleText
+	waitbutton
+	closetext
+	end
+
+.SeenText
+	text "I don't know what's"
+	line "going on here."
+
+	para "I'm starting to"
+	line "feel sad<...>"
+	done
+
+.BeatenText
+	text "You<...>"
+	line "You're awful!"
+	done
+
+.AfterBattleText
+	text "I know I'm weak!"
+
+	para "And, I have no"
+	line "sense of"
+	cont "direction!"
+	done
+
+TrickHouseTrainerCamperJames:
+	trainer CAMPER, JAMES_C, EVENT_TRICK_HOUSE_BEAT_CAMPER_JAMES, .SeenText, .BeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext .AfterBattleText
+	waitbutton
+	closetext
+	end
+
+.SeenText
+	text "I keep coming back"
+	line "to the same"
+	cont "place!"
+	done
+
+.BeatenText
+	text "I'm already having"
+	line "trouble, and then"
+	cont "you have to beat"
+	cont "me?"
+
+	para "It's not fair!"
+	done
+
+.AfterBattleText
+	     ;-----------------$
+	text "It's full of"
+	line "teleporters here!"
+
+	para "It's too small and"
+	line "dark in here!"
+
+	para "Help!"
+	done
+
+TrickHouseTrainerCal:
+	trainer CAL, CAL5, EVENT_TRICK_HOUSE_BEAT_CAL, .SeenText, .BeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext .AfterBattleText
+	waitbutton
+	closetext
+	end
+
+.SeenText
+	text "What's going on?"
+
+	para "What happened"
+	line "to this place?"
+	done
+
+.BeatenText
+	text "Oh, just great."
+	done
+
+.AfterBattleText
+	text "What is all this?"
+
+	para "Where is my"
+	line "TRAINER HOUSE?"
+	done
+
+
 TrickHousePuzzle4_MapEvents:
 	db 0, 0 ; filler
 
@@ -69,7 +168,10 @@ TrickHousePuzzle4_MapEvents:
 	db 1 ; bg events
 	bg_event 13,  1, BGEVENT_SILENT, TrickHousePuzzle4_Door
 
-	db 3 ; object events
+	db 6 ; object events
 	object_event  2,  5, SPRITE_SCROLL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrickHouse_FoundPuzzleScroll, -1
 	object_event  2,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TrickHouseEonMail, EVENT_TRICK_HOUSE_GOT_EON_MAIL
 	object_event  7,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TrickHouseMorphMail, EVENT_TRICK_HOUSE_GOT_MORPH_MAIL
+	object_event 14, 15, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrickHouseTrainerPicnickerJessie, -1
+	object_event 12, 19, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, TrickHouseTrainerCamperJames, -1
+	object_event 10, 14, SPRITE_CAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrickHouseTrainerCal, -1

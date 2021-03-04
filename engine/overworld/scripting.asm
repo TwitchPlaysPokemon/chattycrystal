@@ -1093,7 +1093,7 @@ ApplyEventActionAppearDisappear:
 	ld e, a
 	ld d, [hl]
 	cp LOW(EVENT_INITIALIZED_EVENTS)
-	ld a, e
+	ld a, d
 	jr nz, .go
 	assert !HIGH(EVENT_INITIALIZED_EVENTS)
 	and a

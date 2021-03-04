@@ -35,7 +35,7 @@ AppearUser:
 	ldh [hGraphicStartTile], a
 	predef PlaceGraphic
 FinishAppearDisappearUser:
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	ret
 
@@ -85,7 +85,7 @@ DoWeatherModifiers:
 	ld a, [de]
 	inc de
 	cp -1
-	jr z, .done
+	ret z
 
 	cp b
 	jr nz, .NextWeatherMove
@@ -138,8 +138,6 @@ DoWeatherModifiers:
 	ld [wCurDamage], a
 	ld a, c
 	ld [wCurDamage + 1], a
-
-.done
 	ret
 
 INCLUDE "data/battle/weather_modifiers.asm"

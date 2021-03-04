@@ -10,7 +10,12 @@ DetermineLinkBattleResult:
 	cp c
 	jr z, .even_number_of_mons_remaining
 	jr c, .defeat
-	jr .victory
+
+.victory
+	ld a, [wBattleResult]
+	and $f0
+	ld [wBattleResult], a ; WIN
+	ret
 
 .even_number_of_mons_remaining
 	call .BothSides_CheckNumberMonsAtFullHealth
@@ -36,13 +41,7 @@ DetermineLinkBattleResult:
 	ld a, e
 	cp l
 	jr z, .drawn
-	jr nc, .defeat
-
-.victory
-	ld a, [wBattleResult]
-	and $f0
-	ld [wBattleResult], a ; WIN
-	ret
+	jr c, .victory
 
 .defeat
 	ld a, [wBattleResult]
@@ -123,16 +122,16 @@ DetermineLinkBattleResult:
 	jr nz, .finish ; we have a pokemon that's neither fainted nor at full health
 	ld hl, wOTPartyMon1HP
 	call .CheckFaintedOrFullHealth
-	ld e, $1 ; victory
+	ld e, 1 ; victory
 	ret
 
 .finish
 	ld hl, wOTPartyMon1HP
 	call .CheckFaintedOrFullHealth
-	ld e, $0 ; drawn
+	ld e, 0 ; drawn
 	ret nz ; we both have pokemon that are neither fainted nor at full health
-	ld e, $2 ; defeat
-	ld a, $1 ; not drawn
+	ld e, 2 ; defeat
+	ld a, 1 ; not drawn
 	and a
 	ret
 

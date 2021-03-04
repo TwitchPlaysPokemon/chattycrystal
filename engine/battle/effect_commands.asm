@@ -1834,7 +1834,7 @@ BattleCommand_LowerSub:
 	ret nz
 
 .charge_turn
-	call _CheckBattleScene
+	call CheckBattleScene
 	jr c, .mimic_anims
 
 	xor a
@@ -1990,7 +1990,7 @@ BattleCommand_RaiseSub:
 	bit SUBSTATUS_SUBSTITUTE, a
 	ret z
 
-	call _CheckBattleScene
+	call CheckBattleScene
 	jp c, BattleCommand_RaiseSubNoAnim
 
 	xor a
@@ -4091,14 +4091,14 @@ RaiseStat:
 	; fallthrough
 
 .cant_raise_stat
-	ld a, $2
+	ld a, 2
 	ld [wFailedMessage], a
-	ld a, $1
+	ld a, 1
 	ld [wAttackMissed], a
 	ret
 
 .stat_raise_failed
-	ld a, $1
+	ld a, 1
 	ld [wFailedMessage], a
 	ret
 
@@ -4119,9 +4119,9 @@ MinimizeDropSub:
 	call CompareMove
 	ret nz
 
-	ld a, $1
+	ld a, 1
 	ld [de], a
-	call _CheckBattleScene
+	call CheckBattleScene
 	ret nc
 
 	xor a
@@ -6726,15 +6726,12 @@ AppearUserRaiseSub:
 	farcall _AppearUserRaiseSub
 	ret
 
-_CheckBattleScene:
-; Checks the options.  Returns carry if battle animations are disabled.
-	push hl
-	push de
-	push bc
-	farcall CheckBattleScene
-	pop bc
-	pop de
-	pop hl
+CheckBattleScene:
+; Return carry if battle scene is turned off.
+	ld a, [wOptions]
+	and 1 << BATTLE_SCENE
+	ret z
+	scf
 	ret
 
 CompareMove:

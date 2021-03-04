@@ -859,10 +859,10 @@ CHRIS EQU __enum__
 
 	trainerclass WOOPER_T ; 4a
 	trainervalue GMMTMT
+
+KRIS EQU __enum__
 	
 	trainerclass BLUE_MAY ; 4b
 	trainervalue MARINA
-
-KRIS EQU __enum__
 
 NUM_TRAINER_CLASSES EQU __enum__

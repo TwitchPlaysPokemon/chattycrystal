@@ -6,59 +6,53 @@ TrickHousePuzzle2_MapScripts:
 
 TrickHousePuzzle2_Switch1:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue .done
+	iftrue TrickHouse_End
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	playsound SFX_WALL_OPEN
 	waitsfx
 	changeblock  4,  6, $8D ; Trapdoor 1 close
 	changeblock  0,  4, $90 ; Switch 1 pressed
-	sjump TrickHouse_Finish_ChangeBlock
-.done
+	refreshscreen
 	end
 
 TrickHousePuzzle2_Switch2:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	iftrue .done
+	iftrue TrickHouse_End
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	playsound SFX_WALL_OPEN
 	waitsfx
 	changeblock  6, 14, $8C ; Trapdoor 2 closed
 	changeblock 14,  4, $92 ; Switch 2 pressed
-	sjump TrickHouse_Finish_ChangeBlock
-.done
+	refreshscreen
 	end
 
 TrickHousePuzzle2_Switch3:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
-	iftrue .done
+	iftrue TrickHouse_End
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 	playsound SFX_WALL_OPEN
 	waitsfx
 	changeblock 14, 12, $8E ; Trapdoor 3 closed
 	changeblock  6, 10, $8F ; Switch 3 pressed
-	sjump TrickHouse_Finish_ChangeBlock
-.done
+	refreshscreen
 	end
 
 TrickHousePuzzle2_Switch4:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
-	iftrue .done
+	iftrue TrickHouse_End
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
 	playsound SFX_WALL_OPEN
 	waitsfx
 	changeblock  0, 12, $78 ; Trapdoor 4 closed
 	changeblock 10, 12, $91 ; Switch 4 pressed
-	sjump TrickHouse_Finish_ChangeBlock
-.done
+	refreshscreen
 	end
 
 TrickHousePuzzle2_Door:
 	scall TrickHouse_Door
-	iffalse .end
+	iffalse TrickHouse_End
 	writetext .code
 	sjump TrickHouse_UnlockDoor_Common
-.end
-	end
 
 .code
 	text "TRICK MASTER is"

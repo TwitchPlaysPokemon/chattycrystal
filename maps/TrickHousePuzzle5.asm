@@ -13,12 +13,15 @@ TrickHousePuzzle5_Switch1:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	changeblock  6,  6, $CD ; Conveyor 1 turned
 	changeblock  4,  4, $CC ; Switch 1 on
-	sjump TrickHouse_Finish_ChangeBlock
+	refreshscreen
+	end
+
 .turnoff
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	changeblock  6,  6, $B9 ; Conveyor 1 reset
 	changeblock  4,  4, $BE ; Switch 1 off
-	sjump TrickHouse_Finish_ChangeBlock
+	refreshscreen
+	end
 
 TrickHousePuzzle5_Switch2:
 	playsound SFX_WALL_OPEN
@@ -29,12 +32,15 @@ TrickHousePuzzle5_Switch2:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	changeblock  8,  4, $CF ; Conveyor 2 turned
 	changeblock  6,  4, $CE ; Switch 2 on
-	sjump TrickHouse_Finish_ChangeBlock
+	refreshscreen
+	end
+
 .turnoff
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	changeblock  8,  4, $C0 ; Conveyor 2 reset
 	changeblock  6,  4, $BF ; Switch 2 off
-	sjump TrickHouse_Finish_ChangeBlock
+	refreshscreen
+	end
 
 TrickHousePuzzle5_Switch3:
 	playsound SFX_WALL_OPEN
@@ -45,12 +51,15 @@ TrickHousePuzzle5_Switch3:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 	changeblock  6, 12, $C9 ; Conveyor 3 turned
 	changeblock  4, 10, $C8 ; Switch 3 on
-	sjump TrickHouse_Finish_ChangeBlock
+	refreshscreen
+	end
+
 .turnoff
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 	changeblock  6, 12, $A9 ; Conveyor 3 reset
 	changeblock  4, 10, $AD ; Switch 3 off
-	sjump TrickHouse_Finish_ChangeBlock
+	refreshscreen
+	end
 
 TrickHousePuzzle5_Switch4:
 	playsound SFX_WALL_OPEN
@@ -61,12 +70,15 @@ TrickHousePuzzle5_Switch4:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
 	changeblock 12, 12, $CB ; Conveyor 4 turned
 	changeblock 12, 10, $CA ; Switch 4 on
-	sjump TrickHouse_Finish_ChangeBlock
+	refreshscreen
+	end
+
 .turnoff
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
 	changeblock 12, 12, $AA ; Conveyor 4 reset
 	changeblock 12, 10, $B0 ; Switch 4 off
-	sjump TrickHouse_Finish_ChangeBlock
+	refreshscreen
+	end
 
 TrickHousePuzzle5_Switch5:
 	playsound SFX_WALL_OPEN
@@ -76,19 +88,20 @@ TrickHousePuzzle5_Switch5:
 .turnon
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_5
 	changeblock 12, 16, $C7 ; Switch 5 on and Conveyor 5 turned
-	sjump TrickHouse_Finish_ChangeBlock
+	refreshscreen
+	end
+
 .turnoff
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_5
 	changeblock 12, 16, $A0 ; Switch 5 off and Conveyor 5 reset
-	sjump TrickHouse_Finish_ChangeBlock
+	refreshscreen
+	end
 
 TrickHousePuzzle5_Door:
 	scall TrickHouse_Door
-	iffalse .end
+	iffalse TrickHouse_End
 	writetext .code
 	sjump TrickHouse_UnlockDoor_Common
-.end
-	end
 
 .code
 	text "TRICK MASTER is"

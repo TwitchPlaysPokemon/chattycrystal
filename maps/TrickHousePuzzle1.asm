@@ -6,11 +6,9 @@ TrickHousePuzzle1_MapScripts:
 
 TrickHousePuzzle1_Door:
 	scall TrickHouse_Door
-	iffalse .end
+	iffalse TrickHouse_End
 	writetext .code
 	sjump TrickHouse_UnlockDoor_Common
-.end
-	end
 
 .code
 	text "TRICK MASTER is"

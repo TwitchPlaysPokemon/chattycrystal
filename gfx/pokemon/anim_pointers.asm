@@ -373,7 +373,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Clauncher
 	dw PlaceholderAnimation ; PLACEHOLDER - Clawitzer
 	dw PlaceholderAnimation ; PLACEHOLDER - Helioptile
-	dw PlaceholderAnimation ; PLACEHOLDER - Heliolisk
+	dw HelioliskAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Amaura
 	dw PlaceholderAnimation ; PLACEHOLDER - Aurorus
 	dw SylveonAnimation

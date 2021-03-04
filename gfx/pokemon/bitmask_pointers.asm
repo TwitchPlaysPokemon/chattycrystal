@@ -373,7 +373,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Clauncher
 	dw PlaceholderBitmasks ; PLACEHOLDER - Clawitzer
 	dw PlaceholderBitmasks ; PLACEHOLDER - Helioptile
-	dw PlaceholderBitmasks ; PLACEHOLDER - Heliolisk
+	dw HelioliskBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Amaura
 	dw PlaceholderBitmasks ; PLACEHOLDER - Aurorus
 	dw SylveonBitmasks

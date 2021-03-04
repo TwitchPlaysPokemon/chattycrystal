@@ -15,17 +15,17 @@ TrickHousePuzzle5_MapScripts:
 .check_switch2
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	iffalse .check_switch3
-	scall TrickHousePuzzle5_Switch1_TurnOn
+	scall TrickHousePuzzle5_Switch2_TurnOn
 
 .check_switch3
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 	iffalse .check_switch4
-	scall TrickHousePuzzle5_Switch1_TurnOn
+	scall TrickHousePuzzle5_Switch3_TurnOn
 
 .check_switch4
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
 	iffalse .check_switch5
-	scall TrickHousePuzzle5_Switch1_TurnOn
+	scall TrickHousePuzzle5_Switch4_TurnOn
 
 .check_switch5
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_5

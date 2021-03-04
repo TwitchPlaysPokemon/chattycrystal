@@ -402,16 +402,12 @@ INCLUDE "maps/Route44.asm"
 INCLUDE "maps/Route45.asm"
 INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
+INCLUDE "maps/Route13.asm"
+INCLUDE "maps/Route12.asm"
 
 
 SECTION "Map Scripts 21", ROMX
 
-INCLUDE "maps/CianwoodCity.asm"
-INCLUDE "maps/Route27.asm"
-INCLUDE "maps/Route29.asm"
-INCLUDE "maps/Route30.asm"
-INCLUDE "maps/Route38.asm"
-INCLUDE "maps/Route13.asm"
 INCLUDE "maps/PewterNidoranSpeechHouse.asm"
 INCLUDE "maps/PewterGym.asm"
 INCLUDE "maps/PewterMart.asm"
@@ -420,17 +416,19 @@ INCLUDE "maps/PewterPokecenter2FBeta.asm"
 INCLUDE "maps/PewterSnoozeSpeechHouse.asm"
 
 
+
 SECTION "Map Scripts 22", ROMX
 
 INCLUDE "maps/EcruteakCity.asm"
 INCLUDE "maps/BlackthornCity.asm"
+INCLUDE "maps/CianwoodCity.asm"
+INCLUDE "maps/Route27.asm"
+INCLUDE "maps/Route29.asm"
+INCLUDE "maps/Route30.asm"
+INCLUDE "maps/Route38.asm"
 INCLUDE "maps/Route26.asm"
 INCLUDE "maps/Route28.asm"
-INCLUDE "maps/Route31.asm"
-INCLUDE "maps/Route39.asm"
-INCLUDE "maps/Route40.asm"
-INCLUDE "maps/Route41.asm"
-INCLUDE "maps/Route12.asm"
+
 
 
 SECTION "Map Scripts 23", ROMX
@@ -481,6 +479,10 @@ INCLUDE "maps/Route28SteelWingHouse.asm"
 
 SECTION "Map Scripts 25", ROMX
 
+INCLUDE "maps/Route31.asm"
+INCLUDE "maps/Route39.asm"
+INCLUDE "maps/Route40.asm"
+INCLUDE "maps/Route41.asm"
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
 

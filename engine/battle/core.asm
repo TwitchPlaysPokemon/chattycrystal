@@ -1398,6 +1398,9 @@ HandleLeftoversAndAquaRing:
 	jp StdBattleTextbox
 
 HandleMysteryberry:
+	ld a, [wBattleType]
+	cp BATTLETYPE_METRONOME
+	ret z
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
 	jr z, .DoEnemyFirst
@@ -1415,15 +1418,14 @@ HandleMysteryberry:
 	callfar GetUserItem
 	ld a, b
 	cp HELD_RESTORE_PP
-	jr nz, .quit
+	ret nz
 	ld hl, wPartyMon1PP
 	ld a, [wCurBattleMon]
 	call GetPartyLocation
 	ld d, h
 	ld e, l
-	ld hl, wPartyMon1Moves
-	ld a, [wCurBattleMon]
-	call GetPartyLocation
+	ld hl, MON_MOVES - MON_PP
+	add hl, de
 	ldh a, [hBattleTurn]
 	and a
 	jr z, .wild
@@ -1437,16 +1439,15 @@ HandleMysteryberry:
 	call GetPartyLocation
 	ld d, h
 	ld e, l
-	ld hl, wOTPartyMon1Moves
-	ld a, [wCurOTMon]
-	call GetPartyLocation
+	ld hl, MON_MOVES - MON_PP
+	add hl, de
 
 .wild
 	ld c, $0
 .loop
 	ld a, [hl]
 	and a
-	jr z, .quit
+	ret z
 	ld a, [de]
 	and PP_MASK
 	jr z, .restore
@@ -1456,8 +1457,6 @@ HandleMysteryberry:
 	ld a, c
 	cp NUM_MOVES
 	jr nz, .loop
-
-.quit
 	ret
 
 .restore
@@ -3969,6 +3968,10 @@ InitBattleMon:
 	ld de, wPlayerStats
 	ld bc, PARTYMON_STRUCT_LENGTH - MON_ATK
 	call CopyBytes
+	ld a, [wBattleType]
+	cp BATTLETYPE_METRONOME
+	ld de, wBattleMonMoves
+	call z, ChangeMovesToMetronome
 	jp ApplyStatusEffectOnPlayerStats
 
 BattleCheckPlayerShininess:
@@ -4014,6 +4017,25 @@ ResetPlayerStatLevels:
 	ld [hli], a
 	dec b
 	jr nz, .loop
+	ret
+
+ChangeMovesToMetronome:
+	ld hl, METRONOME
+	call GetMoveIDFromIndex
+	ld h, d
+	ld l, e
+	ld [hli], a
+	xor a
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
+	ld hl, wBattleMonPP + 3 - wBattleMonMoves
+	assert (wBattleMonPP - wBattleMonMoves) == (wEnemyMonPP - wEnemyMonMoves)
+	add hl, de
+	ld [hld], a
+	ld [hld], a
+	ld [hld], a
+	ld [hl], -1
 	ret
 
 InitEnemyMon:
@@ -4067,6 +4089,10 @@ InitEnemyMon:
 	inc de
 	dec b
 	jr nz, .loop
+	ld a, [wBattleType]
+	cp BATTLETYPE_METRONOME
+	ld de, wEnemyMonMoves
+	call z, ChangeMovesToMetronome
 	ld a, [wCurPartyMon]
 	ld [wCurOTMon], a
 	ret
@@ -5680,6 +5706,9 @@ MoveSelectionScreen:
 
 .swap_moves_in_party_struct
 ; Fixes the COOLTRAINER glitch
+	ld a, [wBattleType]
+	cp BATTLETYPE_METRONOME ; if you somehow have 2+ moves in Metronome mode
+	jr z, .transformed
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_TRANSFORMED, a
 	jr nz, .transformed

@@ -65,6 +65,9 @@ BattleCommand_Spite:
 	call GetBattleVar
 	bit SUBSTATUS_TRANSFORMED, a
 	jr nz, .transformed
+	ld a, [wBattleType]
+	cp BATTLETYPE_METRONOME
+	jr z, .transformed
 	ldh a, [hBattleTurn]
 	and a
 	jr nz, .not_wildmon

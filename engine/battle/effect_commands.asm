@@ -918,6 +918,9 @@ BattleCommand_DoTurn:
 	inc de
 	inc de
 
+	ld a, [wBattleType]
+	cp BATTLETYPE_METRONOME
+	ret z
 	ld a, [de]
 	bit SUBSTATUS_TRANSFORMED, a
 	ret nz

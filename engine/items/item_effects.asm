@@ -480,6 +480,9 @@ PokeBallEffect:
 	ld hl, wEnemySubStatus5
 	bit SUBSTATUS_TRANSFORMED, [hl]
 	jr nz, .Transformed
+	ld a, [wBattleType]
+	cp BATTLETYPE_METRONOME ; just in case...
+	jr z, .Transformed
 	ld hl, wWildMonMoves
 	ld de, wEnemyMonMoves
 	ld bc, NUM_MOVES
@@ -1042,16 +1045,6 @@ LevelBallMultiplier:
 ; These two texts were carried over from gen 1.
 ; They are not used in gen 2, and are dummied out.
 
-Text_RBY_CatchMarowak:
-	; It dodged the thrown BALL! This #MON can't be caught!
-	text_far UnknownText_0x1c5a5a
-	text_end
-
-Text_RBY_NoShake:
-	; You missed the #MON!
-	text_far UnknownText_0x1c5a90
-	text_end
-
 Text_NoShake:
 	; Oh no! The #MON broke free!
 	text_far UnknownText_0x1c5aa6
@@ -1265,8 +1258,7 @@ RareCandy_StatBooster_GetParameters:
 	call GetBaseData
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonNicknames
-	call GetNick
-	ret
+	jp GetNick
 
 RareCandyEffect:
 	ld b, PARTYMENUACTION_HEALING_ITEM
@@ -1574,15 +1566,8 @@ FullRestoreEffect:
 	jp z, StatusHealer_NoEffect
 
 	call IsMonAtFullHealth
-	jr c, .NotAtFullHealth
+	jp nc, FullyHealStatus
 
-	jp FullyHealStatus
-
-.NotAtFullHealth:
-	call .FullRestore
-	jp StatusHealer_Jumptable
-
-.FullRestore:
 	xor a
 	ld [wLowHealthAlarm], a
 	call ReviveFullHP
@@ -1599,7 +1584,8 @@ FullRestoreEffect:
 	call ItemActionTextWaitButton
 	call UseDisposableItem
 	ld a, 0
-	ret
+
+	jp StatusHealer_Jumptable
 
 BitterBerryEffect:
 	ld hl, wPlayerSubStatus3
@@ -1635,7 +1621,7 @@ EnergypowderEnergyRootCommon:
 	push bc
 	call ItemRestoreHP
 	pop bc
-	cp 0
+	and a
 	jr nz, .skip_happiness
 
 	farcall ChangeHappiness
@@ -1831,11 +1817,9 @@ RestoreHealth:
 	dec hl
 	ld a, [de]
 	sbc [hl]
-	jr c, .finish
+	ret c
 .full_hp
-	call ReviveFullHP
-.finish
-	ret
+	jp ReviveFullHP
 
 RemoveHP:
 	ld a, MON_HP + 1
@@ -1851,8 +1835,7 @@ RemoveHP:
 	ld [hld], a
 	ld [hl], a
 .okay
-	call LoadCurHPIntoBuffer5
-	ret
+	jp LoadCurHPIntoBuffer5
 
 IsMonFainted:
 	push de
@@ -2014,7 +1997,7 @@ Softboiled_MilkDrinkFunction:
 	ld [wPartyMenuActionText], a
 	call ChooseMonToUseItemOn
 	pop bc
-	jr c, .set_carry
+	ret c
 	ld a, [wPartyMenuCursor]
 	dec a
 	ld c, a
@@ -2028,10 +2011,6 @@ Softboiled_MilkDrinkFunction:
 	call IsMonAtFullHealth
 	jr nc, .cant_use
 	xor a
-	ret
-
-.set_carry
-	scf
 	ret
 
 .cant_use
@@ -2262,16 +2241,16 @@ CoinCaseEffect:
 	text_end
 
 OldRodEffect:
-	ld e, $0
+	ld e, 0
 	jr UseRod
 
 GoodRodEffect:
-	ld e, $1
+	ld e, 1
 	jr UseRod
 
 SuperRodEffect:
-	ld e, $2
-	jr UseRod
+	ld e, 2
+	; fallthrough
 
 UseRod:
 	farcall FishFunction
@@ -2390,7 +2369,9 @@ BattleRestorePP:
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_TRANSFORMED, a
 	jr nz, .not_in_battle
-	call .UpdateBattleMonPP
+	ld a, [wBattleType]
+	cp BATTLETYPE_METRONOME
+	call nz, .UpdateBattleMonPP
 
 .not_in_battle
 	call Play_SFX_FULL_HEAL
@@ -2408,7 +2389,7 @@ BattleRestorePP:
 .loop
 	ld a, [de]
 	and a
-	jr z, .done
+	ret z
 	cp [hl]
 	jr nz, .next
 	push hl
@@ -2430,8 +2411,6 @@ endr
 	inc de
 	dec b
 	jr nz, .loop
-
-.done
 	ret
 
 Not_PP_Up:

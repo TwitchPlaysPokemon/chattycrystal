@@ -10,6 +10,10 @@ BattleCommand_Sketch:
 	jp PrintNothingHappened
 
 .not_linked
+; In Metronome mode, fail.
+	ld a, [wBattleType]
+	cp BATTLETYPE_METRONOME
+	jp z, .fail
 ; If the opponent has a substitute up, fail.
 	call CheckSubstituteOpp
 	jp nz, .fail

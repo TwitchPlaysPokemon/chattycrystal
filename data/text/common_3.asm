@@ -1153,19 +1153,6 @@ _YouCantTakeAnEggText::
 	para ""
 	done
 
-UnknownText_0x1c5a5a::
-	text "It dodged the"
-	line "thrown BALL!"
-
-	para "This #MON"
-	line "can't be caught!"
-	prompt
-
-UnknownText_0x1c5a90::
-	text "You missed the"
-	line "#MON!"
-	prompt
-
 UnknownText_0x1c5aa6::
 	text "Oh no! The #MON"
 	line "broke free!"

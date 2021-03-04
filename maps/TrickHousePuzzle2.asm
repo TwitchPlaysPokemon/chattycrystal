@@ -34,19 +34,19 @@ TrickHousePuzzle2_Switch4_Press:
 	end
 
 TrickHousePuzzle2_Switch3_Press:
-	changeblock 14, 12, $8E ; Trapdoor 3 closed
-	changeblock  6, 10, $8F ; Switch 3 pressed
+	changeblock 14, 12, $8e ; Trapdoor 3 closed
+	changeblock  6, 10, $8f ; Switch 3 pressed
 	refreshscreen
 	end
 
 TrickHousePuzzle2_Switch2_Press:
-	changeblock  6, 14, $8C ; Trapdoor 2 closed
+	changeblock  6, 14, $8c ; Trapdoor 2 closed
 	changeblock 14,  4, $92 ; Switch 2 pressed
 	refreshscreen
 	end
 
 TrickHousePuzzle2_Switch1_Press:
-	changeblock  4,  6, $8D ; Trapdoor 1 closed
+	changeblock  4,  6, $8d ; Trapdoor 1 closed
 	changeblock  0,  4, $90 ; Switch 1 pressed
 	refreshscreen
 	end
@@ -111,8 +111,7 @@ TrickHouseTrainerSchoolBoyTheodore:
 
 .SeenText
 	text "Which switch"
-	line "closes which"
-	cont "hole?"
+	line "closes which hole?"
 	done
 
 .BeatenText
@@ -124,8 +123,7 @@ TrickHouseTrainerSchoolBoyTheodore:
 .AfterBattleText
 	text "Can I get you to"
 	line "push all the"
-
-	para "buttons for me?"
+	cont "buttons for me?"
 	done
 
 TrickHouseTrainerSchoolBoyPaulo:
@@ -141,7 +139,7 @@ TrickHouseTrainerSchoolBoyPaulo:
 
 .SeenText
 	text "Oh! You're on your"
-	line "2nd TRICK HOUSE"
+	line "second TRICK HOUSE"
 	cont "challenge!"
 	done
 
@@ -151,10 +149,8 @@ TrickHouseTrainerSchoolBoyPaulo:
 	done
 
 .AfterBattleText
-		 ;-----------------$
 	text "The TRICK MASTER"
 	line "rigged all the"
-
 	para "tricks in this"
 	line "house all by"
 	cont "himself!"

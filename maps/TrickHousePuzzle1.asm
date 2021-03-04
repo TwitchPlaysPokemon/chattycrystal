@@ -33,11 +33,9 @@ TrickHouseTrainerLassSally:
 	end
 
 .SeenText
-	text "I'll hack and"
-	line "slash my way to"
-	cont "victory"
-
-	para "with CUT!"
+	text "I'll hack and slash"
+	line "my way to victory"
+	cont "with CUT!"
 	done
 
 .BeatenText
@@ -47,9 +45,8 @@ TrickHouseTrainerLassSally:
 
 .AfterBattleText
 	text "I never get tired"
-	line "of hacking" ; ;)
-
-	para "and slashing!"
+	line "of hacking and" ; ;)
+	cont "slashing!"
 	done
 
 TrickHouseTrainerLassRobin:
@@ -105,7 +102,6 @@ TrickHouseTrainerYoungsterEdd:
 .AfterBattleText
 	text "I've lost my way,"
 	line "I lost a battle,"
-
 	para "and I'm now even"
 	line "more lost<...>"
 

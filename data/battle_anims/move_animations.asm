@@ -3639,7 +3639,7 @@ BattleAnim_RockClimb:
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $e8
 	anim_wait 8
 	anim_ret
-	
+
 BattleAnim_WoodHammer:
 	anim_3gfx ANIM_GFX_WOOD, ANIM_GFX_PLANT, ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
@@ -3805,7 +3805,7 @@ BattleAnim_QuiverDance:
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_18
 	anim_jump BattleAnim_ShowMon_0
-	
+
 BattleAnim_FoulPlay:
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgp $f8
@@ -4515,7 +4515,7 @@ BattleAnim_BrickBreak:
 	anim_obj ANIM_OBJ_01, 136, 56, $0
 	anim_wait 34
 	anim_ret
-	
+
 BattleAnim_HeatWave:
 	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_FIRE
 	anim_bgp $90

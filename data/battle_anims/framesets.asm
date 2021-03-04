@@ -1425,7 +1425,7 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_E7,  4
 	frame BATTLEANIMOAMSET_02,  1
 	delanim
-	
+
 .Frameset_d3:
 	frame BATTLEANIMOAMSET_CD,  2
 	frame BATTLEANIMOAMSET_CD,  2, OAM_X_FLIP

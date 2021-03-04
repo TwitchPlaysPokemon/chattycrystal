@@ -394,24 +394,24 @@
 	const EVENT_TRICK_HOUSE_GOT_BLUESKY_MAIL
 	const EVENT_TRICK_HOUSE_GOT_MUSIC_MAIL
 	const EVENT_TRICK_HOUSE_GOT_MIRAGE_MAIL
-	const skip ; 180
-	const skip
-	const skip
-	const skip
-	const skip
-	const skip
-	const skip
-	const skip
-	const skip ; 188
-	const skip
-	const skip
-	const skip
-	const skip
-	const skip
-	const skip
-	const skip
-	const skip ; 190
-	const skip
+	const EVENT_TRICK_HOUSE_BEAT_SALLY ; 180
+	const EVENT_TRICK_HOUSE_BEAT_ROBIN
+	const EVENT_TRICK_HOUSE_BEAT_EDD
+	const EVENT_TRICK_HOUSE_BEAT_THEODORE
+	const EVENT_TRICK_HOUSE_BEAT_PAULO
+	const EVENT_TRICK_HOUSE_BEAT_SAVANNAH
+	const EVENT_TRICK_HOUSE_BEAT_CORA
+	const EVENT_TRICK_HOUSE_BEAT_YUGI
+	const EVENT_TRICK_HOUSE_BEAT_PATTY ; 188
+	const EVENT_TRICK_HOUSE_BEAT_JESSIE
+	const EVENT_TRICK_HOUSE_BEAT_CAMPER_JAMES
+	const EVENT_TRICK_HOUSE_BEAT_CAL
+	const EVENT_TRICK_HOUSE_BEAT_PSYCHIC_JOSHUA
+	const EVENT_TRICK_HOUSE_BEAT_ALEXIS
+	const EVENT_TRICK_HOUSE_BEAT_PHOEBE
+	const EVENT_TRICK_HOUSE_BEAT_KEIRA
+	const EVENT_TRICK_HOUSE_BEAT_COOLTRAINER_VINCENT ; 190
+	const EVENT_TRICK_HOUSE_BEAT_JULES
 	const skip
 	const skip
 	const skip

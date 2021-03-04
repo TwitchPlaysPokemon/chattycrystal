@@ -4635,6 +4635,15 @@ PKMNTrainerGroup:
 	dw BODY_SLAM, CALM_MIND, ICE_BEAM, HYDRO_PUMP
 	db -1 ; end
 
+	next_list_item ; CAL (5)
+	db "CAL@", TRAINERTYPE_NORMAL
+	db 75
+	dw MEGANIUM
+	db 75
+	dw TYPHLOSION
+	db 75
+	dw FERALIGATR
+	db -1 ; end
 
 	end_list_items
 
@@ -4784,6 +4793,14 @@ YoungsterGroup:
 	db 93
 	dw CRABOMINABLE
 	db MYSTERYBERRY
+	db -1 ; end
+
+	next_list_item ; YOUNGSTER (17)
+	db "EDD@", TRAINERTYPE_NORMAL
+	db 70
+	dw LINOONE
+	db 60
+	dw ZIGZAGOON
 	db -1 ; end
 
 	end_list_items
@@ -5241,6 +5258,22 @@ SchoolboyGroup:
 	db MIRACLEBERRY
 	db -1 ; end
 
+	next_list_item ; SCHOOLBOY (26)
+	db "THEODORE@", TRAINERTYPE_NORMAL
+	db 72
+	dw GARDEVOIR
+	db -1 ; end
+
+	next_list_item ; SCHOOLBOY (26)
+	db "PAULO@", TRAINERTYPE_NORMAL
+	db 68
+	dw FLAREON
+	db 65
+	dw VILEPLUME
+	db 66
+	dw PELIPPER
+	db -1 ; end
+
 	end_list_items
 
 BirdKeeperGroup:
@@ -5613,6 +5646,30 @@ LassGroup:
 	db BLACKBELT
 	db -1 ; end
 
+	next_list_item ; LASS (19)
+	db "SALLY@", TRAINERTYPE_NORMAL
+	db 70
+	dw VILEPLUME
+	db -1 ; end
+
+	next_list_item ; LASS (20)
+	db "ROBIN@", TRAINERTYPE_NORMAL
+	db 65
+	dw DELCATTY
+	db 66
+	dw LEAFEON
+	db 68
+	dw AZUMARILL
+	db -1 ; end
+
+	next_list_item ; LASS (21)
+	db "SAVANNAH@", TRAINERTYPE_NORMAL
+	db 68
+	dw ROSERADE
+	db 70
+	dw MOTHIM
+	db -1 ; end
+
 	end_list_items
 
 CooltrainerMGroup:
@@ -5918,6 +5975,24 @@ CooltrainerMGroup:
 	db MYSTIC_WATER
 	db -1 ; end
 
+	next_list_item ; COOLTRAINERM (26)
+	db "VINCENT@", TRAINERTYPE_NORMAL
+	db 80
+	dw TORTERRA
+	db 80
+	dw INFERNAPE
+	db 80
+	dw EMPOLEON
+	db -1 ; end
+
+	next_list_item ; COOLTRAINERM (27)
+	db "JULES@", TRAINERTYPE_NORMAL
+	db 86
+	dw CHANDELURE
+	db 86
+	dw STARMIE
+	db -1 ; end
+
 	end_list_items
 
 CooltrainerFGroup:
@@ -6179,6 +6254,26 @@ CooltrainerFGroup:
 	db 99
 	dw SABLEYE
 	db MIRACLEBERRY
+	db -1 ; end
+
+	next_list_item ; COOLTRAINERF (24)
+	db "CORA@", TRAINERTYPE_NORMAL
+	db 77
+	dw BRONZONG
+	db -1 ; end
+
+	next_list_item ; COOLTRAINERF (25)
+	db "PATTY@", TRAINERTYPE_NORMAL
+	db 77
+	dw SIMISAGE
+	db -1 ; end
+
+	next_list_item ; COOLTRAINERF (26)
+	db "KEIRA@", TRAINERTYPE_NORMAL
+	db 85
+	dw AGGRON
+	db 85
+	dw MANECTRIC
 	db -1 ; end
 
 	end_list_items
@@ -9163,6 +9258,8 @@ JugglerGroup:
 
 	end_list_items
 
+SECTION "Enemy Trainer Parties 3", ROMX
+
 BlackbeltGroup:
 	next_list_item ; BLACKBELT_T (1)
 	db "KENJI@", TRAINERTYPE_NORMAL
@@ -9377,9 +9474,15 @@ BlackbeltGroup:
 	db FOCUS_BAND
 	db -1 ; end
 
-	end_list_items
+	next_list_item ; BLACKBELT_T (16)
+	db "YUGI@", TRAINERTYPE_NORMAL
+	db 76
+	dw HARIYAMA
+	db 76
+	dw MACHAMP
+	db -1 ; end
 
-SECTION "Enemy Trainer Parties 3", ROMX
+	end_list_items
 
 BoarderGroup:
 	next_list_item ; BOARDER (1)
@@ -10300,6 +10403,12 @@ CamperGroup:
 	db SOFT_SAND
 	db -1 ; end
 
+	next_list_item ; CAMPER (25)
+	db "JAMES@", TRAINERTYPE_NORMAL
+	db 78
+	dw SYLVEON
+	db -1 ; end
+
 	end_list_items
 
 SageGroup:
@@ -10628,6 +10737,12 @@ MediumGroup:
 	db MIRACLEBERRY
 	db -1 ; end
 
+	next_list_item ; MEDIUM (15)
+	db "PHOEBE@", TRAINERTYPE_NORMAL
+	db 82
+	dw SABLEYE
+	db -1 ; end
+
 	end_list_items
 
 PicnickerGroup:
@@ -10908,6 +11023,14 @@ PicnickerGroup:
 	db BRIGHTPOWDER
 	db -1 ; end
 
+	next_list_item ; PICNICKER (30)
+	db "JESSIE@", TRAINERTYPE_NORMAL
+	db 76
+	dw SKITTY
+	db 76
+	dw SWABLU
+	db -1 ; end
+
 	end_list_items
 
 PsychicGroup:
@@ -11011,6 +11134,24 @@ PsychicGroup:
 	dw HYPNO
 	db 55
 	dw HYPNO
+	db -1 ; end
+
+	next_list_item ; PSYCHIC_T (13)
+	db "JOSHUA@", TRAINERTYPE_NORMAL
+	db 81
+	dw ALAKAZAM
+	db 81
+	dw BRONZONG
+	db -1 ; end
+
+	next_list_item ; PSYCHIC_T (14)
+	db "ALEXIS@", TRAINERTYPE_NORMAL
+	db 80
+	dw GARDEVOIR
+	db 80
+	dw XATU
+	db 80
+	dw ALAKAZAM
 	db -1 ; end
 
 	end_list_items

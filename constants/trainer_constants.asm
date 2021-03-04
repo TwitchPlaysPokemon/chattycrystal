@@ -34,6 +34,7 @@ CHRIS EQU __enum__
 	trainervalue CAL2
 	trainervalue CAL3
 	trainervalue MT_BATTLE_100 ; CAL4
+	trainervalue CAL5
 
 	trainerclass SCIENTIST ; 2
 	trainervalue ROSS
@@ -69,6 +70,7 @@ CHRIS EQU __enum__
 	trainervalue JOEY5
 	trainervalue MT_BATTLE_20 ; ERBEN
 	trainervalue MT_BATTLE_89 ; PERC
+	trainervalue EDD
 
 	trainerclass SCHOOLBOY ; 4
 	trainervalue JACK1
@@ -96,6 +98,8 @@ CHRIS EQU __enum__
 	trainervalue CHAD4
 	trainervalue CHAD5
 	trainervalue MT_BATTLE_34 ; ROEX
+	trainervalue THEODORE
+	trainervalue PAULO
 
 	trainerclass BIRD_KEEPER ; 5
 	trainervalue ROD
@@ -138,6 +142,9 @@ CHRIS EQU __enum__
 	trainervalue DANA4
 	trainervalue DANA5
 	trainervalue MT_BATTLE_87 ; SANOL
+	trainervalue SALLY
+	trainervalue ROBIN
+	trainervalue SAVANNAH
 
 	trainerclass COOLTRAINERM ; 7
 	trainervalue NICK
@@ -165,6 +172,8 @@ CHRIS EQU __enum__
 	trainervalue MT_BATTLE_50 ; CRYAL
 	trainervalue MT_BATTLE_66 ; DAZON
 	trainervalue MT_BATTLE_91 ; CRUIK
+	trainervalue VINCENT_C
+	trainervalue JULES
 
 	trainerclass COOLTRAINERF ; 8
 	trainervalue GWEN
@@ -190,6 +199,8 @@ CHRIS EQU __enum__
 	trainervalue MT_BATTLE_48 ; ROSNO
 	trainervalue MT_BATTLE_73 ; GILLY
 	trainervalue MT_BATTLE_99 ; TYNAN
+	trainervalue PATTY
+	trainervalue KEIRA
 
 	trainerclass BEAUTY ; 9
 	trainervalue VICTORIA
@@ -525,6 +536,7 @@ CHRIS EQU __enum__
 	trainervalue MT_BATTLE_62 ; HELMIN
 	trainervalue MT_BATTLE_74 ; CHIOD
 	trainervalue MT_BATTLE_96 ; ELDOR
+	trainervalue YUGI
 
 	trainerclass PSYCHIC_T ; 1c
 	trainervalue NATHAN
@@ -539,6 +551,8 @@ CHRIS EQU __enum__
 	trainervalue GILBERT
 	trainervalue JARED
 	trainervalue RODNEY
+	trainervalue JOSHUA_P
+	trainervalue ALEXIS
 
 	trainerclass PICNICKER ; 1d
 	trainervalue LIZ1
@@ -570,6 +584,7 @@ CHRIS EQU __enum__
 	trainervalue MT_BATTLE_17 ; MALOO
 	trainervalue MT_BATTLE_67 ; ZIALE
 	trainervalue MT_BATTLE_93 ; NOMOL
+	trainervalue JESSIE
 
 	trainerclass CAMPER ; 1e
 	trainervalue ROLAND
@@ -596,6 +611,7 @@ CHRIS EQU __enum__
 	trainervalue QUENTIN
 	trainervalue MT_BATTLE_12 ; DENC
 	trainervalue MT_BATTLE_83 ; AICH
+	trainervalue JAMES_C
 
 	trainerclass SAGE ; 1f
 	trainervalue CHOW
@@ -629,6 +645,7 @@ CHRIS EQU __enum__
 	trainervalue MT_BATTLE_38 ; GRENAY
 	trainervalue MT_BATTLE_65 ; PERSTIN
 	trainervalue MT_BATTLE_94 ; DESOR
+	trainervalue PHOEBE
 
 	trainerclass BOARDER ; 21
 	trainervalue RONALD

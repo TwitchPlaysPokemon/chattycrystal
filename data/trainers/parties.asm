@@ -5976,7 +5976,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (26)
-	db "VINCENT@", TRAINERTYPE_NORMAL
+	db "VINCE@", TRAINERTYPE_NORMAL
 	db 80
 	dw TORTERRA
 	db 80

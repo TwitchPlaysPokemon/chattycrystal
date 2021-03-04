@@ -172,7 +172,7 @@ CHRIS EQU __enum__
 	trainervalue MT_BATTLE_50 ; CRYAL
 	trainervalue MT_BATTLE_66 ; DAZON
 	trainervalue MT_BATTLE_91 ; CRUIK
-	trainervalue VINCENT_C
+	trainervalue VINCE
 	trainervalue JULES
 
 	trainerclass COOLTRAINERF ; 8

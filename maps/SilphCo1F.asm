@@ -42,7 +42,6 @@ SilphCoOfficerText:
 
 	para "Since you came"
 	line "such a long way,"
-
 	para "have this neat"
 	line "little souvenir!"
 	done
@@ -51,8 +50,8 @@ SilphCoOfficerText_GotUpGrade:
 	text "It's SILPH CO.'s"
 	line "latest product."
 
-	para "It's not for sale"
-	line "anywhere yet."
+	para "It's available in"
+	line "stores now!"
 	done
 
 MtBattleFinishBattle:

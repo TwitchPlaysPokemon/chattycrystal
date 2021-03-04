@@ -1089,9 +1089,16 @@ ApplyEventActionAppearDisappear:
 	ld hl, MAPOBJECT_EVENT_FLAG
 	add hl, bc
 	pop bc
-	ld e, [hl]
-	inc hl
+	ld a, [hli]
+	ld e, a
 	ld d, [hl]
+	cp LOW(EVENT_INITIALIZED_EVENTS)
+	jr nz, .go
+	ld a, e
+	assert !HIGH(EVENT_INITIALIZED_EVENTS)
+	and a
+	ret z
+.go
 	ld a, -1
 	cp e
 	jp nz, EventFlagAction

@@ -854,13 +854,13 @@ CHRIS EQU __enum__
 
 	trainerclass POKEMON_PROF ; 48
 
-	trainerclass BATTLE_PC    ; 49
+	trainerclass BATTLE_PC ; 49
 	trainervalue MIRROR_PC
 
-	trainerclass WOOPER_T     ; 4a
+	trainerclass WOOPER_T ; 4a
 	trainervalue GMMTMT
 	
-	trainerclass BLUE_MAY     ; 4b
+	trainerclass BLUE_MAY ; 4b
 	trainervalue MARINA
 
 KRIS EQU __enum__

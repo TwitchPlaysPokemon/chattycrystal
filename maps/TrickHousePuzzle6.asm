@@ -33,8 +33,7 @@ TrickHouseTrainerCoolTrainerMVince:
 
 .BeatenText
 	text "That must mean"
-	line "you're tough,"
-	cont "too<...>"
+	line "you're tough, too<...>"
 	done
 
 .AfterBattleText
@@ -60,17 +59,15 @@ TrickHouseTrainerCoolTrainerFKeira:
 
 .BeatenText
 	text "This isn't right!"
-
-	para "I can't lose!"
+	line "I can't lose!"
 	done
 
 .AfterBattleText
-	     ;-----------------$
 	text "It's a miracle that"
 	line "you beat me."
 
-	para "You can brag"
-	line "about it."
+	para "You can brag about"
+	line "it."
 	done
 
 TrickHouseTrainerCoolTrainerMJules:
@@ -83,7 +80,6 @@ TrickHouseTrainerCoolTrainerMJules:
 .SeenText
 	text "You've been"
 	line "slugging through"
-
 	para "the TRICK HOUSE"
 	line "challenge, too."
 	done
@@ -99,7 +95,6 @@ TrickHouseTrainerCoolTrainerMJules:
 .AfterBattleText
 	text "Seeing someone"
 	line "like you should"
-
 	para "please the TRICK"
 	line "MASTER."
 	done

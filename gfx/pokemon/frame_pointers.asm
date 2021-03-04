@@ -364,7 +364,7 @@ FramesPointers:
 	dba KrookodileFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Ducklett
 	dba PlaceholderFrames ; PLACEHOLDER - Swanna
-	dba PlaceholderFrames ; PLACEHOLDER - Tynamo
+	dba TynamoFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Eelektrik
 	dba PlaceholderFrames ; PLACEHOLDER - Eelektross
 	dba LitwickFrames

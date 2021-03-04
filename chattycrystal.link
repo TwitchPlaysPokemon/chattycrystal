@@ -114,7 +114,6 @@ ROMX $1f
 ROMX $20
 	"bank20"
 	"Pics 31"
-	"Battle Text"
 ROMX $21
 	"bank21"
 ROMX $22
@@ -163,6 +162,7 @@ ROMX $34
 	"Pic Animations 1"
 ROMX $35
 	"Pic Animations 2"
+	"Battle Text"
 ROMX $36
 	"Font Inversed"
 	"Pic Animations 3"

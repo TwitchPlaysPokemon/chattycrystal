@@ -127,7 +127,7 @@ TrickHouseTrainerSchoolBoyTheodore:
 	done
 
 TrickHouseTrainerSchoolBoyPaulo:
-	trainer SCHOOLBOY, PAULO, EVENT_TRICK_HOUSE_BEAT_THEODORE, .SeenText, .BeatenText, 0, .Script
+	trainer SCHOOLBOY, PAULO, EVENT_TRICK_HOUSE_BEAT_PAULO, .SeenText, .BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

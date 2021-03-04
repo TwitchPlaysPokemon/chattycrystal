@@ -6263,7 +6263,7 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (25)
-	db "PATTY@", TRAINERTYPE_NORMAL
+	db "CATHY@", TRAINERTYPE_NORMAL
 	db 77
 	dw SIMISAGE
 	db -1 ; end

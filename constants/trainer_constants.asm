@@ -199,7 +199,8 @@ CHRIS EQU __enum__
 	trainervalue MT_BATTLE_48 ; ROSNO
 	trainervalue MT_BATTLE_73 ; GILLY
 	trainervalue MT_BATTLE_99 ; TYNAN
-	trainervalue PATTY
+	trainervalue CORA
+	trainervalue CATHY
 	trainervalue KEIRA
 
 	trainerclass BEAUTY ; 9

@@ -93,6 +93,7 @@ MtBattleGotReward:
 
 .resetTrainers
 	ld b, NUM_SILPH_FLAGS / 8
+	assert !(EVENT_BEAT_MT_BATTLE_1 % 8)
 	ld hl, wEventFlags + EVENT_BEAT_MT_BATTLE_1 / 8
 	xor a
 .loop

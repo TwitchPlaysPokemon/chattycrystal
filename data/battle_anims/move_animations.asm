@@ -323,7 +323,7 @@ MoveAnimations:
 	dw BattleAnim_RazorLeaf    ; PLACEHOLDER
 	dw BattleAnim_IronTail     ; PLACEHOLDER
 	dw BattleAnim_Headbutt     ; PLACEHOLDER
-	dw BattleAnim_Roar         ; PLACEHOLDER
+	dw BattleAnim_Chatter
 	dw BattleAnim_ChargeBeam
 	dw BattleAnim_WoodHammer
 	dw BattleAnim_AquaJet
@@ -3645,6 +3645,23 @@ BattleAnim_RockClimb:
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $e8
 	anim_wait 8
 	anim_ret
+	
+BattleAnim_Chatter:
+	anim_2gfx ANIM_GFX_NOISE, ANIM_GFX_MINI
+	anim_call BattleAnim_TargetObj_2Row
+	anim_bgeffect ANIM_BG_26, $0, $1, $0
+	anim_call BattleAnim_Growl_branch_cbbbc
+	anim_obj ANIM_OBJ_CHATTER, 42, 88, $0
+	anim_wait 16
+	anim_obj ANIM_OBJ_CHATTER, 48, 88, $2
+	anim_wait 32
+	anim_call BattleAnim_Growl_branch_cbbbc
+	anim_obj ANIM_OBJ_CHATTER, 44, 88, $1
+	anim_wait 16
+	anim_obj ANIM_OBJ_CHATTER, 40, 88, $2
+	anim_wait 32
+	anim_incbgeffect ANIM_BG_26
+	anim_jump BattleAnim_ShowMon_0
 	
 BattleAnim_ChargeBeam:
 	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_CHARGE

@@ -73,9 +73,10 @@ MartViolet:
 	db -1 ; end
 
 MartAzalea:
-	db 9 ; # items
+	db 10 ; # items
 	db POKE_BALL
 	db CHARCOAL
+	db THICK_CLUB
 	db POTION
 	db SUPER_POTION
 	db ESCAPE_ROPE
@@ -190,13 +191,13 @@ MartEcruteak:
 	db 10 ; # items
 	db POKE_BALL
 	db GREAT_BALL
+	db SPELL_TAG
+	db LIGHT_BALL
 	db POTION
 	db SUPER_POTION
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
-	db BURN_HEAL
-	db ICE_HEAL
 	db REVIVE
 	db -1 ; end
 
@@ -223,22 +224,22 @@ MartMahogany2:
 	db -1 ; end
 
 MartBlackthorn:
-	db 10 ; # items
+	db 9 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
 	db NEVERMELTICE
+	db DRAGON_FANG
 	db HYPER_POTION
 	db MAX_POTION
 	db FULL_HEAL
 	db REVIVE
 	db MAX_REPEL
-	db X_DEFEND
-	db X_ATTACK
 	db -1 ; end
 
 MartViridian:
-	db 9 ; # items
+	db 10 ; # items
 	db ULTRA_BALL
+	db MIRACLE_SEED
 	db HYPER_POTION
 	db FULL_HEAL
 	db REVIVE
@@ -263,9 +264,10 @@ MartPewter:
 	db -1 ; end
 
 MartCerulean:
-	db 9 ; # items
+	db 10 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
+	db STICK
 	db SUPER_POTION
 	db SUPER_REPEL
 	db FULL_HEAL
@@ -276,9 +278,10 @@ MartCerulean:
 	db -1 ; end
 
 MartLavender:
-	db 9 ; # items
+	db 10 ; # items
 	db GREAT_BALL
 	db CLEANSE_TAG
+	db SILVERPOWDER
 	db POTION
 	db SUPER_POTION
 	db MAX_REPEL
@@ -289,9 +292,11 @@ MartLavender:
 	db -1 ; end
 
 MartVermilion:
-	db 8 ; # items
+	db 10 ; # items
 	db ULTRA_BALL
-	db SUPER_POTION
+	db QUICK_CLAW
+	db SHARP_BEAK
+	db MAGNET
 	db HYPER_POTION
 	db REVIVE
 	db PARLYZ_HEAL
@@ -368,9 +373,12 @@ MartCeladon5F2:
 	db -1 ; end
 
 MartFuchsia:
-	db 7 ; # items
+	db 10 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
+	db POISON_BARB
+	db SMOKE_BALL
+	db BLACKGLASSES
 	db SUPER_POTION
 	db HYPER_POTION
 	db FULL_HEAL
@@ -379,9 +387,11 @@ MartFuchsia:
 	db -1 ; end
 
 MartSaffron:
-	db 8 ; # items
+	db 10 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
+	db TWISTEDSPOON
+	db SCOPE_LENS
 	db HYPER_POTION
 	db MAX_POTION
 	db FULL_HEAL

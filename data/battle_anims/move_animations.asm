@@ -320,7 +320,7 @@ MoveAnimations:
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
 	dw BattleAnim_RockClimb
 	dw BattleAnim_ThunderWave  ; 140, PLACEHOLDER
-	dw BattleAnim_RazorLeaf    ; PLACEHOLDER
+	dw BattleAnim_LeafStorm
 	dw BattleAnim_IronHead
 	dw BattleAnim_GrassKnot
 	dw BattleAnim_Chatter
@@ -3644,6 +3644,40 @@ BattleAnim_RockClimb:
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $5c
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $e8
 	anim_wait 8
+	anim_ret
+
+BattleAnim_LeafStorm:
+	anim_1gfx ANIM_GFX_LEAF_STORM
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 80, $18
+	anim_wait 2
+	anim_obj ANIM_OBJ_LEAF_STORM_BIG, 44, 92, $18
+	anim_wait 2
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 112, $18
+	anim_wait 2
+	anim_bgeffect ANIM_BG_1F, $55, $2, $0
+.loop
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_LEAF_STORM_BIG, 44, 96, $18
+	anim_wait 2
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 80, $18
+	anim_wait 2
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 112, $18
+	anim_wait 2
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 80, $18
+	anim_wait 2
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_LEAF_STORM_BIG, 44, 92, $18
+	anim_wait 2
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 112, $18
+	anim_wait 2
+	anim_loop 5, .loop
+	anim_incbgeffect ANIM_BG_1F
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_wait 4
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_wait 32
 	anim_ret
 
 BattleAnim_IronHead:

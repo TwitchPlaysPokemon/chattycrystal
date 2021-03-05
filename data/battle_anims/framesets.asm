@@ -1440,31 +1440,31 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_CD,  2, OAM_X_FLIP, OAM_Y_FLIP
 	frame BATTLEANIMOAMSET_CD,  2, OAM_Y_FLIP
 	dorestart
-	
+
 .Frameset_d4:
 	frame BATTLEANIMOAMSET_AD, 16, OAM_X_FLIP, OAM_Y_FLIP
 	endanim
-	
+
 .Frameset_d5:
 	frame BATTLEANIMOAMSET_DD, 16, OAM_X_FLIP
 	endanim
-	
+
 .Frameset_d6:
 	frame BATTLEANIMOAMSET_E3, 16, OAM_Y_FLIP
 	endanim
-	
+
 .Frameset_d7:
 	frame BATTLEANIMOAMSET_AD, 16, OAM_X_FLIP
 	endanim
-	
+
 .Frameset_d8:
 	frame BATTLEANIMOAMSET_E3, 16
 	endanim
-	
+
 .Frameset_d9:
 	frame BATTLEANIMOAMSET_DD, 16
 	endanim
-	
+
 .Frameset_da:
 	frame BATTLEANIMOAMSET_AD, 16, OAM_Y_FLIP
 	endanim

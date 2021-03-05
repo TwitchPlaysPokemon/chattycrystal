@@ -3752,7 +3752,7 @@ BattleAnim_AquaJet:
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_wait 16
 	anim_ret
-	
+
 BattleAnim_AttackOrder:
 	anim_2gfx ANIM_GFX_OBJECTS, ANIM_GFX_HIT
 .loop

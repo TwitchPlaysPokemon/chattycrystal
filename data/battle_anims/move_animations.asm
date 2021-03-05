@@ -261,7 +261,7 @@ MoveAnimations:
 	dw BattleAnim_Endeavor
 	dw BattleAnim_Thief        ; PLACEHOLDER
 	dw BattleAnim_HiddenPower  ; PLACEHOLDER
-	dw BattleAnim_Dive         ; incomplete?
+	dw BattleAnim_Dive
 	dw BattleAnim_ArmThrust
 	dw BattleAnim_TeeterDance  ; 108
 	dw BattleAnim_BlazeKick
@@ -324,7 +324,7 @@ MoveAnimations:
 	dw BattleAnim_IronTail     ; PLACEHOLDER
 	dw BattleAnim_Headbutt     ; PLACEHOLDER
 	dw BattleAnim_Roar         ; PLACEHOLDER
-	dw BattleAnim_HyperBeam    ; PLACEHOLDER
+	dw BattleAnim_ChargeBeam
 	dw BattleAnim_WoodHammer
 	dw BattleAnim_AquaJet
 	dw BattleAnim_AttackOrder  ; 148
@@ -3024,7 +3024,6 @@ BattleAnim_Endeavor:
 	anim_wait 8
 .loop
 	anim_sound 0, 0, SFX_RETURN
-	anim_obj ANIM_OBJ_SWEAT, 56, 80, $0
 	anim_wait 14
 	anim_sound 0, 1, SFX_BITE
 	anim_obj ANIM_OBJ_01, 136, 48, $0
@@ -3045,19 +3044,26 @@ BattleAnim_Dive:
 	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
 	anim_wait 8
 	anim_incbgeffect ANIM_BG_BOUNCE_DOWN
-	anim_obj ANIM_OBJ_SWEAT, 72, 112, $0
+	anim_obj ANIM_OBJ_DIVE, 72, 112, $0
 	anim_call BattleAnim_ShowMon_0
 	anim_wait 40
 	anim_ret
-
 .hit
 	anim_sound 0, 1, SFX_BUBBLEBEAM
-	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 56, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 48, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 40, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 32, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 24, $0
 	anim_wait 32
 .fail
 	anim_bgeffect ANIM_BG_ENTER_MON, $0, $1, $0
 	anim_wait 16
-	anim_obj ANIM_OBJ_SWEAT, 72, 112, $0
+	anim_obj ANIM_OBJ_DIVE, 72, 112, $0
 	anim_wait 16
 	anim_ret
 
@@ -3638,6 +3644,46 @@ BattleAnim_RockClimb:
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $5c
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $e8
 	anim_wait 8
+	anim_ret
+	
+BattleAnim_ChargeBeam:
+	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_CHARGE
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $30
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $31
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $32
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $33
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $34
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $35
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $36
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $37
+	anim_wait 1
+.loop
+	anim_sound 0, 0, SFX_WARP_TO
+	anim_wait 16
+	anim_loop 6, .loop
+	anim_wait 40
+	anim_clearobjs
+	anim_incbgeffect ANIM_BG_06
+	anim_bgeffect ANIM_BG_08, $0, $4, $0
+	anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_CHARGE_BEAM, 64, 92, $4
+	anim_wait 4
+	anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_CHARGE_BEAM, 64, 92, $4
+	anim_wait 4
+	anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_CHARGE_BEAM, 64, 92, $4
+	anim_wait 4
+	anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_33, 136, 56, $0
+.loop2
+	anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_CHARGE_BEAM, 64, 92, $4
+	anim_wait 4
+	anim_loop 15, .loop2
+	anim_wait 16
 	anim_ret
 
 BattleAnim_WoodHammer:

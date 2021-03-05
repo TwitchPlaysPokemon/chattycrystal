@@ -228,7 +228,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_DREAM_EATER
 	const ANIM_OBJ_MINIMIZE
 	const ANIM_OBJ_ASSIST
-	const ANIM_OBJ_SWEAT
+	const ANIM_OBJ_DIVE
 	const ANIM_OBJ_HAND_REVERSE
 	const ANIM_OBJ_TEETER_DANCE
 	const ANIM_OBJ_ICE_BALL
@@ -293,6 +293,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_BEE_SW
 	const ANIM_OBJ_BEE_W
 	const ANIM_OBJ_BEE_NW
+	const ANIM_OBJ_CHARGE_BEAM
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def
@@ -607,6 +608,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMFRAMESET_D8
 	const BATTLEANIMFRAMESET_D9
 	const BATTLEANIMFRAMESET_DA
+	const BATTLEANIMFRAMESET_DB
 
 ; BattleAnimOAMData indexes (see data/battle_anims/oam.asm)
 	const_def
@@ -838,6 +840,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMOAMSET_E1
 	const BATTLEANIMOAMSET_E2
 	const BATTLEANIMOAMSET_E3
+	const BATTLEANIMOAMSET_E4
 
 ; BattleBGEffects indexes (see engine/battle_anims/bg_effects.asm)
 	const_def 1

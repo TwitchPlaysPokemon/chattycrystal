@@ -2885,7 +2885,7 @@ RedGroup:
 	bigdw 281
 	bigdw 363
 	bigdw 201
-	db ".UUCDWWWWW@"
+	db ",UUCDWWWWW@"
 
 	db 100
 	dw STARMIE
@@ -2898,7 +2898,7 @@ RedGroup:
 	bigdw 282
 	bigdw 264
 	bigdw 210
-	db "AA-×ZZG-♂@"
+	db "AA-×ZZG--♂@"
 
 	db 100
 	dw RATICATE
@@ -3182,7 +3182,7 @@ RedGroup:
 	bigdw 286
 	bigdw 311
 	bigdw 311
-	db "(ssll <MN>..,@"
+	db "(ssjj <MN>..,@"
 
 	db 100
 	dw VICTREEBEL
@@ -3279,7 +3279,7 @@ RBYGreenGroup:
 	bigdw 206
 	bigdw 240
 	bigdw 240
-	db "UUUVX;:UL@"
+	db "UUUVVX;:UL@"
 	db -1 ; end
 
 	end_list_items
@@ -3627,7 +3627,7 @@ CYRoboredGroup:
 	bigdw 278
 	bigdw 238
 	bigdw 238
-	db "IAS@"
+	db "IAS       @"
 
 	db 100
 	dw GYARADOS
@@ -3640,7 +3640,7 @@ CYRoboredGroup:
 	bigdw 252
 	bigdw 293
 	bigdw 293
-	db "AJJTUUUUU@"
+	db "AJJJTUUUUU@"
 
 	db 100
 	dw VENUSAUR
@@ -3653,7 +3653,7 @@ CYRoboredGroup:
 	bigdw 231
 	bigdw 273
 	bigdw 273
-	db "-SJJJJx  <MN>@"
+	db "-SJJJJ×  <MN>@"
 
 	db 100
 	dw CHATOT
@@ -3692,7 +3692,7 @@ CYRoboredGroup:
 	bigdw 155
 	bigdw 166
 	bigdw 166
-	db "IZZZZZZZQ@"
+	db "IZZZZZZZZQ@"
 
 	db -1 ; end
 

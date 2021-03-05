@@ -285,6 +285,14 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_HEART_BURST
 	const ANIM_OBJ_WOOD_HAMMER_S
 	const ANIM_OBJ_HEAT_WAVE
+;	const ANIM_OBJ_BEE_N            -uncomment when Object Expansion is done
+;	const ANIM_OBJ_BEE_NE
+;	const ANIM_OBJ_BEE_E
+;	const ANIM_OBJ_BEE_SE
+;	const ANIM_OBJ_BEE_S
+;	const ANIM_OBJ_BEE_SW
+;	const ANIM_OBJ_BEE_W
+;	const ANIM_OBJ_BEE_NW
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def
@@ -821,11 +829,6 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMOAMSET_E0
 	const BATTLEANIMOAMSET_E1
 	const BATTLEANIMOAMSET_E2
-	const BATTLEANIMOAMSET_E3
-	const BATTLEANIMOAMSET_E4
-	const BATTLEANIMOAMSET_E5
-	const BATTLEANIMOAMSET_E6
-	const BATTLEANIMOAMSET_E7
 
 ; BattleBGEffects indexes (see engine/battle_anims/bg_effects.asm)
 	const_def 1

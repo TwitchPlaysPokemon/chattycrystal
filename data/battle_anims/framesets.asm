@@ -1387,23 +1387,23 @@ BattleAnimFrameData:
 	endanim
 
 .Frameset_cc:
-	frame BATTLEANIMOAMSET_E1, 16
+	frame BATTLEANIMOAMSET_1E, 16, OAM_Y_FLIP  ;E1
 	endanim
 
 .Frameset_cd:
-	frame BATTLEANIMOAMSET_E2, 16
+	frame BATTLEANIMOAMSET_1F, 16, OAM_Y_FLIP ;E2
 	endanim
 
 .Frameset_ce:
-	frame BATTLEANIMOAMSET_E3, 16
+	frame BATTLEANIMOAMSET_1E, 16, OAM_X_FLIP, OAM_Y_FLIP  ;E3
 	endanim
 
 .Frameset_cf:
-	frame BATTLEANIMOAMSET_E4, 16
+	frame BATTLEANIMOAMSET_20, 16, OAM_X_FLIP ;E4
 	endanim
 
 .Frameset_d0:
-	frame BATTLEANIMOAMSET_E5, 16
+	frame BATTLEANIMOAMSET_1E, 16, OAM_X_FLIP ;E5
 	endanim
 
 .Frameset_d1:
@@ -1412,17 +1412,17 @@ BattleAnimFrameData:
 	frame BATTLEANIMOAMSET_71,  0
 	frame BATTLEANIMOAMSET_72,  0
 	frame BATTLEANIMOAMSET_73,  0
-	frame BATTLEANIMOAMSET_E6,  0
+	frame BATTLEANIMOAMSET_E1,  0
 	delanim
 
 .Frameset_d2:
-	frame BATTLEANIMOAMSET_E7,  4
+	frame BATTLEANIMOAMSET_E2,  4
 	frame BATTLEANIMOAMSET_02,  1
-	frame BATTLEANIMOAMSET_E7,  4
+	frame BATTLEANIMOAMSET_E2,  4
 	frame BATTLEANIMOAMSET_02,  1
-	frame BATTLEANIMOAMSET_E7,  4
+	frame BATTLEANIMOAMSET_E2,  4
 	frame BATTLEANIMOAMSET_02,  1
-	frame BATTLEANIMOAMSET_E7,  4
+	frame BATTLEANIMOAMSET_E2,  4
 	frame BATTLEANIMOAMSET_02,  1
 	delanim
 

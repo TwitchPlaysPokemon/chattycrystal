@@ -327,7 +327,7 @@ MoveAnimations:
 	dw BattleAnim_HyperBeam    ; PLACEHOLDER
 	dw BattleAnim_WoodHammer
 	dw BattleAnim_AquaJet
-	dw BattleAnim_AttackOrder  ; 148, PLACEHOLDER
+	dw BattleAnim_AttackOrder  ; 148
 	dw BattleAnim_DarkVoid
 	dw BattleAnim_HoneClaws
 	dw BattleAnim_Psyshock

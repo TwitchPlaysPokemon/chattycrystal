@@ -3737,6 +3737,7 @@ BattleAnim_Chatter:
 	anim_2gfx ANIM_GFX_NOISE, ANIM_GFX_MINI
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_26, $0, $1, $0
+	anim_cry $0
 	anim_call BattleAnim_Growl_branch_cbbbc
 	anim_obj ANIM_OBJ_CHATTER, 42, 88, $0
 	anim_wait 16

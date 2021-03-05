@@ -321,7 +321,7 @@ MoveAnimations:
 	dw BattleAnim_RockClimb
 	dw BattleAnim_ThunderWave  ; 140, PLACEHOLDER
 	dw BattleAnim_RazorLeaf    ; PLACEHOLDER
-	dw BattleAnim_IronTail     ; PLACEHOLDER
+	dw BattleAnim_IronHead
 	dw BattleAnim_Headbutt     ; PLACEHOLDER
 	dw BattleAnim_Chatter
 	dw BattleAnim_ChargeBeam
@@ -3644,6 +3644,34 @@ BattleAnim_RockClimb:
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $5c
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $e8
 	anim_wait 8
+	anim_ret
+	
+BattleAnim_IronHead:
+	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
+	anim_bgeffect ANIM_BG_1F, $1b, $2, $0
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+	anim_wait 32
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_HEADBUTT
+	anim_wait 8
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_resetobp0
+	anim_obj ANIM_OBJ_00, 128, 56, $0
+	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $28
+	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $5c
+	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $10
+	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $e8
+	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $9c
+	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $d0
+	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $1c
+	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $50
+	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $dc
+	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $90
+	anim_wait 32
+	anim_call BattleAnim_ShowMon_0
 	anim_ret
 	
 BattleAnim_Chatter:

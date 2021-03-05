@@ -285,14 +285,14 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_HEART_BURST
 	const ANIM_OBJ_WOOD_HAMMER_S
 	const ANIM_OBJ_HEAT_WAVE
-;	const ANIM_OBJ_BEE_N            -uncomment when Object Expansion is done
-;	const ANIM_OBJ_BEE_NE
-;	const ANIM_OBJ_BEE_E
-;	const ANIM_OBJ_BEE_SE
-;	const ANIM_OBJ_BEE_S
-;	const ANIM_OBJ_BEE_SW
-;	const ANIM_OBJ_BEE_W
-;	const ANIM_OBJ_BEE_NW
+	const ANIM_OBJ_BEE_N
+	const ANIM_OBJ_BEE_NE
+	const ANIM_OBJ_BEE_E
+	const ANIM_OBJ_BEE_SE
+	const ANIM_OBJ_BEE_S
+	const ANIM_OBJ_BEE_SW
+	const ANIM_OBJ_BEE_W
+	const ANIM_OBJ_BEE_NW
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def
@@ -600,6 +600,13 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMFRAMESET_D1
 	const BATTLEANIMFRAMESET_D2
 	const BATTLEANIMFRAMESET_D3
+	const BATTLEANIMFRAMESET_D4
+	const BATTLEANIMFRAMESET_D5
+	const BATTLEANIMFRAMESET_D6
+	const BATTLEANIMFRAMESET_D7
+	const BATTLEANIMFRAMESET_D8
+	const BATTLEANIMFRAMESET_D9
+	const BATTLEANIMFRAMESET_DA
 
 ; BattleAnimOAMData indexes (see data/battle_anims/oam.asm)
 	const_def
@@ -824,11 +831,13 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMOAMSET_DA
 	const BATTLEANIMOAMSET_DB
 	const BATTLEANIMOAMSET_DC
+	const BATTLEANIMOAMSET_DD
 	const BATTLEANIMOAMSET_DE
 	const BATTLEANIMOAMSET_DF
 	const BATTLEANIMOAMSET_E0
 	const BATTLEANIMOAMSET_E1
 	const BATTLEANIMOAMSET_E2
+	const BATTLEANIMOAMSET_E3
 
 ; BattleBGEffects indexes (see engine/battle_anims/bg_effects.asm)
 	const_def 1

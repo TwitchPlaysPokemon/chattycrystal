@@ -327,7 +327,7 @@ MoveAnimations:
 	dw BattleAnim_HyperBeam    ; PLACEHOLDER
 	dw BattleAnim_WoodHammer
 	dw BattleAnim_AquaJet
-	dw BattleAnim_SweetScent   ; 148, PLACEHOLDER   ;AttackOrder
+	dw BattleAnim_AttackOrder  ; 148, PLACEHOLDER
 	dw BattleAnim_DarkVoid
 	dw BattleAnim_HoneClaws
 	dw BattleAnim_Psyshock
@@ -3707,28 +3707,44 @@ BattleAnim_AquaJet:
 	anim_wait 16
 	anim_ret
 	
-;BattleAnim_AttackOrder:
-;	anim_2gfx ANIM_GFX_OBJECTS, ANIM_GFX_HIT
-;.loop
-;	anim_obj ANIM_OBJ_BEE_NE, 136, 56, $38
-;	anim_wait 4
-;	anim_obj ANIM_OBJ_BEE_W, 136, 56, $20
-;	anim_wait 4
-;	anim_obj ANIM_OBJ_BEE_SE, 136, 56, $8
-;	anim_wait 4
-;	anim_obj ANIM_OBJ_BEE_S, 136, 56, $10
-;	anim_wait 4
-;	anim_obj ANIM_OBJ_BEE_NW, 136, 56, $28
-;	anim_wait 4
-;	anim_obj ANIM_OBJ_BEE_E, 136, 56, $0
-;	anim_wait 4
-;	anim_obj ANIM_OBJ_BEE_SW, 136, 56, $18
-;	anim_wait 4
-;	anim_obj ANIM_OBJ_BEE_N, 136, 56, $30
-;	anim_wait 4
-;	anim_loop 2, .loop
-;	anim_wait 32
-;	anim_ret
+BattleAnim_AttackOrder:
+	anim_2gfx ANIM_GFX_OBJECTS, ANIM_GFX_HIT
+.loop
+	anim_obj ANIM_OBJ_BEE_NE, 136, 56, $38
+	anim_wait 4
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_02, 128, 48, $0
+	anim_obj ANIM_OBJ_BEE_W, 136, 56, $20
+	anim_wait 4
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_02, 144, 64, $0
+	anim_obj ANIM_OBJ_BEE_SE, 136, 56, $8
+	anim_wait 4
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_02, 120, 52, $0
+	anim_obj ANIM_OBJ_BEE_S, 136, 56, $10
+	anim_wait 4
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_02, 136, 56, $0
+	anim_obj ANIM_OBJ_BEE_NW, 136, 56, $28
+	anim_wait 4
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_02, 128, 48, $0
+	anim_obj ANIM_OBJ_BEE_E, 136, 56, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_02, 144, 64, $0
+	anim_obj ANIM_OBJ_BEE_SW, 136, 56, $18
+	anim_wait 4
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_02, 120, 52, $0
+	anim_obj ANIM_OBJ_BEE_N, 136, 56, $30
+	anim_wait 4
+	anim_sound 0, 1, SFX_POISON_STING
+	anim_obj ANIM_OBJ_02, 136, 56, $0
+	anim_loop 3, .loop
+	anim_wait 32
+	anim_ret
 
 BattleAnim_DarkVoid:
 	anim_1gfx ANIM_GFX_ANGELS

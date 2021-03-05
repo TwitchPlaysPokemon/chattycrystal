@@ -41,7 +41,7 @@ AnimObjGFX:
 	anim_obj_gfx 36, AnimObjSkyAttackGFX
 	anim_obj_gfx 16, AnimObjGlobeGFX
 	anim_obj_gfx 48, AnimObjShapesGFX
-	anim_obj_gfx 18, AnimObjObjectsGFX;   -set to 30, when Object Expansion is done
+	anim_obj_gfx 30, AnimObjObjectsGFX
 	anim_obj_gfx 38, AnimObjShineGFX
 	anim_obj_gfx 35, AnimObjAngelsGFX
 	anim_obj_gfx 18, AnimObjWaveGFX

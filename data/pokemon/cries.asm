@@ -260,25 +260,25 @@ PokemonCries::
 	mon_cry CRY_TREECKO,    -$022,  $120 ; GROVYLE
 	mon_cry CRY_TREECKO,    -$0b7,  $200 ; SCEPTILE
 	mon_cry CRY_HOOTHOOT,    $100,  $070 ; TORCHIC
-	mon_cry CRY_HOOTHOOT,    $0E9,  $0F4 ; COMBUSKEN
+	mon_cry CRY_HOOTHOOT,    $0e9,  $0f4 ; COMBUSKEN
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BLAZIKEN - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MUDKIP - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MARSHTOMP - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SWAMPERT - PLACEHOLDER
-	mon_cry CRY_MUK,         $115,  $0C0 ; POOCHYENA
+	mon_cry CRY_MUK,         $115,  $0c0 ; POOCHYENA
 	mon_cry CRY_BLASTOISE,   $000,  $150 ; MIGHTYENA
 	mon_cry CRY_NIDORAN_M,  -$030,  $1b0 ; ZIGZAGOON
-	mon_cry CRY_BLASTOISE,   $2F0,  $100 ; LINOONE
+	mon_cry CRY_BLASTOISE,   $2f0,  $100 ; LINOONE
 	mon_cry CRY_LOTAD,       $0df,  $084 ; LOTAD
 	mon_cry CRY_LOMBRE,      $028,  $140 ; LOMBRE
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LUDICOLO - PLACEHOLDER
-	mon_cry CRY_SPEAROW,     $06F,  $080 ; TAILLOW
+	mon_cry CRY_SPEAROW,     $06f,  $080 ; TAILLOW
 	mon_cry CRY_SPEAROW,     $020,  $090 ; SWELLOW
 	mon_cry CRY_SWELLOW,     $000,  $100 ; WINGULL
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; PELIPPER - PLACEHOLDER
 	mon_cry CRY_NIDORAN_F,   $000,  $100 ; RALTS
 	mon_cry CRY_VILEPLUME,   $008,  $100 ; KIRLIA
-	mon_cry CRY_VILEPLUME,   $F22,  $163 ; GARDEVOIR
+	mon_cry CRY_VILEPLUME,   $f22,  $163 ; GARDEVOIR
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SURSKIT - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MASQUERAIN - PLACEHOLDER
 	mon_cry CRY_TOGETIC,     $03b,  $038 ; WHISMUR - TODO: adjust
@@ -290,9 +290,9 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SKITTY - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DELCATTY - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SABLEYE - PLACEHOLDER
-	mon_cry CRY_GROWLITHE,   $080,  $0B0 ; ARON
+	mon_cry CRY_GROWLITHE,   $080,  $0b0 ; ARON
 	mon_cry CRY_WEEDLE,      $040,  $090 ; LAIRON
-	mon_cry CRY_SLOWKING,    $207,  $1B2 ; AGGRON
+	mon_cry CRY_SLOWKING,    $207,  $1b2 ; AGGRON
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; ELECTRIKE - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MANECTRIC - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; ROSELIA - PLACEHOLDER

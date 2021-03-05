@@ -3647,11 +3647,11 @@ BattleAnim_RockClimb:
 	anim_ret
 
 BattleAnim_IronHead:
-	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
-	anim_bgeffect ANIM_BG_1F, $1b, $2, $0
-	anim_sound 0, 0, SFX_SWORDS_DANCE
-	anim_wait 32
+	anim_3gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT, ANIM_GFX_REFLECT
+	anim_obp0 $0
+	anim_sound 0, 0, SFX_RAGE
 	anim_call BattleAnim_TargetObj_1Row
+	anim_call BattleAnim_MetalClaw_branch_cbc43
 	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
 	anim_wait 4
 	anim_sound 0, 1, SFX_HEADBUTT
@@ -3676,11 +3676,13 @@ BattleAnim_IronHead:
 	
 BattleAnim_GrassKnot:
 	anim_3gfx ANIM_GFX_WAVE, ANIM_GFX_PLANT, ANIM_GFX_HIT
+	anim_call BattleAnim_UserObj_1Row
 	anim_sound 0, 1, SFX_RAZOR_WIND
 	anim_obj ANIM_OBJ_GRASS_KNOT, 136, 56, $0
 	anim_wait 32
 	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $28
 	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $5c
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
 	anim_sound 0, 1, SFX_MENU
 	anim_obj ANIM_OBJ_02, 130, 48, $0
 	anim_wait 8
@@ -3694,6 +3696,7 @@ BattleAnim_GrassKnot:
 	anim_sound 0, 1, SFX_MENU
 	anim_obj ANIM_OBJ_02, 126, 64, $0
 	anim_wait 32
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
 
 BattleAnim_Chatter:

@@ -14,7 +14,7 @@ GameFreakGameDesignerScript:
 	opentext
 	writetext GameFreakGameDesignerText
 	readvar VAR_DEXUNCAUGHT
-	iffalse, .CompletedPokedex
+	iffalse .CompletedPokedex
 	waitbutton
 	closetext
 	end

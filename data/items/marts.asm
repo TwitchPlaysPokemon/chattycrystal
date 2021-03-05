@@ -177,9 +177,9 @@ MartOlivine:
 	db 10 ; # items
 	db GREAT_BALL
 	db MYSTIC_WATER
+	db METAL_POWDER
 	db SUPER_POTION
 	db HYPER_POTION
-	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
 	db ICE_HEAL
@@ -251,10 +251,11 @@ MartViridian:
 	db -1 ; end
 
 MartPewter:
-	db 9 ; # items
+	db 10 ; # items
 	db GREAT_BALL
 	db FOCUS_BAND
 	db HARD_STONE
+	db SOFT_SAND
 	db SUPER_POTION
 	db SUPER_REPEL
 	db ANTIDOTE
@@ -340,12 +341,13 @@ MartCeladon3F:
 	db -1 ; end
 
 MartCeladon4F:
-	db 9 ; # items
+	db 10 ; # items
 	db POKE_DOLL
 	db LOVELY_MAIL
 	db SURF_MAIL
 	db AMULET_COIN
 	db LUCKY_EGG
+	db LUCKY_PUNCH
 	db METAL_COAT
 	db KINGS_ROCK
 	db UP_GRADE

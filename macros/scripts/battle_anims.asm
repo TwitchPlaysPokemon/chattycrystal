@@ -5,25 +5,12 @@ endc
 	db \1
 ENDM
 
-; BattleAnimCommands indexes (see engine/battle_anims/anim_commands.asm)
-	enum_start $d0
+FIRST_ANIM_COMMAND EQU $d0
 
-	enum anim_obj_command ; $d0
-anim_obj: MACRO
-	db anim_obj_command
-if _NARG <= 4
-	db \1 ; object
-	db \2 ; x
-	db \3 ; y
-	db \4 ; param
-else
-; LEGACY: Support the tile+offset format
-	db \1 ; object
-	db (\2) * 8 + (\3) ; x_tile, x
-	db (\4) * 8 + (\5) ; y_tile, y
-	db \6 ; param
-endc
-ENDM
+; BattleAnimCommands indexes (see engine/battle_anims/anim_commands.asm)
+	enum_start FIRST_ANIM_COMMAND
+
+	enum skip ; $d0
 
 	enum anim_1gfx_command ; $d1
 anim_1gfx: MACRO
@@ -222,8 +209,17 @@ anim_clearenemyhud: MACRO
 	db anim_clearenemyhud_command
 ENDM
 
-	enum skip ; $f6
-	enum skip ; $f7
+	enum anim_obj_command ; $f6
+	enum anim_obj_command_100 ; $f7
+anim_obj: MACRO
+	assert _NARG <= 4, "6-argument anim_obj is no longer supported!"
+	assert ((\1) >= 0) && ((\1) < $200), "ANIM_OBJ constant out of range"
+	db anim_obj_command | HIGH(\1)
+	db LOW(\1) ; object
+	db \2 ; x
+	db \3 ; y
+	db \4 ; param
+ENDM
 
 	enum anim_if_param_equal_command ; $f8
 anim_if_param_equal: MACRO

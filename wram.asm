@@ -3134,7 +3134,7 @@ wBattleAnimTemp2:: db
 wBattleAnimTemp3:: db
 
 NEXTU ; d41a
-wBattleObjectTempID:: db
+wBattleObjectTempID:: dw
 wBattleObjectTempXCoord:: db
 wBattleObjectTempYCoord:: db
 wBattleObjectTempParam:: db

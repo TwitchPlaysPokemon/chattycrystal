@@ -1468,7 +1468,7 @@ BattleAnimFrameData:
 .Frameset_da:
 	frame BATTLEANIMOAMSET_AD, 16, OAM_Y_FLIP
 	endanim
-	
+
 .Frameset_db:
 	frame BATTLEANIMOAMSET_E4, 8
 	endanim

@@ -3645,7 +3645,7 @@ BattleAnim_RockClimb:
 	anim_obj ANIM_OBJ_ROCK_SMASH, 136, 24, $e8
 	anim_wait 8
 	anim_ret
-	
+
 BattleAnim_IronHead:
 	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_1F, $1b, $2, $0
@@ -3673,7 +3673,7 @@ BattleAnim_IronHead:
 	anim_wait 32
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
-	
+
 BattleAnim_Chatter:
 	anim_2gfx ANIM_GFX_NOISE, ANIM_GFX_MINI
 	anim_call BattleAnim_TargetObj_2Row
@@ -3690,7 +3690,7 @@ BattleAnim_Chatter:
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_26
 	anim_jump BattleAnim_ShowMon_0
-	
+
 BattleAnim_ChargeBeam:
 	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_CHARGE
 	anim_bgeffect ANIM_BG_06, $0, $2, $0

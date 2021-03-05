@@ -4180,14 +4180,14 @@ BattleAnimFunction_58:
 	ret nc
 	ld a, 8
 	jp BattleAnim_StepToTarget
-	
+
 BattleAnimFunction_59:
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
 	ld a, [hl]
 	inc [hl]
 	inc [hl]
-	ld d, $4
+	ld d, 4
 	call BattleAnim_Sine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
@@ -4198,7 +4198,7 @@ BattleAnimFunction_59:
 	ld hl, BATTLEANIMSTRUCT_10
 	add hl, bc
 	ld e, [hl]
-	lb hl, -1, $01
+	ld hl, -$ff
 	add hl, de
 	ld e, l
 	ld d, h

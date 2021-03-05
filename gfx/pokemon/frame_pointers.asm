@@ -362,7 +362,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Sandile
 	dba PlaceholderFrames ; PLACEHOLDER - Krokorok
 	dba KrookodileFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Ducklett
+	dba DucklettFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Swanna
 	dba TynamoFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Eelektrik

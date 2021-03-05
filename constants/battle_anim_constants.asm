@@ -228,7 +228,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_DREAM_EATER
 	const ANIM_OBJ_MINIMIZE
 	const ANIM_OBJ_ASSIST
-	const ANIM_OBJ_SWEAT
+	const ANIM_OBJ_DIVE
 	const ANIM_OBJ_HAND_REVERSE
 	const ANIM_OBJ_TEETER_DANCE
 	const ANIM_OBJ_ICE_BALL
@@ -285,6 +285,17 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_HEART_BURST
 	const ANIM_OBJ_WOOD_HAMMER_S
 	const ANIM_OBJ_HEAT_WAVE
+	const ANIM_OBJ_BEE_N
+	const ANIM_OBJ_BEE_NE
+	const ANIM_OBJ_BEE_E
+	const ANIM_OBJ_BEE_SE
+	const ANIM_OBJ_BEE_S
+	const ANIM_OBJ_BEE_SW
+	const ANIM_OBJ_BEE_W
+	const ANIM_OBJ_BEE_NW
+	const ANIM_OBJ_CHARGE_BEAM
+	const ANIM_OBJ_CHATTER
+	const ANIM_OBJ_IRON_HEAD
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def
@@ -377,6 +388,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMFUNC_56
 	const BATTLEANIMFUNC_57
 	const BATTLEANIMFUNC_58
+	const BATTLEANIMFUNC_59
 
 ; BattleAnimFrameData indexes (see data/battle_anims/framesets.asm)
 	const_def
@@ -592,6 +604,15 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMFRAMESET_D1
 	const BATTLEANIMFRAMESET_D2
 	const BATTLEANIMFRAMESET_D3
+	const BATTLEANIMFRAMESET_D4
+	const BATTLEANIMFRAMESET_D5
+	const BATTLEANIMFRAMESET_D6
+	const BATTLEANIMFRAMESET_D7
+	const BATTLEANIMFRAMESET_D8
+	const BATTLEANIMFRAMESET_D9
+	const BATTLEANIMFRAMESET_DA
+	const BATTLEANIMFRAMESET_DB
+	const BATTLEANIMFRAMESET_DC
 
 ; BattleAnimOAMData indexes (see data/battle_anims/oam.asm)
 	const_def
@@ -816,6 +837,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMOAMSET_DA
 	const BATTLEANIMOAMSET_DB
 	const BATTLEANIMOAMSET_DC
+	const BATTLEANIMOAMSET_DD
 	const BATTLEANIMOAMSET_DE
 	const BATTLEANIMOAMSET_DF
 	const BATTLEANIMOAMSET_E0
@@ -823,9 +845,6 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMOAMSET_E2
 	const BATTLEANIMOAMSET_E3
 	const BATTLEANIMOAMSET_E4
-	const BATTLEANIMOAMSET_E5
-	const BATTLEANIMOAMSET_E6
-	const BATTLEANIMOAMSET_E7
 
 ; BattleBGEffects indexes (see engine/battle_anims/bg_effects.asm)
 	const_def 1

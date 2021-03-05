@@ -944,6 +944,8 @@ VictreebelFrontpic:  INCBIN "gfx/pokemon/victreebel/front.animated.2bpp.lz"
 
 SECTION "Pics 31", ROMX
 
+CharmanderFrontpic:  INCBIN "gfx/pokemon/charmander/front.animated.2bpp.lz"
+EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SimisageFrontpic:    INCBIN "gfx/pokemon/simisage/front.animated.2bpp.lz"
 DrilburBackpic:      INCBIN "gfx/pokemon/drilbur/back.2bpp.lz"
 DrilburFrontpic:     INCBIN "gfx/pokemon/drilbur/front.animated.2bpp.lz"
@@ -955,8 +957,6 @@ KrokorokBackpic:     INCBIN "gfx/pokemon/krokorok/back.2bpp.lz"
 KrokorokFrontpic:    INCBIN "gfx/pokemon/krokorok/front.animated.2bpp.lz"
 KrookodileBackpic:   INCBIN "gfx/pokemon/krookodile/back.2bpp.lz"
 KrookodileFrontpic:  INCBIN "gfx/pokemon/krookodile/front.animated.2bpp.lz"
-DucklettBackpic:     INCBIN "gfx/pokemon/ducklett/back.2bpp.lz"
-DucklettFrontpic:    INCBIN "gfx/pokemon/ducklett/front.animated.2bpp.lz"
 SwannaBackpic:       INCBIN "gfx/pokemon/swanna/back.2bpp.lz"
 SwannaFrontpic:      INCBIN "gfx/pokemon/swanna/front.animated.2bpp.lz"
 TynamoBackpic:       INCBIN "gfx/pokemon/tynamo/back.2bpp.lz"
@@ -969,8 +969,7 @@ LitwickBackpic:      INCBIN "gfx/pokemon/litwick/back.2bpp.lz"
 LitwickFrontpic:     INCBIN "gfx/pokemon/litwick/front.animated.2bpp.lz"
 LampentBackpic:      INCBIN "gfx/pokemon/lampent/back.2bpp.lz"
 CutieflyBackpic:     INCBIN "gfx/pokemon/cutiefly/back.2bpp.lz"
-RibombeeBackpic:     INCBIN "gfx/pokemon/ribombee/back.2bpp.lz"
-ChandelureBackpic:   INCBIN "gfx/pokemon/chandelure/back.2bpp.lz"
+ChandelureFrontpic:  INCBIN "gfx/pokemon/chandelure/front.animated.2bpp.lz"
 
 SECTION "Pics 32", ROMX
 
@@ -1055,14 +1054,15 @@ CorsolaFrontpic:     INCBIN "gfx/pokemon/corsola/front.animated.2bpp.lz"
 
 SECTION "Pics 37", ROMX
 
-CharmanderFrontpic:  INCBIN "gfx/pokemon/charmander/front.animated.2bpp.lz"
 MisdreavusFrontpic:  INCBIN "gfx/pokemon/misdreavus/front.animated.2bpp.lz"
 CelebiFrontpic:      INCBIN "gfx/pokemon/celebi/front.animated.2bpp.lz"
-EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
 MudkipBackpic:       INCBIN "gfx/pokemon/mudkip/back.2bpp.lz"
 
 SECTION "Pics 38", ROMX
 
-ChandelureFrontpic:  INCBIN "gfx/pokemon/chandelure/front.animated.2bpp.lz"
+DucklettBackpic:     INCBIN "gfx/pokemon/ducklett/back.2bpp.lz"
+DucklettFrontpic:    INCBIN "gfx/pokemon/ducklett/front.animated.2bpp.lz"
+RibombeeBackpic:     INCBIN "gfx/pokemon/ribombee/back.2bpp.lz"
+ChandelureBackpic:   INCBIN "gfx/pokemon/chandelure/back.2bpp.lz"
 SkuntankBackpic:     INCBIN "gfx/pokemon/skuntank/back.2bpp.lz"

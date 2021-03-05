@@ -322,7 +322,7 @@ MoveAnimations:
 	dw BattleAnim_ThunderWave  ; 140, PLACEHOLDER
 	dw BattleAnim_RazorLeaf    ; PLACEHOLDER
 	dw BattleAnim_IronHead
-	dw BattleAnim_Headbutt     ; PLACEHOLDER
+	dw BattleAnim_GrassKnot
 	dw BattleAnim_Chatter
 	dw BattleAnim_ChargeBeam
 	dw BattleAnim_WoodHammer
@@ -3672,6 +3672,28 @@ BattleAnim_IronHead:
 	anim_obj ANIM_OBJ_IRON_HEAD, 128, 64, $90
 	anim_wait 32
 	anim_call BattleAnim_ShowMon_0
+	anim_ret
+	
+BattleAnim_GrassKnot:
+	anim_3gfx ANIM_GFX_WAVE, ANIM_GFX_PLANT, ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_GRASS_KNOT, 136, 56, $0
+	anim_wait 32
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $28
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $5c
+	anim_sound 0, 1, SFX_MENU
+	anim_obj ANIM_OBJ_02, 130, 48, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $10
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $e8
+	anim_sound 0, 1, SFX_MENU
+	anim_obj ANIM_OBJ_02, 152, 56, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $9c
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $d0
+	anim_sound 0, 1, SFX_MENU
+	anim_obj ANIM_OBJ_02, 126, 64, $0
+	anim_wait 32
 	anim_ret
 
 BattleAnim_Chatter:

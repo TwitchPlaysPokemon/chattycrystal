@@ -944,6 +944,8 @@ VictreebelFrontpic:  INCBIN "gfx/pokemon/victreebel/front.animated.2bpp.lz"
 
 SECTION "Pics 31", ROMX
 
+CharmanderFrontpic:  INCBIN "gfx/pokemon/charmander/front.animated.2bpp.lz"
+EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SimisageFrontpic:    INCBIN "gfx/pokemon/simisage/front.animated.2bpp.lz"
 DrilburBackpic:      INCBIN "gfx/pokemon/drilbur/back.2bpp.lz"
 DrilburFrontpic:     INCBIN "gfx/pokemon/drilbur/front.animated.2bpp.lz"
@@ -1052,10 +1054,8 @@ CorsolaFrontpic:     INCBIN "gfx/pokemon/corsola/front.animated.2bpp.lz"
 
 SECTION "Pics 37", ROMX
 
-CharmanderFrontpic:  INCBIN "gfx/pokemon/charmander/front.animated.2bpp.lz"
 MisdreavusFrontpic:  INCBIN "gfx/pokemon/misdreavus/front.animated.2bpp.lz"
 CelebiFrontpic:      INCBIN "gfx/pokemon/celebi/front.animated.2bpp.lz"
-EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
 MudkipBackpic:       INCBIN "gfx/pokemon/mudkip/back.2bpp.lz"
 

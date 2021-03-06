@@ -10,13 +10,13 @@ LeaguePCScript:
 	iffalse .log_off
 	writetext .loading_text
 	special HealParty
-	callasm BackupHeldItems
+	special BackupHeldItems
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	winlosstext .win_text, .lose_text
 	loadtrainer BATTLE_PC, MIRROR_PC
 	startbattle
 	reloadmap
-	callasm RestoreHeldItems
+	special RestoreHeldItems
 	special HealParty
 	end
 

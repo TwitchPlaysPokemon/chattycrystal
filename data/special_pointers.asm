@@ -55,7 +55,7 @@ SpecialsPointers::
 	add_special UnownPuzzle
 	add_special SlotMachine
 	add_special CardFlip
-	add_special DummyNonfunctionalGameCornerGame
+	add_special RestoreHeldItems
 	add_special ClearBGPalettesBufferScreen
 	add_special FadeOutPalettes
 	add_special BattleTowerFade
@@ -69,7 +69,7 @@ SpecialsPointers::
 	add_special UpdateSprites ; bank 0
 	add_special ReplaceKrisSprite ; $38 ; bank 0
 	add_special GameCornerPrizeMonCheckDex
-	add_special UnusedSetSeenMon
+	add_special BackupHeldItems
 	add_special WaitSFX ; bank 0
 	add_special PlayMapMusic ; bank 0
 	add_special RestartMapMusic ; bank 0

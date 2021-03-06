@@ -32,10 +32,10 @@ Marina:
 	startbattle
 	dontrestartmapmusic
 	reloadmap
-	iftrue .LostToMarina
 	special FadeOutMusic
 	special RestoreHeldItems
 	opentext
+	iftrue .LostToMarina
 	writetext .MarinaDefeated
 	waitbutton
 	closetext
@@ -55,9 +55,6 @@ Marina:
 	end
 
 .LostToMarina
-	special FadeOutMusic
-	special RestoreHeldItems
-	opentext
 	writetext .MarinaVictorious
 	waitbutton
 	closetext

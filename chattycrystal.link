@@ -41,13 +41,13 @@ ROMX $04
 ROMX $05
 	"bank5"
 	"Map Blocks 6"
-	"Extra Songs 6"
+	"Songs 10"
 ROMX $06
 	"Tileset Data 1"
 ROMX $07
 	"Roofs"
 	"Tileset Data 2"
-	"Extra Songs 1"
+	"Songs 6"
 	"Enemy Trainer Parties 3"
 ROMX $08
 	"Clock Reset"
@@ -122,6 +122,7 @@ ROMX $22
 	"bank22"
 ROMX $23
 	"bank23"
+	"Map Blocks 7"
 ROMX $24
 	"bank24"
 ROMX $25
@@ -136,7 +137,7 @@ ROMX $28
 	"Pics 33"
 ROMX $29
 	"Phone Text"
-	"Extra Songs 4"
+	"Songs 8"
 ROMX $2a
 	"Map Blocks 1"
 ROMX $2b
@@ -148,7 +149,7 @@ ROMX $2d
 	"Tileset Data 5"
 ROMX $2e
 	"bank2E"
-	"Extra Songs 2"
+	"Songs 7"
 ROMX $2f
 	"Phone Scripts 2"
 	"Tileset Data 9"
@@ -182,7 +183,6 @@ ROMX $3b
 ROMX $3c
 	"Songs 3"
 	"Sound Effects"
-	"Extra Songs 3"
 ROMX $3d
 	"Songs 4"
 ROMX $3e
@@ -296,6 +296,7 @@ ROMX $67
 ROMX $68
 	"Map Scripts 21"
 	"Map Scripts Trick House"
+	"Map Scripts Seafloor Cavern"
 ROMX $69
 	"Map Scripts 22"
 ROMX $6a
@@ -317,16 +318,17 @@ ROMX $70
 	"Pic Animations 4"
 ROMX $71
 	"Text 3"
-	"Effect Commands Extra"
+	"Tileset Data 14"
 ROMX $72
 	"Miscellaneous Text"
 	"Animation Scripts and Pointers"
+	"Effect Commands Extra"
 ROMX $73
 	"Pokedex Entries 129-192"
 	"Pics 36"
 ROMX $74
 	"Pokedex Entries 193-251"
-	"Extra Songs 5"
+	"Songs 9"
 ROMX $75
 	"16-bit ID stuff"
 	"Pics 27"

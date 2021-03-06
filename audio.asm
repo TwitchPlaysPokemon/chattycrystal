@@ -30,6 +30,7 @@ INCLUDE "audio/music/lookpokemaniac.asm"
 INCLUDE "audio/music/trainervictory.asm"
 INCLUDE "audio/music/custom/battlearcadebattle.asm"
 
+
 SECTION "Songs 2", ROMX
 
 INCLUDE "audio/music/route1.asm"
@@ -74,6 +75,14 @@ INCLUDE "audio/music/halloffame.asm"
 INCLUDE "audio/music/healpokemon.asm"
 INCLUDE "audio/music/evolution.asm"
 INCLUDE "audio/music/printer.asm"
+INCLUDE "audio/music/custom/hoennrivalbattle.asm"
+INCLUDE "audio/music/custom/diglettscave.asm"
+INCLUDE "audio/music/custom/cinnabarmansion.asm"
+INCLUDE "audio/music/custom/pokemontower.asm"
+INCLUDE "audio/music/custom/ceruleancave.asm"
+INCLUDE "audio/music/custom/kantolegendbattle.asm"
+INCLUDE "audio/music/custom/vsWCS.asm"
+INCLUDE "audio/music/custom/battletentruins.asm"
 
 
 SECTION "Songs 4", ROMX
@@ -129,28 +138,19 @@ INCLUDE "audio/music/battletowerlobby.asm"
 INCLUDE "audio/music/mobilecenter.asm"
 
 
-SECTION "Extra Songs 1", ROMX
+SECTION "Songs 6", ROMX
 
 INCLUDE "audio/music/credits.asm"
 INCLUDE "audio/music/clair.asm"
 INCLUDE "audio/music/mobileadapter.asm"
 
 
-SECTION "Extra Songs 2", ROMX
+SECTION "Songs 7", ROMX
 
 INCLUDE "audio/music/postcredits.asm"
 
-SECTION "Extra Songs 3", ROMX
 
-INCLUDE "audio/music/custom/diglettscave.asm"
-INCLUDE "audio/music/custom/cinnabarmansion.asm"
-INCLUDE "audio/music/custom/pokemontower.asm"
-INCLUDE "audio/music/custom/ceruleancave.asm"
-INCLUDE "audio/music/custom/kantolegendbattle.asm"
-INCLUDE "audio/music/custom/vsWCS.asm"
-INCLUDE "audio/music/custom/battletentruins.asm"
-
-SECTION "Extra Songs 4", ROMX
+SECTION "Songs 8", ROMX
 
 INCLUDE "audio/music/custom/phancerobattle.asm"
 INCLUDE "audio/music/custom/hoohbattle.asm"
@@ -159,7 +159,8 @@ INCLUDE "audio/music/custom/ceruleanGSC.asm"
 INCLUDE "audio/music/custom/nuggetbridge.asm"
 INCLUDE "audio/music/custom/silphco.asm"
 
-SECTION "Extra Songs 5", ROMX
+
+SECTION "Songs 9", ROMX
 
 INCLUDE "audio/music/custom/championbattleRSE.asm"
 INCLUDE "audio/music/custom/championbattleB2W2.asm"
@@ -167,11 +168,12 @@ INCLUDE "audio/music/custom/championRB.asm"
 INCLUDE "audio/music/custom/gymleaderbattleXY.asm"
 INCLUDE "audio/music/custom/gymleaderprism.asm"
 
-SECTION "Extra Songs 6", ROMX
+
+SECTION "Songs 10", ROMX
 
 INCLUDE "audio/music/custom/trickhouse.asm"
 INCLUDE "audio/music/custom/caveoforigin.asm"
-INCLUDE "audio/music/custom/hoennrivalbattle.asm"
+
 
 SECTION "Sound Effects", ROMX
 

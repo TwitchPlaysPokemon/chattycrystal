@@ -28,7 +28,7 @@ InitDisplayForHallOfFame:
 	text_far _SavingRecordText
 	text_end
 
-InitDisplayForRedCredits:
+InitDisplayForRedCredits::
 	call ClearBGPalettes
 	call ClearTileMap
 	call ClearSprites

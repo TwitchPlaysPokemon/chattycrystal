@@ -5061,6 +5061,10 @@ BattleMenu_Pack:
 	and a
 	jp nz, .ItemsCantBeUsed
 
+	ld a, [wBattleType]
+	cp BATTLETYPE_METRONOME
+	jp z, .ItemsCantBeUsed
+
 	call LoadStandardMenuHeader
 
 	ld a, [wBattleType]

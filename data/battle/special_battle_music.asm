@@ -52,4 +52,5 @@ SpecialBattleMusicTrainers:
 	dbw XY_SERENA2,           MUSIC_XY_GYM_LEADER
 	dbw RED,                  MUSIC_CHAMPION_BATTLE
 	dbw RBY_GREEN,            MUSIC_CHAMPION_BATTLE
+	dbw BLUE_MAY,             MUSIC_HOENN_RIVAL_BATTLE
 	db -1

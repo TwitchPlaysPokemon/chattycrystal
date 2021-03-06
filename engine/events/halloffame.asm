@@ -51,8 +51,12 @@ RedCredits::
 	ld c, 8
 	call DelayFrames
 	call DisableSpriteUpdates
+	ld a, [wSpawnAfterChampion]
+	and a ; check for SPAWN_MARINA
+	jr nz, .skip_setting_spawn
 	ld a, SPAWN_RED
 	ld [wSpawnAfterChampion], a
+.skip_setting_spawn
 	ld a, [wStatusFlags]
 	ld b, a
 	farcall Credits

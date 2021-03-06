@@ -163,8 +163,9 @@ SCRIPT_RUNNING EQU 2
 	const SCRIPT_WAIT
 
 ; wSpawnAfterChampion:: ; d4b5
-SPAWN_LANCE EQU 1
-SPAWN_RED   EQU 2
+SPAWN_LANCE  EQU 1
+SPAWN_RED    EQU 2
+SPAWN_MARINA EQU 3
 
 ; wCurDay:: ; d4cb
 	const_def

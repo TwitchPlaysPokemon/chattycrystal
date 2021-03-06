@@ -603,8 +603,8 @@
 	const EVENT_MT_BATTLE_HEALED_11F
 	const skip
 	const skip
-	const skip ; 250
-	const skip
+	const EVENT_REDS_HOUSE_2F_TM_ROCK_SMASH ; 250
+	const EVENT_MARINA_AVAILABLE
 	const skip
 	const skip
 	const skip

@@ -383,6 +383,11 @@ Continue:
 	call PostCreditsSpawn
 	jp FinishContinueFunction
 
+SpawnAfterMarina:
+	ld a, SPAWN_PALLET
+	ld [wDefaultSpawnpoint], a
+	jp PostCreditsSpawn
+
 SpawnAfterRed:
 	ld a, SPAWN_MT_SILVER
 	ld [wDefaultSpawnpoint], a
@@ -440,12 +445,18 @@ FinishContinueFunction:
 	set 1, [hl]
 	farcall OverworldLoop
 	ld a, [wSpawnAfterChampion]
+	cp SPAWN_MARINA
+	jr z, .AfterMarina
 	cp SPAWN_RED
 	jr z, .AfterRed
 	jp Reset
 
 .AfterRed:
 	call SpawnAfterRed
+	jr .loop
+
+.AfterMarina:
+	call SpawnAfterMarina
 	jr .loop
 
 DisplaySaveInfoOnContinue:

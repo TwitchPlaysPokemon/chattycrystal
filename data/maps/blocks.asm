@@ -1085,3 +1085,23 @@ TrickHousePuzzle5_Blocks:
 
 TrickHousePuzzle6_Blocks:
 	INCBIN "maps/TrickHousePuzzle6.blk"
+
+SECTION "Map Blocks 7", ROMX
+
+SeafloorCavernEntrance_Blocks:
+	INCBIN "maps/SeafloorCavernEntrance.blk"
+
+SeafloorCavernRoom1_Blocks:
+	INCBIN "maps/SeafloorCavernRoom1.blk"
+
+SeafloorCavernRoom4_Blocks:
+	INCBIN "maps/SeafloorCavernRoom4.blk"
+
+SeafloorCavernRoom5_Blocks:
+	INCBIN "maps/SeafloorCavernRoom5.blk"
+
+SeafloorCavernRoom8_Blocks:
+	INCBIN "maps/SeafloorCavernRoom8.blk"
+
+SeafloorCavernRoom9_Blocks:
+	INCBIN "maps/SeafloorCavernRoom9.blk"

@@ -105,6 +105,7 @@ KANTO_LANDMARK EQU const_value
 	const TOHJO_FALLS       ; 62
 	const ROUTE_28          ; 63
 	const FAST_SHIP         ; 64
+	const SEAFLOOR_CAVERN   ; 65
 
 ; used in CaughtData
 GIFT_LOCATION  EQU $7e

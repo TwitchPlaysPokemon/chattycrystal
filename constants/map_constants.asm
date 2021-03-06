@@ -320,6 +320,12 @@ ENDM
 	map_const REDS_HOUSE_2F,                                4,  4 ;  4
 	map_const BLUES_HOUSE,                                  4,  4 ;  5
 	map_const OAKS_LAB,                                     5,  6 ;  6
+	map_const SEAFLOOR_CAVERN_ENTRANCE,                    10, 10 ;  7
+	map_const SEAFLOOR_CAVERN_ROOM1,                       10, 10 ;  8
+	map_const SEAFLOOR_CAVERN_ROOM4,                        9, 10 ;  9
+	map_const SEAFLOOR_CAVERN_ROOM5,                       10, 11 ; 10
+	map_const SEAFLOOR_CAVERN_ROOM8,                        5,  7 ; 11
+	map_const SEAFLOOR_CAVERN_ROOM9,                       13, 23 ; 12
 
 	newgroup                                                      ; 14
 

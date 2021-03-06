@@ -564,3 +564,13 @@ INCLUDE "maps/TrickHousePuzzle4.asm"
 INCLUDE "maps/TrickHousePuzzle5.asm"
 INCLUDE "maps/TrickHousePuzzle6.asm"
 ; DO NOT ADD OTHER MAPS HERE
+
+
+SECTION "Map Scripts Seafloor Cavern", ROMX
+
+INCLUDE "maps/SeafloorCavernEntrance.asm"
+INCLUDE "maps/SeafloorCavernRoom1.asm"
+INCLUDE "maps/SeafloorCavernRoom4.asm"
+INCLUDE "maps/SeafloorCavernRoom5.asm"
+INCLUDE "maps/SeafloorCavernRoom8.asm"
+INCLUDE "maps/SeafloorCavernRoom9.asm"

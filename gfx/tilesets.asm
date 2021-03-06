@@ -351,24 +351,6 @@ TilesetCaveColl:
 TilesetDarkCaveColl:
 INCLUDE "data/tilesets/cave_collision.asm"
 
-TilesetSafariGFX:
-INCBIN "gfx/tilesets/safari.2bpp.lz"
-
-TilesetSafariMeta:
-INCBIN "data/tilesets/safari_metatiles.bin"
-
-TilesetSafariColl:
-INCLUDE "data/tilesets/safari_collision.asm"
-
-TilesetPkmnMansionGFX:
-INCBIN "gfx/tilesets/pkmn_mansion.2bpp.lz"
-
-TilesetPkmnMansionMeta:
-INCBIN "data/tilesets/pkmn_mansion_metatiles.bin"
-
-TilesetPkmnMansionColl:
-INCLUDE "data/tilesets/pkmn_mansion_collision.asm"
-
 
 SECTION "Tileset Data 11", ROMX
 
@@ -395,3 +377,23 @@ SECTION "Tileset Data 13", ROMX
 
 TilesetTraditionalHouseGFX:
 INCBIN "gfx/tilesets/traditional_house.2bpp.lz"
+
+SECTION "Tileset Data 14", ROMX
+
+TilesetSafariGFX:
+	INCBIN "gfx/tilesets/safari.2bpp.lz"
+
+TilesetSafariMeta:
+	INCBIN "data/tilesets/safari_metatiles.bin"
+
+TilesetSafariColl:
+	INCLUDE "data/tilesets/safari_collision.asm"
+
+TilesetPkmnMansionGFX:
+	INCBIN "gfx/tilesets/pkmn_mansion.2bpp.lz"
+
+TilesetPkmnMansionMeta:
+	INCBIN "data/tilesets/pkmn_mansion_metatiles.bin"
+
+TilesetPkmnMansionColl:
+	INCLUDE "data/tilesets/pkmn_mansion_collision.asm"

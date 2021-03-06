@@ -107,6 +107,7 @@ Landmarks:
 	landmark  12, 100, TohjoFallsName
 	landmark  20,  68, Route28Name
 	landmark 140, 116, FastShipName
+	landmark 140, 116, SeafloorCavernName
 
 NewBarkTownName:     db "NEW BARK¯TOWN@"
 CherrygroveCityName: db "CHERRYGROVE¯CITY@"
@@ -210,4 +211,5 @@ DiglettsCaveName:    db "DIGLETT'S¯CAVE@"
 TohjoFallsName:      db "TOHJO FALLS@"
 UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE¯TOWER@"
+SeafloorCavernName:  db "SEAFLOOR CAVERN@"
 SpecialMapName:      db "SPECIAL@"

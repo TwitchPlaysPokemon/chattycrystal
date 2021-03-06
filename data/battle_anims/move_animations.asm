@@ -320,9 +320,9 @@ MoveAnimations:
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
 	dw BattleAnim_RockClimb
 	dw BattleAnim_ThunderWave  ; 140, PLACEHOLDER
-	dw BattleAnim_RazorLeaf    ; PLACEHOLDER
+	dw BattleAnim_LeafStorm
 	dw BattleAnim_IronHead
-	dw BattleAnim_Headbutt     ; PLACEHOLDER
+	dw BattleAnim_GrassKnot
 	dw BattleAnim_Chatter
 	dw BattleAnim_ChargeBeam
 	dw BattleAnim_WoodHammer
@@ -3646,12 +3646,46 @@ BattleAnim_RockClimb:
 	anim_wait 8
 	anim_ret
 
-BattleAnim_IronHead:
-	anim_2gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT
-	anim_bgeffect ANIM_BG_1F, $1b, $2, $0
-	anim_sound 0, 0, SFX_SWORDS_DANCE
+BattleAnim_LeafStorm:
+	anim_1gfx ANIM_GFX_LEAF_STORM
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 80, $18
+	anim_wait 2
+	anim_obj ANIM_OBJ_LEAF_STORM_BIG, 44, 92, $18
+	anim_wait 2
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 112, $18
+	anim_wait 2
+	anim_bgeffect ANIM_BG_1F, $55, $2, $0
+.loop
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_LEAF_STORM_BIG, 44, 96, $18
+	anim_wait 2
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 80, $18
+	anim_wait 2
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 112, $18
+	anim_wait 2
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 80, $18
+	anim_wait 2
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_LEAF_STORM_BIG, 44, 92, $18
+	anim_wait 2
+	anim_obj ANIM_OBJ_LEAF_STORM_SMALL, 44, 112, $18
+	anim_wait 2
+	anim_loop 5, .loop
+	anim_incbgeffect ANIM_BG_1F
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_wait 4
+	anim_sound 0, 0, SFX_RAZOR_WIND
 	anim_wait 32
+	anim_ret
+
+BattleAnim_IronHead:
+	anim_3gfx ANIM_GFX_ROCKS, ANIM_GFX_HIT, ANIM_GFX_REFLECT
+	anim_obp0 $0
+	anim_sound 0, 0, SFX_RAGE
 	anim_call BattleAnim_TargetObj_1Row
+	anim_call BattleAnim_MetalClaw_branch_cbc43
 	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
 	anim_wait 4
 	anim_sound 0, 1, SFX_HEADBUTT
@@ -3673,11 +3707,37 @@ BattleAnim_IronHead:
 	anim_wait 32
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
+	
+BattleAnim_GrassKnot:
+	anim_3gfx ANIM_GFX_WAVE, ANIM_GFX_PLANT, ANIM_GFX_HIT
+	anim_call BattleAnim_UserObj_1Row
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_GRASS_KNOT, 136, 56, $0
+	anim_wait 32
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $28
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $5c
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
+	anim_sound 0, 1, SFX_MENU
+	anim_obj ANIM_OBJ_02, 130, 48, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $10
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $e8
+	anim_sound 0, 1, SFX_MENU
+	anim_obj ANIM_OBJ_02, 152, 56, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $9c
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $d0
+	anim_sound 0, 1, SFX_MENU
+	anim_obj ANIM_OBJ_02, 126, 64, $0
+	anim_wait 32
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
 
 BattleAnim_Chatter:
 	anim_2gfx ANIM_GFX_NOISE, ANIM_GFX_MINI
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_26, $0, $1, $0
+	anim_cry $0
 	anim_call BattleAnim_Growl_branch_cbbbc
 	anim_obj ANIM_OBJ_CHATTER, 42, 88, $0
 	anim_wait 16

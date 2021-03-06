@@ -199,7 +199,7 @@
 	tilecoll FLOOR, WALL, WALL, UP_WALL ; c6
 	tilecoll FLOOR, WARP_CARPET_DOWN, UP_WALL, WALL ; c7
 	tilecoll WALL, FLOOR, WALL, WALL ; c8
-	tilecoll WALL, FLOOR, FLOOR, WALL ; c9
+	tilecoll FLOOR, FLOOR, FLOOR, WALL ; c9
 	tilecoll FLOOR, FLOOR, WALL, WALL ; ca
 	tilecoll FLOOR, WALL, WALL, WALL ; cb
 	tilecoll FLOOR, FLOOR, UP_WALL, WALL ; cc

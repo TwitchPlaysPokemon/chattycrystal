@@ -319,7 +319,7 @@ MoveAnimations:
 	dw BattleAnim_Headbutt     ; PLACEHOLDER
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
 	dw BattleAnim_RockClimb
-	dw BattleAnim_ThunderWave  ; 140, PLACEHOLDER
+	dw BattleAnim_Discharge    ; 140
 	dw BattleAnim_LeafStorm
 	dw BattleAnim_IronHead
 	dw BattleAnim_GrassKnot
@@ -3646,6 +3646,46 @@ BattleAnim_RockClimb:
 	anim_wait 8
 	anim_ret
 
+BattleAnim_Discharge:
+	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_EXPLOSION
+	anim_battlergfx_2row
+	anim_sound 0, 1, SFX_THUNDERSHOCK
+	anim_obj ANIM_OBJ_34, 48, 88, $2
+	anim_obj ANIM_OBJ_33, 48, 88, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_THUNDERSHOCK
+	anim_wait 4
+	anim_sound 0, 1, SFX_THUNDERSHOCK
+	anim_wait 4
+	anim_clearobjs
+	anim_sound 0, 1, SFX_THUNDERSHOCK
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_obj ANIM_OBJ_LIGHTNING_BOLT, 48, 88, $2
+	anim_obj ANIM_OBJ_33, 48, 88, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_THUNDERSHOCK
+	anim_wait 4
+	anim_clearobjs
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_sound 0, 1, SFX_THUNDERSHOCK
+	anim_obj ANIM_OBJ_LIGHTNING_BOLT, 48, 88, $2
+	anim_obj ANIM_OBJ_31, 48, 88, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_THUNDERSHOCK
+	anim_obj ANIM_OBJ_DISCHARGE, 48, 88, $0
+.loop
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_wait 16
+	anim_loop 6, .loop
+	anim_clearobjs
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
+	anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
+	anim_obj ANIM_OBJ_33, 136, 56, $0
+	anim_wait 32
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
+
 BattleAnim_LeafStorm:
 	anim_1gfx ANIM_GFX_LEAF_STORM
 	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
@@ -3707,7 +3747,7 @@ BattleAnim_IronHead:
 	anim_wait 32
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
-	
+
 BattleAnim_GrassKnot:
 	anim_3gfx ANIM_GFX_WAVE, ANIM_GFX_PLANT, ANIM_GFX_HIT
 	anim_call BattleAnim_UserObj_1Row

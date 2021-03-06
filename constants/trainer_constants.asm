@@ -861,7 +861,7 @@ CHRIS EQU __enum__
 	trainervalue GMMTMT
 
 KRIS EQU __enum__
-	
+
 	trainerclass BLUE_MAY ; 4b
 	trainervalue MARINA
 

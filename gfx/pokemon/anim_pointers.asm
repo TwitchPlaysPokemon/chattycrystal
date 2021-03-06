@@ -370,7 +370,7 @@ AnimationPointers:
 	dw LitwickAnimation
 	dw LampentAnimation
 	dw ChandelureAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Clauncher
+	dw ClauncherAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Clawitzer
 	dw PlaceholderAnimation ; PLACEHOLDER - Helioptile
 	dw HelioliskAnimation

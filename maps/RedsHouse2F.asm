@@ -62,12 +62,15 @@ RedsHouse2FPCText:
 	cont "in a long time…"
 	done
 
+RedsHouse2F_RockSmashTM:
+	itemball TM_ROCK_SMASH
+
 RedsHouse2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
 	warp_event  7,  0, REDS_HOUSE_1F, 3
-    warp_event  0,  7, SEAFLOOR_CAVERN_ENTRANCE, 2
+	warp_event  0,  7, SEAFLOOR_CAVERN_ENTRANCE, 2
 
 	db 0 ; coord events
 
@@ -78,7 +81,4 @@ RedsHouse2F_MapEvents:
 	bg_event  0,  7, BGEVENT_LEFT, RedsHouse2BedScript
 
 	db 1 ; object events
-	object_event  3, 1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, .giveRockSmash, EVENT_REDS_HOUSE_2F_TM_ROCK_SMASH
-
-.giveRockSmash
-	itemball TM_ROCK_SMASH
+	object_event  3, 1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RedsHouse2F_RockSmashTM, EVENT_REDS_HOUSE_2F_TM_ROCK_SMASH

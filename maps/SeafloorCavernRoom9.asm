@@ -6,19 +6,6 @@ SeafloorCavernRoom9_MapScripts:
 
 	db 0 ; callbacks
 
-SeafloorCavernRoom9_MapEvents:
-	db 0, 0 ; filler
-
-	db 1 ; warp events
-	warp_event  5, 4, SEAFLOOR_CAVERN_ROOM8, 2
-
-	db 0 ; coord events
-
-	db 0 ; bg events
-
-	db 1 ; object events
-	object_event 12,  6, SPRITE_MAY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Marina, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-
 Marina:
 	special FadeOutMusic
 	chattyoff
@@ -29,7 +16,14 @@ Marina:
 	faceplayer
 	opentext
 	writetext .Challenge
-	scall .TakeAwayItems
+	special BackupHeldItems
+	setval 0
+	writemem wPartyMon1Item
+	writemem wPartyMon2Item
+	writemem wPartyMon3Item
+	writemem wPartyMon4Item
+	writemem wPartyMon5Item
+	writemem wPartyMon6Item
 	waitbutton
 	closetext
 	winlosstext .YouWin, .YouLose
@@ -38,10 +32,10 @@ Marina:
 	startbattle
 	dontrestartmapmusic
 	reloadmap
-	iftrue .LostToMarina
 	special FadeOutMusic
 	special RestoreHeldItems
 	opentext
+	iftrue .LostToMarina
 	writetext .MarinaDefeated
 	waitbutton
 	closetext
@@ -61,9 +55,6 @@ Marina:
 	end
 
 .LostToMarina
-	special FadeOutMusic
-	special RestoreHeldItems
-	opentext
 	writetext .MarinaVictorious
 	waitbutton
 	closetext
@@ -113,13 +104,15 @@ Marina:
 	line "<PLAYER>!"
 	done
 
-.TakeAwayItems
-	special BackupHeldItems
-	setval 0
-	writemem wPartyMon1Item
-	writemem wPartyMon2Item
-	writemem wPartyMon3Item
-	writemem wPartyMon4Item
-	writemem wPartyMon5Item
-	writemem wPartyMon6Item
-	end
+SeafloorCavernRoom9_MapEvents:
+	db 0, 0 ; filler
+
+	db 1 ; warp events
+	warp_event  5, 4, SEAFLOOR_CAVERN_ROOM8, 2
+
+	db 0 ; coord events
+
+	db 0 ; bg events
+
+	db 1 ; object events
+	object_event 12,  6, SPRITE_MAY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Marina, EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1

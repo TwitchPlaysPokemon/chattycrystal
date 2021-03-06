@@ -1,5 +1,3 @@
-	object_const_def ; object_event constants
-
 SeafloorCavernRoom5_MapScripts:
 	db 0 ; scene scripts
 
@@ -24,4 +22,3 @@ SeafloorCavernRoom5_MapEvents:
 	object_event 11,  8, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafloorCavernBoulder, -1
 	object_event 12,  9, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafloorCavernBoulder, -1
 	object_event 13,  9, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafloorCavernRock, -1
-

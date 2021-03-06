@@ -317,7 +317,7 @@ MoveAnimations:
 	dw BattleAnim_SludgeBomb   ; PLACEHOLDER
 	dw BattleAnim_Cut          ; PLACEHOLDER
 	dw BattleAnim_Headbutt     ; PLACEHOLDER
-	dw BattleAnim_ShadowBall   ; PLACEHOLDER
+	dw BattleAnim_FlashCannon
 	dw BattleAnim_RockClimb
 	dw BattleAnim_Discharge    ; 140
 	dw BattleAnim_LeafStorm
@@ -3600,6 +3600,43 @@ BattleAnim_FireFang:
 	anim_obj ANIM_OBJ_BURNED, 136, 56, $90
 	anim_wait 4
 	anim_loop 3, .loop
+	anim_wait 16
+	anim_ret
+
+BattleAnim_FlashCannon:
+	anim_3gfx ANIM_GFX_CHARGE, ANIM_GFX_SHINE, ANIM_GFX_LIGHTNING
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+.loop
+	anim_obj ANIM_OBJ_FLASH_CANNON, 48, 96, $38
+	anim_wait 4
+	anim_obj ANIM_OBJ_FLASH_CANNON, 48, 96, $20
+	anim_wait 4
+	anim_obj ANIM_OBJ_FLASH_CANNON, 48, 96, $8
+	anim_wait 4
+	anim_obj ANIM_OBJ_FLASH_CANNON, 48, 96, $10
+	anim_wait 4
+	anim_obj ANIM_OBJ_FLASH_CANNON, 48, 96, $28
+	anim_wait 4
+	anim_obj ANIM_OBJ_FLASH_CANNON, 48, 96, $0
+	anim_wait 4
+	anim_obj ANIM_OBJ_FLASH_CANNON, 48, 96, $18
+	anim_wait 4
+	anim_obj ANIM_OBJ_FLASH_CANNON, 48, 96, $30
+	anim_wait 4
+	anim_loop 2, .loop
+	anim_wait 16
+	anim_obp0 $30
+	anim_bgeffect ANIM_BG_08, $0, $4, $0
+	anim_sound 0, 0, SFX_CUT
+	anim_obj ANIM_OBJ_ZAP_CANNON, 64, 92, $2
+	anim_wait 32
+	anim_obj ANIM_OBJ_GLIMMER, 132, 28, $0
+	anim_wait 5
+	anim_sound 0, 0, SFX_METRONOME
+	anim_obj ANIM_OBJ_GLIMMER, 112, 60, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMER, 144, 68, $0
 	anim_wait 16
 	anim_ret
 

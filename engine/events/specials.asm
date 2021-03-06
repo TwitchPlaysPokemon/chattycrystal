@@ -31,13 +31,7 @@ GameCornerPrizeMonCheckDex:
 	ld a, [wScriptVar]
 	ld [wNamedObjectIndexBuffer], a
 	farcall NewPokedexEntry
-	call ExitAllMenus
-	ret
-
-UnusedSetSeenMon:
-	ld a, [wScriptVar]
-	call SetSeenMon
-	ret
+	jp ExitAllMenus
 
 FindPartyMonAboveLevel:
 	ld a, [wScriptVar]
@@ -84,8 +78,7 @@ NameRival:
 	; default to "SILVER"
 	ld hl, wRivalName
 	ld de, .default
-	call InitName
-	ret
+	jp InitName
 
 .default
 	db "SILVER@"
@@ -97,20 +90,17 @@ NameRater:
 OverworldTownMap:
 	call FadeToMenu
 	farcall _TownMap
-	call ExitAllMenus
-	ret
+	jp ExitAllMenus
 
 UnownPrinter:
 	call FadeToMenu
 	farcall _UnownPrinter
-	call ExitAllMenus
-	ret
+	jp ExitAllMenus
 
 DisplayLinkRecord:
 	call FadeToMenu
 	farcall _DisplayLinkRecord
-	call ExitAllMenus
-	ret
+	jp ExitAllMenus
 
 PlayersHousePC:
 	xor a
@@ -130,8 +120,7 @@ CheckMysteryGift:
 
 .no
 	ld [wScriptVar], a
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 GetMysteryGiftItem:
 	ld a, BANK(sMysteryGiftItem)
@@ -183,32 +172,21 @@ UnownPuzzle:
 	farcall _UnownPuzzle
 	ld a, [wSolvedUnownPuzzle]
 	ld [wScriptVar], a
-	call ExitAllMenus
-	ret
+	jp ExitAllMenus
 
 SlotMachine:
 	call CheckCoinsAndCoinCase
 	ret c
 	ld a, BANK(_SlotMachine)
 	ld hl, _SlotMachine
-	call StartGameCornerGame
-	ret
+	jp StartGameCornerGame
 
 CardFlip:
 	call CheckCoinsAndCoinCase
 	ret c
 	ld a, BANK(_CardFlip)
 	ld hl, _CardFlip
-	call StartGameCornerGame
-	ret
-
-DummyNonfunctionalGameCornerGame:
-	call CheckCoinsAndCoinCase
-	ret c
-	ld a, BANK(_DummyGame)
-	ld hl, _DummyGame
-	call StartGameCornerGame
-	ret
+	jp StartGameCornerGame
 
 StartGameCornerGame:
 	call FarQueueScript
@@ -221,8 +199,7 @@ StartGameCornerGame:
 	ld l, a
 	pop af
 	rst FarCall
-	call ExitAllMenus
-	ret
+	jp ExitAllMenus
 
 CheckCoinsAndCoinCase:
 	ld hl, wCoins
@@ -261,16 +238,11 @@ CheckCoinsAndCoinCase:
 
 ClearBGPalettesBufferScreen:
 	call ClearBGPalettes
-	call BufferScreen
-	ret
+	jp BufferScreen
 
 ScriptReturnCarry:
-	jr c, .carry
-	xor a
-	ld [wScriptVar], a
-	ret
-.carry
-	ld a, 1
+	sbc a
+	and 1
 	ld [wScriptVar], a
 	ret
 
@@ -282,7 +254,7 @@ HatchUnownEgg:
 	jr z, .nomons
 	cp EGG + 1
 	jr z, .checkloop
-	jr .disable
+	ret
 
 .nomons
 	ld a, [wPartySpecies]
@@ -303,8 +275,6 @@ HatchUnownEgg:
 	ld [hl], 0
 	; hatch it
 	farcall OverworldHatchEgg
-.disable
-	; disable the event
 	ret
 
 ActivateFishingSwarm:
@@ -366,7 +336,6 @@ SnorlaxAwake:
 	ld [wScriptVar], a
 	ret
 
-
 PlayCurMonCry:
 	ld a, [wCurPartySpecies]
 	jp PlayMonCry
@@ -397,7 +366,7 @@ FadeOutMusic:
 	ld [wMusicFadeID], a
 	ld a, HIGH(MUSIC_NONE)
 	ld [wMusicFadeID + 1], a
-	ld a, $2
+	ld a, 2
 	ld [wMusicFade], a
 	ret
 
@@ -410,8 +379,7 @@ Diploma:
 PrintDiploma:
 	call FadeToMenu
 	farcall _PrintDiploma
-	call ExitAllMenus
-	ret
+	jp ExitAllMenus
 
 TrainerHouse:
 	ld a, BANK(sMysteryGiftTrainerHouseFlag)

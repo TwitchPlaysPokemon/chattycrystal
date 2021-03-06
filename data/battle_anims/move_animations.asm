@@ -3648,6 +3648,7 @@ BattleAnim_RockClimb:
 
 BattleAnim_Discharge:
 	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_EXPLOSION
+	anim_battlergfx_2row
 	anim_sound 0, 1, SFX_THUNDERSHOCK
 	anim_obj ANIM_OBJ_34, 48, 88, $2
 	anim_obj ANIM_OBJ_33, 48, 88, $0
@@ -3677,8 +3678,7 @@ BattleAnim_Discharge:
 	anim_wait 16
 	anim_loop 6, .loop
 	anim_clearobjs
-	anim_wait 1
-	anim_call BattleAnim_UserObj_1Row
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
 	anim_sound 0, 0, SFX_ZAP_CANNON
 	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
 	anim_obj ANIM_OBJ_33, 136, 56, $0

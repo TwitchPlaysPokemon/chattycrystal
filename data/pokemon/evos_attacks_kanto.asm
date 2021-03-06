@@ -208,7 +208,7 @@ VenusaurEvosAttacks:
 	dbw 41, DOUBLE_EDGE
 	dbw 53, SYNTHESIS
 	dbw 65, SOLARBEAM
-	dbw 0 ; no more level-up moves
+	db 0 ; no more level-up moves
 
 CharmanderEvosAttacks:
 	dbbw EVOLVE_LEVEL, 16, CHARMELEON

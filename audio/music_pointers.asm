@@ -127,3 +127,4 @@ Music:
 	dba Music_GymLeaderBattlePrism
 	dba Music_BattleArcadeBattle
 	dba Music_TrickHouse
+	dba Music_HoennRivalBattle

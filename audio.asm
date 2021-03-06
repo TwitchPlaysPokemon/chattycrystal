@@ -171,6 +171,7 @@ SECTION "Extra Songs 6", ROMX
 
 INCLUDE "audio/music/custom/trickhouse.asm"
 INCLUDE "audio/music/custom/caveoforigin.asm"
+INCLUDE "audio/music/custom/hoennrivalbattle.asm"
 
 SECTION "Sound Effects", ROMX
 

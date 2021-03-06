@@ -129,6 +129,7 @@
 	const MUSIC_BATTLE_ARCADE_BATTLE         ; 79
 	const MUSIC_TRICK_HOUSE                  ; 7a
 	const MUSIC_CAVE_OF_ORIGIN               ; 7b
+	const MUSIC_HOENN_RIVAL_BATTLE           ; 7c
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64

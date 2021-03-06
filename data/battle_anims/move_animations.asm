@@ -3707,7 +3707,7 @@ BattleAnim_IronHead:
 	anim_wait 32
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
-	
+
 BattleAnim_GrassKnot:
 	anim_3gfx ANIM_GFX_WAVE, ANIM_GFX_PLANT, ANIM_GFX_HIT
 	anim_call BattleAnim_UserObj_1Row

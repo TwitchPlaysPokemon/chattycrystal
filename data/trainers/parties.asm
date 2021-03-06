@@ -11287,7 +11287,7 @@ KimonoGirlGroup:
 	db -1 ; end
 
 	end_list_items
-	
+
 BlueMayGroup:
 	next_list_item ; MARINA
 	db "MARINA@", TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME

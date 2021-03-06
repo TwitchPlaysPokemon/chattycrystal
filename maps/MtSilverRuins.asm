@@ -129,7 +129,6 @@ MtSilverRuinsAzureMiddle:
 	writetext MtSilverRuinsDotsText
 	waitbutton
 	closetext
-	setevent EVENT_MARINA_AVAILABLE
 	checkcaught PHANCERO
 	ifequal 2, MtSilverRuinsStartCredits
 	special HealParty
@@ -181,6 +180,7 @@ MtSilverRuinsStartCredits:
 	setmapscene MT_SILVER_RUINS_B1F, SCENE_DEFAULT
 	clearevent EVENT_RED_IN_MT_SILVER
 	setevent EVENT_BEAT_MT_SILVER
+	setevent EVENT_MARINA_AVAILABLE
 	special HealParty
 	refreshscreen
 	credits

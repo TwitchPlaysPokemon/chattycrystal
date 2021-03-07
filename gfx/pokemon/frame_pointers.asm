@@ -374,7 +374,7 @@ FramesPointers:
 	dba ClawitzerFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Helioptile
 	dba HelioliskFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Amaura
+	dba AmauraFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Aurorus
 	dba SylveonFrames
 	dba GoomyFrames

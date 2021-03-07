@@ -374,7 +374,7 @@ BitmasksPointers:
 	dw ClawitzerBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Helioptile
 	dw HelioliskBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Amaura
+	dw AmauraBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Aurorus
 	dw SylveonBitmasks
 	dw GoomyBitmasks

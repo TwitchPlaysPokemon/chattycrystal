@@ -69,6 +69,8 @@ sSavedChatotName:: ds MON_NAME_LENGTH
 sSavedUnown:: box_struct sSavedUnown
 sSavedUnownName:: ds MON_NAME_LENGTH
 
+sSavedSpecialMonsChecksum:: dw
+
 SECTION "Saved 16-bit conversion tables", SRAM
 sConversionTables::
 sPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable

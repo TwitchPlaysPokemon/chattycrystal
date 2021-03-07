@@ -21,8 +21,7 @@ PrintDayOfWeek:
 	ld h, b
 	ld l, c
 	ld de, .Day
-	call PlaceString
-	ret
+	jp PlaceString
 
 .Days:
 	db "SUN@"
@@ -42,8 +41,7 @@ NewGame_ClearTileMapEtc:
 	call ClearTileMap
 	call LoadFontsExtra
 	call LoadStandardFont
-	call ClearWindowData
-	ret
+	jp ClearWindowData
 
 MysteryGift:
 	call UpdateTime
@@ -76,9 +74,6 @@ NewGame:
 ResetWRAM:
 	xor a
 	ldh [hBGMapMode], a
-	call _ResetWRAM
-	ret
-
 _ResetWRAM:
 	ld a, BANK("16-bit WRAM tables")
 	ldh [rSVBK], a
@@ -213,8 +208,7 @@ endc
 
 	farcall DeleteMobileEventIndex
 
-	call ResetGameTime
-	ret
+	jp ResetGameTime
 
 .InitList:
 ; Loads 0 in the count and -1 in the first item or mon slot.
@@ -266,8 +260,7 @@ InitializeMagikarpHouse:
 	ld a, $6
 	ld [hli], a
 	ld de, .Ralph
-	call CopyName2
-	ret
+	jp CopyName2
 
 .Ralph:
 	db "RALPH@"
@@ -290,8 +283,7 @@ InitializeNPCNames:
 
 .Copy:
 	ld bc, NAME_LENGTH
-	call CopyBytes
-	ret
+	jp CopyBytes
 
 .Rival:  db "???@"
 .Red:    db "RED@"
@@ -344,6 +336,15 @@ Continue:
 	jp c, CloseWindow
 	call Continue_CheckRTC_RestartClock
 	jp c, CloseWindow
+	; TODO: remove this code after we confirm it has been run on all relevant savefiles
+	assert !BANK(sSavedChatot)
+	xor a
+	call GetSRAMBank
+	ld hl, sSavedChatot
+	ld bc, (sSavedSpecialMonsChecksum + 2) - sSavedChatot
+	call ByteFill
+	call CloseSRAM
+	; normal code continues here
 	ld a, 8
 	ld [wMusicFade], a
 	ld a, LOW(MUSIC_NONE)
@@ -451,35 +452,28 @@ FinishContinueFunction:
 DisplaySaveInfoOnContinue:
 	call CheckRTCStatus
 	and %10000000
-	jr z, .clock_ok
+	jr nz, .clock_fail
 	lb de, 4, 8
-	call DisplayContinueDataWithRTCError
-	ret
-
-.clock_ok
-	lb de, 4, 8
-	call DisplayNormalContinueData
-	ret
-
-DisplaySaveInfoOnSave:
-	lb de, 4, 0
 	jr DisplayNormalContinueData
 
-DisplayNormalContinueData:
-	call Continue_LoadMenuHeader
-	call Continue_DisplayBadgesDexPlayerName
-	call Continue_PrintGameTime
-	call LoadFontsExtra
-	call UpdateSprites
-	ret
-
+.clock_fail
+	lb de, 4, 8
 DisplayContinueDataWithRTCError:
 	call Continue_LoadMenuHeader
 	call Continue_DisplayBadgesDexPlayerName
 	call Continue_UnknownGameTime
 	call LoadFontsExtra
-	call UpdateSprites
-	ret
+	jp UpdateSprites
+
+
+DisplaySaveInfoOnSave:
+	lb de, 4, 0
+DisplayNormalContinueData:
+	call Continue_LoadMenuHeader
+	call Continue_DisplayBadgesDexPlayerName
+	call Continue_PrintGameTime
+	call LoadFontsExtra
+	jp UpdateSprites
 
 Continue_LoadMenuHeader:
 	xor a
@@ -493,8 +487,7 @@ Continue_LoadMenuHeader:
 .show_menu
 	call _OffsetMenuHeader
 	call MenuBox
-	call PlaceVerticalMenuItems
-	ret
+	jp PlaceVerticalMenuItems
 
 .MenuHeader_Dex:
 	db MENU_BACKUP_TILES ; flags
@@ -547,18 +540,11 @@ Continue_DisplayBadgesDexPlayerName:
 .Player:
 	db "<PLAYER>@"
 
-Continue_PrintGameTime:
-	decoord 9, 8, 0
-	add hl, de
-	call Continue_DisplayGameTime
-	ret
-
 Continue_UnknownGameTime:
 	decoord 9, 8, 0
 	add hl, de
 	ld de, .three_question_marks
-	call PlaceString
-	ret
+	jp PlaceString
 
 .three_question_marks
 	db " ???@"
@@ -596,6 +582,9 @@ Continue_DisplayPokedexNumCaught:
 	pop bc
 	ret
 
+Continue_PrintGameTime:
+	decoord 9, 8, 0
+	add hl, de
 Continue_DisplayGameTime:
 	ld de, wGameTimeHours
 	lb bc, 2, 3
@@ -682,8 +671,7 @@ OakSpeech:
 	call PrintText
 	call NamePlayer
 	ld hl, OakText7
-	call PrintText
-	ret
+	jp PrintText
 
 OakText1:
 	text_far _OakText1
@@ -756,8 +744,7 @@ NamePlayer:
 	jr z, .Male
 	ld de, .Kris
 .Male:
-	call InitName
-	ret
+	jp InitName
 
 .Chris:
 	db "CHRIS@@@@@@"
@@ -822,8 +809,7 @@ ShrinkPlayer:
 	call DelayFrames
 
 	call RotateThreePalettesRight
-	call ClearTileMap
-	ret
+	jp ClearTileMap
 
 Intro_RotatePalettesLeftFrontpic:
 	ld hl, IntroFadePalettes

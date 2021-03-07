@@ -51,7 +51,7 @@ PrinterJumptableIteration:
 	dw Printer_NextSectionWaitLoopBack ; 12
 	dw Printer_WaitLoopBack ; 13
 
-_Printer_NextSection:
+Printer_NextSection:
 	ld hl, wJumptableIndex
 	inc [hl]
 	ret
@@ -68,12 +68,8 @@ Printer_Quit:
 	set 7, [hl]
 	ret
 
-Printer_NextSection:
-	call _Printer_NextSection
-	ret
-
 Printer_SectionOne:
-	ld a, $1
+	ld a, 1
 	ld [wJumptableIndex], a
 	ret
 
@@ -86,7 +82,7 @@ Print_InitPrinterHandshake:
 	ld [wPrinterSendByteCounter + 1], a
 	ld a, [wPrinterQueueLength]
 	ld [wPrinterRowIndex], a
-	call _Printer_NextSection
+	call Printer_NextSection
 	call Printer_WaitHandshake
 	ld a, PRINTER_STATUS_CHECKING
 	ld [wPrinterStatus], a
@@ -110,7 +106,7 @@ Printer_StartTransmittingTilemap:
 	ld [wPrinterSendByteCounter + 1], a
 	; compute the checksum
 	call Printer_ComputeChecksum
-	call _Printer_NextSection
+	call Printer_NextSection
 	call Printer_WaitHandshake
 	ld a, PRINTER_STATUS_TRANSMITTING
 	ld [wPrinterStatus], a
@@ -118,7 +114,7 @@ Printer_StartTransmittingTilemap:
 
 Printer_EndTilemapTransmission:
 	; ensure that we go from here to routine 7
-	ld a, $6
+	ld a, 6
 	ld [wJumptableIndex], a
 	; send packet 4
 	ld hl, PrinterDataPacket4 ; signal no transmission
@@ -127,9 +123,8 @@ Printer_EndTilemapTransmission:
 	xor a
 	ld [wPrinterSendByteCounter], a
 	ld [wPrinterSendByteCounter + 1], a
-	call _Printer_NextSection
-	call Printer_WaitHandshake
-	ret
+	call Printer_NextSection
+	jp Printer_WaitHandshake
 
 Printer_SignalSendHeader:
 	call Printer_ResetData
@@ -143,7 +138,7 @@ Printer_SignalSendHeader:
 	ld [wPrinterSendByteCounter + 1], a
 	; compute the checksum
 	call Printer_ComputeChecksum
-	call _Printer_NextSection
+	call Printer_NextSection
 	call Printer_WaitHandshake
 	ld a, PRINTER_STATUS_PRINTING
 	ld [wPrinterStatus], a
@@ -160,20 +155,18 @@ Printer_SignalLoopBack:
 	ld [wPrinterSendByteCounter + 1], a
 	ld a, [wPrinterQueueLength]
 	ld [wPrinterRowIndex], a
-	call _Printer_NextSection
-	call Printer_WaitHandshake
-	ret
+	call Printer_NextSection
+	jp Printer_WaitHandshake
 
 Printer_WaitSerial:
 	ld hl, wPrinterSerialFrameDelay
 	inc [hl]
 	ld a, [hl]
-	cp $6
+	cp 6
 	ret c
 	xor a
 	ld [hl], a
-	call _Printer_NextSection
-	ret
+	jp Printer_NextSection
 
 Printer_WaitSerialAndLoopBack2:
 	ld hl, wPrinterSerialFrameDelay
@@ -186,8 +179,7 @@ Printer_WaitSerialAndLoopBack2:
 	ld hl, wPrinterRowIndex
 	dec [hl]
 	call Printer_PrevSection
-	call Printer_PrevSection
-	ret
+	jp Printer_PrevSection
 
 Printer_CheckConnectionStatus:
 	ld a, [wPrinterOpcode]
@@ -205,20 +197,19 @@ Printer_CheckConnectionStatus:
 	cp $81
 	jr nz, .printer_error
 	ld a, [wPrinterStatusFlags]
-	cp $0
+	and a
 	jr nz, .printer_error
 	ld hl, wPrinterConnectionOpen
 	set 1, [hl]
-	ld a, $5
+	ld a, 5
 	ld [wHandshakeFrameDelay], a
-	call _Printer_NextSection
-	ret
+	jp Printer_NextSection
 
 .printer_error
 	ld a, $ff
 	ld [wPrinterHandshake], a
 	ld [wPrinterStatusFlags], a
-	ld a, $e
+	ld a, 14
 	ld [wJumptableIndex], a
 	ret
 
@@ -230,17 +221,12 @@ Printer_TransmissionLoop:
 	and $f0
 	jr nz, .enter_wait_loop
 	ld a, [wPrinterStatusFlags]
-	and $1
-	jr nz, .cycle_back
-	call _Printer_NextSection
-	ret
-
-.cycle_back
-	call Printer_PrevSection
-	ret
+	and 1
+	jp z, Printer_NextSection
+	jp Printer_PrevSection
 
 .enter_wait_loop
-	ld a, $12 ; Printer_NextSectionWaitLoopBack
+	ld a, 18 ; Printer_NextSectionWaitLoopBack
 	ld [wJumptableIndex], a
 	ret
 
@@ -250,12 +236,11 @@ Printer_WaitUntilFinished:
 	ret nz
 	ld a, [wPrinterStatusFlags]
 	and $f3
-	ret nz
-	call _Printer_NextSection
+	jp z, Printer_NextSection
 	ret
 
 Printer_NextSectionWaitLoopBack:
-	call _Printer_NextSection
+	call Printer_NextSection
 Printer_WaitLoopBack:
 	ld a, [wPrinterOpcode]
 	and a
@@ -275,7 +260,7 @@ Printer_WaitHandshake:
 	xor a
 	ld [wPrinterSendByteOffset], a
 	ld [wPrinterSendByteOffset + 1], a
-	ld a, $1
+	ld a, 1
 	ld [wPrinterOpcode], a
 	ld a, $88
 	ldh [rSB], a
@@ -315,8 +300,7 @@ Printer_ResetData:
 	ld [wPrinterSendByteCounter + 1], a
 	ld hl, wGameboyPrinterRAM
 	ld bc, wGameboyPrinter2bppSourceEnd - wGameboyPrinter2bppSource
-	call Printer_ByteFill
-	ret
+	jp Printer_ByteFill
 
 Printer_ComputeChecksum:
 	ld hl, 0
@@ -351,7 +335,7 @@ Printer_ComputeChecksum:
 	ret
 
 Printer_StageHeaderForSend:
-	ld a, $1
+	ld a, 1
 	ld [wGameboyPrinter2bppSource + 0], a
 	ld a, [wPrinterMargins]
 	ld [wGameboyPrinter2bppSource + 1], a
@@ -364,7 +348,7 @@ Printer_StageHeaderForSend:
 Printer_Convert2RowsTo2bpp:
 	; de = wPrinterTileMapBuffer + 2 * SCREEN_WIDTH * ([wPrinterQueueLength] - [wPrinterRowIndex])
 	ld a, [wPrinterRowIndex]
-	xor $ff
+	cpl
 	ld d, a
 	ld a, [wPrinterQueueLength]
 	inc a
@@ -464,7 +448,7 @@ _PrinterReceive::
 	jp hl
 
 .Jumptable:
-	dw Printer_DoNothing ; 00
+	dw GenericDummyFunction ; 00
 
 	dw Printer_Send0x33 ; 01
 	dw Printer_SendPrinterData1 ; 02
@@ -474,7 +458,7 @@ _PrinterReceive::
 	dw Printer_SendNextByte ; 06
 	dw Printer_SendwPrinterChecksumLo ; 07
 	dw Printer_SendwPrinterChecksumHi ; 08
-	dw Printer_Send0x00_2 ; 09
+	dw Printer_Send0x00 ; 09
 	dw Printer_ReceiveTwoPrinterHandshakeAndSend0x00 ; 0a
 	dw Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop ; 0b
 
@@ -485,7 +469,7 @@ _PrinterReceive::
 	dw Printer_Send0x00 ; 10
 	dw Printer_Send0x0f ; 11
 	dw Printer_Send0x00 ; 12
-	dw Printer_Send0x00_2 ; 13
+	dw Printer_Send0x00 ; 13
 	dw Printer_ReceiveTwoPrinterHandshakeAndSend0x00 ; 14
 	dw Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop_2 ; 15
 
@@ -496,7 +480,7 @@ _PrinterReceive::
 	dw Printer_Send0x00 ; 1a
 	dw Printer_Send0x08 ; 1b
 	dw Printer_Send0x00 ; 1c
-	dw Printer_Send0x00_2 ; 1d
+	dw Printer_Send0x00 ; 1d
 	dw Printer_ReceiveTwoPrinterHandshakeAndSend0x00 ; 1e
 	dw Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop ; 1f
 
@@ -505,38 +489,30 @@ Printer_NextInstruction:
 	inc [hl]
 	ret
 
-Printer_DoNothing:
-	ret
-
 Printer_Send0x33:
 	ld a, $33
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_SendPrinterData1:
 	ld a, [wPrinterData]
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_SendPrinterData2:
 	ld a, [wPrinterData + 1]
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_SendPrinterData3:
 	ld a, [wPrinterData + 2]
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_SendPrinterData4:
 	ld a, [wPrinterData + 3]
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_SendNextByte:
 	; decrement 16-bit counter
@@ -563,37 +539,26 @@ Printer_SendNextByte:
 	ld a, d
 	ld [wPrinterSendByteOffset + 1], a
 	ld a, [hl]
-	call Printer_SerialSend
-	ret
+	jp Printer_SerialSend
 
 .done
 	call Printer_NextInstruction
 Printer_SendwPrinterChecksumLo:
 	ld a, [wPrinterChecksum]
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_SendwPrinterChecksumHi:
 	ld a, [wPrinterChecksum + 1]
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
-
-Printer_Send0x00_2:
-; identical to Printer_Send0x00, but referenced less
-	ld a, $0
-	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_ReceiveTwoPrinterHandshakeAndSend0x00:
 	ldh a, [rSB]
 	ld [wPrinterHandshake], a
 	ld a, $0
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop:
 	ldh a, [rSB]
@@ -605,20 +570,17 @@ Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop:
 Printer_Send0x0f:
 	ld a, $f
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_Send0x00:
 	ld a, $0
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_Send0x08:
 	ld a, $8
 	call Printer_SerialSend
-	call Printer_NextInstruction
-	ret
+	jp Printer_NextInstruction
 
 Printer_SerialSend:
 	ldh [rSB], a

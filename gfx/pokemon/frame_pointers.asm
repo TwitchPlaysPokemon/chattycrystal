@@ -341,7 +341,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Gastrodon
 	dba BunearyFrames
 	dba LopunnyFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Stunky
+	dba StunkyFrames
 	dba SkuntankFrames
 	dba BronzorFrames
 	dba BronzongFrames

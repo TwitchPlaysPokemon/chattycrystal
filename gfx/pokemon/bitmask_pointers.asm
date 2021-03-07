@@ -341,7 +341,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Gastrodon
 	dw BunearyBitmasks
 	dw LopunnyBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Stunky
+	dw StunkyBitmasks
 	dw SkuntankBitmasks
 	dw BronzorBitmasks
 	dw BronzongBitmasks

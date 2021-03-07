@@ -341,7 +341,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Gastrodon
 	dw BunearyAnimation
 	dw LopunnyAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Stunky
+	dw StunkyAnimation
 	dw SkuntankAnimation
 	dw BronzorAnimation
 	dw BronzongAnimation

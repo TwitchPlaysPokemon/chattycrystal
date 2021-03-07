@@ -18,7 +18,7 @@ BattleTowerElevator_MapScripts:
 	follow BATTLETOWERELEVATOR_RECEPTIONIST, PLAYER
 	applymovement BATTLETOWERELEVATOR_RECEPTIONIST, MovementData_BattleTowerElevatorReceptionistWalksIn
 	applymovement PLAYER, MovementData_BattleTowerElevatorPlayerWalksIn
-	setval BATTLETOWERACTION_0A
+	setval BATTLETOWERACTION_MAXVOLUME
 	special BattleTowerAction
 	playsound SFX_ELEVATOR
 	earthquake 60

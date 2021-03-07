@@ -332,27 +332,19 @@ LoadOrRegenerateLuckyIDNumber:
 
 Continue:
 	farcall TryLoadSaveFile
-	jr c, .FailToLoad
+	ret c
 	farcall _LoadData
 	call LoadStandardMenuHeader
 	call DisplaySaveInfoOnContinue
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	ld c, 20
 	call DelayFrames
 	call ConfirmContinue
-	jr nc, .Check1Pass
-	call CloseWindow
-	jr .FailToLoad
-
-.Check1Pass:
+	jp c, CloseWindow
 	call Continue_CheckRTC_RestartClock
-	jr nc, .Check2Pass
-	call CloseWindow
-	jr .FailToLoad
-
-.Check2Pass:
-	ld a, $8
+	jp c, CloseWindow
+	ld a, 8
 	ld [wMusicFade], a
 	ld a, LOW(MUSIC_NONE)
 	ld [wMusicFadeID], a
@@ -373,9 +365,6 @@ Continue:
 	ld a, MAPSETUP_CONTINUE
 	ldh [hMapEntryMethod], a
 	jp FinishContinueFunction
-
-.FailToLoad:
-	ret
 
 .SpawnAfterE4:
 	ld a, SPAWN_NEW_BARK

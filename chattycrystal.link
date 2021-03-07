@@ -416,8 +416,6 @@ SRAM 2
 	"Boxes 1-7"
 SRAM 3
 	"Boxes 8-14"
-SRAM 4
-	"SRAM Mobile 1"
 SRAM 5
 	"SRAM Mobile 2"
 HRAM

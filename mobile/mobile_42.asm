@@ -18,6 +18,7 @@ MobileTradeAnimation_RetrieveGivemonFromGTS:
 	jr asm_108018
 
 MobileTradeAnimation_ReceiveGetmonFromGTS:
+	; unreferenced
 	ld a, $0
 asm_108018:
 	ld [wcf65], a

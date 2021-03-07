@@ -178,6 +178,7 @@ CheckStringForErrors_IgnoreTerminator:
 	ret
 
 Function17d0f3:
+	; unreferenced
 	ld a, [wc608 + 5]
 	ld [wOTTrademonSpecies], a
 	ld [wCurPartySpecies], a
@@ -1083,7 +1084,7 @@ Jumptable17d72a:
 	dw IncCrashCheckPointer_SaveAfterLinkTrade
 	dw IncCrashCheckPointer_SaveBox
 	dw IncCrashCheckPointer_SaveChecksum
-	dw IncCrashCheckPointer_SaveTrainerRankingsChecksum
+	dw IncCrashCheckPointer
 	dw Function17e3e0
 	dw Function17e3f0
 	dw Function17e409
@@ -2901,9 +2902,6 @@ IncCrashCheckPointer_SaveBox:
 
 IncCrashCheckPointer_SaveChecksum:
 	inc_crash_check_pointer_farcall SaveChecksum
-
-IncCrashCheckPointer_SaveTrainerRankingsChecksum:
-	inc_crash_check_pointer_farcall UpdateTrainerRankingsChecksum2, BackupMobileEventIndex
 
 Function17e3e0:
 	call IncCrashCheckPointer

@@ -122,20 +122,20 @@ SpecialsPointers::
 	add_special PrintDiploma
 
 ; Crystal only
-	add_special Function11ac3e
-	add_special Function11b444
-	add_special Function11b5e8
-	add_special Function11b7e5 ; $70
-	add_special Function11b879
-	add_special Function11b920
-	add_special Function11b93b
+	add_special NewBattleTowerSession
+	add_special SelectBTParticipants
+	add_special InitialSetDSTFlag
+	add_special InitialClearDSTFlag ; $70
+	add_special RefreshSprites
+	add_special AskRememberPassword
+	add_special LoadMapPalettes
 	add_special BattleTowerRoomMenu
 	add_special Function1700ba
-	add_special Function170114
+	add_special Function10387b
 	add_special BattleTowerBattle
-	add_special Function1704e1 ; $78
+	add_special LoadPokemonData ; $78
 	add_special LoadOpponentTrainerAndPokemonWithOTSprite
-	add_special Function11ba38
+	add_special SetPlayerPalette
 	add_special CheckForBattleTowerRules
 	add_special GiveOddEgg
 	add_special Reset ; bank 0
@@ -163,18 +163,8 @@ SpecialsPointers::
 	add_special SampleKenjiBreakCountdown
 	add_special BeastsCheck
 	add_special MonCheck
-	add_special SetPlayerPalette
 	add_special Mobile_SelectThreeMons
-	add_special Function1037eb ; $98
-	add_special Function10383c
-	add_special RefreshSprites
+	add_special Function1037eb
+	add_special Function10383c ; $98
 	add_special Function1037c2
 	add_special Function103780
-	add_special Function10387b
-	add_special AskRememberPassword
-	add_special LoadMapPalettes
-	add_special InitialSetDSTFlag ; $a0
-	add_special InitialClearDSTFlag
-	add_special SelectBTParticipants
-	add_special NewBattleTowerSession
-	add_special LoadPokemonData

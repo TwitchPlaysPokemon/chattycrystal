@@ -195,17 +195,6 @@ Function170c06:
 	call CloseSRAM
 	ret
 
-Function170c8b:
-	ld hl, wLastEnemyCounterMove
-	ld b, $5
-.asm_170c90
-	ld a, [hl]
-	xor $ff
-	ld [hli], a
-	dec b
-	jr nz, .asm_170c90
-	ret
-
 CheckBTMonMovesForErrors:
 	ld c, BATTLETOWER_PARTY_LENGTH
 	ld hl, wBT_OTTempMon1Moves

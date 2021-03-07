@@ -120,7 +120,7 @@ Script_WalkToBattleTowerElevator:
 	setmapscene BATTLE_TOWER_HALLWAY, SCENE_DEFAULT
 	follow BATTLETOWER1F_RECEPTIONIST, PLAYER
 	applymovement BATTLETOWER1F_RECEPTIONIST, MovementData_BattleTower1FWalkToElevator
-	setval BATTLETOWERACTION_0A
+	setval BATTLETOWERACTION_MAXVOLUME
 	special BattleTowerAction
 	warpsound
 	disappear BATTLETOWER1F_RECEPTIONIST

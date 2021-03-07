@@ -1,15 +1,8 @@
 SECTION "Mobile 46", ROMX
 
-Function118000:
-	ld a, $1
-	ld [wcd38], a
-	jr asm_11800b
-
 Function118007:
 	xor a
 	ld [wcd38], a
-
-asm_11800b:
 	call BattleTowerRoomMenu_InitRAM
 	ld a, $18
 	ld [wcd33], a
@@ -48,6 +41,7 @@ BattleTowerRoomMenu_DoNothing:
 	ret
 
 Function11805f:
+	; unreferenced
 	ld a, $1
 	ld [wcd38], a
 	call BattleTowerRoomMenu_InitRAM
@@ -87,6 +81,7 @@ Function11805f:
 	ret
 
 Function1180b8:
+	; unreferenced
 	call BattleTowerRoomMenu_InitRAM
 	ld a, $22
 	ld [wcd33], a
@@ -5500,15 +5495,8 @@ Text_ThisBattleRoomPleaseWait:
 	cont "Please wait…"
 	done
 
-Function11ac3e:
-	call SpeechTextbox
-	call FadeToMenu
-	callfar ClearSpriteAnims2
-	call Function11ac51
-	call CloseSubmenu
-	ret
-
 Function11ac51:
+	; unreferenced
 	xor a
 	ldh [hBGMapMode], a
 	ld hl, wOptions
@@ -6775,41 +6763,8 @@ Function11b3d9:
 	ld [hl], a
 	ret
 
-Function11b444:
-; special
-	call Mobile46_InitJumptable
-	call Mobile46_RunJumptable
-	ret
-
-Mobile46_InitJumptable:
-	xor a
-	ld [wJumptableIndex], a
-	ld [wcf64], a
-	ld [wcf65], a
-	ld [wcf66], a
-	call UpdateTime
-	ret
-
-Mobile46_RunJumptable:
-.loop
-	call .IterateJumptable
-	call DelayFrame
-	ld a, [wJumptableIndex]
-	cp 4
-	jr nz, .loop
-	ret
-
-.IterateJumptable:
-	jumptable .Jumptable, wJumptableIndex
-
-.Jumptable:
-	dw Function11b483
-	dw Function11b570
-	dw Function11b5c0
-	dw Function11b5e0
-	dw Function11b5e7 ; unused
-
 Function11b483:
+	; unreferenced
 	call .InitRAM
 	ld hl, wPlayerName
 	ld a, NAME_LENGTH_JAPANESE - 1
@@ -6987,6 +6942,7 @@ Function11b483:
 	ret
 
 Function11b570:
+	; unreferenced
 	call Function118007
 	ld a, [wScriptVar]
 	and a
@@ -7032,125 +6988,10 @@ Function11b570:
 	ld [hli], a
 	ldh a, [hRTCDayHi]
 	ld [hl], a
-
-	call CloseSRAM
-	ret
-
-Function11b5c0:
-	ld a, [wcd82]
-	dec a
-	ld [wCurPartyMon], a
-	xor a ; REMOVE_PARTY
-	ld [wPokemonWithdrawDepositParameter], a
-	farcall RemoveMonFromPartyOrBox
-	farcall Function170807
-	farcall SaveAfterLinkTrade
-	jp Function11ad8a
-
-Function11b5e0:
-	xor a
-	ld [wScriptVar], a
-	jp Function11ad8a
-
-Function11b5e7:
-	ret
-
-Function11b5e8:
-	ld a, $0
-	call GetSRAMBank
-	ld hl, wRTC
-	ld de, $c608
-	ld bc, 4
-	call CopyBytes
-	call CloseSRAM
-	ld a, $5
-	call GetSRAMBank
-	ld hl, $c608
-	ld de, $b08c
-	ld bc, 4
-	call CopyBytes
-	ld a, $2
-	ld [$a800], a
-	ld a, [$a81f]
-	ld [wcd2a], a
-	ld a, [$a820]
-	ld [wcd2b], a
-	ld a, [$a821]
-	ld [wcd2c], a
-	ld a, [$a822]
-	ld [wcd2d], a
-	ld a, [$a823]
-	ld [wcd2e], a
-	ld a, [$a824]
-	ld [wcd2f], a
-	ld a, [$a825]
-	ld [wcd30], a
-	ld a, [$a826]
-	ld [wcd31], a
-	call CloseSRAM
-	call Mobile46_InitJumptable
-	call .loop
-	ret
-
-.loop
-	call .RunJumptable
-	call DelayFrame
-	ld a, [wJumptableIndex]
-	cp $1
-	jr nz, .loop
-	ret
-
-.RunJumptable:
-	jumptable .Jumptable, wJumptableIndex
-
-.Jumptable:
-	dw Function11b66d
-	dw Function11b6b3
-
-Function11b66d:
-	call Function1180b8
-	ld a, [wScriptVar]
-	and a
-	jr nz, .asm_11b6b0
-	ldh a, [rSVBK]
-	push af
-	ld a, $3
-	ldh [rSVBK], a
-	ld a, [w3_d090]
-	ld b, a
-	pop af
-	ldh [rSVBK], a
-	ld a, b
-	and a
-	jr z, .asm_11b691
-	cp $1
-	jr nz, .asm_11b6b0
-	call Function11b6b4
-	jr .asm_11b6b0
-
-.asm_11b691
-	farcall Function17081d
-	ld a, [wScriptVar]
-	and a
-	jr z, .asm_11b6b0
-	xor a
-	ld [wScriptVar], a
-	ldh a, [rSVBK]
-	push af
-	ld a, $3
-	ldh [rSVBK], a
-	ld a, $2
-	ld [w3_d090], a
-	pop af
-	ldh [rSVBK], a
-
-.asm_11b6b0
-	jp Function11ad8a
-
-Function11b6b3:
-	ret
+	jp CloseSRAM
 
 Function11b6b4:
+	; unreferenced
 	ld a, $5
 	call GetSRAMBank
 	ld a, [wcd30]
@@ -7284,170 +7125,7 @@ Function11b6b4:
 	inc de
 	ld a, [de]
 	ld [hl], a
-	call AddMobileMonToParty
-	ret
-
-Function11b7e5:
-	ld a, [$c60d] ; species
-	ld [wOTTrademonSpecies], a
-	ld [wCurPartySpecies], a
-	ld a, [wcd81]
-	ld [wc74e], a
-	ld hl, $c63d ; OT
-	ld de, wOTTrademonOTName
-	ld bc, 5
-	call CopyBytes
-	ld a, "@"
-	ld [de], a
-	ld a, [$c60d + MON_ID] ; id
-	ld [wOTTrademonID], a
-	ld a, [$c60d + MON_ID + 1]
-	ld [wOTTrademonID + 1], a
-	ld hl, $c60d + MON_DVS ; dvs
-	ld a, [hli]
-	ld [wOTTrademonDVs], a
-	ld a, [hl]
-	ld [wOTTrademonDVs + 1], a
-	ld bc, $c60d ; pokemon_data_start
-	farcall GetCaughtGender
-	ld a, c
-	ld [wOTTrademonCaughtData], a
-	call SpeechTextbox
-	call FadeToMenu
-	farcall MobileTradeAnimation_ReceiveGetmonFromGTS
-	farcall Function17d1f1
-	ld a, $1
-	ld [wForceEvolution], a
-	ld a, $2
-	ld [wLinkMode], a
-	farcall EvolvePokemon
-	xor a
-	ld [wLinkMode], a
-	farcall SaveAfterLinkTrade
-	ld a, $5
-	call GetSRAMBank
-	ld a, $5
-	ld [$a800], a
-	call CloseSRAM
-	ld a, [wMapGroup]
-	ld b, a
-	ld a, [wMapNumber]
-	ld c, a
-	call GetMapSceneID
-	ld a, d
-	or e
-	jr z, .asm_11b872
-	ld a, $1
-	ld [de], a
-
-.asm_11b872
-	call CloseSubmenu
-	call RestartMapMusic
-	ret
-
-Function11b879:
-	farcall BattleTower_CheckSaveFileExistsAndIsYours
-	ld a, [wScriptVar]
-	and a
-	ret z
-	ld a, $5
-	call GetSRAMBank
-	ld a, [$a800]
-	ld [wScriptVar], a
-	ld a, [$a890]
-	ld [wcd49], a
-	ld a, [$a891]
-	ld [wcd4a], a
-	ld a, [$a892]
-	ld [wcd4b], a
-	ld a, [$a893]
-	ld [wcd4c], a
-	call CloseSRAM
-	ld a, [wScriptVar]
-	and a
-	ret z
-	ld hl, wcd4c
-	ldh a, [hRTCDayHi]
-	cp [hl]
-	ret nz
-	dec hl
-	ldh a, [hRTCDayLo]
-	cp [hl]
-	ret nz
-	ld hl, wcd4a
-	ldh a, [hRTCHours]
-	cp [hl]
-	jr nc, .asm_11b8d8
-	ld a, $18
-	sub [hl]
-	ld hl, hRTCHours
-	add [hl]
-	ld [wcd4c], a
-	ldh a, [hRTCMinutes]
-	ld [wcd4b], a
-	xor a
-	ld [wcd4a], a
-	jr .asm_11b8e2
-
-.asm_11b8d8
-	ldh a, [hRTCMinutes]
-	ld [wcd4b], a
-	ldh a, [hRTCHours]
-	ld [wcd4c], a
-
-.asm_11b8e2
-	xor a
-	ld l, a
-	ld h, a
-	ld b, a
-	ld d, a
-	ld a, [wcd4b]
-	ld e, a
-	ld a, [wcd4c]
-	ld c, $3c
-	call AddNTimes
-	add hl, de
-	push hl
-	xor a
-	ld l, a
-	ld h, a
-	ld b, a
-	ld d, a
-	ld a, [wcd49]
-	ld e, a
-	ld a, [wcd4a]
-	ld c, $3c
-	call AddNTimes
-	add hl, de
-	ld a, l
-	cpl
-	add $1
-	ld e, a
-	ld a, h
-	cpl
-	adc 0
-	ld d, a
-	pop hl
-	add hl, de
-	ld de, $ff88
-	add hl, de
-	bit 7, h
-	ret z
-	ld a, $2
-	ld [wScriptVar], a
-	ret
-
-Function11b920:
-	call Mobile46_InitJumptable
-	ld a, $5
-	call GetSRAMBank
-	ld hl, $a81f
-	ld de, $c626
-	ld bc, 8
-	call CopyBytes
-	call CloseSRAM
-	call Function118000
-	ret
+	jp AddMobileMonToParty
 
 Function11b93b:
 	ld a, $5
@@ -7572,13 +7250,6 @@ AddMobileMonToParty:
 	ld bc, MAIL_STRUCT_LENGTH
 	call CopyBytes
 	jp CloseSRAM
-
-Function11ba38:
-	farcall CheckCurPartyMonFainted
-	ret c
-	xor a
-	ld [wScriptVar], a
-	ret
 
 TilemapPack_11ba44:
 	db $47, $30, $0a, $0a, $0a, $0a, $0a, $56 ; 00

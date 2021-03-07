@@ -4,52 +4,6 @@ BattleTowerRoomMenu:
 	farcall _BattleTowerRoomMenu
 	ret
 
-Function1700ba:
-	call InitBattleTowerChallengeRAM
-	farcall Function11811a
-	ret
-
-Function1700c4:
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(w3_d202TrainerData) ; aka BANK(w3_dffc) and BANK(w3_d202Name)
-	ldh [rSVBK], a
-
-	call Function17042c
-
-	ld a, BANK(s5_be45) ; aka BANK(s5_be46) and BANK(s5_aa41) and BANK(s5_aa5d)
-	call GetSRAMBank
-	ld a, 1
-	ld [s5_be45], a
-	xor a
-	ld [s5_be46], a
-	ld hl, w3_dffc
-	ld de, s5_aa41
-	ld bc, 4
-	call CopyBytes
-	ld hl, w3_d202Name
-	ld de, s5_aa8e
-	ld bc, 7 * $cc ; length of battle tower struct from japanese games?
-	call CopyBytes
-	ld hl, s5_aa5d ; some sort of count
-	ld a, [hl]
-	inc [hl]
-	inc hl
-	sla a
-	sla a
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld e, l
-	ld d, h
-	ld hl, w3_dffc
-	ld bc, 4
-	call CopyBytes
-	call CloseSRAM
-	pop af
-	ldh [rSVBK], a
-	ret
-
 BattleTowerBattle:
 	xor a ; FALSE
 	ld [wBattleTowerBattleEnded], a
@@ -101,7 +55,7 @@ _BattleTowerBattle:
 
 .dw
 	dw RunBattleTowerTrainer
-	dw SkipBattleTowerTrainer
+	dw GenericDummyFunction
 
 RunBattleTowerTrainer:
 	ld a, [wOptions]
@@ -120,7 +74,6 @@ RunBattleTowerTrainer:
 	call SetBattleTowerPartyLevel
 	farcall HealParty
 	call ReadBTTrainerParty
-	call Clears5_a89a
 
 	predef StartBattle
 
@@ -296,7 +249,7 @@ ValidateBTParty:
 	call GetBaseData
 	ld a, BANK(s5_b2fb)
 	call GetSRAMBank
-	ld a, [s5_b2fb] ; s5_b2fb ; max level?
+	ld a, [s5_b2fb] ; max level?
 	call CloseSRAM
 	ld e, a
 	ld hl, MON_LEVEL
@@ -379,71 +332,6 @@ ValidateBTParty:
 BT_ChrisName:
 	db "CHRIS@"
 
-Function17042c:
-	ld hl, w3_d202TrainerData
-	ld a, BATTLETOWER_STREAK_LENGTH
-.loop
-	push af
-	push hl
-	ld c, BATTLETOWER_TRAINERDATALENGTH / 2
-.loop2
-	; First byte is a comparison value.
-	ld a, [hli]
-	ld b, a
-	; Second byte is a lookup index.
-	ld a, [hli]
-	and a
-	jr z, .empty
-	cp 15
-	jr nc, .copy_data
-
-	push hl
-	ld hl, Unknown_170470
-	dec a
-	ld e, a
-	ld d, 0
-	add hl, de
-	ld a, [hl]
-	pop hl
-
-	; If Unknown_170470[a-1] <= b, overwrite the current trainer's data
-	; with Unknown17047e, and exit the inner loop.
-	cp b
-	jr c, .copy_data
-	jr z, .copy_data
-	jr .next_iteration
-
-.empty
-	; If a == 0 and b >= $fc, overwrite the current trainer's data with
-	; Unknown17047e, and exit the inner loop.
-	ld a, b
-	cp $fc
-	jr nc, .copy_data
-
-.next_iteration
-	dec c
-	jr nz, .loop2
-	jr .next_trainer
-
-.copy_data
-	pop de
-	push de
-	ld hl, Unknown_17047e
-	ld bc, BATTLETOWER_TRAINERDATALENGTH
-	call CopyBytes
-
-.next_trainer
-	pop hl
-	ld de, BATTLE_TOWER_STRUCT_LENGTH
-	add hl, de
-	pop af
-	dec a
-	jr nz, .loop
-SkipBattleTowerTrainer:
-	ret
-
-INCLUDE "data/battle_tower/unknown_levels.asm"
-
 CopyBTTrainer_FromBT_OT_TowBT_OTTemp:
 ; copy the BattleTower-Trainer data that lies at 'wBT_OTTrainer' to 'wBT_OTTemp'
 	ldh a, [rSVBK]
@@ -485,22 +373,18 @@ BattleTowerAction:
 	dw BattleTowerAction_GetChallengeState
 	dw BattleTowerAction_SetByteToQuickSaveChallenge
 	dw BattleTowerAction_SetByteToCancelChallenge
-	dw Function1707f4
 	dw SaveBattleTowerLevelGroup
 	dw LoadBattleTowerLevelGroup
 	dw BattleTower_CheckSaveFileExistsAndIsYours
 	dw BattleTowerAction_MaxVolume
 	dw CheckMobileEventIndex
 	dw BattleTowerAction_EggTicket
-	dw Function1709aa
-	dw Function170a9c
-	dw Function170aa0
 	dw BattleTowerAction_LevelCheck
 	dw BattleTowerAction_UbersCheck
 	dw ResetBattleTowerTrainersSRAM
 	dw BattleTower_GiveReward
-	dw Function17071b
-	dw Function170729
+	dw BattleTowerAction_SetWonChallenge
+	dw BattleTowerAction_SetReceivedReward
 	dw BattleTower_RandomlyChooseReward
 	dw BattleTower_SaveOptions
 
@@ -517,9 +401,7 @@ ResetBattleTowerTrainersSRAM:
 	xor a
 	ld [sNrOfBeatenBattleTowerTrainers], a
 
-	call CloseSRAM
-
-	ret
+	jp CloseSRAM
 
 BattleTower_GiveReward:
 	ld a, BANK(sBattleTowerReward)
@@ -550,14 +432,14 @@ BattleTower_GiveReward:
 	ld [wScriptVar], a
 	ret
 
-Function17071b:
+BattleTowerAction_SetWonChallenge:
 	ld a, BANK(sBattleTowerChallengeState)
 	call GetSRAMBank
 	ld a, BATTLETOWER_WON_CHALLENGE
 	ld [sBattleTowerChallengeState], a
 	jp CloseSRAM
 
-Function170729:
+BattleTowerAction_SetReceivedReward:
 	ld a, BANK(sBattleTowerChallengeState)
 	call GetSRAMBank
 	ld a, BATTLETOWER_RECEIVED_REWARD
@@ -630,15 +512,6 @@ asm_17079f:
 	ld [sBattleTowerChallengeState], a
 	jp CloseSRAM
 
-Function1707f4:
-	ld a, BANK(s5_be46) ; aka BANK(s5_aa8b) and BANK(s5_aa8c)
-	call GetSRAMBank
-	xor a
-	ld [s5_be46], a
-	ld [s5_aa8b], a
-	ld [s5_aa8c], a
-	jp CloseSRAM
-
 SaveBattleTowerLevelGroup:
 	ld a, BANK(sBTChoiceOfLevelGroup)
 	call GetSRAMBank
@@ -668,16 +541,12 @@ LoadBattleTowerLevelGroup: ; Load level group choice
 BattleTower_CheckSaveFileExistsAndIsYours:
 	ld a, [wSaveFileExists]
 	and a
-	jr z, .nope
+	jr z, .done
 	farcall CompareLoadedAndSavedPlayerID
-	jr z, .yes
-	xor a ; FALSE
-	jr .nope
-
-.yes
 	ld a, TRUE
-
-.nope
+	jr z, .done
+	xor a ; FALSE
+.done
 	ld [wScriptVar], a
 	ret
 
@@ -762,30 +631,6 @@ endr
 
 String_MysteryJP:
 	db "なぞナゾ@@" ; MYSTERY
-
-Function1709aa:
-	ldh a, [rSVBK]
-	push af
-	ld a, BANK(w3_d090)
-	ldh [rSVBK], a
-	ld a, [w3_d090]
-	ld [wScriptVar], a
-	pop af
-	ldh [rSVBK], a
-	ret
-
-Function170a9c:
-	ld c, FALSE
-	jr asm_170aa2
-
-Function170aa0:
-	ld c, TRUE
-asm_170aa2:
-	ld a, BANK(s5_aa8d)
-	call GetSRAMBank
-	ld a, c
-	ld [s5_aa8d], a
-	jp CloseSRAM
 
 BattleTowerAction_LevelCheck:
 	ld a, BANK(s5_b2fb)
@@ -1008,14 +853,8 @@ SetBattleTowerPartyLevel:
 
 CheckForBattleTowerRules:
 	farcall _CheckForBattleTowerRules
-	jr c, .ready
-	xor a ; FALSE
-	jr .end
-
-.ready
-	ld a, TRUE
-
-.end
+	sbc a
+	and TRUE
 	ld [wScriptVar], a
 	ret
 

@@ -220,16 +220,6 @@ sBox20PokemonIndexes:: ds 2 * MONS_PER_BOX
 
 
 SECTION "SRAM Mobile 2", SRAM
-
-s5_aa41:: ds 4
+	ds $1fe8 ; try to make sure that nothing accidentally overwrites useful SRAM at bank 1
 sMobileLoginPassword:: ds MOBILE_LOGIN_PASSWORD_LENGTH
-s5_aa5d:: ds MOBILE_LOGIN_PASSWORD_LENGTH
-s5_aa8b:: db
-s5_aa8c:: db
-s5_aa8d:: db
-s5_aa8e:: ds 7 * $cc
-s5_b2f9:: db
-s5_b2fa:: db
 s5_b2fb:: db
-s5_be45:: db
-s5_be46:: db

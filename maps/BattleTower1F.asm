@@ -33,8 +33,6 @@ BattleTower1F_MapScripts:
 	prioritysjump BattleTower_LeftWithoutSaving
 	setval BATTLETOWERACTION_CHALLENGECANCELED
 	special BattleTowerAction
-	setval BATTLETOWERACTION_06
-	special BattleTowerAction
 .SkipEverything:
 	setscene SCENE_FINISHED
 .Scene1:
@@ -89,9 +87,7 @@ Script_ChooseChallenge:
 	special NewBattleTowerSession
 	special BattleTowerRoomMenu
 	ifequal $a, .ResetPartyAndReturn
-	ifnotequal $0, Script_MobileError
-	setval BATTLETOWERACTION_11
-	special BattleTowerAction
+	iftrue Script_MobileError
 	special LoadPokemonData
 	writetext Text_RightThisWayToYourBattleRoom
 	waitbutton
@@ -130,7 +126,7 @@ Script_WalkToBattleTowerElevator:
 	end
 
 Script_GivePlayerHisPrize:
-	setval BATTLETOWERACTION_1C
+	setval BATTLETOWERACTION_SETWONCHALLENGE
 	special BattleTowerAction
 	setval BATTLETOWERACTION_GIVEREWARD
 	special BattleTowerAction
@@ -138,7 +134,7 @@ Script_GivePlayerHisPrize:
 	getitemname STRING_BUFFER_4, USE_SCRIPT_VAR
 	giveitem ITEM_FROM_MEM, 5
 	writetext Text_PlayerGotFive
-	setval BATTLETOWERACTION_1D
+	setval BATTLETOWERACTION_SETRECEIVEDREWARD
 	special BattleTowerAction
 	closetext
 	end

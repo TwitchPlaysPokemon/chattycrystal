@@ -126,15 +126,9 @@ Function1180b8:
 	call ReturnToMapFromSubmenu
 	ret
 
-Function11811a:
-	ld a, 1
-	ld [wcd38], a
-	jr Function118125
-
 _BattleTowerRoomMenu:
 	xor a
 	ld [wcd38], a
-Function118125:
 	call BattleTowerRoomMenu_InitRAM
 	ld a, $3
 	ld [wcd33], a
@@ -661,7 +655,7 @@ Function11857c:
 	dw Function1198ee
 	dw Function1198f7
 	dw Function11878d
-	dw Function119937
+	dw BattleTowerRoomMenu_IncrementJumptable
 	dw Function118e6d
 	dw Function11878d
 	dw Function118e76
@@ -1483,48 +1477,6 @@ MenuDownloadURL:
 
 IndexDownloadURL:
 	db "http://gameboy.datacenter.ne.jp/cgb/download?name=/01/CGB-BXTJ/tamago/index.txt", 0
-
-Unreferenced_Function118d35:
-	ld hl, $d200
-	ld a, [wcd38]
-	and a
-	jr nz, .asm_118d6e
-	ld a, [hli]
-	cp $94
-	jr nz, .asm_118d7b
-	ld a, [hl]
-	cp $5
-	jr nz, .asm_118d7b
-	ld a, [wcd4f]
-	sla a
-	ld b, a
-	sla a
-	sla a
-	add b
-	ld b, a
-	ld a, $5
-	call GetSRAMBank
-	ld a, b
-	ld [$b2fb], a
-	call CloseSRAM
-	farcall Function170be4
-	farcall Function1700c4
-	jr .asm_118d78
-
-.asm_118d6e
-	ld a, [hli]
-	cp $96
-	jr nz, .asm_118d7b
-	ld a, [hl]
-	cp $0
-	jr nz, .asm_118d7b
-
-.asm_118d78
-	jp BattleTowerRoomMenu_IncrementJumptable
-
-.asm_118d7b
-	ld a, $d3
-	jp Function118805
 
 Function118d80:
 	call Function118e06
@@ -3272,10 +3224,6 @@ Function1198f7:
 	ld bc, $0200
 	ld a, $2c
 	jp Function119e2b
-
-Function119937:
-	farcall Function1707f4
-	jp BattleTowerRoomMenu_IncrementJumptable
 
 Function119940:
 	ld de, wc3cd

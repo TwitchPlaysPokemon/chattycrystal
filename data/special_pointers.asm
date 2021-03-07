@@ -130,7 +130,7 @@ SpecialsPointers::
 	add_special AskRememberPassword
 	add_special LoadMapPalettes
 	add_special BattleTowerRoomMenu
-	add_special Function1700ba
+	add_special Function103780
 	add_special Function10387b
 	add_special BattleTowerBattle
 	add_special LoadPokemonData ; $78
@@ -167,4 +167,3 @@ SpecialsPointers::
 	add_special Function1037eb
 	add_special Function10383c ; $98
 	add_special Function1037c2
-	add_special Function103780

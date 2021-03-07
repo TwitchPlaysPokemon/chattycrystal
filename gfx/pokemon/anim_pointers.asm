@@ -355,7 +355,7 @@ AnimationPointers:
 	dw DusknoirAnimation
 	dw FroslassAnimation
 	dw DarkraiAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Pansage
+	dw PansageAnimation
 	dw SimisageAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Drilbur
 	dw PlaceholderAnimation ; PLACEHOLDER - Excadrill

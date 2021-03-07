@@ -355,7 +355,7 @@ FramesPointers:
 	dba DusknoirFrames
 	dba FroslassFrames
 	dba DarkraiFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Pansage
+	dba PansageFrames
 	dba SimisageFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Drilbur
 	dba PlaceholderFrames ; PLACEHOLDER - Excadrill

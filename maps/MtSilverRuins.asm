@@ -181,6 +181,7 @@ MtSilverRuinsStartCredits:
 	clearevent EVENT_RED_IN_MT_SILVER
 	setevent EVENT_BEAT_MT_SILVER
 	setevent EVENT_MARINA_AVAILABLE
+	clearevent EVENT_REDS_HOUSE_2F_TM_ROCK_SMASH
 	special HealParty
 	refreshscreen
 	credits

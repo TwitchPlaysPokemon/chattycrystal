@@ -923,6 +923,26 @@ ENDU ; c7e8
 ENDU ; c7e8
 
 
+SECTION "Chatty Variables", WRAM0
+
+wChattyOverride:: db ;tells the code not to ask chatty for things. controlled by the ROM
+wScriptActive:: db ;set to 0 when done accepting script text or other stuff, if it's still 0 when doing something else then the game assumes the script is dead
+wChattySpace:: db ;the amount of space being used up in this textbox
+wChattyHPType:: db ;The type chatty hidden power should be
+wChattyHPPower:: db ;The power chatty hidden power should be
+wChattyChatterMove:: dw ;the move to call with chatter
+
+wCurrentForme:: db
+
+wRequestedBoxSwitch:: db
+
+wTempLoopCounter:: db
+
+wChattyTrainerClass:: db
+wChattyTrainerID:: db
+wTPPFeatureLock:: db ; set to $ba to lock in TPP-only features
+
+
 SECTION "Overworld Map", WRAM0
 
 UNION ; c800
@@ -1601,22 +1621,6 @@ wSecondsSince:: db
 wMinutesSince:: db
 wHoursSince:: db
 wDaysSince:: db
-wChattyOverride:: db ;tells the code not to ask chatty for things. controlled by the ROM
-wScriptActive:: db ;set to 0 when done accepting script text or other stuff, if it's still 0 when doing something else then the game assumes the script is dead
-wChattySpace:: db ;the amount of space being used up in this textbox
-wChattyHPType:: db ;The type chatty hidden power should be
-wChattyHPPower:: db ;The power chatty hidden power should be
-wChattyChatterMove:: dw ;the move to call with chatter
-
-wCurrentForme:: db
-
-wRequestedBoxSwitch:: db
-
-wTempLoopCounter:: db
-
-wChattyTrainerClass:: db
-wChattyTrainerID:: db
-wTPPFeatureLock:: db ; set to $ba to lock in TPP-only features
 
 
 SECTION "16-bit WRAM home data", WRAM0

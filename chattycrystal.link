@@ -346,6 +346,8 @@ WRAM0
 	"Sprites"
 	"Tilemap"
 	"Miscellaneous"
+	"Chatty Variables"
+	align 8
 	"Overworld Map"
 	"Video"
 	align 5

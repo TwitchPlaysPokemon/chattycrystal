@@ -371,7 +371,7 @@ AnimationPointers:
 	dw LampentAnimation
 	dw ChandelureAnimation
 	dw ClauncherAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Clawitzer
+	dw ClawitzerAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Helioptile
 	dw HelioliskAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Amaura

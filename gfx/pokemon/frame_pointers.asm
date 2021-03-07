@@ -371,7 +371,7 @@ FramesPointers:
 	dba LampentFrames
 	dba ChandelureFrames
 	dba ClauncherFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Clawitzer
+	dba ClawitzerFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Helioptile
 	dba HelioliskFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Amaura

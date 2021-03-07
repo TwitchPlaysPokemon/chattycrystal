@@ -970,6 +970,7 @@ LitwickBackpic:      INCBIN "gfx/pokemon/litwick/back.2bpp.lz"
 LampentBackpic:      INCBIN "gfx/pokemon/lampent/back.2bpp.lz"
 ChandelureFrontpic:  INCBIN "gfx/pokemon/chandelure/front.animated.2bpp.lz"
 ChandelureBackpic:   INCBIN "gfx/pokemon/chandelure/back.2bpp.lz"
+CrabrawlerBackpic:   INCBIN "gfx/pokemon/crabrawler/back.2bpp.lz"
 CutieflyBackpic:     INCBIN "gfx/pokemon/cutiefly/back.2bpp.lz"
 
 SECTION "Pics 32", ROMX
@@ -991,7 +992,6 @@ SliggooFrontpic:     INCBIN "gfx/pokemon/sliggoo/front.animated.2bpp.lz"
 SliggooBackpic:      INCBIN "gfx/pokemon/sliggoo/back.2bpp.lz"
 GoodraBackpic:       INCBIN "gfx/pokemon/goodra/back.2bpp.lz"
 CrabrawlerFrontpic:  INCBIN "gfx/pokemon/crabrawler/front.animated.2bpp.lz"
-CrabrawlerBackpic:   INCBIN "gfx/pokemon/crabrawler/back.2bpp.lz"
 CrabominableBackpic: INCBIN "gfx/pokemon/crabominable/back.2bpp.lz"
 SkuntankFrontpic:    INCBIN "gfx/pokemon/skuntank/front.animated.2bpp.lz"
 

@@ -371,7 +371,7 @@ BitmasksPointers:
 	dw LampentBitmasks
 	dw ChandelureBitmasks
 	dw ClauncherBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Clawitzer
+	dw ClawitzerBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Helioptile
 	dw HelioliskBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Amaura

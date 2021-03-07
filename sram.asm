@@ -65,6 +65,7 @@ sLuckyIDNumber::  dw
 
 SECTION "Saved special mons", SRAM
 sSavedChatot:: box_struct sSavedChatot
+sSavedChatotName:: ds MON_NAME_LENGTH
 sSavedUnown:: box_struct sSavedUnown
 sSavedUnownName:: ds MON_NAME_LENGTH
 

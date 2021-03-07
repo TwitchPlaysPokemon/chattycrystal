@@ -1,29 +1,6 @@
 ROM0
 	org $0000
-	"NULL"
-	"rst0"
-	org $0008
-	"rst8"
-	org $0010
-	"rst10"
-	org $0018
-	"rst18"
-	org $0020
-	"rst20"
-	org $0028
-	"rst28"
-	org $0038
-	"rst38"
-	org $0040
-	"vblank"
-	org $0048
-	"lcd"
-	org $0050
-	"timer"
-	org $0058
-	"serial"
-	org $0060
-	"joypad"
+	"Low Home"
 	org $0100
 	"Header"
 	org $0150

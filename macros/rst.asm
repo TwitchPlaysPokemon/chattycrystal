@@ -1,9 +1,3 @@
-FarCall    EQU $08
-Bankswitch EQU $10
-ChattyOn EQU $18
-ChattyOff EQU $20
-JumpTable  EQU $28
-
 farcall: MACRO ; bank, address
 	ld a, BANK(\1)
 	ld hl, \1

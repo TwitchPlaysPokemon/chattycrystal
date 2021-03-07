@@ -382,7 +382,7 @@ BitmasksPointers:
 	dw GoodraBitmasks
 	dw CrabrawlerBitmasks
 	dw CrabominableBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Cutiefly
+	dw CutieflyBitmasks
 	dw RibombeeBitmasks
 	; Fused Crystal mons
 	dw OnixtretBitmasks

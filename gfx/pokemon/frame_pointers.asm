@@ -382,7 +382,7 @@ FramesPointers:
 	dba GoodraFrames
 	dba CrabrawlerFrames
 	dba CrabominableFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Cutiefly
+	dba CutieflyFrames
 	dba RibombeeFrames
 	; Fused Crystal mons
 	dba OnixtretFrames

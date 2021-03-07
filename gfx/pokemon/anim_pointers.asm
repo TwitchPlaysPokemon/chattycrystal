@@ -382,7 +382,7 @@ AnimationPointers:
 	dw GoodraAnimation
 	dw CrabrawlerAnimation
 	dw CrabominableAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Cutiefly
+	dw CutieflyAnimation
 	dw RibombeeAnimation
 	; Fused Crystal mons
 	dw OnixtretAnimation

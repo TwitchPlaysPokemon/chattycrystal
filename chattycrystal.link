@@ -401,6 +401,7 @@ SRAM 0
 	"Scratch"
 	"SRAM Bank 0"
 	"Boxes 15-18"
+	"Saved special mons"
 	align 8
 	"Saved 16-bit conversion tables"
 SRAM 1

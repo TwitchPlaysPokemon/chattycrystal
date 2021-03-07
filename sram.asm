@@ -63,6 +63,11 @@ sRTCStatusFlags:: ds 8
 sLuckyNumberDay:: db
 sLuckyIDNumber::  dw
 
+SECTION "Saved special mons", SRAM
+sSavedChatot:: box_struct sSavedChatot
+sSavedUnown:: box_struct sSavedUnown
+sSavedUnownName:: ds MON_NAME_LENGTH
+
 SECTION "Saved 16-bit conversion tables", SRAM
 sConversionTables::
 sPokemonIndexTable:: ds wPokemonIndexTableEnd - wPokemonIndexTable

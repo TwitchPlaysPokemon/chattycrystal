@@ -31,7 +31,7 @@ Printer_PrepareTileMapForPrint:
 
 Printer_ExitPrinter:
 	call ReturnToMapFromSubmenu
-	jp Printer_RestartMapMusic
+	jp RestartMapMusic
 
 PrintDexEntry:
 	ld a, [wPrinterQueueLength]
@@ -200,8 +200,7 @@ PrintPCBox:
 
 Printer_ResetRegistersAndStartDataSend:
 	call Printer_ResetJoypadRegisters
-	call SendScreenToPrinter
-	ret
+	jp SendScreenToPrinter
 
 PrintUnownStamp:
 	ld a, [wPrinterQueueLength]
@@ -264,8 +263,7 @@ PrintUnownStamp:
 
 PrintMailAndExit:
 	call PrintMail
-	call Printer_ExitPrinter
-	ret
+	jp Printer_ExitPrinter
 
 PrintMail:
 	ld a, [wPrinterQueueLength]
@@ -471,15 +469,13 @@ Printer_CopyTileMapToBuffer:
 	hlcoord 0, 0
 	ld de, wPrinterTileMapBuffer
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	call CopyBytes
-	ret
+	jp CopyBytes
 
 Printer_CopyBufferToTileMap:
 	ld hl, wPrinterTileMapBuffer
 	decoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	call CopyBytes
-	ret
+	jp CopyBytes
 
 Printer_ResetJoypadRegisters:
 	xor a
@@ -491,12 +487,7 @@ Printer_ResetJoypadRegisters:
 
 Printer_PlayMusic:
 	ld de, MUSIC_PRINTER
-	call PlayMusic2
-	ret
-
-Printer_RestartMapMusic:
-	call RestartMapMusic
-	ret
+	jp PlayMusic2
 
 CheckPrinterStatus:
 ; Check for printer errors
@@ -616,8 +607,7 @@ PrintPCBox_Page1:
 	call Printer_GetBoxMonSpecies
 	hlcoord 2, 9
 	ld c, 3
-	call Printer_PrintBoxListSegment
-	ret
+	jp Printer_PrintBoxListSegment
 
 .String_PokemonList:
 	db "#MON LIST@"
@@ -636,8 +626,7 @@ PrintPCBox_Page2:
 	call Printer_GetBoxMonSpecies
 	hlcoord 2, 0
 	ld c, 6
-	call Printer_PrintBoxListSegment
-	ret
+	jp Printer_PrintBoxListSegment
 
 PrintPCBox_Page3:
 	hlcoord 0, 0
@@ -653,8 +642,7 @@ PrintPCBox_Page3:
 	call Printer_GetBoxMonSpecies
 	hlcoord 2, 0
 	ld c, 6
-	call Printer_PrintBoxListSegment
-	ret
+	jp Printer_PrintBoxListSegment
 
 PrintPCBox_Page4:
 	hlcoord 0, 0
@@ -674,8 +662,7 @@ PrintPCBox_Page4:
 	call Printer_GetBoxMonSpecies
 	hlcoord 2, 0
 	ld c, 5
-	call Printer_PrintBoxListSegment
-	ret
+	jp Printer_PrintBoxListSegment
 
 Printer_PrintBoxListSegment:
 	ld a, [wBankOfBoxToPrint]
@@ -776,8 +763,7 @@ Printer_PrintBoxListSegment:
 	ld a, $1
 	ld [wFinishedPrintingBox], a
 .max_length
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 Printer_GetMonGender:
 	push hl

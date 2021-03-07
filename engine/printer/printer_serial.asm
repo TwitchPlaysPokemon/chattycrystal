@@ -428,12 +428,6 @@ PrinterDataPacket3:
 PrinterDataPacket4:
 	db  4, 0, $00, 0
 	dw 4
-PrinterDataPacket5: ; unused
-	db  8, 0, $00, 0
-	dw 8
-PrinterDataPacket6: ; unused
-	db 15, 0, $00, 0
-	dw 15
 
 _PrinterReceive::
 	ld a, [wPrinterOpcode]
@@ -471,7 +465,7 @@ _PrinterReceive::
 	dw Printer_Send0x00 ; 12
 	dw Printer_Send0x00 ; 13
 	dw Printer_ReceiveTwoPrinterHandshakeAndSend0x00 ; 14
-	dw Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop_2 ; 15
+	dw Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop ; 15
 
 	dw Printer_Send0x33 ; 16 triggered by pressing B
 	dw Printer_Send0x08 ; 17
@@ -491,28 +485,23 @@ Printer_NextInstruction:
 
 Printer_Send0x33:
 	ld a, $33
-	call Printer_SerialSend
-	jp Printer_NextInstruction
+	jr Printer_SerialSend_NextInstruction
 
 Printer_SendPrinterData1:
 	ld a, [wPrinterData]
-	call Printer_SerialSend
-	jp Printer_NextInstruction
+	jr Printer_SerialSend_NextInstruction
 
 Printer_SendPrinterData2:
 	ld a, [wPrinterData + 1]
-	call Printer_SerialSend
-	jp Printer_NextInstruction
+	jr Printer_SerialSend_NextInstruction
 
 Printer_SendPrinterData3:
 	ld a, [wPrinterData + 2]
-	call Printer_SerialSend
-	jp Printer_NextInstruction
+	jr Printer_SerialSend_NextInstruction
 
 Printer_SendPrinterData4:
 	ld a, [wPrinterData + 3]
-	call Printer_SerialSend
-	jp Printer_NextInstruction
+	jr Printer_SerialSend_NextInstruction
 
 Printer_SendNextByte:
 	; decrement 16-bit counter
@@ -539,26 +528,26 @@ Printer_SendNextByte:
 	ld a, d
 	ld [wPrinterSendByteOffset + 1], a
 	ld a, [hl]
-	jp Printer_SerialSend
+	jr Printer_SerialSend
 
 .done
 	call Printer_NextInstruction
 Printer_SendwPrinterChecksumLo:
 	ld a, [wPrinterChecksum]
-	call Printer_SerialSend
-	jp Printer_NextInstruction
+	jr Printer_SerialSend_NextInstruction
 
 Printer_SendwPrinterChecksumHi:
 	ld a, [wPrinterChecksum + 1]
+Printer_SerialSend_NextInstruction:
 	call Printer_SerialSend
-	jp Printer_NextInstruction
+	jr Printer_NextInstruction
 
 Printer_ReceiveTwoPrinterHandshakeAndSend0x00:
 	ldh a, [rSB]
 	ld [wPrinterHandshake], a
-	ld a, $0
-	call Printer_SerialSend
-	jp Printer_NextInstruction
+Printer_Send0x00:
+	xor a
+	jr Printer_SerialSend_NextInstruction
 
 Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop:
 	ldh a, [rSB]
@@ -569,18 +558,11 @@ Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop:
 
 Printer_Send0x0f:
 	ld a, $f
-	call Printer_SerialSend
-	jp Printer_NextInstruction
-
-Printer_Send0x00:
-	ld a, $0
-	call Printer_SerialSend
-	jp Printer_NextInstruction
+	jr Printer_SerialSend_NextInstruction
 
 Printer_Send0x08:
 	ld a, $8
-	call Printer_SerialSend
-	jp Printer_NextInstruction
+	jr Printer_SerialSend_NextInstruction
 
 Printer_SerialSend:
 	ldh [rSB], a
@@ -588,12 +570,4 @@ Printer_SerialSend:
 	ldh [rSC], a
 	ld a, (1 << rSC_ON) | (1 << rSC_CLOCK)
 	ldh [rSC], a
-	ret
-
-Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop_2:
-; identical to Printer_ReceiveTwoPrinterStatusFlagsAndExitSendLoop, but referenced less
-	ldh a, [rSB]
-	ld [wPrinterStatusFlags], a
-	xor a
-	ld [wPrinterOpcode], a
 	ret

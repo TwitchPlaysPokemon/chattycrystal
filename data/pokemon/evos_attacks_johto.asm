@@ -352,15 +352,20 @@ AriadosEvosAttacks:
 
 CrobatEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, SCREECH
 	dbw 1, LEECH_LIFE
 	dbw 1, SUPERSONIC
-	dbw 6, SUPERSONIC
+	dbw 1, ASTONISH
+	dbw 8, ASTONISH
 	dbw 12, BITE
+	dbw 15, WING_ATTACK
 	dbw 19, CONFUSE_RAY
-	dbw 30, WING_ATTACK
-	dbw 42, MEAN_LOOK
-	dbw 55, HAZE
+	dbw 22, SWIFT
+	dbw 27, CRUNCH
+	dbw 31, AIR_CUTTER
+	dbw 36, POISON_FANG
+	dbw 40, MEAN_LOOK
+	dbw 45, HAZE
+	dbw 49, AIR_SLASH
 	db 0 ; no more level-up moves
 
 ChinchouEvosAttacks:
@@ -509,11 +514,13 @@ AmpharosEvosAttacks:
 
 BellossomEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, ABSORB
+	dbw 1, MEGA_DRAIN
 	dbw 1, SWEET_SCENT
 	dbw 1, STUN_SPORE
-	dbw 1, PETAL_DANCE
-	dbw 55, SOLARBEAM
+	dbw 1, SUNNY_DAY
+	dbw 47, QUIVER_DANCE
+	dbw 52, PETAL_DANCE
+	dbw 60, LEAF_STORM
 	db 0 ; no more level-up moves
 
 MarillEvosAttacks:

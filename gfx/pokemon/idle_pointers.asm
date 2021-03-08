@@ -338,7 +338,7 @@ AnimationIdlePointers:
 	dw BuizelAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Floatzel
 	dw ShellosAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Gastrodon
+	dw GastrodonAnimationIdle
 	dw BunearyAnimationIdle
 	dw LopunnyAnimationIdle
 	dw StunkyAnimationIdle

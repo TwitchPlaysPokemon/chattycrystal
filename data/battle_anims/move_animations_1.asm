@@ -1811,8 +1811,6 @@ BattleAnim_Tackle:
 	anim_obj ANIM_OBJ_00, 136, 48, $0
 	anim_wait 8
 	anim_call BattleAnim_ShowMon_0
-	anim_ret
-
 
 BattleAnim_BodySlam:
 	anim_1gfx ANIM_GFX_HIT

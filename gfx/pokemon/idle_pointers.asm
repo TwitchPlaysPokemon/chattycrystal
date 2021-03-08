@@ -357,8 +357,8 @@ AnimationIdlePointers:
 	dw DarkraiAnimationIdle
 	dw PansageAnimationIdle
 	dw SimisageAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Drilbur
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Excadrill
+	dw DrilburAnimationIdle
+	dw ExcadrillAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sandile
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Krokorok
 	dw KrookodileAnimationIdle

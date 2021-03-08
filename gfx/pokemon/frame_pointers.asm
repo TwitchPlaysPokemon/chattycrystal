@@ -357,8 +357,8 @@ FramesPointers:
 	dba DarkraiFrames
 	dba PansageFrames
 	dba SimisageFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Drilbur
-	dba PlaceholderFrames ; PLACEHOLDER - Excadrill
+	dba DrilburFrames
+	dba ExcadrillFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Sandile
 	dba PlaceholderFrames ; PLACEHOLDER - Krokorok
 	dba KrookodileFrames

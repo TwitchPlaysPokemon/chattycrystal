@@ -277,7 +277,7 @@ SquirtleEvosAttacks:
 	dbw 19, RAPID_SPIN
 	dbw 22, PROTECT
 	dbw 25, WATER_PULSE
-	dbw 28, AQUA_TAIL
+	dbw 28, AQUA_JET
 	dbw 31, SKULL_BASH
 	dbw 34, IRON_DEFENSE
 	dbw 37, RAIN_DANCE
@@ -297,7 +297,7 @@ WartortleEvosAttacks:
 	dbw 21, RAPID_SPIN
 	dbw 25, PROTECT
 	dbw 29, WATER_PULSE
-	dbw 33, AQUA_TAIL
+	dbw 33, AQUA_JET
 	dbw 37, SKULL_BASH
 	dbw 41, IRON_DEFENSE
 	dbw 45, RAIN_DANCE
@@ -316,7 +316,7 @@ BlastoiseEvosAttacks:
 	dbw 21, RAPID_SPIN
 	dbw 25, PROTECT
 	dbw 29, WATER_PULSE
-	dbw 33, AQUA_TAIL
+	dbw 33, AQUA_JET
 	dbw 36, FLASH_CANNON
 	dbw 40, SKULL_BASH
 	dbw 47, IRON_DEFENSE

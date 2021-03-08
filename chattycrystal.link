@@ -51,14 +51,14 @@ ROMX $0f
 ROMX $10
 	"bank10"
 	"Evolutions and Attacks Pointers"
-	"Evolutions and Attacks 1"
+	"Evolutions and Attacks 2"
 ROMX $11
 	"bank11"
 	"Pics 30"
 ROMX $12
 	"Crystal Features 1"
 	"Egg Moves 2"
-	"Evolutions and Attacks 2"
+	"Evolutions and Attacks 1"
 ROMX $13
 	"bank13"
 	"Map Scripts 27"

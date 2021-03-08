@@ -315,8 +315,8 @@ MoveAnimations:
 	dw BattleAnim_FireFang
 	dw BattleAnim_QuickAttack  ; PLACEHOLDER
 	dw BattleAnim_SludgeBomb   ; PLACEHOLDER
-	dw BattleAnim_Cut          ; PLACEHOLDER
-	dw BattleAnim_Headbutt     ; PLACEHOLDER
+	dw BattleAnim_PsychoCut
+	dw BattleAnim_ZenHeadbutt
 	dw BattleAnim_FlashCannon
 	dw BattleAnim_RockClimb
 	dw BattleAnim_Discharge    ; 140
@@ -3602,6 +3602,54 @@ BattleAnim_FireFang:
 	anim_loop 3, .loop
 	anim_wait 16
 	anim_ret
+
+BattleAnim_PsychoCut:
+	anim_2gfx ANIM_GFX_LEAF_STORM, ANIM_GFX_WOOD
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_sound 6, 2, SFX_SUPERSONIC
+	anim_obj ANIM_OBJ_VORTEX, 48, 96, $30
+	anim_wait 64
+	anim_clearobjs
+	anim_sound 0, 1, SFX_CUT
+	anim_obj ANIM_OBJ_PSY_CUT, 48, 96, $18
+	anim_wait 20
+	anim_incbgeffect ANIM_BG_ALTERNATE_HUES
+	anim_sound 0, 1, SFX_PSYCHIC
+	anim_clearobjs
+	anim_battlergfx_1row
+	anim_bgeffect ANIM_BG_BATTLEROBJ_2ROW, $0, $1, $0
+	anim_bgeffect ANIM_BG_NIGHT_SHADE, $0, $0, $8
+	anim_wait 64
+	anim_incbgeffect ANIM_BG_NIGHT_SHADE
+	anim_jump BattleAnim_ShowMon_1
+	anim_ret
+
+BattleAnim_ZenHeadbutt:
+	anim_2gfx ANIM_GFX_SHINE, ANIM_GFX_HIT
+	anim_battlergfx_1row
+	anim_bgeffect ANIM_BG_18, $0, $1, $40
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_FORESIGHT, 44, 104, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_FORESIGHT, 44, 96, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_FORESIGHT, 44, 88, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_FORESIGHT
+	anim_obj ANIM_OBJ_GLIMMER, 44, 80, $0
+	anim_bgeffect ANIM_BG_07, $0, $0, $0
+	anim_wait 64
+	anim_incbgeffect ANIM_BG_18
+	anim_bgeffect ANIM_BG_BATTLEROBJ_2ROW, $0, $0, $0
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_obj ANIM_OBJ_01, 136, 48, $0
+	anim_wait 8
+	anim_jump BattleAnim_ShowMon_0
 
 BattleAnim_FlashCannon:
 	anim_3gfx ANIM_GFX_CHARGE, ANIM_GFX_SHINE, ANIM_GFX_LIGHTNING

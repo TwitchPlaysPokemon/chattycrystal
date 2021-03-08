@@ -234,6 +234,9 @@ BattleAnimOAMData:
 	dbbw $0e,  8, .OAMData_52 ; BATTLEANIMOAMSET_E6
 	dbbw $0e,  4, .OAMData_53 ; BATTLEANIMOAMSET_E7
 	dbbw $0e,  8, .OAMData_53 ; BATTLEANIMOAMSET_E8
+	dbbw $08, 16, .OAMData_1c ; BATTLEANIMOAMSET_E9
+	dbbw $18, 16, .OAMData_1c ; BATTLEANIMOAMSET_EA
+	dbbw $28, 16, .OAMData_1c ; BATTLEANIMOAMSET_EB
 
 .OAMData_00:
 	dsprite  -2, 0,  -2, 0, $00, $0

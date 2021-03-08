@@ -56,5 +56,5 @@ AnimObjGFX:
 	anim_obj_gfx 32, AnimObjS_RollerGFX
 	anim_obj_gfx 16, AnimObjHornLeechGFX
 	anim_obj_gfx  5, AnimObjHeartsGFX
-	anim_obj_gfx  9, AnimObjWoodGFX
-	anim_obj_gfx 37, AnimObjLeafStormGFX
+	anim_obj_gfx 18, AnimObjWoodGFX
+	anim_obj_gfx 56, AnimObjLeafStormGFX

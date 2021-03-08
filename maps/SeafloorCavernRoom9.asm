@@ -34,6 +34,7 @@ Marina:
 	reloadmap
 	special FadeOutMusic
 	special RestoreHeldItems
+	chattyoff
 	opentext
 	iftrue .LostToMarina
 	writetext .MarinaDefeated

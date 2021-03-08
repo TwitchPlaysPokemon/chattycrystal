@@ -1532,50 +1532,69 @@ DoduoEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, GROWL
-	dbw 9, PURSUIT
-	dbw 13, FURY_ATTACK
-	dbw 21, TRI_ATTACK
-	dbw 25, RAGE
-	dbw 33, DRILL_PECK
-	dbw 37, AGILITY
+	dbw 7, QUICK_ATTACK
+	dbw 11, RAGE
+	dbw 15, FURY_ATTACK
+	dbw 21, PURSUIT
+	dbw 25, AGILITY
+	dbw 29, SWORDS_DANCE
+	dbw 35, JUMP_KICK
+	dbw 39, DRILL_PECK
+	dbw 43, ENDEAVOR
+	dbw 49, THRASH
 	db 0 ; no more level-up moves
 
 DodrioEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, GROWL
-	dbw 1, PURSUIT
-	dbw 1, FURY_ATTACK
-	dbw 9, PURSUIT
-	dbw 13, FURY_ATTACK
-	dbw 21, TRI_ATTACK
-	dbw 25, RAGE
-	dbw 38, DRILL_PECK
-	dbw 47, AGILITY
+	dbw 7, QUICK_ATTACK
+	dbw 11, RAGE
+	dbw 15, FURY_ATTACK
+	dbw 21, PURSUIT
+	dbw 25, AGILITY
+	dbw 29, SWORDS_DANCE
+	dbw 31, TRI_ATTACK
+	dbw 35, JUMP_KICK
+	dbw 39, DRILL_PECK
+	dbw 43, ENDEAVOR
+	dbw 49, THRASH
 	db 0 ; no more level-up moves
 
 SeelEvosAttacks:
 	dbbw EVOLVE_LEVEL, 34, DEWGONG
 	db 0 ; no more evolutions
 	dbw 1, HEADBUTT
-	dbw 5, GROWL
-	dbw 16, AURORA_BEAM
-	dbw 21, REST
-	dbw 32, TAKE_DOWN
-	dbw 37, ICE_BEAM
+	dbw 4, GROWL
+	dbw 8, ICY_WIND
+	dbw 12, ENCORE
+	dbw 15, ICE_SHARD
+	dbw 19, REST
+	dbw 23, AQUA_RING
+	dbw 26, AURORA_BEAM
+	dbw 30, AQUA_JET
+	dbw 34, BRINE
+	dbw 37, TAKE_DOWN
+	dbw 41, DIVE
+	dbw 45, ICE_BEAM
 	dbw 48, SAFEGUARD
 	db 0 ; no more level-up moves
 
 DewgongEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, HEADBUTT
-	dbw 1, GROWL
-	dbw 1, AURORA_BEAM
-	dbw 5, GROWL
-	dbw 16, AURORA_BEAM
-	dbw 21, REST
-	dbw 32, TAKE_DOWN
-	dbw 43, ICE_BEAM
+	dbw 4, GROWL
+	dbw 8, ICY_WIND
+	dbw 12, ENCORE
+	dbw 15, ICE_SHARD
+	dbw 19, REST
+	dbw 23, AQUA_RING
+	dbw 26, AURORA_BEAM
+	dbw 30, AQUA_JET
+	dbw 36, BRINE
+	dbw 42, TAKE_DOWN
+	dbw 48, DIVE
+	dbw 54, ICE_BEAM
 	dbw 60, SAFEGUARD
 	db 0 ; no more level-up moves
 

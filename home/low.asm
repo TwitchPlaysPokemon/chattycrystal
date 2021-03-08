@@ -111,3 +111,5 @@ Crash::
 	assert @ == $0060
 	; joypad interrupt
 	jp JoypadInt
+
+	ds $9d

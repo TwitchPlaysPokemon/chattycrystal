@@ -445,6 +445,7 @@ BellossomBackpic:    INCBIN "gfx/pokemon/bellossom/back.2bpp.lz"
 SwinubBackpic:       INCBIN "gfx/pokemon/swinub/back.2bpp.lz"
 TorchicFrontpic:     INCBIN "gfx/pokemon/torchic/front.animated.2bpp.lz"
 SkittyBackpic:       INCBIN "gfx/pokemon/skitty/back.2bpp.lz"
+CroagunkBackpic:     INCBIN "gfx/pokemon/croagunk/back.2bpp.lz"
 
 SECTION "Pics 15", ROMX
 
@@ -929,7 +930,6 @@ ShellosBackpic::     INCBIN "gfx/pokemon/shellos/back.2bpp.lz"
 GastrodonFrontpic::  INCBIN "gfx/pokemon/gastrodon/front.animated.2bpp.lz"
 GastrodonBackpic::   INCBIN "gfx/pokemon/gastrodon/back.2bpp.lz"
 StunkyFrontpic:      INCBIN "gfx/pokemon/stunky/front.animated.2bpp.lz"
-CroagunkBackpic:     INCBIN "gfx/pokemon/croagunk/back.2bpp.lz"
 ToxicroakFrontpic:   INCBIN "gfx/pokemon/toxicroak/front.animated.2bpp.lz"
 ToxicroakBackpic:    INCBIN "gfx/pokemon/toxicroak/back.2bpp.lz"
 DarkraiFrontpic:     INCBIN "gfx/pokemon/darkrai/front.animated.2bpp.lz"
@@ -1002,7 +1002,6 @@ BurmyTrashBackpic::  INCBIN "gfx/pokemon/burmy-trash/back.2bpp.lz"
 ShellosEastFrontpic::   INCBIN "gfx/pokemon/shellos-east/front.animated.2bpp.lz"
 ShellosEastBackpic::    INCBIN "gfx/pokemon/shellos-east/back.2bpp.lz"
 GastrodonEastFrontpic:: INCBIN "gfx/pokemon/gastrodon-east/front.animated.2bpp.lz"
-GastrodonEastBackpic::  INCBIN "gfx/pokemon/gastrodon-east/back.2bpp.lz"
 BaytortleFrontpic:   INCBIN "gfx/pokemon/baytortle/front.animated.2bpp.lz"
 BaytortleBackpic:    INCBIN "gfx/pokemon/baytortle/back.2bpp.lz"
 ChiquirtleFrontpic:  INCBIN "gfx/pokemon/chiquirtle/front.animated.2bpp.lz"
@@ -1051,6 +1050,7 @@ CrobatFrontpic:      INCBIN "gfx/pokemon/crobat/front.animated.2bpp.lz"
 GranbullFrontpic:    INCBIN "gfx/pokemon/granbull/front.animated.2bpp.lz"
 EspeonFrontpic:      INCBIN "gfx/pokemon/espeon/front.animated.2bpp.lz"
 CorsolaFrontpic:     INCBIN "gfx/pokemon/corsola/front.animated.2bpp.lz"
+GastrodonEastBackpic::  INCBIN "gfx/pokemon/gastrodon-east/back.2bpp.lz"
 
 SECTION "Pics 37", ROMX
 

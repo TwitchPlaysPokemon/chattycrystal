@@ -338,7 +338,7 @@ BitmasksPointers:
 	dw BuizelBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Floatzel
 	dw ShellosBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Gastrodon
+	dw GastrodonBitmasks
 	dw BunearyBitmasks
 	dw LopunnyBitmasks
 	dw StunkyBitmasks

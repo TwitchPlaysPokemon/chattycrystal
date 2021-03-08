@@ -338,7 +338,7 @@ FramesPointers:
 	dba BuizelFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Floatzel
 	dba ShellosFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Gastrodon
+	dba GastrodonFrames
 	dba BunearyFrames
 	dba LopunnyFrames
 	dba StunkyFrames

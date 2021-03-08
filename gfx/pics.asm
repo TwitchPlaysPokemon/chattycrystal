@@ -942,7 +942,6 @@ GoodraFrontpic:      INCBIN "gfx/pokemon/goodra/front.animated.2bpp.lz"
 
 SECTION "Pics 31", ROMX
 
-CharmanderFrontpic:  INCBIN "gfx/pokemon/charmander/front.animated.2bpp.lz"
 EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 DarkraiBackpic:      INCBIN "gfx/pokemon/darkrai/back.2bpp.lz"
 BonslyBackpic:       INCBIN "gfx/pokemon/bonsly/back.2bpp.lz"
@@ -978,6 +977,7 @@ CutieflyBackpic:     INCBIN "gfx/pokemon/cutiefly/back.2bpp.lz"
 
 SECTION "Pics 32", ROMX
 
+CharmanderFrontpic:  INCBIN "gfx/pokemon/charmander/front.animated.2bpp.lz"
 LampentFrontpic:     INCBIN "gfx/pokemon/lampent/front.animated.2bpp.lz"
 ClauncherFrontpic:   INCBIN "gfx/pokemon/clauncher/front.animated.2bpp.lz"
 ClauncherBackpic:    INCBIN "gfx/pokemon/clauncher/back.2bpp.lz"

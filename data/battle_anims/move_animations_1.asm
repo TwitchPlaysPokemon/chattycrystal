@@ -313,7 +313,7 @@ MoveAnimations1:
 	dw BattleAnim_BulletPunch
 	dw BattleAnim_PowderSnow   ; 138, PLACEHOLDER
 	dw BattleAnim_FireFang
-	dw BattleAnim_QuickAttack  ; PLACEHOLDER
+	dw BattleAnim_ShadowSneak
 	dw BattleAnim_MudBomb
 	dw BattleAnim_PsychoCut
 	dw BattleAnim_ZenHeadbutt
@@ -3597,6 +3597,31 @@ BattleAnim_FireFang:
 	anim_wait 16
 	anim_ret
 	
+BattleAnim_ShadowSneak:
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_ANGELS
+	anim_bgp $f8
+	anim_obp0 $fc
+	anim_sound 6, 2, SFX_WHIRLWIND
+	anim_obj ANIM_OBJ_DESTINY_BOND, 44, 120, $2
+	anim_wait 48
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_02, 120, 38, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_02, 148, 46, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_02, 114, 54, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_02, 124, 42, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_02, 134, 58, $0
+	anim_wait 32
+	anim_ret
+
 BattleAnim_MudBomb:
 	anim_2gfx ANIM_GFX_POISON, ANIM_GFX_EXPLOSION
 	anim_sound 6, 2, SFX_SLUDGE_BOMB

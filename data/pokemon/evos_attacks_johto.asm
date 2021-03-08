@@ -735,13 +735,19 @@ SlowkingEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, CURSE
 	dbw 1, TACKLE
-	dbw 6, GROWL
-	dbw 15, WATER_GUN
-	dbw 20, CONFUSION
-	dbw 29, DISABLE
-	dbw 34, HEADBUTT
-	dbw 43, SWAGGER
-	dbw 48, PSYCHIC_M
+	dbw 4, GROWL
+	dbw 8, WATER_GUN
+	dbw 11, CONFUSION
+	dbw 15, DISABLE
+	dbw 18, HEADBUTT
+	dbw 22, WATER_PULSE
+	dbw 25, ZEN_HEADBUTT
+	dbw 29, NASTY_PLOT
+	dbw 32, SWAGGER
+	dbw 37, POWER_GEM
+	dbw 38, PSYCHIC_M
+	dbw 45, RAIN_DANCE
+	dbw 51, PSYCH_UP
 	db 0 ; no more level-up moves
 
 MisdreavusEvosAttacks:

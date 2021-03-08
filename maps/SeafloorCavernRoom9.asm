@@ -41,6 +41,7 @@ Marina:
 	closetext
 	chattyon
 	clearevent EVENT_MARINA_AVAILABLE
+	setevent EVENT_MARINA_DEFEATED
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear SEAFLOOR_CAVERN_ROOM9_MARINA

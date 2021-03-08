@@ -314,7 +314,7 @@ MoveAnimations:
 	dw BattleAnim_PowderSnow   ; 138, PLACEHOLDER
 	dw BattleAnim_FireFang
 	dw BattleAnim_QuickAttack  ; PLACEHOLDER
-	dw BattleAnim_SludgeBomb   ; PLACEHOLDER
+	dw BattleAnim_MudBomb
 	dw BattleAnim_PsychoCut
 	dw BattleAnim_ZenHeadbutt
 	dw BattleAnim_FlashCannon
@@ -3601,6 +3601,23 @@ BattleAnim_FireFang:
 	anim_wait 4
 	anim_loop 3, .loop
 	anim_wait 16
+	anim_ret
+	
+BattleAnim_MudBomb:
+	anim_2gfx ANIM_GFX_POISON, ANIM_GFX_EXPLOSION
+	anim_sound 6, 2, SFX_SLUDGE_BOMB
+	anim_obj ANIM_OBJ_MUD_BOMB, 64, 92, $10
+	anim_wait 36
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_obj ANIM_OBJ_18, 128, 56, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_obj ANIM_OBJ_18, 144, 64, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_obj ANIM_OBJ_18, 136, 72, $0
+	anim_wait 24
 	anim_ret
 
 BattleAnim_PsychoCut:

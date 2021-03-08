@@ -564,12 +564,11 @@ SudowoodoEvosAttacks:
 
 PolitoedEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, WATER_GUN
+	dbw 1, BUBBLEBEAM
 	dbw 1, HYPNOSIS
 	dbw 1, DOUBLESLAP
 	dbw 1, PERISH_SONG
-	dbw 35, PERISH_SONG
-	dbw 51, SWAGGER
+	dbw 43, SWAGGER
 	db 0 ; no more level-up moves
 
 HoppipEvosAttacks:

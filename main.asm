@@ -426,10 +426,6 @@ INCLUDE "engine/events/trainer_scripts.asm"
 INCLUDE "engine/events/bug_contest/display_stats.asm"
 
 
-SECTION "Move Animation Scripts", ROMX
-
-INCLUDE "data/battle_anims/move_animations.asm"
-
 SECTION "Move Animation BG effects", ROMX
 
 INCLUDE "engine/battle_anims/bg_effects.asm"
@@ -681,12 +677,6 @@ INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"
 
 
-SECTION "Animation Scripts and Pointers", ROMX
-
-INCLUDE "data/battle_anims/animation_pointers.asm"
-INCLUDE "data/battle_anims/special_animations.asm"
-
-
 SECTION "Chatty Handling", ROMX
 
 INCLUDE "engine/chattywritearea.asm"
@@ -737,5 +727,6 @@ INCLUDE "engine/pokemon/formes.asm"
 INCLUDE "data/pokemon/formes.asm"
 
 ; own sections
+INCLUDE "data/battle_anims/move_animations.asm"
 INCLUDE "data/trainers/parties.asm"
 INCLUDE "engine/battle/effect_command_files.asm"

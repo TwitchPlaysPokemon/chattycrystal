@@ -1809,14 +1809,32 @@ BattleAnim_Headbutt:
 	anim_jump BattleAnim_ShowMon_0
 
 BattleAnim_Tackle:
-	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_2Row
-	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
-	anim_wait 4
-	anim_sound 0, 1, SFX_TACKLE
-	anim_obj ANIM_OBJ_00, 136, 48, $0
-	anim_wait 8
-	anim_jump BattleAnim_ShowMon_0
+	anim_2gfx ANIM_GFX_ANGELS, ANIM_GFX_SPEED
+	anim_bgp $f8
+	anim_obp0 $7c
+	anim_sound 6, 2, SFX_CURSE
+	anim_obj ANIM_OBJ_DESTINY_BOND, 44, 120, $2
+	anim_wait 48
+.loop
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_47, 44, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_47, 36, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_47, 52, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_47, 28, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_47, 60, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_47, 20, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_47, 68, 108, $8
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 32
+	anim_ret
+
 
 BattleAnim_BodySlam:
 	anim_1gfx ANIM_GFX_HIT

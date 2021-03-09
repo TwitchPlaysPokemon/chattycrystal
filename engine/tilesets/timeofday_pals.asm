@@ -424,7 +424,7 @@ FadeFromBlack::
 	ld hl, wBGPals1
 	ld bc, 16 palettes
 	ld de, wBGPals2
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	ld a, 1

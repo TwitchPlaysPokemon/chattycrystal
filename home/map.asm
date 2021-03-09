@@ -1295,7 +1295,7 @@ LoadTilesetGFX::
 	ld hl, wDecompressScratch
 	ld de, vTiles2
 	ld bc, $60 tiles
-	call CopyBytes
+	rst CopyBytes
 
 	ldh a, [rVBK]
 	push af
@@ -1305,7 +1305,7 @@ LoadTilesetGFX::
 	ld hl, wDecompressScratch + $60 tiles
 	ld de, vTiles5
 	ld bc, $60 tiles
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	ldh [rVBK], a
@@ -1768,7 +1768,7 @@ CheckIfFacingTileCoordIsBGEvent::
 	pop hl
 	ld de, wCurBGEvent
 	ld bc, BG_EVENT_SIZE
-	call CopyBytes
+	rst CopyBytes
 	scf
 	ret
 
@@ -1840,7 +1840,7 @@ CheckCurrentMapCoordEvents::
 	pop hl
 	ld de, wCurCoordEvent
 	ld bc, COORD_EVENT_SIZE
-	call CopyBytes
+	rst CopyBytes
 	scf
 	ret
 
@@ -2021,7 +2021,7 @@ CopyMapPartial::
 	call GetMapPointer
 	ld de, wMapPartial
 	ld bc, wMapPartialEnd - wMapPartial
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	rst Bankswitch

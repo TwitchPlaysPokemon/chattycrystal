@@ -715,17 +715,17 @@ Function17abcf:
 	ld hl, Palette_17ac55
 	ld de, wBGPals1 ; $d000
 	ld bc, 6 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, Palette_17ac95
 	ld de, wOBPals1
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, GFX_17afa5 + $510
 	ld de, wOBPals1 palette 1
 	ld bc, 2 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, MapObjectPals palette 1
 	ld de, wOBPals1 palette 3
@@ -750,14 +750,14 @@ Function17ac1d:
 	ld hl, Tilemap_17acd5
 	decoord 0, 4
 	ld bc, (SCREEN_HEIGHT - 4) * SCREEN_WIDTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 Function17ac2a:
 	ld hl, Tilemap_17ae3d
 	decoord 0, 4, wAttrMap
 	ld bc, (SCREEN_HEIGHT - 4) * SCREEN_WIDTH
-	call CopyBytes
+	rst CopyBytes
 	hlcoord 0, 4, wAttrMap
 	ld bc, (SCREEN_HEIGHT - 4) * SCREEN_WIDTH
 .loop

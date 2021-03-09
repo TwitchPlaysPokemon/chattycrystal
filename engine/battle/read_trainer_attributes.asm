@@ -35,7 +35,7 @@ GetOTName:
 	ld bc, TRAINER_CLASS_NAME_LENGTH
 	ld de, wOTClassName
 	push de
-	call CopyBytes
+	rst CopyBytes
 	pop de
 	ret
 

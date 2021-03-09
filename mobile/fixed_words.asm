@@ -69,7 +69,7 @@ Function11c254:
 	add hl, bc
 	ld de, wcd36
 	ld bc, 12
-	call CopyBytes
+	rst CopyBytes
 	jp CloseSRAM
 
 BCD2String:

@@ -214,7 +214,7 @@ GetHallOfFameParty:
 	ld bc, MON_NAME_LENGTH
 	call AddNTimes
 	ld bc, MON_NAME_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 
 	pop bc
 	inc c
@@ -438,7 +438,7 @@ LoadHOFTeam:
 	jr z, .absent
 	ld de, wHallOfFameTemp
 	ld bc, HOF_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	and a
 	ret
@@ -473,7 +473,7 @@ DisplayHOFMon:
 	ld [wTempMonLevel], a
 	ld de, wStringBuffer2
 	ld bc, MON_NAME_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 	ld a, "@"
 	ld [wStringBuffer2 + 10], a
 	hlcoord 0, 0

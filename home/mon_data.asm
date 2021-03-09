@@ -22,7 +22,7 @@ GetBaseData::
 	rst Bankswitch
 	ld de, wCurBaseData
 	ld bc, BASE_DATA_SIZE
-	call CopyBytes
+	rst CopyBytes
 	pop bc
 	call GetFormeTypeOverrides.function
 	jr nc, .end
@@ -90,7 +90,7 @@ GetNick::
 
 	push de
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	pop de
 
 	callfar CorrectNickErrors

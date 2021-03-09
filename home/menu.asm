@@ -7,7 +7,7 @@ LoadMenuHeader::
 CopyMenuHeader::
 	ld de, wMenuHeader
 	ld bc, wMenuHeaderEnd - wMenuHeader
-	call CopyBytes
+	rst CopyBytes
 	ldh a, [hROMBank]
 	ld [wMenuDataBank], a
 	ret

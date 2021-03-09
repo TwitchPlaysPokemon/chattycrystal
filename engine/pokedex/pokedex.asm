@@ -1871,7 +1871,7 @@ Pokedex_OrderMonsByMode:
 	ld hl, NewPokedexOrder
 	ld de, wPokedexOrder
 	ld bc, NUM_POKEMON * 2
-	call CopyBytes
+	rst CopyBytes
 	ld a, BANK(wPokedexSeen)
 	ldh [rSVBK], a
 	ld bc, NUM_POKEMON

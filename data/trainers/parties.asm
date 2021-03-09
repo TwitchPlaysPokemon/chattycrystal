@@ -4566,7 +4566,7 @@ BattlePCGroup:
 	ld hl, wPartyCount
 	ld de, wOTPartyCount
 	ld bc, 2 + PARTY_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wPartyMons
 	ld de, wOTPartyMons
 	ld bc, PARTY_LENGTH * (PARTYMON_STRUCT_LENGTH + NAME_LENGTH + MON_NAME_LENGTH)

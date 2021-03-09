@@ -17,7 +17,7 @@ PrepMysteryGiftDataToSend:
 	push bc
 	ld hl, sPlayerData + wPlayerName - wPlayerData
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	push de ; wc80e
 	ld hl, sPokemonData + wPokedexCaught - wPokemonData
 	ld bc, wEndPokedexCaught - wPokedexCaught

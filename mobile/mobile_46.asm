@@ -179,7 +179,7 @@ Function118180:
 	ld hl, wcd69
 	ld de, $a89c
 	ld bc, $0016
-	call CopyBytes
+	rst CopyBytes
 
 	ldh a, [rSVBK]
 	push af
@@ -199,7 +199,7 @@ Function118180:
 	ld hl, w3_d202
 	ld de, $a8b2
 	ld bc, $0096
-	call CopyBytes
+	rst CopyBytes
 .reset_banks
 	pop af
 	ldh [rSVBK], a
@@ -1293,7 +1293,7 @@ Function118a65:
 	ld hl, BattleDownloadURL
 	ld de, wcc60
 	ld bc, $80
-	call CopyBytes
+	rst CopyBytes
 	ld de, w3_d000
 	ld bc, $1000
 	jp Function118b10
@@ -1302,7 +1302,7 @@ Function118a7a:
 	ld hl, BattleDownloadURL
 	ld de, wcc60
 	ld bc, $80
-	call CopyBytes
+	rst CopyBytes
 	ld de, w3_d000
 	ld bc, $1000
 	jp Function118b10
@@ -1311,7 +1311,7 @@ Function118a8f:
 	ld hl, ExchangeDownloadURL
 	ld de, wcc60
 	ld bc, $80
-	call CopyBytes
+	rst CopyBytes
 	ld de, w3_d000
 	ld bc, $1000
 	jp Function118b10
@@ -1320,7 +1320,7 @@ Function118aa4:
 	ld hl, NewsDownloadURL
 	ld de, wcc60
 	ld bc, $80
-	call CopyBytes
+	rst CopyBytes
 	ld a, $5
 	ldh [rSVBK], a
 	ld de, w3_d100
@@ -1331,7 +1331,7 @@ Function118abc:
 	ld hl, MenuDownloadURL
 	ld de, wcc60
 	ld bc, $80
-	call CopyBytes
+	rst CopyBytes
 	ld de, w3_d000
 	ld bc, $1000
 	jr Function118b10
@@ -1340,7 +1340,7 @@ Function118ad0:
 	ld hl, IndexDownloadURL
 	ld de, wcc60
 	ld bc, $80
-	call CopyBytes
+	rst CopyBytes
 	ld de, w3_d000
 	ld bc, $1000
 	jr Function118b10
@@ -1672,7 +1672,7 @@ Function118eb0:
 	ld hl, $d802
 	ld de, wBGMapBuffer
 	ld bc, $000c
-	call CopyBytes
+	rst CopyBytes
 	call Function1192cc
 	ret c
 	jp BattleTowerRoomMenu_IncrementJumptable
@@ -1683,7 +1683,7 @@ Function118ec6:
 	ld hl, $d80e
 	ld de, $c320
 	ld bc, $0026
-	call CopyBytes
+	rst CopyBytes
 	xor a
 	ld [$c31f], a
 	ld a, $20
@@ -1914,7 +1914,7 @@ Function119054:
 	ld hl, wBGMapBuffer
 	ld de, $aa7f
 	ld bc, $000c
-	call CopyBytes
+	rst CopyBytes
 	ldh a, [rSVBK]
 	push af
 	ld a, $1
@@ -1924,7 +1924,7 @@ Function119054:
 	ld hl, wd475
 	ld de, $b2f4
 	ld bc, $0004
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	call CloseSRAM
@@ -1950,7 +1950,7 @@ Function1190ec:
 	ld hl, wBGMapBuffer
 	ld de, $aa73
 	ld bc, $000c
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	ld a, $5
 	call GetSRAMBank
@@ -2001,7 +2001,7 @@ Function11915d:
 	ld hl, $d802
 	ld de, wBGMapBuffer
 	ld bc, $000c
-	call CopyBytes
+	rst CopyBytes
 	ld a, $5
 	call GetSRAMBank
 	ld hl, wBGMapBuffer
@@ -2139,7 +2139,7 @@ Function119223:
 	ld hl, wc3cd
 	ld de, $b092
 	ld bc, $001f
-	call CopyBytes
+	rst CopyBytes
 	dec de
 	xor a
 	ld [de], a
@@ -2159,7 +2159,7 @@ Function119223:
 	ld [$b1b2], a
 	ld b, a
 	ld de, $b1d3
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	ld e, l
 	ld d, h
@@ -2246,7 +2246,7 @@ Function1192cc:
 	ld hl, $aa73
 	ld de, $c608
 	ld bc, $000c
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	ld hl, $c608
 	ld de, wBGMapBuffer
@@ -2726,7 +2726,7 @@ Function1195c4:
 	jr nc, .asm_1195f3
 .asm_1195d9
 	ld de, wcc60
-	call CopyBytes
+	rst CopyBytes
 	xor a
 	ld [de], a
 	ld a, [$c608]
@@ -2735,7 +2735,7 @@ Function1195c4:
 	ld h, a
 	ld de, wcd69
 	ld bc, $10
-	call CopyBytes
+	rst CopyBytes
 	ret
 .asm_1195f3
 	ld a, $d8
@@ -3075,7 +3075,7 @@ Function1197dc:
 	ld hl, wd002
 	ld de, wcc60
 	ld bc, $0080
-	call CopyBytes
+	rst CopyBytes
 	dec de
 	xor a
 	ld [de], a
@@ -3633,14 +3633,14 @@ Function119b6b:
 	ld hl, w3_d800
 	ld de, $b023
 	ld bc, $0069
-	call CopyBytes
+	rst CopyBytes
 	ld a, $3
 	ld [$a800], a
 	call CloseSRAM
 	ld hl, w3_d800
 	ld de, $c608
 	ld bc, $0069
-	call CopyBytes
+	rst CopyBytes
 	jp BattleTowerRoomMenu_IncrementJumptable
 
 Function119c3e:
@@ -3917,7 +3917,7 @@ BattleTower_UbersCheck:
 	ld hl, wStringBuffer1
 	ld de, wcd49
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld a, $a
 	ld [wcf66], a
 	pop af
@@ -4244,7 +4244,7 @@ Function11a00e:
 	ld hl, $c608
 	ld de, w3_d800
 	ld bc, $00f6
-	call CopyBytes
+	rst CopyBytes
 	ld a, $1
 	ldh [rSVBK], a
 	call FadeToMenu
@@ -4255,7 +4255,7 @@ Function11a00e:
 	ld hl, w3_d800
 	ld de, $c608
 	ld bc, $00f6
-	call CopyBytes
+	rst CopyBytes
 	ld a, $1
 	ldh [rSVBK], a
 	farcall Function115d99
@@ -5509,7 +5509,7 @@ Function11acb7:
 	ld [de], a
 	decoord 0, 7
 	ld bc, 7
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wcd49]
 	inc a
 	ld [wcd49], a
@@ -5532,7 +5532,7 @@ Function11acb7:
 	add hl, bc
 	decoord 3, 9
 	ld bc, 7
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wcd4a]
 	inc a
 	ld [wcd4a], a
@@ -6024,7 +6024,7 @@ Function11b03d:
 
 .got_string
 	ld bc, 4 ; string length
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 .MaleString: db "オスの　"
@@ -6910,7 +6910,7 @@ Function11b570:
 	ld hl, w3_d800
 	ld de, $c608
 	ld bc, w3_d88f - w3_d800
-	call CopyBytes
+	rst CopyBytes
 
 	ld a, $1
 	ldh [rSVBK], a
@@ -6923,7 +6923,7 @@ Function11b570:
 	inc de
 	ld hl, $c608
 	ld bc, w3_d88f - w3_d800
-	call CopyBytes
+	rst CopyBytes
 
 	push de
 	pop hl
@@ -7083,7 +7083,7 @@ Function11b93b:
 	ld hl, $a823
 	ld de, $c608
 	ld bc, $008f
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 
 	ld a, LOW($c608)
@@ -7151,7 +7151,7 @@ AddMobileMonToParty:
 	ld a, [wMobileMonStructurePointerBuffer + 1]
 	ld h, a
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
@@ -7164,7 +7164,7 @@ AddMobileMonToParty:
 	ld a, [wMobileMonOTNamePointerBuffer + 1]
 	ld h, a
 	ld bc, MON_NAME_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 	ld a, "@"
 	ld [de], a
 
@@ -7179,7 +7179,7 @@ AddMobileMonToParty:
 	ld a, [wMobileMonNicknamePointerBuffer + 1]
 	ld h, a
 	ld bc, MON_NAME_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 	ld a, "@"
 	ld [de], a
 
@@ -7196,7 +7196,7 @@ AddMobileMonToParty:
 	ld a, [wMobileMonMailPointerBuffer + 1]
 	ld h, a
 	ld bc, MAIL_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	jp CloseSRAM
 
 TilemapPack_11ba44:

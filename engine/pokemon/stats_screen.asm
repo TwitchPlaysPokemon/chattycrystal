@@ -229,7 +229,7 @@ StatsScreen_CopyToTempMon:
 	ld hl, wBufferMon
 	ld de, wTempMon
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	jr .done
 
 .breedmon
@@ -685,7 +685,7 @@ StatsScreen_LoadGFX:
 	ld hl, wTempMonMoves
 	ld de, wListMoves_MoveIndicesBuffer
 	ld bc, NUM_MOVES
-	call CopyBytes
+	rst CopyBytes
 	hlcoord 8, 10
 	ld a, SCREEN_WIDTH * 2
 	ld [wBuffer1], a
@@ -1104,14 +1104,14 @@ CopyNickname:
 	ld a, BANK(sBoxMonNicknames)
 	call GetSRAMBank
 	push de
-	call CopyBytes
+	rst CopyBytes
 	pop de
 	call CloseSRAM
 	ret
 
 .partymon
 	push de
-	call CopyBytes
+	rst CopyBytes
 	pop de
 	ret
 

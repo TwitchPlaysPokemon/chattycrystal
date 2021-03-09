@@ -82,7 +82,7 @@ FarCopyWRAM::
 	ldh a, [hBuffer]
 	ldh [rSVBK], a
 
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	ldh [rSVBK], a
@@ -241,7 +241,7 @@ FarCopyBytes::
 	ldh a, [hBuffer]
 	rst Bankswitch
 
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	rst Bankswitch

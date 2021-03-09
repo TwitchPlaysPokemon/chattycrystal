@@ -1584,7 +1584,7 @@ Function4a9d7:
 	ld l, e
 	ld de, wd006
 	ld bc, 6
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wd003]
 	ld hl, wPartyMonNicknames
 	call GetNick
@@ -1592,7 +1592,7 @@ Function4a9d7:
 	ld l, e
 	ld de, wd00c
 	ld bc, 6
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wd004]
 	ld hl, wPartyMonNicknames
 	call GetNick
@@ -1600,7 +1600,7 @@ Function4a9d7:
 	ld l, e
 	ld de, wd012
 	ld bc, 6
-	call CopyBytes
+	rst CopyBytes
 	ld hl, UnknownText_0x4aa1d
 	call PrintText
 	call YesNoBox

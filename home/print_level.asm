@@ -1,9 +1,9 @@
 PrintLevel::
 ; Print wTempMonLevel at hl
 
+	ld a, "<LV>"
+	ld [hli], a
 	ld a, [wTempMonLevel]
-	ld [hl], "<LV>"
-	inc hl
 
 ; How many digits?
 	ld c, 2

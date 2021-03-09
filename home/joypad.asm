@@ -1,10 +1,3 @@
-JoypadInt::
-; Replaced by Joypad, called from VBlank instead of the useless
-; joypad interrupt.
-
-; This is a placeholder in case the interrupt is somehow enabled.
-	reti
-
 ClearJoypad::
 	xor a
 ; Pressed this frame (delta)

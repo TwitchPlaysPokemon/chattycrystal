@@ -48,19 +48,6 @@ UpdateSound::
 	pop hl
 	ret
 
-_LoadMusicByte::
-; wCurMusicByte = [a:de]
-	ldh [hROMBank], a
-	ld [MBC3RomBank], a
-
-	ld a, [de]
-	ld [wCurMusicByte], a
-	ld a, BANK(LoadMusicByte)
-
-	ldh [hROMBank], a
-	ld [MBC3RomBank], a
-	ret
-
 PlayMusic::
 ; Play music de.
 
@@ -177,6 +164,8 @@ endr
 	pop hl
 	ret
 
+WaitPlaySFX::
+	call WaitSFX
 PlaySFX::
 ; Play sound effect de.
 ; Sound effects are ordered by priority (highest to lowest)
@@ -216,10 +205,6 @@ PlaySFX::
 	pop de
 	pop hl
 	ret
-
-WaitPlaySFX::
-	call WaitSFX
-	jp PlaySFX
 
 WaitSFX::
 ; infinite loop until sfx is done playing
@@ -278,16 +263,6 @@ MaxVolume::
 LowVolume::
 	ld a, $33 ; 40%
 	ld [wVolume], a
-	ret
-
-VolumeOff::
-	xor a
-	ld [wVolume], a
-	ret
-
-Unused_FadeOutMusic::
-	ld a, 4
-	ld [wMusicFade], a
 	ret
 
 FadeInMusic::

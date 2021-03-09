@@ -44,22 +44,6 @@ OTPartyAttr::
 	pop bc
 	ret
 
-ResetDamage::
-	xor a
-	ld [wCurDamage], a
-	ld [wCurDamage + 1], a
-	ret
-
-SetPlayerTurn::
-	xor a
-	ldh [hBattleTurn], a
-	ret
-
-SetEnemyTurn::
-	ld a, 1
-	ldh [hBattleTurn], a
-	ret
-
 UpdateOpponentInParty::
 	ldh a, [hBattleTurn]
 	and a
@@ -149,8 +133,6 @@ SwitchTurn::
 	ldh [hBattleTurn], a
 	pop af
 	ret
-
-INCLUDE "home/battle_vars.asm"
 
 FarCopyRadioText::
 	inc hl
@@ -243,6 +225,3 @@ GetBattleAnimByte::
 
 	ld a, [wBattleAnimByte]
 	ret
-
-BattleAnim_Dummy::
-	anim_ret

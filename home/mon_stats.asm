@@ -1,13 +1,3 @@
-IsAPokemon::
-; Return carry if species a is not a Pokemon.
-	cp EGG
-	ret z
-	dec a
-	cp MON_TABLE_ENTRIES
-	inc a
-	ccf
-	ret
-
 DrawBattleHPBar::
 ; Draw an HP bar d tiles long at hl
 ; Fill it up to e pixels

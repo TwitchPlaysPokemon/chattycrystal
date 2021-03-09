@@ -128,13 +128,6 @@ SpeechTextbox::
 	ld c, TEXTBOX_INNERW
 	jp Textbox
 
-RadioTerminator::
-	ld hl, .stop
-	ret
-
-.stop:
-	text_end
-
 PrintText::
 	call SetUpTextbox
 BuenaPrintText::
@@ -146,8 +139,7 @@ BuenaPrintText::
 
 PrintTextboxText::
 	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
-	call PlaceHLTextAtBC
-	ret
+	jp PlaceHLTextAtBC
 
 SetUpTextbox::
 	push hl
@@ -526,9 +518,6 @@ DoneText::
 	ld de, TX_ENDText - 1 ;redirect text pointer to a 1 before a TX_END (so that after TX_START increments, the next command is TX_END
 	ret
 
-TX_ENDText::
-	text_end
-
 NullChar::
 	ld a, "?"
 	ld [hli], a
@@ -603,13 +592,6 @@ FarString::
 	pop af
 	rst Bankswitch
 	ret
-
-PokeFluteTerminatorCharacter::
-	ld hl, .stop
-	ret
-
-.stop:
-	text_end
 
 PlaceHLTextAtBC::
 	ld a, [wTextboxFlags]

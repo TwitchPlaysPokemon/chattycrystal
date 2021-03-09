@@ -61,7 +61,7 @@ GetFormeTypeOverrides::
 	; in: bc: species
 	; out: carry: type overrides loaded; bc: type overrides (clobbered if no carry)
 	push hl
-	ld a, [hROMBank]
+	ldh a, [hROMBank]
 	push af
 	call .function
 	pop hl

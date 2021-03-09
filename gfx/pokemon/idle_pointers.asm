@@ -365,8 +365,8 @@ AnimationIdlePointers:
 	dw DucklettAnimationIdle
 	dw PlaceholderAnimationIdle ; PLACEHOLDER - Swanna
 	dw TynamoAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Eelektrik
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Eelektross
+	dw EelektrikAnimationIdle
+	dw EelektrossAnimationIdle
 	dw LitwickAnimationIdle
 	dw LampentAnimationIdle
 	dw ChandelureAnimationIdle

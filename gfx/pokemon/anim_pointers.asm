@@ -365,8 +365,8 @@ AnimationPointers:
 	dw DucklettAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Swanna
 	dw TynamoAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Eelektrik
-	dw PlaceholderAnimation ; PLACEHOLDER - Eelektross
+	dw EelektrikAnimation
+	dw EelektrossAnimation
 	dw LitwickAnimation
 	dw LampentAnimation
 	dw ChandelureAnimation

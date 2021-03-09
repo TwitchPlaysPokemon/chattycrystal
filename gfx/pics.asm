@@ -755,6 +755,8 @@ SECTION "Pics 22", ROMX
 LombreFrontpic:     INCBIN "gfx/pokemon/lombre/front.animated.2bpp.lz"
 LombreBackpic:      INCBIN "gfx/pokemon/lombre/back.2bpp.lz"
 CombuskenBackpic:   INCBIN "gfx/pokemon/combusken/back.2bpp.lz"
+LitwickFrontpic:     INCBIN "gfx/pokemon/litwick/front.animated.2bpp.lz"
+LitwickBackpic:      INCBIN "gfx/pokemon/litwick/back.2bpp.lz"
 
 SECTION "Pics 23", ROMX
 
@@ -966,8 +968,6 @@ EelektrikFrontpic:   INCBIN "gfx/pokemon/eelektrik/front.animated.2bpp.lz"
 EelektrikBackpic:    INCBIN "gfx/pokemon/eelektrik/back.2bpp.lz"
 EelektrossFrontpic:  INCBIN "gfx/pokemon/eelektross/front.animated.2bpp.lz"
 SliggooBackpic:      INCBIN "gfx/pokemon/sliggoo/back.2bpp.lz"
-LitwickFrontpic:     INCBIN "gfx/pokemon/litwick/front.animated.2bpp.lz"
-LitwickBackpic:      INCBIN "gfx/pokemon/litwick/back.2bpp.lz"
 LampentBackpic:      INCBIN "gfx/pokemon/lampent/back.2bpp.lz"
 ChandelureFrontpic:  INCBIN "gfx/pokemon/chandelure/front.animated.2bpp.lz"
 ChandelureBackpic:   INCBIN "gfx/pokemon/chandelure/back.2bpp.lz"

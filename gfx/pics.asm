@@ -214,7 +214,6 @@ ChinchouFrontpic:    INCBIN "gfx/pokemon/chinchou/front.animated.2bpp.lz"
 RattataFrontpic:     INCBIN "gfx/pokemon/rattata/front.animated.2bpp.lz"
 ChampionPic:         INCBIN "gfx/trainers/champion.2bpp.lz"
 SpearowFrontpic:     INCBIN "gfx/pokemon/spearow/front.animated.2bpp.lz"
-MagikarpFrontpic:    INCBIN "gfx/pokemon/magikarp/front.animated.2bpp.lz"
 CuboneFrontpic:      INCBIN "gfx/pokemon/cubone/front.animated.2bpp.lz"
 BlackbeltTPic:       INCBIN "gfx/trainers/blackbelt_t.2bpp.lz"
 BikerPic:            INCBIN "gfx/trainers/biker.2bpp.lz"
@@ -229,8 +228,8 @@ Porygon2Frontpic:    INCBIN "gfx/pokemon/porygon2/front.animated.2bpp.lz"
 SandshrewFrontpic:   INCBIN "gfx/pokemon/sandshrew/front.animated.2bpp.lz"
 NidoranFFrontpic:    INCBIN "gfx/pokemon/nidoran_f/front.animated.2bpp.lz"
 PidgeyFrontpic:      INCBIN "gfx/pokemon/pidgey/front.animated.2bpp.lz"
-ParasectBackpic:     INCBIN "gfx/pokemon/parasect/back.2bpp.lz"
 SableyeBackpic:      INCBIN "gfx/pokemon/sableye/back.2bpp.lz"
+RoseradeFrontpic:    INCBIN "gfx/pokemon/roserade/front.animated.2bpp.lz"
 
 SECTION "Pics 10", ROMX
 
@@ -894,6 +893,8 @@ LatiosFrontpic:     INCBIN "gfx/pokemon/latios/front.animated.2bpp.lz"
 
 SECTION "Pics 29", ROMX
 
+ParasectBackpic:     INCBIN "gfx/pokemon/parasect/back.2bpp.lz"
+MagikarpFrontpic:    INCBIN "gfx/pokemon/magikarp/front.animated.2bpp.lz"
 TurtwigFrontpic:     INCBIN "gfx/pokemon/turtwig/front.animated.2bpp.lz"
 TurtwigBackpic:      INCBIN "gfx/pokemon/turtwig/back.2bpp.lz"
 GrotleBackpic:       INCBIN "gfx/pokemon/grotle/back.2bpp.lz"
@@ -916,7 +917,6 @@ BidoofBackpic:       INCBIN "gfx/pokemon/bidoof/back.2bpp.lz"
 BibarelFrontpic:     INCBIN "gfx/pokemon/bibarel/front.animated.2bpp.lz"
 BibarelBackpic:      INCBIN "gfx/pokemon/bibarel/back.2bpp.lz"
 BudewBackpic:        INCBIN "gfx/pokemon/budew/back.2bpp.lz"
-RoseradeFrontpic:    INCBIN "gfx/pokemon/roserade/front.animated.2bpp.lz"
 RoseradeBackpic:     INCBIN "gfx/pokemon/roserade/back.2bpp.lz"
 BonslyFrontpic:      INCBIN "gfx/pokemon/bonsly/front.animated.2bpp.lz"
 

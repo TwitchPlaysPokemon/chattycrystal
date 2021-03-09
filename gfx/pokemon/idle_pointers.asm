@@ -332,7 +332,7 @@ AnimationIdlePointers:
 	dw LuxioAnimationIdle
 	dw LuxrayAnimationIdle
 	dw BudewAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Roserade
+	dw RoseradeAnimationIdle
 	dw BurmyAnimationIdle
 	dw MothimAnimationIdle
 	dw BuizelAnimationIdle

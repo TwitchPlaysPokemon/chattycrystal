@@ -332,7 +332,7 @@ FramesPointers:
 	dba LuxioFrames
 	dba LuxrayFrames
 	dba BudewFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Roserade
+	dba RoseradeFrames
 	dba BurmyFrames
 	dba MothimFrames
 	dba BuizelFrames

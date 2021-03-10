@@ -2698,7 +2698,7 @@ wTrickHouseEntranceSceneID::                      db ; d9ca
 
 ; fight counts
 wJackFightCount::    db ; d9f2
-wBeverlyFightCount:: db ; unused
+	db
 wHueyFightCount::    db
 wGavenFightCount::   db
 wBethFightCount::    db
@@ -2711,18 +2711,18 @@ wLizFightCount::     db
 wAnthonyFightCount:: db
 wToddFightCount::    db
 wGinaFightCount::    db
-wIrwinFightCount::   db ; unused
+	db
 wArnieFightCount::   db
 wAlanFightCount::    db
 wDanaFightCount::    db
 wChadFightCount::    db
-wDerekFightCount::   db ; unused
+	db
 wTullyFightCount::   db
 wBrentFightCount::   db
 wTiffanyFightCount:: db
 wVanceFightCount::   db
 wWiltonFightCount::  db
-wKenjiFightCount::   db ; unused
+	db
 wParryFightCount::   db
 wErinFightCount::    db
 ; da0e

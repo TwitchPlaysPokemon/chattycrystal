@@ -302,8 +302,6 @@ UnknownText_0x1c0609::
 	text_waitbutton
 	text_end
 
-	text_end ; unused
-
 _UsedSurfText::
 	text_ram wStringBuffer2
 	text " used"
@@ -756,8 +754,6 @@ UnknownText_0x1c0dba::
 	text_waitbutton
 	text_end
 
-	text_end ; unused
-
 UnknownText_0x1c0dd8::
 	text "Give a nickname to"
 	line "@"
@@ -864,8 +860,6 @@ UnknownText_0x1c0fbc::
 	line "Animation type @"
 	text_ram wStringBuffer2
 	text_end
-
-	text_end ; unused
 
 UnknownText_0x1c0fdd::
 	text "#MON number?"
@@ -1012,8 +1006,6 @@ UnknownText_0x1c123a::
 	text_ram wMagikarpRecordHoldersName
 	text_waitbutton
 	text_end
-
-	text_end ; unused
 
 UnknownText_0x1c1261::
 	text "Congratulations!"
@@ -1506,8 +1498,6 @@ _OakText2::
 _OakText3::
 	text_waitbutton
 	text_end
-
-	text_end ; unused
 
 _OakText4::
 	text "People and #MON"

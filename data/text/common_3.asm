@@ -439,8 +439,6 @@ UnknownText_0x1c4b92::
 	text_ram wStringBuffer2
 	text_end
 
-	text_end ; unused
-
 UnknownText_0x1c4baf::
 	text_start
 
@@ -964,8 +962,6 @@ UnknownText_0x1c5740::
 	text_pause
 	text_end
 
-	text_end ; unused
-
 UnknownText_0x1c574e::
 	text " Poof!@"
 	text_pause
@@ -1024,8 +1020,6 @@ UnknownText_0x1c581a::
 UnknownText_0x1c5821::
 	text_today
 	text_end
-
-	text_end ; unused
 
 UnknownText_0x1c5824::
 	text "<……>"
@@ -1181,14 +1175,6 @@ UnknownText_0x1c5b17::
 	sound_caught_mon
 	text_end
 
-	text_end ; unused
-
-Text_Waitbutton_2::
-	text_waitbutton
-	text_end
-
-	text_end ; unused
-
 UnknownText_0x1c5b38::
 	text_ram wMonOrItemNameBuffer
 	text " was"
@@ -1201,10 +1187,9 @@ UnknownText_0x1c5b53::
 	line "was newly added to"
 	cont "the #DEX.@"
 	sound_slot_machine_start
+Text_Waitbutton_2::
 	text_waitbutton
 	text_end
-
-	text_end ; unused
 
 UnknownText_0x1c5b7f::
 	text "Give a nickname to"
@@ -1251,8 +1236,6 @@ UnknownText_0x1c5c44::
 	text_waitbutton
 	text_end
 
-	text_end ; unused
-
 UnknownText_0x1c5c5e::
 	text "You now have"
 	line "@"
@@ -1265,8 +1248,6 @@ UnknownText_0x1c5c7b::
 	line "@"
 	text_decimal wCoins, 2, 4
 	text_end
-
-	text_end ; unused
 
 Text_RaiseThePPOfWhichMove::
 	text "Raise the PP of"

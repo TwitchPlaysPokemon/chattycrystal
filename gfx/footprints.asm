@@ -252,123 +252,123 @@ INCBIN "gfx/footprints/celebi.1bpp"
 INCBIN "gfx/footprints/treecko.1bpp"
 INCBIN "gfx/footprints/grovyle.1bpp"
 INCBIN "gfx/footprints/sceptile.1bpp"
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Torchic
+INCBIN "gfx/footprints/torchic.1bpp"
 INCBIN "gfx/footprints/combusken.1bpp"
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Blaziken
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Mudkip
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Marshtomp
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Swampert
+INCBIN "gfx/footprints/blaziken.1bpp"
+INCBIN "gfx/footprints/mudkip.1bpp"
+INCBIN "gfx/footprints/marshtomp.1bpp"
+INCBIN "gfx/footprints/swampert.1bpp"
 INCBIN "gfx/footprints/poochyena.1bpp"
 INCBIN "gfx/footprints/mightyena.1bpp"
 INCBIN "gfx/footprints/zigzagoon.1bpp"
 INCBIN "gfx/footprints/linoone.1bpp"
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Lotad
+INCBIN "gfx/footprints/lotad.1bpp"
 INCBIN "gfx/footprints/lombre.1bpp"
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Ludicolo
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Taillow
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Swellow
+INCBIN "gfx/footprints/ludicolo.1bpp"
+INCBIN "gfx/footprints/taillow.1bpp"
+INCBIN "gfx/footprints/swellow.1bpp"
 INCBIN "gfx/footprints/wingull.1bpp"
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Pelipper
+INCBIN "gfx/footprints/pelipper.1bpp"
 INCBIN "gfx/footprints/ralts.1bpp"
 INCBIN "gfx/footprints/kirlia.1bpp"
 INCBIN "gfx/footprints/gardevoir.1bpp"
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Surskit
-INCBIN "gfx/footprints/masquerain.1bpp" ; BLANK - Masquerain
+INCBIN "gfx/footprints/surskit.1bpp"
+INCBIN "gfx/footprints/masquerain.1bpp"
 INCBIN "gfx/footprints/whismur.1bpp"
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Loudred
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Exploud
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Makuhita
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Hariyama
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Azurill
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Skitty
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Delcatty
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Sableye
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Aron
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Lairon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Aggron
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Electrike
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Manectric
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Roselia
-INCBIN "gfx/footprints/wailmer.1bpp" ; BLANK - Wailmer
-INCBIN "gfx/footprints/wailord.1bpp" ; BLANK - Wailord
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Trapinch
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Vibraba
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Flygon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Swablu
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Altaria
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Lileep
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Cradily
-INCBIN "gfx/footprints/feebas.1bpp" ; BLANK - Feebas
-INCBIN "gfx/footprints/milotic.1bpp" ; BLANK - Milotic
-INCBIN "gfx/footprints/duskull.1bpp" ; BLANK - Duskull
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Dusclops
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Absol
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Snorunt
-INCBIN "gfx/footprints/spheal.1bpp" ; BLANK - Spheal
-INCBIN "gfx/footprints/sealeo.1bpp" ; BLANK - Sealeo
-INCBIN "gfx/footprints/walrein.1bpp" ; BLANK - Walrein
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Bagon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Shelgon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Salamence
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Beldum
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Metang
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Metagross
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Latios
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Kyogre
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Groudon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Turtwig
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Grotle
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Torterra
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Chimchar
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Monferno
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Infernape
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Piplup
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Prinplup
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Empoleon
+INCBIN "gfx/footprints/loudred.1bpp"
+INCBIN "gfx/footprints/exploud.1bpp"
+INCBIN "gfx/footprints/makuhita.1bpp"
+INCBIN "gfx/footprints/hariyama.1bpp"
+INCBIN "gfx/footprints/azurill.1bpp"
+INCBIN "gfx/footprints/skitty.1bpp"
+INCBIN "gfx/footprints/delcatty.1bpp"
+INCBIN "gfx/footprints/sableye.1bpp"
+INCBIN "gfx/footprints/aron.1bpp"
+INCBIN "gfx/footprints/lairon.1bpp"
+INCBIN "gfx/footprints/aggron.1bpp"
+INCBIN "gfx/footprints/electrike.1bpp"
+INCBIN "gfx/footprints/manectric.1bpp"
+INCBIN "gfx/footprints/roselia.1bpp"
+INCBIN "gfx/footprints/wailmer.1bpp"
+INCBIN "gfx/footprints/wailord.1bpp"
+INCBIN "gfx/footprints/trapinch.1bpp"
+INCBIN "gfx/footprints/vibrava.1bpp"
+INCBIN "gfx/footprints/flygon.1bpp"
+INCBIN "gfx/footprints/swablu.1bpp"
+INCBIN "gfx/footprints/altaria.1bpp"
+INCBIN "gfx/footprints/lileep.1bpp"
+INCBIN "gfx/footprints/cradily.1bpp"
+INCBIN "gfx/footprints/feebas.1bpp"
+INCBIN "gfx/footprints/milotic.1bpp"
+INCBIN "gfx/footprints/duskull.1bpp"
+INCBIN "gfx/footprints/dusclops.1bpp"
+INCBIN "gfx/footprints/absol.1bpp"
+INCBIN "gfx/footprints/snorunt.1bpp"
+INCBIN "gfx/footprints/spheal.1bpp"
+INCBIN "gfx/footprints/sealeo.1bpp"
+INCBIN "gfx/footprints/walrein.1bpp"
+INCBIN "gfx/footprints/bagon.1bpp"
+INCBIN "gfx/footprints/shelgon.1bpp"
+INCBIN "gfx/footprints/salamence.1bpp"
+INCBIN "gfx/footprints/beldum.1bpp"
+INCBIN "gfx/footprints/metang.1bpp"
+INCBIN "gfx/footprints/metagross.1bpp"
+INCBIN "gfx/footprints/latios.1bpp"
+INCBIN "gfx/footprints/kyogre.1bpp"
+INCBIN "gfx/footprints/groudon.1bpp"
+INCBIN "gfx/footprints/turtwig.1bpp"
+INCBIN "gfx/footprints/grotle.1bpp"
+INCBIN "gfx/footprints/torterra.1bpp"
+INCBIN "gfx/footprints/chimchar.1bpp"
+INCBIN "gfx/footprints/monferno.1bpp"
+INCBIN "gfx/footprints/infernape.1bpp"
+INCBIN "gfx/footprints/piplup.1bpp"
+INCBIN "gfx/footprints/prinplup.1bpp"
+INCBIN "gfx/footprints/empoleon.1bpp"
 INCBIN "gfx/footprints/bidoof.1bpp"
 INCBIN "gfx/footprints/bibarel.1bpp"
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Shinx
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Luxio
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Luxray
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Budew
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Roserade
-INCBIN "gfx/footprints/burmy.1bpp" ; BLANK - Burmy
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Mothim
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Buizel
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Floatzel
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Shellos
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Gastrodon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Buneary
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Lopunny
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Stunky
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Skuntank
-INCBIN "gfx/footprints/bronzor.1bpp" ; BLANK - Bronzor
-INCBIN "gfx/footprints/bronzong.1bpp" ; BLANK - Bronzong
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Bonsly
+INCBIN "gfx/footprints/shinx.1bpp"
+INCBIN "gfx/footprints/luxio.1bpp"
+INCBIN "gfx/footprints/luxray.1bpp"
+INCBIN "gfx/footprints/budew.1bpp"
+INCBIN "gfx/footprints/roserade.1bpp"
+INCBIN "gfx/footprints/burmy.1bpp"
+INCBIN "gfx/footprints/mothim.1bpp"
+INCBIN "gfx/footprints/buizel.1bpp"
+INCBIN "gfx/footprints/floatzel.1bpp"
+INCBIN "gfx/footprints/shellos.1bpp"
+INCBIN "gfx/footprints/gastrodon.1bpp"
+INCBIN "gfx/footprints/buneary.1bpp"
+INCBIN "gfx/footprints/lopunny.1bpp"
+INCBIN "gfx/footprints/stunky.1bpp"
+INCBIN "gfx/footprints/skuntank.1bpp"
+INCBIN "gfx/footprints/bronzor.1bpp"
+INCBIN "gfx/footprints/bronzong.1bpp"
+INCBIN "gfx/footprints/bonsly.1bpp"
 INCBIN "gfx/footprints/chatot.1bpp"
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Croagunk
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Toxicroak
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Leafeon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Glaceon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Porygon Z
-INCBIN "gfx/footprints/dusknoir.1bpp" ; BLANK - Dusknoir
-INCBIN "gfx/footprints/froslass.1bpp" ; BLANK - Froslass
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Darkrai
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Pansage
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Simisage
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Drilbur
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Excadrill
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Sandile
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Krokorok
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Krookodile
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Ducklett
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Swanna
-INCBIN "gfx/footprints/tynamo.1bpp" ; BLANK - Tynamo
-INCBIN "gfx/footprints/eelektrik.1bpp" ; BLANK - Eelektrik
-INCBIN "gfx/footprints/eelektross.1bpp" ; BLANK - Eelektross
-INCBIN "gfx/footprints/litwick.1bpp" ; BLANK - Litwick
-INCBIN "gfx/footprints/lampent.1bpp" ; BLANK - Lampent
-INCBIN "gfx/footprints/chandelure.1bpp" ; BLANK - Chandelure
+INCBIN "gfx/footprints/croagunk.1bpp"
+INCBIN "gfx/footprints/toxicroak.1bpp"
+INCBIN "gfx/footprints/leafeon.1bpp"
+INCBIN "gfx/footprints/glaceon.1bpp"
+INCBIN "gfx/footprints/porygonz.1bpp"
+INCBIN "gfx/footprints/dusknoir.1bpp"
+INCBIN "gfx/footprints/froslass.1bpp"
+INCBIN "gfx/footprints/darkrai.1bpp"
+INCBIN "gfx/footprints/pansage.1bpp"
+INCBIN "gfx/footprints/simisage.1bpp"
+INCBIN "gfx/footprints/drilbur.1bpp"
+INCBIN "gfx/footprints/excadrill.1bpp"
+INCBIN "gfx/footprints/sandile.1bpp"
+INCBIN "gfx/footprints/krokorok.1bpp"
+INCBIN "gfx/footprints/krookodile.1bpp"
+INCBIN "gfx/footprints/ducklett.1bpp"
+INCBIN "gfx/footprints/swanna.1bpp"
+INCBIN "gfx/footprints/tynamo.1bpp"
+INCBIN "gfx/footprints/eelektrik.1bpp"
+INCBIN "gfx/footprints/eelektross.1bpp"
+INCBIN "gfx/footprints/litwick.1bpp"
+INCBIN "gfx/footprints/lampent.1bpp"
+INCBIN "gfx/footprints/chandelure.1bpp"
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Clauncher
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Clawitzer
 INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Helioptile

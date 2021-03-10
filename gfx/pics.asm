@@ -1,6 +1,5 @@
 INCLUDE "constants.asm"
 
-
 ; PokemonPicPointers and UnownPicPointers are assumed to start at the same
 ; address, but in different banks. This is enforced in pokecrystal.link.
 
@@ -118,6 +117,8 @@ ParasectFrontpic:    INCBIN "gfx/pokemon/parasect/front.animated.2bpp.lz"
 MrMimeFrontpic:      INCBIN "gfx/pokemon/mr__mime/front.animated.2bpp.lz"
 HeracrossFrontpic:   INCBIN "gfx/pokemon/heracross/front.animated.2bpp.lz"
 WooperTPic:          INCBIN "gfx/trainers/wooper.2bpp.lz"
+SandileBackpic:      INCBIN "gfx/pokemon/sandile/back.2bpp.lz"
+SliggooBackpic:      INCBIN "gfx/pokemon/sliggoo/back.2bpp.lz"
 
 SECTION "Pics 6", ROMX
 
@@ -954,7 +955,6 @@ DrilburBackpic:      INCBIN "gfx/pokemon/drilbur/back.2bpp.lz"
 ExcadrillFrontpic:   INCBIN "gfx/pokemon/excadrill/front.animated.2bpp.lz"
 ExcadrillBackpic:    INCBIN "gfx/pokemon/excadrill/back.2bpp.lz"
 SandileFrontpic:     INCBIN "gfx/pokemon/sandile/front.animated.2bpp.lz"
-SandileBackpic:      INCBIN "gfx/pokemon/sandile/back.2bpp.lz"
 KrokorokFrontpic:    INCBIN "gfx/pokemon/krokorok/front.animated.2bpp.lz"
 KrokorokBackpic:     INCBIN "gfx/pokemon/krokorok/back.2bpp.lz"
 KrookodileFrontpic:  INCBIN "gfx/pokemon/krookodile/front.animated.2bpp.lz"
@@ -967,7 +967,6 @@ TynamoBackpic:       INCBIN "gfx/pokemon/tynamo/back.2bpp.lz"
 EelektrikFrontpic:   INCBIN "gfx/pokemon/eelektrik/front.animated.2bpp.lz"
 EelektrikBackpic:    INCBIN "gfx/pokemon/eelektrik/back.2bpp.lz"
 EelektrossFrontpic:  INCBIN "gfx/pokemon/eelektross/front.animated.2bpp.lz"
-SliggooBackpic:      INCBIN "gfx/pokemon/sliggoo/back.2bpp.lz"
 LampentBackpic:      INCBIN "gfx/pokemon/lampent/back.2bpp.lz"
 ChandelureFrontpic:  INCBIN "gfx/pokemon/chandelure/front.animated.2bpp.lz"
 ChandelureBackpic:   INCBIN "gfx/pokemon/chandelure/back.2bpp.lz"

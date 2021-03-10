@@ -363,7 +363,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Krokorok
 	dba KrookodileFrames
 	dba DucklettFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Swanna
+	dba SwannaFrames
 	dba TynamoFrames
 	dba EelektrikFrames
 	dba EelektrossFrames

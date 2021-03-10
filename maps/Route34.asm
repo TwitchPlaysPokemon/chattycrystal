@@ -29,8 +29,6 @@ Route34_MapScripts:
 .PutDayCareManOutside:
 	setevent EVENT_DAY_CARE_MAN_IN_DAY_CARE
 	clearevent EVENT_DAY_CARE_MAN_ON_ROUTE_34
-	sjump .CheckMon1
-
 .CheckMon1:
 	checkflag ENGINE_DAY_CARE_MAN_HAS_MON
 	iffalse .HideMon1
@@ -39,8 +37,6 @@ Route34_MapScripts:
 
 .HideMon1:
 	setevent EVENT_DAY_CARE_MON_1
-	sjump .CheckMon2
-
 .CheckMon2:
 	checkflag ENGINE_DAY_CARE_LADY_HAS_MON
 	iffalse .HideMon2
@@ -470,10 +466,6 @@ TrainerCooltrainerfKate:
 	closetext
 	end
 
-Route34IlexForestSign:
-; unused
-	jumptext Route34IlexForestSignText
-
 Route34Sign:
 	jumptext Route34SignText
 
@@ -723,12 +715,6 @@ CooltrainerfKateAfterText:
 
 	para "here. You sure"
 	line "startled us."
-	done
-
-Route34IlexForestSignText:
-; unused
-	text "ILEX FOREST"
-	line "THROUGH THE GATE"
 	done
 
 Route34SignText:

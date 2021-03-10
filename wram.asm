@@ -1178,7 +1178,7 @@ wBGMapBufferEnd::
 
 NEXTU ; cd20
 ; credits
-ds 1; unused
+	ds 1
 wCreditsTimer:: db
 
 NEXTU ; cd20
@@ -2126,7 +2126,7 @@ wTilesetBlocksAddress:: dw ; d1dd
 wTilesetCollisionBank:: db ; d1df
 wTilesetCollisionAddress:: dw ; d1e0
 wTilesetAnim:: dw ; bank 3f ; d1e2
-	ds 2 ; unused ; d1e4
+	ds 2 ; d1e4
 wTilesetPalettes:: dw ; bank 3f ; d1e6
 wTilesetEnd::
 
@@ -2698,7 +2698,7 @@ wTrickHouseEntranceSceneID::                      db ; d9ca
 
 ; fight counts
 wJackFightCount::    db ; d9f2
-wBeverlyFightCount:: db ; unused
+	db
 wHueyFightCount::    db
 wGavenFightCount::   db
 wBethFightCount::    db
@@ -2711,18 +2711,18 @@ wLizFightCount::     db
 wAnthonyFightCount:: db
 wToddFightCount::    db
 wGinaFightCount::    db
-wIrwinFightCount::   db ; unused
+	db
 wArnieFightCount::   db
 wAlanFightCount::    db
 wDanaFightCount::    db
 wChadFightCount::    db
-wDerekFightCount::   db ; unused
+	db
 wTullyFightCount::   db
 wBrentFightCount::   db
 wTiffanyFightCount:: db
 wVanceFightCount::   db
 wWiltonFightCount::  db
-wKenjiFightCount::   db ; unused
+	db
 wParryFightCount::   db
 wErinFightCount::    db
 ; da0e

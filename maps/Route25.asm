@@ -19,8 +19,6 @@ Route25_MapScripts:
 	db 0 ; callbacks
 
 .DummyScene0:
-	end
-
 .DummyScene1:
 	end
 
@@ -191,24 +189,14 @@ Route25Protein:
 Route25HiddenPotion:
 	hiddenitem POTION, EVENT_ROUTE_25_HIDDEN_POTION
 
-MovementData_0x19efe8:
-	big_step DOWN
-	step_end
-
 MovementData_0x19efea:
 	big_step DOWN
+MovementData_0x19efe8:
 	big_step DOWN
 	step_end
 
 MovementData_0x19efed:
 	step UP
-	step UP
-	step UP
-	step LEFT
-	step LEFT
-	step LEFT
-	step_end
-
 MovementData_0x19eff4:
 	step UP
 	step UP
@@ -421,10 +409,6 @@ CooltrainermKevinAfterBattleText:
 BillsHouseSignText:
 	text "SEA COTTAGE"
 	line "BILL'S HOUSE"
-	done
-
-; unused
-	text "BILL'S HOUSE"
 	done
 
 Route25_MapEvents:

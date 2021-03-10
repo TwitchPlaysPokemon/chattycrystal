@@ -329,15 +329,12 @@ ENDM
 
 ___conversion_bitmap_check_values: MACRO
 	; macro arguments: bit setting function, address, address, address...
-___target EQUS "\1"
-___unroll = _NARG - 1
-	shift
-	rept ___unroll
+	for ___addr, 1, _NARG
+		shift ___addr
 		ld a, [\1]
-		call ___target
-		shift
+		shift -___addr
+		call \1
 	endr
-	PURGE ___target
 ENDM
 
 ___conversion_bitmap_free_unused: MACRO

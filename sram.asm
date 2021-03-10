@@ -29,18 +29,14 @@ sPartyMon6MailBackup:: mailmsg sPartyMon6MailBackup
 
 sMailboxCount:: db
 sMailbox::
-___count = 0
-rept MAILBOX_CAPACITY
-___count = ___count + 1
-sMailbox{d:___count}::  mailmsg sMailbox{d:___count}
+for x, 1, MAILBOX_CAPACITY + 1
+sMailbox{d:x}::  mailmsg sMailbox{d:x}
 endr
 
 sMailboxCountBackup:: db
 sMailboxBackup::
-___count = 0
-rept MAILBOX_CAPACITY
-___count = ___count + 1
-sMailbox{d:___count}Backup::  mailmsg sMailbox{d:___count}Backup
+for x, 1, MAILBOX_CAPACITY + 1
+sMailbox{d:x}Backup::  mailmsg sMailbox{d:x}Backup
 endr
 
 sMysteryGiftItem:: db
@@ -125,10 +121,8 @@ sLinkBattleStatsEnd::
 SECTION "SRAM Hall of Fame", SRAM
 
 sHallOfFame::
-___count = 0
-rept NUM_HOF_TEAMS
-___count = ___count + 1
-sHallOfFame{d:___count}:: hall_of_fame sHallOfFame{d:___count}
+for x, 1, NUM_HOF_TEAMS + 1
+sHallOfFame{d:x}:: hall_of_fame sHallOfFame{d:x}
 endr
 sHallOfFameEnd::
 

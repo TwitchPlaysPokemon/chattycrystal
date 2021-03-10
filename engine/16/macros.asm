@@ -300,11 +300,9 @@ ___conversion_bitmap_check_structs: MACRO
 	; may clobber anything; falls through
 ___unroll = 8
 	if (\3) <= ___unroll
-___iteration = 0
-		rept \3
+		for ___iteration, \3
 			ld a, [(\1) + ___iteration * (\2)]
 			call \4
-___iteration = ___iteration + 1
 		endr
 	else
 		ld de, \1
@@ -331,15 +329,12 @@ ENDM
 
 ___conversion_bitmap_check_values: MACRO
 	; macro arguments: bit setting function, address, address, address...
-___target EQUS "\1"
-___unroll = _NARG - 1
-	shift
-	rept ___unroll
+	for ___addr, 1, _NARG
+		shift ___addr
 		ld a, [\1]
-		call ___target
-		shift
+		shift -___addr
+		call \1
 	endr
-	PURGE ___target
 ENDM
 
 ___conversion_bitmap_free_unused: MACRO
@@ -353,8 +348,7 @@ ___conversion_bitmap_free_unused: MACRO
 	push de
 	ld e, a
 	; no ___unroll here since we rely on there being 8 bits per byte
-___iteration = 0
-	rept 8
+	for ___iteration, 8
 		srl e
 		ld a, [hli]
 		db $30, 3 ;jr nc, <skip 3 bytes> - avoid labels to avoid running into bugs with \@
@@ -370,7 +364,6 @@ ___iteration = 0
 		else
 			inc l
 		endc
-___iteration = ___iteration + 1
 	endr
 	pop de
 	ld a, [de]
@@ -380,8 +373,7 @@ ___iteration = ___iteration + 1
 	if \2_ENTRIES & 7
 		; handle the few remaining entries that couldn't be handled by the loop
 		ld e, a
-___iteration = 0
-		rept \2_ENTRIES & 7
+		for ___iteration, \2_ENTRIES & 7
 			; same loop as above
 			srl e
 			ld a, [hli]
@@ -392,8 +384,7 @@ ___iteration = 0
 			ld [hld], a
 			ld [hl], a
 			dec b
-___iteration = ___iteration + 1
-			if ___iteration < (\2_ENTRIES & 7)
+			if ___iteration < (\2_ENTRIES & 7) - 1
 				; no point incrementing the pointer if it is the last iteration
 				set 0, l
 				inc l ;no overflow is possible here

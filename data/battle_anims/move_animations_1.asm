@@ -307,9 +307,9 @@ MoveAnimations1:
 	dw BattleAnim_PowerGem
 	dw BattleAnim_Dynamicpunch ; PLACEHOLDER
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
-	dw BattleAnim_WingAttack   ; PLACEHOLDER
+	dw BattleAnim_BraveBird
 	dw BattleAnim_EarthPower
-	dw BattleAnim_PsychUp      ; PLACEHOLDER
+	dw BattleAnim_NastyPlot
 	dw BattleAnim_BulletPunch
 	dw BattleAnim_IceShard     ; 138
 	dw BattleAnim_FireFang
@@ -2325,8 +2325,9 @@ BattleAnim_Minimize:
 BattleAnim_SkyAttack:
 	anim_if_param_equal $1, BattleAnim_SkyAttack_branch_c9fb5
 	anim_1gfx ANIM_GFX_SKY_ATTACK
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
 	anim_bgeffect ANIM_BG_27, $0, $1, $0
-	anim_wait 32
+	anim_wait 8
 	anim_sound 0, 0, SFX_HYPER_BEAM
 	anim_obj ANIM_OBJ_SKY_ATTACK, 48, 88, $40
 	anim_wait 64
@@ -3517,6 +3518,21 @@ BattleAnim_MuddyWater:
 	anim_incobj 1
 	anim_wait 56
 	anim_ret
+	
+BattleAnim_BraveBird:
+	anim_1gfx ANIM_GFX_SKY_ATTACK
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_bgeffect ANIM_BG_27, $0, $1, $0
+	anim_wait 8
+	anim_bgeffect ANIM_BG_08, $0, $4, $0
+	anim_obp0 $30
+	anim_sound 0, 0, SFX_HYPER_BEAM
+	anim_obj ANIM_OBJ_BRAVE_BIRD, 48, 88, $18
+	anim_wait 16
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_wait 64
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
 
 BattleAnim_EarthPower:
 	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_ROCKS
@@ -3549,6 +3565,34 @@ BattleAnim_EarthPower:
 	anim_obj ANIM_OBJ_ROCK_SMASH, 132, 68, $50
 	anim_obj ANIM_OBJ_EMBER, 132, 68, $30
 	anim_wait 48
+	anim_ret
+	
+BattleAnim_NastyPlot:
+	anim_1gfx ANIM_GFX_STATUS
+	anim_sound 0, 0, SFX_LICK
+	anim_obj ANIM_OBJ_NASTY_PLOT, 64, 88, $2
+	anim_wait 16
+	anim_sound 0, 0, SFX_LICK
+	anim_obj ANIM_OBJ_NASTY_PLOT, 68, 88, $1
+	anim_obj ANIM_OBJ_NASTY_PLOT, 28, 88, $2
+	anim_wait 16
+	anim_sound 0, 0, SFX_LICK
+	anim_obj ANIM_OBJ_NASTY_PLOT, 72, 88, $0
+	anim_obj ANIM_OBJ_NASTY_PLOT, 24, 88, $1
+	anim_obj ANIM_OBJ_NASTY_PLOT_2, 46, 80, $2
+	anim_wait 16
+	anim_obj ANIM_OBJ_NASTY_PLOT, 20, 88, $0
+	anim_obj ANIM_OBJ_NASTY_PLOT_2, 46, 80, $1
+	anim_wait 16
+	anim_obj ANIM_OBJ_NASTY_PLOT_2, 46, 80, $0
+	anim_wait 32
+	anim_clearobjs
+	anim_wait 1
+	anim_2gfx ANIM_GFX_SHINE, ANIM_GFX_MISC
+	anim_obj ANIM_OBJ_FINGER_POINT, 48, 72, $0
+	anim_sound 0, 1, SFX_FORESIGHT
+	anim_obj ANIM_OBJ_GLIMMER_Y_SET, 48, 68, $0
+	anim_wait 24
 	anim_ret
 
 BattleAnim_BulletPunch:
@@ -3585,8 +3629,8 @@ BattleAnim_IceShard:
 .loop
 	anim_obj ANIM_OBJ_STEAM, 48, 96, $0
 	anim_wait 8
-	anim_loop 5, .loop
-.loop2	
+	anim_loop 4, .loop
+	anim_wait 8
 	anim_obj ANIM_OBJ_12, 40, 74, $0
 	anim_wait 6
 	anim_obj ANIM_OBJ_12, 56, 102, $0
@@ -3598,7 +3642,7 @@ BattleAnim_IceShard:
 	anim_obj ANIM_OBJ_12, 56, 74, $0
 	anim_wait 6
 	anim_obj ANIM_OBJ_12, 40, 102, $0
-	anim_loop 2, .loop2
+	anim_wait 6
 	anim_sound 6, 2, SFX_SHINE
 	anim_obj ANIM_OBJ_ICE_SHARD, 48, 80, $18
 	anim_wait 6

@@ -2348,10 +2348,8 @@ _ChangeBox_MenuHeader:
 
 .boxes
 	db NUM_BOXES
-x = 1
-rept NUM_BOXES
-	db x
-x = x + 1
+for x, NUM_BOXES
+	db x + 1
 endr
 	db -1
 

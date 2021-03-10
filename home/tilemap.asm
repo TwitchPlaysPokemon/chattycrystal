@@ -19,11 +19,6 @@ WaitBGMap2::
 	call DelayFrames
 	jr WaitBGMap
 
-IsCGB::
-	ldh a, [hCGB]
-	and a
-	ret
-
 ApplyTilemap::
 	ldh a, [hCGB]
 	and a

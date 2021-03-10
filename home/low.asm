@@ -24,13 +24,9 @@ FarCall::
 	; rst $08
 	jp FarCall_hl
 
-xor_a::
+VolumeOff::
 	xor a
-	ret
-
-xor_a_dec_a::
-	xor a
-	dec a
+	ld [wVolume], a
 	ret
 
 Bankswitch::
@@ -40,7 +36,9 @@ Bankswitch::
 	ld [MBC3RomBank], a
 	ret
 
-	ds 2
+xor_a::
+	xor a
+	ret
 
 ChattyOn::
 	assert ChattyOn == $0018
@@ -121,11 +119,11 @@ GetBattleVar::
 	; timer interrupt
 	reti
 
-	ds 2
-
-VolumeOff::
-	xor a
-	ld [wVolume], a
+DelayFrames::
+; Wait c frames
+	call DelayFrame
+	dec c
+	jr nz, DelayFrames
 	ret
 
 	assert @ == $0058
@@ -220,13 +218,6 @@ Sine::
 	homecall _Sine
 	ret
 
-DelayFrames::
-; Wait c frames
-	call DelayFrame
-	dec c
-	jr nz, DelayFrames
-	ret
-
 DelayFrame::
 ; Wait for one frame
 	ld a, 1
@@ -285,4 +276,14 @@ RTC::
 	ret nc
 TimeOfDayPals::
 	callfar _TimeOfDayPals
+	ret
+
+xor_a_dec_a::
+	xor a
+	dec a
+	ret
+
+IsCGB::
+	ldh a, [hCGB]
+	and a
 	ret

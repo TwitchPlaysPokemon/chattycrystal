@@ -183,7 +183,7 @@ ROMX $43
 	"Title"
 	"New Pokedex Entries 1"
 ROMX $44
-	; empty
+	"Pics 24"
 ROMX $45
 	"Mobile 45"
 	"Mobile Stadium"
@@ -337,7 +337,7 @@ ROMX $7d
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
-	"Pics 24"
+	; empty
 WRAM0
 	"Stack"
 	"Audio RAM"

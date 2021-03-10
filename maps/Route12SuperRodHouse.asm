@@ -32,10 +32,6 @@ Route12SuperRodHouseFishingGuruScript:
 	closetext
 	end
 
-SuperRodHouseBookshelf:
-; unused
-	jumpstd picturebookshelf
-
 OfferSuperRodText:
 	text "I'm the FISHING"
 	line "GURU's younger"

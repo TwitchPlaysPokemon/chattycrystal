@@ -24,11 +24,7 @@ Route32_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .Frieda
 
 .DummyScene0:
-	end
-
 .DummyScene1:
-	end
-
 .DummyScene2:
 	end
 
@@ -131,7 +127,6 @@ _OfferToSellSlowpokeTail:
 TrainerCamperRoland:
 	trainer CAMPER, ROLAND, EVENT_BEAT_CAMPER_ROLAND, CamperRolandSeenText, CamperRolandBeatenText, 0, .Script
 
-
 .Script:
 	endifjustbattled
 	opentext
@@ -142,7 +137,6 @@ TrainerCamperRoland:
 
 TrainerFisherJustin:
 	trainer FISHER, JUSTIN, EVENT_BEAT_FISHER_JUSTIN, FisherJustinSeenText, FisherJustinBeatenText, 0, .Script
-
 
 .Script:
 	endifjustbattled
@@ -652,49 +646,6 @@ FisherRalphSwarmText:
 	line "as you can, kid!"
 	done
 
-; --- start a segment of unused text
-
-Route32UnusedFisher1SeenText:
-	text "I keep catching"
-	line "the same #MON…"
-
-	para "Maybe a battle"
-	line "will turn things"
-	cont "around for me."
-	done
-
-Route32UnusedFisher1BeatenText:
-	text "Nothing ever goes"
-	line "right for me now…"
-	done
-
-Route32UnusedFisher1AfterText:
-	text "How come the guy"
-	line "next to me catches"
-	cont "good #MON?"
-	done
-
-Route32UnusedFisher2SeenText:
-	text "Heh, I'm on a roll"
-	line "today. How about a"
-	cont "battle, kid?"
-	done
-
-Route32UnusedFisher2BeatenText:
-	text "Oof. I wasn't"
-	line "lucky that time."
-	done
-
-Route32UnusedFisher2AfterText:
-	text "You have to have a"
-	line "good ROD if you"
-
-	para "want to catch good"
-	line "#MON."
-	done
-
-; --- end a segment of unused texts
-
 FisherHenrySeenText:
 	text "My #MON?"
 	line "Freshly caught!"
@@ -807,13 +758,6 @@ BirdKeeperPeterAfterText:
 	text "I should train"
 	line "again at the GYM"
 	cont "in VIOLET CITY."
-	done
-
-Route32UnusedText:
-; unused
-	text "The fishermen"
-	line "yelled at me for"
-	cont "bugging them…"
 	done
 
 Text_RoarIntro:

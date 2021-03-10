@@ -369,20 +369,20 @@ INCBIN "gfx/footprints/eelektross.1bpp"
 INCBIN "gfx/footprints/litwick.1bpp"
 INCBIN "gfx/footprints/lampent.1bpp"
 INCBIN "gfx/footprints/chandelure.1bpp"
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Clauncher
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Clawitzer
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Helioptile
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Heliolisk
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Amaura
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Aurorus
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Sylveon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Goomy
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Sliggoo
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Goodra
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Crabrawler
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Crabominable
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Cutiefly
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Ribombee
+INCBIN "gfx/footprints/clauncher.1bpp"
+INCBIN "gfx/footprints/clawitzer.1bpp"
+INCBIN "gfx/footprints/helioptile.1bpp"
+INCBIN "gfx/footprints/heliolisk.1bpp"
+INCBIN "gfx/footprints/amaura.1bpp"
+INCBIN "gfx/footprints/aurorus.1bpp"
+INCBIN "gfx/footprints/sylveon.1bpp"
+INCBIN "gfx/footprints/goomy.1bpp"
+INCBIN "gfx/footprints/sliggoo.1bpp"
+INCBIN "gfx/footprints/goodra.1bpp"
+INCBIN "gfx/footprints/crabrawler.1bpp"
+INCBIN "gfx/footprints/crabominable.1bpp"
+INCBIN "gfx/footprints/cutiefly.1bpp"
+INCBIN "gfx/footprints/ribombee.1bpp"
 ; Fused Crystal mons use the same footprints as their base mon
 INCBIN "gfx/footprints/onix.1bpp"      ; Onixtret
 INCBIN "gfx/footprints/chikorita.1bpp" ; Chiquirtle
@@ -399,4 +399,4 @@ INCBIN "gfx/footprints/wooper.1bpp"    ; Woochum
 INCBIN "gfx/footprints/quagsire.1bpp"  ; Quagynx
 INCBIN "gfx/footprints/steelix.1bpp"   ; Steelurret
 ; TPP's signature fakemon
-INCBIN "gfx/footprints/pikachu.1bpp" ; PLACEHOLDER - Phancero
+INCBIN "gfx/footprints/phancero.1bpp"

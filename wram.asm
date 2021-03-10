@@ -1630,7 +1630,9 @@ wConversionTableBitmap:: ds $20
 
 SECTION "WRAM 1", WRAMX
 
-wGBCOnlyDecompressBuffer:: ds 1 ; also uses the next $53f bytes for $540 total
+wGBCOnlyDecompressBuffer:: ; $540 bytes, but only used for the GBC only screen
+
+wForceWildForme:: db
 
 wDefaultSpawnpoint:: db
 

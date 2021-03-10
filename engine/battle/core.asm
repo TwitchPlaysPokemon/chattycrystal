@@ -6338,6 +6338,30 @@ LoadEnemyMon:
 	call BattleRandom
 	ld c, a
 
+	ld a, [wForceWildForme]
+	and a
+	jr z, .UpdateDVs
+	push bc
+	ld hl, sp + 0
+	predef GetCurrentForme
+	pop bc
+	ld a, [wForceWildForme]
+	ld l, a
+	res 7, l
+	add a, a
+	ld a, [wCurrentForme]
+	jr c, .check_forme
+	ld a, [wUnownLetter]
+.check_forme
+	cp l
+	jr nz, .GenerateDVs
+; Swap the DVs, because GetCurrentForme reads them the other way around when pushed
+	ld a, b
+	ld b, c
+	ld c, a
+	xor a
+	ld [wForceWildForme], a
+
 .UpdateDVs:
 ; Input DVs in register bc
 	ld hl, wEnemyMonDVs
@@ -6429,7 +6453,7 @@ LoadEnemyMon:
 ; Try again if length >= 1600 mm (i.e. if LOW(length) >= 3 inches)
 	ld a, [wMagikarpLength + 1]
 	cp LOW(1600) ; should be "cp 3", since 1600 mm = 5'3", but LOW(1600) = 64
-	jr nc, .GenerateDVs
+	jp nc, .GenerateDVs
 
 .CheckMagikarpArea:
 ; The "jr z" checks are supposed to be "jr nz".
@@ -6458,7 +6482,7 @@ LoadEnemyMon:
 ; Try again if length < 1024 mm (i.e. if HIGH(length) < 3 feet)
 	ld a, [wMagikarpLength]
 	cp HIGH(1024) ; should be "cp 3", since 1024 mm = 3'4", but HIGH(1024) = 4
-	jr c, .GenerateDVs ; try again
+	jp c, .GenerateDVs ; try again
 
 ; Finally done with DVs
 

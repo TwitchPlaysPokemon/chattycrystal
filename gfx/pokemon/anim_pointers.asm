@@ -321,8 +321,8 @@ AnimationPointers:
 	dw GrotleAnimation
 	dw TorterraAnimation
 	dw ChimcharAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Monferno
-	dw PlaceholderAnimation ; PLACEHOLDER - Infernape
+	dw MonfernoAnimation
+	dw InfernapeAnimation
 	dw PiplupAnimation
 	dw PrinplupAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Empoleon

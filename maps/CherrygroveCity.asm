@@ -27,7 +27,6 @@ CherrygroveCityGuideGent:
 	writetext GuideGentIntroText
 	yesorno
 	iffalse .No
-	sjump .Yes
 .Yes:
 	writetext GuideGentTourText1
 	waitbutton
@@ -215,18 +214,9 @@ GuideGentMovement1:
 	turn_head UP
 	step_end
 
-GuideGentMovement2:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	turn_head UP
-	step_end
-
 GuideGentMovement3:
 	step LEFT
+GuideGentMovement2:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -251,23 +241,14 @@ GuideGentMovement4:
 GuideGentMovement5:
 	step DOWN
 	step DOWN
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
+	rept 10
+		step RIGHT
+	endr
 	step DOWN
 	step DOWN
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
+	rept 5
+		step RIGHT
+	endr
 	turn_head UP
 	step_end
 
@@ -287,11 +268,6 @@ CherrygroveCity_RivalWalksToYou:
 CherrygroveCity_RivalPushesYouOutOfTheWay:
 	big_step DOWN
 	turn_head UP
-	step_end
-
-CherrygroveCity_UnusedMovementData:
-	step LEFT
-	turn_head DOWN
 	step_end
 
 CherrygroveCity_RivalExitsStageLeft:

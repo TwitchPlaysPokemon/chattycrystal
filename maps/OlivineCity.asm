@@ -109,14 +109,9 @@ OlivineCityPokecenterSign:
 OlivineCityMartSign:
 	jumpstd martsign
 
-MovementData_0x1a88d2:
-	step DOWN
-	step RIGHT
-	step RIGHT
-	step_end
-
 MovementData_0x1a88d6:
 	step DOWN
+MovementData_0x1a88d2:
 	step DOWN
 	step RIGHT
 	step RIGHT
@@ -239,11 +234,6 @@ OlivineLighthouseSignText:
 OlivineCityBattleTowerSignText:
 	text "BATTLE TOWER AHEAD"
 	line "Opening Now!"
-	done
-
-OlivineCityBattleTowerSignText_NotYetOpen:
-; unused; originally shown when the Battle Tower was closed
-	text "BATTLE TOWER AHEAD"
 	done
 
 OlivineCity_MapEvents:

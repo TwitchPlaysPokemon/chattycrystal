@@ -196,7 +196,7 @@ ElmGiveEverstoneScript:
 	waitbutton
 	closetext
 	setevent EVENT_GOT_EVERSTONE_FROM_ELM
-	setflag ENGINE_MAIN_MENU_MOBILE_CHOICES ;TODO this
+	setflag ENGINE_MAIN_MENU_MOBILE_CHOICES
 	setmapscene ROUTE_29, SCENE_ROUTE29_CATCH_TUTORIAL
 	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
 	setevent EVENT_ROUTE_30_BATTLE
@@ -357,10 +357,6 @@ ElmsLabTrashcan:
 ElmsLabPC:
 	jumptext ElmsLabPCText
 
-ElmsLabTrashcan2:
-; unused
-	jumpstd trashcan
-
 ElmsLabBookshelf:
 	jumpstd difficultbookshelf
 
@@ -369,16 +365,12 @@ ElmsLab_MoveOutOfTheWay:
 	turn_head LEFT
 	step_end
 
-ElmsLab_WalkUpToElmMovementPart1:
-	step UP
-	step UP
-	step_end
-
 ElmsLab_WalkUpToElmMovementPart2:
 	step UP
 	step UP
 	step UP
 	step UP
+ElmsLab_WalkUpToElmMovementPart1:
 	step UP
 	step UP
 	step_end
@@ -395,27 +387,17 @@ ElmsLab_EvanLeave:
 	step DOWN
 	step_end
 
+AideWalksRight2:
+	step RIGHT
 AideWalksRight1:
 	step RIGHT
 	step RIGHT
 	turn_head UP
 	step_end
 
-AideWalksRight2:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head UP
-	step_end
-
-AideWalksLeft1:
-	step LEFT
-	step LEFT
-	turn_head DOWN
-	step_end
-
 AideWalksLeft2:
 	step LEFT
+AideWalksLeft1:
 	step LEFT
 	step LEFT
 	turn_head DOWN
@@ -907,4 +889,3 @@ ElmsLab_MapEvents:
 	object_event  4,  10, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_BABA_IN_ELMS_LAB
 	object_event  4,  9, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_AJ_IN_ELMS_LAB
 	object_event  4,  5, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_EVAN_IN_ELMS_LAB
-

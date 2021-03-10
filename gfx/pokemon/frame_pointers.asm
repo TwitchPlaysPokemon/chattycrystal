@@ -321,8 +321,8 @@ FramesPointers:
 	dba GrotleFrames
 	dba TorterraFrames
 	dba ChimcharFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Monferno
-	dba PlaceholderFrames ; PLACEHOLDER - Infernape
+	dba MonfernoFrames
+	dba InfernapeFrames
 	dba PiplupFrames
 	dba PrinplupFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Empoleon

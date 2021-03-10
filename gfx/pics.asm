@@ -748,6 +748,8 @@ SECTION "Pics 21", ROMX
 GrovyleFrontpic:    INCBIN "gfx/pokemon/grovyle/front.animated.2bpp.lz"
 GrovyleBackpic:     INCBIN "gfx/pokemon/grovyle/back.2bpp.lz"
 SceptileBackpic:    INCBIN "gfx/pokemon/sceptile/back.2bpp.lz"
+TurtwigFrontpic:     INCBIN "gfx/pokemon/turtwig/front.animated.2bpp.lz"
+TurtwigBackpic:      INCBIN "gfx/pokemon/turtwig/back.2bpp.lz"
 
 SECTION "Pics 22", ROMX
 
@@ -895,8 +897,6 @@ SECTION "Pics 29", ROMX
 
 ParasectBackpic:     INCBIN "gfx/pokemon/parasect/back.2bpp.lz"
 MagikarpFrontpic:    INCBIN "gfx/pokemon/magikarp/front.animated.2bpp.lz"
-TurtwigFrontpic:     INCBIN "gfx/pokemon/turtwig/front.animated.2bpp.lz"
-TurtwigBackpic:      INCBIN "gfx/pokemon/turtwig/back.2bpp.lz"
 GrotleBackpic:       INCBIN "gfx/pokemon/grotle/back.2bpp.lz"
 TorterraFrontpic:    INCBIN "gfx/pokemon/torterra/front.animated.2bpp.lz"
 TorterraBackpic:     INCBIN "gfx/pokemon/torterra/back.2bpp.lz"

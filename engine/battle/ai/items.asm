@@ -14,15 +14,15 @@ AI_SwitchOrTryItem:
 
 	ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_CANT_RUN, a
-	jr nz, DontSwitch
+	jr nz, .dont_switch
 
 	ld a, [wEnemySubStatus5]
 	bit SUBSTATUS_AQUA_RING, a
-	jr nz, DontSwitch
+	jr nz, .dont_switch
 
 	ld a, [wEnemyWrapCount]
 	and a
-	jr nz, DontSwitch
+	jr nz, .dont_switch
 
 	ld hl, TrainerClassAttributes + TRNATTR_AI_ITEM_SWITCH
 	ld a, [wInBattleTowerBattle] ; always load the first trainer class in wTrainerClass for BattleTower-Trainers
@@ -40,24 +40,21 @@ AI_SwitchOrTryItem:
 	jp nz, SwitchRarely
 	bit SWITCH_SOMETIMES_F, [hl]
 	jp nz, SwitchSometimes
-	; fallthrough
-
-DontSwitch:
-	call AI_TryItem
-	ret
+.dont_switch
+	jp AI_TryItem
 
 SwitchOften:
 	callfar CheckAbleToSwitch
 	ld a, [wEnemySwitchMonParam]
 	and $f0
-	jp z, DontSwitch
+	jp z, AI_TryItem
 
 	cp $10
 	jr nz, .not_10
 	call Random
 	cp 50 percent + 1
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_10
 
 	cp $20
@@ -65,13 +62,13 @@ SwitchOften:
 	call Random
 	cp 79 percent - 1
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_20
 
 	; $30
 	call Random
 	cp 4 percent
-	jp c, DontSwitch
+	jp c, AI_TryItem
 
 .switch
 	ld a, [wEnemySwitchMonParam]
@@ -85,14 +82,14 @@ SwitchRarely:
 	callfar CheckAbleToSwitch
 	ld a, [wEnemySwitchMonParam]
 	and $f0
-	jp z, DontSwitch
+	jp z, AI_TryItem
 
 	cp $10
 	jr nz, .not_10
 	call Random
 	cp 8 percent
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_10
 
 	cp $20
@@ -100,13 +97,13 @@ SwitchRarely:
 	call Random
 	cp 12 percent
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_20
 
 	; $30
 	call Random
 	cp 79 percent - 1
-	jp c, DontSwitch
+	jp c, AI_TryItem
 
 .switch
 	ld a, [wEnemySwitchMonParam]
@@ -119,14 +116,14 @@ SwitchSometimes:
 	callfar CheckAbleToSwitch
 	ld a, [wEnemySwitchMonParam]
 	and $f0
-	jp z, DontSwitch
+	jp z, AI_TryItem
 
 	cp $10
 	jr nz, .not_10
 	call Random
 	cp 20 percent - 1
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_10
 
 	cp $20
@@ -134,13 +131,13 @@ SwitchSometimes:
 	call Random
 	cp 50 percent + 1
 	jr c, .switch
-	jp DontSwitch
+	jp AI_TryItem
 .not_20
 
 	; $30
 	call Random
 	cp 20 percent - 1
-	jp c, DontSwitch
+	jp c, AI_TryItem
 
 .switch
 	ld a, [wEnemySwitchMonParam]
@@ -400,27 +397,6 @@ AI_Items:
 	ld b, 20
 	call EnemyUsedPotion
 	jp .Use
-
-.asm_382ae ; This appears to be unused
-	callfar AICheckEnemyMaxHP
-	jr c, .dont_use
-	push bc
-	ld de, wEnemyMonMaxHP + 1
-	ld hl, wEnemyMonHP + 1
-	ld a, [de]
-	sub [hl]
-	jr z, .check_40_percent
-	dec hl
-	dec de
-	ld c, a
-	sbc [hl]
-	and a
-	jr nz, .check_40_percent
-	ld a, c
-	cp b
-	jp c, .check_50_percent
-	callfar AICheckEnemyQuarterHP
-	jr c, .check_40_percent
 
 .check_50_percent
 	pop bc
@@ -715,12 +691,6 @@ TextJump_EnemyWithdrew:
 	text_far Text_EnemyWithdrew
 	text_end
 
-Function384d5: ; This appears to be unused
-	call AIUsedItemSound
-	call AI_HealStatus
-	ld a, FULL_HEAL_RED ; X_SPEED
-	jp PrintText_UsedItemOn_AND_AIUpdateHUD
-
 AI_HealStatus:
 	ld a, [wCurOTMon]
 	ld hl, wOTPartyMon1Status
@@ -757,31 +727,6 @@ EnemyUsedDireHit:
 	set SUBSTATUS_FOCUS_ENERGY, [hl]
 	ld a, DIRE_HIT
 	jp PrintText_UsedItemOn_AND_AIUpdateHUD
-
-Function3851e: ; This appears to be unused
-	ldh [hDivisor], a
-	ld hl, wEnemyMonMaxHP
-	ld a, [hli]
-	ldh [hDividend], a
-	ld a, [hl]
-	ldh [hDividend + 1], a
-	ld b, 2
-	call Divide
-	ldh a, [hQuotient + 3]
-	ld c, a
-	ldh a, [hQuotient + 2]
-	ld b, a
-	ld hl, wEnemyMonHP + 1
-	ld a, [hld]
-	ld e, a
-	ld a, [hl]
-	ld d, a
-	ld a, d
-	sub b
-	ret nz
-	ld a, e
-	sub c
-	ret
 
 EnemyUsedXAttack:
 	ld b, ATTACK

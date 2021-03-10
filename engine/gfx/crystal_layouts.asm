@@ -233,7 +233,7 @@ Function49742:
 .Palette_49757:
 INCLUDE "gfx/unknown/49757.pal"
 
-_InitMG_Mobile_LinkTradePalMap:
+InitMG_Mobile_LinkTradePalMap:
 	hlcoord 0, 0, wAttrMap
 	lb bc, 16, 2
 	ld a, $4
@@ -295,10 +295,3 @@ _LoadTradeRoomBGPals:
 
 TradeRoomPalette:
 INCLUDE "gfx/trade/border.pal"
-
-InitMG_Mobile_LinkTradePalMap:
-	call _InitMG_Mobile_LinkTradePalMap
-	ret
-
-; unused
-INCLUDE "gfx/unknown/4985a.asm"

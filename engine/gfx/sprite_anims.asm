@@ -13,7 +13,7 @@ DoAnimFrame:
 
 .Jumptable:
 ; entries correspond to SPRITE_ANIM_SEQ_* constants
-	dw .Null
+	dw GenericDummyFunction
 	dw .PartyMon
 	dw .PartyMonSwitch
 	dw .PartyMonSelected
@@ -26,7 +26,7 @@ DoAnimFrame:
 	dw .SlotsChansey
 	dw .SlotsChanseyEgg
 	dw .MailCursor
-	dw .UnusedCursor
+	dw GenericDummyFunction
 	dw .DummyGameCursor
 	dw .PokegearArrow
 	dw .TradePokeBall
@@ -48,9 +48,6 @@ DoAnimFrame:
 	dw .IntroUnown
 	dw .IntroUnownF
 	dw .IntroSuicuneAway
-
-.Null:
-	ret
 
 .PartyMon
 	ld a, [wMenuCursorY]
@@ -397,10 +394,6 @@ DoAnimFrame:
 	ld hl, SPRITEANIMSTRUCT_YOFFSET
 	add hl, bc
 	ld [hl], a
-	ret
-
-.UnusedCursor
-	callfar ret_e00ed
 	ret
 
 .PokegearArrow

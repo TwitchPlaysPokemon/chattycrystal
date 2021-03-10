@@ -6394,7 +6394,7 @@ Function102e3e:
 
 Function102e4f:
 	farcall Function16d42e
-	farcall _InitMG_Mobile_LinkTradePalMap
+	farcall InitMG_Mobile_LinkTradePalMap
 	ld de, wPlayerName
 	hlcoord 4, 0
 	call PlaceString
@@ -6410,9 +6410,6 @@ Function102e4f:
 	call .PlaceSpeciesNames
 	hlcoord 7, 9
 	ld de, wOTPartySpecies
-	call .PlaceSpeciesNames
-	ret
-
 .PlaceSpeciesNames:
 	ld c, 0
 .count_loop

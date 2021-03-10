@@ -334,13 +334,6 @@ _CGB_BillsPC:
 .Function9009:
 	ld hl, .BillsPCOrangePalette
 	call LoadHLPaletteIntoDE
-	jr .asm_901a
-
-.unused
-	ld bc, wTempMonDVs
-	call GetPlayerOrMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
-.asm_901a
 	call WipeAttrMap
 	hlcoord 1, 1, wAttrMap
 	lb bc, 7, 7
@@ -583,7 +576,7 @@ _CGB_Evolution:
 	call WipeAttrMap
 	call ApplyAttrMap
 	call ApplyPals
-	ld a, $1
+	ld a, 1
 	ldh [hCGBPalUpdate], a
 	ret
 
@@ -601,7 +594,7 @@ _CGB_GSTitleScreen:
 	ld a, SCGB_DIPLOMA
 	ld [wSGBPredef], a
 	call ApplyPals
-	ld a, $1
+	ld a, 1
 	ldh [hCGBPalUpdate], a
 	ret
 
@@ -609,8 +602,7 @@ _CGB0d:
 	ld hl, PalPacket_Diploma + 1
 	call CopyFourPalettes
 	call WipeAttrMap
-	call ApplyAttrMap
-	ret
+	jp ApplyAttrMap
 
 _CGB_UnownPuzzle:
 	ld hl, PalPacket_UnownPuzzle + 1

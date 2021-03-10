@@ -1816,13 +1816,13 @@ GivePoke::
 	ld bc, MON_NAME_LENGTH
 	rst CopyBytes
 	call CloseSRAM
-	ld b, $1
+	ld b, 1
 	ret
 
 .FailedToGiveMon:
 	pop bc
 	pop de
-	ld b, $2
+	ld b, 2
 	ret
 
 TextJump_WasSentToBillsPC:

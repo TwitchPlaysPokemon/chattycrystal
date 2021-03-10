@@ -38,7 +38,7 @@ BT_PartySelect:
 	call SetPalettes
 	call DelayFrame
 	call PartyMenuSelect
-	jr c, .return
+	jp c, ReturnToMapWithSpeechTextbox
 	farcall FreezeMonIcons
 
 	; Check if we're entering something. In that case, remove the entry.
@@ -61,9 +61,6 @@ BT_PartySelect:
 	dec a ; Stats
 	jp z, .Stats
 	jr .loop ; Cancel
-
-.return
-	jp ReturnToMapWithSpeechTextbox
 
 .Menu:
 	; 2 menu headers; eggs (banned), regular
@@ -129,7 +126,7 @@ BT_PartySelect:
 	jp c, .loop
 	dec a
 	jp nz, .loop
-	jp .return
+	jp ReturnToMapWithSpeechTextbox
 
 .selection_ok_text
 	db "Enter battle?@"
@@ -1112,14 +1109,6 @@ TeachWhichPKMNString:
 MoveToWhereString:
 	db "Move to where?@"
 
-ChooseAFemalePKMNString:
-; unused
-	db "Choose a ♀<PK><MN>.@"
-
-ChooseAMalePKMNString:
-; unused
-	db "Choose a ♂<PK><MN>.@"
-
 ToWhichPKMNString:
 	db "To which <PK><MN>?@"
 
@@ -1136,7 +1125,20 @@ PrintPartyMenuActionText:
 	ld a, [wPartyMenuActionText]
 	and $f
 	ld hl, .MenuActionTexts
-	call .PrintText
+	ld e, a
+	ld d, 0
+	add hl, de
+	add hl, de
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld a, [wOptions]
+	push af
+	set NO_TEXT_SCROLL, a
+	ld [wOptions], a
+	call PrintText
+	pop af
+	ld [wOptions], a
 	ret
 
 .MenuActionTexts:
@@ -1201,20 +1203,3 @@ PrintPartyMenuActionText:
 	; came to its senses.
 	text_far _CameToItsSensesText
 	text_end
-
-.PrintText:
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	ld a, [wOptions]
-	push af
-	set NO_TEXT_SCROLL, a
-	ld [wOptions], a
-	call PrintText
-	pop af
-	ld [wOptions], a
-	ret

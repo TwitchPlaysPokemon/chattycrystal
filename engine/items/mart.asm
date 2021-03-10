@@ -762,9 +762,9 @@ SellMenu:
 
 .dw
 	dw .try_sell
-	dw .cant_buy
-	dw .cant_buy
-	dw .cant_buy
+	dw GenericDummyFunction
+	dw GenericDummyFunction
+	dw GenericDummyFunction
 	dw .try_sell
 	dw .try_sell
 	dw .try_sell
@@ -783,7 +783,6 @@ SellMenu:
 	pop af
 	ld [wChattyOverride], a
 	and a
-.cant_buy
 	ret
 
 .okay_to_sell
@@ -837,9 +836,6 @@ Text_Mart_ICanPayThisMuch:
 	; I can pay you ¥@ . Is that OK?
 	text_far UnknownText_0x1c4f3e
 	text_end
-
-.UnusedString15f7d:
-	db "！ダミー！@"
 
 Text_Mart_HowMayIHelpYou:
 	; Welcome! How may I help you?

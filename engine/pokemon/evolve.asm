@@ -336,8 +336,6 @@ EvolveAfterBattle_MasterLoop:
 	inc hl
 	jp .loop
 
-; unused
-	pop hl
 .ReturnToMap:
 	pop de
 	pop bc

@@ -3,13 +3,6 @@ CARDFLIP_LIGHT_ON  EQU "♀" ; $f5
 
 CARDFLIP_DECK_SIZE EQU 4 * 6
 
-; two labels below called from inside ./dummy_game.asm
-Unknown_e00ed:
-; Graphics for an unused Game Corner
-; game were meant to be here.
-ret_e00ed:
-	ret
-
 _CardFlip:
 	ld hl, wOptions
 	set NO_TEXT_SCROLL, [hl]
@@ -152,8 +145,7 @@ _CardFlip:
 	ld a, $1
 	ldh [hBGMapMode], a
 	call WaitSFX
-	call .Increment
-	ret
+	jp .Increment
 
 .NotEnoughCoinsText:
 	; Not enough coins…
@@ -200,14 +192,14 @@ _CardFlip:
 	call DelayFrames
 	ld hl, wCardFlipWhichCard
 	ld a, [hl]
-	xor $1
+	xor 1
 	ld [hl], a
 	jr .loop
 
 .next
 	ld de, SFX_SLOT_MACHINE_START
 	call PlaySFX
-	ld a, $3
+	ld a, 3
 .loop2
 	push af
 	call PlaceOAMCardBorder
@@ -222,15 +214,14 @@ _CardFlip:
 	ld hl, wCardFlipWhichCard
 	ld a, [hl]
 	push af
-	xor $1
+	xor 1
 	ld [hl], a
 	call GetCoordsOfChosenCard
 	lb bc, 6, 5
 	call CardFlip_FillGreenBox
 	pop af
 	ld [wCardFlipWhichCard], a
-	call .Increment
-	ret
+	jp .Increment
 
 .ChooseACardText:
 	; Choose a card.
@@ -244,15 +235,11 @@ _CardFlip:
 	call JoyTextDelay
 	ldh a, [hJoyLast]
 	and A_BUTTON
-	jr nz, .betdone
+	jp nz, .Increment
 	call ChooseCard_HandleJoypad
 	call CardFlip_UpdateCursorOAM
 	call DelayFrame
 	jr .betloop
-
-.betdone
-	call .Increment
-	ret
 
 .PlaceYourBetText:
 	; Place your bet.
@@ -285,32 +272,26 @@ _CardFlip:
 	call GetCoordsOfChosenCard
 	call CardFlip_DisplayCardFaceUp
 	call WaitBGMap2
-	call .Increment
-	ret
+	jp .Increment
 
 .TabulateTheResult:
 	call CardFlip_CheckWinCondition
 	call WaitPressAorB_BlinkCursor
-	call .Increment
-	ret
+	jp .Increment
 
 .PlayAgain:
 	call ClearSprites
 	ld hl, .PlayAgainText
 	call CardFlip_UpdateCoinBalanceDisplay
 	call YesNoBox
-	jr nc, .Continue
-	call .Increment
-	ret
-
-.Continue:
+	jp c, .Increment
 	ld a, [wCardFlipNumCardsPlayed]
 	inc a
 	ld [wCardFlipNumCardsPlayed], a
 	cp 12
 	jr c, .KeepTheCurrentDeck
 	call CardFlip_InitTilemap
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	call CardFlip_ShuffleDeck
 	ld hl, .CardsShuffledText
@@ -365,8 +346,7 @@ CardFlip_ShuffleDeck:
 	ld [wCardFlipNumCardsPlayed], a
 	ld hl, wDiscardPile
 	ld bc, CARDFLIP_DECK_SIZE
-	call ByteFill
-	ret
+	jp ByteFill
 
 CollapseCursorPosition:
 	ld hl, 0
@@ -385,22 +365,18 @@ GetCoordsOfChosenCard:
 	jr nz, .BottomCard
 	hlcoord 2, 0
 	bcpixel 2, 3
-	jr .done
+	ret
 
 .BottomCard:
 	hlcoord 2, 6
 	bcpixel 8, 3
-
-.done
-	ret
 
 PlaceCardFaceDown:
 	xor a
 	ldh [hBGMapMode], a
 	ld de, .FaceDownCardTilemap
 	lb bc, 6, 5
-	call CardFlip_CopyToBox
-	ret
+	jp CardFlip_CopyToBox
 
 .FaceDownCardTilemap:
 	db $08, $09, $09, $09, $0a
@@ -469,8 +445,7 @@ CardFlip_DisplayCardFaceUp:
 	and 3
 	inc a
 	lb bc, 6, 5
-	call CardFlip_FillBox
-	ret
+	jp CardFlip_FillBox
 
 .FaceUpCardTilemap:
 	db $18, $19, $19, $19, $1a
@@ -497,9 +472,6 @@ CardFlip_UpdateCoinBalanceDisplay:
 	call Textbox
 	pop hl
 	call PrintTextboxText
-	call CardFlip_PrintCoinBalance
-	ret
-
 CardFlip_PrintCoinBalance:
 	hlcoord 9, 15
 	ld b, 1
@@ -511,8 +483,7 @@ CardFlip_PrintCoinBalance:
 	hlcoord 15, 16
 	ld de, wCoins
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 4
-	call PrintNum
-	ret
+	jp PrintNum
 
 .CoinStr:
 	db "COIN@"
@@ -530,12 +501,10 @@ CardFlip_InitTilemap:
 	call CardFlip_CopyToBox
 	hlcoord 0, 12
 	lb bc, 4, 18
-	call Textbox
-	ret
+	jp Textbox
 
 CardFlip_FillGreenBox:
 	ld a, $29
-
 CardFlip_FillBox:
 .row
 	push bc
@@ -800,15 +769,15 @@ CardFlip_CheckWinCondition:
 	jp hl
 
 .Jumptable:
-	dw .Impossible
-	dw .Impossible
+	dw .Lose
+	dw .Lose
 	dw .PikaJiggly
 	dw .PikaJiggly
 	dw .PoliOddish
 	dw .PoliOddish
 
-	dw .Impossible
-	dw .Impossible
+	dw .Lose
+	dw .Lose
 	dw .Pikachu
 	dw .Jigglypuff
 	dw .Poliwag
@@ -855,9 +824,6 @@ CardFlip_CheckWinCondition:
 	dw .JigglySix
 	dw .PoliSix
 	dw .OddSix
-
-.Impossible:
-	jp .Lose
 
 .PikaJiggly:
 	ld a, [wCardFlipFaceUpCard]
@@ -1080,16 +1046,6 @@ CardFlip_CheckWinCondition:
 	jr nz, .Lose
 	ld c, 72
 	ld de, SFX_2ND_PLACE
-	jr .Payout
-
-.Lose:
-	ld de, SFX_WRONG
-	call PlaySFX
-	ld hl, .Text_Darn
-	call CardFlip_UpdateCoinBalanceDisplay
-	call WaitSFX
-	ret
-
 .Payout:
 	push bc
 	push de
@@ -1114,6 +1070,13 @@ CardFlip_CheckWinCondition:
 	jr nz, .loop
 	ret
 
+.Lose:
+	ld de, SFX_WRONG
+	call PlaySFX
+	ld hl, .Text_Darn
+	call CardFlip_UpdateCoinBalanceDisplay
+	jp WaitSFX
+
 .Text_Yeah:
 	; Yeah!
 	text_far UnknownText_0x1c5813
@@ -1135,8 +1098,7 @@ CardFlip_CheckWinCondition:
 	ld a, l
 	ld [wCoins + 1], a
 	ld de, SFX_PAY_DAY
-	call PlaySFX
-	ret
+	jp PlaySFX
 
 .IsCoinCaseFull:
 	ld a, [wCoins]
@@ -1161,8 +1123,7 @@ CardFlip_CheckWinCondition:
 PlaceOAMCardBorder:
 	call GetCoordsOfChosenCard
 	ld hl, .SpriteData
-	call CardFlip_CopyOAM
-	ret
+	jp CardFlip_CopyOAM
 
 .SpriteData:
 	db 18
@@ -1324,8 +1285,7 @@ ChooseCard_HandleJoypad:
 
 .play_sound
 	ld de, SFX_POKEBALLS_PLACED_ON_TABLE
-	call PlaySFX
-	ret
+	jp PlaySFX
 
 CardFlip_UpdateCursorOAM:
 	call ClearSprites
@@ -1349,8 +1309,7 @@ CardFlip_UpdateCursorOAM:
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a
-	call CardFlip_CopyOAM
-	ret
+	jp CardFlip_CopyOAM
 
 .OAMData:
 cardflip_cursor: MACRO

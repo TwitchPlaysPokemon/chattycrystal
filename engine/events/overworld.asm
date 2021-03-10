@@ -1003,8 +1003,7 @@ SetStrengthFlag:
 	add hl, de
 	ld a, [hl]
 	ld [wBuffer6], a
-	call GetPartyNick
-	ret
+	jp GetPartyNick
 
 Script_StrengthFromMenu:
 	reloadmappart
@@ -1615,8 +1614,7 @@ PutTheRodAway:
 	ld a, $1
 	ld [wPlayerAction], a
 	call UpdateSprites
-	call ReplaceKrisSprite
-	ret
+	jp ReplaceKrisSprite
 
 UnknownText_0xd0a4:
 	; Oh! A bite!
@@ -1626,11 +1624,6 @@ UnknownText_0xd0a4:
 UnknownText_0xd0a9:
 	; Not even a nibble!
 	text_far UnknownText_0x1c0965
-	text_end
-
-UnknownText_0xd0ae: ; unused
-	; Looks like there's nothing here.
-	text_far UnknownText_0x1c0979
 	text_end
 
 BikeFunction:
@@ -1734,10 +1727,6 @@ Script_GetOnBike_Register:
 	closetext
 	special ReplaceKrisSprite
 	end
-
-; unused
-	nop
-	ret
 
 Script_GetOffBike:
 	reloadmappart

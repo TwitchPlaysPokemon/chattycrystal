@@ -16,16 +16,12 @@ TMHMPocket:
 	add hl, bc
 	ld a, [hl]
 	ld [wItemQuantityBuffer], a
-	call .ConvertItemToTMHMNumber
-	scf
-	ret
-
-.ConvertItemToTMHMNumber:
 	ld a, [wCurItem]
 	ld c, a
 	callfar GetNumberedTMHM
 	ld a, c
 	ld [wCurItem], a
+	scf
 	ret
 
 ConvertCurItemIntoCurTMHM:
@@ -156,18 +152,12 @@ TeachTMHM:
 	ld c, HAPPINESS_LEARNMOVE
 	callfar ChangeHappiness
 	call ConsumeTM
-	jr .learned_move
+	scf
+	ret
 
 .nope
 	rst ChattyOn
 	and a
-	ret
-
-.unused
-	ld a, 2
-	ld [wItemEffectSucceeded], a
-.learned_move
-	scf
 	ret
 
 IsHM::

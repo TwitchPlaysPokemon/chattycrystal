@@ -58,8 +58,7 @@ Pack:
 	call Pack_InitGFX
 	ld a, [wPackJumptableIndex]
 	ld [wJumptableIndex], a
-	call Pack_InitColors
-	ret
+	jp Pack_InitColors
 
 .InitItemsPocket:
 	xor a ; ITEM_POCKET
@@ -67,8 +66,7 @@ Pack:
 	call ClearPocketList
 	call DrawPocketName
 	call WaitBGMap_DrawPackGFX
-	call Pack_JumptableNext
-	ret
+	jp Pack_JumptableNext
 
 .ItemsPocketMenu:
 	ld hl, ItemsPocketMenuHeader
@@ -86,8 +84,7 @@ Pack:
 	ld c, PACKSTATE_INITBALLSPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
-	call .ItemBallsKey_LoadSubmenu
-	ret
+	jp .ItemBallsKey_LoadSubmenu
 
 .InitKeyItemsPocket:
 	ld a, KEY_ITEM_POCKET
@@ -95,8 +92,7 @@ Pack:
 	call ClearPocketList
 	call DrawPocketName
 	call WaitBGMap_DrawPackGFX
-	call Pack_JumptableNext
-	ret
+	jp Pack_JumptableNext
 
 .KeyItemsPocketMenu:
 	ld hl, KeyItemsPocketMenuHeader
@@ -114,8 +110,7 @@ Pack:
 	ld c, PACKSTATE_INITTMHMPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
-	call .ItemBallsKey_LoadSubmenu
-	ret
+	jp .ItemBallsKey_LoadSubmenu
 
 .InitTMHMPocket:
 	ld a, TM_HM_POCKET
@@ -125,8 +120,7 @@ Pack:
 	xor a
 	ldh [hBGMapMode], a
 	call WaitBGMap_DrawPackGFX
-	call Pack_JumptableNext
-	ret
+	jp Pack_JumptableNext
 
 .TMHMPocketMenu:
 	farcall TMHMPocket
@@ -171,7 +165,7 @@ Pack:
 
 .Jumptable1:
 	dw .UseItem
-	dw QuitItemSubmenu
+	dw GenericDummyFunction
 
 .MenuHeader2:
 	db MENU_BACKUP_TILES ; flags
@@ -189,7 +183,7 @@ Pack:
 .Jumptable2:
 	dw .UseItem
 	dw GiveItem
-	dw QuitItemSubmenu
+	dw GenericDummyFunction
 
 .UseItem:
 	farcall AskTeachTMHM
@@ -208,8 +202,7 @@ Pack:
 	ldh [hBGMapMode], a
 	call Pack_InitGFX
 	call WaitBGMap_DrawPackGFX
-	call Pack_InitColors
-	ret
+	jp Pack_InitColors
 
 .InitBallsPocket:
 	ld a, BALL_POCKET
@@ -217,8 +210,7 @@ Pack:
 	call ClearPocketList
 	call DrawPocketName
 	call WaitBGMap_DrawPackGFX
-	call Pack_JumptableNext
-	ret
+	jp Pack_JumptableNext
 
 .BallsPocketMenu:
 	ld hl, BallsPocketMenuHeader
@@ -236,9 +228,6 @@ Pack:
 	ld c, PACKSTATE_INITKEYITEMSPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
-	call .ItemBallsKey_LoadSubmenu
-	ret
-
 .ItemBallsKey_LoadSubmenu:
 	farcall _CheckTossableItem
 	ld a, [wItemAttributeParamBuffer]
@@ -252,21 +241,19 @@ Pack:
 	ld a, [wItemAttributeParamBuffer]
 	and a
 	jr nz, .usable
-	jr .unusable
-
-.selectable
-	farcall CheckItemMenu
-	ld a, [wItemAttributeParamBuffer]
-	and a
-	jr nz, .selectable_usable
-	jr .selectable_unusable
+.unusable
+	ld hl, MenuHeader_HoldableKeyItem
+	ld de, Jumptable_GiveTossRegisterQuit
+	jr .build_menu
 
 .tossable
 	farcall CheckSelectableItem
 	ld a, [wItemAttributeParamBuffer]
 	and a
 	jr nz, .tossable_selectable
-	jr .tossable_unselectable
+	ld hl, MenuHeader_UnusableKeyItem
+	ld de, Jumptable_UseRegisterQuit
+	jr .build_menu
 
 .usable
 	ld hl, MenuHeader_UsableKeyItem
@@ -283,17 +270,11 @@ Pack:
 	ld de, Jumptable_UseQuit
 	jr .build_menu
 
-.tossable_unselectable
-	ld hl, MenuHeader_UnusableKeyItem
-	ld de, Jumptable_UseRegisterQuit
-	jr .build_menu
-
-.unusable
-	ld hl, MenuHeader_HoldableKeyItem
-	ld de, Jumptable_GiveTossRegisterQuit
-	jr .build_menu
-
-.selectable_unusable
+.selectable
+	farcall CheckItemMenu
+	ld a, [wItemAttributeParamBuffer]
+	and a
+	jr nz, .selectable_usable
 	ld hl, MenuHeader_HoldableItem
 	ld de, Jumptable_GiveTossQuit
 .build_menu
@@ -328,7 +309,7 @@ Jumptable_UseGiveTossRegisterQuit:
 	dw GiveItem
 	dw TossMenu
 	dw RegisterItem
-	dw QuitItemSubmenu
+	dw GenericDummyFunction
 
 MenuHeader_UsableItem:
 	db MENU_BACKUP_TILES ; flags
@@ -348,7 +329,7 @@ Jumptable_UseGiveTossQuit:
 	dw UseItem
 	dw GiveItem
 	dw TossMenu
-	dw QuitItemSubmenu
+	dw GenericDummyFunction
 
 MenuHeader_UnusableItem:
 	db MENU_BACKUP_TILES ; flags
@@ -364,7 +345,7 @@ MenuHeader_UnusableItem:
 
 Jumptable_UseQuit:
 	dw UseItem
-	dw QuitItemSubmenu
+	dw GenericDummyFunction
 
 MenuHeader_UnusableKeyItem:
 	db MENU_BACKUP_TILES ; flags
@@ -382,7 +363,7 @@ MenuHeader_UnusableKeyItem:
 Jumptable_UseRegisterQuit:
 	dw UseItem
 	dw RegisterItem
-	dw QuitItemSubmenu
+	dw GenericDummyFunction
 
 MenuHeader_HoldableKeyItem:
 	db MENU_BACKUP_TILES ; flags
@@ -402,7 +383,7 @@ Jumptable_GiveTossRegisterQuit:
 	dw GiveItem
 	dw TossMenu
 	dw RegisterItem
-	dw QuitItemSubmenu
+	dw GenericDummyFunction
 
 MenuHeader_HoldableItem:
 	db MENU_BACKUP_TILES ; flags
@@ -420,7 +401,7 @@ MenuHeader_HoldableItem:
 Jumptable_GiveTossQuit:
 	dw GiveItem
 	dw TossMenu
-	dw QuitItemSubmenu
+	dw GenericDummyFunction
 
 UseItem:
 	farcall CheckItemMenu
@@ -431,22 +412,17 @@ UseItem:
 
 .dw
 ; entries correspond to ITEMMENU_* constants
-	dw .Oak     ; ITEMMENU_NOUSE
+	dw .Oak         ; ITEMMENU_NOUSE
 	dw .Oak
 	dw .Oak
 	dw .Oak
-	dw .Current ; ITEMMENU_CURRENT
-	dw .Party   ; ITEMMENU_PARTY
-	dw .Field   ; ITEMMENU_CLOSE
+	dw DoItemEffect ; ITEMMENU_CURRENT
+	dw .Party       ; ITEMMENU_PARTY
+	dw .Field       ; ITEMMENU_CLOSE
 
 .Oak:
 	ld hl, Text_ThisIsntTheTime
-	call Pack_PrintTextNoScroll
-	ret
-
-.Current:
-	call DoItemEffect
-	ret
+	jp Pack_PrintTextNoScroll
 
 .Party:
 	ld a, [wPartyCount]
@@ -457,13 +433,11 @@ UseItem:
 	ldh [hBGMapMode], a
 	call Pack_InitGFX
 	call WaitBGMap_DrawPackGFX
-	call Pack_InitColors
-	ret
+	jp Pack_InitColors
 
 .NoPokemon:
 	ld hl, TextJump_YouDontHaveAMon
-	call Pack_PrintTextNoScroll
-	ret
+	jp Pack_PrintTextNoScroll
 
 .Field:
 	call DoItemEffect
@@ -575,20 +549,16 @@ GiveItem:
 	ldh [hBGMapMode], a
 	call Pack_InitGFX
 	call WaitBGMap_DrawPackGFX
-	call Pack_InitColors
-	ret
+	jp Pack_InitColors
 
 .NoPokemon:
 	ld hl, TextJump_YouDontHaveAMon
-	call Pack_PrintTextNoScroll
-	ret
+	jp Pack_PrintTextNoScroll
+
 .Egg:
 	; An EGG can't hold an item.
 	text_far Text_AnEGGCantHoldAnItem
 	text_end
-
-QuitItemSubmenu:
-	ret
 
 BattlePack:
 	ld hl, wOptions
@@ -636,8 +606,7 @@ BattlePack:
 	call Pack_InitGFX
 	ld a, [wPackJumptableIndex]
 	ld [wJumptableIndex], a
-	call Pack_InitColors
-	ret
+	jp Pack_InitColors
 
 .InitItemsPocket:
 	xor a ; ITEM_POCKET
@@ -645,8 +614,7 @@ BattlePack:
 	call ClearPocketList
 	call DrawPocketName
 	call WaitBGMap_DrawPackGFX
-	call Pack_JumptableNext
-	ret
+	jp Pack_JumptableNext
 
 .ItemsPocketMenu:
 	ld hl, ItemsPocketMenuHeader
@@ -664,8 +632,7 @@ BattlePack:
 	ld c, PACKSTATE_INITBALLSPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
-	call ItemSubmenu
-	ret
+	jp ItemSubmenu
 
 .InitKeyItemsPocket:
 	ld a, KEY_ITEM_POCKET
@@ -673,8 +640,7 @@ BattlePack:
 	call ClearPocketList
 	call DrawPocketName
 	call WaitBGMap_DrawPackGFX
-	call Pack_JumptableNext
-	ret
+	jp Pack_JumptableNext
 
 .KeyItemsPocketMenu:
 	ld hl, KeyItemsPocketMenuHeader
@@ -692,8 +658,7 @@ BattlePack:
 	ld c, PACKSTATE_INITTMHMPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
-	call ItemSubmenu
-	ret
+	jp ItemSubmenu
 
 .InitTMHMPocket:
 	ld a, TM_HM_POCKET
@@ -705,8 +670,7 @@ BattlePack:
 	call WaitBGMap_DrawPackGFX
 	ld hl, Text_PackEmptyString
 	call Pack_PrintTextNoScroll
-	call Pack_JumptableNext
-	ret
+	jp Pack_JumptableNext
 
 .TMHMPocketMenu:
 	farcall TMHMPocket
@@ -715,8 +679,7 @@ BattlePack:
 	call Pack_InterpretJoypad
 	ret c
 	xor a
-	call TMHMSubmenu
-	ret
+	jp TMHMSubmenu
 
 .InitBallsPocket:
 	ld a, BALL_POCKET
@@ -724,8 +687,7 @@ BattlePack:
 	call ClearPocketList
 	call DrawPocketName
 	call WaitBGMap_DrawPackGFX
-	call Pack_JumptableNext
-	ret
+	jp Pack_JumptableNext
 
 .BallsPocketMenu:
 	ld hl, BallsPocketMenuHeader
@@ -743,8 +705,7 @@ BattlePack:
 	ld c, PACKSTATE_INITKEYITEMSPOCKET ; right
 	call Pack_InterpretJoypad
 	ret c
-	call ItemSubmenu
-	ret
+	jp ItemSubmenu
 
 ItemSubmenu:
 	farcall CheckItemContext
@@ -785,7 +746,7 @@ TMHMSubmenu:
 
 .UsableJumptable:
 	dw .Use
-	dw .Quit
+	dw GenericDummyFunction
 
 .UnusableMenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -799,7 +760,7 @@ TMHMSubmenu:
 	db "QUIT@"
 
 .UnusableJumptable:
-	dw .Quit
+	dw GenericDummyFunction
 
 .Use:
 	farcall CheckItemContext
@@ -820,8 +781,7 @@ TMHMSubmenu:
 
 .Oak:
 	ld hl, Text_ThisIsntTheTime
-	call Pack_PrintTextNoScroll
-	ret
+	jp Pack_PrintTextNoScroll
 
 .Unused:
 	call DoItemEffect
@@ -839,8 +799,7 @@ TMHMSubmenu:
 	ldh [hBGMapMode], a
 	call Pack_InitGFX
 	call WaitBGMap_DrawPackGFX
-	call Pack_InitColors
-	ret
+	jp Pack_InitColors
 
 .ReturnToBattle:
 	call ClearBGPalettes
@@ -861,8 +820,6 @@ TMHMSubmenu:
 .didnt_use_item
 	xor a
 	ld [wItemEffectSucceeded], a
-	ret
-.Quit:
 	ret
 
 InitPackBuffers:
@@ -891,8 +848,7 @@ DepositSellInitPackBuffers:
 	ld [wPackUsedItem], a
 	ld [wSwitchItem], a
 	call Pack_InitGFX
-	call Pack_InitColors
-	ret
+	jp Pack_InitColors
 
 DepositSellPack:
 .loop
@@ -975,8 +931,7 @@ InitPocket:
 	ld [wCurPocket], a
 	call ClearPocketList
 	call DrawPocketName
-	call WaitBGMap_DrawPackGFX
-	ret
+	jp WaitBGMap_DrawPackGFX
 
 DepositSellTutorial_InterpretJoypad:
 	ld hl, wMenuJoypad
@@ -1132,8 +1087,7 @@ TutorialPack:
 	call InitPocket
 	pop hl
 	call CopyMenuHeader
-	call ScrollingMenu
-	ret
+	jp ScrollingMenu
 
 Pack_JumptableNext:
 	ld hl, wJumptableIndex
@@ -1196,8 +1150,7 @@ DrawPackGFX:
 	ld d, [hl]
 	ld hl, vTiles2 tile $50
 	lb bc, BANK(PackGFX), 15
-	call Request2bpp
-	ret
+	jp Request2bpp
 
 .female
 	farcall DrawKrisPackGFX
@@ -1328,8 +1281,7 @@ Pack_InitGFX:
 	lb bc, 4, SCREEN_WIDTH - 2
 	call Textbox
 	call EnableLCD
-	call DrawPackGFX
-	ret
+	jp DrawPackGFX
 
 PlacePackGFX:
 	hlcoord 0, 3

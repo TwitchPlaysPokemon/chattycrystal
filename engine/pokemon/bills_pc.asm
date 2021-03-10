@@ -603,11 +603,6 @@ _MovePKMNWithoutMail:
 	ld [wJumptableIndex], a
 	ret
 
-.unused
-	ld hl, wJumptableIndex
-	dec [hl]
-	ret
-
 .b_button
 	ld a, 6
 	ld [wJumptableIndex], a
@@ -625,8 +620,7 @@ _MovePKMNWithoutMail:
 	call BillsPC_PlaceString
 	ld a, 1
 	ld [wMenuCursorY], a
-	call BillsPC_IncrementJumptableIndex
-	ret
+	jp BillsPC_IncrementJumptableIndex
 
 .MoveMonWOMailSubmenu:
 	ld hl, .MenuHeader
@@ -2552,10 +2546,7 @@ BillsPC_ChangeBoxSubmenu:
 	dec a
 	call GetBoxName
 	ld de, wd002
-	call CopyName2
-	ret
-
-	hlcoord 11, 7 ; unused
+	jp CopyName2
 
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags

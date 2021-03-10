@@ -470,11 +470,6 @@ UnknownText_0x1c0965::
 	text "Not even a nibble!"
 	prompt
 
-UnknownText_0x1c0979::
-	text "Looks like there's"
-	line "nothing here."
-	prompt
-
 UnknownText_0x1c099a::
 	text "You can't get off"
 	line "here!"

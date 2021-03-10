@@ -6390,8 +6390,7 @@ Function11b295:
 	jr nz, .asm_11b2ec
 	pop hl
 	ld de, wStringBuffer4
-	call PlaceString
-	ret
+	jp PlaceString
 
 String_11b2fe:
 	db "あげる#@"
@@ -6407,8 +6406,7 @@ String_11b30e:
 
 Function11b314:
 	call Function11b31b
-	call Function11b3d9
-	ret
+	jp Function11b3d9
 
 Function11b31b:
 	ld hl, .Coords

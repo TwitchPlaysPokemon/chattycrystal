@@ -363,7 +363,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Krokorok
 	dw KrookodileAnimation
 	dw DucklettAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Swanna
+	dw SwannaAnimation
 	dw TynamoAnimation
 	dw EelektrikAnimation
 	dw EelektrossAnimation

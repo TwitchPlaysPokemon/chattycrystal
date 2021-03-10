@@ -123,7 +123,7 @@ ReadBTTrainerParty:
 	ld h, d
 	ld de, wBT_OTTempMon1Name
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 .skip_mon_1
 	ld de, wBT_OTTempMon2Name
@@ -137,7 +137,7 @@ ReadBTTrainerParty:
 	ld h, d
 	ld de, wBT_OTTempMon2Name
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 .skip_mon_2
 	ld de, wBT_OTTempMon3Name
@@ -151,7 +151,7 @@ ReadBTTrainerParty:
 	ld h, d
 	ld de, wBT_OTTempMon3Name
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 .skip_mon_3
 ; Add the terminator character to each of these names
@@ -175,7 +175,7 @@ ReadBTTrainerParty:
 .done_trainer_name
 	ld de, wOTPlayerName
 	ld bc, NAME_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 	ld a, "@"
 	ld [de], a
 
@@ -200,14 +200,14 @@ ReadBTTrainerParty:
 	inc bc
 	push bc
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	push de
 	ld a, [wBGMapBuffer]
 	ld e, a
 	ld a, [wBGMapBuffer + 1]
 	ld d, a
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld a, e
 	ld [wBGMapBuffer], a
 	ld a, d
@@ -342,7 +342,7 @@ CopyBTTrainer_FromBT_OT_TowBT_OTTemp:
 	ld hl, wBT_OTTrainer
 	ld de, wBT_OTTemp
 	ld bc, BATTLE_TOWER_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	ldh [rSVBK], a
@@ -741,7 +741,7 @@ NewBattleTowerSession:
 	ld hl, wBT_PartySelections
 	ld de, sBTPartySelection
 	ld bc, BATTLETOWER_PARTY_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	; Initialize party here for the benefit of Uber checks.
 LoadBattleTowerParticipants:
 ; Loads battle tower participants. Assumes current party setup is regular.
@@ -751,7 +751,7 @@ LoadBattleTowerParticipants:
 	ld hl, sBTPartySelection
 	ld de, wBT_PartySelections
 	ld bc, BATTLETOWER_PARTY_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld a, BATTLETOWER_PARTY_LENGTH
 	ld [wBT_PartySelectCounter], a
 
@@ -762,7 +762,7 @@ LoadBattleTowerParticipants:
 	ld hl, wOTPartyCount
 	ld de, wPartyCount
 	ld bc, wOTPartyDataEnd - wOTPartyCount
-	call CopyBytes
+	rst CopyBytes
 	jp CloseSRAM
 
 SetBattleTowerPartyLevel:
@@ -938,7 +938,7 @@ BT_SetPlayerOT:
 
 	; Now copy the data
 	ld c, a
-	call CopyBytes
+	rst CopyBytes
 	pop bc
 	ret
 

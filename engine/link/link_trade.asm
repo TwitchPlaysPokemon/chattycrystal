@@ -12,7 +12,7 @@ Function16d42e:
 	ld hl, Tilemap_MobileTradeBorderFullscreen
 	decoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 Function16d43b:
@@ -142,11 +142,11 @@ Function16d6ae:
 	ld hl, Tilemap_CableTradeBorderTop
 	decoord 0, 0
 	ld bc, 2 * SCREEN_WIDTH
-	call CopyBytes
+	rst CopyBytes
 	ld hl, Tilemap_CableTradeBorderBottom
 	decoord 0, 16
 	ld bc, 2 * SCREEN_WIDTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 LinkTextbox:

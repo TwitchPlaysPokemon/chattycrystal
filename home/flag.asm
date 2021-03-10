@@ -1,9 +1,3 @@
-ResetMapBufferEventFlags::
-	xor a
-	ld hl, wEventFlags
-	ld [hli], a
-	ret
-
 ResetBikeFlags::
 	xor a
 	ld hl, wBikeFlags

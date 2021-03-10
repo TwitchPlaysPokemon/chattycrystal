@@ -59,7 +59,7 @@ Function_LoadOpponentTrainerAndPokemons:
 	ld bc, NAME_LENGTH
 	call AddNTimes
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 	call Function_LoadRandomBattleTowerMon
 	pop af
@@ -200,7 +200,7 @@ Function_LoadRandomBattleTowerMon:
 	dec b
 	jr nz, .move_loop
 	ld c, NICKNAMED_MON_STRUCT_LENGTH - 6
-	call CopyBytes
+	rst CopyBytes
 
 	; rename the Pokémon to its default name (overriding the transliterated Japanese nicknames)
 	push de
@@ -213,7 +213,7 @@ Function_LoadRandomBattleTowerMon:
 	ld l, e
 	pop de
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	pop de
 
 	pop bc
@@ -225,7 +225,7 @@ Function_LoadRandomBattleTowerMon:
 	ld de, sBTMonPrevPrevTrainer1
 	ld bc, 6
 	push hl
-	call CopyBytes
+	rst CopyBytes
 	pop de
 	ld a, [wBT_OTMon1]
 	call .store_index

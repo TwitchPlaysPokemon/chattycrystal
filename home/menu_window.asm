@@ -85,7 +85,7 @@ CopyMenuData::
 	ld l, a
 	ld de, wMenuDataFlags
 	ld bc, wMenuDataEnd - wMenuDataFlags
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	pop bc
 	pop de

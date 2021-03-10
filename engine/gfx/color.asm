@@ -221,7 +221,7 @@ LoadMailPalettes:
 	ld hl, PalPacket_9ce6
 	ld de, wSGBPals
 	ld bc, PALPACKET_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	pop hl
 	inc hl
 	inc hl

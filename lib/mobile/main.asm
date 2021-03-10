@@ -6801,9 +6801,6 @@ Function112d33:
 	dec a
 	jp .asm_112e46
 
-; unused
-	ret
-
 .asm_112d4d
 	ld a, [$c86a]
 	cp $23

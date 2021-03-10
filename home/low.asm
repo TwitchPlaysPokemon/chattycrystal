@@ -16,7 +16,8 @@ _de_::
 GenericDummyFunction::
 	ret
 
-	ds 1
+TX_ENDText::
+	text_end
 
 FarCall::
 	assert FarCall == $0008
@@ -50,7 +51,8 @@ ChattyOn::
 	pop af
 	ret
 
-	ds 1
+BattleAnim_Dummy::
+	anim_ret
 
 ChattyOff::
 	assert ChattyOff == $0020
@@ -64,6 +66,80 @@ ChattyOff::
 JumpTable::
 	assert JumpTable == $0028
 	; rst $28
+	jr _Jumptable
+
+ResetMapBufferEventFlags::
+	xor a
+	ld hl, wEventFlags
+	ld [hli], a
+	ret
+
+CopyBytes::
+	assert CopyBytes == $0030
+	; rst $30
+	; copy bc bytes from hl to de
+	inc b ; we bail the moment b hits 0, so include the last run
+	inc c ; same thing; include last byte
+	jr CopyBytes_Loop
+
+SetPlayerTurn::
+	xor a
+	ldh [hBattleTurn], a
+	ret
+
+Crash::
+	assert Crash == $0038
+	; no rst, just a crash
+	rst Crash
+
+UpdateTimePals::
+	callfar _UpdateTimePals
+	ret
+
+	assert @ == $0040
+	; vblank interrupt
+	jp VBlank
+
+SetHPPal::
+; Set palette for hp bar pixel length e at hl.
+	call GetHPPal
+	ld [hl], d
+	ret
+
+	assert @ == $0048
+	; lcd interrupt
+	jr LCD
+
+GetBattleVar::
+; Preserves hl.
+	push hl
+	call GetBattleVarAddr
+	pop hl
+	ret
+
+	assert @ == $0050
+	; timer interrupt
+	jp Timer
+
+VolumeOff::
+	xor a
+	ld [wVolume], a
+	ret
+
+	assert @ == $0058
+	; serial interrupt
+	jp Serial
+
+SetEnemyTurn::
+	ld a, 1
+	ldh [hBattleTurn], a
+	ret
+
+	assert @ == $0060
+	; joypad interrupt
+	reti
+
+_Jumptable:
 	push de
 	ld e, a
 	ld d, 0
@@ -75,41 +151,136 @@ JumpTable::
 	pop de
 	jp hl
 
-	ds 5
+CopyBytes_DoCopy:
+	ld a, [hli]
+	ld [de], a
+	inc de
+CopyBytes_Loop:
+	dec c
+	jr nz, CopyBytes_DoCopy
+	dec b
+	jr nz, CopyBytes_DoCopy
+	ret
 
-Crash::
-	assert Crash == $0038
-	; no rst, just a crash
-	rst Crash
+LCD::
+	push af
+	ldh a, [hLCDCPointer]
+	and a
+	jr z, .done
 
-	ds 7
+; At this point it's assumed we're in WRAM bank 5!
+	push bc
+	ldh a, [rLY]
+	ld c, a
+	ld b, HIGH(wLYOverrides)
+	ld a, [bc]
+	ld b, a
+	ldh a, [hLCDCPointer]
+	ld c, a
+	ld a, b
+	ldh [c], a
+	pop bc
 
-	assert @ == $0040
-	; vblank interrupt
-	jp VBlank
+.done
+	pop af
+	reti
 
-	ds 5
+_LoadMusicByte::
+; wCurMusicByte = [a:de]
+	ldh [hROMBank], a
+	ld [MBC3RomBank], a
 
-	assert @ == $0048
-	; lcd interrupt
-	jp LCD
+	ld a, [de]
+	ld [wCurMusicByte], a
+	ld a, BANK(LoadMusicByte)
 
-	ds 5
+	ldh [hROMBank], a
+	ld [MBC3RomBank], a
+	ret
 
-	assert @ == $0050
-	; timer interrupt
-	jp Timer
+IsAPokemon::
+; Return carry if species a is not a Pokemon.
+	cp EGG
+	ret z
+	dec a
+	cp MON_TABLE_ENTRIES
+	inc a
+	ccf
+	ret
 
-	ds 5
+Cosine::
+; a = d * cos(a * pi/32)
+	add %010000 ; cos(x) = sin(x + pi/2)
+	; fallthrough
+Sine::
+; a = d * sin(a * pi/32)
+	ld e, a
+	homecall _Sine
+	ret
 
-	assert @ == $0058
-	; serial interrupt
-	jp Serial
+DelayFrames::
+; Wait c frames
+	call DelayFrame
+	dec c
+	jr nz, DelayFrames
+	ret
 
-	ds 5
+DelayFrame::
+; Wait for one frame
+	ld a, 1
+	ld [wVBlankOccurred], a
 
-	assert @ == $0060
-	; joypad interrupt
-	jp JoypadInt
+; Wait for the next VBlank, halting to conserve battery
+.halt
+	halt ; rgbasm adds a nop after this instruction by default
+	ld a, [wVBlankOccurred]
+	and a
+	jr nz, .halt
+	ret
 
-	ds $9d
+GetWeekday::
+	ld a, [wCurDay]
+.mod
+	sub 7
+	jr nc, .mod
+	add 7
+	ret
+
+PokeFluteTerminatorCharacter::
+RadioTerminator::
+	ld hl, TX_ENDText
+	ret
+
+ResetDamage::
+	xor a
+	ld [wCurDamage], a
+	ld [wCurDamage + 1], a
+	ret
+
+GetHPPal::
+; Get palette for hp bar pixel length e in d.
+	ld d, HP_GREEN
+	ld a, e
+	cp (HP_BAR_LENGTH_PX * 50 / 100) ; 24
+	ret nc
+	inc d ; HP_YELLOW
+	cp (HP_BAR_LENGTH_PX * 21 / 100) ; 10
+	ret nc
+	inc d ; HP_RED
+	ret
+
+RTC::
+; update time and time-sensitive palettes
+	ld a, [wSpriteUpdatesEnabled]
+	and a
+	ret z
+
+	call UpdateTime
+
+; obj update on?
+	ld a, [wVramState]
+	rra
+	ret nc
+TimeOfDayPals::
+	callfar _TimeOfDayPals
+	ret

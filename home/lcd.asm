@@ -1,28 +1,5 @@
 ; LCD handling
 
-LCD::
-	push af
-	ldh a, [hLCDCPointer]
-	and a
-	jr z, .done
-
-; At this point it's assumed we're in WRAM bank 5!
-	push bc
-	ldh a, [rLY]
-	ld c, a
-	ld b, HIGH(wLYOverrides)
-	ld a, [bc]
-	ld b, a
-	ldh a, [hLCDCPointer]
-	ld c, a
-	ld a, b
-	ldh [c], a
-	pop bc
-
-.done
-	pop af
-	reti
-
 DisableLCD::
 ; Turn the LCD off
 

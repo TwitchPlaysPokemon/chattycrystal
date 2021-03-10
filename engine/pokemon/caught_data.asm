@@ -28,7 +28,7 @@ CheckPartyFullAfterContest:
 	ld e, l
 	ld hl, wContestMon
 	ld bc, PARTYMON_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wPartyCount]
 	dec a
 	ld hl, wPartyMonOT
@@ -36,14 +36,14 @@ CheckPartyFullAfterContest:
 	ld d, h
 	ld e, l
 	ld hl, wPlayerName
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wCurPartySpecies]
 	ld [wNamedObjectIndexBuffer], a
 	call GetPokemonName
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call GiveANickname_YesNo
 	jr c, .Party_SkipNickname
 	ld a, [wPartyCount]
@@ -62,7 +62,7 @@ CheckPartyFullAfterContest:
 	ld d, h
 	ld e, l
 	ld hl, wMonOrItemNameBuffer
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wPartyCount]
 	dec a
 	ld hl, wPartyMon1Level
@@ -98,11 +98,11 @@ CheckPartyFullAfterContest:
 	ld hl, wContestMon
 	ld de, wBufferMon
 	ld bc, BOXMON_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wPlayerName
 	ld de, wBufferMonOT
 	ld bc, NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	callfar InsertPokemonIntoBox
 	ld a, [wCurPartySpecies]
 	ld [wNamedObjectIndexBuffer], a
@@ -121,7 +121,7 @@ CheckPartyFullAfterContest:
 	call GetSRAMBank
 	ld de, sBoxMonNicknames
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 
 .BoxFull:

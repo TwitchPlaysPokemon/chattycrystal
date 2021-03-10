@@ -21,7 +21,7 @@ _UnownPuzzle:
 	ld hl, UnownPuzzleCursorGFX
 	ld de, vTiles0 tile $e0
 	ld bc, 4 tiles
-	call CopyBytes
+	rst CopyBytes
 	ld hl, UnownPuzzleStartCancelLZ
 	ld de, vTiles0 tile $ed
 	call Decompress

@@ -486,12 +486,12 @@ PokeBallEffect:
 	ld hl, wWildMonMoves
 	ld de, wEnemyMonMoves
 	ld bc, NUM_MOVES
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, wWildMonPP
 	ld de, wEnemyMonPP
 	ld bc, NUM_MOVES
-	call CopyBytes
+	rst CopyBytes
 
 .Transformed:
 	ld a, [wEnemyMonSpecies]
@@ -650,7 +650,7 @@ PokeBallEffect:
 	ld hl, wMonOrItemNameBuffer
 	ld de, sBoxMonNicknames
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, sBoxMonNicknames
 	ld de, wStringBuffer1
@@ -665,7 +665,7 @@ PokeBallEffect:
 	ld hl, sBoxMonNicknames
 	ld de, wMonOrItemNameBuffer
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 	call CloseSRAM
 
@@ -1174,7 +1174,7 @@ VitaminEffect:
 	ld l, a
 	ld de, wStringBuffer2
 	ld bc, ITEM_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 	call Play_SFX_FULL_HEAL
 

@@ -7,7 +7,7 @@ LoadTileMapToTempTileMap::
 	hlcoord 0, 0
 	decoord 0, 0, wTempTileMap
 	ld bc, wTileMapEnd - wTileMap
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	ret
@@ -29,7 +29,7 @@ LoadTempTileMapToTileMap::
 	hlcoord 0, 0, wTempTileMap
 	decoord 0, 0
 	ld bc, wTileMapEnd - wTileMap
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	ret

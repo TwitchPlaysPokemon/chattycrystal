@@ -20,7 +20,7 @@ SendMailToPC:
 	ld a, BANK(sMailboxCount)
 	call GetSRAMBank
 	ld bc, MAIL_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	pop hl
 	xor a
 	ld bc, MAIL_STRUCT_LENGTH
@@ -57,7 +57,7 @@ DeleteMailFromPC:
 	jr z, .done
 	push bc
 	ld bc, MAIL_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	pop bc
 	inc b
 	jr .loop
@@ -99,7 +99,7 @@ MoveMailFromPCToParty:
 	pop hl
 	push hl
 	ld bc, MAIL_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	pop hl
 	ld de, PARTYMON_STRUCT_LENGTH - MON_MOVES
 	add hl, de
@@ -204,14 +204,14 @@ GivePokeMail::
 	ld bc, MAIL_MSG_LENGTH + 1
 	ld a, BANK(sPartyMail)
 	call GetSRAMBank
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	push af
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
 	call AddNTimes
 	ld bc, NAME_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ld hl, wPartyMon1ID
 	ld bc, PARTYMON_STRUCT_LENGTH
@@ -236,11 +236,11 @@ BackupPartyMonMail:
 	ld hl, sPartyMail
 	ld de, sPartyMailBackup
 	ld bc, PARTY_LENGTH * MAIL_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld hl, sMailboxCount
 	ld de, sMailboxCountBackup
 	ld bc, 1 + MAILBOX_CAPACITY * MAIL_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	jp CloseSRAM
 
 RestorePartyMonMail:
@@ -249,11 +249,11 @@ RestorePartyMonMail:
 	ld hl, sPartyMailBackup
 	ld de, sPartyMail
 	ld bc, PARTY_LENGTH * MAIL_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld hl, sMailboxCountBackup
 	ld de, sMailboxCount
 	ld bc, 1 + MAILBOX_CAPACITY * MAIL_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	jp CloseSRAM
 
 DeletePartyMonMail:
@@ -345,7 +345,7 @@ MailboxPC_GetMailAuthor:
 	ld de, wStringBuffer2
 	push de
 	ld bc, NAME_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 	ld a, "@"
 	ld [de], a
 	call CloseSRAM

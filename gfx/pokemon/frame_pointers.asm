@@ -332,7 +332,7 @@ FramesPointers:
 	dba LuxioFrames
 	dba LuxrayFrames
 	dba BudewFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Roserade
+	dba RoseradeFrames
 	dba BurmyFrames
 	dba MothimFrames
 	dba BuizelFrames
@@ -365,8 +365,8 @@ FramesPointers:
 	dba DucklettFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Swanna
 	dba TynamoFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Eelektrik
-	dba PlaceholderFrames ; PLACEHOLDER - Eelektross
+	dba EelektrikFrames
+	dba EelektrossFrames
 	dba LitwickFrames
 	dba LampentFrames
 	dba ChandelureFrames

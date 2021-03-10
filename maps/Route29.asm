@@ -17,8 +17,6 @@ Route29_MapScripts:
 	callback MAPCALLBACK_OBJECTS, .Tuscany
 
 .DummyScene0:
-	end
-
 .DummyScene1:
 	end
 
@@ -106,7 +104,7 @@ CatchingTutorialDudeScript:
 	faceplayer
 	opentext
 	readvar VAR_BOXSPACE
-	ifequal 0, .BoxFull
+	iffalse, .BoxFull
 	checkevent EVENT_LEARNED_TO_CATCH_POKEMON
 	iftrue .BoxFull
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
@@ -214,13 +212,6 @@ Route29Potion:
 
 DudeMovementData1a:
 	step UP
-	step UP
-	step UP
-	step UP
-	step RIGHT
-	step RIGHT
-	step_end
-
 DudeMovementData2a:
 	step UP
 	step UP
@@ -320,15 +311,6 @@ Route29FisherText:
 
 	para "to record my"
 	line "progress."
-	done
-
-; unused
-Text_WaitingForDay:
-	text "I'm waiting for"
-	line "#MON that"
-
-	para "appear only in the"
-	line "daytime."
 	done
 
 Route29CooltrainerMText_WaitingForNight:

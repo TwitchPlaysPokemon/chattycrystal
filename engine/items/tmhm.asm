@@ -76,7 +76,7 @@ ChooseMonToLearnTMHM:
 	ld hl, wStringBuffer2
 	ld de, wTMHMMoveNameBackup
 	ld bc, 12
-	call CopyBytes
+	rst CopyBytes
 	call ClearBGPalettes
 ChooseMonToLearnTMHM_NoRefresh:
 	farcall LoadPartyMenuGFX
@@ -100,7 +100,7 @@ ChooseMonToLearnTMHM_NoRefresh:
 	ld hl, wTMHMMoveNameBackup
 	ld de, wStringBuffer2
 	ld bc, 12
-	call CopyBytes
+	rst CopyBytes
 	pop af ; now contains the original contents of af
 	ret
 

@@ -40,3 +40,20 @@ ReturnFarCall::
 	ld a, [wFarCallBCBuffer + 1]
 	ld c, a
 	ret
+
+CallPointerAt::
+	ldh a, [hROMBank]
+	push af
+	ld a, [hli]
+	rst Bankswitch
+
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+
+	call _hl_
+
+	pop hl
+	ld a, h
+	rst Bankswitch
+	ret

@@ -218,7 +218,7 @@ GiveTakePartyMonItem:
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wMenuCursorY]
 	cp 1
 	jr nz, .take
@@ -452,10 +452,10 @@ ComposeMailMessage:
 	ld hl, wPlayerName
 	ld de, wTempMailAuthor
 	ld bc, NAME_LENGTH - 1
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wPlayerID
 	ld bc, 2
-	call CopyBytes
+	rst CopyBytes
 	ld a, [wCurPartySpecies]
 	ld [de], a
 	inc de
@@ -471,7 +471,7 @@ ComposeMailMessage:
 	ld bc, MAIL_STRUCT_LENGTH
 	ld a, BANK(sPartyMail)
 	call GetSRAMBank
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	ret
 
@@ -1145,7 +1145,7 @@ SetUpMoveList:
 	ld hl, wTempMonMoves
 	ld de, wListMoves_MoveIndicesBuffer
 	ld bc, NUM_MOVES
-	call CopyBytes
+	rst CopyBytes
 	ld a, SCREEN_WIDTH * 2
 	ld [wBuffer1], a
 	hlcoord 2, 3

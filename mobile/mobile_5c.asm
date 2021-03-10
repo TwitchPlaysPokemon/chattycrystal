@@ -4,13 +4,13 @@ Function170000:
 	ld hl, $c62e
 	ld de, wPlayerTrademonSenderName
 	ld bc, $0005
-	call CopyBytes
+	rst CopyBytes
 	ld a, $50
 	ld [de], a
 	ld hl, $c663
 	ld de, wPlayerTrademonOTName
 	ld bc, $0005
-	call CopyBytes
+	rst CopyBytes
 	ld a, $50
 	ld [de], a
 	ld hl, $c648
@@ -32,7 +32,7 @@ Function170000:
 	ld hl, $c608
 	ld de, $d800
 	ld bc, $008f
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 Function17005a:
@@ -43,13 +43,13 @@ Function17005a:
 	ld hl, $a827
 	ld de, wOTTrademonSenderName
 	ld bc, NAME_LENGTH_JAPANESE - 1
-	call CopyBytes
+	rst CopyBytes
 	ld a, "@"
 	ld [de], a
 	ld hl, $a85c
 	ld de, wOTTrademonOTName
 	ld bc, NAME_LENGTH_JAPANESE - 1
-	call CopyBytes
+	rst CopyBytes
 	ld a, "@"
 	ld [de], a
 	ld hl, $a841
@@ -173,7 +173,7 @@ Function171ccd:
 	ld hl, Palette_171d71
 	ld de, wBGPals1
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, wOBPals1 palette 0 color 1
 	ld a, LOW(PALRGB_WHITE)
 	ld [hli], a
@@ -231,16 +231,16 @@ Function172e78:
 	ld hl, GameBoyN64GFX
 	ld de, vTiles2 tile $00
 	ld bc, $610
-	call CopyBytes
+	rst CopyBytes
 	call EnableLCD
 	ld hl, Tilemap_1733af
 	decoord 0, 0
 	ld bc, $168
-	call CopyBytes
+	rst CopyBytes
 	ld hl, Attrmap_173517
 	decoord 0, 0, wAttrMap
 	ld bc, $168
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 Function172eb9:
@@ -251,11 +251,11 @@ Function172eb9:
 	ld hl, Palette_172edf
 	ld de, wBGPals1
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, Palette_172edf
 	ld de, wBGPals2
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 	call SetPalettes
 	pop af
 	ldh [rSVBK], a

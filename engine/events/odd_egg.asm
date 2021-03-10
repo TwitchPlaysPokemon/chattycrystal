@@ -24,7 +24,7 @@ _GiveOddEgg:
 	; even though OddEggs does not have data for wOddEggOTName
 	ld de, wOddEgg
 	ld bc, NICKNAMED_MON_STRUCT_LENGTH + NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 	; Loads the actual species and overwrites the zero in wOddEggSpecies
 	pop hl
@@ -88,7 +88,7 @@ GiveLoadedEgg:
 	ld hl, .Odd
 	ld de, wTempOddEggNickname
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 	; load pointer to wTempOddEggNickname in wMobileMonOTNamePointerBuffer
 	ld a, LOW(wTempOddEggNickname)
@@ -115,7 +115,7 @@ GiveChattyMon::
 	; load the bulk of the mon data into the odd egg slot
 	ld de, wOddEgg
 	ld bc, NICKNAMED_MON_STRUCT_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	; Loads the actual species and overwrites the zero in wOddEggSpecies
 	ld a, [hli]
 	push hl

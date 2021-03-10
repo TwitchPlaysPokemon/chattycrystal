@@ -149,7 +149,7 @@ PlaceGameFreakPresents_1:
 	ld hl, .GAME_FREAK
 	decoord 5, 10
 	ld bc, .end - .GAME_FREAK
-	call CopyBytes
+	rst CopyBytes
 	call PlaceGameFreakPresents_AdvanceIndex
 	ld de, SFX_GAME_FREAK_PRESENTS
 	jp PlaySFX
@@ -173,7 +173,7 @@ PlaceGameFreakPresents_2:
 	ld hl, .presents
 	decoord 7, 11
 	ld bc, .end - .presents
-	call CopyBytes
+	rst CopyBytes
 	jp PlaceGameFreakPresents_AdvanceIndex
 
 .presents
@@ -459,11 +459,11 @@ IntroScene1:
 	ld hl, IntroPalette2
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, IntroPalette2
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	xor a
@@ -527,11 +527,11 @@ IntroScene3:
 	ld hl, IntroPalette1
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, IntroPalette1
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	xor a
@@ -588,11 +588,11 @@ IntroScene5:
 	ld hl, IntroPalette2
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, IntroPalette2
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	xor a
@@ -688,12 +688,12 @@ IntroScene7:
 	ld hl, IntroPalette1
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	ld hl, IntroPalette1
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	ldh [rSVBK], a
@@ -837,11 +837,11 @@ IntroScene11:
 	ld hl, IntroPalette2
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, IntroPalette2
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	xor a
@@ -955,11 +955,11 @@ IntroScene13:
 	ld hl, IntroPalette1
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, IntroPalette1
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	xor a
@@ -1062,11 +1062,11 @@ IntroScene15:
 	ld hl, IntroPalette5
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, IntroPalette5
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	xor a
@@ -1134,11 +1134,11 @@ IntroScene17:
 	ld hl, IntroPalette4
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, IntroPalette4
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	xor a
@@ -1206,11 +1206,11 @@ IntroScene19:
 	ld hl, IntroPalette5
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, IntroPalette5
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	xor a
@@ -1354,11 +1354,11 @@ IntroScene26:
 	ld hl, IntroPalette3
 	ld de, wBGPals1
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, IntroPalette3
 	ld de, wBGPals2
 	ld bc, 16 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	xor a
@@ -1633,7 +1633,7 @@ Intro_Scene20_AppearUnown:
 	ld d, a
 
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop bc
 
 	ld de, wBGPals1
@@ -1645,7 +1645,7 @@ Intro_Scene20_AppearUnown:
 	ld d, a
 
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	ldh [rSVBK], a

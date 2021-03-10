@@ -592,7 +592,7 @@ Function8949c:
 	ld hl, Palette_894b3
 	ld de, wBGPals1 palette 7
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	ret
@@ -639,11 +639,11 @@ Function894dc:
 	ld l, a
 	ld de, wBGPals1
 	ld bc, 3 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, .Pals345
 	ld de, wBGPals1 + 3 palettes
 	ld bc, 3 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	ldh [rSVBK], a
@@ -781,7 +781,7 @@ Function895c7:
 	ld hl, Palette_895de
 	ld de, wd030
 	ld bc, 8
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	ret
@@ -2049,7 +2049,7 @@ Function89d0d:
 	push bc
 	ld hl, .Palette1
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop bc
 	dec c
 	jr nz, .loop
@@ -2057,7 +2057,7 @@ Function89d0d:
 	ld hl, .Palette2
 	ld de, wBGPals1 + 2 palettes
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 
 	pop af
 	ldh [rSVBK], a
@@ -2274,7 +2274,7 @@ Function89e9a:
 	ld hl, Palette_89eb1
 	ld de, wBGPals1 palette 5
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	ret
@@ -3243,15 +3243,15 @@ Function8a5b6:
 	ld hl, Palette_8a5e5
 	ld de, wBGPals1 + 4 palettes
 	ld bc, 3 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, Palette_8a5fd
 	ld de, wOBPals1
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, Palette_8a605
 	ld de, wOBPals1 + 1 palettes
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	ret
@@ -3292,7 +3292,7 @@ Function8a60d:
 	ld hl, Palette_8a624
 	ld de, wOBPals1
 	ld bc, 1 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	ret
@@ -3693,7 +3693,7 @@ Function8a930:
 	ld l, c
 	ld de, wd002
 	ld bc, $25
-	call CopyBytes
+	rst CopyBytes
 	pop de
 	pop bc
 	ld a, c
@@ -3703,11 +3703,11 @@ Function8a930:
 	ld h, b
 	ld l, c
 	ld bc, $25
-	call CopyBytes
+	rst CopyBytes
 	pop de
 	ld hl, wd002
 	ld bc, $25
-	call CopyBytes
+	rst CopyBytes
 	ld de, SFX_SWITCH_POKEMON
 	call WaitPlaySFX
 	ld de, SFX_SWITCH_POKEMON
@@ -4670,7 +4670,7 @@ Function8b555:
 	ld hl, wd013
 	ld de, $a037 ; 4:a037
 	ld bc, $4
-	call CopyBytes
+	rst CopyBytes
 	call CloseSRAM
 	call Function89448
 	ld bc, wd013
@@ -4828,7 +4828,7 @@ Function8b6bb:
 	ld hl, Palette_8b6d5
 	ld de, wBGPals1
 	ld bc, 3 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	call Function8949c

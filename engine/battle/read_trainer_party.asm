@@ -310,7 +310,7 @@ ReadTrainerPartyPieces:
 	push hl
 	ld hl, wStringBuffer1
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	pop hl
 
 .nickname_done

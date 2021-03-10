@@ -63,8 +63,3 @@ ElmPhoneCallerScript:
 	farwritetext ElmPhoneGiftText
 	specialphonecall SPECIALCALL_NONE
 	end
-
-.unused
-	farwritetext ElmPhoneUnusedText
-	specialphonecall SPECIALCALL_NONE
-	end

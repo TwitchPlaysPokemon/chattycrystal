@@ -562,7 +562,7 @@ GiveItem:
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	call TryGiveItemToPartymon
 	pop af
 	ld [wPackJumptableIndex], a

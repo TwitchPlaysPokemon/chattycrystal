@@ -7,7 +7,7 @@ LearnMove:
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 
 .loop
 	ld hl, wPartyMon1Moves
@@ -98,12 +98,12 @@ LearnMove:
 	ld l, e
 	ld de, wBattleMonMoves
 	ld bc, NUM_MOVES
-	call CopyBytes
+	rst CopyBytes
 	ld bc, wPartyMon1PP - (wPartyMon1Moves + NUM_MOVES)
 	add hl, bc
 	ld de, wBattleMonPP
 	ld bc, NUM_MOVES
-	call CopyBytes
+	rst CopyBytes
 .learned
 	ld hl, Text_LearnedMove ; <MON> learned <MOVE>!
 	call PrintText
@@ -135,7 +135,7 @@ ForgetMove:
 	push hl
 	ld de, wListMoves_MoveIndicesBuffer
 	ld bc, NUM_MOVES
-	call CopyBytes
+	rst CopyBytes
 	pop hl
 .loop
 	push hl

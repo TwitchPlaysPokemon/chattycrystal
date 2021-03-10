@@ -4,7 +4,7 @@ PrintPage1:
 	hlcoord 0, 0
 	decoord 0, 0, wPrinterTileMapBuffer
 	ld bc, 17 * SCREEN_WIDTH
-	call CopyBytes
+	rst CopyBytes
 	hlcoord 17, 1, wPrinterTileMapBuffer
 	ld a, $62
 	ld [hli], a
@@ -261,7 +261,7 @@ PrintPartyMonPage2:
 	ld bc, SCREEN_WIDTH
 	decoord 0, 0
 	hlcoord 0, 1
-	call CopyBytes
+	rst CopyBytes
 	hlcoord 7, 0
 	ld a, [wTempMonMoves + 1]
 	call Function1dc51a

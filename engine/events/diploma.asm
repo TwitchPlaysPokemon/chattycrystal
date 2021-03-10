@@ -14,7 +14,7 @@ PlaceDiplomaOnScreen:
 	ld hl, DiplomaPage1Tilemap
 	decoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	call CopyBytes
+	rst CopyBytes
 	ld de, .Player
 	hlcoord 2, 5
 	call PlaceString
@@ -57,7 +57,7 @@ PrintDiplomaPage2:
 	ld hl, DiplomaPage2Tilemap
 	decoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	call CopyBytes
+	rst CopyBytes
 	ld de, .GameFreak
 	hlcoord 8, 0
 	call PlaceString

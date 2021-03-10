@@ -324,7 +324,7 @@ MobileTradeAnim_InitSpeciesName:
 	ld hl, wStringBuffer1
 	pop de
 	ld bc, MON_NAME_LENGTH
-	call CopyBytes
+	rst CopyBytes
 	ret
 
 MobileTradeAnim_JumptableLoop:
@@ -807,7 +807,7 @@ MobileTradeAnim_02:
 	ld hl, Palette_109107
 	ld de, wBGPals1
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	call Function108d07
@@ -852,7 +852,7 @@ MobileTradeAnim_10:
 	ld hl, Palette_109107
 	ld de, wBGPals1
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	call Function108d07
@@ -895,7 +895,7 @@ MobileTradeAnim_11:
 	ld hl, Palette_109107
 	ld de, wBGPals1
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	call Function108d07
@@ -1391,22 +1391,22 @@ Function108af4:
 	ld hl, Palette_109187
 	ld de, wOBPals1
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, Palette_109187
 	ld de, wOBPals2
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 	jr .done_copy
 
 .copy_palette_109147
 	ld hl, Palette_109147
 	ld de, wOBPals1
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 	ld hl, Palette_109147
 	ld de, wOBPals2
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 
 .done_copy
 	pop af
@@ -1499,7 +1499,7 @@ Function108b98:
 .asm_108bb0
 	ld de, wBGPals1 + 7 palettes
 	ld bc, 8 palettes
-	call CopyBytes
+	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
 	ret

@@ -73,18 +73,6 @@ FlowerShopFloriaScript:
 	closetext
 	end
 
-FlowerShopShelf1:
-; unused
-	jumpstd picturebookshelf
-
-FlowerShopShelf2:
-; unused
-	jumpstd magazinebookshelf
-
-FlowerShopRadio:
-; unused
-	jumpstd radio2
-
 GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text:
 	text "Have you seen that"
 	line "wiggly tree that's"

@@ -14,8 +14,6 @@ RuinsOfAlphHoOhChamber_MapScripts:
 
 .OpenWall:
 	prioritysjump .WallOpenScript
-	end
-
 .DummyScene:
 	end
 
@@ -111,11 +109,6 @@ RuinsOfAlphHoOhChamberSkyfallTopMovement:
 RuinsOfAlphHoOhChamberWallPatternLeftText:
 	text "Patterns appeared"
 	line "on the walls…"
-	done
-
-RuinsOfAlphHoOhChamberUnownText:
-; unused
-	text "It's UNOWN text!"
 	done
 
 RuinsOfAlphHoOhChamberWallPatternRightText:

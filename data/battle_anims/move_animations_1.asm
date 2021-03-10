@@ -307,7 +307,7 @@ MoveAnimations1:
 	dw BattleAnim_PowerGem
 	dw BattleAnim_Dynamicpunch ; PLACEHOLDER
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
-	dw BattleAnim_WingAttack   ; PLACEHOLDER
+	dw BattleAnim_BraveBird
 	dw BattleAnim_EarthPower
 	dw BattleAnim_NastyPlot
 	dw BattleAnim_BulletPunch
@@ -2325,8 +2325,9 @@ BattleAnim_Minimize:
 BattleAnim_SkyAttack:
 	anim_if_param_equal $1, BattleAnim_SkyAttack_branch_c9fb5
 	anim_1gfx ANIM_GFX_SKY_ATTACK
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
 	anim_bgeffect ANIM_BG_27, $0, $1, $0
-	anim_wait 32
+	anim_wait 8
 	anim_sound 0, 0, SFX_HYPER_BEAM
 	anim_obj ANIM_OBJ_SKY_ATTACK, 48, 88, $40
 	anim_wait 64
@@ -3516,6 +3517,21 @@ BattleAnim_MuddyWater:
 	anim_loop 4, .loop
 	anim_incobj 1
 	anim_wait 56
+	anim_ret
+	
+BattleAnim_BraveBird:
+	anim_1gfx ANIM_GFX_SKY_ATTACK
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_bgeffect ANIM_BG_27, $0, $1, $0
+	anim_wait 8
+	anim_bgeffect ANIM_BG_08, $0, $4, $0
+	anim_obp0 $30
+	anim_sound 0, 0, SFX_HYPER_BEAM
+	anim_obj ANIM_OBJ_BRAVE_BIRD, 48, 88, $18
+	anim_wait 16
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_wait 64
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
 
 BattleAnim_EarthPower:

@@ -95,7 +95,6 @@ ROMX $20
 	"Pics 31"
 ROMX $21
 	"bank21"
-	"Move Animation Scripts 2"
 ROMX $22
 	"bank22"
 ROMX $23
@@ -158,6 +157,7 @@ ROMX $3a
 	"Songs 1"
 ROMX $3b
 	"Songs 2"
+	"Move Animation Scripts 2"
 ROMX $3c
 	"Songs 3"
 	"Sound Effects"

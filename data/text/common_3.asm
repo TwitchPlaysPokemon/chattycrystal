@@ -749,11 +749,6 @@ UnknownText_0x1c51f4::
 	para "Use these three?"
 	done
 
-UnknownText_0x1c521c::
-	text "Only three #MON"
-	line "may enter."
-	prompt
-
 UnknownText_0x1c5238::
 	text "The CARD FOLDER"
 	line "stores your and"

@@ -96,14 +96,10 @@ RotateUnownFrontpic:
 	ret
 
 gbprinterrect: MACRO
-y = 0
-rept \1
-x = \1 * (\2 + -1) + y
-rept \2
-	dw wGameboyPrinterRAM tile x
-x = x + -\2
+for y, \1
+for x, \1 * (\2 - 1), (\1 - \2) * \2 - \1, -\2
+	dw wGameboyPrinterRAM tile (x + y)
 endr
-y = y + 1
 endr
 ENDM
 

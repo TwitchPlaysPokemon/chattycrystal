@@ -1121,16 +1121,19 @@ HoundoomEvosAttacks:
 KingdraEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
-	dbw 1, SMOKESCREEN
 	dbw 1, LEER
-	dbw 1, WATER_GUN
-	dbw 8, SMOKESCREEN
-	dbw 15, LEER
-	dbw 22, WATER_GUN
-	dbw 29, TWISTER
-	dbw 40, AGILITY
-	dbw 51, HYDRO_PUMP
-	dbw 60, DRAGON_PULSE
+	dbw 5, SMOKESCREEN
+	dbw 10, WATER_GUN
+	dbw 14, TWISTER
+	dbw 19, FOCUS_ENERGY
+	dbw 23, BUBBLEBEAM
+	dbw 28, DRAGONBREATH
+	dbw 32, AGILITY
+	dbw 39, BRINE
+	dbw 45, DRAGON_PULSE
+	dbw 52, HYDRO_PUMP
+	dbw 58, DRAGON_DANCE
+	dbw 64, RAIN_DANCE
 	db 0 ; no more level-up moves
 
 PhanpyEvosAttacks:
@@ -1205,6 +1208,8 @@ TyrogueEvosAttacks:
 	dbbbw EVOLVE_STAT, 20, ATK_EQ_DEF, HITMONTOP
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, FAKE_OUT
+	dbw 1, FORESIGHT
 	db 0 ; no more level-up moves
 
 HitmontopEvosAttacks:

@@ -1,8 +1,6 @@
 unownword: MACRO
-x = 1
-rept STRLEN(\1)
+for x, 1, STRLEN(\1) + 1
 	db STRSUB(\1, x, 1) - $40
-x = x + 1
 endr
 	db -1
 ENDM

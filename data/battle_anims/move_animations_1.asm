@@ -3526,6 +3526,10 @@ BattleAnim_BraveBird:
 	anim_wait 8
 	anim_bgeffect ANIM_BG_08, $0, $4, $0
 	anim_obp0 $30
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_BRAVE_BIRD, 48, 88, $0
+	anim_wait 16
+	anim_clearobjs
 	anim_sound 0, 0, SFX_HYPER_BEAM
 	anim_obj ANIM_OBJ_BRAVE_BIRD, 48, 88, $18
 	anim_wait 16

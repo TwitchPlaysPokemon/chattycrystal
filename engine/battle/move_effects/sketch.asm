@@ -40,11 +40,21 @@ BattleCommand_Sketch:
 	call GetBattleVar
 	ld [wNamedObjectIndexBuffer], a
 	ld b, a
-; Fail if move is invalid or is Struggle.
+; Fail if move is invalid, is one of the special moves (Chatter and chatty Hidden Power), or is Struggle.
 	and a
 	jr z, .fail
 	push bc
 	ld bc, STRUGGLE
+	call CompareMove
+	pop bc
+	jr z, .fail
+	push bc
+	ld bc, CHATTER
+	call CompareMove
+	pop bc
+	jr z, .fail
+	push bc
+	ld bc, CHATTY_HP
 	call CompareMove
 	pop bc
 	jr z, .fail

@@ -897,14 +897,19 @@ ScizorEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, QUICK_ATTACK
 	dbw 1, LEER
+	dbw 1, BULLET_PUNCH
 	dbw 6, FOCUS_ENERGY
-	dbw 12, PURSUIT
-	dbw 18, FALSE_SWIPE
-	dbw 24, AGILITY
-	dbw 30, METAL_CLAW
-	dbw 36, SLASH
-	dbw 42, SWORDS_DANCE
-	dbw 48, DOUBLE_TEAM
+	dbw 10, PURSUIT
+	dbw 15, FALSE_SWIPE
+	dbw 19, AGILITY
+	dbw 24, METAL_CLAW
+	dbw 28, FURY_CUTTER
+	dbw 33, SLASH
+	dbw 37, RAZOR_WIND
+	dbw 42, IRON_DEFENSE
+	dbw 46, NIGHT_SLASH
+	dbw 51, IRON_HEAD
+	dbw 55, SWORDS_DANCE
 	db 0 ; no more level-up moves
 
 ShuckleEvosAttacks:
@@ -1230,14 +1235,18 @@ SmoochumEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	dbw 1, LICK
-	dbw 9, SWEET_KISS
-	dbw 13, POWDER_SNOW
-	dbw 21, CONFUSION
-	dbw 25, SING
-	dbw 33, MEAN_LOOK
-	dbw 37, PSYCHIC_M
-	dbw 45, PERISH_SONG
-	dbw 49, BLIZZARD
+	dbw 4, POWDER_SNOW
+	dbw 8, DOUBLESLAP
+	dbw 12, CONFUSION
+	dbw 16, SING
+	dbw 20, ICE_PUNCH
+	dbw 24, MEAN_LOOK
+	dbw 28, WAKE_UP_SLAP
+	dbw 32, SWEET_KISS
+	dbw 36, PSYCHIC
+	dbw 40, BODY_SLAM
+	dbw 46, PERISH_SONG
+	dbw 50, BLIZZARD
 	db 0 ; no more level-up moves
 
 ElekidEvosAttacks:
@@ -1245,26 +1254,37 @@ ElekidEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, QUICK_ATTACK
 	dbw 1, LEER
-	dbw 9, THUNDERPUNCH
-	dbw 17, LIGHT_SCREEN
-	dbw 25, SWIFT
-	dbw 33, SCREECH
-	dbw 41, THUNDERBOLT
-	dbw 49, THUNDER
+	dbw 4, THUNDERSHOCK
+	dbw 8, CHARGE
+	dbw 12, SWIFT
+	dbw 16, SHOCK_WAVE
+	dbw 20, THUNDER_WAVE
+	dbw 24, SCREECH
+	dbw 30, THUNDERPUNCH
+	dbw 32, DISCHARGE
+	dbw 36, LOW_KICK
+	dbw 40, THUNDERBOLT
+	dbw 44, LIGHT_SCREEN 
+	dbw 48, THUNDER
 	db 0 ; no more level-up moves
 
 MagbyEvosAttacks:
 	dbbw EVOLVE_LEVEL, 30, MAGMAR
 	db 0 ; no more evolutions
-	dbw 1, EMBER
-	dbw 7, LEER
-	dbw 13, SMOG
-	dbw 19, FIRE_PUNCH
-	dbw 25, SMOKESCREEN
-	dbw 31, SUNNY_DAY
-	dbw 37, FLAMETHROWER
-	dbw 43, CONFUSE_RAY
-	dbw 49, FIRE_BLAST
+	dbw 1, SMOG
+	dbw 1, LEER
+	dbw 4, EMBER
+	dbw 8, SMOKESCREEN
+	dbw 12, FAINT_ATTACK
+	dbw 16, FLAME_WHEEL
+	dbw 20, FIRE_SPIN
+	dbw 24, CONFUSE_RAY
+	dbw 30, FIRE_PUNCH
+	dbw 32, LAVA_PLUME
+	dbw 36, LOW_KICK
+	dbw 40, FLAMETHROWER
+	dbw 44, SUNNY_DAY 
+	dbw 48, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 MiltankEvosAttacks:

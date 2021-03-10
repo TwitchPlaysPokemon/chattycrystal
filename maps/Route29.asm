@@ -104,7 +104,7 @@ CatchingTutorialDudeScript:
 	faceplayer
 	opentext
 	readvar VAR_BOXSPACE
-	iffalse, .BoxFull
+	iffalse .BoxFull
 	checkevent EVENT_LEARNED_TO_CATCH_POKEMON
 	iftrue .BoxFull
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM

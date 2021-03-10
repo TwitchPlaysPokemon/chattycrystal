@@ -183,11 +183,6 @@ MainMenu_PrintCurrentTimeAndDay:
 .TimeNotSet:
 	db "TIME NOT SET@"
 
-.UnusedText:
-	; Clock time unknown
-	text_far UnknownText_0x1c5182
-	text_end
-
 .PlaceCurrentDay:
 	push de
 	ld hl, .Days
@@ -200,8 +195,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	ld h, b
 	ld l, c
 	ld de, .Day
-	call PlaceString
-	ret
+	jp PlaceString
 
 .Days:
 	db "SUN@"

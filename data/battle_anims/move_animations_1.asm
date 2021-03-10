@@ -355,10 +355,6 @@ MoveAnimations1:
 	dw BattleAnim_ThunderWave  ; PLACEHOLDER
 	dw BattleAnim_KnockOff
 	dw BattleAnim_WaterSpout
-	dw BattleAnim_NeedleArm
-	dw BattleAnim_DracoMeteor
-	dw BattleAnim_CalmMind
-	dw BattleAnim_MudShot
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -4663,26 +4659,6 @@ BattleAnim_PowerTrip:
 	anim_wait 8
 	anim_jump BattleAnim_ShowMon_0
 
-BattleAnim_CalmMind:
-	anim_1gfx ANIM_GFX_MISC
-	anim_bgp $1b
-	anim_bgeffect ANIM_BG_06, $0, $2, $0
-	anim_sound 0, 0, SFX_GAME_FREAK_LOGO_GS
-.loop
-	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $3
-	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $12
-	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $20
-	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $31
-	anim_wait 8
-	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $3
-	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $12
-	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $20
-	anim_obj ANIM_OBJ_MIND_READER, 48, 88, $31
-	anim_wait 42
-	anim_clearobjs
-	anim_loop 2, .loop
-	anim_ret
-
 BattleAnim_KnockOff:
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 3, 0, SFX_RAZOR_WIND
@@ -4769,93 +4745,6 @@ BattleAnim_WaterSpout:
 	anim_obj ANIM_OBJ_WATER_HIT, 116, 68, $0
 	anim_wait 2
 	anim_wait 32
-	anim_ret
-
-BattleAnim_NeedleArm:
-	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
-	anim_obj ANIM_OBJ_LONG_PUNCH, 136, 56, $0
-.loop
-	anim_sound 0, 1, SFX_MEGA_PUNCH
-	anim_obj ANIM_OBJ_NEEDLE_ARM_N, 136, 56, $30
-	anim_obj ANIM_OBJ_NEEDLE_ARM_NE, 136, 56, $38
-	anim_obj ANIM_OBJ_NEEDLE_ARM_E, 136, 56, $0
-	anim_obj ANIM_OBJ_NEEDLE_ARM_SE, 136, 56, $8
-	anim_obj ANIM_OBJ_NEEDLE_ARM_S, 136, 56, $10
-	anim_obj ANIM_OBJ_NEEDLE_ARM_SW, 136, 56, $18
-	anim_obj ANIM_OBJ_NEEDLE_ARM_W, 136, 56, $20
-	anim_obj ANIM_OBJ_NEEDLE_ARM_NW, 136, 56, $28
-	anim_wait 8
-	anim_sound 0, 1, SFX_POISON_STING
-	anim_loop 6, .loop
-	anim_wait 32
-	anim_ret
-
-BattleAnim_DracoMeteor:
-	anim_3gfx ANIM_GFX_METEOR, ANIM_GFX_EXPLOSION, ANIM_GFX_WATER
-	anim_bgp $1b
-	anim_sound 0, 1, SFX_MORNING_SUN
-	anim_obj ANIM_OBJ_RAIN, 88, 0, $2
-	anim_wait 8
-	anim_obj ANIM_OBJ_RAIN, 88, 0, $2
-	anim_wait 8
-	anim_obj ANIM_OBJ_RAIN, 88, 0, $2
-	anim_wait 64
-	anim_clearobjs
-	anim_obj ANIM_OBJ_METEOR, 88, 0, $2
-	anim_wait 12
-	anim_bgeffect ANIM_BG_1F, $8, $3, $0
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 150, 64, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_METEOR, 72, 0, $2
-	anim_wait 12
-	anim_bgeffect ANIM_BG_1F, $8, $3, $0
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 134, 64, $0
-	anim_wait 4
-	anim_obj ANIM_OBJ_METEOR, 96, 0, $2
-	anim_wait 12
-	anim_bgeffect ANIM_BG_1F, $60, $3, $0
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 158, 64, $0
-	anim_wait 4
-	anim_obj ANIM_OBJ_METEOR, 76, 0, $2
-	anim_wait 12
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 138, 64, $0
-	anim_obj ANIM_OBJ_METEOR, 84, 0, $2
-	anim_wait 12
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 146, 64, $0
-	anim_obj ANIM_OBJ_METEOR, 96, 0, $2
-	anim_wait 12
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 158, 64, $0
-	anim_obj ANIM_OBJ_METEOR, 76, 0, $2
-	anim_wait 12
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 138, 64, $0
-	anim_obj ANIM_OBJ_METEOR, 84, 0, $2
-	anim_wait 12
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 146, 64, $0
-	anim_wait 32
-	anim_ret
-
-BattleAnim_MudShot:
-	anim_1gfx ANIM_GFX_POISON
-.loop
-	anim_sound 6, 2, SFX_BUBBLEBEAM
-	anim_obj ANIM_OBJ_MUD_SHOT, 64, 92, $4
-	anim_wait 4
-	anim_obj ANIM_OBJ_MUD_SHOT, 64, 92, $4
-	anim_wait 4
-	anim_obj ANIM_OBJ_MUD_SPLASH, 136, 56, $5c
-	anim_obj ANIM_OBJ_MUD_SPLASH, 136, 56, $e8
-	anim_obj ANIM_OBJ_MUD_SPLASH, 136, 56, $d0
-	anim_obj ANIM_OBJ_MUD_SPLASH, 136, 56, $50
-	anim_loop 8, .loop
-	anim_wait 16
 	anim_ret
 
 BattleAnim_FlameWheel:

@@ -321,8 +321,8 @@ BitmasksPointers:
 	dw GrotleBitmasks
 	dw TorterraBitmasks
 	dw ChimcharBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Monferno
-	dw PlaceholderBitmasks ; PLACEHOLDER - Infernape
+	dw MonfernoBitmasks
+	dw InfernapeBitmasks
 	dw PiplupBitmasks
 	dw PrinplupBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Empoleon

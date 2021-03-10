@@ -258,15 +258,7 @@ Function10635c:
 	dw Function106453
 
 .init:
-	ld de, wcd30
-	ld hl, $41
-	ld bc, $41
-	ld a, $40
-	call Function3e32
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+	; unreachable
 
 Function106392:
 	xor a
@@ -330,13 +322,7 @@ Function1063e5:
 	ret
 
 Function1063f3:
-	ld de, wcd31
-	ld a, $32
-	call Function3e32
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+	; unreachable
 
 Function106403:
 	ld a, [wc821]
@@ -377,14 +363,7 @@ Function106403:
 	ret
 
 Function106442:
-	ld a, $36
-	call Function3e32
-	xor a
-	ldh [hMobile], a
-	ldh [hMobileReceive], a
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
+	; unreachable
 
 Function106453:
 	ld a, [wMobileCommsJumptableIndex]

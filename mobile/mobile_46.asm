@@ -882,10 +882,6 @@ Function118746:
 
 Function11878d:
 	ld a, [wc821]
-	bit 1, a
-	jr nz, .asm_1187af
-	bit 2, a
-	jr nz, .asm_1187d1
 	bit 0, a
 	jr nz, .asm_1187aa
 	ld a, [wcd89]
@@ -895,69 +891,14 @@ Function11878d:
 	ldh [rSVBK], a
 .asm_1187a7
 	jp BattleTowerRoomMenu_IncrementJumptable
+
 .asm_1187aa
 	call Function118821
 	ret c
 	ret
-.asm_1187af
-	ld a, $0
-	call Function3e32
-	ld [wc300], a
-	ld a, l
-	ld [wc301], a
-	ld a, h
-	ld [wc302], a
-	ld a, $a
-	call Function3e32
-	ld a, [wc3f0]
-	ld [$c319], a
-	ld a, [wcd34]
-	ld [wcf66], a
-	ret
-.asm_1187d1
-	ld hl, wcd89
-	bit 0, [hl]
-	jr nz, .asm_118803
-	set 0, [hl]
-	ld a, $6
-	ldh [rSVBK], a
-	ld de, $d000
-	ld bc, $1000
-	ld a, [hl]
-	sla a
-	jr c, .asm_1187f9
-	sla a
-	jr c, .asm_1187fd
-	sla a
-	jr c, .asm_1187f5
-	ld a, $24
-	jr .asm_1187ff
-.asm_1187f5
-	ld a, $28
-	jr .asm_1187ff
-.asm_1187f9
-	ld a, $2a
-	jr .asm_1187ff
-.asm_1187fd
-	ld a, $2c
-.asm_1187ff
-	call Function3e32
-	ret
-.asm_118803
-	ld a, $d3
 
 Function118805:
-	ld [wc300], a
-	xor a
-	ld [wc301], a
-	ld [wc302], a
-	ld a, $a
-	call Function3e32
-	ld a, [wc3f0]
-	ld [$c319], a
-	ld a, [wcd34]
-	ld [wcf66], a
-	ret
+	; unreachable
 
 Function118821:
 	ld a, [$c319]
@@ -968,16 +909,7 @@ Function118821:
 	ldh a, [hJoyDown]
 	cp $5
 	jr nz, .asm_11884a
-	ld a, $a
-	call Function3e32
-	ld a, $a
-	ld [wc300], a
-	ld a, [wc3f0]
-	ld [$c319], a
-	ld a, [wcd34]
-	ld [wcf66], a
-	scf
-	ret
+	; unreachable
 .asm_11884a
 	and a
 	ret
@@ -986,14 +918,7 @@ Function11884c:
 	ldh a, [hJoyDown]
 	cp $5
 	jr nz, .asm_118864
-	ld a, $a
-	call Function3e32
-	ld a, $a
-	ld [wc300], a
-	ld a, [wcd34]
-	ld [wcf66], a
-	scf
-	ret
+	; unreachable
 
 .asm_118864
 	and a
@@ -3926,7 +3851,7 @@ BattleTower_UbersCheck:
 	ret
 
 Function119e2b:
-	call Function3e32
+	; unreachable
 
 BattleTowerRoomMenu_IncrementJumptable:
 	ld hl, wcf66

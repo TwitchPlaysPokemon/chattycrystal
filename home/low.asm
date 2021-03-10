@@ -119,7 +119,9 @@ GetBattleVar::
 
 	assert @ == $0050
 	; timer interrupt
-	jp Timer
+	reti
+
+	ds 2
 
 VolumeOff::
 	xor a

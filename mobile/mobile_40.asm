@@ -470,16 +470,7 @@ Function10034d:
 	ret
 
 .asm_10036a
-	ld a, 0
-	call Function3e32
-	ld [wcd2c], a
-	ld a, h
-	ld [wcd2d], a
-	ld a, l
-	ld [wcd2e], a
-	ld a, $ff
-	scf
-	ret
+	; unreachable
 
 .asm_10037e
 	ld a, $fe
@@ -493,24 +484,17 @@ Function100382:
 	ret
 
 Function10038a:
-	ld hl, wccb4
-	ld a, $2e
-	call Function3e32
-	ret
+	; unreachable
 
 Function100393:
-	ld hl, wcc60
-	ld a, $3a
-	call Function3e32
-	ret
+	; unreachable
 
 Function10039c:
 	ld hl, wcc60
 	ld de, w3_d000
 	ld bc, $54
 	ld a, $03
-	call FarCopyWRAM
-	ret
+	jp FarCopyWRAM
 
 Function1003ab:
 	ld hl, w3_d000
@@ -3096,50 +3080,19 @@ Function1014f4:
 	ret
 
 Function101507:
-	ld de, wcd30
-	ld hl, $40
-	ld bc, $40
-	ld a, $02
-	call Function3e32
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+	; unreachable
 
 Function10152a:
-	ld a, $36
-	call Function3e32
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+	; unreachable
 
 Function101537:
-	ld a, $0a
-	call Function3e32
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+	; unreachable
 
 Function101544:
-	farcall StartMobileInactivityTimer
-	ld a, $12
-	call Function3e32
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+	; unreachable
 
 Function101557:
-	farcall StartMobileInactivityTimer
-	ld hl, wcd53
-	ld a, $08
-	call Function3e32
-	ld a, [wMobileCommsJumptableIndex]
-	inc a
-	ld [wMobileCommsJumptableIndex], a
-	ret
+	; unreachable
 
 Function10156d:
 	call Function101418

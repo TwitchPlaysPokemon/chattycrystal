@@ -183,7 +183,7 @@ ROMX $43
 	"Title"
 	"New Pokedex Entries 1"
 ROMX $44
-	"Mobile Adapter SDK"
+	; empty
 ROMX $45
 	"Mobile 45"
 	"Mobile Stadium"

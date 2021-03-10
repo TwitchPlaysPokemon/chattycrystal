@@ -311,7 +311,7 @@ MoveAnimations1:
 	dw BattleAnim_EarthPower
 	dw BattleAnim_PsychUp      ; PLACEHOLDER
 	dw BattleAnim_BulletPunch
-	dw BattleAnim_PowderSnow   ; 138, PLACEHOLDER
+	dw BattleAnim_IceShard     ; 138
 	dw BattleAnim_FireFang
 	dw BattleAnim_ShadowSneak
 	dw BattleAnim_MudBomb
@@ -3577,6 +3577,44 @@ BattleAnim_BulletPunch:
 	anim_wait 32
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
+	
+BattleAnim_IceShard:
+	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_HAZE
+	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
+	anim_sound 0, 0, SFX_SWORDS_DANCE
+.loop
+	anim_obj ANIM_OBJ_STEAM, 48, 96, $0
+	anim_wait 8
+	anim_loop 5, .loop
+.loop2	
+	anim_obj ANIM_OBJ_12, 40, 74, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_12, 56, 102, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_12, 32, 88, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_12, 64, 88, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_12, 56, 74, $0
+	anim_wait 6
+	anim_obj ANIM_OBJ_12, 40, 102, $0
+	anim_loop 2, .loop2
+	anim_sound 6, 2, SFX_SHINE
+	anim_obj ANIM_OBJ_ICE_SHARD, 48, 80, $18
+	anim_wait 6
+	anim_sound 6, 2, SFX_SHINE
+	anim_obj ANIM_OBJ_ICE_SHARD, 48, 112, $18
+	anim_wait 6
+	anim_sound 6, 2, SFX_SHINE
+	anim_obj ANIM_OBJ_ICE_SHARD, 48, 104, $18
+	anim_wait 6
+	anim_sound 6, 2, SFX_SHINE
+	anim_obj ANIM_OBJ_ICE_SHARD, 48, 88, $18
+	anim_wait 6
+	anim_sound 6, 2, SFX_SHINE
+	anim_obj ANIM_OBJ_ICE_SHARD, 48, 96, $18
+	anim_wait 32
+	anim_ret
 
 BattleAnim_FireFang:
 	anim_3gfx ANIM_GFX_CUT, ANIM_GFX_HIT, ANIM_GFX_FIRE
@@ -3628,14 +3666,22 @@ BattleAnim_MudBomb:
 	anim_obj ANIM_OBJ_MUD_BOMB, 64, 92, $10
 	anim_wait 36
 	anim_bgeffect ANIM_BG_1F, $14, $2, $0
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 128, 56, $0
+	anim_sound 0, 1, SFX_AEROBLAST
+	anim_obj ANIM_OBJ_18, 136, 60, $0
+	anim_obj ANIM_OBJ_MUD_SPLASH, 128, 56, $5c
+	anim_obj ANIM_OBJ_MUD_SPLASH, 128, 56, $e8
+	anim_obj ANIM_OBJ_MUD_SPLASH, 128, 56, $d0
+	anim_obj ANIM_OBJ_MUD_SPLASH, 128, 56, $50
 	anim_wait 8
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 144, 64, $0
+	anim_obj ANIM_OBJ_MUD_SPLASH, 144, 64, $5c
+	anim_obj ANIM_OBJ_MUD_SPLASH, 144, 64, $e8
+	anim_obj ANIM_OBJ_MUD_SPLASH, 144, 64, $d0
+	anim_obj ANIM_OBJ_MUD_SPLASH, 144, 64, $50
 	anim_wait 8
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_obj ANIM_OBJ_18, 136, 72, $0
+	anim_obj ANIM_OBJ_MUD_SPLASH, 136, 72, $5c
+	anim_obj ANIM_OBJ_MUD_SPLASH, 136, 72, $e8
+	anim_obj ANIM_OBJ_MUD_SPLASH, 136, 72, $d0
+	anim_obj ANIM_OBJ_MUD_SPLASH, 136, 72, $50
 	anim_wait 24
 	anim_ret
 

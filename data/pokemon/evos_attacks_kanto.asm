@@ -2288,12 +2288,12 @@ MagmarEvosAttacks:
 	dbw 1, LEER
 	dbw 4, EMBER
 	dbw 8, SMOKESCREEN
-	dbw 12, FAINT_ATTACK
+	dbw 12, FEINT_ATTACK
 	dbw 16, FLAME_WHEEL
 	dbw 20, FIRE_SPIN
 	dbw 24, CONFUSE_RAY
 	dbw 28, FIRE_PUNCH
-	dbw 33, LAVA_PLUME
+	;dbw 33, LAVA_PLUME
 	dbw 39, LOW_KICK
 	dbw 44, FLAMETHROWER
 	dbw 50, SUNNY_DAY 

@@ -18,6 +18,10 @@ UpdateCGBPals::
 	ret z
 
 ForceUpdateCGBPals::
+	ldh a, [hCGB]
+	cp 2
+	jr nc, .done
+
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wBGPals2)
@@ -56,6 +60,7 @@ endr
 	pop af
 	ldh [rSVBK], a
 
+.done
 ; clear pal update queue
 	xor a
 	ldh [hCGBPalUpdate], a

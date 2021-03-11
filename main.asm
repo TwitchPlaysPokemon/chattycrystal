@@ -327,6 +327,7 @@ INCLUDE "engine/gfx/sprites.asm"
 INCLUDE "engine/gfx/mon_icons.asm"
 INCLUDE "engine/events/poisonstep_pals.asm"
 INCLUDE "engine/battle/battle_transition.asm"
+INCLUDE "engine/gfx/red_mode.asm"
 
 
 SECTION "bank24", ROMX

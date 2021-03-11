@@ -810,8 +810,8 @@ AnimateWaterPalette:
 
 ; No palette changes on DMG.
 	ldh a, [hCGB]
-	and a
-	ret z
+	cp 1
+	ret nz
 
 ; We don't want to mess with non-standard palettes.
 	ldh a, [rBGP] ; BGP
@@ -872,8 +872,8 @@ AnimateWaterPalette:
 FlickeringCaveEntrancePalette:
 ; No palette changes on DMG.
 	ldh a, [hCGB]
-	and a
-	ret z
+	cp 1
+	ret nz
 ; We don't want to mess with non-standard palettes.
 	ldh a, [rBGP]
 	cp %11100100

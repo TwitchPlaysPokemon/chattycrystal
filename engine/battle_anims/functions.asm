@@ -4231,14 +4231,14 @@ BattleAnimFunction_RadialMoveOut:
 	ld a, [hli]
 	ld e, [hl]
 	ld d, a
-	ld hl, 1.5 >> 8 ; speed
+	ld hl, 6.0 >> 8 ; speed
 	add hl, de
 	ld a, h
 	ld e, l
 	pop hl
 	ld [hli], a
 	ld [hl], e
-	cp 50 ; final position
+	cp 80 ; final position
 	jp nc, DeinitBattleAnimation
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc

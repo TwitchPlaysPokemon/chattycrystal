@@ -370,6 +370,7 @@ MoveDescriptions1:
 	dw RockBlastDescription
 	dw BrickBreakDescription
 	dw HeatWaveDescription
+	dw LavaPlumeDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -1647,3 +1648,7 @@ MementoDescription:
 BrickBreakDescription:
 	db   "Removes Reflect"
 	next "and Light Screen.@"
+
+LavaPlumeDescription:
+	db   "A scarlet inferno"
+	next "that may burn.@"

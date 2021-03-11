@@ -36,6 +36,7 @@ ROMX $09
 ROMX $0a
 	"bankA"
 	"Map Blocks 4"
+	"Move Animation Scripts 2"
 ROMX $0b
 	"bankB"
 	"Map Blocks 5"
@@ -157,7 +158,6 @@ ROMX $3a
 	"Songs 1"
 ROMX $3b
 	"Songs 2"
-	"Move Animation Scripts 2"
 ROMX $3c
 	"Songs 3"
 	"Sound Effects"

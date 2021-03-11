@@ -4750,54 +4750,6 @@ BattleAnim_WaterSpout:
 	anim_wait 2
 	anim_wait 32
 	anim_ret
-	
-BattleAnim_LavaPlume:
-	anim_1gfx ANIM_GFX_FIRE
-	anim_battlergfx_2row
-	anim_sound 6, 2, SFX_EMBER
-	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
-.loop
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $38
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $10
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $36
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $4
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $18
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $28
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $40
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $32
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $20
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $30
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $0
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $24
-	anim_wait 1
-	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $8
-	anim_wait 1
-	anim_loop 2, .loop
-	anim_wait 32
-	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
-	anim_wait 1
-	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
-	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $1
-	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $4
-	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $5
-.loop2
-	anim_sound 0, 0, SFX_BURN
-	anim_wait 4
-	anim_loop 3, .loop2
-	anim_wait 32
-	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
-	anim_ret
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE

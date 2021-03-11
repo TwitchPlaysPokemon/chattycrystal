@@ -67,13 +67,15 @@ calc_sine_wave: MACRO
 	call .apply\@
 	ld a, h
 	ret
+
 .negative\@
 	and %011111
 	call .apply\@
 	ld a, h
-	xor $ff
+	cpl
 	inc a
 	ret
+
 .apply\@
 	ld e, a
 	ld a, d
@@ -99,6 +101,7 @@ endc
 	and a
 	jr nz, .multiply\@
 	ret
+
 if _NARG == 0
 .sinetable\@
 	sine_table 32

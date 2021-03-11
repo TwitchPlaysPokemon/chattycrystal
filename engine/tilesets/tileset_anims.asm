@@ -587,7 +587,10 @@ AnimateFlowerTile:
 ; CGB has different color mappings for flowers.
 	ld e, a
 	ldh a, [hCGB]
-	and 1
+	and a
+	jr z, .not_color
+	ld a, 1
+.not_color
 	add e
 
 	swap a

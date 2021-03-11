@@ -92,7 +92,7 @@ MainMenu_GetWhichMenu:
 	ld a, 3
 	ret z
 	ldh a, [hCGB]
-	cp 1
+	and a
 	ld a, 1
 	ret nz
 	ld a, BANK(sNumDailyMysteryGiftPartnerIDs)

@@ -103,6 +103,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_57 ; 57
 	dw BattleAnimFunction_58 ; 58
 	dw BattleAnimFunction_59 ; 59
+	dw BattleAnimFunction_RadialMoveOut ; 5a
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -1502,7 +1503,7 @@ BattleAnimFunction_18:
 	call BattleAnim_IncAnonJumptableIndex
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
-	ld [hl], $28
+	ld [hl], 40
 	inc hl
 	ld [hl], 0
 .one
@@ -1533,7 +1534,7 @@ BattleAnimFunction_18:
 	ld hl, BATTLEANIMSTRUCT_10
 	add hl, bc
 	ld e, [hl]
-	ld hl, -$80
+	ld hl, -0.5 >> 8
 	add hl, de
 	ld e, l
 	ld d, h
@@ -1995,7 +1996,7 @@ BattleAnimFunction_1D:
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
 	ld e, [hl]
-	ld hl, -$80
+	ld hl, -0.5 >> 8
 	add hl, de
 	ld e, l
 	ld d, h
@@ -3145,7 +3146,7 @@ BattleAnimFunction_36:
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
 	ld e, [hl]
-	ld hl, -$80
+	ld hl, -0.5 >> 8
 	add hl, de
 	ld e, l
 	ld d, h
@@ -4001,7 +4002,7 @@ BattleAnimFunction_53:
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
 	ld e, [hl]
-	ld hl, -$80
+	ld hl, -0.5 >> 8
 	add hl, de
 	ld e, l
 	ld d, h
@@ -4074,7 +4075,7 @@ BattleAnimFunction_57:
 	call BattleAnim_IncAnonJumptableIndex
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
-	ld [hl], $28
+	ld [hl], 40
 	inc hl
 	ld [hl], 0
 .one
@@ -4101,7 +4102,7 @@ BattleAnimFunction_57:
 	ld a, [hli]
 	ld d, a
 	ld e, [hl]
-	ld hl, -$480
+	ld hl, -4.5 >> 8
 	add hl, de
 	jp nc, DeinitBattleAnimation
 	ld e, l
@@ -4137,7 +4138,7 @@ BattleAnimFunction_58:
 	ld hl, BATTLEANIMSTRUCT_0F
 	add hl, bc
 	ld e, [hl]
-	ld hl, -$80
+	ld hl, -0.5 >> 8
 	add hl, de
 	ld e, l
 	ld d, h
@@ -4198,7 +4199,7 @@ BattleAnimFunction_59:
 	ld hl, BATTLEANIMSTRUCT_10
 	add hl, bc
 	ld e, [hl]
-	ld hl, -$ff
+	ld hl, -0.996 >> 8
 	add hl, de
 	ld e, l
 	ld d, h
@@ -4208,4 +4209,49 @@ BattleAnimFunction_59:
 	ld hl, BATTLEANIMSTRUCT_10
 	add hl, bc
 	ld [hl], e
+	ret
+
+BattleAnimFunction_RadialMoveOut:
+	call BattleAnim_AnonJumptable
+
+	dw .initialize
+	dw .step
+
+.initialize
+	ld hl, BATTLEANIMSTRUCT_10
+	add hl, bc
+	xor a
+	ld [hld], a
+	ld [hl], a ; initial position = 0
+	call BattleAnim_IncAnonJumptableIndex
+.step
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	push hl
+	ld a, [hli]
+	ld e, [hl]
+	ld d, a
+	ld hl, 1.5 >> 8 ; speed
+	add hl, de
+	pop hl
+	ld a, d
+	ld [hli], a
+	ld [hl], e
+	cp 50 ; final position
+	jp nc, DeinitBattleAnimation
+	ld hl, BATTLEANIMSTRUCT_PARAM
+	add hl, bc
+	ld e, [hl]
+	push de
+	ld a, e
+	call BattleAnim_Sine
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], a
+	pop de
+	ld a, e
+	call BattleAnim_Cosine
+	ld hl, BATTLEANIMSTRUCT_XOFFSET
+	add hl, bc
+	ld [hl], a
 	ret

@@ -359,6 +359,7 @@ WRAMX 1
 	"Party"
 WRAMX 2
 	"Pic Animations"
+	"Held special mons"
 	align 8
 	"16-bit WRAM tables"
 WRAMX 3

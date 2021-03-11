@@ -3005,6 +3005,14 @@ wPokeAnimBitmaskBuffer:: ds 7
 wPokeAnimStructEnd::
 
 
+Section "Held special mons", WRAMX
+
+wSavedChatot:: box_struct wSavedChatot
+wSavedChatotName:: ds MON_NAME_LENGTH
+wSavedUnown:: box_struct wSavedUnown
+wSavedUnownName:: ds MON_NAME_LENGTH
+
+
 SECTION "16-bit WRAM tables", WRAMX
 ; align this section to $100
 	wram_conversion_table wPokemonIndexTable, MON_TABLE

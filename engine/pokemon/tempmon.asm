@@ -20,7 +20,7 @@ CopyMonToTempMon:
 	jr z, .copywholestruct
 	ld bc, BOXMON_STRUCT_LENGTH
 	callfar CopyBoxmonToTempMon
-	jr .done
+	ret
 
 .copywholestruct
 	ld a, [wCurPartyMon]
@@ -28,8 +28,6 @@ CopyMonToTempMon:
 	ld de, wTempMon
 	ld bc, PARTYMON_STRUCT_LENGTH
 	rst CopyBytes
-
-.done
 	ret
 
 CalcBufferMonStats:
@@ -38,7 +36,7 @@ CalcBufferMonStats:
 
 CalcTempmonStats:
 	ld bc, wTempMon
-_TempMonStatsCalculation:
+_TempMonStatsCalculation::
 	ld hl, MON_LEVEL
 	add hl, bc
 	ld a, [hl]

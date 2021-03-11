@@ -88,6 +88,35 @@ FarCopyWRAM::
 	ldh [rSVBK], a
 	ret
 
+DoubleFarCopyWRAM::
+	; copies c bytes from a:hl to b:de; c = 0 means $100 bytes
+	; exits with hl, de pointing to the end of the buffers; abc clobbered
+	res 4, b
+	res 5, b
+	res 6, b
+	swap a
+	and $70
+	or b
+	ld b, a
+	ldh a, [rSVBK]
+	push af
+.loop
+	ld a, b
+	swap a
+	ldh [rSVBK], a
+	ld a, [hli]
+	ldh [hBuffer], a
+	ld a, b
+	ldh [rSVBK], a
+	ldh a, [hBuffer]
+	ld [de], a
+	inc de
+	dec c
+	jr nz, .loop
+	pop af
+	ldh [rSVBK], a
+	ret
+
 GetFarWRAMByte::
 	ldh [hBuffer], a
 	ldh a, [rSVBK]

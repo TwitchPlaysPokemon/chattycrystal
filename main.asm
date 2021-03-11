@@ -100,6 +100,7 @@ INCLUDE "engine/pokedex/unown_dex.asm"
 INCLUDE "engine/events/magikarp.asm"
 INCLUDE "engine/battle/hidden_power.asm"
 INCLUDE "engine/battle/misc.asm"
+INCLUDE "engine/events/special_mons.asm"
 
 
 SECTION "Roofs", ROMX

@@ -2040,37 +2040,32 @@ MovePKMNWitoutMail_InsertMon:
 	cp [hl]
 	jr z, .same_box
 	call .CopyFromBox
-	call .CopyToBox
-	ret
+	jp .CopyToBox
 
 .same_box
 	call .CopyFromBox
 	call .CheckTrivialMove
-	call .CopyToBox
-	ret
+	jp .CopyToBox
 
 .PartyToBox:
 	call .CopyFromParty
 	rst ChattyOff
-	ld a, $1
+	ld a, 1
 	ld [wGameLogicPaused], a
 	farcall SaveGameData
 	xor a
 	ld [wGameLogicPaused], a
 	rst ChattyOn
-	call .CopyToBox
-	ret
+	jp .CopyToBox
 
 .BoxToParty:
 	call .CopyFromBox
-	call .CopyToParty
-	ret
+	jp .CopyToParty
 
 .PartyToParty:
 	call .CopyFromParty
 	call .CheckTrivialMove
-	call .CopyToParty
-	ret
+	jp .CopyToParty
 
 .CheckTrivialMove:
 	ld a, [wBillsPC_CursorPosition]
@@ -2624,35 +2619,8 @@ BillsPC_ConvertBoxData::
 	jp CloseSRAM
 
 .convert
-	jr nz, BillsPC_ConvertBoxMonToPartyMon
+	jr z, BillsPC_ConvertPartyMonToBoxMon
 	; fallthrough
-
-BillsPC_ConvertPartyMonToBoxMon:
-	; converts 8-bit IDs in the party mon struct's moves into 14-bit indexes, storing the overflow bits in the PP count
-	; in: hl: struct pointer
-	; out: hl, bc, de: preserved
-	push hl
-	push de
-	push bc
-	call BillsPC_SetUpMoveAndPPPointers
-.loop
-	ld a, [bc]
-	call GetMoveIndexFromID
-	ld a, l
-	ld [bc], a
-	inc bc
-	ld a, [de]
-	and $c0
-	or h
-	ld [de], a
-	inc de
-	ld hl, hTemp
-	dec [hl]
-	jr nz, .loop
-	pop bc
-	pop de
-	pop hl
-	ret
 
 BillsPC_ConvertBoxMonToPartyMon:
 	; undoes the conversion from the previous function and fully restores the PP of the mon
@@ -2710,6 +2678,47 @@ BillsPC_ConvertBoxMonToPartyMon:
 	pop bc
 	pop de
 	pop hl
+	ret
+
+ConvertPartyStructToBoxStruct::
+	ld h, b
+	ld l, c
+BillsPC_ConvertPartyMonToBoxMon:
+	; converts 8-bit IDs in the party mon struct's moves into 14-bit indexes, storing the overflow bits in the PP count
+	; in: hl: struct pointer
+	; out: hl, bc, de: preserved
+	push hl
+	push de
+	push bc
+	call BillsPC_SetUpMoveAndPPPointers
+.loop
+	ld a, [bc]
+	call GetMoveIndexFromID
+	ld a, l
+	ld [bc], a
+	inc bc
+	ld a, [de]
+	and $c0
+	or h
+	ld [de], a
+	inc de
+	ld hl, hTemp
+	dec [hl]
+	jr nz, .loop
+	pop bc
+	pop de
+	pop hl
+	ret
+
+ConvertBoxStructToPartyStruct::
+	ld h, b
+	ld l, c
+	call BillsPC_ConvertBoxMonToPartyMon
+	ld a, [bc]
+	ld [wCurSpecies], a
+	ld [wCurPartySpecies], a
+	call GetBaseData
+	farcall _TempMonStatsCalculation
 	ret
 
 BillsPC_SetUpMoveAndPPPointers:

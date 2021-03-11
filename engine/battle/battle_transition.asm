@@ -59,42 +59,26 @@ DoBattleTransition:
 	ldh [rSVBK], a
 	pop af
 	ldh [hVBlank], a
-	call DelayFrame
-	ret
+	jp DelayFrame
 
 .InitGFX:
-	ld a, [wLinkMode]
-	cp LINK_MOBILE
-	jr z, .mobile
 	farcall ReanchorBGMap_NoOAMUpdate
 	call UpdateSprites
 	call DelayFrame
-	call .NonMobile_LoadPokeballTiles
-	call BattleStart_CopyTilemapAtOnce
-	jr .resume
-
-.mobile
 	call LoadTrainerBattlePokeballTiles
-
-.resume
+	hlbgcoord 0, 0
+	call ConvertTrainerBattlePokeballTilesTo2bpp
+	call BattleStart_CopyTilemapAtOnce
 	ld a, SCREEN_HEIGHT_PX
 	ldh [hWY], a
 	call DelayFrame
 	xor a
 	ldh [hBGMapMode], a
 	ld hl, wJumptableIndex
-	xor a
 	ld [hli], a
 	ld [hli], a
 	ld [hl], a
-	call WipeLYOverrides
-	ret
-
-.NonMobile_LoadPokeballTiles:
-	call LoadTrainerBattlePokeballTiles
-	hlbgcoord 0, 0
-	call ConvertTrainerBattlePokeballTilesTo2bpp
-	ret
+	jp WipeLYOverrides
 
 LoadTrainerBattlePokeballTiles:
 ; Load the tiles used in the Pokeball Graphic that fills the screen
@@ -264,8 +248,7 @@ StartTrainerBattle_SetUpBGMap:
 
 StartTrainerBattle_Flash:
 	call .DoFlashAnimation
-	ret nc
-	call StartTrainerBattle_NextScene
+	jp c, StartTrainerBattle_NextScene
 	ret
 
 .DoFlashAnimation:
@@ -281,7 +264,7 @@ StartTrainerBattle_Flash:
 	ld hl, .pals
 	add hl, de
 	ld a, [hl]
-	cp %00000001
+	cp 1
 	jr z, .done
 	ld [wBGP], a
 	call DmgToCgbBGPals
@@ -307,7 +290,7 @@ StartTrainerBattle_Flash:
 	dc 1, 0, 0, 0
 	dc 2, 1, 0, 0
 	dc 3, 2, 1, 0
-	dc 0, 0, 0, 1
+	db 1
 
 StartTrainerBattle_SetUpForWavyOutro:
 	farcall Function5602
@@ -330,11 +313,7 @@ StartTrainerBattle_SetUpForWavyOutro:
 StartTrainerBattle_SineWave:
 	ld a, [wcf64]
 	cp $60
-	jr nc, .end
-	call .DoSineWave
-	ret
-
-.end
+	jr c, .DoSineWave
 	ld a, BATTLETRANSITION_FINISH
 	ld [wJumptableIndex], a
 	ret
@@ -349,7 +328,7 @@ StartTrainerBattle_SineWave:
 	ld [hl], a
 	ld a, wLYOverridesEnd - wLYOverrides
 	ld bc, wLYOverrides
-	ld e, $0
+	ld e, 0
 
 .loop
 	push af
@@ -360,7 +339,7 @@ StartTrainerBattle_SineWave:
 	inc bc
 	pop de
 	ld a, e
-	add $2
+	add a, 2
 	ld e, a
 	pop af
 	dec a
@@ -400,7 +379,7 @@ endr
 	ret
 
 .end
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	call DelayFrame
 	call DelayFrame
@@ -644,7 +623,7 @@ StartTrainerBattle_LoadPokeBallGraphics:
 	ldh a, [hCGB]
 	and a
 	jr nz, .cgb
-	ld a, $1
+	ld a, 1
 	ldh [hBGMapMode], a
 	call DelayFrame
 	call DelayFrame
@@ -677,10 +656,8 @@ StartTrainerBattle_LoadPokeBallGraphics:
 	ldh [hCGBPalUpdate], a
 	call DelayFrame
 	call BattleStart_CopyTilemapAtOnce
-
 .nextscene
-	call StartTrainerBattle_NextScene
-	ret
+	jp StartTrainerBattle_NextScene
 
 .copypals
 	ld de, wBGPals1 palette PAL_BG_TEXT

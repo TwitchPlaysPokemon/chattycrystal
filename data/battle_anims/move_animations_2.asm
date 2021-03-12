@@ -12,6 +12,7 @@ MoveAnimations2:
 	dw BattleAnim_LavaPlume
 	dw BattleAnim_IceFang
 	dw BattleAnim_ThunderFang
+	dw BattleAnim_XScissor
 
 
 BattleAnim_NeedleArm:
@@ -321,6 +322,7 @@ BattleAnim_ThunderFang:
 	anim_obj ANIM_OBJ_BITE, 136, 56, $98
 	anim_obj ANIM_OBJ_BITE, 136, 56, $18
 	anim_wait 8
+	anim_sound 0, 1, SFX_BITE
 	anim_obj ANIM_OBJ_01, 136, 56, $0
 	anim_bgeffect ANIM_BG_1F, $14, $2, $0
 	anim_wait 4
@@ -328,5 +330,14 @@ BattleAnim_ThunderFang:
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2
 	anim_sound 0, 1, SFX_THUNDER
 	anim_obj ANIM_OBJ_2F, 152, 68, $0
+	anim_wait 32
+	anim_ret
+	
+BattleAnim_XScissor:
+	anim_1gfx ANIM_GFX_CUT
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_1F, $08, $2, $0
+	anim_obj ANIM_OBJ_3A, 150, 40, $0
+	anim_obj ANIM_OBJ_3B, 118, 40, $0
 	anim_wait 32
 	anim_ret

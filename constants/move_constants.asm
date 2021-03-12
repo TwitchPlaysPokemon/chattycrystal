@@ -374,6 +374,7 @@
 	const LAVA_PLUME   ; 16e
 	const ICE_FANG     ; 16f
 	const THUNDER_FANG ; 170
+	const X_SCISSOR    ; 171
 
 NUM_ATTACKS EQU const_value + -1
 

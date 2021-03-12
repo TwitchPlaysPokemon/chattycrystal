@@ -900,16 +900,17 @@ ScizorEvosAttacks:
 	dbw 1, BULLET_PUNCH
 	dbw 6, FOCUS_ENERGY
 	dbw 10, PURSUIT
-	dbw 15, FALSE_SWIPE
+	dbw 14, FALSE_SWIPE
 	dbw 19, AGILITY
-	dbw 24, METAL_CLAW
-	dbw 28, FURY_CUTTER
-	dbw 33, SLASH
-	dbw 37, RAZOR_WIND
-	dbw 42, IRON_DEFENSE
-	dbw 46, NIGHT_SLASH
-	dbw 51, IRON_HEAD
-	dbw 55, SWORDS_DANCE
+	dbw 23, METAL_CLAW
+	dbw 27, FURY_CUTTER
+	dbw 32, SLASH
+	dbw 36, RAZOR_WIND
+	dbw 40, IRON_DEFENSE
+	dbw 45, X_SCISSOR
+	dbw 49, NIGHT_SLASH
+	dbw 53, IRON_HEAD
+	dbw 58, SWORDS_DANCE
 	db 0 ; no more level-up moves
 
 ShuckleEvosAttacks:

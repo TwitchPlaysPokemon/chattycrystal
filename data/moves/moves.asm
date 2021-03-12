@@ -385,3 +385,4 @@ Moves1:
 	move EFFECT_BURN_HIT,             80, FIRE,     100, 15,  30 ;LAVA_PLUME
 	move EFFECT_ICE_FANG,             65, ICE,       95, 15,  10 ;ICE_FANG
 	move EFFECT_THUNDER_FANG,         65, ELECTRIC,  95, 15,  10 ;THUNDER_FANG
+	move EFFECT_NORMAL_HIT,           80, BUG,      100, 15,   0 ;X_SCISSOR

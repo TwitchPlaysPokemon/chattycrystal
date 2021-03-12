@@ -367,3 +367,4 @@ MoveNames::
 	db "LAVA PLUME@"
 	db "ICE FANG@"
 	db "THUNDER FANG@"
+	db "X-SCISSOR@"

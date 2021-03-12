@@ -879,6 +879,7 @@ ParasEvosAttacks:
 	dbw 27, SLASH
 	dbw 33, GROWTH
 	dbw 38, GIGA_DRAIN
+	dbw 43, X_SCISSOR
 	db 0 ; no more level-up moves
 
 ParasectEvosAttacks:
@@ -893,6 +894,7 @@ ParasectEvosAttacks:
 	dbw 29, SLASH
 	dbw 37, GROWTH
 	dbw 44, GIGA_DRAIN
+	dbw 51, X_SCISSOR
 	db 0 ; no more level-up moves
 
 VenonatEvosAttacks:
@@ -2234,16 +2236,17 @@ ScytherEvosAttacks:
 	dbw 1, LEER
 	dbw 6, FOCUS_ENERGY
 	dbw 10, PURSUIT
-	dbw 15, FALSE_SWIPE
+	dbw 14, FALSE_SWIPE
 	dbw 19, AGILITY
-	dbw 24, WING_ATTACK
-	dbw 28, FURY_CUTTER
-	dbw 33, SLASH
-	dbw 37, RAZOR_WIND
-	dbw 42, DOUBLE_TEAM
-	dbw 46, NIGHT_SLASH
-	dbw 51, AIR_SLASH
-	dbw 55, SWORDS_DANCE
+	dbw 23, WING_ATTACK
+	dbw 27, FURY_CUTTER
+	dbw 32, SLASH
+	dbw 36, RAZOR_WIND
+	dbw 40, DOUBLE_TEAM
+	dbw 45, X_SCISSOR
+	dbw 49, NIGHT_SLASH
+	dbw 53, AIR_SLASH
+	dbw 58, SWORDS_DANCE
 	db 0 ; no more level-up moves
 
 JynxEvosAttacks:
@@ -2293,7 +2296,7 @@ MagmarEvosAttacks:
 	dbw 20, FIRE_SPIN
 	dbw 24, CONFUSE_RAY
 	dbw 28, FIRE_PUNCH
-	;dbw 33, LAVA_PLUME
+	dbw 33, LAVA_PLUME
 	dbw 39, LOW_KICK
 	dbw 44, FLAMETHROWER
 	dbw 50, SUNNY_DAY 
@@ -2310,7 +2313,7 @@ PinsirEvosAttacks:
 	dbw 17, REVENGE
 	dbw 21, VITAL_THROW
 	dbw 25, BRICK_BREAK
-	;dbw 29, X_SCISSOR
+	dbw 29, X_SCISSOR
 	dbw 33, SUBMISSION
 	dbw 37, SWORDS_DANCE
 	dbw 41, THRASH
@@ -2351,7 +2354,7 @@ GyaradosEvosAttacks:
 	dbw 20, BITE
 	dbw 21, LEER
 	dbw 24, TWISTER
-	;dbw 27, ICE_FANG
+	dbw 27, ICE_FANG
 	dbw 30, BRINE
 	dbw 33, SCARY_FACE
 	dbw 36, DRAGON_RAGE

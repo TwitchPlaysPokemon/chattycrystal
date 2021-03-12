@@ -2217,7 +2217,7 @@ MrMimeEvosAttacks:
 	dbw 9, MEDITATE
 	dbw 13, DOUBLESLAP
 	dbw 17, MIMIC
-    dbw 17, PSYWAVE
+	dbw 17, PSYWAVE
 	dbw 21, LIGHT_SCREEN
 	dbw 21, REFLECT
 	dbw 25, PSYBEAM

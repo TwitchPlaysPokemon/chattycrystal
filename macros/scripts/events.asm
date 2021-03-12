@@ -1124,3 +1124,9 @@ withdrawspecial: MACRO
 	dw \2 ; species
 	dw \3 ; OT name
 ENDM
+
+	enum checkspecialstorage_command ; $b4
+checkspecialstorage: MACRO
+	db checkspecialstorage_command
+	db \1 ; slot
+ENDM

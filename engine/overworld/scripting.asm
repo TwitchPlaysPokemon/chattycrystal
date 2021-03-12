@@ -237,6 +237,7 @@ ScriptCommandTable:
 	dw Script_givedecoration             ; b1
 	dw Script_depositspecial             ; b2
 	dw Script_withdrawspecial            ; b3
+	dw Script_checkspecialstorage        ; b4
 
 StartScript:
 	ld hl, wScriptFlags
@@ -3107,5 +3108,27 @@ Script_withdrawspecial:
 	farcall TryWithdrawSpecialMon
 	sbc a
 	inc a
+	ld [wScriptVar], a
+	ret
+
+Script_checkspecialstorage:
+; script command 0xb4
+; parameter: slot (byte)
+	call GetScriptByte
+	ld bc, BOXMON_STRUCT_LENGTH + MON_NAME_LENGTH
+	ld hl, wSavedChatot
+	call AddNTimes
+	ldh a, [rSVBK]
+	ld b, a
+	ld a, BANK(wSavedChatot)
+	ldh [rSVBK], a
+	ld c, [hl]
+	ld a, b
+	ldh [rSVBK], a
+	ld a, c
+	and a
+	jr z, .done
+	ld a, 1
+.done
 	ld [wScriptVar], a
 	ret

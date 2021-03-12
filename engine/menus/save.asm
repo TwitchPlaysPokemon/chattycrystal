@@ -430,7 +430,7 @@ SaveSpecialMons:
 	ld hl, wSavedChatot
 	ld de, sSavedChatot
 	ld bc, 2 * (BOXMON_STRUCT_LENGTH + MON_NAME_LENGTH)
-	push hl
+	push de
 	push bc
 	rst CopyBytes
 	pop bc

@@ -336,15 +336,6 @@ Continue:
 	jp c, CloseWindow
 	call Continue_CheckRTC_RestartClock
 	jp c, CloseWindow
-	; TODO: remove this code after we confirm it has been run on all relevant savefiles
-	assert !BANK(sSavedChatot)
-	xor a
-	call GetSRAMBank
-	ld hl, sSavedChatot
-	ld bc, (sSavedSpecialMonsChecksum + 2) - sSavedChatot
-	call ByteFill
-	call CloseSRAM
-	; normal code continues here
 	ld a, 8
 	ld [wMusicFade], a
 	ld a, LOW(MUSIC_NONE)

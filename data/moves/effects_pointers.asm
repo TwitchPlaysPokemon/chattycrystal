@@ -198,3 +198,5 @@ MoveEffectsPointers:
 	dw GrassKnot
 	dw Memento
 	dw BrickBreak
+	dw IceFang
+	dw ThunderFang

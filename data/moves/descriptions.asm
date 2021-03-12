@@ -370,6 +370,9 @@ MoveDescriptions1:
 	dw RockBlastDescription
 	dw BrickBreakDescription
 	dw HeatWaveDescription
+	dw LavaPlumeDescription
+	dw IceFangDescription
+	dw ThunderFangDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -609,6 +612,7 @@ EmberDescription:
 FlamethrowerDescription:
 HeatWaveDescription:
 ScaldDescription:
+LavaPlumeDescription:
 	db   "An attack that may"
 	next "inflict a burn.@"
 
@@ -1647,3 +1651,12 @@ MementoDescription:
 BrickBreakDescription:
 	db   "Removes Reflect"
 	next "and Light Screen.@"
+	
+IceFangDescription:
+	db   "May freeze or"
+	next "flinch the foe.@"
+	
+ThunderFangDescription:
+	db   "May paralyze or"
+	next "flinch the foe.@"
+

@@ -9,6 +9,8 @@ MoveAnimations2:
 	dw BattleAnim_RockBlast
 	dw BattleAnim_BrickBreak
 	dw BattleAnim_HeatWave
+	dw BattleAnim_IceFang
+	dw BattleAnim_ThunderFang
 
 BattleAnim_NeedleArm:
 	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
@@ -233,4 +235,48 @@ BattleAnim_HeatWave:
 	anim_obj ANIM_OBJ_HEAT_WAVE, 40, 64, $1
 	anim_loop 3, .loop
 	anim_incbgeffect ANIM_BG_WHIRLPOOL
+	anim_ret
+	
+BattleAnim_IceFang:
+	anim_3gfx ANIM_GFX_CUT, ANIM_GFX_HIT, ANIM_GFX_ICE
+	anim_obj ANIM_OBJ_BITE, 136, 56, $98
+	anim_obj ANIM_OBJ_BITE, 136, 56, $18
+	anim_wait 8
+	anim_sound 0, 1, SFX_BITE
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_wait 4
+	anim_clearobjs
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_12, 128, 42, $0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_12, 144, 70, $0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_12, 120, 56, $0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_12, 152, 56, $0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_12, 144, 42, $0
+	anim_wait 6
+	anim_sound 0, 1, SFX_SHINE
+	anim_obj ANIM_OBJ_12, 128, 70, $0
+	anim_ret
+	
+BattleAnim_ThunderFang:
+	anim_3gfx ANIM_GFX_CUT, ANIM_GFX_HIT, ANIM_GFX_LIGHTNING
+	anim_obj ANIM_OBJ_BITE, 136, 56, $98
+	anim_obj ANIM_OBJ_BITE, 136, 56, $18
+	anim_wait 8
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_wait 4
+	anim_clearobjs
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2
+	anim_sound 0, 1, SFX_THUNDER
+	anim_obj ANIM_OBJ_2F, 152, 68, $0
+	anim_wait 32
 	anim_ret

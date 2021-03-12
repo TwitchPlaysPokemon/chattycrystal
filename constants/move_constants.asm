@@ -371,6 +371,9 @@
 	const ROCK_BLAST   ; 16b
 	const BRICK_BREAK  ; 16c
 	const HEAT_WAVE    ; 16d
+	const LAVA_PLUME   ; 16e
+	const ICE_FANG     ; 16f
+	const THUNDER_FANG ; 170
 
 NUM_ATTACKS EQU const_value + -1
 

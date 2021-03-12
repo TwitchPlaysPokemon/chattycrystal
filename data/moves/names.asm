@@ -364,3 +364,6 @@ MoveNames::
 	db "ROCK BLAST@"
 	db "BRICK BREAK@"
 	db "HEAT WAVE@"
+	db "LAVA PLUME@"
+	db "ICE FANG@"
+	db "THUNDER FANG@"

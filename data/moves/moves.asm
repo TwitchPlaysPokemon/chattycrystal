@@ -2,6 +2,7 @@
 
 move: MACRO
 	; the animation byte will be filled when the move is loaded
+	assert ((\5) == 1) || (((\5) <= 40) && !((\5) % 5)), "Invalid PP count"
 	db \1 ; effect
 	db \2 ; power
 	db \3 ; type
@@ -298,7 +299,7 @@ Moves1:
 	move EFFECT_TRAP_TARGET,          35, GROUND,    85, 15,   0 ;SAND_TOMB
 	move EFFECT_ACCURACY_DOWN_HIT,    90, WATER,     85, 10,  30 ;MUDDY_WATER
 	move EFFECT_ALWAYS_HIT,           60, FLYING,   100, 20,   0 ;AERIAL_ACE
-	move EFFECT_DEFENSE_UP_2,          0, STEEL,    100, 16,   0 ;IRON_DEFENSE
+	move EFFECT_DEFENSE_UP_2,          0, STEEL,    100, 15,   0 ;IRON_DEFENSE
 	move EFFECT_ATTACK_UP,             0, NORMAL,   100, 40,   0 ;HOWL
 	move EFFECT_NORMAL_HIT,           80, DRAGON,   100, 15,   0 ;DRAGON_CLAW
 	move EFFECT_THIEF,                60, NORMAL,   100, 25, 100 ;COVET

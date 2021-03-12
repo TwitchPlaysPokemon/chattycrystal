@@ -2861,7 +2861,7 @@ IceFang:
 	effectchance ; independent chance
 	flinchtarget
 	endmove
-	
+
 ThunderFang:
 	checkobedience
 	usedmovetext

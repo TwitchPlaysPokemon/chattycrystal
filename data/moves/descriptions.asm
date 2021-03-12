@@ -374,6 +374,7 @@ MoveDescriptions1:
 	dw IceFangDescription
 	dw ThunderFangDescription
 	dw XScissorDescription
+	dw HurricaneDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -1663,7 +1664,7 @@ IceFangDescription:
 ThunderFangDescription:
 	db   "May paralyze or"
 	next "flinch the foe.@"
-	
+
 XScissorDescription:
 	db   "Slashes the foe in"
 	next "a cross pattern.@"

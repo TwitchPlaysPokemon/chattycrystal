@@ -11,10 +11,9 @@ MoveAnimations2:
 	dw BattleAnim_HeatWave
 	dw BattleAnim_LavaPlume
 	dw BattleAnim_IceFang
-	dw BattleAnim_ThunderFang
+	dw BattleAnim_ThunderFang  ; 170
 	dw BattleAnim_XScissor
 	dw BattleAnim_Hurricane
-
 
 BattleAnim_NeedleArm:
 	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
@@ -240,7 +239,7 @@ BattleAnim_HeatWave:
 	anim_loop 3, .loop
 	anim_incbgeffect ANIM_BG_WHIRLPOOL
 	anim_ret
-	
+
 BattleAnim_LavaPlume:
 	anim_1gfx ANIM_GFX_FIRE
 	anim_battlergfx_2row
@@ -333,7 +332,7 @@ BattleAnim_ThunderFang:
 	anim_obj ANIM_OBJ_2F, 152, 68, $0
 	anim_wait 32
 	anim_ret
-	
+
 BattleAnim_XScissor:
 	anim_1gfx ANIM_GFX_CUT
 	anim_sound 0, 1, SFX_CUT

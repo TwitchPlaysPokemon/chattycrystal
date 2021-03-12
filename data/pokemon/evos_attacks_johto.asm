@@ -1265,7 +1265,7 @@ ElekidEvosAttacks:
 	dbw 32, DISCHARGE
 	dbw 36, LOW_KICK
 	dbw 40, THUNDERBOLT
-	dbw 44, LIGHT_SCREEN 
+	dbw 44, LIGHT_SCREEN
 	dbw 48, THUNDER
 	db 0 ; no more level-up moves
 
@@ -1284,7 +1284,7 @@ MagbyEvosAttacks:
 	;dbw 32, LAVA_PLUME
 	dbw 36, LOW_KICK
 	dbw 40, FLAMETHROWER
-	dbw 44, SUNNY_DAY 
+	dbw 44, SUNNY_DAY
 	dbw 48, FIRE_BLAST
 	db 0 ; no more level-up moves
 

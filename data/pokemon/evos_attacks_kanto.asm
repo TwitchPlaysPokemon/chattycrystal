@@ -2281,7 +2281,7 @@ ElectabuzzEvosAttacks:
 	dbw 33, DISCHARGE
 	dbw 39, LOW_KICK
 	dbw 44, THUNDERBOLT
-	dbw 50, LIGHT_SCREEN 
+	dbw 50, LIGHT_SCREEN
 	dbw 55, THUNDER
 	db 0 ; no more level-up moves
 
@@ -2299,7 +2299,7 @@ MagmarEvosAttacks:
 	dbw 33, LAVA_PLUME
 	dbw 39, LOW_KICK
 	dbw 44, FLAMETHROWER
-	dbw 50, SUNNY_DAY 
+	dbw 50, SUNNY_DAY
 	dbw 55, FIRE_BLAST
 	db 0 ; no more level-up moves
 

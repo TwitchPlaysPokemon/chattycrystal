@@ -109,6 +109,7 @@ MoveMonWOMail_InsertMon_SaveGame:
 	call SavePlayerData
 	call SavePokemonData
 	call SaveIndexTables
+	call SaveSpecialMons
 	call SaveChecksum
 	farcall BackupPartyMonMail
 	farcall BackupMobileEventIndex
@@ -308,6 +309,7 @@ SaveGameData:
 	call SavePlayerData
 	call SavePokemonData
 	call SaveIndexTables
+	call SaveSpecialMons
 	call SaveBox
 	call SaveChecksum
 	farcall BackupPartyMonMail
@@ -415,8 +417,30 @@ SavePokemonData:
 	ld de, sPokemonData
 	ld bc, wPokemonDataEnd - wPokemonData
 	rst CopyBytes
-	call CloseSRAM
-	ret
+	jp CloseSRAM
+
+SaveSpecialMons:
+	assert !BANK(sSavedChatot)
+	xor a
+	call GetSRAMBank
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wSavedChatot)
+	ld hl, wSavedChatot
+	ld de, sSavedChatot
+	ld bc, 2 * (BOXMON_STRUCT_LENGTH + MON_NAME_LENGTH)
+	push hl
+	push bc
+	rst CopyBytes
+	pop bc
+	pop hl
+	pop af
+	ldh [rSVBK], a
+	call Checksum ; exits pointing after the buffer
+	ld a, e
+	ld [hli], a
+	ld [hl], d
+	jp CloseSRAM
 
 SaveIndexTables:
 	; saving is already a long operation, so take the chance to GC the table
@@ -482,8 +506,7 @@ SaveChecksum:
 	ld [sChecksum + 0], a
 	ld a, d
 	ld [sChecksum + 1], a
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 TryLoadSaveFile:
 	call VerifyChecksum
@@ -491,6 +514,7 @@ TryLoadSaveFile:
 	call LoadPlayerData
 	call LoadPokemonData
 	call LoadIndexTables
+	call LoadSpecialMons
 	call LoadBox
 	farcall RestorePartyMonMail
 	farcall RestoreMobileEventIndex
@@ -582,8 +606,7 @@ LoadPlayerData:
 	ld a, BATTLETOWER_WON_CHALLENGE
 	ld [sBattleTowerChallengeState], a
 .not_4
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 LoadPokemonData:
 	ld a, BANK(sPokemonData)
@@ -592,8 +615,7 @@ LoadPokemonData:
 	ld de, wPokemonData
 	ld bc, wPokemonDataEnd - wPokemonData
 	rst CopyBytes
-	call CloseSRAM
-	ret
+	jp CloseSRAM
 
 LoadIndexTables:
 	ldh a, [rSVBK]
@@ -611,6 +633,22 @@ LoadIndexTables:
 	ld hl, sMoveIndexTable
 	ld de, wMoveIndexTable
 	ld bc, wMoveIndexTableEnd - wMoveIndexTable
+	rst CopyBytes
+	pop af
+	ldh [rSVBK], a
+	jp CloseSRAM
+
+LoadSpecialMons:
+	ldh a, [rSVBK]
+	push af
+	ld a, BANK(wSavedChatot)
+	ldh [rSVBK], a
+	assert !BANK(sSavedChatot)
+	xor a
+	call GetSRAMBank
+	ld hl, sSavedChatot
+	ld de, wSavedChatot
+	ld bc, 2 * (BOXMON_STRUCT_LENGTH + MON_NAME_LENGTH)
 	rst CopyBytes
 	pop af
 	ldh [rSVBK], a
@@ -663,6 +701,16 @@ VerifyChecksum:
 	jr nz, .fail
 	ld a, e
 	cp l
+	jr nz, .fail
+	assert BANK(sConversionTables) == BANK(sSavedChatot)
+	ld hl, sSavedChatot
+	ld bc, 2 * (BOXMON_STRUCT_LENGTH + MON_NAME_LENGTH)
+	call Checksum
+	ld a, [hli]
+	cp e
+	jr nz, .fail
+	ld a, d
+	cp [hl]
 .fail
 	push af
 	call CloseSRAM

@@ -9,8 +9,10 @@ MoveAnimations2:
 	dw BattleAnim_RockBlast
 	dw BattleAnim_BrickBreak
 	dw BattleAnim_HeatWave
+	dw BattleAnim_LavaPlume
 	dw BattleAnim_IceFang
 	dw BattleAnim_ThunderFang
+
 
 BattleAnim_NeedleArm:
 	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
@@ -237,6 +239,54 @@ BattleAnim_HeatWave:
 	anim_incbgeffect ANIM_BG_WHIRLPOOL
 	anim_ret
 	
+BattleAnim_LavaPlume:
+	anim_1gfx ANIM_GFX_FIRE
+	anim_battlergfx_2row
+	anim_sound 6, 2, SFX_EMBER
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+.loop
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $38
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $10
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $36
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $4
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $18
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $28
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $40
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $32
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $20
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $30
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $24
+	anim_wait 1
+	anim_obj ANIM_OBJ_LAVA_PLUME, 48, 96, $8
+	anim_wait 1
+	anim_loop 2, .loop
+	anim_wait 32
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
+	anim_wait 1
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $1
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $4
+	anim_obj ANIM_OBJ_FIRE_BLAST, 136, 48, $5
+.loop2
+	anim_sound 0, 0, SFX_BURN
+	anim_wait 4
+	anim_loop 3, .loop2
+	anim_wait 32
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
+
 BattleAnim_IceFang:
 	anim_3gfx ANIM_GFX_CUT, ANIM_GFX_HIT, ANIM_GFX_ICE
 	anim_obj ANIM_OBJ_BITE, 136, 56, $98
@@ -265,7 +315,7 @@ BattleAnim_IceFang:
 	anim_sound 0, 1, SFX_SHINE
 	anim_obj ANIM_OBJ_12, 128, 70, $0
 	anim_ret
-	
+
 BattleAnim_ThunderFang:
 	anim_3gfx ANIM_GFX_CUT, ANIM_GFX_HIT, ANIM_GFX_LIGHTNING
 	anim_obj ANIM_OBJ_BITE, 136, 56, $98

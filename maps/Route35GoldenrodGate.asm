@@ -23,15 +23,15 @@ RandyScript:
 	checkevent EVENT_GOT_KENYA
 	iftrue .alreadyhavekenya
 .continue
-	writetext Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText
+	writetext .ask_take_kenya_text
 	yesorno
 	iffalse .refused
-	writetext Route35GoldenrodGateRandyThanksKidText
+	writetext .thanks_text
 	buttonsound
 	waitsfx
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .partyfull
-	writetext Route35GoldenrodGatePlayerReceivedAMonWithMailText
+	writetext .received_mon_text
 	playsound SFX_KEY_ITEM
 	waitsfx
 	givepoke CHATOT, 20, NO_ITEM, TRUE, GiftChatotName, GiftChatotOTName
@@ -40,35 +40,119 @@ RandyScript:
 	setevent EVENT_GOT_KENYA
 	setscene SCENE_FINISHED
 .alreadyhavekenya
-	writetext Route35GoldenrodGateRandyWeirdTreeBlockingRoadText
+	callasm CheckKenyaMailLost
+	iftrue .lostmail
+	writetext .quest_ready_text
 	waitbutton
 	closetext
 	end
+
+.ask_take_kenya_text
+	text "Excuse me, kid!"
+	line "Can you do a guy"
+	cont "a favor?"
+
+	para "Can you take this"
+	line "#MON with MAIL"
+	cont "to my friend?"
+
+	para "He's on ROUTE 31."
+	done
+
+.thanks_text
+	text "You will? Perfect!"
+	line "Thanks, kid!"
+
+	para "My pal's a chubby"
+	line "guy who snoozes"
+	cont "all the time."
+
+	para "You'll recognize"
+	line "him right away!"
+	done
+
+.received_mon_text
+	text "<PLAYER> received a"
+	line "#MON with MAIL."
+	done
+
+.quest_ready_text
+	text "You can read it,"
+	line "but don't lose it!"
+	cont "ROUTE 31!"
+
+	para "Oh, yeah. There"
+	line "was a weird tree"
+	cont "blocking the road."
+
+	para "I wonder if it's"
+	line "been cleared?"
+	done
+
+.lostmail
+	writetext .lost_mail_text
+	waitbutton
+	closetext
+	; assume we gave the reward
+	setevent EVENT_GOT_HP_UP_FROM_RANDY
+	end
+
+.lost_mail_text
+	text "You lost the MAIL?"
+	line "Don't worry, that"
+	para "happens. I'll give"
+	line "my friend a call."
+	done
 
 .partyfull
-	writetext Route35GoldenrodGateRandyCantCarryAnotherMonText
+	writetext .party_full_text
 	waitbutton
 	closetext
 	end
+
+.party_full_text
+	text "You can't carry"
+	line "another #MON…"
+	done
 
 .refused
-	writetext Route35GoldenrodGateRandyOhNeverMindThenText
+	writetext .refused_text
 	waitbutton
 	closetext
 	end
 
+.refused_text
+	text "Oh… Never mind,"
+	line "then…"
+	done
+
 .questcomplete
-	writetext Route35GoldenrodGateRandySomethingForYourTroubleText
+	writetext .reward_text
 	buttonsound
 	verbosegiveitem HP_UP
 	iffalse .bagfull
 	setevent EVENT_GOT_HP_UP_FROM_RANDY
 .gothpup
-	writetext Route35GoldenrodGateRandyMyPalWasSnoozingRightText
+	writetext .after_reward_text
 	waitbutton
 .bagfull
 	closetext
 	end
+
+.reward_text
+	text "Thanks, kid! You"
+	line "made the delivery"
+	cont "for me!"
+
+	para "Here's something"
+	line "for your trouble!"
+	done
+
+.after_reward_text
+	text "My pal was snooz-"
+	line "ing, right? Heh,"
+	cont "what'd I say?"
+	done
 
 .tryhold
 	readmem wTPPFeatureLock
@@ -252,6 +336,70 @@ GiftChatotName:
 GiftChatotOTName:
 	db "RANDY@"
 
+CheckKenyaMailLost:
+	assert !BANK(sPartyMail)
+	assert BANK(sPartyMail) == BANK(sMailbox)
+	xor a
+	ld b, a
+	ld c, a
+	call GetSRAMBank
+	ld hl, wPartyMon1Item
+.party_loop
+	ld d, [hl]
+	push hl
+	push bc
+	farcall ItemIsMail
+	pop bc
+	jr nc, .not_mail
+	push bc
+	ld a, MAIL_STRUCT_LENGTH
+	ld hl, sPartyMail
+	call AddNTimes
+	pop bc
+	call .check
+	jr z, .done
+.not_mail
+	pop hl
+	ld de, PARTYMON_STRUCT_LENGTH
+	add hl, de
+	inc c
+	ld a, [wPartyCount]
+	cp c
+	jr nz, .party_loop
+	ld hl, sMailboxCount
+	ld a, [hli]
+	ld c, a
+.mailbox_loop
+	push hl
+	call .check
+	jr z, .done
+	pop hl
+	ld de, MAIL_STRUCT_LENGTH
+	add hl, de
+	dec c
+	jr nz, .mailbox_loop
+	ld a, TRUE
+	jr .exit
+
+.done
+	pop hl
+	xor a
+.exit
+	ld [wScriptVar], a
+	jp CloseSRAM
+
+.check
+	ld de, GiftChatotMail + 1
+.check_loop
+	ld a, [de]
+	cp [hl]
+	ret nz
+	cp "@"
+	ret z
+	inc de
+	inc hl
+	jr .check_loop
+
 Route35GoldenrodGate_KenyaLock_Left:
 	turnobject ROUTE35GOLDENRODGATE_RANDY, RIGHT
 	showemote EMOTE_SHOCK, ROUTE35GOLDENRODGATE_RANDY, 20
@@ -303,73 +451,6 @@ Route35GoldenrodGatePokefanFScript:
 
 Route35GoldenrodGateFisherScript:
 	jumptextfaceplayer Route35GoldenrodGateFisherText
-
-Route35GoldenrodGateRandyAskTakeThisMonToMyFriendText:
-	text "Excuse me, kid!"
-	line "Can you do a guy"
-	cont "a favor?"
-
-	para "Can you take this"
-	line "#MON with MAIL"
-	cont "to my friend?"
-
-	para "He's on ROUTE 31."
-	done
-
-Route35GoldenrodGateRandyThanksKidText:
-	text "You will? Perfect!"
-	line "Thanks, kid!"
-
-	para "My pal's a chubby"
-	line "guy who snoozes"
-	cont "all the time."
-
-	para "You'll recognize"
-	line "him right away!"
-	done
-
-Route35GoldenrodGatePlayerReceivedAMonWithMailText:
-	text "<PLAYER> received a"
-	line "#MON with MAIL."
-	done
-
-Route35GoldenrodGateRandyWeirdTreeBlockingRoadText:
-	text "You can read it,"
-	line "but don't lose it!"
-	cont "ROUTE 31!"
-
-	para "Oh, yeah. There"
-	line "was a weird tree"
-	cont "blocking the road."
-
-	para "I wonder if it's"
-	line "been cleared?"
-	done
-
-Route35GoldenrodGateRandyCantCarryAnotherMonText:
-	text "You can't carry"
-	line "another #MON…"
-	done
-
-Route35GoldenrodGateRandyOhNeverMindThenText:
-	text "Oh… Never mind,"
-	line "then…"
-	done
-
-Route35GoldenrodGateRandySomethingForYourTroubleText:
-	text "Thanks, kid! You"
-	line "made the delivery"
-	cont "for me!"
-
-	para "Here's something"
-	line "for your trouble!"
-	done
-
-Route35GoldenrodGateRandyMyPalWasSnoozingRightText:
-	text "My pal was snooz-"
-	line "ing, right? Heh,"
-	cont "what'd I say?"
-	done
 
 Route35GoldenrodGatePokefanFText:
 	text "A strange tree is"

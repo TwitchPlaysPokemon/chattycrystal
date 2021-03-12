@@ -902,7 +902,7 @@ LoadMailGFX_Color3:
 
 INCLUDE "gfx/mail.asm"
 
-ItemIsMail:
+ItemIsMail::
 	ld a, d
 	ld hl, MailItems
 	ld de, 1

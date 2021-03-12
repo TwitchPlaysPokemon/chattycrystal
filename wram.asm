@@ -145,7 +145,7 @@ wDebugFlags:: db
 wGameLogicPaused:: db ; c2cd
 wSpriteUpdatesEnabled:: db
 
-wUnusedScriptByteBuffer:: db
+	ds 1
 
 wMapTimeOfDay:: db
 

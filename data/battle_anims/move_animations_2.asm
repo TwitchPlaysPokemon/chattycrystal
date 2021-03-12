@@ -344,7 +344,6 @@ BattleAnim_XScissor:
 	anim_wait 32
 	anim_ret
 
-BattleAnim_AquaTail:
 BattleAnim_Hurricane:
 	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
 	anim_bgeffect ANIM_BG_1F, $90, $4, $10
@@ -362,6 +361,48 @@ BattleAnim_Hurricane:
 	anim_obj ANIM_OBJ_01, 128, 32, $18
 	anim_wait 16
 	anim_ret
+
+BattleAnim_AquaTail:
+	anim_1gfx ANIM_GFX_BUBBLE
+	anim_sound 0, 1, SFX_TOXIC
+	anim_obj ANIM_OBJ_RISING_BUBBLE, 64, 104, $0
+	anim_wait 16
+	anim_sound 0, 1, SFX_TOXIC
+	anim_obj ANIM_OBJ_RISING_BUBBLE, 32, 104, $0
+	anim_wait 16
+	anim_sound 0, 1, SFX_TOXIC
+	anim_obj ANIM_OBJ_RISING_BUBBLE, 48, 104, $0
+	anim_wait 32
+	anim_clearobjs
+	anim_wait 1
+	anim_call BattleAnim_TargetObj_1Row
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_SAND
+	anim_bgeffect ANIM_BG_26, $0, $1, $0
+	anim_wait 16
+	anim_sound 0, 1, SFX_BUBBLEBEAM
+	anim_obj ANIM_OBJ_AQUA_TAIL, 104, 60, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_AQUA_TAIL, 112, 60, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_AQUA_TAIL, 120, 60, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_AQUA_TAIL, 128, 60, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_AQUA_TAIL, 136, 60, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_AQUA_TAIL, 144, 60, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_AQUA_TAIL, 152, 60, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_AQUA_TAIL, 160, 60, $0
+	anim_wait 8
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_sound 0, 1, SFX_MEGA_KICK
+	anim_obj ANIM_OBJ_00, 136, 48, $0
+	anim_wait 16
+	anim_incbgeffect ANIM_BG_26
+	anim_jump BattleAnim_ShowMon_0
+
 
 BattleAnim_StoneEdge:
 	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_ROCKS

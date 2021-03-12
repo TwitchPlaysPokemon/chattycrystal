@@ -258,22 +258,22 @@ MtSilverRuins_MapEvents:
 
 	; warps
 	db 16
-	warp_def 47, 27, 2, SILVER_CAVE_ROOM_3
-	warp_def 47, 28, 3, SILVER_CAVE_ROOM_3
-	warp_def 43, 27, 1, MT_SILVER_RUINS_B1F
-	warp_def 43, 28, 2, MT_SILVER_RUINS_B1F
-	warp_def 44, 18, 3, MT_SILVER_RUINS_B1F
-	warp_def 36, 16, 4, MT_SILVER_RUINS_B1F
-	warp_def 32, 4, 5, MT_SILVER_RUINS_B1F
-	warp_def 26, 4, 6, MT_SILVER_RUINS_B1F
-	warp_def 24, 16, 7, MT_SILVER_RUINS_B1F
-	warp_def 32, 20, 8, MT_SILVER_RUINS_B1F
-	warp_def 26, 22, 9, MT_SILVER_RUINS_B1F
-	warp_def 28, 28, 10, MT_SILVER_RUINS_B1F
-	warp_def 16, 28, 11, MT_SILVER_RUINS_B1F
-	warp_def 4, 4, 12, MT_SILVER_RUINS_B1F
-	warp_def 1, 3, 13, MT_SILVER_RUINS_B1F
-	warp_def 1, 4, 14, MT_SILVER_RUINS_B1F
+	warp_event 27, 47, SILVER_CAVE_ROOM_3, 2
+	warp_event 28, 47, SILVER_CAVE_ROOM_3, 3
+	warp_event 27, 43, MT_SILVER_RUINS_B1F, 1
+	warp_event 28, 43, MT_SILVER_RUINS_B1F, 2
+	warp_event 18, 44, MT_SILVER_RUINS_B1F, 3
+	warp_event 16, 36, MT_SILVER_RUINS_B1F, 4
+	warp_event  4, 32, MT_SILVER_RUINS_B1F, 5
+	warp_event  4, 26, MT_SILVER_RUINS_B1F, 6
+	warp_event 16, 24, MT_SILVER_RUINS_B1F, 7
+	warp_event 20, 32, MT_SILVER_RUINS_B1F, 8
+	warp_event 22, 26, MT_SILVER_RUINS_B1F, 9
+	warp_event 28, 28, MT_SILVER_RUINS_B1F, 10
+	warp_event 28, 16, MT_SILVER_RUINS_B1F, 11
+	warp_event  4,  4, MT_SILVER_RUINS_B1F, 12
+	warp_event  3,  1, MT_SILVER_RUINS_B1F, 13
+	warp_event  4,  1, MT_SILVER_RUINS_B1F, 14
 
 	; coord events
 	db 8

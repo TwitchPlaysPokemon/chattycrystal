@@ -76,8 +76,8 @@ TrainerBoarderBryce:
 .SeenText:
 	text "What did you"
 	line "come all the way"
-	cont "out here for,"
-	cont "I wonder."
+	para "out here for,"
+	line "I wonder."
 	done
 
 .BeatenText:
@@ -103,23 +103,23 @@ SeafoamIslandsB2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 8 ; warp events
-	warp_def $f, $19, 3, SEAFOAM_ISLANDS_B1F
-	warp_def $7, $f, 4, SEAFOAM_ISLANDS_B1F
-	warp_def $d, $d, 5, SEAFOAM_ISLANDS_B1F
-	warp_def $f, $7, 6, SEAFOAM_ISLANDS_B1F
-	warp_def $7, $23, 1, SEAFOAM_ISLANDS_B3F
-	warp_def $9, $1c, 2, SEAFOAM_ISLANDS_B3F
-	warp_def $f, $23, 3, SEAFOAM_ISLANDS_B3F
-	warp_def $d, $4, 4, SEAFOAM_ISLANDS_B3F
+	warp_event 25, 15, SEAFOAM_ISLANDS_B1F, 3
+	warp_event 15,  7, SEAFOAM_ISLANDS_B1F, 4
+	warp_event 13, 13, SEAFOAM_ISLANDS_B1F, 5
+	warp_event  7, 15, SEAFOAM_ISLANDS_B1F, 6
+	warp_event 35,  7, SEAFOAM_ISLANDS_B3F, 1
+	warp_event 28,  9, SEAFOAM_ISLANDS_B3F, 2
+	warp_event 35, 15, SEAFOAM_ISLANDS_B3F, 3
+	warp_event  4, 13, SEAFOAM_ISLANDS_B3F, 4
 
 	db 0 ; coord events
 
 	db 2 ; bg events
-	signpost 9, 7, BGEVENT_ITEM, SeafoamIslandsB2FHiddenPearl1
-	signpost 13, 35, BGEVENT_ITEM, SeafoamIslandsB2FHiddenPearl2
+	bg_event  7,  9, BGEVENT_ITEM, SeafoamIslandsB2FHiddenPearl1
+	bg_event 35, 13, BGEVENT_ITEM, SeafoamIslandsB2FHiddenPearl2
 
 	db 4 ; object events
-	person_event SPRITE_BUENA, 4, 11, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerSkierCady, -1
-	person_event SPRITE_ROCKER,  2, 15, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderShaun, -1
-	person_event SPRITE_ROCKER, 8, 25, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderBryce, -1
-	person_event SPRITE_POKE_BALL, 16, 15, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamIslandsB2FWaterStone, EVENT_SEAFOAM_ISLANDS_B2F_WATER_STONE
+	object_event 11,  4, SPRITE_BUENA, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerSkierCady, -1
+	object_event 15,  2, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderShaun, -1
+	object_event 25,  8, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBoarderBryce, -1
+	object_event 15, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SeafoamIslandsB2FWaterStone, EVENT_SEAFOAM_ISLANDS_B2F_WATER_STONE

@@ -1,29 +1,19 @@
-SilverCaveOutside_MapScripts: ; 0x1b2042
+SilverCaveOutside_MapScripts:
 	; trigger count
 	db 0
 
 	; callback count
 	db 0
 
-	; callbacks
+SilverCaveOutside_MapEvents:
+	db 0, 0 ; filler
 
-SilverCaveOutside_MapEvents: ; 0x1b205f
-	; filler
-	db 0, 0
+	db 2 ; warp events
+	warp_event 23, 19, SILVER_CAVE_POKECENTER_1F, 1
+	warp_event 18, 11, SILVER_CAVE_ROOM_1, 1
 
-	; warps
-	db 2
-	warp_def $13, $17, 1, SILVER_CAVE_POKECENTER_1F
-	warp_def $b, $12, 1, SILVER_CAVE_ROOM_1
+	db 0 ; coord events
 
-	; xy triggers
-	db 0
+	db 0 ; bg events
 
-	; signposts
-	db 0
-;	signpost 19, 24, $0, MapSilverCaveOutsideSignpost0Script
-;	signpost 13, 17, $0, MapSilverCaveOutsideSignpost1Script
-;	signpost 25, 9, $7, MapSilverCaveOutsideSignpostItem2
-
-	; people-events
-	db 0
+	db 0 ; object events

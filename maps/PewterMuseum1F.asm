@@ -11,7 +11,7 @@ PewterMuseum1F_MapScripts:
 
 PewterMuseum1FTicketScene1:
 	applymovement PLAYER, .StepRightMovement
-	jump PewterMuseum1FTicketSceneContinue
+	sjump PewterMuseum1FTicketSceneContinue
 
 .StepRightMovement:
 	step RIGHT
@@ -118,8 +118,8 @@ PewterMuseum1FScientist1Script:
 .Text:
 	text "#MON can be"
 	line "resurrected from"
-	cont "fossils with"
-	cont "technology!"
+	para "fossils with"
+	line "technology!"
 	done
 
 PewterMuseum1FScientist2Script:

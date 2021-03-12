@@ -328,14 +328,14 @@ Music_CeruleanGSC_Loop2:
 	note D#, 1
 	note E_, 1
 	note __, 3
-	unknownmusic0xde 10
+	sound_duty 10
 	dutycycle 0
 	stereopanning $ff
 	octave 4
 	note G#, 4
 	note E_, 4
 ;Channel2_Bar11:
-	unknownmusic0xde 85
+	sound_duty 85
 	stereopanning $f0
 	dutycycle 1
 	octave 3
@@ -345,14 +345,14 @@ Music_CeruleanGSC_Loop2:
 	note E_, 1
 	note F#, 1
 	note __, 3
-	unknownmusic0xde 10
+	sound_duty 10
 	stereopanning $ff
 	dutycycle 0
 	octave 4
 	note B_, 4
 	note F#, 4
 ;Channel2_Bar12:
-	unknownmusic0xde 85
+	sound_duty 85
 	stereopanning $f0
 	dutycycle 1
 	octave 3
@@ -387,7 +387,7 @@ Music_CeruleanGSC_Loop2:
 	note F#, 1
 	note B_, 8
 ;Channel2_Bar14:
-	unknownmusic0xde 10
+	sound_duty 10
 	intensity $C6
 	stereopanning $ff
 	dutycycle 2
@@ -409,7 +409,7 @@ Music_CeruleanGSC_Loop2:
 ;Channel2_Bar17:
 	note C#, 4
 	note D#, 4
-	unknownmusic0xde 170
+	sound_duty 170
 	notetype 2, $C2
 	stereopanning $f0
 	note __, 2

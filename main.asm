@@ -140,12 +140,6 @@ SECTION "bankA", ROMX
 
 INCLUDE "engine/overworld/wildmons.asm"
 
-ChrisBackpic:
-INCBIN "gfx/player/chris_back.2bpp.lz"
-
-DudeBackpic:
-INCBIN "gfx/battle/dude.2bpp.lz"
-
 
 SECTION "bankB", ROMX
 
@@ -573,6 +567,12 @@ SECTION "bank5B", ROMX
 INCLUDE "engine/link/link_trade.asm"
 INCLUDE "engine/link/link.asm"
 INCLUDE "engine/battle/link_result.asm"
+
+ChrisBackpic:
+INCBIN "gfx/player/chris_back.2bpp.lz"
+
+DudeBackpic:
+INCBIN "gfx/battle/dude.2bpp.lz"
 
 
 SECTION "Mobile 5C", ROMX

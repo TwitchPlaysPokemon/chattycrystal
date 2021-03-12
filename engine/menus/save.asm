@@ -426,6 +426,7 @@ SaveSpecialMons:
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wSavedChatot)
+	ldh [rSVBK], a
 	ld hl, wSavedChatot
 	ld de, sSavedChatot
 	ld bc, 2 * (BOXMON_STRUCT_LENGTH + MON_NAME_LENGTH)

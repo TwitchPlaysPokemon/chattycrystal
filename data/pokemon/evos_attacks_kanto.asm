@@ -2303,26 +2303,38 @@ MagmarEvosAttacks:
 PinsirEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, VICEGRIP
-	dbw 7, FOCUS_ENERGY
-	dbw 13, BIND
-	dbw 19, SEISMIC_TOSS
-	dbw 25, HARDEN
-	dbw 31, GUILLOTINE
-	dbw 37, SUBMISSION
-	dbw 43, SWORDS_DANCE
+	dbw 1, FOCUS_ENERGY
+	dbw 5, BIND
+	dbw 9, SEISMIC_TOSS
+	dbw 13, HARDEN
+	dbw 17, REVENGE
+	dbw 21, VITAL_THROW
+	dbw 25, BRICK_BREAK
+	;dbw 29, X_SCISSOR
+	dbw 33, SUBMISSION
+	dbw 37, SWORDS_DANCE
+	dbw 41, THRASH
+	dbw 45, SUPERPOWER
+	dbw 49, GUILLOTINE
 	db 0 ; no more level-up moves
 
 TaurosEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 4, TAIL_WHIP
-	dbw 8, RAGE
-	dbw 13, HORN_ATTACK
-	dbw 19, SCARY_FACE
-	dbw 26, PURSUIT
-	dbw 34, REST
-	dbw 43, THRASH
-	dbw 53, TAKE_DOWN
+	dbw 1, TAIL_WHIP
+	dbw 4, RAGE
+	dbw 9, HORN_ATTACK
+	dbw 15, SCARY_FACE
+	dbw 19, PURSUIT
+	dbw 24, REST
+	dbw 30, ASSURANCE
+	dbw 34, WORK_UP
+	dbw 39, TAKE_DOWN
+	dbw 45, ZEN_HEADBUTT
+	dbw 49, SWAGGER
+	dbw 54, THRASH
+	dbw 60, DOUBLE_EDGE
+	dbw 64, OUTRAGE
 	db 0 ; no more level-up moves
 
 MagikarpEvosAttacks:
@@ -2337,12 +2349,18 @@ GyaradosEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, THRASH
 	dbw 20, BITE
-	dbw 25, DRAGON_RAGE
-	dbw 30, LEER
-	dbw 35, TWISTER
-	dbw 40, HYDRO_PUMP
-	dbw 45, RAIN_DANCE
-	dbw 50, HYPER_BEAM
+	dbw 21, LEER
+	dbw 24, TWISTER
+	;dbw 27, ICE_FANG
+	dbw 30, BRINE
+	dbw 33, SCARY_FACE
+	dbw 36, DRAGON_RAGE
+	dbw 39, CRUNCH
+	dbw 42, HYDRO_PUMP
+	dbw 45, DRAGON_DANCE
+	;dbw 48, HURRICANE
+	dbw 51, RAIN_DANCE
+	dbw 54, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 LaprasEvosAttacks:

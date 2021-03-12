@@ -306,7 +306,7 @@ MoveAnimations1:
 	dw BattleAnim_DragonPulse  ; 130
 	dw BattleAnim_PowerGem
 	dw BattleAnim_Dynamicpunch ; PLACEHOLDER
-	dw BattleAnim_ShadowBall   ; PLACEHOLDER
+	dw BattleAnim_FocusBlast
 	dw BattleAnim_BraveBird
 	dw BattleAnim_EarthPower
 	dw BattleAnim_NastyPlot
@@ -3513,6 +3513,35 @@ BattleAnim_MuddyWater:
 	anim_loop 4, .loop
 	anim_incobj 1
 	anim_wait 56
+	anim_ret
+
+BattleAnim_FocusBlast:
+	anim_2gfx ANIM_GFX_LEAF_STORM, ANIM_GFX_WIND
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_obj ANIM_OBJ_AGILITY, 8, 24, $10
+	anim_obj ANIM_OBJ_AGILITY, 8, 88, $8
+	anim_wait 4
+	anim_obj ANIM_OBJ_AGILITY, 8, 32, $6
+	anim_obj ANIM_OBJ_AGILITY, 8, 80, $4
+	anim_sound 6, 2, SFX_OUTRAGE
+	anim_obj ANIM_OBJ_VORTEX_YELLOW, 48, 96, $30
+	anim_wait 63
+	anim_incobj 5
+	anim_wait 1
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_3gfx ANIM_GFX_CHARGE, ANIM_GFX_WIND, ANIM_GFX_EXPLOSION
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_FOCUS_BLAST, 48, 96, $12
+	anim_wait 42
+	anim_sound 0, 1, SFX_TACKLE
+	anim_obj ANIM_OBJ_18, 128, 48, $0
+	anim_wait 5
+	anim_sound 0, 1, SFX_TACKLE
+	anim_obj ANIM_OBJ_18, 144, 46, $0
+	anim_wait 5
+	anim_sound 0, 1, SFX_TACKLE
+	anim_obj ANIM_OBJ_18, 136, 64, $0
+	anim_wait 16
 	anim_ret
 
 BattleAnim_BraveBird:

@@ -1108,3 +1108,19 @@ givedecoration: MACRO
 	db givedecoration_command
 	db \1 ; decoration
 ENDM
+
+	enum depositspecial_command ; $b2
+depositspecial: MACRO
+	db depositspecial_command
+	db \1 ; slot
+	dw \2 ; expected species
+	dw \3 ; expected move
+ENDM
+
+	enum withdrawspecial_command ; $b3
+withdrawspecial: MACRO
+	db withdrawspecial_command
+	db \1 ; slot
+	dw \2 ; species
+	dw \3 ; OT name
+ENDM

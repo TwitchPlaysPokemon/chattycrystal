@@ -235,6 +235,8 @@ ScriptCommandTable:
 	dw Script_clearifuncaught            ; af
 	dw Script_checkcaught                ; b0
 	dw Script_givedecoration             ; b1
+	dw Script_depositspecial             ; b2
+	dw Script_withdrawspecial            ; b3
 
 StartScript:
 	ld hl, wScriptFlags
@@ -3026,5 +3028,84 @@ Script_partyselect:
 	ccf
 	sbc a
 	and [hl]
+	ld [wScriptVar], a
+	ret
+
+Script_depositspecial:
+; script command 0xb2
+; parameters: slot (byte), expected species, expected move
+; script var (1-6) indicates the party slot
+	ld a, [wScriptVar]
+	dec a
+	cp PARTY_LENGTH
+	jr nc, .fail
+	ld [wCurPartyMon], a
+	call GetScriptByte
+	push af
+	call GetScriptByte
+	ld c, a
+	call GetScriptByte
+	ld b, a
+	call GetScriptByte
+	ld e, a
+	call GetScriptByte
+	ld d, a
+	farcall CheckSpecialMon
+	pop bc
+	ret c
+	ld a, b
+	ld bc, BOXMON_STRUCT_LENGTH + MON_NAME_LENGTH
+	ld hl, wSavedChatot
+	call AddNTimes
+	ld d, h
+	ld e, l
+	farcall TryDepositSpecialMon
+	ret
+
+.fail
+	ld a, -1
+	ld [wScriptVar], a
+	ret
+
+Script_withdrawspecial:
+; script command 0xb3
+; parameters: slot (byte), species, OT name pointer
+	call GetScriptByte
+	ld bc, BOXMON_STRUCT_LENGTH + MON_NAME_LENGTH
+	ld hl, wSavedChatot
+	call AddNTimes
+	ld d, h
+	ld e, l
+	call GetScriptByte
+	ld l, a
+	call GetScriptByte
+	ld h, a
+	call GetPokemonIDFromIndex
+	ld [wCurPartySpecies], a
+	call GetScriptByte
+	ld c, a
+	call GetScriptByte
+	ld b, a
+	add a, a
+	jr c, .not_ROMX
+	add a, a
+	jr nc, .not_ROMX
+	push de
+	push bc
+	ld hl, wStringBuffer2
+	ld a, "@"
+	ld bc, MON_NAME_LENGTH
+	call ByteFill
+	pop hl
+	ld de, wStringBuffer2
+	ld bc, MON_NAME_LENGTH
+	ld a, [wScriptBank]
+	call FarCopyBytes
+	pop de
+	ld bc, wStringBuffer2
+.not_ROMX
+	farcall TryWithdrawSpecialMon
+	sbc a
+	inc a
 	ld [wScriptVar], a
 	ret

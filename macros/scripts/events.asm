@@ -1129,7 +1129,7 @@ checkspecialstorage: MACRO
 	db \1 ; slot
 ENDM
 
-	enum replacemove_command ; $ b5
+	enum replacemove_command ; $b5
 replacemove: MACRO
 	db replacemove_command
 	dw \1 ; original move

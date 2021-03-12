@@ -846,15 +846,26 @@ GligarEvosAttacks:
 
 SteelixEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, THUNDER_FANG
+	dbw 1, ICE_FANG
+	dbw 1, FIRE_FANG
 	dbw 1, TACKLE
-	dbw 1, SCREECH
-	dbw 10, BIND
-	dbw 14, ROCK_THROW
-	dbw 23, HARDEN
-	dbw 27, RAGE
-	dbw 36, SANDSTORM
-	dbw 40, SLAM
-	dbw 49, CRUNCH
+	dbw 1, HARDEN
+	dbw 1, BIND
+	dbw 1, CURSE
+	dbw 10, ROCK_THROW
+	dbw 14, ROCK_TOMB
+	dbw 17, RAGE
+	dbw 21, SANDSTORM
+	dbw 24, SLAM
+	dbw 28, DRAGONBREATH
+	dbw 31, SCREECH
+	dbw 35, ROCK_SLIDE
+	dbw 38, SAND_TOMB
+	dbw 42, IRON_TAIL
+	dbw 45, DIG
+	dbw 49, DOUBLE_EDGE
+	dbw 52, STONE_EDGE
 	db 0 ; no more level-up moves
 
 SnubbullEvosAttacks:

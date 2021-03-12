@@ -387,3 +387,5 @@ Moves1:
 	move EFFECT_THUNDER_FANG,         65, ELECTRIC,  95, 15,  10 ;THUNDER_FANG
 	move EFFECT_NORMAL_HIT,           80, BUG,      100, 15,   0 ;X_SCISSOR
 	move EFFECT_CONFUSE_HIT,         120, FLYING,    70, 10,  30 ;HURRICANE
+	move EFFECT_NORMAL_HIT,           90, WATER,     90, 10,   0 ;AQUA_TAIL
+	move EFFECT_NORMAL_HIT,          100, ROCK,      80,  5,   0 ;STONE_EDGE

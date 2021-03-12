@@ -376,6 +376,8 @@
 	const THUNDER_FANG ; 170
 	const X_SCISSOR    ; 171
 	const HURRICANE    ; 172
+	const AQUA_TAIL    ; 173
+	const STONE_EDGE   ; 174
 
 NUM_ATTACKS EQU const_value + -1
 

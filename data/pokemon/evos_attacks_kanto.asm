@@ -277,7 +277,7 @@ SquirtleEvosAttacks:
 	dbw 19, RAPID_SPIN
 	dbw 22, PROTECT
 	dbw 25, WATER_PULSE
-	dbw 28, AQUA_JET
+	dbw 28, AQUA_TAIL
 	dbw 31, SKULL_BASH
 	dbw 34, IRON_DEFENSE
 	dbw 37, RAIN_DANCE
@@ -297,7 +297,7 @@ WartortleEvosAttacks:
 	dbw 21, RAPID_SPIN
 	dbw 25, PROTECT
 	dbw 29, WATER_PULSE
-	dbw 33, AQUA_JET
+	dbw 33, AQUA_TAIL
 	dbw 37, SKULL_BASH
 	dbw 41, IRON_DEFENSE
 	dbw 45, RAIN_DANCE
@@ -316,7 +316,7 @@ BlastoiseEvosAttacks:
 	dbw 21, RAPID_SPIN
 	dbw 25, PROTECT
 	dbw 29, WATER_PULSE
-	dbw 33, AQUA_JET
+	dbw 33, AQUA_TAIL
 	dbw 36, FLASH_CANNON
 	dbw 40, SKULL_BASH
 	dbw 47, IRON_DEFENSE
@@ -529,6 +529,9 @@ EkansEvosAttacks:
 
 ArbokEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, THUNDER_FANG
+	dbw 1, ICE_FANG
+	dbw 1, FIRE_FANG
 	dbw 1, WRAP
 	dbw 1, LEER
 	dbw 1, POISON_STING
@@ -1028,15 +1031,19 @@ PsyduckEvosAttacks:
 	dbw 22, DISABLE
 	dbw 25, SCREECH
 	dbw 29, ZEN_HEADBUTT
-	dbw 32, PSYCH_UP
-	dbw 36, AMNESIA
-	dbw 39, HYDRO_PUMP
+	dbw 32, AQUA_TAIL
+	dbw 36, PSYCH_UP
+	dbw 39, AMNESIA
+	dbw 43, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 GolduckEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, AQUA_JET
 	dbw 1, SCRATCH
-	dbw 4, TAIL_WHIP
+	dbw 1, TAIL_WHIP
+	dbw 1, WATER_GUN
+	dbw 1, CONFUSION
 	dbw 8, WATER_GUN
 	dbw 11, CONFUSION
 	dbw 15, FURY_SWIPES
@@ -1044,10 +1051,10 @@ GolduckEvosAttacks:
 	dbw 22, DISABLE
 	dbw 25, SCREECH
 	dbw 29, ZEN_HEADBUTT
-	dbw 33, AQUA_JET
-	dbw 34, PSYCH_UP
-	dbw 39, AMNESIA
-	dbw 44, HYDRO_PUMP
+	dbw 34, AQUA_TAIL
+	dbw 39, PSYCH_UP
+	dbw 44, AMNESIA
+	dbw 49, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 MankeyEvosAttacks:
@@ -1113,6 +1120,7 @@ GrowlitheEvosAttacks:
 
 ArcanineEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, THUNDER_FANG
 	dbw 1, BITE
 	dbw 1, LEER
 	dbw 1, ROAR
@@ -1353,17 +1361,18 @@ GeodudeEvosAttacks:
 	dbbw EVOLVE_LEVEL, 25, GRAVELER
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 5, DEFENSE_CURL
-	dbw 9, BIDE
-	dbw 13, ROLLOUT
-	dbw 17, MAGNITUDE
-	dbw 21, ROCK_THROW
-	dbw 25, BULLDOZE
-	dbw 29, SELFDESTRUCT
-	dbw 33, ROCK_BLAST
-	dbw 37, EARTHQUAKE
-	dbw 41, EXPLOSION
-	dbw 45, DOUBLE_EDGE
+	dbw 4, DEFENSE_CURL
+	dbw 6, BIDE
+	dbw 10, ROLLOUT
+	dbw 12, MAGNITUDE
+	dbw 16, ROCK_THROW
+	dbw 20, BULLDOZE
+	dbw 24, SELFDESTRUCT
+	dbw 28, ROCK_BLAST
+	dbw 32, EARTHQUAKE
+	dbw 36, EXPLOSION
+	dbw 30, DOUBLE_EDGE
+	dbw 44, STONE_EDGE
 	db 0 ; no more level-up moves
 
 GravelerEvosAttacks:
@@ -1371,33 +1380,35 @@ GravelerEvosAttacks:
 	dbbw EVOLVE_LEVEL, 38, GOLEM
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 5, DEFENSE_CURL
-	dbw 9, BIDE
-	dbw 13, ROLLOUT
-	dbw 17, MAGNITUDE
-	dbw 21, ROCK_THROW
-	dbw 25, BULLDOZE
-	dbw 31, SELFDESTRUCT
-	dbw 36, ROCK_BLAST
-	dbw 42, EARTHQUAKE
-	dbw 47, EXPLOSION
-	dbw 53, DOUBLE_EDGE
+	dbw 4, DEFENSE_CURL
+	dbw 6, BIDE
+	dbw 10, ROLLOUT
+	dbw 12, MAGNITUDE
+	dbw 16, ROCK_THROW
+	dbw 20, BULLDOZE
+	dbw 24, SELFDESTRUCT
+	dbw 30, ROCK_BLAST
+	dbw 36, EARTHQUAKE
+	dbw 42, EXPLOSION
+	dbw 48, DOUBLE_EDGE
+	dbw 54, STONE_EDGE
 	db 0 ; no more level-up moves
 
 GolemEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 5, DEFENSE_CURL
-	dbw 9, BIDE
-	dbw 13, ROLLOUT
-	dbw 17, MAGNITUDE
-	dbw 21, ROCK_THROW
-	dbw 25, BULLDOZE
-	dbw 31, SELFDESTRUCT
-	dbw 36, ROCK_BLAST
-	dbw 42, EARTHQUAKE
-	dbw 47, EXPLOSION
-	dbw 53, DOUBLE_EDGE
+	dbw 4, DEFENSE_CURL
+	dbw 6, BIDE
+	dbw 10, ROLLOUT
+	dbw 12, MAGNITUDE
+	dbw 16, ROCK_THROW
+	dbw 20, BULLDOZE
+	dbw 24, SELFDESTRUCT
+	dbw 30, ROCK_BLAST
+	dbw 36, EARTHQUAKE
+	dbw 42, EXPLOSION
+	dbw 48, DOUBLE_EDGE
+	dbw 54, STONE_EDGE
 	db 0 ; no more level-up moves
 
 PonytaEvosAttacks:
@@ -1534,33 +1545,35 @@ DoduoEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, GROWL
-	dbw 7, QUICK_ATTACK
-	dbw 11, RAGE
+	dbw 6, QUICK_ATTACK
+	dbw 10, RAGE
 	dbw 15, FURY_ATTACK
-	dbw 21, PURSUIT
-	dbw 25, AGILITY
-	dbw 29, SWORDS_DANCE
-	dbw 35, JUMP_KICK
-	dbw 39, DRILL_PECK
-	dbw 43, ENDEAVOR
-	dbw 49, THRASH
+	dbw 19, PURSUIT
+	dbw 24, AERIAL_ACE
+	dbw 28, AGILITY
+	dbw 33, SWORDS_DANCE
+	dbw 37, JUMP_KICK
+	dbw 42, DRILL_PECK
+	dbw 46, ENDEAVOR
+	dbw 51, THRASH
 	db 0 ; no more level-up moves
 
 DodrioEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, GROWL
-	dbw 7, QUICK_ATTACK
-	dbw 11, RAGE
+	dbw 6, QUICK_ATTACK
+	dbw 10, RAGE
 	dbw 15, FURY_ATTACK
-	dbw 21, PURSUIT
-	dbw 25, AGILITY
-	dbw 29, SWORDS_DANCE
+	dbw 19, PURSUIT
+	dbw 24, AERIAL_ACE
+	dbw 28, AGILITY
 	dbw 31, TRI_ATTACK
-	dbw 35, JUMP_KICK
-	dbw 39, DRILL_PECK
-	dbw 43, ENDEAVOR
-	dbw 49, THRASH
+	dbw 34, SWORDS_DANCE
+	dbw 39, JUMP_KICK
+	dbw 45, DRILL_PECK
+	dbw 50, ENDEAVOR
+	dbw 56, THRASH
 	db 0 ; no more level-up moves
 
 SeelEvosAttacks:
@@ -1569,17 +1582,18 @@ SeelEvosAttacks:
 	dbw 1, HEADBUTT
 	dbw 4, GROWL
 	dbw 8, ICY_WIND
-	dbw 12, ENCORE
+	dbw 11, ENCORE
 	dbw 15, ICE_SHARD
-	dbw 19, REST
-	dbw 23, AQUA_RING
-	dbw 26, AURORA_BEAM
-	dbw 30, AQUA_JET
-	dbw 34, BRINE
-	dbw 37, TAKE_DOWN
-	dbw 41, DIVE
-	dbw 45, ICE_BEAM
-	dbw 48, SAFEGUARD
+	dbw 18, REST
+	dbw 22, AQUA_RING
+	dbw 25, AURORA_BEAM
+	dbw 29, AQUA_JET
+	dbw 32, BRINE
+	dbw 36, TAKE_DOWN
+	dbw 39, DIVE
+	dbw 43, AQUA_TAIL
+	dbw 47, ICE_BEAM
+	dbw 51, SAFEGUARD
 	db 0 ; no more level-up moves
 
 DewgongEvosAttacks:
@@ -1587,17 +1601,18 @@ DewgongEvosAttacks:
 	dbw 1, HEADBUTT
 	dbw 4, GROWL
 	dbw 8, ICY_WIND
-	dbw 12, ENCORE
+	dbw 11, ENCORE
 	dbw 15, ICE_SHARD
-	dbw 19, REST
-	dbw 23, AQUA_RING
-	dbw 26, AURORA_BEAM
-	dbw 30, AQUA_JET
-	dbw 36, BRINE
-	dbw 42, TAKE_DOWN
-	dbw 48, DIVE
-	dbw 54, ICE_BEAM
-	dbw 60, SAFEGUARD
+	dbw 18, REST
+	dbw 22, AQUA_RING
+	dbw 25, AURORA_BEAM
+	dbw 29, AQUA_JET
+	dbw 32, BRINE
+	dbw 38, TAKE_DOWN
+	dbw 44, DIVE
+	dbw 50, AQUA_TAIL
+	dbw 56, ICE_BEAM
+	dbw 62, SAFEGUARD
 	db 0 ; no more level-up moves
 
 GrimerEvosAttacks:
@@ -1738,11 +1753,12 @@ OnixEvosAttacks:
 	dbw 24, SLAM
 	dbw 28, DRAGONBREATH
 	dbw 31, SCREECH
-	dbw 35, SAND_TOMB
-	dbw 38, IRON_TAIL
-	dbw 42, DIG
-	dbw 45, DOUBLE_EDGE
-	dbw 49, ROCK_SLIDE
+	dbw 35, ROCK_SLIDE
+	dbw 38, SAND_TOMB
+	dbw 42, IRON_TAIL
+	dbw 45, DIG
+	dbw 49, DOUBLE_EDGE
+	dbw 52, STONE_EDGE
 	db 0 ; no more level-up moves
 
 DrowzeeEvosAttacks:
@@ -2031,7 +2047,7 @@ RhyhornEvosAttacks:
 	dbw 28, STOMP
 	dbw 34, ROCK_BLAST
 	dbw 37, TAKE_DOWN
-	dbw 43, ROCK_SLIDE
+	dbw 43, STONE_EDGE
 	dbw 46, EARTHQUAKE
 	dbw 52, MEGAHORN
 	dbw 55, HORN_DRILL
@@ -2049,7 +2065,7 @@ RhydonEvosAttacks:
 	dbw 28, STOMP
 	dbw 34, ROCK_BLAST
 	dbw 37, TAKE_DOWN
-	dbw 45, ROCK_SLIDE
+	dbw 45, STONE_EDGE
 	dbw 50, EARTHQUAKE
 	dbw 57, MEGAHORN
 	dbw 62, HORN_DRILL
@@ -2217,7 +2233,7 @@ MrMimeEvosAttacks:
 	dbw 9, MEDITATE
 	dbw 13, DOUBLESLAP
 	dbw 17, MIMIC
-	dbw 17, PSYWAVE
+    dbw 17, PSYWAVE
 	dbw 21, LIGHT_SCREEN
 	dbw 21, REFLECT
 	dbw 25, PSYBEAM
@@ -2355,7 +2371,7 @@ GyaradosEvosAttacks:
 	dbw 21, LEER
 	dbw 24, TWISTER
 	dbw 27, ICE_FANG
-	dbw 30, BRINE
+	dbw 30, AQUA_TAIL
 	dbw 33, SCARY_FACE
 	dbw 36, DRAGON_RAGE
 	dbw 39, CRUNCH
@@ -2655,7 +2671,7 @@ DratiniEvosAttacks:
 	dbw 15, DRAGON_RAGE
 	dbw 21, AGILITY
 	dbw 25, SLAM
-	;dbw 31, AQUA_TAIL
+	dbw 31, AQUA_TAIL
 	dbw 35, DRAGON_PULSE
 	dbw 41, SAFEGUARD
 	dbw 45, DRAGON_DANCE
@@ -2673,7 +2689,7 @@ DragonairEvosAttacks:
 	dbw 15, DRAGON_RAGE
 	dbw 21, AGILITY
 	dbw 25, SLAM
-	;dbw 33, AQUA_TAIL
+	dbw 33, AQUA_TAIL
 	dbw 39, DRAGON_PULSE
 	dbw 47, SAFEGUARD
 	dbw 53, DRAGON_DANCE
@@ -2695,7 +2711,7 @@ DragoniteEvosAttacks:
 	dbw 15, DRAGON_RAGE
 	dbw 21, AGILITY
 	dbw 25, SLAM
-	;dbw 33, AQUA_TAIL
+	dbw 33, AQUA_TAIL
 	dbw 39, DRAGON_PULSE
 	dbw 47, SAFEGUARD
 	dbw 53, DRAGON_DANCE

@@ -14,6 +14,7 @@ CriticalHitMoves:
 	dw NIGHT_SLASH
 	dw PSYCHO_CUT
 	dw SKY_ATTACK
+	dw STONE_EDGE
 	dw -1
 
 MetronomeExcepts:

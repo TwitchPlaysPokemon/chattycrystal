@@ -369,3 +369,5 @@ MoveNames::
 	db "THUNDER FANG@"
 	db "X-SCISSOR@"
 	db "HURRICANE@"
+	db "AQUA TAIL@"
+	db "STONE EDGE@"

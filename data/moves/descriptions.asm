@@ -375,6 +375,8 @@ MoveDescriptions1:
 	dw ThunderFangDescription
 	dw XScissorDescription
 	dw HurricaneDescription
+	dw AquaTailDescription
+	dw StoneEdgeDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -384,6 +386,7 @@ PoundDescription:
 	db   "Pounds with fore-"
 	next "legs or tail.@"
 
+StoneEdgeDescription:
 KarateChopDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
@@ -1672,3 +1675,7 @@ XScissorDescription:
 HurricaneDescription:
 	db   "A fierce wind that"
 	next "may confuse foes.@"
+
+AquaTailDescription:
+	db   "Swings with a tail"
+	next "like a big wave.@"

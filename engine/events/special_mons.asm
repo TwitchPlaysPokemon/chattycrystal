@@ -161,6 +161,8 @@ TryWithdrawSpecialMon::
 	ld e, l
 	pop hl
 	push de
+	xor a
+	ld [de], a
 	lb bc, BANK(wPartyMons), BOXMON_STRUCT_LENGTH
 	ld a, BANK(wSavedChatot)
 	call DoubleFarCopyWRAM

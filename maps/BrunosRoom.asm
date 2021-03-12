@@ -29,7 +29,7 @@ BrunosRoom_MapScripts:
 
 .BrunosDoorLocksBehindYou:
 	applymovement PLAYER, BrunosRoom_EnterMovement
-	refreshscreen $86
+	refreshscreen
 	playsound SFX_STRENGTH
 	earthquake 80
 	changeblock 4, 14, $2a ; wall

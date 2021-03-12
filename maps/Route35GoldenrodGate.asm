@@ -36,6 +36,7 @@ RandyScript:
 	waitsfx
 	givepoke CHATOT, 20, NO_ITEM, TRUE, GiftChatotName, GiftChatotOTName
 	givepokemail GiftChatotMail
+	replacemove AERIAL_ACE, CHATTER
 	setevent EVENT_GOT_KENYA
 	setscene SCENE_FINISHED
 .alreadyhavekenya

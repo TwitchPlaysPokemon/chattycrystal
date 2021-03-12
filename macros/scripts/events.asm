@@ -476,12 +476,10 @@ ENDM
 
 	enum refreshscreen_command ; $48
 refreshscreen: MACRO
-if _NARG == 0
-	refreshscreen 0
-else
+	if _NARG > 0
+		warn "refreshscreen doesn't need an argument!"
+	endc
 	db refreshscreen_command
-	db \1 ; dummy
-endc
 ENDM
 
 	enum closetext_command ; $49
@@ -1129,4 +1127,11 @@ ENDM
 checkspecialstorage: MACRO
 	db checkspecialstorage_command
 	db \1 ; slot
+ENDM
+
+	enum replacemove_command ; $ b5
+replacemove: MACRO
+	db replacemove_command
+	dw \1 ; original move
+	dw \2 ; new move
 ENDM

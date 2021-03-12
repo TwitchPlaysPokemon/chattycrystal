@@ -142,7 +142,7 @@ ScriptCommandTable:
 	dw Script_itemnotify                 ; 45
 	dw Script_pocketisfull               ; 46
 	dw OpenText                          ; 47 - opentext
-	dw Script_refreshscreen              ; 48
+	dw RefreshScreen                     ; 48 - refreshscreen
 	dw Script_closetext                  ; 49
 	dw Script_partyselect                ; 4a
 	dw Script_farwritetext               ; 4b
@@ -251,6 +251,7 @@ ScriptCommandTable:
 	dw Script_depositspecial             ; b2
 	dw Script_withdrawspecial            ; b3
 	dw Script_checkspecialstorage        ; b4
+	dw Script_replacemove                ; b5
 
 Script_callasm:
 ; script command 0xe
@@ -378,10 +379,10 @@ Script_repeattext:
 	ld l, a
 	call GetScriptByte
 	ld h, a
-	cp -1
+	inc a
 	ret nz
 	ld a, l
-	cp -1
+	inc a
 	ret nz
 	ld hl, wScriptTextBank
 	ld a, [hli]
@@ -396,7 +397,7 @@ Script_buttonsound:
 
 	ldh a, [hOAMUpdate]
 	push af
-	ld a, $1
+	ld a, 1
 	ldh [hOAMUpdate], a
 	call WaitBGMap
 	call ButtonSound
@@ -533,10 +534,8 @@ Script_verbosegiveitemvar:
 	ld [wItemQuantityChangeBuffer], a
 	ld hl, wNumItems
 	call ReceiveItem
-	ld a, TRUE
-	jr c, .ok2
-	xor a
-.ok2
+	sbc a
+	and TRUE
 	ld [wScriptVar], a
 	call CurItemName
 	ld de, wStringBuffer1
@@ -1348,18 +1347,14 @@ Script_scall:
 ; parameters: pointer
 
 	ld a, [wScriptBank]
-	ld b, a
-	call GetScriptByte
-	ld e, a
-	call GetScriptByte
-	ld d, a
-	jr ScriptCall
+	jr ScriptCallContinue
 
 Script_farscall:
 ; script command 0x1
 ; parameters: pointer
 
 	call GetScriptByte
+ScriptCallContinue:
 	ld b, a
 	call GetScriptByte
 	ld e, a
@@ -1549,8 +1544,17 @@ StdScript:
 	jp GetFarHalfword
 
 SkipTwoScriptBytes:
-	call GetScriptByte
-	jp GetScriptByte
+	ld a, 2
+SkipScriptBytes:
+	push hl
+	ld hl, wScriptPos
+	add a, [hl]
+	ld [hli], a
+	jr nc, .done
+	inc [hl]
+.done
+	pop hl
+	ret
 
 ScriptJump:
 	ld a, b
@@ -2230,10 +2234,8 @@ Script_givepoke:
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
-	call GetScriptByte
-	call GetScriptByte
-	call GetScriptByte
-	call GetScriptByte
+	ld a, 4
+	call SkipScriptBytes
 .ok
 	farcall GivePoke
 	ld a, b
@@ -2414,9 +2416,8 @@ Script_warp:
 	jp StopScript
 
 .not_ok
-	call GetScriptByte
-	call GetScriptByte
-	call GetScriptByte
+	ld a, 3
+	call SkipScriptBytes
 	ld a, SPAWN_N_A
 	ld [wDefaultSpawnpoint], a
 	ld a, MAPSETUP_BADWARP
@@ -2542,14 +2543,6 @@ Script_reloadandreturn:
 
 	call Script_newloadmap
 	jp Script_end
-
-
-Script_refreshscreen:
-; script command 0x48
-; parameters: dummy
-
-	call RefreshScreen
-	jp GetScriptByte
 
 Script_closetext:
 ; script command 0x49
@@ -3122,5 +3115,22 @@ Script_checkspecialstorage:
 	jr z, .done
 	ld a, 1
 .done
+	ld [wScriptVar], a
+	ret
+
+Script_replacemove:
+; script command 0xb5
+; parameters: old move, new move
+	call GetScriptByte
+	ld e, a
+	call GetScriptByte
+	ld d, a
+	call GetScriptByte
+	ld c, a
+	call GetScriptByte
+	ld b, a
+	farcall ReplaceMove
+	sbc a
+	inc a
 	ld [wScriptVar], a
 	ret

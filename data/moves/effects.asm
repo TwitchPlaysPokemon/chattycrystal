@@ -964,6 +964,7 @@ FireFang:
 	stab
 	damagevariation
 	checkhit
+	guranteedeffectchance ; Fails if sub is up.
 	moveanim
 	failuretext
 	applydamage
@@ -971,10 +972,12 @@ FireFang:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	effectchance
-	burntarget
-	effectchance ; independent chance
-	flinchtarget
+	ifsecondary
+		effectchance
+		burntarget
+		effectchance ; independent chance
+		flinchtarget
+	endif
 	endmove
 
 OHKOHit:
@@ -2463,10 +2466,13 @@ SelfSpeedDownHit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	ifhit
+		selfspeeddown
+		selfstatdownmessage
+		resetmiss
+	endif
 	checkfaint
 	buildopponentrage
-	selfspeeddown
-	selfstatdownmessage
 	endmove
 
 SelfSpecialAttackDown2Hit:
@@ -2484,10 +2490,13 @@ SelfSpecialAttackDown2Hit:
 	applydamage
 	criticaltext
 	supereffectivetext
+	ifhit
+		selfspecialattackdown2
+		selfstatdownmessage
+		resetmiss
+	endif
 	checkfaint
 	buildopponentrage
-	selfspecialattackdown2
-	selfstatdownmessage
 	endmove
 
 CloseCombat:
@@ -2505,13 +2514,16 @@ CloseCombat:
 	applydamage
 	criticaltext
 	supereffectivetext
+	ifhit
+		selfdefensedown
+		selfstatdownmessage
+		resetmiss
+		selfspecialdefensedown
+		selfstatdownmessage
+		resetmiss ; don't let buildopponentrage think we missed
+	endif
 	checkfaint
 	buildopponentrage
-	selfdefensedown
-	selfstatdownmessage
-	resetmiss
-	selfspecialdefensedown
-	selfstatdownmessage
 	endmove
 
 Superpower:
@@ -2529,13 +2541,16 @@ Superpower:
 	applydamage
 	criticaltext
 	supereffectivetext
+	ifhit
+		selfattackdown
+		selfstatdownmessage
+		resetmiss
+		selfdefensedown
+		selfstatdownmessage
+		resetmiss ; don't let buildopponentrage think we missed
+	endif
 	checkfaint
 	buildopponentrage
-	selfattackdown
-	selfstatdownmessage
-	resetmiss
-	selfdefensedown
-	selfstatdownmessage
 	endmove
 
 AquaRing:
@@ -2872,6 +2887,7 @@ ThunderFang:
 	stab
 	damagevariation
 	checkhit
+	guranteedeffectchance ; Fails if sub is up.
 	moveanim
 	failuretext
 	applydamage
@@ -2879,8 +2895,10 @@ ThunderFang:
 	supereffectivetext
 	checkfaint
 	buildopponentrage
-	effectchance
-	paralyzetarget
-	effectchance ; independent chance
-	flinchtarget
+	ifsecondary
+		effectchance
+		paralyzetarget
+		effectchance ; independent chance
+		flinchtarget
+	endif
 	endmove

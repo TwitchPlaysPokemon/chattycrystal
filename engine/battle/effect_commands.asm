@@ -1776,12 +1776,6 @@ BattleCommand_CheckHit:
 
 BattleCommand_EffectChance:
 ; effectchance
-
-	xor a
-	ld [wEffectFailed], a
-	call CheckSubstituteOpp
-	jr nz, .failed
-
 	push hl
 	ld hl, wPlayerMoveStruct + MOVE_CHANCE
 	ldh a, [hBattleTurn]
@@ -1795,9 +1789,15 @@ BattleCommand_EffectChance:
 	jr c, .got_move_chance
 	cp [hl]
 	pop hl
-	ret c
-
-.failed
+	jr nc, _EffectChanceFailed
+	; fallthrough
+BattleCommand_GuranteedEffectChance:
+	xor a
+	ld [wEffectFailed], a
+	call CheckSubstituteOpp
+	ret z
+	; fallthrough
+_EffectChanceFailed:
 	ld a, 1
 	ld [wEffectFailed], a
 	and a
@@ -6697,6 +6697,23 @@ BattleCommand_Splash:
 	call AnimateCurrentMove
 	jp PrintNothingHappened
 
+BattleCommand_IfHit:
+; Runs if block if attack hit.
+	ld a, [wAttackMissed]
+	and a
+	ret z
+	jr IfConditionFailed
+
+BattleCommand_IfSecondary:
+; Runs if block if secondary was successful.
+	ld a, [wEffectFailed]
+	and a
+	ret z
+	; fallthrough
+IfConditionFailed:
+; Note that if conditions can't be nested.
+	ld b, endif_command
+	; fallthrough
 SkipToBattleCommand:
 ; Skip over commands until reaching command b.
 	ld a, [wBattleScriptBufferAddress + 1]

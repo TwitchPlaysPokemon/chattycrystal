@@ -305,7 +305,7 @@ MoveAnimations1:
 	dw BattleAnim_Roar         ; PLACEHOLDER
 	dw BattleAnim_DragonPulse  ; 130
 	dw BattleAnim_PowerGem
-	dw BattleAnim_Dynamicpunch ; PLACEHOLDER
+	dw BattleAnim_DrainPunch
 	dw BattleAnim_FocusBlast
 	dw BattleAnim_BraveBird
 	dw BattleAnim_EarthPower
@@ -3349,6 +3349,19 @@ BattleAnim_Extrasensory:
 	anim_call BattleAnim_ShowMon_1
 	anim_ret
 
+BattleAnim_MuddyWater:
+	anim_1gfx ANIM_GFX_BUBBLE
+	anim_bgp $f8
+	anim_bgeffect ANIM_BG_SURF, $0, $0, $0
+	anim_obj ANIM_OBJ_MUDDY_WATER, 88, 104, $8
+.loop
+	anim_sound 0, 1, SFX_SURF
+	anim_wait 32
+	anim_loop 4, .loop
+	anim_incobj 1
+	anim_wait 56
+	anim_ret
+
 BattleAnim_WaterPulse:
 	anim_2gfx ANIM_GFX_BUBBLE, ANIM_GFX_PSYCHIC
 	anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
@@ -3502,17 +3515,24 @@ BattleAnim_PowerGem:
 	anim_wait 32
 	anim_ret
 
-BattleAnim_MuddyWater:
-	anim_1gfx ANIM_GFX_BUBBLE
-	anim_bgp $f8
-	anim_bgeffect ANIM_BG_SURF, $0, $0, $0
-	anim_obj ANIM_OBJ_MUDDY_WATER, 88, 104, $8
+BattleAnim_DrainPunch:
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_CHARGE
+	anim_bgeffect ANIM_BG_1F, $8, $2, $0
+	anim_sound 0, 1, SFX_MEGA_PUNCH
+	anim_obj ANIM_OBJ_LONG_PUNCH, 136, 52, $0
+	anim_wait 16
 .loop
-	anim_sound 0, 1, SFX_SURF
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_DREAM_EATER, 128, 48, $2
+	anim_wait 3
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_DREAM_EATER, 136, 64, $3
+	anim_wait 4
+	anim_sound 6, 3, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_DREAM_EATER, 136, 32, $4
+	anim_wait 3
+	anim_loop 6, .loop
 	anim_wait 32
-	anim_loop 4, .loop
-	anim_incobj 1
-	anim_wait 56
 	anim_ret
 
 BattleAnim_FocusBlast:

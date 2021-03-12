@@ -137,7 +137,18 @@ TryDepositSpecialMon::
 
 TryWithdrawSpecialMon::
 	; in: de: mon data, bc: OT name, [wCurPartySpecies]: intended species
-	; out: carry if party full; otherwise, this always succeeds
+	; out: carry if party full or if no mon is deposited
+	ldh a, [rSVBK]
+	ld h, a
+	ld a, BANK(wSavedChatot)
+	ldh [rSVBK], a
+	ld a, [de]
+	ld l, a
+	ld a, h
+	ldh [rSVBK], a
+	ld a, l
+	sub 1
+	ret c
 	ld a, [wPartyCount]
 	cp PARTY_LENGTH
 	ccf

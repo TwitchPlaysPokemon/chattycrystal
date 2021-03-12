@@ -489,7 +489,10 @@ closetext: MACRO
 	db closetext_command
 ENDM
 
-	enum skip ; $4a
+	enum partyselect_command ; $4a
+partyselect: MACRO
+	db partyselect_command
+ENDM
 
 	enum farwritetext_command ; $4b
 farwritetext: MACRO

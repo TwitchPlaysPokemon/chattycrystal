@@ -131,7 +131,7 @@ ScriptCommandTable:
 	dw OpenText                          ; 47 - opentext
 	dw Script_refreshscreen              ; 48
 	dw Script_closetext                  ; 49
-	dw GenericDummyFunction              ; 4a - unused
+	dw Script_partyselect                ; 4a
 	dw Script_farwritetext               ; 4b
 	dw Script_writetext                  ; 4c
 	dw Script_repeattext                 ; 4d
@@ -3016,3 +3016,13 @@ Script_givedecoration:
 	para "<PLAYER> sent the"
 	line "decoration home."
 	done
+
+Script_partyselect:
+; script command 0x4a
+	farcall SelectMonFromParty
+	ld hl, wMenuCursorY
+	ccf
+	sbc a
+	and [hl]
+	ld [wScriptVar], a
+	ret

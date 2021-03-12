@@ -6693,6 +6693,10 @@ BattleCommand_ClearText:
 .text:
 	text_end
 
+BattleCommand_Splash:
+	call AnimateCurrentMove
+	jp PrintNothingHappened
+
 SkipToBattleCommand:
 ; Skip over commands until reaching command b.
 	ld a, [wBattleScriptBufferAddress + 1]

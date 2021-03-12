@@ -3019,6 +3019,8 @@ Script_givedecoration:
 
 Script_partyselect:
 ; script command 0x4a
+; returns 0 if cancelled or 1-6 for the selected mon
+; exits after opentext!
 	farcall SelectMonFromParty
 	ld hl, wMenuCursorY
 	ccf

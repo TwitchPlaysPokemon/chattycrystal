@@ -224,7 +224,7 @@ ENDM
 	command grassknot               ; d9
 	command memento                 ; da
 	command brickbreak              ; db
-	command guranteedeffectchance   ; dc
+	command guaranteedeffectchance  ; dc
 	command ifhit                   ; dd
 	command ifsecondary             ; de
 	command endif                   ; df

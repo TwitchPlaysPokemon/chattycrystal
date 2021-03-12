@@ -224,7 +224,7 @@ BattleCommandPointers:
 	effectfn BattleCommand_GrassKnot
 	effectfn BattleCommand_Memento
 	effectfn BattleCommand_BrickBreak
-	effectfn BattleCommand_GuranteedEffectChance
+	effectfn BattleCommand_GuaranteedEffectChance
 	effectfn BattleCommand_IfHit
 	effectfn BattleCommand_IfSecondary
 	effectfn GenericDummyFunction ; endif isn't a real battle command.

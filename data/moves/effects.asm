@@ -964,7 +964,7 @@ FireFang:
 	stab
 	damagevariation
 	checkhit
-	guranteedeffectchance ; Fails if sub is up.
+	guaranteedeffectchance ; Fails if sub is up.
 	moveanim
 	failuretext
 	applydamage
@@ -2887,7 +2887,7 @@ ThunderFang:
 	stab
 	damagevariation
 	checkhit
-	guranteedeffectchance ; Fails if sub is up.
+	guaranteedeffectchance ; Fails if sub is up.
 	moveanim
 	failuretext
 	applydamage

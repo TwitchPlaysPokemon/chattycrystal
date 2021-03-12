@@ -1791,7 +1791,7 @@ BattleCommand_EffectChance:
 	pop hl
 	jr nc, _EffectChanceFailed
 	; fallthrough
-BattleCommand_GuranteedEffectChance:
+BattleCommand_GuaranteedEffectChance:
 	xor a
 	ld [wEffectFailed], a
 	call CheckSubstituteOpp

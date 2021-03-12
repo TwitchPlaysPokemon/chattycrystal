@@ -13,6 +13,6 @@ BattleCommand_ThunderAccuracy:
 	ret
 
 .rain
-	; Redundant with CheckHit guranteeing hit
+	; Redundant with CheckHit guaranteeing hit.
 	ld [hl], 100 percent
 	ret

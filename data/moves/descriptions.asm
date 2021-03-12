@@ -1668,3 +1668,6 @@ XScissorDescription:
 	db   "Slashes the foe in"
 	next "a cross pattern.@"
 
+HurricaneDescription:
+	db   "A fierce wind that"
+	next "may confuse foes.@"

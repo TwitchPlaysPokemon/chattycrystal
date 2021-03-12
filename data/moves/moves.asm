@@ -386,3 +386,4 @@ Moves1:
 	move EFFECT_ICE_FANG,             65, ICE,       95, 15,  10 ;ICE_FANG
 	move EFFECT_THUNDER_FANG,         65, ELECTRIC,  95, 15,  10 ;THUNDER_FANG
 	move EFFECT_NORMAL_HIT,           80, BUG,      100, 15,   0 ;X_SCISSOR
+	move EFFECT_CONFUSE_HIT,         120, FLYING,    70, 10,  30 ;HURRICANE

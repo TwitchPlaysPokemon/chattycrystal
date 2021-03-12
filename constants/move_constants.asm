@@ -375,6 +375,7 @@
 	const ICE_FANG     ; 16f
 	const THUNDER_FANG ; 170
 	const X_SCISSOR    ; 171
+	const HURRICANE    ; 172
 
 NUM_ATTACKS EQU const_value + -1
 

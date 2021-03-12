@@ -400,7 +400,7 @@ PidgeyEvosAttacks:
 	dbw 37, MIRROR_MOVE
 	dbw 41, AIR_SLASH
 	dbw 45, RAZOR_WIND
-	dbw 49, BRAVE_BIRD
+	dbw 49, HURRICANE
 	db 0 ; no more level-up moves
 
 PidgeottoEvosAttacks:
@@ -419,7 +419,7 @@ PidgeottoEvosAttacks:
 	dbw 42, MIRROR_MOVE
 	dbw 47, AIR_SLASH
 	dbw 52, RAZOR_WIND
-	dbw 57, BRAVE_BIRD
+	dbw 57, HURRICANE
 	db 0 ; no more level-up moves
 
 PidgeotEvosAttacks:
@@ -438,7 +438,7 @@ PidgeotEvosAttacks:
 	dbw 44, MIRROR_MOVE
 	dbw 50, AIR_SLASH
 	dbw 56, RAZOR_WIND
-	dbw 62, BRAVE_BIRD
+	dbw 62, HURRICANE
 	db 0 ; no more level-up moves
 
 RattataEvosAttacks:
@@ -2361,24 +2361,27 @@ GyaradosEvosAttacks:
 	dbw 39, CRUNCH
 	dbw 42, HYDRO_PUMP
 	dbw 45, DRAGON_DANCE
-	;dbw 48, HURRICANE
+	dbw 48, HURRICANE
 	dbw 51, RAIN_DANCE
 	dbw 54, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 LaprasEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, WATER_GUN
-	dbw 1, GROWL
 	dbw 1, SING
-	dbw 8, MIST
-	dbw 15, BODY_SLAM
-	dbw 22, CONFUSE_RAY
-	dbw 29, PERISH_SONG
-	dbw 36, ICE_BEAM
-	dbw 43, RAIN_DANCE
-	dbw 50, SAFEGUARD
-	dbw 57, HYDRO_PUMP
+	dbw 1, GROWL
+	dbw 1, WATER_GUN
+	dbw 4, MIST
+	dbw 7, CONFUSE_RAY
+	dbw 10, ICE_SHARD
+	dbw 14, WATER_PULSE
+	dbw 18, BODY_SLAM
+	dbw 22, RAIN_DANCE
+	dbw 27, PERISH_SONG
+	dbw 32, ICE_BEAM
+	dbw 37, BRINE
+	dbw 43, SAFEGUARD
+	dbw 49, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 DittoEvosAttacks:

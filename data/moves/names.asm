@@ -368,3 +368,4 @@ MoveNames::
 	db "ICE FANG@"
 	db "THUNDER FANG@"
 	db "X-SCISSOR@"
+	db "HURRICANE@"

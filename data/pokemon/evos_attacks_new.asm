@@ -1678,7 +1678,7 @@ ChatotEvosAttacks:
 	dbw 9, MIRROR_MOVE
 	dbw 13, SING
 	dbw 17, FURY_ATTACK
-	dbw 20, SUPERSONIC
+	dbw 20, AERIAL_ACE
 	dbw 25, TAUNT
 	dbw 29, MIMIC
 	dbw 33, ROOST

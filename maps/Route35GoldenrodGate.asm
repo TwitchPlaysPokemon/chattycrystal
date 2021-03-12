@@ -17,7 +17,7 @@ RandyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_HP_UP_FROM_RANDY
-	iftrue .gothpup
+	iftrue .tryhold
 	checkevent EVENT_GAVE_KENYA
 	iftrue .questcomplete
 	checkevent EVENT_GOT_KENYA
@@ -69,6 +69,177 @@ RandyScript:
 .bagfull
 	closetext
 	end
+
+.tryhold
+	readmem wTPPFeatureLock
+	ifequal TPP_FEATURE_LOCK_VALUE, .gothpup
+	; fallthrough
+
+RandyHoldKenya:
+	checkspecialstorage SPECIALSTORAGE_CHATOT
+	iftrue .withdraw
+	writetext .request_hold_text
+	yesorno
+	iffalse .refused_deposit
+	partyselect
+	iffalse .refused_deposit
+	depositspecial SPECIALSTORAGE_CHATOT, CHATOT, CHATTER
+	ifequal SPECIALDEPOSIT_HOLDING_MAIL, .mail
+	ifequal SPECIALDEPOSIT_LAST_MON, .last_mon
+	ifequal SPECIALDEPOSIT_WRONG_SPECIES, .wrong_mon
+	ifequal SPECIALDEPOSIT_WRONG_MOVES, .wrong_move
+	ifequal SPECIALDEPOSIT_EGG, .egg
+	writetext .deposited_text
+	waitbutton
+	closetext
+	end
+
+.request_hold_text
+	text "Oh, it's you again!"
+	line "Can I have my"
+	cont "#MON back?"
+	done
+
+.deposited_text
+	text "Thank you! Come"
+	line "and visit whenever"
+	cont "you're around."
+
+	para "You can borrow"
+	line "KENYA any time you"
+	cont "want to!"
+	done
+
+.refused_deposit
+	writetext .refused_hold_text
+	waitbutton
+	closetext
+	end
+
+.refused_hold_text
+	text "OK, you can keep"
+	line "KENYA around for a"
+	para "while. The bird"
+	line "seems to love you!"
+	done
+
+.mail
+	writetext .mail_text
+	waitbutton
+	closetext
+	end
+
+.mail_text
+	text "KENYA is still"
+	line "holding some MAIL<...>"
+
+	para "I can't stop the"
+	line "bird from doing"
+	para "its deliveries,"
+	line "you know!"
+	done
+
+.last_mon
+	writetext .last_mon_text
+	waitbutton
+	closetext
+	end
+
+.last_mon_text
+	text "If I take KENYA"
+	line "away from you,"
+	para "what will you"
+	line "battle with?"
+	done
+
+.wrong_mon
+	writetext .wrong_mon_text
+	waitbutton
+	closetext
+	end
+
+.wrong_mon_text
+	text "Oh, I cannot just"
+	line "raise one of your"
+	cont "#MON like that<...>"
+
+	para "Have you tried the"
+	line "DAY-CARE to the"
+	cont "south of here?"
+	done
+
+.wrong_move
+	writetext .wrong_move_text
+	waitbutton
+	closetext
+	end
+
+.wrong_move_text
+	text "That seems like an"
+	line "ordinary CHATOT to"
+	cont "me<...>"
+
+	para "Are you sure that's"
+	line "my KENYA?"
+	done
+
+.egg
+	writetext .egg_text
+	waitbutton
+	closetext
+	end
+
+.egg_text
+	text "That's just an EGG,"
+	line "though!"
+	done
+
+.withdraw
+	writetext .request_withdraw_text
+	yesorno
+	iffalse .refused_withdraw
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .party_full
+	withdrawspecial SPECIALSTORAGE_CHATOT, CHATOT, GiftChatotOTName
+	iffalse .party_full
+	waitbutton
+	closetext
+	end
+
+.request_withdraw_text
+	text "Oh, it's you again!"
+	line "Do you want to"
+	para "borrow KENYA for a"
+	line "while?"
+	done
+
+.refused_withdraw
+	writetext .refused_withdraw_text
+	waitbutton
+	closetext
+	end
+
+.refused_withdraw_text
+	text "Oh, that's fine."
+	line "Come back whenever"
+	cont "you want!"
+	done
+
+.party_full
+	writetext .party_full_text
+	waitbutton
+	closetext
+	end
+
+.party_full_text
+	text "Oh, but you can't"
+	line "carry any more"
+	cont "#MON, can you?"
+
+	para "KENYA is terrified"
+	line "of the PC for some"
+	cont "reason<...>"
+	done
 
 GiftChatotMail:
 	db FLOWER_MAIL

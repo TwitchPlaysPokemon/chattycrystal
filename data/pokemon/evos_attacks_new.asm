@@ -1754,16 +1754,20 @@ GlaceonEvosAttacks:
 
 PorygonZEvosAttacks:
 	db 0
-	dbw 1, CONVERSION2
 	dbw 1, TACKLE
+	dbw 1, NASTY_PLOT
 	dbw 1, CONVERSION
-	dbw 9, AGILITY
+	dbw 7, THUNDERSHOCK
 	dbw 12, PSYBEAM
-	dbw 20, RECOVER
-	dbw 24, NASTY_PLOT
-	dbw 32, LOCK_ON
-	dbw 36, TRI_ATTACK
-	dbw 44, ZAP_CANNON
+	dbw 18, CONVERSION2
+	dbw 23, AGILITY
+	dbw 29, SIGNAL_BEAM
+	dbw 34, RECOVER
+	dbw 40, DISCHARGE
+	dbw 45, TRI_ATTACK
+	dbw 51, LOCK_ON
+	dbw 56, ZAP_CANNON
+	dbw 62, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 DusknoirEvosAttacks:

@@ -697,28 +697,32 @@ EspeonEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
-	dbw 8, SAND_ATTACK
-	dbw 16, CONFUSION
-	dbw 23, QUICK_ATTACK
-	dbw 30, SWIFT
-	dbw 36, PSYBEAM
-	dbw 42, PSYCH_UP
-	dbw 47, PSYCHIC_M
-	dbw 52, MORNING_SUN
+	dbw 6, SAND_ATTACK
+	dbw 10, CONFUSION
+	dbw 14, QUICK_ATTACK
+	dbw 18, PSYBEAM
+	dbw 23, SWIFT
+	dbw 27, PSYCH_UP
+	dbw 33, MORNING_SUN
+	dbw 38, PSYCHIC
+	dbw 45, REFLECT
+	dbw 50, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 UmbreonEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
-	dbw 8, SAND_ATTACK
-	dbw 16, PURSUIT
-	dbw 23, QUICK_ATTACK
-	dbw 30, CONFUSE_RAY
-	dbw 36, FEINT_ATTACK
-	dbw 42, MEAN_LOOK
-	dbw 47, SCREECH
-	dbw 52, MOONLIGHT
+	dbw 6, SAND_ATTACK
+	dbw 10, PURSUIT
+	dbw 14, QUICK_ATTACK
+	dbw 18, CONFUSE_RAY
+	dbw 23, FEINT_ATTACK
+	dbw 27, MEAN_LOOK
+	dbw 33, MOONLIGHT
+	dbw 38, ASSURANCE
+	dbw 45, SCREECH
+	dbw 50, DARK_PULSE
 	db 0 ; no more level-up moves
 
 MurkrowEvosAttacks:
@@ -1171,16 +1175,19 @@ Porygon2EvosAttacks:
 	dbbw EVOLVE_TRADE, UP_GRADE, PORYGON_Z
 	dbbw EVOLVE_ITEM, UP_GRADE, PORYGON_Z
 	db 0 ; no more evolutions
-	dbw 1, CONVERSION2
 	dbw 1, TACKLE
+	dbw 1, DEFENSE_CURL
 	dbw 1, CONVERSION
-	dbw 9, AGILITY
+	dbw 7, THUNDERSHOCK
 	dbw 12, PSYBEAM
-	dbw 20, RECOVER
-	dbw 24, DEFENSE_CURL
-	dbw 32, LOCK_ON
-	dbw 36, TRI_ATTACK
-	dbw 44, ZAP_CANNON
+	dbw 18, CONVERSION2
+	dbw 23, AGILITY
+	dbw 29, SIGNAL_BEAM
+	dbw 34, RECOVER
+	dbw 40, DISCHARGE
+	dbw 45, TRI_ATTACK
+	dbw 51, LOCK_ON
+	dbw 56, ZAP_CANNON
 	db 0 ; no more level-up moves
 
 StantlerEvosAttacks:

@@ -3070,7 +3070,7 @@ Script_withdrawspecial:
 	push bc
 	ld hl, wStringBuffer2
 	ld a, "@"
-	ld bc, MON_NAME_LENGTH
+	ld bc, NAME_LENGTH
 	call ByteFill
 	pop de
 	ld hl, wStringBuffer2
@@ -3092,7 +3092,8 @@ Script_withdrawspecial:
 	rst CopyBytes
 	ld hl, .text
 	ld b, BANK(@)
-	jp MapTextbox
+	call MapTextbox
+	jp WaitButton
 
 .text
 	text "<PLAYER> got back"
@@ -3100,7 +3101,7 @@ Script_withdrawspecial:
 	text_ram wStringBuffer2
 	text "!@"
 	sound_item
-	prompt
+	done
 
 Script_checkspecialstorage:
 ; script command 0xb4

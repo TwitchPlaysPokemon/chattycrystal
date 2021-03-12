@@ -1,7 +1,6 @@
 CopyName1::
 ; Copies the name from de to wStringBuffer2
 	ld hl, wStringBuffer2
-
 CopyName2::
 ; Copies the name from de to hl
 .loop
@@ -10,6 +9,18 @@ CopyName2::
 	ld [hli], a
 	cp "@"
 	jr nz, .loop
+	ret
+
+FarCopyName::
+; Copies the name from a:de to hl
+	push af
+	ldh a, [hROMBank]
+	ldh [hBuffer], a
+	pop af
+	rst Bankswitch
+	call CopyName2
+	ldh a, [hBuffer]
+	rst Bankswitch
 	ret
 
 CopyStringWithTerminator::

@@ -34,7 +34,20 @@ WaitScript:
 
 	ld a, SCRIPT_READ
 	ld [wScriptMode], a
-	jp StartScript
+StartScript:
+	ld hl, wScriptFlags
+	set SCRIPT_RUNNING, [hl]
+	ret
+
+CheckScript:
+	ld hl, wScriptFlags
+	bit SCRIPT_RUNNING, [hl]
+	ret
+
+StopScript:
+	ld hl, wScriptFlags
+	res SCRIPT_RUNNING, [hl]
+	ret
 
 WaitScriptMovement:
 	call StopScript
@@ -47,7 +60,7 @@ WaitScriptMovement:
 
 	ld a, SCRIPT_READ
 	ld [wScriptMode], a
-	jp StartScript
+	jr StartScript
 
 RunScriptCommand:
 	call GetScriptByte
@@ -230,29 +243,14 @@ ScriptCommandTable:
 	dw Script_loadmonindex               ; aa
 	dw Script_checkmaplockedmons         ; ab
 	dw Script_givechattymon              ; ac
-	dw Script_chattyoff                  ; ad
-	dw Script_chattyon                   ; ae
+	dw ChattyOff                         ; ad - chattyoff
+	dw ChattyOn                          ; ae - chattyon
 	dw Script_clearifuncaught            ; af
 	dw Script_checkcaught                ; b0
 	dw Script_givedecoration             ; b1
 	dw Script_depositspecial             ; b2
 	dw Script_withdrawspecial            ; b3
 	dw Script_checkspecialstorage        ; b4
-
-StartScript:
-	ld hl, wScriptFlags
-	set SCRIPT_RUNNING, [hl]
-	ret
-
-CheckScript:
-	ld hl, wScriptFlags
-	bit SCRIPT_RUNNING, [hl]
-	ret
-
-StopScript:
-	ld hl, wScriptFlags
-	res SCRIPT_RUNNING, [hl]
-	ret
 
 Script_callasm:
 ; script command 0xe
@@ -410,10 +408,8 @@ Script_yesorno:
 ; script command 0x4e
 
 	call YesNoBox
-	ld a, FALSE
-	jr c, .no
-	ld a, TRUE
-.no
+	sbc a
+	inc a
 	ld [wScriptVar], a
 	ret
 
@@ -637,8 +633,6 @@ Script_elevator:
 ; script command 0x95
 ; parameters: floor_list_pointer
 
-	xor a
-	ld [wScriptVar], a
 	call GetScriptByte
 	ld e, a
 	call GetScriptByte
@@ -646,8 +640,8 @@ Script_elevator:
 	ld a, [wScriptBank]
 	ld b, a
 	farcall Elevator
-	ret c
-	ld a, TRUE
+	sbc a
+	inc a
 	ld [wScriptVar], a
 	ret
 
@@ -799,14 +793,6 @@ Script_winlosstext:
 	ld [hli], a
 	ret
 
-Script_endifjustbattled:
-; script command 0x66
-
-	ld a, [wRunningTrainerBattleScript]
-	and a
-	ret z
-	jp Script_end
-
 Script_checkjustbattled:
 ; script command 0x67
 
@@ -902,7 +888,6 @@ Script_applymovement:
 	call GetScriptByte
 	call GetScriptObject
 	ld c, a
-
 ApplyMovement:
 	push bc
 	ld a, c
@@ -937,7 +922,7 @@ Script_applymovementlasttalked:
 
 	ldh a, [hLastTalked]
 	ld c, a
-	jp ApplyMovement
+	jr ApplyMovement
 
 Script_faceplayer:
 ; script command 0x6b
@@ -1051,7 +1036,7 @@ Script_variablesprite:
 
 	call GetScriptByte
 	ld e, a
-	ld d, $0
+	ld d, 0
 	ld hl, wVariableSprites
 	add hl, de
 	call GetScriptByte
@@ -1434,6 +1419,13 @@ CallCallback::
 	ld [wScriptBank], a
 	jp ScriptCall
 
+Script_iffalse:
+; script command 0x8
+; parameters: pointer
+
+	ld a, [wScriptVar]
+	and a
+	jp nz, SkipTwoScriptBytes
 Script_sjump:
 ; script command 0x3
 ; parameters: pointer
@@ -1473,22 +1465,13 @@ Script_memjump:
 	ld l, a
 	jp ScriptJump
 
-Script_iffalse:
-; script command 0x8
-; parameters: pointer
-
-	ld a, [wScriptVar]
-	and a
-	jp nz, SkipTwoScriptBytes
-	jp Script_sjump
-
 Script_iftrue:
 ; script command 0x9
 ; parameters: pointer
 
 	ld a, [wScriptVar]
 	and a
-	jp nz, Script_sjump
+	jr nz, Script_sjump
 	jp SkipTwoScriptBytes
 
 Script_ifequal:
@@ -1648,10 +1631,9 @@ DoScene:
 	call GetMapSceneID
 	ld a, d
 	or e
-	jr z, .no_scene
+	ret z
 	call GetScriptByte
 	ld [de], a
-.no_scene
 	ret
 
 Script_readmem:
@@ -1799,12 +1781,9 @@ GetVarAction:
 Script_checkver:
 ; script command 0x18
 
-	ld a, [.gs_version]
+	ld a, GS_VERSION
 	ld [wScriptVar], a
 	ret
-
-.gs_version:
-	db GS_VERSION
 
 Script_getmonname:
 ; script command 0x40
@@ -2627,6 +2606,12 @@ Script_stopandsjump:
 	call StopScript
 	jp Script_sjump
 
+Script_endifjustbattled:
+; script command 0x66
+
+	ld a, [wRunningTrainerBattleScript]
+	and a
+	ret z
 Script_end:
 ; script command 0x91
 
@@ -2816,16 +2801,6 @@ Script_givechattymon:
 	sbc a
 	and 2
 	ld [wScriptVar], a
-	ret
-
-Script_chattyoff:
-; script command 0xad
-	rst ChattyOff
-	ret
-
-Script_chattyon:
-; script command 0xae
-	rst ChattyOn
 	ret
 
 Script_checkcaught:
@@ -3097,11 +3072,10 @@ Script_withdrawspecial:
 	ld a, "@"
 	ld bc, MON_NAME_LENGTH
 	call ByteFill
-	pop hl
-	ld de, wStringBuffer2
-	ld bc, MON_NAME_LENGTH
+	pop de
+	ld hl, wStringBuffer2
 	ld a, [wScriptBank]
-	call FarCopyBytes
+	call FarCopyName
 	pop de
 	ld bc, wStringBuffer2
 .not_ROMX
@@ -3109,7 +3083,24 @@ Script_withdrawspecial:
 	sbc a
 	inc a
 	ld [wScriptVar], a
-	ret
+	ret z
+	ld a, [wPartyCount]
+	ld bc, MON_NAME_LENGTH
+	ld hl, wPartyMonNicknames - MON_NAME_LENGTH
+	call AddNTimes
+	ld de, wStringBuffer2
+	rst CopyBytes
+	ld hl, .text
+	ld b, BANK(@)
+	jp MapTextbox
+
+.text
+	text "<PLAYER> got back"
+	line "@"
+	text_ram wStringBuffer2
+	text "!@"
+	sound_item
+	prompt
 
 Script_checkspecialstorage:
 ; script command 0xb4

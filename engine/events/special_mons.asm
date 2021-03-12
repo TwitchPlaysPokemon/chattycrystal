@@ -119,7 +119,7 @@ TryDepositSpecialMon::
 	ld bc, MON_NAME_LENGTH
 	call AddNTimes
 	ld a, BANK(wPartyMonNicknames)
-	lb bc, BANK(wSavedChatot), MON_NAME_LENGTH
+	ld b, BANK(wSavedChatot)
 	call DoubleFarCopyWRAM
 	pop bc
 	ldh a, [rSVBK]
@@ -189,7 +189,7 @@ TryWithdrawSpecialMon::
 	ld d, h
 	ld e, l
 	pop hl
-	lb bc, BANK(wPartyMonNicknames), MON_NAME_LENGTH
+	ld b, BANK(wPartyMonNicknames)
 	ld a, BANK(wSavedChatot)
 	call DoubleFarCopyWRAM
 	ld hl, wPartyCount

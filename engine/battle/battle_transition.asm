@@ -68,7 +68,7 @@ DoBattleTransition:
 	call LoadTrainerBattlePokeballTiles
 	hlbgcoord 0, 0
 	call ConvertTrainerBattlePokeballTilesTo2bpp
-	call BattleStart_CopyTilemapAtOnce
+	call CGBOnly_CopyTilemapAtOnce
 	ld a, SCREEN_HEIGHT_PX
 	ldh [hWY], a
 	call DelayFrame
@@ -655,7 +655,7 @@ StartTrainerBattle_LoadPokeBallGraphics:
 	ld a, $1
 	ldh [hCGBPalUpdate], a
 	call DelayFrame
-	call BattleStart_CopyTilemapAtOnce
+	call CGBOnly_CopyTilemapAtOnce
 .nextscene
 	jp StartTrainerBattle_NextScene
 

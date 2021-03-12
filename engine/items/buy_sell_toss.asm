@@ -43,6 +43,11 @@ Toss_Sell_Loop:
 	and a
 	ret
 
+Kurt_SelectQuantity_InterpretJoypad:
+	call BuySellToss_InterpretJoypad
+	ld b, a
+	ret
+
 BuySellToss_InterpretJoypad:
 	call JoyTextDelay_ForcehJoyDown ; get joypad
 	bit B_BUTTON_F, c

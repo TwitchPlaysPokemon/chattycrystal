@@ -175,8 +175,7 @@ Kurt1:
 	pause 15
 	special FadeInQuickly
 	opentext
-	jump .GotLureBall
-	end
+	sjump .GotLureBall
 
 .Cancel:
 	writetext KurtsHouseKurtThatsALetdownText
@@ -280,7 +279,7 @@ Kurt1:
 	turnobject PLAYER, DOWN
 	playsound SFX_FLY
 	applymovement KURTSHOUSE_KURT1, KurtsHouseKurtExitHouseMovement
-	jump .KurtHasLeftTheBuilding
+	sjump .KurtHasLeftTheBuilding
 
 .GSBallRunAround:
 	turnobject PLAYER, DOWN
@@ -299,16 +298,14 @@ Kurt2:
 	faceplayer
 	opentext
 	checkevent EVENT_GAVE_GS_BALL_TO_KURT
-	iftrue KurtScript_ImCheckingItNow
-	end
-
-KurtScript_ImCheckingItNow:
+	iffalse .end
 	writetext KurtsHouseKurtImCheckingItNowText
 	waitbutton
 	turnobject KURTSHOUSE_KURT2, UP
 	writetext KurtsHouseKurtAhHaISeeText
 	waitbutton
 	closetext
+.end
 	end
 
 KurtsGranddaughter1:

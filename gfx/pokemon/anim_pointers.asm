@@ -325,7 +325,7 @@ AnimationPointers:
 	dw InfernapeAnimation
 	dw PiplupAnimation
 	dw PrinplupAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Empoleon
+	dw EmpoleonAnimation
 	dw BidoofAnimation
 	dw BibarelAnimation
 	dw ShinxAnimation
@@ -336,7 +336,7 @@ AnimationPointers:
 	dw BurmyAnimation
 	dw MothimAnimation
 	dw BuizelAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Floatzel
+	dw FloatzelAnimation
 	dw ShellosAnimation
 	dw GastrodonAnimation
 	dw BunearyAnimation
@@ -375,7 +375,7 @@ AnimationPointers:
 	dw PlaceholderAnimation ; PLACEHOLDER - Helioptile
 	dw HelioliskAnimation
 	dw AmauraAnimation
-	dw PlaceholderAnimation ; PLACEHOLDER - Aurorus
+	dw AurorusAnimation
 	dw SylveonAnimation
 	dw GoomyAnimation
 	dw PlaceholderAnimation ; PLACEHOLDER - Sliggoo

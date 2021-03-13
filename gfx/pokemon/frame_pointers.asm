@@ -325,7 +325,7 @@ FramesPointers:
 	dba InfernapeFrames
 	dba PiplupFrames
 	dba PrinplupFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Empoleon
+	dba EmpoleonFrames
 	dba BidoofFrames
 	dba BibarelFrames
 	dba ShinxFrames
@@ -336,7 +336,7 @@ FramesPointers:
 	dba BurmyFrames
 	dba MothimFrames
 	dba BuizelFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Floatzel
+	dba FloatzelFrames
 	dba ShellosFrames
 	dba GastrodonFrames
 	dba BunearyFrames
@@ -375,7 +375,7 @@ FramesPointers:
 	dba PlaceholderFrames ; PLACEHOLDER - Helioptile
 	dba HelioliskFrames
 	dba AmauraFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Aurorus
+	dba AurorusFrames
 	dba SylveonFrames
 	dba GoomyFrames
 	dba PlaceholderFrames ; PLACEHOLDER - Sliggoo

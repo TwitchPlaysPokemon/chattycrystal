@@ -325,7 +325,7 @@ BitmasksPointers:
 	dw InfernapeBitmasks
 	dw PiplupBitmasks
 	dw PrinplupBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Empoleon
+	dw EmpoleonBitmasks
 	dw BidoofBitmasks
 	dw BibarelBitmasks
 	dw ShinxBitmasks
@@ -336,7 +336,7 @@ BitmasksPointers:
 	dw BurmyBitmasks
 	dw MothimBitmasks
 	dw BuizelBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Floatzel
+	dw FloatzelBitmasks
 	dw ShellosBitmasks
 	dw GastrodonBitmasks
 	dw BunearyBitmasks
@@ -375,7 +375,7 @@ BitmasksPointers:
 	dw PlaceholderBitmasks ; PLACEHOLDER - Helioptile
 	dw HelioliskBitmasks
 	dw AmauraBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Aurorus
+	dw AurorusBitmasks
 	dw SylveonBitmasks
 	dw GoomyBitmasks
 	dw PlaceholderBitmasks ; PLACEHOLDER - Sliggoo

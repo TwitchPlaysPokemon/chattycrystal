@@ -469,12 +469,17 @@ INCLUDE "gfx/pokemon/unown_idles.asm"
 
 SECTION "Pic Animations 4", ROMX
 
-INCLUDE "gfx/pokemon/new_frames.asm"
+INCLUDE "gfx/pokemon/hoenn_frames.asm"
+INCLUDE "gfx/pokemon/sinnoh_frames.asm"
 
 SECTION "Pic Animations 5", ROMX
 
 INCLUDE "gfx/pokemon/bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/bitmasks.asm"
+
+SECTION "Pic Animations 6", ROMX
+
+INCLUDE "gfx/pokemon/new_frames.asm"
 
 
 SECTION "bank38", ROMX

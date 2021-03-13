@@ -104,6 +104,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_58 ; 58
 	dw BattleAnimFunction_59 ; 59
 	dw BattleAnimFunction_RadialMoveOut ; 5a
+	dw BattleAnimFunction_RadialMoveOut_Slow ; 5b
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -4239,6 +4240,52 @@ BattleAnimFunction_RadialMoveOut:
 	ld [hli], a
 	ld [hl], e
 	cp 80 ; final position
+	jp nc, DeinitBattleAnimation
+	ld hl, BATTLEANIMSTRUCT_PARAM
+	add hl, bc
+	ld e, [hl]
+	push de
+	ld a, e
+	call BattleAnim_Sine
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], a
+	pop de
+	ld a, e
+	call BattleAnim_Cosine
+	ld hl, BATTLEANIMSTRUCT_XOFFSET
+	add hl, bc
+	ld [hl], a
+	ret
+
+BattleAnimFunction_RadialMoveOut_Slow:
+	call BattleAnim_AnonJumptable
+
+	dw .initialize
+	dw .step
+
+.initialize
+	ld hl, BATTLEANIMSTRUCT_10
+	add hl, bc
+	xor a
+	ld [hld], a
+	ld [hl], a ; initial position = 0
+	call BattleAnim_IncAnonJumptableIndex
+.step
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	push hl
+	ld a, [hli]
+	ld e, [hl]
+	ld d, a
+	ld hl, 1.5 >> 8 ; speed
+	add hl, de
+	ld a, h
+	ld e, l
+	pop hl
+	ld [hli], a
+	ld [hl], e
+	cp 60 ; final position
 	jp nc, DeinitBattleAnimation
 	ld hl, BATTLEANIMSTRUCT_PARAM
 	add hl, bc

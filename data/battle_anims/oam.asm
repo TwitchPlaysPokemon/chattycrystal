@@ -238,6 +238,8 @@ BattleAnimOAMData:
 	dbbw $18, 16, .OAMData_1c ; BATTLEANIMOAMSET_EA
 	dbbw $28, 16, .OAMData_1c ; BATTLEANIMOAMSET_EB
 	dbbw $11,  2, .OAMData_ec ; BATTLEANIMOAMSET_EC
+	dbbw $00,  5, .OAMData_ed ; BATTLEANIMOAMSET_ED
+	dbbw $04,  3, .OAMData_ee ; BATTLEANIMOAMSET_EE
 
 .OAMData_00:
 	dsprite  -2, 0,  -2, 0, $00, $0
@@ -1159,3 +1161,15 @@ BattleAnimOAMData:
 .OAMData_ec
 	dsprite  -1, 0,  -1, 0, $00, $0
 	dsprite   0, 0,  -1, 0, $01, $0
+
+.OAMData_ed:
+	dsprite  -2, 4,  -2, 4, $00, $0
+	dsprite  -2, 4,  -1, 4, $01, $0
+	dsprite  -2, 4,   0, 4, $02, $0
+	dsprite  -1, 4,  -2, 4, $03, $0
+	dsprite   0, 4,  -2, 4, $06, $0
+
+.OAMData_ee:
+	dsprite  -1, 0,  -1, 0, $00, $0
+	dsprite  -1, 0,   0, 0, $01, $0
+	dsprite   0, 0,  -1, 0, $03, $0

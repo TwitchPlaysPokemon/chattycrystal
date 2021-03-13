@@ -302,7 +302,7 @@ MoveAnimations1:
 	dw BattleAnim_ShadowBall   ; PLACEHOLDER
 	dw BattleAnim_Slash        ; PLACEHOLDER
 	dw BattleAnim_Slash        ; PLACEHOLDER
-	dw BattleAnim_Roar         ; PLACEHOLDER
+	dw BattleAnim_BugBuzz
 	dw BattleAnim_DragonPulse  ; 130
 	dw BattleAnim_PowerGem
 	dw BattleAnim_DrainPunch
@@ -3453,6 +3453,30 @@ BattleAnim_CloseCombat:
 	anim_wait 2
 	anim_loop 4, .loop
 	anim_wait 16
+	anim_ret
+
+BattleAnim_BugBuzz:
+	anim_2gfx ANIM_GFX_BUG_BUZZ, ANIM_GFX_PSYCHIC
+	anim_battlergfx_2row
+.loop
+	anim_sound 6, 2, SFX_SUPERSONIC
+	anim_obj ANIM_OBJ_BUG_BUZZ_L, 32, 84, $28
+	anim_obj ANIM_OBJ_BUG_BUZZ_R, 64, 84, $38
+	anim_wait 4
+	anim_sound 6, 2, SFX_SUPERSONIC
+	anim_obj ANIM_OBJ_BUG_BUZZ_L, 32, 84, $28
+	anim_obj ANIM_OBJ_BUG_BUZZ_R, 64, 84, $38
+	anim_wait 4
+	anim_obj ANIM_OBJ_BUG_BUZZ_L, 32, 84, $28
+	anim_obj ANIM_OBJ_BUG_BUZZ_R, 64, 84, $38
+	anim_obj ANIM_OBJ_WAVE, 64, 88, $2
+	anim_wait 4
+	anim_loop 5, .loop
+	anim_wait 8
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
+	anim_wait 64
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
 
 BattleAnim_DragonPulse:

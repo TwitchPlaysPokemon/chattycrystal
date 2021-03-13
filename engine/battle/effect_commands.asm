@@ -1960,6 +1960,8 @@ BattleCommand_StatDownAnim:
 	; fallthrough
 
 BattleCommand_StatUpDownAnim:
+	ld [wNumHits], a
+
 	; Only perform the animation once. Used for multi-stat-up moves.
 	ld a, [wAlreadyPerformed]
 	and a
@@ -1969,7 +1971,6 @@ BattleCommand_StatUpDownAnim:
 	dec a
 
 	; Now do the actual animation.
-	ld [wNumHits], a
 	xor a
 	ld [wKickCounter], a
 	ld a, BATTLE_VARS_MOVE_ANIM

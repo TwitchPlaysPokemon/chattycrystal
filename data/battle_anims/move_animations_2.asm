@@ -16,6 +16,7 @@ MoveAnimations2:
 	dw BattleAnim_Hurricane
 	dw BattleAnim_AquaTail
 	dw BattleAnim_StoneEdge
+	dw BattleAnim_HyperVoice
 
 BattleAnim_NeedleArm:
 	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
@@ -459,4 +460,24 @@ BattleAnim_StoneEdge:
 	anim_wait 2
 	anim_obj ANIM_OBJ_STONE_EDGE, 144, 72, $8
 	anim_wait 32
+	anim_ret
+
+BattleAnim_HyperVoice:
+	anim_2gfx ANIM_GFX_NOISE, ANIM_GFX_PSYCHIC
+.loop
+	anim_bgeffect ANIM_BG_1F, $30, $2, $0
+	anim_sound 0, 0, SFX_BOAT
+	anim_obj ANIM_OBJ_4B, 64, 76, $0
+	anim_obj ANIM_OBJ_4B, 64, 88, $1
+	anim_obj ANIM_OBJ_4B, 64, 100, $2
+	anim_obj ANIM_OBJ_HYPER_VOICE, 64, 88, $2
+	anim_wait 2
+	anim_obj ANIM_OBJ_HYPER_VOICE, 64, 88, $2
+	anim_wait 28
+	anim_obj ANIM_OBJ_4B, 64, 76, $0
+	anim_obj ANIM_OBJ_4B, 64, 88, $1
+	anim_obj ANIM_OBJ_4B, 64, 100, $2
+	anim_wait 28
+	anim_loop 2, .loop
+	anim_wait 8
 	anim_ret

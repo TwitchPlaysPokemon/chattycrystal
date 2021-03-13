@@ -773,7 +773,8 @@ JigglypuffEvosAttacks:
 	dbw 37, BODY_SLAM
 	dbw 41, MIMIC
 	dbw 45, PLAY_ROUGH
-	dbw 49, DOUBLE_EDGE
+	dbw 49, HYPER_VOICE
+	dbw 53, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 WigglytuffEvosAttacks:

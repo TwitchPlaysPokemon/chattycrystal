@@ -371,3 +371,4 @@ MoveNames::
 	db "HURRICANE@"
 	db "AQUA TAIL@"
 	db "STONE EDGE@"
+	db "HYPER VOICE@"

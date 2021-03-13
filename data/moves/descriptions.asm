@@ -377,6 +377,7 @@ MoveDescriptions1:
 	dw HurricaneDescription
 	dw AquaTailDescription
 	dw StoneEdgeDescription
+	dw HyperVoiceDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -1679,3 +1680,7 @@ HurricaneDescription:
 AquaTailDescription:
 	db   "Swings with a tail"
 	next "like a big wave.@"
+
+HyperVoiceDescription:
+	db   "Uses loud sound"
+	next "waves to attack.@"

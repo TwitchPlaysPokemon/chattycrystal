@@ -390,3 +390,4 @@ Moves1:
 	move EFFECT_CONFUSE_HIT,         120, FLYING,    70, 10,  30 ;HURRICANE
 	move EFFECT_NORMAL_HIT,           90, WATER,     90, 10,   0 ;AQUA_TAIL
 	move EFFECT_NORMAL_HIT,          100, ROCK,      80,  5,   0 ;STONE_EDGE
+	move EFFECT_NORMAL_HIT,           90, NORMAL,   100, 10,   0 ;HYPER_VOICE

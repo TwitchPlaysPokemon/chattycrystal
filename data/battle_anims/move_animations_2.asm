@@ -403,7 +403,6 @@ BattleAnim_AquaTail:
 	anim_incbgeffect ANIM_BG_26
 	anim_jump BattleAnim_ShowMon_0
 
-
 BattleAnim_StoneEdge:
 	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_ROCKS
 	anim_sound 0, 0, SFX_SPARK

@@ -3458,21 +3458,25 @@ BattleAnim_CloseCombat:
 BattleAnim_BugBuzz:
 	anim_2gfx ANIM_GFX_BUG_BUZZ, ANIM_GFX_PSYCHIC
 	anim_battlergfx_2row
+	anim_bgeffect ANIM_BG_1F, $4a, $1, $0
 .loop
+	anim_sound 6, 2, SFX_TINGLE
+	anim_obj ANIM_OBJ_BUG_BUZZ_L, 32, 84, $28
+	anim_obj ANIM_OBJ_BUG_BUZZ_R, 64, 84, $38
+	anim_wait 2
+	anim_sound 6, 2, SFX_TINGLE
+	anim_wait 2
+	anim_sound 6, 2, SFX_TINGLE
+	anim_obj ANIM_OBJ_BUG_BUZZ_L, 32, 84, $28
+	anim_obj ANIM_OBJ_BUG_BUZZ_R, 64, 84, $38
+	anim_obj ANIM_OBJ_ECHOED_VOICE, 64, 88, $2
+	anim_wait 2
+	anim_sound 6, 2, SFX_TINGLE
+	anim_wait 2
+	anim_loop 6, .loop
+	anim_wait 2
 	anim_sound 6, 2, SFX_SUPERSONIC
-	anim_obj ANIM_OBJ_BUG_BUZZ_L, 32, 84, $28
-	anim_obj ANIM_OBJ_BUG_BUZZ_R, 64, 84, $38
-	anim_wait 4
-	anim_sound 6, 2, SFX_SUPERSONIC
-	anim_obj ANIM_OBJ_BUG_BUZZ_L, 32, 84, $28
-	anim_obj ANIM_OBJ_BUG_BUZZ_R, 64, 84, $38
-	anim_wait 4
-	anim_obj ANIM_OBJ_BUG_BUZZ_L, 32, 84, $28
-	anim_obj ANIM_OBJ_BUG_BUZZ_R, 64, 84, $38
-	anim_obj ANIM_OBJ_WAVE, 64, 88, $2
-	anim_wait 4
-	anim_loop 5, .loop
-	anim_wait 8
+	anim_wait 6
 	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
 	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
 	anim_wait 64

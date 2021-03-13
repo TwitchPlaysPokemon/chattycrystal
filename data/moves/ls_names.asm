@@ -10,6 +10,8 @@ LSMoveNames::
 	indirect_entries MEMENTO, .new_moves_3
 	indirect_entries ROCK_BLAST - 1
 	indirect_entries HEAT_WAVE, .new_moves_4
+	indirect_entries HYPER_VOICE - 1
+	indirect_entries HYPER_VOICE, .new_moves_5
 	indirect_table_end
 
 .new_moves_1
@@ -66,6 +68,9 @@ LSMoveNames::
 	db "Kujisi@@" ; 16b
 	db "Fixed@@@"
 	db "Hot@@@@@"
+
+.new_moves_5
+	db "Sound@@@" ; 175
 
 .original_moves
 	db "fihgt@@@"

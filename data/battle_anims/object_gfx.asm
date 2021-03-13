@@ -58,3 +58,4 @@ AnimObjGFX:
 	anim_obj_gfx  5, AnimObjHeartsGFX
 	anim_obj_gfx 18, AnimObjWoodGFX
 	anim_obj_gfx 56, AnimObjLeafStormGFX
+	anim_obj_gfx  9, AnimObjBugBuzzGFX

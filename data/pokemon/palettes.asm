@@ -836,6 +836,9 @@ INCLUDE "gfx/pokemon/steelurret/shiny.pal"
 INCBIN "gfx/pokemon/phancero/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/phancero/shiny.pal"
 
+SnorlaxShoePalette:
+INCBIN "gfx/pokemon/snorlax-shoe/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Snorlax (shoelax)
 BurmySandyPalette:
 INCBIN "gfx/pokemon/burmy-sandy/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Burmy (sandy)

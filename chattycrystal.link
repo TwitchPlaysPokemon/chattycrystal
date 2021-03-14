@@ -105,6 +105,7 @@ ROMX $24
 	"bank24"
 ROMX $25
 	"Maps"
+	"Battle Text"
 ROMX $26
 	"Map Scripts 11"
 ROMX $27
@@ -143,7 +144,6 @@ ROMX $34
 	"Pic Animations 1"
 ROMX $35
 	"Pic Animations 2"
-	"Battle Text"
 ROMX $36
 	"Font Inversed"
 	"Pic Animations 3"

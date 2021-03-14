@@ -400,6 +400,7 @@ NidorinoBackpic:     INCBIN "gfx/pokemon/nidorino/back.2bpp.lz"
 CooltrainerfPic:     INCBIN "gfx/trainers/cooltrainer_f.2bpp.lz"
 ElectrodeFrontpic:   INCBIN "gfx/pokemon/electrode/front.animated.2bpp.lz"
 ZigzagoonFrontpic:   INCBIN "gfx/pokemon/zigzagoon/front.animated.2bpp.lz"
+TogekeyFrontpic:     INCBIN "gfx/pokemon/togekey/front.animated.2bpp.lz"
 
 SECTION "Pics 14", ROMX
 
@@ -771,10 +772,10 @@ GlaceonFrontpic:     INCBIN "gfx/pokemon/glaceon/front.animated.2bpp.lz"
 GlaceonBackpic:      INCBIN "gfx/pokemon/glaceon/back.2bpp.lz"
 LotadFrontpic:       INCBIN "gfx/pokemon/lotad/front.animated.2bpp.lz"
 LotadBackpic:        INCBIN "gfx/pokemon/lotad/back.2bpp.lz"
-WingullFrontpic:     INCBIN "gfx/pokemon/wingull/front.animated.2bpp.lz"
 WingullBackpic:      INCBIN "gfx/pokemon/wingull/back.2bpp.lz"
 ElectrikeBackpic:    INCBIN "gfx/pokemon/electrike/back.2bpp.lz"
 SphealFrontpic:      INCBIN "gfx/pokemon/spheal/front.animated.2bpp.lz"
+SnorlaxShoeFrontpic::   INCBIN "gfx/pokemon/snorlax-shoe/front.animated.2bpp.lz"
 
 SECTION "Pics 24", ROMX
 
@@ -1020,9 +1021,9 @@ StunkyBackpic:       INCBIN "gfx/pokemon/stunky/back.2bpp.lz"
 
 SECTION "Pics 34", ROMX
 
+WingullFrontpic:     INCBIN "gfx/pokemon/wingull/front.animated.2bpp.lz"
 SkipleefFrontpic:    INCBIN "gfx/pokemon/skipleef/front.animated.2bpp.lz"
 SkipleefBackpic:     INCBIN "gfx/pokemon/skipleef/back.2bpp.lz"
-TogekeyFrontpic:     INCBIN "gfx/pokemon/togekey/front.animated.2bpp.lz"
 TogekeyBackpic:      INCBIN "gfx/pokemon/togekey/back.2bpp.lz"
 WoochumFrontpic:     INCBIN "gfx/pokemon/woochum/front.animated.2bpp.lz"
 WoochumBackpic:      INCBIN "gfx/pokemon/woochum/back.2bpp.lz"

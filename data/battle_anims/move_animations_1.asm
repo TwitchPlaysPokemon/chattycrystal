@@ -299,7 +299,7 @@ MoveAnimations1:
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_Waterfall    ; PLACEHOLDER
 	dw BattleAnim_FlameWheel   ; PLACEHOLDER
-	dw BattleAnim_ShadowBall   ; PLACEHOLDER
+	dw BattleAnim_AuraSphere
 	dw BattleAnim_Slash        ; PLACEHOLDER
 	dw BattleAnim_Slash        ; PLACEHOLDER
 	dw BattleAnim_BugBuzz
@@ -3453,6 +3453,47 @@ BattleAnim_CloseCombat:
 	anim_wait 2
 	anim_loop 4, .loop
 	anim_wait 16
+	anim_ret
+
+BattleAnim_AuraSphere:
+	anim_2gfx ANIM_GFX_LEAF_STORM, ANIM_GFX_WIND
+	anim_obj ANIM_OBJ_AGILITY, 8, 24, $10
+	anim_obj ANIM_OBJ_AGILITY, 8, 88, $8
+	anim_wait 4
+	anim_obj ANIM_OBJ_AGILITY, 8, 32, $6
+	anim_obj ANIM_OBJ_AGILITY, 8, 80, $4
+	anim_sound 6, 2, SFX_OUTRAGE
+	anim_obj ANIM_OBJ_VORTEX_BLUE, 48, 96, $30
+	anim_wait 63
+	anim_clearobjs
+	anim_wait 1
+	anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_HIT
+	anim_sound 0, 1, SFX_MEGA_PUNCH
+	anim_obj ANIM_OBJ_AURA_SPHERE, 48, 96, $16
+	anim_wait 16
+	anim_bgeffect ANIM_BG_07, $0, $0, $0
+	anim_obj ANIM_OBJ_00, 136, 56, $0
+	anim_wait 32
+	anim_ret
+
+BattleAnim_AirSlash:
+	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_WHIP
+	anim_resetobp0
+	anim_bgeffect ANIM_BG_1F, $0a, $2, $0
+	anim_sound 0, 1, SFX_CUT
+	anim_obj ANIM_OBJ_3A, 152, 40, $0
+	anim_obj ANIM_OBJ_42, 144, 40, $3
+	anim_obj ANIM_OBJ_42, 152, 48, $3
+	anim_wait 4
+	anim_obj ANIM_OBJ_42, 136, 48, $3
+	anim_obj ANIM_OBJ_42, 144, 56, $3
+	anim_wait 4
+	anim_obj ANIM_OBJ_42, 128, 56, $3
+	anim_obj ANIM_OBJ_42, 136, 64, $3
+	anim_wait 4
+	anim_obj ANIM_OBJ_42, 120, 64, $3
+	anim_obj ANIM_OBJ_42, 128, 72, $3
+	anim_wait 32
 	anim_ret
 
 BattleAnim_BugBuzz:

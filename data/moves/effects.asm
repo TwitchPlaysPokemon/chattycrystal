@@ -2017,6 +2017,7 @@ ChattyHiddenPower:
 	damagecalc
 	stab
 	damagevariation
+	failuretext
 	applydamage
 	criticaltext
 	supereffectivetext

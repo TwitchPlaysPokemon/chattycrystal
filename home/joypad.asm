@@ -139,9 +139,6 @@ GetJoypad::
 	and b
 	ldh [hJoyPressed], a
 
-; It looks like the collective presses got commented out here.
-	ld c, a
-
 ; Currently pressed:
 	ld a, b
 	ldh [hJoyDown], a ; frame input
@@ -462,4 +459,19 @@ BlinkCursor::
 	ldh [hObjectStructIndexBuffer], a
 	ld a, "▼"
 	ld [hl], a
+	ret
+
+TallyJoypad::
+	assert LOW(wButtonTally) == $f8
+	ld hl, wButtonTally
+	ldh a, [hJoypadPressed]
+.loop
+	rra
+	jr nc, .next
+	inc [hl]
+	jr nz, .next
+	dec [hl]
+.next
+	inc l
+	jr nz, .loop
 	ret

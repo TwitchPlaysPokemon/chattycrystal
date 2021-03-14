@@ -942,6 +942,21 @@ wChattyTrainerClass:: db
 wChattyTrainerID:: db
 wTPPFeatureLock:: db ; set to $ba to lock in TPP-only features
 
+wChattyFlags:: db ; bit 0: enable button tally
+
+	ds 2
+
+	align 3
+wButtonTally::
+wButtonTallyA:: db
+wButtonTallyB:: db
+wButtonTallySelect:: db
+wButtonTallyStart:: db
+wButtonTallyRight:: db
+wButtonTallyLeft:: db
+wButtonTallyUp:: db
+wButtonTallyDown:: db
+
 
 SECTION "Overworld Map", WRAM0
 

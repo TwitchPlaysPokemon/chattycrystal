@@ -54,6 +54,13 @@ BattleAnimRunScript:
 	add a, a
 	jr c, .play_anyway
 
+	cp 2 * HIGH(CHATTY_HP)
+	jr nz, .check
+	ld a, [wFXAnimID]
+	cp LOW(CHATTY_HP)
+	jr z, .play_anyway
+.check
+
 	farcall CheckBattleScene
 	jr c, .disabled
 
@@ -126,6 +133,12 @@ RunBattleAnimScript:
 	jr nz, .find
 
 .not_rollout
+	ld a, [wChattyFlags]
+	rra
+	jr nc, .no_joypad
+	call Joypad
+	call TallyJoypad
+.no_joypad
 	call BattleAnimDelayFrame
 
 .done

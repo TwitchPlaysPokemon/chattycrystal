@@ -12,7 +12,6 @@ OverworldLoop::
 	ld a, [wMapStatus]
 	cp MAPSTATUS_DONE
 	jr nz, .loop
-.done
 	ret
 
 .jumps
@@ -20,7 +19,7 @@ OverworldLoop::
 	dw StartMap
 	dw EnterMap
 	dw HandleMap
-	dw .done
+	dw GenericDummyFunction
 
 DisableEvents:
 	xor a
@@ -148,8 +147,7 @@ HandleMap:
 	call HandleMapObjects
 	call NextOverworldFrame
 	call HandleMapBackground
-	call CheckPlayerState
-	ret
+	jp CheckPlayerState
 
 MapEvents:
 	ld a, [wMapEventStatus]
@@ -160,7 +158,7 @@ MapEvents:
 .jumps
 ; entries correspond to MAPEVENTS_* constants
 	dw .events
-	dw .no_events
+	dw GenericDummyFunction
 
 .events
 	call PlayerEvents
@@ -168,14 +166,8 @@ MapEvents:
 	farcall ScriptEvents
 	ret
 
-.no_events
-	ret
-
-MaxOverworldDelay:
-	db 2
-
 ResetOverworldDelay:
-	ld a, [MaxOverworldDelay]
+	ld a, 2
 	ld [wOverworldDelay], a
 	ret
 
@@ -184,8 +176,7 @@ NextOverworldFrame:
 	and a
 	ret z
 	ld c, a
-	call DelayFrames
-	ret
+	jp DelayFrames
 
 HandleMapTimeAndJoypad:
 	ld a, [wMapEventStatus]
@@ -194,14 +185,12 @@ HandleMapTimeAndJoypad:
 
 	call UpdateTime
 	call GetJoypad
-	call TimeOfDayPals
-	ret
+	jp TimeOfDayPals
 
 HandleMapObjects:
 	farcall HandleNPCStep ; engine/map_objects.asm
 	farcall _HandlePlayerStep
-	call _CheckObjectEnteringVisibleRange
-	ret
+	jp _CheckObjectEnteringVisibleRange
 
 HandleMapBackground:
 	farcall _UpdateSprites
@@ -241,8 +230,6 @@ PlayerEvents:
 	ld a, [wScriptRunning]
 	and a
 	ret nz
-
-	call Dummy_CheckScriptFlags3Bit5 ; This is a waste of time
 
 	call CheckTrainerBattle_GetPlayerEvent
 	jr c, .ok
@@ -286,8 +273,6 @@ PlayerEvents:
 	ret
 
 CheckTrainerBattle_GetPlayerEvent:
-	nop
-	nop
 	call CheckTrainerBattle
 	jr nc, .nope
 
@@ -331,7 +316,6 @@ CheckTileEvent:
 
 	call RandomEncounter
 	ret c
-	jr .ok ; pointless
 
 .ok
 	xor a
@@ -361,8 +345,7 @@ CheckTileEvent:
 	ld h, [hl]
 	ld l, a
 	call GetMapScriptsBank
-	call CallScript
-	ret
+	jp CallScript
 
 CheckWildEncounterCooldown::
 	ld hl, wWildEncounterCooldown
@@ -379,20 +362,12 @@ SetUpFiveStepWildEncounterCooldown:
 	ld [wWildEncounterCooldown], a
 	ret
 
-ret_968d7:
-	ret
-
 SetMinTwoStepWildEncounterCooldown:
 	ld a, [wWildEncounterCooldown]
 	cp 2
 	ret nc
 	ld a, 2
 	ld [wWildEncounterCooldown], a
-	ret
-
-Dummy_CheckScriptFlags3Bit5:
-	call CheckBit5_ScriptFlags3
-	ret z
 	ret
 
 RunSceneScript:
@@ -602,17 +577,8 @@ TryObjectEvent:
 	ret
 
 .three
-	xor a
-	ret
-
 .four
-	xor a
-	ret
-
 .five
-	xor a
-	ret
-
 .six
 	xor a
 	ret
@@ -758,25 +724,17 @@ PlayerMovement:
 
 .zero
 .four
-	xor a
-	ld c, a
-	ret
-
 .seven
-	call ret_968d7 ; mobile
-	xor a
-	ld c, a
+	ld c, 0
 	ret
 
 .one
-	ld a, 5
-	ld c, a
+	ld c, 5
 	scf
 	ret
 
 .two
-	ld a, 9
-	ld c, a
+	ld c, 9
 	scf
 	ret
 
@@ -792,8 +750,7 @@ PlayerMovement:
 
 .five
 .six
-	ld a, -1
-	ld c, a
+	ld c, -1
 	and a
 	ret
 
@@ -1257,8 +1214,6 @@ TryWildEncounter_BugContest:
 INCLUDE "data/wild/bug_contest_mons.asm"
 
 DoBikeStep::
-	nop
-	nop
 	; If the bike shop owner doesn't have our number, or
 	; if we've already gotten the call, we don't have to
 	; be here.
@@ -1444,8 +1399,8 @@ HandleQueuedCommand:
 	ret
 
 .Jumptable:
-	dba CmdQueue_Null
-	dba CmdQueue_Null2
+	dba GenericDummyFunction
+	dba GenericDummyFunction
 	dba CmdQueue_StoneTable
 	dba CmdQueue_Type3
 	dba CmdQueue_Type4
@@ -1470,15 +1425,9 @@ CmdQueueAnonJT_Decrement:
 	dec [hl]
 	ret
 
-CmdQueue_Null:
-	ret
-
-CmdQueue_Null2:
-	ret
-
 CmdQueue_Type4:
 	call CmdQueueAnonymousJumptable
-	; anonymous dw
+
 	dw .zero
 	dw .one
 
@@ -1495,7 +1444,7 @@ CmdQueue_Type4:
 	dec a
 	ld [hl], a
 	jr z, .finish
-	and $1
+	and 1
 	jr z, .add
 	ld hl, 2
 	add hl, bc
@@ -1522,7 +1471,7 @@ CmdQueue_Type4:
 
 CmdQueue_Type3:
 	call CmdQueueAnonymousJumptable
-	; anonymous dw
+
 	dw .zero
 	dw .one
 	dw .two

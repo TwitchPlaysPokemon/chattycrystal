@@ -274,8 +274,9 @@ RandyHoldKenya:
 	end
 
 .egg_text
-	text "That's just an EGG,"
-	line "though!"
+	text "That's just an EGG!"
+	line "Did my KENYA have"
+	cont "an EGG?"
 	done
 
 .withdraw

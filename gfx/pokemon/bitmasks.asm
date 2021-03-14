@@ -403,5 +403,3 @@ QuagynxBitmasks:    INCLUDE "gfx/pokemon/quagynx/bitmask.asm"
 SteelurretBitmasks: INCLUDE "gfx/pokemon/steelurret/bitmask.asm"
 PhanceroBitmasks:   INCLUDE "gfx/pokemon/phancero/bitmask.asm"
 EggBitmasks:        INCLUDE "gfx/pokemon/egg/bitmask.asm"
-
-PlaceholderBitmasks: INCLUDE "gfx/pokemon/placeholder/bitmask.asm"

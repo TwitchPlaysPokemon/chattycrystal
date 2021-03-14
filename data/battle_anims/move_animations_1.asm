@@ -301,7 +301,7 @@ MoveAnimations1:
 	dw BattleAnim_FlameWheel   ; PLACEHOLDER
 	dw BattleAnim_AuraSphere
 	dw BattleAnim_Slash        ; PLACEHOLDER
-	dw BattleAnim_Slash        ; PLACEHOLDER
+	dw BattleAnim_AirSlash
 	dw BattleAnim_BugBuzz
 	dw BattleAnim_DragonPulse  ; 130
 	dw BattleAnim_PowerGem

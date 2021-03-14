@@ -2381,6 +2381,8 @@ EndMoveEffect:
 	ld [hli], a
 	ld [hli], a
 	ld [hl], a
+	ld hl, wChattyFlags
+	res 0, [hl]
 	ret
 
 DittoMetalPowder:
@@ -3048,7 +3050,7 @@ BattleCommand_ConstantDamage:
 	ld a, BATTLE_VARS_MOVE_POWER
 	call GetBattleVar
 	ld b, a
-	ld a, $0
+	xor a
 	jr .got_power
 
 .psywave
@@ -3063,7 +3065,7 @@ BattleCommand_ConstantDamage:
 	cp b
 	jr nc, .psywave_loop
 	ld b, a
-	ld a, 0
+	xor a
 	jr .got_power
 
 .super_fang
@@ -3086,8 +3088,7 @@ BattleCommand_ConstantDamage:
 	or b
 	ld a, 0
 	jr nz, .got_power
-	ld b, 1
-	jr .got_power
+	inc b
 
 .got_power
 	ld hl, wCurDamage
@@ -3472,11 +3473,11 @@ BattleCommand_Sleep:
 	jp StdBattleTextbox
 
 SetSleepStatus:
-	ld b, $7
+	ld b, 7
 	ld a, [wInBattleTowerBattle]
 	and a
 	jr z, .random_loop
-	ld b, $3
+	ld b, 3
 
 .random_loop
 	call BattleRandom
@@ -3772,7 +3773,7 @@ SapHealth:
 	ldh a, [hBattleTurn]
 	and a
 	hlcoord 10, 9
-	ld a, $1
+	ld a, 1
 	jr z, .hp_bar
 	hlcoord 2, 2
 	xor a
@@ -3910,7 +3911,7 @@ BattleCommand_FreezeTarget:
 	jr z, .finish
 	ld hl, wPlayerJustGotFrozen
 .finish
-	ld [hl], $1
+	ld [hl], 1
 	ret
 
 BattleCommand_ParalyzeTarget:
@@ -4047,7 +4048,7 @@ RaiseStat:
 	ld [hl], b
 	push hl
 	ld a, c
-	cp $5
+	cp 5
 	jr nc, .done_calcing_stats
 	ld hl, wBattleMonStats + 1
 	ld de, wPlayerStats
@@ -4097,7 +4098,7 @@ RaiseStat:
 .cant_raise_stat
 	ld a, 2
 	ld [wFailedMessage], a
-	ld a, 1
+	dec a
 	ld [wAttackMissed], a
 	ret
 
@@ -4277,7 +4278,7 @@ BattleCommand_StatDown:
 .Mist:
 	ld a, 2
 	ld [wFailedMessage], a
-	ld a, 1
+	dec a
 	ld [wAttackMissed], a
 	ret
 
@@ -4641,7 +4642,8 @@ GetStatName:
 .Copy:
 	ld de, wStringBuffer2
 	ld bc, wStringBuffer3 - wStringBuffer2
-	jp CopyBytes
+	rst CopyBytes
+	ret
 
 BattleCommand_Tickle:
 ; We can't use the general resetmiss battle command, because we may have missed
@@ -4948,7 +4950,7 @@ BattleCommand_CheckRampage:
 
 	set SUBSTATUS_CONFUSED, [hl]
 	call BattleRandom
-	and %00000001
+	and 1
 	inc a
 	inc a
 	inc de ; ConfuseCount
@@ -4977,7 +4979,7 @@ BattleCommand_Rampage:
 	set SUBSTATUS_RAMPAGE, [hl]
 ; Rampage for 1 or 2 more turns
 	call BattleRandom
-	and %00000001
+	and 1
 	inc a
 	ld [de], a
 	ld a, 1
@@ -5048,7 +5050,7 @@ BattleCommand_ForceSwitch:
 	and a
 	jr z, .switch_fail
 	call UpdateEnemyMonInParty
-	ld a, $1
+	ld a, 1
 	ld [wKickCounter], a
 	call AnimateCurrentMove
 	ld c, $14
@@ -5065,7 +5067,7 @@ BattleCommand_ForceSwitch:
 ; select a random enemy mon to switch to
 .random_loop_trainer
 	call BattleRandom
-	and $7
+	and 7
 	cp b
 	jr nc, .random_loop_trainer
 	cp c
@@ -5139,7 +5141,7 @@ BattleCommand_ForceSwitch:
 	jr c, .fail
 
 	ld a, [wEnemyGoesFirst]
-	cp $1
+	cp 1
 	jr z, .switch_fail
 
 	call UpdateBattleMonInParty
@@ -5159,7 +5161,7 @@ BattleCommand_ForceSwitch:
 	ld c, a
 .random_loop_trainer_playeristarget
 	call BattleRandom
-	and $7
+	and 7
 	cp b
 	jr nc, .random_loop_trainer_playeristarget
 
@@ -5196,7 +5198,7 @@ BattleCommand_ForceSwitch:
 .succeed
 	push af
 	call SetBattleDraw
-	ld a, $1
+	ld a, 1
 	ld [wKickCounter], a
 	call AnimateCurrentMove
 	ld c, 20
@@ -5274,7 +5276,7 @@ BattleCommand_EndLoop:
 	jr nz, .not_triple_kick
 .reject_triple_kick_sample
 	call BattleRandom
-	and $3
+	and 3
 	jr z, .reject_triple_kick_sample
 	dec a
 	jr nz, .double_hit
@@ -5311,11 +5313,11 @@ BattleCommand_EndLoop:
 
 .not_triple_kick
 	call BattleRandom
-	and $3
+	and 3
 	cp 2
 	jr c, .got_number_hits
 	call BattleRandom
-	and $3
+	and 3
 .got_number_hits
 	inc a
 .double_hit
@@ -5497,14 +5499,14 @@ BattleCommand_OHKO:
 	ld a, $ff
 	ld [hli], a
 	ld [hl], a
-	ld a, $2
+	ld a, 2
 	ld [wCriticalHit], a
 	ret
 
 .no_effect
 	ld a, $ff
 	ld [wCriticalHit], a
-	ld a, $1
+	ld a, 1
 	ld [wAttackMissed], a
 BattleCommand_ChattyBranch: ;exists only as a stopping point for checkchatty
 	ret
@@ -6575,7 +6577,7 @@ PlayDamageAnim:
 .player
 	ld [wNumHits], a
 
-	jp PlayUserBattleAnim
+	jr PlayUserBattleAnim
 
 LoadMoveAnim:
 	xor a
@@ -6688,11 +6690,8 @@ BattleCommand_ClearText:
 ; cleartext
 
 ; Used in multi-hit moves.
-	ld hl, .text
+	ld hl, TX_ENDText
 	jp BattleTextbox
-
-.text:
-	text_end
 
 BattleCommand_Splash:
 	call AnimateCurrentMove
@@ -6730,6 +6729,17 @@ SkipToBattleCommand:
 	ld [wBattleScriptBufferAddress + 1], a
 	ld a, l
 	ld [wBattleScriptBufferAddress], a
+	ret
+
+BattleCommand_BeginButtonTally:
+	ld hl, wChattyFlags
+	set 0, [hl]
+	assert LOW(wButtonTally) == $f8
+	ld hl, wButtonTally
+.loop
+	ld [hl], 0
+	inc l
+	jr nz, .loop
 	ret
 
 DisappearUser:

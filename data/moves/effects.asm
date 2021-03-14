@@ -2011,6 +2011,7 @@ ChattyHiddenPower:
 	critical
 	checkchatty
 	checkhit
+	beginbuttontally
 	moveanim
 	failuretext
 	hiddenpower

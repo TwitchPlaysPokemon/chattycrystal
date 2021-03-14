@@ -2010,13 +2010,13 @@ ChattyHiddenPower:
 	doturn
 	critical
 	checkchatty
+	checkhit
+	moveanim
+	failuretext
 	hiddenpower
 	damagecalc
 	stab
 	damagevariation
-	checkhit
-	moveanim
-	failuretext
 	applydamage
 	criticaltext
 	supereffectivetext

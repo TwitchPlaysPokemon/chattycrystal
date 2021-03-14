@@ -314,6 +314,7 @@ INCBIN "gfx/pokemon/kabutops/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/kabutops/shiny.pal"
 INCBIN "gfx/pokemon/aerodactyl/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/aerodactyl/shiny.pal"
+SnorlaxPalette:
 INCBIN "gfx/pokemon/snorlax/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/snorlax/shiny.pal"
 INCBIN "gfx/pokemon/articuno/front.gbcpal", middle_colors
@@ -838,7 +839,7 @@ INCLUDE "gfx/pokemon/phancero/shiny.pal"
 
 SnorlaxShoePalette:
 INCBIN "gfx/pokemon/snorlax-shoe/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Snorlax (shoelax)
+INCLUDE "gfx/pokemon/snorlax-shoe/shiny.pal"
 BurmySandyPalette:
 INCBIN "gfx/pokemon/burmy-sandy/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Burmy (sandy)

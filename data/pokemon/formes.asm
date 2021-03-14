@@ -15,6 +15,7 @@ ENDM
 ; MUST have 6 formes per species; duplicate as needed!
 
 Formes::
+	dw SNORLAX, SnorlaxFormes
 	dw BURMY, BurmyFormes
 	dw SHELLOS, ShellosFormes
 	dw GASTRODON, GastrodonFormes
@@ -23,6 +24,21 @@ Formes::
 FormeTypeOverrides:
 	dw -1
 
+
+SnorlaxFormes:
+	; regular Snorlax
+	forme SnorlaxFrontpic, SnorlaxBackpic, SnorlaxPalette, SnorlaxFrames, SnorlaxBitmasks, SnorlaxAnimation, SnorlaxAnimationIdle
+	; regular Snorlax
+	forme SnorlaxFrontpic, SnorlaxBackpic, SnorlaxPalette, SnorlaxFrames, SnorlaxBitmasks, SnorlaxAnimation, SnorlaxAnimationIdle
+	; regular Snorlax
+	forme SnorlaxFrontpic, SnorlaxBackpic, SnorlaxPalette, SnorlaxFrames, SnorlaxBitmasks, SnorlaxAnimation, SnorlaxAnimationIdle
+	; regular Snorlax
+	forme SnorlaxFrontpic, SnorlaxBackpic, SnorlaxPalette, SnorlaxFrames, SnorlaxBitmasks, SnorlaxAnimation, SnorlaxAnimationIdle
+	; regular Snorlax
+	forme SnorlaxFrontpic, SnorlaxBackpic, SnorlaxPalette, SnorlaxFrames, SnorlaxBitmasks, SnorlaxAnimation, SnorlaxAnimationIdle
+	; Shoelax (same backpic as regular Snorlax)
+	forme SnorlaxShoeFrontpic, SnorlaxBackpic, SnorlaxShoePalette, SnorlaxShoeFrames, SnorlaxShoeBitmasks, \
+	      SnorlaxShoeAnimation, SnorlaxShoeAnimationIdle
 
 BurmyFormes:
 	; plant cloak

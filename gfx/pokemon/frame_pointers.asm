@@ -359,8 +359,8 @@ FramesPointers:
 	dba SimisageFrames
 	dba DrilburFrames
 	dba ExcadrillFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Sandile
-	dba PlaceholderFrames ; PLACEHOLDER - Krokorok
+	dba SandileFrames
+	dba KrokorokFrames
 	dba KrookodileFrames
 	dba DucklettFrames
 	dba SwannaFrames
@@ -372,13 +372,13 @@ FramesPointers:
 	dba ChandelureFrames
 	dba ClauncherFrames
 	dba ClawitzerFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Helioptile
+	dba HelioptileFrames
 	dba HelioliskFrames
 	dba AmauraFrames
 	dba AurorusFrames
 	dba SylveonFrames
 	dba GoomyFrames
-	dba PlaceholderFrames ; PLACEHOLDER - Sliggoo
+	dba SliggooFrames
 	dba GoodraFrames
 	dba CrabrawlerFrames
 	dba CrabominableFrames

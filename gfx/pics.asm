@@ -270,6 +270,7 @@ CloysterBackpic:     INCBIN "gfx/pokemon/cloyster/back.2bpp.lz"
 HoothootFrontpic:    INCBIN "gfx/pokemon/hoothoot/front.animated.2bpp.lz"
 UnownFBackpic:       INCBIN "gfx/pokemon/unown_f/back.2bpp.lz"
 PelipperBackpic:     INCBIN "gfx/pokemon/pelipper/back.2bpp.lz"
+TynamoFrontpic:      INCBIN "gfx/pokemon/tynamo/front.animated.2bpp.lz"
 
 SECTION "Pics 11", ROMX
 
@@ -885,6 +886,8 @@ FroslassFrontpic:    INCBIN "gfx/pokemon/froslass/front.animated.2bpp.lz"
 FroslassBackpic:     INCBIN "gfx/pokemon/froslass/back.2bpp.lz"
 SylveonFrontpic:     INCBIN "gfx/pokemon/sylveon/front.animated.2bpp.lz"
 SylveonBackpic:      INCBIN "gfx/pokemon/sylveon/back.2bpp.lz"
+ClauncherFrontpic:   INCBIN "gfx/pokemon/clauncher/front.animated.2bpp.lz"
+ClauncherBackpic:    INCBIN "gfx/pokemon/clauncher/back.2bpp.lz"
 
 SECTION "Pics 28", ROMX
 
@@ -963,7 +966,6 @@ KrookodileBackpic:   INCBIN "gfx/pokemon/krookodile/back.2bpp.lz"
 SwannaFrontpic:      INCBIN "gfx/pokemon/swanna/front.animated.2bpp.lz"
 SwannaBackpic:       INCBIN "gfx/pokemon/swanna/back.2bpp.lz"
 HelioliskBackpic:    INCBIN "gfx/pokemon/heliolisk/back.2bpp.lz"
-TynamoFrontpic:      INCBIN "gfx/pokemon/tynamo/front.animated.2bpp.lz"
 TynamoBackpic:       INCBIN "gfx/pokemon/tynamo/back.2bpp.lz"
 EelektrikFrontpic:   INCBIN "gfx/pokemon/eelektrik/front.animated.2bpp.lz"
 EelektrikBackpic:    INCBIN "gfx/pokemon/eelektrik/back.2bpp.lz"
@@ -979,8 +981,6 @@ SECTION "Pics 32", ROMX
 
 CharmanderFrontpic:  INCBIN "gfx/pokemon/charmander/front.animated.2bpp.lz"
 LampentFrontpic:     INCBIN "gfx/pokemon/lampent/front.animated.2bpp.lz"
-ClauncherFrontpic:   INCBIN "gfx/pokemon/clauncher/front.animated.2bpp.lz"
-ClauncherBackpic:    INCBIN "gfx/pokemon/clauncher/back.2bpp.lz"
 ClawitzerFrontpic:   INCBIN "gfx/pokemon/clawitzer/front.animated.2bpp.lz"
 ClawitzerBackpic:    INCBIN "gfx/pokemon/clawitzer/back.2bpp.lz"
 HelioptileFrontpic:  INCBIN "gfx/pokemon/helioptile/front.animated.2bpp.lz"

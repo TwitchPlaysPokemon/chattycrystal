@@ -359,8 +359,8 @@ AnimationIdlePointers:
 	dw SimisageAnimationIdle
 	dw DrilburAnimationIdle
 	dw ExcadrillAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sandile
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Krokorok
+	dw SandileAnimationIdle
+	dw KrokorokAnimationIdle
 	dw KrookodileAnimationIdle
 	dw DucklettAnimationIdle
 	dw SwannaAnimationIdle
@@ -372,13 +372,13 @@ AnimationIdlePointers:
 	dw ChandelureAnimationIdle
 	dw ClauncherAnimationIdle
 	dw ClawitzerAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Helioptile
+	dw HelioptileAnimationIdle
 	dw HelioliskAnimationIdle
 	dw AmauraAnimationIdle
 	dw AurorusAnimationIdle
 	dw SylveonAnimationIdle
 	dw GoomyAnimationIdle
-	dw PlaceholderAnimationIdle ; PLACEHOLDER - Sliggoo
+	dw SliggooAnimationIdle
 	dw GoodraAnimationIdle
 	dw CrabrawlerAnimationIdle
 	dw CrabominableAnimationIdle

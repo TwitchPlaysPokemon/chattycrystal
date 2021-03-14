@@ -359,8 +359,8 @@ BitmasksPointers:
 	dw SimisageBitmasks
 	dw DrilburBitmasks
 	dw ExcadrillBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Sandile
-	dw PlaceholderBitmasks ; PLACEHOLDER - Krokorok
+	dw SandileBitmasks
+	dw KrokorokBitmasks
 	dw KrookodileBitmasks
 	dw DucklettBitmasks
 	dw SwannaBitmasks
@@ -372,13 +372,13 @@ BitmasksPointers:
 	dw ChandelureBitmasks
 	dw ClauncherBitmasks
 	dw ClawitzerBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Helioptile
+	dw HelioptileBitmasks
 	dw HelioliskBitmasks
 	dw AmauraBitmasks
 	dw AurorusBitmasks
 	dw SylveonBitmasks
 	dw GoomyBitmasks
-	dw PlaceholderBitmasks ; PLACEHOLDER - Sliggoo
+	dw SliggooBitmasks
 	dw GoodraBitmasks
 	dw CrabrawlerBitmasks
 	dw CrabominableBitmasks

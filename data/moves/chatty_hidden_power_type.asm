@@ -15,7 +15,7 @@ ChattyHiddenPowerType:
 	db A_BUTTON + D_UP     + D_DOWN,   FLYING
 	db A_BUTTON + D_LEFT   + D_RIGHT,  FIGHTING
 	db B_BUTTON + D_UP     + D_LEFT,   BUG
-	db B_BUTTON + D_UP     + D_RIGHT,  POISON
+	db B_BUTTON + D_UP     + D_RIGHT,  GHOST
 	db B_BUTTON + D_DOWN   + D_LEFT,   ROCK
 	db B_BUTTON + D_DOWN   + D_RIGHT,  GROUND
 	db B_BUTTON + D_UP     + D_DOWN,   POISON

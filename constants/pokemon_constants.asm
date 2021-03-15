@@ -1,23 +1,4 @@
-; pokemon ids
-; indexes for:
-; - PokemonNames (see data/pokemon/names.asm)
-; - BaseData (see data/pokemon/base_stats.asm)
-; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm)
-; - EggMovePointers (see data/pokemon/egg_move_pointers.asm)
-; - PokemonCries (see data/pokemon/cries.asm)
-; - MonMenuIcons (see data/pokemon/menu_icons.asm)
-; - PokemonPicPointers (see data/pokemon/pic_pointers.asm)
-; - PokemonPalettes (see data/pokemon/palettes.asm)
-; - PokedexDataPointerTable (see data/pokemon/dex_entry_pointers.asm)
-; - AlphabeticalPokedexOrder (see data/pokemon/dex_order_alpha.asm)
-; - EZChat_SortedPokemon (see data/pokemon/ezchat_order.asm)
-; - NewPokedexOrder (see data/pokemon/dex_order_new.asm)
-; - Pokered_MonIndices (see data/pokemon/gen1_order.asm)
-; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)
-; - AnimationIdlePointers (see gfx/pokemon/idle_pointers.asm)
-; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)
-; - FramesPointers (see gfx/pokemon/frame_pointers.asm)
-; - Footprints (see gfx/footprints.asm)
+; Pokémon IDs; used for just about everything in the game
 	const_def 1
 	const BULBASAUR    ;   1
 	const IVYSAUR      ;   2

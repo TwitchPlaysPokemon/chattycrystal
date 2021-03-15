@@ -1,6 +1,5 @@
 BattleCommand_HiddenPower:
 ; hiddenpower
-
 	ld a, [wAttackMissed]
 	and a
 	ret nz
@@ -19,4 +18,15 @@ BattleCommand_ChattyHP:
 	farcall BattleCommand_DamageStats
 	ld a, [wChattyHPPower]
 	ld d, a
+	ret
+
+BattleCommand_NonChattyHP:
+; nonchattyhp
+	ld a, [wAttackMissed]
+	and a
+	ret nz
+	ld a, [wLinkMode]
+	and a
+	jr nz, BattleCommand_HiddenPower
+	farcall ChattyHiddenPowerDamage
 	ret

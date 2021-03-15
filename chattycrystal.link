@@ -18,7 +18,6 @@ ROMX $04
 ROMX $05
 	"bank5"
 	"Map Blocks 6"
-	"Songs 10"
 ROMX $06
 	"Tileset Data 1"
 ROMX $07
@@ -190,6 +189,7 @@ ROMX $45
 ROMX $46
 	"Mobile 46"
 	"Mobile 46 ASCII"
+	"Songs 10"
 ROMX $47
 	"Battle Tower"
 	"Tileset Data 10"

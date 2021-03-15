@@ -716,6 +716,9 @@ wSomeoneIsRampaging:: db ; c73b
 
 wPlayerJustGotFrozen:: db ; c73c
 wEnemyJustGotFrozen:: db ; c73d
+
+wButtonSortBuffer:: ds 12
+
 wBattleEnd::
 
 NEXTU ; c608

@@ -229,3 +229,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_IfSecondary
 	effectfn GenericDummyFunction ; endif isn't a real battle command
 	effectfn BattleCommand_BeginButtonTally
+	effectfn BattleCommand_NonChattyHP

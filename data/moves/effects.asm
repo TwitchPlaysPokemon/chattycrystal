@@ -2014,7 +2014,7 @@ ChattyHiddenPower:
 	beginbuttontally
 	moveanim
 	failuretext
-	hiddenpower
+	nonchattyhp
 	damagecalc
 	stab
 	damagevariation

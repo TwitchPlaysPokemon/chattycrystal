@@ -229,6 +229,7 @@ ENDM
 	command ifsecondary             ; de
 	command endif                   ; df
 	command beginbuttontally        ; e0
+	command nonchattyhp             ; e1
 
 	enum_start $fe
 	command endturn                 ; fe

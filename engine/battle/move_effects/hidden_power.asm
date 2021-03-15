@@ -22,6 +22,8 @@ BattleCommand_ChattyHP:
 
 BattleCommand_NonChattyHP:
 ; nonchattyhp
+	ld hl, wChattyFlags
+	res 0, [hl]
 	ld a, [wAttackMissed]
 	and a
 	ret nz

@@ -1,7 +1,4 @@
 ChattyHiddenPowerDamage:
-	ld hl, wChattyFlags
-	res 0, [hl]
-
 ; Determine the top three buttons pressed during the move animation. Start and Select are ignored.
 	assert LOW(wButtonTally) == $f8
 

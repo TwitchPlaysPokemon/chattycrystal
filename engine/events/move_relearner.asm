@@ -331,10 +331,13 @@ MoveRelearner:
 	inc de
 	ld [de], a
 
+	farcall StatsScreen_LoadFont
 	call MoveRelearner_InitializeScreenLayout
 	xor a
 	ld [wMoveRelearnerCursor], a
 	ld [wMoveRelearnerScroll], a
+	hlcoord 1, 2
+	ld [hl], "▶"
 	call MoveRelearner_DisplayMoveData
 	call WaitBGMap
 	ld b, SCGB_DIPLOMA
@@ -373,11 +376,147 @@ MoveRelearner_InitializeScreenLayout:
 	ld a, [wMoveRelearnerLevel]
 	ld [wTempMonLevel], a
 	hlcoord 14, 0
-	jp PrintLevel
+	call PrintLevel
+	ld de, .acc_string
+	hlcoord 4, 12
+	call PlaceString
+	ld de, .atk_string
+	hlcoord 12, 12
+	jp PlaceString
+
+.acc_string
+	db "ACC/@"
+.atk_string
+	db "ATK/@"
 
 MoveRelearner_DisplayMoveData:
-	; TODO: display move data
+	hlcoord 2, 2
+	lb bc, 8, 17
+	call ClearBox
+	hlcoord 1, 13
+	lb bc, 4, 18
+	call ClearBox
+	hlcoord 8, 12
+	ld de, .clear_numbers
+	call PlaceString
+	hlcoord 16, 12
+	ld de, .clear_numbers
+	call PlaceString
+	ld a, [wMoveRelearnerScroll]
+	add a, a
+	add a, LOW(wMoveRelearnerMoveList)
+	ld e, a
+	adc HIGH(wMoveRelearnerMoveList)
+	sub e
+	ld d, a
+	hlcoord 2, 2
+	xor a
+.loop
+	ld [wTempLoopCounter], a
+	push hl
+	ld a, [de]
+	inc de
+	ld l, a
+	ld a, [de]
+	inc de
+	ld h, a
+	or l
+	jp z, .place_cancel
+	call GetMoveIDFromIndex
+	pop hl
+	ld [wNamedObjectIndexBuffer], a
+	push de
+	call GetMoveName
+	push hl
+	call PlaceString
+	ld a, [wNamedObjectIndexBuffer]
+	call GetMoveAddress
+	push af
+	; TODO: move details
+	ld d, h
+	ld e, l
+	pop af
+	pop hl
+	ld bc, 13
+	add hl, bc
+	ld b, a
+	push hl
+	ld hl, MOVE_TYPE - 1
+	add hl, de
+	call GetFarByte
+	ld [wNamedObjectIndexBuffer], a
+	assert (MOVE_PP - MOVE_TYPE) == 2
+	inc hl
+	inc hl
+	ld a, b
+	call GetFarByte
+	pop hl
+	ld c, 10
+	call SimpleDivide
+	ld c, a
+	ld a, b
+	and a
+	jr z, .skip_tens
+	add a, "0"
+	ld [hl], a
+.skip_tens
+	inc hl
+	ld a, c
+	add a, "0"
+	ld [hli], a
+	ld a, $3e ; P from PP
+	ld [hli], a
+	ld [hli], a
+	ld de, 4
+	add hl, de
+	ld de, .type_string
+	call PlaceString
+	ld de, 5
+	add hl, de
+	push hl
+	predef GetTypeName
+	pop hl
+	ld de, wStringBuffer1
+	call PlaceString
+	ld de, 14
+	add hl, de
+	pop de
+	ld a, [wTempLoopCounter]
+	inc a
+	cp 4
+	jr nz, .loop
+.place_arrows
+	hlcoord 18, 1
+	ld a, [wMoveRelearnerScroll]
+	ld c, a
+	and a
+	ld [hl], $7a ; textbox horizontal border
+	jr z, .got_top_arrow
+	ld [hl], $70 ; arrow pointing up
+.got_top_arrow
+	hlcoord 18, 10
+	ld [hl], $7a ; textbox horizontal border
+	ld a, [wMoveRelearnerMoveCount]
+	sub c
+	cp 4
+	ret c
+	ld [hl], $ee ; arrow pointing down
 	ret
+
+.place_cancel
+	pop hl
+	ld de, .cancel_string
+	call PlaceString
+	jr .place_arrows
+
+.clear_numbers
+	db "   @"
+
+.cancel_string
+	db "CANCEL@"
+
+.type_string
+	db "TYPE/@"
 
 MoveRelearner_InterpretJoypad:
 	; TODO: actually do something

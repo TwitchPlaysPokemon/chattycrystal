@@ -141,7 +141,7 @@ CeladonGameCornerPosterScript:
 
 CeladonGameCornerLuckySlotMachineScript:
 	random 6
-	ifequal 0, CeladonGameCornerSlotMachineScript
+	iffalse CeladonGameCornerSlotMachineScript
 	refreshscreen
 	setval FALSE
 	special SlotMachine

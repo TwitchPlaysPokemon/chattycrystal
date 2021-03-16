@@ -809,6 +809,15 @@ wPokedexNameBuffer:: ds MON_NAME_LENGTH
 	ds 231
 
 NEXTU ; c6d0
+wMoveRelearnerSpecies:: dw ; c6d0
+wMoveRelearnerLevel:: db ; c6d2
+wMoveRelearnerMoveCount:: db ; c6d3
+wMoveRelearnerMoveList:: ds 2 * 63 ; c6d4
+wMoveRelearnerMoveListTerminator:: dw ; c752
+wMoveRelearnerCursor:: db ; c754
+wMoveRelearnerScroll:: db ; c755
+
+NEXTU ; c6d0
 ; pokegear
 wPokegearPhoneLoadNameBuffer:: db ; c6d0
 wPokegearPhoneCursorPosition:: db ; c6d1

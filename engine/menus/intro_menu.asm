@@ -49,10 +49,6 @@ MysteryGift:
 	farcall DoMysteryGift
 	ret
 
-OptionsMenu:
-	farcall _OptionsMenu
-	ret
-
 NewGame:
 	xor a
 	ld [wDebugFlags], a

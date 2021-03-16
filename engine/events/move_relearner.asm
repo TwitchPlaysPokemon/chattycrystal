@@ -90,6 +90,11 @@ MoveRelearnerLoad:
 	ld [wScriptVar], a
 	ret
 
+.chatty_fail
+	ld a, MOVERELEARNER_NO_MOVES
+	ld [wScriptVar], a
+	ret
+
 .no_egg
 	ld d, a
 	ld a, [wCurPartyMon]
@@ -107,7 +112,17 @@ MoveRelearnerLoad:
 	ld a, [hli]
 	ld d, a
 	ld e, [hl]
+	ld a, b
+	call GetMoveIndexFromID
+	ld a, l
+	cp LOW(CHATTY_HP)
+	jr nz, .ok
+	ld a, h
+	assert HIGH(CHATTY_HP) == 1
+	dec h
+.ok
 	pop hl
+	jr z, .chatty_fail
 	push de
 	push bc
 	ld a, BANK(wMoveRelearnerStaging)

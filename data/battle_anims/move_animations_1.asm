@@ -298,7 +298,7 @@ MoveAnimations1:
 	dw BattleAnim_Headbutt     ; 128, PLACEHOLDER
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
 	dw BattleAnim_Waterfall    ; PLACEHOLDER
-	dw BattleAnim_FlameWheel   ; PLACEHOLDER
+	dw BattleAnim_FlareBlitz
 	dw BattleAnim_AuraSphere
 	dw BattleAnim_Slash        ; PLACEHOLDER
 	dw BattleAnim_AirSlash
@@ -352,7 +352,7 @@ MoveAnimations1:
 	dw BattleAnim_PollenPuff
 	dw BattleAnim_PowerTrip
 	dw BattleAnim_HiddenPower  ; 160
-	dw BattleAnim_ThunderWave  ; PLACEHOLDER
+	dw BattleAnim_CrystalBolt
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -3453,6 +3453,51 @@ BattleAnim_CloseCombat:
 	anim_wait 16
 	anim_ret
 
+BattleAnim_FlareBlitz:
+	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_HIT
+	anim_battlergfx_2row
+.loop
+	anim_sound 0, 1, SFX_MEGA_PUNCH
+	anim_obj ANIM_OBJ_FLARE_BLITZ, 44, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_FLARE_BLITZ, 36, 108, $6
+	anim_wait 2
+	anim_sound 0, 1, SFX_MEGA_PUNCH
+	anim_obj ANIM_OBJ_FLARE_BLITZ, 52, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_FLARE_BLITZ, 28, 108, $8
+	anim_wait 2
+	anim_sound 0, 1, SFX_MEGA_PUNCH
+	anim_obj ANIM_OBJ_FLARE_BLITZ, 60, 108, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_FLARE_BLITZ, 20, 108, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_FLARE_BLITZ, 68, 108, $8
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 16
+	anim_bgp $90
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $0, $0
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 8
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_sound 0, 0, SFX_BURN
+	anim_obj ANIM_OBJ_LAVA_PLUME, 136, 48, $0
+	anim_obj ANIM_OBJ_LAVA_PLUME, 136, 48, $8
+	anim_obj ANIM_OBJ_LAVA_PLUME, 136, 48, $10
+	anim_obj ANIM_OBJ_LAVA_PLUME, 136, 48, $18
+	anim_obj ANIM_OBJ_LAVA_PLUME, 136, 48, $20
+	anim_obj ANIM_OBJ_LAVA_PLUME, 136, 48, $28
+	anim_obj ANIM_OBJ_LAVA_PLUME, 136, 48, $30
+	anim_obj ANIM_OBJ_LAVA_PLUME, 136, 48, $38
+	anim_wait 2
+	anim_sound 0, 0, SFX_BURN
+	anim_wait 2
+	anim_sound 0, 0, SFX_BURN
+	anim_wait 32
+	anim_jump BattleAnim_ShowMon_0
+
 BattleAnim_AuraSphere:
 	anim_2gfx ANIM_GFX_LEAF_STORM, ANIM_GFX_WIND
 	anim_obj ANIM_OBJ_AGILITY, 8, 24, $10
@@ -4778,6 +4823,29 @@ BattleAnim_PowerTrip:
 	anim_obj ANIM_OBJ_01, 144, 56, $0
 	anim_wait 8
 	anim_jump BattleAnim_ShowMon_0
+
+BattleAnim_CrystalBolt:
+	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_LIGHTNING
+	anim_sound 0, 0, SFX_ZAP_CANNON
+.loop
+	anim_obj ANIM_OBJ_CRYSTAL_BOLT_1, 48, 88, $30
+	anim_wait 2
+	anim_loop 10, .loop
+	anim_wait 16
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $6, $20
+	anim_sound 0, 1, SFX_THUNDER
+	anim_bgeffect ANIM_BG_1F, $28, $2, $0
+.loop2
+	anim_obj ANIM_OBJ_CRYSTAL_BOLT_2, 136, 68, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_CRYSTALS, 136, 72, $5c
+	anim_obj ANIM_OBJ_CRYSTALS, 136, 72, $e8
+	anim_obj ANIM_OBJ_CRYSTALS, 136, 72, $d0
+	anim_obj ANIM_OBJ_CRYSTALS, 136, 72, $50
+	anim_wait 8
+	anim_loop 4, .loop2
+	anim_wait 8
+	anim_ret
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE

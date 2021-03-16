@@ -50,21 +50,21 @@ BattleAnim_WaterSpout:
 	anim_2gfx ANIM_GFX_WATER, ANIM_GFX_HIT
 .loop
 	anim_sound 0, 0, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $30
 	anim_wait 2
-	anim_obj ANIM_OBJ_WATER_SPOUT_1, 52, 96, $6
-	anim_wait 2
-	anim_sound 0, 0, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
-	anim_obj ANIM_OBJ_WATER_SPOUT_1, 46, 96, $6
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 52, 96, $30
 	anim_wait 2
 	anim_sound 0, 0, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
-	anim_wait 2
-	anim_obj ANIM_OBJ_WATER_SPOUT_1, 54, 96, $6
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $30
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 46, 96, $30
 	anim_wait 2
 	anim_sound 0, 0, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $30
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 54, 96, $30
+	anim_wait 2
+	anim_sound 0, 0, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $30
 	anim_wait 2
 	anim_loop 3, .loop
 	anim_wait 32

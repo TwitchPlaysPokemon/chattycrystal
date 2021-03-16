@@ -323,6 +323,10 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_HYPER_VOICE
 	const ANIM_OBJ_VORTEX_BLUE
 	const ANIM_OBJ_AURA_SPHERE
+	const ANIM_OBJ_FLARE_BLITZ
+	const ANIM_OBJ_CRYSTALS
+	const ANIM_OBJ_CRYSTAL_BOLT_1
+	const ANIM_OBJ_CRYSTAL_BOLT_2
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def
@@ -655,6 +659,7 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const BATTLEANIMFRAMESET_E7
 	const BATTLEANIMFRAMESET_E8
 	const BATTLEANIMFRAMESET_E9
+	const BATTLEANIMFRAMESET_EA
 
 ; BattleAnimOAMData indexes (see data/battle_anims/oam.asm)
 	const_def

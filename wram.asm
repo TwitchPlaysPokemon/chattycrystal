@@ -3205,6 +3205,25 @@ w5_dc11:: ds 9
 NEXTU ; d500
 wPokedexOrder:: ds 2 * (NUM_POKEMON + 1) ; enough room to expand to 1,407 entries
 
+NEXTU ; d500
+
+wMoveRelearnerStaging::
+
+	align 8
+wMoveRelearnerTeachableMoves:: flag_array NUM_ATTACKS
+wMoveRelearnerTeachableMovesEnd::
+
+	ds $100 - (2 * 63) - (NUM_ATTACKS + 7) / 8 - 4
+
+wMoveRelearnerSpeciesStaging:: dw
+wMoveRelearnerLevelStaging:: db
+wMoveRelearnerMoveCountStaging:: db
+wMoveRelearnerMoveListStaging:: ds 2 * 63
+
+wMoveRelearnerRejectedMoves:: flag_array NUM_ATTACKS
+	assert wMoveRelearnerRejectedMoves == (wMoveRelearnerTeachableMoves + $100)
+wMoveRelearnerRejectedMovesEnd::
+
 ENDU
 
 

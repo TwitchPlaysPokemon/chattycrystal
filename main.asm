@@ -532,6 +532,7 @@ INCLUDE "engine/link/mystery_gift.asm"
 INCLUDE "engine/battle/used_move_text.asm"
 INCLUDE "mobile/mobile_41.asm"
 INCLUDE "engine/gfx/load_overworld_font.asm"
+INCLUDE "engine/events/move_relearner.asm"
 
 
 SECTION "Mobile 42", ROMX

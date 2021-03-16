@@ -220,14 +220,7 @@ ChattyHiddenPowerDamage:
 	jr HiddenPower_SetDamage
 
 .calculate_button
-	inc a
-	ld c, 0
-	scf
-.shift_loop
-	rl c
-	dec a
-	jr nz, .shift_loop
-	ld a, c
+	call ShiftLeftOne
 	or b
 	ld b, a
 	ret

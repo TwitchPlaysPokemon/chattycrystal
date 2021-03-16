@@ -80,3 +80,17 @@ SubtractSigned::
 	inc a
 	scf
 	ret
+
+ShiftLeftOne::
+; Return 1 << a.
+	push bc
+	inc a
+	ld c, 0
+	scf
+.loop
+	rl c
+	dec a
+	jr nz, .loop
+	ld a, c
+	pop bc
+	ret

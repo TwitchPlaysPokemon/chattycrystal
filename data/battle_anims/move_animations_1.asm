@@ -297,7 +297,7 @@ MoveAnimations1:
 	dw BattleAnim_Pursuit      ; PLACEHOLDER
 	dw BattleAnim_Headbutt     ; 128, PLACEHOLDER
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
-	dw BattleAnim_Waterfall    ; PLACEHOLDER
+	dw BattleAnim_AquaRing
 	dw BattleAnim_FlareBlitz
 	dw BattleAnim_AuraSphere
 	dw BattleAnim_Slash        ; PLACEHOLDER
@@ -3451,6 +3451,18 @@ BattleAnim_CloseCombat:
 	anim_wait 2
 	anim_loop 4, .loop
 	anim_wait 16
+	anim_ret
+
+BattleAnim_AquaRing:
+	anim_2gfx ANIM_GFX_AQUA_RING, ANIM_GFX_CHARGE
+	anim_bgeffect ANIM_BG_18, $0, $1, $40
+	anim_obj ANIM_OBJ_AQUA_RING_CENTER, 48, 96, $0
+	anim_obj ANIM_OBJ_AQUA_RING, 48, 96, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_AQUA_RING, 48, 96, $0
+	anim_sound 0, 1, SFX_GAME_FREAK_LOGO_GS
+	anim_wait 96
+	anim_incbgeffect ANIM_BG_18
 	anim_ret
 
 BattleAnim_FlareBlitz:

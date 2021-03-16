@@ -300,7 +300,7 @@ MoveAnimations1:
 	dw BattleAnim_AquaRing
 	dw BattleAnim_FlareBlitz
 	dw BattleAnim_AuraSphere
-	dw BattleAnim_Slash        ; PLACEHOLDER
+	dw BattleAnim_NightSlash
 	dw BattleAnim_AirSlash
 	dw BattleAnim_BugBuzz
 	dw BattleAnim_DragonPulse  ; 130
@@ -3528,6 +3528,25 @@ BattleAnim_AuraSphere:
 	anim_wait 16
 	anim_bgeffect ANIM_BG_07, $0, $0, $0
 	anim_obj ANIM_OBJ_00, 136, 56, $0
+	anim_wait 32
+	anim_ret
+
+BattleAnim_NightSlash:
+	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_WIND
+	anim_bgp $1b
+	anim_obp0 $c0
+	anim_obj ANIM_OBJ_AGILITY, 8, 24, $10
+	anim_obj ANIM_OBJ_AGILITY, 8, 88, $8
+	anim_wait 4
+	anim_obj ANIM_OBJ_AGILITY, 8, 32, $6
+	anim_obj ANIM_OBJ_AGILITY, 8, 80, $4
+	anim_bgeffect ANIM_BG_1F, $08, $2, $0
+	anim_sound 0, 1, SFX_CUT
+	anim_obj ANIM_OBJ_NIGHT_SLASH_2, 112, 38, $0
+	anim_wait 40
+	anim_bgeffect ANIM_BG_1F, $08, $2, $0
+	anim_sound 0, 1, SFX_CUT
+	anim_obj ANIM_OBJ_NIGHT_SLASH, 152, 42, $0
 	anim_wait 32
 	anim_ret
 

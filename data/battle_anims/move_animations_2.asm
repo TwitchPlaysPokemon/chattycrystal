@@ -1,5 +1,7 @@
 MoveAnimations2:
-	dw BattleAnim_NeedleArm    ; 164
+	dw BattleAnim_KnockOff     ; 162
+	dw BattleAnim_WaterSpout
+	dw BattleAnim_NeedleArm
 	dw BattleAnim_DracoMeteor
 	dw BattleAnim_CalmMind
 	dw BattleAnim_MudShot
@@ -17,6 +19,94 @@ MoveAnimations2:
 	dw BattleAnim_AquaTail
 	dw BattleAnim_StoneEdge
 	dw BattleAnim_HyperVoice
+
+BattleAnim_KnockOff:
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 3, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_08, 136, 08, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_08, 136, 16, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_08, 136, 24, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_08, 136, 32, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_08, 136, 40, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_08, 136, 48, $0
+	anim_wait 1
+	anim_bgeffect ANIM_BG_20, $10, $1, $20
+	anim_sound 0, 1, SFX_TACKLE
+	anim_obj ANIM_OBJ_00, 136, 48, $0
+	anim_obj ANIM_OBJ_08, 136, 56, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_08, 136, 64, $0
+	anim_wait 1
+	anim_obj ANIM_OBJ_08, 136, 72, $0
+	anim_wait 8
+	anim_ret
+
+BattleAnim_WaterSpout:
+	anim_2gfx ANIM_GFX_WATER, ANIM_GFX_HIT
+.loop
+	anim_sound 0, 0, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 52, 96, $6
+	anim_wait 2
+	anim_sound 0, 0, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 46, 96, $6
+	anim_wait 2
+	anim_sound 0, 0, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 54, 96, $6
+	anim_wait 2
+	anim_sound 0, 0, SFX_WATER_GUN
+	anim_obj ANIM_OBJ_WATER_SPOUT_1, 48, 96, $6
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 32
+	anim_sound 0, 0, SFX_BUBBLEBEAM
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 108, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 156, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 116, 10, $6
+	anim_wait 2
+	anim_bgeffect ANIM_BG_1F, $55, $1, $0
+.loop2
+	anim_obj ANIM_OBJ_WATER_HIT, 108, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 150, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 156, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 124, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 116, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 140, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 150, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 132, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 124, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 108, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 140, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 156, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 132, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 116, 10, $6
+	anim_wait 2
+	anim_loop 2, .loop2
+	anim_obj ANIM_OBJ_WATER_HIT, 108, 68, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 156, 68, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 116, 68, $0
+	anim_wait 2
+	anim_wait 32
+	anim_ret
 
 BattleAnim_NeedleArm:
 	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT

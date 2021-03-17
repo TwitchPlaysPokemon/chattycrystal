@@ -348,8 +348,6 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_PlayRough
 	dw BattleAnim_MoonBlast
 	dw BattleAnim_DazzlingGleam
-	dw BattleAnim_Nuzzle
-	dw BattleAnim_IceHammer
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -4854,36 +4852,6 @@ BattleAnim_DazzlingGleam:
 	anim_wait 32
 	anim_ret
 
-BattleAnim_Nuzzle:
-	anim_1gfx ANIM_GFX_LIGHTNING
-	anim_call BattleAnim_TargetObj_2Row
-	anim_sound 0, 0, SFX_ZAP_CANNON
-	anim_obj ANIM_OBJ_31, 44, 88, $0
-	anim_wait 16
-	anim_bgeffect ANIM_BG_26, $0, $1, $0
-	anim_wait 24
-	anim_incbgeffect ANIM_BG_26
-	anim_call BattleAnim_ShowMon_0
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
-	anim_sound 0, 1, SFX_THUNDERSHOCK
-	anim_obj ANIM_OBJ_THUNDER_WAVE, 136, 56, $0
-	anim_wait 16
-	anim_incobj 3
-	anim_wait 32
-	anim_ret
-
-BattleAnim_IceHammer:
-	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_ICE
-	anim_obj ANIM_OBJ_HAMMER_ARM, 136, 68, $30
-	anim_wait 18
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
-	anim_bgeffect ANIM_BG_1F, $60, $4, $10
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_wait 12
-	anim_call BattleAnimSub_Ice
-	anim_wait 32
-	anim_ret
-
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE
 .loop
@@ -6424,26 +6392,6 @@ BattleAnimSub_Fire:
 	anim_obj ANIM_OBJ_BURNED, 136, 56, $90
 	anim_wait 4
 	anim_loop 4, .loop
-	anim_ret
-
-BattleAnimSub_Ice:
-	anim_sound 0, 1, SFX_SHINE
-	anim_obj ANIM_OBJ_12, 128, 42, $0
-	anim_wait 6
-	anim_sound 0, 1, SFX_SHINE
-	anim_obj ANIM_OBJ_12, 144, 70, $0
-	anim_wait 6
-	anim_sound 0, 1, SFX_SHINE
-	anim_obj ANIM_OBJ_12, 120, 56, $0
-	anim_wait 6
-	anim_sound 0, 1, SFX_SHINE
-	anim_obj ANIM_OBJ_12, 152, 56, $0
-	anim_wait 6
-	anim_sound 0, 1, SFX_SHINE
-	anim_obj ANIM_OBJ_12, 144, 42, $0
-	anim_wait 6
-	anim_sound 0, 1, SFX_SHINE
-	anim_obj ANIM_OBJ_12, 128, 70, $0
 	anim_ret
 
 BattleAnimSub_Sludge:

@@ -1271,4 +1271,3 @@ BattleAnimOAMData:
 	dsprite   0, 4,  -6, 4, $00, X_FLIP
 	dsprite   1, 4,  -7, 4, $00, Y_FLIP
 	dsprite   1, 4,  -6, 4, $00, X_FLIP | Y_FLIP
-

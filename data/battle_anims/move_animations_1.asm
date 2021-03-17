@@ -296,7 +296,7 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_Waterfall    ; PLACEHOLDER
 	dw BattleAnim_CloseCombat
 	dw BattleAnim_Pursuit      ; PLACEHOLDER
-	dw BattleAnim_Headbutt     ; 128, PLACEHOLDER
+	dw BattleAnim_TrumpCard    ; 128
 	dw BattleAnim_SuckerPunch
 	dw BattleAnim_AquaRing
 	dw BattleAnim_FlareBlitz
@@ -3447,6 +3447,30 @@ BattleAnim_CloseCombat:
 	anim_obj ANIM_OBJ_01, 114, 52, $0
 	anim_wait 2
 	anim_loop 4, .loop
+	anim_wait 16
+	anim_ret
+
+BattleAnim_TrumpCard:
+	anim_2gfx ANIM_GFX_OBJECTS, ANIM_GFX_CUT
+	anim_sound 63, 3, SFX_SHARPEN
+	anim_obj ANIM_OBJ_TRUMP_CARD_R, 112, 56, $0
+	anim_setobj $1, $3
+	anim_wait 12
+	anim_obj ANIM_OBJ_TRUMP_CARD_B, 112, 56, $0
+	anim_setobj $2, $3
+	anim_wait 12
+	anim_obj ANIM_OBJ_TRUMP_CARD_Y, 112, 56, $0
+	anim_setobj $3, $3
+	anim_wait 12
+	anim_obj ANIM_OBJ_TRUMP_CARD_R, 112, 56, $0
+	anim_setobj $4, $3
+	anim_wait 12
+	anim_obj ANIM_OBJ_TRUMP_CARD_B, 112, 56, $0
+	anim_setobj $5, $3
+	anim_wait 24
+	anim_clearobjs
+	anim_sound 0, 1, SFX_CUT
+	anim_obj ANIM_OBJ_3B, 112, 40, $0
 	anim_wait 16
 	anim_ret
 

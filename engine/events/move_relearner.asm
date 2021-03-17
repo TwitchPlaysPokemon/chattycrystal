@@ -715,9 +715,23 @@ MoveRelearner_InterpretJoypad:
 	ld a, h
 	or l
 	jr z, .exit
-	; TODO: teach move
+	call GetMoveIDFromIndex
+	ld [wPutativeTMHMMove], a
+	ld [wNamedObjectIndexBuffer], a
+	call GetMoveName
+	call CopyName1
+	predef LearnMove
+	ld a, b
+	add a, -1 ; carry if non-zero
+	ret c
+	xor a
+	ldh [hBGMapMode], a
+	call MoveRelearner_InitializeScreenLayout
+	call MoveRelearner_DisplayMoveData
 	call .current_cursor_position
 	ld [hl], "▶"
+	ld a, 1
+	ldh [hBGMapMode], a
 	and a
 	ret
 

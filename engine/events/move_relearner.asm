@@ -634,10 +634,9 @@ MoveRelearner_InterpretJoypad:
 	bit D_DOWN_F, a
 	jr nz, .down
 	and D_UP
-	jr nz, .up
-	ret
+	ret z
 
-.up
+; up
 	ld a, [wMoveRelearnerCursor]
 	and a
 	jr z, .scroll_up

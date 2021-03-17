@@ -700,24 +700,29 @@ MoveRelearner_InterpretJoypad:
 	ret
 
 .cancel
+	call PlayClickSFX
+.exit
 	ld a, MOVERELEARNER_CANCEL
 	ld [wScriptVar], a
 	scf
 	ret
 
 .confirm
-	call .cursor_position
+	call PlayClickSFX
+	call .current_cursor_position
 	ld [hl], "▷"
 	call MoveRelearner_LoadCurrentMoveIndex
 	ld a, h
 	or l
-	jr z, .cancel
+	jr z, .exit
 	; TODO: teach move
-	call .cursor_position
+	call .current_cursor_position
 	ld [hl], "▶"
 	and a
 	ret
 
+.current_cursor_position
+	ld a, [wMoveRelearnerCursor]
 .cursor_position
 	push bc
 	ld bc, 2 * SCREEN_WIDTH

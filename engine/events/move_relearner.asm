@@ -530,20 +530,9 @@ MoveRelearner_DisplayMoveData:
 
 MoveRelearner_UpdateMoveInfoBox:
 	call MoveRelearner_ClearMoveInfoBox
-	ld hl, wMoveRelearnerCursor
-	assert wMoveRelearnerScroll == (wMoveRelearnerCursor + 1)
-	ld a, [hli]
-	add a, [hl]
-	add a, a
-	add a, LOW(wMoveRelearnerMoveList)
-	ld l, a
-	adc HIGH(wMoveRelearnerMoveList)
-	sub l
-	ld h, a
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	or h
+	call MoveRelearner_LoadCurrentMoveIndex
+	ld a, h
+	or l
 	ret z
 	call GetMoveIDFromIndex
 	ld [wNamedObjectIndexBuffer], a
@@ -625,10 +614,25 @@ MoveRelearner_ClearMoveInfoBox:
 .clear_numbers
 	db "   @"
 
+MoveRelearner_LoadCurrentMoveIndex:
+	ld hl, wMoveRelearnerCursor
+	assert wMoveRelearnerScroll == (wMoveRelearnerCursor + 1)
+	ld a, [hli]
+	add a, [hl]
+	add a, a
+	add a, LOW(wMoveRelearnerMoveList)
+	ld l, a
+	adc HIGH(wMoveRelearnerMoveList)
+	sub l
+	ld h, a
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ret
+
 MoveRelearner_InterpretJoypad:
 	bit B_BUTTON_F, a
-	scf
-	ret nz
+	jr nz, .cancel
 	bit A_BUTTON_F, a
 	jr nz, .confirm
 	bit D_DOWN_F, a
@@ -695,8 +699,22 @@ MoveRelearner_InterpretJoypad:
 	and a
 	ret
 
+.cancel
+	ld a, MOVERELEARNER_CANCEL
+	ld [wScriptVar], a
+	scf
+	ret
+
 .confirm
+	call .cursor_position
+	ld [hl], "▷"
+	call MoveRelearner_LoadCurrentMoveIndex
+	ld a, h
+	or l
+	jr z, .cancel
 	; TODO: teach move
+	call .cursor_position
+	ld [hl], "▶"
 	and a
 	ret
 

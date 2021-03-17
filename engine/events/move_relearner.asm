@@ -345,6 +345,7 @@ MoveRelearner:
 	ld [de], a
 	inc de
 	ld [de], a
+	ld [wScriptVar], a
 
 	farcall StatsScreen_LoadFont
 	call MoveRelearner_InitializeScreenLayout
@@ -408,15 +409,7 @@ MoveRelearner_DisplayMoveData:
 	hlcoord 2, 2
 	lb bc, 8, 17
 	call ClearBox
-	hlcoord 1, 13
-	lb bc, 4, 18
-	call ClearBox
-	hlcoord 8, 12
-	ld de, .clear_numbers
-	call PlaceString
-	hlcoord 16, 12
-	ld de, .clear_numbers
-	call PlaceString
+	call MoveRelearner_ClearMoveInfoBox
 	ld a, [wMoveRelearnerScroll]
 	add a, a
 	add a, LOW(wMoveRelearnerMoveList)
@@ -447,7 +440,12 @@ MoveRelearner_DisplayMoveData:
 	ld a, [wNamedObjectIndexBuffer]
 	call GetMoveAddress
 	push af
-	; TODO: move details
+	ld b, a
+	ld a, [wTempLoopCounter]
+	ld c, a
+	ld a, [wMoveRelearnerCursor]
+	cp c
+	call z, MoveRelearner_DisplayMoveInfoBox
 	ld d, h
 	ld e, l
 	pop af
@@ -499,7 +497,7 @@ MoveRelearner_DisplayMoveData:
 	ld a, [wTempLoopCounter]
 	inc a
 	cp 4
-	jr nz, .loop
+	jp nz, .loop
 .place_arrows
 	hlcoord 18, 1
 	ld a, [wMoveRelearnerScroll]
@@ -524,18 +522,189 @@ MoveRelearner_DisplayMoveData:
 	call PlaceString
 	jr .place_arrows
 
-.clear_numbers
-	db "   @"
-
 .cancel_string
 	db "CANCEL@"
 
 .type_string
 	db "TYPE/@"
 
-MoveRelearner_InterpretJoypad:
-	; TODO: actually do something
-	and A_BUTTON + B_BUTTON
+MoveRelearner_UpdateMoveInfoBox:
+	call MoveRelearner_ClearMoveInfoBox
+	ld hl, wMoveRelearnerCursor
+	assert wMoveRelearnerScroll == (wMoveRelearnerCursor + 1)
+	ld a, [hli]
+	add a, [hl]
+	add a, a
+	add a, LOW(wMoveRelearnerMoveList)
+	ld l, a
+	adc HIGH(wMoveRelearnerMoveList)
+	sub l
+	ld h, a
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	or h
 	ret z
+	call GetMoveIDFromIndex
+	ld [wNamedObjectIndexBuffer], a
+	call GetMoveAddress
+	ld b, a
+MoveRelearner_DisplayMoveInfoBox:
+	; in: b:hl = move attributes, [wNamedObjectIndexBuffer] = move ID
+	push hl
+	inc hl
+	ld a, b
+	call GetFarByte
+	push af
+	inc hl
+	inc hl
+	ld a, b
+	call GetFarByte
+	ld bc, 100
+	ld hl, $80
+	call AddNTimes
+	ld a, h
+	hlcoord 8, 12
+	call .print_value
+	pop af
+	hlcoord 16, 12
+	call .print_value
+	ld a, [wNamedObjectIndexBuffer]
+	call GetMoveIndexFromID
+	ld b, h
+	ld c, l
+	ld hl, MoveDescriptions
+	ld a, BANK(MoveDescriptions)
+	call LoadDoubleIndirectPointer
+	ld d, h
+	ld e, l
+	hlcoord 1, 14
+	call nz, FarPlaceString
+	pop hl
+	ret
+
+.print_value
+	ld de, .dashes
+	cp 2
+	jp c, PlaceString
+	ld c, 100
+	call SimpleDivide
+	ld c, a
+	ld a, b
+	and a
+	jr z, .skip_hundreds
+	add a, "0"
+	ld [hl], a
+.skip_hundreds
+	inc hl
+	inc hl
+	ld a, c
+	ld c, 10
+	call SimpleDivide
+	add a, "0"
+	ld [hld], a
+	ld a, b
+	add a, "0"
+	ld [hl], a
+	ret
+
+.dashes
+	db "---@"
+
+MoveRelearner_ClearMoveInfoBox:
+	hlcoord 1, 13
+	lb bc, 4, 18
+	call ClearBox
+	hlcoord 8, 12
+	ld de, .clear_numbers
+	call PlaceString
+	hlcoord 16, 12
+	ld de, .clear_numbers
+	jp PlaceString
+
+.clear_numbers
+	db "   @"
+
+MoveRelearner_InterpretJoypad:
+	bit B_BUTTON_F, a
 	scf
+	ret nz
+	bit A_BUTTON_F, a
+	jr nz, .confirm
+	bit D_DOWN_F, a
+	jr nz, .down
+	and D_UP
+	jr nz, .up
+	ret
+
+.up
+	ld a, [wMoveRelearnerCursor]
+	and a
+	jr z, .scroll_up
+	ld c, -1
+.update_cursor
+	ld a, [wMoveRelearnerCursor]
+	ld b, a
+	call .cursor_position
+	ld [hl], " "
+	ld a, b
+	add a, c
+	ld [wMoveRelearnerCursor], a
+	call .cursor_position
+	ld [hl], "▶"
+	call MoveRelearner_UpdateMoveInfoBox
+	and a
+	ret
+
+.scroll_up
+	ld a, [wMoveRelearnerScroll]
+	and a
+	ret z
+	dec a
+	ld [wMoveRelearnerScroll], a
+	call MoveRelearner_DisplayMoveData
+	hlcoord 1, 2
+	ld [hl], "▶"
+	and a
+	ret
+
+.down
+	ld a, [wMoveRelearnerMoveCount]
+	ld d, a
+	ld e, 0
+	cp 4
+	jr c, .got_scroll_limits
+	sub 3
+	ld e, a
+	ld d, 3
+.got_scroll_limits
+	ld a, [wMoveRelearnerCursor]
+	cp d
+	jr nc, .scroll_down
+	ld c, 1
+	jr .update_cursor
+
+.scroll_down
+	ld a, [wMoveRelearnerScroll]
+	cp e
+	ret nc
+	inc a
+	ld [wMoveRelearnerScroll], a
+	call MoveRelearner_DisplayMoveData
+	hlcoord 1, 8
+	ld [hl], "▶"
+	and a
+	ret
+
+.confirm
+	; TODO: teach move
+	and a
+	ret
+
+.cursor_position
+	push bc
+	ld bc, 2 * SCREEN_WIDTH
+	hlcoord 1, 2
+	call AddNTimes
+	pop bc
 	ret

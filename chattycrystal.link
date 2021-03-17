@@ -15,6 +15,7 @@ ROMX $03
 ROMX $04
 	"bank4"
 	"Formes"
+	"Move Animation Scripts 2"
 ROMX $05
 	"bank5"
 	"Map Blocks 6"
@@ -35,7 +36,7 @@ ROMX $09
 ROMX $0a
 	"bankA"
 	"Map Blocks 4"
-	"Move Animation Scripts 2"
+	"Move Animation Scripts 3"
 ROMX $0b
 	"bankB"
 	"Map Blocks 5"

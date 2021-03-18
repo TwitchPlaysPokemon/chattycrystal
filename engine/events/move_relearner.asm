@@ -5,19 +5,16 @@
 	const MOVERELEARNER_EGG
 
 MoveRelearnerScript::
-	; assumes the player has already been offered the relearner's services
-	yesorno
-	iffalse .cancel
 	refreshscreen
 	partyselect
-	iffalse .cancel
+	iffalse MoveRelearnerCancel
 	callasm MoveRelearnerLoad
 	ifequal MOVERELEARNER_NO_MOVES, .no_moves
 	ifequal MOVERELEARNER_EGG, .egg
 	writetext .what_move_text
 	callasm MoveRelearner
 	opentext
-	ifequal MOVERELEARNER_CANCEL, .cancel
+	ifequal MOVERELEARNER_CANCEL, MoveRelearnerCancel
 	writetext .done_text
 	waitbutton
 	closetext
@@ -38,7 +35,7 @@ MoveRelearnerScript::
 
 .no_moves
 	writetext .no_moves_text
-	sjump .exit_failure
+	sjump MoveRelearnerCancel.exit_failure
 
 .no_moves_text
 	text "This #MON knows"
@@ -50,7 +47,7 @@ MoveRelearnerScript::
 
 .egg
 	writetext .egg_text
-	sjump .exit_failure
+	sjump MoveRelearnerCancel.exit_failure
 
 .egg_text
 	text "EGGS don't learn"
@@ -59,7 +56,7 @@ MoveRelearnerScript::
 	line "remember a move?"
 	done
 
-.cancel
+MoveRelearnerCancel::
 	writetext .cancel_text
 .exit_failure
 	waitbutton

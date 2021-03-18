@@ -349,11 +349,11 @@ MoveRelearner:
 	ld [de], a
 	inc de
 	ld [de], a
-	ld [wScriptVar], a
 
 	farcall StatsScreen_LoadFont
 	call MoveRelearner_InitializeScreenLayout
 	xor a
+	ld [wScriptVar], a
 	ld [wMoveRelearnerCursor], a
 	ld [wMoveRelearnerScroll], a
 	hlcoord 1, 2

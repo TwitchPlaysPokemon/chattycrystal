@@ -125,7 +125,6 @@ INCLUDE "engine/pokemon/mon_submenu.asm"
 INCLUDE "engine/battle/menu.asm"
 INCLUDE "engine/items/buy_sell_toss.asm"
 INCLUDE "engine/menus/trainer_card.asm"
-INCLUDE "engine/events/prof_oaks_pc.asm"
 INCLUDE "engine/overworld/decorations.asm"
 INCLUDE "engine/pokemon/level_up_happiness.asm"
 INCLUDE "engine/battle/read_trainer_dvs.asm"
@@ -173,6 +172,7 @@ SECTION "bank10", ROMX
 INCLUDE "engine/pokedex/pokedex.asm"
 INCLUDE "data/moves/moves.asm"
 INCLUDE "engine/pokemon/evolve.asm"
+INCLUDE "engine/events/prof_oaks_pc.asm"
 
 TheEndGFX::
 INCBIN "gfx/credits/theend.2bpp"

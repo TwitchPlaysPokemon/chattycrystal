@@ -93,7 +93,7 @@ _GrewToLevelText::
 	line "level @"
 	text_decimal wCurPartyLevel, 1, 3
 	text "!@"
-	sound_dex_fanfare_50_79 ; plays SFX_DEX_FANFARE_50_79, identical to SFX_LEVEL_UP
+	sound_dex_fanfare_3 ; plays SFX_DEX_FANFARE_3, identical to SFX_LEVEL_UP
 	text_waitbutton
 	text_end
 
@@ -1352,7 +1352,7 @@ UnknownText_0x1bd429::
 	text_end
 
 UnknownText_0x1bd445::
-	sound_dex_fanfare_80_109
+	sound_dex_fanfare_4
 	text_pause
 	text_end
 

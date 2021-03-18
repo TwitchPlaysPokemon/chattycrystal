@@ -48,7 +48,7 @@ RadioTower1FLuckyNumberManScript:
 	buttonsound
 	waitsfx
 	writetext RadioTower1FLuckyNumberManDotDotDotText
-	playsound SFX_DEX_FANFARE_20_49
+	playsound SFX_DEX_FANFARE_2
 	waitsfx
 	buttonsound
 	special CheckForLuckyNumberWinners

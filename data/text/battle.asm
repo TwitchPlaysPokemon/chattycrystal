@@ -363,7 +363,7 @@ BattleText_StringBuffer1GrewToLevel:
 	line "level @"
 	text_decimal wCurPartyLevel, 1, 3
 	text "!@"
-	sound_dex_fanfare_50_79
+	sound_dex_fanfare_3
 	text_end
 
 FastAsleepText:

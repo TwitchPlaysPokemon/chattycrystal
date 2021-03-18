@@ -113,7 +113,7 @@ TrickHouse_CheckDoor_Common:
 
 TrickHouse_UnlockDoor_Common:
 	writetext TrickHouse_DoorUnlockText
-	playsound SFX_DEX_FANFARE_50_79
+	playsound SFX_DEX_FANFARE_3
 	waitsfx
 	changeblock 12, 0, $43 ; exit door open
 	reloadmappart ; This works fine

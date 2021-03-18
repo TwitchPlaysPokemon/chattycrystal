@@ -902,7 +902,7 @@ UnknownText_0x1c5660::
 	line "@"
 	text_ram wStringBuffer2
 	text "!@"
-	sound_dex_fanfare_50_79
+	sound_dex_fanfare_3
 	text_waitbutton
 	text_end
 
@@ -1269,7 +1269,7 @@ UnknownText_0x1c5cf1::
 UnknownText_0x1c5d03::
 	text "There was a trophy"
 	line "inside!@"
-	sound_dex_fanfare_50_79
+	sound_dex_fanfare_3
 	text_start
 
 	para "@"

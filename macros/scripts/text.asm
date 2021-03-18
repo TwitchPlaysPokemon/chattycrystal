@@ -73,9 +73,9 @@ text_pause: MACRO
 	db TX_PAUSE
 ENDM
 
-	enum TX_SOUND_DEX_FANFARE_50_79 ; $0b
-sound_dex_fanfare_50_79: MACRO
-	db TX_SOUND_DEX_FANFARE_50_79
+	enum TX_SOUND_DEX_FANFARE_3 ; $0b
+sound_dex_fanfare_3: MACRO
+	db TX_SOUND_DEX_FANFARE_3
 ENDM
 
 	enum TX_DOTS ; $0c
@@ -89,9 +89,9 @@ text_linkwaitbutton: MACRO
 	db TX_LINK_WAIT_BUTTON
 ENDM
 
-	enum TX_SOUND_DEX_FANFARE_20_49 ; $0e
-sound_dex_fanfare_20_49: MACRO
-	db TX_SOUND_DEX_FANFARE_20_49
+	enum TX_SOUND_DEX_FANFARE_2 ; $0e
+sound_dex_fanfare_2: MACRO
+	db TX_SOUND_DEX_FANFARE_2
 ENDM
 
 	enum TX_SOUND_ITEM ; $0f
@@ -104,9 +104,9 @@ sound_caught_mon: MACRO
 	db TX_SOUND_CAUGHT_MON
 ENDM
 
-	enum TX_SOUND_DEX_FANFARE_80_109 ; $11
-sound_dex_fanfare_80_109: MACRO
-	db TX_SOUND_DEX_FANFARE_80_109
+	enum TX_SOUND_DEX_FANFARE_4 ; $11
+sound_dex_fanfare_4: MACRO
+	db TX_SOUND_DEX_FANFARE_4
 ENDM
 
 	enum TX_SOUND_FANFARE ; $12

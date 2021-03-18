@@ -458,7 +458,7 @@ TradedForText:
 	ret
 
 .done
-	; sound_dex_fanfare_80_109
+	; sound_dex_fanfare_4
 	; text_pause
 	text_far UnknownText_0x1bd445
 	text_end

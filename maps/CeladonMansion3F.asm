@@ -22,7 +22,7 @@ GameFreakGameDesignerScript:
 .CompletedPokedex:
 	buttonsound
 	writetext GameFreakGameDesignerCompletedPokedexText
-	playsound SFX_DEX_FANFARE_230_PLUS
+	playsound SFX_DEX_FANFARE_8
 	waitsfx
 	writetext GameFreakGameDesignerPauseForDiplomaText
 	buttonsound

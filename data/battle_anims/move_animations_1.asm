@@ -3073,7 +3073,7 @@ BattleAnim_TeeterDance:
 	anim_1gfx ANIM_GFX_NOISE
 	anim_call BattleAnim_TargetObj_2Row
 	anim_bgeffect ANIM_BG_2C, $0, $1, $0
-	anim_sound 0, 0, SFX_DEX_FANFARE_LESS_THAN_20
+	anim_sound 0, 0, SFX_DEX_FANFARE_1
 	anim_wait 8
 	anim_obj ANIM_OBJ_TEETER_DANCE, 64, 80, $0
 	anim_wait 32

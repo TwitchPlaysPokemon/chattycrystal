@@ -643,13 +643,13 @@ TextCommands::
 	dw TextCommand_START_ASM        ; TX_START_ASM
 	dw TextCommand_NUM              ; TX_NUM
 	dw TextCommand_PAUSE            ; TX_PAUSE
-	dw TextCommand_SOUND            ; TX_SOUND_DEX_FANFARE_50_79
+	dw TextCommand_SOUND            ; TX_SOUND_DEX_FANFARE_3
 	dw TextCommand_DOTS             ; TX_DOTS
 	dw TextCommand_LINK_WAIT_BUTTON ; TX_LINK_WAIT_BUTTON
-	dw TextCommand_SOUND            ; TX_SOUND_DEX_FANFARE_20_49
+	dw TextCommand_SOUND            ; TX_SOUND_DEX_FANFARE_2
 	dw TextCommand_SOUND            ; TX_SOUND_ITEM
 	dw TextCommand_SOUND            ; TX_SOUND_CAUGHT_MON
-	dw TextCommand_SOUND            ; TX_SOUND_DEX_FANFARE_80_109
+	dw TextCommand_SOUND            ; TX_SOUND_DEX_FANFARE_4
 	dw TextCommand_SOUND            ; TX_SOUND_FANFARE
 	dw TextCommand_SOUND            ; TX_SOUND_SLOT_MACHINE_START
 	dw TextCommand_STRINGBUFFER     ; TX_STRINGBUFFER
@@ -951,12 +951,12 @@ TextCommand_SOUND::
 	ret
 
 TextSFX::
-	dbw TX_SOUND_DEX_FANFARE_50_79,  SFX_DEX_FANFARE_50_79
+	dbw TX_SOUND_DEX_FANFARE_3,      SFX_DEX_FANFARE_3
 	dbw TX_SOUND_FANFARE,            SFX_FANFARE
-	dbw TX_SOUND_DEX_FANFARE_20_49,  SFX_DEX_FANFARE_20_49
+	dbw TX_SOUND_DEX_FANFARE_2,      SFX_DEX_FANFARE_2
 	dbw TX_SOUND_ITEM,               SFX_ITEM
 	dbw TX_SOUND_CAUGHT_MON,         SFX_CAUGHT_MON
-	dbw TX_SOUND_DEX_FANFARE_80_109, SFX_DEX_FANFARE_80_109
+	dbw TX_SOUND_DEX_FANFARE_4,      SFX_DEX_FANFARE_4
 	dbw TX_SOUND_SLOT_MACHINE_START, SFX_SLOT_MACHINE_START
 	db -1
 

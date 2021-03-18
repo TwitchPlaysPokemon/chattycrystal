@@ -1,7 +1,7 @@
 ; SFX indexes (see audio/sfx_pointers.asm)
 	const_def
 
-	const SFX_DEX_FANFARE_50_79           ; 00
+	const SFX_DEX_FANFARE_3               ; 00
 	const SFX_ITEM                        ; 01
 	const SFX_CAUGHT_MON                  ; 02
 	const SFX_POKEBALLS_PLACED_ON_TABLE   ; 03
@@ -10,8 +10,8 @@
 	const SFX_MENU                        ; 06
 	const SFX_READ_TEXT                   ; 07
 	const SFX_READ_TEXT_2                 ; 08
-	const SFX_DEX_FANFARE_20_49           ; 09
-	const SFX_DEX_FANFARE_80_109          ; 0a
+	const SFX_DEX_FANFARE_2               ; 09
+	const SFX_DEX_FANFARE_4               ; 0a
 	const SFX_POISON                      ; 0b
 	const SFX_GOT_SAFARI_BALLS            ; 0c
 	const SFX_BOOT_PC                     ; 0d
@@ -160,11 +160,11 @@
 	const SFX_GET_BADGE                   ; 9c
 	const SFX_QUIT_SLOTS                  ; 9d
 	const SFX_EGG_CRACK                   ; 9e
-	const SFX_DEX_FANFARE_LESS_THAN_20    ; 9f
-	const SFX_DEX_FANFARE_140_169         ; a0
-	const SFX_DEX_FANFARE_170_199         ; a1
-	const SFX_DEX_FANFARE_200_229         ; a2
-	const SFX_DEX_FANFARE_230_PLUS        ; a3
+	const SFX_DEX_FANFARE_1               ; 9f
+	const SFX_DEX_FANFARE_5               ; a0
+	const SFX_DEX_FANFARE_6               ; a1
+	const SFX_DEX_FANFARE_7               ; a2
+	const SFX_DEX_FANFARE_8               ; a3
 	const SFX_EVOLVED                     ; a4
 	const SFX_MASTER_BALL                 ; a5
 	const SFX_EGG_HATCH                   ; a6

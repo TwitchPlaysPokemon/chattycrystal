@@ -287,7 +287,7 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_Slash        ; PLACEHOLDER
 	dw BattleAnim_Thief        ; PLACEHOLDER
 	dw BattleAnim_Spark        ; PLACEHOLDER
-	dw BattleAnim_Sharpen      ; PLACEHOLDER
+	dw BattleAnim_DragonDance
 	dw BattleAnim_ShockWave    ; 120
 	dw BattleAnim_WaterPulse
 	dw BattleAnim_Roost
@@ -3350,6 +3350,19 @@ BattleAnim_MuddyWater:
 	anim_incobj 1
 	anim_wait 56
 	anim_ret
+
+BattleAnim_DragonDance:
+	anim_1gfx ANIM_GFX_CHARGE
+	anim_bgeffect ANIM_BG_18, $0, $1, $40
+.loop
+	anim_sound 0, 0, SFX_OUTRAGE
+	anim_obj ANIM_OBJ_DRAGON_DANCE, 48, 104, $0
+	anim_wait 8
+	anim_loop 8, .loop
+	anim_wait 40
+	anim_incbgeffect ANIM_BG_18
+	anim_wait 1
+	anim_jump BattleAnim_SkyAttack_branch_c9fb5
 
 BattleAnim_ShockWave:
 	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_CHARGE

@@ -292,7 +292,7 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_WaterPulse
 	dw BattleAnim_Roost
 	dw BattleAnim_Recover      ; PLACEHOLDER
-	dw BattleAnim_MegaPunch    ; PLACEHOLDER
+	dw BattleAnim_HammerArm
 	dw BattleAnim_Brine
 	dw BattleAnim_CloseCombat
 	dw BattleAnim_Assurance
@@ -3398,6 +3398,17 @@ BattleAnim_Roost:
 	anim_wait 5
 	anim_obj ANIM_OBJ_GLIMMER, 56, 104, $0
 	anim_wait 21
+	anim_ret
+
+BattleAnim_HammerArm:
+	anim_1gfx ANIM_GFX_HIT
+	anim_obj ANIM_OBJ_HAMMER_ARM, 136, 68, $30
+	anim_wait 18
+	anim_obj ANIM_OBJ_00, 136, 48, $0
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_bgeffect ANIM_BG_1F, $60, $4, $10
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_wait 44
 	anim_ret
 
 BattleAnim_Brine:

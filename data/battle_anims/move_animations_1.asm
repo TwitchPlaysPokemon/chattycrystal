@@ -4403,24 +4403,23 @@ BattleAnim_Chatter:
 BattleAnim_ChargeBeam:
 	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_CHARGE
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
-	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
-	anim_obj ANIM_OBJ_CHARGE, 44, 88, $30
-	anim_obj ANIM_OBJ_CHARGE, 44, 88, $31
-	anim_obj ANIM_OBJ_CHARGE, 44, 88, $32
-	anim_obj ANIM_OBJ_CHARGE, 44, 88, $33
-	anim_obj ANIM_OBJ_CHARGE, 44, 88, $34
-	anim_obj ANIM_OBJ_CHARGE, 44, 88, $35
-	anim_obj ANIM_OBJ_CHARGE, 44, 88, $36
-	anim_obj ANIM_OBJ_CHARGE, 44, 88, $37
-	anim_wait 1
-.loop
 	anim_sound 0, 0, SFX_WARP_TO
+	anim_obj ANIM_OBJ_SHOCK_WAVE_CHARGE, 48, 88, $38
+	anim_wait 4
+	anim_obj ANIM_OBJ_SHOCK_WAVE_CHARGE, 48, 88, $20
+	anim_wait 4
+	anim_obj ANIM_OBJ_SHOCK_WAVE_CHARGE, 48, 88, $8
+	anim_wait 4
+	anim_obj ANIM_OBJ_SHOCK_WAVE_CHARGE, 48, 88, $10
+	anim_wait 4
+	anim_obj ANIM_OBJ_SHOCK_WAVE_CHARGE, 48, 88, $28
+	anim_wait 4
+	anim_obj ANIM_OBJ_SHOCK_WAVE_CHARGE, 48, 88, $0
+	anim_wait 4
+	anim_obj ANIM_OBJ_SHOCK_WAVE_CHARGE, 48, 88, $18
+	anim_wait 4
+	anim_obj ANIM_OBJ_SHOCK_WAVE_CHARGE, 48, 88, $30
 	anim_wait 16
-	anim_loop 6, .loop
-	anim_wait 40
-	anim_clearobjs
-	anim_incbgeffect ANIM_BG_06
-	anim_bgeffect ANIM_BG_08, $0, $4, $0
 	anim_sound 0, 0, SFX_ZAP_CANNON
 	anim_obj ANIM_OBJ_CHARGE_BEAM, 64, 92, $4
 	anim_wait 4

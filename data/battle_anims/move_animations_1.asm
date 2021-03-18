@@ -293,9 +293,9 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_Roost
 	dw BattleAnim_Recover      ; PLACEHOLDER
 	dw BattleAnim_MegaPunch    ; PLACEHOLDER
-	dw BattleAnim_Waterfall    ; PLACEHOLDER
+	dw BattleAnim_Brine
 	dw BattleAnim_CloseCombat
-	dw BattleAnim_Pursuit      ; PLACEHOLDER
+	dw BattleAnim_Assurance
 	dw BattleAnim_TrumpCard    ; 128
 	dw BattleAnim_SuckerPunch
 	dw BattleAnim_AquaRing
@@ -3404,6 +3404,55 @@ BattleAnim_Roost:
 	anim_wait 21
 	anim_ret
 
+BattleAnim_Brine:
+	anim_2gfx ANIM_GFX_WATER, ANIM_GFX_HIT
+	anim_battlergfx_2row
+	anim_sound 0, 0, SFX_SURF
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 128, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 136, 10, $6
+	anim_wait 2
+.loop
+	anim_obj ANIM_OBJ_WATER_HIT, 128, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 122, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 142, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 122, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 116, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 142, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 148, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 116, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 110, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 148, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 154, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 110, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 128, 10, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 154, 68, $0
+	anim_obj ANIM_OBJ_WATER_SPOUT_2, 136, 10, $6
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_obj ANIM_OBJ_WATER_HIT, 128, 68, $0
+	anim_wait 2
+	anim_obj ANIM_OBJ_WATER_HIT, 136, 68, $0
+	anim_wait 8
+	anim_sound 0, 0, SFX_TOXIC
+	anim_bgeffect ANIM_BG_30, $0, $0, $0
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
+	anim_wait 1
+	anim_bgeffect ANIM_BG_31, $1c, $0, $0
+	anim_wait 19
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_bgeffect ANIM_BG_32, $0, $0, $0
+	anim_wait 8
+	anim_ret
+
 BattleAnim_CloseCombat:
 	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
 	anim_sound 0, 0, SFX_RAZOR_WIND
@@ -3446,6 +3495,23 @@ BattleAnim_CloseCombat:
 	anim_wait 2
 	anim_loop 4, .loop
 	anim_wait 16
+	anim_ret
+
+BattleAnim_Assurance:
+	anim_1gfx ANIM_GFX_HIT
+	anim_battlergfx_2row
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
+	anim_sound 0, 1, SFX_DOUBLESLAP
+	anim_obj ANIM_OBJ_HAND_REVERSE, 130, 48, $0
+	anim_obj ANIM_OBJ_08, 142, 48, $0
+	anim_wait 8
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
+	anim_sound 0, 1, SFX_DOUBLESLAP
+	anim_obj ANIM_OBJ_HAND_REVERSE, 130, 48, $0
+	anim_obj ANIM_OBJ_08, 142, 48, $0
+	anim_obj ANIM_OBJ_00, 136, 48, $0
+	anim_wait 32
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
 
 BattleAnim_TrumpCard:

@@ -1,4 +1,4 @@
-SECTION "mobile_40", ROMX
+SECTION "Mobile 40", ROMX
 
 Function100000:
 ; d: 1 or 2

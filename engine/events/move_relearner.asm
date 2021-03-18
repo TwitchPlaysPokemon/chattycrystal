@@ -5,6 +5,7 @@
 	const MOVERELEARNER_EGG
 
 MoveRelearnerScript::
+	writetext .which_mon_text
 	refreshscreen
 	partyselect
 	iffalse MoveRelearnerCancel
@@ -20,6 +21,12 @@ MoveRelearnerScript::
 	closetext
 	setval TRUE
 	end
+
+.which_mon_text
+	text "So, which #MON"
+	line "should I make"
+	cont "remember a move?"
+	prompt
 
 .what_move_text
 	text "What move should I"

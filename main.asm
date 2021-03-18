@@ -72,6 +72,7 @@ INCLUDE "engine/events/pokerus/apply_pokerus_tick.asm"
 INCLUDE "engine/events/bug_contest/contest_2.asm"
 INCLUDE "engine/events/reset_unique_mons.asm"
 INCLUDE "engine/math/get_square_root.asm"
+INCLUDE "engine/pokemon/add_mobile_mon.asm"
 
 TheEndGFX::
 INCBIN "gfx/credits/theend.2bpp"

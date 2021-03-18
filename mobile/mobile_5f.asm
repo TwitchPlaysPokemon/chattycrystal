@@ -1,6 +1,7 @@
 SECTION "Mobile 5F", ROMX
 
 Function17c000:
+	; unreferenced
 	call DisableLCD
 
 	ld hl, vTiles2
@@ -235,53 +236,7 @@ Function17d0f3:
 
 .asm_17d180
 	call CloseSubmenu
-	call RestartMapMusic
-	ret
-
-Mobile_CopyDefaultOTName:
-	ld hl, Mobile5F_PlayersName
-	ld de, wc63d
-	ld bc, 5
-	rst CopyBytes
-	ret
-
-Mobile5F_PlayersName:
-	db "クりス@@"
-
-Mobile_CopyDefaultNickname:
-	ld hl, .DefaultNickname
-	ld de, wc642
-	ld bc, 5
-	rst CopyBytes
-	ret
-
-.DefaultNickname:
-	db "？？？？？"
-
-Mobile_CopyDefaultMail:
-	ld a, "@"
-	ld hl, wc647
-	ld bc, MAIL_MSG_LENGTH + 1
-	call ByteFill
-	ld hl, .DefaultMessage
-	ld de, wc647
-	ld bc, 6
-	rst CopyBytes
-	ret
-
-.DefaultMessage:
-	db "こんにちは@"
-
-Mobile_CopyDefaultMailAuthor:
-	ld a, "@"
-	ld de, wc668
-	ld bc, 5
-	call ByteFill
-	ld hl, Mobile5F_PlayersName
-	ld de, wc668
-	ld bc, 5
-	rst CopyBytes
-	ret
+	jp RestartMapMusic
 
 CheckStringContainsLessThanBNextCharacters:
 .loop

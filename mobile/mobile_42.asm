@@ -1,6 +1,7 @@
 SECTION "Mobile 42", ROMX
 
 MobileTradeAnimation_SendGivemonToGTS:
+	; unreferenced
 	ld a, $80
 	ld [wcf65], a
 	ld de, .TradeAnimScript
@@ -16,6 +17,7 @@ MobileTradeAnimation_SendGivemonToGTS:
 	mobiletradeanim_end
 
 MobileTradeAnimation_RetrieveGivemonFromGTS:
+	; unreferenced
 	ld a, $80
 asm_108018:
 	ld [wcf65], a

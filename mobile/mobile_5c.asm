@@ -1,6 +1,7 @@
 SECTION "Mobile 5C", ROMX
 
 Function170000:
+	; unreferenced
 	ld a, [$c62b]
 	ld [wPlayerTrademonSpecies], a
 	ld hl, $c62e
@@ -38,6 +39,7 @@ Function170000:
 	ret
 
 Function17005a:
+	; unreferenced
 	ld a, $5
 	call GetSRAMBank
 	ld a, [$a824]

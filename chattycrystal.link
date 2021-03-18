@@ -142,6 +142,7 @@ ROMX $33
 	"Move Animations"
 ROMX $34
 	"Pic Animations 1"
+	"Battle Tower"
 ROMX $35
 	"Pic Animations 2"
 ROMX $36
@@ -191,9 +192,8 @@ ROMX $45
 ROMX $46
 	"Crystal Events"
 ROMX $47
-	"Battle Tower"
-	"Tileset Data 10"
-	"Pics 37"
+	"Sprites 3"
+	"Tileset Data 11"
 ROMX $48
 	"Pic Pointers"
 	"Pics 1"
@@ -239,8 +239,8 @@ ROMX $5b
 	"bank5B"
 	"Pics 20"
 ROMX $5c
-	"bank5C"
 	"Mobile 5C"
+	"Tileset Data 10"
 ROMX $5d
 	"Crystal Phone Text 2"
 	"Pics 21"
@@ -287,6 +287,7 @@ ROMX $6c
 	"Map Scripts 25"
 ROMX $6d
 	"Special Phone Text"
+	"Pics 37"
 ROMX $6e
 	"Pokedex Entries 065-128"
 	"Cries"
@@ -335,8 +336,7 @@ ROMX $7c
 	"Battle Tower Trainer Data"
 	"Pics 25"
 ROMX $7d
-	"Sprites 3"
-	"Tileset Data 11"
+	; empty
 ROMX $7e
 	; empty
 ROMX $7f

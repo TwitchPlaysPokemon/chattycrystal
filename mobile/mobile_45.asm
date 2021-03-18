@@ -5777,6 +5777,7 @@ MobilePassword_IncrementJumptable:
 	ret
 
 Function117ab4:
+	; unreferenced
 	call ClearBGPalettes
 	call ClearSprites
 	farcall Function172e78

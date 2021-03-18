@@ -721,16 +721,6 @@ _MobileStadiumSuccessText::
 	para ""
 	done
 
-UnknownText_0x1c5196::
-	text "Delete the saved"
-	line "LOG-IN PASSWORD?"
-	done
-
-UnknownText_0x1c51b9::
-	text "Deleted the LOG-IN"
-	line "PASSWORD."
-	done
-
 UnknownText_0x1c51d7::
 	text "Pick three #MON"
 	line "for battle."

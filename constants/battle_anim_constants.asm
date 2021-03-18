@@ -334,6 +334,10 @@ BATTLEANIM_BASE_TILE EQU 7 * 7  ; Maximum size of a pokemon picture
 	const ANIM_OBJ_TRUMP_CARD_R
 	const ANIM_OBJ_TRUMP_CARD_B
 	const ANIM_OBJ_TRUMP_CARD_Y
+	const ANIM_OBJ_SHOCK_WAVE_CHARGE
+	const ANIM_OBJ_SHOCK_WAVE
+	const ANIM_OBJ_SHOCK_WAVE_2
+	const ANIM_OBJ_SHOCK_WAVE_3
 
 ; DoBattleAnimFrame arguments (see engine/battle_anims/functions.asm)
 	const_def

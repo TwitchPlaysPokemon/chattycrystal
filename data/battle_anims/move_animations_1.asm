@@ -291,7 +291,7 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_ThunderWave  ; 120, PLACEHOLDER
 	dw BattleAnim_WaterPulse
 	dw BattleAnim_Roost
-	dw BattleAnim_Recover      ; PLACEHOLDER
+	dw BattleAnim_WakeUpSlap
 	dw BattleAnim_HammerArm
 	dw BattleAnim_Brine
 	dw BattleAnim_CloseCombat
@@ -3398,6 +3398,28 @@ BattleAnim_Roost:
 	anim_wait 5
 	anim_obj ANIM_OBJ_GLIMMER, 56, 104, $0
 	anim_wait 21
+	anim_ret
+
+BattleAnim_WakeUpSlap:
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_STARS
+	anim_bgeffect ANIM_BG_1F, $56, $1, $0
+.loop
+	anim_sound 0, 1, SFX_DOUBLESLAP
+	anim_obj ANIM_OBJ_08, 142, 48, $0
+	anim_wait 4
+	anim_obj ANIM_OBJ_00, 136, 48, $0
+	anim_obj ANIM_OBJ_STAR_BURST, 136, 48, $5c
+	anim_obj ANIM_OBJ_STAR_BURST, 136, 48, $e8
+	anim_wait 4
+	anim_sound 0, 1, SFX_DOUBLESLAP
+	anim_obj ANIM_OBJ_HAND_REVERSE, 130, 48, $0
+	anim_wait 4
+	anim_obj ANIM_OBJ_00, 136, 48, $0
+	anim_obj ANIM_OBJ_STAR_BURST, 136, 48, $d0
+	anim_obj ANIM_OBJ_STAR_BURST, 136, 48, $50
+	anim_wait 4
+	anim_loop 4, .loop
+	anim_wait 32
 	anim_ret
 
 BattleAnim_HammerArm:

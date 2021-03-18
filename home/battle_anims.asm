@@ -59,3 +59,13 @@ BattleAnimSub_Ice::
 	anim_sound 0, 1, SFX_SHINE
 	anim_obj ANIM_OBJ_12, 128, 70, $0
 	anim_ret
+
+BattleAnimSub_Glimmer1::
+	anim_sound 0, 0, SFX_METRONOME
+	anim_obj ANIM_OBJ_GLIMMER, 44, 64, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMER, 24, 96, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMER, 56, 104, $0
+	anim_wait 21
+	anim_ret

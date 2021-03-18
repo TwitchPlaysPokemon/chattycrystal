@@ -15,7 +15,6 @@ ROMX $03
 ROMX $04
 	"bank4"
 	"Formes"
-	"Move Animation Scripts 2"
 ROMX $05
 	"bank5"
 	"Map Blocks 6"
@@ -168,6 +167,7 @@ ROMX $3e
 ROMX $3f
 	"bank3F"
 	"Pic Animations 5"
+	"Move Animation Scripts 2"
 ROMX $40
 	"mobile_40"
 	"Pics 34"

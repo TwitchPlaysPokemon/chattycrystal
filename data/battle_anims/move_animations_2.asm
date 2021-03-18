@@ -1,8 +1,143 @@
 MoveAnimations2:
-	dw BattleAnim_Nuzzle       ; 15c
+	dw BattleAnim_DrainingKiss ; 158
+	dw BattleAnim_PlayRough
+	dw BattleAnim_MoonBlast
+	dw BattleAnim_DazzlingGleam
+	dw BattleAnim_Nuzzle
 	dw BattleAnim_IceHammer
 	dw BattleAnim_PollenPuff
 	dw BattleAnim_PowerTrip
+
+BattleAnim_DrainingKiss:
+	anim_3gfx ANIM_GFX_OBJECTS, ANIM_GFX_CHARGE, ANIM_GFX_SHINE
+	anim_sound 0, 1, SFX_SWEET_KISS
+	anim_obj ANIM_OBJ_HEART, 120, 40, $0
+	anim_wait 8
+.loop
+	anim_sound 0, 1, SFX_SWEET_KISS_2
+	anim_obj ANIM_OBJ_DREAM_EATER, 128, 48, $2
+	anim_wait 5
+	anim_sound 0, 1, SFX_SWEET_KISS_2
+	anim_obj ANIM_OBJ_DREAM_EATER, 136, 64, $3
+	anim_wait 5
+	anim_sound 0, 1, SFX_SWEET_KISS_2
+	anim_obj ANIM_OBJ_DREAM_EATER, 136, 32, $4
+	anim_wait 5
+	anim_loop 5, .loop
+	anim_wait 32
+	anim_bgeffect ANIM_BG_07, $0, $0, $0
+	anim_jump BattleAnimSub_Glimmer1
+
+BattleAnim_PlayRough:
+	anim_1gfx ANIM_GFX_SPEED
+	anim_sound 6, 2, SFX_THROW_BALL
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 24, 88, $2
+	anim_obj ANIM_OBJ_SPEED_LINE, 32, 88, $1
+	anim_obj ANIM_OBJ_SPEED_LINE, 40, 88, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 48, 88, $80
+	anim_obj ANIM_OBJ_SPEED_LINE, 56, 88, $81
+	anim_obj ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_wait 12
+	anim_3gfx ANIM_GFX_STARS, ANIM_GFX_HIT, ANIM_GFX_HEARTS
+	anim_bgeffect ANIM_BG_1F, $55, $2, $0
+.loop
+	anim_sound 0, 1, SFX_BONE_CLUB
+	anim_obj ANIM_OBJ_STAR_BURST, 128, 48, $28
+	anim_obj ANIM_OBJ_01, 128, 48, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_HEART_BURST, 144, 64, $5c
+	anim_wait 3
+	anim_obj ANIM_OBJ_STAR_BURST, 144, 64, $10
+	anim_obj ANIM_OBJ_01, 144, 64, $0
+	anim_wait 3
+	anim_sound 0, 1, SFX_DOUBLESLAP
+	anim_obj ANIM_OBJ_HEART_BURST, 120, 52, $e8
+	anim_wait 3
+	anim_obj ANIM_OBJ_STAR_BURST, 120, 52, $9c
+	anim_obj ANIM_OBJ_01, 120, 52, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_STAR_BURST, 152, 48, $d0
+	anim_wait 3
+	anim_sound 6, 2, SFX_SLUDGE_BOMB
+	anim_obj ANIM_OBJ_HEART_BURST, 152, 48, $1c
+	anim_obj ANIM_OBJ_01, 152, 48, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_STAR_BURST, 136, 56, $50
+	anim_wait 3
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_HEART_BURST, 136, 56, $dc
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 3
+	anim_obj ANIM_OBJ_STAR_BURST, 128, 48, $90
+	anim_loop 2, .loop
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
+
+BattleAnim_MoonBlast:
+	anim_3gfx ANIM_GFX_MOON, ANIM_GFX_SHINE, ANIM_GFX_CHARGE
+	anim_bgp $1b
+	anim_obj ANIM_OBJ_MOON, 44, 104, $1
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $30
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $31
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $32
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $33
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $34
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $35
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $36
+	anim_obj ANIM_OBJ_CHARGE, 44, 88, $37
+	anim_wait 1
+	anim_sound 0, 0, SFX_MOONLIGHT
+	anim_wait 96
+	anim_clearobjs
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_08, $0, $4, $0
+	anim_sound 0, 0, SFX_GIGA_DRAIN
+	anim_obj ANIM_OBJ_MOONBLAST, 64, 92, $14
+	anim_wait 16
+	anim_sound 0, 0, SFX_METRONOME
+	anim_obj ANIM_OBJ_GLIMMER, 132, 28, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMER, 112, 60, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMER, 144, 68, $0
+	anim_wait 32
+	anim_ret
+
+BattleAnim_DazzlingGleam:
+	anim_1gfx ANIM_GFX_SPEED
+	anim_sound 0, 1, SFX_MOONLIGHT
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $0
+	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $8
+	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $10
+	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $18
+	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $20
+	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $28
+	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $30
+	anim_obj ANIM_OBJ_DAZZLE, 44, 88, $38
+	anim_wait 48
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_SHINE
+	anim_incbgeffect ANIM_BG_ALTERNATE_HUES
+	anim_sound 0, 1, SFX_FLASH
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $6, $20
+	anim_wait 4
+	anim_bgeffect ANIM_BG_1A, $0, $1, $20
+	anim_bgeffect ANIM_BG_07, $0, $2, $0
+	anim_obj ANIM_OBJ_GLIMMER, 24, 64, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMER, 56, 104, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_00, 136, 56, $0
+	anim_obj ANIM_OBJ_GLIMMER, 24, 104, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMER, 56, 64, $0
+	anim_wait 5
+	anim_obj ANIM_OBJ_GLIMMER, 40, 84, $0
+	anim_wait 5
+	anim_wait 32
+	anim_ret
 
 BattleAnim_Nuzzle:
 	anim_1gfx ANIM_GFX_LIGHTNING

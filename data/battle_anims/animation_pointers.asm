@@ -1,6 +1,6 @@
 BattleAnimations::
 	indirect_table 2, 0
-	indirect_entries DAZZLINGLEAM, MoveAnimations1
+	indirect_entries FREEZE_DRY, MoveAnimations1
 	indirect_entries CHATTY_HP - 1, MoveAnimations2
 	indirect_entries CHATTY_HP, MoveAnimationsChattyHP
 	indirect_entries NUM_ATTACKS, MoveAnimations3

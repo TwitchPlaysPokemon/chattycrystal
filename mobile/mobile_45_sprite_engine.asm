@@ -16,15 +16,6 @@ Function115d99:
 	ld [wc308], a
 	ret
 
-Function115dc3:
-	xor a
-	ld [wc305], a
-	ld a, $a0
-	ld hl, wVirtualOAMSprite31
-	ld bc, 8 * SPRITEOAMSTRUCT_LENGTH
-	call ByteFill
-	ret
-
 Function115dd3:
 	ld a, [wc305]
 	and a

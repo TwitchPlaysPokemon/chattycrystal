@@ -5428,11 +5428,8 @@ Unknown_117356:
 
 SECTION "Mobile Stadium", ROMX
 
-GiveOddEgg:
-	farcall _GiveOddEgg
-	ret
-
 Function11765d:
+	; unreferenced
 	ldh a, [hInMenu]
 	push af
 	ld a, $1
@@ -5910,49 +5907,7 @@ Function117b4f:
 	ret
 
 Function117bb6:
-	call Function117c89
-	ld a, $1
-	ldh [hBGMapMode], a
-	farcall Function118284
-	call ClearSprites
-	ld a, [wc300]
-	and a
-	jr z, .asm_117be7
-	ld a, $80
-	ld [wJumptableIndex], a
-	ret
-
-.asm_117be7
-	ldh a, [rSVBK]
-	push af
-	ld a, $3
-	ldh [rSVBK], a
-	ld hl, w3_dfec
-	ld de, wcd69
-	ld c, $10
-.asm_117c0b
-	ld a, [de]
-	inc de
-	inc hl
-	dec c
-	jr nz, .asm_117c0b
-	pop af
-	ldh [rSVBK], a
-	farcall Function172eb9
-	ldh a, [rSVBK]
-	push af
-	ld a, $3
-	ldh [rSVBK], a
-	ld a, $7
-	call GetSRAMBank
-	ld hl, w3_d002
-	ld de, $b000
-	ld bc, $1000
-	rst CopyBytes
-	call CloseSRAM
-	pop af
-	ldh [rSVBK], a
-	jp MobileStudium_JumptableIncrement
+	; unreachable
 
 Function117c4a:
 	ld hl, MenuHeader_117cbc
@@ -5984,36 +5939,6 @@ Function117c4a:
 	ldh [rSVBK], a
 	ld a, $80
 	ld [wJumptableIndex], a
-	ret
-
-Function117c89:
-	ld a, $7
-	call GetSRAMBank
-	ld l, $0
-	ld h, l
-	ld de, $b000
-	ld bc, $0ffc
-.asm_117c97
-	push bc
-	ld a, [de]
-	inc de
-	ld c, a
-	ld b, $0
-	add hl, bc
-	pop bc
-	dec bc
-	ld a, b
-	or c
-	jr nz, .asm_117c97
-	ld a, l
-	ld [wcd83], a
-	ld a, h
-	ld [wcd84], a
-	ld hl, $bfea
-	ld de, wcd69
-	ld bc, $10
-	rst CopyBytes
-	call CloseSRAM
 	ret
 
 MenuHeader_117cbc:

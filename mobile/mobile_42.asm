@@ -1,36 +1,5 @@
 SECTION "Mobile 42", ROMX
 
-MobileTradeAnimation_SendGivemonToGTS:
-	; unreferenced
-	ld a, $80
-	ld [wcf65], a
-	ld de, .TradeAnimScript
-	jp RunMobileTradeAnim_NoFrontpics
-
-.TradeAnimScript:
-	mobiletradeanim_showgtsgivemon
-	mobiletradeanim_12
-	mobiletradeanim_10
-	mobiletradeanim_sendmon
-	mobiletradeanim_06
-	mobiletradeanim_0f
-	mobiletradeanim_end
-
-MobileTradeAnimation_RetrieveGivemonFromGTS:
-	; unreferenced
-	ld a, $80
-asm_108018:
-	ld [wcf65], a
-	ld de, .TradeAnimScript
-	jp RunMobileTradeAnim_NoFrontpics
-
-.TradeAnimScript:
-	mobiletradeanim_11
-	mobiletradeanim_07
-	mobiletradeanim_receivemon
-	mobiletradeanim_showgtsgetmon
-	mobiletradeanim_end
-
 Function108026:
 	ld a, $0
 	jr asm_10802c
@@ -53,18 +22,6 @@ asm_10802c:
 	mobiletradeanim_showgetmon
 	mobiletradeanim_end
 
-Function10803d:
-	ld a, $0
-	ld [wcf65], a
-	ld de, .TradeAnimScript
-	jp RunMobileTradeAnim_NoFrontpics
-
-.TradeAnimScript:
-	mobiletradeanim_11
-	mobiletradeanim_07
-	mobiletradeanim_receivemon
-	mobiletradeanim_showoddegg
-	mobiletradeanim_end
 
 Function10804d:
 	ld a, $0

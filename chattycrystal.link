@@ -120,6 +120,7 @@ ROMX $2a
 	"Map Blocks 1"
 ROMX $2b
 	"Map Blocks 2"
+	"Songs 10"
 ROMX $2c
 	"Map Blocks 3"
 	"Map Scripts 4"
@@ -189,8 +190,6 @@ ROMX $45
 	"Mobile Stadium"
 ROMX $46
 	"Mobile 46"
-	"Mobile 46 ASCII"
-	"Songs 10"
 ROMX $47
 	"Battle Tower"
 	"Tileset Data 10"

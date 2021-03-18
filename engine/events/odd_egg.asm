@@ -1,4 +1,4 @@
-_GiveOddEgg:
+GiveOddEgg:
 	; Figure out which egg to give.
 
 	call Random
@@ -9,7 +9,7 @@ _GiveOddEgg:
 	ld a, [hli]
 	cpl
 	inc a
-	jr z, _GiveOddEgg ; we overshot, resample
+	jr z, GiveOddEgg ; we overshot, resample
 	inc c
 	add a, b
 	jr c, .loop

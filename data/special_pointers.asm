@@ -148,7 +148,7 @@ SpecialsPointers::
 	add_special BattleTowerAction
 	add_special DisplayUnownWords
 	add_special Menu_ChallengeExplanationCancel
-	add_special Function17d2b6
+	add_special Function1037c2
 	add_special Function17d2ce ; $88
 	add_special BattleTowerMobileError
 	add_special AskMobileOrCable
@@ -166,4 +166,3 @@ SpecialsPointers::
 	add_special Mobile_SelectThreeMons
 	add_special Function1037eb
 	add_special Function10383c ; $98
-	add_special Function1037c2

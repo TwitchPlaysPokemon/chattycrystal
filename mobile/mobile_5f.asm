@@ -176,7 +176,6 @@ HaveWantPals:
 	RGB  0,  0,  0
 
 CheckStringForErrors:
-CheckStringForErrors_IgnoreTerminator:
 	and a
 	ret
 
@@ -237,25 +236,6 @@ Function17d0f3:
 .asm_17d180
 	call CloseSubmenu
 	jp RestartMapMusic
-
-CheckStringContainsLessThanBNextCharacters:
-.loop
-	ld a, [de]
-	inc de
-	cp "<NEXT>"
-	jr nz, .next_char
-	dec b
-	jr z, .done
-
-.next_char
-	dec c
-	jr nz, .loop
-	and a
-	ret
-
-.done
-	scf
-	ret
 
 Function17d1f1:
 	ld a, [wCurPartySpecies]
@@ -372,19 +352,6 @@ MenuData_ChallengeExplanationCancel:
 	db "Challenge@"
 	db "Explanation@"
 	db "Cancel@"
-
-Function17d2b6:
-	call Function17d2c0
-	farcall Function1181da
-	ret
-
-Function17d2c0:
-	xor a
-	ld [wJumptableIndex], a
-	ld [wcf64], a
-	ld [wcf65], a
-	ld [wcf66], a
-	ret
 
 Function17d2ce:
 	ld a, $5
@@ -523,12 +490,6 @@ Function17d370:
 	rst CopyBytes
 	call CloseSRAM
 	ret
-
-Function17d3f6:
-	call ClearBGPalettes
-	call ClearSprites
-	call ClearScreen
-	farcall ReloadMapPart
 
 Function17d405:
 	call DisableLCD
@@ -1173,138 +1134,10 @@ Function17d833:
 	ret
 
 Function17d85d:
-	call IncCrashCheckPointer
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-	push hl
-	ld hl, wBGPals1
-	add hl, de
-	ld de, wcc60
-.asm_17d86c
-	ld a, [hli]
-	ld [de], a
-	inc de
-	and a
-	jr nz, .asm_17d86c
-	pop hl
-	ld de, wc608
-	ld c, $0
-.asm_17d878
-	ld a, [hli]
-	cp $ff
-	jr z, .asm_17d8c7
-	ld [wcd4f], a
-	ld a, [hli]
-	ld [wcd50], a
-	ld a, [hli]
-	ld [wcd51], a
-	ld a, [hli]
-	ld [wcd52], a
-	ld a, [wcd51]
-	push af
-	cp $c0
-	jr c, .asm_17d89b
-	ld a, [wcd4f]
-	ldh [rSVBK], a
-	jr .asm_17d8a1
-
-.asm_17d89b
-	ld a, [wcd4f]
-	call GetSRAMBank
-
-.asm_17d8a1
-	push hl
-	ld a, [wcd50]
-	ld l, a
-	ld a, [wcd51]
-	ld h, a
-	ld a, [wcd52]
-.asm_17d8ad
-	push af
-	ld a, [hli]
-	ld [de], a
-	inc de
-	inc c
-	pop af
-	dec a
-	jr nz, .asm_17d8ad
-	pop hl
-	pop af
-	cp $c0
-	jr c, .asm_17d8c2
-	ld a, $4
-	ldh [rSVBK], a
-	jr .asm_17d878
-
-.asm_17d8c2
-	call CloseSRAM
-	jr .asm_17d878
-
-.asm_17d8c7
-	call HlToCrashCheckPointer
-	push bc
-	ld a, $3
-	ldh [rSVBK], a
-	ld hl, wc608
-	ld de, wBGPals1
-	ld b, $0
-	rst CopyBytes
-	ld a, $4
-	ldh [rSVBK], a
-	call Function17e32b
-	pop bc
-	ld a, c
-	ld [wcd3b], a
-	xor a
-	ld [wcf66], a
-	farcall Function118329
-	ld a, [wc300]
-	and a
-	jr z, .asm_17d8fe
-	cp $a
-	jr z, .asm_17d8fe
-	call Function17e309
-	ret
-
-.asm_17d8fe
-	call Function17e349
-	ret
+	; unreachable
 
 Function17d902:
-	call IncCrashCheckPointer
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-	push de
-	call HlToCrashCheckPointer
-	call Function17e32b
-	pop de
-	ld hl, wBGPals1
-	add hl, de
-	ld de, wcc60
-.asm_17d918
-	ld a, [hli]
-	ld [de], a
-	inc de
-	and a
-	jr nz, .asm_17d918
-	xor a
-	ld [wcf66], a
-	farcall Function11837a
-	ld a, [wc300]
-	and a
-	jr z, .asm_17d936
-	cp $a
-	jr z, .asm_17d936
-	call Function17e309
-	ret
-
-.asm_17d936
-	call Function17e349
-	ret
+	; unreachable
 
 Function17d93a:
 	call IncCrashCheckPointer
@@ -1775,27 +1608,6 @@ Function17dc9f:
 Function17dca9:
 	call IncCrashCheckPointer
 	call HlToCrashCheckPointer
-
-Function17dcaf:
-	ld a, $5
-	ldh [rSVBK], a
-	ld hl, wBGPals1
-	ld de, 1 palettes
-	ld c, 8
-.asm_17dcbb
-	push hl
-	ld a, $ff
-	ld [hli], a
-	ld a, $7f
-	ld [hl], a
-	pop hl
-	add hl, de
-	dec c
-	jr nz, .asm_17dcbb
-	call RotateThreePalettesRight
-	ld a, $4
-	ldh [rSVBK], a
-	ret
 
 Function17dccf:
 	call IncCrashCheckPointer
@@ -2742,65 +2554,7 @@ Function17e293:
 	ret
 
 Function17e2a7:
-	call IncCrashCheckPointer
-	call HlToCrashCheckPointer
-	call Function17e32b
-	xor a
-	ld [wcf66], a
-	farcall Function118233
-	ld de, GFX_17eb7e
-	ld hl, vTiles2 tile $60
-	lb bc, BANK(GFX_17eb7e), 1
-	call Get2bpp
-	ld a, [wc300]
-	and a
-	jr z, .asm_17e2d8
-	cp $a
-	jr z, .asm_17e2f7
-	cp $b
-	jr z, .asm_17e300
-	call Function17e309
-	ret
-
-.asm_17e2d8
-	call Function17d60b
-	call Function17e349
-	xor a
-	ld [wcd7a], a
-	ld a, $5
-	call GetSRAMBank
-	ld hl, $aa73
-	ld de, $aa7f
-	ld bc, $c
-	rst CopyBytes
-	call CloseSRAM
-	ret
-
-.asm_17e2f7
-	call Function17e349
-	ld a, $1
-	ld [wcd7a], a
-	ret
-
-.asm_17e300
-	call Function17e349
-	ld a, $2
-	ld [wcd7a], a
-	ret
-
-Function17e309:
-	ld a, $2
-	ld [wc303], a
-	call Function17dcaf
-	call ClearScreen
-	call Function17e349
-	call Function17d5f6
 	; unreachable
-	call Function17e349
-	call Function17dcaf
-	xor a
-	ld [wcd77], a
-	ret
 
 Function17e32b:
 	ld a, $5

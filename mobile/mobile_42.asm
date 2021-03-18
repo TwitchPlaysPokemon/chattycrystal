@@ -1,3 +1,5 @@
+SECTION "Mobile 42", ROMX
+
 MobileTradeAnimation_SendGivemonToGTS:
 	ld a, $80
 	ld [wcf65], a

@@ -1,3 +1,5 @@
+SECTION "Mobile 5C", ROMX
+
 Function170000:
 	ld a, [$c62b]
 	ld [wPlayerTrademonSpecies], a

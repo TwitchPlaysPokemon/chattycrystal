@@ -520,9 +520,6 @@ TownMapGFX:
 INCBIN "gfx/pokegear/town_map.2bpp.lz"
 
 
-INCLUDE "mobile/mobile_40.asm"
-
-
 SECTION "bank41", ROMX
 
 INCLUDE "engine/gfx/dma_transfer.asm"
@@ -533,11 +530,6 @@ INCLUDE "engine/battle/used_move_text.asm"
 INCLUDE "mobile/mobile_41.asm"
 INCLUDE "engine/gfx/load_overworld_font.asm"
 INCLUDE "engine/events/move_relearner.asm"
-
-
-SECTION "Mobile 42", ROMX
-
-INCLUDE "mobile/mobile_42.asm"
 
 
 SECTION "Move Animation Framesets", ROMX
@@ -554,12 +546,6 @@ INCBIN "gfx/intro/logo.2bpp.lz"
 SECTION "Title", ROMX
 
 INCLUDE "engine/movie/title.asm"
-
-
-INCLUDE "mobile/mobile_45.asm"
-
-
-INCLUDE "mobile/mobile_46.asm"
 
 
 SECTION "Battle Tower", ROMX
@@ -580,9 +566,8 @@ DudeBackpic:
 INCBIN "gfx/battle/dude.2bpp.lz"
 
 
-SECTION "Mobile 5C", ROMX
+SECTION "bank5C", ROMX
 
-INCLUDE "mobile/mobile_5c.asm"
 INCLUDE "data/moves/bootleg_names.asm"
 
 
@@ -608,16 +593,6 @@ INCLUDE "data/phone/text/gina_caller.asm"
 SECTION "UpdateBattleHUDs", ROMX
 
 INCLUDE "engine/battle/update_battle_huds.asm"
-
-
-SECTION "Mobile 5E", ROMX
-
-INCLUDE "mobile/mobile_5e.asm"
-
-
-SECTION "Mobile 5F", ROMX
-
-INCLUDE "mobile/mobile_5f.asm"
 
 
 SECTION "Phone Text 2", ROMX
@@ -734,3 +709,10 @@ INCLUDE "data/battle_anims/move_animations.asm"
 INCLUDE "data/trainers/parties.asm"
 INCLUDE "engine/battle/effect_command_files.asm"
 INCLUDE "gfx/tilesets.asm"
+INCLUDE "mobile/mobile_40.asm"
+INCLUDE "mobile/mobile_42.asm"
+INCLUDE "mobile/mobile_45.asm"
+INCLUDE "mobile/mobile_46.asm"
+INCLUDE "mobile/mobile_5c.asm"
+INCLUDE "mobile/mobile_5e.asm"
+INCLUDE "mobile/mobile_5f.asm"

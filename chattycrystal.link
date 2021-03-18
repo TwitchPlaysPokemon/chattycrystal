@@ -240,6 +240,7 @@ ROMX $5b
 	"bank5B"
 	"Pics 20"
 ROMX $5c
+	"bank5C"
 	"Mobile 5C"
 ROMX $5d
 	"Crystal Phone Text 2"

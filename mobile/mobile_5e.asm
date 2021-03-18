@@ -1,3 +1,5 @@
+SECTION "Mobile 5E", ROMX
+
 MobileAdapterGFX::
 INCBIN "gfx/mobile/mobile_adapter.2bpp"
 

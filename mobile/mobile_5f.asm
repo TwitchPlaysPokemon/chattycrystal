@@ -1,3 +1,5 @@
+SECTION "Mobile 5F", ROMX
+
 Function17c000:
 	call DisableLCD
 

@@ -286,7 +286,7 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_Roar         ; PLACEHOLDER
 	dw BattleAnim_Slash        ; PLACEHOLDER
 	dw BattleAnim_Thief        ; PLACEHOLDER
-	dw BattleAnim_Spark        ; PLACEHOLDER
+	dw BattleAnim_VoltTackle
 	dw BattleAnim_DragonDance
 	dw BattleAnim_ShockWave    ; 120
 	dw BattleAnim_WaterPulse
@@ -3349,6 +3349,52 @@ BattleAnim_MuddyWater:
 	anim_loop 4, .loop
 	anim_incobj 1
 	anim_wait 56
+	anim_ret
+
+BattleAnim_VoltTackle:
+	anim_3gfx ANIM_GFX_LIGHTNING, ANIM_GFX_EXPLOSION, ANIM_GFX_SPEED
+	anim_sound 0, 1, SFX_THUNDERSHOCK
+	anim_obj ANIM_OBJ_THUNDER_WAVE, 48, 88, $0
+	anim_bgp $1b
+	anim_incobj 1
+	anim_wait 48
+	anim_clearobjs
+	anim_sound 0, 0, SFX_MENU
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 24, 88, $2
+	anim_obj ANIM_OBJ_SPEED_LINE, 32, 88, $1
+	anim_obj ANIM_OBJ_SPEED_LINE, 40, 88, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 48, 88, $80
+	anim_obj ANIM_OBJ_SPEED_LINE, 56, 88, $81
+	anim_obj ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_wait 12
+.loop
+	anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_VOLT_TACKLE, 48, 88, $0
+	anim_wait 1
+	anim_loop 8, .loop
+	anim_wait 2
+.loop2
+	anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_VOLT_TACKLE, 158, 72, $20
+	anim_wait 1
+	anim_loop 8, .loop2
+	anim_wait 2
+.loop3
+	anim_sound 0, 0, SFX_ZAP_CANNON
+	anim_obj ANIM_OBJ_VOLT_TACKLE, 0, 56, $0
+	anim_wait 1
+	anim_loop 8, .loop3
+	anim_wait 2
+	anim_sound 0, 1, SFX_EGG_BOMB
+	anim_bgeffect ANIM_BG_1F, $60, $4, $10
+	anim_obp0 $30
+	anim_sound 0, 1, SFX_THUNDER
+	anim_obj ANIM_OBJ_LIGHTNING_BOLT, 136, 56, $2
+	anim_wait 16
+	anim_obj ANIM_OBJ_31, 136, 56, $0
+	anim_wait 64
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
 
 BattleAnim_DragonDance:

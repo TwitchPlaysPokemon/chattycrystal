@@ -238,6 +238,7 @@ BattleAnimFrameData:
 	dw .Frameset_eb ; BATTLEANIMFRAMESET_EB
 	dw .Frameset_ec ; BATTLEANIMFRAMESET_EC
 	dw .Frameset_ed ; BATTLEANIMFRAMESET_ED
+	dw .Frameset_ee ; BATTLEANIMFRAMESET_EE
 
 .Frameset_00:
 	frame BATTLEANIMOAMSET_00,  6
@@ -1619,3 +1620,7 @@ BattleAnimFrameData:
 	dowait 2
 	frame BATTLEANIMOAMSET_F9,  2, OAM_X_FLIP
 	delanim
+
+.Frameset_ee:
+	frame BATTLEANIMOAMSET_FA,  8
+	endanim

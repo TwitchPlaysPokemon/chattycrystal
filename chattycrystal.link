@@ -189,7 +189,7 @@ ROMX $45
 	"Mobile 45"
 	"Mobile Stadium"
 ROMX $46
-	"Mobile 46"
+	"Crystal Events"
 ROMX $47
 	"Battle Tower"
 	"Tileset Data 10"
@@ -298,6 +298,7 @@ ROMX $70
 ROMX $71
 	"Text 3"
 	"Tileset Data 14"
+	"Mobile Battle Tower"
 ROMX $72
 	"Miscellaneous Text"
 	"Animation Scripts and Pointers"
@@ -337,7 +338,7 @@ ROMX $7d
 	"Sprites 3"
 	"Tileset Data 11"
 ROMX $7e
-	"Crystal Events"
+	; empty
 ROMX $7f
 	; empty
 WRAM0

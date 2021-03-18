@@ -1,4 +1,4 @@
-SECTION "Mobile 46", ROMX
+SECTION "Mobile Battle Tower", ROMX
 
 _BattleTowerRoomMenu:
 	xor a

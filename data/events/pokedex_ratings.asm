@@ -13,10 +13,16 @@ OakRatings:
 	dw 139, SFX_CAUGHT_MON,    OakRating10
 	dw 154, SFX_DEX_FANFARE_5, OakRating11
 	dw 169, SFX_DEX_FANFARE_5, OakRating12
-	dw 184, SFX_DEX_FANFARE_6, OakRating13
-	dw 199, SFX_DEX_FANFARE_6, OakRating14
-	dw 214, SFX_DEX_FANFARE_7, OakRating15
-	dw 229, SFX_DEX_FANFARE_7, OakRating16
-	dw 239, SFX_DEX_FANFARE_8, OakRating17
-	dw 248, SFX_DEX_FANFARE_8, OakRating18
-	dw  -1, SFX_DEX_FANFARE_8, OakRating19
+	dw 184, SFX_DEX_FANFARE_5, OakRating13
+	dw 199, SFX_DEX_FANFARE_5, OakRating14
+	dw 214, SFX_DEX_FANFARE_6, OakRating15
+	dw 229, SFX_DEX_FANFARE_6, OakRating16
+	dw 239, SFX_DEX_FANFARE_6, OakRating17
+	dw 251, SFX_DEX_FANFARE_6, OakRating18
+	dw 274, SFX_DEX_FANFARE_6, OakRating19
+	dw 299, SFX_DEX_FANFARE_6, OakRating20
+	dw 329, SFX_DEX_FANFARE_7, OakRating21
+	dw 359, SFX_DEX_FANFARE_7, OakRating22
+	dw 389, SFX_DEX_FANFARE_7, OakRating23
+	dw 399, SFX_DEX_FANFARE_8, OakRating24
+	dw  -1, SFX_DEX_FANFARE_8, OakRating25

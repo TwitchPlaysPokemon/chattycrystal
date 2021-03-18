@@ -73,6 +73,9 @@ INCLUDE "engine/events/bug_contest/contest_2.asm"
 INCLUDE "engine/events/reset_unique_mons.asm"
 INCLUDE "engine/math/get_square_root.asm"
 
+TheEndGFX::
+INCBIN "gfx/credits/theend.2bpp"
+
 
 SECTION "bank5", ROMX
 
@@ -173,9 +176,6 @@ INCLUDE "engine/pokedex/pokedex.asm"
 INCLUDE "data/moves/moves.asm"
 INCLUDE "engine/pokemon/evolve.asm"
 INCLUDE "engine/events/prof_oaks_pc.asm"
-
-TheEndGFX::
-INCBIN "gfx/credits/theend.2bpp"
 
 
 SECTION "bank11", ROMX

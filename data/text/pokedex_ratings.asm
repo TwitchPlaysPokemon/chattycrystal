@@ -149,6 +149,48 @@ OakRating18:
 	done
 
 OakRating19:
+	text "You've discovered"
+	line "more #MON than"
+	para "anyone had ever"
+	line "recorded before."
+	cont "Congratulations!"
+	done
+
+OakRating20:
+	text "Excellent work!"
+	line "You've been great"
+	para "for the #DEX"
+	line "project!"
+	done
+
+OakRating21:
+	text "300 already? I'm"
+	line "impressed! Keep"
+	cont "going like that!"
+	done
+
+OakRating22:
+	text "My studies have"
+	line "never progressed"
+	para "this fast. You've"
+	line "helped me so much!"
+	done
+
+OakRating23:
+	text "Your #DEX is"
+	line "just impressive!"
+	para "You should come"
+	line "work with me in"
+	cont "the LAB!"
+	done
+
+OakRating24:
+	text "You're almost done!"
+	line "Keep up the good"
+	cont "work!"
+	done
+
+OakRating25:
 	text "Whoa! A perfect"
 	line "#DEX! I've"
 	para "dreamt about this!"

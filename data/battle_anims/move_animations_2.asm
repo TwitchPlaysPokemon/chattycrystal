@@ -1,4 +1,6 @@
 MoveAnimations2:
+	dw BattleAnim_BlueFlare    ; 156
+	dw BattleAnim_FreezeDry
 	dw BattleAnim_DrainingKiss ; 158
 	dw BattleAnim_PlayRough
 	dw BattleAnim_MoonBlast
@@ -7,6 +9,49 @@ MoveAnimations2:
 	dw BattleAnim_IceHammer
 	dw BattleAnim_PollenPuff
 	dw BattleAnim_PowerTrip
+
+BattleAnim_BlueFlare:
+	anim_1gfx ANIM_GFX_FIRE
+	anim_bgeffect ANIM_BG_08, $0, $4, $0
+.loop
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_BLUE_FLARE_1, 64, 88, $63
+	anim_wait 2
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_BLUE_FLARE_1, 64, 80, $64
+	anim_wait 2
+	anim_sound 6, 2, SFX_EMBER
+	anim_obj ANIM_OBJ_BLUE_FLARE_1, 64, 96, $63
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 116
+	anim_clearobjs
+	anim_sound 0, 1, SFX_EMBER
+	anim_obj ANIM_OBJ_BLUE_FLARE_2, 136, 56, $1
+	anim_obj ANIM_OBJ_BLUE_FLARE_2, 136, 56, $2
+	anim_obj ANIM_OBJ_BLUE_FLARE_2, 136, 56, $3
+	anim_obj ANIM_OBJ_BLUE_FLARE_2, 136, 56, $4
+	anim_obj ANIM_OBJ_BLUE_FLARE_2, 136, 56, $5
+	anim_wait 64
+	anim_ret
+
+BattleAnim_FreezeDry:
+	anim_obp0 $54
+	anim_2gfx ANIM_GFX_HAZE, ANIM_GFX_ICE
+	anim_sound 0, 0, SFX_SURF
+.loop
+	anim_obj ANIM_OBJ_MIST, 132, 16, $0
+	anim_wait 8
+	anim_loop 4, .loop
+	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
+	anim_wait 32
+	anim_obj ANIM_OBJ_ICE_BUILDUP, 136, 74, $10
+	anim_wait 128
+	anim_sound 0, 1, SFX_SHINE
+	anim_wait 8
+	anim_sound 0, 1, SFX_SHINE
+	anim_wait 24
+	anim_ret
 
 BattleAnim_DrainingKiss:
 	anim_3gfx ANIM_GFX_OBJECTS, ANIM_GFX_CHARGE, ANIM_GFX_SHINE

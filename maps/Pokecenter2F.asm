@@ -72,6 +72,8 @@ LinkReceptionistScript_Trade:
 	writetext Text_TradeReceptionistIntro
 	yesorno
 	iffalse .Cancel
+	callasm CheckChattyMonInParty
+	iftrue .chatty_mon
 	special SetBitsForLinkTradeRequest
 	writetext Text_PleaseWait
 	special WaitForLinkedFriend
@@ -125,6 +127,21 @@ LinkReceptionistScript_Trade:
 .Cancel:
 	closetext
 	end
+
+.chatty_mon
+	writetext .chatty_mon_text
+	writetext Text_PleaseComeAgain
+	closetext
+	end
+
+.chatty_mon_text
+	text "I'm sorry, but your"
+	line "@"
+	text_ram wStringBuffer2
+	text " cannot"
+	para "enter the TRADE"
+	line "ROOM."
+	prompt
 
 LinkReceptionistScript_Battle:
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM

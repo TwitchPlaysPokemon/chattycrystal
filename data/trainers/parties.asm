@@ -4665,7 +4665,7 @@ YoungsterGroup:
 	next_list_item ; YOUNGSTER (3)
 	db "ALBERT@", TRAINERTYPE_NORMAL
 	db 13
-	dw RATTATA
+	dw LOTAD
 	db 15
 	dw ZUBAT
 	db -1 ; end
@@ -5282,7 +5282,7 @@ BirdKeeperGroup:
 	db 12
 	dw PIDGEY
 	db 12
-	dw PIDGEY
+	dw TAILLOW
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (2)
@@ -5384,7 +5384,7 @@ BirdKeeperGroup:
 	db 12
 	dw PIDGEY
 	db 12
-	dw PIDGEY
+	dw TAILLOW
 	db 14
 	dw SPEAROW
 	db -1 ; end
@@ -5674,16 +5674,13 @@ LassGroup:
 
 CooltrainerMGroup:
 	next_list_item ; COOLTRAINERM (1)
-	db "NICK@", TRAINERTYPE_MOVES
-	db 26
-	dw CHARMANDER
-	dw EMBER, SMOKESCREEN, RAGE, SCARY_FACE
-	db 26
-	dw SQUIRTLE
-	dw WITHDRAW, WATER_GUN, BITE, CURSE
-	db 26
-	dw BULBASAUR
-	dw LEECH_SEED, POISONPOWDER, SLEEP_POWDER, RAZOR_LEAF
+	db "NICK@", TRAINERTYPE_NORMAL
+	db 33
+	dw COMBUSKEN
+	db 33
+	dw MARSHTOMP
+	db 33
+	dw GROVYLE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (2)
@@ -5998,14 +5995,18 @@ CooltrainerMGroup:
 CooltrainerFGroup:
 	next_list_item ; COOLTRAINERF (1)
 	db "GWEN@", TRAINERTYPE_NORMAL
-	db 26
-	dw EEVEE
-	db 22
+	db 32
 	dw FLAREON
-	db 22
+	db 32
 	dw VAPOREON
 	db 22
 	dw JOLTEON
+	db 32
+	dw ESPEON
+	db 32
+	dw UMBREON
+	db 32
+	dw LEAFEON
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (2)
@@ -6123,8 +6124,8 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (15)
 	db "EMMA@", TRAINERTYPE_NORMAL
-	db 28
-	dw POLIWHIRL
+	db 35
+	dw POLITOED
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (16)
@@ -6468,15 +6469,15 @@ PokemaniacGroup:
 
 	next_list_item ; POKEMANIAC (2)
 	db "ANDREW@", TRAINERTYPE_NORMAL
-	db 24
+	db 34
 	dw MAROWAK
-	db 24
-	dw MAROWAK
+	db 34
+	dw LOUDRED
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (3)
 	db "CALVIN@", TRAINERTYPE_NORMAL
-	db 26
+	db 35
 	dw KANGASKHAN
 	db -1 ; end
 
@@ -7115,7 +7116,7 @@ BugCatcherGroup:
 	db 5
 	dw CATERPIE
 	db 5
-	dw CATERPIE
+	dw SPINARAK
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (2)
@@ -7141,11 +7142,11 @@ BugCatcherGroup:
 	db 6
 	dw CATERPIE
 	db 6
-	dw CATERPIE
+	dw LEDYBA
 	db 7
 	dw WEEDLE
 	db 6
-	dw CATERPIE
+	dw SPINARAK
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (5)
@@ -7369,7 +7370,7 @@ FisherGroup:
 	db 14
 	dw POLIWAG
 	db 14
-	dw POLIWAG
+	dw TENTACOOL
 	db -1 ; end
 
 	next_list_item ; FISHER (6)
@@ -8546,27 +8547,27 @@ HikerGroup:
 	db 13
 	dw GEODUDE
 	db 15
-	dw GEODUDE
+	dw ARON
 	db 17
-	dw GEODUDE
+	dw MAKUHITA
 	db -1 ; end
 
 	next_list_item ; HIKER (3)
 	db "PHILLIP@", TRAINERTYPE_NORMAL
-	db 23
-	dw GEODUDE
-	db 23
-	dw GEODUDE
-	db 23
+	db 32
 	dw GRAVELER
+	db 32
+	dw STEELIX
+	db 32
+	dw LAIRON
 	db -1 ; end
 
 	next_list_item ; HIKER (4)
 	db "LEONARD@", TRAINERTYPE_NORMAL
-	db 23
-	dw GEODUDE
-	db 25
-	dw MACHOP
+	db 32
+	dw GRAVELER
+	db 34
+	dw HARIYAMA
 	db -1 ; end
 
 	next_list_item ; HIKER (5)
@@ -9078,7 +9079,7 @@ FirebreatherGroup:
 	db 15
 	dw KOFFING
 	db 15
-	dw KOFFING
+	dw CHIMCHAR
 	db -1 ; end
 
 	next_list_item ; FIREBREATHER (6)
@@ -11036,7 +11037,7 @@ PicnickerGroup:
 PsychicGroup:
 	next_list_item ; PSYCHIC_T (1)
 	db "NATHAN@", TRAINERTYPE_NORMAL
-	db 26
+	db 36
 	dw GIRAFARIG
 	db -1 ; end
 

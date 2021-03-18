@@ -356,29 +356,29 @@ JohtoGrassWildMons:
 	map_id RUINS_OF_ALPH_OUTSIDE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 20, NATU
-	dbw 22, NATU
-	dbw 18, NATU
-	dbw 24, NATU
-	dbw 20, SMEARGLE
-	dbw 22, SMEARGLE
-	dbw 22, SMEARGLE
+	dbw 29, NATU
+	dbw 31, XATU
+	dbw 27, NATU
+	dbw 33, XATU
+	dbw 29, SMEARGLE
+	dbw 31, SMEARGLE
+	dbw 31, SMEARGLE
 	; day
-	dbw 20, NATU
-	dbw 22, NATU
-	dbw 18, NATU
-	dbw 24, NATU
-	dbw 20, SMEARGLE
-	dbw 22, SMEARGLE
-	dbw 22, SMEARGLE
+	dbw 29, NATU
+	dbw 31, XATU
+	dbw 27, NATU
+	dbw 33, XATU
+	dbw 29, SMEARGLE
+	dbw 31, SMEARGLE
+	dbw 31, SMEARGLE
 	; nite
-	dbw 20, NATU
-	dbw 22, NATU
-	dbw 18, NATU
-	dbw 24, NATU
-	dbw 22, WOOPER
-	dbw 22, QUAGSIRE
-	dbw 22, QUAGSIRE
+	dbw 29, NATU
+	dbw 31, XATU
+	dbw 27, NATU
+	dbw 33, XATU
+	dbw 31, WOOPER
+	dbw 31, QUAGSIRE
+	dbw 31, QUAGSIRE
 
 	map_id RUINS_OF_ALPH_INNER_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -464,29 +464,29 @@ JohtoGrassWildMons:
 	map_id UNION_CAVE_B2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 22, ZUBAT
-	dbw 22, GOLBAT
-	dbw 22, ZUBAT
-	dbw 21, RATICATE
-	dbw 20, GEODUDE
-	dbw 23, ONIX
-	dbw 23, ONIX
+	dbw 31, ZUBAT
+	dbw 31, GOLBAT
+	dbw 31, ZUBAT
+	dbw 30, RATICATE
+	dbw 29, GEODUDE
+	dbw 32, ONIX
+	dbw 32, ONIX
 	; day
-	dbw 22, ZUBAT
-	dbw 22, GOLBAT
-	dbw 22, ZUBAT
-	dbw 21, RATICATE
-	dbw 20, GEODUDE
-	dbw 23, ONIX
-	dbw 23, ONIX
+	dbw 31, ZUBAT
+	dbw 31, GOLBAT
+	dbw 31, ZUBAT
+	dbw 30, RATICATE
+	dbw 29, GEODUDE
+	dbw 32, ONIX
+	dbw 32, ONIX
 	; nite
-	dbw 22, ZUBAT
-	dbw 22, GOLBAT
-	dbw 22, QUAGSIRE
-	dbw 21, RATICATE
-	dbw 20, GEODUDE
-	dbw 23, ONIX
-	dbw 23, ONIX
+	dbw 31, ZUBAT
+	dbw 31, GOLBAT
+	dbw 31, QUAGSIRE
+	dbw 30, RATICATE
+	dbw 29, GEODUDE
+	dbw 32, ONIX
+	dbw 32, ONIX
 
 	map_id SLOWPOKE_WELL_B1F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite

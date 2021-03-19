@@ -276,13 +276,13 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_RockTomb
 	dw BattleAnim_MetalSound
 	dw BattleAnim_Tickle
-	dw BattleAnim_Psybeam      ; PLACEHOLDER
-	dw BattleAnim_FeintAttack  ; PLACEHOLDER
+	dw BattleAnim_SignalBeam
+	dw BattleAnim_ShadowPunch
 	dw BattleAnim_Extrasensory
-	dw BattleAnim_Twister      ; PLACEHOLDER
+	dw BattleAnim_SandTomb
 	dw BattleAnim_MuddyWater   ; 118
 	dw BattleAnim_AerialAce
-	dw BattleAnim_Harden       ; PLACEHOLDER
+	dw BattleAnim_IronDefense
 	dw BattleAnim_Howl
 	dw BattleAnim_DragonClaw
 	dw BattleAnim_Covet
@@ -3304,6 +3304,36 @@ BattleAnim_Tickle:
 	anim_incbgeffect ANIM_BG_26
 	anim_jump BattleAnim_ShowMon_1
 
+BattleAnim_SignalBeam:
+	anim_1gfx ANIM_GFX_CHARGE
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+.loop
+	anim_sound 0, 0, SFX_SPITE
+	anim_obj ANIM_OBJ_SIGNAL_BEAM_R, 64, 92, $0
+	anim_wait 4
+	anim_sound 0, 0, SFX_SPITE
+	anim_obj ANIM_OBJ_SIGNAL_BEAM_B, 64, 92, $0
+	anim_wait 4
+	anim_loop 8, .loop
+	anim_wait 64
+	anim_ret
+
+BattleAnim_ShadowPunch:
+	anim_1gfx ANIM_GFX_HIT
+	anim_battlergfx_2row
+	anim_bgp $f8
+	anim_sound 6, 2, SFX_CURSE
+	anim_wait 32
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $0, $0
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_COMET_PUNCH
+	anim_obj ANIM_OBJ_SIDE_PUNCH, 88, 56, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_01, 136, 56, $0
+	anim_wait 32
+	anim_jump BattleAnim_ShowMon_0
+
 BattleAnim_Extrasensory:
 	anim_1gfx ANIM_GFX_SHINE
 	anim_sound 0, 1, SFX_CUT
@@ -3328,6 +3358,21 @@ BattleAnim_Extrasensory:
 	anim_incbgeffect ANIM_BG_TELEPORT
 	anim_call BattleAnim_ShowMon_1
 	anim_ret
+
+BattleAnim_SandTomb:
+	anim_1gfx ANIM_GFX_POWDER
+	anim_bgeffect ANIM_BG_19, $0, $0, $40
+.loop
+	anim_sound 0, 0, SFX_MENU
+	anim_obj ANIM_OBJ_SAND_TOMB, 136, 70, $0
+	anim_wait 4
+	anim_sound 0, 0, SFX_MENU
+	anim_obj ANIM_OBJ_SAND_TOMB, 136, 62, $0
+	anim_wait 4
+	anim_loop 7, .loop
+	anim_wait 40
+	anim_incbgeffect ANIM_BG_19
+	anim_jump BattleAnim_ShowMon_1
 
 BattleAnim_MuddyWater:
 	anim_1gfx ANIM_GFX_BUBBLE
@@ -3363,6 +3408,22 @@ BattleAnim_AerialAce:
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
 
+BattleAnim_IronDefense:
+	anim_1gfx ANIM_GFX_REFLECT
+	anim_obp0 $0
+	anim_call BattleAnim_TargetObj_1Row
+.loop
+	anim_bgp $90
+	anim_sound 0, 0, SFX_FORESIGHT
+	anim_obj ANIM_OBJ_HARDEN, 48, 84, $0
+	anim_wait 6
+	anim_bgp $f8
+	anim_wait 6
+	anim_loop 5, .loop
+	anim_wait 6
+	anim_jump BattleAnim_ShowMon_0
+	anim_ret
+
 BattleAnim_Howl:
 	anim_1gfx ANIM_GFX_NOISE
 	anim_battlergfx_2row
@@ -3377,11 +3438,7 @@ BattleAnim_Howl:
 	anim_wait 16
 	anim_loop 3, .loop
 	anim_wait 16
-	anim_bgeffect ANIM_BG_27, $0, $0, $0
-	anim_wait 64
-	anim_incbgeffect ANIM_BG_18
-	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
-	anim_ret
+	anim_jump BattleAnim_ShowMon_0
 
 BattleAnim_DragonClaw:
 	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_FIRE

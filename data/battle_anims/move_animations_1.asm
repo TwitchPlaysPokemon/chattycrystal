@@ -281,11 +281,11 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_Extrasensory
 	dw BattleAnim_Twister      ; PLACEHOLDER
 	dw BattleAnim_MuddyWater   ; 118
-	dw BattleAnim_WingAttack   ; PLACEHOLDER
+	dw BattleAnim_AerialAce
 	dw BattleAnim_Harden       ; PLACEHOLDER
 	dw BattleAnim_Roar         ; PLACEHOLDER
 	dw BattleAnim_Slash        ; PLACEHOLDER
-	dw BattleAnim_Thief        ; PLACEHOLDER
+	dw BattleAnim_Covet
 	dw BattleAnim_VoltTackle
 	dw BattleAnim_DragonDance
 	dw BattleAnim_ShockWave    ; 120
@@ -3347,6 +3347,55 @@ BattleAnim_MuddyWater:
 	anim_loop 4, .loop
 	anim_incobj 1
 	anim_wait 56
+	anim_ret
+
+BattleAnim_AerialAce:
+	anim_2gfx ANIM_GFX_SPEED, ANIM_GFX_CUT
+	anim_sound 0, 0, SFX_MENU
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 24, 88, $2
+	anim_obj ANIM_OBJ_SPEED_LINE, 32, 88, $1
+	anim_obj ANIM_OBJ_SPEED_LINE, 40, 88, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 48, 88, $80
+	anim_obj ANIM_OBJ_SPEED_LINE, 56, 88, $81
+	anim_obj ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_wait 12
+	anim_sound 0, 1, SFX_WING_ATTACK
+	anim_obj ANIM_OBJ_3A, 160, 40, $0
+	anim_wait 24
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2
+	anim_obj ANIM_OBJ_AERIAL_ACE, 120, 68, $0
+	anim_wait 32
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
+
+BattleAnim_Covet:
+	anim_1gfx ANIM_GFX_HEARTS
+	anim_battlergfx_2row
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $0, $0
+	anim_bgeffect ANIM_BG_26, $0, $1, $0
+	anim_sound 0, 0, SFX_ATTRACT
+	anim_obj ANIM_OBJ_HEART_SMALL, 62, 80, $0
+	anim_wait 12
+	anim_sound 0, 0, SFX_ATTRACT
+	anim_obj ANIM_OBJ_HEART_SMALL, 42, 80, $0
+	anim_wait 12
+	anim_sound 0, 0, SFX_ATTRACT
+	anim_obj ANIM_OBJ_HEART_SMALL, 32, 80, $0
+	anim_wait 12
+	anim_sound 0, 0, SFX_ATTRACT
+	anim_obj ANIM_OBJ_HEART_SMALL, 54, 80, $0
+	anim_wait 32
+	anim_clearobjs
+	anim_incbgeffect ANIM_BG_26
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
+	anim_wait 4
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
+	anim_wait 4
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
+	anim_wait 32
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret
 
 BattleAnim_VoltTackle:

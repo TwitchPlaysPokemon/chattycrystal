@@ -1590,6 +1590,7 @@ GetBuenasPassword:
 	ld h, [hl]
 	ld l, a
 	call GetPokemonIDFromIndex
+	ld [wNamedObjectIndexBuffer], a
 	jp GetPokemonName
 
 .Item:
@@ -1609,6 +1610,7 @@ GetBuenasPassword:
 	ld h, [hl]
 	ld l, a
 	call GetMoveIDFromIndex
+	ld [wNamedObjectIndexBuffer], a
 	jp GetMoveName
 
 .RawString:

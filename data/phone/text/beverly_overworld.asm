@@ -28,7 +28,7 @@ BeverlyNumberAcceptedText:
 	line "want a MARILL."
 
 	para "But I make do with"
-	line "my cute SNUBBULL."
+	line "my cute LOPUNNY."
 	done
 
 BeverlyNumberDeclinedText:

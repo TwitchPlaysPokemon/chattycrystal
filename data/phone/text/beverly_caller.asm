@@ -11,9 +11,9 @@ UnknownText_0x174688:
 UnknownText_0x1746c3:
 	text "I happened to come"
 	line "across a wild"
-	cont "SNUBBULL recently."
+	cont "LOPUNNY recently."
 
-	para "My SNUBBULL, I"
+	para "My LOPUNNY, I"
 	line "assure you, was"
 
 	para "far cuter than the"

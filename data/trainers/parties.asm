@@ -4683,9 +4683,9 @@ YoungsterGroup:
 	db 23
 	dw SANDSLASH
 	db 21
-	dw FEAROW
+	dw BUNEARY
 	db 21
-	dw FEAROW
+	dw SWABLU
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (6)
@@ -5016,9 +5016,9 @@ SchoolboyGroup:
 	next_list_item ; SCHOOLBOY (1)
 	db "JACK@", TRAINERTYPE_NORMAL
 	db 24
-	dw GLOOM
+	dw GROTLE
 	db 25
-	dw VOLTORB
+	dw VENONAT
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (2)
@@ -5118,17 +5118,17 @@ SchoolboyGroup:
 	next_list_item ; SCHOOLBOY (13)
 	db "JACK@", TRAINERTYPE_NORMAL
 	db 38
-	dw VILEPLUME
+	dw TORTERRA
 	db 40
-	dw ELECTRODE
+	dw VENOMOTH
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (14)
 	db "JACK@", TRAINERTYPE_NORMAL
 	db 51
-	dw VILEPLUME
+	dw TORTERRA
 	db 53
-	dw ELECTRODE
+	dw VENOMOTH
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (15)
@@ -5170,24 +5170,24 @@ SchoolboyGroup:
 	next_list_item ; SCHOOLBOY (19)
 	db "JACK@", TRAINERTYPE_NORMAL
 	db 68
-	dw VILEPLUME
+	dw TORTERRA
 	db 70
-	dw ARCANINE
+	dw MANECTRIC
 	db 70
-	dw ELECTRODE
+	dw VENOMOTH
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (20)
 	db "JACK@", TRAINERTYPE_MOVES
 	db 78
-	dw ELECTRODE
-	dw REFLECT, THUNDERBOLT, EXPLOSION, LIGHT_SCREEN
+	dw TORTERRA
+	dw LEECH_SEED, IRON_TAIL, EARTHQUAKE, LEAF_STORM
 	db 78
-	dw ARCANINE
-	dw SUNNY_DAY, DRAGONBREATH, EXTREMESPEED, FLAMETHROWER
+	dw MANECTRIC
+	dw ROAR, CHARGE, THUNDER, FLAMETHROWER
 	db 80
-	dw VILEPLUME
-	dw SOLARBEAM, SLEEP_POWDER, SLUDGE_BOMB, SUNNY_DAY
+	dw VENOMOTH
+	dw SIGNAL_BEAM, SLEEP_POWDER, SLUDGE_BOMB, PSYCHIC_M
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (21)
@@ -5296,7 +5296,7 @@ BirdKeeperGroup:
 	db 23
 	dw PIDGEOTTO
 	db 25
-	dw PIDGEOTTO
+	dw PELIPPER
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (4)
@@ -5477,13 +5477,13 @@ LassGroup:
 	next_list_item ; LASS (1)
 	db "CARRIE@", TRAINERTYPE_NORMAL
 	db 28
-	dw GRANBULL
+	dw RIBOMBEE
 	db -1 ; end
 
 	next_list_item ; LASS (2)
 	db "BRIDGET@", TRAINERTYPE_NORMAL
 	db 26
-	dw JIGGLYPUFF
+	dw HELIOPTILE
 	db 26
 	dw JIGGLYPUFF
 	db 26
@@ -6036,7 +6036,7 @@ CooltrainerFGroup:
 	next_list_item ; COOLTRAINERF (5)
 	db "KATE@", TRAINERTYPE_NORMAL
 	db 31
-	dw SHELLDER
+	dw SPHEAL
 	db 33
 	dw CLOYSTER
 	db -1 ; end
@@ -6044,7 +6044,7 @@ CooltrainerFGroup:
 	next_list_item ; COOLTRAINERF (6)
 	db "IRENE@", TRAINERTYPE_NORMAL
 	db 31
-	dw GOLDEEN
+	dw DUCKLETT
 	db 33
 	dw SEAKING
 	db -1 ; end
@@ -6141,7 +6141,7 @@ CooltrainerFGroup:
 	next_list_item ; COOLTRAINERF (17)
 	db "JENN@", TRAINERTYPE_NORMAL
 	db 24
-	dw STARYU
+	dw CLAUNCHER
 	db 26
 	dw STARMIE
 	db -1 ; end
@@ -6283,9 +6283,9 @@ BeautyGroup:
 	next_list_item ; BEAUTY (1)
 	db "VICTORIA@", TRAINERTYPE_NORMAL
 	db 20
-	dw FURRET
+	dw LINOONE
 	db 23
-	dw FURRET
+	dw BIBAREL
 	db 26
 	dw FURRET
 	db -1 ; end
@@ -6293,8 +6293,8 @@ BeautyGroup:
 	next_list_item ; BEAUTY (2)
 	db "SAMANTHA@", TRAINERTYPE_MOVES
 	db 26
-	dw MEOWTH
-	dw SCRATCH, GROWL, BITE, PAY_DAY
+	dw DELCATTY
+	dw SING, ASSIST, GROWL, DOUBLESLAP
 	db 26
 	dw MEOWTH
 	dw SCRATCH, GROWL, BITE, SLASH
@@ -6529,10 +6529,9 @@ PokemaniacGroup:
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (11)
-	db "ISSAC@", TRAINERTYPE_MOVES
+	db "ISSAC@", TRAINERTYPE_NORMAL
 	db 25
 	dw LICKITUNG
-	dw WRAP, STOMP, CUT, LICK
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (12)
@@ -6540,7 +6539,7 @@ PokemaniacGroup:
 	db 24
 	dw SLOWPOKE
 	db 24
-	dw SLOWPOKE
+	dw WOBBUFFET
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (13)
@@ -6570,11 +6569,11 @@ GruntMGroup:
 	next_list_item ; GRUNTM (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 16
-	dw RATTATA
+	dw ZIGZAGOON
 	db 18
 	dw ZUBAT
 	db 18
-	dw ZUBAT
+	dw STUNKY
 	db -1 ; end
 
 	next_list_item ; GRUNTM (3)
@@ -6774,7 +6773,7 @@ GruntMGroup:
 	db 18
 	dw RATTATA
 	db 18
-	dw RATTATA
+	dw BIDOOF
 	db -1 ; end
 
 	next_list_item ; GRUNTM (30)
@@ -7164,7 +7163,7 @@ BugCatcherGroup:
 	db 20
 	dw BUTTERFREE
 	db 20
-	dw BEEDRILL
+	dw MOTHIM
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (7)
@@ -7176,7 +7175,7 @@ BugCatcherGroup:
 	next_list_item ; BUG_CATCHER (8)
 	db "ARNIE@", TRAINERTYPE_NORMAL
 	db 26
-	dw VENONAT
+	dw YANMA
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (9)
@@ -7281,7 +7280,7 @@ BugCatcherGroup:
 	db 22
 	dw LEDIAN
 	db 24
-	dw PARAS
+	dw PINECO
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (20)
@@ -8184,7 +8183,7 @@ SuperNerdGroup:
 	next_list_item ; SUPER_NERD (2)
 	db "ERIC@", TRAINERTYPE_NORMAL
 	db 24
-	dw GRIMER
+	dw CROAGUNK
 	db 24
 	dw GRIMER
 	db -1 ; end
@@ -8537,7 +8536,7 @@ HikerGroup:
 	next_list_item ; HIKER (1)
 	db "ANTHONY@", TRAINERTYPE_NORMAL
 	db 16
-	dw GEODUDE
+	dw COMBUSKEN
 	db 18
 	dw MACHOP
 	db -1 ; end
@@ -8573,7 +8572,7 @@ HikerGroup:
 	next_list_item ; HIKER (5)
 	db "ANTHONY@", TRAINERTYPE_NORMAL
 	db 40
-	dw GRAVELER
+	dw BLAZIKEN
 	db 40
 	dw MACHOKE
 	db -1 ; end
@@ -8641,9 +8640,9 @@ HikerGroup:
 	next_list_item ; HIKER (12)
 	db "ANTHONY@", TRAINERTYPE_NORMAL
 	db 48
-	dw GRAVELER
-	db 50
 	dw GOLEM
+	db 50
+	dw BLAZIKEN
 	db 52
 	dw MACHAMP
 	db -1 ; end
@@ -8726,7 +8725,7 @@ HikerGroup:
 	db 67
 	dw GOLEM
 	db 67
-	dw GOLEM
+	dw BLAZIKEN
 	db 69
 	dw MACHAMP
 	db -1 ; end
@@ -8737,8 +8736,8 @@ HikerGroup:
 	dw GOLEM
 	dw EARTHQUAKE, EXPLOSION, DEFENSE_CURL, ROLLOUT
 	db 79
-	dw GOLEM
-	dw EARTHQUAKE, EXPLOSION, DEFENSE_CURL, ROLLOUT
+	dw BLAZIKEN
+	dw FLARE_BLITZ, CROSS_CHOP, SWORDS_DANCE, SLASH
 	db 77
 	dw MACHAMP
 	dw CROSS_CHOP, CURSE, HEADBUTT, EARTHQUAKE
@@ -9085,7 +9084,7 @@ FirebreatherGroup:
 	next_list_item ; FIREBREATHER (6)
 	db "WALT@", TRAINERTYPE_NORMAL
 	db 23
-	dw MAGMAR
+	dw MONFERNO
 	db 25
 	dw MAGMAR
 	db -1 ; end
@@ -9656,7 +9655,7 @@ PokefanMGroup:
 	next_list_item ; POKEFANM (1)
 	db "WILLIAM@", TRAINERTYPE_ITEM
 	db 26
-	dw RAICHU
+	dw LUXIO
 	db GOLD_BERRY
 	db -1 ; end
 
@@ -9872,7 +9871,7 @@ TwinsGroup:
 	next_list_item ; TWINS (1)
 	db "AMY & MAY@", TRAINERTYPE_NORMAL
 	db 21
-	dw SPINARAK
+	dw CUTIEFLY
 	db 21
 	dw LEDYBA
 	db -1 ; end
@@ -9898,7 +9897,7 @@ TwinsGroup:
 	db 21
 	dw LEDYBA
 	db 21
-	dw SPINARAK
+	dw CUTIEFLY
 	db -1 ; end
 
 	next_list_item ; TWINS (5)
@@ -9959,7 +9958,7 @@ PokefanFGroup:
 	next_list_item ; POKEFANF (1)
 	db "BEVERLY@", TRAINERTYPE_ITEM
 	db 26
-	dw GRANBULL
+	dw LOPUNNY
 	db GOLD_BERRY
 	db -1 ; end
 
@@ -10131,10 +10130,10 @@ OfficerGroup:
 
 	next_list_item ; OFFICER (2)
 	db "DIRK@", TRAINERTYPE_NORMAL
-	db 25
-	dw GROWLITHE
-	db 25
-	dw GROWLITHE
+	db 24
+	dw ELECTRIKE
+	db 26
+	dw MANECTRIC
 	db -1 ; end
 
 	next_list_item ; OFFICER (3)
@@ -10183,7 +10182,7 @@ CamperGroup:
 	db 21
 	dw ZUBAT
 	db 25
-	dw DIGLETT
+	dw TRAPINCH
 	db -1 ; end
 
 	next_list_item ; CAMPER (4)
@@ -10247,7 +10246,7 @@ CamperGroup:
 	db 36
 	dw GRAVELER
 	db 36
-	dw GRAVELER
+	dw VIBRAVA
 	db 40
 	dw GOLDUCK
 	db -1 ; end
@@ -10257,7 +10256,7 @@ CamperGroup:
 	db 51
 	dw GOLEM
 	db 51
-	dw GRAVELER
+	dw FLYGON
 	db 51
 	dw MAGCARGO
 	db 53
@@ -10333,7 +10332,7 @@ CamperGroup:
 	db 67
 	dw GOLEM
 	db 67
-	dw GOLEM
+	dw FLYGON
 	db 67
 	dw MAGCARGO
 	db 69
@@ -10346,8 +10345,8 @@ CamperGroup:
 	dw GOLEM
 	dw EXPLOSION, ROLLOUT, DEFENSE_CURL, EARTHQUAKE
 	db 75
-	dw GOLEM
-	dw EXPLOSION, ROCK_SLIDE, STRENGTH, EARTHQUAKE
+	dw FLYGON
+	dw DRAGON_PULSE, ROCK_SLIDE, FIRE_PUNCH, EARTHQUAKE
 	db 79
 	dw MAGCARGO
 	dw ROCK_SLIDE, EARTHQUAKE, AMNESIA, FLAMETHROWER
@@ -10758,7 +10757,7 @@ PicnickerGroup:
 	db 20
 	dw SKIPLOOM
 	db 20
-	dw SKIPLOOM
+	dw LOMBRE
 	db 23
 	dw IVYSAUR
 	db -1 ; end
@@ -10806,7 +10805,7 @@ PicnickerGroup:
 	db 41
 	dw JUMPLUFF
 	db 41
-	dw JUMPLUFF
+	dw LUDICOLO
 	db 44
 	dw VENUSAUR
 	db -1 ; end
@@ -10858,7 +10857,7 @@ PicnickerGroup:
 	db 49
 	dw JUMPLUFF
 	db 49
-	dw JUMPLUFF
+	dw LUDICOLO
 	db 52
 	dw VENUSAUR
 	db -1 ; end
@@ -10939,7 +10938,7 @@ PicnickerGroup:
 	db 67
 	dw JUMPLUFF
 	db 67
-	dw JUMPLUFF
+	dw LUDICOLO
 	db 69
 	dw VENUSAUR
 	db -1 ; end
@@ -10947,14 +10946,14 @@ PicnickerGroup:
 	next_list_item ; PICNICKER (25)
 	db "GINA@", TRAINERTYPE_MOVES
 	db 77
-	dw JUMPLUFF
-	dw SLEEP_POWDER, SUNNY_DAY, LEECH_SEED, SOLARBEAM
+	dw LUDICOLO
+	dw GIGA_DRAIN, SURF, ICE_BEAM, SWAGGER
 	db 77
 	dw JUMPLUFF
-	dw GIGA_DRAIN, SLEEP_POWDER, LEECH_SEED, RETURN
+	dw SLEEP_POWDER, SUNNY_DAY, LEECH_SEED, SOLARBEAM
 	db 79
 	dw VENUSAUR
-	dw SLUDGE_BOMB, RAZOR_LEAF, HEADBUTT, MUD_SLAP
+	dw SLUDGE_BOMB, SOLARBEAM, HEADBUTT, MUD_SLAP
 	db -1 ; end
 
 	next_list_item ; PICNICKER (26)
@@ -11161,7 +11160,7 @@ GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 16
-	dw ZUBAT
+	dw POOCHYENA
 	db 18
 	dw EKANS
 	db -1 ; end

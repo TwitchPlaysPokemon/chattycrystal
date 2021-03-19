@@ -189,7 +189,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	waitbutton
 	loadmonindex 1, ABRA
 	special GameCornerPrizeMonCheckDex
-	givepoke ABRA, 5
+	givepoke ABRA, 15
 	takecoins GOLDENRODGAMECORNER_ABRA_COINS
 	sjump .loop
 
@@ -207,7 +207,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	waitbutton
 	loadmonindex 2, CUBONE
 	special GameCornerPrizeMonCheckDex
-	givepoke CUBONE, 15
+	givepoke CUBONE, 20
 	takecoins GOLDENRODGAMECORNER_CUBONE_COINS
 	sjump .loop
 
@@ -225,7 +225,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	waitbutton
 	loadmonindex 3, WOBBUFFET
 	special GameCornerPrizeMonCheckDex
-	givepoke WOBBUFFET, 15
+	givepoke WOBBUFFET, 25
 	takecoins GOLDENRODGAMECORNER_WOBBUFFET_COINS
 	sjump .loop
 

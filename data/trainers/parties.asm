@@ -4809,7 +4809,7 @@ ScientistGroup:
 	next_list_item ; SCIENTIST (1)
 	db "ROSS@", TRAINERTYPE_NORMAL
 	db 46
-	dw WEEZING
+	dw BRONZONG
 	db 46
 	dw WEEZING
 	db -1 ; end
@@ -4825,9 +4825,9 @@ ScientistGroup:
 	db 45
 	dw MAGNETON
 	db 45
-	dw MAGNETON
+	dw EELEKTRIK
 	db 45
-	dw MAGNETON
+	dw METANG
 	db -1 ; end
 
 	next_list_item ; SCIENTIST (4)
@@ -5686,11 +5686,11 @@ CooltrainerMGroup:
 	next_list_item ; COOLTRAINERM (2)
 	db "AARON@", TRAINERTYPE_NORMAL
 	db 48
-	dw VENUSAUR
+	dw SCEPTILE
 	db 48
-	dw CHARIZARD
+	dw BLAZIKEN
 	db 48
-	dw BLASTOISE
+	dw SWAMPERT
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (3)
@@ -6492,19 +6492,19 @@ PokemaniacGroup:
 	next_list_item ; POKEMANIAC (5)
 	db "BEN@", TRAINERTYPE_NORMAL
 	db 48
-	dw SLOWBRO
+	dw FERALIGATR
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (6)
 	db "BRENT@", TRAINERTYPE_NORMAL
 	db 48
-	dw LICKITUNG
+	dw GIRAFARIG
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (7)
 	db "RON@", TRAINERTYPE_NORMAL
 	db 48
-	dw NIDOKING
+	dw TOXICROAK
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (8)
@@ -6558,9 +6558,9 @@ PokemaniacGroup:
 	next_list_item ; POKEMANIAC (15)
 	db "MILLER@", TRAINERTYPE_NORMAL
 	db 45
-	dw NIDOKING
+	dw NIDORINO
 	db 45
-	dw NIDOQUEEN
+	dw NIDORINA
 	db -1 ; end
 
 	end_list_items
@@ -6689,17 +6689,17 @@ GruntMGroup:
 	db 45
 	dw RATICATE
 	db 45
-	dw RATICATE
+	dw MIGHTYENA
 	db 45
-	dw RATICATE
+	dw KROOKODILE
 	db 45
-	dw RATICATE
+	dw TOXICROAK
 	db -1 ; end
 
 	next_list_item ; GRUNTM (17)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 47
-	dw GOLBAT
+	dw MURKROW
 	db -1 ; end
 
 	next_list_item ; GRUNTM (18)
@@ -6707,15 +6707,15 @@ GruntMGroup:
 	db 45
 	dw RATICATE
 	db 45
-	dw GOLBAT
+	dw HOUNDOOM
 	db 45
-	dw RATICATE
+	dw SKUNTANK
 	db -1 ; end
 
 	next_list_item ; GRUNTM (19)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 46
-	dw VENOMOTH
+	dw MIGHTYENA
 	db 46
 	dw VENOMOTH
 	db -1 ; end
@@ -6725,13 +6725,13 @@ GruntMGroup:
 	db 45
 	dw HYPNO
 	db 47
-	dw GOLBAT
+	dw CROBAT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (21)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 45
-	dw GOLBAT
+	dw MIGHTYENA
 	db 46
 	dw MUK
 	db 47
@@ -6851,7 +6851,7 @@ SkierGroup:
 	next_list_item ; SKIER (2)
 	db "CLARISSA@", TRAINERTYPE_NORMAL
 	db 50
-	dw DEWGONG
+	dw WALREIN
 	db -1 ; end
 
 	next_list_item ; SKIER (3)
@@ -7405,7 +7405,7 @@ FisherGroup:
 	db 50
 	dw MAGIKARP
 	db 50
-	dw MAGIKARP
+	dw FEEBAS
 	db -1 ; end
 
 	next_list_item ; FISHER (10)
@@ -8278,14 +8278,14 @@ SuperNerdGroup:
 	next_list_item ; SUPER_NERD (13)
 	db "HUGH@", TRAINERTYPE_NORMAL
 	db 72
-	dw KINGDRA
+	dw SALAMENCE
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (14)
 	db "MARKUS@", TRAINERTYPE_MOVES
 	db 46
-	dw SLOWKING
-	dw CURSE, SURF, SWAGGER, STRENGTH
+	dw SABLEYE
+	dw CONFUSE_RAY, KNOCK_OFF, SHADOW_BALL, FAKE_OUT
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (15)
@@ -8582,9 +8582,9 @@ HikerGroup:
 	db 43
 	dw DUGTRIO
 	db 43
-	dw GRAVELER
+	dw GOLEM
 	db 45
-	dw DUGTRIO
+	dw SHELGON
 	db -1 ; end
 
 	next_list_item ; HIKER (7)
@@ -9488,17 +9488,17 @@ BoarderGroup:
 	next_list_item ; BOARDER (1)
 	db "RONALD@", TRAINERTYPE_NORMAL
 	db 48
-	dw SEEL
+	dw AMAURA
 	db 49
-	dw DEWGONG
+	dw AURORUS
 	db 48
-	dw SEEL
+	dw SEALEO
 	db -1 ; end
 
 	next_list_item ; BOARDER (2)
 	db "BRAD@", TRAINERTYPE_NORMAL
 	db 49
-	dw PILOSWINE
+	dw FROSLASS
 	db 49
 	dw PILOSWINE
 	db -1 ; end
@@ -9506,11 +9506,11 @@ BoarderGroup:
 	next_list_item ; BOARDER (3)
 	db "DOUGLAS@", TRAINERTYPE_NORMAL
 	db 48
-	dw SHELLDER
+	dw DEWGONG
 	db 49
 	dw CLOYSTER
 	db 48
-	dw SHELLDER
+	dw GLACEON
 	db -1 ; end
 
 	next_list_item ; BOARDER (4)
@@ -10321,7 +10321,7 @@ CamperGroup:
 	db 45
 	dw SANDSLASH
 	db 45
-	dw SANDSLASH
+	dw TYPHLOSION
 	db 47
 	dw CROBAT
 	db -1 ; end

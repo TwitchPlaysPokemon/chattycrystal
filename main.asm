@@ -311,6 +311,9 @@ INCLUDE "engine/events/dratini.asm"
 INCLUDE "engine/events/battle_tower/rules.asm"
 INCLUDE "engine/events/field_moves.asm"
 
+TownMapGFX:
+INCBIN "gfx/pokegear/town_map.2bpp.lz"
+
 
 SECTION "bank23", ROMX
 
@@ -516,9 +519,6 @@ SECTION "bank3F", ROMX
 INCLUDE "engine/tilesets/tileset_anims.asm"
 INCLUDE "engine/events/npc_trade.asm"
 INCLUDE "engine/events/mom_phone.asm"
-
-TownMapGFX:
-INCBIN "gfx/pokegear/town_map.2bpp.lz"
 
 
 SECTION "bank41", ROMX

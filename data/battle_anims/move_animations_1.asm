@@ -335,9 +335,6 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_QuiverDance
 	dw BattleAnim_FoulPlay
 	dw BattleAnim_EchoedVoice
-	dw BattleAnim_Scald
-	dw BattleAnim_Bulldoze     ; 150
-	dw BattleAnim_WorkUp
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -3374,7 +3371,7 @@ BattleAnim_Howl:
 	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $1, $0
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_bgeffect ANIM_BG_18, $0, $1, $40
-	anim_cry $1
+	anim_cry 1
 .loop
 	anim_call BattleAnimSub_Sound
 	anim_wait 16
@@ -4841,77 +4838,6 @@ BattleAnim_EchoedVoice:
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_NIGHT_SHADE
 	anim_jump BattleAnim_ShowMon_1
-
-BattleAnim_Scald:
-	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_HIT, ANIM_GFX_HAZE
-	anim_bgp $90
-	anim_sound 0, 1, SFX_SURF
-	anim_obj ANIM_OBJ_SCALD, 64, 88, $4
-	anim_wait 4
-	anim_obj ANIM_OBJ_SCALD, 64, 88, $4
-	anim_wait 4
-	anim_obj ANIM_OBJ_SCALD, 64, 88, $4
-	anim_wait 4
-.loop
-	anim_obj ANIM_OBJ_WATER_HIT, 136, 52, $0
-	anim_obj ANIM_OBJ_SCALD, 64, 88, $4
-	anim_wait 4
-	anim_loop 15, .loop
-	anim_obj ANIM_OBJ_WATER_HIT, 136, 52, $0
-	anim_wait 4
-	anim_obj ANIM_OBJ_WATER_HIT, 136, 52, $0
-	anim_wait 4
-	anim_obj ANIM_OBJ_WATER_HIT, 136, 52, $0
-	anim_wait 32
-	anim_1gfx ANIM_GFX_HAZE
-	anim_bgeffect ANIM_BG_18, $0, $0, $40
-	anim_sound 0, 1, SFX_POISON_STING
-.loop2
-	anim_obj ANIM_OBJ_STEAM, 136, 52, $0
-	anim_wait 8
-	anim_loop 5, .loop2
-	anim_wait 32
-	anim_incbgeffect ANIM_BG_18
-	anim_jump BattleAnim_ShowMon_1
-
-BattleAnim_Bulldoze:
-	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_2Row
-	anim_bgeffect ANIM_BG_WITHDRAW, $0, $1, $50
-	anim_wait 4
-	anim_incbgeffect ANIM_BG_WITHDRAW
-	anim_call BattleAnim_ShowMon_0
-	anim_wait 1
-.loop
-	anim_bgeffect ANIM_BG_1F, $08, $2, $0
-	anim_sound 0, 1, SFX_SPARK
-	anim_wait 8
-	anim_loop 6, .loop
-	anim_bgeffect ANIM_BG_1F, $40, $2, $0
-.loop2
-	anim_sound 0, 1, SFX_SPARK
-	anim_wait 4
-	anim_loop 12, .loop2
-	anim_wait 48
-	anim_incbgeffect ANIM_BG_1F
-	anim_ret
-
-BattleAnim_WorkUp:
-	anim_1gfx ANIM_GFX_WIND
-	anim_call BattleAnim_TargetObj_2Row
-	anim_sound 0, 0, SFX_AEROBLAST
-	anim_bgeffect ANIM_BG_18, $0, $1, $40
-.loop
-	anim_bgeffect ANIM_BG_WITHDRAW, $0, $1, $50
-	anim_wait 3
-	anim_incbgeffect ANIM_BG_WITHDRAW
-	anim_loop 16, .loop
-	anim_wait 32
-	anim_sound 0, 0, SFX_MENU
-	anim_obj ANIM_OBJ_SWAGGER, 72, 88, $44
-	anim_wait 32
-	anim_call BattleAnim_ShowMon_0
-	anim_ret
 
 BattleAnim_FlameWheel:
 	anim_1gfx ANIM_GFX_FIRE

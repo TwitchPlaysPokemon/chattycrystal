@@ -1299,7 +1299,7 @@ MagbyEvosAttacks:
 	dbw 20, FIRE_SPIN
 	dbw 24, CONFUSE_RAY
 	dbw 28, FIRE_PUNCH
-	;dbw 32, LAVA_PLUME
+	dbw 32, LAVA_PLUME
 	dbw 36, LOW_KICK
 	dbw 40, FLAMETHROWER
 	dbw 44, SUNNY_DAY

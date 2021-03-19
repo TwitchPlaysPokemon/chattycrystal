@@ -5302,15 +5302,15 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (4)
 	db "THEO@", TRAINERTYPE_NORMAL
 	db 32
-	dw PIDGEOTTO
+	dw SWELLOW
 	db 30
-	dw PIDGEOTTO
+	dw SWABLU
 	db 34
 	dw PIDGEOTTO
 	db 30
-	dw PIDGEOTTO
+	dw NOCTOWL
 	db 30
-	dw PIDGEOTTO
+	dw SWANNA
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (5)
@@ -5511,7 +5511,7 @@ LassGroup:
 	next_list_item ; LASS (5)
 	db "CONNIE@", TRAINERTYPE_NORMAL
 	db 36
-	dw AZUMARILL
+	dw FLOATZEL
 	db -1 ; end
 
 	next_list_item ; LASS (6)
@@ -6391,8 +6391,8 @@ BeautyGroup:
 	next_list_item ; BEAUTY (16)
 	db "VALERIE@", TRAINERTYPE_MOVES
 	db 33
-	dw SKIPLOOM
-	dw SYNTHESIS, SLEEP_POWDER, TACKLE, LEECH_SEED
+	dw MILTANK
+	dw DEFENSE_CURL, STOMP, MILK_DRINK, BIDE
 	db 33
 	dw JUMPLUFF
 	dw SYNTHESIS, SLEEP_POWDER, TACKLE, LEECH_SEED
@@ -6808,7 +6808,7 @@ GentlemanGroup:
 	next_list_item ; GENTLEMAN (1)
 	db "PRESTON@", TRAINERTYPE_NORMAL
 	db 35
-	dw GROWLITHE
+	dw LUXRAY
 	db 35
 	dw ARCANINE
 	db -1 ; end
@@ -7578,13 +7578,13 @@ SwimmerMGroup:
 	db 36
 	dw TENTACRUEL
 	db 36
-	dw TENTACRUEL
+	dw PELIPPER
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (3)
 	db "RANDALL@", TRAINERTYPE_NORMAL
 	db 35
-	dw SHELLDER
+	dw PRINPLUP
 	db 35
 	dw BLASTOISE
 	db 35
@@ -7594,25 +7594,25 @@ SwimmerMGroup:
 	next_list_item ; SWIMMERM (4)
 	db "CHARLIE@", TRAINERTYPE_NORMAL
 	db 36
-	dw CLOYSTER
+	dw LANTURN
 	db 34
-	dw TENTACOOL
+	dw WAILMER
 	db 34
-	dw TENTACRUEL
+	dw SWANNA
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (5)
 	db "GEORGE@", TRAINERTYPE_NORMAL
 	db 32
-	dw TENTACOOL
+	dw CLAUNCHER
 	db 33
 	dw TENTACRUEL
 	db 32
-	dw TENTACOOL
+	dw SEADRA
 	db 35
 	dw STARMIE
 	db 33
-	dw TENTACRUEL
+	dw GASTRODON
 	db 35
 	dw OCTILLERY
 	db -1 ; end
@@ -7626,7 +7626,7 @@ SwimmerMGroup:
 	next_list_item ; SWIMMERM (7)
 	db "KIRK@", TRAINERTYPE_NORMAL
 	db 36
-	dw GYARADOS
+	dw MILOTIC
 	db 36
 	dw GYARADOS
 	db -1 ; end
@@ -7839,19 +7839,19 @@ SwimmerFGroup:
 	next_list_item ; SWIMMERF (2)
 	db "PAULA@", TRAINERTYPE_NORMAL
 	db 36
-	dw STARMIE
+	dw MANTINE
 	db 36
-	dw CLOYSTER
+	dw SWANNA
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (3)
 	db "KAYLEE@", TRAINERTYPE_NORMAL
 	db 33
-	dw GOLDEEN
+	dw SEEL
 	db 35
 	dw SEAKING
 	db 35
-	dw SEAKING
+	dw FLOATZEL
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (4)
@@ -7860,8 +7860,8 @@ SwimmerFGroup:
 	dw GOLDUCK
 	dw SURF, PSYCH_UP, DISABLE, CONFUSION
 	db 36
-	dw SEAKING
-	dw SURF, TAIL_WHIP, FURY_ATTACK, FLAIL
+	dw SEALEO
+	dw BODY_SLAM, AURORA_BEAM, SURF, ENCORE
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (5)
@@ -7875,17 +7875,17 @@ SwimmerFGroup:
 	db 36
 	dw STARYU
 	db 36
-	dw STARMIE
+	dw VAPOREON
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (7)
 	db "WENDY@", TRAINERTYPE_MOVES
 	db 36
 	dw SEADRA
-	dw SURF, TWISTER, LEER, SMOKESCREEN
+	dw SURF, DRAGONBREATH, AGILITY, SMOKESCREEN
 	db 36
 	dw KINGDRA
-	dw SURF, DRAGONBREATH, LEER, SMOKESCREEN
+	dw SURF, DRAGONBREATH, AGILITY, FOCUS_ENERGY
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (8)
@@ -8036,7 +8036,7 @@ SailorGroup:
 	db 32
 	dw POLIWHIRL
 	db 32
-	dw RATICATE
+	dw TAUROS
 	db 34
 	dw KRABBY
 	db -1 ; end
@@ -8052,17 +8052,17 @@ SailorGroup:
 	next_list_item ; SAILOR (3)
 	db "TERRELL@", TRAINERTYPE_NORMAL
 	db 36
-	dw POLITOED
+	dw SWAMPERT
 	db -1 ; end
 
 	next_list_item ; SAILOR (4)
 	db "KENT@", TRAINERTYPE_MOVES
 	db 33
-	dw KINGLER
-	dw BUBBLEBEAM, GUILLOTINE, STOMP, HARDEN
+	dw CRABRAWLER
+	dw IRON_DEFENSE, CRABHAMMER, DIZZY_PUNCH, DYNAMICPUNCH
 	db 35
 	dw KINGLER
-	dw BUBBLEBEAM, GUILLOTINE, STOMP, HARDEN
+	dw BUBBLEBEAM, MUD_SHOT, STOMP, FLAIL
 	db -1 ; end
 
 	next_list_item ; SAILOR (5)
@@ -8114,7 +8114,7 @@ SailorGroup:
 	next_list_item ; SAILOR (10)
 	db "HARRY@", TRAINERTYPE_NORMAL
 	db 34
-	dw QUAGSIRE
+	dw SKUNTANK
 	db -1 ; end
 
 	next_list_item ; SAILOR (11)
@@ -9305,8 +9305,8 @@ BlackbeltGroup:
 	next_list_item ; BLACKBELT_T (5)
 	db "NOB@", TRAINERTYPE_MOVES
 	db 38
-	dw MACHOKE
-	dw LEER, FORESIGHT, VITAL_THROW, KARATE_CHOP
+	dw HITMONTOP
+	dw RAPID_SPIN, QUICK_ATTACK, ROLLING_KICK, COUNTER
 	db 38
 	dw MACHAMP
 	dw LEER, FORESIGHT, VITAL_THROW, KARATE_CHOP
@@ -9325,9 +9325,9 @@ BlackbeltGroup:
 	next_list_item ; BLACKBELT_T (7)
 	db "LUNG@", TRAINERTYPE_NORMAL
 	db 37
-	dw MANKEY
+	dw CRABRAWLER
 	db 37
-	dw MANKEY
+	dw CRABOMINABLE
 	db 38
 	dw PRIMEAPE
 	db -1 ; end
@@ -9881,13 +9881,13 @@ TwinsGroup:
 	db 30
 	dw CLEFAIRY
 	db 30
-	dw JIGGLYPUFF
+	dw DELCATTY
 	db -1 ; end
 
 	next_list_item ; TWINS (3)
 	db "ANN & ANNE@", TRAINERTYPE_NORMAL
 	db 30
-	dw JIGGLYPUFF
+	dw DELCATTY
 	db 30
 	dw CLEFAIRY
 	db -1 ; end
@@ -9963,10 +9963,9 @@ PokefanFGroup:
 	db -1 ; end
 
 	next_list_item ; POKEFANF (2)
-	db "RUTH@", TRAINERTYPE_ITEM
+	db "RUTH@", TRAINERTYPE_NORMAL
 	db 35
-	dw PIKACHU
-	db LIGHT_BALL
+	dw MAGNETON
 	db -1 ; end
 
 	next_list_item ; POKEFANF (3)
@@ -10454,16 +10453,14 @@ SageGroup:
 
 	next_list_item ; SAGE (6)
 	db "PING@", TRAINERTYPE_NORMAL
-	db 28
+	db 29
 	dw GASTLY
-	db 28
-	dw GASTLY
-	db 28
-	dw GASTLY
-	db 28
-	dw GASTLY
-	db 28
-	dw GASTLY
+	db 29
+	dw DUSKULL
+	db 29
+	dw LITWICK
+	db 29
+	dw SABLEYE
 	db -1 ; end
 
 	next_list_item ; SAGE (7)
@@ -10593,10 +10590,8 @@ MediumGroup:
 
 	next_list_item ; MEDIUM (2)
 	db "GRACE@", TRAINERTYPE_NORMAL
-	db 30
-	dw HAUNTER
-	db 30
-	dw HAUNTER
+	db 31
+	dw FROSLASS
 	db -1 ; end
 
 	next_list_item ; MEDIUM (3)
@@ -11065,15 +11060,15 @@ PsychicGroup:
 	next_list_item ; PSYCHIC_T (5)
 	db "GREG@", TRAINERTYPE_MOVES
 	db 31
-	dw DROWZEE
-	dw HYPNOSIS, HEADBUTT, DREAM_EATER, CONFUSION
+	dw HYPNO
+	dw HYPNOSIS, WAKE_UP_SLAP, DREAM_EATER, PSYBEAM
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (6)
 	db "NORMAN@", TRAINERTYPE_MOVES
 	db 31
-	dw SLOWPOKE
-	dw DISABLE, GROWL, WATER_GUN, CONFUSION
+	dw BRONZOR
+	dw HYPNOSIS, CONFUSE_RAY, EXTRASENSORY, IRON_DEFENSE
 	db 34
 	dw SLOWKING
 	dw CURSE, BODY_SLAM, WATER_GUN, CONFUSION
@@ -11082,11 +11077,11 @@ PsychicGroup:
 	next_list_item ; PSYCHIC_T (7)
 	db "MARK@", TRAINERTYPE_MOVES
 	db 24
-	dw KADABRA
-	dw DISABLE, KINESIS, PSYBEAM, FLASH
+	dw DROWZEE
+	dw POISON_GAS, MEDITATE, PSYBEAM, HEADBUTT
 	db 24
-	dw KADABRA
-	dw DISABLE, KINESIS, PSYBEAM, FLASH
+	dw KIRLIA
+	dw PSYCHIC_M, DOUBLE_TEAM, CONFUSION, GROWL
 	db 26
 	dw KADABRA
 	dw DISABLE, RECOVER, PSYBEAM, KINESIS

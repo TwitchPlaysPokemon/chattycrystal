@@ -338,10 +338,6 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_Scald
 	dw BattleAnim_Bulldoze     ; 150
 	dw BattleAnim_WorkUp
-	dw BattleAnim_DualChop
-	dw BattleAnim_HornLeech
-	dw BattleAnim_SteamRoller
-	dw BattleAnim_TailSlap
 
 BattleAnim_Pound:
 	anim_1gfx ANIM_GFX_HIT
@@ -4863,76 +4859,6 @@ BattleAnim_WorkUp:
 	anim_obj ANIM_OBJ_SWAGGER, 72, 88, $44
 	anim_wait 32
 	anim_call BattleAnim_ShowMon_0
-	anim_ret
-
-BattleAnim_DualChop:
-	anim_1gfx ANIM_GFX_CUT
-	anim_sound 0, 1, SFX_CUT
-	anim_obj ANIM_OBJ_3A, 152, 40, $0
-	anim_sound 0, 1, SFX_VICEGRIP
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
-	anim_wait 24
-	anim_obj ANIM_OBJ_3B, 112, 40, $0
-	anim_sound 0, 1, SFX_VICEGRIP
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
-	anim_wait 32
-	anim_ret
-
-BattleAnim_HornLeech:
-	anim_3gfx ANIM_GFX_HORN_LEECH, ANIM_GFX_HIT, ANIM_GFX_CHARGE
-	anim_obj ANIM_OBJ_HORN_LEECH, 72, 80, $1
-	anim_wait 16
-	anim_sound 0, 1, SFX_HORN_ATTACK
-	anim_obj ANIM_OBJ_01, 136, 56, $0
-	anim_wait 16
-	anim_setvar $0
-.loop
-	anim_sound 6, 3, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_ABSORB, 128, 48, $2
-	anim_wait 3
-	anim_sound 6, 3, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_ABSORB, 136, 64, $3
-	anim_wait 4
-	anim_sound 6, 3, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_ABSORB, 136, 32, $4
-	anim_wait 3
-	anim_loop 6, .loop
-	anim_wait 32
-	anim_ret
-
-BattleAnim_SteamRoller:
-	anim_1gfx ANIM_GFX_S_ROLLER
-	anim_obj ANIM_OBJ_S_ROLLER, 130, 56, $30
-	anim_wait 18
-	anim_bgeffect ANIM_BG_1F, $4, $2, $0
-	anim_sound 0, 1, SFX_EGG_BOMB
-	anim_wait 30
-	anim_clearobjs
-	anim_bgeffect ANIM_BG_1F, $55, $2, $0
-	anim_obj ANIM_OBJ_S_ROLLER_SPIN, 130, 49, $30
-.loop
-	anim_sound 0, 1, SFX_SPARK
-	anim_wait 8
-	anim_loop 10, .loop
-	anim_clearobjs
-	anim_wait 16
-	anim_ret
-
-BattleAnim_TailSlap:
-	anim_2gfx ANIM_GFX_WHIP, ANIM_GFX_HIT
-	anim_call BattleAnim_TargetObj_2Row
-	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
-	anim_wait 12
-	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
-	anim_wait 1
-	anim_incobj 1
-	anim_sound 0, 1, SFX_DOUBLESLAP
-	anim_obj ANIM_OBJ_40, 116, 48, $80
-	anim_wait 4
-	anim_obj ANIM_OBJ_3F, 128, 54, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_01, 136, 56, $0
-	anim_wait 16
 	anim_ret
 
 BattleAnim_FlameWheel:

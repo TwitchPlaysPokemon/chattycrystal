@@ -283,7 +283,7 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_MuddyWater   ; 118
 	dw BattleAnim_AerialAce
 	dw BattleAnim_Harden       ; PLACEHOLDER
-	dw BattleAnim_Roar         ; PLACEHOLDER
+	dw BattleAnim_Howl
 	dw BattleAnim_DragonClaw
 	dw BattleAnim_Covet
 	dw BattleAnim_VoltTackle
@@ -3364,6 +3364,26 @@ BattleAnim_AerialAce:
 	anim_obj ANIM_OBJ_AERIAL_ACE, 120, 68, $0
 	anim_wait 32
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
+
+BattleAnim_Howl:
+	anim_1gfx ANIM_GFX_NOISE
+	anim_battlergfx_2row
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $0, $0
+	anim_wait 1
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $1, $0
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_18, $0, $1, $40
+	anim_cry $1
+.loop
+	anim_call BattleAnimSub_Sound
+	anim_wait 16
+	anim_loop 3, .loop
+	anim_wait 16
+	anim_bgeffect ANIM_BG_27, $0, $0, $0
+	anim_wait 64
+	anim_incbgeffect ANIM_BG_18
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
 	anim_ret
 
 BattleAnim_DragonClaw:

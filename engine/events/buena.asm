@@ -8,20 +8,19 @@ BuenasPassword:
 	farcall GetBuenasPassword
 	ld a, [wMenuBorderLeftCoord]
 	add c
-	add $2
+	add 2
 	ld [wMenuBorderRightCoord], a
 	call PushWindow
 	call DoNthMenu ; menu
 	farcall Buena_ExitMenu
-	ld b, $0
+	ld b, 0
 	ld a, [wMenuSelection]
 	ld c, a
 	ld a, [wBuenasPassword]
 	maskbits NUM_PASSWORDS_PER_CATEGORY
 	cp c
 	jr nz, .wrong
-	ld b, $1
-
+	ld b, 1
 .wrong
 	ld a, b
 	ld [wScriptVar], a
@@ -58,13 +57,12 @@ endr
 	ld c, a
 	farcall GetBuenasPassword
 	pop hl
-	call PlaceString
-	ret
+	jp PlaceString
 
 BuenaPrize:
 	xor a
 	ld [wMenuScrollPosition], a
-	ld a, $1
+	inc a
 	ld [wMenuSelection], a
 	call Buena_PlacePrizeMenuBox
 	call Buena_DisplayBlueCardBalance
@@ -104,7 +102,7 @@ BuenaPrize:
 	ld a, [hli]
 	push hl
 	ld [wCurItem], a
-	ld a, $1
+	ld a, 1
 	ld [wItemQuantityChangeBuffer], a
 	ld hl, wNumItems
 	call ReceiveItem
@@ -141,8 +139,7 @@ BuenaPrize:
 	ld hl, .Text_PleaseComeBackAgain
 	call PrintText
 	call JoyWaitAorB
-	call PlayClickSFX
-	ret
+	jp PlayClickSFX
 
 .Text_AskWhichPrize:
 	; Which prize would you like?
@@ -176,16 +173,9 @@ BuenaPrize:
 
 Buena_DisplayBlueCardBalance:
 	ld hl, BlueCardBalanceMenuHeader
-	call LoadMenuHeader
-	ret
+	jp LoadMenuHeader
 
 PrintBlueCardBalance:
-	ld de, wBlueCardBalance
-	call .DrawBox
-	ret
-
-.DrawBox:
-	push de
 	xor a
 	ldh [hBGMapMode], a
 	ld hl, BlueCardBalanceMenuHeader
@@ -203,10 +193,9 @@ PrintBlueCardBalance:
 	ld a, " "
 	ld [hli], a
 	ld [hld], a
-	pop de
+	ld de, wBlueCardBalance
 	lb bc, 1, 2
-	call PrintNum
-	ret
+	jp PrintNum
 
 .Points_string:
 	db "Points@"
@@ -217,8 +206,7 @@ BlueCardBalanceMenuHeader:
 
 Buena_PlacePrizeMenuBox:
 	ld hl, .MenuHeader
-	call LoadMenuHeader
-	ret
+	jp LoadMenuHeader
 
 .MenuHeader
 	db MENU_BACKUP_TILES ; flags
@@ -240,12 +228,11 @@ Buena_PrizeMenu:
 	ld a, [wMenuCursorY]
 	ld [wMenuSelection], a
 	ld a, [wMenuJoypad]
-	cp $2
+	cp 2
 	jr z, .cancel
 	ld a, c
 	and a
 	ret nz
-
 .cancel
 	xor a
 	ret
@@ -283,8 +270,7 @@ endr
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	pop hl
-	call PlaceString
-	ret
+	jp PlaceString
 
 .prizepoints
 	ld a, [wMenuSelection]

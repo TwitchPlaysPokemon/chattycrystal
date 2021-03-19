@@ -29,102 +29,102 @@ PlayRadioShow:
 
 RadioJumptable:
 ; entries correspond to constants/radio_constants.asm
-	dw OaksPKMNTalk1  ; $00
-	dw PokedexShow1 ; $01
-	dw BenMonMusic1  ; $02
-	dw LuckyNumberShow1 ; $03
-	dw BuenasPassword1 ; $04
-	dw PeoplePlaces1 ; $05
-	dw FernMonMusic1 ; $06
-	dw RocketRadio1 ; $07
-	dw PokeFluteRadio ; $08
-	dw UnownRadio ; $09
-	dw EvolutionRadio ; $0a
+	dw OaksPKMNTalk1        ; $00
+	dw PokedexShow1         ; $01
+	dw BenMonMusic1         ; $02
+	dw LuckyNumberShow1     ; $03
+	dw BuenasPassword1      ; $04
+	dw PeoplePlaces1        ; $05
+	dw FernMonMusic1        ; $06
+	dw RocketRadio1         ; $07
+	dw PokeFluteRadio       ; $08
+	dw UnownRadio           ; $09
+	dw EvolutionRadio       ; $0a
 ; OaksPKMNTalk
-	dw OaksPKMNTalk2  ; $0b
-	dw OaksPKMNTalk3  ; $0c
-	dw OaksPKMNTalk4  ; $0d
-	dw OaksPKMNTalk5  ; $0e
-	dw OaksPKMNTalk6  ; $0f
-	dw OaksPKMNTalk7  ; $10
-	dw OaksPKMNTalk8  ; $11
-	dw OaksPKMNTalk9  ; $12
-	dw PokedexShow2 ; $13
-	dw PokedexShow3 ; $14
-	dw PokedexShow4 ; $15
-	dw PokedexShow5 ; $16
+	dw OaksPKMNTalk2        ; $0b
+	dw OaksPKMNTalk3        ; $0c
+	dw OaksPKMNTalk4        ; $0d
+	dw OaksPKMNTalk5        ; $0e
+	dw OaksPKMNTalk6        ; $0f
+	dw OaksPKMNTalk7        ; $10
+	dw OaksPKMNTalk8        ; $11
+	dw OaksPKMNTalk9        ; $12
+	dw PokedexShow2         ; $13
+	dw PokedexShow3         ; $14
+	dw PokedexShow4         ; $15
+	dw PokedexShow5         ; $16
 ; Ben Music
-	dw BenMonMusic2  ; $17
-	dw BenMonMusic3  ; $18
-	dw BenFernMusic4 ; $19
-	dw BenFernMusic5 ; $1a
-	dw BenFernMusic6 ; $1b
-	dw BenFernMusic7 ; $1c
-	dw FernMonMusic2 ; $1d
+	dw BenMonMusic2         ; $17
+	dw BenMonMusic3         ; $18
+	dw BenFernMusic4        ; $19
+	dw BenFernMusic5        ; $1a
+	dw BenFernMusic6        ; $1b
+	dw GenericDummyFunction ; $1c
+	dw FernMonMusic2        ; $1d
 ; Lucky Number Show
-	dw LuckyNumberShow2 ; $1e
-	dw LuckyNumberShow3 ; $1f
-	dw LuckyNumberShow4 ; $20
-	dw LuckyNumberShow5 ; $21
-	dw LuckyNumberShow6 ; $22
-	dw LuckyNumberShow7 ; $23
-	dw LuckyNumberShow8 ; $24
-	dw LuckyNumberShow9 ; $25
-	dw LuckyNumberShow10 ; $26
-	dw LuckyNumberShow11 ; $27
-	dw LuckyNumberShow12 ; $28
-	dw LuckyNumberShow13 ; $29
-	dw LuckyNumberShow14 ; $2a
-	dw LuckyNumberShow15 ; $2b
+	dw LuckyNumberShow2     ; $1e
+	dw LuckyNumberShow3     ; $1f
+	dw LuckyNumberShow4     ; $20
+	dw LuckyNumberShow5     ; $21
+	dw LuckyNumberShow6     ; $22
+	dw LuckyNumberShow7     ; $23
+	dw LuckyNumberShow8     ; $24
+	dw LuckyNumberShow9     ; $25
+	dw LuckyNumberShow10    ; $26
+	dw LuckyNumberShow11    ; $27
+	dw LuckyNumberShow12    ; $28
+	dw LuckyNumberShow13    ; $29
+	dw LuckyNumberShow14    ; $2a
+	dw LuckyNumberShow15    ; $2b
 ; People & Places
-	dw PeoplePlaces2 ; $2c
-	dw PeoplePlaces3 ; $2d
-	dw PeoplePlaces4 ; $2e
-	dw PeoplePlaces5 ; $2f
-	dw PeoplePlaces6 ; $30
-	dw PeoplePlaces7 ; $31
+	dw PeoplePlaces2        ; $2c
+	dw PeoplePlaces3        ; $2d
+	dw PeoplePlaces4        ; $2e
+	dw PeoplePlaces5        ; $2f
+	dw PeoplePlaces6        ; $30
+	dw PeoplePlaces7        ; $31
 ; Rocket Radio
-	dw RocketRadio2 ; $32
-	dw RocketRadio3 ; $33
-	dw RocketRadio4 ; $34
-	dw RocketRadio5 ; $35
-	dw RocketRadio6 ; $36
-	dw RocketRadio7 ; $37
-	dw RocketRadio8 ; $38
-	dw RocketRadio9 ; $39
-	dw RocketRadio10 ; $3a
+	dw RocketRadio2         ; $32
+	dw RocketRadio3         ; $33
+	dw RocketRadio4         ; $34
+	dw RocketRadio5         ; $35
+	dw RocketRadio6         ; $36
+	dw RocketRadio7         ; $37
+	dw RocketRadio8         ; $38
+	dw RocketRadio9         ; $39
+	dw RocketRadio10        ; $3a
 ; More Pokemon Channel stuff
-	dw OaksPKMNTalk10 ; $3b
-	dw OaksPKMNTalk11 ; $3c
-	dw OaksPKMNTalk12 ; $3d
-	dw OaksPKMNTalk13 ; $3e
-	dw OaksPKMNTalk14 ; $3f
+	dw OaksPKMNTalk10       ; $3b
+	dw OaksPKMNTalk11       ; $3c
+	dw OaksPKMNTalk12       ; $3d
+	dw OaksPKMNTalk13       ; $3e
+	dw OaksPKMNTalk14       ; $3f
 ; Buenas Password
-	dw BuenasPassword2 ; $40
-	dw BuenasPassword3 ; $41
-	dw BuenasPassword4 ; $42
-	dw BuenasPassword5 ; $43
-	dw BuenasPassword6 ; $44
-	dw BuenasPassword7 ; $45
-	dw BuenasPassword8 ; $46
-	dw BuenasPassword9 ; $47
-	dw BuenasPassword10 ; $48
-	dw BuenasPassword11 ; $49
-	dw BuenasPassword12 ; $4a
-	dw BuenasPassword13 ; $4b
-	dw BuenasPassword14 ; $4c
-	dw BuenasPassword15 ; $4d
-	dw BuenasPassword16 ; $4e
-	dw BuenasPassword17 ; $4f
-	dw BuenasPassword18 ; $50
-	dw BuenasPassword19 ; $51
-	dw BuenasPassword20 ; $52
-	dw BuenasPassword21 ; $53
-	dw RadioScroll ; $54
+	dw BuenasPassword2      ; $40
+	dw BuenasPassword3      ; $41
+	dw BuenasPassword4      ; $42
+	dw BuenasPassword5      ; $43
+	dw BuenasPassword6      ; $44
+	dw BuenasPassword7      ; $45
+	dw BuenasPassword8      ; $46
+	dw BuenasPassword9      ; $47
+	dw BuenasPassword10     ; $48
+	dw BuenasPassword11     ; $49
+	dw BuenasPassword12     ; $4a
+	dw BuenasPassword13     ; $4b
+	dw BuenasPassword14     ; $4c
+	dw BuenasPassword15     ; $4d
+	dw BuenasPassword16     ; $4e
+	dw BuenasPassword17     ; $4f
+	dw BuenasPassword18     ; $50
+	dw BuenasPassword19     ; $51
+	dw BuenasPassword20     ; $52
+	dw BuenasPassword21     ; $53
+	dw RadioScroll          ; $54
 ; More Pokemon Channel stuff
-	dw PokedexShow6 ; $55
-	dw PokedexShow7 ; $56
-	dw PokedexShow8 ; $57
+	dw PokedexShow6         ; $55
+	dw PokedexShow7         ; $56
+	dw PokedexShow8         ; $57
 
 PrintRadioLine:
 	ld [wNextRadioLine], a
@@ -265,11 +265,6 @@ OaksPKMNTalk4:
 	ld hl, OPT_OakText1
 	call CopyRadioTextToRAM
 	ld a, OAKS_POKEMON_TALK_5
-	jp PrintRadioLine
-
-.overflow
-	pop bc
-	ld a, OAKS_POKEMON_TALK
 	jp PrintRadioLine
 
 INCLUDE "data/radio/oaks_pkmn_talk_routes.asm"
@@ -581,8 +576,6 @@ OaksPKMNTalk10:
 OPT_PokemonChannelText:
 	; #MON
 	text_far _OPT_PokemonChannelText
-	text_end
-
 OPT_RestartText:
 	text_end
 
@@ -668,14 +661,13 @@ ClearBottomLine:
 PokedexShow1:
 	call StartRadioStation
 .loop
+	assert HIGH(NUM_POKEMON) == 1
 	call Random
 	ld e, a
 	call Random
-	and $f
+	and 1
 	ld d, a
-	cp HIGH(NUM_POKEMON)
-	jr c, .ok
-	jr nz, .loop
+	jr z, .ok
 	ld a, e
 	cp LOW(NUM_POKEMON)
 	jr nc, .loop
@@ -775,8 +767,7 @@ CopyDexEntry:
 	call CopyRadioTextToRAM
 	pop hl
 	pop af
-	call CopyDexEntryPart2
-	ret
+	jr CopyDexEntryPart2
 
 CopyDexEntryPart1:
 	ld de, wPokedexShowPointerBank
@@ -874,9 +865,6 @@ BenFernMusic6:
 .SunTueThurSun:
 	ld a, POKEMON_MUSIC_7
 	jp NextRadioLine
-
-BenFernMusic7:
-	ret
 
 StartPokemonMusicChannel:
 	call RadioTerminator
@@ -1109,8 +1097,9 @@ PeoplePlaces2:
 
 PeoplePlaces3:
 	ld hl, PnP_Text3
+PeoplePlacesNext:
 	call Random
-	cp 49 percent - 1
+	add a, a
 	ld a, PLACES_AND_PEOPLE_4 ; People
 	jr c, .ok
 	ld a, PLACES_AND_PEOPLE_6 ; Places
@@ -1145,8 +1134,8 @@ PeoplePlaces4: ; People
 	jr z, .ok
 	ld hl, PnP_HiddenPeople_BeatE4
 	ld a, [wKantoBadges]
-	cp %11111111 ; all badges
-	jr nz, .ok
+	inc a
+	jr z, .ok
 	ld hl, PnP_HiddenPeople_BeatKanto
 .ok
 	pop af
@@ -1190,14 +1179,8 @@ PeoplePlaces5:
 	call Random
 	cp 4 percent
 	ld a, PLACES_AND_PEOPLE
-	jr c, .ok
-	call Random
-	cp 49 percent - 1
-	ld a, PLACES_AND_PEOPLE_4 ; People
-	jr c, .ok
-	ld a, PLACES_AND_PEOPLE_6 ; Places
-.ok
-	jp NextRadioLine
+	jp c, NextRadioLine
+	jp PeoplePlacesNext
 
 .Adjectives:
 ; there are NUM_PNP_PEOPLE_ADJECTIVES entries
@@ -1341,14 +1324,8 @@ PeoplePlaces7:
 	call Random
 	cp 4 percent
 	ld a, PLACES_AND_PEOPLE
-	jr c, .ok
-	call Random
-	cp 49 percent - 1
-	ld a, PLACES_AND_PEOPLE_4 ; People
-	jr c, .ok
-	ld a, PLACES_AND_PEOPLE_6 ; Places
-.ok
-	jp PrintRadioLine
+	jp c, PrintRadioLine
+	jp PeoplePlacesNext
 
 .Adjectives:
 ; there are NUM_PNP_PLACES_ADJECTIVES entries
@@ -1491,7 +1468,7 @@ EvolutionRadio:
 BuenasPassword1:
 ; Determine if we need to be here
 	call BuenasPasswordCheckTime
-	jp nc, .PlayPassword
+	jr nc, .PlayPassword
 	ld a, [wNumRadioLinesPrinted]
 	and a
 	jp z, BuenasPassword20
@@ -1566,10 +1543,10 @@ GetBuenasPassword:
 	ld a, c
 	swap a
 	and $f
+	add a, a
 	ld hl, BuenasPasswordTable
 	ld d, 0
 	ld e, a
-	add hl, de
 	add hl, de
 	ld a, [hli]
 	ld h, [hl]
@@ -1613,8 +1590,7 @@ GetBuenasPassword:
 	ld h, [hl]
 	ld l, a
 	call GetPokemonIDFromIndex
-	call GetPokemonName
-	ret
+	jp GetPokemonName
 
 .Item:
 	ld h, 0
@@ -1622,8 +1598,7 @@ GetBuenasPassword:
 	add hl, de
 	ld a, [hl]
 	ld [wNamedObjectIndexBuffer], a
-	call GetItemName
-	ret
+	jp GetItemName
 
 .Move:
 	ld h, 0
@@ -1634,8 +1609,7 @@ GetBuenasPassword:
 	ld h, [hl]
 	ld l, a
 	call GetMoveIDFromIndex
-	call GetMoveName
-	ret
+	jp GetMoveName
 
 .RawString:
 ; Get the string from the table...
@@ -1883,7 +1857,8 @@ CopyRadioTextToRAM:
 	jp z, FarCopyRadioText
 	ld de, wRadioText
 	ld bc, SCREEN_WIDTH * 2
-	jp CopyBytes
+	rst CopyBytes
+	ret
 
 StartRadioStation:
 	ld a, [wNumRadioLinesPrinted]

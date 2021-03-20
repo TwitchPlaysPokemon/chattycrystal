@@ -2288,7 +2288,6 @@ wCurBaseDataEnd::
 
 wCurDamage:: dw ; d256
 
-; moving credits because chaos is dum
 wCreditsPos:: dw ; d258
 
 wMornEncounterRate::  db ; d25a

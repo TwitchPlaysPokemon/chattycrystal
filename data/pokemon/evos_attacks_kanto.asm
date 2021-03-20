@@ -247,6 +247,8 @@ CharmeleonEvosAttacks:
 
 CharizardEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, DRAGON_CLAW
+	dbw 1, AIR_SLASH
 	dbw 1, SCRATCH
 	dbw 1, GROWL
 	dbw 1, EMBER
@@ -461,8 +463,11 @@ RattataEvosAttacks:
 
 RaticateEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, SWORDS_DANCE
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
+	dbw 1, QUICK_ATTACK
+	dbw 1, FOCUS_ENERGY
 	dbw 4, QUICK_ATTACK
 	dbw 7, FOCUS_ENERGY
 	dbw 10, BITE
@@ -751,11 +756,11 @@ VulpixEvosAttacks:
 
 NinetalesEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, NASTY_PLOT
 	dbw 1, FLAMETHROWER
 	dbw 1, QUICK_ATTACK
 	dbw 1, CONFUSE_RAY
 	dbw 1, SAFEGUARD
-	dbw 43, NASTY_PLOT
 	db 0 ; no more level-up moves
 
 JigglypuffEvosAttacks:
@@ -779,6 +784,8 @@ JigglypuffEvosAttacks:
 
 WigglytuffEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, DOUBLE_EDGE
+	dbw 1, PLAY_ROUGH
 	dbw 1, SING
 	dbw 1, DISABLE
 	dbw 1, DEFENSE_CURL
@@ -806,9 +813,11 @@ ZubatEvosAttacks:
 GolbatEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, CROBAT
 	db 0 ; no more evolutions
+	dbw 1, SCREECH
 	dbw 1, LEECH_LIFE
 	dbw 1, SUPERSONIC
 	dbw 1, ASTONISH
+	dbw 1, BITE
 	dbw 8, ASTONISH
 	dbw 12, BITE
 	dbw 15, WING_ATTACK
@@ -963,9 +972,12 @@ DiglettEvosAttacks:
 
 DugtrioEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, NIGHT_SLASH
 	dbw 1, TRI_ATTACK
 	dbw 1, SCRATCH
 	dbw 1, SAND_ATTACK
+	dbw 1, GROWL
+	dbw 1, ASTONISH
 	dbw 4, GROWL
 	dbw 7, ASTONISH
 	dbw 10, MUD_SLAP
@@ -1061,6 +1073,7 @@ GolduckEvosAttacks:
 MankeyEvosAttacks:
 	dbbw EVOLVE_LEVEL, 28, PRIMEAPE
 	db 0 ; no more evolutions
+	dbw 1, COVET
 	dbw 1, SCRATCH
 	dbw 1, LEER
 	dbw 1, LOW_KICK
@@ -1431,8 +1444,12 @@ PonytaEvosAttacks:
 
 RapidashEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, POISON_JAB
+	dbw 1, MEGAHORN
 	dbw 1, TACKLE
 	dbw 1, GROWL
+	dbw 1, TAIL_WHIP
+	dbw 1, EMBER
 	dbw 4, TAIL_WHIP
 	dbw 10, EMBER
 	dbw 14, DOUBLE_KICK
@@ -1444,7 +1461,6 @@ RapidashEvosAttacks:
 	dbw 40, FURY_ATTACK
 	dbw 44, TAKE_DOWN
 	dbw 50, FLARE_BLITZ
-	dbw 57, MEGAHORN
 	db 0 ; no more level-up moves
 
 SlowpokeEvosAttacks:
@@ -1599,8 +1615,11 @@ SeelEvosAttacks:
 
 DewgongEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, SIGNAL_BEAM
 	dbw 1, HEADBUTT
-	dbw 4, GROWL
+	dbw 1, GROWL
+	dbw 1, ICY_WIND
+	dbw 1, ENCORE
 	dbw 8, ICY_WIND
 	dbw 11, ENCORE
 	dbw 15, ICE_SHARD
@@ -1672,6 +1691,7 @@ ShellderEvosAttacks:
 
 CloysterEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, HYDRO_PUMP
 	dbw 1, WITHDRAW
 	dbw 1, SUPERSONIC
 	dbw 1, AURORA_BEAM
@@ -1785,8 +1805,11 @@ DrowzeeEvosAttacks:
 
 HypnoEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, NIGHTMARE
 	dbw 1, POUND
 	dbw 1, HYPNOSIS
+	dbw 1, DISABLE
+	dbw 1, CONFUSION
 	dbw 5, DISABLE
 	dbw 8, CONFUSION
 	dbw 12, HEADBUTT

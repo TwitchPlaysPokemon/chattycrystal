@@ -2278,7 +2278,7 @@ JynxEvosAttacks:
 	dbw 24, MEAN_LOOK
 	dbw 28, WAKE_UP_SLAP
 	dbw 33, LOVELY_KISS
-	dbw 39, PSYCHIC
+	dbw 39, PSYCHIC_M
 	dbw 44, BODY_SLAM
 	dbw 50, PERISH_SONG
 	dbw 55, BLIZZARD

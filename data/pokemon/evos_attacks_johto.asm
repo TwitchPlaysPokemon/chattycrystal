@@ -704,7 +704,7 @@ EspeonEvosAttacks:
 	dbw 23, SWIFT
 	dbw 27, PSYCH_UP
 	dbw 33, MORNING_SUN
-	dbw 38, PSYCHIC
+	dbw 38, PSYCHIC_M
 	dbw 45, REFLECT
 	dbw 50, FUTURE_SIGHT
 	db 0 ; no more level-up moves
@@ -1262,7 +1262,7 @@ SmoochumEvosAttacks:
 	dbw 24, MEAN_LOOK
 	dbw 28, WAKE_UP_SLAP
 	dbw 32, SWEET_KISS
-	dbw 36, PSYCHIC
+	dbw 36, PSYCHIC_M
 	dbw 40, BODY_SLAM
 	dbw 46, PERISH_SONG
 	dbw 50, BLIZZARD

@@ -5336,7 +5336,7 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (7)
 	db "VANCE@", TRAINERTYPE_NORMAL
 	db 52
-	dw PIDGEOT
+	dw ALTARIA
 	db 52
 	dw PIDGEOT
 	db -1 ; end
@@ -5412,7 +5412,7 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (18)
 	db "VANCE@", TRAINERTYPE_NORMAL
 	db 69
-	dw PIDGEOT
+	dw ALTARIA
 	db 69
 	dw PIDGEOT
 	db -1 ; end
@@ -5420,11 +5420,11 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (19)
 	db "VANCE@", TRAINERTYPE_MOVES
 	db 79
-	dw PIDGEOT
-	dw TOXIC, QUICK_ATTACK, RETURN, FLY
+	dw ALTARIA
+	dw EARTHQUAKE, DRAGON_PULSE, DRAGON_DANCE, FLY
 	db 79
 	dw PIDGEOT
-	dw RETURN, DETECT, STEEL_WING, FLY
+	dw RETURN, QUICK_ATTACK, STEEL_WING, FLY
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (20)
@@ -5847,7 +5847,7 @@ CooltrainerMGroup:
 	next_list_item ; COOLTRAINERM (19)
 	db "ALLEN@", TRAINERTYPE_NORMAL
 	db 53
-	dw CHARIZARD
+	dw INFERNAPE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (20)
@@ -6129,13 +6129,11 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (16)
-	db "CYBIL@", TRAINERTYPE_MOVES
+	db "CYBIL@", TRAINERTYPE_NORMAL
 	db 52
-	dw BUTTERFREE
-	dw PSYCHIC_M, SLEEP_POWDER, WHIRLWIND, GUST
+	dw FROSLASS
 	db 52
-	dw BELLOSSOM
-	dw SUNNY_DAY, SLEEP_POWDER, SLUDGE_BOMB, SOLARBEAM
+	dw JYNX
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (17)
@@ -6581,15 +6579,15 @@ GruntMGroup:
 	db 50
 	dw RATICATE
 	db 50
-	dw RATICATE
+	dw MIGHTYENA
 	db -1 ; end
 
 	next_list_item ; GRUNTM (4)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 49
-	dw GRIMER
+	dw STUNKY
 	db 49
-	dw MUK
+	dw SKUNTANK
 	db 49
 	dw MUK
 	db -1 ; end
@@ -6597,21 +6595,21 @@ GruntMGroup:
 	next_list_item ; GRUNTM (5)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 47
-	dw RATTATA
+	dw SANDILE
 	db 47
 	dw RATTATA
 	db 49
 	dw RATICATE
 	db 49
-	dw RATICATE
+	dw KROKOROK
 	db 49
-	dw RATICATE
+	dw KROOKODILE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (6)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 50
-	dw GOLBAT
+	dw SABLEYE
 	db 50
 	dw CROBAT
 	db -1 ; end
@@ -6623,65 +6621,65 @@ GruntMGroup:
 	db 48
 	dw MUK
 	db 48
-	dw GOLBAT
+	dw MURKROW
 	db 48
-	dw RATICATE
+	dw HOUNDOOM
 	db -1 ; end
 
 	next_list_item ; GRUNTM (8)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 51
-	dw WEEZING
+	dw SNEASEL
 	db -1 ; end
 
 	next_list_item ; GRUNTM (9)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 48
-	dw RATICATE
+	dw PUPITAR
 	db 50
-	dw WEEZING
+	dw TOXICROAK
 	db -1 ; end
 
 	next_list_item ; GRUNTM (10)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 48
-	dw GOLBAT
+	dw URSARING
 	db 50
 	dw CROBAT
 	db 48
-	dw MUK
+	dw GENGAR
 	db -1 ; end
 
 	next_list_item ; GRUNTM (11)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 48
-	dw MUK
+	dw GENGAR
 	db 48
-	dw WEEZING
+	dw HOUNDOOM
 	db 50
-	dw RATICATE
+	dw LINOONE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (13)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 51
-	dw RATICATE
+	dw BIBAREL
 	db -1 ; end
 
 	next_list_item ; GRUNTM (14)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 50
-	dw RATICATE
+	dw URSARING
 	db 50
-	dw GOLBAT
+	dw SKUNTANK
 	db -1 ; end
 
 	next_list_item ; GRUNTM (15)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 50
-	dw MUK
+	dw EXPLOUD
 	db 47
-	dw WEEZING
+	dw KROOKODILE
 	db -1 ; end
 
 	next_list_item ; GRUNTM (16)
@@ -6741,15 +6739,15 @@ GruntMGroup:
 	next_list_item ; GRUNTM (24)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 50
-	dw WEEZING
+	dw VENUSAUR
 	db 50
-	dw WEEZING
+	dw TYRANITAR
 	db -1 ; end
 
 	next_list_item ; GRUNTM (25)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 50
-	dw WEEZING
+	dw VICTREEBEL
 	db 50
 	dw MUK
 	db -1 ; end
@@ -7411,9 +7409,9 @@ FisherGroup:
 	next_list_item ; FISHER (10)
 	db "WILTON@", TRAINERTYPE_NORMAL
 	db 50
-	dw SEAKING
+	dw POLITOED
 	db 50
-	dw SEAKING
+	dw POLIWRATH
 	db 52
 	dw SEAKING
 	db -1 ; end
@@ -7421,7 +7419,7 @@ FisherGroup:
 	next_list_item ; FISHER (11)
 	db "EDGAR@", TRAINERTYPE_NORMAL
 	db 52
-	dw OCTILLERY
+	dw CLAWITZER
 	db 52
 	dw OCTILLERY
 	db -1 ; end
@@ -7501,9 +7499,9 @@ FisherGroup:
 	next_list_item ; FISHER (20)
 	db "WILTON@", TRAINERTYPE_NORMAL
 	db 67
-	dw SEAKING
+	dw POLITOED
 	db 67
-	dw SEAKING
+	dw POLIWRATH
 	db 69
 	dw SEAKING
 	db -1 ; end
@@ -7522,10 +7520,13 @@ FisherGroup:
 	db "WILTON@", TRAINERTYPE_MOVES
 	db 75
 	dw SEAKING
-	dw HORN_DRILL, ICE_BEAM, WATERFALL, AGILITY
+	dw HORN_DRILL, MEGAHORN, WATERFALL, AGILITY
 	db 75
-	dw SEAKING
-	dw RETURN, WATERFALL, FLAIL, ENDURE
+	dw POLITOED
+	dw ICE_BEAM, WATERFALL, HYPNOSIS, PERISH_SONG
+	db 75
+	dw POLIWRATH
+	dw WAKE_UP_SLAP, HYDRO_PUMP, EARTH_POWER, BELLY_DRUM
 	db 79
 	dw OCTILLERY
 	dw PSYBEAM, SURF, ICE_BEAM, HYPER_BEAM
@@ -8981,11 +8982,11 @@ BurglarGroup:
 	next_list_item ; BURGLAR (1)
 	db "DUNCAN@", TRAINERTYPE_NORMAL
 	db 48
-	dw WEEZING
+	dw SABLEYE
 	db 50
 	dw MAGMAR
 	db 48
-	dw WEEZING
+	dw CHANDELURE
 	db -1 ; end
 
 	next_list_item ; BURGLAR (2)
@@ -11169,19 +11170,19 @@ GruntFGroup:
 	next_list_item ; GRUNTF (3)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 50
-	dw VILEPLUME
+	dw ROSERADE
 	db 50
-	dw BELLOSSOM
+	dw LICKITUNG
 	db -1 ; end
 
 	next_list_item ; GRUNTF (4)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 47
-	dw ARBOK
+	dw PERSIAN
 	db 49
 	dw VILEPLUME
 	db 47
-	dw ARBOK
+	dw UMBREON
 	db 50
 	dw BELLOSSOM
 	db -1 ; end

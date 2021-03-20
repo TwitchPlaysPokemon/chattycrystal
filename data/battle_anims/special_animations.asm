@@ -1,5 +1,5 @@
 SpecialAnimations:
-	dw BattleAnim_Dummy           ; -18, PLACEHOLDER
+	dw BattleAnim_Snatched        ; -18
 	dw BattleAnim_HeldItemTrigger
 	dw BattleAnim_ThrowPokeBall
 	dw BattleAnim_SendOutMon
@@ -23,6 +23,26 @@ SpecialAnimations:
 	dw BattleAnim_Wobble
 	dw BattleAnim_Shake
 	dw BattleAnim_HitConfusion
+
+BattleAnim_Snatched:
+	anim_2gfx ANIM_GFX_SNATCH, ANIM_GFX_SPEED
+	anim_sound 0, 0, SFX_MENU
+	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 24, 88, $2
+	anim_obj ANIM_OBJ_SPEED_LINE, 32, 88, $1
+	anim_obj ANIM_OBJ_SPEED_LINE, 40, 88, $0
+	anim_obj ANIM_OBJ_SPEED_LINE, 48, 88, $80
+	anim_obj ANIM_OBJ_SPEED_LINE, 56, 88, $81
+	anim_obj ANIM_OBJ_SPEED_LINE, 64, 88, $82
+	anim_wait 12
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_SNATCH, 48, 88, $0
+	anim_wait 16
+	anim_sound 0, 0, SFX_RAZOR_WIND
+	anim_obj ANIM_OBJ_SNATCH_2, 158, 56, $20
+	anim_wait 32
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_ret
 
 BattleAnim_HeldItemTrigger:
 	anim_1gfx ANIM_GFX_BUBBLE

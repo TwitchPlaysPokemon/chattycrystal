@@ -260,7 +260,7 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_Superpower
 	dw BattleAnim_Revenge
 	dw BattleAnim_Endeavor
-	dw BattleAnim_Thief        ; PLACEHOLDER
+	dw BattleAnim_Snatch
 	dw BattleAnim_Dummy
 	dw BattleAnim_Dive
 	dw BattleAnim_ArmThrust
@@ -3003,6 +3003,19 @@ BattleAnim_Endeavor:
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_2C
 	anim_jump BattleAnim_ShowMon_0
+
+BattleAnim_Snatch:
+	anim_1gfx ANIM_GFX_SHINE
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect ANIM_BG_2F, $0, $1, $0
+	anim_wait 16
+	anim_sound 0, 1, SFX_FORESIGHT
+	anim_obj ANIM_OBJ_FORESIGHT, 48, 88, $0
+	anim_wait 32
+	anim_incbgeffect ANIM_BG_2F
+	anim_wait 16
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
 
 BattleAnim_Dive:
 	anim_2gfx ANIM_GFX_SAND, ANIM_GFX_HIT

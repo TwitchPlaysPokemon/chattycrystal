@@ -60,3 +60,4 @@ AnimObjGFX:
 	anim_obj_gfx 56, AnimObjLeafStormGFX
 	anim_obj_gfx  9, AnimObjBugBuzzGFX
 	anim_obj_gfx 12, AnimObjAquaRingGFX
+	anim_obj_gfx 16, AnimObjSnatchGFX

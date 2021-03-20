@@ -174,7 +174,6 @@ INCLUDE "data/battle/effect_command_pointers.asm"
 SECTION "bank10", ROMX
 
 INCLUDE "engine/pokedex/pokedex.asm"
-INCLUDE "data/moves/moves.asm"
 INCLUDE "engine/pokemon/evolve.asm"
 INCLUDE "engine/events/prof_oaks_pc.asm"
 
@@ -507,6 +506,7 @@ CopyrightTPPGFXEnd::
 
 INCLUDE "engine/menus/options_menu.asm"
 INCLUDE "engine/movie/crystal_intro.asm"
+INCLUDE "data/moves/moves.asm"
 
 
 SECTION "bank3E", ROMX

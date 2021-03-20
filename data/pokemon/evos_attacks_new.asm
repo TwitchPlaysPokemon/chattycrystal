@@ -1657,18 +1657,16 @@ BronzongEvosAttacks:
 BonslyEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, SUDOWOODO
 	db 0
-	dbw 1, MIRROR_MOVE ; Copycat
-	dbw 6, FLAIL
-	dbw 9, LOW_KICK
-	dbw 14, ROCK_THROW
-	dbw 17, MIMIC
-	dbw 22, MEAN_LOOK
-	dbw 25, FEINT_ATTACK
-	dbw 30, ROCK_TOMB
+	dbw 1, FLAIL
+	dbw 6, LOW_KICK
+	dbw 10, ROCK_THROW
+	dbw 15, MIMIC
+	dbw 19, FEINT_ATTACK
+	dbw 24, ROCK_TOMB
+	dbw 28, COUNTER
 	dbw 33, ROCK_SLIDE
-	dbw 38, SLAM
-	dbw 41, SUCKER_PUNCH
-	dbw 46, DOUBLE_EDGE
+	dbw 37, SUCKER_PUNCH
+	dbw 42, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 ChatotEvosAttacks:

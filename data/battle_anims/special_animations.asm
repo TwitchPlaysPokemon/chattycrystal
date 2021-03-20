@@ -25,6 +25,7 @@ SpecialAnimations:
 	dw BattleAnim_HitConfusion
 
 BattleAnim_Snatched:
+	anim_if_param_equal $0, .off
 	anim_2gfx ANIM_GFX_SNATCH, ANIM_GFX_SPEED
 	anim_sound 0, 0, SFX_MENU
 	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
@@ -40,6 +41,7 @@ BattleAnim_Snatched:
 	anim_wait 16
 	anim_sound 0, 0, SFX_RAZOR_WIND
 	anim_obj ANIM_OBJ_SNATCH_2, 158, 56, $20
+.off
 	anim_wait 32
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret

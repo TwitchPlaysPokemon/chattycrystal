@@ -3014,8 +3014,7 @@ BattleAnim_Snatch:
 	anim_wait 32
 	anim_incbgeffect ANIM_BG_2F
 	anim_wait 16
-	anim_call BattleAnim_ShowMon_0
-	anim_ret
+	anim_jump BattleAnim_ShowMon_0
 
 BattleAnim_Dive:
 	anim_2gfx ANIM_GFX_SAND, ANIM_GFX_HIT

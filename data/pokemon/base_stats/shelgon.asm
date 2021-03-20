@@ -12,7 +12,7 @@
 	db 41 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/shelgon/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	ds BASE_PADDING_SIZE ; padding
 	db GROWTH_SLOW ; growth rate
 	dn EGG_DRAGON, EGG_DRAGON ; egg groups
 

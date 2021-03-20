@@ -12,7 +12,7 @@
 	db 16 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/taillow/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	ds BASE_PADDING_SIZE ; padding
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_FLYING, EGG_FLYING ; egg groups
 

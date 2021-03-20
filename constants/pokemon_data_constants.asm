@@ -25,6 +25,9 @@ BASE_EGG_GROUPS  EQUS "(wBaseEggGroups - wCurBaseData)"
 BASE_TMHM        EQUS "(wBaseTMHM - wCurBaseData)"
 BASE_DATA_SIZE   EQUS "(wCurBaseDataEnd - wCurBaseData)"
 
+BASE_PADDING_SIZE EQU 4
+	assert (BASE_GROWTH_RATE - BASE_PADDING) == BASE_PADDING_SIZE
+
 ; gender ratio constants
 GENDER_F0      EQU $00
 GENDER_F12_5   EQU $1f

@@ -12,7 +12,7 @@
 	db 80 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/zapdos/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	ds BASE_PADDING_SIZE ; padding
 	db GROWTH_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

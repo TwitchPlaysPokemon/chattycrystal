@@ -12,7 +12,7 @@
 	db 20 ; step cycles to hatch
 	db 5 ; unknown
 	INCBIN "gfx/pokemon/skipleef/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	ds BASE_PADDING_SIZE ; padding
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_FAIRY, EGG_MONSTER ; egg groups
 

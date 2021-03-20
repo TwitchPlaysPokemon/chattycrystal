@@ -12,7 +12,7 @@
 	db 11 ; step cycles to hatch
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/azurill/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+	ds BASE_PADDING_SIZE ; padding
 	db GROWTH_FAST ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 

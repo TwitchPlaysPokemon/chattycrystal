@@ -261,7 +261,7 @@ MoveAnimationsChattyHP:
 	dw BattleAnim_Revenge
 	dw BattleAnim_Endeavor
 	dw BattleAnim_Thief        ; PLACEHOLDER
-	dw BattleAnim_HiddenPower  ; PLACEHOLDER
+	dw BattleAnim_Dummy
 	dw BattleAnim_Dive
 	dw BattleAnim_ArmThrust
 	dw BattleAnim_TeeterDance  ; 108

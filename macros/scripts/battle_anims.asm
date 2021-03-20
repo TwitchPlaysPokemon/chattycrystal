@@ -141,7 +141,7 @@ anim_beatup: MACRO
 	db anim_beatup_command
 ENDM
 
-	enum anim_0xe7_command ; $e7
+	enum skip ; $e7
 
 	enum anim_updateactorpic_command ; $e8
 anim_updateactorpic: MACRO

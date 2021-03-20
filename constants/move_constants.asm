@@ -386,12 +386,13 @@ NUM_ATTACKS EQU const_value + -1
 		fail "Too many moves defined!"
 	endc
 
-NUM_SPECIAL_ANIMS EQU $17 ;fix if more special (always on) animations are added
+NUM_SPECIAL_ANIMS EQU $18 ;fix if more special (always on) animations are added
 SPECIAL_ANIM_OFFSET EQU (1 + HIGH(NUM_ATTACKS + NUM_SPECIAL_ANIMS)) << 8
 
 ; Battle animations use the same constants as the moves
 ; Animations with negative IDs will play even when animations are disabled
 const_value = -NUM_SPECIAL_ANIMS
+	const ANIM_SNATCHED_MOVE     ; -18 (ffe8)
 	const ANIM_HELD_ITEM_TRIGGER ; -17 (ffe9)
 	const ANIM_THROW_POKE_BALL   ; -16 (ffea)
 	const ANIM_SEND_OUT_MON      ; -15 (ffeb)

@@ -38,9 +38,7 @@ BattleCommand_Encore:
 	set SUBSTATUS_ENCORED, [hl]
 	call BattleRandom
 	and 3
-	inc a
-	inc a
-	inc a
+	add a, 3
 	ld [de], a
 	call CheckOpponentWentFirst
 	jr nz, .finish_move

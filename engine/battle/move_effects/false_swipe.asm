@@ -16,7 +16,8 @@ BattleCommand_FalseSwipe:
 	call CompareBytes
 	pop de
 	pop hl
-	jr c, .done
+	ccf
+	ret nc
 
 	ld a, [hli]
 	ld [de], a
@@ -34,15 +35,9 @@ BattleCommand_FalseSwipe:
 .okay
 
 	ld a, [wCriticalHit]
-	cp 2
+	sub 2
 	jr nz, .carry
-	xor a
 	ld [wCriticalHit], a
-
 .carry
 	scf
-	ret
-
-.done
-	and a
 	ret

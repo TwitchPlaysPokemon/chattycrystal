@@ -28,6 +28,12 @@ SafariZoneCenterRestHouseScript:
 .Text:
 	text "It's locked…"
 	done
+	
+SafariZoneCenterLuckyPunch:
+	itemball LUCKY_PUNCH
+	
+SafariZoneCenterMaxPotion:
+	itemball MAX_POTION
 
 SafariZoneCenter_MapEvents:
 	db 0, 0 ; filler
@@ -49,4 +55,6 @@ SafariZoneCenter_MapEvents:
 	bg_event 18, 20, BGEVENT_READ, SafariZoneCenterRestHouseSignScript
 	bg_event 17, 19, BGEVENT_READ, SafariZoneCenterRestHouseScript
 
-	db 0 ; object events
+	db 2 ; object events
+	object_event 15, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneCenterLuckyPunch, EVENT_SAFARI_ZONE_CENTER_LUCKY_PUNCH
+	object_event  2, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneCenterMaxPotion, EVENT_SAFARI_ZONE_CENTER_MAX_POTION

@@ -31,6 +31,12 @@ SafariZoneEastRestHouseScript:
 .Text:
 	text "It's locked…"
 	done
+	
+SafariZoneEastLeafStone:
+	itemball LEAF_STONE
+	
+SafariZoneEastStick:
+	itemball STICK
 
 SafariZoneEast_MapEvents:
 	db 0, 0 ; filler
@@ -49,4 +55,6 @@ SafariZoneEast_MapEvents:
 	bg_event 26, 10, BGEVENT_READ, SafariZoneEastRestHouseSignScript
 	bg_event 25,  9, BGEVENT_READ, SafariZoneEastRestHouseScript
 
-	db 0 ; object events
+	db 2 ; object events
+	object_event 14, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneEastLeafStone, EVENT_SAFARI_ZONE_EAST_LEAF_STONE
+	object_event 26,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneEastStick, EVENT_SAFARI_ZONE_EAST_STICK

@@ -54,6 +54,9 @@ Latios:
 LatiosText:
 	text "Laaati!"
 	done
+	
+SafariZoneNorthFastBall:
+	itemball FAST_BALL
 
 SafariZoneNorth_MapEvents:
 	db 0, 0 ; filler
@@ -78,6 +81,6 @@ SafariZoneNorth_MapEvents:
 	bg_event 36,  4, BGEVENT_READ, SafariZoneNorthRestHouseSignScript
 	bg_event 35,  3, BGEVENT_READ, SafariZoneNorthRestHouseScript
 
-	db 1 ; object events
+	db 2 ; object events
 	object_event 30,  2, SPRITE_DRAGON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Latios, EVENT_LATIOS_IN_SAFARI_ZONE
-
+	object_event 19, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneNorthFastBall, EVENT_SAFARI_ZONE_NORTH_FAST_BALL

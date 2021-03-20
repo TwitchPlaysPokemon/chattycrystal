@@ -46,6 +46,12 @@ SafariZoneWestPrizeHouseScript:
 .Text:
 	text "It's locked…"
 	done
+	
+SafariZoneWestRevivalHerb:
+	itemball REVIVAL_HERB
+	
+SafariZoneWestHyperBeam:
+	itemball TM_HYPER_BEAM
 
 SafariZoneWest_MapEvents:
 	db 0, 0 ; filler
@@ -68,4 +74,6 @@ SafariZoneWest_MapEvents:
 	bg_event 11, 11, BGEVENT_READ, SafariZoneWestRestHouseScript
 	bg_event  3,  3, BGEVENT_READ, SafariZoneWestPrizeHouseScript
 
-	db 0 ; object events
+	db 2 ; object events
+	object_event 12,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneWestRevivalHerb, EVENT_SAFARI_ZONE_WEST_REVIVAL_HERB
+	object_event  4,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneWestHyperBeam, EVENT_SAFARI_ZONE_WEST_HYPER_BEAM

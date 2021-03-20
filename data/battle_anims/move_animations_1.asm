@@ -4565,26 +4565,16 @@ BattleAnim_IronHead:
 	anim_ret
 
 BattleAnim_GrassKnot:
-	anim_3gfx ANIM_GFX_WAVE, ANIM_GFX_PLANT, ANIM_GFX_HIT
+	anim_2gfx ANIM_GFX_GRASS_KNOT, ANIM_GFX_PLANT
 	anim_call BattleAnim_UserObj_1Row
-	anim_sound 0, 1, SFX_RAZOR_WIND
 	anim_obj ANIM_OBJ_GRASS_KNOT, 136, 56, $0
-	anim_wait 32
+	anim_wait 26
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
+	anim_sound 0, 1, SFX_RAZOR_WIND
 	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $28
 	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $5c
 	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
-	anim_sound 0, 1, SFX_MENU
-	anim_obj ANIM_OBJ_02, 130, 48, $0
 	anim_wait 8
-	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $10
-	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $e8
-	anim_sound 0, 1, SFX_MENU
-	anim_obj ANIM_OBJ_02, 152, 56, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $9c
-	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $d0
-	anim_sound 0, 1, SFX_MENU
-	anim_obj ANIM_OBJ_02, 126, 64, $0
 	anim_wait 32
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_ret

@@ -3422,7 +3422,6 @@ BattleAnim_IronDefense:
 	anim_loop 5, .loop
 	anim_wait 6
 	anim_jump BattleAnim_ShowMon_0
-	anim_ret
 
 BattleAnim_Howl:
 	anim_1gfx ANIM_GFX_NOISE

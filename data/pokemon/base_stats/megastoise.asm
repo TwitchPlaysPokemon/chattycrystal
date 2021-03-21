@@ -1,6 +1,6 @@
 	db 0 ; species ID placeholder
 
-	db  80,  83,  100,  79, 84,  103
+	db  80,  83, 100,  79,  84,  03
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, WATER ; type

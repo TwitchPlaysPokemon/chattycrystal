@@ -2276,14 +2276,12 @@ wBaseItems:: ; d241
 wBaseItem1:: db ; d241
 wBaseItem2:: db ; d242
 wBaseGender:: db ; d243
-wBaseUnknown1:: db ; d244
+wBasePicSize:: db ; d244
 wBaseEggSteps:: db ; d245
-wBaseUnknown2:: db ; d246
-wBasePicSize:: db ; d247
-wBasePadding:: ds BASE_PADDING_SIZE ; d248
-wBaseGrowthRate:: db ; d24c
-wBaseEggGroups:: db ; d24d
-wBaseTMHM:: flag_array NUM_TM_HM_TUTOR ; d24e
+wBaseGrowthRate:: db ; d246
+wBaseEggGroups:: db ; d247
+wBaseTMHM:: flag_array NUM_TM_HM_TUTOR ; d248
+wBasePadding:: ds BASE_PADDING_SIZE ; d250
 wCurBaseDataEnd::
 
 wCurDamage:: dw ; d256

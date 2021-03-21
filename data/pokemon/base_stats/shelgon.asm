@@ -1,4 +1,4 @@
-	db 0 ; species ID placeholder
+:	db 0 ; species ID placeholder
 
 	db  65,  95, 100,  50,  60,  50
 	;   hp  atk  def  spd  sat  sdf
@@ -8,14 +8,13 @@
 	db 144 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
-	db 100 ; unknown 1
-	db 41 ; step cycles to hatch
-	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/shelgon/front.dimensions"
-	ds BASE_PADDING_SIZE ; padding
+	db 41 ; step cycles to hatch
 	db GROWTH_SLOW ; growth rate
 	dn EGG_DRAGON, EGG_DRAGON ; egg groups
 
 	; tm/hm learnset
 	tmhm HEADBUTT, CURSE, ROLLOUT, ROAR, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, DRAGONBREATH, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, DEFENSE_CURL, REST, ATTRACT, FURY_CUTTER, CUT, STRENGTH, FLAMETHROWER
-	; end
+
+	ds BASE_PADDING_SIZE ; padding
+	assert (@ - :-) == BASE_DATA_SIZE ; end

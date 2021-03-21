@@ -1,4 +1,4 @@
-	db 0 ; species ID placeholder
+:	db 0 ; species ID placeholder
 
 	db  20,  10,  55,  80,  15,  20
 	;   hp  atk  def  spd  sat  sdf
@@ -8,14 +8,13 @@
 	db 20 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
-	db 100 ; unknown 1
-	db 5 ; step cycles to hatch
-	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/magikarp/front.dimensions"
-	ds BASE_PADDING_SIZE ; padding
+	db 5 ; step cycles to hatch
 	db GROWTH_SLOW ; growth rate
 	dn EGG_WATER_2, EGG_DRAGON ; egg groups
 
 	; tm/hm learnset
 	tmhm
-	; end
+
+	ds BASE_PADDING_SIZE ; padding
+	assert (@ - :-) == BASE_DATA_SIZE ; end

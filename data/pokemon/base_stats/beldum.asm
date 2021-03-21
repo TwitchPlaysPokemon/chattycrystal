@@ -1,4 +1,4 @@
-	db 0 ; species ID placeholder
+:	db 0 ; species ID placeholder
 
 	db  40,  55,  80,  30,  35,  60
 	;   hp  atk  def  spd  sat  sdf
@@ -8,14 +8,13 @@
 	db 103 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
-	db 100 ; unknown 1
-	db 41 ; step cycles to hatch
-	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/beldum/front.dimensions"
-	ds BASE_PADDING_SIZE ; padding
+	db 41 ; step cycles to hatch
 	db GROWTH_SLOW ; growth rate
 	dn EGG_MINERAL, EGG_MINERAL ; egg groups
 
 	; tm/hm learnset
 	tmhm HEADBUTT
-	; end
+
+	ds BASE_PADDING_SIZE ; padding
+	assert (@ - :-) == BASE_DATA_SIZE ; end

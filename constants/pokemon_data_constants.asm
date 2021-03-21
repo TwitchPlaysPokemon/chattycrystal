@@ -15,18 +15,15 @@ BASE_ITEMS       EQUS "(wBaseItems - wCurBaseData)"
 BASE_ITEM_1      EQUS "(wBaseItem1 - wCurBaseData)"
 BASE_ITEM_2      EQUS "(wBaseItem2 - wCurBaseData)"
 BASE_GENDER      EQUS "(wBaseGender - wCurBaseData)"
-BASE_UNKNOWN_1   EQUS "(wBaseUnknown1 - wCurBaseData)"
-BASE_EGG_STEPS   EQUS "(wBaseEggSteps - wCurBaseData)"
-BASE_UNKNOWN_2   EQUS "(wBaseUnknown2 - wCurBaseData)"
 BASE_PIC_SIZE    EQUS "(wBasePicSize - wCurBaseData)"
-BASE_PADDING     EQUS "(wBasePadding - wCurBaseData)"
+BASE_EGG_STEPS   EQUS "(wBaseEggSteps - wCurBaseData)"
 BASE_GROWTH_RATE EQUS "(wBaseGrowthRate - wCurBaseData)"
 BASE_EGG_GROUPS  EQUS "(wBaseEggGroups - wCurBaseData)"
 BASE_TMHM        EQUS "(wBaseTMHM - wCurBaseData)"
+BASE_PADDING     EQUS "(wBasePadding - wCurBaseData)"
 BASE_DATA_SIZE   EQUS "(wCurBaseDataEnd - wCurBaseData)"
 
-BASE_PADDING_SIZE EQU 4
-	assert (BASE_GROWTH_RATE - BASE_PADDING) == BASE_PADDING_SIZE
+BASE_PADDING_SIZE EQU 6
 
 ; gender ratio constants
 GENDER_F0      EQU $00

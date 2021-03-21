@@ -755,21 +755,21 @@ INCLUDE "gfx/pokemon/drilbur/shiny.pal"
 INCBIN "gfx/pokemon/excadrill/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/excadrill/shiny.pal"
 INCBIN "gfx/pokemon/sandile/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Sandile
+INCLUDE "gfx/pokemon/sandile/shiny.pal"
 INCBIN "gfx/pokemon/krokorok/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Krokorok
+INCLUDE "gfx/pokemon/krokorok/shiny.pal"
 INCBIN "gfx/pokemon/krookodile/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Krookodile
+INCLUDE "gfx/pokemon/krookodile/shiny.pal"
 INCBIN "gfx/pokemon/ducklett/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Ducklett
+INCLUDE "gfx/pokemon/ducklett/shiny.pal"
 INCBIN "gfx/pokemon/swanna/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Swanna
+INCLUDE "gfx/pokemon/swanna/shiny.pal"
 INCBIN "gfx/pokemon/tynamo/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Tynamo
+INCLUDE "gfx/pokemon/tynamo/shiny.pal"
 INCBIN "gfx/pokemon/eelektrik/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Eelektrik
+INCLUDE "gfx/pokemon/eelektrik/shiny.pal"
 INCBIN "gfx/pokemon/eelektross/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Eelektross
+INCLUDE "gfx/pokemon/eelektross/shiny.pal"
 INCBIN "gfx/pokemon/litwick/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/litwick/shiny.pal"
 INCBIN "gfx/pokemon/lampent/front.gbcpal", middle_colors
@@ -777,33 +777,33 @@ INCLUDE "gfx/pokemon/lampent/shiny.pal"
 INCBIN "gfx/pokemon/chandelure/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/chandelure/shiny.pal"
 INCBIN "gfx/pokemon/clauncher/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Clauncher
+INCLUDE "gfx/pokemon/clauncher/shiny.pal"
 INCBIN "gfx/pokemon/clawitzer/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Clawtizer
+INCLUDE "gfx/pokemon/clawitzer/shiny.pal"
 INCBIN "gfx/pokemon/helioptile/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Helioptile
+INCLUDE "gfx/pokemon/helioptile/shiny.pal"
 INCBIN "gfx/pokemon/heliolisk/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Heliolisk
+INCLUDE "gfx/pokemon/heliolisk/shiny.pal"
 INCBIN "gfx/pokemon/amaura/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Amaura
+INCLUDE "gfx/pokemon/amaura/shiny.pal"
 INCBIN "gfx/pokemon/aurorus/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Aurorus
+INCLUDE "gfx/pokemon/aurorus/shiny.pal"
 INCBIN "gfx/pokemon/sylveon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/sylveon/shiny.pal"
 INCBIN "gfx/pokemon/goomy/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Goomy
+INCLUDE "gfx/pokemon/goomy/shiny.pal"
 INCBIN "gfx/pokemon/sliggoo/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Sliggoo
+INCLUDE "gfx/pokemon/sliggoo/shiny.pal"
 INCBIN "gfx/pokemon/goodra/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Goodra
+INCLUDE "gfx/pokemon/goodra/shiny.pal"
 INCBIN "gfx/pokemon/crabrawler/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Crabrawler
+INCLUDE "gfx/pokemon/crabrawler/shiny.pal"
 INCBIN "gfx/pokemon/crabominable/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Crabominable
+INCLUDE "gfx/pokemon/crabominable/shiny.pal"
 INCBIN "gfx/pokemon/cutiefly/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Cutiefly
+INCLUDE "gfx/pokemon/cutiefly/shiny.pal"
 INCBIN "gfx/pokemon/ribombee/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Ribombee
+INCLUDE "gfx/pokemon/ribombee/shiny.pal"
 ; Fused Crystal mons
 INCBIN "gfx/pokemon/onixtret/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/onixtret/shiny.pal"

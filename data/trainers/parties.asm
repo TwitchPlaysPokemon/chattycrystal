@@ -4712,7 +4712,7 @@ YoungsterGroup:
 	next_list_item ; YOUNGSTER (9)
 	db "WARREN@", TRAINERTYPE_NORMAL
 	db 72
-	dw FEAROW
+	dw PIDGEOT
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (10)
@@ -4726,7 +4726,7 @@ YoungsterGroup:
 	next_list_item ; YOUNGSTER (11)
 	db "OWEN@", TRAINERTYPE_NORMAL
 	db 66
-	dw ARCANINE
+	dw HELIOLISK
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (12)
@@ -4734,7 +4734,7 @@ YoungsterGroup:
 	db 65
 	dw SANDSLASH
 	db 65
-	dw CROBAT
+	dw AMPHAROS
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (13)
@@ -5024,13 +5024,13 @@ SchoolboyGroup:
 	next_list_item ; SCHOOLBOY (2)
 	db "KIPP@", TRAINERTYPE_NORMAL
 	db 59
-	dw VOLTORB
+	dw PANSAGE
 	db 59
-	dw MAGNEMITE
+	dw NIDORINO
 	db 63
-	dw ELECTRODE
+	dw SIMISAGE
 	db 63
-	dw MAGNETON
+	dw NIDOKING
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (3)
@@ -5042,9 +5042,9 @@ SchoolboyGroup:
 	next_list_item ; SCHOOLBOY (4)
 	db "JOHNNY@", TRAINERTYPE_NORMAL
 	db 60
-	dw WEEPINBELL
+	dw NIDORINA
 	db 62
-	dw VICTREEBEL
+	dw NIDOQUEEN
 	db 64
 	dw VICTREEBEL
 	db -1 ; end
@@ -5064,7 +5064,7 @@ SchoolboyGroup:
 	db 63
 	dw XATU
 	db 65
-	dw ALAKAZAM
+	dw CRABOMINABLE
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (7)
@@ -5078,17 +5078,17 @@ SchoolboyGroup:
 	db 68
 	dw TANGELA
 	db 68
-	dw VAPOREON
+	dw GLACEON
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (9)
 	db "BILLY@", TRAINERTYPE_NORMAL
 	db 63
-	dw PARASECT
+	dw SCYTHER
+	db 63
+	dw SCIZOR
 	db 63
 	dw PARASECT
-	db 63
-	dw POLITOED
 	db 80
 	dw DITTO
 	db -1 ; end
@@ -5344,9 +5344,9 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (8)
 	db "HANK@", TRAINERTYPE_NORMAL
 	db 12
-	dw PIDGEY
+	dw TOGEPI
 	db 72
-	dw PIDGEOT
+	dw TOGETIC
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (9)
@@ -5354,7 +5354,7 @@ BirdKeeperGroup:
 	db 59
 	dw FEAROW
 	db 65
-	dw FEAROW
+	dw DODRIO
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (10)
@@ -5406,7 +5406,7 @@ BirdKeeperGroup:
 	db 65
 	dw PIDGEOT
 	db 65
-	dw FEAROW
+	dw NOCTOWL
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (18)
@@ -5527,21 +5527,21 @@ LassGroup:
 	next_list_item ; LASS (7)
 	db "LAURA@", TRAINERTYPE_NORMAL
 	db 65
-	dw BELLOSSOM
+	dw ROSERADE
 	db 68
 	dw PIDGEOT
 	db 68
-	dw BELLOSSOM
+	dw SUNFLORA
 	db -1 ; end
 
 	next_list_item ; LASS (8)
 	db "SHANNON@", TRAINERTYPE_NORMAL
 	db 65
-	dw PARASECT
+	dw TOGETIC
 	db 65
-	dw PARASECT
+	dw JYNX
 	db 68
-	dw PARASECT
+	dw MAGMAR
 	db -1 ; end
 
 	next_list_item ; LASS (9)
@@ -5567,9 +5567,9 @@ LassGroup:
 	next_list_item ; LASS (11)
 	db "ELLEN@", TRAINERTYPE_NORMAL
 	db 64
-	dw WIGGLYTUFF
+	dw VICTREEBEL
 	db 68
-	dw GRANBULL
+	dw BELLOSSOM
 	db -1 ; end
 
 	next_list_item ; LASS (12)
@@ -6930,13 +6930,13 @@ TeacherGroup:
 	next_list_item ; TEACHER (1)
 	db "COLETTE@", TRAINERTYPE_NORMAL
 	db 65
-	dw CLEFABLE
+	dw BLISSEY
 	db -1 ; end
 
 	next_list_item ; TEACHER (2)
 	db "HILLARY@", TRAINERTYPE_NORMAL
 	db 62
-	dw AIPOM
+	dw TAUROS
 	db 64
 	dw MAROWAK
 	db -1 ; end
@@ -7127,11 +7127,11 @@ BugCatcherGroup:
 	next_list_item ; BUG_CATCHER (3)
 	db "ED@", TRAINERTYPE_NORMAL
 	db 69
-	dw BEEDRILL
+	dw LEDIAN
 	db 69
-	dw BEEDRILL
+	dw ARIADOS
 	db 69
-	dw BEEDRILL
+	dw VENOMOTH
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (4)
@@ -7211,7 +7211,7 @@ BugCatcherGroup:
 	next_list_item ; BUG_CATCHER (12)
 	db "DOUG@", TRAINERTYPE_NORMAL
 	db 71
-	dw ARIADOS
+	dw MASQUERAIN
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (13)
@@ -7284,25 +7284,25 @@ BugCatcherGroup:
 	next_list_item ; BUG_CATCHER (20)
 	db "DANE@", TRAINERTYPE_NORMAL
 	db 68
-	dw BEEDRILL
+	dw RIBOMBEE
 	db 70
-	dw BUTTERFREE
+	dw MOTHIM
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (21)
 	db "DION@", TRAINERTYPE_NORMAL
 	db 71
-	dw ARIADOS
+	dw HERACROSS
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (22)
 	db "STACEY@", TRAINERTYPE_NORMAL
 	db 66
-	dw RIBOMBEE
+	dw SCYTHER
 	db 68
-	dw LEDIAN
+	dw PINSIR
 	db 70
-	dw BUTTERFREE
+	dw SCIZOR
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (23)
@@ -7318,9 +7318,9 @@ BugCatcherGroup:
 	next_list_item ; BUG_CATCHER (24)
 	db "ABNER@", TRAINERTYPE_NORMAL
 	db 70
-	dw BUTTERFREE
+	dw FORRETRESS
 	db 70
-	dw BEEDRILL
+	dw YANMA
 	db 70
 	dw PIKACHU
 	db -1 ; end
@@ -7355,11 +7355,11 @@ FisherGroup:
 	next_list_item ; FISHER (4)
 	db "KYLE@", TRAINERTYPE_NORMAL
 	db 62
-	dw SEAKING
+	dw STARMIE
 	db 65
-	dw POLITOED
+	dw POLIWRATH
 	db 65
-	dw SEAKING
+	dw KINGLER
 	db -1 ; end
 
 	next_list_item ; FISHER (5)
@@ -7441,7 +7441,7 @@ FisherGroup:
 	db 65
 	dw OCTILLERY
 	db 65
-	dw OCTILLERY
+	dw TENTACRUEL
 	db -1 ; end
 
 	next_list_item ; FISHER (14)
@@ -7449,11 +7449,11 @@ FisherGroup:
 	db 90
 	dw MAGIKARP
 	db 90
-	dw MAGIKARP
+	dw FEEBAS
 	db 65
 	dw QWILFISH
 	db 65
-	dw TENTACRUEL
+	dw CLAWITZER
 	db -1 ; end
 
 	next_list_item ; FISHER (15)
@@ -7461,9 +7461,9 @@ FisherGroup:
 	db 64
 	dw GYARADOS
 	db 64
-	dw GYARADOS
+	dw MILOTIC
 	db 64
-	dw GYARADOS
+	dw DRAGONITE
 	db -1 ; end
 
 	next_list_item ; FISHER (16)
@@ -7757,9 +7757,9 @@ SwimmerMGroup:
 	db 66
 	dw KINGDRA
 	db 66
-	dw KINGDRA
+	dw VAPOREON
 	db 69
-	dw KINGDRA
+	dw EMPOLEON
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (22)
@@ -7970,9 +7970,9 @@ SwimmerFGroup:
 	next_list_item ; SWIMMERF (19)
 	db "BRIANA@", TRAINERTYPE_NORMAL
 	db 69
-	dw SEAKING
+	dw PELIPPER
 	db 69
-	dw SEAKING
+	dw SWAMPERT
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (20)
@@ -8218,7 +8218,7 @@ SuperNerdGroup:
 	db 65
 	dw MUK
 	db 65
-	dw MUK
+	dw METAGROSS
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (7)
@@ -8226,9 +8226,9 @@ SuperNerdGroup:
 	db 64
 	dw MAGNETON
 	db 64
-	dw MAGNETON
+	dw PORYGON_Z
 	db 64
-	dw MAGNETON
+	dw BRONZONG
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (8)
@@ -8653,9 +8653,9 @@ HikerGroup:
 	db 66
 	dw GOLEM
 	db 66
-	dw GOLEM
+	dw AGGRON
 	db 66
-	dw GOLEM
+	dw MAROWAK
 	db -1 ; end
 
 	next_list_item ; HIKER (14)
@@ -8681,9 +8681,9 @@ HikerGroup:
 	db 63
 	dw GOLEM
 	db 65
-	dw GOLEM
+	dw GASTRODON
 	db 63
-	dw GOLEM
+	dw QUAGSIRE
 	db -1 ; end
 
 	next_list_item ; HIKER (17)
@@ -8838,11 +8838,11 @@ BikerGroup:
 	db 62
 	dw WEEZING
 	db 63
-	dw WEEZING
+	dw INFERNAPE
 	db 64
-	dw WEEZING
+	dw MASQUERAIN
 	db 65
-	dw WEEZING
+	dw WIGGLYTUFF
 	db -1 ; end
 
 	next_list_item ; BIKER (4)
@@ -8854,9 +8854,9 @@ BikerGroup:
 	next_list_item ; BIKER (5)
 	db "ZEKE@", TRAINERTYPE_NORMAL
 	db 65
-	dw WEEZING
+	dw GRANBULL
 	db 65
-	dw WEEZING
+	dw NINETALES
 	db -1 ; end
 
 	next_list_item ; BIKER (6)
@@ -9047,9 +9047,9 @@ FirebreatherGroup:
 	db 69
 	dw MAGMAR
 	db 71
-	dw WEEZING
+	dw BLAZIKEN
 	db 69
-	dw MAGMAR
+	dw CHANDELURE
 	db -1 ; end
 
 	next_list_item ; FIREBREATHER (2)
@@ -9071,7 +9071,7 @@ FirebreatherGroup:
 	next_list_item ; FIREBREATHER (4)
 	db "BURT@", TRAINERTYPE_NORMAL
 	db 71
-	dw WEEZING
+	dw SKUNTANK
 	db 71
 	dw MAGCARGO
 	db -1 ; end
@@ -9672,7 +9672,7 @@ PokefanMGroup:
 	next_list_item ; POKEFANM (3)
 	db "ROBERT@", TRAINERTYPE_ITEM
 	db 67
-	dw QUAGSIRE
+	dw KANGASKHAN
 	db GOLD_BERRY
 	db -1 ; end
 
@@ -9714,7 +9714,7 @@ PokefanMGroup:
 	next_list_item ; POKEFANM (6)
 	db "TREVOR@", TRAINERTYPE_ITEM
 	db 65
-	dw GOLDUCK
+	dw RIBOMBEE
 	db GOLD_BERRY
 	db -1 ; end
 
@@ -10197,25 +10197,25 @@ CamperGroup:
 	next_list_item ; CAMPER (6)
 	db "LLOYD@", TRAINERTYPE_NORMAL
 	db 69
-	dw NIDOKING
+	dw SUDOWOODO
 	db -1 ; end
 
 	next_list_item ; CAMPER (7)
 	db "DEAN@", TRAINERTYPE_NORMAL
 	db 67
-	dw GOLDUCK
+	dw LUXRAY
 	db 65
-	dw SANDSLASH
+	dw KROOKODILE
 	db -1 ; end
 
 	next_list_item ; CAMPER (8)
 	db "SID@", TRAINERTYPE_NORMAL
+	db 64
+	dw TYNAMO
+	db 65
+	dw EELEKTRIK
 	db 67
-	dw DUGTRIO
-	db 64
-	dw PRIMEAPE
-	db 64
-	dw POLIWRATH
+	dw EELEKTROSS
 	db -1 ; end
 
 	next_list_item ; CAMPER (9)
@@ -10309,7 +10309,7 @@ CamperGroup:
 	next_list_item ; CAMPER (18)
 	db "JERRY@", TRAINERTYPE_NORMAL
 	db 72
-	dw SANDSLASH
+	dw CRADILY
 	db -1 ; end
 
 	next_list_item ; CAMPER (19)
@@ -10774,7 +10774,7 @@ PicnickerGroup:
 	next_list_item ; PICNICKER (6)
 	db "HOPE@", TRAINERTYPE_NORMAL
 	db 72
-	dw AMPHAROS
+	dw CLEFABLE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (7)
@@ -10832,15 +10832,15 @@ PicnickerGroup:
 	db 67
 	dw JUMPLUFF
 	db 67
-	dw JUMPLUFF
+	dw RIBOMBEE
 	db -1 ; end
 
 	next_list_item ; PICNICKER (14)
 	db "EDNA@", TRAINERTYPE_NORMAL
 	db 63
-	dw NIDORINA
+	dw MIGHTYENA
 	db 67
-	dw RAICHU
+	dw ABSOL
 	db -1 ; end
 
 	next_list_item ; PICNICKER (15)
@@ -11044,13 +11044,13 @@ PsychicGroup:
 	db 64
 	dw EXEGGUTOR
 	db 64
-	dw EXEGGUTOR
+	dw HYPNO
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (4)
 	db "FIDEL@", TRAINERTYPE_NORMAL
 	db 66
-	dw XATU
+	dw GARDEVOIR
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (5)

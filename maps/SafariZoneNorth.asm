@@ -54,7 +54,7 @@ Latios:
 LatiosText:
 	text "Laaati!"
 	done
-	
+
 SafariZoneNorthFastBall:
 	itemball FAST_BALL
 

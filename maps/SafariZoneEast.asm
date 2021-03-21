@@ -31,10 +31,10 @@ SafariZoneEastRestHouseScript:
 .Text:
 	text "It's locked…"
 	done
-	
+
 SafariZoneEastLeafStone:
 	itemball LEAF_STONE
-	
+
 SafariZoneEastStick:
 	itemball STICK
 

@@ -46,10 +46,10 @@ SafariZoneWestPrizeHouseScript:
 .Text:
 	text "It's locked…"
 	done
-	
+
 SafariZoneWestRevivalHerb:
 	itemball REVIVAL_HERB
-	
+
 SafariZoneWestHyperBeam:
 	itemball TM_HYPER_BEAM
 

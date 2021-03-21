@@ -28,10 +28,10 @@ SafariZoneCenterRestHouseScript:
 .Text:
 	text "It's locked…"
 	done
-	
+
 SafariZoneCenterLuckyPunch:
 	itemball LUCKY_PUNCH
-	
+
 SafariZoneCenterMaxPotion:
 	itemball MAX_POTION
 

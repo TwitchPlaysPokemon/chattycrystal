@@ -5780,8 +5780,8 @@ CooltrainerMGroup:
 	next_list_item ; COOLTRAINERM (12)
 	db "BRIAN@", TRAINERTYPE_MOVES
 	db 75
-	dw SANDSLASH
-	dw EARTHQUAKE, SANDSTORM, SLASH, ROLLOUT
+	dw EXCADRILL
+	dw EARTHQUAKE, SWORDS_DANCE, IRON_HEAD, ROCK_SLIDE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (13)
@@ -6079,21 +6079,21 @@ CooltrainerFGroup:
 	next_list_item ; COOLTRAINERF (10)
 	db "REENA@", TRAINERTYPE_NORMAL
 	db 72
-	dw STARMIE
+	dw SYLVEON
 	db 74
-	dw NIDOQUEEN
+	dw GOODRA
 	db 72
-	dw STARMIE
+	dw ABSOL
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (11)
 	db "MEGAN@", TRAINERTYPE_NORMAL
 	db 75
-	dw BULBASAUR
+	dw CHIKORITA
 	db 75
-	dw IVYSAUR
+	dw BAYLEEF
 	db 75
-	dw VENUSAUR
+	dw MEGANIUM
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (12)
@@ -6116,10 +6116,12 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (14)
 	db "QUINN@", TRAINERTYPE_NORMAL
-	db 70
+	db 69
 	dw VENUSAUR
-	db 70
-	dw STARMIE
+	db 69
+	dw BLASTOISE
+	db 69
+	dw CHARIZARD
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (15)
@@ -7509,7 +7511,7 @@ FisherGroup:
 	next_list_item ; FISHER (21)
 	db "SCOTT@", TRAINERTYPE_NORMAL
 	db 70
-	dw QWILFISH
+	dw LUDICOLO
 	db 70
 	dw QWILFISH
 	db 74
@@ -7569,7 +7571,7 @@ SwimmerMGroup:
 	next_list_item ; SWIMMERM (1)
 	db "HAROLD@", TRAINERTYPE_NORMAL
 	db 72
-	dw OCTILLERY
+	dw WAILORD
 	db 70
 	dw KINGDRA
 	db -1 ; end
@@ -7689,19 +7691,19 @@ SwimmerMGroup:
 	next_list_item ; SWIMMERM (14)
 	db "JEROME@", TRAINERTYPE_NORMAL
 	db 68
-	dw KINGDRA
+	dw SEADRA
 	db 70
-	dw TENTACRUEL
+	dw KINGDRA
 	db 72
 	dw TENTACRUEL
 	db 70
-	dw SEAKING
+	dw PELIPPER
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (15)
 	db "TUCKER@", TRAINERTYPE_NORMAL
 	db 72
-	dw SHELLDER
+	dw CLAWITZER
 	db 72
 	dw CLOYSTER
 	db -1 ; end
@@ -7719,13 +7721,13 @@ SwimmerMGroup:
 	next_list_item ; SWIMMERM (17)
 	db "CAMERON@", TRAINERTYPE_NORMAL
 	db 72
-	dw AZUMARILL
+	dw KABUTOPS
 	db -1 ; end
 
 	next_list_item ; SWIMMERM (18)
 	db "SETH@", TRAINERTYPE_NORMAL
 	db 68
-	dw QUAGSIRE
+	dw WAILORD
 	db 68
 	dw OCTILLERY
 	db 70
@@ -7928,7 +7930,7 @@ SwimmerFGroup:
 	next_list_item ; SWIMMERF (14)
 	db "NICOLE@", TRAINERTYPE_NORMAL
 	db 68
-	dw AZUMARILL
+	dw WALREIN
 	db 68
 	dw AZUMARILL
 	db 71
@@ -7938,9 +7940,9 @@ SwimmerFGroup:
 	next_list_item ; SWIMMERF (15)
 	db "LORI@", TRAINERTYPE_NORMAL
 	db 71
-	dw STARMIE
+	dw CLOYSTER
 	db 71
-	dw STARMIE
+	dw OMASTAR
 	db -1 ; end
 
 	next_list_item ; SWIMMERF (16)
@@ -7952,11 +7954,11 @@ SwimmerFGroup:
 	next_list_item ; SWIMMERF (17)
 	db "NIKKI@", TRAINERTYPE_NORMAL
 	db 67
-	dw DEWGONG
+	dw PIPLUP
 	db 67
-	dw DEWGONG
+	dw PRINPLUP
 	db 67
-	dw DEWGONG
+	dw EMPOLEON
 	db 67
 	dw DEWGONG
 	db -1 ; end
@@ -9519,17 +9521,17 @@ BoarderGroup:
 	next_list_item ; BOARDER (4)
 	db "SHAUN@", TRAINERTYPE_NORMAL
 	db 72
-	dw CLOYSTER
+	dw AURORUS
 	db 67
-	dw DEWGONG
+	dw FROSLASS
 	db -1 ; end
 
 	next_list_item ; BOARDER (5)
 	db "BRYCE@", TRAINERTYPE_NORMAL
 	db 72
-	dw DEWGONG
+	dw CRADILY
 	db 67
-	dw LAPRAS
+	dw LILEEP
 	db -1 ; end
 
 	next_list_item ; BOARDER (6)
@@ -11102,7 +11104,7 @@ PsychicGroup:
 	next_list_item ; PSYCHIC_T (10)
 	db "GILBERT@", TRAINERTYPE_NORMAL
 	db 70
-	dw STARMIE
+	dw GARDEVOIR
 	db 70
 	dw EXEGGUTOR
 	db 74

@@ -733,7 +733,7 @@ INCLUDE "gfx/pokemon/chatot/shiny.pal"
 INCBIN "gfx/pokemon/croagunk/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/croagunk/shiny.pal"
 INCBIN "gfx/pokemon/toxicroak/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/placeholder/shiny.pal" ; PLACEHOLDER - Toxicroak
+INCLUDE "gfx/pokemon/toxicroak/shiny.pal"
 INCBIN "gfx/pokemon/leafeon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/leafeon/shiny.pal"
 INCBIN "gfx/pokemon/glaceon/front.gbcpal", middle_colors

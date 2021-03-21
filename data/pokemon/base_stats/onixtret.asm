@@ -3,14 +3,14 @@
 	db  35,  46,  97,  45,  33,  45
 	;   hp  atk  def  spd  sat  sdf
 
-	db ROCK, NORMAL
+	db ROCK, NORMAL ; type
 	db 107 ; catch rate
 	db 83 ; base exp
 	db NO_ITEM, BERRY ; items
 	db GENDER_F50 ; gender ratio
-	db 100 ; unknown
+	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
-	db 5 ; unknown
+	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/onixtret/front.dimensions"
 	ds BASE_PADDING_SIZE ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate

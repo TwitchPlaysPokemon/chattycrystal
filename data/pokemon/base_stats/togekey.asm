@@ -3,14 +3,14 @@
 	db  38,  50,  50,  45,  38,  55
 	;   hp  atk  def  spd  sat  sdf
 
-	db FIGHTING, NORMAL
+	db FIGHTING, NORMAL ; type
 	db 190 ; catch rate
 	db 74 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F31_25 ; gender ratio
-	db 100 ; unknown
+	db 100 ; unknown 1
 	db 15 ; step cycles to hatch
-	db 5 ; unknown
+	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/togekey/front.dimensions"
 	ds BASE_PADDING_SIZE ; padding
 	db GROWTH_SLIGHTLY_FAST ; growth rate

@@ -5,7 +5,7 @@
 
 	db DRAGON, DRAGON ; type
 	db 45 ; catch rate
-	db 255 ; base exp - should be 270 but lmao 8-bit
+	db 250 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F50 ; gender ratio
 	db 100 ; unknown 1

@@ -3,14 +3,14 @@
 	db  78,  69,  85,  95,  69,  93
 	;   hp  atk  def  spd  sat  sdf
 
-	db GRASS, FLYING
+	db GRASS, FLYING ; type
 	db 45 ; catch rate
 	db 192 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F31_25 ; gender ratio
-	db 100 ; unknown
+	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
-	db 5 ; unknown
+	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/jumpanium/front.dimensions"
 	ds BASE_PADDING_SIZE ; padding
 	db GROWTH_MEDIUM_SLOW ; growth rate

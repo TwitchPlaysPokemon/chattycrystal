@@ -3,14 +3,14 @@
 	db  80,  68,  60,  65, 90,  80
 	;   hp  atk  def  spd  sat  sdf
 
-	db GROUND, ICE
+	db GROUND, ICE ; type
 	db 64 ; catch rate
 	db 137 ; base exp
 	db ICE_BERRY, ICE_BERRY ; items
 	db GENDER_F75 ; gender ratio
-	db 100 ; unknown
+	db 100 ; unknown 1
 	db 22 ; step cycles to hatch
-	db 5 ; unknown
+	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/quagynx/front.dimensions"
 	ds BASE_PADDING_SIZE ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate

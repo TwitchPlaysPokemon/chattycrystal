@@ -3,14 +3,14 @@
 	db  50,  38,  30,  40,  55,  45
 	;   hp  atk  def  spd  sat  sdf
 
-	db GROUND, ICE
+	db GROUND, ICE ; type
 	db 107 ; catch rate
 	db 70 ; base exp
 	db ICE_BERRY, ICE_BERRY ; items
 	db GENDER_F75 ; gender ratio
-	db 100 ; unknown
+	db 100 ; unknown 1
 	db 22 ; step cycles to hatch
-	db 5 ; unknown
+	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/woochum/front.dimensions"
 	ds BASE_PADDING_SIZE ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate

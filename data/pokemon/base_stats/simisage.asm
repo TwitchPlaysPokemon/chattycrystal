@@ -13,7 +13,7 @@
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/simisage/front.dimensions"
 	ds BASE_PADDING_SIZE ; padding
-	db GROWTH_MEDIUM_FAST; growth rate
+	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 
 	; tm/hm learnset

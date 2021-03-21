@@ -13,7 +13,7 @@
 	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/salamence/front.dimensions"
 	ds BASE_PADDING_SIZE ; padding
-	db GROWTH_SLOW; growth rate
+	db GROWTH_SLOW ; growth rate
 	dn EGG_DRAGON, EGG_DRAGON ; egg groups
 
 	; tm/hm learnset

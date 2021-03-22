@@ -602,16 +602,19 @@ BattleAnim_LeafBlade:
 	anim_sound 0, 1, SFX_CUT
 	anim_bgeffect ANIM_BG_1F, $08, $2, $0
 	anim_obj ANIM_OBJ_3A, 150, 40, $0
-	anim_obj ANIM_OBJ_RAZOR_LEAF, 48, 80, $28
-	anim_wait 16
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $28
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $d0
+	anim_wait 32
 	anim_sound 0, 1, SFX_CUT
 	anim_bgeffect ANIM_BG_1F, $08, $2, $0
 	anim_obj ANIM_OBJ_3B, 118, 40, $0
-	anim_obj ANIM_OBJ_RAZOR_LEAF, 48, 80, $5c
-	anim_wait 16
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $10
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $dc
+	anim_wait 32
 	anim_sound 0, 1, SFX_CUT
 	anim_bgeffect ANIM_BG_1F, $08, $2, $0
 	anim_obj ANIM_OBJ_AERIAL_ACE, 120, 68, $0
-	anim_obj ANIM_OBJ_RAZOR_LEAF, 48, 80, $10
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $5c
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $90
 	anim_wait 32
 	anim_ret

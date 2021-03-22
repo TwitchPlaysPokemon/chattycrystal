@@ -2098,8 +2098,12 @@ RhydonEvosAttacks:
 ChanseyEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
 	db 0 ; no more evolutions
+	dbw 1, COVET
+	dbw 1, CHARM
 	dbw 1, POUND
-	dbw 4, GROWL
+	dbw 1, GROWL
+	dbw 1, TAIL_WHIP
+	dbw 1, DEFENSE_CURL
 	dbw 7, TAIL_WHIP
 	dbw 10, DEFENSE_CURL
 	dbw 13, DOUBLESLAP

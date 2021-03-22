@@ -20,6 +20,7 @@ MoveAnimations3:
 	dw BattleAnim_AquaTail
 	dw BattleAnim_StoneEdge
 	dw BattleAnim_HyperVoice
+	dw BattleAnim_LeafBlade
 
 BattleAnim_CrystalBolt:
 	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_LIGHTNING
@@ -594,4 +595,23 @@ BattleAnim_HyperVoice:
 	anim_wait 28
 	anim_loop 2, .loop
 	anim_wait 8
+	anim_ret
+
+BattleAnim_LeafBlade:
+	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_PLANT
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_1F, $08, $2, $0
+	anim_obj ANIM_OBJ_3A, 150, 40, $0
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 48, 80, $28
+	anim_wait 16
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_1F, $08, $2, $0
+	anim_obj ANIM_OBJ_3B, 118, 40, $0
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 48, 80, $5c
+	anim_wait 16
+	anim_sound 0, 1, SFX_CUT
+	anim_bgeffect ANIM_BG_1F, $08, $2, $0
+	anim_obj ANIM_OBJ_AERIAL_ACE, 120, 68, $0
+	anim_obj ANIM_OBJ_RAZOR_LEAF, 48, 80, $10
+	anim_wait 32
 	anim_ret

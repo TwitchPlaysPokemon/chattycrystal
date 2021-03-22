@@ -870,7 +870,7 @@ RandomUnseenWildMon:
 	ret
 
 .done
-	ld a, $1
+	ld a, 1
 	ld [wScriptVar], a
 	ret
 

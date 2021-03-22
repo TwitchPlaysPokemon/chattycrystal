@@ -6731,17 +6731,6 @@ SkipToBattleCommand:
 	ld [wBattleScriptBufferAddress], a
 	ret
 
-BattleCommand_BeginButtonTally:
-	ld hl, wChattyFlags
-	set 0, [hl]
-	assert LOW(wButtonTally) == $f8
-	ld hl, wButtonTally
-.loop
-	ld [hl], 0
-	inc l
-	jr nz, .loop
-	ret
-
 DisappearUser:
 	farcall _DisappearUser
 	ret

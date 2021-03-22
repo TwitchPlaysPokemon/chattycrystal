@@ -172,6 +172,7 @@ AlphabeticalMoveList::
 	dw KINESIS
 	dw KNOCK_OFF
 	dw LAVA_PLUME
+	dw LEAF_BLADE
 	dw LEAF_STORM
 	dw LEECH_LIFE
 	dw LEECH_SEED

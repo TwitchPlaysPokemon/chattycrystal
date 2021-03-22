@@ -378,6 +378,7 @@ MoveDescriptions1:
 	dw AquaTailDescription
 	dw StoneEdgeDescription
 	dw HyperVoiceDescription
+	dw LeafBladeDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -389,6 +390,8 @@ PoundDescription:
 
 StoneEdgeDescription:
 KarateChopDescription:
+RazorLeafDescription:
+LeafBladeDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
@@ -554,10 +557,6 @@ FlareBlitzDescription:
 	db   "Cloaks in flame,"
 	next "hurting the foe.@"
 
-TailWhipDescription:
-	db   "Lowers the foe's"
-	next "DEFENSE.@"
-
 PoisonStingDescription:
 PoisonJabDescription:
 	db   "An attack that may"
@@ -571,11 +570,13 @@ PinMissileDescription:
 	db   "Fires pins that"
 	next "strike 2-5 times.@"
 
+TailWhipDescription:
 LeerDescription:
 	db   "Reduces the foe's"
 	next "DEFENSE.@"
 
 BiteDescription:
+LowKickDescription:
 	db   "An attack that may"
 	next "cause flinching.@"
 
@@ -634,17 +635,11 @@ WaterGunDescription:
 	next "attack.@"
 
 HydroPumpDescription:
-	db   "A powerful water-"
-	next "type attack.@"
-
 SurfDescription:
 	db   "A strong water-"
 	next "type attack.@"
 
 IceBeamDescription:
-	db   "An attack that may"
-	next "freeze the foe.@"
-
 BlizzardDescription:
 	db   "An attack that may"
 	next "freeze the foe.@"
@@ -680,10 +675,6 @@ SubmissionDescription:
 	db   "An attack that al-"
 	next "so hurts the user.@"
 
-LowKickDescription:
-	db   "An attack that may"
-	next "cause flinching.@"
-
 CounterDescription:
 	db   "Returns a physical"
 	next "blow double.@"
@@ -699,9 +690,6 @@ StrengthDescription:
 AbsorbDescription:
 DrainPunchDescription:
 HornLeechDescription:
-	db   "Steals 1/2 of the"
-	next "damage inflicted.@"
-
 MegaDrainDescription:
 	db   "Steals 1/2 of the"
 	next "damage inflicted.@"
@@ -715,16 +703,12 @@ LeechSeedDescription:
 	next "foe on every turn.@"
 
 GrowthDescription:
-	db   "Raises the SPCL."
-	next "ATK rating.@"
+	db   "Raises the user's"
+	next "SPECIAL ATTACK.@"
 
 NastyPlotDescription:
 	db   "Sharply raises the"
 	next "user's SPCL.ATK.@"
-
-RazorLeafDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
 
 SolarbeamDescription:
 	db   "1st turn: Prepare"
@@ -733,10 +717,6 @@ SolarbeamDescription:
 PoisonpowderDescription:
 	db   "A move that may"
 	next "poison the foe.@"
-
-StunSporeDescription:
-	db   "A move that may"
-	next "paralyze the foe.@"
 
 SleepPowderDescription:
 	db   "May cause the foe"
@@ -759,14 +739,13 @@ FireSpinDescription:
 	next "for 2-5 turns.@"
 
 ThundershockDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
-
+ThunderDescription:
 DischargeDescription:
 ThunderboltDescription:
 	db   "An attack that may"
 	next "cause paralysis.@"
 
+StunSporeDescription:
 ThunderWaveDescription:
 	db   "A move that may"
 	next "cause paralysis.@"
@@ -774,10 +753,6 @@ ThunderWaveDescription:
 WillOWispDescription:
 	db   "A move that may"
 	next "cause a burn.@"
-
-ThunderDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
 
 RockThrowDescription:
 	db   "Drops rocks on the"
@@ -879,9 +854,6 @@ TeeterDanceDescription:
 	next "confusion.@"
 
 WithdrawDescription:
-	db   "Heightens the"
-	next "user's DEFENSE.@"
-
 DefenseCurlDescription:
 	db   "Heightens the"
 	next "user's DEFENSE.@"
@@ -932,9 +904,6 @@ LickDescription:
 	next "cause paralysis.@"
 
 SmogDescription:
-	db   "An attack that may"
-	next "poison the foe.@"
-
 SludgeDescription:
 	db   "An attack that may"
 	next "poison the foe.@"

@@ -331,3 +331,14 @@ BattleCommand_DoubleMinimizeDamage:
 	and a
 	jr nz, DoubleDamage
 	ret
+
+BattleCommand_BeginButtonTally:
+	ld hl, wChattyFlags
+	set 0, [hl]
+	assert LOW(wButtonTally) == $f8
+	ld hl, wButtonTally
+.loop
+	ld [hl], 0
+	inc l
+	jr nz, .loop
+	ret

@@ -11,7 +11,7 @@ LSMoveNames::
 	indirect_entries ROCK_BLAST - 1
 	indirect_entries HEAT_WAVE, .new_moves_4
 	indirect_entries HYPER_VOICE - 1
-	indirect_entries HYPER_VOICE, .new_moves_5
+	indirect_entries LEAF_BLADE, .new_moves_5
 	indirect_table_end
 
 .new_moves_1
@@ -71,6 +71,7 @@ LSMoveNames::
 
 .new_moves_5
 	db "Sound@@@" ; 175
+	db "Coral@@@"
 
 .original_moves
 	db "fihgt@@@"

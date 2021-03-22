@@ -379,6 +379,7 @@
 	const AQUA_TAIL    ; 173
 	const STONE_EDGE   ; 174
 	const HYPER_VOICE  ; 175
+	const LEAF_BLADE   ; 176
 
 NUM_ATTACKS EQU const_value + -1
 

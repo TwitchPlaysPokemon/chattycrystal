@@ -35,7 +35,6 @@ ROMX $09
 ROMX $0a
 	"bankA"
 	"Map Blocks 4"
-	"Move Animation Scripts 3"
 ROMX $0b
 	"bankB"
 	"Map Blocks 5"
@@ -194,6 +193,7 @@ ROMX $46
 ROMX $47
 	"Sprites 3"
 	"Tileset Data 11"
+	"Move Animation Scripts 3"
 ROMX $48
 	"Pic Pointers"
 	"Pics 1"

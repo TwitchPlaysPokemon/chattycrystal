@@ -15,6 +15,7 @@ CriticalHitMoves:
 	dw PSYCHO_CUT
 	dw SKY_ATTACK
 	dw STONE_EDGE
+	dw LEAF_BLADE
 	dw -1
 
 MetronomeExcepts:

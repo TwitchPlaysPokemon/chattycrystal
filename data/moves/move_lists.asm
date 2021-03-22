@@ -1,35 +1,35 @@
 ; Various move lists used by the battle effects code.
 
 CriticalHitMoves:
-	dw KARATE_CHOP
-	dw RAZOR_WIND
-	dw RAZOR_LEAF
-	dw CRABHAMMER
-	dw SLASH
 	dw AEROBLAST
-	dw CROSS_CHOP
 	dw AIR_CUTTER
 	dw ATTACK_ORDER
 	dw BLAZE_KICK
+	dw CRABHAMMER
+	dw CROSS_CHOP
+	dw KARATE_CHOP
+	dw LEAF_BLADE
 	dw NIGHT_SLASH
 	dw PSYCHO_CUT
+	dw RAZOR_LEAF
+	dw RAZOR_WIND
 	dw SKY_ATTACK
+	dw SLASH
 	dw STONE_EDGE
-	dw LEAF_BLADE
 	dw -1
 
 MetronomeExcepts:
-	dw METRONOME
-	dw STRUGGLE
-	dw SKETCH
-	dw MIMIC
 	dw COUNTER
-	dw MIRROR_COAT
-	dw PROTECT
+	dw DESTINY_BOND
 	dw DETECT
 	dw ENDURE
-	dw DESTINY_BOND
+	dw METRONOME
+	dw MIMIC
+	dw MIRROR_COAT
+	dw PROTECT
+	dw SKETCH
 	dw SLEEP_TALK
+	dw STRUGGLE
 	dw THIEF
 	dw -1
 
@@ -60,8 +60,8 @@ AssistExcepts:
 	dw -1
 
 SleepBypassMoves:
-	dw SNORE
 	dw SLEEP_TALK
+	dw SNORE
 	dw -1
 
 ThawingMoves:
@@ -71,9 +71,9 @@ ThawingMoves:
 	dw -1
 
 SemiInvulnerableMoves:
-	dw FLY
 	dw DIG
 	dw DIVE
+	dw FLY
 	dw -1
 
 FlyHitMoves:
@@ -96,7 +96,7 @@ DiveHitMoves:
 
 NoEncoreMoves:
 	dw NO_MOVE
-	dw STRUGGLE
 	dw ENCORE
 	dw MIRROR_MOVE
+	dw STRUGGLE
 	dw -1

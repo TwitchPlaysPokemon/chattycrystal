@@ -1430,7 +1430,7 @@ ChargeBeamDescription:
 	next "up user's SPCL.ATK.@"
 
 ChargeDescription:
-	db   "Double an electruc"
+	db   "Double an electric"
 	next "move's power.@"
 
 MetalSoundDescription:

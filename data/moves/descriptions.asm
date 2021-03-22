@@ -613,10 +613,8 @@ AcidDescription:
 	next "lower DEFENSE.@"
 
 EmberDescription:
-	db   "An attack that may"
-	next "inflict a burn.@"
-
 FlamethrowerDescription:
+FireBlastDescription:
 HeatWaveDescription:
 ScaldDescription:
 	db   "An attack that may"
@@ -912,10 +910,6 @@ BoneClubDescription:
 	db   "An attack that may"
 	next "cause flinching.@"
 
-FireBlastDescription:
-	db   "An attack that"
-	next "may cause a burn.@"
-
 WaterfallDescription:
 	db   "An aquatic charge"
 	next "attack.@"
@@ -929,6 +923,7 @@ AuraSphereDescription:
 ShadowPunchDescription:
 ShockWaveDescription:
 SwiftDescription:
+FeintAttackDescription:
 	db   "An attack that"
 	next "never misses.@"
 
@@ -1070,6 +1065,8 @@ AttackOrderDescription:
 NightSlashDescription:
 PsychoCutDescription:
 SlashDescription:
+CrossChopDescription:
+AeroblastDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
@@ -1126,10 +1123,6 @@ Conversion2Description:
 	db   "The user's type is"
 	next "made resistant.@"
 
-AeroblastDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
-
 CottonSporeDescription:
 	db   "Sharply reduces"
 	next "the foe's SPEED.@"
@@ -1157,10 +1150,6 @@ MachPunchDescription:
 ScaryFaceDescription:
 	db   "Sharply reduces"
 	next "the foe's SPEED.@"
-
-FeintAttackDescription:
-	db   "An attack that"
-	next "never misses.@"
 
 SweetKissDescription:
 	db   "A move that causes"
@@ -1382,10 +1371,6 @@ ChattyHPDescription:
 	db   "The power varies"
 	next "with the #MON.@"
 
-CrossChopDescription:
-	db   "Has a high criti-"
-	next "cal hit ratio.@"
-
 TwisterDescription:
 	db   "Whips up a tornado"
 	next "to attack.@"
@@ -1399,6 +1384,7 @@ SunnyDayDescription:
 	next "moves for 5 turns.@"
 
 CrunchDescription:
+ShadowBallDescription:
 	db   "An attack that may"
 	next "lower SPCL.DEF.@"
 
@@ -1417,10 +1403,6 @@ ExtremespeedDescription:
 AncientpowerDescription:
 	db   "An attack that may"
 	next "raise all stats.@"
-
-ShadowBallDescription:
-	db   "An attack that may"
-	next "lower SPCL.DEF.@"
 
 FutureSightDescription:
 	db   "An attack that"
@@ -1445,10 +1427,10 @@ NuzzleDescription:
 
 ChargeBeamDescription:
 	db   "An attack that may"
-	next "up user's SP.ATK.@"
+	next "up user's SPCL.ATK.@"
 
 ChargeDescription:
-	db   "Double an ELECTRIC"
+	db   "Double an electruc"
 	next "move's power.@"
 
 MetalSoundDescription:

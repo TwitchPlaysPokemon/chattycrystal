@@ -961,7 +961,7 @@ GirafarigEvosAttacks:
 	dbw 37, CRUNCH
 	dbw 41, BATON_PASS
 	dbw 46, NASTY_PLOT
-	dbw 50, PSYCHIC
+	dbw 50, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 PinecoEvosAttacks:

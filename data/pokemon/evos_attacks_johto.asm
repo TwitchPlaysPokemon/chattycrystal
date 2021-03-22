@@ -607,6 +607,7 @@ AmpharosEvosAttacks:
 
 BellossomEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, LEAF_BLADE
 	dbw 1, MEGA_DRAIN
 	dbw 1, SWEET_SCENT
 	dbw 1, STUN_SPORE

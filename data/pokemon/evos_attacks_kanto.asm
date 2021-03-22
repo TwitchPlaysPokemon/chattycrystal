@@ -1335,7 +1335,8 @@ VictreebelEvosAttacks:
 	dbw 1, SLEEP_POWDER
 	dbw 1, SWEET_SCENT
 	dbw 1, RAZOR_LEAF
-	dbw 44, LEAF_STORM
+	dbw 36, LEAF_STORM
+	dbw 48, LEAF_BLADE
 	db 0 ; no more level-up moves
 
 TentacoolEvosAttacks:
@@ -1541,20 +1542,23 @@ MagnetonEvosAttacks:
 
 FarfetchDEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, POISON_JAB
 	dbw 1, PECK
 	dbw 1, SAND_ATTACK
-	dbw 4, LEER
+	dbw 1, LEER
+	dbw 1, FURY_CUTTER
 	dbw 8, FURY_ATTACK
-	dbw 13, AERIAL_ACE
-	dbw 17, KNOCK_OFF
+	dbw 13, KNOCK_OFF
+	dbw 17, AERIAL_ACE
 	dbw 21, SLASH
 	dbw 26, AIR_CUTTER
 	dbw 30, SWORDS_DANCE
-	dbw 34, AGILITY
+	dbw 34, FALSE_SWIPE
 	dbw 39, NIGHT_SLASH
-	dbw 43, FALSE_SWIPE
-	dbw 47, AIR_SLASH
-	dbw 52, BRAVE_BIRD
+	dbw 43, AIR_SLASH
+	dbw 47, LEAF_BLADE
+	dbw 52, AGILITY
+	dbw 56, BRAVE_BIRD
 	db 0 ; no more level-up moves
 
 DoduoEvosAttacks:

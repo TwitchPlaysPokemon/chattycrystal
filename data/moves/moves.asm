@@ -392,3 +392,4 @@ Moves1:
 	move EFFECT_NORMAL_HIT,          100, ROCK,      80,  5,   0 ;STONE_EDGE
 	move EFFECT_NORMAL_HIT,           90, NORMAL,   100, 10,   0 ;HYPER_VOICE
 	move EFFECT_NORMAL_HIT,           90, GRASS,    100, 15,   0 ;LEAF_BLADE
+	move EFFECT_SP_DEF_DOWN_HIT,      90, GRASS,    100, 10,  10 ;ENERGY_BALL

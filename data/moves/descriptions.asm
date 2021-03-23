@@ -379,6 +379,7 @@ MoveDescriptions1:
 	dw StoneEdgeDescription
 	dw HyperVoiceDescription
 	dw LeafBladeDescription
+	dw EnergyBallDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -671,6 +672,7 @@ FlashCannonDescription:
 FocusBlastDescription:
 PsychicMDescription:
 ShadowBallDescription:
+EnergyBallDescription:
 	db   "An attack that may"
 	next "lower SPCL.DEF.@"
 

@@ -21,6 +21,7 @@ MoveAnimations3:
 	dw BattleAnim_StoneEdge
 	dw BattleAnim_HyperVoice
 	dw BattleAnim_LeafBlade
+	dw BattleAnim_LeafBlade ;PLACEHOLDER energy ball
 
 BattleAnim_CrystalBolt:
 	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_LIGHTNING

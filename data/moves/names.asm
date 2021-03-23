@@ -373,3 +373,4 @@ MoveNames::
 	db "STONE EDGE@"
 	db "HYPER VOICE@"
 	db "LEAF BLADE@"
+	db "ENERGY BALL@"

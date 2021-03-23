@@ -102,6 +102,7 @@ AlphabeticalMoveList::
 	dw ENCORE
 	dw ENDEAVOR
 	dw ENDURE
+	dw ENERGY_BALL
 	dw EXPLOSION
 	dw EXTRASENSORY
 	dw EXTREMESPEED

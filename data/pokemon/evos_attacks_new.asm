@@ -159,14 +159,17 @@ TreeckoEvosAttacks:
 	dbw 1, POUND
 	dbw 1, LEER
 	dbw 6, ABSORB
-	dbw 11, QUICK_ATTACK
-	dbw 16, PURSUIT
-	dbw 21, SCREECH
-	dbw 26, MEGA_DRAIN
-	dbw 31, AGILITY
-	dbw 36, SLAM
-	dbw 41, DETECT
-	dbw 45, GIGA_DRAIN
+	dbw 9, QUICK_ATTACK
+	dbw 13, MEGA_DRAIN
+	dbw 17, PURSUIT
+	dbw 21, GIGA_DRAIN
+	dbw 25, DOUBLE_TEAM
+	dbw 29, SLAM
+	dbw 33, DETECT
+	dbw 37, ENERGY_BALL
+	dbw 41, SCREECH
+	dbw 45, ENDEAVOR
+	dbw 49, LEAF_STORM
 	db 0 ; no more level-up moves
 
 GrovyleEvosAttacks:
@@ -177,15 +180,18 @@ GrovyleEvosAttacks:
 	dbw 1, ABSORB
 	dbw 1, QUICK_ATTACK
 	dbw 6, ABSORB
-	dbw 11, QUICK_ATTACK
+	dbw 9, QUICK_ATTACK
+	dbw 13, MEGA_DRAIN
 	dbw 16, FURY_CUTTER
-	dbw 17, PURSUIT
-	dbw 23, SCREECH
-	dbw 29, RAZOR_LEAF
-	dbw 35, AGILITY
-	dbw 41, SLAM
-	dbw 47, DETECT
+	dbw 18, PURSUIT
+	dbw 23, GIGA_DRAIN
+	dbw 28, DOUBLE_TEAM
+	dbw 33, SLAM
+	dbw 38, DETECT
+	dbw 43, X_SCISSOR
+	dbw 48, SCREECH
 	dbw 53, FALSE_SWIPE
+	dbw 58, LEAF_STORM
 	db 0 ; no more level-up moves
 
 SceptileEvosAttacks:
@@ -195,15 +201,19 @@ SceptileEvosAttacks:
 	dbw 1, ABSORB
 	dbw 1, QUICK_ATTACK
 	dbw 6, ABSORB
-	dbw 11, QUICK_ATTACK
+	dbw 9, QUICK_ATTACK
+	dbw 13, MEGA_DRAIN
 	dbw 16, FURY_CUTTER
-	dbw 17, PURSUIT
-	dbw 23, SCREECH
-	dbw 29, RAZOR_LEAF
-	dbw 35, AGILITY
-	dbw 43, SLAM
-	dbw 51, DETECT
-	dbw 59, FALSE_SWIPE
+	dbw 18, PURSUIT
+	dbw 23, GIGA_DRAIN
+	dbw 28, DOUBLE_TEAM
+	dbw 33, SLAM
+	dbw 36, DUAL_CHOP
+	dbw 39, DETECT
+	dbw 45, X_SCISSOR
+	dbw 51, SCREECH
+	dbw 57, FALSE_SWIPE
+	dbw 63, LEAF_STORM
 	db 0 ; no more level-up moves
 
 TorchicEvosAttacks:
@@ -211,15 +221,16 @@ TorchicEvosAttacks:
 	db 0
 	dbw 1, SCRATCH
 	dbw 1, GROWL
-	dbw 7, FOCUS_ENERGY
-	dbw 10, EMBER
-	dbw 16, PECK
-	dbw 19, SAND_ATTACK
-	dbw 25, FIRE_SPIN
-	dbw 28, QUICK_ATTACK
-	dbw 34, SLASH
-	dbw 37, MIRROR_MOVE
-	dbw 43, FLAMETHROWER
+	dbw 6, EMBER
+	dbw 10, SAND_ATTACK
+	dbw 14, PECK
+	dbw 19, FIRE_SPIN
+	dbw 23, QUICK_ATTACK
+	dbw 28, FLAME_WHEEL
+	dbw 32, FOCUS_ENERGY
+	dbw 37, SLASH
+	dbw 41, MIRROR_MOVE
+	dbw 46, FLAMETHROWER
 	db 0 ; no more level-up moves
 
 CombuskenEvosAttacks:
@@ -227,39 +238,43 @@ CombuskenEvosAttacks:
 	db 0
 	dbw 1, SCRATCH
 	dbw 1, GROWL
-	dbw 1, FOCUS_ENERGY
 	dbw 1, EMBER
-	dbw 7, FOCUS_ENERGY
-	dbw 13, EMBER
+	dbw 1, SAND_ATTACK
+	dbw 6, EMBER
+	dbw 10, SAND_ATTACK
+	dbw 14, PECK
 	dbw 16, DOUBLE_KICK
-	dbw 17, PECK
-	dbw 21, SAND_ATTACK
-	dbw 28, SWORDS_DANCE
-	dbw 32, QUICK_ATTACK
-	dbw 39, SLASH
-	dbw 43, MIRROR_MOVE
-	dbw 50, CROSS_CHOP
+	dbw 20, FLAME_WHEEL
+	dbw 25, QUICK_ATTACK
+	dbw 31, WORK_UP
+	dbw 36, FOCUS_ENERGY
+	dbw 42, SLASH
+	dbw 47, MIRROR_MOVE
+	dbw 53, REVERSAL
 	dbw 58, FLARE_BLITZ
 	db 0 ; no more level-up moves
 
 BlazikenEvosAttacks:
 	db 0
+	dbw 1, FIRE_PUNCH
+	dbw 1, HI_JUMP_KICK
 	dbw 1, SCRATCH
 	dbw 1, GROWL
-	dbw 1, FOCUS_ENERGY
 	dbw 1, EMBER
-	dbw 7, FOCUS_ENERGY
-	dbw 13, EMBER
+	dbw 1, SAND_ATTACK
+	dbw 6, EMBER
+	dbw 10, SAND_ATTACK
+	dbw 14, PECK
 	dbw 16, DOUBLE_KICK
-	dbw 17, PECK
-	dbw 21, SAND_ATTACK
-	dbw 28, SWORDS_DANCE
-	dbw 32, QUICK_ATTACK
+	dbw 20, FLAME_WHEEL
+	dbw 25, QUICK_ATTACK
+	dbw 31, WORK_UP
 	dbw 36, BLAZE_KICK
-	dbw 42, SLASH
-	dbw 49, MIRROR_MOVE
-	dbw 59, CROSS_CHOP
-	dbw 70, FLARE_BLITZ
+	dbw 37, FOCUS_ENERGY
+	dbw 44, SLASH
+	dbw 50, BRAVE_BIRD
+	dbw 57, REVERSAL
+	dbw 63, FLARE_BLITZ
 	db 0 ; no more level-up moves
 
 MudkipEvosAttacks:
@@ -267,16 +282,17 @@ MudkipEvosAttacks:
 	db 0
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 6, MUD_SLAP
-	dbw 10, WATER_GUN
-	dbw 15, BIDE
-	dbw 19, FORESIGHT
-	dbw 24, WATER_PULSE
-	dbw 28, TAKE_DOWN
+	dbw 6, WATER_GUN
+	dbw 9, MUD_SLAP
+	dbw 12, FORESIGHT
+	dbw 17, BIDE
+	dbw 21, WATER_PULSE
+	dbw 24, ROCK_THROW
+	dbw 29, PROTECT
 	dbw 33, WHIRLPOOL
-	dbw 37, PROTECT
-	dbw 42, HYDRO_PUMP
-	dbw 46, ENDEAVOR
+	dbw 36, TAKE_DOWN
+	dbw 41, HYDRO_PUMP
+	dbw 44, ENDEAVOR
 	db 0 ; no more level-up moves
 
 MarshtompEvosAttacks:
@@ -284,75 +300,84 @@ MarshtompEvosAttacks:
 	db 0
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 1, MUD_SLAP
 	dbw 1, WATER_GUN
-	dbw 6, MUD_SLAP
-	dbw 10, WATER_GUN
-	dbw 15, BIDE
-	dbw 16, MUD_BOMB
-	dbw 20, FORESIGHT
-	dbw 25, WATER_PULSE
-	dbw 31, TAKE_DOWN
-	dbw 37, MUDDY_WATER
-	dbw 42, PROTECT
-	dbw 46, EARTHQUAKE
-	dbw 53, ENDEAVOR
+	dbw 1, MUD_SLAP
+	dbw 6, WATER_GUN
+	dbw 9, MUD_SLAP
+	dbw 12, FORESIGHT
+	dbw 16, MUD_SHOT
+	dbw 18, BIDE
+	dbw 22, MUD_BOMB
+	dbw 26, ROCK_SLIDE
+	dbw 32, PROTECT
+	dbw 38, MUDDY_WATER
+	dbw 42, TAKE_DOWN
+	dbw 48, EARTHQUAKE
+	dbw 52, ENDEAVOR
 	db 0 ; no more level-up moves
 
 SwampertEvosAttacks:
 	db 0
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 1, MUD_SLAP
 	dbw 1, WATER_GUN
-	dbw 6, MUD_SLAP
-	dbw 10, WATER_GUN
-	dbw 15, BIDE
-	dbw 16, MUD_BOMB
-	dbw 20, FORESIGHT
-	dbw 25, WATER_PULSE
-	dbw 31, TAKE_DOWN
+	dbw 1, MUD_SLAP
+	dbw 6, WATER_GUN
+	dbw 9, MUD_SLAP
+	dbw 12, FORESIGHT
+	dbw 16, MUD_SHOT
+	dbw 18, BIDE
+	dbw 22, MUD_BOMB
+	dbw 26, ROCK_SLIDE
+	dbw 32, PROTECT
 	dbw 39, MUDDY_WATER
-	dbw 46, PROTECT
-	dbw 52, EARTHQUAKE
-	dbw 61, ENDEAVOR
-	dbw 70, HAMMER_ARM
+	dbw 44, TAKE_DOWN
+	dbw 51, EARTHQUAKE
+	dbw 56, ENDEAVOR
+	dbw 63, HAMMER_ARM
 	db 0 ; no more level-up moves
 
 PoochyenaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 18, MIGHTYENA
 	db 0
 	dbw 1, TACKLE
-	dbw 5, HOWL
-	dbw 9, SAND_ATTACK
-	dbw 13, BITE
-	dbw 19, FORESIGHT
-	dbw 21, ROAR
-	dbw 25, SWAGGER
-	dbw 29, SCARY_FACE
-	dbw 33, TAKE_DOWN
-	dbw 37, TAUNT
-	dbw 41, CRUNCH
-	dbw 45, THIEF
+	dbw 4, HOWL
+	dbw 8, SAND_ATTACK
+	dbw 12, BITE
+	dbw 15, ODOR_SLEUTH
+	dbw 19, ROAR
+	dbw 23, SWAGGER
+	dbw 26, ASSURANCE
+	dbw 30, SCARY_FACE
+	dbw 34, TAUNT
+	dbw 37, CRUNCH
+	dbw 41, TAKE_DOWN
+	dbw 45, SUCKER_PUNCH
+	dbw 48, PLAY_ROUGH
 	db 0 ; no more level-up moves
 
 MightyenaEvosAttacks:
 	db 0
+	dbw 1, FIRE_FANG
+	dbw 1, THUNDER_FANG
+	dbw 1, ICE_FANG
 	dbw 1, TACKLE
 	dbw 1, HOWL
 	dbw 1, SAND_ATTACK
 	dbw 1, BITE
-	dbw 5, HOWL
-	dbw 9, SAND_ATTACK
-	dbw 13, BITE
-	dbw 17, FORESIGHT
-	dbw 22, ROAR
-	dbw 27, SWAGGER
-	dbw 32, SCARY_FACE
-	dbw 37, TAKE_DOWN
-	dbw 42, TAUNT
-	dbw 47, CRUNCH
-	dbw 52, THIEF
+	dbw 8, SAND_ATTACK
+	dbw 12, BITE
+	dbw 15, ODOR_SLEUTH
+	dbw 18, THIEF
+	dbw 20, ROAR
+	dbw 25, SWAGGER
+	dbw 29, ASSURANCE
+	dbw 34, SCARY_FACE
+	dbw 39, TAUNT
+	dbw 43, CRUNCH
+	dbw 48, TAKE_DOWN
+	dbw 53, SUCKER_PUNCH
+	dbw 57, PLAY_ROUGH
 	db 0 ; no more level-up moves
 
 ZigzagoonEvosAttacks:

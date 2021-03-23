@@ -32,22 +32,10 @@ GoldenrodCity_MapScripts:
 	return
 
 .MoveTutor:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .MoveTutorDone
 	checkitem COIN_CASE
-	iffalse .MoveTutorDisappear
-	readvar VAR_WEEKDAY
-	ifequal WEDNESDAY, .MoveTutorAppear
-	ifequal SATURDAY, .MoveTutorAppear
-.MoveTutorDisappear:
+	iftrue .MoveTutorAppear
 	disappear GOLDENRODCITY_MOVETUTOR
-	return
-
 .MoveTutorAppear:
-	checkflag ENGINE_DAILY_MOVE_TUTOR
-	iftrue .MoveTutorDone
-	appear GOLDENRODCITY_MOVETUTOR
-.MoveTutorDone:
 	return
 
 MoveTutorScript:
@@ -125,23 +113,7 @@ MoveTutorScript:
 	waitsfx
 	playsound SFX_TRANSACTION
 	special DisplayCoinCaseBalance
-	writetext GoldenrodCityMoveTutorFarewellKidText
-	waitbutton
-	closetext
-	readvar VAR_FACING
-	ifequal LEFT, .WalkAroundPlayer
-	applymovement GOLDENRODCITY_MOVETUTOR, GoldenrodCityMoveTutorEnterGameCornerMovement
-	sjump .GoInside
-
-.WalkAroundPlayer:
-	applymovement GOLDENRODCITY_MOVETUTOR, GoldenrodCityMoveTutorWalkAroundPlayerThenEnterGameCornerMovement
-.GoInside:
-	playsound SFX_ENTER_DOOR
-	disappear GOLDENRODCITY_MOVETUTOR
-	clearevent EVENT_GOLDENROD_GAME_CORNER_MOVE_TUTOR
-	setflag ENGINE_DAILY_MOVE_TUTOR
-	waitsfx
-	end
+	jumptext GoldenrodCityMoveTutorComeAgainKidText
 
 .Incompatible:
 	writetext GoldenrodCityMoveTutorBButText
@@ -266,20 +238,6 @@ GoldenrodCityPokecenterSign:
 
 GoldenrodCityFlowerShopSign:
 	jumptext GoldenrodCityFlowerShopSignText
-
-GoldenrodCityMoveTutorEnterGameCornerMovement:
-	step RIGHT
-	step RIGHT
-	step UP
-	step_end
-
-GoldenrodCityMoveTutorWalkAroundPlayerThenEnterGameCornerMovement:
-	step DOWN
-	step RIGHT
-	step RIGHT
-	step UP
-	step UP
-	step_end
 
 GoldenrodCityPokefanMText:
 	text "They built the new"
@@ -482,7 +440,6 @@ GoldenrodCityFlowerShopSignText:
 GoldenrodCityMoveTutorAskTeachAMoveText:
 	text "I can teach your"
 	line "#MON amazing"
-
 	para "moves if you'd"
 	line "like."
 
@@ -517,15 +474,14 @@ GoldenrodCityMoveTutorHmTooBadText:
 GoldenrodCityMoveTutorIfYouUnderstandYouveMadeItText:
 	text "If you understand"
 	line "what's so amazing"
-
 	para "about this move,"
 	line "you've made it as"
 	cont "a trainer."
 	done
 
-GoldenrodCityMoveTutorFarewellKidText:
+GoldenrodCityMoveTutorComeAgainKidText:
 	text "Wahahah!"
-	line "Farewell, kid!"
+	line "Come again, kid!"
 	done
 
 GoldenrodCityMoveTutorBButText:
@@ -592,4 +548,4 @@ GoldenrodCity_MapEvents:
 	object_event 29, 20, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket4Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 29,  7, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket5Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	object_event 31, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodCityRocket6Script, EVENT_RADIO_TOWER_ROCKET_TAKEOVER
-	object_event 12, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorScript, EVENT_INITIALIZED_EVENTS
+	object_event 12, 22, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, MoveTutorScript, -1

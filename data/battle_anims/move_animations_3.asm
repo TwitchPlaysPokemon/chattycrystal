@@ -21,7 +21,7 @@ MoveAnimations3:
 	dw BattleAnim_StoneEdge
 	dw BattleAnim_HyperVoice
 	dw BattleAnim_LeafBlade
-	dw BattleAnim_LeafBlade ;PLACEHOLDER energy ball
+	dw BattleAnim_EnergyBall
 
 BattleAnim_CrystalBolt:
 	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_LIGHTNING
@@ -618,4 +618,36 @@ BattleAnim_LeafBlade:
 	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $5c
 	anim_obj ANIM_OBJ_RAZOR_LEAF, 136, 40, $90
 	anim_wait 32
+	anim_ret
+
+BattleAnim_EnergyBall:
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_CHARGE
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_obj ANIM_OBJ_3D, 44, 88, $0
+	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $30
+	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $31
+	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $32
+	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $33
+	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $34
+	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $35
+	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $36
+	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $37
+.loop
+	anim_sound 0, 0, SFX_WARP_TO
+	anim_wait 16
+	anim_loop 4, .loop
+	anim_wait 32
+	anim_clearobjs
+	anim_sound 0, 1, SFX_SWEET_SCENT
+	anim_obj ANIM_OBJ_ENERGY_BALL_2, 64, 92, $2
+	anim_wait 32
+	anim_sound 0, 1, SFX_TOXIC
+	anim_obj ANIM_GREEN_HIT, 128, 40, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_TOXIC
+	anim_obj ANIM_GREEN_HIT, 144, 48, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_TOXIC
+	anim_obj ANIM_GREEN_HIT, 136, 56, $0
+	anim_wait 16
 	anim_ret

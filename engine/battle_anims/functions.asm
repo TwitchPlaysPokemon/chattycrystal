@@ -106,6 +106,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_RadialMoveOut ; 5a
 	dw BattleAnimFunction_RadialMoveOut_Slow ; 5b
 	dw BattleAnimFunction_RadialMoveOut_Fast ; 5c
+	dw BattleAnimFunction_5d ; 5d
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -4348,5 +4349,43 @@ BattleAnimFunction_RadialMoveOut_Fast:
 	call BattleAnim_Cosine
 	ld hl, BATTLEANIMSTRUCT_XOFFSET
 	add hl, bc
+	ld [hl], a
+	ret
+
+BattleAnimFunction_5d:
+	ld hl, BATTLEANIMSTRUCT_XCOORD
+	add hl, bc
+	ld a, [hl]
+	cp $88
+	jp nc, DeinitBattleAnimation
+
+	add 2
+	ld [hl], a
+	ld hl, BATTLEANIMSTRUCT_YCOORD
+	add hl, bc
+	dec [hl]
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld a, [hl]
+	inc [hl]
+	inc [hl]
+	inc [hl]
+	inc [hl]
+	ld d, $08
+	push af
+	push de
+	call BattleAnim_Sine
+	ld hl, BATTLEANIMSTRUCT_YOFFSET
+	add hl, bc
+	ld [hl], a
+	pop de
+	pop af
+	call BattleAnim_Cosine
+	ld hl, BATTLEANIMSTRUCT_XOFFSET
+	add hl, bc
+	sra a
+	sra a
+	sra a
+	sra a
 	ld [hl], a
 	ret

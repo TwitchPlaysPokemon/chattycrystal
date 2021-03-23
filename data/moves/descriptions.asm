@@ -668,11 +668,11 @@ MoonblastDescription:
 BugBuzzDescription:
 CrunchDescription:
 EarthPowerDescription:
+EnergyBallDescription:
 FlashCannonDescription:
 FocusBlastDescription:
 PsychicMDescription:
 ShadowBallDescription:
-EnergyBallDescription:
 	db   "An attack that may"
 	next "lower SPCL.DEF.@"
 

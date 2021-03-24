@@ -5,7 +5,9 @@ BattleCommand_Taunt:
 	jr z, .got_opponent_taunt
 	ld hl, wPlayerTauntCount
 .got_opponent_taunt
-	call CheckOpponentWentFirst
+	push hl
+	farcall CheckOpponentWentFirst
+	pop hl
 	ld a, 4
 	jr z, .got_duration
 	inc a
@@ -18,11 +20,12 @@ BattleCommand_Taunt:
 	; Otherwise, set Taunt.
 	ld [hl], a
 
-	call AnimateCurrentMove
+	farcall AnimateCurrentMove
 	ld hl, WasTauntedText
 	jp StdBattleTextbox
 
 .failed
-	call AnimateFailedMove
-	call PrintButItFailed
-	jp EndMoveEffect
+	farcall AnimateFailedMove
+	farcall PrintButItFailed
+	farcall EndMoveEffect
+	ret

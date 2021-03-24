@@ -1945,12 +1945,7 @@ ENDU ; d066
 
 wTMHMMoveNameBackup:: ds MOVE_NAME_LENGTH ; d066
 
-UNION
 wStringBuffer1:: ds 19 ; d073
-NEXTU
-wAssistMove:: db
-wAssistMoveIterator:: db
-ENDU
 wStringBuffer2:: ds 19 ; d086
 wStringBuffer3:: ds 19 ; d099
 UNION
@@ -1959,6 +1954,10 @@ wStringBuffer5:: ds 19 ; d0bf
 NEXTU
 wBT_PartySelectCounter:: db
 wBT_PartySelections:: ds BATTLETOWER_PARTY_LENGTH
+NEXTU
+wAssistMove:: db
+wAssistMoveIterator:: ; Uses the first of the bytes below.
+wAssistMaxDamage:: dw
 ENDU
 
 wBattleMenuCursorBuffer:: dw ; d0d2

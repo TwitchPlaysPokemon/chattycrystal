@@ -59,6 +59,18 @@ AssistExcepts:
 	dw WHIRLWIND
 	dw -1
 
+ChatterExcepts:
+; Doesn't include status moves (which Chatter ignores anyway).
+	dw COUNTER
+	dw COVET
+	dw EXPLOSION
+	dw MIRROR_COAT
+	dw PSYWAVE
+	dw SELFDESTRUCT
+	dw STRUGGLE
+	dw THIEF
+	dw -1
+
 SleepBypassMoves:
 	dw SLEEP_TALK
 	dw SNORE

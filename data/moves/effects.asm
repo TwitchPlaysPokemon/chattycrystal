@@ -1113,22 +1113,7 @@ Chatter:
 	checkobedience
 	usedmovetext
 	doturn
-	checkchatty
-	critical
-	damagestats
-	damagecalc
-	stab
-	damagevariation
-	checkhit
-	effectchance
-	moveanim
-	failuretext
-	applydamage
-	criticaltext
-	supereffectivetext
-	checkfaint
-	buildopponentrage
-	confusetarget
+	chattyassist
 	endturn
 
 	chattybranch
@@ -1419,6 +1404,7 @@ Whirlpool:
 
 SuperFang:
 Psywave:
+Endeavor:
 StaticDamage:
 	checkobedience
 	usedmovetext
@@ -2398,14 +2384,6 @@ StoredPower:
 	checkfaint
 	buildopponentrage
 	kingsrock
-	endmove
-
-Endeavor:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	endeavor
 	endmove
 
 Roost:

@@ -10,15 +10,14 @@ BattleCommand_Chargem:
 	jp StdBattleTextbox
 
 ApplyChargeModifier:
-	push hl
 	ld a, BATTLE_VARS_SUBSTATUS2
 	call GetBattleVarAddr
 	ld a, [hl]
 	bit SUBSTATUS_CHARGE, a
-	jr z, .not_charged
+	ret z
 	ld a, [wCurType]
 	cp ELECTRIC
-	jr nz, .not_charged
+	ret nz
 	ld hl, wCurDamage + 1
 	ld a, [hld]
 	ld h, [hl]
@@ -28,7 +27,4 @@ ApplyChargeModifier:
 	ld [wCurDamage], a
 	ld a, l
 	ld [wCurDamage + 1], a
-
-.not_charged
-	pop hl
 	ret

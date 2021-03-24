@@ -184,7 +184,6 @@ BattleCommandPointers:
 	effectfn BattleCommand_Chatter
 	effectfn BattleCommand_Chargem
 	effectfn BattleCommand_Stored_Power
-	effectfn BattleCommand_Endeavor
 	effectfn BattleCommand_Roost
 	effectfn BattleCommand_Revenge
 	effectfn BattleCommand_SelfAttackDown
@@ -230,3 +229,4 @@ BattleCommandPointers:
 	effectfn GenericDummyFunction ; endif isn't a real battle command
 	effectfn BattleCommand_BeginButtonTally
 	effectfn BattleCommand_NonChattyHP
+	effectfn BattleCommand_ChattyAssist

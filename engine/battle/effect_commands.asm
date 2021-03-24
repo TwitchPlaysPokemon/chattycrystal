@@ -1210,7 +1210,9 @@ BattleCommand_Stab:
 	pop de
 	pop hl
 
+	push hl
 	call ApplyChargeModifier
+	pop hl
 
 	ld a, [wCurType]
 	cp b
@@ -1474,11 +1476,22 @@ CheckTypeMatchup:
 BattleCommand_ResetTypeMatchup:
 ; Reset the type matchup multiplier to 1.0, if the type matchup is not 0.
 ; If there is immunity in play, the move automatically misses.
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_ENDEAVOR
+	jr nz, .not_endeavor
+	ld hl, wCurDamage
+	ld a, [hli]
+	or [hl]
+	jr z, .fail
+
+.not_endeavor
 	call BattleCheckTypeMatchup
 	ld a, [wTypeMatchup]
 	and a
 	ld a, 10 ; 1.0
 	jr nz, .reset
+.fail
 	call ResetDamage
 	xor a
 	ld [wTypeModifier], a
@@ -3031,6 +3044,8 @@ BattleCommand_ConstantDamage:
 .got_turn
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
+	cp EFFECT_ENDEAVOR
+	jr z, .endeavor
 	cp EFFECT_LEVEL_DAMAGE
 	ld b, [hl]
 	ld a, 0
@@ -3051,6 +3066,29 @@ BattleCommand_ConstantDamage:
 	call GetBattleVar
 	ld b, a
 	xor a
+	jr .got_power
+
+.endeavor
+	ldh a, [hBattleTurn]
+	ld hl, wBattleMonHP + 1
+	ld de, wEnemyMonHP + 1
+	and a
+	jr z, .got_endeavor_target
+	push hl
+	ld h, d
+	ld l, e
+	pop de
+.got_endeavor_target
+	ld a, [de]
+	dec de
+	sub [hl]
+	dec hl
+	ld b, a
+	ld a, [de]
+	sbc [hl]
+	jr nc, .got_power
+	xor a
+	ld b, 0
 	jr .got_power
 
 .psywave

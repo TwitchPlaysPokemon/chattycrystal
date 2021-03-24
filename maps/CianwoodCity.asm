@@ -14,15 +14,11 @@
 
 CianwoodCity_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_CIANWOODCITY_NOTHING
-	scene_script .DummyScene1 ; SCENE_CIANWOODCITY_SUICUNE_AND_EUSINE
+	scene_script GenericDummyScript ; SCENE_CIANWOODCITY_NOTHING
+	scene_script GenericDummyScript ; SCENE_CIANWOODCITY_SUICUNE_AND_EUSINE
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPointAndSuicune
-
-.DummyScene0:
-.DummyScene1:
-	end
 
 .FlyPointAndSuicune:
 	setflag ENGINE_FLYPOINT_CIANWOOD
@@ -49,16 +45,16 @@ CianwoodCitySuicuneAndEusine:
 	clearevent EVENT_SAW_SUICUNE_ON_ROUTE_42
 	setmapscene ROUTE_42, SCENE_ROUTE42_SUICUNE
 	checkevent EVENT_FOUGHT_EUSINE
-	iftrue .Done
+	iftrue GenericDummyScript
 	setevent EVENT_FOUGHT_EUSINE
 	playmusic MUSIC_MYSTICALMAN_ENCOUNTER
 	appear CIANWOODCITY_EUSINE
 	applymovement CIANWOODCITY_EUSINE, CianwoodCityEusineApproachMovement
 	opentext
-	writetext EusineSuicuneText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext EusineBeatenText, 0
+	winlosstext HostSilenceText, 0
 	setlasttalked CIANWOODCITY_EUSINE
 	loadtrainer CY_ROBORED, X_CHATTYYELLOW2
 	startbattle
@@ -66,7 +62,7 @@ CianwoodCitySuicuneAndEusine:
 	reloadmapafterbattle
 	playmusic MUSIC_MYSTICALMAN_ENCOUNTER
 	opentext
-	writetext EusineAfterText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement CIANWOODCITY_EUSINE, CianwoodCityEusineDepartMovement
@@ -75,7 +71,6 @@ CianwoodCitySuicuneAndEusine:
 	special FadeOutMusic
 	playmapmusic
 	pause 10
-.Done:
 	end
 
 CianwoodCityChucksWife:
@@ -183,7 +178,6 @@ ChucksWifeEasierToFlyText:
 
 	para "It would be much"
 	line "easier if your"
-
 	para "#MON knew how"
 	line "to FLY…"
 	done
@@ -215,7 +209,6 @@ ChucksWifeFlySpeechText:
 
 	para "You will be able"
 	line "to FLY instantly"
-
 	para "to anywhere you "
 	line "have visited."
 	done
@@ -233,7 +226,6 @@ ChucksWifeChubbyText:
 CianwoodCityYoungsterText:
 	text "If you use FLY,"
 	line "you can get back"
-
 	para "to OLIVINE in-"
 	line "stantly."
 	done
@@ -252,23 +244,10 @@ CianwoodCityPokefanMText:
 	done
 
 CianwoodCityLassText:
-	text "CHUCK, the GYM"
+	text "9'l, the GYM"
 	line "LEADER, spars with"
-
-	para "his fighting #-"
-	line "MON."
-	done
-
-EusineSuicuneText:
-	text "…"
-	done
-
-EusineBeatenText:
-	text "…"
-	done
-
-EusineAfterText:
-	text "…"
+	para "his fighting"
+	line "#MON."
 	done
 
 CianwoodCitySignText:

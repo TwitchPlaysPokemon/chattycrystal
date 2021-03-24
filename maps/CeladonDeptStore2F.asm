@@ -50,10 +50,8 @@ CeladonDeptStore2FPokefanMText:
 CeladonDeptStore2FYoungsterText:
 	text "My dad's having a"
 	line "hard time learning"
-
 	para "the names of items"
 	line "and how they are"
-
 	para "supposed to be"
 	line "used…"
 	done

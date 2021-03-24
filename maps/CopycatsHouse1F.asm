@@ -41,7 +41,6 @@ CopycatsHouse1FPokefanMText:
 
 	para "Her mimicry has"
 	line "earned her the"
-
 	para "nickname COPYCAT"
 	line "around here."
 	done
@@ -57,7 +56,6 @@ CopycatsHouse1FPokefanFText:
 CopycatsHouse1FPokefanFText_ReturnedMachinePart:
 	text "She recently lost"
 	line "the # DOLL that"
-
 	para "a boy gave her"
 	line "three years ago."
 

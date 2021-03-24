@@ -18,7 +18,6 @@ CeladonMansionRoofFisherText:
 
 	para "I'd say the only"
 	line "thing that loves"
-
 	para "heights as much as"
 	line "me is smoke!"
 	done

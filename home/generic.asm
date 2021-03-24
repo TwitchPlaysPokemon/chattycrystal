@@ -5,6 +5,18 @@
 GenericDummyScript::
 	end
 
+EllipsisSilenceText:: ; just in case we change the host text to something else
 HostSilenceText::
 	text "<...>"
 	done
+
+ActivateRockets::
+	ifequal 7, .RadioTowerRockets
+	ifequal 6, .GoldenrodRockets
+	end
+
+.GoldenrodRockets:
+	jumpstd goldenrodrockets
+
+.RadioTowerRockets:
+	jumpstd radiotowerrockets

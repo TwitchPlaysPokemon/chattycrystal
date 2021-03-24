@@ -71,7 +71,6 @@ EcruteakItemfinderAdventureText:
 EcruteakItemfinderTrueSpiritText:
 	text "Good! You under-"
 	line "stand the true"
-
 	para "spirit of adven-"
 	line "ture."
 
@@ -82,25 +81,21 @@ EcruteakItemfinderTrueSpiritText:
 ItemfinderExplanationText:
 	text "There are many"
 	line "items lying about"
-
 	para "that aren't ob-"
 	line "vious."
 
 	para "Use ITEMFINDER to"
 	line "check if there is"
-
 	para "an item on the"
 	line "ground near you."
 
 	para "It doesn't show"
 	line "the exact spot,"
-
 	para "so you'll have to"
 	line "look yourself."
 
 	para "Oh yeah--I heard"
 	line "there are items"
-
 	para "in ECRUTEAK's"
 	line "BURNED TOWER."
 	done
@@ -139,13 +134,11 @@ EcruteakTwoTowersText:
 EcruteakThreeMonText:
 	text "ECRUTEAK was also"
 	line "home to three"
-
 	para "#MON that raced"
 	line "around the town."
 
 	para "They were said to"
 	line "have been born of"
-
 	para "water, lightning"
 	line "and fire."
 
@@ -155,7 +148,6 @@ EcruteakThreeMonText:
 
 	para "So they say the"
 	line "three ran like the"
-
 	para "wind off into the"
 	line "grassland."
 	done

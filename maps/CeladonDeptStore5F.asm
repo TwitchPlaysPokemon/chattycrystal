@@ -42,7 +42,6 @@ CeladonDeptStore5FElevatorButton:
 CeladonDeptStore5FGentlemanText:
 	text "I want to buy some"
 	line "items that raise"
-
 	para "#MON stats, but"
 	line "I don't have"
 	cont "enough money…"
@@ -51,7 +50,6 @@ CeladonDeptStore5FGentlemanText:
 CeladonDeptStore5FSailorText:
 	text "I want PP UP, so I"
 	line "can raise the PP"
-
 	para "of moves. But you"
 	line "can't buy it…"
 	done

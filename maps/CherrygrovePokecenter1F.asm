@@ -37,7 +37,6 @@ CherrygrovePokecenter1FTeacherScript:
 CherrygrovePokecenter1FFisherText:
 	text "It's great. I can"
 	line "store any number"
-
 	para "of #MON, and"
 	line "it's all free."
 	done

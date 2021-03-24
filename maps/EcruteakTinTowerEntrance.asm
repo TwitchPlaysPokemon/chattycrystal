@@ -6,17 +6,11 @@
 
 EcruteakTinTowerEntrance_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .InitializeSages
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 .InitializeSages:
 	checkevent EVENT_FOUGHT_SUICUNE
@@ -24,17 +18,14 @@ EcruteakTinTowerEntrance_MapScripts:
 	checkevent EVENT_KOJI_ALLOWS_YOU_PASSAGE_TO_TIN_TOWER
 	iftrue .DontBlockTower
 	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .BlockTower
-	return
-
-.BlockTower:
+	iffalse .return
 	clearevent EVENT_RANG_CLEAR_BELL_1
 	setevent EVENT_RANG_CLEAR_BELL_2
 	setevent EVENT_ECRUTEAK_TIN_TOWER_ENTRANCE_WANDERING_SAGE
 	checkitem CLEAR_BELL
-	iftrue .NoClearBell
+	iftrue .return
 	setscene SCENE_DEFAULT
-.NoClearBell:
+.return
 	return
 
 .DontBlockTower:
@@ -43,44 +34,47 @@ EcruteakTinTowerEntrance_MapScripts:
 
 EcruteakTinTowerEntrance_CoordEvent1:
 	checkevent EVENT_RANG_CLEAR_BELL_2
-	iftrue EcruteakTinTowerEntrance_CoordEvent_DontMove
-	applymovement ECRUTEAKTINTOWERENTRANCE_SAGE2, MovementData_0x980c7
+	iftrue GenericDummyScript
+	applymovement ECRUTEAKTINTOWERENTRANCE_SAGE2, .movement
 	moveobject ECRUTEAKTINTOWERENTRANCE_SAGE1, 4, 6
 	appear ECRUTEAKTINTOWERENTRANCE_SAGE1
 	pause 5
 	disappear ECRUTEAKTINTOWERENTRANCE_SAGE2
 	end
 
+.movement
+	fix_facing
+	big_step LEFT
+	remove_fixed_facing
+	turn_head DOWN
+	step_end
+
 EcruteakTinTowerEntrance_CoordEvent2:
 	checkevent EVENT_RANG_CLEAR_BELL_1
-	iftrue EcruteakTinTowerEntrance_CoordEvent_DontMove
-	applymovement ECRUTEAKTINTOWERENTRANCE_SAGE1, MovementData_0x980cc
+	iftrue GenericDummyScript
+	applymovement ECRUTEAKTINTOWERENTRANCE_SAGE1, .movement
 	moveobject ECRUTEAKTINTOWERENTRANCE_SAGE2, 5, 6
 	appear ECRUTEAKTINTOWERENTRANCE_SAGE2
 	pause 5
 	disappear ECRUTEAKTINTOWERENTRANCE_SAGE1
 	end
 
-EcruteakTinTowerEntrance_CoordEvent_DontMove:
-	end
+.movement
+	fix_facing
+	big_step RIGHT
+	remove_fixed_facing
+	turn_head DOWN
+	step_end
 
 EcruteakTinTowerEntranceSageScript:
-	faceplayer
-	opentext
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .CheckForClearBell
 	checkflag ENGINE_FOGBADGE
 	iftrue .BlockPassage_GotFogBadge
-	writetext EcruteakTinTowerEntranceSageText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakTinTowerEntranceSageText
 
 .BlockPassage_GotFogBadge:
-	writetext EcruteakTinTowerEntranceSageText_GotFogBadge
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakTinTowerEntranceSageText_GotFogBadge
 
 .CheckForClearBell:
 	checkevent EVENT_KOJI_ALLOWS_YOU_PASSAGE_TO_TIN_TOWER
@@ -89,70 +83,35 @@ EcruteakTinTowerEntranceSageScript:
 	iftrue .RangClearBell
 	checkitem CLEAR_BELL
 	iftrue .GotClearBell
-	writetext EcruteakTinTowerEntranceSageText_NoClearBell
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakTinTowerEntranceSageText_NoClearBell
 
 .GotClearBell:
-	writetext EcruteakTinTowerEntranceSageText_HearsClearBell
-	waitbutton
-	closetext
 	setscene SCENE_FINISHED
 	setevent EVENT_RANG_CLEAR_BELL_2
 	clearevent EVENT_RANG_CLEAR_BELL_1
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	end
+	jumptextfaceplayer EcruteakTinTowerEntranceSageText_HearsClearBell
 
 .AllowedThrough:
-	writetext EcruteakTinTowerEntranceSageText_PleaseDoGoOn
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakTinTowerEntranceSageText_PleaseDoGoOn
 
 .RangClearBell:
-	writetext EcruteakTinTowerEntranceSageText_HeardClearBell
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakTinTowerEntranceSageText_HeardClearBell
 
 EcruteakTinTowerEntranceWanderingSageScript:
-	faceplayer
-	opentext
 	checkevent EVENT_GOT_CLEAR_BELL
 	iftrue .GotClearBell
-	writetext EcruteakTinTowerEntranceWanderingSageText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakTinTowerEntranceWanderingSageText
 
 .GotClearBell:
-	writetext EcruteakTinTowerEntranceWanderingSageText_GotClearBell
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakTinTowerEntranceWanderingSageText_GotClearBell
 
 EcruteakTinTowerEntranceGrampsScript:
 	jumptextfaceplayer EcruteakTinTowerEntranceGrampsText
 
-MovementData_0x980c7:
-	fix_facing
-	big_step LEFT
-	remove_fixed_facing
-	turn_head DOWN
-	step_end
-
-MovementData_0x980cc:
-	fix_facing
-	big_step RIGHT
-	remove_fixed_facing
-	turn_head DOWN
-	step_end
-
 EcruteakTinTowerEntranceSageText:
 	text "TIN TOWER is off"
 	line "limits to anyone"
-
 	para "without ECRUTEAK"
 	line "GYM's BADGE."
 
@@ -163,7 +122,6 @@ EcruteakTinTowerEntranceSageText:
 EcruteakTinTowerEntranceSageText_GotFogBadge:
 	text "TIN TOWER is off"
 	line "limits to anyone"
-
 	para "without ECRUTEAK"
 	line "GYM's BADGE."
 
@@ -187,7 +145,6 @@ EcruteakTinTowerEntranceSageText_NoClearBell:
 
 	para "The WISE TRIO say"
 	line "things that are so"
-
 	para "very difficult to"
 	line "understand…"
 	done
@@ -247,7 +204,6 @@ EcruteakTinTowerEntranceSageText_HeardClearBell:
 EcruteakTinTowerEntranceWanderingSageText:
 	text "The TIN TOWER"
 	line "ahead is a nine-"
-
 	para "tier tower of"
 	line "divine beauty."
 
@@ -259,7 +215,6 @@ EcruteakTinTowerEntranceWanderingSageText:
 EcruteakTinTowerEntranceWanderingSageText_GotClearBell:
 	text "The TIN TOWER"
 	line "shook! A #MON"
-
 	para "must have returned"
 	line "to the top!"
 	done
@@ -270,7 +225,6 @@ EcruteakTinTowerEntranceGrampsText:
 
 	para "But when one"
 	line "burned down, both"
-
 	para "#MON flew away,"
 	line "never to return."
 	done

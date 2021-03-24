@@ -177,7 +177,6 @@ CeladonGameCornerReceptionistText:
 
 	para "You may exchange"
 	line "your coins for"
-
 	para "fabulous prizes"
 	line "next door."
 	done
@@ -194,7 +193,6 @@ CeladonGameCornerTeacherText:
 
 	para "It cleaned me out"
 	line "yesterday, so it"
-
 	para "should pay out"
 	line "today."
 	done
@@ -226,7 +224,6 @@ CeladonGameCornerFisherText2:
 
 	para "It makes me feel"
 	line "good to do nice"
-
 	para "things for other"
 	line "people!"
 	done
@@ -267,7 +264,6 @@ CeladonGymGuyText:
 CeladonGameCornerGrampsText:
 	text "Hmmm… The odds are"
 	line "surely better for"
-
 	para "PIKACHU's line,"
 	line "but… What to do?"
 	done

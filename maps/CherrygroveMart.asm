@@ -57,7 +57,6 @@ CherrygroveMartCooltrainerMText_PokeBallsInStock:
 CherrygroveMartYoungsterText:
 	text "When I was walking"
 	line "in the grass, a"
-
 	para "bug #MON poi-"
 	line "soned my #MON!"
 

@@ -200,7 +200,6 @@ AcademyEarlTeachHowToRaiseWellText:
 
 	para "If #MON come"
 	line "out in battle even"
-
 	para "briefly, some EXP."
 	line "Points it gets."
 
@@ -374,13 +373,11 @@ AcademyNotebookText2:
 AcademyNotebookText3:
 	text "People who catch"
 	line "and use #MON"
-
 	para "in battle are"
 	line "#MON trainers."
 
 	para "They are expected"
 	line "to visit #MON"
-
 	para "GYMS and defeat"
 	line "other trainers."
 

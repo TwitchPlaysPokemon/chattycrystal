@@ -18,20 +18,12 @@ CeruleanCity_MapScripts:
 	return
 
 CeruleanCityCooltrainerMScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
-	writetext CeruleanCityCooltrainerMText1
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CeruleanCityCooltrainerMText1
 
 .ReturnedMachinePart:
-	writetext CeruleanCityCooltrainerMText2
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CeruleanCityCooltrainerMText2
 
 CeruleanCitySuperNerdScript:
 	jumptextfaceplayer CeruleanCitySuperNerdText
@@ -60,30 +52,18 @@ CeruleanCityCooltrainerFScript:
 	cry SLOWBRO
 	waitbutton
 	closetext
-	opentext
-	writetext CeruleanCityCooltrainerFText3
-	waitbutton
-	closetext
-	end
+	jumptext EllipsisSilenceText
 
 CeruleanCityFisherScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
 	checkevent EVENT_MET_ROCKET_GRUNT_AT_CERULEAN_GYM
 	iftrue .MetCeruleanRocket
 .ReturnedMachinePart:
-	writetext CeruleanCityFisherText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CeruleanCityFisherText
 
 .MetCeruleanRocket:
-	writetext CeruleanCityFisherRocketTipText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CeruleanCityFisherRocketTipText
 
 CeruleanCityYoungsterScript:
 	faceplayer
@@ -157,7 +137,6 @@ CeruleanCityCooltrainerMText1:
 
 	para "It's near the end"
 	line "of ROUTE 9, the"
-
 	para "road that heads"
 	line "east from here."
 
@@ -179,7 +158,6 @@ CeruleanCityCooltrainerMText2:
 CeruleanCitySuperNerdText:
 	text "The CAPE in the"
 	line "north is a good"
-
 	para "place for dates."
 	line "Girls like it!"
 	done
@@ -199,14 +177,9 @@ CeruleanCityCooltrainerFText2:
 	line "your CONFUSION!"
 	done
 
-CeruleanCityCooltrainerFText3:
-	text "…"
-	done
-
 CeruleanCityFisherText:
 	text "I'm a huge fan of"
-	line "CERULEAN GYM's"
-	cont "MISTY."
+	line "CERULEAN GYM's d<PK>."
 	done
 
 CeruleanCityFisherRocketTipText:
@@ -218,7 +191,6 @@ CeruleanCityFisherRocketTipText:
 CeruleanCityYoungsterText1:
 	text "There's a cave"
 	line "here with scary-"
-
 	para "powerful #MON"
 	line "in it."
 	done
@@ -241,7 +213,6 @@ CeruleanCityCooltrainerM2Text:
 
 	para "Only those who"
 	line "have defeated the"
-
 	para "ELITE FOUR are"
 	line "allowed inside."
 	done
@@ -256,7 +227,7 @@ CeruleanCitySignText:
 CeruleanGymSignText:
 	text "CERULEAN CITY"
 	line "#MON GYM"
-	cont "LEADER: MISTY"
+	cont "LEADER: d<PK>"
 
 	para "The Tomboyish"
 	line "Mermaid"
@@ -277,7 +248,6 @@ CeruleanPoliceSignText:
 
 	para "Stamp out thievery"
 	line "and make the city"
-
 	para "a friendlier, more"
 	line "cheerful place!"
 

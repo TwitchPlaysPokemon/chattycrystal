@@ -28,7 +28,7 @@ CinnabarIslandGymSignText:
 	line "relocated to SEA-"
 	cont "FOAM ISLANDS."
 
-	para "BLAINE"
+	para "-GYM Staff"
 	done
 
 CinnabarIslandSignText:

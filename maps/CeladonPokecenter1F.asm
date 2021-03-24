@@ -25,15 +25,15 @@ CeladonPokecenter1FPharmacistScript:
 CeladonEusine:
 	faceplayer
 	opentext
-	writetext CeladonEusineText
+	writetext HostSilenceText
 	buttonsound
 	closetext
-	winlosstext CeladonEusineText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer CY_ROBORED, X_CHATTYYELLOW4
 	startbattle
 	reloadmapafterbattle
 	opentext
-	writetext EusineLeavesCeladonText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	readvar VAR_FACING
@@ -51,12 +51,6 @@ CeladonEusine:
 
 .Movement2:
 	step LEFT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
-
 .Movement1:
 	step DOWN
 	step DOWN
@@ -65,7 +59,7 @@ CeladonEusine:
 	step_end
 
 CeladonPokecenter1FCooltrainerFText:
-	text "ERIKA is a master"
+	text "URF is a master"
 	line "of grass #MON."
 
 	para "She'll make you"
@@ -76,19 +70,13 @@ CeladonPokecenter1FCooltrainerFText:
 CeladonPokecenter1FPharmacistText:
 	text "TEAM ROCKET's"
 	line "hideout is in the"
-
 	para "basement of the"
 	line "GAME CORNER."
 
 	para "Oh, wait. That was"
-	line "three years ago."
+	line "three years ago<....>"
+	cont "Or was it?"
 	done
-
-EusineLeavesCeladonText:
-CeladonEusineText:
-	text "<...>"
-	done
-
 
 CeladonPokecenter1F_MapEvents:
 	db 0, 0 ; filler

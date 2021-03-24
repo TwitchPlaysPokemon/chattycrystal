@@ -11,12 +11,7 @@ CeladonCafe_MapScripts:
 	db 0 ; callbacks
 
 CeladonCafeChef:
-	faceplayer
-	opentext
-	writetext ChefText_Eatathon
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer ChefText_Eatathon
 
 CeladonCafeFisher1:
 	opentext
@@ -167,7 +162,6 @@ TeacherText_CrunchCrunch:
 TeacherText_NoCoinCase:
 	text "Nobody here will"
 	line "give you a COIN"
-
 	para "CASE. You should"
 	line "look in JOHTO."
 	done
@@ -188,7 +182,6 @@ EatathonContestPosterText:
 
 	para "A battle without"
 	line "end! The biggest"
-
 	para "muncher gets it"
 	line "all for free!"
 	done

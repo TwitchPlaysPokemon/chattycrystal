@@ -19,8 +19,7 @@ CinnabarPokecenter1FFisherScript:
 
 CinnabarPokecenter1FCooltrainerFText:
 	text "CINNABAR GYM's"
-	line "BLAINE apparently"
-
+	line "AAEFFFF apparently"
 	para "lives alone in the"
 	line "SEAFOAM ISLANDS"
 	cont "cave…"

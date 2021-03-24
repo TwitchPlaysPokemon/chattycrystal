@@ -30,36 +30,20 @@ EcruteakCityLass1Script:
 	jumptextfaceplayer EcruteakCityLass1Text
 
 EcruteakCityLass2Script:
-	faceplayer
-	opentext
 	checkevent EVENT_RELEASED_THE_BEASTS
 	iftrue .ReleasedBeasts
-	writetext EcruteakCityLass2Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakCityLass2Text
 
 .ReleasedBeasts:
-	writetext EcruteakCityLass2Text_ReleasedBeasts
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakCityLass2Text_ReleasedBeasts
 
 EcruteakCityFisherScript:
-	faceplayer
-	opentext
 	checkevent EVENT_JASMINE_RETURNED_TO_GYM
 	iftrue .JasmineReturned
-	writetext EcruteakCityFisherText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakCityFisherText
 
 .JasmineReturned:
-	writetext EcruteakCityFisherText_JasmineReturned
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakCityFisherText_JasmineReturned
 
 EcruteakCityYoungsterScript:
 	jumptextfaceplayer EcruteakCityYoungsterText
@@ -91,7 +75,6 @@ EcruteakCityHiddenHyperPotion:
 EcruteakCityGramps1Text:
 	text "ECRUTEAK used to"
 	line "have two towers:"
-
 	para "one each in the"
 	line "east and west."
 	done
@@ -99,13 +82,11 @@ EcruteakCityGramps1Text:
 EcruteakCityGramps2Text:
 	text "Ah, child."
 	line "Have you learned"
-
 	para "to dance like the"
 	line "KIMONO GIRLS?"
 
 	para "If you go to their"
 	line "DANCE THEATER, an"
-
 	para "odd old man will"
 	line "give you something"
 	cont "nice, I hear."
@@ -114,7 +95,6 @@ EcruteakCityGramps2Text:
 EcruteakCityLass1Text:
 	text "I'm going to prac-"
 	line "tice at the DANCE"
-
 	para "THEATER. Care to"
 	line "join me?"
 	done
@@ -142,7 +122,6 @@ EcruteakCityFisherText:
 
 	para "The #MON that"
 	line "serves as the"
-
 	para "beacon fell ill."
 	line "Sounds like they"
 	cont "are in trouble."
@@ -161,7 +140,6 @@ EcruteakCityFisherText_JasmineReturned:
 EcruteakCityYoungsterText:
 	text "I hear #MON are"
 	line "rampaging at the"
-
 	para "LAKE OF RAGE. I'd"
 	line "like to see that."
 	done
@@ -172,19 +150,16 @@ EcruteakCityGramps3Text:
 
 	para "This tower burned"
 	line "in a fire. Three"
-
 	para "nameless #MON"
 	line "perished in it."
 
 	para "A rainbow-colored"
 	line "#MON descended"
-
 	para "from the sky and"
 	line "resurrected them…"
 
 	para "It's a legend that"
 	line "has been passed"
-
 	para "down by ECRUTEAK"
 	line "GYM LEADERS."
 
@@ -215,7 +190,6 @@ EcruteakGymSignText:
 	text "ECRUTEAK CITY"
 	line "#MON GYM"
 	cont "LEADER: aoooo"
-
 	done
 
 EcruteakDanceTheaterSignText:

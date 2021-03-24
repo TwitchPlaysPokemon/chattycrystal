@@ -10,7 +10,7 @@
 EcruteakGym_MapScripts:
 	db 2 ; scene scripts
 	scene_script .ForcedToLeave ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
@@ -18,18 +18,15 @@ EcruteakGym_MapScripts:
 	prioritysjump EcruteakGymClosed
 	end
 
-.DummyScene:
-	end
-
 EcruteakGymMortyScript:
 	faceplayer
 	opentext
 	checkevent EVENT_BEAT_MORTY
 	iftrue .FightDone
-	writetext MortyIntroText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MortyWinLossText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer HGSS_LYRA, AOOOO
 	startbattle
 	reloadmapafterbattle
@@ -40,7 +37,7 @@ EcruteakGymMortyScript:
 	waitsfx
 	setflag ENGINE_FOGBADGE
 	readvar VAR_BADGES
-	scall EcruteakGymActivateRockets
+	scall ActivateRockets
 	setmapscene ECRUTEAK_TIN_TOWER_ENTRANCE, SCENE_FINISHED
 	setevent EVENT_RANG_CLEAR_BELL_1
 	setevent EVENT_RANG_CLEAR_BELL_2
@@ -51,33 +48,17 @@ EcruteakGymMortyScript:
 	setevent EVENT_BEAT_SAGE_PING
 	setevent EVENT_BEAT_MEDIUM_MARTHA
 	setevent EVENT_BEAT_MEDIUM_GRACE
-	writetext MortyText_FogBadgeSpeech
+	writetext HostSilenceText
 	buttonsound
 	verbosegiveitem TM_SHADOW_BALL
 	iffalse .NoRoomForShadowBall
 	setevent EVENT_GOT_TM30_SHADOW_BALL
-	writetext MortyText_ShadowBallSpeech
-	waitbutton
-	closetext
-	end
-
 .GotShadowBall:
-	writetext MortyFightDoneText
+	writetext HostSilenceText
 	waitbutton
 .NoRoomForShadowBall:
 	closetext
 	end
-
-EcruteakGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
-	end
-
-.GoldenrodRockets:
-	jumpstd goldenrodrockets
-
-.RadioTowerRockets:
-	jumpstd radiotowerrockets
 
 EcruteakGymClosed:
 	applymovement PLAYER, EcruteakGymPlayerStepUpMovement
@@ -100,60 +81,36 @@ TrainerSageJeffrey:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SageJeffreyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SageJeffreyAfterBattleText
 
 TrainerSagePing:
 	trainer SAGE, PING, EVENT_BEAT_SAGE_PING, SagePingSeenText, SagePingBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SagePingAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SagePingAfterBattleText
 
 TrainerMediumMartha:
 	trainer MEDIUM, MARTHA, EVENT_BEAT_MEDIUM_MARTHA, MediumMarthaSeenText, MediumMarthaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext MediumMarthaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext MediumMarthaAfterBattleText
 
 TrainerMediumGrace:
 	trainer MEDIUM, GRACE, EVENT_BEAT_MEDIUM_GRACE, MediumGraceSeenText, MediumGraceBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext MediumGraceAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext MediumGraceAfterBattleText
 
 EcruteakGymGuyScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_MORTY
 	iftrue .EcruteakGymGuyWinScript
-	writetext EcruteakGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakGymGuyText
 
 .EcruteakGymGuyWinScript:
-	writetext EcruteakGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer EcruteakGymGuyWinText
 
 EcruteakGymStatue:
 	checkflag ENGINE_FOGBADGE
@@ -177,29 +134,9 @@ EcruteakGymGrampsSlowStepDownMovement:
 	slow_step DOWN
 	step_end
 
-MortyIntroText:
-	text "…"
-	done
-
-MortyWinLossText:
-	text "…"
-	done
-
 Text_ReceivedFogBadge:
 	text "<PLAYER> received"
 	line "FOGBADGE."
-	done
-
-MortyText_FogBadgeSpeech:
-	text "…"
-	done
-
-MortyText_ShadowBallSpeech:
-	text "…"
-	done
-
-MortyFightDoneText:
-	text "…"
 	done
 
 SageJeffreySeenText:
@@ -211,7 +148,6 @@ SageJeffreySeenText:
 
 	para "Then spring came"
 	line "again. We have"
-
 	para "lived together"
 	line "for a long time."
 	done
@@ -273,7 +209,6 @@ MediumGraceBeatenText:
 MediumGraceAfterBattleText:
 	text "Fine. I shall tell"
 	line "you the secret of"
-
 	para "the invisible"
 	line "floor."
 
@@ -283,12 +218,11 @@ MediumGraceAfterBattleText:
 
 EcruteakGymGuyText:
 	text "The trainers here"
-	line "have secret mo-"
-	cont "tives."
+	line "have secret"
+	cont "motives."
 
 	para "If you win, they"
 	line "may tell you some"
-
 	para "deep secrets about"
 	line "ECRUTEAK."
 	done

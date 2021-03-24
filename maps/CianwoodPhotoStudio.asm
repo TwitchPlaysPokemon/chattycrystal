@@ -41,7 +41,6 @@ CianwoodPhotoStudioFishingGuruText_Yes:
 CianwoodPhotoStudioFishingGuruText_No:
 	text "Oh, that's too"
 	line "bad. I thought it"
-
 	para "would be a great"
 	line "memento…"
 	done

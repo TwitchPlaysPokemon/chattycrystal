@@ -41,7 +41,6 @@ CeladonMansionRoofHousePharmacistIntroText:
 CeladonMansionRoofHousePharmacistNotNightText:
 	text "Then again, it's"
 	line "not as scary while"
-
 	para "it's still light"
 	line "outside."
 
@@ -52,7 +51,6 @@ CeladonMansionRoofHousePharmacistNotNightText:
 CeladonMansionRoofHousePharmacistStoryText:
 	text "Once upon a time,"
 	line "there was a little"
-
 	para "boy who was given"
 	line "a new BICYCLE…"
 
@@ -61,13 +59,11 @@ CeladonMansionRoofHousePharmacistStoryText:
 
 	para "He was having so"
 	line "much fun that he"
-
 	para "didn't notice the"
 	line "sun had set…"
 
 	para "While riding home"
 	line "in the pitch-black"
-
 	para "night, the bike"
 	line "suddenly slowed!"
 
@@ -76,13 +72,11 @@ CeladonMansionRoofHousePharmacistStoryText:
 
 	para "When he stopped"
 	line "pedaling, the bike"
-
 	para "began slipping"
 	line "backwards!"
 
 	para "It was as if the"
 	line "bike were cursed"
-
 	para "and trying to drag"
 	line "him into oblivion!"
 
@@ -109,7 +103,6 @@ CeladonMansionRoofHousePharmacistCurseText:
 
 	para "It's a terrifying"
 	line "move that slowly"
-
 	para "whittles down the"
 	line "victim's HP."
 	done

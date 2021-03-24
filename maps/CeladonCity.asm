@@ -93,7 +93,7 @@ CeladonCityTeacher1Text:
 	line "machines again…"
 
 	para "We girls also play"
-	line "the slots now."
+	line "the slots!"
 
 	para "You should check"
 	line "them out too."
@@ -105,7 +105,6 @@ CeladonCityGramps1Text:
 
 	para "See that pond out"
 	line "in front of the"
-
 	para "house? GRIMER live"
 	line "there now."
 
@@ -117,7 +116,6 @@ CeladonCityGramps1Text:
 CeladonCityGramps2Text:
 	text "Nihihi! This GYM"
 	line "is great! Only"
-
 	para "girls are allowed"
 	line "here!"
 	done
@@ -144,13 +142,11 @@ CeladonCityYoungster2Text:
 CeladonCityTeacher2Text:
 	text "CELADON DEPT.STORE"
 	line "has the biggest"
-
 	para "and best selection"
 	line "of merchandise."
 
 	para "If you can't get"
 	line "it there, you"
-
 	para "can't get it any-"
 	line "where."
 
@@ -161,7 +157,6 @@ CeladonCityTeacher2Text:
 CeladonCityLassText:
 	text "Looking at the"
 	line "ground while I was"
-
 	para "walking made me"
 	line "dizzy."
 	done
@@ -176,10 +171,7 @@ CeladonCitySignText:
 CeladonGymSignText:
 	text "CELADON CITY"
 	line "#MON GYM"
-	cont "LEADER: ERIKA"
-
-	para "The Nature-Loving"
-	line "Princess"
+	cont "LEADER: URF"
 	done
 
 CeladonCityDeptStoreSignText:
@@ -203,7 +195,6 @@ CeladonCityTrainerTipsText:
 
 	para "GUARD SPEC."
 	line "protects #MON"
-
 	para "against SPECIAL"
 	line "attacks such as"
 	cont "fire and water."

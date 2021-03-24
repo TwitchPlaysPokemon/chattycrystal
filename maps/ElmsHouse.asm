@@ -20,15 +20,13 @@ ElmsHouseBookshelf:
 	jumpstd difficultbookshelf
 
 ElmsWifeText:
-	text "Hi, <PLAY_G>! My"
+	text "Hi, <PLAYER>! My"
 	line "husband's always"
-
 	para "so busy--I hope"
 	line "he's OK."
 
 	para "When he's caught"
 	line "up in his #MON"
-
 	para "research, he even"
 	line "forgets to eat."
 	done
@@ -45,7 +43,7 @@ ElmsSonText:
 
 ElmsHousePCText:
 	text "#MON. Where do"
-	line "they come from? "
+	line "they come from?"
 
 	para "Where are they"
 	line "going?"
@@ -56,7 +54,6 @@ ElmsHousePCText:
 
 	para "I want to know! I"
 	line "will dedicate my"
-
 	para "life to the study"
 	line "of #MON!"
 

@@ -22,13 +22,12 @@ EcruteakLugiaSpeechHouseGrampsText:
 
 	para "The sky suddenly"
 	line "turned black. A"
-
 	para "giant flying #-"
 	line "MON was blocking"
 	cont "out the sun."
 
 	para "I wonder what that"
-	line "#MON was? "
+	line "#MON was?"
 
 	para "It was like a bird"
 	line "and a dragon."

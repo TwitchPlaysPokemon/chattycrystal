@@ -8,18 +8,10 @@ CherrygroveEvolutionSpeechHouse_MapScripts:
 	db 0 ; callbacks
 
 CherrygroveEvolutionSpeechHouseYoungsterScript:
-	opentext
-	writetext CherrygroveEvolutionSpeechHouseYoungsterText
-	waitbutton
-	closetext
-	end
+	jumptext CherrygroveEvolutionSpeechHouseYoungsterText
 
 CherrygroveEvolutionSpeechHouseLassScript:
-	opentext
-	writetext CherrygroveEvolutionSpeechHouseLassText
-	waitbutton
-	closetext
-	end
+	jumptext CherrygroveEvolutionSpeechHouseLassText
 
 CherrygroveEvolutionSpeechHouseBookshelf:
 	jumpstd magazinebookshelf
@@ -27,7 +19,6 @@ CherrygroveEvolutionSpeechHouseBookshelf:
 CherrygroveEvolutionSpeechHouseYoungsterText:
 	text "#MON gain expe-"
 	line "rience in battle"
-
 	para "and change their"
 	line "form."
 	done

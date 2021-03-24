@@ -8,15 +8,14 @@
 ElmsLab_MapScripts:
 	db 4 ; scene scripts
 	scene_script .MeetElm ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_ELMSLAB_NOTHING
-	scene_script .DummyScene ; SCENE_ELMSLAB_AIDE_GIVES_POTIONS
-	scene_script .DummyScene ; SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
+	scene_script GenericDummyScript ; SCENE_ELMSLAB_NOTHING
+	scene_script GenericDummyScript ; SCENE_ELMSLAB_AIDE_GIVES_POTIONS
+	scene_script GenericDummyScript ; SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
 
 	db 0 ; callbacks
 
 .MeetElm:
 	prioritysjump .WalkUpToElm
-.DummyScene:
 	end
 
 .WalkUpToElm:
@@ -132,15 +131,12 @@ ElmDescribesMrPokemonScript:
 	end
 
 ElmsLabHealingMachine:
-	opentext
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue .CanHeal
-	writetext ElmsLabHealingMachineText1
-	waitbutton
-	closetext
-	end
+	jumptext ElmsLabHealingMachineText1
 
 .CanHeal:
+	opentext
 	writetext ElmsLabHealingMachineText2
 	yesorno
 	iftrue ElmsLabHealingMachine_HealParty
@@ -156,7 +152,6 @@ ElmsLabHealingMachine_HealParty:
 	special RestartMapMusic
 	closetext
 	end
-
 
 ElmStudyingEggScript:
 	writetext ElmStudyingEggText
@@ -221,7 +216,6 @@ ElmGiveMasterBallScript:
 .notdone
 	closetext
 	end
-
 
 ElmJumpBackScript1:
 	closetext
@@ -316,28 +310,12 @@ AideScript_GiveYouBalls:
 
 AideScript_ReceiveTheBalls:
 	jumpstd receiveitem
-	end
 
 ElmsAideScript:
-	faceplayer
-	opentext
-	iftrue AideScript_ExplainBalls
-	waitbutton
-	closetext
-	end
-
-AideScript_ExplainBalls:
-	writetext AideText_ExplainBalls
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer AideText_ExplainBalls
 
 ElmsLabWindow:
-	opentext
-	writetext ElmsLabWindowText1
-	waitbutton
-	closetext
-	end
+	jumptext ElmsLabWindowText1
 
 ElmsLabTravelTip1:
 	jumptext ElmsLabTravelTip1Text
@@ -443,7 +421,7 @@ ElmsLab_MoveDown:
 	step_end
 
 ElmText_Intro:
-	text "ELM: <PLAY_G>!"
+	text "ELM: <PLAYER>!"
 	line "There you are!"
 	cont "You're late!"
 
@@ -453,8 +431,8 @@ ElmText_Intro:
 
 	para "You won't be able"
 	line "to start your"
-	cont "#MON adventure"
-	cont "like this<……>"
+	para "#MON adventure"
+	line "like this<……>"
 
 	para "Unless<……>"
 	line "I know!"
@@ -464,10 +442,10 @@ ElmText_Intro:
 
 	para "He's visiting a"
 	line "friend nearby and"
-	cont "will have a spare"
-	cont "#MON."
+	para "will have a spare"
+	line "#MON."
 
-	para "Now hold still<……>"
+	para "Now, hold still<……>"
 	done
 
 ElmText_Sprayed:
@@ -477,10 +455,10 @@ ElmText_Sprayed:
 	para "That should keep"
 	line "wild #MON away."
 
-	para "While you're there"
+	para "While you're there,"
 	line "you can deliver"
-	cont "this EGG to"
-	cont "Mr. #MON."
+	para "this EGG to"
+	line "MR.#MON."
 	done
 
 ElmText_GotAnEgg:
@@ -490,19 +468,16 @@ ElmText_GotAnEgg:
 ElmDirectionsText:
 	text "MR.#MON lives a"
 	line "little bit beyond"
-
 	para "CHERRYGROVE, the"
 	line "next city over."
 
 	para "It's almost a"
 	line "direct route"
-
 	para "there, so you"
 	line "can't miss it."
 
 	para "But just in case,"
 	line "here's my phone"
-
 	para "number. Call me if"
 	line "anything comes up!"
 	done
@@ -522,7 +497,6 @@ GotElmsNumberText:
 	text "<PLAYER> got ELM's"
 	line "phone number."
 	done
-
 
 ElmPokeBallText:
 	text "It contains a"
@@ -546,7 +520,7 @@ ElmAfterTheftText5:
 	para "PROF.OAK gave you"
 	line "a #DEX?"
 
-	para "<PLAY_G>, is that"
+	para "<PLAYER>, is that"
 	line "true? Th-that's"
 	cont "incredible!"
 
@@ -555,9 +529,8 @@ ElmAfterTheftText5:
 	cont "tial of people as"
 	cont "trainers."
 
-	para "Wow, <PLAY_G>. You"
+	para "Wow, <PLAYER>. You"
 	line "may have what it"
-
 	para "takes to become"
 	line "the CHAMPION."
 
@@ -577,7 +550,6 @@ ElmAfterTheftText5:
 ElmAfterTheftText6:
 	text "…<PLAY_G>. The"
 	line "road to the"
-
 	para "championship will"
 	line "be a long one."
 
@@ -589,19 +561,17 @@ ElmAfterTheftText6:
 ElmStudyingEggText:
 	text "ELM: Don't give"
 	line "up! I'll call if"
-
 	para "I learn anything"
 	line "about that EGG!"
 	done
 
 ElmAideHasEggText:
-	text "ELM: <PLAY_G>?"
+	text "ELM: <PLAYER>?"
 	line "Didn't you meet my"
 	cont "assistant?"
 
 	para "He should have met"
 	line "you with the EGG"
-
 	para "at VIOLET CITY's"
 	line "#MON CENTER."
 
@@ -647,9 +617,8 @@ ShowElmUnownText3:
 	done
 
 ElmGiveEverstoneText1:
-	text "Thanks, <PLAY_G>!"
+	text "Thanks, <PLAYER>!"
 	line "You're helping"
-
 	para "unravel #MON"
 	line "mysteries for us!"
 
@@ -678,7 +647,7 @@ ElmGiveEverstoneText2:
 	done
 
 ElmText_CallYou:
-	text "ELM: <PLAY_G>, I'll"
+	text "ELM: <PLAYER>, I'll"
 	line "call you if any-"
 	cont "thing comes up."
 	done
@@ -701,7 +670,6 @@ ElmGiveMasterBallText2:
 
 	para "It's the ultimate"
 	line "BALL! It'll catch"
-
 	para "any #MON with-"
 	line "out fail."
 
@@ -711,9 +679,8 @@ ElmGiveMasterBallText2:
 
 	para "I think you can"
 	line "make much better"
-
 	para "use of it than I"
-	line "can, <PLAY_G>!"
+	line "can, <PLAYER>!"
 	done
 
 ElmsLabSignpostText_Egg:
@@ -723,7 +690,7 @@ ElmsLabSignpostText_Egg:
 	done
 
 AideText_GiveYouPotion:
-	text "<PLAY_G>, I want"
+	text "<PLAYER>, I want"
 	line "you to have this"
 	cont "for your errand."
 	done
@@ -754,13 +721,12 @@ AideText_TheftTestimony:
 
 	para "They say a #MON"
 	line "raised by a bad"
-
 	para "person turns bad"
 	line "itself."
 	done
 
 AideText_GiveYouBalls:
-	text "<PLAY_G>!"
+	text "<PLAYER>!"
 
 	para "Use these on your"
 	line "#DEX quest!"
@@ -785,7 +751,6 @@ ElmDescribesMrPokemonText:
 	line "just rare and"
 	cont "not very useful…"
 	done
-
 
 ElmsLabWindowText1:
 	text "The window's open."
@@ -886,6 +851,6 @@ ElmsLab_MapEvents:
 	db 5 ; object events
 	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
 	object_event  2,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, -1
-	object_event  4,  10, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_BABA_IN_ELMS_LAB
-	object_event  4,  9, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_AJ_IN_ELMS_LAB
-	object_event  4,  5, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_EVAN_IN_ELMS_LAB
+	object_event  4, 10, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_BABA_IN_ELMS_LAB
+	object_event  4,  9, SPRITE_CHRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_AJ_IN_ELMS_LAB
+	object_event  4,  5, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_EVAN_IN_ELMS_LAB

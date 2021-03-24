@@ -8,15 +8,12 @@
 EcruteakPokecenter1F_MapScripts:
 	db 2 ; scene scripts
 	scene_script .MeetBill ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
 .MeetBill:
 	prioritysjump .BillActivatesTimeCapsule
-	end
-
-.DummyScene:
 	end
 
 .BillActivatesTimeCapsule:
@@ -39,9 +36,6 @@ EcruteakPokecenter1F_MapScripts:
 	opentext
 	writetext EcruteakPokecenter1F_BillText1
 	buttonsound
-	sjump .PointlessJump
-
-.PointlessJump:
 	writetext EcruteakPokecenter1F_BillText2
 	waitbutton
 	closetext
@@ -112,13 +106,11 @@ EcruteakPokecenter1F_BillText2:
 
 	para "My TIME CAPSULE"
 	line "was developed to"
-
 	para "enable trades with"
 	line "the past."
 
 	para "But you can't send"
 	line "anything that"
-
 	para "didn't exist in"
 	line "the past."
 
@@ -128,13 +120,11 @@ EcruteakPokecenter1F_BillText2:
 
 	para "So you have to"
 	line "remove anything"
-
 	para "that wasn't around"
 	line "in the past."
 
 	para "Put simply, no"
 	line "sending new moves"
-
 	para "or new #MON in"
 	line "the TIME CAPSULE."
 
@@ -144,7 +134,6 @@ EcruteakPokecenter1F_BillText2:
 
 	para "Tomorrow, TIME"
 	line "CAPSULES will be"
-
 	para "running at all"
 	line "#MON CENTERS."
 
@@ -158,7 +147,6 @@ EcruteakPokecenter1F_BillText2:
 EcruteakPokecenter1FPokefanMText:
 	text "The way the KIMONO"
 	line "GIRLS dance is"
-
 	para "marvelous. Just"
 	line "like the way they"
 	cont "use their #MON."

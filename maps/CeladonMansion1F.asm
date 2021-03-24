@@ -45,7 +45,6 @@ CeladonMansion1FBookshelf:
 CeladonMansionManagerText:
 	text "My dear #MON"
 	line "keep me company,"
-
 	para "so I don't ever"
 	line "feel lonely."
 

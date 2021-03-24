@@ -8,13 +8,10 @@
 
 CeruleanGym_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_CERULEANGYM_NOTHING
+	scene_script GenericDummyScript ; SCENE_CERULEANGYM_NOTHING
 	scene_script .GruntRunsOut ; SCENE_CERULEANGYM_GRUNT_RUNS_OUT
 
 	db 0 ; callbacks
-
-.DummyScene0:
-	end
 
 .GruntRunsOut:
 	prioritysjump .GruntRunsOutScript
@@ -26,18 +23,18 @@ CeruleanGym_MapScripts:
 	applymovement CERULEANGYM_ROCKET, CeruleanGymGruntRunsIntoYouMovement
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	opentext
-	writetext CeruleanGymGruntIntroText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	showemote EMOTE_SHOCK, CERULEANGYM_ROCKET, 15
 	applymovement CERULEANGYM_ROCKET, CeruleanGymGruntBacksAwayMovement
 	opentext
-	writetext CeruleanGymGruntBigMistakeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement CERULEANGYM_ROCKET, CeruleanGymGruntMovesCloseMovement
 	opentext
-	writetext CeruleanGymGruntByeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement CERULEANGYM_ROCKET, CeruleanGymGruntRunsOutMovement
@@ -61,10 +58,10 @@ CeruleanGymMistyScript:
 	opentext
 	checkflag ENGINE_CASCADEBADGE
 	iftrue .FightDone
-	writetext MistyIntroText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MistyWinLossText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer GSCHGSS_CHRIS, D_GAUNTLETCRYSTAL
 	startbattle
 	reloadmapafterbattle
@@ -78,7 +75,7 @@ CeruleanGymMistyScript:
 	waitsfx
 	setflag ENGINE_CASCADEBADGE
 .FightDone:
-	writetext MistyFightDoneText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
@@ -88,49 +85,29 @@ TrainerSwimmerfDiana:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerfDianaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmerfDianaAfterBattleText
 
 TrainerSwimmerfBriana:
 	trainer SWIMMERF, BRIANA, EVENT_BEAT_SWIMMERF_BRIANA, SwimmerfBrianaSeenText, SwimmerfBrianaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerfBrianaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmerfBrianaAfterBattleText
 
 TrainerSwimmermParker:
 	trainer SWIMMERM, PARKER, EVENT_BEAT_SWIMMERM_PARKER, SwimmermParkerSeenText, SwimmermParkerBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmermParkerAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmermParkerAfterBattleText
 
 CeruleanGymGuyScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_MISTY
 	iftrue .CeruleanGymGuyWinScript
-	writetext CeruleanGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CeruleanGymGuyText
 
 .CeruleanGymGuyWinScript:
-	writetext CeruleanGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CeruleanGymGuyWinText
 
 CeruleanGymHiddenMachinePart:
 	hiddenitem MACHINE_PART, EVENT_FOUND_MACHINE_PART_IN_CERULEAN_GYM
@@ -138,20 +115,12 @@ CeruleanGymHiddenMachinePart:
 CeruleanGymStatue1:
 	checkevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	iffalse CeruleanGymStatue
-	opentext
-	writetext CeruleanGymNote1Text
-	waitbutton
-	closetext
-	end
+	jumptext CeruleanGymNote1Text
 
 CeruleanGymStatue2:
 	checkevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	iffalse CeruleanGymStatue
-	opentext
-	writetext CeruleanGymNote2Text
-	waitbutton
-	closetext
-	end
+	jumptext CeruleanGymNote2Text
 
 CeruleanGymStatue:
 	checkflag ENGINE_CASCADEBADGE
@@ -170,6 +139,7 @@ CeruleanGymGruntRunsDownMovement:
 
 CeruleanGymGruntRunsOutMovement:
 	big_step RIGHT
+CeruleanGymGruntMovesCloseMovement:
 	big_step DOWN
 	step_end
 
@@ -185,35 +155,22 @@ CeruleanGymGruntRunsIntoYouMovement:
 	step DOWN
 	step_end
 
-CeruleanGymGruntMovesCloseMovement:
-	big_step DOWN
-	step_end
-
 CeruleanGymGruntBacksAwayMovement:
 	fix_facing
 	slow_step UP
 	remove_fixed_facing
 	step_end
 
-MistyIntroText:
-MistyWinLossText:
-MistyFightDoneText:
-CeruleanGymGruntBigMistakeText:
-CeruleanGymGruntByeText:
-CeruleanGymGruntIntroText:
-	text "<...>"
-	done
-
 CeruleanGymNote1Text:
-	text "Sorry, I'll be out"
-	line "for a while."
-	cont "MISTY, GYM LEADER"
+	text "Sorry, d<PK> will be"
+	line "out for a while."
+	cont "-GYM Staff"
 	done
 
 CeruleanGymNote2Text:
-	text "Since MISTY's out,"
+	text "Since d<PK> is out,"
 	line "we'll be away too."
-	cont "GYM TRAINERS"
+	cont "-GYM TRAINERS"
 	done
 
 ReceivedCascadeBadgeText:
@@ -238,9 +195,9 @@ SwimmerfDianaAfterBattleText:
 	done
 
 SwimmerfBrianaSeenText:
-	text "Don't let my ele-"
-	line "gant swimming un-"
-	cont "nerve you."
+	text "Don't let my"
+	line "elegant swimming"
+	cont "unnerve you."
 	done
 
 SwimmerfBrianaBeatenText:
@@ -252,7 +209,7 @@ SwimmerfBrianaAfterBattleText:
 	text "Don't be too smug"
 	line "about beating me."
 
-	para "MISTY will destroy"
+	para "d<PK> will destroy"
 	line "you if you get"
 	cont "complacent."
 	done
@@ -269,9 +226,9 @@ SwimmermParkerBeatenText:
 	done
 
 SwimmermParkerAfterBattleText:
-	text "MISTY has gotten"
-	line "much better in the"
-	cont "past few years."
+	text "d<PK> has gotten much"
+	line "better in the past"
+	cont "few years."
 
 	para "Don't let your"
 	line "guard down, or"
@@ -282,10 +239,9 @@ CeruleanGymGuyText:
 	text "Yo! CHAMP in"
 	line "making!"
 
-	para "Since MISTY was"
-	line "away, I went out"
-
-	para "for some fun too."
+	para "Since d<PK> was away,"
+	line "I went out for"
+	para "some fun too."
 	line "He-he-he."
 	done
 

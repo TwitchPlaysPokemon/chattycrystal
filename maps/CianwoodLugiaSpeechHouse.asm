@@ -28,16 +28,15 @@ CianwoodLugiaSpeechHouseTeacherText:
 	line "the four islands"
 	cont "along the way?"
 
-	para "I heard that a "
-	line "mythical sea crea-"
-	cont "ture is hiding in"
-	cont "them."
+	para "I heard that a"
+	line "mythical sea"
+	para "creature is hiding"
+	line "in them."
 	done
 
 CianwoodLugiaSpeechHouseLassText:
 	text "I heard that you"
 	line "can only see it if"
-
 	para "you have a SILVER"
 	line "WING."
 
@@ -49,7 +48,6 @@ CianwoodLugiaSpeechHouseLassText:
 CianwoodLugiaSpeechHouseTwinText:
 	text "I've heard that"
 	line "the whirlpools"
-
 	para "around the islands"
 	line "are caused by the"
 	cont "sea creature."

@@ -36,7 +36,6 @@ CeladonDeptStore4FSuperNerdText:
 CeladonDeptStore4FYoungsterText:
 	text "This is the only"
 	line "place where you"
-
 	para "can buy LOVELY"
 	line "MAIL."
 	done

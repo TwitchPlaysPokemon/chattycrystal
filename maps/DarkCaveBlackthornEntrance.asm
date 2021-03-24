@@ -37,7 +37,6 @@ DarkCaveBlackthornEntrancePharmacistText1:
 
 	para "I had my BLACK-"
 	line "GLASSES on, so I"
-
 	para "didn't notice you"
 	line "at all."
 

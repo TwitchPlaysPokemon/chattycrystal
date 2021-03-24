@@ -7,15 +7,11 @@
 
 CherrygroveCity_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_CHERRYGROVECITY_NOTHING
-	scene_script .DummyScene1 ; SCENE_CHERRYGROVECITY_MEET_RIVAL
+	scene_script GenericDummyScript ; SCENE_CHERRYGROVECITY_NOTHING
+	scene_script GenericDummyScript ; SCENE_CHERRYGROVECITY_MEET_RIVAL
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-
-.DummyScene0:
-.DummyScene1:
-	end
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_CHERRYGROVE
@@ -84,7 +80,6 @@ CherrygroveCityGuideGent:
 
 .JumpstdReceiveItem:
 	jumpstd receiveitem
-	end
 
 .mapcardname
 	db "MAP CARD@"
@@ -107,31 +102,19 @@ CherrygroveBabaSceneNorth:
 	turnobject PLAYER, RIGHT
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext CherrygroveRivalText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext CherrygroveRivalText, CherrygroveRivalText
+	winlosstext HostSilenceText, HostSilenceText
 	setlasttalked CHERRYGROVECITY_SILVER
 	loadtrainer AC_CHRIS, EVAN1
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
 	startbattle
 	dontrestartmapmusic
 	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
-
-.AfterVictorious:
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
-	writetext CherrygroveRivalText
-	waitbutton
-	closetext
-	sjump .FinishRival
-
-.AfterYourDefeat:
-	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext CherrygroveRivalText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 .FinishRival:
@@ -146,36 +129,20 @@ CherrygroveBabaSceneNorth:
 	end
 
 CherrygroveTeacherScript:
-	faceplayer
-	opentext
 	checkflag ENGINE_MAP_CARD
 	iftrue .HaveMapCard
-	writetext CherrygroveTeacherText_NoMapCard
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CherrygroveTeacherText_NoMapCard
 
 .HaveMapCard:
-	writetext CherrygroveTeacherText_HaveMapCard
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CherrygroveTeacherText_HaveMapCard
 
 CherrygroveYoungsterScript:
-	faceplayer
-	opentext
 	checkflag ENGINE_POKEDEX
 	iftrue .HavePokedex
-	writetext CherrygroveYoungsterText_NoPokedex
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CherrygroveYoungsterText_NoPokedex
 
 .HavePokedex:
-	writetext CherrygroveYoungsterText_HavePokedex
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CherrygroveYoungsterText_HavePokedex
 
 MysticWaterGuy:
 	faceplayer
@@ -303,13 +270,11 @@ GuideGentTourText1:
 GuideGentPokecenterText:
 	text "This is a #MON"
 	line "CENTER. They heal"
-
 	para "your #MON in no"
 	line "time at all."
 
 	para "You'll be relying"
 	line "on them a lot, so"
-
 	para "you better learn"
 	line "about them."
 	done
@@ -320,7 +285,6 @@ GuideGentMartText:
 
 	para "They sell BALLS"
 	line "for catching wild"
-
 	para "#MON and other"
 	line "useful items."
 	done
@@ -331,7 +295,6 @@ GuideGentRoute30Text:
 
 	para "Trainers will be"
 	line "battling their"
-
 	para "prized #MON"
 	line "there."
 	done
@@ -378,10 +341,6 @@ GuideGentNoText:
 	line "when you like."
 	done
 
-CherrygroveRivalText:
-	text "<……>"
-	done
-
 CherrygroveTeacherText_NoMapCard:
 	text "Did you talk to"
 	line "the old man by the"
@@ -411,7 +370,6 @@ CherrygroveYoungsterText_HavePokedex:
 
 	para "My #MON lost."
 	line "They're a mess! I"
-
 	para "must take them to"
 	line "a #MON CENTER."
 	done

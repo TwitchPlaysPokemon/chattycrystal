@@ -24,7 +24,7 @@ GameFreakGameDesignerScript:
 	writetext GameFreakGameDesignerCompletedPokedexText
 	playsound SFX_DEX_FANFARE_8
 	waitsfx
-	writetext GameFreakGameDesignerPauseForDiplomaText
+	writetext EllipsisSilenceText
 	buttonsound
 	special Diploma
 	writetext GameFreakGameDesignerAfterDiplomaText
@@ -34,16 +34,13 @@ GameFreakGameDesignerScript:
 	end
 
 GameFreakGraphicArtistScript:
-	faceplayer
-	opentext
 	checkevent EVENT_ENABLE_DIPLOMA_PRINTING
 	iftrue .CanPrintDiploma
-	writetext GameFreakGraphicArtistText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer GameFreakGraphicArtistText
 
 .CanPrintDiploma:
+	faceplayer
+	opentext
 	writetext GameFreakGraphicArtistPrintDiplomaText
 	yesorno
 	iffalse .Refused
@@ -94,10 +91,6 @@ GameFreakGameDesignerCompletedPokedexText:
 	para "Congratulations!"
 	done
 
-GameFreakGameDesignerPauseForDiplomaText:
-	text "…"
-	done
-
 GameFreakGameDesignerAfterDiplomaText:
 	text "The GRAPHIC ARTIST"
 	line "will print out a"
@@ -143,9 +136,6 @@ GameFreakCharacterDesignerText:
 	text "Aren't the TWINS"
 	line "adorable?"
 
-	para "JASMINE's pretty"
-	line "too."
-
 	para "Oh, I love them!"
 	done
 
@@ -163,7 +153,6 @@ CeladonMansion3FDrawingText:
 CeladonMansion3FGameProgramText:
 	text "It's the game"
 	line "program. Messing"
-
 	para "with it could put"
 	line "a bug in the game!"
 	done

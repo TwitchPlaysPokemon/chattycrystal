@@ -16,21 +16,12 @@ CianwoodPokecenter1FLassScript:
 	jumptextfaceplayer CianwoodPokecenter1FLassText
 
 CianwoodGymGuyScript:
-	faceplayer
 	checkevent EVENT_BEAT_CHUCK
 	iftrue .CianwoodGymGuyWinScript
-	opentext
-	writetext CianwoodGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CianwoodGymGuyText
 
 .CianwoodGymGuyWinScript:
-	opentext
-	writetext CianwoodGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CianwoodGymGuyWinText
 
 CianwoodPokecenter1FSuperNerdScript:
 	jumptextfaceplayer CianwoodPokecenter1FSuperNerdText
@@ -55,7 +46,6 @@ CianwoodGymGuyText:
 
 	para "Here's some ad-"
 	line "vice: the GYM"
-
 	para "LEADER uses the"
 	line "fighting-type."
 
@@ -65,7 +55,6 @@ CianwoodGymGuyText:
 
 	para "Wipe out his #-"
 	line "MON before they"
-
 	para "can use their"
 	line "physical strength."
 
@@ -75,7 +64,6 @@ CianwoodGymGuyText:
 
 	para "If you don't move"
 	line "them correctly,"
-
 	para "you won't reach"
 	line "the GYM LEADER."
 
@@ -92,13 +80,11 @@ CianwoodGymGuyWinText:
 CianwoodPokecenter1FSuperNerdText:
 	text "I love showing off"
 	line "the #MON that"
-
 	para "I've raised."
 	line "Don't you?"
 
 	para "I'm going to get"
 	line "into a bunch of"
-
 	para "battles, and show"
 	line "off my #MON!"
 	done

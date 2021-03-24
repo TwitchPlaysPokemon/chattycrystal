@@ -20,88 +20,56 @@ TrainerKimonoGirlNaoko2:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext KimonoGirlNaoko2AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext KimonoGirlNaoko2AfterBattleText
 
 TrainerKimonoGirlSayo:
 	trainer KIMONO_GIRL, SAYO, EVENT_BEAT_KIMONO_GIRL_SAYO, KimonoGirlSayoSeenText, KimonoGirlSayoBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext KimonoGirlSayoAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext KimonoGirlSayoAfterBattleText
 
 TrainerKimonoGirlZuki:
 	trainer KIMONO_GIRL, ZUKI, EVENT_BEAT_KIMONO_GIRL_ZUKI, KimonoGirlZukiSeenText, KimonoGirlZukiBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext KimonoGirlZukiAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext KimonoGirlZukiAfterBattleText
 
 TrainerKimonoGirlKuni:
 	trainer KIMONO_GIRL, KUNI, EVENT_BEAT_KIMONO_GIRL_KUNI, KimonoGirlKuniSeenText, KimonoGirlKuniBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext KimonoGirlKuniAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext KimonoGirlKuniAfterBattleText
 
 TrainerKimonoGirlMiki:
 	trainer KIMONO_GIRL, MIKI, EVENT_BEAT_KIMONO_GIRL_MIKI, KimonoGirlMikiSeenText, KimonoGirlMikiBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext KimonoGirlMikiAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext KimonoGirlMikiAfterBattleText
 
 TrainerKimonoGirlLinnea:
-	trainer KIMONO_GIRL, LINNEA, EVENT_BEAT_KIMONO_GIRL_LINNEA, KimonoGirlPlaceholderText, KimonoGirlPlaceholderText, 0, .Script
+	trainer KIMONO_GIRL, LINNEA, EVENT_BEAT_KIMONO_GIRL_LINNEA, KimonoGirlLinneaSeenText, KimonoGirlLinneaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext KimonoGirlPlaceholderText
-	waitbutton
-	closetext
-	end
+	jumptext KimonoGirlLinneaAfterBattleText
 
 TrainerKimonoGirlRea:
-	trainer KIMONO_GIRL, REA, EVENT_BEAT_KIMONO_GIRL_REA, KimonoGirlPlaceholderText, KimonoGirlPlaceholderText, 0, .Script
+	trainer KIMONO_GIRL, REA, EVENT_BEAT_KIMONO_GIRL_REA, KimonoGirlReaSeenText, KimonoGirlReaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext KimonoGirlPlaceholderText
-	waitbutton
-	closetext
-	end
+	jumptext KimonoGirlReaAfterBattleText
 
 TrainerKimonoGirlSakuya:
-	trainer KIMONO_GIRL, SAKUYA, EVENT_BEAT_KIMONO_GIRL_SAKUYA, KimonoGirlPlaceholderText, KimonoGirlPlaceholderText, 0, .Script
+	trainer KIMONO_GIRL, SAKUYA, EVENT_BEAT_KIMONO_GIRL_SAKUYA, KimonoGirlSakuyaSeenText, KimonoGirlSakuyaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext KimonoGirlPlaceholderText
-	waitbutton
-	closetext
-	end
+	jumptext KimonoGirlSakuyaAfterBattleText
 
 DanceTheaterSurfGuy:
 	faceplayer
@@ -175,10 +143,6 @@ DanceTheatreGrannyScript:
 DanceTheatreFancyPanel:
 	jumptext DanceTheatreFancyPanelText
 
-KimonoGirlPlaceholderText:
-	text "<...>"
-	done
-
 KimonoGirlNaoko2SeenText:
 	text "You have lovely"
 	line "#MON. May I see"
@@ -212,9 +176,8 @@ KimonoGirlSayoBeatenText:
 KimonoGirlSayoAfterBattleText:
 	text "Rhythm is impor-"
 	line "tant for both"
-
-	para "dancing and #-"
-	line "MON."
+	para "dancing and"
+	line "#MON."
 	done
 
 KimonoGirlZukiSeenText:
@@ -250,7 +213,6 @@ KimonoGirlKuniBeatenText:
 KimonoGirlKuniAfterBattleText:
 	text "I trained a lot,"
 	line "so I thought I was"
-
 	para "a capable trainer."
 	line "I guess I'm not."
 	done
@@ -269,7 +231,6 @@ KimonoGirlMikiBeatenText:
 KimonoGirlMikiAfterBattleText:
 	text "I can keep dancing"
 	line "because there are"
-
 	para "people who enjoy"
 	line "what I do."
 
@@ -277,17 +238,84 @@ KimonoGirlMikiAfterBattleText:
 	line "spirits up too."
 	done
 
+KimonoGirlLinneaSeenText:
+	text "My #MON and I"
+	line "always dance"
+	cont "together."
+
+	para "Or perhaps you'd"
+	line "rather see us"
+	cont "battling?"
+	done
+
+KimonoGirlLinneaBeatenText:
+	text "Maybe we're better"
+	line "at dancing<...>"
+	done
+
+KimonoGirlLinneaAfterBattleText:
+	text "My #MON and I"
+	line "always dance"
+	cont "together."
+
+	para "However, I still"
+	line "make sure to train"
+	para "my #MON in"
+	line "battle when I can."
+	done
+
+KimonoGirlReaSeenText:
+	text "I train my #MON"
+	line "during my dance"
+	para "breaks. Of course,"
+	line "dancing itself is"
+	cont "also training."
+
+	text "Would you like to"
+	line "battle?"
+	done
+
+KimonoGirlReaBeatenText:
+	text "I guess we need"
+	line "more training."
+	done
+
+KimonoGirlReaAfterBattleText:
+	text "Dancing, training<...>"
+	line "I can't decide what"
+	cont "I like more."
+	done
+
+KimonoGirlSakuyaSeenText:
+	text "My #MON's dance"
+	line "is as graceful as"
+	cont "mine."
+
+	para "Oh, you want to"
+	line "battle us?"
+	done
+
+KimonoGirlSakuyaBeatenText:
+	text "My battling wasn't"
+	line "graceful at all<...>"
+	done
+
+KimonoGirlSakuyaAfterBattleText:
+	text "When learning a"
+	line "new dance, I"
+	para "always follow my"
+	line "#MON's steps."
+	done
+
 SurfGuyNeverLeftAScratchText:
 	text "Not only are the"
 	line "KIMONO GIRLS great"
-
 	para "dancers, they're"
 	line "also skilled at"
 	cont "#MON."
 
 	para "I always challenge"
 	line "them, but I've"
-
 	para "never even left a"
 	line "scratch…"
 	done
@@ -295,7 +323,6 @@ SurfGuyNeverLeftAScratchText:
 SurfGuyLadGiftText:
 	text "Lad! If you can"
 	line "defeat all the"
-
 	para "KIMONO GIRLS, I'll"
 	line "give you a gift."
 	done
@@ -303,7 +330,6 @@ SurfGuyLadGiftText:
 SurfGuyLassieGiftText:
 	text "Lassie, if you can"
 	line "defeat all the"
-
 	para "KIMONO GIRLS, I'll"
 	line "give you a gift."
 	done
@@ -364,7 +390,6 @@ DanceTheatreGrannyText:
 
 	para "And they have to"
 	line "learn to follow"
-
 	para "customs before ap-"
 	line "pearing in public."
 

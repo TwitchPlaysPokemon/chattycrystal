@@ -220,7 +220,6 @@ CopycatText_QuickMimicking:
 CopycatText_Male_2:
 	text "<PLAYER>: Hi!"
 	line "I heard that you"
-
 	para "lost your favorite"
 	line "# DOLL."
 
@@ -255,7 +254,6 @@ CopycatText_GiveDoll:
 
 	para "See the tear where"
 	line "the right leg is"
-
 	para "sewn on? That's"
 	line "proof!"
 	done
@@ -273,7 +271,6 @@ CopycatText_ExplainPass:
 
 	para "The rail company"
 	line "man gave me that"
-
 	para "when they tore"
 	line "down our old house"
 	cont "for the STATION."
@@ -314,7 +311,6 @@ CopycatText_Female_2:
 
 	para "<PLAYER>: You'll"
 	line "really give me a"
-
 	para "rail PASS if I"
 	line "find it for you?"
 
@@ -334,7 +330,6 @@ CopycatText_Female_3:
 
 	para "<PLAYER>: Is it"
 	line "really that fun to"
-
 	para "copy what I say"
 	line "and do?"
 	done
@@ -346,7 +341,6 @@ CopycatsDodrioText1:
 CopycatsDodrioText2:
 	text "MIRROR, MIRROR ON"
 	line "THE WALL, WHO'S"
-
 	para "THE FAIREST ONE OF"
 	line "ALL?"
 	done

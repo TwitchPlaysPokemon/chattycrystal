@@ -20,10 +20,8 @@ CeruleanPokecenter1FGymGuyScript:
 CeruleanPokecenter1FSuperNerdText:
 	text "For battles, I'd"
 	line "much rather use"
-
 	para "#MON I've been"
 	line "raising, even if"
-
 	para "they're weaker"
 	line "than some newly"
 	cont "caught #MON."
@@ -32,10 +30,8 @@ CeruleanPokecenter1FSuperNerdText:
 CeruleanPokecenter1FGymGuyText:
 	text "The MAGNET TRAIN"
 	line "travels at over"
-
 	para "340 mph. It goes"
 	line "between KANTO and"
-
 	para "JOHTO in almost no"
 	line "time at all."
 

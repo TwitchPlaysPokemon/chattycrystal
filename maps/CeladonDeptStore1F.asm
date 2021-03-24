@@ -35,7 +35,6 @@ CeladonDeptStore1FReceptionistText:
 CeladonDeptStore1FGentlemanText:
 	text "This DEPT.STORE is"
 	line "part of the same"
-
 	para "chain as the one"
 	line "in GOLDENROD CITY."
 

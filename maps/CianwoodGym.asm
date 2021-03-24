@@ -19,12 +19,12 @@ CianwoodGymChuckScript:
 	opentext
 	checkevent EVENT_BEAT_CHUCK
 	iftrue .FightDone
-	writetext ChuckIntroText1
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	turnobject CIANWOODGYM_CHUCK, RIGHT
 	opentext
-	writetext ChuckIntroText2
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement CIANWOODGYM_BOULDER1, CianwoodGymMovement_ChuckChucksBoulder
@@ -34,10 +34,10 @@ CianwoodGymChuckScript:
 	pause 30
 	faceplayer
 	opentext
-	writetext ChuckIntroText3
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext ChuckLossText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer SMUSUM_ELIO, L_SUN
 	startbattle
 	reloadmapafterbattle
@@ -48,7 +48,7 @@ CianwoodGymChuckScript:
 	waitsfx
 	setflag ENGINE_STORMBADGE
 	readvar VAR_BADGES
-	scall CianwoodGymActivateRockets
+	scall ActivateRockets
 .FightDone:
 	checkevent EVENT_GOT_TM01_DYNAMICPUNCH
 	iftrue .AlreadyGotTM
@@ -56,77 +56,45 @@ CianwoodGymChuckScript:
 	setevent EVENT_BEAT_BLACKBELT_LAO
 	setevent EVENT_BEAT_BLACKBELT_NOB
 	setevent EVENT_BEAT_BLACKBELT_LUNG
-	writetext ChuckExplainBadgeText
+	writetext HostSilenceText
 	buttonsound
 	verbosegiveitem TM_DYNAMICPUNCH
 	iffalse .BagFull
 	setevent EVENT_GOT_TM01_DYNAMICPUNCH
-	writetext ChuckExplainTMText
-	waitbutton
-	closetext
-	end
-
 .AlreadyGotTM:
-	writetext ChuckAfterText
+	writetext HostSilenceText
 	waitbutton
 .BagFull:
 	closetext
 	end
-
-CianwoodGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
-	end
-
-.GoldenrodRockets:
-	jumpstd goldenrodrockets
-
-.RadioTowerRockets:
-	jumpstd radiotowerrockets
 
 TrainerBlackbeltYoshi:
 	trainer BLACKBELT_T, YOSHI, EVENT_BEAT_BLACKBELT_YOSHI, BlackbeltYoshiSeenText, BlackbeltYoshiBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BlackbeltYoshiAfterText
-	waitbutton
-	closetext
-	end
+	jumptext BlackbeltYoshiAfterText
 
 TrainerBlackbeltLao:
 	trainer BLACKBELT_T, LAO, EVENT_BEAT_BLACKBELT_LAO, BlackbeltLaoSeenText, BlackbeltLaoBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BlackbeltLaoAfterText
-	waitbutton
-	closetext
-	end
+	jumptext BlackbeltLaoAfterText
 
 TrainerBlackbeltNob:
-	trainer BLACKBELT_T, NOB, EVENT_BEAT_BLACKBELT_NOB, BlackbeltNobSeenText, BlackbeltNobBeatenText, 0, .Script
+	trainer BLACKBELT_T, NOB, EVENT_BEAT_BLACKBELT_NOB, BlackbeltNobSeenText, EllipsisSilenceText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BlackbeltNobAfterText
-	waitbutton
-	closetext
-	end
+	jumptext BlackbeltNobAfterText
 
 TrainerBlackbeltLung:
 	trainer BLACKBELT_T, LUNG, EVENT_BEAT_BLACKBELT_LUNG, BlackbeltLungSeenText, BlackbeltLungBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BlackbeltLungAfterText
-	waitbutton
-	closetext
-	end
+	jumptext BlackbeltLungAfterText
 
 CianwoodGymBoulder:
 	jumpstd strengthboulder
@@ -147,43 +115,15 @@ CianwoodGymMovement_ChuckChucksBoulder:
 	remove_sliding
 	step_end
 
-ChuckIntroText1:
-	text "…"
-	done
-
-ChuckIntroText2:
-	text "…"
-	done
-
-ChuckIntroText3:
-	text "…"
-	done
-
-ChuckLossText:
-	text "…"
-	done
-
 GetStormBadgeText:
 	text "<PLAYER> received"
 	line "STORMBADGE."
 	done
 
-ChuckExplainBadgeText:
-	text "…"
-	done
-
-ChuckExplainTMText:
-	text "…"
-	done
-
-ChuckAfterText:
-	text "…"
-	done
-
 BlackbeltYoshiSeenText:
 	text "My #MON and I"
-	line "are bound togeth-"
-	cont "er by friendship."
+	line "are bound together"
+	cont "by friendship."
 
 	para "Our bond will"
 	line "never be broken!"
@@ -210,8 +150,8 @@ BlackbeltLaoBeatenText:
 
 BlackbeltLaoAfterText:
 	text "Fighting #MON"
-	line "are afraid of psy-"
-	cont "chics…"
+	line "are afraid of"
+	cont "psychics…"
 	done
 
 BlackbeltNobSeenText:
@@ -220,12 +160,8 @@ BlackbeltNobSeenText:
 	cont "the talking!"
 	done
 
-BlackbeltNobBeatenText:
-	text "…"
-	done
-
 BlackbeltNobAfterText:
-	text "I lost! "
+	text "I lost!"
 	line "I'm speechless!"
 	done
 

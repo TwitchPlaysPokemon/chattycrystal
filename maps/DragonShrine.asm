@@ -7,13 +7,12 @@
 DragonShrine_MapScripts:
 	db 2 ; scene scripts
 	scene_script .DragonShrineTest ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
 .DragonShrineTest:
 	prioritysjump .DragonShrineTestScript
-.DummyScene:
 	end
 
 .DragonShrineTestScript:
@@ -127,18 +126,18 @@ DragonShrine_MapScripts:
 	turnobject PLAYER, LEFT
 	turnobject DRAGONSHRINE_ELDER1, LEFT
 	opentext
-	writetext DragonShrineClairYouPassedText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	special FadeOutMusic
 	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairBigStepLeftMovement
 	opentext
-	writetext DragonShrineClairThatCantBeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairSlowStepLeftMovement
 	opentext
-	writetext DragonShrineClairYoureLyingText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement DRAGONSHRINE_ELDER1, DragonShrineElderWalkToClairMovement
@@ -149,12 +148,12 @@ DragonShrine_MapScripts:
 	closetext
 	showemote EMOTE_SHOCK, DRAGONSHRINE_CLAIR, 15
 	opentext
-	writetext DragonShrineIUnderstandText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement DRAGONSHRINE_CLAIR, DragonShrineClairTwoSlowStepsRightMovement
 	opentext
-	writetext DragonShrineHereRisingBadgeText
+	writetext HostSilenceText
 	waitbutton
 	setflag ENGINE_RISINGBADGE
 	playsound SFX_GET_BADGE
@@ -165,7 +164,7 @@ DragonShrine_MapScripts:
 	setmapscene DRAGONS_DEN_B1F, SCENE_DRAGONSDENB1F_CLAIR_GIVES_TM
 	writetext DragonShrinePlayerReceivedRisingBadgeText
 	buttonsound
-	writetext DragonShrineRisingBadgeExplanationText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement DRAGONSHRINE_ELDER1, DragonShrineElderWalkAway1Movement
@@ -405,7 +404,7 @@ DragonShrineElderGreetingText:
 	para "No need to explain"
 	line "why you came."
 
-	para "CLAIR sent you"
+	para "AAALK' sent you"
 	line "here, didn't she?"
 
 	para "That girl is a"
@@ -471,7 +470,7 @@ DragonShrinePassedTestText:
 	done
 
 DragonShrineMustIInformLanceText:
-	text "CLAIR!"
+	text "AAALK'!"
 
 	para "This child is"
 	line "impeccable, in"
@@ -486,11 +485,10 @@ DragonShrineMustIInformLanceText:
 	done
 
 DragonShrineElderScoldsClairText:
-	text "CLAIR…"
+	text "AAALK'…"
 
 	para "Reflect upon what"
 	line "it is that you"
-
 	para "lack and this"
 	line "child has."
 	done
@@ -512,7 +510,6 @@ DragonShrineTakeThisDratiniText:
 
 	para "Take this DRATINI"
 	line "as proof that I"
-
 	para "have recognized"
 	line "your worth."
 	done
@@ -534,15 +531,13 @@ DragonShrineSymbolicDragonText:
 
 	para "You have shown"
 	line "that you can be"
-
 	para "entrusted with"
 	line "one."
 	done
 
 DragonShrineClairsGrandfatherText:
-	text "CLAIR appears to"
+	text "AAALK' appears to"
 	line "have learned an"
-
 	para "invaluable lesson"
 	line "from you."
 
@@ -556,10 +551,10 @@ DragonShrineSilverIsInTrainingText:
 	cont "training here."
 
 	para "He is much like"
-	line "CLAIR when she was"
-
-	para "younger. It is a"
-	line "little worrisome…"
+	line "AAALK' when she"
+	para "was younger. It is"
+	line "a little"
+	cont "worrisome…"
 	done
 
 DragonShrineWrongAnswerText1:
@@ -579,7 +574,6 @@ DragonShrineRightAnswerText:
 DragonShrineElder2Text:
 	text "It's been quite"
 	line "some time since a"
-
 	para "trainer has gained"
 	line "our MASTER's rare"
 	cont "approval."
@@ -600,62 +594,9 @@ DragonShrineElder3Text:
 	line "blood."
 	done
 
-DragonShrineClairYouPassedText:
-	text "So how did it go?"
-
-	para "I guess there's no"
-	line "point in asking."
-
-	para "You did fail?"
-
-	para "<……><……><……><……><……><……>"
-
-	para "…What? You passed?"
-	done
-
-DragonShrineClairThatCantBeText:
-	text "That can't be!"
-	done
-
-DragonShrineClairYoureLyingText:
-	text "You're lying!"
-
-	para "Even I haven't"
-	line "been approved!"
-	done
-
-DragonShrineIUnderstandText:
-	text "I-I understand…"
-	done
-
-DragonShrineHereRisingBadgeText:
-	text "Here, this is the"
-	line "RISINGBADGE…"
-
-	para "Hurry up! Take it!"
-	done
-
 DragonShrinePlayerReceivedRisingBadgeText:
 	text "<PLAYER> received"
 	line "RISINGBADGE."
-	done
-
-DragonShrineRisingBadgeExplanationText:
-	text "RISINGBADGE will"
-	line "enable your"
-
-	para "#MON to use the"
-	line "move for climbing"
-	cont "waterfalls."
-
-	para "Also, all #MON"
-	line "will recognize you"
-
-	para "as a trainer and"
-	line "obey your every"
-
-	para "command without"
-	line "question."
 	done
 
 DragonShrineSpeechlessText:
@@ -666,23 +607,23 @@ DragonShrineGiveTicket1:
 	text "Oh! I nearly"
 	line "forgot!"
 
-	para "LANCE sent this"
-	line "as a thank you"
-	cont "for helping with"
-	cont "TEAM ROCKET."
+	para "LANCE sent this as"
+	line "a thank you for"
+	para "helping with TEAM"
+	line "ROCKET."
 	done
 
 DragonShrineGiveTicket2:
 	text "It's a ticket for"
 	line "a ferry to KANTO."
 
-	para "You need 16"
-	line "GYM BADGES to"
-	cont "challenge the"
-	cont "ELITE FOUR."
+	para "You need 16 GYM"
+	line "BADGES in order to"
+	para "challenge the"
+	line "ELITE FOUR."
 
 	para "Defeating one"
-	line "region's GYMs is"
+	line "region's GYMS is"
 	cont "not enough!"
 
 	para "It departs from"

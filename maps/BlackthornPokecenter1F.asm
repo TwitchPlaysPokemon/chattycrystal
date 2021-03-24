@@ -24,13 +24,11 @@ BlackthornPokecenter1FCooltrainerMScript:
 BlackthornPokecenter1FGentlemanText:
 	text "Deep inside far-"
 	line "off INDIGO PLATEAU"
-
 	para "is the #MON"
 	line "LEAGUE."
 
 	para "I hear the best"
 	line "trainers gather"
-
 	para "there from around"
 	line "the country."
 	done
@@ -38,7 +36,6 @@ BlackthornPokecenter1FGentlemanText:
 BlackthornPokecenter1FTwinText:
 	text "There was this"
 	line "move I just had"
-
 	para "to teach my #-"
 	line "MON."
 

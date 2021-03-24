@@ -11,7 +11,6 @@ BattleTentGenerator_MapScripts:
 
 	db 0 ; callbacks
 
-
 BattleTentGeneratorTMClerk1:
 	faceplayer
 	opentext

@@ -14,17 +14,12 @@
 
 AzaleaTown_MapScripts:
 	db 3 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_AZALEATOWN_NOTHING
-	scene_script .DummyScene1 ; SCENE_AZALEATOWN_RIVAL_BATTLE
-	scene_script .DummyScene2 ; SCENE_AZALEATOWN_KURT_RETURNS_GS_BALL
+	scene_script GenericDummyScript ; SCENE_AZALEATOWN_NOTHING
+	scene_script GenericDummyScript ; SCENE_AZALEATOWN_RIVAL_BATTLE
+	scene_script GenericDummyScript ; SCENE_AZALEATOWN_KURT_RETURNS_GS_BALL
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .Flypoint
-
-.DummyScene0:
-.DummyScene1:
-.DummyScene2:
-	end
 
 .Flypoint:
 	setflag ENGINE_FLYPOINT_AZALEA
@@ -52,10 +47,10 @@ AzaleaTownRivalBattleScene2:
 AzaleaTownRivalBattleScript:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext AzaleaTownRivalBeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext AzaleaTownRivalWinText, AzaleaTownRivalLossText
+	winlosstext HostSilenceText, HostSilenceText
 	setlasttalked AZALEATOWN_SILVER
 	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW1
 	startbattle
@@ -63,7 +58,7 @@ AzaleaTownRivalBattleScript:
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
-	writetext AzaleaTownRivalAfterText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	turnobject PLAYER, LEFT
@@ -204,22 +199,6 @@ AzaleaTownPlayerLeavesKurtsHouseMovement:
 	turn_head LEFT
 	step_end
 
-AzaleaTownRivalBeforeText:
-	text "…"
-	done
-
-AzaleaTownRivalWinText:
-	text "…"
-	done
-
-AzaleaTownRivalAfterText:
-	text "…"
-	done
-
-AzaleaTownRivalLossText:
-	text "…"
-	done
-
 AzaleaTownRocket1Text:
 	text "It's unsafe to go"
 	line "in there, so I'm"
@@ -254,7 +233,6 @@ AzaleaTownGrampsTextAfter:
 
 	para "Knowing them, they"
 	line "could've just been"
-
 	para "goofing off some-"
 	line "where."
 	done
@@ -275,7 +253,6 @@ AzaleaTownYoungsterText:
 
 	para "But these skinny"
 	line "trees make it"
-
 	para "impossible to get"
 	line "through."
 
@@ -315,7 +292,6 @@ AzaleaTownKurtText3:
 AzaleaTownSignText:
 	text "AZALEA TOWN"
 	line "Where People and"
-
 	para "#MON Live in"
 	line "Happy Harmony"
 	done
@@ -342,7 +318,6 @@ SlowpokeWellSignText:
 
 	para "Records show that"
 	line "a SLOWPOKE's yawn"
-
 	para "ended a drought"
 	line "400 years ago."
 	done

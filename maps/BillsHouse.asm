@@ -226,9 +226,6 @@ BillsGrandpa:
 .WrongPokemon:
 	writetext BillsGrandpaWrongPokemonText
 	waitbutton
-	closetext
-	end
-
 .BagFull:
 	closetext
 	end

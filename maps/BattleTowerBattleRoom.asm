@@ -5,7 +5,7 @@
 BattleTowerBattleRoom_MapScripts:
 	db 2 ; scene scripts
 	scene_script .EnterBattleRoom ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
@@ -13,7 +13,6 @@ BattleTowerBattleRoom_MapScripts:
 	disappear BATTLETOWERBATTLEROOM_YOUNGSTER
 	prioritysjump Script_BattleRoom
 	setscene SCENE_FINISHED
-.DummyScene:
 	end
 
 Script_BattleRoom:

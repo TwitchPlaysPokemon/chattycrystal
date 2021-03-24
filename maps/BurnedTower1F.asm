@@ -8,16 +8,14 @@
 BurnedTower1F_MapScripts:
 	db 3 ; scene scripts
 	scene_script .EusineScene ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_BURNEDTOWER1F_RIVAL_BATTLE
-	scene_script .DummyScene2 ; SCENE_BURNEDTOWER1F_NOTHING
+	scene_script GenericDummyScript ; SCENE_BURNEDTOWER1F_RIVAL_BATTLE
+	scene_script GenericDummyScript ; SCENE_BURNEDTOWER1F_NOTHING
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .HoleAndLadder
 
 .EusineScene:
 	prioritysjump .MeetEusine
-.DummyScene1:
-.DummyScene2:
 	end
 
 .HoleAndLadder:
@@ -36,15 +34,15 @@ BurnedTower1F_MapScripts:
 	showemote EMOTE_SHOCK, BURNEDTOWER1F_EUSINE, 15
 	applymovement BURNEDTOWER1F_EUSINE, BurnedTower1FEusineMovement
 	opentext
-	writetext BurnedTower1FEusineIntroText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext BurnedTower1FEusineIntroText, BurnedTower1FEusineIntroText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer CY_ROBORED, X_CHATTYYELLOW1
 	startbattle
 	reloadmapafterbattle
 	opentext
-	writetext BurnedTower1FEusineIntroText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	moveobject BURNEDTOWER1F_EUSINE, 9, 14
@@ -61,10 +59,10 @@ BurnedTowerRivalBattleScript:
 	applymovement BURNEDTOWER1F_SILVER, BurnedTowerMovement_SilverWalksToPlayer
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext BurnedTowerSilver_BeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext BurnedTowerSilver_WinText, BurnedTowerSilver_LossText
+	winlosstext HostSilenceText, HostSilenceText
 	setlasttalked BURNEDTOWER1F_SILVER
 	loadtrainer BABA, BABA2
 	startbattle
@@ -72,7 +70,7 @@ BurnedTowerRivalBattleScript:
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
-	writetext BurnedTowerSilver_AfterText1
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	setscene SCENE_BURNEDTOWER1F_NOTHING
@@ -90,7 +88,7 @@ BurnedTowerRivalBattleScript:
 	playsound SFX_KINESIS
 	showemote EMOTE_SHOCK, BURNEDTOWER1F_SILVER, 20
 	opentext
-	writetext BurnedTowerSilver_AfterText2
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	setevent EVENT_HOLE_IN_BURNED_TOWER
@@ -99,10 +97,10 @@ BurnedTowerRivalBattleScript:
 	end
 
 BurnedTower1FEusineScript:
-	jumptextfaceplayer BurnedTower1FEusineText
+	jumptextfaceplayer HostSilenceText
 
 BurnedTower1FMortyScript:
-	jumptextfaceplayer BurnedTower1FMortyText
+	jumptextfaceplayer HostSilenceText
 
 BurnedTower1FRock:
 	jumpstd smashrock
@@ -135,38 +133,6 @@ BurnedTower1FEusineMovement:
 	step LEFT
 	step DOWN
 	step_end
-
-BurnedTowerSilver_BeforeText:
-	text "…"
-	done
-
-BurnedTowerSilver_WinText:
-	text "…"
-	done
-
-BurnedTowerSilver_AfterText1:
-	text "…"
-	done
-
-BurnedTowerSilver_LossText:
-	text "…"
-	done
-
-BurnedTowerSilver_AfterText2:
-	text "…"
-	done
-
-BurnedTower1FEusineIntroText:
-	text "…"
-	done
-
-BurnedTower1FEusineText:
-	text "…"
-	done
-
-BurnedTower1FMortyText:
-	text "…"
-	done
 
 BurnedTower1F_MapEvents:
 	db 0, 0 ; filler

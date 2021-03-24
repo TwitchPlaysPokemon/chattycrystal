@@ -8,7 +8,7 @@
 BattleTower1F_MapScripts:
 	db 2 ; scene scripts
 	scene_script .Scene0 ; SCENE_DEFAULT
-	scene_script .Scene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
@@ -18,10 +18,10 @@ BattleTower1F_MapScripts:
 	iffalse .SkipEverything
 	setval BATTLETOWERACTION_GET_CHALLENGE_STATE ; readmem sBattleTowerChallengeState
 	special BattleTowerAction
-	ifequal $0, .SkipEverything
-	ifequal $2, .LeftWithoutSaving
-	ifequal $3, .SkipEverything
-	ifequal $4, .SkipEverything
+	iffalse .SkipEverything
+	ifequal 2, .LeftWithoutSaving
+	ifequal 3, .SkipEverything
+	ifequal 4, .SkipEverything
 	opentext
 	writetext Text_WeveBeenWaitingForYou
 	waitbutton
@@ -35,7 +35,6 @@ BattleTower1F_MapScripts:
 	special BattleTowerAction
 .SkipEverything:
 	setscene SCENE_FINISHED
-.Scene1:
 	end
 
 BattleTower1FRulesSign:
@@ -52,13 +51,13 @@ BattleTower1FRulesSign:
 BattleTower1FReceptionistScript:
 	setval BATTLETOWERACTION_GET_CHALLENGE_STATE ; readmem sBattleTowerChallengeState
 	special BattleTowerAction
-	ifequal $3, Script_BeatenAllTrainers2 ; maps/BattleTowerBattleRoom.asm
+	ifequal 3, Script_BeatenAllTrainers2 ; maps/BattleTowerBattleRoom.asm
 	opentext
 	writetext Text_BattleTowerWelcomesYou
 	buttonsound
 	setval BATTLETOWERACTION_CHECK_EXPLANATION_READ ; if new save file: bit 1, [sBattleTowerSaveFileFlags]
 	special BattleTowerAction
-	ifnotequal $0, Script_Menu_ChallengeExplanationCancel
+	iftrue Script_Menu_ChallengeExplanationCancel
 	sjump Script_BattleTowerIntroductionYesNo
 
 Script_Menu_ChallengeExplanationCancel:
@@ -86,7 +85,7 @@ Script_ChooseChallenge:
 	special BattleTowerAction
 	special NewBattleTowerSession
 	special BattleTowerRoomMenu
-	ifequal $a, .ResetPartyAndReturn
+	ifequal 10, .ResetPartyAndReturn
 	iftrue Script_MobileError
 	special LoadPokemonData
 	writetext Text_RightThisWayToYourBattleRoom
@@ -158,10 +157,6 @@ Script_BattleTowerSkipExplanation:
 
 Script_BattleTowerHopeToServeYouAgain:
 	writetext Text_WeHopeToServeYouAgain
-	waitbutton
-	closetext
-	end
-
 Script_WaitButton:
 	waitbutton
 	closetext
@@ -279,15 +274,12 @@ MovementData_BattleTowerBattleRoomReceptionistWalksAway:
 	slow_step DOWN
 	slow_step LEFT
 	slow_step LEFT
+MovementData_BattleTowerBattleRoomPlayerTurnsToFaceNextOpponent:
 	turn_head RIGHT
 	step_end
 
 MovementData_BattleTowerBattleRoomPlayerTurnsToFaceReceptionist:
 	turn_head DOWN
-	step_end
-
-MovementData_BattleTowerBattleRoomPlayerTurnsToFaceNextOpponent:
-	turn_head RIGHT
 	step_end
 
 Text_BattleTowerWelcomesYou:
@@ -315,10 +307,8 @@ Text_BattleTowerIntroduction_2:
 
 	para "Countless #MON"
 	line "trainers gather"
-
 	para "from all over to"
 	line "hold battles in"
-
 	para "specially designed"
 	line "BATTLE ROOMS."
 
@@ -334,10 +324,8 @@ Text_BattleTowerIntroduction_2:
 
 	para "To interrupt a"
 	line "session, you must"
-
 	para "SAVE. If not, you"
 	line "won't be able to"
-
 	para "resume your ROOM"
 	line "challenge."
 
@@ -408,7 +396,6 @@ Text_WouldYouLikeToHearAboutTheBattleTower:
 Text_CantBeRegistered:
 	text "Your record from"
 	line "the previous"
-
 	para "BATTLE ROOM can't"
 	line "be registered. OK?"
 	done
@@ -416,7 +403,6 @@ Text_CantBeRegistered:
 Text_CantBeRegistered_PreviousRecordDeleted:
 	text "Your record from"
 	line "the previous"
-
 	para "BATTLE ROOM can't"
 	line "be registered."
 
@@ -445,7 +431,6 @@ Text_BattleTowerRules:
 
 	para "Certain #MON"
 	line "may also have"
-
 	para "level restrictions"
 	line "placed on them."
 	done
@@ -453,13 +438,11 @@ Text_BattleTowerRules:
 Text_BattleTower_LeftWithoutSaving:
 	text "Excuse me!"
 	line "You didn't SAVE"
-
 	para "before exiting"
 	line "the BATTLE ROOM."
 
 	para "I'm awfully sorry,"
 	line "but your challenge"
-
 	para "will be declared"
 	line "invalid."
 	done
@@ -480,7 +463,6 @@ Text_NextUpOpponentNo:
 Text_SaveBeforeEnteringBattleRoom:
 	text "Before entering"
 	line "the BATTLE ROOM,"
-
 	para "your progress will"
 	line "be saved."
 	done
@@ -493,7 +475,6 @@ Text_SaveAndEndTheSession:
 Text_SaveBeforeReentry:
 	text "Your record will"
 	line "be SAVED before"
-
 	para "you go back into"
 	line "the previous ROOM."
 	done
@@ -506,7 +487,6 @@ Text_CancelYourBattleRoomChallenge:
 Text_WeveBeenWaitingForYou:
 	text "We've been waiting"
 	line "for you. This way"
-
 	para "to a BATTLE ROOM,"
 	line "please."
 	done
@@ -514,13 +494,10 @@ Text_WeveBeenWaitingForYou:
 Text_TooMuchTimeElapsedNoRegister:
 	text "Sorry, but it's"
 	line "not possible to"
-
 	para "register your"
 	line "current record at"
-
 	para "the CENTER because"
 	line "too much time has"
-
 	para "elapsed since the"
 	line "start of your"
 	cont "challenge."
@@ -549,7 +526,6 @@ Text_MayNotEnterABattleRoomUnderL70:
 Text_BattleTowerYoungster:
 	text "Destroyed by the"
 	line "first opponent in"
-
 	para "no time at all…"
 	line "I'm no good…"
 	done
@@ -557,7 +533,6 @@ Text_BattleTowerYoungster:
 Text_BattleTowerCooltrainerF:
 	text "There are lots of"
 	line "BATTLE ROOMS, but"
-
 	para "I'm going to win"
 	line "them all!"
 	done
@@ -565,13 +540,11 @@ Text_BattleTowerCooltrainerF:
 Text_BattleTowerGranny:
 	text "It's a grueling"
 	line "task, not being"
-
 	para "able to use items"
 	line "in battle."
 
 	para "Making your"
 	line "#MON hold items"
-
 	para "is the key to"
 	line "winning battles."
 	done
@@ -579,7 +552,6 @@ Text_BattleTowerGranny:
 Text_BattleTowerBugCatcher:
 	text "I'm trying to see"
 	line "how far I can go"
-
 	para "using just bug"
 	line "#MON."
 

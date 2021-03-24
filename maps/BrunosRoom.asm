@@ -4,16 +4,13 @@
 BrunosRoom_MapScripts:
 	db 2 ; scene scripts
 	scene_script .LockDoor ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .BrunosRoomDoors
 
 .LockDoor:
 	prioritysjump .BrunosDoorLocksBehindYou
-	end
-
-.DummyScene:
 	end
 
 .BrunosRoomDoors:
@@ -45,16 +42,16 @@ BrunoScript_Battle:
 	opentext
 	checkevent EVENT_BEAT_ELITE_4_BRUNO
 	iftrue BrunoScript_AfterBattle
-	writetext BrunoScript_BrunoBeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext BrunoScript_BrunoBeatenText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer BROWN, PAUL_B
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_BRUNO
 	opentext
-	writetext BrunoScript_BrunoDefeatText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
@@ -66,7 +63,7 @@ BrunoScript_Battle:
 	end
 
 BrunoScript_AfterBattle:
-	writetext BrunoScript_BrunoDefeatText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
@@ -77,12 +74,6 @@ BrunosRoom_EnterMovement:
 	step UP
 	step UP
 	step_end
-
-BrunoScript_BrunoBeatenText:
-BrunoScript_BrunoDefeatText:
-BrunoScript_BrunoBeforeText:
-	text "<...>"
-	done
 
 BrunosRoom_MapEvents:
 	db 0, 0 ; filler

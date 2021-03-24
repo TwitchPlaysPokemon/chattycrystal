@@ -43,7 +43,6 @@ BattleTowerOutsideBuenaText:
 
 	para "It's so hard to"
 	line "decide which three"
-
 	para "should go into"
 	line "battle…"
 	done

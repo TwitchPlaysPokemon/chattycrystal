@@ -31,28 +31,17 @@ BlackthornCity_MapScripts:
 	return
 
 BlackthornSuperNerdScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_CLAIR
 	iftrue .BeatClair
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .ClearedRadioTower
-	writetext Text_ClairIsOut
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Text_ClairIsOut
 
 .ClearedRadioTower:
-	writetext Text_ClairIsIn
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Text_ClairIsIn
 
 .BeatClair:
-	writetext Text_ClairIsBeaten
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Text_ClairIsBeaten
 
 BlackthornGramps1Script:
 	jumptextfaceplayer BlackthornGrampsRefusesEntryText
@@ -61,20 +50,12 @@ BlackthornGramps2Script:
 	jumptextfaceplayer BlackthornGrampsGrantsEntryText
 
 BlackthornBlackBeltScript:
-	faceplayer
-	opentext
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .ClearedRadioTower
-	writetext BlackBeltText_WeirdRadio
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer BlackBeltText_WeirdRadio
 
 .ClearedRadioTower:
-	writetext BlackBeltText_VoicesInMyHead
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer BlackBeltText_VoicesInMyHead
 
 BlackthornCooltrainerF1Script:
 	jumptextfaceplayer BlackthornCooltrainerF1Text
@@ -145,9 +126,8 @@ BlackthornCityMartSign:
 Text_ClairIsOut:
 	text "I am sorry."
 
-	para "CLAIR, our GYM"
+	para "AAALK', our GYM"
 	line "LEADER, entered"
-
 	para "the DRAGON'S DEN"
 	line "behind the GYM."
 
@@ -157,26 +137,24 @@ Text_ClairIsOut:
 	done
 
 Text_ClairIsIn:
-	text "CLAIR, our GYM"
+	text "AAALK', our GYM"
 	line "LEADER, is waiting"
 	cont "for you."
 
 	para "However, it would"
 	line "be impossible for"
-
 	para "a run-of-the-mill"
 	line "trainer to win."
 	done
 
 Text_ClairIsBeaten:
 	text "You defeated"
-	line "CLAIR?"
+	line "AAALK'?"
 
 	para "That's amazing!"
 
 	para "I've never heard"
 	line "of her losing to"
-
 	para "anyone other than"
 	line "LANCE."
 	done
@@ -184,13 +162,12 @@ Text_ClairIsBeaten:
 BlackthornGrampsRefusesEntryText:
 	text "No. Only chosen"
 	line "trainers may train"
-
 	para "here."
 	line "Please leave."
 	done
 
 BlackthornGrampsGrantsEntryText:
-	text "If CLAIR allows"
+	text "If AAALK' allows"
 	line "it, her grand-"
 	cont "father--our MASTER"
 	cont "--will also."
@@ -283,7 +260,7 @@ BlackthornCitySignText:
 BlackthornGymSignText:
 	text "BLACKTHORN CITY"
 	line "#MON GYM"
-	cont "LEADER: CLAIR"
+	cont "LEADER: AAALK'"
 
 	para "The Blessed User"
 	line "of Dragon #MON"
@@ -304,7 +281,6 @@ BlackthornCityTrainerTipsText:
 
 	para "A #MON holding"
 	line "a MIRACLEBERRY"
-
 	para "will cure itself"
 	line "of any status"
 	cont "problem."

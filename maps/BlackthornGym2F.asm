@@ -37,21 +37,11 @@ BlackthornGym2F_MapScripts:
 
 .Boulder3:
 	disappear BLACKTHORNGYM2F_BOULDER3
-	sjump .Fall
-
 .Fall:
 	pause 30
-	scall .FX
-	opentext
-	writetext BlackthornGym2FBoulderFellText
-	waitbutton
-	closetext
-	end
-
-.FX:
 	playsound SFX_STRENGTH
 	earthquake 80
-	end
+	jumptext BlackthornGym2FBoulderFellText
 
 BlackthornGymBoulder:
 	jumpstd strengthboulder
@@ -61,22 +51,14 @@ TrainerCooltrainermCody:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermCodyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermCodyAfterBattleText
 
 TrainerCooltrainerfFran:
 	trainer COOLTRAINERF, FRAN, EVENT_BEAT_COOLTRAINERF_FRAN, CooltrainerfFranSeenText, CooltrainerfFranBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerfFranAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfFranAfterBattleText
 
 CooltrainermCodySeenText:
 	text "It's not as if we"
@@ -92,10 +74,8 @@ CooltrainermCodyBeatenText:
 CooltrainermCodyAfterBattleText:
 	text "Members of our"
 	line "dragon-user clan"
-
 	para "can use dragon"
 	line "#MON only after"
-
 	para "our MASTER allows"
 	line "it."
 	done
@@ -105,7 +85,7 @@ CooltrainerfFranSeenText:
 	line "nameless trainer"
 	cont "past me!"
 
-	para "CLAIR would be"
+	para "AAALK' would be"
 	line "livid if I did!"
 	done
 
@@ -114,7 +94,7 @@ CooltrainerfFranBeatenText:
 	done
 
 CooltrainerfFranAfterBattleText:
-	text "Uh-oh… CLAIR is"
+	text "Uh-oh… AAALK' is"
 	line "going to be mad…"
 	done
 

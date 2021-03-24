@@ -7,26 +7,23 @@ BluesHouse_MapScripts:
 	db 0 ; callbacks
 
 DaisyScript:
-	faceplayer
-	opentext
 	readvar VAR_HOUR
 	ifequal 15, .ThreePM
-	writetext DaisyHelloText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer DaisyHelloText
 
 .ThreePM:
 	checkflag ENGINE_DAISYS_GROOMING
 	iftrue .AlreadyGroomedMon
+	faceplayer
+	opentext
 	writetext DaisyOfferGroomingText
 	yesorno
 	iffalse .Refused
 	writetext DaisyWhichMonText
 	waitbutton
 	special DaisysGrooming
-	ifequal $0, .Refused
-	ifequal $1, .CantGroomEgg
+	iffalse .Refused
+	ifequal 1, .CantGroomEgg
 	setflag ENGINE_DAISYS_GROOMING
 	writetext DaisyAlrightText
 	waitbutton
@@ -46,10 +43,7 @@ DaisyScript:
 	end
 
 .AlreadyGroomedMon:
-	writetext DaisyAlreadyGroomedText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer DaisyAlreadyGroomedText
 
 .Refused:
 	writetext DaisyRefusedText
@@ -66,13 +60,11 @@ DaisyScript:
 DaisyHelloText:
 	text "DAISY: Hi! My kid"
 	line "brother is the GYM"
-
 	para "LEADER in VIRIDIAN"
 	line "CITY."
 
 	para "But he goes out"
 	line "of town so often,"
-
 	para "it causes problems"
 	line "for the trainers."
 	done
@@ -123,7 +115,6 @@ DaisyAllDoneText:
 DaisyAlreadyGroomedText:
 	text "DAISY: I always"
 	line "have tea around"
-
 	para "this time. Come"
 	line "join me."
 	done
@@ -131,7 +122,6 @@ DaisyAlreadyGroomedText:
 DaisyRefusedText:
 	text "DAISY: You don't"
 	line "want to have one"
-
 	para "groomed? OK, we'll"
 	line "just have tea."
 	done

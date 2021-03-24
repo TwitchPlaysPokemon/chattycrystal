@@ -6,12 +6,9 @@
 
 AzaleaPokecenter1F_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene
+	scene_script GenericDummyScript
 
 	db 0 ; callbacks
-
-.DummyScene:
-	end
 
 AzaleaPokecenter1FNurseScript:
 	jumpstd pokecenternurse
@@ -31,7 +28,6 @@ AzaleaPokecenter1FGentlemanText:
 
 	para "Those moves can"
 	line "be used even if"
-
 	para "your #MON has"
 	line "fainted."
 	done
@@ -48,7 +44,6 @@ AzaleaPokecenter1FPokefanFText:
 
 	para "Crack one open,"
 	line "hollow it out and"
-
 	para "fit it with a"
 	line "special device."
 
@@ -57,7 +52,6 @@ AzaleaPokecenter1FPokefanFText:
 
 	para "Before # BALLS"
 	line "were invented,"
-
 	para "everyone used"
 	line "APRICORNS."
 	done

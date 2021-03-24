@@ -17,10 +17,10 @@ AzaleaGymBugsyScript:
 	opentext
 	checkevent EVENT_BEAT_BUGSY
 	iftrue .FightDone
-	writetext BugsyText_INeverLose
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext BugsyText_ResearchIncomplete, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer GLAZED, AHUNIgg
 	startbattle
 	reloadmapafterbattle
@@ -39,18 +39,13 @@ AzaleaGymBugsyScript:
 	setevent EVENT_BEAT_BUG_CATCHER_BENNY
 	setevent EVENT_BEAT_BUG_CATCHER_AL
 	setevent EVENT_BEAT_BUG_CATCHER_JOSH
-	writetext BugsyText_HiveBadgeSpeech
+	writetext HostSilenceText
 	buttonsound
 	verbosegiveitem TM_FURY_CUTTER
 	iffalse .NoRoomForFuryCutter
 	setevent EVENT_GOT_TM49_FURY_CUTTER
-	writetext BugsyText_FuryCutterSpeech
-	waitbutton
-	closetext
-	end
-
 .GotFuryCutter:
-	writetext BugsyText_BugMonsAreDeep
+	writetext HostSilenceText
 	waitbutton
 .NoRoomForFuryCutter:
 	closetext
@@ -147,14 +142,6 @@ AzaleaGymStatue:
 	gettrainername STRING_BUFFER_4, GLAZED, AHUNIgg
 	jumpstd gymstatue2
 
-BugsyText_INeverLose:
-BugsyText_ResearchIncomplete:
-BugsyText_HiveBadgeSpeech:
-BugsyText_FuryCutterSpeech:
-BugsyText_BugMonsAreDeep:
-	text "<...>"
-	done
-
 Text_ReceivedHiveBadge:
 	text "<PLAYER> received"
 	line "HIVEBADGE."
@@ -250,30 +237,27 @@ TwinsAmyandmay2BeatenText:
 	done
 
 TwinsAmyandmay2AfterBattleText:
-	text "MAY: Our bug #-"
-	line "MON lost! Oh, what"
-	cont "a shame."
+	text "MAY: Our bug"
+	line "#MON lost! Oh,"
+	cont "what a shame."
 	done
 
 AzaleaGymGuyText:
 	text "Yo, challenger!"
 
-	para "AHUNIgg's young"
+	para "AHUNIgg's young,"
 	line "but her knowledge"
-
 	para "of #MON is for"
 	line "real."
 
 	para "It's going to be"
 	line "tough without my"
 	cont "advice."
-
 	done
 
 AzaleaGymGuyWinText:
 	text "Well done! That"
 	line "was a great clash"
-
 	para "of talented young"
 	line "trainers."
 

@@ -33,16 +33,16 @@ BlackthornGymClairScript:
 	iftrue .AlreadyGotBadge
 	checkevent EVENT_BEAT_CLAIR
 	iftrue .FightDone
-	writetext ClairIntroText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext ClairWinText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer NATE_LEADER, AAAALK
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CLAIR
 	opentext
-	writetext ClairText_GoToDragonsDen
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	setevent EVENT_BEAT_COOLTRAINERM_PAUL
@@ -55,16 +55,10 @@ BlackthornGymClairScript:
 	clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
 	end
 
-.FightDone:
-	writetext ClairText_TooMuchToExpect
-	waitbutton
-	closetext
-	end
-
 .AlreadyGotBadge:
 	checkevent EVENT_GOT_TM24_DRAGONBREATH
-	iftrue .GotTM24
-	writetext BlackthornGymClairText_YouKeptMeWaiting
+	iftrue .FightDone
+	writetext HostSilenceText
 	buttonsound
 	giveitem TM_DRAGONBREATH
 	iffalse .BagFull
@@ -74,18 +68,11 @@ BlackthornGymClairScript:
 	waitsfx
 	itemnotify
 	setevent EVENT_GOT_TM24_DRAGONBREATH
-	writetext BlackthornGymClairText_DescribeTM24
+	writetext HostSilenceText
 	buttonsound
-	sjump .GotTM24
-
+.FightDone:
 .BagFull:
-	writetext BlackthornGymClairText_BagFull
-	waitbutton
-	closetext
-	end
-
-.GotTM24:
-	writetext BlackthornGymClairText_League
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
@@ -95,33 +82,21 @@ TrainerCooltrainermPaul:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermPaulAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermPaulAfterBattleText
 
 TrainerCooltrainermMike:
 	trainer COOLTRAINERM, MIKE, EVENT_BEAT_COOLTRAINERM_MIKE, CooltrainermMikeSeenText, CooltrainermMikeBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermMikeAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermMikeAfterBattleText
 
 TrainerCooltrainerfLola:
 	trainer COOLTRAINERF, LOLA, EVENT_BEAT_COOLTRAINERF_LOLA, CooltrainerfLolaSeenText, CooltrainerfLolaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerfLolaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfLolaAfterBattleText
 
 BlackthornGymGuyScript:
 	faceplayer
@@ -147,18 +122,6 @@ BlackthornGymStatue:
 	gettrainername STRING_BUFFER_4, NATE_LEADER, AAAALK
 	jumpstd gymstatue2
 
-ClairWinText:
-ClairText_GoToDragonsDen:
-ClairText_TooMuchToExpect:
-BlackthornGymClairText_YouKeptMeWaiting:
-BlackthornGymClairText_DescribeTM24:
-BlackthornGymClairText_BagFull:
-BlackthornGymClairText_League:
-
-ClairIntroText:
-	text "…"
-	done
-
 BlackthornGymText_ReceivedTM24:
 	text "<PLAYER> received"
 	line "TM24."
@@ -180,7 +143,6 @@ CooltrainermPaulBeatenText:
 CooltrainermPaulAfterBattleText:
 	text "LANCE told you"
 	line "that he'd like to"
-
 	para "see you again?"
 	line "Not a chance!"
 	done
@@ -212,7 +174,6 @@ CooltrainerfLolaSeenText:
 
 	para "If you're not"
 	line "serious, you won't"
-
 	para "be able to beat"
 	line "them."
 	done
@@ -233,28 +194,26 @@ BlackthornGymGuyText:
 
 	para "It's been a long"
 	line "journey, but we"
-
 	para "are almost done!"
 	line "Count on me!"
 
-	para "CLAIR uses the"
-	line "mythical and sac-"
-	cont "red dragon-type"
-	cont "#MON."
+	para "AAALK' uses the"
+	line "mythical and"
+	para "sacred dragon-type"
+	line "#MON."
 
 	para "You can't damage"
 	line "them very easily."
 
 	para "But you know,"
 	line "they're supposed"
-
 	para "to be weak against"
 	line "ice-type moves."
 	done
 
 BlackthornGymGuyWinText:
 	text "You were great to"
-	line "beat CLAIR!"
+	line "beat AAALK'!"
 
 	para "All that's left is"
 	line "the #MON LEAGUE"

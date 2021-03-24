@@ -12,15 +12,11 @@
 
 BurnedTowerB1F_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .LadderCallback
-
-.DummyScene0:
-.DummyScene1:
-	end
 
 .LadderCallback:
 	checkevent EVENT_RELEASED_THE_BEASTS
@@ -99,7 +95,7 @@ ReleaseTheBeasts:
 BurnedTowerB1FEusine:
 	faceplayer
 	opentext
-	writetext BurnedTowerB1FEusineText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	readvar VAR_FACING
@@ -183,9 +179,6 @@ BurnedTowerB1FEusineMovement1:
 	step DOWN
 	step_end
 
-BurnedTowerB1FEusineText:
-	text "…"
-	done
 
 BurnedTowerB1F_RematchEntei:
 	faceplayer

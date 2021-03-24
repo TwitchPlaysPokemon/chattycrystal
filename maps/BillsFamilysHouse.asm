@@ -117,7 +117,6 @@ BillTakeThisEeveeText:
 
 	para "Someone has to"
 	line "take care of it,"
-
 	para "but I don't like"
 	line "being outside."
 
@@ -148,7 +147,6 @@ ReceivedEeveeText:
 BillEeveeMayEvolveText:
 	text "BILL: PROF.ELM"
 	line "claims EEVEE may"
-
 	para "evolve in new and"
 	line "unknown ways."
 	done
@@ -167,7 +165,6 @@ BillNoEeveeText:
 BillPopWontWorkText:
 	text "BILL: My pop, he"
 	line "won't work. All he"
-
 	para "does is goof off"
 	line "all day long."
 
@@ -182,13 +179,11 @@ BillsPopText:
 
 	para "He just got called"
 	line "to the #MON"
-
 	para "CENTER in ECRUTEAK"
 	line "CITY."
 
 	para "My husband went"
 	line "off to the GAME"
-
 	para "CORNER without"
 	line "being called…"
 	done
@@ -196,10 +191,8 @@ BillsPopText:
 BillsMomText:
 	text "My husband was"
 	line "once known as a"
-
 	para "#MANIAC."
 	line "BILL must have"
-
 	para "taken after his"
 	line "father."
 	done
@@ -235,7 +228,6 @@ BillsSisterPhoneFullText:
 BillsSisterStorageSystemText:
 	text "My big brother"
 	line "BILL made the PC"
-
 	para "#MON storage"
 	line "system."
 	done

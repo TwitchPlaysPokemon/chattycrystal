@@ -4,14 +4,13 @@
 BattleTowerElevator_MapScripts:
 	db 2 ; scene scripts
 	scene_script .Scene0 ; SCENE_DEFAULT
-	scene_script .Scene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
 .Scene0:
 	prioritysjump .RideElevator
 	setscene SCENE_FINISHED
-.Scene1:
 	end
 
 .RideElevator:
@@ -34,9 +33,6 @@ BattleTowerElevator_MapScripts:
 
 MovementData_BattleTowerElevatorReceptionistWalksIn:
 	step RIGHT
-	turn_head DOWN
-	step_end
-
 MovementData_BattleTowerElevatorPlayerWalksIn:
 	turn_head DOWN
 	step_end

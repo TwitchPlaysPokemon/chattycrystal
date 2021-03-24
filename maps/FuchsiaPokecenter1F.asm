@@ -6,12 +6,9 @@
 
 FuchsiaPokecenter1F_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene
+	scene_script GenericDummyScript
 
 	db 0 ; callbacks
-
-.DummyScene:
-	end
 
 FuchsiaPokecenter1FNurseScript:
 	jumpstd pokecenternurse
@@ -72,18 +69,18 @@ FuchsiaPokecenter1FCooltrainerFText:
 	line "shock at the GYM."
 
 	para "There were all"
-	line "these girls who"
+	line "these boys who"
 	cont "looked identical."
 	done
 
 FuchsiaPokecenter1FJanineImpersonatorText1:
-	text "I'm JANINE! Hocus-"
+	text "I'm nqpppnl! Hocus-"
 	line "pocus… Poof!"
 	done
 
 FuchsiaPokecenter1FJanineImpersonatorText2:
 	text "See? I look just"
-	line "like her now!"
+	line "like him now!"
 	done
 
 FuchsiaPokecenter1F_MapEvents:

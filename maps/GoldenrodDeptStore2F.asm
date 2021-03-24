@@ -44,9 +44,9 @@ GoldenrodDeptStore2FYoungsterText:
 	line "up to ten phone"
 	cont "numbers."
 
-	para "It's hard to de-"
-	line "cide which numbers"
-	cont "to keep."
+	para "It's hard to"
+	line "decide which"
+	cont "numbers to keep."
 	done
 
 GoldenrodDeptStore2FCooltrainerFText:
@@ -60,7 +60,6 @@ GoldenrodDeptStore2FCooltrainerFText:
 GoldenrodDeptStore2FGentlemanText:
 	text "This DEPT.STORE"
 	line "makes me realize"
-
 	para "that GOLDENROD is"
 	line "a big city."
 

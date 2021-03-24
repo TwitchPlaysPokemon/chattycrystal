@@ -48,11 +48,7 @@ IcePathB1F_MapScripts:
 .FinishBoulder:
 	pause 30
 	scall .BoulderFallsThrough
-	opentext
-	writetext IcePathBoulderFellThroughText
-	waitbutton
-	closetext
-	end
+	jumptext IcePathBoulderFellThroughText
 
 .BoulderFallsThrough:
 	playsound SFX_STRENGTH

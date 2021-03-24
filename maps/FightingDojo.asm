@@ -24,7 +24,6 @@ FightingDojoBlackBeltText:
 
 	para "KARATE KING, the"
 	line "FIGHTING DOJO's"
-
 	para "master, is in a"
 	line "cave in JOHTO for"
 	cont "training."

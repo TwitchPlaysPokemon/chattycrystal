@@ -17,66 +17,42 @@ TrainerCooltrainermSean:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermSeanAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermSeanAfterBattleText
 
 TrainerCooltrainerfCarol:
 	trainer COOLTRAINERF, CAROL, EVENT_BEAT_COOLTRAINERF_CAROL, CooltrainerfCarolSeenText, CooltrainerfCarolBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerfCarolAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfCarolAfterBattleText
 
 TrainerPokemaniacEthan:
 	trainer POKEMANIAC, ETHAN, EVENT_BEAT_POKEMANIAC_ETHAN, PokemaniacEthanSeenText, PokemaniacEthanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokemaniacEthanAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokemaniacEthanAfterBattleText
 
 TrainerHikerNoland:
 	trainer HIKER, NOLAND, EVENT_BEAT_HIKER_NOLAND, HikerNolandSeenText, HikerNolandBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext HikerNolandAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext HikerNolandAfterBattleText
 
 TrainerGentlemanEdward:
 	trainer GENTLEMAN, EDWARD, EVENT_BEAT_GENTLEMAN_EDWARD, GentlemanEdwardSeenText, GentlemanEdwardBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GentlemanEdwardAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GentlemanEdwardAfterBattleText
 
 TrainerBurglarCorey:
 	trainer BURGLAR, COREY, EVENT_BEAT_BURGLAR_COREY, BurglarCoreySeenText, BurglarCoreyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BurglarCoreyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BurglarCoreyAfterBattleText
 
 FastShipLazySailorScript:
 	playmusic MUSIC_HIKER_ENCOUNTER
@@ -143,7 +119,6 @@ CooltrainermSeanBeatenText:
 CooltrainermSeanAfterBattleText:
 	text "Trainers from"
 	line "JOHTO can battle"
-
 	para "with KANTO GYM"
 	line "LEADERS."
 	done
@@ -195,14 +170,13 @@ HikerNolandBeatenText:
 HikerNolandAfterBattleText:
 	text "I wonder if there"
 	line "are any mountains"
-
 	para "worth climbing in"
 	line "KANTO?"
 	done
 
 SailorStanlySeenText:
-	text "Yeah, I'm a sail-"
-	line "or, all right."
+	text "Yeah, I'm a"
+	line "sailor, all right."
 
 	para "I wasn't goofing"
 	line "off!"
@@ -222,9 +196,9 @@ SailorStanlyBeatenText:
 
 SailorStanlyAfterBattleText:
 	text "Being a sailor, I"
-	line "have to do phys-"
-	cont "ical labor. It's"
-	cont "exhausting!"
+	line "have to do"
+	para "physical labor."
+	line "It's exhausting!"
 	done
 
 GentlemanEdwardSeenText:
@@ -241,7 +215,6 @@ GentlemanEdwardBeatenText:
 GentlemanEdwardAfterBattleText:
 	text "I give up."
 	line "You don't have to"
-
 	para "look. Just forget"
 	line "about it!"
 	done

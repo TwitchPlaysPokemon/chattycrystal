@@ -119,7 +119,6 @@ GoldenrodHappinessRatingText_LooksMean:
 GoldenrodHappinessRaterPokefanMText:
 	text "I keep losing in"
 	line "battles, and my"
-
 	para "#MON end up"
 	line "fainting…"
 

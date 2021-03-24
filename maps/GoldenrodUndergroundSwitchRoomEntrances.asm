@@ -46,17 +46,11 @@ ENDM
 
 GoldenrodUndergroundSwitchRoomEntrances_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .UpdateDoorPositions
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 .UpdateDoorPositions:
 	checkevent EVENT_SWITCH_4
@@ -162,87 +156,59 @@ UndergroundSilverBattleScript:
 .Continue:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext UndergroundSilverBeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext UndergroundSilverWinText, UndergroundSilverLossText
+	winlosstext HostSilenceText, HostSilenceText
 	setlasttalked GOLDENRODUNDERGROUNDSWITCHROOMENTRANCES_SILVER
 	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW3
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext UndergroundSilverAfterText
-	waitbutton
-	closetext
-	end
+	jumptext HostSilenceText
 
 TrainerGruntM11:
 	trainer GRUNTM, GRUNTM_11, EVENT_BEAT_ROCKET_GRUNTM_11, GruntM11SeenText, GruntM11BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM11AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM11AfterBattleText
 
 TrainerGruntM25:
 	trainer GRUNTM, GRUNTM_25, EVENT_BEAT_ROCKET_GRUNTM_25, GruntM25SeenText, GruntM25BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM25AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM25AfterBattleText
 
 TrainerBurglarDuncan:
 	trainer BURGLAR, DUNCAN, EVENT_BEAT_BURGLAR_DUNCAN, BurglarDuncanSeenText, BurglarDuncanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BurglarDuncanAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BurglarDuncanAfterBattleText
 
 TrainerBurglarEddie:
 	trainer BURGLAR, EDDIE, EVENT_BEAT_BURGLAR_EDDIE, BurglarEddieSeenText, BurglarEddieBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BurglarEddieAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BurglarEddieAfterBattleText
 
 TrainerGruntM13:
 	trainer GRUNTM, GRUNTM_13, EVENT_BEAT_ROCKET_GRUNTM_13, GruntM13SeenText, GruntM13BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM13AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM13AfterBattleText
 
 TrainerGruntF3:
 	trainer GRUNTF, GRUNTF_3, EVENT_BEAT_ROCKET_GRUNTF_3, GruntF3SeenText, GruntF3BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntF3AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntF3AfterBattleText
 
 Switch1Script:
 	opentext
@@ -638,90 +604,6 @@ UndergroundSilverRetreatMovement2:
 	step UP
 	step_end
 
-UndergroundSilverBeforeText:
-	text "Hold it!"
-
-	para "I saw you, so I"
-	line "tailed you."
-
-	para "I don't need you"
-	line "underfoot while I"
-
-	para "take care of TEAM"
-	line "ROCKET."
-
-	para "…Wait a second."
-	line "You beat me be-"
-	cont "fore, didn't you?"
-
-	para "That was just a"
-	line "fluke."
-
-	para "But I repay my"
-	line "debts!"
-	done
-
-UndergroundSilverWinText:
-	text "…Why…"
-	line "Why do I lose?"
-
-	para "I've assembled the"
-	line "toughest #MON."
-
-	para "I didn't ease up"
-	line "on the gas."
-
-	para "So why do I lose?"
-	done
-
-UndergroundSilverAfterText:
-	text "…I don't under-"
-	line "stand…"
-
-	para "Is what that LANCE"
-	line "guy said true?"
-
-	para "That I don't treat"
-	line "#MON properly?"
-
-	para "Love…"
-
-	para "Trust…"
-
-	para "Are they really"
-	line "what I lack?"
-
-	para "Are they keeping"
-	line "me from winning?"
-
-	para "I… I just don't"
-	line "understand."
-
-	para "But it's not going"
-	line "to end here."
-
-	para "Not now. Not"
-	line "because of this."
-
-	para "I won't give up my"
-	line "dream of becoming"
-
-	para "the world's best"
-	line "#MON trainer!"
-	done
-
-UndergroundSilverLossText:
-	text "Humph. This is my"
-	line "real power, wimp."
-
-	para "I'll make TEAM"
-	line "ROCKET history."
-
-	para "And I'm going to"
-	line "grind that LANCE"
-	cont "under my heels."
-	done
-
 GoldenrodUndergroundSwitchRoomEntrances_SuperNerdText:
 	text "I was challenged"
 	line "to a battle down-"
@@ -759,7 +641,6 @@ GruntM11BeatenText:
 GruntM11AfterBattleText:
 	text "I'm confused too…"
 	line "The switch on the"
-
 	para "end is the one to"
 	line "press first, but…"
 	done
@@ -847,7 +728,7 @@ GruntM13BeatenText:
 GruntM13AfterBattleText:
 	text "You must have ice"
 	line "in your veins to"
-	cont "dis TEAM ROCKET."
+	cont "diss TEAM ROCKET."
 	done
 
 SwitchRoomText_Switch1:

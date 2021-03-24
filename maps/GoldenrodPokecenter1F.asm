@@ -15,9 +15,9 @@ GoldenrodPokecenter1FNurseScript:
 
 GoldenrodPokecenter1F_SilverWingSceneLeft:
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .cancel
+	iffalse GenericDummyScript
 	checkevent EVENT_GOT_SILVER_WING_FROM_POKECOM_CENTER
-	iftrue .cancel
+	iftrue GenericDummyScript
 	playsound SFX_EXIT_BUILDING
 	moveobject GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST, 0, 7
 	disappear GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST
@@ -37,7 +37,6 @@ GoldenrodPokecenter1F_SilverWingSceneLeft:
 	special RestartMapMusic
 	disappear GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST
 	playsound SFX_EXIT_BUILDING
-.cancel
 	end
 
 .approach_player_movement
@@ -57,9 +56,9 @@ GoldenrodPokecenter1F_SilverWingSceneLeft:
 
 GoldenrodPokecenter1F_SilverWingSceneRight:
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .cancel
+	iffalse GenericDummyScript
 	checkevent EVENT_GOT_SILVER_WING_FROM_POKECOM_CENTER
-	iftrue .cancel
+	iftrue GenericDummyScript
 	playsound SFX_EXIT_BUILDING
 	moveobject GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST, 0, 7
 	disappear GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST
@@ -79,7 +78,6 @@ GoldenrodPokecenter1F_SilverWingSceneRight:
 	special RestartMapMusic
 	disappear GOLDENRODPOKECENTER1F_LINK_RECEPTIONIST
 	playsound SFX_EXIT_BUILDING
-.cancel
 	end
 
 .approach_player_movement
@@ -107,8 +105,7 @@ GoldenrodPokeCenter1FLinkReceptionistPleaseAcceptSilverWingText:
 
 	para "Courtesy of the"
 	line "KANTO champion,"
-
-	para "This SILVER WING"
+	para "this SILVER WING"
 	line "has been sent"
 	cont "just for you!"
 
@@ -167,7 +164,6 @@ GoldenrodPokecenter1FGameboyKidText:
 
 	para "Battle records are"
 	line "posted on the"
-
 	para "wall, so I can't"
 	line "afford to lose."
 	done
@@ -178,12 +174,11 @@ GoldenrodPokecenter1FLassText:
 	cont "always win."
 
 	para "After all, it may"
-	line "have a type dis-"
-	cont "advantage."
+	line "have a type"
+	cont "disadvantage."
 
 	para "I don't think"
 	line "there is a single"
-
 	para "#MON that is"
 	line "the toughest."
 	done

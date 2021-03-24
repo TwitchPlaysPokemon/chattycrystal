@@ -37,9 +37,9 @@ GoldenrodDeptStore3FSuperNerdText:
 	done
 
 GoldenrodDeptStore3FRockerText:
-	text "Hey! When you bat-"
-	line "tle, do you use X"
-	cont "SPECIAL?"
+	text "Hey! When you"
+	line "battle, do you use"
+	cont "X SPECIAL?"
 
 	para "It's awesome. It"
 	line "really jacks up"

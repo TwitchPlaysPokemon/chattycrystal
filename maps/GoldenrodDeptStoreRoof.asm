@@ -97,7 +97,6 @@ GoldenrodDeptStoreRoofPokefanFText:
 
 	para "I sometimes come"
 	line "up to the rooftop"
-
 	para "to take a break"
 	line "from shopping."
 	done
@@ -109,7 +108,6 @@ GoldenrodDeptStoreRoofFisherText:
 
 	para "I'm going to be"
 	line "back every day to"
-
 	para "collect all the"
 	line "dolls!"
 	done
@@ -152,7 +150,6 @@ GoldenrodDeptStoreRoofTeacherText:
 GoldenrodDeptStoreRoofBugCatcherText:
 	text "My #MON always"
 	line "get paralyzed or"
-
 	para "poisoned when the"
 	line "chips are down…"
 
@@ -166,7 +163,6 @@ GoldenrodDeptStoreRoofBugCatcherText:
 Binoculars1Text:
 	text "These binoculars"
 	line "let me see far"
-
 	para "away. Maybe I can"
 	line "see my own house."
 

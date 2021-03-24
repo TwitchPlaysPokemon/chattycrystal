@@ -38,33 +38,21 @@ TrainerGruntM24:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM24AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM24AfterBattleText
 
 TrainerGruntM14:
 	trainer GRUNTM, GRUNTM_14, EVENT_BEAT_ROCKET_GRUNTM_14, GruntM14SeenText, GruntM14BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM14AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM14AfterBattleText
 
 TrainerGruntM15:
 	trainer GRUNTM, GRUNTM_15, EVENT_BEAT_ROCKET_GRUNTM_15, GruntM15SeenText, GruntM15BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM15AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM15AfterBattleText
 
 GoldenrodUndergroundWarehouseDirectorScript:
 	faceplayer
@@ -188,13 +176,11 @@ DirectorAfterText:
 
 	para "There's no telling"
 	line "what they'll do if"
-
 	para "they control the"
 	line "transmitter."
 
 	para "They may even be"
 	line "able to control"
-
 	para "#MON using a"
 	line "special signal!"
 

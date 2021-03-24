@@ -51,17 +51,17 @@ FuchsiaCityFruitTree:
 	fruittree FRUITTREE_FUCHSIA_CITY
 
 FuchsiaCityYoungsterText:
-	text "One of the ELITE"
-	line "FOUR used to be"
-
-	para "the LEADER of"
-	line "FUCHSIA's GYM."
+	text "KOGA, a former"
+	line "member of the"
+	para "ELITE FOUR, also"
+	line "used to be the"
+	para "LEADER of FUCHSIA's"
+	line "GYM before then."
 	done
 
 FuchsiaCityPokefanMText:
 	text "KOGA's daughter"
 	line "succeeded him as"
-
 	para "the GYM LEADER"
 	line "after he joined"
 	cont "the ELITE FOUR."
@@ -70,7 +70,6 @@ FuchsiaCityPokefanMText:
 FuchsiaCityTeacherText:
 	text "The SAFARI GAME is"
 	line "over… It's sad,"
-
 	para "considering it's"
 	line "FUCHSIA's main"
 	cont "attraction."
@@ -86,10 +85,7 @@ FuchsiaCitySignText:
 FuchsiaGymSignText:
 	text "FUCHSIA CITY"
 	line "#MON GYM"
-	cont "LEADER: JANINE"
-
-	para "The Poisonous"
-	line "Ninja Master"
+	cont "LEADER: nqpppnl"
 	done
 
 SafariZoneOfficeSignText:

@@ -134,36 +134,20 @@ GoldenrodCityYoungster1Script:
 	jumptextfaceplayer GoldenrodCityYoungster1Text
 
 GoldenrodCityCooltrainerF1Script:
-	faceplayer
-	opentext
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .ClearedRadioTower
-	writetext GoldenrodCityCooltrainerF1Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer GoldenrodCityCooltrainerF1Text
 
 .ClearedRadioTower:
-	writetext GoldenrodCityCooltrainerF1Text_ClearedRadioTower
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer GoldenrodCityCooltrainerF1Text_ClearedRadioTower
 
 GoldenrodCityCooltrainerF2Script:
-	faceplayer
-	opentext
 	checkflag ENGINE_RADIO_CARD
 	iftrue .GotRadioCard
-	writetext GoldenrodCityCooltrainerF2Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer GoldenrodCityCooltrainerF2Text
 
 .GotRadioCard:
-	writetext GoldenrodCityCooltrainerF2Text_GotRadioCard
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer GoldenrodCityCooltrainerF2Text_GotRadioCard
 
 GoldenrodCityYoungster2Script:
 	jumptextfaceplayer GoldenrodCityYoungster2Text
@@ -242,7 +226,6 @@ GoldenrodCityFlowerShopSign:
 GoldenrodCityPokefanMText:
 	text "They built the new"
 	line "RADIO TOWER to"
-
 	para "replace the old,"
 	line "creaky one."
 	done
@@ -250,7 +233,6 @@ GoldenrodCityPokefanMText:
 GoldenrodCityYoungster1Text:
 	text "I know there's a"
 	line "new BIKE SHOP, but"
-
 	para "I can't find it"
 	line "anywhere."
 	done
@@ -258,7 +240,6 @@ GoldenrodCityYoungster1Text:
 GoldenrodCityCooltrainerF1Text:
 	text "Is that man in"
 	line "black dressed up"
-
 	para "like a TEAM ROCKET"
 	line "member? How silly!"
 	done
@@ -266,7 +247,6 @@ GoldenrodCityCooltrainerF1Text:
 GoldenrodCityCooltrainerF1Text_ClearedRadioTower:
 	text "Was that man in"
 	line "black really part"
-
 	para "of TEAM ROCKET? I"
 	line "can't believe it!"
 	done
@@ -277,12 +257,11 @@ GoldenrodCityCooltrainerF2Text:
 	cont "a landmark."
 
 	para "They're running a"
-	line "promotional cam- "
+	line "promotional cam-"
 	cont "paign right now."
 
 	para "They'll modify"
 	line "your #GEAR,"
-
 	para "so it can also"
 	line "serve as a radio."
 	done
@@ -297,7 +276,6 @@ GoldenrodCityYoungster2Text:
 
 	para "I got in trouble"
 	line "for playing in the"
-
 	para "basement of the"
 	line "DEPT.STORE."
 	done
@@ -314,9 +292,8 @@ GoldenrodCityLassText:
 GoldenrodCityGrampsText:
 	text "Whew! This is one"
 	line "big town. I don't"
-
-	para "know where any-"
-	line "thing is."
+	para "know where"
+	line "anything is."
 	done
 
 GoldenrodCityRocketScoutText1:
@@ -345,7 +322,6 @@ GoldenrodCityRocket2Text:
 GoldenrodCityRocket3Text:
 	text "#MON? They're"
 	line "nothing more than"
-
 	para "tools for making"
 	line "money!"
 	done
@@ -392,7 +368,6 @@ GoldenrodGymSignText:
 	text "GOLDENROD CITY"
 	line "#MON GYM"
 	cont "LEADER: A"
-
 	done
 
 GoldenrodCitySignText:

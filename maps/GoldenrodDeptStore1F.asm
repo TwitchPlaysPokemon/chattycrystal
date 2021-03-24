@@ -39,7 +39,6 @@ GoldenrodDeptStore1FGentlemanText:
 
 	para "But some items"
 	line "are only available"
-
 	para "as GAME CORNER"
 	line "prizes."
 	done

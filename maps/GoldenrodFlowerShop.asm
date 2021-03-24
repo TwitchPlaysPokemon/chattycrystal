@@ -76,13 +76,11 @@ FlowerShopFloriaScript:
 GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text:
 	text "Have you seen that"
 	line "wiggly tree that's"
-
 	para "growing on ROUTE"
 	line "36?"
 
 	para "My little sister"
 	line "got all excited"
-
 	para "and went to see"
 	line "it…"
 
@@ -93,10 +91,8 @@ GoldenrodFlowerShopTeacherMySisterWentToSeeWigglyTreeRoute36Text:
 GoldenrodFlowerShopTeacherAskWantToBorrowWaterBottleText:
 	text "Do you want to"
 	line "borrow the water"
-
 	para "bottle too?"
 	line "I don't want you"
-
 	para "doing anything"
 	line "dangerous with it."
 	done
@@ -124,13 +120,11 @@ GoldenrodFlowerShopTeacherLalalaHavePlentyOfWaterText:
 GoldenrodFlowerShopFloriaWonderIfSisWillLendWaterBottleText:
 	text "When I told my sis"
 	line "about the jiggly"
-
 	para "tree, she told me"
 	line "it's dangerous."
 
 	para "If I beat A,"
 	line "I wonder if she'll"
-
 	para "lend me her water"
 	line "bottle…"
 	done

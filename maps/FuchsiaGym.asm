@@ -17,10 +17,10 @@ FuchsiaGymJanineScript:
 	applymovement FUCHSIAGYM_JANINE, Movement_NinjaSpin
 	faceplayer
 	opentext
-	writetext JanineText_DisappointYou
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext JanineText_ToughOne, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer PT_LUCAS, NQPPPNL
 	startbattle
 	reloadmapafterbattle
@@ -40,19 +40,20 @@ FuchsiaGymJanineScript:
 	waitsfx
 	setflag ENGINE_SOULBADGE
 	sjump .AfterBattle
+
 .FightDone:
 	faceplayer
 	opentext
 .AfterBattle:
 	checkevent EVENT_GOT_TM06_TOXIC
 	iftrue .AfterTM
-	writetext JanineText_ToxicSpeech
+	writetext HostSilenceText
 	buttonsound
 	verbosegiveitem TM_TOXIC
 	iffalse .AfterTM
 	setevent EVENT_GOT_TM06_TOXIC
 .AfterTM:
-	writetext JanineText_ApplyMyself
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
@@ -194,20 +195,12 @@ CamperBarryScript:
 	end
 
 FuchsiaGymGuyScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_JANINE
 	iftrue .FuchsiaGymGuyWinScript
-	writetext FuchsiaGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer FuchsiaGymGuyText
 
 .FuchsiaGymGuyWinScript:
-	writetext FuchsiaGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer FuchsiaGymGuyWinText
 
 FuchsiaGymStatue:
 	checkflag ENGINE_SOULBADGE
@@ -233,13 +226,6 @@ Movement_NinjaSpin:
 	turn_head DOWN
 	step_end
 
-JanineText_ToxicSpeech:
-JanineText_ToughOne:
-JanineText_DisappointYou:
-JanineText_ApplyMyself:
-	text "<...>"
-	done
-
 Text_ReceivedSoulBadge:
 	text "<PLAYER> received"
 	line "SOULBADGE."
@@ -248,7 +234,7 @@ Text_ReceivedSoulBadge:
 LassAliceBeforeText:
 	text "Fufufu!"
 
-	para "I'm JANINE, the"
+	para "I'm nqpppnl, the"
 	line "GYM LEADER!"
 
 	para "No, I'm not!"
@@ -281,7 +267,7 @@ LassLindaAfterText:
 	done
 
 PicnickerCindyBeforeText:
-	text "I'm JANINE!"
+	text "I'm nqpppnl!"
 
 	para "How did you know I"
 	line "was real?"
@@ -303,7 +289,7 @@ CamperBarryBeforeText:
 	text "Wahahaha!"
 
 	para "You betcha!"
-	line "I'm JANINE!"
+	line "I'm nqpppnl!"
 	done
 
 CamperBarryBeatenText:
@@ -323,13 +309,12 @@ FuchsiaGymGuyText:
 
 	para "Whoops! Take a"
 	line "good look around"
-
 	para "you. The trainers"
 	line "all look like the"
-	cont "LEADER, JANINE."
+	cont "LEADER, nqpppnl."
 
 	para "Which of them is"
-	line "the real JANINE?"
+	line "the real one?"
 	done
 
 FuchsiaGymGuyWinText:

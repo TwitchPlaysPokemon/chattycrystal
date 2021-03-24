@@ -4,24 +4,18 @@
 
 GoldenrodMagnetTrainStation_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_DEFAULT
 
 	db 0 ; callbacks
 
-.DummyScene:
-	end
-
 GoldenrodMagnetTrainStationOfficerScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .MagnetTrainToSaffron
-	writetext GoldenrodMagnetTrainStationOfficerTheTrainHasntComeInText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer GoldenrodMagnetTrainStationOfficerTheTrainHasntComeInText
 
 .MagnetTrainToSaffron:
+	faceplayer
+	opentext
 	writetext GoldenrodMagnetTrainStationOfficerAreYouComingAboardText
 	yesorno
 	iffalse .DecidedNotToRide
@@ -153,7 +147,6 @@ GoldenrodMagnetTrainStationGentlemanText:
 
 	para "My dream was to"
 	line "build a train that"
-
 	para "is faster than any"
 	line "#MON."
 

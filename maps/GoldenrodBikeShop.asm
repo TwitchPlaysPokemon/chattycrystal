@@ -42,7 +42,6 @@ GoldenrodBikeShopBicycle:
 GoldenrodBikeShopClerkIntroText:
 	text "…sigh… I moved"
 	line "here, but I can't"
-
 	para "sell my BICYCLES."
 	line "Why is that?"
 
@@ -56,7 +55,6 @@ GoldenrodBikeShopClerkAgreedText:
 
 	para "Give me your name"
 	line "and phone number,"
-
 	para "and I'll loan you"
 	line "a BICYCLE."
 	done
@@ -69,7 +67,6 @@ BorrowedABicycleText:
 GoldenrodBikeShopClerkFirstRateBikesText:
 	text "My BICYCLES are"
 	line "first-rate! You"
-
 	para "can ride them"
 	line "anywhere."
 	done

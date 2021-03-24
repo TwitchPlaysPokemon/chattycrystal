@@ -116,44 +116,28 @@ TrainerSupernerdEric:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SupernerdEricAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SupernerdEricAfterBattleText
 
 TrainerSupernerdTeru:
 	trainer SUPER_NERD, TERU, EVENT_BEAT_SUPER_NERD_TERU, SupernerdTeruSeenText, SupernerdTeruBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SupernerdTeruAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SupernerdTeruAfterBattleText
 
 TrainerPokemaniacIssac:
 	trainer POKEMANIAC, ISSAC, EVENT_BEAT_POKEMANIAC_ISSAC, PokemaniacIssacSeenText, PokemaniacIssacBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokemaniacIssacAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokemaniacIssacAfterBattleText
 
 TrainerPokemaniacDonald:
 	trainer POKEMANIAC, DONALD, EVENT_BEAT_POKEMANIAC_DONALD, PokemaniacDonaldSeenText, PokemaniacDonaldBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokemaniacDonaldAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokemaniacDonaldAfterBattleText
 
 BitterMerchantScript:
 	opentext
@@ -202,11 +186,11 @@ OlderHaircutBrotherScript:
 	writetext GoldenrodUndergroundOlderHaircutBrotherAskWhichMonText
 	buttonsound
 	special OlderHaircutBrother
-	ifequal $0, .Refused
-	ifequal $1, .Refused
+	iffalse .Refused
+	ifequal 1, .Refused
 	setflag ENGINE_GOLDENROD_UNDERGROUND_GOT_HAIRCUT
-	ifequal $2, .two
-	ifequal $3, .three
+	ifequal 2, .two
+	ifequal 3, .three
 	sjump .else
 
 .two
@@ -285,11 +269,11 @@ YoungerHaircutBrotherScript:
 	writetext GoldenrodUndergroundYoungerHaircutBrotherAskWhichMonText
 	buttonsound
 	special YoungerHaircutBrother
-	ifequal $0, .Refused
-	ifequal $1, .Refused
+	iffalse .Refused
+	ifequal 1, .Refused
 	setflag ENGINE_GOLDENROD_UNDERGROUND_GOT_HAIRCUT
-	ifequal $2, .two
-	ifequal $3, .three
+	ifequal 2, .two
+	ifequal 3, .three
 	sjump .else
 
 .two
@@ -420,8 +404,8 @@ GoldenrodUndergroundHiddenAntidote:
 
 SupernerdEricSeenText:
 	text "I got booted out"
-	line "of the GAME COR-"
-	cont "NER."
+	line "of the GAME"
+	cont "CORNER."
 
 	para "I was trying to"
 	line "cheat using my"
@@ -445,7 +429,6 @@ SupernerdTeruSeenText:
 
 	para "If you know your"
 	line "type advantages,"
-
 	para "you'll do better"
 	line "in battle."
 	done
@@ -477,7 +460,6 @@ PokemaniacIssacBeatenText:
 PokemaniacIssacAfterBattleText:
 	text "Your #MON will"
 	line "like you more if"
-
 	para "you give them"
 	line "haircuts."
 	done
@@ -575,9 +557,9 @@ GoldenrodUndergroundYoungerHaircutBrotherOfferHaircutText:
 	line "#MON SALON!"
 
 	para "I'm the younger"
-	line "and less expen-"
-	cont "sive of the two"
-	cont "HAIRCUT BROTHERS."
+	line "and less expensive"
+	para "of the two HAIRCUT"
+	line "BROTHERS."
 
 	para "I'll spiff up your"
 	line "#MON for just"
@@ -602,7 +584,7 @@ GoldenrodUndergroundYoungerHaircutBrotherAllDoneText:
 	done
 
 GoldenrodUndergroundYoungerHaircutBrotherHowDisappointingText:
-	text "No? "
+	text "No?"
 	line "How disappointing!"
 	done
 

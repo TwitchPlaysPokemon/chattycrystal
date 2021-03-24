@@ -125,10 +125,8 @@ GoldenrodDeptStore6FLassText:
 
 	para "If you want to"
 	line "win, trade #MON"
-
 	para "with as many peo-"
 	line "ple as possible to"
-
 	para "get different ID"
 	line "numbers."
 	done

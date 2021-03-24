@@ -6,13 +6,10 @@
 
 IcePath1F_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
-
-.DummyScene:
-	end
 
 IcePath1FTM_PSYCH_UP:
 	itemball TM_PSYCH_UP
@@ -20,23 +17,23 @@ IcePath1FTM_PSYCH_UP:
 IcePathEvan:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showemote EMOTE_SHOCK, PLAYER, 15
-	applymovement PLAYER, IcePath1fPlayerTurnHead
-	applymovement ICEPATH1F_EVAN, IcePath1fEvanMoveUp
+	applymovement PLAYER, IcePath1FPlayerTurnHead
+	applymovement ICEPATH1F_EVAN, IcePath1FEvanMoveUp
 	opentext
-	writetext IcePathEvanText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext IcePathEvanText, IcePathEvanText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer AC_CHRIS, EVAN3
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext IcePathEvanText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	setscene SCENE_FINISHED
-	applymovement ICEPATH1F_EVAN, IcePath1fEvanMoveDown
+	applymovement ICEPATH1F_EVAN, IcePath1FEvanMoveDown
 	special FadeOutMusic
 	playsound SFX_EXIT_BUILDING
 	disappear ICEPATH1F_EVAN
@@ -45,25 +42,21 @@ IcePathEvan:
 	playmapmusic
 	end
 
-IcePath1fEvanMoveUp:
+IcePath1FEvanMoveUp:
 	step UP
 	step UP
 	step UP
 	step_end
 
-IcePath1fEvanMoveDown:
+IcePath1FEvanMoveDown:
 	step DOWN
 	step DOWN
 	step DOWN
 	step_end
 
-IcePath1fPlayerTurnHead:
+IcePath1FPlayerTurnHead:
 	turn_head DOWN
 	step_end
-
-IcePathEvanText:
-	text "<...>"
-	done
 
 IcePath1FPPUp:
 	itemball PP_UP

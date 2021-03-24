@@ -85,20 +85,12 @@ IlexForest_MapScripts:
 	return
 
 IlexForestCharcoalApprenticeScript:
-	faceplayer
-	opentext
 	checkevent EVENT_HERDED_FARFETCHD
 	iftrue .DoneFarfetchd
-	writetext IlexForestApprenticeIntroText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer IlexForestApprenticeIntroText
 
 .DoneFarfetchd:
-	writetext IlexForestApprenticeAfterText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer IlexForestApprenticeAfterText
 
 IlexForestFarfetchdScript:
 	readmem wFarfetchdPosition
@@ -204,7 +196,7 @@ IlexForestFarfetchdScript:
 	end
 
 .Position5_Up:
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos5_Pos4_Up
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos5_Pos4_Up
 	moveobject ILEXFOREST_FARFETCHD, 29, 22
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -212,7 +204,7 @@ IlexForestFarfetchdScript:
 	end
 
 .Position5_Right:
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos5_Pos4_Right
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos5_Pos4_Right
 	moveobject ILEXFOREST_FARFETCHD, 29, 22
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -222,7 +214,7 @@ IlexForestFarfetchdScript:
 .Position6:
 	scall .CryAndCheckFacing
 	ifequal RIGHT, .Position6_Right
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos6_Pos7
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos6_Pos7
 	moveobject ILEXFOREST_FARFETCHD, 22, 31
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -230,7 +222,7 @@ IlexForestFarfetchdScript:
 	end
 
 .Position6_Right:
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos6_Pos5
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos6_Pos5
 	moveobject ILEXFOREST_FARFETCHD, 28, 31
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -241,7 +233,7 @@ IlexForestFarfetchdScript:
 	scall .CryAndCheckFacing
 	ifequal DOWN, .Position7_Down
 	ifequal LEFT, .Position7_Left
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos7_Pos8
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos7_Pos8
 	moveobject ILEXFOREST_FARFETCHD, 15, 29
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -249,7 +241,7 @@ IlexForestFarfetchdScript:
 	end
 
 .Position7_Left:
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos7_Pos6
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos7_Pos6
 	moveobject ILEXFOREST_FARFETCHD, 24, 35
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -257,7 +249,7 @@ IlexForestFarfetchdScript:
 	end
 
 .Position7_Down:
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos7_Pos5
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos7_Pos5
 	moveobject ILEXFOREST_FARFETCHD, 28, 31
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -269,7 +261,7 @@ IlexForestFarfetchdScript:
 	ifequal UP, .Position8_Up
 	ifequal LEFT, .Position8_Left
 	ifequal RIGHT, .Position8_Right
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos8_Pos9
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos8_Pos9
 	moveobject ILEXFOREST_FARFETCHD, 10, 35
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -277,7 +269,7 @@ IlexForestFarfetchdScript:
 	end
 
 .Position8_Right:
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos8_Pos7
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos8_Pos7
 	moveobject ILEXFOREST_FARFETCHD, 22, 31
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -286,7 +278,7 @@ IlexForestFarfetchdScript:
 
 .Position8_Up:
 .Position8_Left:
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos8_Pos2
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos8_Pos2
 	moveobject ILEXFOREST_FARFETCHD, 15, 25
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -297,7 +289,7 @@ IlexForestFarfetchdScript:
 	scall .CryAndCheckFacing
 	ifequal DOWN, .Position9_Down
 	ifequal RIGHT, .Position9_Right
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos9_Pos10
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos9_Pos10
 	moveobject ILEXFOREST_FARFETCHD, 6, 28
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -308,7 +300,7 @@ IlexForestFarfetchdScript:
 	end
 
 .Position9_Right:
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos9_Pos8_Right
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos9_Pos8_Right
 	moveobject ILEXFOREST_FARFETCHD, 15, 29
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -316,7 +308,7 @@ IlexForestFarfetchdScript:
 	end
 
 .Position9_Down:
-	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetched_Pos9_Pos8_Down
+	applymovement ILEXFOREST_FARFETCHD, MovementData_Farfetchd_Pos9_Pos8_Down
 	moveobject ILEXFOREST_FARFETCHD, 15, 29
 	disappear ILEXFOREST_FARFETCHD
 	appear ILEXFOREST_FARFETCHD
@@ -390,11 +382,7 @@ TrainerBugCatcherWayne:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BugCatcherWayneAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BugCatcherWayneAfterBattleText
 
 IlexForestLassScript:
 	jumptextfaceplayer Text_IlexForestLass
@@ -458,7 +446,7 @@ IlexForestShrineScript:
 	pause 20
 	showemote EMOTE_SHOCK, PLAYER, 20
 	special FadeOutMusic
-	applymovement PLAYER, MovementData_0x6ef58
+	applymovement PLAYER, .player_step_back
 	pause 30
 	turnobject PLAYER, DOWN
 	pause 20
@@ -470,16 +458,15 @@ IlexForestShrineScript:
 	reloadmapafterbattle
 	pause 20
 	special CheckCaughtCelebi
-	iffalse .DidntCatchCelebi
+	iffalse GenericDummyScript
 	appear ILEXFOREST_KURT
-	applymovement ILEXFOREST_KURT, MovementData_0x6ef4e
+	applymovement ILEXFOREST_KURT, .walk_to_player
 	opentext
 	writetext Text_KurtCaughtCelebi
 	waitbutton
 	closetext
-	applymovement ILEXFOREST_KURT, MovementData_0x6ef53
+	applymovement ILEXFOREST_KURT, .walk_away
 	disappear ILEXFOREST_KURT
-.DidntCatchCelebi:
 	end
 
 .CelebiRematch:
@@ -490,12 +477,24 @@ IlexForestShrineScript:
 	closetext
 	end
 
-MovementData_Farfetchd_Pos1_Pos2:
-	big_step UP
-	big_step UP
-	big_step UP
-	big_step UP
-	big_step UP
+.player_step_back
+	fix_facing
+	slow_step DOWN
+	remove_fixed_facing
+	step_end
+
+.walk_to_player
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
+
+.walk_away
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step_end
 
 MovementData_Farfetchd_Pos2_Pos3:
@@ -509,16 +508,10 @@ MovementData_Farfetchd_Pos2_Pos3:
 	big_step DOWN
 	step_end
 
-MovementData_Farfetchd_Pos2_Pos8:
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	step_end
-
 MovementData_Farfetchd_Pos3_Pos4:
+MovementData_Farfetchd_Pos7_Pos5:
 	big_step RIGHT
+MovementData_Farfetchd_Pos8_Pos7:
 	big_step RIGHT
 	big_step RIGHT
 	big_step RIGHT
@@ -536,6 +529,7 @@ MovementData_Farfetchd_Pos3_Pos2:
 
 MovementData_Farfetchd_Pos4_Pos5:
 	big_step DOWN
+MovementData_Farfetchd_Pos2_Pos8:
 	big_step DOWN
 	big_step DOWN
 	big_step DOWN
@@ -556,12 +550,6 @@ MovementData_Farfetchd_Pos5_Pos6:
 	big_step DOWN
 	big_step DOWN
 	big_step DOWN
-	big_step LEFT
-	big_step LEFT
-	big_step LEFT
-	big_step LEFT
-	step_end
-
 MovementData_Farfetchd_Pos5_Pos7:
 	big_step LEFT
 	big_step LEFT
@@ -569,7 +557,7 @@ MovementData_Farfetchd_Pos5_Pos7:
 	big_step LEFT
 	step_end
 
-MovementData_Farfetched_Pos5_Pos4_Up:
+MovementData_Farfetchd_Pos5_Pos4_Up:
 	big_step UP
 	big_step UP
 	big_step UP
@@ -577,7 +565,7 @@ MovementData_Farfetched_Pos5_Pos4_Up:
 	big_step UP
 	step_end
 
-MovementData_Farfetched_Pos5_Pos4_Right:
+MovementData_Farfetchd_Pos5_Pos4_Right:
 	big_step RIGHT
 	turn_head UP
 	step_sleep 1
@@ -599,7 +587,7 @@ MovementData_Farfetched_Pos5_Pos4_Right:
 	big_step UP
 	step_end
 
-MovementData_Farfetched_Pos6_Pos7:
+MovementData_Farfetchd_Pos6_Pos7:
 	big_step LEFT
 	big_step LEFT
 	big_step LEFT
@@ -610,7 +598,7 @@ MovementData_Farfetched_Pos6_Pos7:
 	big_step UP
 	step_end
 
-MovementData_Farfetched_Pos6_Pos5:
+MovementData_Farfetchd_Pos6_Pos5:
 	big_step RIGHT
 	big_step RIGHT
 	big_step RIGHT
@@ -621,7 +609,7 @@ MovementData_Farfetched_Pos6_Pos5:
 	big_step UP
 	step_end
 
-MovementData_Farfetched_Pos7_Pos8:
+MovementData_Farfetchd_Pos7_Pos8:
 	big_step UP
 	big_step UP
 	big_step LEFT
@@ -631,7 +619,7 @@ MovementData_Farfetched_Pos7_Pos8:
 	big_step LEFT
 	step_end
 
-MovementData_Farfetched_Pos7_Pos6:
+MovementData_Farfetchd_Pos7_Pos6:
 	big_step DOWN
 	big_step DOWN
 	big_step LEFT
@@ -642,16 +630,7 @@ MovementData_Farfetched_Pos7_Pos6:
 	big_step RIGHT
 	step_end
 
-MovementData_Farfetched_Pos7_Pos5:
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	step_end
-
-MovementData_Farfetched_Pos8_Pos9:
+MovementData_Farfetchd_Pos8_Pos9:
 	big_step DOWN
 	big_step LEFT
 	big_step DOWN
@@ -661,22 +640,7 @@ MovementData_Farfetched_Pos8_Pos9:
 	big_step DOWN
 	step_end
 
-MovementData_Farfetched_Pos8_Pos7:
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	step_end
-
-MovementData_Farfetched_Pos8_Pos2:
-	big_step UP
-	big_step UP
-	big_step UP
-	big_step UP
-	step_end
-
-MovementData_Farfetched_Pos9_Pos10:
+MovementData_Farfetchd_Pos9_Pos10:
 	big_step LEFT
 	big_step LEFT
 	fix_facing
@@ -694,19 +658,7 @@ MovementData_Farfetched_Pos9_Pos10:
 	big_step UP
 	step_end
 
-MovementData_Farfetched_Pos9_Pos8_Right:
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step UP
-	big_step UP
-	big_step UP
-	big_step UP
-	big_step UP
-	step_end
-
-MovementData_Farfetched_Pos9_Pos8_Down:
+MovementData_Farfetchd_Pos9_Pos8_Down:
 	big_step LEFT
 	big_step LEFT
 	fix_facing
@@ -714,35 +666,18 @@ MovementData_Farfetched_Pos9_Pos8_Down:
 	step_sleep 8
 	step_sleep 8
 	remove_fixed_facing
+MovementData_Farfetchd_Pos9_Pos8_Right:
 	big_step RIGHT
 	big_step RIGHT
 	big_step RIGHT
 	big_step RIGHT
+MovementData_Farfetchd_Pos1_Pos2:
+	big_step UP
+MovementData_Farfetchd_Pos8_Pos2:
 	big_step UP
 	big_step UP
 	big_step UP
 	big_step UP
-	big_step UP
-	step_end
-
-MovementData_0x6ef4e:
-	step UP
-	step UP
-	step UP
-	step UP
-	step_end
-
-MovementData_0x6ef53:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
-
-MovementData_0x6ef58:
-	fix_facing
-	slow_step DOWN
-	remove_fixed_facing
 	step_end
 
 IlexForestApprenticeIntroText:
@@ -752,7 +687,6 @@ IlexForestApprenticeIntroText:
 
 	para "The FARFETCH'D"
 	line "that CUTS trees"
-
 	para "for charcoal took"
 	line "off on me."
 
@@ -769,9 +703,9 @@ IlexForestApprenticeAfterText:
 	line "whole bunch!"
 
 	para "My boss's #MON"
-	line "won't obey me be-"
-	cont "cause I don't have"
-	cont "a BADGE."
+	line "won't obey me"
+	para "because I don't"
+	line "have a BADGE."
 	done
 
 Text_ItsTheMissingPokemon:
@@ -791,7 +725,6 @@ Text_CharcoalMasterIntro:
 
 	para "Without it, we"
 	line "wouldn't be able"
-
 	para "to CUT trees for"
 	line "charcoal."
 
@@ -807,13 +740,11 @@ Text_CharcoalMasterIntro:
 Text_CharcoalMasterOutro:
 	text "That's the CUT HM."
 	line "Teach that to a"
-
 	para "#MON to clear"
 	line "small trees."
 
 	para "Of course, you"
 	line "have to have the"
-
 	para "GYM BADGE from"
 	line "AZALEA to use it."
 	done
@@ -821,7 +752,6 @@ Text_CharcoalMasterOutro:
 Text_CharcoalMasterTalkAfter:
 	text "Do you want to"
 	line "apprentice as a"
-
 	para "charcoal maker"
 	line "with me?"
 
@@ -855,7 +785,6 @@ Text_IlexForestLass:
 IlexForestSignpostText:
 	text "ILEX FOREST is"
 	line "so overgrown with"
-
 	para "trees that you"
 	line "can't see the sky."
 
@@ -885,7 +814,6 @@ Text_ShrineCelebiEvent:
 
 	para "It's a hole."
 	line "It looks like the"
-
 	para "GS BALL would fit"
 	line "inside it."
 
@@ -948,7 +876,6 @@ BugCatcherWayneBeatenText:
 BugCatcherWayneAfterBattleText:
 	text "A #MON I've"
 	line "never seen before"
-
 	para "fell out of the"
 	line "tree when I used"
 	cont "HEADBUTT."

@@ -8,26 +8,20 @@
 
 GoldenrodGym_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_GOLDENRODGYM_NOTHING
-	scene_script .DummyScene1 ; SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING
+	scene_script GenericDummyScript ; SCENE_GOLDENRODGYM_NOTHING
+	scene_script GenericDummyScript ; SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING
 
 	db 0 ; callbacks
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 GoldenrodGymWhitneyScript:
 	faceplayer
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .FightDone
 	opentext
-	writetext WhitneyBeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext WhitneyShouldntBeSoSeriousText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer FRLG_LEAF, A_FIRERED
 	startbattle
 	reloadmapafterbattle
@@ -42,7 +36,7 @@ GoldenrodGymWhitneyScript:
 	opentext
 	checkevent EVENT_MADE_WHITNEY_CRY
 	iffalse .StoppedCrying
-	writetext WhitneyYouMeanieText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
@@ -52,7 +46,7 @@ GoldenrodGymWhitneyScript:
 	iftrue .GotAttract
 	checkflag ENGINE_PLAINBADGE
 	iftrue .GotPlainBadge
-	writetext WhitneyWhatDoYouWantText
+	writetext HostSilenceText
 	buttonsound
 	waitsfx
 	writetext PlayerReceivedPlainBadgeText
@@ -60,46 +54,26 @@ GoldenrodGymWhitneyScript:
 	waitsfx
 	setflag ENGINE_PLAINBADGE
 	readvar VAR_BADGES
-	scall GoldenrodGymActivateRockets
+	scall ActivateRockets
 .GotPlainBadge:
-	writetext WhitneyPlainBadgeText
+	writetext HostSilenceText
 	buttonsound
 	verbosegiveitem TM_ATTRACT
 	iffalse .NoRoomForAttract
 	setevent EVENT_GOT_TM45_ATTRACT
-	writetext WhitneyAttractText
-	waitbutton
-	closetext
-	end
-
 .GotAttract:
-	writetext WhitneyGoodCryText
+	writetext HostSilenceText
 	waitbutton
 .NoRoomForAttract:
 	closetext
 	end
-
-GoldenrodGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
-	end
-
-.GoldenrodRockets:
-	jumpstd goldenrodrockets
-
-.RadioTowerRockets:
-	jumpstd radiotowerrockets
 
 TrainerLassCarrie:
 	trainer LASS, CARRIE, EVENT_BEAT_LASS_CARRIE, LassCarrieSeenText, LassCarrieBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext LassCarrieAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext LassCarrieAfterBattleText
 
 WhitneyCriesScript:
 	showemote EMOTE_SHOCK, GOLDENRODGYM_LASS2, 15
@@ -119,50 +93,29 @@ TrainerLassBridget:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext LassBridgetAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext LassBridgetAfterBattleText
 
 TrainerBeautyVictoria:
 	trainer BEAUTY, VICTORIA, EVENT_BEAT_BEAUTY_VICTORIA, BeautyVictoriaSeenText, BeautyVictoriaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BeautyVictoriaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BeautyVictoriaAfterBattleText
 
 TrainerBeautySamantha:
 	trainer BEAUTY, SAMANTHA, EVENT_BEAT_BEAUTY_SAMANTHA, BeautySamanthaSeenText, BeautySamanthaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BeautySamanthaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BeautySamanthaAfterBattleText
 
 GoldenrodGymGuyScript:
-	faceplayer
 	checkevent EVENT_BEAT_WHITNEY
 	iftrue .GoldenrodGymGuyWinScript
-	opentext
-	writetext GoldenrodGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer GoldenrodGymGuyText
 
 .GoldenrodGymGuyWinScript:
-	opentext
-	writetext GoldenrodGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer GoldenrodGymGuyWinText
 
 GoldenrodGymStatue:
 	checkflag ENGINE_PLAINBADGE
@@ -182,16 +135,6 @@ BridgetWalksAwayMovement:
 	turn_head LEFT
 	step_end
 
-WhitneyBeforeText:
-WhitneyShouldntBeSoSeriousText:
-WhitneyYouMeanieText:
-WhitneyWhatDoYouWantText:
-WhitneyPlainBadgeText:
-WhitneyAttractText:
-WhitneyGoodCryText:
-	text "…"
-	done
-
 PlayerReceivedPlainBadgeText:
 	text "<PLAYER> received"
 	line "PLAINBADGE."
@@ -200,7 +143,6 @@ PlayerReceivedPlainBadgeText:
 LassCarrieSeenText:
 	text "Don't let my"
 	line "#MON's cute"
-
 	para "looks fool you."
 	line "They can whip you!"
 	done
@@ -235,7 +177,6 @@ LassBridgetAfterBattleText:
 
 	para "I'm okay! If I"
 	line "lose, I'll just"
-
 	para "try harder next"
 	line "time!"
 	done
@@ -246,14 +187,13 @@ BridgetWhitneyCriesText:
 
 	para "It's OK. She'll"
 	line "stop soon. She"
-
 	para "always cries when"
 	line "she loses."
 	done
 
 BeautyVictoriaSeenText:
 	text "Oh, you are a cute"
-	line "little trainer! "
+	line "little trainer!"
 
 	para "I like you, but I"
 	line "won't hold back!"

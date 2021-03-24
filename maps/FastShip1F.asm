@@ -6,22 +6,20 @@
 
 FastShip1F_MapScripts:
 	db 3 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_DEFAULT
 	scene_script .EnterFastShip ; SCENE_FASTSHIP1F_ENTER_SHIP
-	scene_script .DummyScene2 ; SCENE_FASTSHIP1F_MEET_GRANDPA
+	scene_script GenericDummyScript ; SCENE_FASTSHIP1F_MEET_GRANDPA
 
 	db 0 ; callbacks
 
 .EnterFastShip:
 	prioritysjump .EnterFastShipScript
-.DummyScene0:
-.DummyScene2:
 	end
 
 .EnterFastShipScript:
-	applymovement FASTSHIP1F_SAILOR1, MovementData_0x7520e
-	applymovement PLAYER, MovementData_0x75217
-	applymovement FASTSHIP1F_SAILOR1, MovementData_0x75211
+	applymovement FASTSHIP1F_SAILOR1, FastShip1F_Movement_SailorStepLeft
+	applymovement PLAYER, .walk_in
+	applymovement FASTSHIP1F_SAILOR1, .sailor_step_in
 	pause 30
 	playsound SFX_BOAT
 	earthquake 30
@@ -36,27 +34,32 @@ FastShip1F_MapScripts:
 	setscene SCENE_DEFAULT
 	end
 
+.walk_in
+	step DOWN
+	step DOWN
+	turn_head DOWN
+	step_end
+
+.sailor_step_in
+	slow_step RIGHT
+	turn_head DOWN
+	step_end
+
 FastShip1FSailor1Script:
-	faceplayer
-	opentext
 	checkevent EVENT_FAST_SHIP_HAS_ARRIVED
-	iftrue .Arrived
+	iftrue FastShip1F_ShipArrived
 	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
 	iftrue .Olivine
-	writetext FastShip1FSailor1Text_ToVermilion
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer FastShip1FSailor1Text_ToVermilion
 
 .Olivine:
-	writetext FastShip1FSailor1Text_ToOlivine
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer FastShip1FSailor1Text_ToOlivine
 
-.Arrived:
+FastShip1F_ShipArrived:
+	faceplayer
+	opentext
 	checkevent EVENT_FAST_SHIP_DESTINATION_OLIVINE
-	iftrue ._Olivine
+	iftrue .Olivine
 	writetext FastShip1FSailor1Text_InVermilion
 	waitbutton
 	closetext
@@ -69,7 +72,7 @@ FastShip1FSailor1Script:
 	warp VERMILION_PORT, 7, 17
 	end
 
-._Olivine:
+.Olivine:
 	writetext FastShip1FSailor1Text_InOlivine
 	waitbutton
 	closetext
@@ -85,120 +88,92 @@ FastShip1FSailor1Script:
 .LetThePlayerOut:
 	readvar VAR_FACING
 	ifequal RIGHT, .YouAreFacingRight
-	applymovement FASTSHIP1F_SAILOR1, MovementData_0x7520e
-	applymovement PLAYER, MovementData_0x75235
+	applymovement FASTSHIP1F_SAILOR1, FastShip1F_Movement_SailorStepLeft
+	applymovement PLAYER, .walk_out
 	end
 
 .YouAreFacingRight:
-	applymovement FASTSHIP1F_SAILOR1, MovementData_0x75214
-	applymovement PLAYER, MovementData_0x75238
+	applymovement FASTSHIP1F_SAILOR1, .sailor_step_down
+	applymovement PLAYER, .walk_right_out
 	end
+
+.sailor_step_down
+	slow_step DOWN
+	turn_head UP
+	step_end
+
+.walk_out
+	step UP
+	step UP
+	step_end
+
+.walk_right_out
+	step RIGHT
+	step UP
+	step_end
+
+FastShip1F_Movement_SailorStepLeft:
+	slow_step LEFT
+	turn_head RIGHT
+	step_end
 
 FastShip1FSailor2Script:
-	faceplayer
-	opentext
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
 	iftrue .Vermilion
-	writetext FastShip1FSailor2Text_FirstTime
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer FastShip1FSailor2Text_FirstTime
 
 .Vermilion:
-	writetext FastShip1FSailor2Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer FastShip1FSailor2Text
 
 FastShip1FSailor3Script:
 	jumptextfaceplayer FastShip1FSailor3Text
 
 WorriedGrandpaSceneRight:
 	moveobject FASTSHIP1F_GENTLEMAN, 20, 6
-
 WorriedGrandpaSceneLeft:
 	appear FASTSHIP1F_GENTLEMAN
-	applymovement FASTSHIP1F_GENTLEMAN, MovementData_0x7521b
+	applymovement FASTSHIP1F_GENTLEMAN, .bump_into_player
 	playsound SFX_TACKLE
-	applymovement PLAYER, MovementData_0x7522e
-	applymovement FASTSHIP1F_GENTLEMAN, MovementData_0x75220
+	applymovement PLAYER, .fall_back
+	applymovement FASTSHIP1F_GENTLEMAN, .walk_to_player
 	opentext
 	writetext FastShip1FGrandpaText
 	waitbutton
 	closetext
 	turnobject PLAYER, RIGHT
-	applymovement FASTSHIP1F_GENTLEMAN, MovementData_0x75222
+	applymovement FASTSHIP1F_GENTLEMAN, .exit
 	disappear FASTSHIP1F_GENTLEMAN
 	setscene SCENE_DEFAULT
 	end
 
-MovementData_0x7520e:
-	slow_step LEFT
-	turn_head RIGHT
-	step_end
-
-MovementData_0x75211:
-	slow_step RIGHT
-	turn_head DOWN
-	step_end
-
-MovementData_0x75214:
-	slow_step DOWN
-	turn_head UP
-	step_end
-
-MovementData_0x75217:
-	step DOWN
-	step DOWN
-	turn_head DOWN
-	step_end
-
-MovementData_0x7521b:
+.bump_into_player
 	big_step RIGHT
 	big_step RIGHT
 	big_step RIGHT
 	big_step RIGHT
 	step_end
 
-MovementData_0x75220:
-	step RIGHT
-	step_end
-
-MovementData_0x75222:
-	big_step DOWN
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step RIGHT
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	big_step DOWN
-	step_end
-
-MovementData_0x7522e:
+.fall_back
 	big_step RIGHT
 	turn_head LEFT
 	step_end
 
-MovementData_0x75231:
-	step UP
-	step_end
-
-MovementData_0x75233:
-	step DOWN
-	step_end
-
-MovementData_0x75235:
-	step UP
-	step UP
-	step_end
-
-MovementData_0x75238:
+.walk_to_player
 	step RIGHT
-	step UP
+	step_end
+
+.exit
+	big_step DOWN
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step RIGHT
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
+	big_step DOWN
 	step_end
 
 FastShip1FSailor1Text_ToVermilion:
@@ -262,7 +237,6 @@ FastShip1FGrandpaText:
 
 	para "She's just a wee"
 	line "girl. If you see"
-
 	para "her, please let me"
 	line "know!"
 	done

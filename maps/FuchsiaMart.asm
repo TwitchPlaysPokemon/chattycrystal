@@ -23,7 +23,6 @@ FuchsiaMartCooltrainerFScript:
 FuchsiaMartFisherText:
 	text "I was hoping to"
 	line "buy some SAFARI"
-
 	para "ZONE souvenirs,"
 	line "but it's abandoned…"
 	done

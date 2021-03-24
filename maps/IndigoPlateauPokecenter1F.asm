@@ -8,8 +8,8 @@
 
 IndigoPlateauPokecenter1F_MapScripts:
 	db 2 ; scene scripts
-	scene_script PlateauRivalScriptDone ; SCENE_DEFAULT
-	scene_script PlateauRivalScriptDone ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .PrepareElite4
@@ -61,10 +61,10 @@ PlateauRivalBattle2:
 	turnobject PLAYER, LEFT
 PlateauRivalBattleCommon:
 	opentext
-	writetext PlateauRivalText1
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext PlateauRivalWinText, PlateauRivalLoseText
+	winlosstext HostSilenceText, HostSilenceText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer AC_CHRIS, EVAN5
 	startbattle
@@ -72,7 +72,7 @@ PlateauRivalBattleCommon:
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
-	writetext PlateauRivalText2
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	turnobject PLAYER, DOWN
@@ -81,7 +81,6 @@ PlateauRivalBattleCommon:
 	setscene SCENE_FINISHED
 	playmapmusic
 	setflag EVENT_BEAT_RIVAL_IN_INDIGO
-PlateauRivalScriptDone:
 	end
 
 IndigoPlateauPokecenter1FNurseScript:
@@ -154,77 +153,23 @@ PlateauRivalLeavesMovement:
 IndigoPlateauPokecenter1FCooltrainerMText:
 	text "At the #MON"
 	line "LEAGUE, you'll get"
-
 	para "tested by the"
 	line "ELITE FOUR."
 
 	para "You have to beat"
 	line "them all. If you"
-
 	para "lose, you have to"
 	line "start all over!"
-	done
-
-PlateauRivalText1:
-	text "Hold it."
-
-	para "You're going to"
-	line "take the #MON"
-
-	para "LEAGUE challenge"
-	line "now?"
-
-	para "That's not going"
-	line "to happen."
-
-	para "My super-well-"
-	line "trained #MON"
-
-	para "are going to pound"
-	line "you."
-
-	para "<PLAYER>!"
-	line "I challenge you!"
-	done
-
-PlateauRivalWinText:
-	text "…"
-
-	para "OK--I lost…"
-	done
-
-PlateauRivalText2:
-	text "…Darn… I still"
-	line "can't win…"
-
-	para "I… I have to think"
-	line "more about my"
-	cont "#MON…"
-
-	para "Humph! Try not to"
-	line "lose!"
-	done
-
-PlateauRivalLoseText:
-	text "…"
-
-	para "Whew…"
-	line "With my partners,"
-
-	para "I'm going to be"
-	line "the CHAMPION!"
 	done
 
 TeleportGuyText1:
 	text "Ah! You're chal-"
 	line "lenging the ELITE"
-
 	para "FOUR? Are you sure"
 	line "you're ready?"
 
 	para "If you need to"
 	line "train some more,"
-
 	para "my ABRA can help"
 	line "you."
 

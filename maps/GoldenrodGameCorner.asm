@@ -336,7 +336,6 @@ GoldenrodGameCornerPrizeVendorNoCoinCaseText:
 GoldenrodGameCornerPharmacistText:
 	text "I always play this"
 	line "slot machine. It"
-
 	para "pays out more than"
 	line "others, I think."
 	done
@@ -361,7 +360,6 @@ GoldenrodGameCornerPokefanFText:
 
 	para "I prefer it over"
 	line "the slots because"
-
 	para "it's easier to"
 	line "figure the odds."
 
@@ -380,7 +378,6 @@ GoldenrodGameCornerGentlemanText:
 
 	para "It was hard to get"
 	line "enough coins for"
-
 	para "it, but it was"
 	line "worth it."
 	done
@@ -388,13 +385,11 @@ GoldenrodGameCornerGentlemanText:
 GoldenrodGameCornerPokefanM2Text:
 	text "I couldn't win at"
 	line "the slots, and I"
-
 	para "blew it on card"
 	line "flipping…"
 
 	para "I got so furious,"
 	line "I tossed out my"
-
 	para "COIN CASE in the"
 	line "UNDERGROUND."
 	done

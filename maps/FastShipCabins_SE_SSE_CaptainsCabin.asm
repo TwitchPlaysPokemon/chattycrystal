@@ -17,20 +17,12 @@ FastShipCabins_SE_SSE_CaptainsCabin_MapScripts:
 	db 0 ; callbacks
 
 SSAquaCaptain:
-	faceplayer
-	opentext
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
 	iftrue .LaterTrip
-	writetext SSAquaCaptainExhaustingText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SSAquaCaptainExhaustingText
 
 .LaterTrip:
-	writetext SSAquaCaptainHowDoYouLikeText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SSAquaCaptainHowDoYouLikeText
 
 SSAquaGranddaughterBefore:
 	turnobject FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_TWIN2, RIGHT
@@ -46,7 +38,7 @@ SSAquaGranddaughterBefore:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_TWIN2
-	applymovement PLAYER, MovementData_0x76004
+	applymovement PLAYER, .walk_up
 	moveobject FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_TWIN1, 3, 19
 	appear FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_TWIN1
 	turnobject PLAYER, UP
@@ -54,7 +46,7 @@ SSAquaGranddaughterBefore:
 	special FadeInQuickly
 	turnobject FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_GENTLEMAN, DOWN
 	showemote EMOTE_SHOCK, FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_GENTLEMAN, 15
-	applymovement FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_TWIN1, MovementData_0x7600c
+	applymovement FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_TWIN1, .walk_to_grandpa
 	turnobject FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_GENTLEMAN, RIGHT
 	checkflag ENGINE_PLAYER_IS_FEMALE
 	iftrue .PlayerIsFemale
@@ -71,28 +63,12 @@ SSAquaGranddaughterBefore:
 	closetext
 .cont:
 	turnobject FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_TWIN2, DOWN
-	applymovement FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_GENTLEMAN, MovementData_0x76010
+	applymovement FASTSHIPCABINS_SE_SSE_CAPTAINSCABIN_GENTLEMAN, .walk_to_player
 	opentext
 	writetext SSAquaEntertainedGranddaughterText
 	buttonsound
 	setevent EVENT_VERMILION_PORT_SAILOR_AT_GANGWAY
 	setmapscene FAST_SHIP_1F, SCENE_DEFAULT
-	sjump SSAquaMetalCoatAndDocking
-
-SSAquaGrandpa:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
-	iftrue SSAquaGotMetalCoat
-	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_2
-	iftrue SSAquaFoundGranddaughter
-	writetext SSAquaCantFindGranddaughterText
-	waitbutton
-	closetext
-	setmapscene FAST_SHIP_1F, SCENE_DEFAULT
-	end
-
-SSAquaMetalCoatAndDocking:
 	writetext SSAquaGrandpaHaveThisText
 	buttonsound
 	verbosegiveitem METAL_COAT
@@ -109,6 +85,39 @@ SSAquaMetalCoatAndDocking:
 	setevent EVENT_FAST_SHIP_HAS_ARRIVED
 	setevent EVENT_FAST_SHIP_FOUND_GIRL
 	closetext
+	end
+
+.walk_up
+	big_step RIGHT
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step UP
+	big_step UP
+	step_end
+
+.walk_to_grandpa
+	step UP
+	step UP
+	turn_head LEFT
+	step_end
+
+.walk_to_player
+	step DOWN
+	step_end
+
+SSAquaGrandpa:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
+	iftrue SSAquaGotMetalCoat
+	checkevent EVENT_FAST_SHIP_CABINS_SE_SSE_CAPTAINS_CABIN_TWIN_2
+	iftrue SSAquaFoundGranddaughter
+	writetext SSAquaCantFindGranddaughterText
+	waitbutton
+	closetext
+	setmapscene FAST_SHIP_1F, SCENE_DEFAULT
 	end
 
 SSAquaFoundGranddaughter:
@@ -128,119 +137,66 @@ SSAquaGotMetalCoat:
 	end
 
 SSAquaGranddaughterAfter:
-	faceplayer
-	opentext
-	writetext SSAquaGranddaughterHadFunText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SSAquaGranddaughterHadFunText
 
 TrainerPokefanmColin:
 	trainer POKEFANM, COLIN, EVENT_BEAT_POKEFANM_COLIN, PokefanmColinSeenText, PokefanmColinBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokefanmColinAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokefanmColinAfterBattleText
 
 TrainerTwinsMegandpeg1:
 	trainer TWINS, MEGANDPEG1, EVENT_BEAT_TWINS_MEG_AND_PEG, TwinsMegandpeg1SeenText, TwinsMegandpeg1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext TwinsMegandpeg1AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext TwinsMegandpeg1AfterBattleText
 
 TrainerTwinsMegandpeg2:
 	trainer TWINS, MEGANDPEG2, EVENT_BEAT_TWINS_MEG_AND_PEG, TwinsMegandpeg2SeenText, TwinsMegandpeg2BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext TwinsMegandpeg2AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext TwinsMegandpeg2AfterBattleText
 
 TrainerPsychicRodney:
 	trainer PSYCHIC_T, RODNEY, EVENT_BEAT_PSYCHIC_RODNEY, PsychicRodneySeenText, PsychicRodneyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PsychicRodneyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PsychicRodneyAfterBattleText
 
 TrainerPokefanmJeremy:
 	trainer POKEFANM, JEREMY, EVENT_BEAT_POKEFANM_JEREMY, PokefanmJeremySeenText, PokefanmJeremyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokefanmJeremyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokefanmJeremyAfterBattleText
 
 TrainerPokefanfGeorgia:
 	trainer POKEFANF, GEORGIA, EVENT_BEAT_POKEFANF_GEORGIA, PokefanfGeorgiaSeenText, PokefanfGeorgiaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokefanfGeorgiaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokefanfGeorgiaAfterBattleText
 
 TrainerSupernerdShawn:
 	trainer SUPER_NERD, SHAWN, EVENT_BEAT_SUPER_NERD_SHAWN, SupernerdShawnSeenText, SupernerdShawnBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SupernerdShawnAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SupernerdShawnAfterBattleText
 
 FastShipCaptainsCabinTrashcan:
 	jumpstd trashcan
-
-MovementData_0x76004:
-	big_step RIGHT
-	big_step UP
-	big_step UP
-	big_step UP
-	big_step UP
-	big_step UP
-	big_step UP
-	step_end
-
-MovementData_0x7600c:
-	step UP
-	step UP
-	turn_head LEFT
-	step_end
-
-MovementData_0x76010:
-	step DOWN
-	step_end
 
 SSAquaCaptainExhaustingText:
 	text "Whew! Thanks for"
 	line "coming along."
 
-	para "Keeping that lit-"
-	line "tle girl amused"
+	para "Keeping that"
+	line "little girl amused"
 	cont "was exhausting."
 	done
 
@@ -264,16 +220,15 @@ SSAquaCantFindGranddaughterText:
 
 	para "She's an energetic"
 	line "child, so she may"
-
 	para "be bugging some-"
 	line "one. I'm worried…"
 	done
 
 SSAquaEntertainedGranddaughterText:
-	text "<PLAY_G>, was it?"
-	line "I heard you enter-"
-	cont "tained my grand-"
-	cont "daughter."
+	text "<PLAYER>, was it?"
+	line "I heard you"
+	para "entertained my"
+	line "granddaughter."
 
 	para "I want to thank"
 	line "you for that."
@@ -407,8 +362,8 @@ PokefanmJeremySeenText:
 	done
 
 PokefanmJeremyBeatenText:
-	text "Oh, no! My beauti-"
-	line "ful #MON!"
+	text "Oh, no! My"
+	line "beautiful #MON!"
 	done
 
 PokefanmJeremyAfterBattleText:

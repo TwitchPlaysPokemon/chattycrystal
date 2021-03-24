@@ -105,17 +105,10 @@ Carrie:
 	faceplayer
 	opentext
 	special GameboyCheck
-	ifnotequal GBCHECK_CGB, .NotGBC ; This is a dummy check from Gold/Silver
 	writetext GoldenrodDeptStore5FCarrieMysteryGiftExplanationText
 	waitbutton
 	closetext
 	special UnlockMysteryGift
-	end
-
-.NotGBC:
-	writetext GoldenrodDeptStore5FCarrieMysteryGiftRequiresGBCText
-	waitbutton
-	closetext
 	end
 
 GoldenrodDeptStore5FLassScript:
@@ -168,7 +161,6 @@ GoldenrodDeptStore5FReceptionistItLooksEvilHowAboutThisTMText:
 GoldenrodDeptStore5FReceptionistThereAreTMsPerfectForMonText:
 	text "There are sure to"
 	line "be TMs that are"
-
 	para "just perfect for"
 	line "your #MON."
 	done
@@ -179,12 +171,6 @@ GoldenrodDeptStore5FCarrieMysteryGiftExplanationText:
 	para "With just a"
 	line "little beep, you"
 	cont "get a gift."
-	done
-
-GoldenrodDeptStore5FCarrieMysteryGiftRequiresGBCText:
-	text "The MYSTERY GIFT"
-	line "option requires a"
-	cont "Game Boy Roloc."
 	done
 
 GoldenrodDeptStore5FLassText:
@@ -203,7 +189,6 @@ GoldenrodDeptStore5FPokefanMText:
 
 	para "The name is a re-"
 	line "flection of the"
-
 	para "original trainer's"
 	line "feelings for it."
 	done

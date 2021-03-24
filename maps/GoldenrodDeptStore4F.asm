@@ -41,9 +41,9 @@ GoldenrodDeptStore4FCooltrainerMText:
 	text "Hey. I love strong"
 	line "#MON."
 
-	para "I feed them PRO-"
-	line "TEIN to crank up"
-	cont "their ATTACK."
+	para "I feed them"
+	line "PROTEIN to crank"
+	cont "up their ATTACK."
 	done
 
 GoldenrodDeptStore4FBugCatcherText:
@@ -53,14 +53,12 @@ GoldenrodDeptStore4FBugCatcherText:
 
 GoldenrodDeptStore4FGameboyKidText:
 	text "Some #MON"
-	line "evolve only by"
-
-	para "being traded via a"
+	line "evolve when they"
+	para "are traded via a"
 	line "Game Link cable."
 
 	para "I know of four:"
 	line "MACHOKE, KADABRA,"
-
 	para "HAUNTER and, um,"
 	line "GRAVELER."
 

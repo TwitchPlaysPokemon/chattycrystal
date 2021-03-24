@@ -162,6 +162,7 @@ CherrygroveGymSpeechHouse_Blocks:
 GuideGentsHouse_Blocks:
 CherrygroveEvolutionSpeechHouse_Blocks:
 Route30BerryHouse_Blocks:
+GoldenrodMoveRelearner_Blocks:
 	INCBIN "maps/House1.blk"
 
 SafariZoneFuchsiaGate_Blocks:

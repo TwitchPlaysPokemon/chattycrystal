@@ -404,6 +404,7 @@ INCLUDE "maps/Route19.asm"
 INCLUDE "maps/Route25.asm"
 INCLUDE "maps/Route13.asm"
 INCLUDE "maps/Route12.asm"
+INCLUDE "maps/GoldenrodMoveRelearner.asm"
 
 
 SECTION "Map Scripts 21", ROMX
@@ -568,9 +569,11 @@ INCLUDE "maps/TrickHousePuzzle6.asm"
 
 SECTION "Map Scripts Seafloor Cavern", ROMX
 
+; DO NOT SPLIT INTO SECTIONS
 INCLUDE "maps/SeafloorCavernEntrance.asm"
 INCLUDE "maps/SeafloorCavernRoom1.asm"
 INCLUDE "maps/SeafloorCavernRoom4.asm"
 INCLUDE "maps/SeafloorCavernRoom5.asm"
 INCLUDE "maps/SeafloorCavernRoom8.asm"
 INCLUDE "maps/SeafloorCavernRoom9.asm"
+; DO NOT ADD OTHER MAPS HERE

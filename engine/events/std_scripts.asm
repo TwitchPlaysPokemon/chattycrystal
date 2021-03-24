@@ -172,7 +172,6 @@ Radio1Script:
 	end
 
 Radio2Script:
-; Lucky Channel
 	opentext
 	setval MAPRADIO_LUCKY_CHANNEL
 	special MapRadio

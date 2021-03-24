@@ -356,9 +356,9 @@ ChatotCry::
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; CHATOT - TODO: port chatot cry (not that important as it's played by the controller)
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CROAGUNK - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TOXICROAK - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LEAFEON - PLACEHOLDER
+	mon_cry CRY_VENONAT,     $03d,  $160 ; LEAFEON
 	mon_cry CRY_TYPHLOSION,  $014,  $118 ; GLACEON
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; PORYGON_Z - PLACEHOLDER
+	mon_cry CRY_GIRAFARIG,   $073,  $240 ; PORYGON_Z
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DUSKNOIR - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; FROSLASS - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DARKRAI - PLACEHOLDER
@@ -383,7 +383,7 @@ ChatotCry::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; HELIOLISK - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; AMAURA - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; AURORUS - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SYLVEON - PLACEHOLDER
+	mon_cry CRY_VENONAT,     $0b0,  $16f ; SYLVEON
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GOOMY - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SLIGGOO - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GOODRA - PLACEHOLDER

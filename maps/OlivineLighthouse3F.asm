@@ -14,33 +14,21 @@ TrainerBirdKeeperTheo:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BirdKeeperTheoAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BirdKeeperTheoAfterBattleText
 
 TrainerGentlemanPreston:
 	trainer GENTLEMAN, PRESTON, EVENT_BEAT_GENTLEMAN_PRESTON, GentlemanPrestonSeenText, GentlemanPrestonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GentlemanPrestonAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GentlemanPrestonAfterBattleText
 
 TrainerSailorTerrell:
 	trainer SAILOR, TERRELL, EVENT_BEAT_SAILOR_TERRELL, SailorTerrellSeenText, SailorTerrellBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SailorTerrellAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SailorTerrellAfterBattleText
 
 OlivineLighthouse3FEther:
 	itemball ETHER
@@ -48,7 +36,6 @@ OlivineLighthouse3FEther:
 BirdKeeperTheoSeenText:
 	text "Why are you here?"
 	line "Are you just going"
-
 	para "to gawk? I suggest"
 	line "that you leave!"
 	done
@@ -64,7 +51,6 @@ BirdKeeperTheoAfterBattleText:
 
 	para "I want to visit"
 	line "the sick #MON,"
-
 	para "but I can't get up"
 	line "there…"
 	done
@@ -87,16 +73,15 @@ SailorTerrellAfterBattleText:
 
 	para "The GYM LEADER's"
 	line "#MON type has"
-
 	para "changed without me"
 	line "noticing."
 	done
 
 GentlemanPrestonSeenText:
 	text "I travel the world"
-	line "to train my #-"
-	cont "MON. I wish to"
-	cont "battle with you."
+	line "to train my"
+	para "#MON. I wish to"
+	line "battle with you."
 	done
 
 GentlemanPrestonBeatenText:
@@ -105,7 +90,7 @@ GentlemanPrestonBeatenText:
 	done
 
 GentlemanPrestonAfterBattleText:
-	text "JASMINE used to"
+	text "AIIIAAB used to"
 	line "use rock #MON"
 	cont "like ONIX."
 	done

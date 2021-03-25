@@ -9,20 +9,17 @@
 
 OlivinePort_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_DEFAULT
 	scene_script .LeaveFastShip ; SCENE_OLIVINEPORT_LEAVE_SHIP
 
 	db 0 ; callbacks
-
-.DummyScene0:
-	end
 
 .LeaveFastShip:
 	prioritysjump .LeaveFastShipScript
 	end
 
 .LeaveFastShipScript:
-	applymovement PLAYER, MovementData_0x74a32
+	applymovement PLAYER, OlivinePort_Movement_PlayerDisembark
 	appear OLIVINEPORT_SAILOR1
 	setscene SCENE_DEFAULT
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
@@ -34,7 +31,7 @@ OlivinePortSailorAtGangwayScript:
 	opentext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue OlivinePortAlreadyRodeScript
-	writetext UnknownText_0x74a55
+	writetext OlivinePort_Text_DepartingSoon
 	waitbutton
 	closetext
 	turnobject OLIVINEPORT_SAILOR1, DOWN
@@ -42,7 +39,7 @@ OlivinePortSailorAtGangwayScript:
 	playsound SFX_EXIT_BUILDING
 	disappear OLIVINEPORT_SAILOR1
 	waitsfx
-	applymovement PLAYER, MovementData_0x74a30
+	applymovement PLAYER, OlivinePort_Movement_PlayerBoardShip
 	playsound SFX_EXIT_BUILDING
 	special FadeOutPalettes
 	waitsfx
@@ -67,7 +64,7 @@ OlivinePortSailorAtGangwayScript:
 	end
 
 OlivinePortAlreadyRodeScript:
-	writetext UnknownText_0x74a80
+	writetext OlivinePort_Text_CantBoardNow
 	waitbutton
 	closetext
 	end
@@ -75,46 +72,43 @@ OlivinePortAlreadyRodeScript:
 OlivinePortWalkUpToShipScript:
 	turnobject OLIVINEPORT_SAILOR3, RIGHT
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue .skip
+	iftrue GenericDummyScript
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	iftrue .skip
+	iftrue GenericDummyScript
 	turnobject PLAYER, LEFT
 	opentext
-	writetext UnknownText_0x74a9c
+	writetext OlivinePort_Text_WelcomeToShip
 	yesorno
 	iffalse OlivinePortNotRidingMoveAwayScript
-	writetext UnknownText_0x74ada
+	writetext OlivinePort_Text_RequestTicket
 	buttonsound
 	checkitem S_S_TICKET
 	iffalse .NoTicket
-	writetext UnknownText_0x74b11
+	writetext OlivinePort_Text_PlayerFlashedTicket
 	waitbutton
 	closetext
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	applymovement PLAYER, MovementData_0x74a37
+	applymovement PLAYER, OlivinePort_Movement_PlayerApproachSailor
 	sjump OlivinePortSailorAtGangwayScript
 
 .NoTicket:
-	writetext UnknownText_0x74b41
+	writetext OlivinePort_Text_PlayerHasNoTicket
 	waitbutton
 	closetext
-	applymovement PLAYER, MovementData_0x74a34
-	end
-
-.skip:
+	applymovement PLAYER, OlivinePort_Movement_PushPlayerBack
 	end
 
 OlivinePortNotRidingScript:
-	writetext UnknownText_0x74af6
+	writetext OlivinePort_Text_HopeToSeeYouAgain
 	waitbutton
 	closetext
 	end
 
 OlivinePortNotRidingMoveAwayScript:
-	writetext UnknownText_0x74af6
+	writetext OlivinePort_Text_HopeToSeeYouAgain
 	waitbutton
 	closetext
-	applymovement PLAYER, MovementData_0x74a34
+	applymovement PLAYER, OlivinePort_Movement_PushPlayerBack
 	end
 
 OlivinePortSailorAfterHOFScript:
@@ -123,28 +117,28 @@ OlivinePortSailorAfterHOFScript:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue OlivinePortAlreadyRodeScript
 	checkevent EVENT_FAST_SHIP_FIRST_TIME
-	writetext UnknownText_0x74a9c
+	writetext OlivinePort_Text_WelcomeToShip
 	yesorno
 	iffalse OlivinePortNotRidingScript
-	writetext UnknownText_0x74ada
+	writetext OlivinePort_Text_RequestTicket
 	buttonsound
 	checkitem S_S_TICKET
 	iffalse .NoTicket
-	writetext UnknownText_0x74b11
+	writetext OlivinePort_Text_PlayerFlashedTicket
 	waitbutton
 	closetext
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	readvar VAR_FACING
 	ifequal RIGHT, .Right
-	applymovement PLAYER, MovementData_0x74a3f
+	applymovement PLAYER, OlivinePort_Movement_PlayerApproachShip
 	sjump OlivinePortSailorAtGangwayScript
 
 .Right:
-	applymovement PLAYER, MovementData_0x74a49
+	applymovement PLAYER, OlivinePort_Movement_PlayerApproachShipAroundSailor
 	sjump OlivinePortSailorAtGangwayScript
 
 .NoTicket:
-	writetext UnknownText_0x74b41
+	writetext OlivinePort_Text_PlayerHasNoTicket
 	waitbutton
 	closetext
 	end
@@ -191,85 +185,62 @@ OlivinePortCooltrainerFScript:
 OlivinePortHiddenProtein:
 	hiddenitem PROTEIN, EVENT_OLIVINE_PORT_HIDDEN_PROTEIN
 
-MovementData_0x74a30:
-	step DOWN
-	step_end
-
-MovementData_0x74a32:
+OlivinePort_Movement_PlayerDisembark:
 	step UP
 	step_end
 
-MovementData_0x74a34:
+OlivinePort_Movement_PushPlayerBack:
 	step RIGHT
 	turn_head LEFT
 	step_end
 
-MovementData_0x74a37:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
-
-MovementData_0x74a3f:
-	step RIGHT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
-
-MovementData_0x74a49:
+OlivinePort_Movement_PlayerApproachShipAroundSailor:
 	step UP
 	step RIGHT
+OlivinePort_Movement_PlayerApproachShip:
 	step RIGHT
 	step DOWN
+OlivinePort_Movement_PlayerApproachSailor:
 	step DOWN
 	step DOWN
 	step DOWN
 	step DOWN
 	step DOWN
 	step DOWN
+OlivinePort_Movement_PlayerBoardShip:
 	step DOWN
 	step_end
 
-UnknownText_0x74a55:
+OlivinePort_Text_DepartingSoon:
 	text "We're departing"
 	line "soon. Please get"
 	cont "on board."
 	done
 
-UnknownText_0x74a80:
+OlivinePort_Text_CantBoardNow:
 	text "Sorry. You can't"
 	line "board now."
 	done
 
-UnknownText_0x74a9c:
+OlivinePort_Text_WelcomeToShip:
 	text "Welcome to FAST"
 	line "SHIP S.S.AQUA."
 
-	para "Will you be board-"
-	line "ing today?"
+	para "Will you be"
+	line "boarding today?"
 	done
 
-UnknownText_0x74ada:
+OlivinePort_Text_RequestTicket:
 	text "May I see your"
 	line "S.S.TICKET?"
 	done
 
-UnknownText_0x74af6:
+OlivinePort_Text_HopeToSeeYouAgain:
 	text "We hope to see you"
 	line "again!"
 	done
 
-UnknownText_0x74b11:
+OlivinePort_Text_PlayerFlashedTicket:
 	text "<PLAYER> flashed"
 	line "the S.S.TICKET."
 
@@ -277,7 +248,7 @@ UnknownText_0x74b11:
 	line "Thank you!"
 	done
 
-UnknownText_0x74b41:
+OlivinePort_Text_PlayerHasNoTicket:
 	text "<PLAYER> tried to"
 	line "show the S.S."
 	cont "TICKET…"
@@ -286,7 +257,6 @@ UnknownText_0x74b41:
 
 	para "Sorry!"
 	line "You may board only"
-
 	para "if you have an"
 	line "S.S.TICKET."
 	done
@@ -324,7 +294,6 @@ OlivinePortCooltrainerFText:
 OlivinePortSailorBeforeHOFText:
 	text "We don't want you"
 	line "to fall into the"
-
 	para "sea, so you're not"
 	line "allowed in."
 	done

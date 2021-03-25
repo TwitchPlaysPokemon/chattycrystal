@@ -22,7 +22,6 @@ OlivinePunishmentSpeechHouseBookshelf1:
 OlivinePunishmentSpeechHouseDadText:
 	text "Along the way to"
 	line "CIANWOOD, there"
-
 	para "are four deserted"
 	line "islands."
 

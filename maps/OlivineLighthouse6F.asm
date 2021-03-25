@@ -20,23 +20,23 @@ OlivineLighthouseJasmine:
 	iftrue .BroughtSecretpotion
 	checkevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
 	iftrue .ExplainedSickness
-	writetext JasmineCianwoodPharmacyText
+	writetext HostSilenceText
 	buttonsound
 	setevent EVENT_JASMINE_EXPLAINED_AMPHYS_SICKNESS
 .ExplainedSickness:
-	writetext JasmineGetSomeMedicineText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
 
 .BroughtSecretpotion:
-	writetext JasmineCureAmphyText
+	writetext HostSilenceText
 	yesorno
 	iffalse .no
 	writetext PlayerHandedSecretpotionText
 	buttonsound
 	takeitem SECRETPOTION
-	writetext JasmineDontBeOffendedText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	turnobject OLIVINELIGHTHOUSE6F_JASMINE, RIGHT
@@ -44,7 +44,7 @@ OlivineLighthouseJasmine:
 	turnobject OLIVINELIGHTHOUSE6F_MONSTER, LEFT
 	opentext
 	playmusic MUSIC_HEAL
-	writetext JasmineAmphyHowAreYouFeelingText
+	writetext HostSilenceText
 	pause 60
 	buttonsound
 	closetext
@@ -67,7 +67,7 @@ OlivineLighthouseJasmine:
 	pause 10
 	faceplayer
 	opentext
-	writetext JasmineThankYouText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	setevent EVENT_JASMINE_RETURNED_TO_GYM
@@ -75,32 +75,28 @@ OlivineLighthouseJasmine:
 	readvar VAR_FACING
 	ifequal DOWN, .FacingDown
 	ifequal RIGHT, .FacingRight
-	applymovement OLIVINELIGHTHOUSE6F_JASMINE, MovementData_0x60c68
+	applymovement OLIVINELIGHTHOUSE6F_JASMINE, OlivineLighthouse6F_Movement_JasmineExit_PlayerFacingUp
 	disappear OLIVINELIGHTHOUSE6F_JASMINE
 	end
 
 .FacingDown:
-	applymovement OLIVINELIGHTHOUSE6F_JASMINE, MovementData_0x60c70
+	applymovement OLIVINELIGHTHOUSE6F_JASMINE, OlivineLighthouse6F_Movement_JasmineExit_PlayerFacingDown
 	disappear OLIVINELIGHTHOUSE6F_JASMINE
 	end
 
 .FacingRight:
-	applymovement OLIVINELIGHTHOUSE6F_JASMINE, MovementData_0x60c79
+	applymovement OLIVINELIGHTHOUSE6F_JASMINE, OlivineLighthouse6F_Movement_JasmineExit_PlayerFacingRight
 	disappear OLIVINELIGHTHOUSE6F_JASMINE
 	end
 
 .no:
-	writetext JasmineISeeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	turnobject OLIVINELIGHTHOUSE6F_JASMINE, RIGHT
 	pause 15
 	turnobject OLIVINELIGHTHOUSE6F_MONSTER, LEFT
-	opentext
-	writetext JasmineAmphyHangOnText
-	waitbutton
-	closetext
-	end
+	jumptext HostSilenceText
 
 OlivineLighthouseAmphy:
 	faceplayer
@@ -130,7 +126,7 @@ OlivineLighthouseAmphy:
 OlivineLighthouse6FSuperPotion:
 	itemball SUPER_POTION
 
-MovementData_0x60c68:
+OlivineLighthouse6F_Movement_JasmineExit_PlayerFacingUp:
 	slow_step UP
 	slow_step UP
 	slow_step RIGHT
@@ -140,7 +136,7 @@ MovementData_0x60c68:
 	step_sleep 8
 	step_end
 
-MovementData_0x60c70:
+OlivineLighthouse6F_Movement_JasmineExit_PlayerFacingDown:
 	slow_step DOWN
 	slow_step RIGHT
 	slow_step RIGHT
@@ -151,7 +147,7 @@ MovementData_0x60c70:
 	slow_step RIGHT
 	step_end
 
-MovementData_0x60c79:
+OlivineLighthouse6F_Movement_JasmineExit_PlayerFacingRight:
 	slow_step UP
 	slow_step UP
 	slow_step RIGHT
@@ -161,42 +157,10 @@ MovementData_0x60c79:
 	step_sleep 8
 	step_end
 
-JasmineCianwoodPharmacyText:
-	text "…"
-	done
-
-JasmineGetSomeMedicineText:
-	text "…"
-	done
-
-JasmineCureAmphyText:
-	text "…"
-	done
-
 PlayerHandedSecretpotionText:
 	text "<PLAYER> handed the"
 	line "SECRETPOTION to"
-	cont "ACCPPQ."
-	done
-
-JasmineDontBeOffendedText:
-	text "…"
-	done
-
-JasmineAmphyHowAreYouFeelingText:
-	text "…"
-	done
-
-JasmineThankYouText:
-	text "…"
-	done
-
-JasmineISeeText:
-	text "…"
-	done
-
-JasmineAmphyHangOnText:
-	text "…"
+	cont "AIIIAAB."
 	done
 
 AmphyPalPalooText:

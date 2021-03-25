@@ -24,7 +24,6 @@ OlivinePokecenter1FTeacherScript:
 OlivinePokecenter1FFisherText:
 	text "The SAILOR in the"
 	line "OLIVINE CAFE next"
-
 	para "door is really"
 	line "generous."
 
@@ -40,8 +39,8 @@ OlivinePokecenter1FTeacherText:
 	line "in CIANWOOD CITY"
 	cont "across the sea."
 
-	para "I heard him brag-"
-	line "ging about his"
+	para "I heard him"
+	line "bragging about his"
 	cont "rare #MON."
 	done
 

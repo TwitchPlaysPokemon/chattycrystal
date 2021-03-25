@@ -15,22 +15,14 @@ TrainerBirdKeeperDenis:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BirdKeeperDenisAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BirdKeeperDenisAfterBattleText
 
 TrainerSailorErnest:
 	trainer SAILOR, ERNEST, EVENT_BEAT_SAILOR_ERNEST, SailorErnestSeenText, SailorErnestBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SailorErnestAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SailorErnestAfterBattleText
 
 OlivineLighthouse5FRareCandy:
 	itemball RARE_CANDY
@@ -46,8 +38,7 @@ OlivineLighthouse5FHiddenHyperPotion:
 
 SailorErnestSeenText:
 	text "I wanted to battle"
-	line "JASMINE, but she's"
-
+	line "AIIIAAB, but he's"
 	para "not up to it now."
 	line "So, how about you?"
 	done
@@ -60,7 +51,6 @@ SailorErnestBeatenText:
 SailorErnestAfterBattleText:
 	text "A GYM LEADER isn't"
 	line "just about being"
-
 	para "strong. A LEADER"
 	line "also needs to be"
 	cont "compassionate."
@@ -69,7 +59,6 @@ SailorErnestAfterBattleText:
 BirdKeeperDenisSeenText:
 	text "We're pretty high"
 	line "up here. My bird"
-
 	para "#MON are in"
 	line "prime form."
 	done

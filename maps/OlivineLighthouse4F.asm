@@ -12,29 +12,21 @@ TrainerLassConnie:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext LassConnie1AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext LassConnie1AfterBattleText
 
 TrainerSailorKent:
 	trainer SAILOR, KENT, EVENT_BEAT_SAILOR_KENT, SailorKentSeenText, SailorKentBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SailorKentAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SailorKentAfterBattleText
 
 SailorKentSeenText:
-	text "JASMINE must be"
+	text "AIIIAAB must be"
 	line "worried sick about"
 	cont "the #MON here."
 
-	para "She won't even"
+	para "He won't even"
 	line "smile these days."
 	done
 
@@ -46,17 +38,16 @@ SailorKentBeatenText:
 SailorKentAfterBattleText:
 	text "Speaking of sick,"
 	line "I've heard there's"
-
 	para "a good PHARMACY in"
 	line "CIANWOOD."
 	done
 
 LassConnie1SeenText:
-	text "JASMINE is this"
+	text "AIIIAAB is this"
 	line "city's GYM LEADER."
 
 	para "I mean to bring"
-	line "her back with me."
+	line "him back with me."
 
 	para "Nobody had better"
 	line "get in my way!"
@@ -69,13 +60,12 @@ LassConnie1BeatenText:
 LassConnie1AfterBattleText:
 	text "Right. Anybody"
 	line "would be worried"
-	cont "if his or her own"
-	cont "#MON were hurt."
+	para "if their own"
+	line "#MON were hurt."
 
 	para "I'll pray for the"
 	line "#MON here, so"
-
-	para "JASMINE can come"
+	para "AIIIAAB can come"
 	line "back to the GYM."
 	done
 

@@ -23,7 +23,6 @@ OlivineMartLassScript:
 OlivineMartCooltrainerFText:
 	text "Do your #MON"
 	line "already know the"
-
 	para "move for carrying"
 	line "people on water?"
 	done

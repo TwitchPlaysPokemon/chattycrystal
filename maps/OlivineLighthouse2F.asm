@@ -12,11 +12,7 @@ TrainerGentlemanAlfred:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GentlemanAlfredAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GentlemanAlfredAfterBattleText
 
 TrainerSailorHuey:
 	trainer SAILOR, HUEY1, EVENT_BEAT_SAILOR_HUEY, SailorHueySeenText, SailorHueyBeatenText, 0, .Script
@@ -52,7 +48,7 @@ TrainerSailorHuey:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight3:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight3
@@ -94,15 +90,12 @@ TrainerSailorHuey:
 	checkevent EVENT_HUEY_PROTEIN
 	iftrue .HasProtein
 	checkevent EVENT_GOT_PROTEIN_FROM_HUEY
-	iftrue .SkipGift
+	iftrue GenericDummyScript
 	scall .RematchGift
 	verbosegiveitem PROTEIN
 	iffalse .PackFull
 	setevent EVENT_GOT_PROTEIN_FROM_HUEY
 	sjump .NumberAccepted
-
-.SkipGift:
-	end
 
 .HasProtein:
 	opentext
@@ -116,40 +109,31 @@ TrainerSailorHuey:
 
 .AskNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
 
 .NumberAccepted:
 	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .Rematch:
 	jumpstd rematchm
-	end
 
 .PackFull:
 	setevent EVENT_HUEY_PROTEIN
 	jumpstd packfullm
-	end
 
 .RematchGift:
 	jumpstd rematchgiftm
-	end
 
 SailorHueySeenText:
 	text "Men of the sea are"
@@ -179,7 +163,6 @@ GentlemanAlfredAfterBattleText:
 
 	para "But I hear that"
 	line "it's sick now and"
-
 	para "can't be cured by"
 	line "ordinary medicine."
 	done

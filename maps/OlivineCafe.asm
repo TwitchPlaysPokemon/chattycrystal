@@ -46,7 +46,6 @@ OlivineCafeStrengthSailorText:
 OlivineCafeStrengthSailorText_GotStrength:
 	text "On the sea, the"
 	line "only thing you can"
-
 	para "count on is your"
 	line "own good self!"
 
@@ -57,7 +56,6 @@ OlivineCafeStrengthSailorText_GotStrength:
 OlivineCafeFishingGuruText:
 	text "OLIVINE CAFE's"
 	line "menu is chock full"
-
 	para "of hearty fare for"
 	line "beefy SAILORS!"
 	done
@@ -65,13 +63,11 @@ OlivineCafeFishingGuruText:
 OlivineCafeSailorText:
 	text "Whenever I roll"
 	line "into this town, I"
-
 	para "always visit the"
 	line "OLIVINE CAFE."
 
 	para "Everything on the"
 	line "menu makes me feel"
-
 	para "stronger. I can't"
 	line "stop eating!"
 	done

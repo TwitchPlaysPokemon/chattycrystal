@@ -6,15 +6,11 @@
 
 OlivineCity_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-
-.DummyScene0:
-.DummyScene1:
-	end
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_OLIVINE
@@ -22,20 +18,20 @@ OlivineCity_MapScripts:
 
 OlivineCityRivalSceneTop:
 	scall OlivineCityRivalEnter
-	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88d2
+	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCity_Movement_RivalApproachPlayerAbove
 	scall OlivineCityRivalBattle
-	applymovement PLAYER, MovementData_0x1a88f4
+	applymovement PLAYER, OlivineCity_Movement_PlayerStepDown
 	turnobject PLAYER, RIGHT
-	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88db
+	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCity_Movement_RivalLeaveTop
 	sjump OlivineCityRivalExit
 
 OlivineCityRivalSceneBottom:
 	scall OlivineCityRivalEnter
-	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88d6
+	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCity_Movement_RivalApproachPlayerBelow
 	scall OlivineCityRivalBattle
-	applymovement PLAYER, MovementData_0x1a88f7
+	applymovement PLAYER, OlivineCity_Movement_RivalLeaveBottom
 	turnobject PLAYER, RIGHT
-	applymovement OLIVINECITY_OLIVINE_RIVAL, MovementData_0x1a88e8
+	applymovement OLIVINECITY_OLIVINE_RIVAL, OlivineCity_Movement_PlayerStepUp
 OlivineCityRivalExit:
 	disappear OLIVINECITY_OLIVINE_RIVAL
 	setscene SCENE_FINISHED
@@ -46,11 +42,11 @@ OlivineCityRivalExit:
 OlivineCityRivalBattle:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext OlivineCityRivalText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW2
-	winlosstext OlivineCityRivalText, OlivineCityRivalText
+	winlosstext HostSilenceText, HostSilenceText
 	startbattle
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
@@ -70,20 +66,12 @@ OlivineCitySailor1Script:
 	jumptextfaceplayer OlivineCitySailor1Text
 
 OlivineCityStandingYoungsterScript:
-	faceplayer
-	opentext
 	random 2
-	ifequal 0, .FiftyFifty
-	writetext OlivineCityStandingYoungsterPokegearText
-	waitbutton
-	closetext
-	end
+	iffalse .FiftyFifty
+	jumptextfaceplayer OlivineCityStandingYoungsterPokegearText
 
 .FiftyFifty:
-	writetext OlivineCityStandingYoungsterPokedexText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer OlivineCityStandingYoungsterPokedexText
 
 OlivineCitySailor2Script:
 	jumptextfaceplayer OlivineCitySailor2Text
@@ -109,15 +97,15 @@ OlivineCityPokecenterSign:
 OlivineCityMartSign:
 	jumpstd martsign
 
-MovementData_0x1a88d6:
+OlivineCity_Movement_RivalApproachPlayerBelow:
 	step DOWN
-MovementData_0x1a88d2:
+OlivineCity_Movement_RivalApproachPlayerAbove:
 	step DOWN
 	step RIGHT
 	step RIGHT
 	step_end
 
-MovementData_0x1a88db:
+OlivineCity_Movement_RivalLeaveTop:
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -132,7 +120,7 @@ MovementData_0x1a88db:
 	step UP
 	step_end
 
-MovementData_0x1a88e8:
+OlivineCity_Movement_PlayerStepUp:
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -146,19 +134,15 @@ MovementData_0x1a88e8:
 	step UP
 	step_end
 
-MovementData_0x1a88f4:
+OlivineCity_Movement_PlayerStepDown:
 	step DOWN
 	turn_head UP
 	step_end
 
-MovementData_0x1a88f7:
+OlivineCity_Movement_RivalLeaveBottom:
 	step UP
 	turn_head DOWN
 	step_end
-
-OlivineCityRivalText:
-	text "…"
-	done
 
 OlivineCitySailor1Text:
 	text "Dark roads are"
@@ -167,22 +151,20 @@ OlivineCitySailor1Text:
 
 	para "But in the pitch-"
 	line "black of night,"
-
 	para "the sea is even"
 	line "more treacherous!"
 
 	para "Without the beacon"
 	line "of the LIGHTHOUSE"
-
 	para "to guide it, no"
 	line "ship can sail."
 	done
 
 OlivineCityStandingYoungsterPokegearText:
 	text "That thing you"
-	line "have--it's a #-"
-	cont "GEAR, right? Wow,"
-	cont "that's cool."
+	line "have--it's a"
+	para "#GEAR, right?"
+	line "Wow, that's cool."
 	done
 
 OlivineCityStandingYoungsterPokedexText:
@@ -199,7 +181,7 @@ OlivineCitySailor2Text:
 	para "Sunsets on the sea"
 	line "are marvelous!"
 
-	para "Sing with me! "
+	para "Sing with me!"
 	line "Yo-ho! Blow the"
 	cont "man down!…"
 	done
@@ -219,10 +201,7 @@ OlivineCityPortSignText:
 OlivineGymSignText:
 	text "OLIVINE CITY"
 	line "#MON GYM"
-	cont "LEADER: JASMINE"
-
-	para "The Steel-Clad"
-	line "Defense Girl"
+	cont "LEADER: AIIIAAB"
 	done
 
 OlivineLighthouseSignText:
@@ -239,16 +218,15 @@ OlivineCityBattleTowerSignText:
 OlivineCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 11 ; warp events
+	db 10 ; warp events
 	warp_event 13, 21, OLIVINE_POKECENTER_1F, 1
 	warp_event 10, 11, OLIVINE_GYM, 1
 	warp_event 25, 11, OLIVINE_TIMS_HOUSE, 1
-	warp_event  0,  0, OLIVINE_HOUSE_BETA, 1 ; inaccessible
+	warp_event 29, 27, OLIVINE_LIGHTHOUSE_1F, 1
 	warp_event 29, 11, OLIVINE_PUNISHMENT_SPEECH_HOUSE, 1
 	warp_event 13, 15, OLIVINE_GOOD_ROD_HOUSE, 1
 	warp_event  7, 21, OLIVINE_CAFE, 1
 	warp_event 19, 17, OLIVINE_MART, 2
-	warp_event 29, 27, OLIVINE_LIGHTHOUSE_1F, 1
 	warp_event 19, 27, OLIVINE_PORT_PASSAGE, 1
 	warp_event 20, 27, OLIVINE_PORT_PASSAGE, 2
 

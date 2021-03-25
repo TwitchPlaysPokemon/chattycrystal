@@ -9,9 +9,6 @@ OaksLab_MapScripts:
 
 	db 0 ; callbacks
 
-.DummyScene:
-	end
-
 Oak:
 	faceplayer
 	opentext
@@ -26,9 +23,10 @@ Oak:
 	readvar VAR_BADGES
 	ifequal NUM_JOHTO_BADGES, .Complain
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .OpenMtSilver
-	sjump .AhGood
-
+	iffalse .AhGood
+	writetext OakOpenMtSilverText
+	buttonsound
+	setevent EVENT_OAK_MENTIONED_MT_SILVER
 .CheckPokedex:
 	writetext OakLabDexCheckText
 	waitbutton
@@ -37,12 +35,6 @@ Oak:
 	waitbutton
 	closetext
 	end
-
-.OpenMtSilver:
-	writetext OakOpenMtSilverText
-	buttonsound
-	setevent EVENT_OAK_MENTIONED_MT_SILVER
-	sjump .CheckPokedex
 
 .Complain:
 	writetext OakNoKantoBadgesText
@@ -79,15 +71,13 @@ OaksLabPC:
 	jumptext OaksLabPCText
 
 OakWelcomeKantoText:
-	text "OAK: Ah, <PLAY_G>!"
+	text "OAK: Ah, <PLAYER>!"
 	line "It's good of you"
-
 	para "to come all this"
 	line "way to KANTO."
 
 	para "What do you think"
 	line "of the trainers"
-
 	para "out here?"
 	line "Pretty tough, huh?"
 	done
@@ -109,39 +99,36 @@ OakOpenMtSilverText:
 	text "OAK: Wow! That's"
 	line "excellent!"
 
-	para "You collected the"
-	line "BADGES of GYMS in"
-	cont "KANTO. Well done!"
+	para "You managed to"
+	line "beat the ELITE"
+	para "FOUR and become"
+	line "the new CHAMPION."
+	cont "Well done!"
 
 	para "I was right in my"
 	line "assessment of you."
 
 	para "Tell you what,"
-	line "<PLAY_G>. I'll make"
-
+	line "<PLAYER>. I'll make"
 	para "arrangements so"
 	line "that you can go to"
 	cont "MT.SILVER."
 
 	para "MT.SILVER is a big"
 	line "mountain that is"
-
 	para "home to many wild"
 	line "#MON."
 
 	para "It's too dangerous"
 	line "for your average"
-
 	para "trainer, so it's"
 	line "off limits. But"
-
 	para "we can make an"
 	line "exception in your"
-	cont "case, <PLAY_G>."
+	cont "case, <PLAYER>."
 
 	para "Go up to INDIGO"
 	line "PLATEAU. You can"
-
 	para "reach MT.SILVER"
 	line "from there."
 	done
@@ -153,7 +140,6 @@ OakNoKantoBadgesText:
 
 	para "The GYM LEADERS in"
 	line "KANTO are as tough"
-
 	para "as any you battled"
 	line "in JOHTO."
 
@@ -169,24 +155,28 @@ OakYesKantoBadgesText:
 
 	para "I imagine that"
 	line "it's hard, but the"
-
 	para "experience is sure"
 	line "to help you."
 
-	para "Come see me when"
-	line "you get them all."
+	para "When you get them"
+	line "all, you'll be able"
+	para "to take on the"
+	line "#MON LEAGUE"
+	para "challenge and have"
+	line "a shot at becoming"
+	cont "the next CHAMPION."
 
-	para "I'll have a gift"
-	line "for you."
+	para "If you get that"
+	line "far, I'll have a"
+	line "gift for you."
 
 	para "Keep trying hard,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 	done
 
 OaksAssistant1Text:
 	text "The PROF's #MON"
 	line "TALK radio program"
-
 	para "isn't aired here"
 	line "in KANTO."
 
@@ -196,17 +186,15 @@ OaksAssistant1Text:
 
 OaksAssistant2Text:
 	text "Thanks to your"
-	line "work on the #-"
-	cont "DEX, the PROF's"
-
-	para "research is coming"
-	line "along great."
+	line "work on the"
+	para "#DEX, the PROF's"
+	line "research is coming"
+	cont "along great."
 	done
 
 OaksAssistant3Text:
 	text "Don't tell anyone,"
 	line "but PROF.OAK'S"
-
 	para "#MON TALK isn't"
 	line "a live broadcast."
 	done
@@ -243,8 +231,7 @@ OaksLabPCText:
 	line "away."
 
 	para "I heard rumors"
-	line "that <PLAY_G> is"
-
+	line "that <PLAYER> is"
 	para "getting quite a"
 	line "reputation."
 

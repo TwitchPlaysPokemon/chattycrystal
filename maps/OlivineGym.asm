@@ -12,10 +12,10 @@ OlivineGymJasmineScript:
 	opentext
 	checkevent EVENT_BEAT_JASMINE
 	iftrue .FightDone
-	writetext Jasmine_SteelTypeIntro
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext Jasmine_BetterTrainer, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer RED_JOHTO_LEADER, AIIIAAB1
 	startbattle
 	reloadmapafterbattle
@@ -26,63 +26,34 @@ OlivineGymJasmineScript:
 	waitsfx
 	setflag ENGINE_MINERALBADGE
 	readvar VAR_BADGES
-	scall OlivineGymActivateRockets
+	scall ActivateRockets
 .FightDone:
 	checkevent EVENT_GOT_TM23_IRON_TAIL
 	iftrue .GotIronTail
-	writetext Jasmine_BadgeSpeech
+	writetext HostSilenceText
 	buttonsound
 	verbosegiveitem TM_IRON_TAIL
 	iffalse .NoRoomForIronTail
 	setevent EVENT_GOT_TM23_IRON_TAIL
-	writetext Jasmine_IronTailSpeech
-	waitbutton
-	closetext
-	end
-
 .GotIronTail:
-	writetext Jasmine_GoodLuck
+	writetext HostSilenceText
 	waitbutton
 .NoRoomForIronTail:
 	closetext
 	end
 
-OlivineGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
-	end
-
-.GoldenrodRockets:
-	jumpstd goldenrodrockets
-
-.RadioTowerRockets:
-	jumpstd radiotowerrockets
-
 OlivineGymGuyScript:
-	faceplayer
 	checkevent EVENT_BEAT_JASMINE
 	iftrue .OlivineGymGuyWinScript
 	checkevent EVENT_JASMINE_RETURNED_TO_GYM
 	iffalse .OlivineGymGuyPreScript
-	opentext
-	writetext OlivineGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer OlivineGymGuyText
 
 .OlivineGymGuyWinScript:
-	opentext
-	writetext OlivineGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer OlivineGymGuyWinText
 
 .OlivineGymGuyPreScript:
-	opentext
-	writetext OlivineGymGuyPreText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer OlivineGymGuyPreText
 
 OlivineGymStatue:
 	checkflag ENGINE_MINERALBADGE
@@ -97,16 +68,8 @@ Text_ReceivedMineralBadge:
 	line "MINERALBADGE."
 	done
 
-Jasmine_SteelTypeIntro:
-Jasmine_BetterTrainer:
-Jasmine_BadgeSpeech:
-Jasmine_IronTailSpeech:
-Jasmine_GoodLuck:
-	text "…"
-	done
-
 OlivineGymGuyText:
-	text "JASMINE uses the"
+	text "AIIIAAB uses the"
 	line "newly discovered"
 	cont "steel-type."
 
@@ -126,16 +89,16 @@ OlivineGymGuyWinText:
 	done
 
 OlivineGymGuyPreText:
-	text "JASMINE, the GYM"
+	text "AIIIAAB, the GYM"
 	line "LEADER, is at the"
 	cont "LIGHTHOUSE."
 
-	para "She's been tending"
+	para "He's been tending"
 	line "to a sick #MON."
 
 	para "A strong trainer"
-	line "has to be compas-"
-	cont "sionate."
+	line "has to be"
+	cont "compassionate."
 	done
 
 OlivineGym_MapEvents:

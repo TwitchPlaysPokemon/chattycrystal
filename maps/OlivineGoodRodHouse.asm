@@ -7,10 +7,10 @@ OlivineGoodRodHouse_MapScripts:
 	db 0 ; callbacks
 
 GoodRodGuru:
-	faceplayer
-	opentext
 	checkevent EVENT_GOT_GOOD_ROD
 	iftrue .AlreadyGotItem
+	faceplayer
+	opentext
 	writetext OfferGoodRodText
 	yesorno
 	iffalse .DontWantIt
@@ -30,10 +30,7 @@ GoodRodGuru:
 	end
 
 .AlreadyGotItem:
-	writetext HaveGoodRodText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer HaveGoodRodText
 
 OfferGoodRodText:
 	text "OLIVINE is on the"

@@ -374,4 +374,4 @@ MoveNames::
 	db "HYPER VOICE@"
 	db "LEAF BLADE@"
 	db "ENERGY BALL@"
-	db "DRILL_RUN@"
+	db "DRILL RUN@"

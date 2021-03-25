@@ -1,16 +1,13 @@
 PokemonTower5F_MapScripts:
 	db 1 ; scene scripts
-	scene_script .dummy
+	scene_script GenericDummyScript
 
 	db 0 ; callbacks
-
-.dummy
-	end
 
 PokemonTower5F_HealPad:
 	special HealParty
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iffalse .done
+	iffalse GenericDummyScript
 	clearevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	special FadeOutPalettes
 	pause 6
@@ -19,7 +16,6 @@ PokemonTower5F_HealPad:
 	writetext .text
 	waitbutton
 	closetext
-.done
 	end
 
 .text
@@ -31,23 +27,27 @@ PokemonTower5F_HealPad:
 	done
 
 TrainerSageYang:
-	trainer SAGE, YANG, EVENT_BEAT_SAGE_YANG, SageYangSeenText, SageYangBeatenText, 0, .Script
+	trainer SAGE, YANG, EVENT_BEAT_SAGE_YANG, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SageYangAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
 
-SageYangSeenText:
-SageYangBeatenText:
-SageYangAfterBattleText:
-	text "<...>"
+.before_text
+	text "Give<...> me<...>"
+	line "your<...> all<...>"
 	done
 
-PokemonTower5fMaxRevive:
+.defeat_text
+	text "Gasp!"
+	done
+
+.after_text
+	text "I was under"
+	line "possession."
+	done
+
+PokemonTower5FMaxRevive:
 	itemball MAX_REVIVE
 
 PokemonTower5F_EnableHealPad:
@@ -77,4 +77,4 @@ PokemonTower5F_MapEvents:
 
 	db 2 ; object events
 	object_event 12,  7, SPRITE_SAGE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerSageYang, -1
-	object_event 13,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower5fMaxRevive, EVENT_POKEMON_TOWER_5F_MAX_REVIVE
+	object_event 13,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower5FMaxRevive, EVENT_POKEMON_TOWER_5F_MAX_REVIVE

@@ -115,16 +115,14 @@ PowerPlantB1FElectrode9:
 	iftrue PowerPlantB1FReloadMap
 	setflag EVENT_POWER_PLANT_B1F_ELECTRODE_9
 	disappear POWERPLANTB1F_ELECTRODE_9
-	sjump PowerPlantB1FReloadMap
+PowerPlantB1FReloadMap:
+	reloadmapafterbattle
+	end
 
 PowerPlantFightElectrode:
 	cry ELECTRODE
 	loadwildmon ELECTRODE, 72
 	startbattle
-	end
-
-PowerPlantB1FReloadMap:
-	reloadmapafterbattle
 	end
 
 PowerPlantB1F_MapEvents:

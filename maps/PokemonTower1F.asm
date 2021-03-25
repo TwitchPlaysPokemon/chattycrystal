@@ -30,21 +30,18 @@ MrFujiText:
 
 	para "Hmm… You appear to"
 	line "be raising your"
-
 	para "#MON in a kind"
 	line "and loving manner."
 
 	para "#MON lovers"
 	line "come here to pay"
-
 	para "their respects to"
 	line "departed #MON."
 
-	para "Please offer con-"
-	line "dolences for the"
-
-	para "souls of the de-"
-	line "parted #MON."
+	para "Please offer"
+	line "condolences for"
+	para "the souls of the"
+	line "departed #MON."
 
 	para "I'm sure that will"
 	line "make them happy."
@@ -53,7 +50,6 @@ MrFujiText:
 PokemonTower1FReceptionistText:
 	text "#MON TOWER was"
 	line "erected in the"
-
 	para "memory of #MON"
 	line "that had died."
 	done

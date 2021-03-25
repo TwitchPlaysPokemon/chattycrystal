@@ -31,8 +31,8 @@ BluesHouseSign:
 	jumptext BluesHouseSignText
 
 PalletTownTeacherText:
-	text "I'm raising #-"
-	line "MON too."
+	text "I'm raising"
+	line "#MON too."
 
 	para "They serve as my"
 	line "private guards."

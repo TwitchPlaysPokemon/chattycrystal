@@ -28,7 +28,8 @@ PokecomCenterAdminOfficeMobileComputer1:
 	closewindow
 	ifequal 1, .PokeComClub
 	ifequal 2, .MobileCenter
-	sjump .Quit
+	closetext
+	end
 
 .PokeComClub:
 	opentext
@@ -41,10 +42,6 @@ PokecomCenterAdminOfficeMobileComputer1:
 	writetext PokecomCenterAdminOfficeMobileComputer1Text_MobileCenter
 	waitbutton
 	sjump .loop
-
-.Quit:
-	closetext
-	end
 
 .Computer1MenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -70,7 +67,8 @@ PokecomCenterAdminOfficeMobileComputer2:
 	closewindow
 	ifequal 1, .UsePhone
 	ifequal 2, .DontUsePhone
-	sjump .Quit
+	closetext
+	end
 
 .UsePhone:
 	opentext
@@ -83,10 +81,6 @@ PokecomCenterAdminOfficeMobileComputer2:
 	writetext PokecomCenterAdminOfficeMobileComputer2Text_DontUsePhone
 	waitbutton
 	sjump .loop
-
-.Quit:
-	closetext
-	end
 
 .Computer2MenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -107,13 +101,10 @@ PokecomCenterAdminOfficeMobileComputer3:
 PokecomCenterAdminOfficeMobileScientist1Text:
 	text "#COM CENTER and"
 	line "MOBILE CENTER were"
-
 	para "built to satisfy"
 	line "demands for trades"
-
 	para "and battles with"
 	line "trainers far away"
-
 	para "and with total"
 	line "strangers."
 	done
@@ -121,16 +112,13 @@ PokecomCenterAdminOfficeMobileScientist1Text:
 PokecomCenterAdminOfficeMobileScientist2Text:
 	text "When you linked"
 	line "with someone by"
-
 	para "mobile phone for"
 	line "the first time,"
-
 	para "weren't you"
 	line "impressed?"
 
 	para "When my first try"
 	line "worked, I was so"
-
 	para "impressed that I"
 	line "got the shakes!"
 	done
@@ -138,7 +126,6 @@ PokecomCenterAdminOfficeMobileScientist2Text:
 PokecomCenterAdminOfficeMobileScientist3Text:
 	text "They were able to"
 	line "build this huge"
-
 	para "facility thanks to"
 	line "advances in wire-"
 	cont "less technology."
@@ -147,7 +134,6 @@ PokecomCenterAdminOfficeMobileScientist3Text:
 PokecomCenterAdminOfficeMobileComputer1Text:
 	text "It's a notice"
 	line "about where MOBILE"
-
 	para "ADAPTERS are to be"
 	line "used…"
 	done
@@ -155,20 +141,17 @@ PokecomCenterAdminOfficeMobileComputer1Text:
 PokecomCenterAdminOfficeMobileComputer1Text_PokeComClub:
 	text "There's a #COM"
 	line "CLUB upstairs in"
-
 	para "any #MON"
 	line "CENTER."
 
 	para "There, you can"
 	line "battle or trade"
-
 	para "with a friend far"
 	line "away by using a"
 	cont "MOBILE ADAPTER."
 
 	para "To link up, your"
 	line "friend must have"
-
 	para "the same kind of"
 	line "MOBILE ADAPTER as"
 	cont "you."
@@ -177,14 +160,12 @@ PokecomCenterAdminOfficeMobileComputer1Text_PokeComClub:
 PokecomCenterAdminOfficeMobileComputer1Text_MobileCenter:
 	text "To use the TRADE"
 	line "CORNER or read the"
-
 	para "#MON NEWS, you"
 	line "need to phone the"
 	cont "MOBILE CENTER."
 
 	para "You must register"
 	line "at the MOBILE"
-
 	para "CENTER before"
 	line "connecting there."
 	done
@@ -198,7 +179,6 @@ PokecomCenterAdminOfficeMobileComputer2Text:
 PokecomCenterAdminOfficeMobileComputer2Text_UsePhone:
 	text "Please ensure that"
 	line "your phone and"
-
 	para "MOBILE ADAPTER are"
 	line "properly linked."
 
@@ -214,7 +194,6 @@ PokecomCenterAdminOfficeMobileComputer2Text_UsePhone:
 PokecomCenterAdminOfficeMobileComputer2Text_DontUsePhone:
 	text "If the server is"
 	line "busy, it may not"
-
 	para "be possible to log"
 	line "on."
 
@@ -223,10 +202,8 @@ PokecomCenterAdminOfficeMobileComputer2Text_DontUsePhone:
 
 	para "If you are unable"
 	line "to log on or don't"
-
 	para "understand the"
 	line "error messages,"
-
 	para "call a support"
 	line "center or read the"
 	cont "instructions."
@@ -244,16 +221,12 @@ PokecomCenterAdminOfficeMobileComputer3Text:
 
 	para "Wireless communi-"
 	line "cation has enabled"
-
 	para "#MON trainers"
 	line "to interact across"
-
 	para "the nation. Let's"
 	line "keep working for"
-
 	para "the day when all"
 	line "the trainers in"
-
 	para "the world can link"
 	line "without barriers!"
 

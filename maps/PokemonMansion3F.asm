@@ -4,41 +4,54 @@ PokemonMansion3F_MapScripts:
 	db 0 ; callbacks
 
 TrainerScientistGideon:
-	trainer SCIENTIST, GIDEON, EVENT_BEAT_SCIENTIST_GIDEON, ScientistGideonSeenText, ScientistGideonBeatenText, 0, .Script
+	trainer SCIENTIST, GIDEON, EVENT_BEAT_SCIENTIST_GIDEON, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext ScientistGideonAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
+
+.before_text
+	text "My mentor once"
+	line "lived here."
+	done
+
+.defeat_text
+	text "Whew!"
+	line "Overwhelming!"
+	done
+
+.after_text
+	text "So, you're stuck?"
+	line "Try jumping off"
+	cont "over there!"
+	done
 
 TrainerBurglarSimon:
-	trainer BURGLAR, SIMON_B, EVENT_BEAT_BURGLAR_SIMON, BurglarSimonSeenText, BurglarSimonBeatenText, 0, .Script
+	trainer BURGLAR, SIMON_B, EVENT_BEAT_BURGLAR_SIMON, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BurglarSimonAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
+
+.before_text
+	text "This place is,"
+	line "like, huge!"
+	done
+
+.defeat_text
+	text "Ayah!"
+	done
+
+.after_text
+	text "I wonder where my"
+	line "partner went."
+	done
 
 PokemonMansion3FNugget:
 	itemball NUGGET
 
 PokemonMansion3FFireBlast:
 	itemball TM_FIRE_BLAST
-
-BurglarSimonSeenText:
-BurglarSimonBeatenText:
-BurglarSimonAfterBattleText:
-ScientistGideonAfterBattleText:
-ScientistGideonBeatenText:
-ScientistGideonSeenText:
-	text "<...>"
-	done
 
 PokemonMansion3FHiddenEscapeRope:
 	hiddenitem ESCAPE_ROPE, EVENT_POKEMON_MANSION_3F_ESCAPE_ROPE

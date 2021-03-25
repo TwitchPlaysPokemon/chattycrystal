@@ -4,34 +4,50 @@ PokemonMansion1F_MapScripts:
 	db 0 ; callbacks
 
 TrainerScientistBraydon:
-	trainer SCIENTIST, BRAYDON, EVENT_BEAT_SCIENTIST_BRAYDON, ScientistBraydonSeenText, ScientistBraydonBeatenText, 0, .Script
+	trainer SCIENTIST, BRAYDON, EVENT_BEAT_SCIENTIST_BRAYDON, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext ScientistBraydonAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
+
+.before_text
+	text "Who are you? There"
+	line "shouldn't be anyone"
+	cont "here."
+	done
+
+.defeat_text
+	text "Ouch!"
+	done
+
+.after_text
+	text "A key? I don't know"
+	line "what you're talking"
+	cont "about."
+	done
 
 TrainerBurglarDusty:
-	trainer BURGLAR, DUSTY, EVENT_BEAT_BURGLAR_DUSTY, BurglarDustySeenText, BurglarDustyBeatenText, 0, .Script
+	trainer BURGLAR, DUSTY, EVENT_BEAT_BURGLAR_DUSTY, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BurglarDustyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
 
-BurglarDustySeenText:
-BurglarDustyBeatenText:
-BurglarDustyAfterBattleText:
-ScientistBraydonSeenText:
-ScientistBraydonBeatenText:
-ScientistBraydonAfterBattleText:
-	text "<...>"
+.before_text
+	text "Uh-oh<...>"
+	line "Where am I now?"
+	done
+
+.defeat_text
+	text "Awooh!"
+	done
+
+.after_text
+	text "You can find stuff"
+	line "lying around."
+
+	para "The residents"
+	line "must've left them."
 	done
 
 PokemonMansion1FElixir:

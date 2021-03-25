@@ -13,10 +13,10 @@ PewterGymBrockScript:
 	opentext
 	checkflag ENGINE_BOULDERBADGE
 	iftrue .FightDone
-	writetext BrockIntroText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext BrockWinLossText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer GSC_KRIS, EWWYPPP
 	startbattle
 	reloadmapafterbattle
@@ -27,13 +27,8 @@ PewterGymBrockScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_BOULDERBADGE
-	writetext BrockBoulderBadgeText
-	waitbutton
-	closetext
-	end
-
 .FightDone:
-	writetext BrockFightDoneText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
@@ -43,27 +38,15 @@ TrainerCamperJerry:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CamperJerryAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CamperJerryAfterBattleText
 
 PewterGymGuyScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_BROCK
 	iftrue .PewterGymGuyWinScript
-	writetext PewterGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PewterGymGuyText
 
 .PewterGymGuyWinScript:
-	writetext PewterGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PewterGymGuyWinText
 
 PewterGymStatue:
 	checkflag ENGINE_BOULDERBADGE
@@ -72,13 +55,6 @@ PewterGymStatue:
 .Beaten:
 	gettrainername STRING_BUFFER_4, GSC_KRIS, EWWYPPP
 	jumpstd gymstatue2
-
-BrockBoulderBadgeText:
-BrockFightDoneText:
-BrockWinLossText:
-BrockIntroText:
-	text "<...>"
-	done
 
 ReceivedBoulderBadgeText:
 	text "<PLAYER> received"
@@ -95,7 +71,6 @@ CamperJerrySeenText:
 
 	para "Battles could end"
 	line "up going a long"
-
 	para "time. Are you"
 	line "ready for this?"
 	done
@@ -107,28 +82,24 @@ CamperJerryBeatenText:
 
 CamperJerryAfterBattleText:
 	text "Hey, you! Trainer"
-	line "from JOHTO! BROCK"
+	line "from JOHTO!"
 
-	para "is tough. He'll"
-	line "punish you if you"
-
-	para "don't take him"
-	line "seriously."
+	para "EWWYPPP is tough."
+	line "He'll punish you"
+	para "if you don't take"
+	line "him seriously."
 	done
 
 PewterGymGuyText:
 	text "Yo! CHAMP in"
 	line "making! You're"
-
 	para "really rocking."
 	line "Are you battling"
-
 	para "the GYM LEADERS of"
 	line "KANTO?"
 
 	para "They're strong and"
 	line "dedicated people,"
-
 	para "just like JOHTO's"
 	line "GYM LEADERS."
 	done
@@ -136,13 +107,11 @@ PewterGymGuyText:
 PewterGymGuyWinText:
 	text "Yo! CHAMP in"
 	line "making! That GYM"
-
 	para "didn't give you"
 	line "much trouble."
 
 	para "The way you took"
 	line "charge was really"
-
 	para "inspiring. I mean"
 	line "that seriously."
 	done

@@ -4,34 +4,48 @@ PokemonTower4F_MapScripts:
 	db 0 ; callbacks
 
 TrainerMediumLaurel:
-	trainer MEDIUM, LAUREL, EVENT_BEAT_MEDIUM_LAUREL, MediumLaurelSeenText, MediumLaurelBeatenText, 0, .Script
+	trainer MEDIUM, LAUREL, EVENT_BEAT_MEDIUM_LAUREL, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext MediumLaurelAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
+
+.before_text
+	text "Be cursed with me!"
+	line "Kwaaah!"
+	done
+
+.defeat_text
+	text "What!"
+	done
+
+.after_text
+	text "We can't determine"
+	line "the identity of"
+	cont "the ghosts<...>"
+	done
 
 TrainerMediumPatricia:
-	trainer MEDIUM, PATRICIA, EVENT_BEAT_MEDIUM_PATRICIA, MediumPatriciaSeenText, MediumPatriciaBeatenText, 0, .Script
+	trainer MEDIUM, PATRICIA, EVENT_BEAT_MEDIUM_PATRICIA, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext MediumPatriciaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
 
-MediumLaurelBeatenText:
-MediumLaurelSeenText:
-MediumLaurelAfterBattleText:
-MediumPatriciaBeatenText:
-MediumPatriciaSeenText:
-MediumPatriciaAfterBattleText:
-	text "<...>"
+.before_text
+	text "Be gone!"
+	line "Malevolent spirit!"
+	done
+
+.defeat_text
+	text "Whew! The spirit"
+	line "left!"
+	done
+
+.after_text
+	text "The others above<...>"
+	line "They must have"
+	cont "been possessed."
 	done
 
 PokemonTower4F_MapEvents:

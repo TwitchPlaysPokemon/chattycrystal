@@ -29,15 +29,29 @@ GroudonText:
 	done
 
 TrainerScientistTaylor:
-	trainer SCIENTIST, TAYLOR, EVENT_BEAT_SCIENTIST_TAYLOR, ScientistTaylorSeenText, ScientistTaylorBeatenText, 0, .Script
+	trainer SCIENTIST, TAYLOR, EVENT_BEAT_SCIENTIST_TAYLOR, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext ScientistTaylorAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
+
+.before_text
+	text "This place is"
+	line "ideal for a lab."
+
+	para "Look at all this"
+	line "space."
+	done
+
+.defeat_text
+	text "What was that for?"
+	done
+
+.after_text
+	text "I like it here."
+	line "It's conducive to"
+	cont "my studies."
+	done
 
 PokemonMansionB1FBlizzard:
 	itemball TM_BLIZZARD
@@ -47,12 +61,6 @@ PokemonMansionB1FAwakening:
 
 PokemonMansionB1FHeavyBall:
 	itemball HEAVY_BALL
-
-ScientistTaylorSeenText:
-ScientistTaylorBeatenText:
-ScientistTaylorAfterBattleText:
-	text "<...>"
-	done
 
 PokemonMansionB1F_MapEvents:
 	db 0, 0 ; filler

@@ -10,16 +10,10 @@
 
 PowerPlant_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_POWERPLANT_NOTHING
-	scene_script .DummyScene1 ; SCENE_POWERPLANT_GUARD_GETS_PHONE_CALL
+	scene_script GenericDummyScript ; SCENE_POWERPLANT_NOTHING
+	scene_script GenericDummyScript ; SCENE_POWERPLANT_GUARD_GETS_PHONE_CALL
 
 	db 0 ; callbacks
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 PowerPlantGuardPhoneScript:
 	playsound SFX_CALL
@@ -45,100 +39,52 @@ PowerPlantGuardPhoneScript:
 	end
 
 PowerPlantOfficerScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
 	checkevent EVENT_MET_MANAGER_AT_POWER_PLANT
 	iftrue .MetManager
-	writetext PowerPlantOfficer1AThiefBrokeInText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantOfficer1AThiefBrokeInText
 
 .MetManager:
-	writetext PowerPlantOfficer1CouldIAskForYourCooperationText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantOfficer1CouldIAskForYourCooperationText
 
 .ReturnedMachinePart:
-	writetext PowerPlantOfficer1HaveToBeefUpSecurityText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantOfficer1HaveToBeefUpSecurityText
 
 PowerPlantGymGuy1Script:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
-	writetext PowerPlantGymGuy1SomeoneStoleAPartText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantGymGuy1SomeoneStoleAPartText
 
 .ReturnedMachinePart:
-	writetext PowerPlantGymGuy1GeneratorUpAndRunningText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantGymGuy1GeneratorUpAndRunningText
 
 PowerPlantGymGuy2Script:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
-	writetext PowerPlantGymGuy2PowerPlantUpAndRunningText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantGymGuy2PowerPlantUpAndRunningText
 
 .ReturnedMachinePart:
-	writetext PowerPlantGymGuy2GeneratorIsRunningAgainText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantGymGuy2GeneratorIsRunningAgainText
 
 PowerPlantOfficer2Script:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
-	writetext PowerPlantOfficer2ManagerHasBeenSadAndFuriousText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantOfficer2ManagerHasBeenSadAndFuriousText
 
 .ReturnedMachinePart:
-	writetext PowerPlantOfficer2ManagerHasBeenCheerfulText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantOfficer2ManagerHasBeenCheerfulText
 
 PowerPlantOfficer3Script:
-	faceplayer
-	opentext
-	writetext PowerPlantOfficer3Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantOfficer3Text
 
 PowerPlantGymGuy4Script:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
-	writetext PowerPlantGymGuy4MagnetTrainConsumesElectricityText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantGymGuy4MagnetTrainConsumesElectricityText
 
 .ReturnedMachinePart:
-	writetext PowerPlantGymGuy4WeCanGetMagnetTrainRunningText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PowerPlantGymGuy4WeCanGetMagnetTrainRunningText
 
 PowerPlantManager:
 	faceplayer
@@ -236,7 +182,6 @@ PowerPlantOfficer1CeruleanShadyCharacterText:
 
 	para "It appears that a"
 	line "shady character"
-
 	para "has been loitering"
 	line "around."
 	done
@@ -255,7 +200,6 @@ PowerPlantOfficer1HaveToBeefUpSecurityText:
 PowerPlantGymGuy1SomeoneStoleAPartText:
 	text "Someone made off"
 	line "with a part that's"
-
 	para "essential for the"
 	line "generator."
 
@@ -267,7 +211,6 @@ PowerPlantGymGuy1SomeoneStoleAPartText:
 PowerPlantGymGuy1GeneratorUpAndRunningText:
 	text "The generator's up"
 	line "and running. It's"
-
 	para "making electricity"
 	line "to spare."
 	done
@@ -279,7 +222,6 @@ PowerPlantGymGuy2PowerPlantUpAndRunningText:
 
 	para "We got it back up"
 	line "and running to"
-
 	para "provide power to"
 	line "the MAGNET TRAIN."
 	done
@@ -295,16 +237,15 @@ PowerPlantOfficer2ManagerHasBeenSadAndFuriousText:
 	cont "ahead."
 
 	para "But since someone"
-	line "wrecked the gener-"
-	cont "ator, he's been"
-	cont "both sad and"
+	line "wrecked the"
+	para "generator, he's"
+	line "been both sad and"
 	cont "furious…"
 	done
 
 PowerPlantOfficer2ManagerHasBeenCheerfulText:
 	text "Since the gener-"
 	line "ator's been fixed,"
-
 	para "the MANAGER has"
 	line "been cheerful."
 	done
@@ -322,7 +263,6 @@ PowerPlantGymGuy4MagnetTrainConsumesElectricityText:
 PowerPlantGymGuy4WeCanGetMagnetTrainRunningText:
 	text "All right! We can"
 	line "finally get the"
-
 	para "MAGNET TRAIN"
 	line "running again."
 	done
@@ -340,9 +280,8 @@ PowerPlantManagerWhoWouldRuinMyGeneratorText:
 
 	para "If I catch him,"
 	line "he's going to get"
-
-	para "tossed down the"
-	line "WATERFALL!"
+	para "tossed down a"
+	line "waterfall!"
 	done
 
 PowerPlantManagerIWontForgiveCulpritText:
@@ -351,7 +290,6 @@ PowerPlantManagerIWontForgiveCulpritText:
 
 	para "The culprit can"
 	line "cry and apologize,"
-
 	para "but I'll still"
 	line "hammer him!"
 
@@ -362,9 +300,9 @@ PowerPlantManagerThatsThePartText:
 	text "MANAGER: Ah! Yeah!"
 
 	para "That's the missing"
-	line "PART from my be-"
-	cont "loved generator!"
-	cont "You found it?"
+	line "PART from my"
+	para "beloved generator!"
+	line "You found it?"
 	done
 
 PowerPlantManagerTakeThisHMText:
@@ -379,7 +317,9 @@ PowerPlantManagerHM07IsWaterfallText:
 	line "WATERFALL."
 
 	para "It's a powerful"
-	line "technique!"
+	line "technique that"
+	para "will also let you"
+	line "climb waterfalls!"
 	done
 
 PowerPlantManagerMyBelovedGeneratorText:
@@ -391,14 +331,12 @@ PowerPlantManagerMyBelovedGeneratorText:
 	done
 
 PowerPlantOfficer3Text:
-	text "There's strong"
+	text "There's some strong"
 	line "wild #MON in"
 	cont "the basement."
 
-	para "It's best not"
-	line "to go inside"
-	cont "right now."
-
+	para "It's best not to go"
+	line "inside right now."
 	done
 
 PowerPlant_MapEvents:

@@ -174,17 +174,16 @@ PokemonFanClubChairmanItsARareCandyText:
 
 	para "I prefer making my"
 	line "#MON stronger"
-
 	para "by battling, so"
 	line "you can have it."
 	done
 
 PokemonFanClubChairmanMoreTalesToTellText:
-	text "Hello, <PLAY_G>!"
+	text "Hello, <PLAYER>!"
 
 	para "Did you come see"
-	line "me about my #-"
-	cont "MON again?"
+	line "me about my"
+	cont "#MON again?"
 
 	para "No? Oh… I had more"
 	line "tales to tell…"
@@ -206,10 +205,8 @@ PokemonFanClubReceptionistText:
 PokemonFanClubClefairyGuyClefairyIsSoAdorableText:
 	text "I love the way"
 	line "CLEFAIRY waggles"
-
 	para "its finger when"
 	line "it's trying to use"
-
 	para "METRONOME."
 	line "It's so adorable!"
 	done
@@ -217,10 +214,8 @@ PokemonFanClubClefairyGuyClefairyIsSoAdorableText:
 PokemonFanClubClefairyGuyMakingDoWithADollIFoundText:
 	text "I love CLEFAIRY,"
 	line "but I could never"
-
 	para "catch one. So I'm"
 	line "making do with a"
-
 	para "# DOLL that I"
 	line "found."
 	done
@@ -228,18 +223,15 @@ PokemonFanClubClefairyGuyMakingDoWithADollIFoundText:
 PokemonFanClubClefairyGuyTakeThisDollBackToGirlText:
 	text "Oh, I see now. The"
 	line "girl who lost this"
-
 	para "# DOLL is sad…"
 
 	para "OK. Could you take"
 	line "this # DOLL"
-
 	para "back to that poor"
 	line "little girl?"
 
 	para "I'll befriend a"
 	line "real CLEFAIRY on"
-
 	para "my own one day."
 	line "No worries!"
 	done
@@ -252,7 +244,6 @@ PokemonFanClubPlayerReceivedDollText:
 PokemonFanClubClefairyGuyGoingToGetARealClefairyText:
 	text "You watch. I'm"
 	line "going to get a"
-
 	para "real CLEFAIRY as"
 	line "my friend."
 	done

@@ -19,8 +19,6 @@ PewterMuseum1FTicketScene1:
 
 PewterMuseum1FTicketScene2:
 	turnobject PLAYER, RIGHT
-	; fallthrough
-
 PewterMuseum1FTicketSceneContinue:
 	turnobject PEWTERMUSEUM1F_RECEPTIONIST, LEFT
 	opentext
@@ -128,8 +126,8 @@ PewterMuseum1FScientist2Script:
 .Text:
 	text "We are proud of 2"
 	line "fossils of very"
-	cont "rare, prehistoric"
-	cont "#MON!"
+	para "rare, prehistoric"
+	line "#MON!"
 	done
 
 PewterMuseum1FAerodactylFossilScript:

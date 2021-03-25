@@ -26,7 +26,6 @@ PewterMartYoungsterText:
 
 	para "I raised it from a"
 	line "MAGIKARP. I can't"
-
 	para "believe how strong"
 	line "it has become."
 	done
@@ -38,7 +37,6 @@ PewterMartSuperNerdText:
 
 	para "He was saying the"
 	line "MAGIKARP from the"
-
 	para "LAKE OF RAGE were"
 	line "excellent."
 	done

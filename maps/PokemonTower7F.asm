@@ -9,7 +9,7 @@ PokemonTower7F_MapScripts:
 Darkrai:
 	faceplayer
 	opentext
-	writetext DarikraiText
+	writetext .text
 	cry DARKRAI
 	pause 15
 	closetext
@@ -20,7 +20,7 @@ Darkrai:
 	reloadmapafterbattle
 	end
 
-DarikraiText:
+.text
 	text "<...><...><...><...>!"
 	done
 

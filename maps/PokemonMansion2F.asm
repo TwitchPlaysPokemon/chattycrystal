@@ -12,11 +12,10 @@ PokemonMansion2F_MapScripts:
 
 	db 0 ; callbacks
 
-
 PokemonMansionBlue:
 	faceplayer
 	opentext
-	writetext PokemonMansionBlueText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	playsound SFX_WARP_TO
@@ -27,26 +26,59 @@ PokemonMansionBlue:
 	end
 
 TrainerCooltrainermYuji:
-	trainer COOLTRAINERM, YUJI, EVENT_BEAT_COOLTRAINERM_YUJI, CooltrainermYujiSeenText, CooltrainermYujiBeatenText, 0, .Script
+	trainer COOLTRAINERM, YUJI, EVENT_BEAT_COOLTRAINERM_YUJI, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermYujiAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
+
+.before_text
+	text "W-w-waah! You"
+	line "startled me!"
+
+	para "I thought you were"
+	line "a ghost."
+	done
+
+.defeat_text
+	text "Tch! I can't get"
+	line "any wins."
+	done
+
+.after_text
+	text "I was exploring"
+	line "here by myself,"
+	para "but I feel"
+	line "spooked."
+
+	para "I ought to go"
+	line "soon."
+	done
 
 TrainerBurglarJac:
-	trainer BURGLAR, JAC, EVENT_BEAT_BURGLAR_JAC, BurglarJacSeenText, BurglarJacBeatenText, 0, .Script
+	trainer BURGLAR, JAC, EVENT_BEAT_BURGLAR_JAC, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BurglarJacAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
+
+.before_text
+	text "I can't get out!"
+	line "This old place is"
+	cont "one big puzzle."
+	done
+
+.defeat_text
+	text "Oh, no!"
+	line "My bag of loot!"
+	done
+
+.after_text
+	text "The switches here"
+	line "open and close"
+	para "alternating sets"
+	line "of doors."
+	done
 
 PokemonMansion2FRareCandy:
 	itemball RARE_CANDY
@@ -59,16 +91,6 @@ PokemonMansion2FLemonade:
 
 PokemonMansion2FPokeDoll:
 	itemball POKE_DOLL
-
-BurglarJacSeenText:
-BurglarJacBeatenText:
-BurglarJacAfterBattleText:
-CooltrainermYujiAfterBattleText:
-CooltrainermYujiBeatenText:
-CooltrainermYujiSeenText:
-PokemonMansionBlueText:
-	text "<...>"
-	done
 
 PokemonMansionBlueTeleport:
 	teleport_from

@@ -49,8 +49,8 @@ PlayersNeighborsDaughterText:
 	line "evolved #MON."
 
 	para "I was amazed by"
-	line "PROF.ELM's find-"
-	cont "ings."
+	line "PROF.ELM's"
+	cont "findings."
 
 	para "He's so famous for"
 	line "his research on"
@@ -66,7 +66,6 @@ PlayersNeighborsDaughterText:
 PlayersNeighborText:
 	text "My daughter is"
 	line "adamant about"
-
 	para "becoming PROF."
 	line "ELM's assistant."
 

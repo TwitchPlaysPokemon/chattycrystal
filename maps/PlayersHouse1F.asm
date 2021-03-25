@@ -7,16 +7,10 @@
 
 PlayersHouse1F_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 MeetMomLeftScript:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
@@ -173,8 +167,6 @@ NeighborScript:
 .NiteScript:
 	writetext NeighborNiteIntroText
 	buttonsound
-	sjump .Main
-
 .Main:
 	writetext NeighborText
 	waitbutton
@@ -213,7 +205,6 @@ MomWalksBackMovement:
 ElmsLookingForYouText:
 	text "Oh, <PLAYER>…! Our"
 	line "neighbor, PROF."
-
 	para "ELM, was looking"
 	line "for you."
 
@@ -223,7 +214,6 @@ ElmsLookingForYouText:
 
 	para "Oh! I almost for-"
 	line "got! Your #MON"
-
 	para "GEAR is back from"
 	line "the repair shop."
 
@@ -253,7 +243,6 @@ IsItDSTText:
 ComeHomeForDSTText:
 	text "Come home to"
 	line "adjust your clock"
-
 	para "for Daylight"
 	line "Saving Time."
 
@@ -265,7 +254,6 @@ ComeHomeForDSTText:
 KnowTheInstructionsText:
 	text "Don't you just"
 	line "turn the #GEAR"
-
 	para "on and select the"
 	line "PHONE icon?"
 	done
@@ -320,30 +308,29 @@ ImBehindYouText:
 
 NeighborMornIntroText:
 	text "Good morning,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "I'm visiting!"
 	done
 
 NeighborDayIntroText:
-	text "Hello, <PLAY_G>!"
+	text "Hello, <PLAYER>!"
 	line "I'm visiting!"
 	done
 
 NeighborNiteIntroText:
 	text "Good evening,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "I'm visiting!"
 	done
 
 NeighborText:
-	text "<PLAY_G>, have you"
+	text "<PLAYER>, have you"
 	line "heard?"
 
 	para "My daughter is"
 	line "adamant about"
-
 	para "becoming PROF."
 	line "ELM's assistant."
 
@@ -359,9 +346,9 @@ StoveText:
 	done
 
 SinkText:
-	text "The sink is spot-"
-	line "less. Mom likes it"
-	cont "clean."
+	text "The sink is"
+	line "spotless. Mom"
+	cont "likes it clean."
 	done
 
 FridgeText:
@@ -375,7 +362,6 @@ FridgeText:
 TVText:
 	text "There's a movie on"
 	line "TV: Stars dot the"
-
 	para "sky as two boys"
 	line "ride on a train…"
 

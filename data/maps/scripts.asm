@@ -490,8 +490,6 @@ INCLUDE "maps/Route10North.asm"
 
 SECTION "Map Scripts 26", ROMX
 
-INCLUDE "maps/PewterMuseum1F.asm"
-INCLUDE "maps/PewterMuseum2F.asm"
 INCLUDE "maps/ViridianForest.asm"
 INCLUDE "maps/ViridianForestNorthGate.asm"
 INCLUDE "maps/ViridianForestSouthGate.asm"
@@ -531,6 +529,8 @@ INCLUDE "maps/BattleTentPCRoom.asm"
 INCLUDE "maps/MtSilverRuins.asm"
 INCLUDE "maps/MtSilverRuinsB1F.asm"
 INCLUDE "maps/PowerPlantB1F.asm"
+INCLUDE "maps/PewterMuseum1F.asm"
+INCLUDE "maps/PewterMuseum2F.asm"
 
 
 SECTION "Map Scripts Mt. Battle", ROMX

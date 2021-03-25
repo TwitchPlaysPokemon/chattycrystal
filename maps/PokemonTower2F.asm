@@ -9,35 +9,46 @@ PokemonTower2F_MapScripts:
 	db 0 ; callbacks
 
 TrainerMediumCarly:
-	trainer MEDIUM, CARLY, EVENT_BEAT_MEDIUM_CARLY, MediumCarlySeenText, MediumCarlyBeatenText, 0, .Script
+	trainer MEDIUM, CARLY, EVENT_BEAT_MEDIUM_CARLY, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext MediumCarlyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
+
+.before_text
+	text "Kekeke<...>"
+	line "Kwaaah!"
+	done
+
+.defeat_text
+	text "Hmm? What am I"
+	line "doing?"
+	done
+
+.after_text
+	text "Sorry! I was"
+	line "possessed!"
+	done
 
 PokemonTowerEvan:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showemote EMOTE_SHOCK, PLAYER, 15
-	applymovement POKEMONTOWER2F_EVAN, PokemonTower2fEvanMoveToPlayer
+	applymovement POKEMONTOWER2F_EVAN, PokemonTower2FEvanMoveToPlayer
 	opentext
-	writetext PokemonTowerEvanText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext PokemonTowerEvanText, PokemonTowerEvanText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer AC_CHRIS, EVAN4
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext PokemonTowerEvanText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	setscene SCENE_FINISHED
-	applymovement POKEMONTOWER2F_EVAN, PokemonTower2fEvanLeave
+	applymovement POKEMONTOWER2F_EVAN, PokemonTower2FEvanLeave
 	special FadeOutMusic
 	playsound SFX_EXIT_BUILDING
 	disappear POKEMONTOWER2F_EVAN
@@ -46,7 +57,7 @@ PokemonTowerEvan:
 	playmapmusic
 	end
 
-PokemonTower2fEvanMoveToPlayer:
+PokemonTower2FEvanMoveToPlayer:
 	step RIGHT
 	step RIGHT
 	step UP
@@ -55,7 +66,7 @@ PokemonTower2fEvanMoveToPlayer:
 	step RIGHT
 	step_end
 
-PokemonTower2fEvanLeave:
+PokemonTower2FEvanLeave:
 	step LEFT
 	step DOWN
 	step DOWN
@@ -65,15 +76,8 @@ PokemonTower2fEvanLeave:
 	step LEFT
 	step_end
 
-PokemonTower2fEscapeRope:
+PokemonTower2FEscapeRope:
 	itemball ESCAPE_ROPE
-
-MediumCarlySeenText:
-MediumCarlyBeatenText:
-MediumCarlyAfterBattleText:
-PokemonTowerEvanText:
-	text "<...>"
-	done
 
 PokemonTower2F_MapEvents:
 	db 0, 0 ; filler
@@ -90,4 +94,4 @@ PokemonTower2F_MapEvents:
 	db 3 ; object events
 	object_event  1,  8, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 3, ObjectEvent, EVENT_POKEMON_TOWER_2F_EVAN
 	object_event  9, 11, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, TrainerMediumCarly, -1
-	object_event  8, 7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower2fEscapeRope, EVENT_POKEMON_TOWER_2F_ESCAPE_ROPE
+	object_event  8, 7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, PokemonTower2FEscapeRope, EVENT_POKEMON_TOWER_2F_ESCAPE_ROPE

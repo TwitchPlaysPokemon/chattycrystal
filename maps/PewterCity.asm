@@ -23,12 +23,7 @@ PewterCityBugCatcherScript:
 	jumptextfaceplayer PewterCityBugCatcherText
 
 PewterCityGrampsScript:
-	faceplayer
-	opentext
-	writetext PewterCityGrampsText
-	buttonsound
-	closetext
-	end
+	jumptextfaceplayer PewterCityGrampsText
 
 PewterCitySign:
 	jumptext PewterCitySignText
@@ -81,7 +76,6 @@ PewterCityGrampsText:
 
 	para "That brings back"
 	line "memories. When I"
-
 	para "was young, I went"
 	line "to JOHTO to train."
 	done
@@ -95,10 +89,7 @@ PewterCitySignText:
 PewterGymSignText:
 	text "PEWTER CITY"
 	line "#MON GYM"
-	cont "LEADER: BROCK"
-
-	para "The Rock Solid"
-	line "#MON Trainer"
+	cont "LEADER: EWWYPPP"
 	done
 
 PewterMuseumSignText:

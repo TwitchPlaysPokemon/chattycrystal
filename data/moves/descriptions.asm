@@ -964,6 +964,7 @@ AirCutterDescription:
 AttackOrderDescription:
 CrabhammerDescription:
 CrossChopDescription:
+DrillRunDescription:
 KarateChopDescription:
 LeafBladeDescription:
 NightSlashDescription:
@@ -971,7 +972,6 @@ PsychoCutDescription:
 RazorLeafDescription:
 SlashDescription:
 StoneEdgeDescription:
-DrillRunDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 

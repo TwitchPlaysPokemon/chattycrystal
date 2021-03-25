@@ -7,6 +7,7 @@ CriticalHitMoves:
 	dw BLAZE_KICK
 	dw CRABHAMMER
 	dw CROSS_CHOP
+	dw DRILL_RUN
 	dw KARATE_CHOP
 	dw LEAF_BLADE
 	dw NIGHT_SLASH
@@ -16,7 +17,6 @@ CriticalHitMoves:
 	dw SKY_ATTACK
 	dw SLASH
 	dw STONE_EDGE
-	dw DRILL_RUN
 	dw -1
 
 MetronomeExcepts:

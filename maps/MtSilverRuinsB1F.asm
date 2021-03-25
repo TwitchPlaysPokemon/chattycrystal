@@ -7,17 +7,14 @@
 
 MtSilverRuinsB1F_MapScripts:
 	db 5 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_BEAT_RED
-	scene_script .DummyScene ; SCENE_BEAT_XMAN
-	scene_script .DummyScene ; SCENE_BEAT_DUAL_HOSTS
-	scene_script .DummyScene ; SCENE_BEAT_REDO
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_BEAT_RED
+	scene_script GenericDummyScript ; SCENE_BEAT_XMAN
+	scene_script GenericDummyScript ; SCENE_BEAT_DUAL_HOSTS
+	scene_script GenericDummyScript ; SCENE_BEAT_REDO
 
 	; callbacks
 	db 0
-
-.DummyScene
-	end
 
 MtSilverRuinsB1FRed:
 	special FadeOutMusic
@@ -31,16 +28,16 @@ MtSilverRuinsB1FRed:
 	appear MTSILVERRUINFB1F_RED
 	applymovement MTSILVERRUINFB1F_RED, MtSilverRuinsB1FLeftApproachMovement
 	opentext
-	writetext MtSilverRuinsB1FDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MtSilverRuinsB1FDotsText, MtSilverRuinsB1FDotsText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer RED, RED_RED2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext MtSilverRuinsB1FDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINFB1F_RED, MtSilverRuinsB1FWarpOutMovement
@@ -61,16 +58,16 @@ MtSilverRuinsB1FXman:
 	appear MTSILVERRUINFB1F_XMAN
 	applymovement MTSILVERRUINFB1F_XMAN, MtSilverRuinsB1FXmanApproachMovement
 	opentext
-	writetext MtSilverRuinsB1FDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MtSilverRuinsB1FDotsText, MtSilverRuinsB1FDotsText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer CY_ROBORED, X_CHATTYYELLOW5
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext MtSilverRuinsB1FDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINFB1F_XMAN, MtSilverRuinsB1FWarpOutMovement
@@ -94,32 +91,32 @@ MtSilverRuinsB1FDualHosts:
 	appear MTSILVERRUINFB1F_BRACKETS
 	applymovement MTSILVERRUINFB1F_BRACKETS, MtSilverRuinsB1FRightApproachMovement
 	opentext
-	writetext MtSilverRuinsB1FDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MtSilverRuinsB1FDotsText, MtSilverRuinsB1FDotsText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer RED, CCC_DUALRED
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext MtSilverRuinsB1FDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
 	appear MTSILVERRUINFB1F_XXWWNN
 	applymovement MTSILVERRUINFB1F_XXWWNN, MtSilverRuinsB1FXxwwnnApproachMovement
 	opentext
-	writetext MtSilverRuinsB1FDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MtSilverRuinsB1FDotsText, MtSilverRuinsB1FDotsText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer RBY_GREEN, XXWWNN
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext MtSilverRuinsB1FDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINFB1F_BRACKETS, MtSilverRuinsB1FWarpOutMovement
@@ -144,16 +141,16 @@ MtSilverRuinsB1FRedo:
 	applymovement PLAYER, MtSilverRuinsB1FFaceLeft
 	applymovement MTSILVERRUINFB1F_REDO, MtSilverRuinsB1FRedoFinishMovement
 	opentext
-	writetext MtSilverRuinsB1FDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MtSilverRuinsB1FDotsText, MtSilverRuinsB1FDotsText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer RED, RED_GAUNTLETRED
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext MtSilverRuinsB1FDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINFB1F_REDO, MtSilverRuinsB1FWarpOutMovement
@@ -181,6 +178,7 @@ MtSilverRuinsB1FLeftApproachMovement:
 MtSilverRuinsB1FRightApproachMovement:
 	step RIGHT
 	step RIGHT
+MtSilverRuinsB1FRedoFinishMovement:
 	step RIGHT
 	step RIGHT
 	step_end
@@ -207,11 +205,6 @@ MtSilverRuinsB1FRedoApproachMovement:
 	step UP
 	step_end
 
-MtSilverRuinsB1FRedoFinishMovement:
-	step RIGHT
-	step RIGHT
-	step_end
-
 MtSilverRuinsB1FWarpOutMovement:
 	teleport_from
 	step_end
@@ -222,10 +215,6 @@ MtSilverRuinsB1FXxwwnnApproachMovement:
 MtSilverRuinsB1FFaceDown:
 	turn_head DOWN
 	step_end
-
-MtSilverRuinsB1FDotsText:
-	text "<...>"
-	done
 
 MtSilverRuinsB1F_MapEvents:
 	; filler

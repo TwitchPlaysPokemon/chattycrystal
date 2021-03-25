@@ -4,15 +4,12 @@
 MountMoon_MapScripts:
 	db 2 ; scene scripts
 	scene_script .RivalEncounter ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
 .RivalEncounter:
 	prioritysjump .RivalBattle
-	end
-
-.DummyScene:
 	end
 
 .RivalBattle:
@@ -23,10 +20,10 @@ MountMoon_MapScripts:
 	applymovement MOUNTMOON_SILVER, MountMoonSilverMovementBefore
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext MountMoonSilverTextBefore
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
+	winlosstext HostSilenceText, HostSilenceText
 	setlasttalked MOUNTMOON_SILVER
 	loadtrainer BABA, BABA4
 	startbattle
@@ -34,7 +31,7 @@ MountMoon_MapScripts:
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
-	writetext MountMoonSilverTextAfter
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement MOUNTMOON_SILVER, MountMoonSilverMovementAfter
@@ -59,79 +56,6 @@ MountMoonSilverMovementAfter:
 	step DOWN
 	step DOWN
 	step_end
-
-MountMoonSilverTextBefore:
-	text "<……> <……> <……>"
-
-	para "It's been a while,"
-	line "<PLAYER>."
-
-	para "…Since I lost to"
-	line "you, I thought"
-
-	para "about what I was"
-	line "lacking with my"
-	cont "#MON…"
-
-	para "And we came up"
-	line "with an answer."
-
-	para "<PLAYER>, now we'll"
-	line "show you!"
-	done
-
-MountMoonSilverTextWin:
-	text "<……> <……> <……>"
-
-	para "I thought I raised"
-	line "my #MON to be"
-
-	para "the best they"
-	line "could be…"
-
-	para "…But it still "
-	line "wasn't enough…"
-	done
-
-MountMoonSilverTextAfter:
-	text "<……> <……> <……>"
-
-	para "…You won, fair"
-	line "and square."
-
-	para "I admit it. But"
-	line "this isn't the"
-	cont "end."
-
-	para "I'm going to be"
-	line "the greatest #-"
-	cont "MON trainer ever."
-
-	para "Because these guys"
-	line "are behind me."
-
-	para "…Listen, <PLAYER>."
-
-	para "One of these days"
-	line "I'm going to prove"
-
-	para "how good I am by"
-	line "beating you."
-	done
-
-MountMoonSilverTextLoss:
-	text "<……> <……> <……>"
-
-	para "I've repaid my"
-	line "debt to you."
-
-	para "With my #MON,"
-	line "I'm going to beat"
-
-	para "the CHAMPION and"
-	line "become the world's"
-	cont "greatest trainer."
-	done
 
 MountMoon_MapEvents:
 	db 0, 0 ; filler

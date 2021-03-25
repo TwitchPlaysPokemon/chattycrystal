@@ -100,7 +100,6 @@ ManiaText_AskLookAfterShuckle:
 
 	para "A guy about your"
 	line "age with piercing"
-
 	para "eyes and long hair"
 	line "came in."
 
@@ -114,7 +113,6 @@ ManiaText_AskLookAfterShuckle:
 
 	para "You look strong."
 	line "Could you look"
-
 	para "after my #MON"
 	line "for a while?"
 	done
@@ -181,7 +179,6 @@ ManiaText_SameAsBeingRobbed:
 ManiaText_HappinessSpeech:
 	text "For #MON, hap-"
 	line "piness is being"
-
 	para "with a person who"
 	line "treats them well."
 	done
@@ -189,7 +186,6 @@ ManiaText_HappinessSpeech:
 ManiaText_ShuckleIsYourLastMon:
 	text "If I take my #-"
 	line "MON back, what are"
-
 	para "you going to use"
 	line "in battle?"
 	done

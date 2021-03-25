@@ -5,15 +5,12 @@
 MrPokemonsHouse_MapScripts:
 	db 2 ; scene scripts
 	scene_script .MeetMrPokemon ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
 .MeetMrPokemon:
 	prioritysjump .MrPokemonEvent
-	end
-
-.DummyScene:
 	end
 
 .MrPokemonEvent:
@@ -83,24 +80,18 @@ MrPokemonsHouse_MapScripts:
 	end
 
 MrPokemonsHouse_MrPokemonScript:
-	faceplayer
-	opentext
 	checkitem RED_SCALE
 	iftrue .RedScale
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue .AlwaysNewDiscoveries
-	writetext MrPokemonText_GoBackToElm
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer MrPokemonText_GoBackToElm
 
 .AlwaysNewDiscoveries:
-	writetext MrPokemonText_AlwaysNewDiscoveries
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer MrPokemonText_AlwaysNewDiscoveries
 
 .RedScale:
+	faceplayer
+	opentext
 	writetext MrPokemonText_GimmeTheScale
 	yesorno
 	iffalse .refused
@@ -145,7 +136,7 @@ MrPokemonsHouse_OakExits:
 
 MrPokemonIntroText1:
 	text "Hello, hello! You"
-	line "must be <PLAY_G>."
+	line "must be <PLAYER>."
 
 	para "PROF.ELM said that"
 	line "you would visit."
@@ -160,17 +151,16 @@ MrPokemonIntroText2:
 MrPokemonIntroText3:
 	text "What! It hatched!?"
 	line "Without a #MON"
-	cont "to incubate it?!"
+	cont "to incubate it!?"
 
-	para "and it's a rare,"
+	para "And it's a rare,"
 	line "genderless #MON"
-	cont "as-well<……>"
-
+	cont "as well<...>"
 	done
 
 MrPokemonIntroText4:
-	text "Have you seen this"
-	line "OAK?"
+	text "Have you seen"
+	line "this, PROF.OAK?"
 	done
 
 MrPokemonText_GoBackToElm:
@@ -181,18 +171,18 @@ MrPokemonText_GoBackToElm:
 
 MrPokemonText_AlwaysNewDiscoveries:
 	text "Life is delight-"
-	line "ful! Always, new"
-
+	line "ful! Always new"
 	para "discoveries to be"
 	line "made!"
 	done
 
 MrPokemonsHouse_OakText1:
-	text "OAK: Aha! So"
-	line "you're <PLAY_G>!"
+	text "OAK: Aha! So you're"
+	line "<PLAYER>!"
 
-	para "I'm OAK! A #MON"
-	line "researcher."
+	para "I'm PROFESSOR OAK,"
+	line "a #MON"
+	cont "researcher."
 
 	para "I was just visit-"
 	line "ing my old friend"
@@ -200,23 +190,21 @@ MrPokemonsHouse_OakText1:
 
 	para "I heard you were"
 	line "running an errand"
-
 	para "for PROF.ELM, so I"
 	line "waited here."
 
 	para "Can I see this"
 	line "rare #MON?"
 
-	para "Let's see…"
+	para "Let's see<...>"
 
-	para "<……>"
+	para "<...><...><...>"
 
-	para "The #MON seems"
+	para "This #MON seems"
 	line "perfectly healthy."
 
 	para "Let me collect"
-	line "some data<……>"
-
+	line "some data<...>"
 	done
 
 MrPokemonsHouse_OakText2:
@@ -224,30 +212,30 @@ MrPokemonsHouse_OakText2:
 	line "be enough."
 
 	para "The #MON is"
-	line "completly normal"
+	line "completly normal."
 
 	para "While ELM had"
 	line "told me to keep a"
-	cont "#MON aside<……>"
+	cont "#MON aside<...>"
 
 	para "I think it is best"
-	line "for you to keep it"
-	cont "for yourself."
+	line "for you to keep"
+	para "this #MON for"
+	line "yourself."
 
 	para "You seem to be"
 	line "dependable."
 
-	para "How would you"
-	line "like to help me"
-	cont "gather data."
+	para "Would you like to"
+	line "help me gather"
+	cont "data?"
 
 	para "See? This is the"
 	line "latest version of"
-	cont "#DEX."
+	cont "the #DEX."
 
 	para "It automatically"
 	line "records data on"
-
 	para "#MON you've"
 	line "seen or caught."
 
@@ -263,7 +251,6 @@ MrPokemonsHouse_GetDexText:
 MrPokemonsHouse_OakText3:
 	text "Go meet many kinds"
 	line "of #MON and"
-
 	para "complete that"
 	line "#DEX!"
 
@@ -274,7 +261,7 @@ MrPokemonsHouse_OakText3:
 	line "GOLDENROD for my"
 	cont "usual radio show."
 
-	para "<PLAY_G>, I'm"
+	para "<PLAYER>, I'm"
 	line "counting on you!"
 	done
 
@@ -286,7 +273,7 @@ MrPokemonText_GimmeTheScale:
 	para "That's rare! "
 	line "I, I want it…"
 
-	para "<PLAY_G>, would you"
+	para "<PLAYER>, would you"
 	line "care to trade it?"
 
 	para "I can offer this"
@@ -309,9 +296,9 @@ MrPokemonsHouse_ForeignMagazinesText:
 	done
 
 MrPokemonsHouse_BrokenComputerText:
-	text "It's a big com-"
-	line "puter. Hmm. It's"
-	cont "broken."
+	text "It's a big"
+	line "computer. Hmm<...> it"
+	cont "seems broken<...>"
 	done
 
 MrPokemonsHouse_StrangeCoinsText:
@@ -319,7 +306,7 @@ MrPokemonsHouse_StrangeCoinsText:
 	line "strange coins!"
 
 	para "Maybe they're from"
-	line "another country<……>"
+	line "another country<...>"
 	done
 
 MrPokemonsHouse_MapEvents:

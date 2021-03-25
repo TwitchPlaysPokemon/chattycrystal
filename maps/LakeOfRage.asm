@@ -13,17 +13,11 @@
 	const LAKEOFRAGE_POKE_BALL2
 
 LakeOfRage_MapScripts:
-	db 2 ; scene scripts
-	scene_script .DummyScene0 ; unusable
-	scene_script .DummyScene1 ; unusable
+	db 0 ; scene scripts
 
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 	callback MAPCALLBACK_OBJECTS, .Wesley
-
-.DummyScene0:
-.DummyScene1:
-	end
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
@@ -43,42 +37,44 @@ LakeOfRageLanceScript:
 	checkevent EVENT_REFUSED_TO_HELP_LANCE_AT_LAKE_OF_RAGE
 	iftrue .AskAgainForHelp
 	opentext
-	writetext UnknownText_0x70157
+	writetext HostSilenceText
 	buttonsound
 	faceplayer
-	writetext UnknownText_0x701b4
+	writetext HostSilenceText
 	yesorno
 	iffalse .RefusedToHelp
 .AgreedToHelp:
-	writetext UnknownText_0x702c6
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	playsound SFX_WARP_TO
-	applymovement LAKEOFRAGE_LANCE, MovementData_0x70155
+	applymovement LAKEOFRAGE_LANCE, .teleport
 	disappear LAKEOFRAGE_LANCE
 	clearevent EVENT_MAHOGANY_MART_LANCE_AND_DRAGONITE
 	setevent EVENT_DECIDED_TO_HELP_LANCE
 	setmapscene MAHOGANY_MART_1F, SCENE_MAHOGANYMART1F_LANCE_UNCOVERS_STAIRS
 	end
 
+.AskAgainForHelp:
+	faceplayer
+	opentext
+	writetext HostSilenceText
+	yesorno
+	iftrue .AgreedToHelp
 .RefusedToHelp:
-	writetext UnknownText_0x70371
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	setevent EVENT_REFUSED_TO_HELP_LANCE_AT_LAKE_OF_RAGE
 	end
 
-.AskAgainForHelp:
-	faceplayer
-	opentext
-	writetext UnknownText_0x703a5
-	yesorno
-	iffalse .RefusedToHelp
-	sjump .AgreedToHelp
+.teleport
+	teleport_from
+	step_end
 
 RedGyarados:
 	opentext
-	writetext UnknownText_0x703cb
+	writetext LakeOfRage_GyaradosCry
 	pause 15
 	cry GYARADOS
 	closetext
@@ -92,30 +88,21 @@ RedGyarados:
 	opentext
 	giveitem RED_SCALE
 	waitsfx
-	writetext UnknownText_0x703df
+	writetext LakeOfRage_PlayerGotRedScaleText
 	playsound SFX_ITEM
 	waitsfx
 	itemnotify
 	closetext
-	setscene 0 ; Lake of Rage does not have a scene variable
 	appear LAKEOFRAGE_LANCE
 	end
 
 LakeOfRageGrampsScript:
-	faceplayer
-	opentext
 	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
 	iftrue .ClearedRocketHideout
-	writetext LakeOfRageGrampsText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer LakeOfRageGrampsText
 
 .ClearedRocketHideout:
-	writetext LakeOfRageGrampsText_ClearedRocketHideout
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer LakeOfRageGrampsText_ClearedRocketHideout
 
 LakeOfRageSuperNerdScript:
 	jumptextfaceplayer LakeOfRageSuperNerdText
@@ -146,44 +133,28 @@ TrainerFisherAndre:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherAndreAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FisherAndreAfterBattleText
 
 TrainerFisherRaymond:
 	trainer FISHER, RAYMOND, EVENT_BEAT_FISHER_RAYMOND, FisherRaymondSeenText, FisherRaymondBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherRaymondAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FisherRaymondAfterBattleText
 
 TrainerCooltrainermAaron:
 	trainer COOLTRAINERM, AARON, EVENT_BEAT_COOLTRAINERM_AARON, CooltrainermAaronSeenText, CooltrainermAaronBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermAaronAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermAaronAfterBattleText
 
 TrainerCooltrainerfLois:
 	trainer COOLTRAINERF, LOIS, EVENT_BEAT_COOLTRAINERF_LOIS, CooltrainerfLoisSeenText, CooltrainerfLoisBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerfLoisAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfLoisAfterBattleText
 
 WesleyScript:
 	faceplayer
@@ -236,83 +207,11 @@ LakeOfRageHiddenRareCandy:
 LakeOfRageHiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION
 
-MovementData_0x70155:
-	teleport_from
-	step_end
-
-UnknownText_0x70157:
-	text "This lake is full"
-	line "of GYARADOS but"
-	cont "nothing else…"
-
-	para "So the MAGIKARP"
-	line "are being forced"
-	cont "to evolve…"
-	done
-
-UnknownText_0x701b4:
-	text "Did you come here"
-	line "because of the"
-	cont "rumors?"
-
-	para "You're <PLAYER>?"
-	line "I'm LANCE, a"
-	cont "trainer like you."
-
-	para "I heard some ru-"
-	line "mors, so I came to"
-	cont "investigate…"
-
-	para "I saw the way you"
-	line "battled earlier,"
-	cont "<PLAY_G>."
-
-	para "I can tell that"
-	line "you're a trainer"
-
-	para "with considerable"
-	line "skill."
-
-	para "If you don't mind,"
-	line "could you help me"
-	cont "investigate?"
-	done
-
-UnknownText_0x702c6:
-	text "LANCE: Excellent!"
-
-	para "It seems that the"
-	line "LAKE's MAGIKARP"
-
-	para "are being forced"
-	line "to evolve."
-
-	para "A mysterious radio"
-	line "broadcast coming"
-
-	para "from MAHOGANY is"
-	line "the cause."
-
-	para "I'll be waiting"
-	line "for you, <PLAY_G>."
-	done
-
-UnknownText_0x70371:
-	text "Oh… Well, if you"
-	line "change your mind,"
-	cont "please help me."
-	done
-
-UnknownText_0x703a5:
-	text "LANCE: Hm? Are you"
-	line "going to help me?"
-	done
-
-UnknownText_0x703cb:
+LakeOfRage_GyaradosCry:
 	text "GYARADOS: Gyashaa!"
 	done
 
-UnknownText_0x703df:
+LakeOfRage_PlayerGotRedScaleText:
 	text "<PLAYER> obtained a"
 	line "RED SCALE."
 	done
@@ -336,16 +235,14 @@ LakeOfRageSuperNerdText:
 
 	para "I wonder if there"
 	line "is any connection"
-
-	para "to their mass out-"
-	line "break now?"
+	para "to their mass"
+	line "outbreak now?"
 	done
 
 LakeOfRageCooltrainerFText:
-	text "Did my eyes de-"
-	line "ceive me? I saw a"
-
-	para "red GYARADOS in"
+	text "Did my eyes"
+	line "deceive me? I saw"
+	para "a red GYARADOS in"
 	line "the LAKE…"
 
 	para "But I thought"
@@ -360,11 +257,10 @@ FisherAndreSeenText:
 	done
 
 FisherAndreBeatenText:
-	text "I might be an ex-"
-	line "pert angler, but"
-
-	para "I stink as a #-"
-	line "MON trainer…"
+	text "I might be an"
+	line "expert angler, but"
+	para "I stink as a"
+	line "#MON trainer…"
 	done
 
 FisherAndreAfterBattleText:
@@ -376,9 +272,8 @@ FisherAndreAfterBattleText:
 FisherRaymondSeenText:
 	text "No matter what I"
 	line "do, all I catch"
-
-	para "are the same #-"
-	line "MON…"
+	para "are the same"
+	line "#MON…"
 	done
 
 FisherRaymondBeatenText:
@@ -394,7 +289,6 @@ FisherRaymondAfterBattleText:
 CooltrainermAaronSeenText:
 	text "If a trainer spots"
 	line "another trainer,"
-
 	para "he has to make a"
 	line "challenge."
 
@@ -410,7 +304,6 @@ CooltrainermAaronBeatenText:
 CooltrainermAaronAfterBattleText:
 	text "#MON and their"
 	line "trainer become"
-
 	para "powerful through"
 	line "constant battling."
 	done
@@ -444,7 +337,6 @@ MeetWesleyText:
 
 	para "Seeing as how it's"
 	line "Wednesday today,"
-
 	para "I'm WESLEY of"
 	line "Wednesday."
 	done
@@ -464,7 +356,6 @@ WesleyGaveGiftText:
 WesleyWednesdayText:
 	text "WESLEY: Since you"
 	line "found me, you must"
-
 	para "have met my broth-"
 	line "ers and sisters."
 

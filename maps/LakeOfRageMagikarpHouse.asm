@@ -89,25 +89,21 @@ MagikarpHouseBookshelf:
 MagikarpLengthRaterText_LakeOfRageHistory:
 	text "LAKE OF RAGE is"
 	line "actually a crater"
-
 	para "made by rampaging"
 	line "GYARADOS."
 
 	para "The crater filled"
 	line "up with rainwater"
-
 	para "and the LAKE was"
 	line "formed."
 
 	para "That's the story"
 	line "passed on from my"
-
 	para "Grandpa's great-"
 	line "great-grandpa."
 
 	para "It used to be that"
 	line "you could catch"
-
 	para "lively MAGIKARP"
 	line "there, but…"
 
@@ -118,7 +114,6 @@ MagikarpLengthRaterText_LakeOfRageHistory:
 MagikarpLengthRaterText_MenInBlack:
 	text "The LAKE hasn't"
 	line "been normal since"
-
 	para "those men wearing"
 	line "black arrived."
 	done
@@ -131,9 +126,9 @@ MagikarpLengthRaterText_WorldsLargestMagikarp:
 	line "returned."
 
 	para "I may yet realize"
-	line "my dream of see-"
-	cont "ing the world's"
-	cont "largest MAGIKARP."
+	line "my dream of"
+	para "seeing the world's"
+	line "largest MAGIKARP."
 
 	para "Do you have a ROD?"
 	line "Please help me if"
@@ -143,7 +138,6 @@ MagikarpLengthRaterText_WorldsLargestMagikarp:
 MagikarpLengthRaterText_YouHaveAMagikarp:
 	text "Ah, you have a"
 	line "MAGIKARP! Let's"
-
 	para "see how big that"
 	line "baby is."
 	done
@@ -173,7 +167,6 @@ MagikarpLengthRaterText_TooShort:
 
 	para "…I wish I could"
 	line "say that, but I've"
-
 	para "seen a bigger one"
 	line "before."
 	done
@@ -186,7 +179,6 @@ MagikarpLengthRaterText_NotMagikarp:
 MagikarpLengthRaterText_Refused:
 	text "Oh… So you didn't"
 	line "get one good"
-
 	para "enough to show me?"
 	line "Maybe next time."
 	done

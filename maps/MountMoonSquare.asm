@@ -5,14 +5,11 @@
 
 MountMoonSquare_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_DEFAULT
 
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .DisappearMoonStone
 	callback MAPCALLBACK_OBJECTS, .DisappearRock
-
-.DummyScene:
-	end
 
 .DisappearMoonStone:
 	setevent EVENT_MOUNT_MOON_SQUARE_HIDDEN_MOON_STONE
@@ -24,11 +21,11 @@ MountMoonSquare_MapScripts:
 
 ClefairyDance:
 	checkflag ENGINE_MT_MOON_SQUARE_CLEFAIRY
-	iftrue .NoDancing
+	iftrue GenericDummyScript
 	readvar VAR_WEEKDAY
-	ifnotequal MONDAY, .NoDancing
+	ifnotequal MONDAY, GenericDummyScript
 	checktime NITE
-	iffalse .NoDancing
+	iffalse GenericDummyScript
 	appear MOUNTMOONSQUARE_FAIRY1
 	appear MOUNTMOONSQUARE_FAIRY2
 	applymovement PLAYER, PlayerWalksUpToDancingClefairies
@@ -67,9 +64,6 @@ ClefairyDance:
 	stopfollow
 	clearevent EVENT_MOUNT_MOON_SQUARE_HIDDEN_MOON_STONE
 	setflag ENGINE_MT_MOON_SQUARE_CLEFAIRY
-	end
-
-.NoDancing:
 	end
 
 MountMoonSquareHiddenMoonStone:

@@ -15,38 +15,38 @@ MountMortarB1F_MapScripts:
 MountMortarB1FKiyoScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TYROGUE_FROM_KIYO
+	checkevent EVENT_GOT_HITMONTOP_FROM_KIYO
 	iftrue .GotTyrogue
 	checkevent EVENT_BEAT_BLACKBELT_KIYO
 	iftrue .BeatKiyo
-	writetext UnknownText_0x7e24d
+	writetext BlackbeltKiyoIntroductionText
 	waitbutton
 	closetext
-	winlosstext UnknownText_0x7e2a9, 0
+	winlosstext BlackbeltKiyoWinText, 0
 	loadtrainer BLACKBELT_T, KIYO
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLACKBELT_KIYO
 	opentext
 .BeatKiyo:
-	writetext UnknownText_0x7e2c0
+	writetext BlackbeltKiyoAfterWinText
 	buttonsound
 	waitsfx
 	readvar VAR_PARTYCOUNT
 	ifequal PARTY_LENGTH, .NoRoom
-	writetext UnknownText_0x7e355
+	writetext MountMortarB1F_PlayerGotHitmontopText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	givepoke HITMONTOP, 70
-	setevent EVENT_GOT_TYROGUE_FROM_KIYO
+	setevent EVENT_GOT_HITMONTOP_FROM_KIYO
 .GotTyrogue:
-	writetext UnknownText_0x7e36a
+	writetext BlackbeltKiyoAfterGiftText
 	waitbutton
 	closetext
 	end
 
 .NoRoom:
-	writetext UnknownText_0x7e3df
+	writetext BlackbeltKiyoNoRoomText
 	waitbutton
 	closetext
 	end
@@ -72,7 +72,7 @@ MountMortarB1FPPUp:
 MountMortarB1FHiddenMaxRevive:
 	hiddenitem MAX_REVIVE, EVENT_MOUNT_MORTAR_B1F_HIDDEN_MAX_REVIVE
 
-UnknownText_0x7e24d:
+BlackbeltKiyoIntroductionText:
 	text "Hey!"
 
 	para "I am the KARATE"
@@ -87,12 +87,12 @@ UnknownText_0x7e24d:
 	para "Hwaaarggh!"
 	done
 
-UnknownText_0x7e2a9:
+BlackbeltKiyoWinText:
 	text "Waaaarggh!"
 	line "I'm beaten!"
 	done
 
-UnknownText_0x7e2c0:
+BlackbeltKiyoAfterWinText:
 	text "I… I'm crushed…"
 
 	para "My training is"
@@ -103,17 +103,16 @@ UnknownText_0x7e2c0:
 
 	para "As proof that you"
 	line "defeated me, I'll"
-
 	para "give you a rare"
 	line "fighting #MON."
 	done
 
-UnknownText_0x7e355:
+MountMortarB1F_PlayerGotHitmontopText:
 	text "<PLAYER> received"
 	line "HITMONTOP."
 	done
 
-UnknownText_0x7e36a:
+BlackbeltKiyoAfterGiftText:
 	text "Keep up the hard"
 	line "work. I'll keep"
 	cont "training too."
@@ -121,7 +120,7 @@ UnknownText_0x7e36a:
 	para "Farewell!"
 	done
 
-UnknownText_0x7e3df:
+BlackbeltKiyoNoRoomText:
 	text "You have no room"
 	line "in your party!"
 	done

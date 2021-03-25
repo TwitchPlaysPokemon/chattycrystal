@@ -1,15 +1,12 @@
 MobileBattleRoom_MapScripts:
 	db 2 ; scene scripts
 	scene_script .InitializeMobileBattleRoom ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
 .InitializeMobileBattleRoom:
 	prioritysjump .InitializeAndPreparePokecenter2F
-	end
-
-.DummyScene:
 	end
 
 .InitializeAndPreparePokecenter2F:

@@ -4,16 +4,13 @@
 KarensRoom_MapScripts:
 	db 2 ; scene scripts
 	scene_script .LockDoor ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .KarensRoomDoors
 
 .LockDoor:
 	prioritysjump .KarensDoorLocksBehindYou
-	end
-
-.DummyScene:
 	end
 
 .KarensRoomDoors:
@@ -41,20 +38,20 @@ KarensRoom_MapScripts:
 	end
 
 KarenScript_Battle:
+	checkevent EVENT_BEAT_ELITE_4_KAREN
+	iftrue .battled
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_ELITE_4_KAREN
-	iftrue KarenScript_AfterBattle
-	writetext KarenScript_KarenBeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext KarenScript_KarenBeatenText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer GREEN_MAY, A_EMERALD
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN
 	opentext
-	writetext KarenScript_KarenDefeatText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
@@ -65,11 +62,8 @@ KarenScript_Battle:
 	waitsfx
 	end
 
-KarenScript_AfterBattle:
-	writetext KarenScript_KarenDefeatText
-	waitbutton
-	closetext
-	end
+.battled
+	jumptextfaceplayer HostSilenceText
 
 KarensRoom_EnterMovement:
 	step UP
@@ -77,12 +71,6 @@ KarensRoom_EnterMovement:
 	step UP
 	step UP
 	step_end
-
-KarenScript_KarenBeatenText:
-KarenScript_KarenDefeatText:
-KarenScript_KarenBeforeText:
-	text "<...>"
-	done
 
 KarensRoom_MapEvents:
 	db 0, 0 ; filler

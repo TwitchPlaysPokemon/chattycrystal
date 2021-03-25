@@ -17,10 +17,10 @@ MahoganyGymPryceScript:
 	opentext
 	checkevent EVENT_BEAT_PRYCE
 	iftrue .FightDone
-	writetext PryceText_Intro
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext PryceText_Impressed, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer FC_CHRIS, Y_FUSEDCRYSTAL
 	startbattle
 	reloadmapafterbattle
@@ -31,7 +31,7 @@ MahoganyGymPryceScript:
 	waitsfx
 	setflag ENGINE_GLACIERBADGE
 	readvar VAR_BADGES
-	scall MahoganyGymActivateRockets
+	scall ActivateRockets
 .FightDone:
 	checkevent EVENT_GOT_TM16_ICY_WIND
 	iftrue PryceScript_Defeat
@@ -40,104 +40,60 @@ MahoganyGymPryceScript:
 	setevent EVENT_BEAT_BOARDER_RONALD
 	setevent EVENT_BEAT_BOARDER_BRAD
 	setevent EVENT_BEAT_BOARDER_DOUGLAS
-	writetext PryceText_GlacierBadgeSpeech
+	writetext HostSilenceText
 	buttonsound
 	verbosegiveitem TM_ICY_WIND
 	iffalse MahoganyGym_NoRoomForIcyWind
 	setevent EVENT_GOT_TM16_ICY_WIND
-	writetext PryceText_IcyWindSpeech
-	waitbutton
-	closetext
-	end
-
 PryceScript_Defeat:
-	writetext PryceText_CherishYourPokemon
+	writetext HostSilenceText
 	waitbutton
 MahoganyGym_NoRoomForIcyWind:
 	closetext
 	end
-
-MahoganyGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
-	end
-
-.GoldenrodRockets:
-	jumpstd goldenrodrockets
-
-.RadioTowerRockets:
-	jumpstd radiotowerrockets
 
 TrainerSkierRoxanne:
 	trainer SKIER, ROXANNE, EVENT_BEAT_SKIER_ROXANNE, SkierRoxanneSeenText, SkierRoxanneBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SkierRoxanneAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SkierRoxanneAfterBattleText
 
 TrainerSkierClarissa:
 	trainer SKIER, CLARISSA, EVENT_BEAT_SKIER_CLARISSA, SkierClarissaSeenText, SkierClarissaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SkierClarissaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SkierClarissaAfterBattleText
 
 TrainerBoarderRonald:
 	trainer BOARDER, RONALD, EVENT_BEAT_BOARDER_RONALD, BoarderRonaldSeenText, BoarderRonaldBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BoarderRonaldAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BoarderRonaldAfterBattleText
 
 TrainerBoarderBrad:
 	trainer BOARDER, BRAD, EVENT_BEAT_BOARDER_BRAD, BoarderBradSeenText, BoarderBradBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BoarderBradAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BoarderBradAfterBattleText
 
 TrainerBoarderDouglas:
 	trainer BOARDER, DOUGLAS, EVENT_BEAT_BOARDER_DOUGLAS, BoarderDouglasSeenText, BoarderDouglasBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BoarderDouglasAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BoarderDouglasAfterBattleText
 
 MahoganyGymGuyScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_PRYCE
 	iftrue .MahoganyGymGuyWinScript
-	writetext MahoganyGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer MahoganyGymGuyText
 
 .MahoganyGymGuyWinScript:
-	writetext MahoganyGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer MahoganyGymGuyWinText
 
 MahoganyGymStatue:
 	checkflag ENGINE_GLACIERBADGE
@@ -146,14 +102,6 @@ MahoganyGymStatue:
 .Beaten:
 	gettrainername STRING_BUFFER_4, FC_CHRIS, Y_FUSEDCRYSTAL
 	jumpstd gymstatue2
-
-PryceText_Impressed:
-PryceText_GlacierBadgeSpeech:
-PryceText_IcyWindSpeech:
-PryceText_CherishYourPokemon:
-PryceText_Intro:
-	text "<...>"
-	done
 
 Text_ReceivedGlacierBadge:
 	text "<PLAYER> received"
@@ -174,7 +122,6 @@ BoarderRonaldBeatenText:
 BoarderRonaldAfterBattleText:
 	text "I think there's a"
 	line "move a #MON"
-
 	para "can use while it's"
 	line "frozen."
 	done
@@ -203,31 +150,28 @@ BoarderBradAfterBattleText:
 	done
 
 BoarderDouglasSeenText:
-	text "I know PRYCE's"
-	line "secret."
+	text "I know Y's secret."
 	done
 
 BoarderDouglasBeatenText:
 	text "OK. I'll tell you"
-	line "PRYCE's secret."
+	line "Y's secret."
 	done
 
 BoarderDouglasAfterBattleText:
 	text "The secret behind"
-	line "PRYCE's power…"
+	line "Y's power…"
 
 	para "He meditates under"
 	line "a waterfall daily"
-
 	para "to strengthen his"
 	line "mind and body."
 	done
 
 SkierRoxanneSeenText:
-	text "To get to PRYCE,"
-	line "our GYM LEADER,"
-
-	para "you need to think"
+	text "To get to Y, our"
+	line "GYM LEADER, you"
+	para "need to think"
 	line "before you skate."
 	done
 
@@ -239,7 +183,6 @@ SkierRoxanneBeatenText:
 SkierRoxanneAfterBattleText:
 	text "If you don't skate"
 	line "with precision,"
-
 	para "you won't get far"
 	line "in this GYM."
 	done
@@ -261,35 +204,24 @@ SkierClarissaAfterBattleText:
 	done
 
 MahoganyGymGuyText:
-	text "PRYCE is a veteran"
-	line "who has trained"
-
-	para "#MON for some"
-	line "50 years."
-
-	para "He's said to be"
+	text "Y is said to be"
 	line "good at freezing"
-
 	para "opponents with"
 	line "ice-type moves."
 
 	para "That means you"
 	line "should melt him"
-
 	para "with your burning"
 	line "ambition!"
 	done
 
 MahoganyGymGuyWinText:
-	text "PRYCE is some-"
-	line "thing, but you're"
+	text "Y is something,"
+	line "but you're"
 	cont "something else!"
 
 	para "That was a hot"
-	line "battle that"
-
-	para "bridged the gen-"
-	line "eration gap!"
+	line "battle!"
 	done
 
 MahoganyGym_MapEvents:

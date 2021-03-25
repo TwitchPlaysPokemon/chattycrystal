@@ -4,17 +4,11 @@
 
 NewBarkTown_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_NEW_BARK
@@ -69,8 +63,6 @@ NewBarkTown_TeacherStopsYouScene2:
 	end
 
 NewBarkTownTeacherScript:
-	faceplayer
-	opentext
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
 	iftrue .CallMom
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
@@ -79,34 +71,19 @@ NewBarkTownTeacherScript:
 	iftrue .MonIsAdorable
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue .SentYouAlone
-	writetext Text_GearIsImpressive
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Text_GearIsImpressive
 
 .MonIsAdorable:
-	writetext Text_YourMonIsAdorable
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Text_YourMonIsAdorable
 
 .TellMomYoureLeaving:
-	writetext Text_TellMomIfLeaving
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Text_TellMomIfLeaving
 
 .CallMom:
-	writetext Text_CallMomOnGear
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Text_CallMomOnGear
 
 .SentYouAlone:
-	writetext Text_ElmSentYouAlone
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Text_ElmSentYouAlone
 
 NewBarkTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
@@ -139,16 +116,9 @@ Movement_TeacherRunsToYou2_NBT:
 	turn_head DOWN
 	step_end
 
-Movement_TeacherBringsYouBack1_NBT:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head LEFT
-	step_end
-
 Movement_TeacherBringsYouBack2_NBT:
 	step RIGHT
+Movement_TeacherBringsYouBack1_NBT:
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -181,7 +151,7 @@ Text_GearIsImpressive:
 	done
 
 Text_WaitPlayer:
-	text "Wait, <PLAY_G>!"
+	text "Wait, <PLAYER>!"
 	done
 
 Text_WhatDoYouThinkYoureDoing:
@@ -194,11 +164,10 @@ Text_ItsDangerousToGoAlone:
 	line "go out without a"
 	cont "#MON!"
 
-	para "Wild #MON"
-	line "jump out of the"
-
-	para "grass on the way"
-	line "to the next town."
+	para "Wild #MON jump"
+	line "out of the grass"
+	para "on the way to the"
+	line "next town."
 	done
 
 Text_YourMonIsAdorable:
@@ -214,11 +183,10 @@ Text_ElmSentYouAlone:
 
 	para "I guess it's OK"
 	line "if he says so<……>"
-
 	done
 
 Text_TellMomIfLeaving:
-	text "Hi, <PLAY_G>!"
+	text "Hi, <PLAYER>!"
 	line "Leaving again?"
 
 	para "You should tell"
@@ -229,7 +197,6 @@ Text_TellMomIfLeaving:
 Text_CallMomOnGear:
 	text "Call your mom on"
 	line "your #GEAR to"
-
 	para "let her know how"
 	line "you're doing."
 	done

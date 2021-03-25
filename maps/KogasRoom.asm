@@ -4,16 +4,13 @@
 KogasRoom_MapScripts:
 	db 2 ; scene scripts
 	scene_script .LockDoor ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .KogasRoomDoors
 
 .LockDoor:
 	prioritysjump .KogasDoorLocksBehindYou
-	end
-
-.DummyScene:
 	end
 
 .KogasRoomDoors:
@@ -41,20 +38,20 @@ KogasRoom_MapScripts:
 	end
 
 KogaScript_Battle:
+	checkevent EVENT_BEAT_ELITE_4_KOGA
+	iftrue .battled
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_ELITE_4_KOGA
-	iftrue KogaScript_AfterBattle
-	writetext KogaScript_KogaBeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext KogaScript_KogaBeatenText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer NATE_ELITE_4, R_BLACK22
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KOGA
 	opentext
-	writetext KogaScript_KogaDefeatText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
@@ -65,11 +62,8 @@ KogaScript_Battle:
 	waitsfx
 	end
 
-KogaScript_AfterBattle:
-	writetext KogaScript_KogaDefeatText
-	waitbutton
-	closetext
-	end
+.battled
+	jumptextfaceplayer HostSilenceText
 
 KogasRoom_EnterMovement:
 	step UP
@@ -77,12 +71,6 @@ KogasRoom_EnterMovement:
 	step UP
 	step UP
 	step_end
-
-KogaScript_KogaBeforeText:
-KogaScript_KogaBeatenText:
-KogaScript_KogaDefeatText:
-	text "<...>"
-	done
 
 KogasRoom_MapEvents:
 	db 0, 0 ; filler

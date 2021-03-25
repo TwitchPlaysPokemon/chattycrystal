@@ -37,15 +37,14 @@ MahoganyPokecenter1FYoungsterText:
 	cont "early."
 
 	para "I make them learn"
-	line "certain moves be-"
-	cont "fore I let them"
-	cont "evolve."
+	line "certain moves"
+	para "before I let them"
+	line "evolve."
 	done
 
 MahoganyPokecenter1FCooltrainerFText:
 	text "#MON do become"
 	line "stronger when they"
-
 	para "evolve, but they"
 	line "also learn moves"
 	cont "more slowly."

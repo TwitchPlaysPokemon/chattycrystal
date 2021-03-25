@@ -8,17 +8,11 @@ MAHOGANYTOWN_RAGECANDYBAR_PRICE EQU 300
 
 MahoganyTown_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_MAHOGANY
@@ -26,31 +20,35 @@ MahoganyTown_MapScripts:
 
 MahoganyTownTryARageCandyBarScript:
 	showemote EMOTE_SHOCK, MAHOGANYTOWN_POKEFAN_M, 15
-	applymovement MAHOGANYTOWN_POKEFAN_M, MovementData_0x1900a9
+	applymovement MAHOGANYTOWN_POKEFAN_M, .block_player
 	follow PLAYER, MAHOGANYTOWN_POKEFAN_M
-	applymovement PLAYER, MovementData_0x1900a7
+	applymovement PLAYER, .step_back
 	stopfollow
 	turnobject PLAYER, RIGHT
 	scall RageCandyBarMerchantScript
-	applymovement MAHOGANYTOWN_POKEFAN_M, MovementData_0x1900ad
+	applymovement MAHOGANYTOWN_POKEFAN_M, .walk_back
 	end
+
+.block_player
+	step RIGHT
+	step DOWN
+	turn_head LEFT
+	step_end
+
+.step_back
+	step LEFT
+	step_end
+
+.walk_back
+	step UP
+	turn_head DOWN
+	step_end
 
 MahoganyTownPokefanMScript:
 	faceplayer
 RageCandyBarMerchantScript:
 	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
 	iftrue .ClearedRocketHideout
-	scall .SellRageCandyBars
-	end
-
-.ClearedRocketHideout:
-	opentext
-	writetext RageCandyBarMerchantSoldOutText
-	waitbutton
-	closetext
-	end
-
-.SellRageCandyBars:
 	opentext
 	writetext RageCandyBarMerchantTryOneText
 	special PlaceMoneyTopRight
@@ -68,6 +66,9 @@ RageCandyBarMerchantScript:
 	waitbutton
 	closetext
 	end
+
+.ClearedRocketHideout:
+	jumptext RageCandyBarMerchantSoldOutText
 
 .NotEnoughMoney:
 	writetext RageCandyBarMerchantNotEnoughMoneyText
@@ -88,20 +89,12 @@ RageCandyBarMerchantScript:
 	end
 
 MahoganyTownGrampsScript:
-	faceplayer
-	opentext
 	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
 	iftrue .ClearedRocketHideout
-	writetext MahoganyTownGrampsText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer MahoganyTownGrampsText
 
 .ClearedRocketHideout:
-	writetext MahoganyTownGrampsText_ClearedRocketHideout
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer MahoganyTownGrampsText_ClearedRocketHideout
 
 MahoganyTownFisherScript:
 	jumptextfaceplayer MahoganyTownFisherText
@@ -121,25 +114,6 @@ MahoganyGymSign:
 MahoganyTownPokecenterSign:
 	jumpstd pokecentersign
 
-MovementData_0x1900a4:
-	step DOWN
-	big_step UP
-	turn_head DOWN
-MovementData_0x1900a7:
-	step LEFT
-	step_end
-
-MovementData_0x1900a9:
-	step RIGHT
-	step DOWN
-	turn_head LEFT
-	step_end
-
-MovementData_0x1900ad:
-	step UP
-	turn_head DOWN
-	step_end
-
 RageCandyBarMerchantTryOneText:
 	text "Hiya, kid!"
 
@@ -148,7 +122,6 @@ RageCandyBarMerchantTryOneText:
 
 	para "Since you're new,"
 	line "you should try a"
-
 	para "yummy RAGECANDY-"
 	line "BAR!"
 
@@ -203,13 +176,11 @@ MahoganyTownGrampsText_ClearedRocketHideout:
 MahoganyTownFisherText:
 	text "Since you came"
 	line "this far, take the"
-
 	para "time to do some"
 	line "sightseeing."
 
 	para "You should head"
 	line "north and check"
-
 	para "out LAKE OF RAGE"
 	line "right now."
 	done
@@ -217,7 +188,6 @@ MahoganyTownFisherText:
 MahoganyTownLassText:
 	text "Visit Grandma's"
 	line "shop. She sells"
-
 	para "stuff that nobody"
 	line "else has."
 	done

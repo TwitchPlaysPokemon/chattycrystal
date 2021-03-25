@@ -45,26 +45,17 @@ KantoRadioTower1FGentlemanScript:
 
 .receiveitem:
 	jumpstd receiveitem
-	end
 
 .expncardname
 	db "EXPN CARD@"
 
 KantoRadioTower1FSuperNerd2Script:
-	faceplayer
-	opentext
 	checkflag ENGINE_EXPN_CARD
 	iftrue .GotExpnCard
-	writetext KantoRadioTower1FSuperNerd2Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer KantoRadioTower1FSuperNerd2Text
 
 .GotExpnCard:
-	writetext KantoRadioTower1FSuperNerd2Text_GotExpnCard
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer KantoRadioTower1FSuperNerd2Text_GotExpnCard
 
 KantoRadioTower1FDirectory:
 	jumptext KantoRadioTower1FDirectoryText
@@ -75,7 +66,6 @@ KantoRadioTower1FPokeFluteSign:
 KantoRadioTower1FReceptionistText:
 	text "Welcome!"
 	line "Feel free to look"
-
 	para "around anywhere on"
 	line "this floor."
 	done
@@ -87,10 +77,8 @@ KantoRadioTower1FOfficerText:
 
 	para "Ever since JOHTO's"
 	line "RADIO TOWER was"
-
 	para "taken over by a"
 	line "criminal gang, we"
-
 	para "have had to step"
 	line "up our security."
 	done
@@ -98,7 +86,6 @@ KantoRadioTower1FOfficerText:
 KantoRadioTower1FSuperNerd1Text:
 	text "Many people are"
 	line "hard at work here"
-
 	para "in the RADIO"
 	line "TOWER."
 
@@ -112,13 +99,11 @@ KantoRadioTower1FGentlemanText:
 
 	para "We've been off the"
 	line "air ever since the"
-
 	para "POWER PLANT shut"
 	line "down."
 
 	para "All my efforts to"
 	line "start this station"
-
 	para "would be wasted if"
 	line "I can't broadcast."
 
@@ -127,8 +112,7 @@ KantoRadioTower1FGentlemanText:
 
 KantoRadioTower1FGentlemanText_ReturnedMachinePart:
 	text "Ah! So you're the"
-	line "<PLAY_G> who solved"
-
+	line "<PLAYER> who solved"
 	para "the POWER PLANT's"
 	line "problem?"
 
@@ -145,7 +129,6 @@ KantoRadioTower1FGentlemanText_ReturnedMachinePart:
 KantoRadioTower1FGentlemanText_GotExpnCard:
 	text "With that thing,"
 	line "you can tune into"
-
 	para "the radio programs"
 	line "here in KANTO."
 
@@ -160,13 +143,11 @@ KantoRadioTower1FSuperNerd2Text:
 
 	para "Huh? Your #GEAR"
 	line "can't tune into my"
-
 	para "music programs."
 	line "How unfortunate!"
 
 	para "If you get an EXPN"
 	line "CARD upgrade, you"
-
 	para "can tune in. You'd"
 	line "better get one!"
 	done
@@ -179,7 +160,6 @@ KantoRadioTower1FSuperNerd2Text_GotExpnCard:
 
 	para "I'm responsible"
 	line "for the gorgeous"
-
 	para "melodies that go"
 	line "out over the air."
 

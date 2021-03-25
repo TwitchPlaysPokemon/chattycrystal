@@ -59,7 +59,6 @@ LavenderTownTeacherText:
 LavenderTownGrampsText:
 	text "People come from"
 	line "all over to pay"
-
 	para "their respects to"
 	line "the departed souls"
 	cont "of #MON."

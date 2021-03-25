@@ -15,13 +15,11 @@ LavenderSpeechHouseBookshelf:
 LavenderSpeechHousePokefanFText:
 	text "LAVENDER is a"
 	line "tiny, quiet town"
-
 	para "at the foot of the"
 	line "mountains."
 
 	para "It's gotten a bit"
 	line "busier since the"
-
 	para "RADIO TOWER was"
 	line "built."
 	done

@@ -7,14 +7,11 @@
 
 MahoganyMart1F_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_MAHOGANYMART1F_NOTHING
+	scene_script GenericDummyScript ; SCENE_MAHOGANYMART1F_NOTHING
 	scene_script .LanceUncoversStaircase ; SCENE_MAHOGANYMART1F_LANCE_UNCOVERS_STAIRS
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .MahoganyMart1FStaircase
-
-.DummyScene0:
-	end
 
 .LanceUncoversStaircase:
 	prioritysjump MahoganyMart1FLanceUncoversStaircaseScript
@@ -30,60 +27,80 @@ MahoganyMart1F_MapScripts:
 	return
 
 MahogayMart1FPharmacistScript:
-	faceplayer
-	opentext
 	checkevent EVENT_DECIDED_TO_HELP_LANCE
 	iftrue .LanceEntered
+	faceplayer
+	opentext
 	pokemart MARTTYPE_STANDARD, MART_MAHOGANY_1
 	closetext
 	end
 
 .LanceEntered:
-	writetext MahogayMart1FPharmacistText_LanceEntered
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer .entered_text
+
+.entered_text
+	text "Arrgh… You found"
+	line "the secret stair-"
+	cont "way…"
+	done
 
 MahogayMart1FBlackBeltScript:
-	faceplayer
-	opentext
 	checkevent EVENT_DECIDED_TO_HELP_LANCE
 	iftrue .LanceEntered
-	writetext MahogayMart1FBlackBeltText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer .text
+
+.text
+	text "Heheh! The experi-"
+	line "ment worked like a"
+	cont "charm."
+
+	para "MAGIKARP are just"
+	line "worthless, but"
+	para "GYARADOS are big"
+	line "moneymakers."
+	done
 
 .LanceEntered:
-	writetext MahogayMart1FBlackBeltText_LanceEntered
-	waitbutton
+	jumptextfaceplayer .entered_text
+
+.entered_text
+	text "Urrgh…"
+
+	para "That girl's dragon"
+	line "#MON are tough…"
+	done
+
+MahogayMart1FGrannyScript:
+	faceplayer
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_MAHOGANY_2
 	closetext
 	end
 
 MahoganyMart1FLanceUncoversStaircaseScript:
 	pause 15
 	opentext
-	writetext UnknownText_0x6c52a
+	writetext HostSilenceText
 	pause 15
 	closetext
 	playsound SFX_TACKLE
-	applymovement MAHOGANYMART1F_DRAGON, MovementData_0x6c3f6
-	applymovement MAHOGANYMART1F_BLACK_BELT, MovementData_0x6c3fb
+	applymovement MAHOGANYMART1F_DRAGON, .dragonite_attacks
+	applymovement MAHOGANYMART1F_BLACK_BELT, .black_belt_falls
 	pause 15
 	disappear MAHOGANYMART1F_DRAGON
 	pause 15
-	applymovement MAHOGANYMART1F_LANCE, MovementData_0x6c407
+	applymovement MAHOGANYMART1F_LANCE, .walk_to_player
 	opentext
-	writetext UnknownText_0x6c549
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	follow MAHOGANYMART1F_LANCE, PLAYER
-	applymovement MAHOGANYMART1F_LANCE, MovementData_0x6c40a
-	applymovement MAHOGANYMART1F_PHARMACIST, MovementData_0x6c403
-	applymovement MAHOGANYMART1F_LANCE, MovementData_0x6c40e
+	applymovement MAHOGANYMART1F_LANCE, .push_pharmacist
+	applymovement MAHOGANYMART1F_PHARMACIST, .shoved_aside
+	applymovement MAHOGANYMART1F_LANCE, .approach_stairs
 	stopfollow
 	opentext
-	writetext UnknownText_0x6c59e
+	writetext HostSilenceText
 	waitbutton
 	showemote EMOTE_SHOCK, MAHOGANYMART1F_PHARMACIST, 10
 	playsound SFX_FAINT
@@ -93,31 +110,24 @@ MahoganyMart1FLanceUncoversStaircaseScript:
 	setevent EVENT_UNCOVERED_STAIRCASE_IN_MAHOGANY_MART
 	turnobject MAHOGANYMART1F_LANCE, LEFT
 	opentext
-	writetext UnknownText_0x6c5ba
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	applymovement MAHOGANYMART1F_LANCE, MovementData_0x6c412
+	applymovement MAHOGANYMART1F_LANCE, .enter_stairs
 	playsound SFX_EXIT_BUILDING
 	disappear MAHOGANYMART1F_LANCE
 	setscene SCENE_MAHOGANYMART1F_NOTHING
 	waitsfx
 	end
 
-MahogayMart1FGrannyScript:
-	faceplayer
-	opentext
-	pokemart MARTTYPE_STANDARD, MART_MAHOGANY_2
-	closetext
-	end
-
-MovementData_0x6c3f6:
+.dragonite_attacks
 	fix_facing
 	big_step LEFT
 	big_step RIGHT
 	remove_fixed_facing
 	step_end
 
-MovementData_0x6c3fb:
+.black_belt_falls
 	fix_facing
 	big_step LEFT
 	remove_fixed_facing
@@ -127,96 +137,32 @@ MovementData_0x6c3fb:
 	turn_head RIGHT
 	step_end
 
-MovementData_0x6c403:
+.walk_to_player
+	slow_step LEFT
+	turn_head DOWN
+	step_end
+
+.push_pharmacist
+	slow_step RIGHT
+	slow_step UP
+	slow_step UP
+	step_end
+
+.shoved_aside
 	fix_facing
 	big_step LEFT
 	remove_fixed_facing
 	step_end
 
-MovementData_0x6c407:
-	slow_step LEFT
-	turn_head DOWN
-	step_end
-
-MovementData_0x6c40a:
-	slow_step RIGHT
-	slow_step UP
-	slow_step UP
-	step_end
-
-MovementData_0x6c40e:
+.approach_stairs
 	slow_step UP
 	slow_step RIGHT
 	slow_step RIGHT
 	step_end
 
-MovementData_0x6c412:
+.enter_stairs
 	slow_step RIGHT
 	step_end
-
-UnknownText_0x6c414:
-	text "Hello, kiddo!"
-
-	para "How would you like"
-	line "some RAGECANDYBAR?"
-
-	para "It's the thing to"
-	line "eat in MAHOGANY!"
-	done
-
-MahogayMart1FPharmacistText_LanceEntered:
-	text "Arrgh… You found"
-	line "the secret stair-"
-	cont "way…"
-	done
-
-MahogayMart1FBlackBeltText:
-	text "Heheh! The experi-"
-	line "ment worked like a"
-	cont "charm."
-
-	para "MAGIKARP are just"
-	line "worthless, but"
-
-	para "GYARADOS are big"
-	line "moneymakers."
-	done
-
-MahogayMart1FBlackBeltText_LanceEntered:
-	text "Urrgh…"
-
-	para "That guy's dragon"
-	line "#MON are tough…"
-	done
-
-UnknownText_0x6c52a:
-	text "LANCE: DRAGONITE,"
-	line "HYPER BEAM."
-	done
-
-UnknownText_0x6c549:
-	text "What took you,"
-	line "<PLAY_G>?"
-
-	para "Just as I thought,"
-	line "that strange radio"
-
-	para "signal is coming"
-	line "from here."
-	done
-
-UnknownText_0x6c59e:
-	text "The stairs are"
-	line "right here."
-	done
-
-UnknownText_0x6c5ba:
-	text "LANCE: <PLAY_G>, we"
-	line "should split up to"
-
-	para "check this place."
-	line "I'll go first."
-	done
 
 MahoganyMart1F_MapEvents:
 	db 0, 0 ; filler

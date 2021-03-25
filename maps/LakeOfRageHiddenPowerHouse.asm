@@ -7,10 +7,10 @@ LakeOfRageHiddenPowerHouse_MapScripts:
 	db 0 ; callbacks
 
 HiddenPowerGuy:
-	faceplayer
-	opentext
 	checkevent EVENT_GOT_TM10_HIDDEN_POWER
 	iftrue .AlreadyGotItem
+	faceplayer
+	opentext
 	writetext HiddenPowerGuyText1
 	buttonsound
 	verbosegiveitem TM_HIDDEN_POWER
@@ -18,14 +18,12 @@ HiddenPowerGuy:
 	setevent EVENT_GOT_TM10_HIDDEN_POWER
 	writetext HiddenPowerGuyText2
 	waitbutton
-	closetext
-	end
-.AlreadyGotItem:
-	writetext HiddenPowerGuyText3
-	waitbutton
 .Done:
 	closetext
 	end
+
+.AlreadyGotItem:
+	jumptextfaceplayer HiddenPowerGuyText3
 
 HiddenPowerHouseBookshelf:
 	jumpstd difficultbookshelf
@@ -36,13 +34,11 @@ HiddenPowerGuyText1:
 
 	para "Here I have medi-"
 	line "tated. Inside me,"
-
 	para "a new power has"
 	line "been awakened."
 
 	para "Let me share my"
 	line "power with your"
-
 	para "#MON."
 	line "Take this, child."
 	done
@@ -56,9 +52,9 @@ HiddenPowerGuyText2:
 	cont "for attacking."
 
 	para "Remember this: its"
-	line "type and power de-"
-	cont "pend on the #-"
-	cont "MON using it."
+	line "type and power"
+	para "depend on the"
+	line "#MON using it."
 	done
 
 HiddenPowerGuyText3:

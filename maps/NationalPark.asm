@@ -82,7 +82,7 @@ TrainerSchoolboyJack1:
 	iftrue .NumberAccepted
 	checkevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext UnknownText_0x5c4f3
+	writetext SchoolboyJack1AskPhoneNumberText
 	buttonsound
 	setevent EVENT_JACK_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
@@ -106,7 +106,7 @@ TrainerSchoolboyJack1:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -160,42 +160,31 @@ TrainerSchoolboyJack1:
 
 .AskNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
 
 .NumberAccepted:
 	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .RematchStd:
 	jumpstd rematchm
-	end
 
 TrainerPokefanmWilliam:
 	trainer POKEFANM, WILLIAM, EVENT_BEAT_POKEFANM_WILLIAM, PokefanmWilliamSeenText, PokefanmWilliamBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokefanmWilliamAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokefanmWilliamAfterBattleText
 
 TrainerPokefanfBeverly1:
 	trainer POKEFANF, BEVERLY1, EVENT_BEAT_POKEFANF_BEVERLY, PokefanfBeverly1SeenText, PokefanfBeverly1BeatenText, 0, .Script
@@ -212,7 +201,7 @@ TrainerPokefanfBeverly1:
 	iffalse .NoMarill
 	checkevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgain
-	writetext UnknownText_0x5c5bd
+	writetext PokefanBeverly1AskPhoneNumberText
 	buttonsound
 	setevent EVENT_BEVERLY_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
@@ -239,53 +228,41 @@ TrainerPokefanfBeverly1:
 	sjump .PackFull
 
 .NoMarill:
-	writetext UnknownText_0x5c68a
+	writetext PokefanBeverly1NoMarillText
 	waitbutton
 	closetext
 	end
 
 .AskNumber1:
 	jumpstd asknumber1f
-	end
 
 .AskNumber2:
 	jumpstd asknumber2f
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberf
-	end
 
 .NumberAccepted:
 	jumpstd numberacceptedf
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedf
-	end
 
 .PhoneFull:
 	jumpstd phonefullf
-	end
 
 .Gift:
 	jumpstd giftf
-	end
 
 .PackFull:
 	jumpstd packfullf
-	end
 
 TrainerLassKrise:
 	trainer LASS, KRISE, EVENT_BEAT_LASS_KRISE, LassKriseSeenText, LassKriseBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext LassKriseAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext LassKriseAfterBattleText
 
 NationalParkRelaxationSquareSign:
 	jumptext NationalParkRelaxationSquareText
@@ -311,7 +288,6 @@ NationalParkLassText:
 
 	para "I printed out my"
 	line "favorites from my"
-
 	para "#DEX and stuck"
 	line "them on my bag."
 	done
@@ -328,7 +304,6 @@ NationalParkTeacher1Text:
 
 	para "…Oops, I have to"
 	line "quit thinking like"
-
 	para "a teacher all the"
 	line "time."
 
@@ -337,7 +312,6 @@ NationalParkTeacher1Text:
 
 	para "Since you're work-"
 	line "ing so hard, I"
-
 	para "want you to have"
 	line "this."
 	done
@@ -366,7 +340,6 @@ NationalParkYoungster2Text:
 NationalParkTeacher2Text:
 	text "I take walks in"
 	line "the PARK, but I"
-
 	para "never go into the"
 	line "grass."
 
@@ -384,7 +357,6 @@ NationalParkGameboyKidText:
 
 	para "You can also print"
 	line "out stuff like"
-
 	para "MAIL and your PC"
 	line "BOXES."
 	done
@@ -405,7 +377,7 @@ SchoolboyJack1BeatenText:
 	text "Wha-wha-what?"
 	done
 
-UnknownText_0x5c4f3:
+SchoolboyJack1AskPhoneNumberText:
 	text "There is a lot"
 	line "to learn."
 
@@ -432,7 +404,7 @@ PokefanfBeverly1BeatenText:
 	line "pride, but…"
 	done
 
-UnknownText_0x5c5bd:
+PokefanBeverly1AskPhoneNumberText:
 	text "I must say, your"
 	line "#MON are quite"
 	cont "cute, too."
@@ -454,12 +426,11 @@ PokefanmWilliamBeatenText:
 PokefanmWilliamAfterBattleText:
 	text "I lost the battle,"
 	line "but my #MON win"
-
 	para "the prize for"
 	line "being most lovely."
 	done
 
-UnknownText_0x5c68a:
+PokefanBeverly1NoMarillText:
 	text "My friend keeps a"
 	line "MARILL!"
 

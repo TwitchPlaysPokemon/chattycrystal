@@ -6,16 +6,13 @@
 LancesRoom_MapScripts:
 	db 2 ; scene scripts
 	scene_script .LockDoor ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_LANCESROOM_APPROACH_LANCE
+	scene_script GenericDummyScript ; SCENE_LANCESROOM_APPROACH_LANCE
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .LancesRoomDoors
 
 .LockDoor:
 	prioritysjump .LancesDoorLocksBehindYou
-	end
-
-.DummyScene:
 	end
 
 .LancesRoomDoors:
@@ -52,10 +49,10 @@ Script_ApproachLanceFromRight:
 LancesRoomLanceScript:
 	turnobject LANCESROOM_LANCE, LEFT
 	opentext
-	writetext LanceBattleIntroText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext LanceBattleWinText, 0
+	winlosstext HostSilenceText, 0
 	setlasttalked LANCESROOM_LANCE
 	loadtrainer P_CYAN, CYAN
 	startbattle
@@ -63,7 +60,7 @@ LancesRoomLanceScript:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CHAMPION_LANCE
 	opentext
-	writetext LanceBattleAfterText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
@@ -80,7 +77,7 @@ LancesRoomLanceScript:
 	appear LANCESROOM_MARY
 	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryRushesIn
 	opentext
-	writetext UnknownText_0x1811dd
+	writetext LancesRoom_MaryGreetsOakText
 	waitbutton
 	closetext
 	appear LANCESROOM_OAK
@@ -91,19 +88,19 @@ LancesRoomLanceScript:
 	turnobject LANCESROOM_OAK, UP
 	turnobject LANCESROOM_LANCE, LEFT
 	opentext
-	writetext UnknownText_0x18121b
+	writetext LancesRoom_OakText
 	waitbutton
 	closetext
 	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryInterviewChampion
 	turnobject PLAYER, LEFT
 	opentext
-	writetext UnknownText_0x18134b
+	writetext LancesRoom_MaryInterviewText
 	waitbutton
 	closetext
 	applymovement LANCESROOM_LANCE, LancesRoomMovementData_LancePositionsSelfToGuidePlayerAway
 	turnobject PLAYER, UP
 	opentext
-	writetext UnknownText_0x18137b
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	follow LANCESROOM_LANCE, PLAYER
@@ -119,7 +116,7 @@ LancesRoomLanceScript:
 	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryTriesToFollow
 	showemote EMOTE_SHOCK, LANCESROOM_MARY, 15
 	opentext
-	writetext UnknownText_0x1813c5
+	writetext LancesRoom_MaryWaitText
 	pause 30
 	closetext
 	applymovement LANCESROOM_MARY, LancesRoomMovementData_MaryRunsBackAndForth
@@ -131,7 +128,10 @@ LancesRoomLanceScript:
 LancesRoom_EnterMovement:
 	step UP
 	step UP
+LancesRoomMovementData_OakWalksIn:
 	step UP
+LancesRoomMovementData_LanceLeadsPlayerToHallOfFame:
+LancesRoomMovementData_PlayerExits:
 	step UP
 	step_end
 
@@ -155,11 +155,6 @@ LancesRoomMovementData_MaryRushesIn:
 	turn_head DOWN
 	step_end
 
-LancesRoomMovementData_OakWalksIn:
-	step UP
-	step UP
-	step_end
-
 LancesRoomMovementData_MaryYieldsToOak:
 	step LEFT
 	turn_head RIGHT
@@ -174,14 +169,6 @@ LancesRoomMovementData_LancePositionsSelfToGuidePlayerAway:
 	step UP
 	step LEFT
 	turn_head DOWN
-	step_end
-
-LancesRoomMovementData_LanceLeadsPlayerToHallOfFame:
-	step UP
-	step_end
-
-LancesRoomMovementData_PlayerExits:
-	step UP
 	step_end
 
 LancesRoomMovementData_MaryTriesToFollow:
@@ -204,14 +191,7 @@ LancesRoomMovementData_MaryRunsBackAndForth:
 	turn_head UP
 	step_end
 
-UnknownText_0x18137b:
-LanceBattleWinText:
-LanceBattleAfterText:
-LanceBattleIntroText:
-	text "<...>"
-	done
-
-UnknownText_0x1811dd:
+LancesRoom_MaryGreetsOakText:
 	text "MARY: Oh, no!"
 	line "It's all over!"
 
@@ -219,9 +199,9 @@ UnknownText_0x1811dd:
 	line "weren't so slow…"
 	done
 
-UnknownText_0x18121b:
+LancesRoom_OakText:
 	text "PROF.OAK: Ah,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "It's been a long"
 	line "while."
@@ -235,30 +215,28 @@ UnknownText_0x18121b:
 
 	para "Your dedication,"
 	line "trust and love for"
-
 	para "your #MON made"
 	line "this happen."
 
 	para "Your #MON were"
 	line "outstanding too."
 
-	para "Because they be-"
-	line "lieved in you as a"
-
-	para "trainer, they per-"
-	line "severed."
+	para "Because they"
+	line "believed in you as"
+	para "a trainer, they"
+	line "persevered."
 
 	para "Congratulations,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 	done
 
-UnknownText_0x18134b:
+LancesRoom_MaryInterviewText:
 	text "MARY: Let's inter-"
 	line "view the brand new"
 	cont "CHAMPION!"
 	done
 
-UnknownText_0x1813c5:
+LancesRoom_MaryWaitText:
 	text "MARY: Oh, wait!"
 	line "We haven't done"
 	cont "the interview!"

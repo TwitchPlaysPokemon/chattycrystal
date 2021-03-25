@@ -17,11 +17,7 @@ TrainerSupernerdHugh:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SupernerdHughAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SupernerdHughAfterBattleText
 
 Kyogre:
 	faceplayer
@@ -77,7 +73,6 @@ SupernerdHughAfterBattleText:
 
 	para "Have you seen a"
 	line "trainer who has a"
-
 	para "SLOWPOKE that can"
 	line "use STRENGTH?"
 	done

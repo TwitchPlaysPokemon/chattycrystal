@@ -8,17 +8,14 @@
 
 MtSilverRuins_MapScripts:
 	db 5 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_BEAT_ABE
-	scene_script .DummyScene ; SCENE_BEAT_EVAN
-	scene_script .DummyScene ; SCENE_BEAT_KAY
-	scene_script .DummyScene ; SCENE_BEAT_AZURE
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_BEAT_ABE
+	scene_script GenericDummyScript ; SCENE_BEAT_EVAN
+	scene_script GenericDummyScript ; SCENE_BEAT_KAY
+	scene_script GenericDummyScript ; SCENE_BEAT_AZURE
 
 	; callbacks
 	db 0
-
-.DummyScene
-	end
 
 MtSilverRuinsAbe:
 	special FadeOutMusic
@@ -27,16 +24,16 @@ MtSilverRuinsAbe:
 	appear MTSILVERRUINSB1F_ABE
 	applymovement MTSILVERRUINSB1F_ABE, MtSilverRuinsAbeApproachMovement
 	opentext
-	writetext MtSilverRuinsDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MtSilverRuinsDotsText, MtSilverRuinsDotsText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer RED, AIIIAAB2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext MtSilverRuinsDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINSB1F_ABE, MtSilverRuinsWarpOutMovement
@@ -54,16 +51,16 @@ MtSilverRuinsEvanUp:
 	appear MTSILVERRUINSB1F_EVAN
 	applymovement MTSILVERRUINSB1F_EVAN, MtSilverRuinsRightApproachMovement
 	opentext
-	writetext MtSilverRuinsDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MtSilverRuinsDotsText, MtSilverRuinsDotsText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer AC_CHRIS, EVAN6
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext MtSilverRuinsDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINSB1F_EVAN, MtSilverRuinsWarpOutMovement
@@ -81,16 +78,16 @@ MtSilverRuinsKayUp:
 	appear MTSILVERRUINSB1F_KAY
 	applymovement MTSILVERRUINSB1F_KAY, MtSilverRuinsRightApproachMovement
 	opentext
-	writetext MtSilverRuinsDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MtSilverRuinsDotsText, MtSilverRuinsDotsText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer RED, KAY
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext MtSilverRuinsDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINSB1F_KAY, MtSilverRuinsWarpOutMovement
@@ -106,27 +103,28 @@ MtSilverRuinsAzureRight:
 MtSilverRuinsAzureLeft:
 	applymovement PLAYER, MtSilverRuinsStepRightMovement
 MtSilverRuinsAzureMiddle:
+	; TODO: add text for Azure
 	special FadeOutMusic
 	applymovement PLAYER, MtSilverRuinsFaceDown
 	appear MTSILVERRUINSB1F_AZURE
 	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsUpApproachMovement
 	opentext
-	writetext MtSilverRuinsDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsAzureMovesToArena
 	applymovement PLAYER, MtSilverRuinsPlayerMovesToArena
 	opentext
-	writetext MtSilverRuinsDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext MtSilverRuinsDotsText, MtSilverRuinsDotsText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer AZURE, AZURE1
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext MtSilverRuinsDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	checkcaught PHANCERO
@@ -135,7 +133,7 @@ MtSilverRuinsAzureMiddle:
 	playsound SFX_POTION
 	waitsfx
 	opentext
-	writetext MtSilverRuinsDotsText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsWarpOutMovement
@@ -156,7 +154,7 @@ Phancero:
 	faceobject MTSILVERRUINSB1F_PHANCERO_ALIVE, PLAYER
 PhanceroContinue:
 	opentext
-	writetext PhanceroText
+	writetext EllipsisSilenceText
 	cry PHANCERO
 	pause 15
 	closetext
@@ -186,12 +184,6 @@ MtSilverRuinsStartCredits:
 	refreshscreen
 	credits
 	end
-
-PhanceroFledText:
-PhanceroText:
-MtSilverRuinsDotsText:
-	text "<...>"
-	done
 
 MtSilverRuinsAbeApproachMovement:
 	step LEFT
@@ -251,6 +243,11 @@ MtSilverRuinsStepDown:
 MtSilverRuinsShowObject:
 	show_object
 	step_end
+
+PhanceroFledText:
+	text "PHANCERO flew"
+	line "away<...>"
+	done
 
 MtSilverRuins_MapEvents:
 	; filler

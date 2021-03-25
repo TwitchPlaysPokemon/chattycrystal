@@ -583,8 +583,9 @@ BattleAnim_StoneEdge:
 BattleAnim_HyperVoice:
 	anim_2gfx ANIM_GFX_NOISE, ANIM_GFX_PSYCHIC
 .loop
+	anim_cry $0
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
 	anim_bgeffect ANIM_BG_1F, $30, $2, $0
-	anim_sound 0, 0, SFX_BOAT
 	anim_obj ANIM_OBJ_4B, 64, 76, $0
 	anim_obj ANIM_OBJ_4B, 64, 88, $1
 	anim_obj ANIM_OBJ_4B, 64, 100, $2

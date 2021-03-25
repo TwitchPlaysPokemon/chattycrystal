@@ -1911,66 +1911,72 @@ ChatotEvosAttacks:
 CroagunkEvosAttacks:
 	dbbw EVOLVE_LEVEL, 37, TOXICROAK
 	db 0
-	dbw 1, ASTONISH
+	dbw 1, POISON_STING
 	dbw 3, MUD_SLAP
-	dbw 8, POISON_STING
+	dbw 8, ASTONISH
 	dbw 10, TAUNT
 	dbw 15, PURSUIT
 	dbw 17, FEINT_ATTACK
 	dbw 22, REVENGE
 	dbw 24, SWAGGER
 	dbw 29, MUD_BOMB
-	dbw 31, SUCKER_PUNCH
-	dbw 36, NASTY_PLOT
-	dbw 38, POISON_FANG ; Poison Jab
-	dbw 43, SLUDGE_BOMB
+	dbw 31, POISON_JAB
+	dbw 36, TOXIC
+	dbw 38, SUCKER_PUNCH
+	dbw 43, NASTY_PLOT
+	dbw 45, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 ToxicroakEvosAttacks:
 	db 0
-	dbw 1, ASTONISH
-	dbw 1, MUD_SLAP
 	dbw 1, POISON_STING
+	dbw 1, MUD_SLAP
+	dbw 1, ASTONISH
+	dbw 1, TAUNT
+	dbw 8, ASTONISH
 	dbw 10, TAUNT
 	dbw 15, PURSUIT
 	dbw 17, FEINT_ATTACK
 	dbw 22, REVENGE
 	dbw 24, SWAGGER
 	dbw 29, MUD_BOMB
-	dbw 31, SUCKER_PUNCH
-	dbw 36, NASTY_PLOT
-	dbw 41, POISON_FANG ; Poison Jab
-	dbw 49, SLUDGE_BOMB
+	dbw 31, POISON_JAB
+	dbw 36, TOXIC
+	dbw 40, SUCKER_PUNCH
+	dbw 46, NASTY_PLOT
+	dbw 50, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 LeafeonEvosAttacks:
 	db 0
 	dbw 1, TACKLE
-	dbw 8, SAND_ATTACK
-	dbw 15, RAZOR_LEAF
-	dbw 22, QUICK_ATTACK
-	dbw 29, SYNTHESIS
-	dbw 43, GIGA_DRAIN
-	dbw 50, SOLARBEAM ; replacement for Last Resort
-	dbw 57, SING ; replacement for Grasswhistle
-	dbw 64, SUNNY_DAY
-	dbw 78, SWORDS_DANCE
+	dbw 1, TAIL_WHIP
+	dbw 6, SAND_ATTACK
+	dbw 10, RAZOR_LEAF
+	dbw 14, QUICK_ATTACK
+	dbw 18, SLEEP_POWDER
+	dbw 23, SWIFT
+	dbw 27, GIGA_DRAIN
+	dbw 33, SWORDS_DANCE
+	dbw 38, SYNTHESIS
+	dbw 45, SUNNY_DAY
+	dbw 50, LEAF_BLADE
 	db 0 ; no more level-up moves
 
 GlaceonEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
-	dbw 5, SAND_ATTACK
-	dbw 9, ICY_WIND
-	dbw 13, QUICK_ATTACK
-	dbw 17, BITE
-	dbw 17, AURORA_BEAM ; No Ice Fang, no PSS either so doesn't matter.
-	dbw 25, ICE_SHARD
-	dbw 29, BARRIER
-	dbw 33, MIRROR_COAT
-	dbw 41, ICE_BEAM ; Replacement for Last Resort, and because Ice Beam isn't a TM this gen, and fuck the postgame tutor.
-	dbw 45, BLIZZARD
+	dbw 6, SAND_ATTACK
+	dbw 10, RAZOR_LEAF
+	dbw 14, QUICK_ATTACK
+	dbw 18, ICY_WIND
+	dbw 23, BITE
+	dbw 27, ICE_FANG
+	dbw 33, ICE_SHARD
+	dbw 38, BARRIER
+	dbw 45, MIRROR_COAT
+	dbw 50, BLIZZARD
 	db 0 ; no more level-up moves
 
 PorygonZEvosAttacks:
@@ -1997,6 +2003,8 @@ DusknoirEvosAttacks:
 	dbw 1, FIRE_PUNCH
 	dbw 1, ICE_PUNCH
 	dbw 1, SHADOW_PUNCH
+	dbw 52, DARK_PULSE
+	dbw 57, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 FroslassEvosAttacks:
@@ -2019,25 +2027,24 @@ FroslassEvosAttacks:
 
 DarkraiEvosAttacks:
 	db 0
-	dbw 1, DISABLE
 	dbw 1, NIGHT_SHADE
+	dbw 1, DISABLE
 	dbw 11, QUICK_ATTACK
 	dbw 20, HYPNOSIS
-	dbw 29, KNOCK_OFF
+	dbw 29, FEINT_ATTACK
 	dbw 38, NIGHTMARE
 	dbw 47, DOUBLE_TEAM
 	dbw 57, HAZE
 	dbw 66, DARK_VOID
 	dbw 75, NASTY_PLOT
 	dbw 84, DREAM_EATER
-	dbw 93, SUCKER_PUNCH
+	dbw 93, DARK_PULSE
 	db 0 ; no more level-up moves
 
 PansageEvosAttacks:
 	dbbw EVOLVE_ITEM, LEAF_STONE, SIMISAGE
 	db 0
 	dbw 1, SCRATCH
-	dbw 1, GROWL
 	dbw 4, LEER
 	dbw 7, LICK
 	dbw 10, VINE_WHIP
@@ -2045,10 +2052,13 @@ PansageEvosAttacks:
 	dbw 16, LEECH_SEED
 	dbw 19, BITE
 	dbw 22, RAZOR_LEAF
-	dbw 25, SWAGGER
-	dbw 32, NEEDLE_ARM
-	dbw 44, CRUNCH
-	dbw 52, LEAF_STORM
+	dbw 25, TAUNT
+	dbw 28, COVET
+	dbw 31, LOW_KICK
+	dbw 31, GRASS_KNOT
+	dbw 34, TICKLE
+	dbw 37, SWAGGER
+	dbw 40, CRUNCH
 	db 0 ; no more level-up moves
 
 SimisageEvosAttacks:
@@ -2056,103 +2066,106 @@ SimisageEvosAttacks:
 	dbw 1, LEER
 	dbw 1, LICK
 	dbw 1, FURY_SWIPES
-	dbw 1, LEAF_STORM
+	dbw 1, RAZOR_LEAF
 	db 0 ; no more level-up moves
 
 DrilburEvosAttacks:
 	dbbw EVOLVE_LEVEL, 31, EXCADRILL
 	db 0
 	dbw 1, SCRATCH
-	dbw 1, MUD_SLAP ; Mud Sport
 	dbw 5, RAPID_SPIN
+	dbw 8, MUD_SLAP
 	dbw 12, FURY_SWIPES
 	dbw 15, METAL_CLAW
 	dbw 19, DIG
 	dbw 22, HONE_CLAWS
 	dbw 26, SLASH
 	dbw 29, ROCK_SLIDE
-	dbw 33, EARTHQUAKE
+	dbw 33, DRILL_RUN
 	dbw 36, SWORDS_DANCE
 	dbw 40, SANDSTORM
+	dbw 43, EARTHQUAKE
 	dbw 47, FISSURE
 	db 0 ; no more level-up moves
 
 ExcadrillEvosAttacks:
 	db 0
 	dbw 1, SCRATCH
-	dbw 1, MUD_SLAP ; Mud Sport
-	dbw 1, RAPID_SPIN
+	dbw 5, RAPID_SPIN
+	dbw 8, MUD_SLAP
 	dbw 12, FURY_SWIPES
 	dbw 15, METAL_CLAW
 	dbw 19, DIG
 	dbw 22, HONE_CLAWS
 	dbw 26, SLASH
 	dbw 29, ROCK_SLIDE
-	dbw 31, HORN_DRILL
-	dbw 36, EARTHQUAKE
+	dbw 36, DRILL_RUN
 	dbw 42, SWORDS_DANCE
 	dbw 49, SANDSTORM
+	dbw 55, EARTHQUAKE
 	dbw 62, FISSURE
 	db 0 ; no more level-up moves
 
 SandileEvosAttacks:
 	dbbw EVOLVE_LEVEL, 29, KROKOROK
 	db 0
-	dbw 1, POWER_TRIP
+	dbw 1, RAGE
 	dbw 1, LEER
-	dbw 3, SAND_ATTACK
-	dbw 6, HONE_CLAWS
-	dbw 9, BITE
-	dbw 12, SAND_TOMB
-	dbw 15, ASSURANCE
-	dbw 18, DIG
-	dbw 21, SWAGGER
-	dbw 24, SCARY_FACE
-	dbw 27, CRUNCH
-	dbw 30, SANDSTORM
-	dbw 33, FOUL_PLAY
-	dbw 36, EARTHQUAKE
-	dbw 39, THRASH
+	dbw 4, SAND_ATTACK
+	dbw 7, BITE
+	dbw 10, HONE_CLAWS
+	dbw 13, SAND_TOMB
+	dbw 19, ASSURANCE
+	dbw 25, DIG
+	dbw 28, CRUNCH
+	dbw 31, SWAGGER
+	dbw 34, THIEF
+	dbw 37, SANDSTORM
+	dbw 40, FOUL_PLAY
+	dbw 43, EARTHQUAKE
+	dbw 46, THRASH
 	db 0 ; no more level-up moves
 
 KrokorokEvosAttacks:
 	dbbw EVOLVE_LEVEL, 40, KROOKODILE
 	db 0
-	dbw 1, POWER_TRIP
+	dbw 1, RAGE
 	dbw 1, LEER
-	dbw 1, SAND_ATTACK
-	dbw 1, HONE_CLAWS
-	dbw 9, BITE
-	dbw 12, SAND_TOMB
-	dbw 15, ASSURANCE
-	dbw 18, DIG
-	dbw 21, SWAGGER
-	dbw 24, SCARY_FACE
-	dbw 27, CRUNCH
-	dbw 32, SANDSTORM
-	dbw 35, FOUL_PLAY
-	dbw 42, EARTHQUAKE
-	dbw 47, THRASH
+	dbw 4, SAND_ATTACK
+	dbw 7, BITE
+	dbw 10, HONE_CLAWS
+	dbw 13, SAND_TOMB
+	dbw 19, ASSURANCE
+	dbw 25, DIG
+	dbw 28, CRUNCH
+	dbw 32, SWAGGER
+	dbw 36, THIEF
+	dbw 40, SANDSTORM
+	dbw 44, FOUL_PLAY
+	dbw 48, EARTHQUAKE
+	dbw 52, THRASH
 	db 0 ; no more level-up moves
 
 KrookodileEvosAttacks:
 	db 0
 	dbw 1, POWER_TRIP
+	dbw 1, RAGE
 	dbw 1, LEER
 	dbw 1, SAND_ATTACK
-	dbw 1, HONE_CLAWS
-	dbw 9, BITE
-	dbw 12, SAND_TOMB
-	dbw 15, ASSURANCE
-	dbw 18, DIG
-	dbw 21, SWAGGER
-	dbw 24, SCARY_FACE
-	dbw 27, CRUNCH
-	dbw 32, SANDSTORM
-	dbw 35, FOUL_PLAY
-	dbw 44, EARTHQUAKE
-	dbw 51, THRASH
-	dbw 58, OUTRAGE
+	dbw 1, BITE
+	dbw 7, BITE
+	dbw 10, HONE_CLAWS
+	dbw 13, SAND_TOMB
+	dbw 19, ASSURANCE
+	dbw 25, DIG
+	dbw 28, CRUNCH
+	dbw 32, SWAGGER
+	dbw 36, THIEF
+	dbw 42, SANDSTORM
+	dbw 48, FOUL_PLAY
+	dbw 54, EARTHQUAKE
+	dbw 60, THRASH
+	dbw 66, OUTRAGE
 	db 0 ; no more level-up moves
 
 DucklettEvosAttacks:

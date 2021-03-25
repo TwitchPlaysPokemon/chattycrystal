@@ -22,6 +22,7 @@ MoveAnimations3:
 	dw BattleAnim_HyperVoice
 	dw BattleAnim_LeafBlade
 	dw BattleAnim_EnergyBall
+	dw BattleAnim_EnergyBall   ; 178 PLACEHOLDER Drill run
 
 BattleAnim_CrystalBolt:
 	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_LIGHTNING

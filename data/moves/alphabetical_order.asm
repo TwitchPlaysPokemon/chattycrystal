@@ -92,6 +92,7 @@ AlphabeticalMoveList::
 	dw DRAININGKISS
 	dw DREAM_EATER
 	dw DRILL_PECK
+	dw DRILL_RUN
 	dw DUAL_CHOP
 	dw DYNAMICPUNCH
 	dw EARTH_POWER

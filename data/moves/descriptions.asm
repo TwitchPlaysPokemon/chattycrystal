@@ -380,6 +380,7 @@ MoveDescriptions1:
 	dw HyperVoiceDescription
 	dw LeafBladeDescription
 	dw EnergyBallDescription
+	dw DrillRunDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -970,6 +971,7 @@ PsychoCutDescription:
 RazorLeafDescription:
 SlashDescription:
 StoneEdgeDescription:
+DrillRunDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 

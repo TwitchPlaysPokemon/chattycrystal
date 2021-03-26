@@ -12,20 +12,12 @@ RadioTower1F_MapScripts:
 	db 0 ; callbacks
 
 RadioTower1FReceptionistScript:
-	faceplayer
-	opentext
 	checkflag ENGINE_ROCKETS_IN_RADIO_TOWER
 	iftrue .Rockets
-	writetext RadioTower1FReceptionistWelcomeText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RadioTower1FReceptionistWelcomeText
 
 .Rockets:
-	writetext RadioTower1FReceptionistNoToursText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RadioTower1FReceptionistNoToursText
 
 RadioTower1FLuckyNumberManScript:
 	faceplayer
@@ -58,10 +50,7 @@ RadioTower1FLuckyNumberManScript:
 	ifequal 1, .FirstPlace
 	ifequal 2, .SecondPlace
 	ifequal 3, .ThirdPlace
-	sjump .NoPrize
-
-.GameOver:
-	writetext RadioTower1FLuckyNumberManComeAgainText
+	writetext RadioTower1FLuckyNumberManNoneOfYourIDNumbersMatchText
 	waitbutton
 	closetext
 	end
@@ -72,10 +61,7 @@ RadioTower1FLuckyNumberManScript:
 	waitsfx
 	buttonsound
 	giveitem MASTER_BALL
-	iffalse .BagFull
-	itemnotify
-	setflag ENGINE_LUCKY_NUMBER_SHOW
-	sjump .GameOver
+	sjump .award
 
 .SecondPlace:
 	writetext RadioTower1FLuckyNumberManOkayMatchText
@@ -83,10 +69,7 @@ RadioTower1FLuckyNumberManScript:
 	waitsfx
 	buttonsound
 	giveitem EXP_SHARE
-	iffalse .BagFull
-	itemnotify
-	setflag ENGINE_LUCKY_NUMBER_SHOW
-	sjump .GameOver
+	sjump .award
 
 .ThirdPlace:
 	writetext RadioTower1FLuckyNumberManWeakMatchText
@@ -94,13 +77,12 @@ RadioTower1FLuckyNumberManScript:
 	waitsfx
 	buttonsound
 	giveitem PP_UP
+.award
 	iffalse .BagFull
 	itemnotify
 	setflag ENGINE_LUCKY_NUMBER_SHOW
-	sjump .GameOver
-
-.NoPrize:
-	writetext RadioTower1FLuckyNumberManNoneOfYourIDNumbersMatchText
+.GameOver:
+	writetext RadioTower1FLuckyNumberManComeAgainText
 	waitbutton
 	closetext
 	end
@@ -162,7 +144,6 @@ RadioTower1FRadioCardWomanScript:
 
 .ReceiveItem:
 	jumpstd receiveitem
-	end
 
 .WrongAnswer:
 	playsound SFX_WRONG
@@ -188,11 +169,7 @@ TrainerGruntM3:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM3AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM3AfterBattleText
 
 RadioTower1FDirectory:
 	jumptext RadioTower1FDirectoryText
@@ -217,14 +194,14 @@ RadioTower1FReceptionistWelcomeText:
 RadioTower1FReceptionistNoToursText:
 	text "Hello. I'm sorry,"
 	line "but we're not"
-	cont "offering any tours"
-	cont "today."
+	para "offering any tours"
+	line "today."
 	done
 
 RadioTower1FLuckyNumberManAskToPlayText:
 	text "Hi, are you here"
-	line "for the LUCKY NUM-"
-	cont "BER SHOW?"
+	line "for the LUCKY"
+	cont "NUMBER SHOW?"
 
 	para "Want me to check"
 	line "the ID numbers of"
@@ -312,7 +289,6 @@ RadioTower1FRadioCardWomanOfferQuizText:
 
 	para "Slide it into your"
 	line "#GEAR to play"
-
 	para "the radio anytime,"
 	line "anywhere."
 
@@ -353,7 +329,6 @@ RadioTower1FRadioCardWomanQuestion4Text:
 
 	para "Is FALKNER the"
 	line "VIOLET GYM LEADER"
-
 	para "who uses bird"
 	line "#MON?"
 	done
@@ -365,7 +340,6 @@ RadioTower1FRadioCardWomanQuestion5Text:
 
 	para "Do GOLDENROD GAME"
 	line "CORNER's slots"
-
 	para "have CHARMANDER"
 	line "on their reels?"
 	done
@@ -392,7 +366,6 @@ RadioTower1FRadioCardWomanTuneInText:
 RadioTower1FRadioCardWomanWrongAnswerText:
 	text "Oh, dear."
 	line "Sorry, but you"
-
 	para "got it wrong."
 	line "Please try again!"
 	done
@@ -427,7 +400,6 @@ GruntM3SeenText:
 
 	para "Now everyone will"
 	line "get to experience"
-
 	para "the true terror of"
 	line "TEAM ROCKET!"
 

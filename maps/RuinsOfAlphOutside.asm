@@ -7,29 +7,19 @@
 
 RuinsOfAlphOutside_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_RUINSOFALPHOUTSIDE_NOTHING
-	scene_script .DummyScene1 ; SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX
+	scene_script GenericDummyScript ; SCENE_RUINSOFALPHOUTSIDE_NOTHING
+	scene_script GenericDummyScript ; SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .ScientistCallback
-
-.DummyScene0:
-.DummyScene1:
-	end
 
 .ScientistCallback:
 	checkflag ENGINE_UNOWN_DEX
 	iftrue .NoScientist
 	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
-	iftrue .MaybeScientist
-	sjump .NoScientist
-
-.MaybeScientist:
+	iffalse .NoScientist
 	readvar VAR_UNOWNCOUNT
-	ifgreater 2, .YesScientist
-	sjump .NoScientist
-
-.YesScientist:
+	ifless 3, .NoScientist
 	appear RUINSOFALPHOUTSIDE_SCIENTIST
 	setscene SCENE_RUINSOFALPHOUTSIDE_GET_UNOWN_DEX
 	return
@@ -58,10 +48,10 @@ RuinsOfAlphOutsideScientistSceneContinue:
 	closetext
 	playmusic MUSIC_SHOW_ME_AROUND
 	follow RUINSOFALPHOUTSIDE_SCIENTIST, PLAYER
-	applymovement RUINSOFALPHOUTSIDE_SCIENTIST, MovementData_0x580ba
+	applymovement RUINSOFALPHOUTSIDE_SCIENTIST, RuinsOfAlphOutside_Movement_WalkToResearchCenter
 	disappear RUINSOFALPHOUTSIDE_SCIENTIST
 	stopfollow
-	applymovement PLAYER, MovementData_0x580c5
+	applymovement PLAYER, RuinsOfAlphOutside_Movement_WalkIn
 	setmapscene RUINS_OF_ALPH_RESEARCH_CENTER, SCENE_RUINSOFALPHRESEARCHCENTER_GET_UNOWN_DEX
 	warpcheck
 	end
@@ -81,12 +71,7 @@ RuinsOfAlphOutsideFisherScript:
 	end
 
 RuinsOfAlphOutsideYoungster1Script:
-	faceplayer
-	opentext
-	writetext RuinsOfAlphOutsideYoungster1Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RuinsOfAlphOutsideYoungster1Text
 
 RuinsOfAlphOutsideYoungster2Script:
 	faceplayer
@@ -98,26 +83,18 @@ RuinsOfAlphOutsideYoungster2Script:
 	end
 
 TrainerPsychicNathan:
-	trainer PSYCHIC_T, NATHAN, EVENT_BEAT_PSYCHIC_NATHAN, PsychicNathanSeenText, PsychicNathanBeatenText, 0, .Script
+	trainer PSYCHIC_T, NATHAN, EVENT_BEAT_PSYCHIC_NATHAN, PsychicNathanSeenText, EllipsisSilenceText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PsychicNathanAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PsychicNathanAfterBattleText
 
 TrainerSuperNerdStan:
 	trainer SUPER_NERD, STAN, EVENT_BEAT_SUPER_NERD_STAN, SuperNerdStanSeenText, SuperNerdStanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SuperNerdStanAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SuperNerdStanAfterBattleText
 
 RuinsOfAlphOutsideMysteryChamberSign:
 	jumptext RuinsOfAlphOutsideMysteryChamberSignText
@@ -128,7 +105,7 @@ RuinsOfAlphSign:
 RuinsOfAlphResearchCenterSign:
 	jumptext RuinsOfAlphResearchCenterSignText
 
-MovementData_0x580ba:
+RuinsOfAlphOutside_Movement_WalkToResearchCenter:
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -138,16 +115,13 @@ MovementData_0x580ba:
 	step RIGHT
 	step RIGHT
 	step UP
-	step UP
-	step_end
-
-MovementData_0x580c5:
+RuinsOfAlphOutside_Movement_WalkIn:
 	step UP
 	step_end
 
 RuinsOfAlphOutsideScientistText:
-	text "Hm? That's a #-"
-	line "DEX, isn't it?"
+	text "Hm? That's a"
+	line "#DEX, isn't it?"
 	cont "May I see it?"
 
 	para "There are so many"
@@ -160,7 +134,6 @@ RuinsOfAlphOutsideScientistText:
 
 	para "It looks like the"
 	line "strange writing on"
-
 	para "the walls of the"
 	line "RUINS."
 
@@ -183,7 +156,6 @@ SuperNerdStanSeenText:
 SuperNerdStanBeatenText:
 	text "Sorry…"
 	line "I'm frustrated by"
-
 	para "our lack of real"
 	line "understanding…"
 	done
@@ -197,9 +169,9 @@ SuperNerdStanAfterBattleText:
 	line "built them."
 
 	para "It's also not"
-	line "known if the #-"
-	cont "MON statues have"
-	cont "any meaning."
+	line "known if the"
+	para "#MON statues"
+	line "have any meaning."
 
 	para "It's all one big"
 	line "mystery…"
@@ -208,10 +180,6 @@ SuperNerdStanAfterBattleText:
 PsychicNathanSeenText:
 	text "Hmmm… This is a"
 	line "strange place."
-	done
-
-PsychicNathanBeatenText:
-	text "…"
 	done
 
 PsychicNathanAfterBattleText:
@@ -240,7 +208,6 @@ RuinsOfAlphResearchCenterSignText:
 RuinsOfAlphOutsideFisherText1:
 	text "While exploring"
 	line "the RUINS, we"
-
 	para "suddenly noticed"
 	line "an odd presence."
 
@@ -261,7 +228,6 @@ RuinsOfAlphOutsideFisherText2:
 RuinsOfAlphOutsideYoungster1Text:
 	text "There are many"
 	line "kinds of UNOWN, so"
-
 	para "we use them for"
 	line "our secret codes."
 	done

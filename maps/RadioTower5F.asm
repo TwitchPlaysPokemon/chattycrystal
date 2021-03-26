@@ -7,41 +7,32 @@
 
 RadioTower5F_MapScripts:
 	db 3 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_RADIOTOWER5F_ROCKET_BOSS
-	scene_script .DummyScene2 ; SCENE_RADIOTOWER5F_NOTHING
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_RADIOTOWER5F_ROCKET_BOSS
+	scene_script GenericDummyScript ; SCENE_RADIOTOWER5F_NOTHING
 
 	db 0 ; callbacks
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
-
-.DummyScene2:
-	end
 
 FakeDirectorScript:
 	turnobject RADIOTOWER5F_DIRECTOR, UP
 	showemote EMOTE_SHOCK, RADIOTOWER5F_DIRECTOR, 15
 	opentext
-	writetext FakeDirectorTextBefore1
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement RADIOTOWER5F_DIRECTOR, FakeDirectorMovement
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	opentext
-	writetext FakeDirectorTextBefore2
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext FakeDirectorWinText, 0
+	winlosstext HostSilenceText, 0
 	setlasttalked RADIOTOWER5F_DIRECTOR
 	loadtrainer COLO_WES, AAAAAAA1
 	startbattle
 	reloadmapafterbattle
 	opentext
-	writetext FakeDirectorTextAfter
+	writetext HostSilenceText
 	buttonsound
 	verbosegiveitem BASEMENT_KEY
 	closetext
@@ -50,47 +41,35 @@ FakeDirectorScript:
 	end
 
 Director:
-	faceplayer
-	opentext
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .TrueDirector
-	writetext FakeDirectorTextAfter
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer HostSilenceText
 
 .TrueDirector:
-	writetext RadioTower5FDirectorText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RadioTower5FDirectorText
 
 TrainerExecutivef1:
-	trainer NUZLOCKE, F483, EVENT_BEAT_ROCKET_EXECUTIVEF_1, Executivef1SeenText, Executivef1BeatenText, 0, .Script
+	trainer NUZLOCKE, F483, EVENT_BEAT_ROCKET_EXECUTIVEF_1, HostSilenceText, HostSilenceText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext Executivef1AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext HostSilenceText
 
 RadioTower5FRocketBossScene:
 	applymovement PLAYER, RadioTower5FPlayerTwoStepsLeftMovement
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	turnobject RADIOTOWER5F_ROCKET, RIGHT
 	opentext
-	writetext RadioTower5FRocketBossBeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext RadioTower5FRocketBossWinText, 0
+	winlosstext HostSilenceText, 0
 	setlasttalked RADIOTOWER5F_ROCKET
 	loadtrainer RED_LARRY, LARRY_R1
 	startbattle
 	reloadmapafterbattle
 	opentext
-	writetext RadioTower5FRocketBossAfterText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	special FadeBlackQuickly
@@ -128,9 +107,6 @@ RadioTower5FRocketBossScene:
 	setmapscene ECRUTEAK_TIN_TOWER_ENTRANCE, SCENE_DEFAULT
 	setevent EVENT_GOT_CLEAR_BELL
 	setevent EVENT_TEAM_ROCKET_DISBANDED
-	sjump .UselessJump
-
-.UselessJump:
 	applymovement RADIOTOWER5F_DIRECTOR, RadioTower5FDirectorWalksOut
 	playsound SFX_EXIT_BUILDING
 	disappear RADIOTOWER5F_DIRECTOR
@@ -151,14 +127,6 @@ RadioTower5FStudio1Sign:
 RadioTower5FBookshelf:
 	jumpstd magazinebookshelf
 
-FakeDirectorMovement:
-	step LEFT
-	step LEFT
-	step LEFT
-	step UP
-	step UP
-	step_end
-
 RadioTower5FDirectorWalksIn:
 	step DOWN
 	step DOWN
@@ -178,6 +146,7 @@ RadioTower5FDirectorWalksOut:
 	step UP
 	step UP
 	step LEFT
+FakeDirectorMovement:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -190,143 +159,12 @@ RadioTower5FPlayerTwoStepsLeftMovement:
 	step LEFT
 	step_end
 
-FakeDirectorTextBefore1:
-	text "Y-you! You came to"
-	line "rescue me?"
-	done
-
-FakeDirectorTextBefore2:
-	text "Is that what you"
-	line "were expecting?"
-
-	para "Wrong!"
-	line "I'm an imposter!"
-
-	para "I pretended to be"
-	line "the real thing to"
-
-	para "prepare for our"
-	line "takeover."
-
-	para "Do you want to"
-	line "know where we hid"
-	cont "the real DIRECTOR?"
-
-	para "Sure, I'll tell"
-	line "you. But only if"
-	cont "you can beat me!"
-	done
-
-FakeDirectorWinText:
-	text "OK, OK. I'll tell"
-	line "you where he is."
-	done
-
-FakeDirectorTextAfter:
-	text "We stashed the"
-	line "real DIRECTOR in"
-
-	para "the UNDERGROUND"
-	line "WAREHOUSE."
-
-	para "It's at the far"
-	line "end of the UNDER-"
-	cont "GROUND."
-
-	para "But I doubt you'll"
-	line "get that far."
-	done
-
-Executivef1SeenText:
-	text "Remember me from"
-	line "the HIDEOUT in"
-	cont "MAHOGANY TOWN?"
-
-	para "I lost then, but I"
-	line "won't this time."
-	done
-
-Executivef1BeatenText:
-	text "This can't be"
-	line "happening!"
-
-	para "I fought hard, but"
-	line "I still lost…"
-	done
-
-Executivef1AfterBattleText:
-	text "<PLAYER>, isn't it?"
-
-	para "A brat like you"
-	line "won't appreciate"
-
-	para "the magnificence"
-	line "of TEAM ROCKET."
-
-	para "That's too bad."
-	line "I really admire"
-	cont "your power."
-	done
-
-RadioTower5FRocketBossBeforeText:
-	text "Oh? You managed to"
-	line "get this far?"
-
-	para "You must be quite"
-	line "the trainer."
-
-	para "We intend to take"
-	line "over this RADIO"
-
-	para "STATION and an-"
-	line "nounce our come-"
-	cont "back."
-
-	para "That should bring"
-	line "our boss GIOVANNI"
-
-	para "back from his solo"
-	line "training."
-
-	para "We are going to"
-	line "regain our former"
-	cont "glory."
-
-	para "I won't allow you"
-	line "to interfere with"
-	cont "our plans."
-	done
-
-RadioTower5FRocketBossWinText:
-	text "No! Forgive me,"
-	line "GIOVANNI!"
-	done
-
-RadioTower5FRocketBossAfterText:
-	text "How could this be?"
-
-	para "Our dreams have"
-	line "come to naught."
-
-	para "I wasn't up to the"
-	line "task after all."
-
-	para "Like GIOVANNI did"
-	line "before me, I will"
-
-	para "disband TEAM"
-	line "ROCKET here today."
-
-	para "Farewell."
-	done
-
 RadioTower5FDirectorThankYouText:
-	text "DIRECTOR: <PLAY_G>,"
+	text "DIRECTOR: <PLAYER>,"
 	line "thank you!"
 
 	para "Your courageous"
 	line "actions have saved"
-
 	para "#MON nation-"
 	line "wide."
 
@@ -353,7 +191,6 @@ RadioTower5FDirectorDescribeClearBellText:
 
 	para "I heard that all"
 	line "sorts of #MON"
-
 	para "lived in GOLDENROD"
 	line "in the past."
 
@@ -361,7 +198,6 @@ RadioTower5FDirectorDescribeClearBellText:
 
 	para "That bell has some"
 	line "connection to the"
-
 	para "TIN TOWER in"
 	line "ECRUTEAK CITY…"
 
@@ -378,7 +214,6 @@ RadioTower5FDirectorDescribeClearBellText:
 
 	para "I have no idea"
 	line "what is happening,"
-
 	para "but you might look"
 	line "into it."
 
@@ -388,14 +223,13 @@ RadioTower5FDirectorDescribeClearBellText:
 
 RadioTower5FDirectorText:
 	text "DIRECTOR: Hello,"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 
 	para "You know, I love"
 	line "#MON."
 
 	para "I built this RADIO"
 	line "TOWER so I could"
-
 	para "express my love"
 	line "of #MON."
 

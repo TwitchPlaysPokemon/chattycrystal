@@ -7,13 +7,10 @@
 
 RocketHideoutB4F_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
-
-.DummyScene
-	end
 
 RocketHideoutB4FLarryBattleDown:
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -30,20 +27,20 @@ RocketHideoutB4FLarryBattleUp:
 RocketHideoutB4FLarryBattleContinue:
 	applymovement ROCKETHIDEOUTB4F_LARRY, RocketHideoutB4FLarryMovement
 	opentext
-	writetext RocketHideoutB4FLarryBeforeBattleText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext RocketHideoutB4FLarryWinText, RocketHideoutB4FLarryLoseText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer RED_LARRY, LARRY_R2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	opentext
-	writetext RocketHideoutB4FLarryAfterBattleText
+	writetext HostSilenceText
 	waitbutton
 	verbosegiveitem LIFT_KEY
-	writetext RocketHideoutB4FLarryAfterLiftKeyText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement ROCKETHIDEOUTB4F_LARRY, RocketHideoutB4FLarryLeavesMovement
@@ -72,25 +69,24 @@ RocketHideoutB4FLarryLeavesMovement:
 	step_end
 
 TrainerGruntM32:
-	trainer GRUNTM, GRUNTM_32, EVENT_BEAT_ROCKET_GRUNTM_32, GruntM32SeenText, GruntM32BeatenText, 0, .Script
+	trainer GRUNTM, GRUNTM_32, EVENT_BEAT_ROCKET_GRUNTM_32, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM32AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
 
-GruntM32SeenText:
-GruntM32BeatenText:
-GruntM32AfterBattleText:
-RocketHideoutB4FLarryBeforeBattleText:
-RocketHideoutB4FLarryWinText:
-RocketHideoutB4FLarryLoseText:
-RocketHideoutB4FLarryAfterBattleText:
-RocketHideoutB4FLarryAfterLiftKeyText:
-	text "<...>"
+.before_text
+	text "How can you not"
+	line "see the beauty of"
+	cont "our evil?"
+
+.defeat_text
+	text "Ayaya!"
+	done
+
+.after_text
+	text "BOSS! I'm sorry I"
+	line "failed you!"
 	done
 
 RocketHideoutB4FHopporita:

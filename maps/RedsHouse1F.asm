@@ -3,28 +3,18 @@
 
 RedsHouse1F_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene
+	scene_script GenericDummyScript
 
 	db 0 ; callbacks
 
-.DummyScene:
-	end
-
 RedsMom:
-	faceplayer
-	opentext
 	checkevent EVENT_MET_REDS_MOM
 	iftrue .MetAlready
-	writetext RedsMomText1
-	waitbutton
-	closetext
 	setevent EVENT_MET_REDS_MOM
-	end
+	jumptextfaceplayer RedsMomText1
+
 .MetAlready:
-	writetext RedsMomText2
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RedsMomText2
 
 RedsHouse1FTV:
 	jumptext RedsHouse1FTVText
@@ -40,14 +30,12 @@ RedsMomText1:
 
 	para "He hasn't called"
 	line "either, so I have"
-
 	para "no idea where he"
 	line "is or what he's"
 	cont "been doing."
 
 	para "They say that no"
 	line "word is proof that"
-
 	para "he's doing fine,"
 	line "but I do worry"
 	cont "about him."
@@ -56,14 +44,11 @@ RedsMomText1:
 RedsMomText2:
 	text "I worry about RED"
 	line "getting hurt or"
-
 	para "sick, but he's a"
 	line "boy. I'm proud"
-
 	para "that he is doing"
 	line "what he wants to"
-
-	para "do."
+	cont "do."
 	done
 
 RedsHouse1FTVText:

@@ -5,19 +5,15 @@
 RuinsOfAlphKabutoChamber_MapScripts:
 	db 2 ; scene scripts
 	scene_script .CheckWall ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .HiddenDoors
 
 .CheckWall:
 	checkevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
-	iftrue .OpenWall
-	end
-
-.OpenWall:
+	iffalse GenericDummyScript
 	prioritysjump .WallOpenScript
-.DummyScene:
 	end
 
 .HiddenDoors:
@@ -26,12 +22,10 @@ RuinsOfAlphKabutoChamber_MapScripts:
 	changeblock 4, 0, $2e ; closed wall
 .WallOpen:
 	checkevent EVENT_SOLVED_KABUTO_PUZZLE
-	iffalse .FloorClosed
-	return
-
-.FloorClosed:
+	iftrue .return
 	changeblock 2, 2, $01 ; left floor
 	changeblock 4, 2, $02 ; right floor
+.return
 	return
 
 .WallOpenScript:
@@ -55,10 +49,7 @@ RuinsOfAlphKabutoChamberPuzzle:
 	setval UNOWNPUZZLE_KABUTO
 	special UnownPuzzle
 	closetext
-	iftrue .PuzzleComplete
-	end
-
-.PuzzleComplete:
+	iffalse GenericDummyScript
 	setevent EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
 	setevent EVENT_SOLVED_KABUTO_PUZZLE
 	setflag ENGINE_UNLOCKED_UNOWNS_A_TO_K
@@ -79,34 +70,28 @@ RuinsOfAlphKabutoChamberPuzzle:
 	end
 
 RuinsOfAlphKabutoChamberScientistScript:
-	faceplayer
-	opentext
 	readvar VAR_UNOWNCOUNT
 	ifequal NUM_UNOWN, .AllUnownCaught
 	checkevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
 	iftrue .WallOpen
+	faceplayer
+	opentext
 	checkevent EVENT_SOLVED_KABUTO_PUZZLE
 	iffalse .PuzzleIncomplete
-	writetext UnknownText_0x589b8
+	writetext RuinsOfAlphKabutoChamberScientistTremorText
 	buttonsound
 .PuzzleIncomplete:
-	writetext UnknownText_0x588f5
+	writetext RuinsOfAlphKabutoChamberScientistPatternsText
 	waitbutton
 	closetext
 	turnobject RUINSOFALPHKABUTOCHAMBER_SCIENTIST, UP
 	end
 
 .WallOpen:
-	writetext UnknownText_0x5897c
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RuinsOfAlphKabutoChamberScientistHoleText
 
 .AllUnownCaught:
-	writetext RuinsOfAlphResearchCenterScientist1Text_GotAllUnown
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RuinsOfAlphResearchCenterScientist1Text_GotAllUnown
 
 RuinsOfAlphKabutoChamberAncientReplica:
 	jumptext RuinsOfAlphKabutoChamberAncientReplicaText
@@ -116,7 +101,7 @@ RuinsOfAlphKabutoChamberDescriptionSign:
 
 RuinsOfAlphKabutoChamberWallPatternLeft:
 	opentext
-	writetext RuinsOfAlphKabutoChamberWallPatternLeftText
+	writetext RuinsOfAlphKabutoChamberWallPatternText
 	setval UNOWNWORDS_ESCAPE
 	special DisplayUnownWords
 	closetext
@@ -126,18 +111,14 @@ RuinsOfAlphKabutoChamberWallPatternRight:
 	checkevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
 	iftrue .WallOpen
 	opentext
-	writetext RuinsOfAlphKabutoChamberWallPatternRightText
+	writetext RuinsOfAlphKabutoChamberWallPatternText
 	setval UNOWNWORDS_ESCAPE
 	special DisplayUnownWords
 	closetext
 	end
 
 .WallOpen:
-	opentext
-	writetext RuinsOfAlphKabutoChamberWallHoleText
-	waitbutton
-	closetext
-	end
+	jumptext RuinsOfAlphKabutoChamberWallHoleText
 
 RuinsOfAlphKabutoChamberSkyfallTopMovement:
 	skyfall_top
@@ -149,7 +130,6 @@ RuinsOfAlphKabutoChamberReceptionistText:
 
 	para "There are sliding"
 	line "panels that depict"
-
 	para "a #MON drawn by"
 	line "the ancients."
 
@@ -163,12 +143,11 @@ RuinsOfAlphKabutoChamberReceptionistText:
 
 	para "Scientists in the"
 	line "back are examining"
-
 	para "some newly found"
 	line "patterns."
 	done
 
-UnknownText_0x588f5:
+RuinsOfAlphKabutoChamberScientistPatternsText:
 	text "Recently, strange,"
 	line "cryptic patterns"
 	cont "have appeared."
@@ -181,7 +160,7 @@ UnknownText_0x588f5:
 	line "look at the walls."
 	done
 
-UnknownText_0x5897c:
+RuinsOfAlphKabutoChamberScientistHoleText:
 	text "Ah! Here's another"
 	line "huge hole!"
 
@@ -189,7 +168,7 @@ UnknownText_0x5897c:
 	line "go through!"
 	done
 
-UnknownText_0x589b8:
+RuinsOfAlphKabutoChamberScientistTremorText:
 	text "That tremor was"
 	line "pretty scary!"
 
@@ -198,12 +177,7 @@ UnknownText_0x589b8:
 	cont "this wall here…"
 	done
 
-RuinsOfAlphKabutoChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
-	done
-
-RuinsOfAlphKabutoChamberWallPatternRightText:
+RuinsOfAlphKabutoChamberWallPatternText:
 	text "Patterns appeared"
 	line "on the walls…"
 	done
@@ -215,8 +189,8 @@ RuinsOfAlphKabutoChamberWallHoleText:
 
 RuinsOfAlphKabutoChamberAncientReplicaText:
 	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	line "an ancient"
+	cont "#MON."
 	done
 
 RuinsOfAlphKabutoChamberDescriptionText:

@@ -15,22 +15,30 @@ RocketHideoutB2FUpGrade:
 RocketHideoutB2FRareCandy:
 	itemball RARE_CANDY
 
-GruntF6SeenText:
-GruntF6BeatenText:
-GruntF6AfterBattleText:
-	text "<...>"
-	done
-
 TrainerGruntF6:
-	trainer GRUNTF, GRUNTF_6, EVENT_BEAT_ROCKET_GRUNTF_6, GruntF6SeenText, GruntF6BeatenText, 0, .Script
+	trainer GRUNTF, GRUNTF_6, EVENT_BEAT_ROCKET_GRUNTF_6, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntF6AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
+
+.before_text
+	text "We got word from"
+	line "upstairs that you"
+	cont "were coming!"
+	done
+
+.defeat_text
+	text "What?"
+	line "I lost? No!"
+	done
+
+.after_text
+	text "Go ahead and go!"
+	line "But you can't run"
+	para "the elevator with-"
+	line "out the LIFT KEY."
+	done
 
 RocketHideoutB2FChiquirtle:
 	refreshscreen

@@ -5,7 +5,7 @@
 
 RuinsOfAlphResearchCenter_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_RUINSOFALPHRESEARCHCENTER_NOTHING
+	scene_script GenericDummyScript ; SCENE_RUINSOFALPHRESEARCHCENTER_NOTHING
 	scene_script .GetUnownDex ; SCENE_RUINSOFALPHRESEARCHCENTER_GET_UNOWN_DEX
 
 	db 1 ; callbacks
@@ -13,7 +13,6 @@ RuinsOfAlphResearchCenter_MapScripts:
 
 .GetUnownDex:
 	prioritysjump .GetUnownDexScript
-.DummyScene0:
 	end
 
 .ScientistCallback:
@@ -27,7 +26,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 	return
 
 .GetUnownDexScript:
-	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, MovementData_0x5926f
+	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, RuinsOfAlphResearchCenter_Movement_ScientistApproachPC
 	playsound SFX_BOOT_PC
 	pause 60
 	playsound SFX_SWITCH_POKEMON
@@ -41,7 +40,7 @@ RuinsOfAlphResearchCenter_MapScripts:
 	writetext RuinsOfAlphResearchCenterModifiedDexText
 	waitbutton
 	closetext
-	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, MovementData_0x59274
+	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, RuinsOfAlphResearchCenter_Movement_ScientistApproachPlayer
 	opentext
 	writetext RuinsOfAlphResearchCenterDexUpgradedText
 	playsound SFX_ITEM
@@ -50,91 +49,59 @@ RuinsOfAlphResearchCenter_MapScripts:
 	writetext RuinsOfAlphResearchCenterScientist3Text
 	waitbutton
 	closetext
-	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, MovementData_0x59276
+	applymovement RUINSOFALPHRESEARCHCENTER_SCIENTIST3, RuinsOfAlphResearchCenter_Movement_ScientistWalkBack
 	setscene SCENE_RUINSOFALPHRESEARCHCENTER_NOTHING
 	special RestartMapMusic
 	end
 
 RuinsOfAlphResearchCenterScientist3Script:
-	faceplayer
-	opentext
 	readvar VAR_UNOWNCOUNT
 	ifequal NUM_UNOWN, .PrinterAvailable
-	writetext RuinsOfAlphResearchCenterScientist3Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RuinsOfAlphResearchCenterScientist3Text
 
 .PrinterAvailable:
-	writetext RuinsOfAlphResearchCenterScientist3_PrinterAvailable
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RuinsOfAlphResearchCenterScientist3_PrinterAvailable
 
 RuinsOfAlphResearchCenterScientist1Script:
-	faceplayer
-	opentext
 	readvar VAR_UNOWNCOUNT
 	ifequal NUM_UNOWN, .GotAllUnown
 	checkflag ENGINE_UNOWN_DEX
 	iftrue .GotUnownDex
 	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
 	iftrue .UnownAppeared
-	writetext RuinsOfAlphResearchCenterScientist1Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RuinsOfAlphResearchCenterScientist1Text
 
 .UnownAppeared:
-	writetext RuinsOfAlphResearchCenterScientist1Text_UnownAppeared
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RuinsOfAlphResearchCenterScientist1Text_UnownAppeared
 
 .GotUnownDex:
-	writetext RuinsOfAlphResearchCenterScientist1Text_GotUnownDex
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RuinsOfAlphResearchCenterScientist1Text_GotUnownDex
 
 .GotAllUnown:
-	writetext RuinsOfAlphResearchCenterScientist1Text_GotAllUnown
-	waitbutton
-	closetext
 	clearevent EVENT_RUINS_OF_ALPH_OUTSIDE_TOURIST_YOUNGSTERS
-	end
+	jumptextfaceplayer RuinsOfAlphResearchCenterScientist1Text_GotAllUnown
 
 RuinsOfAlphResearchCenterComputer:
-	opentext
 	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	iftrue .SkipChecking
 	readvar VAR_UNOWNCOUNT
 	ifequal NUM_UNOWN, .GotAllUnown
 .SkipChecking:
-	writetext RuinsOfAlphResearchCenterComputerText
-	waitbutton
-	closetext
-	end
+	jumptext RuinsOfAlphResearchCenterComputerText
 
 .GotAllUnown:
-	writetext RuinsOfAlphResearchCenterComputerText_GotAllUnown
-	waitbutton
-	closetext
-	end
+	jumptext RuinsOfAlphResearchCenterComputerText_GotAllUnown
 
 RuinsOfAlphResearchCenterPrinter:
-	opentext
 	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	iftrue .SkipChecking
 	readvar VAR_UNOWNCOUNT
 	ifequal NUM_UNOWN, .PrinterAvailable
 .SkipChecking:
-	writetext RuinsOfAlphResearchCenterPrinterText_DoesntWork
-	waitbutton
-	closetext
-	end
+	jumptext RuinsOfAlphResearchCenterPrinterText_DoesntWork
 
 .PrinterAvailable:
+	opentext
 	writetext RuinsOfAlphResearchCenterUnownPrinterText
 	waitbutton
 	special UnownPrinter
@@ -144,18 +111,18 @@ RuinsOfAlphResearchCenterPrinter:
 RuinsOfAlphResearchCenterBookshelf:
 	jumptext RuinsOfAlphResearchCenterAcademicBooksText
 
-MovementData_0x5926f:
+RuinsOfAlphResearchCenter_Movement_ScientistApproachPC:
 	step UP
 	step UP
 	step LEFT
 	turn_head UP
 	step_end
 
-MovementData_0x59274:
+RuinsOfAlphResearchCenter_Movement_ScientistApproachPlayer:
 	step DOWN
 	step_end
 
-MovementData_0x59276:
+RuinsOfAlphResearchCenter_Movement_ScientistWalkBack:
 	step UP
 	step_end
 
@@ -167,7 +134,6 @@ RuinsOfAlphResearchCenterModifiedDexText:
 
 	para "I added an"
 	line "optional #DEX"
-
 	para "to store UNOWN"
 	line "data."
 
@@ -235,22 +201,19 @@ RuinsOfAlphResearchCenterScientist1Text_UnownAppeared:
 RuinsOfAlphResearchCenterScientist1Text_GotAllUnown:
 	text "Our investigation,"
 	line "with your help, is"
-
 	para "giving us insight"
 	line "into the RUINS."
 
 	para "The RUINS appear"
 	line "to have been built"
-
 	para "as a habitat for"
 	line "#MON."
 	done
 
 RuinsOfAlphResearchCenterScientist2Text:
-	text "There are odd pat-"
-	line "terns drawn on the"
-
-	para "walls of the"
+	text "There are odd"
+	line "patterns drawn on"
+	para "the walls of the"
 	line "RUINS."
 
 	para "They must be the"
@@ -260,13 +223,12 @@ RuinsOfAlphResearchCenterScientist2Text:
 	done
 
 RuinsOfAlphResearchCenterScientist2Text_UnownAppeared:
-	text "The strange #-"
-	line "MON you saw in the"
-	cont "RUINS?"
+	text "The strange"
+	line "#MON you saw in"
+	cont "the RUINS?"
 
 	para "They appear to be"
 	line "very much like the"
-
 	para "drawings on the"
 	line "walls there."
 

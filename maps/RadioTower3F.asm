@@ -15,32 +15,22 @@ RadioTower3F_MapScripts:
 
 .CardKeyShutterCallback:
 	checkevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
-	iftrue .Change
-	return
-
-.Change:
+	iffalse .return
 	changeblock 14, 2, $2a ; open shutter
 	changeblock 14, 4, $01 ; floor
+.return
 	return
 
 RadioTower3FSuperNerdScript:
 	jumptextfaceplayer RadioTower3FSuperNerdText
 
 RadioTower3FGymGuyScript:
-	faceplayer
-	opentext
 	checkevent EVENT_CLEARED_RADIO_TOWER
 	iftrue .NoRockets
-	writetext RadioTower3FGymGuyText_Rockets
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RadioTower3FGymGuyText_Rockets
 
 .NoRockets:
-	writetext RadioTower3FGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RadioTower3FGymGuyText
 
 RadioTower3FCooltrainerFScript:
 	faceplayer
@@ -85,44 +75,28 @@ TrainerGruntM7:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM7AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM7AfterBattleText
 
 TrainerGruntM8:
 	trainer GRUNTM, GRUNTM_8, EVENT_BEAT_ROCKET_GRUNTM_8, GruntM8SeenText, GruntM8BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM8AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM8AfterBattleText
 
 TrainerGruntM9:
 	trainer GRUNTM, GRUNTM_9, EVENT_BEAT_ROCKET_GRUNTM_9, GruntM9SeenText, GruntM9BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM9AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM9AfterBattleText
 
 TrainerScientistMarc:
 	trainer SCIENTIST, MARC, EVENT_BEAT_SCIENTIST_MARC, ScientistMarcSeenText, ScientistMarcBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext ScientistMarcAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext ScientistMarcAfterBattleText
 
 CardKeySlotScript::
 	opentext
@@ -157,7 +131,6 @@ RadioTower3FPokemonMusicSign:
 RadioTower3FSuperNerdText:
 	text "We have recordings"
 	line "of the cries of"
-
 	para "all #MON that"
 	line "have been found."
 
@@ -166,13 +139,12 @@ RadioTower3FSuperNerdText:
 	done
 
 RadioTower3FGymGuyText_Rockets:
-	text "To trainers, #-"
-	line "MON are their"
+	text "To trainers,"
+	line "#MON are their"
 	cont "beloved partners."
 
 	para "It's terrible how"
 	line "TEAM ROCKET is"
-
 	para "trying to control"
 	line "#MON."
 	done
@@ -180,9 +152,8 @@ RadioTower3FGymGuyText_Rockets:
 RadioTower3FGymGuyText:
 	text "We run 24 hours a"
 	line "day to broadcast"
-
-	para "entertaining pro-"
-	line "grams."
+	para "entertaining"
+	line "programs."
 
 	para "I'll do my best to"
 	line "run around the"
@@ -218,9 +189,9 @@ RadioTower3FCooltrainerFYoureMyHeroText:
 
 RadioTower3FCooltrainerFItsSunnyDayText:
 	text "It's SUNNY DAY."
-	line "It powers up fire-"
-	cont "type moves for a"
-	cont "while."
+	line "It powers up"
+	para "fire-type moves"
+	line "for a while."
 	done
 
 RadioTower3FCooltrainerFYouWereMarvelousText:
@@ -270,7 +241,6 @@ GruntM8AfterBattleText:
 GruntM9SeenText:
 	text "Why did the shut-"
 	line "ter open? Did you"
-
 	para "have something to"
 	line "do with this?"
 	done

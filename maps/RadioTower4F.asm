@@ -58,44 +58,28 @@ TrainerGruntM10:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM10AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM10AfterBattleText
 
 TrainerExecutivem2:
-	trainer COLO_WES, ACCC, EVENT_BEAT_ROCKET_EXECUTIVEM_2, Executivem2SeenText, Executivem2BeatenText, 0, .Script
+	trainer COLO_WES, ACCC, EVENT_BEAT_ROCKET_EXECUTIVEM_2, HostSilenceText, HostSilenceText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext Executivem2AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext HostSilenceText
 
 TrainerGruntF4:
 	trainer GRUNTF, GRUNTF_4, EVENT_BEAT_ROCKET_GRUNTF_4, GruntF4SeenText, GruntF4BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntF4AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntF4AfterBattleText
 
 TrainerScientistRich:
 	trainer SCIENTIST, RICH, EVENT_BEAT_SCIENTIST_RICH, ScientistRichSeenText, ScientistRichBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext ScientistRichAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext ScientistRichAfterBattleText
 
 RadioTower4FProductionSign:
 	jumptext RadioTower4FProductionSignText
@@ -131,7 +115,6 @@ RadioTower4FDJMaryText_ClearedRockets:
 RadioTower4FDJMaryText_GivePinkBow:
 	text "MARY: It's just"
 	line "right for #MON"
-
 	para "that know normal-"
 	line "type moves."
 	done
@@ -139,7 +122,6 @@ RadioTower4FDJMaryText_GivePinkBow:
 RadioTower4FDJMaryText_After:
 	text "MARY: Please tune"
 	line "into me on PROF."
-
 	para "OAK'S #MON TALK"
 	line "show."
 	done
@@ -166,37 +148,12 @@ GruntM10AfterBattleText:
 	line "it! I was beaten!"
 	done
 
-Executivem2SeenText:
-	text "Stop! I'm known as"
-	line "the TEAM ROCKET"
-	cont "fortress!"
-
-	para "You're not taking"
-	line "another step!"
-	done
-
-Executivem2BeatenText:
-	text "The fortress came"
-	line "down!"
-	done
-
-Executivem2AfterBattleText:
-	text "You've earned my"
-	line "respect, so here's"
-	cont "some advice."
-
-	para "It's not too late."
-	line "You can still turn"
-	cont "back."
-	done
-
 GruntF4SeenText:
 	text "Don't I think"
 	line "#MON are cute?"
 
 	para "I'll think my"
 	line "#MON are cute--"
-
 	para "after they beat"
 	line "yours!"
 	done

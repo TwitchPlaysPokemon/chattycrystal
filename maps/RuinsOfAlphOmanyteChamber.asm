@@ -1,7 +1,7 @@
 RuinsOfAlphOmanyteChamber_MapScripts:
 	db 2 ; scene scripts
 	scene_script .CheckWall ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .HiddenDoors
@@ -9,12 +9,8 @@ RuinsOfAlphOmanyteChamber_MapScripts:
 .CheckWall:
 	special OmanyteChamber
 	checkevent EVENT_WALL_OPENED_IN_OMANYTE_CHAMBER
-	iftrue .OpenWall
-	end
-
-.OpenWall:
+	iffalse GenericDummyScript
 	prioritysjump .WallOpenScript
-.DummyScene:
 	end
 
 .HiddenDoors:
@@ -23,12 +19,10 @@ RuinsOfAlphOmanyteChamber_MapScripts:
 	changeblock 4, 0, $2e ; closed wall
 .WallOpen:
 	checkevent EVENT_SOLVED_OMANYTE_PUZZLE
-	iffalse .FloorClosed
-	return
-
-.FloorClosed:
+	iftrue .return
 	changeblock 2, 2, $01 ; left floor
 	changeblock 4, 2, $02 ; right floor
+.return
 	return
 
 .WallOpenScript:
@@ -79,7 +73,7 @@ RuinsOfAlphOmanyteChamberDescriptionSign:
 
 RuinsOfAlphOmanyteChamberWallPatternLeft:
 	opentext
-	writetext RuinsOfAlphOmanyteChamberWallPatternLeftText
+	writetext RuinsOfAlphOmanyteChamberWallPatternText
 	setval UNOWNWORDS_WATER
 	special DisplayUnownWords
 	closetext
@@ -89,29 +83,20 @@ RuinsOfAlphOmanyteChamberWallPatternRight:
 	checkevent EVENT_WALL_OPENED_IN_OMANYTE_CHAMBER
 	iftrue .WallOpen
 	opentext
-	writetext RuinsOfAlphOmanyteChamberWallPatternRightText
+	writetext RuinsOfAlphOmanyteChamberWallPatternText
 	setval UNOWNWORDS_WATER
 	special DisplayUnownWords
 	closetext
 	end
 
 .WallOpen:
-	opentext
-	writetext RuinsOfAlphOmanyteChamberWallHoleText
-	waitbutton
-	closetext
-	end
+	jumptext RuinsOfAlphOmanyteChamberWallHoleText
 
 RuinsOfAlphOmanyteChamberSkyfallTopMovement:
 	skyfall_top
 	step_end
 
-RuinsOfAlphOmanyteChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
-	done
-
-RuinsOfAlphOmanyteChamberWallPatternRightText:
+RuinsOfAlphOmanyteChamberWallPatternText:
 	text "Patterns appeared"
 	line "on the walls…"
 	done
@@ -123,14 +108,13 @@ RuinsOfAlphOmanyteChamberWallHoleText:
 
 RuinsOfAlphOmanyteChamberAncientReplicaText:
 	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	line "an ancient"
+	cont "#MON."
 	done
 
 RuinsOfAlphOmanyteChamberDescriptionText:
 	text "This #MON"
 	line "drifted in the"
-
 	para "sea by twisting"
 	line "its ten tentacles."
 	done

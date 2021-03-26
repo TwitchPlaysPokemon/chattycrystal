@@ -9,20 +9,15 @@ RocketHideoutElevatorScript:
 	opentext
 	elevator .ElevatorData
 	closetext
-	iffalse .Done
+	iffalse GenericDummyScript
 	pause 5
 	playsound SFX_ELEVATOR
 	earthquake 60
 	waitsfx
-.Done:
 	end
 
 .NeedAKey
-	opentext
-	writetext RocketHideoutElevatorNeedAKeyText
-	waitbutton
-	closetext
-	end
+	jumptext RocketHideoutElevatorNeedAKeyText
 
 .ElevatorData:
 	db 3 ; floors

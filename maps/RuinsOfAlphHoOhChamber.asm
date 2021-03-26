@@ -1,7 +1,7 @@
 RuinsOfAlphHoOhChamber_MapScripts:
 	db 2 ; scene scripts
 	scene_script .CheckWall ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .HiddenDoors
@@ -9,12 +9,8 @@ RuinsOfAlphHoOhChamber_MapScripts:
 .CheckWall:
 	special HoOhChamber
 	checkevent EVENT_WALL_OPENED_IN_HO_OH_CHAMBER
-	iftrue .OpenWall
-	end
-
-.OpenWall:
+	iffalse GenericDummyScript
 	prioritysjump .WallOpenScript
-.DummyScene:
 	end
 
 .HiddenDoors:
@@ -23,12 +19,10 @@ RuinsOfAlphHoOhChamber_MapScripts:
 	changeblock 4, 0, $2e ; closed wall
 .WallOpen:
 	checkevent EVENT_SOLVED_HO_OH_PUZZLE
-	iffalse .FloorClosed
-	return
-
-.FloorClosed:
+	iftrue .return
 	changeblock 2, 2, $01 ; left floor
 	changeblock 4, 2, $02 ; right floor
+.return
 	return
 
 .WallOpenScript:
@@ -79,7 +73,7 @@ RuinsOfAlphHoOhChamberDescriptionSign:
 
 RuinsOfAlphHoOhChamberWallPatternLeft:
 	opentext
-	writetext RuinsOfAlphHoOhChamberWallPatternLeftText
+	writetext RuinsOfAlphHoOhChamberWallPatternText
 	setval UNOWNWORDS_HO_OH
 	special DisplayUnownWords
 	closetext
@@ -89,29 +83,20 @@ RuinsOfAlphHoOhChamberWallPatternRight:
 	checkevent EVENT_WALL_OPENED_IN_HO_OH_CHAMBER
 	iftrue .WallOpen
 	opentext
-	writetext RuinsOfAlphHoOhChamberWallPatternRightText
+	writetext RuinsOfAlphHoOhChamberWallPatternText
 	setval UNOWNWORDS_HO_OH
 	special DisplayUnownWords
 	closetext
 	end
 
 .WallOpen:
-	opentext
-	writetext RuinsOfAlphHoOhChamberWallHoleText
-	waitbutton
-	closetext
-	end
+	jumptext RuinsOfAlphHoOhChamberWallHoleText
 
 RuinsOfAlphHoOhChamberSkyfallTopMovement:
 	skyfall_top
 	step_end
 
-RuinsOfAlphHoOhChamberWallPatternLeftText:
-	text "Patterns appeared"
-	line "on the walls…"
-	done
-
-RuinsOfAlphHoOhChamberWallPatternRightText:
+RuinsOfAlphHoOhChamberWallPatternText:
 	text "Patterns appeared"
 	line "on the walls…"
 	done
@@ -123,14 +108,13 @@ RuinsOfAlphHoOhChamberWallHoleText:
 
 RuinsOfAlphHoOhChamberAncientReplicaText:
 	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	line "an ancient"
+	cont "#MON."
 	done
 
 RuinsOfAlphHoOhChamberDescriptionText:
 	text "A #MON that"
 	line "flew gracefully on"
-
 	para "rainbow-colored"
 	line "wings."
 	done

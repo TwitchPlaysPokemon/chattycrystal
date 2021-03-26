@@ -20,20 +20,12 @@ RadioTower2FSuperNerdScript:
 	jumptextfaceplayer RadioTower2FSuperNerdText
 
 RadioTower2FTeacherScript:
-	faceplayer
-	opentext
 	checkflag ENGINE_ROCKETS_IN_RADIO_TOWER
 	iftrue .Rockets
-	writetext RadioTower2FTeacherText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RadioTower2FTeacherText
 
 .Rockets:
-	writetext RadioTower2FTeacherText_Rockets
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer RadioTower2FTeacherText_Rockets
 
 RadioTowerJigglypuff:
 	opentext
@@ -54,44 +46,28 @@ TrainerGruntM4:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM4AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM4AfterBattleText
 
 TrainerGruntM5:
 	trainer GRUNTM, GRUNTM_5, EVENT_BEAT_ROCKET_GRUNTM_5, GruntM5SeenText, GruntM5BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM5AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM5AfterBattleText
 
 TrainerGruntM6:
 	trainer GRUNTM, GRUNTM_6, EVENT_BEAT_ROCKET_GRUNTM_6, GruntM6SeenText, GruntM6BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM6AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM6AfterBattleText
 
 TrainerGruntF2:
 	trainer GRUNTF, GRUNTF_2, EVENT_BEAT_ROCKET_GRUNTF_2, GruntF2SeenText, GruntF2BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntF2AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntF2AfterBattleText
 
 Buena:
 	faceplayer
@@ -248,15 +224,14 @@ Buena:
 	waitbutton
 	closetext
 	checkcellnum PHONE_BUENA
-	iftrue .Registered4
+	iftrue GenericDummyScript
 	checkevent EVENT_BUENA_OFFERED_HER_PHONE_NUMBER
 	iftrue .OfferedNumberBefore
-.Registered4:
 	end
 
 .BlueCardCapped1:
 	checkcellnum PHONE_BUENA
-	iftrue .HasNumber
+	iftrue GenericDummyScript
 	pause 20
 	turnobject RADIOTOWER2F_BUENA, DOWN
 	pause 15
@@ -301,7 +276,6 @@ Buena:
 	waitbutton
 	closetext
 	turnobject RADIOTOWER2F_BUENA, RIGHT
-.HasNumber:
 	end
 
 RadioTowerBuenaPrizeReceptionist:
@@ -447,7 +421,6 @@ GruntF2SeenText:
 
 	para "How boring."
 	line "It was far too"
-
 	para "easy to take over"
 	line "this place!"
 
@@ -474,23 +447,20 @@ RadioTower2FBuenaShowIntroductionText:
 
 	para "If you can tell me"
 	line "the password from"
-
 	para "the program, you"
 	line "will earn points."
 
 	para "Save up those"
 	line "points and trade"
-
 	para "them to that sweet"
 	line "young lady over"
-
 	para "there for some"
 	line "choice prizes!"
 
 	para "Here you go!"
 
 	para "It's your very own"
-	line "point card!"
+	line "points card!"
 	done
 
 RadioTower2FBuenaTuneInToMyShowText:
@@ -514,9 +484,9 @@ RadioTower2FBuenaJoinTheShowText:
 	para "What was your name"
 	line "again?"
 
-	para "…<PLAY_G>, OK!"
+	para "…<PLAYER>, OK!"
 
-	para "Come on, <PLAY_G>."
+	para "Come on, <PLAYER>."
 	line "Join the show."
 	done
 
@@ -526,15 +496,13 @@ RadioTower2FBuenaEveryoneSayPasswordText:
 
 	para "I want to hear you"
 	line "shout out today's"
-
 	para "password for"
-	line "<PLAY_G>!"
+	line "<PLAYER>!"
 	done
 
 RadioTower2FBuenaComeBackAfterListeningText:
 	text "BUENA: Come back"
 	line "after you listen"
-
 	para "to my show, OK?"
 	line "Catch ya later!"
 	done
@@ -571,13 +539,11 @@ RadioTower2FBuenaDidYouForgetText:
 RadioTower2FBuenaThanksForComingText:
 	text "BUENA: Yup! Our"
 	line "contestant was"
-
-	para "<PLAY_G>."
+	para "<PLAYER>."
 	line "Thanks for coming!"
 
 	para "I hope all you"
 	line "listeners will"
-
 	para "come too!"
 	line "I'll be waiting!"
 	done
@@ -600,7 +566,6 @@ RadioTower2FBuenaCardIsFullText:
 RadioTower2FBuenaTuneInAfterSixText:
 	text "BUENA: Tune in to"
 	line "PASSWORD every"
-
 	para "night from six to"
 	line "midnight!"
 
@@ -621,7 +586,6 @@ RadioTower2FBuenaNoBlueCardText:
 RadioTower2FBuenaOfferPhoneNumberText:
 	text "BUENA: Oh! Your"
 	line "BLUE CARD reached"
-
 	para "30 points today!"
 	line "That's so wild!"
 
@@ -630,7 +594,7 @@ RadioTower2FBuenaOfferPhoneNumberText:
 	cont "30 points, but…"
 
 	para "You came by so"
-	line "often, <PLAY_G>."
+	line "often, <PLAYER>."
 
 	para "I'll make you a"
 	line "special deal!"
@@ -640,9 +604,8 @@ RadioTower2FBuenaOfferPhoneNumberText:
 	done
 
 RadioTower2FBuenaOfferNumberAgainText:
-	text "BUENA: <PLAY_G>,"
+	text "BUENA: <PLAYER>,"
 	line "do you want to"
-
 	para "register my phone"
 	line "number?"
 	done
@@ -664,9 +627,8 @@ RadioTower2FBuenaSadRejectedText:
 	done
 
 RadioTower2FBuenaYourPhoneIsFullText:
-	text "BUENA: <PLAY_G>,"
+	text "BUENA: <PLAYER>,"
 	line "your phone list"
-
 	para "has no room left"
 	line "for me…"
 	done
@@ -674,7 +636,6 @@ RadioTower2FBuenaYourPhoneIsFullText:
 RadioTower2FBuenaReceptionistPointsForPrizesText:
 	text "You can cash in"
 	line "your saved points"
-
 	para "for a lovely prize"
 	line "of your choice!"
 	done

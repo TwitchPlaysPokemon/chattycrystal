@@ -5,13 +5,10 @@
 
 RuinsOfAlphInnerChamber_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_RUINSOFALPHINNERCHAMBER_NOTHING
+	scene_script GenericDummyScript ; SCENE_RUINSOFALPHINNERCHAMBER_NOTHING
 	scene_script .UnownAppear ; SCENE_RUINSOFALPHINNERCHAMBER_STRANGE_PRESENCE
 
 	db 0 ; callbacks
-
-.DummyScene0:
-	end
 
 .UnownAppear:
 	prioritysjump .StrangePresenceScript
@@ -56,7 +53,7 @@ RuinsOfAlphInnerChamberTeacherText:
 	cont "to it."
 
 	para "It feels sort of"
-	line "ethereal even."
+	line "ethereal, even."
 	done
 
 RuinsOfAlphInnerChamberGrampsText:
@@ -70,8 +67,8 @@ RuinsOfAlphInnerChamberGrampsText:
 
 RuinsOfAlphInnerChamberStatueText:
 	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	line "an ancient"
+	cont "#MON."
 	done
 
 RuinsOfAlphInnerChamber_MapEvents:

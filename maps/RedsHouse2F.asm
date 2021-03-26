@@ -11,12 +11,12 @@ RedsHouse2FPCScript:
 
 RedsHouse2BedScript:
 	checkevent EVENT_MARINA_AVAILABLE
-	iffalse .done
+	iffalse .no_event
 	opentext
 	writetext .comfy
 	waitbutton
 	closetext
-	applymovement PLAYER, .enterBed
+	applymovement PLAYER, .enter
 	special FadeOutMusic
 	special FadeBlackQuickly
 	playsound SFX_ENTER_DOOR
@@ -29,13 +29,11 @@ RedsHouse2BedScript:
 	playsound SFX_METRONOME
 	waitsfx
 	warp SEAFLOOR_CAVERN_ENTRANCE, 9, 7
-.done
 	end
 
 .comfy
 	text "It does look soft"
 	line "and comfy<...>"
-
 	para "and you are pretty"
 	line "tired<...>"
 
@@ -44,9 +42,17 @@ RedsHouse2BedScript:
 	para "No one will know."
 	done
 
-.enterBed
+.enter
 	step LEFT
 	step_end
+
+.no_event
+	jumptext .text
+
+.text
+	text "It's a soft, comfy"
+	line "bed."
+	done
 
 RedsHouse2FN64Text:
 	text "<PLAYER> played the"

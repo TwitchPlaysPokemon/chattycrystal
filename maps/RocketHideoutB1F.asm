@@ -8,17 +8,28 @@ RocketHideoutB1F_MapScripts:
 
 	db 0 ; callbacks
 
-
 TrainerGruntM31:
-	trainer GRUNTM, GRUNTM_31, EVENT_BEAT_ROCKET_GRUNTM_31, GruntM31SeenText, GruntM31BeatenText, 0, .Script
+	trainer GRUNTM, GRUNTM_31, EVENT_BEAT_ROCKET_GRUNTM_31, .before_text, .defeat_text, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM31AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext .after_text
+
+.before_text
+	text "Who are you? How"
+	line "did you get here?"
+	done
+
+.defeat_text
+	text "Oww!"
+	line "Beaten!"
+	done
+
+.after_text
+	text "Blast it<....> You're"
+	line "dissing TEAM"
+	cont "ROCKET, aren't you?"
+	done
 
 RocketHideoutB1FOnixtret:
 	refreshscreen
@@ -64,12 +75,6 @@ RocketHideoutB1FPartyFullText:
 	line "is full<...>"
 	done
 
-GruntM31SeenText:
-GruntM31BeatenText:
-GruntM31AfterBattleText:
-	text "<...>"
-	done
-
 RocketHideoutB1FSodaPop:
 	itemball SODA_POP
 
@@ -91,5 +96,3 @@ RocketHideoutB1F_MapEvents:
 	object_event 10,  7, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerGruntM31, -1
 	object_event  3, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RocketHideoutB1FSodaPop, EVENT_ROCKET_HIDEOUT_B1F_SODA_POP
 	object_event  9, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RocketHideoutB1FOnixtret, EVENT_ONIXTRET_IN_ROCKET_HIDEOUT
-
-

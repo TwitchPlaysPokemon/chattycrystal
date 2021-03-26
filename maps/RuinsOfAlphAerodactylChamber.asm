@@ -1,19 +1,15 @@
 RuinsOfAlphAerodactylChamber_MapScripts:
 	db 2 ; scene scripts
 	scene_script .CheckWall ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .HiddenDoors
 
 .CheckWall:
 	checkevent EVENT_WALL_OPENED_IN_AERODACTYL_CHAMBER
-	iftrue .OpenWall
-	end
-
-.OpenWall:
+	iffalse GenericDummyScript
 	prioritysjump .WallOpenScript
-.DummyScene:
 	end
 
 .HiddenDoors:
@@ -22,12 +18,10 @@ RuinsOfAlphAerodactylChamber_MapScripts:
 	changeblock 4, 0, $2e ; closed wall
 .WallOpen:
 	checkevent EVENT_SOLVED_AERODACTYL_PUZZLE
-	iffalse .FloorClosed
-	return
-
-.FloorClosed:
+	iftrue .return
 	changeblock 2, 2, $01 ; left floor
 	changeblock 4, 2, $02 ; right floor
+.return
 	return
 
 .WallOpenScript:
@@ -95,11 +89,7 @@ RuinsOfAlphAerodactylChamberWallPatternRight:
 	end
 
 .WallOpen:
-	opentext
-	writetext RuinsOfAlphAerodactylChamberWallHoleText
-	waitbutton
-	closetext
-	end
+	jumptext RuinsOfAlphAerodactylChamberWallHoleText
 
 RuinsOfAlphAerodactylChamberSkyfallTopMovement:
 	skyfall_top
@@ -122,16 +112,16 @@ RuinsOfAlphAerodactylChamberWallHoleText:
 
 RuinsOfAlphAerodactylChamberAncientReplicaText:
 	text "It's a replica of"
-	line "an ancient #-"
-	cont "MON."
+	line "an ancient"
+	cont "#MON."
 	done
 
 RuinsOfAlphAerodactylChamberDescriptionText:
-	text "This flying #-"
-	line "MON attacked its"
+	text "This flying"
+	line "#MON attacked"
 
-	para "prey with saw-like"
-	line "fangs."
+	para "its prey with"
+	line "saw-like fangs."
 	done
 
 RuinsOfAlphAerodactylChamber_MapEvents:

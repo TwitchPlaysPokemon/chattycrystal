@@ -12,13 +12,10 @@
 
 RocketHideoutB3F_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
-
-.DummyScene
-	end
 
 RocketHideoutB3FWooperTBattleLeft:
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -37,17 +34,17 @@ RocketHideoutB3FWooperBattleContinue:
 	applymovement PLAYER, RocketHideoutB3FPlayerFaceRight
 	applymovement ROCKETHIDEOUTB3F_WOOPER_GMMTMT, RocketHideoutB3FWooperMovement
 	opentext
-	writetext RocketHideoutB3FWooperBeforeBattleText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext RocketHideoutB3FWooperWinText, RocketHideoutB3FWooperLoseText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer WOOPER_T, GMMTMT
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	opentext
-	writetext RocketHideoutB3FWooperAfterBattleText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement ROCKETHIDEOUTB3F_WOOPER_GMMTMT, RocketHideoutB3FWooperLeavesMovement
@@ -58,12 +55,9 @@ RocketHideoutB3FWooperBattleContinue:
 	playmapmusic
 	end
 
-RocketHideoutB3FWooperMovementLeft:
-	step LEFT
-	step_end
-
 RocketHideoutB3FWooperMovement:
 	step LEFT
+RocketHideoutB3FWooperMovementLeft:
 	step LEFT
 	step_end
 
@@ -74,13 +68,6 @@ RocketHideoutB3FWooperLeavesMovement:
 RocketHideoutB3FPlayerFaceRight:
 	turn_head RIGHT
 	step_end
-
-RocketHideoutB3FWooperBeforeBattleText:
-RocketHideoutB3FWooperLoseText:
-RocketHideoutB3FWooperWinText:
-RocketHideoutB3FWooperAfterBattleText:
-	text "<...>"
-	done
 
 RocketHideoutB3FUpGrade:
 	itemball UP_GRADE

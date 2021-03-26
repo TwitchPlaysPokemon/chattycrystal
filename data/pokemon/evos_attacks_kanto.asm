@@ -1387,7 +1387,7 @@ GeodudeEvosAttacks:
 	dbw 28, ROCK_BLAST
 	dbw 32, EARTHQUAKE
 	dbw 36, EXPLOSION
-	dbw 30, DOUBLE_EDGE
+	dbw 40, DOUBLE_EDGE
 	dbw 44, STONE_EDGE
 	db 0 ; no more level-up moves
 

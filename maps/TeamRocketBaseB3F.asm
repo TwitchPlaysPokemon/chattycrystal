@@ -17,9 +17,9 @@
 TeamRocketBaseB3F_MapScripts:
 	db 4 ; scene scripts
 	scene_script .LanceGetsPassword ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_TEAMROCKETBASEB3F_RIVAL_ENCOUNTER
-	scene_script .DummyScene2 ; SCENE_TEAMROCKETBASEB3F_ROCKET_BOSS
-	scene_script .DummyScene3 ; SCENE_TEAMROCKETBASEB3F_NOTHING
+	scene_script GenericDummyScript ; SCENE_TEAMROCKETBASEB3F_RIVAL_ENCOUNTER
+	scene_script GenericDummyScript ; SCENE_TEAMROCKETBASEB3F_ROCKET_BOSS
+	scene_script GenericDummyScript ; SCENE_TEAMROCKETBASEB3F_NOTHING
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .CheckGiovanniDoor
@@ -28,22 +28,11 @@ TeamRocketBaseB3F_MapScripts:
 	prioritysjump LanceGetPasswordScript
 	end
 
-.DummyScene1:
-	end
-
-.DummyScene2:
-	end
-
-.DummyScene3:
-	end
-
 .CheckGiovanniDoor:
 	checkevent EVENT_OPENED_DOOR_TO_GIOVANNIS_OFFICE
-	iftrue .OpenSesame
-	return
-
-.OpenSesame:
+	iffalse .return
 	changeblock 10, 8, $07 ; floor
+.return
 	return
 
 LanceGetPasswordScript:
@@ -51,12 +40,12 @@ LanceGetPasswordScript:
 	pause 5
 	turnobject TEAMROCKETBASEB3F_MOLTRES, RIGHT
 	pause 20
-	applymovement TEAMROCKETBASEB3F_LANCE, MovementData_0x6e12a
+	applymovement TEAMROCKETBASEB3F_LANCE, TeamRocketBaseB3F_Movement_LanceApproachesPlayer
 	opentext
-	writetext LanceGetPasswordText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	applymovement TEAMROCKETBASEB3F_LANCE, MovementData_0x6e12c
+	applymovement TEAMROCKETBASEB3F_LANCE, TeamRocketBaseB3F_Movement_LanceLeaves
 	disappear TEAMROCKETBASEB3F_LANCE
 	setscene SCENE_TEAMROCKETBASEB3F_RIVAL_ENCOUNTER
 	end
@@ -68,13 +57,13 @@ RocketBaseRival:
 	appear TEAMROCKETBASEB3F_SILVER
 	applymovement TEAMROCKETBASEB3F_SILVER, RocketBaseRivalEnterMovement
 	turnobject PLAYER, LEFT
-	winlosstext RocketBaseRivalText, RocketBaseRivalText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer BABA, BABA3
 	startbattle
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext RocketBaseRivalText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	playsound SFX_TACKLE
@@ -89,69 +78,57 @@ TeamRocketBaseB3FRocketScript:
 	jumptextfaceplayer TeamRocketBaseB3FRocketText
 
 RocketBaseBossLeft:
-	applymovement PLAYER, MovementData_0x6e133
+	applymovement PLAYER, TeamRocketBaseB3F_Movement_PlayerApproachesExecutive_Left
 	sjump RocketBaseBoss
 
 RocketBaseBossRight:
-	applymovement PLAYER, MovementData_0x6e13a
+	applymovement PLAYER, TeamRocketBaseB3F_Movement_PlayerApproachesExecutive_Right
 RocketBaseBoss:
 	pause 30
 	showemote EMOTE_SHOCK, TEAMROCKETBASEB3F_ROCKET1, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	turnobject TEAMROCKETBASEB3F_ROCKET1, DOWN
 	opentext
-	writetext ExecutiveM4BeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	applymovement TEAMROCKETBASEB3F_ROCKET1, MovementData_0x6e142
-	winlosstext ExecutiveM4BeatenText, 0
+	applymovement TEAMROCKETBASEB3F_ROCKET1, TeamRocketBaseB3F_Movement_ExecutiveApproachesPlayer
+	winlosstext HostSilenceText, 0
 	setlasttalked TEAMROCKETBASEB3F_ROCKET1
 	loadtrainer FC_LARRY, LARRY_GREEN
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ROCKET_EXECUTIVEM_4
 	opentext
-	writetext ExecutiveM4AfterText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	applymovement TEAMROCKETBASEB3F_ROCKET1, MovementData_0x6e144
+	applymovement TEAMROCKETBASEB3F_ROCKET1, TeamRocketBaseB3F_Movement_ExecutiveHitsTable
 	playsound SFX_TACKLE
-	applymovement TEAMROCKETBASEB3F_ROCKET1, MovementData_0x6e147
+	applymovement TEAMROCKETBASEB3F_ROCKET1, TeamRocketBaseB3F_Movement_ExecutiveLeaves
 	disappear TEAMROCKETBASEB3F_ROCKET1
 	setscene SCENE_TEAMROCKETBASEB3F_NOTHING
 	end
 
 RocketBaseMurkrow:
-	opentext
-	writetext RocketBaseMurkrowText
-	waitbutton
-	closetext
 	setevent EVENT_LEARNED_HAIL_GIOVANNI
-	end
+	jumptext RocketBaseMurkrowText
 
 SlowpokeTailGrunt:
 	trainer GRUNTF, GRUNTF_5, EVENT_BEAT_ROCKET_GRUNTF_5, GruntF5SeenText, GruntF5BeatenText, 0, GruntF5Script
 
 GruntF5Script:
 	endifjustbattled
-	opentext
-	writetext GruntF5AfterBattleText
-	waitbutton
-	closetext
 	setevent EVENT_LEARNED_SLOWPOKETAIL
-	end
+	jumptext GruntF5AfterBattleText
 
 RaticateTailGrunt:
 	trainer GRUNTM, GRUNTM_28, EVENT_BEAT_ROCKET_GRUNTM_28, GruntM28SeenText, GruntM28BeatenText, 0, GruntM28Script
 
 GruntM28Script:
 	endifjustbattled
-	opentext
-	writetext GruntM28AfterBattleText
-	waitbutton
-	closetext
 	setevent EVENT_LEARNED_RATICATE_TAIL
-	end
+	jumptext GruntM28AfterBattleText
 
 TrainerScientistRoss:
 	trainer SCIENTIST, ROSS, EVENT_BEAT_SCIENTIST_ROSS, ScientistRossSeenText, ScientistRossBeatenText, 0, .Script
@@ -169,30 +146,17 @@ TrainerScientistMitch:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext ScientistMitchAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext ScientistMitchAfterBattleText
 
 TeamRocketBaseB3FLockedDoor:
 	conditional_event EVENT_OPENED_DOOR_TO_GIOVANNIS_OFFICE, .Script
 
 .Script:
-	opentext
 	checkevent EVENT_LEARNED_SLOWPOKETAIL
 	iffalse .NeedsPassword
 	checkevent EVENT_LEARNED_RATICATE_TAIL
 	iffalse .NeedsPassword
-	sjump .OpenSesame
-
-.NeedsPassword:
-	writetext TeamRocketBaseB3FLockedDoorNeedsPasswordText
-	waitbutton
-	closetext
-	end
-
-.OpenSesame:
+	opentext
 	writetext TeamRocketBaseB3FLockedDoorOpenSesameText
 	waitbutton
 	playsound SFX_ENTER_DOOR
@@ -202,6 +166,9 @@ TeamRocketBaseB3FLockedDoor:
 	setevent EVENT_OPENED_DOOR_TO_GIOVANNIS_OFFICE
 	waitsfx
 	end
+
+.NeedsPassword:
+	jumptext TeamRocketBaseB3FLockedDoorNeedsPasswordText
 
 TeamRocketBaseB3FOathScript:
 	jumpstd teamrocketoath
@@ -221,11 +188,7 @@ TeamRocketBaseB3FIceHeal:
 TeamRocketBaseB3FUltraBall:
 	itemball ULTRA_BALL
 
-MovementData_0x6e12a:
-	step RIGHT
-	step_end
-
-MovementData_0x6e12c:
+TeamRocketBaseB3F_Movement_LanceLeaves:
 	step DOWN
 	step LEFT
 	step LEFT
@@ -234,7 +197,7 @@ MovementData_0x6e12c:
 	step LEFT
 	step_end
 
-MovementData_0x6e133:
+TeamRocketBaseB3F_Movement_PlayerApproachesExecutive_Left:
 	step UP
 	step UP
 	step UP
@@ -243,7 +206,7 @@ MovementData_0x6e133:
 	turn_head UP
 	step_end
 
-MovementData_0x6e13a:
+TeamRocketBaseB3F_Movement_PlayerApproachesExecutive_Right:
 	step UP
 	step UP
 	step LEFT
@@ -253,16 +216,16 @@ MovementData_0x6e13a:
 	turn_head UP
 	step_end
 
-MovementData_0x6e142:
+TeamRocketBaseB3F_Movement_ExecutiveApproachesPlayer:
 	step DOWN
 	step_end
 
-MovementData_0x6e144:
+TeamRocketBaseB3F_Movement_ExecutiveHitsTable:
 	big_step RIGHT
 	big_step RIGHT
 	step_end
 
-MovementData_0x6e147:
+TeamRocketBaseB3F_Movement_ExecutiveLeaves:
 	fix_facing
 	fast_jump_step LEFT
 	remove_fixed_facing
@@ -301,6 +264,7 @@ RocketBaseRivalEnterMovement:
 	step DOWN
 	step RIGHT
 	step RIGHT
+TeamRocketBaseB3F_Movement_LanceApproachesPlayer:
 	step RIGHT
 	step_end
 
@@ -320,76 +284,10 @@ RocketBaseRivalShovesPlayerMovement:
 	remove_fixed_facing
 	step_end
 
-LanceGetPasswordText:
-	text "LANCE: It takes"
-	line "two passwords to"
-
-	para "get into the"
-	line "boss's quarters."
-
-	para "Those passwords"
-	line "are known only to"
-	cont "a few ROCKETS."
-
-	para "That ROCKET there"
-	line "very graciously"
-	cont "told me so."
-
-	para "<PLAY_G>, let's go"
-	line "get the passwords."
-	done
-
 TeamRocketBaseB3FRocketText:
 	text "Urrggh… The guy"
 	line "in the cape is"
 	cont "incredibly tough…"
-	done
-
-RocketBaseRivalText:
-	text "…"
-	done
-
-ExecutiveM4BeforeText:
-	text "What? Who are you?"
-	line "This is the office"
-
-	para "of our leader,"
-	line "GIOVANNI."
-
-	para "Since disbanding"
-	line "TEAM ROCKET three"
-
-	para "years ago, he has"
-	line "been in training."
-
-	para "But we're certain"
-	line "he will be back"
-
-	para "some day to assume"
-	line "command again."
-
-	para "That's why we're"
-	line "standing guard."
-
-	para "I won't let any-"
-	line "one disturb this"
-	cont "place!"
-	done
-
-ExecutiveM4BeatenText:
-	text "I… I couldn't do a"
-	line "thing…"
-
-	para "GIOVANNI, please"
-	line "forgive me…"
-	done
-
-ExecutiveM4AfterText:
-	text "No, I can't let"
-	line "this affect me."
-
-	para "I have to inform"
-	line "the others…"
 	done
 
 RocketBaseMurkrowText:
@@ -438,7 +336,6 @@ GruntM28SeenText:
 
 	para "If you can beat"
 	line "me, I'll tell you"
-
 	para "a password to the"
 	line "boss's room!"
 	done
@@ -461,7 +358,6 @@ GruntM28AfterBattleText:
 ScientistRossSeenText:
 	text "I used to work for"
 	line "SILPH, but now I"
-
 	para "run research for"
 	line "TEAM ROCKET."
 
@@ -477,15 +373,14 @@ ScientistRossBeatenText:
 
 ScientistRossAfterBattleText:
 	text "A radio signal"
-	line "that drives #-"
-	cont "MON mad…"
+	line "that drives"
+	cont "#MON mad…"
 
 	para "My experiment is a"
 	line "complete success."
 
 	para "My promotion is"
 	line "assured. This loss"
-
 	para "means absolutely"
 	line "nothing."
 	done
@@ -505,7 +400,6 @@ ScientistMitchBeatenText:
 ScientistMitchAfterBattleText:
 	text "If we turn up the"
 	line "power of our radio"
-
 	para "signal for broad-"
 	line "cast nationwide…"
 

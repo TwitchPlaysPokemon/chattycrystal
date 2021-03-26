@@ -1,7 +1,7 @@
 	object_const_def ; object_event constants
-	const TINTOWER1F_SUICUNE
-	const TINTOWER1F_RAIKOU
 	const TINTOWER1F_ENTEI
+	const TINTOWER1F_RAIKOU
+	const TINTOWER1F_SUICUNE
 	const TINTOWER1F_EUSINE
 	const TINTOWER1F_SAGE1
 	const TINTOWER1F_SAGE2
@@ -13,7 +13,7 @@
 TinTower1F_MapScripts:
 	db 2 ; scene scripts
 	scene_script .FaceSuicune ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 3 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .NPCsCallback
@@ -22,7 +22,6 @@ TinTower1F_MapScripts:
 
 .FaceSuicune:
 	prioritysjump .SuicuneBattle
-.DummyScene:
 	end
 
 .NPCsCallback:
@@ -50,7 +49,7 @@ TinTower1F_MapScripts:
 .FaceBeasts:
 	checkevent EVENT_FOUGHT_SUICUNE
 	iftrue .FoughtSuicune
-	appear TINTOWER1F_SUICUNE
+	appear TINTOWER1F_ENTEI
 	loadmonindex 0, RAIKOU
 	special MonCheck
 	iftrue .NoRaikou
@@ -62,19 +61,19 @@ TinTower1F_MapScripts:
 .CheckEntei:
 	loadmonindex 0, ENTEI
 	special MonCheck
-	iftrue .NoEntei
-	appear TINTOWER1F_ENTEI
+	iftrue .NoSuicune
+	appear TINTOWER1F_SUICUNE
 	sjump .BeastsDone
 
-.NoEntei:
-	disappear TINTOWER1F_ENTEI
+.NoSuicune:
+	disappear TINTOWER1F_SUICUNE
 .BeastsDone:
 	return
 
 .FoughtSuicune:
-	disappear TINTOWER1F_SUICUNE
-	disappear TINTOWER1F_RAIKOU
 	disappear TINTOWER1F_ENTEI
+	disappear TINTOWER1F_RAIKOU
+	disappear TINTOWER1F_SUICUNE
 	clearevent EVENT_TIN_TOWER_1F_WISE_TRIO_1
 	setevent EVENT_TIN_TOWER_1F_WISE_TRIO_2
 	return
@@ -104,28 +103,28 @@ TinTower1F_MapScripts:
 .Next1:
 	loadmonindex 0, SUICUNE
 	special MonCheck
-	iftrue .Next2 ; if player caught Entei, he doesn't appear in Tin Tower
-	applymovement TINTOWER1F_ENTEI, TinTowerEnteiMovement1
+	iftrue .Next2 ; if player caught Suicune, he doesn't appear in Tin Tower
+	applymovement TINTOWER1F_SUICUNE, TinTowerEnteiMovement1
 	turnobject PLAYER, RIGHT
 	cry SUICUNE
 	pause 10
 	playsound SFX_WARP_FROM
-	applymovement TINTOWER1F_ENTEI, TinTowerEnteiMovement2
-	disappear TINTOWER1F_ENTEI
+	applymovement TINTOWER1F_SUICUNE, TinTowerEnteiMovement2
+	disappear TINTOWER1F_SUICUNE
 	playsound SFX_EXIT_BUILDING
 	waitsfx
 .Next2:
 	turnobject PLAYER, UP
 	pause 10
 	applymovement PLAYER, TinTowerPlayerMovement2
-	applymovement TINTOWER1F_SUICUNE, TinTowerSuicuneMovement
+	applymovement TINTOWER1F_ENTEI, TinTowerSuicuneMovement
 	cry ENTEI
 	pause 20
 	loadwildmon ENTEI, 55
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SUICUNE
 	startbattle
 	dontrestartmapmusic
-	disappear TINTOWER1F_SUICUNE
+	disappear TINTOWER1F_ENTEI
 	setevent EVENT_FOUGHT_SUICUNE
 	setevent EVENT_SAW_SUICUNE_ON_ROUTE_42
 	setmapscene ROUTE_42, SCENE_ROUTE42_NOTHING
@@ -142,19 +141,19 @@ TinTower1F_MapScripts:
 	playsound SFX_ENTER_DOOR
 	moveobject TINTOWER1F_EUSINE, 10, 15
 	appear TINTOWER1F_EUSINE
-	applymovement TINTOWER1F_EUSINE, MovementData_0x1851ec
+	applymovement TINTOWER1F_EUSINE, TinTower1F_Movement_EusineUp
 	playsound SFX_ENTER_DOOR
 	moveobject TINTOWER1F_SAGE1, 9, 15
 	appear TINTOWER1F_SAGE1
-	applymovement TINTOWER1F_SAGE1, MovementData_0x1851f5
+	applymovement TINTOWER1F_SAGE1, TinTower1F_Movement_Sage1
 	playsound SFX_ENTER_DOOR
 	moveobject TINTOWER1F_SAGE2, 9, 15
 	appear TINTOWER1F_SAGE2
-	applymovement TINTOWER1F_SAGE2, MovementData_0x1851fb
+	applymovement TINTOWER1F_SAGE2, TinTower1F_Movement_Sage2
 	playsound SFX_ENTER_DOOR
 	moveobject TINTOWER1F_SAGE3, 9, 15
 	appear TINTOWER1F_SAGE3
-	applymovement TINTOWER1F_SAGE3, MovementData_0x1851fe
+	applymovement TINTOWER1F_SAGE3, TinTower1F_Movement_Sage3
 	moveobject TINTOWER1F_SAGE1, 7, 13
 	moveobject TINTOWER1F_SAGE2, 9, 13
 	moveobject TINTOWER1F_SAGE3, 11, 13
@@ -163,7 +162,7 @@ TinTower1F_MapScripts:
 	writetext TinTowerEusineSuicuneText
 	waitbutton
 	closetext
-	applymovement TINTOWER1F_EUSINE, MovementData_0x1851f1
+	applymovement TINTOWER1F_EUSINE, TinTower1F_Movement_EusineDown
 	playsound SFX_EXIT_BUILDING
 	disappear TINTOWER1F_EUSINE
 	waitsfx
@@ -279,20 +278,20 @@ TinTowerPlayerMovement2:
 	remove_fixed_facing
 	step_end
 
-MovementData_0x1851ec:
+TinTower1F_Movement_EusineUp:
 	step UP
 	step UP
 	step UP
 	turn_head LEFT
 	step_end
 
-MovementData_0x1851f1:
+TinTower1F_Movement_EusineDown:
 	step DOWN
 	step DOWN
 	step DOWN
 	step_end
 
-MovementData_0x1851f5:
+TinTower1F_Movement_Sage1:
 	step UP
 	step UP
 	step LEFT
@@ -300,12 +299,12 @@ MovementData_0x1851f5:
 	turn_head UP
 	step_end
 
-MovementData_0x1851fb:
+TinTower1F_Movement_Sage2:
 	step UP
 	step UP
 	step_end
 
-MovementData_0x1851fe:
+TinTower1F_Movement_Sage3:
 	step UP
 	step RIGHT
 	step RIGHT
@@ -322,16 +321,13 @@ TinTower1FSage1Text:
 
 	para "When the souls of"
 	line "#MON and humans"
-
 	para "commune, from the"
 	line "heavens descends a"
-
 	para "#MON of rainbow"
 	line "colors…"
 
 	para "Could it mean the"
 	line "legendary #MON"
-
 	para "are testing us"
 	line "humans?"
 	done
@@ -339,10 +335,8 @@ TinTower1FSage1Text:
 TinTower1FSage2Text:
 	text "When the BRASS"
 	line "TOWER burned down,"
-
 	para "three nameless"
 	line "#MON were said"
-
 	para "to have perished."
 	line "It was tragic."
 
@@ -355,7 +349,6 @@ TinTower1FSage2Text:
 
 	para "HO-OH descended"
 	line "from the sky and"
-
 	para "gave new life to"
 	line "the three #MON."
 
@@ -371,16 +364,13 @@ TinTower1FSage2Text:
 TinTower1FSage3Text:
 	text "The two TOWERS are"
 	line "said to have been"
-
 	para "built to foster"
 	line "friendship and"
-
 	para "hope between #-"
 	line "MON and people."
 
 	para "That was 700 years"
 	line "ago, but the ideal"
-
 	para "still remains"
 	line "important today."
 	done
@@ -388,7 +378,6 @@ TinTower1FSage3Text:
 TinTower1FSage4Text1:
 	text "HO-OH appears to"
 	line "have descended"
-
 	para "upon this, the TIN"
 	line "TOWER!"
 	done
@@ -416,7 +405,6 @@ TinTowerEusineHoOhText:
 
 	para "I knew you'd get"
 	line "to see the #MON"
-
 	para "of rainbow colors,"
 	line "<PLAYER>."
 
@@ -428,7 +416,6 @@ TinTowerEusineHoOhText:
 
 	para "I'm going to keep"
 	line "studying #MON"
-
 	para "to become a famous"
 	line "#MANIAC!"
 	done
@@ -436,7 +423,6 @@ TinTowerEusineHoOhText:
 TinTower1FSage4Text2:
 	text "The legendary"
 	line "#MON are said"
-
 	para "to embody three"
 	line "powers…"
 
@@ -465,7 +451,6 @@ TinTower1FSage5Text3:
 
 	para "The legendary"
 	line "#MON, knowing"
-
 	para "their own power,"
 	line "fled, ignoring the"
 	cont "frightened people."
@@ -474,19 +459,16 @@ TinTower1FSage5Text3:
 TinTower1FSage6Text2:
 	text "Of the legendary"
 	line "#MON, SUICUNE"
-
 	para "is said to be the"
 	line "closest to HO-OH."
 
 	para "I hear there may"
 	line "also be a link to"
-
 	para "#MON known as"
 	line "UNOWN."
 
 	para "The #MON UNOWN"
 	line "must be sharing a"
-
 	para "cooperative bond"
 	line "with SUICUNE."
 	done

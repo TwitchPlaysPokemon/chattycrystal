@@ -11,13 +11,6 @@ SafariZoneWestSignScript:
 	done
 
 SafariZoneWestTrainerTips1Script:
-	jumptext .Text
-
-.Text:
-	text "The sign is"
-	line "faded…"
-	done
-
 SafariZoneWestTrainerTips2Script:
 	jumptext .Text
 
@@ -34,12 +27,6 @@ SafariZoneWestRestHouseSignScript:
 	done
 
 SafariZoneWestRestHouseScript:
-	jumptext .Text
-
-.Text:
-	text "It's locked…"
-	done
-
 SafariZoneWestPrizeHouseScript:
 	jumptext .Text
 

@@ -19,36 +19,20 @@ SaffronCity_MapScripts:
 	return
 
 SaffronCityLass1Script:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
-	writetext SaffronCityLass1Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronCityLass1Text
 
 .ReturnedMachinePart:
-	writetext SaffronCityLass1Text_ReturnedMachinePart
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronCityLass1Text_ReturnedMachinePart
 
 SaffronCityPokefanMScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
-	writetext SaffronCityPokefanMText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronCityPokefanMText
 
 .ReturnedMachinePart:
-	writetext SaffronCityPokefanMText_ReturnedMachinePart
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronCityPokefanMText_ReturnedMachinePart
 
 SaffronCityCooltrainerMScript:
 	jumptextfaceplayer SaffronCityCooltrainerMText
@@ -57,20 +41,12 @@ SaffronCityCooltrainerFScript:
 	jumptextfaceplayer SaffronCityCooltrainerFText
 
 SaffronCityFisherScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
-	writetext SaffronCityFisherText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronCityFisherText
 
 .ReturnedMachinePart:
-	writetext SaffronCityFisherText_ReturnedMachinePart
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronCityFisherText_ReturnedMachinePart
 
 SaffronCityYoungster1Script:
 	jumptextfaceplayer SaffronCityYoungster1Text
@@ -108,13 +84,11 @@ SaffronCityMartSign:
 SaffronCityLass1Text:
 	text "A little girl who"
 	line "is an expert at"
-
 	para "mimicking people"
 	line "lives here."
 
 	para "She even mimics"
 	line "the people she's"
-
 	para "conversing with."
 	line "It's confusing."
 	done
@@ -153,7 +127,6 @@ SaffronCityCooltrainerMText:
 
 	para "It turns out, I"
 	line "stumbled into the"
-
 	para "unused GYM next"
 	line "door."
 
@@ -168,9 +141,13 @@ SaffronCityCooltrainerFText:
 
 	para "In the past, TEAM"
 	line "ROCKET wanted the"
-
 	para "company because of"
 	line "that."
+
+	para "I think there's"
+	line "something else"
+	para "going on in there"
+	line "nowadays<...>"
 	done
 
 SaffronCityFisherText:
@@ -197,20 +174,27 @@ SaffronCityFisherText_ReturnedMachinePart:
 SaffronCityYoungster1Text:
 	text "Going into an"
 	line "alley for the"
-
 	para "first time makes"
 	line "me sorta anxious."
 	done
 
 SaffronCityYoungster2Text:
-	text "There's a place"
-	line "called TRAINER"
+	text "There used to be a"
+	line "place called"
+	para "TRAINER HOUSE in"
+	line "VIRIDIAN, where"
+	para "trainers gathered"
+	line "from all over the"
+	cont "place."
 
-	para "HOUSE in VIRIDIAN"
-	line "where trainers"
+	para "But some strange"
+	line "dude bought out"
+	para "the house a few"
+	line "months ago<...>"
 
-	para "gather from all"
-	line "over the place."
+	para "I wonder what will"
+	line "happen with it"
+	cont "now."
 	done
 
 SaffronCityLass2Text:
@@ -220,7 +204,6 @@ SaffronCityLass2Text:
 
 	para "It's nice to hear"
 	line "praise for your"
-
 	para "city, but it's a"
 	line "bit embarrassing"
 	cont "too."
@@ -236,10 +219,7 @@ SaffronCitySignText:
 SaffronGymSignText:
 	text "SAFFRON CITY"
 	line "#MON GYM"
-	cont "LEADER: SABRINA"
-
-	para "The Master of"
-	line "Psychic #MON!"
+	cont "LEADER: STARS"
 	done
 
 FightingDojoSignText:

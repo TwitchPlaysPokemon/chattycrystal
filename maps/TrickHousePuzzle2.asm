@@ -24,7 +24,7 @@ TrickHousePuzzle2_MapScripts:
 
 .check_switch4
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	;fallthrough
 
 TrickHousePuzzle2_Switch4_Press:
@@ -53,37 +53,35 @@ TrickHousePuzzle2_Switch1_Press:
 
 TrickHousePuzzle2_Switch1:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue TrickHouse_End
+	iftrue GenericDummyScript
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	playsound SFX_WALL_OPEN
 	sjump TrickHousePuzzle2_Switch1_Press
 
 TrickHousePuzzle2_Switch2:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	iftrue TrickHouse_End
+	iftrue GenericDummyScript
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
 	playsound SFX_WALL_OPEN
 	sjump TrickHousePuzzle2_Switch2_Press
 
 TrickHousePuzzle2_Switch3:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
-	iftrue TrickHouse_End
+	iftrue GenericDummyScript
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_3
 	playsound SFX_WALL_OPEN
 	sjump TrickHousePuzzle2_Switch3_Press
 
-
 TrickHousePuzzle2_Switch4:
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
-	iftrue TrickHouse_End
+	iftrue GenericDummyScript
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_4
 	playsound SFX_WALL_OPEN
 	sjump TrickHousePuzzle2_Switch4_Press
 
-
 TrickHousePuzzle2_Door:
 	scall TrickHouse_Door
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	writetext .code
 	sjump TrickHouse_UnlockDoor_Common
 

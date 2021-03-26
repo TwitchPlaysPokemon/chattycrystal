@@ -5,16 +5,13 @@
 TimeCapsule_MapScripts:
 	db 2 ; scene scripts
 	scene_script .InitializeTimeCapsule ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .SetWhichChris
 
 .InitializeTimeCapsule:
 	prioritysjump .InitializeAndPreparePokecenter2F
-	end
-
-.DummyScene:
 	end
 
 .SetWhichChris:

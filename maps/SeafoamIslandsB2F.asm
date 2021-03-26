@@ -14,11 +14,7 @@ TrainerSkierCady:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterText
 
 .SeenText:
 	text "To beat the cold,"
@@ -41,11 +37,7 @@ TrainerBoarderShaun:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterText
 
 .SeenText:
 	text "Hey, hey, you're"
@@ -67,11 +59,7 @@ TrainerBoarderBryce:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterText
 
 .SeenText:
 	text "What did you"

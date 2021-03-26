@@ -7,20 +7,13 @@ SafariZoneWardensHome_MapScripts:
 	db 0 ; callbacks
 
 WardensGranddaughter:
-	faceplayer
-	opentext
 	checkevent EVENT_TALKED_TO_WARDENS_GRANDDAUGHTER
 	iftrue .AlreadyMet
-	writetext WardensGranddaughterText1
-	waitbutton
-	closetext
 	setevent EVENT_TALKED_TO_WARDENS_GRANDDAUGHTER
-	end
+	jumptextfaceplayer WardensGranddaughterText1
+
 .AlreadyMet:
-	writetext WardensGranddaughterText2
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer WardensGranddaughterText2
 
 WardenPhoto:
 	jumptext WardenPhotoText
@@ -33,14 +26,13 @@ WardensHomeBookshelf:
 
 WardensGranddaughterText1:
 	text "My grandpa is the"
-	line "SAFARI ZONE WAR-"
-	cont "DEN."
+	line "SAFARI ZONE"
+	cont "WARDEN."
 
 	para "At least he was…"
 
 	para "He decided to go"
 	line "on a vacation and"
-
 	para "took off overseas"
 	line "all by himself."
 
@@ -52,16 +44,22 @@ WardensGranddaughterText1:
 WardensGranddaughterText2:
 	text "Many people were"
 	line "disappointed that"
-
 	para "SAFARI ZONE closed"
 	line "down, but Grandpa"
 	cont "is so stubborn…"
+
+	para "The city opened up"
+	line "the place again"
+	para "some time ago, but"
+	line "the SAFARI GAME is"
+	para "gone--it's been"
+	line "overrun by wild"
+	cont "#MON now."
 	done
 
 WardenPhotoText:
 	text "It's a photo of a"
 	line "grinning old man"
-
 	para "who's surrounded"
 	line "by #MON."
 	done
@@ -69,7 +67,6 @@ WardenPhotoText:
 SafariZonePhotoText:
 	text "It's a photo of a"
 	line "huge grassy plain"
-
 	para "with rare #MON"
 	line "frolicking in it."
 	done

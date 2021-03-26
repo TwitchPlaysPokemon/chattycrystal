@@ -22,18 +22,14 @@ TrainerGruntM29:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM29AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM29AfterBattleText
 
 TrainerGruntM1:
-	trainer NUZLOCKE, F481, EVENT_BEAT_ROCKET_GRUNTM_1, GruntM1SeenText, GruntM1BeatenText, 0, .Script
+	trainer NUZLOCKE, F481, EVENT_BEAT_ROCKET_GRUNTM_1, HostSilenceText, HostSilenceText, 0, .Script
 
 .Script:
 	opentext
-	writetext TrainerGruntM1WhenTalkText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	special FadeBlackQuickly
@@ -76,22 +72,14 @@ TrainerGruntM2:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM2AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM2AfterBattleText
 
 TrainerGruntF1:
 	trainer GRUNTF, GRUNTF_1, EVENT_BEAT_ROCKET_GRUNTF_1, GruntF1SeenText, GruntF1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntF1AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntF1AfterBattleText
 
 SlowpokeWellB1FSlowpokeWithMailScript:
 	faceplayer
@@ -160,7 +148,6 @@ SlowpokeWellB1FKurtText:
 
 	para "Rats! If I were"
 	line "fit, my #MON"
-
 	para "would've punished"
 	line "them…"
 
@@ -187,7 +174,6 @@ KurtLeaveSlowpokeWellText:
 GruntM29SeenText:
 	text "Darn! I was stand-"
 	line "ing guard up top"
-
 	para "when some old coot"
 	line "yelled at me."
 
@@ -208,7 +194,6 @@ GruntM29BeatenText:
 GruntM29AfterBattleText:
 	text "Sure, we've been"
 	line "hacking the tails"
-
 	para "off SLOWPOKE and"
 	line "selling them."
 
@@ -217,21 +202,8 @@ GruntM29AfterBattleText:
 
 	para "That's right!"
 	line "We're TEAM ROCKET,"
-
 	para "and we'll do any-"
 	line "thing for money!"
-	done
-
-GruntM1SeenText:
-	text "…"
-	done
-
-GruntM1BeatenText:
-	text "…"
-	done
-
-TrainerGruntM1WhenTalkText:
-	text "…"
 	done
 
 GruntM2SeenText:
@@ -290,7 +262,6 @@ SlowpokeWellB1FSlowpokeMailText:
 
 	para "Be good and look"
 	line "after the house"
-
 	para "with Grandpa and"
 	line "SLOWPOKE."
 

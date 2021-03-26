@@ -6,7 +6,7 @@ TrickHousePuzzle4_MapScripts:
 
 TrickHousePuzzle4_Door:
 	scall TrickHouse_Door
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	writetext .code
 	sjump TrickHouse_UnlockDoor_Common
 
@@ -104,7 +104,6 @@ TrickHouseTrainerCal:
 	para "Where is my"
 	line "TRAINER HOUSE?"
 	done
-
 
 TrickHousePuzzle4_MapEvents:
 	db 0, 0 ; filler

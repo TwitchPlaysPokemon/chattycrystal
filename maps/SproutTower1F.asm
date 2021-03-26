@@ -28,11 +28,7 @@ TrainerSageChow:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SageChowAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SageChowAfterBattleText
 
 SproutTower1FParlyzHeal:
 	itemball PARLYZ_HEAL
@@ -71,7 +67,6 @@ SproutTower1FSage1Text:
 SproutTower1FSage2Text:
 	text "SPROUT TOWER was"
 	line "built long ago"
-
 	para "as a place for"
 	line "#MON training."
 	done

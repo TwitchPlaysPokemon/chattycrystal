@@ -9,14 +9,10 @@
 
 SproutTower3F_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
-
-.DummyScene0:
-.DummyScene1:
-	end
 
 SproutTower3FRivalScene:
 	turnobject PLAYER, UP
@@ -29,29 +25,29 @@ SproutTower3FRivalScene:
 	playsound SFX_TACKLE
 	playsound SFX_ELEVATOR
 	earthquake 79
-	applymovement PLAYER, MovementData_0x184a1d
-	applymovement SPROUTTOWER3F_SILVER, MovementData_0x184a22
+	applymovement PLAYER, SproutTower3F_Movement_PlayerApproachRival
+	applymovement SPROUTTOWER3F_SILVER, SproutTower3F_Movement_RivalWalkUp
 	opentext
-	writetext SproutTowerRivalSageText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	showemote EMOTE_SHOCK, SPROUTTOWER3F_SILVER, 15
 	turnobject SPROUTTOWER3F_SILVER, DOWN
 	pause 15
-	applymovement SPROUTTOWER3F_SILVER, MovementData_0x184a24
+	applymovement SPROUTTOWER3F_SILVER, SproutTower3F_Movement_RivalApproachPlayer
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext SproutTowerRivalSageText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext SproutTowerRivalSageText, SproutTowerRivalSageText
+	winlosstext HostSilenceText, HostSilenceText
 	setlasttalked SPROUTTOWER3F_SILVER
 	loadtrainer BABA, BABA1
 	startbattle
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
 	opentext
-	writetext SproutTowerRivalSageText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	turnobject SPROUTTOWER3F_SILVER, UP
@@ -74,26 +70,21 @@ SageLiScript:
 	opentext
 	checkevent EVENT_GOT_HM05_FLASH
 	iftrue .GotFlash
-	writetext SproutTowerRivalSageText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext SproutTowerRivalSageText, SproutTowerRivalSageText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer B2W2_NATE, R_BLACK21
 	startbattle
 	reloadmapafterbattle
 	opentext
-	writetext SproutTowerRivalSageText
+	writetext HostSilenceText
 	buttonsound
 	verbosegiveitem HM_FLASH
 	setevent EVENT_GOT_HM05_FLASH
 	setevent EVENT_BEAT_SAGE_LI
-	writetext SproutTowerRivalSageText
-	waitbutton
-	closetext
-	end
-
 .GotFlash:
-	writetext SproutTowerRivalSageText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
@@ -103,34 +94,21 @@ TrainerSageJin:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SageJinAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SageJinAfterBattleText
 
 TrainerSageTroy:
 	trainer SAGE, TROY, EVENT_BEAT_SAGE_TROY, SageTroySeenText, SageTroyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SageTroyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SageTroyAfterBattleText
 
 TrainerSageNeal:
 	trainer SAGE, NEAL, EVENT_BEAT_SAGE_NEAL, SageNealSeenText, SageNealBeatenText, 0, .Script
 
-
 .Script:
 	endifjustbattled
-	opentext
-	writetext SageNealAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SageNealAfterBattleText
 
 SproutTower3FPainting:
 	jumptext SproutTower3FPaintingText
@@ -144,25 +122,18 @@ SproutTower3FPotion:
 SproutTower3FEscapeRope:
 	itemball ESCAPE_ROPE
 
-MovementData_0x184a1d:
+SproutTower3F_Movement_PlayerApproachRival:
 	step UP
 	step UP
 	step UP
-	step UP
-	step_end
-
-MovementData_0x184a22:
+SproutTower3F_Movement_RivalWalkUp:
 	step UP
 	step_end
 
-MovementData_0x184a24:
+SproutTower3F_Movement_RivalApproachPlayer:
 	step RIGHT
 	step DOWN
 	step_end
-
-SproutTowerRivalSageText:
-	text "…"
-	done
 
 SproutTowerRivalUsedEscapeRopeText:
 	text "BABA used an"
@@ -187,7 +158,6 @@ SageJinAfterBattleText:
 
 	para "No, wait. As the"
 	line "trainer grows"
-
 	para "stronger, so do"
 	line "the #MON."
 	done

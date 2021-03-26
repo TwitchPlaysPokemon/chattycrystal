@@ -6,7 +6,7 @@ TrickHousePuzzle1_MapScripts:
 
 TrickHousePuzzle1_Door:
 	scall TrickHouse_Door
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	writetext .code
 	sjump TrickHouse_UnlockDoor_Common
 

@@ -4,8 +4,8 @@
 TrickHouseExit_MapScripts:
 	db 3 ; scene scripts
 	scene_script .lock ; SCENE_DEFAULT
-	scene_script TrickHouse_End ; SCENE_TRICKHOUSEEXIT_LOCKED
-	scene_script TrickHouse_End ; SCENE_TRICKHOUSEEXIT_GOT_REWARD
+	scene_script GenericDummyScript ; SCENE_TRICKHOUSEEXIT_LOCKED
+	scene_script GenericDummyScript ; SCENE_TRICKHOUSEEXIT_GOT_REWARD
 
 	db 0 ; callbacks
 

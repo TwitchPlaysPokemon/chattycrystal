@@ -16,10 +16,10 @@ SaffronGymSabrinaScript:
 	opentext
 	checkflag ENGINE_MARSHBADGE
 	iftrue .FightDone
-	writetext SabrinaIntroText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext SabrinaWinLossText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer XD_MICHAEL, STARS
 	startbattle
 	reloadmapafterbattle
@@ -33,13 +33,8 @@ SaffronGymSabrinaScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_MARSHBADGE
-	writetext SabrinaMarshBadgeText
-	waitbutton
-	closetext
-	end
-
 .FightDone:
-	writetext SabrinaFightDoneText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
@@ -49,60 +44,36 @@ TrainerMediumRebecca:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext MediumRebeccaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext MediumRebeccaAfterBattleText
 
 TrainerPsychicFranklin:
 	trainer PSYCHIC_T, FRANKLIN, EVENT_BEAT_PSYCHIC_FRANKLIN, PsychicFranklinSeenText, PsychicFranklinBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PsychicFranklinAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PsychicFranklinAfterBattleText
 
 TrainerMediumDoris:
 	trainer MEDIUM, DORIS, EVENT_BEAT_MEDIUM_DORIS, MediumDorisSeenText, MediumDorisBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext MediumDorisAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext MediumDorisAfterBattleText
 
 TrainerPsychicJared:
 	trainer PSYCHIC_T, JARED, EVENT_BEAT_PSYCHIC_JARED, PsychicJaredSeenText, PsychicJaredBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PsychicJaredAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PsychicJaredAfterBattleText
 
 SaffronGymGuyScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_SABRINA
 	iftrue .SaffronGymGuyWinScript
-	writetext SaffronGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronGymGuyText
 
 .SaffronGymGuyWinScript:
-	writetext SaffronGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronGymGuyWinText
 
 SaffronGymStatue:
 	checkflag ENGINE_MARSHBADGE
@@ -111,13 +82,6 @@ SaffronGymStatue:
 .Beaten:
 	gettrainername STRING_BUFFER_4, XD_MICHAEL, STARS
 	jumpstd gymstatue2
-
-SabrinaMarshBadgeText:
-SabrinaFightDoneText:
-SabrinaWinLossText:
-SabrinaIntroText:
-	text "<...>"
-	done
 
 ReceivedMarshBadgeText:
 	text "<PLAYER> received"
@@ -189,10 +153,9 @@ PsychicJaredBeatenText:
 PsychicJaredAfterBattleText:
 	text "KARATE KING, the"
 	line "master of the"
-
 	para "FIGHTING DOJO, was"
 	line "just destroyed by"
-	cont "SABRINA."
+	cont "our LEADER."
 	done
 
 SaffronGymGuyText:
@@ -201,10 +164,8 @@ SaffronGymGuyText:
 
 	para "A trainer as"
 	line "skilled as you"
-
 	para "doesn't need to be"
 	line "told how to deal"
-
 	para "with psychic-type"
 	line "#MON, right?"
 

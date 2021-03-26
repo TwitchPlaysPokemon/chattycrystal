@@ -9,8 +9,8 @@
 
 TrickHouseEntrance_MapScripts:
 	db 2 ; scene scripts
-	scene_script TrickHouse_End ; SCENE_DEFAULT
-	scene_script TrickHouse_End ; SCENE_TRICKHOUSEENTRANCE_WATCHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_TRICKHOUSEENTRANCE_WATCHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .check_ready
@@ -94,7 +94,7 @@ TrickHouseEntrance_Scroll:
 	writetext .big_hole_text
 	yesorno
 	closetext
-	iffalse .end
+	iffalse GenericDummyScript
 	setmapscene TRICK_HOUSE_EXIT, SCENE_DEFAULT
 	changeblock 4, 0, $41 ; open door
 	reloadmappart
@@ -111,7 +111,6 @@ TrickHouseEntrance_Scroll:
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
 	iftrue .two
 	warp TRICK_HOUSE_PUZZLE_1, 0, 21
-.end
 	end
 
 .two
@@ -226,9 +225,9 @@ TrickHouseEntrance_PrepareTrickMasterReveal:
 
 TrickHouseEntrance_HidingSpot_1:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
-	iftrue TrickHouse_End
+	iftrue GenericDummyScript
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
@@ -244,11 +243,11 @@ TrickHouseEntrance_HidingSpot_1:
 
 TrickHouseEntrance_HidingSpot_2:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_1
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_2
-	iftrue TrickHouse_End
+	iftrue GenericDummyScript
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
@@ -264,11 +263,11 @@ TrickHouseEntrance_HidingSpot_2:
 
 TrickHouseEntrance_HidingSpot_3:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_2
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_3
-	iftrue TrickHouse_End
+	iftrue GenericDummyScript
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
@@ -284,11 +283,11 @@ TrickHouseEntrance_HidingSpot_3:
 
 TrickHouseEntrance_HidingSpot_4:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_3
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_4
-	iftrue TrickHouse_End
+	iftrue GenericDummyScript
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
@@ -305,11 +304,11 @@ TrickHouseEntrance_HidingSpot_4:
 
 TrickHouseEntrance_HidingSpot_5:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_4
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
-	iftrue TrickHouse_End
+	iftrue GenericDummyScript
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext .text
 	sjump TrickHouseEntrance_DoTrickMasterReveal
@@ -325,9 +324,9 @@ TrickHouseEntrance_HidingSpot_5:
 
 TrickHouseEntrance_HidingSpot_6:
 	checkevent TRICKHOUSEEVENT_PUZZLE_READY
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	checkevent EVENT_TRICK_HOUSE_FINISHED_PUZZLE_5
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	scall TrickHouseEntrance_PrepareTrickMasterReveal
 	writetext TrickHouseEntrance_HidingSpot_6_Text
 TrickHouseEntrance_DoTrickMasterReveal:
@@ -354,7 +353,6 @@ TrickHouseEntrance_DoTrickMasterReveal:
 	disappear TRICKHOUSEENTRANCE_TRICK_MASTER
 	clearevent TRICKHOUSEEVENT_PUZZLE_READY
 	setevent EVENT_TRICK_HOUSE_SCROLL_ACTIVE
-TrickHouse_End:
 	end
 
 TrickHouseEntrance_HidingSpot_6_Text:

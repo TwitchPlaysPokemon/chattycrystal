@@ -16,13 +16,11 @@ SilverCavePokecenter1FGrannyScript:
 SilverCavePokecenter1FGrannyText:
 	text "Trainers who seek"
 	line "power climb MT."
-
 	para "SILVER despite its"
 	line "many dangers…"
 
 	para "With their trusted"
 	line "#MON, they must"
-
 	para "feel they can go"
 	line "anywhere…"
 	done

@@ -20,17 +20,17 @@ Red:
 	special FadeOutMusic
 	faceplayer
 	opentext
-	writetext RedSeenText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext RedWinLossText, RedWinLossText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer RED, GF_RED
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	special FadeOutMusic
 	opentext
-	writetext RedLeavesText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	special FadeBlackQuickly
@@ -52,19 +52,37 @@ Red:
 RuinsEntranceSignScript:
 	jumptext RuinsEntranceSignText
 
-RedSeenText:
-	text "<……>"
-	line "<……>"
-	done
-
 RuinsEntranceSignText:
-RedWinLossText:
-	text "…"
-	done
+	text "There's a piece of"
+	line "text here<...>"
 
-RedLeavesText:
-	text "<……>"
-	line "<……>"
+	para "A PIECE OF THE"
+	line "WORLD IS MISSING,"
+	para "CAST DOWN BY THE"
+	line "ORIGINAL ONE."
+
+	para "BUT HOW CAN ONE"
+	line "CAST DOWN THAT"
+	para "WHICH DOES NOT"
+	line "EXIST?"
+
+	para "<...>"
+
+	para "IT WAITS FOR A"
+	line "TAMER - IT WAITS"
+	cont "FOR YOU."
+
+	para "<...>"
+
+	para "GO FORTH AND"
+	line "CONFRONT THE"
+	para "SLEEPING ONE. FOR"
+	line "ITS NAME IS-"
+
+	para "<...>"
+
+	para "The statue appears"
+	line "to be broken off<...>"
 	done
 
 SilverCaveRoom3_MapEvents:

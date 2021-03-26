@@ -4,12 +4,9 @@
 
 TrainerHouseB1F_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_DEFAULT
 
 	db 0 ; callbacks
-
-.DummyScene:
-	end
 
 TrainerHouseReceptionistScript:
 	turnobject PLAYER, UP
@@ -140,7 +137,6 @@ TrainerHouseB1FGoRightInText:
 TrainerHouseB1FPleaseComeAgainText:
 	text "Sorry. Only those"
 	line "trainers who will"
-
 	para "be battling are"
 	line "allowed to go in."
 	done
@@ -148,10 +144,8 @@ TrainerHouseB1FPleaseComeAgainText:
 TrainerHouseB1FSecondChallengeDeniedText:
 	text "I'm sorry."
 	line "This would be your"
-
 	para "second time today."
 	line "You're permitted"
-
 	para "to enter just once"
 	line "a day."
 	done

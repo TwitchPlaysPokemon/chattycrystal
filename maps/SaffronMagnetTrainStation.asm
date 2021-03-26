@@ -6,24 +6,18 @@
 
 SaffronMagnetTrainStation_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_DEFAULT
 
 	db 0 ; callbacks
 
-.DummyScene:
-	end
-
 SaffronMagnetTrainStationOfficerScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .MagnetTrainToGoldenrod
-	writetext SaffronMagnetTrainStationOfficerTrainIsntOperatingText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronMagnetTrainStationOfficerTrainIsntOperatingText
 
 .MagnetTrainToGoldenrod:
+	faceplayer
+	opentext
 	writetext SaffronMagnetTrainStationOfficerAreYouComingOnBoardText
 	yesorno
 	iffalse .DecidedNotToRide
@@ -62,27 +56,15 @@ Script_ArriveFromGoldenrod:
 	applymovement SAFFRONMAGNETTRAINSTATION_OFFICER, SaffronMagnetTrainStationOfficerApproachTrainDoorMovement
 	applymovement PLAYER, SaffronMagnetTrainStationPlayerLeaveTrainAndEnterStationMovement
 	applymovement SAFFRONMAGNETTRAINSTATION_OFFICER, SaffronMagnetTrainStationOfficerReturnToBoardingGateMovement
-	opentext
-	writetext SaffronMagnetTrainStationOfficerArrivedInSaffronText
-	waitbutton
-	closetext
-	end
+	jumptext SaffronMagnetTrainStationOfficerArrivedInSaffronText
 
 SaffronMagnetTrainStationGymGuyScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedMachinePart
-	writetext SaffronMagnetTrainStationGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronMagnetTrainStationGymGuyText
 
 .ReturnedMachinePart:
-	writetext SaffronMagnetTrainStationGymGuyText_ReturnedMachinePart
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronMagnetTrainStationGymGuyText_ReturnedMachinePart
 
 SaffronMagnetTrainStationTeacherScript:
 	jumptextfaceplayer SaffronMagnetTrainStationTeacherText
@@ -167,10 +149,8 @@ SaffronMagnetTrainStationOfficerArrivedInSaffronText:
 SaffronMagnetTrainStationGymGuyText:
 	text "The MAGNET TRAIN"
 	line "is a super-modern"
-
 	para "rail liner that"
 	line "uses electricity"
-
 	para "and magnets to"
 	line "attain incredible"
 	cont "speed."
@@ -185,7 +165,6 @@ SaffronMagnetTrainStationGymGuyText_ReturnedMachinePart:
 
 	para "How many times"
 	line "have I gone back"
-
 	para "and forth between"
 	line "KANTO and JOHTO?"
 	done
@@ -193,7 +172,6 @@ SaffronMagnetTrainStationGymGuyText_ReturnedMachinePart:
 SaffronMagnetTrainStationTeacherText:
 	text "Before the MAGNET"
 	line "TRAIN STATION was"
-
 	para "built, there was a"
 	line "house there."
 
@@ -205,10 +183,8 @@ SaffronMagnetTrainStationTeacherText:
 SaffronMagnetTrainStationLassText:
 	text "Hi. Do you have a"
 	line "rail PASS? I have"
-
 	para "one. All the peo-"
 	line "ple in SAFFRON who"
-
 	para "ride the MAGNET"
 	line "TRAIN have PASSES."
 	done

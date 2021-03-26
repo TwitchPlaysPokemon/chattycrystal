@@ -41,7 +41,6 @@ SlowpokeWellB2FGymGuyText:
 
 	para "A SLOWPOKE with a"
 	line "KING'S ROCK often"
-
 	para "gets bitten by a"
 	line "SHELLDER."
 

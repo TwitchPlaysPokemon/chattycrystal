@@ -37,7 +37,6 @@ TrainerHouseIllegibleBook:
 TrainerHouse1FReceptionistText:
 	text "Welcome to TRAINER"
 	line "HOUSE, the newest"
-
 	para "and most happening"
 	line "place in VIRIDIAN."
 
@@ -46,7 +45,6 @@ TrainerHouse1FReceptionistText:
 
 	para "You can battle"
 	line "against the best"
-
 	para "of the best right"
 	line "downstairs."
 	done
@@ -58,10 +56,8 @@ TrainerHouse1FCooltrainerMText:
 
 	para "They built this"
 	line "place because so"
-
 	para "many trainers pass"
 	line "through on their"
-
 	para "way up to INDIGO"
 	line "PLATEAU."
 	done
@@ -73,7 +69,6 @@ TrainerHouse1FCooltrainerFText:
 
 	para "I would love to"
 	line "see how well a"
-
 	para "trainer from JOHTO"
 	line "battles."
 	done
@@ -81,7 +76,6 @@ TrainerHouse1FCooltrainerFText:
 TrainerHouse1FYoungsterText:
 	text "I guess you can't"
 	line "become the CHAMP"
-
 	para "unless you go all"
 	line "over the place and"
 
@@ -90,7 +84,6 @@ TrainerHouse1FYoungsterText:
 
 	para "The CHAMPION from"
 	line "PALLET traveled to"
-
 	para "all the cities and"
 	line "towns in KANTO."
 	done

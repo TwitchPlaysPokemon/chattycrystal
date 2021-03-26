@@ -11,25 +11,16 @@ SproutTower2F_MapScripts:
 TrainerSageNico:
 	trainer SAGE, NICO, EVENT_BEAT_SAGE_NICO, SageNicoSeenText, SageNicoBeatenText, 0, .Script
 
-
 .Script:
 	endifjustbattled
-	opentext
-	writetext SageNicoAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SageNicoAfterBattleText
 
 TrainerSageEdmond:
 	trainer SAGE, EDMOND, EVENT_BEAT_SAGE_EDMOND, SageEdmondSeenText, SageEdmondBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SageEdmondAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SageEdmondAfterBattleText
 
 SproutTower2FStatue:
 	jumptext SproutTower2FStatueText
@@ -51,7 +42,6 @@ SageNicoBeatenText:
 SageNicoAfterBattleText:
 	text "The flexible pil-"
 	line "lar protects the"
-
 	para "TOWER, even from"
 	line "earthquakes."
 	done
@@ -68,7 +58,6 @@ SageEdmondBeatenText:
 SageEdmondAfterBattleText:
 	text "I tried to copy"
 	line "BELLSPROUT's"
-
 	para "gentle movements"
 	line "for battle…"
 

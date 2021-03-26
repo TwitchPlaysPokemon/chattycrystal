@@ -8,13 +8,10 @@
 
 TeamRocketBaseB1F_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_DEFAULT
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .HideSecurityGrunt
-
-.DummyScene:
-	end
 
 .HideSecurityGrunt:
 	disappear TEAMROCKETBASEB1F_ROCKET1
@@ -22,10 +19,10 @@ TeamRocketBaseB1F_MapScripts:
 
 SecurityCamera1a:
 	checkevent EVENT_SECURITY_CAMERA_1
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveobject TEAMROCKETBASEB1F_ROCKET1, 19, 2
@@ -33,7 +30,7 @@ SecurityCamera1a:
 	turnobject PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -41,16 +38,16 @@ SecurityCamera1a:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt2
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	setevent EVENT_SECURITY_CAMERA_1
 	end
 
 SecurityCamera1b:
 	checkevent EVENT_SECURITY_CAMERA_1
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveobject TEAMROCKETBASEB1F_ROCKET1, 19, 3
@@ -58,7 +55,7 @@ SecurityCamera1b:
 	turnobject PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -66,16 +63,16 @@ SecurityCamera1b:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt2
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	setevent EVENT_SECURITY_CAMERA_1
 	end
 
 SecurityCamera2a:
 	checkevent EVENT_SECURITY_CAMERA_2
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveobject TEAMROCKETBASEB1F_ROCKET1, 4, 7
@@ -83,7 +80,7 @@ SecurityCamera2a:
 	turnobject PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement2
 	scall TrainerCameraGrunt1
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -92,16 +89,16 @@ SecurityCamera2a:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement3
 	scall TrainerCameraGrunt2
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	setevent EVENT_SECURITY_CAMERA_2
 	end
 
 SecurityCamera2b:
 	checkevent EVENT_SECURITY_CAMERA_2
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveobject TEAMROCKETBASEB1F_ROCKET1, 4, 8
@@ -109,7 +106,7 @@ SecurityCamera2b:
 	turnobject PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement4
 	scall TrainerCameraGrunt1
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -118,16 +115,16 @@ SecurityCamera2b:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement5
 	scall TrainerCameraGrunt2
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	setevent EVENT_SECURITY_CAMERA_2
 	end
 
 SecurityCamera3a:
 	checkevent EVENT_SECURITY_CAMERA_3
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveobject TEAMROCKETBASEB1F_ROCKET1, 19, 6
@@ -135,7 +132,7 @@ SecurityCamera3a:
 	turnobject PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -144,16 +141,16 @@ SecurityCamera3a:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement6
 	scall TrainerCameraGrunt2
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	setevent EVENT_SECURITY_CAMERA_3
 	end
 
 SecurityCamera3b:
 	checkevent EVENT_SECURITY_CAMERA_3
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveobject TEAMROCKETBASEB1F_ROCKET1, 19, 7
@@ -161,7 +158,7 @@ SecurityCamera3b:
 	turnobject PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -170,16 +167,16 @@ SecurityCamera3b:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement7
 	scall TrainerCameraGrunt2
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	setevent EVENT_SECURITY_CAMERA_3
 	end
 
 SecurityCamera4:
 	checkevent EVENT_SECURITY_CAMERA_4
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveobject TEAMROCKETBASEB1F_ROCKET1, 17, 16
@@ -187,7 +184,7 @@ SecurityCamera4:
 	turnobject PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -196,16 +193,16 @@ SecurityCamera4:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement8
 	scall TrainerCameraGrunt2
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	setevent EVENT_SECURITY_CAMERA_4
 	end
 
 SecurityCamera5:
 	checkevent EVENT_SECURITY_CAMERA_5
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NoSecurityCamera
+	iftrue GenericDummyScript
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveobject TEAMROCKETBASEB1F_ROCKET1, 3, 16
@@ -213,7 +210,7 @@ SecurityCamera5:
 	turnobject PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -222,11 +219,8 @@ SecurityCamera5:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement9
 	scall TrainerCameraGrunt2
-	ifequal TRUE, NoSecurityCamera
+	ifequal TRUE, GenericDummyScript
 	setevent EVENT_SECURITY_CAMERA_5
-	end
-
-NoSecurityCamera:
 	end
 
 TrainerCameraGrunt1:
@@ -271,7 +265,7 @@ PlaySecurityCameraSounds:
 
 ExplodingTrap1:
 	checkevent EVENT_EXPLODING_TRAP_1
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_1
@@ -279,7 +273,7 @@ ExplodingTrap1:
 
 ExplodingTrap2:
 	checkevent EVENT_EXPLODING_TRAP_2
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_2
@@ -287,7 +281,7 @@ ExplodingTrap2:
 
 ExplodingTrap3:
 	checkevent EVENT_EXPLODING_TRAP_3
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_3
@@ -295,7 +289,7 @@ ExplodingTrap3:
 
 ExplodingTrap4:
 	checkevent EVENT_EXPLODING_TRAP_4
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_4
@@ -303,7 +297,7 @@ ExplodingTrap4:
 
 ExplodingTrap5:
 	checkevent EVENT_EXPLODING_TRAP_5
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_5
@@ -311,7 +305,7 @@ ExplodingTrap5:
 
 ExplodingTrap6:
 	checkevent EVENT_EXPLODING_TRAP_6
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_6
@@ -319,7 +313,7 @@ ExplodingTrap6:
 
 ExplodingTrap7:
 	checkevent EVENT_EXPLODING_TRAP_7
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_7
@@ -327,7 +321,7 @@ ExplodingTrap7:
 
 ExplodingTrap8:
 	checkevent EVENT_EXPLODING_TRAP_8
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_8
@@ -335,7 +329,7 @@ ExplodingTrap8:
 
 ExplodingTrap9:
 	checkevent EVENT_EXPLODING_TRAP_9
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_9
@@ -343,7 +337,7 @@ ExplodingTrap9:
 
 ExplodingTrap10:
 	checkevent EVENT_EXPLODING_TRAP_10
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_10
@@ -351,7 +345,7 @@ ExplodingTrap10:
 
 ExplodingTrap11:
 	checkevent EVENT_EXPLODING_TRAP_11
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_11
@@ -359,7 +353,7 @@ ExplodingTrap11:
 
 ExplodingTrap12:
 	checkevent EVENT_EXPLODING_TRAP_12
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_12
@@ -367,7 +361,7 @@ ExplodingTrap12:
 
 ExplodingTrap13:
 	checkevent EVENT_EXPLODING_TRAP_13
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_13
@@ -375,7 +369,7 @@ ExplodingTrap13:
 
 ExplodingTrap14:
 	checkevent EVENT_EXPLODING_TRAP_14
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_14
@@ -383,7 +377,7 @@ ExplodingTrap14:
 
 ExplodingTrap15:
 	checkevent EVENT_EXPLODING_TRAP_15
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_15
@@ -391,7 +385,7 @@ ExplodingTrap15:
 
 ExplodingTrap16:
 	checkevent EVENT_EXPLODING_TRAP_16
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_16
@@ -399,7 +393,7 @@ ExplodingTrap16:
 
 ExplodingTrap17:
 	checkevent EVENT_EXPLODING_TRAP_17
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_17
@@ -407,7 +401,7 @@ ExplodingTrap17:
 
 ExplodingTrap18:
 	checkevent EVENT_EXPLODING_TRAP_18
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_18
@@ -415,7 +409,7 @@ ExplodingTrap18:
 
 ExplodingTrap19:
 	checkevent EVENT_EXPLODING_TRAP_19
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_19
@@ -423,7 +417,7 @@ ExplodingTrap19:
 
 ExplodingTrap20:
 	checkevent EVENT_EXPLODING_TRAP_20
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_20
@@ -431,7 +425,7 @@ ExplodingTrap20:
 
 ExplodingTrap21:
 	checkevent EVENT_EXPLODING_TRAP_21
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_21
@@ -439,7 +433,7 @@ ExplodingTrap21:
 
 ExplodingTrap22:
 	checkevent EVENT_EXPLODING_TRAP_22
-	iftrue NoExplodingTrap
+	iftrue GenericDummyScript
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_22
@@ -475,30 +469,19 @@ KoffingExplodingTrap:
 	startbattle
 	end
 
-NoExplodingTrap:
-	end
-
 TrainerScientistJed:
 	trainer SCIENTIST, JED, EVENT_BEAT_SCIENTIST_JED, ScientistJedSeenText, ScientistJedBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext ScientistJedAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext ScientistJedAfterBattleText
 
 TrainerGruntM16:
 	trainer GRUNTM, GRUNTM_16, EVENT_BEAT_ROCKET_GRUNTM_16, GruntM16SeenText, GruntM16BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GruntM16AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GruntM16AfterBattleText
 
 TeamRocketBaseB1FSecurityCamera:
 	jumptext TeamRocketBaseB1FSecurityCameraText
@@ -507,9 +490,9 @@ TeamRocketBaseB1FBookshelf:
 	jumpstd teamrocketoath
 
 TeamRocketBaseB1FSecretSwitch:
-	opentext
 	checkevent EVENT_TURNED_OFF_SECURITY_CAMERAS
 	iftrue .SecretSwitchOff
+	opentext
 	writetext TeamRocketBaseB1FSecretSwitchText
 	playsound SFX_TALLY
 	waitbutton
@@ -523,10 +506,7 @@ TeamRocketBaseB1FSecretSwitch:
 	end
 
 .SecretSwitchOff:
-	writetext TeamRocketBaseB1FSwitchOffText
-	waitbutton
-	closetext
-	end
+	jumptext TeamRocketBaseB1FSwitchOffText
 
 TeamRocketBaseB1FHyperPotion:
 	itemball HYPER_POTION
@@ -745,7 +725,7 @@ TeamRocketBaseB1F_MapEvents:
 	coord_event 22, 16, SCENE_DEFAULT, SecurityCamera4
 	coord_event  8, 16, SCENE_DEFAULT, SecurityCamera5
 	; There are spots on the floor that trigger a Pokémon battle.
-	; Each Pokémon (Voltorb, Koffing, Geodude) knows Selfdestruct.
+	; Each Pokémon (Voltorb, Koffing, Geodude) knows Explosion.
 	coord_event  2,  7, SCENE_DEFAULT, ExplodingTrap1
 	coord_event  3,  7, SCENE_DEFAULT, ExplodingTrap2
 	coord_event  4,  7, SCENE_DEFAULT, ExplodingTrap3

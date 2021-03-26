@@ -29,7 +29,7 @@ TrickHousePuzzle5_MapScripts:
 
 .check_switch5
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_5
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	;fallthrough
 
 TrickHousePuzzle5_Switch5_TurnOn:
@@ -122,7 +122,7 @@ TrickHousePuzzle5_Switch5:
 
 TrickHousePuzzle5_Door:
 	scall TrickHouse_Door
-	iffalse TrickHouse_End
+	iffalse GenericDummyScript
 	writetext .code
 	sjump TrickHouse_UnlockDoor_Common
 

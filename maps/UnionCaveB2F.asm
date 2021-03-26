@@ -40,33 +40,21 @@ TrainerCooltrainermNick:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermNickAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermNickAfterBattleText
 
 TrainerCooltrainerfGwen:
 	trainer COOLTRAINERF, GWEN, EVENT_BEAT_COOLTRAINERF_GWEN, CooltrainerfGwenSeenText, CooltrainerfGwenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerfGwenAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfGwenAfterBattleText
 
 TrainerCooltrainerfEmma:
 	trainer COOLTRAINERF, EMMA, EVENT_BEAT_COOLTRAINERF_EMMA, CooltrainerfEmmaSeenText, CooltrainerfEmmaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerfEmmaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfEmmaAfterBattleText
 
 UnionCaveB2FElixir:
 	itemball ELIXIR

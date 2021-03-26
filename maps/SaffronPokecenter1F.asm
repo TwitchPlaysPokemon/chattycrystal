@@ -16,20 +16,12 @@ SaffronPokecenter1FTeacherScript:
 	jumptextfaceplayer SaffronPokecenter1FTeacherText
 
 SaffronPokecenter1FFisherScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .SolvedKantoPowerCrisis
-	writetext SaffronPokecenter1FFisherText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronPokecenter1FFisherText
 
 .SolvedKantoPowerCrisis:
-	writetext SaffronPokecenter1FFisherReturnedMachinePartText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer SaffronPokecenter1FFisherReturnedMachinePartText
 
 SaffronPokecenter1FYoungsterScript:
 	jumptextfaceplayer SaffronPokecenter1FYoungsterText
@@ -41,7 +33,6 @@ SaffronPokecenter1FTeacherText:
 
 	para "…Oh, I see. So"
 	line "they're not much"
-
 	para "different from the"
 	line "ones in KANTO."
 
@@ -53,7 +44,6 @@ SaffronPokecenter1FTeacherText:
 SaffronPokecenter1FFisherText:
 	text "I just happened to"
 	line "come through ROCK"
-
 	para "TUNNEL. There was"
 	line "some commotion at"
 	cont "the POWER PLANT."
@@ -65,10 +55,7 @@ SaffronPokecenter1FFisherReturnedMachinePartText:
 
 	para "Several caves have"
 	line "disappeared in the"
-
-	para "past few years,"
-	line "like the one out-"
-	cont "side CERULEAN."
+	cont "past few years."
 
 	para "As a pro HIKER,"
 	line "that's common"
@@ -78,10 +65,8 @@ SaffronPokecenter1FFisherReturnedMachinePartText:
 SaffronPokecenter1FYoungsterText:
 	text "SILPH CO.'s HEAD"
 	line "OFFICE and the"
-
 	para "MAGNET TRAIN STA-"
 	line "TION--they're the"
-
 	para "places to see in"
 	line "SAFFRON."
 	done

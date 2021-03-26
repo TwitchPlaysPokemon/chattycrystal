@@ -17,55 +17,35 @@ TrainerBikerDwayne:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BikerDwayneAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BikerDwayneAfterBattleText
 
 TrainerBikerHarris:
 	trainer BIKER, HARRIS, EVENT_BEAT_BIKER_HARRIS, BikerHarrisSeenText, BikerHarrisBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BikerHarrisAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BikerHarrisAfterBattleText
 
 TrainerBikerZeke:
 	trainer BIKER, ZEKE, EVENT_BEAT_BIKER_ZEKE, BikerZekeSeenText, BikerZekeBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BikerZekeAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BikerZekeAfterBattleText
 
 TrainerSupernerdSam:
 	trainer SUPER_NERD, SAM, EVENT_BEAT_SUPER_NERD_SAM, SupernerdSamSeenText, SupernerdSamBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SupernerdSamAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SupernerdSamAfterBattleText
 
 TrainerSupernerdTom:
 	trainer SUPER_NERD, TOM, EVENT_BEAT_SUPER_NERD_TOM, SupernerdTomSeenText, SupernerdTomBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SupernerdTomAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SupernerdTomAfterBattleText
 
 Route8Snorlax:
 	opentext
@@ -135,7 +115,6 @@ BikerDwayneAfterBattleText:
 BikerHarrisSeenText:
 	text "The cops shut down"
 	line "our UNDERGROUND"
-
 	para "PATH! That really"
 	line "fries me!"
 	done
@@ -151,9 +130,9 @@ BikerHarrisAfterBattleText:
 
 BikerZekeSeenText:
 	text "We're the KANTO"
-	line "#MON FEDERA-"
-	cont "TION!"
-	cont "Right on!"
+	line "#MON"
+	para "FEDERATION!"
+	line "Right on!"
 	done
 
 BikerZekeBeatenText:
@@ -167,8 +146,8 @@ BikerZekeAfterBattleText:
 	done
 
 SupernerdSamSeenText:
-	text "How does the MAG-"
-	line "NET TRAIN work?"
+	text "How does the"
+	line "MAGNET TRAIN work?"
 	done
 
 SupernerdSamBeatenText:

@@ -13,22 +13,14 @@ TrainerPokefanmRex:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokefanmRexAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokefanmRexAfterBattleText
 
 TrainerPokefanmAllan:
 	trainer POKEFANM, ALLAN, EVENT_BEAT_POKEFANM_ALLAN, PokefanmAllanSeenText, PokefanmAllanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokefanmAllanAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokefanmAllanAfterBattleText
 
 Route6PokefanMScript:
 	jumptextfaceplayer Route6PokefanMText
@@ -39,7 +31,6 @@ Route6UndergroundPathSign:
 Route6PokefanMText:
 	text "The road is closed"
 	line "until the problem"
-
 	para "at the POWER PLANT"
 	line "is solved."
 	done

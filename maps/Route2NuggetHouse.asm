@@ -41,7 +41,6 @@ Route2NuggetHouseFisherText_GotNugget:
 
 	para "I can't give you"
 	line "any nuggets of"
-
 	para "wisdom, so that'll"
 	line "have to do!"
 	done

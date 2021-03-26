@@ -63,7 +63,6 @@ GaveSuperRodText:
 
 	para "Remember--you can"
 	line "catch different"
-
 	para "#MON using"
 	line "different RODS."
 	done

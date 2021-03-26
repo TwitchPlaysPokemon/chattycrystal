@@ -3,28 +3,17 @@
 
 Route6SaffronGate_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene
+	scene_script GenericDummyScript
 
 	db 0 ; callbacks
 
-.DummyScene:
-	end
-
 Route6SaffronGuardScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedPart
-	writetext Route6SaffronGuardWelcomeText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route6SaffronGuardWelcomeText
 
 .ReturnedPart:
-	writetext Route6SaffronGuardMagnetTrainText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route6SaffronGuardMagnetTrainText
 
 Route6SaffronGuardWelcomeText:
 	text "Welcome to SAFFRON"
@@ -33,16 +22,13 @@ Route6SaffronGuardWelcomeText:
 
 	para "…That's what I'd"
 	line "normally say, but"
-
 	para "the MAGNET TRAIN"
 	line "isn't running now."
 
 	para "It's not getting"
 	line "any electricity"
-
 	para "because there's"
 	line "something wrong"
-
 	para "with the POWER"
 	line "PLANT."
 	done
@@ -50,9 +36,8 @@ Route6SaffronGuardWelcomeText:
 Route6SaffronGuardMagnetTrainText:
 	text "The MAGNET TRAIN"
 	line "is the most famous"
-
-	para "thing about SAF-"
-	line "FRON."
+	para "thing about"
+	line "SAFFRON."
 	done
 
 Route6SaffronGate_MapEvents:

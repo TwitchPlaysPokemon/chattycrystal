@@ -13,8 +13,9 @@ Route8SaffronGateOfficerText:
 	text "Have you been to"
 	line "LAVENDER TOWN?"
 
-	para "There's a tall"
-	line "RADIO TOWER there."
+	para "The #MON TOWER"
+	line "has been sitting"
+	cont "there for years."
 	done
 
 Route8SaffronGate_MapEvents:

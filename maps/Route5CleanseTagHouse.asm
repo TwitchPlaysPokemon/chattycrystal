@@ -50,7 +50,6 @@ Route5CleanseTagHouseGrannyText2:
 Route5CleanseTagHouseTeacherText:
 	text "My grandma is into"
 	line "warding off what"
-
 	para "she believes to be"
 	line "evil spirits."
 

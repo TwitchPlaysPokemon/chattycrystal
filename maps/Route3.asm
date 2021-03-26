@@ -14,44 +14,28 @@ TrainerFirebreatherOtis:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FirebreatherOtisAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FirebreatherOtisAfterBattleText
 
 TrainerYoungsterWarren:
 	trainer YOUNGSTER, WARREN, EVENT_BEAT_YOUNGSTER_WARREN, YoungsterWarrenSeenText, YoungsterWarrenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext YoungsterWarrenAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext YoungsterWarrenAfterBattleText
 
 TrainerYoungsterJimmy:
 	trainer YOUNGSTER, JIMMY, EVENT_BEAT_YOUNGSTER_JIMMY, YoungsterJimmySeenText, YoungsterJimmyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext YoungsterJimmyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext YoungsterJimmyAfterBattleText
 
 TrainerFirebreatherBurt:
 	trainer FIREBREATHER, BURT, EVENT_BEAT_FIREBREATHER_BURT, FirebreatherBurtSeenText, FirebreatherBurtBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FirebreatherBurtAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FirebreatherBurtAfterBattleText
 
 Route3MtMoonSquareSign:
 	jumptext Route3MtMoonSquareSignText

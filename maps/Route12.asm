@@ -16,44 +16,28 @@ TrainerFisherKyle:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherKyleAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FisherKyleAfterBattleText
 
 TrainerFisherMartin:
 	trainer FISHER, MARTIN, EVENT_BEAT_FISHER_MARTIN, FisherMartinSeenText, FisherMartinBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherMartinAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FisherMartinAfterBattleText
 
 TrainerFisherStephen:
 	trainer FISHER, STEPHEN, EVENT_BEAT_FISHER_STEPHEN, FisherStephenSeenText, FisherStephenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherStephenAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FisherStephenAfterBattleText
 
 TrainerFisherBarney:
 	trainer FISHER, BARNEY, EVENT_BEAT_FISHER_BARNEY, FisherBarneySeenText, FisherBarneyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherBarneyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FisherBarneyAfterBattleText
 
 Route12Sign:
 	jumptext Route12SignText
@@ -87,9 +71,9 @@ FisherMartinAfterBattleText:
 
 FisherStephenSeenText:
 	text "I feel so content,"
-	line "fishing while lis-"
-	cont "tening to some"
-	cont "tunes on my radio."
+	line "fishing while"
+	para "listening to some"
+	line "tunes on my radio."
 	done
 
 FisherStephenBeatenText:
@@ -100,7 +84,6 @@ FisherStephenBeatenText:
 FisherStephenAfterBattleText:
 	text "Have you checked"
 	line "out KANTO's radio"
-
 	para "programs? We get a"
 	line "good variety here."
 	done
@@ -119,16 +102,13 @@ FisherBarneyBeatenText:
 FisherBarneyAfterBattleText:
 	text "I think electric-"
 	line "ity is the most"
-
 	para "important thing in"
 	line "our daily lives."
 
 	para "If it weren't,"
 	line "people wouldn't"
-
 	para "have made such a"
 	line "fuss when the"
-
 	para "POWER PLANT went"
 	line "out of commission."
 	done
@@ -144,9 +124,8 @@ FisherKyleBeatenText:
 FisherKyleAfterBattleText:
 	text "The tug you feel"
 	line "on the ROD when"
-
-	para "you hook a #-"
-	line "MON…"
+	para "you hook a"
+	line "#MON…"
 
 	para "That's the best"
 	line "feeling ever for"

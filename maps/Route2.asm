@@ -18,33 +18,21 @@ TrainerBugCatcherRob:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BugCatcherRobAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BugCatcherRobAfterBattleText
 
 TrainerBugCatcherEd:
 	trainer BUG_CATCHER, ED, EVENT_BEAT_BUG_CATCHER_ED, BugCatcherEdSeenText, BugCatcherEdBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BugCatcherEdAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BugCatcherEdAfterBattleText
 
 TrainerBugCatcherDoug:
 	trainer BUG_CATCHER, DOUG, EVENT_BEAT_BUG_CATCHER_DOUG, BugCatcherDougSeenText, BugCatcherDougBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BugCatcherDougAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BugCatcherDougAfterBattleText
 
 Route2Sign:
 	jumptext Route2SignText
@@ -80,7 +68,6 @@ BugCatcherRobAfterBattleText:
 BugCatcherEdSeenText:
 	text "If you walk in"
 	line "tall grass wearing"
-
 	para "shorts, do you get"
 	line "nicks and cuts?"
 	done
@@ -107,7 +94,6 @@ BugCatcherDougBeatenText:
 BugCatcherDougAfterBattleText:
 	text "Bug #MON squish"
 	line "like plush toys"
-
 	para "when you squeeze"
 	line "their bellies."
 

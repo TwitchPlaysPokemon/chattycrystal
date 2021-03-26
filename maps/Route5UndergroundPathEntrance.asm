@@ -12,7 +12,6 @@ Route5UndergroundPathEntranceTeacherScript:
 Route5UndergroundPathEntranceTeacherText:
 	text "Many cities in"
 	line "JOHTO have long"
-
 	para "histories. I'd"
 	line "love to visit!"
 	done

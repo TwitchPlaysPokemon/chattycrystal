@@ -41,7 +41,6 @@ Route5Snorlax:
 Route5PokefanMText:
 	text "The road is closed"
 	line "until the problem"
-
 	para "at the POWER PLANT"
 	line "is solved."
 	done

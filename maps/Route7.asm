@@ -14,15 +14,14 @@ Route7UndergroundPathSignText:
 
 	para "… Uncouth trainers"
 	line "have been holding"
-
 	para "battles in the"
 	line "UNDERGROUND PATH."
 
 	para "Because of rising"
 	line "complaints by lo-"
 	cont "cal residents, the"
-	cont "UNDERGROUND PATH"
-	cont "has been sealed"
+	para "UNDERGROUND PATH"
+	line "has been sealed"
 	cont "indefinitely."
 
 	para "CELADON POLICE"

@@ -7,20 +7,12 @@ Route7SaffronGate_MapScripts:
 	db 0 ; callbacks
 
 Route7SaffronGuardScript:
-	faceplayer
-	opentext
 	checkevent EVENT_RETURNED_MACHINE_PART
 	iftrue .ReturnedPart
-	writetext Route7SaffronGuardPowerPlantText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route7SaffronGuardPowerPlantText
 
 .ReturnedPart:
-	writetext Route7SaffronGuardSeriousText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route7SaffronGuardSeriousText
 
 Route7SaffronGuardPowerPlantText:
 	text "Did you hear about"

@@ -4395,61 +4395,15 @@ BattleAnimFunction_Drill:
 	call BattleAnim_AnonJumptable
 
 	dw .zero
-	dw .one
-	dw .two
-	dw .three
+	dw DeinitBattleAnimation
 
 .zero
-	ld hl, BATTLEANIMSTRUCT_PARAM
-	add hl, bc
-	ld a, [hl]
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
-	add hl, bc
-	ld [hl], a
-	ld hl, BATTLEANIMSTRUCT_YCOORD
-	add hl, bc
-	ld a, [hl]
-	ld hl, BATTLEANIMSTRUCT_0F
-	add hl, bc
-	ld [hl], a
-	ret
-
-.one
 	ld hl, BATTLEANIMSTRUCT_XCOORD
 	add hl, bc
 	ld a, [hl]
-	cp $58
+	cp $78
 	ret nc
-	ld a, 2
+	ld hl, BATTLEANIMSTRUCT_PARAM
+	add hl, bc
+	ld a, [hl]
 	jp BattleAnim_StepToTarget
-
-.two
-	ld hl, BATTLEANIMSTRUCT_10
-	add hl, bc
-	ld a, [hl]
-	cp $20
-	jp nc, DeinitBattleAnimation
-.three
-	ld hl, BATTLEANIMSTRUCT_10
-	add hl, bc
-	ld a, [hl]
-	ld d, 8
-	call BattleAnim_Sine
-	ld hl, BATTLEANIMSTRUCT_XOFFSET
-	add hl, bc
-	ld [hl], a
-	sra a
-	cpl
-	inc a
-	ld hl, BATTLEANIMSTRUCT_0F
-	add hl, bc
-	add [hl]
-	ld hl, BATTLEANIMSTRUCT_YCOORD
-	add hl, bc
-	ld [hl], a
-	ld hl, BATTLEANIMSTRUCT_10
-	add hl, bc
-	ld a, [hl]
-	add 8
-	ld [hl], a
-	ret

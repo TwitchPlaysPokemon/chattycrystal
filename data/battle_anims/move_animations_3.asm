@@ -22,7 +22,7 @@ MoveAnimations3:
 	dw BattleAnim_HyperVoice
 	dw BattleAnim_LeafBlade
 	dw BattleAnim_EnergyBall
-	dw BattleAnim_EnergyBall   ; 178 PLACEHOLDER Drill run
+	dw BattleAnim_DrillRun   ; 178
 
 BattleAnim_CrystalBolt:
 	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_LIGHTNING
@@ -643,12 +643,35 @@ BattleAnim_EnergyBall:
 	anim_obj ANIM_OBJ_ENERGY_BALL_2, 64, 92, $2
 	anim_wait 32
 	anim_sound 0, 1, SFX_TOXIC
-	anim_obj ANIM_GREEN_HIT, 128, 40, $0
+	anim_obj ANIM_OBJ_GREEN_HIT, 128, 40, $0
 	anim_wait 4
 	anim_sound 0, 1, SFX_TOXIC
-	anim_obj ANIM_GREEN_HIT, 144, 48, $0
+	anim_obj ANIM_OBJ_GREEN_HIT, 144, 48, $0
 	anim_wait 4
 	anim_sound 0, 1, SFX_TOXIC
-	anim_obj ANIM_GREEN_HIT, 136, 56, $0
+	anim_obj ANIM_OBJ_GREEN_HIT, 136, 56, $0
+	anim_wait 16
+	anim_ret
+
+BattleAnim_DrillRun:
+	anim_2gfx ANIM_GFX_DRILL, ANIM_GFX_HIT
+	anim_obj ANIM_OBJ_DRILL, 72, 80, $4
+	anim_wait 8
+	anim_bgeffect ANIM_BG_1F, $50, $1, $0
+.loop
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_DRILL_HIT, 128, 48, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_DRILL_HIT, 132, 44, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_DRILL_HIT, 136, 48, $0
+	anim_wait 2
+	anim_sound 0, 1, SFX_KARATE_CHOP
+	anim_obj ANIM_OBJ_DRILL_HIT, 132, 52, $0
+	anim_wait 2
+	anim_loop 6, .loop
+	anim_clearobjs
 	anim_wait 16
 	anim_ret

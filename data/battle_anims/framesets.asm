@@ -1653,7 +1653,7 @@ BattleAnimFrameData:
 	endanim
 
 .Frameset_f2:
-	frame BATTLEANIMOAMSET_93,  2
-	frame BATTLEANIMOAMSET_FC,  2
-	frame BATTLEANIMOAMSET_FD,  2
+	frame BATTLEANIMOAMSET_93,  1
+	frame BATTLEANIMOAMSET_FC,  1
+	frame BATTLEANIMOAMSET_FD,  1
 	dorestart

@@ -37,13 +37,13 @@ VermilionSnorlax:
 	opentext
 	special SnorlaxAwake
 	iftrue .Awake
-	writetext UnknownText_0x1aab64
+	writetext VermilionCitySnorlaxSleepingText
 	waitbutton
 	closetext
 	end
 
 .Awake:
-	writetext UnknownText_0x1aab84
+	writetext VermilionCitySnorlaxWokeUpText
 	pause 15
 	cry SNORLAX
 	closetext
@@ -64,31 +64,31 @@ VermilionGymBadgeGuy:
 	ifequal NUM_BADGES, .AllBadges
 	ifgreater 13, .MostBadges
 	ifgreater 9, .SomeBadges
-	writetext UnknownText_0x1aabc8
+	writetext VermilionCityBadgeGuyText_LessThan2
 	waitbutton
 	closetext
 	end
 
 .SomeBadges:
-	writetext UnknownText_0x1aac2b
+	writetext VermilionCityBadgeGuyText_LessThan6
 	waitbutton
 	closetext
 	end
 
 .MostBadges:
-	writetext UnknownText_0x1aac88
+	writetext VermilionCityBadgeGuyText_LessThan8
 	waitbutton
 	closetext
 	end
 
 .AllBadges:
-	writetext UnknownText_0x1aacf3
+	writetext VermilionCityBadgeGuyText_AllBadges
 	buttonsound
 	verbosegiveitem HP_UP
 	iffalse .Done
 	setevent EVENT_GOT_HP_UP_FROM_VERMILION_GUY
 .AlreadyGotItem:
-	writetext UnknownText_0x1aad4a
+	writetext VermilionCityBadgeGuyText_AfterReward
 	waitbutton
 .Done:
 	closetext
@@ -157,12 +157,12 @@ VermilionCitySuperNerdText:
 	cont "#MON GYM."
 	done
 
-UnknownText_0x1aab64:
+VermilionCitySnorlaxSleepingText:
 	text "SNORLAX is snoring"
 	line "peacefully…"
 	done
 
-UnknownText_0x1aab84:
+VermilionCitySnorlaxWokeUpText:
 	text "The #GEAR was"
 	line "placed near the"
 	cont "sleeping SNORLAX…"
@@ -172,7 +172,7 @@ UnknownText_0x1aab84:
 	para "SNORLAX woke up!"
 	done
 
-UnknownText_0x1aabc8:
+VermilionCityBadgeGuyText_LessThan2:
 	text "Skilled trainers"
 	line "gather in KANTO."
 
@@ -183,7 +183,7 @@ UnknownText_0x1aabc8:
 	line "to defeat."
 	done
 
-UnknownText_0x1aac2b:
+VermilionCityBadgeGuyText_LessThan6:
 	text "You've started to"
 	line "collect KANTO GYM"
 	cont "BADGES?"
@@ -193,10 +193,9 @@ UnknownText_0x1aac2b:
 	cont "here are tough?"
 	done
 
-UnknownText_0x1aac88:
+VermilionCityBadgeGuyText_LessThan8:
 	text "I guess you'll be"
 	line "finished with your"
-
 	para "conquest of KANTO"
 	line "GYMS soon."
 
@@ -205,7 +204,7 @@ UnknownText_0x1aac88:
 	cont "BADGES."
 	done
 
-UnknownText_0x1aacf3:
+VermilionCityBadgeGuyText_AllBadges:
 	text "Congratulations!"
 
 	para "You got all the"
@@ -215,7 +214,7 @@ UnknownText_0x1aacf3:
 	line "for your efforts."
 	done
 
-UnknownText_0x1aad4a:
+VermilionCityBadgeGuyText_AfterReward:
 	text "Having a variety"
 	line "of #MON types"
 
@@ -237,10 +236,7 @@ VermilionCitySignText:
 VermilionGymSignText:
 	text "VERMILION CITY"
 	line "#MON GYM"
-	cont "LEADER: LT.SURGE"
-
-	para "The Lightning"
-	line "American"
+	cont "LEADER: RED"
 	done
 
 PokemonFanClubSignText:

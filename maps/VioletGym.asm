@@ -14,10 +14,10 @@ VioletGymFalknerScript:
 	opentext
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .FightDone
-	writetext FalknerText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext FalknerText, FalknerText
+	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer BRENDAN_JOHTO_LEADER, ORLANDO
 	startbattle
 	reloadmapafterbattle
@@ -28,79 +28,46 @@ VioletGymFalknerScript:
 	waitsfx
 	setflag ENGINE_ZEPHYRBADGE
 	readvar VAR_BADGES
-	scall VioletGymActivateRockets
+	scall ActivateRockets
 .FightDone:
 	checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
 	setevent EVENT_BEAT_BIRD_KEEPER_ROD
 	setevent EVENT_BEAT_BIRD_KEEPER_ABE
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_NOTHING
-	writetext FalknerText
+	writetext HostSilenceText
 	buttonsound
 	verbosegiveitem TM_MUD_SLAP
 	iffalse .NoRoomForMudSlap
 	setevent EVENT_GOT_TM31_MUD_SLAP
-	writetext FalknerText
-	waitbutton
-	closetext
-	end
-
 .SpeechAfterTM:
-	writetext FalknerText
+	writetext HostSilenceText
 	waitbutton
 .NoRoomForMudSlap:
 	closetext
 	end
-
-VioletGymActivateRockets:
-	ifequal 7, .RadioTowerRockets
-	ifequal 6, .GoldenrodRockets
-	end
-
-.GoldenrodRockets:
-	jumpstd goldenrodrockets
-
-.RadioTowerRockets:
-	jumpstd radiotowerrockets
 
 TrainerBirdKeeperRod:
 	trainer BIRD_KEEPER, ROD, EVENT_BEAT_BIRD_KEEPER_ROD, BirdKeeperRodSeenText, BirdKeeperRodBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BirdKeeperRodAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BirdKeeperRodAfterBattleText
 
 TrainerBirdKeeperAbe:
 	trainer BIRD_KEEPER, ABE, EVENT_BEAT_BIRD_KEEPER_ABE, BirdKeeperAbeSeenText, BirdKeeperAbeBeatenText, 0, .Script
 
-
 .Script:
 	endifjustbattled
-	opentext
-	writetext BirdKeeperAbeAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BirdKeeperAbeAfterBattleText
 
 VioletGymGuyScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .VioletGymGuyWinScript
-	writetext VioletGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer VioletGymGuyText
 
 .VioletGymGuyWinScript:
-	writetext VioletGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer VioletGymGuyWinText
 
 VioletGymStatue:
 	checkflag ENGINE_ZEPHYRBADGE
@@ -109,10 +76,6 @@ VioletGymStatue:
 .Beaten:
 	gettrainername STRING_BUFFER_4, BRENDAN_JOHTO_LEADER, ORLANDO
 	jumpstd gymstatue2
-
-FalknerText:
-	text "<...>"
-	done
 
 ReceivedZephyrBadgeText:
 	text "<PLAYER> received"
@@ -125,7 +88,6 @@ BirdKeeperRodSeenText:
 
 	para "Those here are"
 	line "training night and"
-
 	para "day to become bird"
 	line "#MON masters."
 
@@ -164,12 +126,11 @@ BirdKeeperAbeAfterBattleText:
 
 VioletGymGuyText:
 	text "Hey! I'm no train-"
-	line "er but I can give"
+	line "er, but I can give"
 	cont "some advice!"
 
 	para "Believe me!"
 	line "If you believe, a"
-
 	para "championship dream"
 	line "can come true."
 
@@ -178,7 +139,6 @@ VioletGymGuyText:
 
 	para "The grass-type is"
 	line "weak against the"
-
 	para "flying-type. Keep"
 	line "this in mind."
 	done
@@ -186,7 +146,6 @@ VioletGymGuyText:
 VioletGymGuyWinText:
 	text "Nice battle! Keep"
 	line "it up, and you'll"
-
 	para "be the CHAMP in no"
 	line "time at all!"
 	done

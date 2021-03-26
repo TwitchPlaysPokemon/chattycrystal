@@ -13,20 +13,12 @@ VermilionPokecenter1FNurseScript:
 	jumpstd pokecenternurse
 
 VermilionPokecenter1FFishingGuruScript:
-	faceplayer
-	opentext
 	checkevent EVENT_FOUGHT_SNORLAX
 	iftrue .FoughtSnorlax
-	writetext VermilionPokecenter1FFishingGuruText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer VermilionPokecenter1FFishingGuruText
 
 .FoughtSnorlax:
-	writetext VermilionPokecenter1FFishingGuruText_FoughtSnorlax
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer VermilionPokecenter1FFishingGuruText_FoughtSnorlax
 
 VermilionPokecenter1FSailorScript:
 	jumptextfaceplayer VermilionPokecenter1FSailorText
@@ -41,7 +33,6 @@ VermilionPokecenter1FFishingGuruText:
 
 	para "It's a fantastic"
 	line "opportunity to get"
-
 	para "it, but how do you"
 	line "wake it up?"
 	done
@@ -49,7 +40,6 @@ VermilionPokecenter1FFishingGuruText:
 VermilionPokecenter1FFishingGuruText_FoughtSnorlax:
 	text "There used to be a"
 	line "sleeping #MON"
-
 	para "lying in front of"
 	line "DIGLETT'S CAVE."
 
@@ -60,7 +50,6 @@ VermilionPokecenter1FFishingGuruText_FoughtSnorlax:
 VermilionPokecenter1FSailorText:
 	text "The FAST SHIP is a"
 	line "great place to"
-
 	para "meet and battle"
 	line "trainers."
 	done

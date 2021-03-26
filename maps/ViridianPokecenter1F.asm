@@ -13,20 +13,12 @@ ViridianPokecenter1FNurseScript:
 	jumpstd pokecenternurse
 
 ViridianPokecenter1FCooltrainerMScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BLUE_IN_CINNABAR
 	iftrue .BlueReturned
-	writetext ViridianPokecenter1FCooltrainerMText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer ViridianPokecenter1FCooltrainerMText
 
 .BlueReturned:
-	writetext ViridianPokecenter1FCooltrainerMText_BlueReturned
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer ViridianPokecenter1FCooltrainerMText_BlueReturned
 
 ViridianPokecenter1FCooltrainerFScript:
 	jumptextfaceplayer ViridianPokecenter1FCooltrainerFText
@@ -37,7 +29,6 @@ ViridianPokecenter1FBugCatcherScript:
 ViridianPokecenter1FCooltrainerMText:
 	text "Where in the world"
 	line "is VIRIDIAN's GYM"
-
 	para "LEADER? I wanted"
 	line "to challenge him."
 	done
@@ -49,7 +40,6 @@ ViridianPokecenter1FCooltrainerMText_BlueReturned:
 
 	para "The LEADER claims"
 	line "his policy is to"
-
 	para "win without having"
 	line "any underlings."
 	done
@@ -59,9 +49,9 @@ ViridianPokecenter1FCooltrainerFText:
 	line "GYM in CINNABAR is"
 	cont "gone."
 
-	para "I wonder what be-"
-	line "came of BLAINE,"
-	cont "the GYM LEADER."
+	para "I wonder what"
+	line "became of the GYM"
+	cont "LEADER."
 	done
 
 ViridianPokecenter1FBugCatcherText:

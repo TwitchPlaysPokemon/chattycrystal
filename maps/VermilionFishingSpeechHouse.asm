@@ -27,7 +27,6 @@ FishingDudeText:
 
 	para "If you don't mind,"
 	line "could you show him"
-
 	para "any MAGIKARP you"
 	line "catch?"
 

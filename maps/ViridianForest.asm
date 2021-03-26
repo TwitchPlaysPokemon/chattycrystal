@@ -17,17 +17,13 @@ TrainerBugCatcherDane:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterText
 
 .SeenText:
 	text "Welcome to"
 	line "VIRIDIAN FOREST."
-	cont "Enjoy my BUG-type"
-	cont "#MON."
+	para "Enjoy my bug-type"
+	line "#MON."
 	done
 
 .BeatenText:
@@ -47,11 +43,7 @@ TrainerBugCatcherDion:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterText
 
 .SeenText:
 	text "Shh! Be quiet! The"
@@ -64,14 +56,14 @@ TrainerBugCatcherDion:
 	done
 
 .AfterText:
-	text "BUG-type #MON"
+	text "Bug-type #MON"
 	line "make all kinds of"
 	cont "sounds."
 
 	para "For bug #MON"
 	line "fans, knowing how"
-	cont "to distinguish"
-	cont "them is key!"
+	para "to distinguish"
+	line "them is key!"
 	done
 
 TrainerBugCatcherStacey:
@@ -79,11 +71,7 @@ TrainerBugCatcherStacey:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterText
 
 .SeenText:
 	text "Wow, that's a HUGE"
@@ -102,8 +90,8 @@ TrainerBugCatcherStacey:
 .AfterText:
 	text "Has anyone ever"
 	line "told you that from"
-	cont "behind you look"
-	cont "like a VENONAT?"
+	para "behind you look"
+	line "like a VENONAT?"
 	done
 
 TrainerBugCatcherEllis:
@@ -111,17 +99,13 @@ TrainerBugCatcherEllis:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterText
 
 .SeenText:
 	text "There's nothing"
 	line "more efficient and"
-	cont "beautiful than a"
-	cont "BUG-type #MON."
+	para "beautiful than a"
+	line "bug-type #MON."
 	done
 
 .BeatenText:
@@ -140,17 +124,13 @@ TrainerBugCatcherAbner:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext .AfterText
-	waitbutton
-	closetext
-	end
+	jumptext .AfterText
 
 .SeenText:
 	text "Many people prefer"
 	line "solid bug #MON"
-	cont "over squishy bug"
-	cont "#MON."
+	para "over squishy bug"
+	line "#MON."
 	done
 
 .BeatenText:
@@ -199,7 +179,6 @@ ViridianForestSignScript3:
 
 	para "GRASS-type #MON"
 	line "are unaffected by"
-
 	para "powder and spore"
 	line "moves!"
 	done
@@ -210,7 +189,7 @@ ViridianForestSignScript4:
 .Text:
 	text "For poison, use"
 	line "ANTIDOTE! Get it"
-	cont "at #MON MARTs!"
+	cont "at #MON MARTS!"
 	done
 
 ViridianForestSignScript5:
@@ -219,7 +198,7 @@ ViridianForestSignScript5:
 .Text:
 	text "TRAINER TIPS"
 
-	para "POISON-type #-"
+	para "Poison-type #-"
 	line "MON can't be poi-"
 	cont "soned themselves!"
 	done

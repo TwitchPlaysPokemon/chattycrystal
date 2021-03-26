@@ -12,8 +12,8 @@ ViridianForestSouthGateOfficerScript:
 ViridianForestSouthGateOfficerText:
 	text "Are you going to"
 	line "VIRIDIAN FOREST?"
-	cont "Be careful, it's"
-	cont "a natural maze!"
+	para "Be careful, it's"
+	line "a natural maze!"
 	done
 
 ViridianForestSouthGate_MapEvents:

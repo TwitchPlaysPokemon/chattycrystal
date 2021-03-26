@@ -15,10 +15,10 @@ VermilionGymSurgeScript:
 	opentext
 	checkflag ENGINE_THUNDERBADGE
 	iftrue .FightDone
-	writetext LtSurgeIntroText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext LtSurgeWinLossText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer RED_KANTO_LEADER, RED_RED
 	startbattle
 	reloadmapafterbattle
@@ -31,13 +31,8 @@ VermilionGymSurgeScript:
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_THUNDERBADGE
-	writetext LtSurgeThunderBadgeText
-	waitbutton
-	closetext
-	end
-
 .FightDone:
-	writetext LtSurgeFightDoneText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
@@ -47,49 +42,29 @@ TrainerGentlemanGregory:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GentlemanGregoryAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GentlemanGregoryAfterBattleText
 
 TrainerGuitaristVincent:
 	trainer GUITARIST, VINCENT, EVENT_BEAT_GUITARIST_VINCENT, GuitaristVincentSeenText, GuitaristVincentBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext GuitaristVincentAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext GuitaristVincentAfterBattleText
 
 TrainerJugglerHorton:
 	trainer JUGGLER, HORTON, EVENT_BEAT_JUGGLER_HORTON, JugglerHortonSeenText, JugglerHortonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext JugglerHortonAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext JugglerHortonAfterBattleText
 
 VermilionGymGuyScript:
-	faceplayer
-	opentext
 	checkevent EVENT_BEAT_LTSURGE
 	iftrue .VermilionGymGuyWinScript
-	writetext VermilionGymGuyText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer VermilionGymGuyText
 
 .VermilionGymGuyWinScript:
-	writetext VermilionGymGuyWinText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer VermilionGymGuyWinText
 
 VermilionGymTrashCan:
 	jumptext VermilionGymTrashCanText
@@ -102,13 +77,6 @@ VermilionGymStatue:
 	gettrainername STRING_BUFFER_4, RED_KANTO_LEADER, RED_RED
 	jumpstd gymstatue2
 
-LtSurgeWinLossText:
-LtSurgeThunderBadgeText:
-LtSurgeFightDoneText:
-LtSurgeIntroText:
-	text "<...>"
-	done
-
 ReceivedThunderBadgeText:
 	text "<PLAYER> received"
 	line "THUNDERBADGE."
@@ -116,7 +84,7 @@ ReceivedThunderBadgeText:
 
 GentlemanGregorySeenText:
 	text "You're here to"
-	line "defeat LT.SURGE?"
+	line "defeat RED?"
 
 	para "Not if I can help"
 	line "it!"
@@ -124,24 +92,21 @@ GentlemanGregorySeenText:
 
 GentlemanGregoryBeatenText:
 	text "Sorry I failed"
-	line "you, LT.SURGE,"
-	cont "sir!"
+	line "you, RED, sir!"
 	done
 
 GentlemanGregoryAfterBattleText:
 	text "When I was still"
-	line "in the army, LT."
-
-	para "SURGE saved my"
-	line "life."
+	line "in the army, our"
+	para "former leader, LT."
+	line "SURGE, saved my"
+	cont "life."
 	done
 
 GuitaristVincentSeenText:
-	text "LT.SURGE recog-"
-	line "nized my potential"
-
-	para "with electric"
-	line "#MON."
+	text "RED recognized"
+	line "my potential with"
+	cont "electric #MON."
 
 	para "Think you can beat"
 	line "me?"
@@ -154,7 +119,6 @@ GuitaristVincentBeatenText:
 GuitaristVincentAfterBattleText:
 	text "If the GYM's traps"
 	line "were working, you"
-
 	para "would have been"
 	line "toast…"
 	done
@@ -173,9 +137,8 @@ JugglerHortonBeatenText:
 JugglerHortonAfterBattleText:
 	text "Don't get too com-"
 	line "fortable about"
-
 	para "beating me…"
-	line "LT.SURGE is tough."
+	line "RED is tough."
 	done
 
 VermilionGymGuyText:
@@ -185,9 +148,8 @@ VermilionGymGuyText:
 	para "You lucked out"
 	line "this time."
 
-	para "LT.SURGE is very"
+	para "RED is very"
 	line "cautious. He has"
-
 	para "traps set all over"
 	line "the GYM."
 
@@ -197,7 +159,7 @@ VermilionGymGuyText:
 
 	para "You'll have no"
 	line "problem getting to"
-	cont "LT.SURGE."
+	cont "RED."
 	done
 
 VermilionGymGuyWinText:

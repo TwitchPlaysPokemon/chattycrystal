@@ -21,47 +21,6 @@ VioletPokecenter1FGentlemanScript:
 VioletPokecenter1FYoungsterScript:
 	jumptextfaceplayer VioletPokecenter1FYoungsterText
 
-MovementData_AideWalksStraightOutOfPokecenter:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
-
-MovementData_AideWalksLeftToExitPokecenter:
-	step LEFT
-	step DOWN
-	step_end
-
-MovementData_AideFinishesLeavingPokecenter:
-	step DOWN
-	step DOWN
-	step DOWN
-	step_end
-
-UnknownText_0x6972d:
-	text "I've been thinking"
-	line "it'd be great to"
-
-	para "be able to link up"
-	line "and battle with my"
-
-	para "friends who live"
-	line "far away."
-	done
-
-UnknownText_0x69791:
-	text "I just battled a"
-	line "friend in CIANWOOD"
-	cont "over a link."
-
-	para "If you connect a"
-	line "MOBILE ADAPTER,"
-
-	para "you can link with"
-	line "a friend far away."
-	done
-
 VioletPokecenter1FGameboyKidText:
 	text "A guy named BILL"
 	line "made the #MON"
@@ -84,13 +43,11 @@ VioletPokecenter1FGentlemanText:
 VioletPokecenter1FYoungsterText:
 	text "#MON are smart."
 	line "They won't obey a"
-
 	para "trainer they don't"
 	line "respect."
 
 	para "Without the right"
 	line "GYM BADGES, they"
-
 	para "will just do as"
 	line "they please."
 	done

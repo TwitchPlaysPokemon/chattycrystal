@@ -7,14 +7,10 @@
 
 VictoryRoadGate_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
-
-.DummyScene0:
-.DummyScene1:
-	end
 
 VictoryRoadGateBadgeCheckSceneLeft:
 	turnobject PLAYER, LEFT
@@ -22,8 +18,6 @@ VictoryRoadGateBadgeCheckSceneLeft:
 
 VictoryRoadGateBadgeCheckSceneRight:
 	turnobject PLAYER, RIGHT
-;fallthrough
-
 VictoryRoadGateBadgeCheckScript:
 	turnobject VICTORYROADGATE_OFFICER3, LEFT
 	turnobject VICTORYROADGATE_OFFICER2, RIGHT
@@ -47,12 +41,7 @@ VictoryRoadGateBadgeCheckScript:
 	end
 
 VictoryRoadGateOfficerScript:
-	faceplayer
-	opentext
-	writetext VictoryRoadGateOfficerText
-	buttonsound
-	closetext
-	end
+	jumptextfaceplayer VictoryRoadGateOfficerText
 
 VictoryRoadGateLeftBlackBeltScript:
 	jumptextfaceplayer VictoryRoadGateLeftBlackBeltText
@@ -73,9 +62,8 @@ VictoryRoadGateOfficerText:
 ZephyrBoulderBadgeCheckText:
 	text "Only trainers who"
 	line "who posses the"
-
 	para "ZEPHYRBADGE and"
-	line "BOULDERBADGE"
+	line "the BOULDERBADGE"
 	cont "may pass."
 	done
 
@@ -91,7 +79,7 @@ NoZephyrBoulderBadgeText:
 HaveZephyrBoulderBadgeText:
 	text "Oh! You have the"
 	line "ZEPHYRBADGE and"
-	cont "BOULDERBADGE!"
+	cont "the BOULDERBADGE!"
 
 	para "Please, go right"
 	line "on through!"
@@ -112,7 +100,6 @@ VictoryRoadGateRightBlackBeltText:
 
 	para "The ELITE FOUR are"
 	line "so strong it's"
-
 	para "scary, and they're"
 	line "ready for you!"
 	done

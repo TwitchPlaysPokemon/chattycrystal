@@ -8,14 +8,10 @@
 
 VictoryRoad_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
-
-.DummyScene0:
-.DummyScene1:
-	end
 
 VictoryRoadRivalLeft:
 	moveobject VICTORYROAD_SILVER, 18, 11
@@ -24,9 +20,9 @@ VictoryRoadRivalLeft:
 	special FadeOutMusic
 	pause 15
 	appear VICTORYROAD_SILVER
-	applymovement VICTORYROAD_SILVER, MovementData_0x74539
+	applymovement VICTORYROAD_SILVER, VictoryRoadRivalApproachPlayerMovement_Left
 	scall VictoryRoadRivalNext
-	applymovement VICTORYROAD_SILVER, MovementData_0x7454c
+	applymovement VICTORYROAD_SILVER, VictoryRoadRivalLeaveMovement_Left
 	disappear VICTORYROAD_SILVER
 	setscene SCENE_FINISHED
 	playmapmusic
@@ -38,9 +34,9 @@ VictoryRoadRivalRight:
 	special FadeOutMusic
 	pause 15
 	appear VICTORYROAD_SILVER
-	applymovement VICTORYROAD_SILVER, MovementData_0x74542
+	applymovement VICTORYROAD_SILVER, VictoryRoadRivalApproachPlayerMovement_Right
 	scall VictoryRoadRivalNext
-	applymovement VICTORYROAD_SILVER, MovementData_0x74555
+	applymovement VICTORYROAD_SILVER, VictoryRoadRivalLeaveMovement_Right
 	disappear VICTORYROAD_SILVER
 	setscene SCENE_FINISHED
 	playmapmusic
@@ -50,21 +46,17 @@ VictoryRoadRivalNext:
 	turnobject PLAYER, DOWN
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
-	writetext VictoryRoadRivalBeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext VictoryRoadRivalDefeatText, VictoryRoadRivalVictoryText
+	winlosstext HostSilenceText, HostSilenceText
 	setlasttalked VICTORYROAD_SILVER
 	loadtrainer GSCHGSS_CHRIS_RIVAL, AJDNNW4
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext VictoryRoadRivalAfterText
-	waitbutton
-	closetext
-	end
+	jumptext HostSilenceText
 
 Moltres:
 	faceplayer
@@ -90,7 +82,6 @@ VictoryRoadTMEarthquake:
 VictoryRoadMaxRevive:
 	itemball MAX_REVIVE
 
-
 VictoryRoadFullHeal:
 	itemball FULL_HEAL
 
@@ -103,7 +94,7 @@ VictoryRoadHiddenMaxPotion:
 VictoryRoadHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_VICTORY_ROAD_HIDDEN_FULL_HEAL
 
-MovementData_0x74539:
+VictoryRoadRivalApproachPlayerMovement_Left:
 	step LEFT
 	step LEFT
 	step LEFT
@@ -114,7 +105,7 @@ MovementData_0x74539:
 	step UP
 	step_end
 
-MovementData_0x74542:
+VictoryRoadRivalApproachPlayerMovement_Right:
 	step UP
 	step UP
 	step LEFT
@@ -126,7 +117,7 @@ MovementData_0x74542:
 	step UP
 	step_end
 
-MovementData_0x7454c:
+VictoryRoadRivalLeaveMovement_Left:
 	step DOWN
 	step DOWN
 	step RIGHT
@@ -137,7 +128,7 @@ MovementData_0x7454c:
 	step RIGHT
 	step_end
 
-MovementData_0x74555:
+VictoryRoadRivalLeaveMovement_Right:
 	step DOWN
 	step DOWN
 	step RIGHT
@@ -148,81 +139,6 @@ MovementData_0x74555:
 	step DOWN
 	step DOWN
 	step_end
-
-VictoryRoadRivalBeforeText:
-	text "Hold it."
-
-	para "…Are you going to"
-	line "take the #MON"
-	cont "LEAGUE challenge?"
-
-	para "…Don't make me"
-	line "laugh."
-
-	para "You're so much"
-	line "weaker than I am."
-
-	para "I'm not like I was"
-	line "before."
-
-	para "I now have the"
-	line "best and strongest"
-
-	para "#MON with me."
-	line "I'm invincible!"
-
-	para "<PLAYER>!"
-	line "I challenge you!"
-	done
-
-VictoryRoadRivalDefeatText:
-	text "…I couldn't win…"
-
-	para "I gave it every-"
-	line "thing I had…"
-
-	para "What you possess,"
-	line "and what I lack…"
-
-	para "I'm beginning to"
-	line "understand what"
-
-	para "that dragon master"
-	line "said to me…"
-	done
-
-VictoryRoadRivalAfterText:
-	text "…I haven't given up"
-	line "on becoming the"
-	cont "greatest trainer…"
-
-	para "I'm going to find"
-	line "out why I can't"
-
-	para "win and become"
-	line "stronger…"
-
-	para "When I do, I will"
-	line "challenge you."
-
-	para "And I'll beat you"
-	line "down with all my"
-	cont "power."
-
-	para "…Humph! You keep"
-	line "at it until then."
-	done
-
-VictoryRoadRivalVictoryText:
-	text "…Humph!"
-
-	para "When it comes down"
-	line "to it, nothing can"
-	cont "beat power."
-
-	para "I don't need any-"
-	line "thing else."
-	done
 
 VictoryRoad_MapEvents:
 	db 0, 0 ; filler

@@ -25,9 +25,6 @@ VioletCityEarlScript:
 	writetext Text_EarlAsksIfYouBeatFalkner
 	yesorno
 	iffalse .FollowEarl
-	sjump .PointlessJump
-
-.PointlessJump:
 	writetext Text_VeryNiceIndeed
 	waitbutton
 	closetext
@@ -209,7 +206,6 @@ VioletCityLassText:
 
 	para "They said normal-"
 	line "type #MON moves"
-
 	para "had no effect on"
 	line "ghosts."
 	done
@@ -220,7 +216,6 @@ VioletCitySuperNerdText:
 
 	para "If you beat the"
 	line "GYM LEADER here,"
-
 	para "you'll be ready"
 	line "for prime time!"
 	done
@@ -228,7 +223,6 @@ VioletCitySuperNerdText:
 VioletCityGrampsText:
 	text "!12rtyhasz, from"
 	line "the VIOLET #MON"
-
 	para "GYM, is a fine"
 	line "trainer!"
 	done

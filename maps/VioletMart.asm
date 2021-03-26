@@ -41,7 +41,6 @@ VioletMartCooltrainerMText:
 
 	para "But they don't"
 	line "appear to know how"
-
 	para "to use manmade"
 	line "items."
 	done

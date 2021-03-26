@@ -4,16 +4,13 @@
 WillsRoom_MapScripts:
 	db 2 ; scene scripts
 	scene_script .LockDoor ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_TILES, .WillsRoomDoors
 
 .LockDoor:
 	prioritysjump .WillsDoorLocksBehindYou
-	end
-
-.DummyScene:
 	end
 
 .WillsRoomDoors:
@@ -45,16 +42,16 @@ WillScript_Battle:
 	opentext
 	checkevent EVENT_BEAT_ELITE_4_WILL
 	iftrue WillScript_AfterBattle
-	writetext WillScript_WillBeforeText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext WillScript_WillBeatenText, 0
+	winlosstext HostSilenceText, 0
 	loadtrainer XY_SERENA2, ETR
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_WILL
 	opentext
-	writetext WillScript_WillDefeatText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	playsound SFX_ENTER_DOOR
@@ -66,7 +63,7 @@ WillScript_Battle:
 	end
 
 WillScript_AfterBattle:
-	writetext WillScript_WillDefeatText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	end
@@ -77,12 +74,6 @@ WillsRoom_EnterMovement:
 	step UP
 	step UP
 	step_end
-
-WillScript_WillBeforeText:
-WillScript_WillBeatenText:
-WillScript_WillDefeatText:
-	text "<...>"
-	done
 
 WillsRoom_MapEvents:
 	db 0, 0 ; filler

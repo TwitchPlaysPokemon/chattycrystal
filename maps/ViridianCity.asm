@@ -32,20 +32,12 @@ ViridianCityCoffeeGramps:
 	end
 
 ViridianCityGrampsNearGym:
-	faceplayer
-	opentext
 	checkevent EVENT_BLUE_IN_CINNABAR
 	iftrue .BlueReturned
-	writetext ViridianCityGrampsNearGymText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer ViridianCityGrampsNearGymText
 
 .BlueReturned:
-	writetext ViridianCityGrampsNearGymBlueReturnedText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer ViridianCityGrampsNearGymBlueReturnedText
 
 ViridianCityDreamEaterFisher:
 	faceplayer
@@ -88,7 +80,6 @@ ViridianCityMartSign:
 ViridianCityCoffeeGrampsQuestionText:
 	text "Hey, kid! I just"
 	line "had a double shot"
-
 	para "of espresso, and"
 	line "I am wired!"
 
@@ -98,7 +89,6 @@ ViridianCityCoffeeGrampsQuestionText:
 
 	para "I might not look"
 	line "like much now, but"
-
 	para "I was an expert at"
 	line "catching #MON."
 
@@ -108,7 +98,6 @@ ViridianCityCoffeeGrampsQuestionText:
 ViridianCityCoffeeGrampsBelievedText:
 	text "Good, good. Yes, I"
 	line "was something out"
-
 	para "of the ordinary,"
 	line "let me tell you!"
 	done
@@ -119,7 +108,6 @@ ViridianCityCoffeeGrampsDoubtedText:
 
 	para "If I were just a"
 	line "bit younger, I'd"
-
 	para "show you a thing"
 	line "or two. Humph!"
 	done
@@ -130,10 +118,16 @@ ViridianCityGrampsNearGymText:
 	cont "until recently."
 
 	para "A young man from"
-	line "PALLET became the"
+	line "LITTLEROOT became"
+	para "the LEADER, but"
+	line "he's often away."
 
-	para "LEADER, but he's"
-	line "often away."
+	para "Huh? You don't know"
+	line "where LITTLEROOT"
+	cont "TOWN is?"
+
+	para "To be honest,"
+	line "neither do I<...>"
 	done
 
 ViridianCityGrampsNearGymBlueReturnedText:
@@ -152,7 +146,6 @@ ViridianCityDreamEaterFisherText:
 
 	para "…I had this dream"
 	line "about a DROWZEE"
-
 	para "eating my dream."
 	line "Weird, huh?"
 
@@ -177,7 +170,6 @@ ViridianCityDreamEaterFisherGotDreamEaterText:
 ViridianCityYoungsterText:
 	text "I heard that there"
 	line "are many items on"
-
 	para "the ground in"
 	line "VIRIDIAN FOREST."
 	done

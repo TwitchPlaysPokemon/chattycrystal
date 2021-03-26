@@ -8,17 +8,11 @@
 
 WiseTriosRoom_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .WiseTrioCallback
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 .WiseTrioCallback:
 	checkevent EVENT_FOUGHT_SUICUNE
@@ -55,14 +49,14 @@ WiseTriosRoom_CannotEnterTinTowerScript:
 	turnobject PLAYER, DOWN
 	showemote EMOTE_SHOCK, WISETRIOSROOM_SAGE3, 20
 	follow PLAYER, WISETRIOSROOM_SAGE3
-	applymovement PLAYER, MovementData_0x98622
+	applymovement PLAYER, WiseTriosRoom_Movement_PushPlayerAway
 	stopfollow
 	turnobject PLAYER, RIGHT
 	opentext
 	writetext WiseTriosRoomSage3BlocksExitText
 	waitbutton
 	closetext
-	applymovement WISETRIOSROOM_SAGE3, MovementData_0x98625
+	applymovement WISETRIOSROOM_SAGE3, WiseTriosRoom_Movement_WalkBack
 	turnobject WISETRIOSROOM_SAGE3, LEFT
 	end
 
@@ -70,21 +64,13 @@ TrainerSageGaku:
 	trainer SAGE, GAKU, EVENT_BEAT_SAGE_GAKU, SageGakuSeenText, SageGakuBeatenText, 0, .Script
 
 .Script:
-	opentext
-	writetext SageGakuAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SageGakuAfterBattleText
 
 TrainerSageMasa:
 	trainer SAGE, MASA, EVENT_BEAT_SAGE_MASA, SageMasaSeenText, SageMasaBeatenText, 0, .Script
 
 .Script:
-	opentext
-	writetext SageMasaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SageMasaAfterBattleText
 
 TrainerSageKoji:
 	trainer CY_ROBORED, X_CHATTYYELLOW3, EVENT_BEAT_SAGE_KOJI, SageKojiSeenText, SageKojiBeatenText, 0, .Script
@@ -100,30 +86,21 @@ TrainerSageKoji:
 	writetext SageKojiAfterBattleSpeechText
 	waitbutton
 	closetext
-	applymovement WISETRIOSROOM_SAGE6, MovementData_0x98628
+	applymovement WISETRIOSROOM_SAGE6, WiseTriosRoom_Movement_WalkBack
 	turnobject WISETRIOSROOM_SAGE6, UP
 	setevent EVENT_KOJI_ALLOWS_YOU_PASSAGE_TO_TIN_TOWER
 	setscene SCENE_FINISHED
 	end
 
 .KojiAllowsPassage:
-	opentext
-	writetext SageKojiAfterBattleFinalText
-	waitbutton
-	closetext
-	end
+	jumptext SageKojiAfterBattleFinalText
 
-MovementData_0x98622:
+WiseTriosRoom_Movement_PushPlayerAway:
 	step LEFT
 	step LEFT
 	step_end
 
-MovementData_0x98625:
-	step RIGHT
-	step DOWN
-	step_end
-
-MovementData_0x98628:
+WiseTriosRoom_Movement_WalkBack:
 	step RIGHT
 	step DOWN
 	step_end
@@ -142,13 +119,10 @@ WiseTriosRoomSage1Text:
 WiseTriosRoomSage2Text:
 	text "We train at the"
 	line "BURNED TOWER, but"
-
 	para "we've never heard"
 	line "of a hole opening"
-
 	para "up there before."
 	line "It must have been"
-
 	para "deliberately made"
 	line "by someone."
 	done
@@ -156,16 +130,13 @@ WiseTriosRoomSage2Text:
 WiseTriosRoomSage3BlocksExitText:
 	text "TIN TOWER may be"
 	line "entered by those"
-
 	para "bearing ECRUTEAK's"
 	line "GYM BADGE."
 
 	para "However, now that"
 	line "SUICUNE, RAIKOU"
-
 	para "and ENTEI have"
 	line "arisen, I ask you"
-
 	para "to refrain from"
 	line "entering!"
 	done
@@ -173,7 +144,6 @@ WiseTriosRoomSage3BlocksExitText:
 WiseTriosRoomSage3Text:
 	text "We, the WISE TRIO,"
 	line "are the protectors"
-
 	para "of the legendary"
 	line "#MON."
 	done
@@ -181,16 +151,12 @@ WiseTriosRoomSage3Text:
 SageGakuSeenText:
 	text "Legend has it that"
 	line "upon the emergence"
-
 	para "of a trainer who"
 	line "has the ability to"
-
 	para "touch the souls of"
 	line "#MON, a #MON"
-
 	para "will come forth to"
 	line "put that trainer"
-
 	para "to test at the TIN"
 	line "TOWER."
 
@@ -198,12 +164,11 @@ SageGakuSeenText:
 	line "come true!"
 
 	para "The legendary"
-	line "#MON SUICUNE"
-	cont "has arrived!"
+	line "#MON ENTEI has"
+	cont "arrived!"
 
 	para "We, the WISE TRIO,"
 	line "shall test your"
-
 	para "worthiness to go"
 	line "inside!"
 	done
@@ -216,7 +181,6 @@ SageGakuBeatenText:
 SageGakuAfterBattleText:
 	text "Ah, so it is you"
 	line "who claim to have"
-
 	para "seen SUICUNE,"
 	line "ENTEI and RAIKOU"
 	cont "while they slept?"
@@ -248,25 +212,20 @@ SageMasaAfterBattleText:
 
 	para "The BRASS TOWER,"
 	line "which was said to"
-
 	para "awaken #MON,"
 	line "and the TIN TOWER,"
-
 	para "where #MON were"
 	line "said to rest."
 
 	para "The view from the"
 	line "tops of the TOWERS"
-
 	para "must have been"
 	line "magnificent."
 
 	para "At the time, an"
 	line "immense, silver-"
-
 	para "colored #MON"
 	line "was said to make"
-
 	para "its roost atop the"
 	line "BRASS TOWER."
 
@@ -274,7 +233,6 @@ SageMasaAfterBattleText:
 
 	para "About 150 years"
 	line "ago, a lightning"
-
 	para "bolt struck one of"
 	line "the TOWERS."
 
@@ -304,7 +262,6 @@ SageKojiBeatenText:
 SageKojiAfterBattleQuestionText:
 	text "You… Are you the"
 	line "trainer who is"
-
 	para "awaited by the"
 	line "legendary #MON?"
 	done
@@ -313,17 +270,13 @@ SageKojiAfterBattleSpeechText:
 	text "I see…"
 
 	para "We, the WISE TRIO,"
-	line "have been given "
-
+	line "have been given"
 	para "the responsibility"
 	line "of protecting the"
-
 	para "legendary #MON."
 	line "We are to allow"
-
 	para "passage only to"
 	line "those people who"
-
 	para "possess the power"
 	line "and soul of truth."
 
@@ -331,15 +284,15 @@ SageKojiAfterBattleSpeechText:
 	line "and enter the TIN"
 	cont "TOWER ahead."
 
-	para "SUICUNE will put"
-	line "you to the test."
+	para "ENTEI will put you"
+	line "to the test."
 	done
 
 SageKojiAfterBattleFinalText:
 	text "Please, do go on."
 
-	para "SUICUNE will put"
-	line "you to the test."
+	para "ENTEI will put you"
+	line "to the test."
 	done
 
 WiseTriosRoom_MapEvents:

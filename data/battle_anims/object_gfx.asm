@@ -61,3 +61,4 @@ AnimObjGFX:
 	anim_obj_gfx  9, AnimObjBugBuzzGFX
 	anim_obj_gfx 12, AnimObjAquaRingGFX
 	anim_obj_gfx 16, AnimObjSnatchGFX
+	anim_obj_gfx 18, AnimObjDrillGFX

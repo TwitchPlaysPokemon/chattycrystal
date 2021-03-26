@@ -107,6 +107,7 @@ DoBattleAnimFrame:
 	dw BattleAnimFunction_RadialMoveOut_Slow ; 5b
 	dw BattleAnimFunction_RadialMoveOut_Fast ; 5c
 	dw BattleAnimFunction_5d ; 5d
+	dw BattleAnimFunction_Drill ; 5e
 
 BattleAnimFunction_Null:
 	call BattleAnim_AnonJumptable
@@ -4387,5 +4388,68 @@ BattleAnimFunction_5d:
 	sra a
 	sra a
 	sra a
+	ld [hl], a
+	ret
+
+BattleAnimFunction_Drill:
+	call BattleAnim_AnonJumptable
+
+	dw .zero
+	dw .one
+	dw .two
+	dw .three
+
+.zero
+	ld hl, BATTLEANIMSTRUCT_PARAM
+	add hl, bc
+	ld a, [hl]
+	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	add hl, bc
+	ld [hl], a
+	ld hl, BATTLEANIMSTRUCT_YCOORD
+	add hl, bc
+	ld a, [hl]
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	ld [hl], a
+	ret
+
+.one
+	ld hl, BATTLEANIMSTRUCT_XCOORD
+	add hl, bc
+	ld a, [hl]
+	cp $58
+	ret nc
+	ld a, 2
+	jp BattleAnim_StepToTarget
+
+.two
+	ld hl, BATTLEANIMSTRUCT_10
+	add hl, bc
+	ld a, [hl]
+	cp $20
+	jp nc, DeinitBattleAnimation
+.three
+	ld hl, BATTLEANIMSTRUCT_10
+	add hl, bc
+	ld a, [hl]
+	ld d, 8
+	call BattleAnim_Sine
+	ld hl, BATTLEANIMSTRUCT_XOFFSET
+	add hl, bc
+	ld [hl], a
+	sra a
+	cpl
+	inc a
+	ld hl, BATTLEANIMSTRUCT_0F
+	add hl, bc
+	add [hl]
+	ld hl, BATTLEANIMSTRUCT_YCOORD
+	add hl, bc
+	ld [hl], a
+	ld hl, BATTLEANIMSTRUCT_10
+	add hl, bc
+	ld a, [hl]
+	add 8
 	ld [hl], a
 	ret

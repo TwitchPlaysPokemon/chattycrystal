@@ -1001,21 +1001,22 @@ DunsparceEvosAttacks:
 	dbw 1, RAGE
 	dbw 1, DEFENSE_CURL
 	dbw 4, ROLLOUT
-	dbw 8, SPITE
-	dbw 11, PURSUIT
-	dbw 15, SCREECH
-	dbw 18, MUD_SLAP
-	dbw 22, ANCIENTPOWER
-	dbw 25, BODY_SLAM
-	dbw 29, ROOST
-	dbw 32, TAKE_DOWN
-	dbw 36, GLARE
-	dbw 39, DIG
-	dbw 43, DOUBLE_EDGE
-	dbw 46, ENDEAVOR
-	dbw 50, AIR_SLASH
-	dbw 53, ENDURE
-	dbw 57, FLAIL
+	dbw 7, SPITE
+	dbw 10, PURSUIT
+	dbw 13, SCREECH
+	dbw 16, MUD_SLAP
+	dbw 19, ANCIENTPOWER
+	dbw 22, BODY_SLAM
+	dbw 25, DRILL_RUN
+	dbw 28, ROOST
+	dbw 31, TAKE_DOWN
+	dbw 34, GLARE
+	dbw 37, DIG
+	dbw 40, DOUBLE_EDGE
+	dbw 43, ENDEAVOR
+	dbw 46, AIR_SLASH
+	dbw 49, ENDURE
+	dbw 52, FLAIL
 	db 0 ; no more level-up moves
 
 GligarEvosAttacks:

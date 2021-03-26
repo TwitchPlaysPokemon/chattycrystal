@@ -513,6 +513,7 @@ FearowEvosAttacks:
 	dbw 32, FOCUS_ENERGY
 	dbw 36, ROOST
 	dbw 41, DRILL_PECK
+	dbw 45, DRILL_RUN
 	db 0 ; no more level-up moves
 
 EkansEvosAttacks:
@@ -2067,35 +2068,38 @@ RhyhornEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
-	dbw 7, FURY_ATTACK
-	dbw 10, ROCK_THROW
-	dbw 16, BULLDOZE
-	dbw 19, HORN_ATTACK
-	dbw 25, SCARY_FACE
-	dbw 28, STOMP
-	dbw 34, ROCK_BLAST
+	dbw 5, FURY_ATTACK
+	dbw 9, ROCK_THROW
+	dbw 13, BULLDOZE
+	dbw 17, HORN_ATTACK
+	dbw 21, SCARY_FACE
+	dbw 25, STOMP
+	dbw 29, ROCK_BLAST
+	dbw 33, DRILL_RUN
 	dbw 37, TAKE_DOWN
-	dbw 43, STONE_EDGE
-	dbw 46, EARTHQUAKE
-	dbw 52, MEGAHORN
-	dbw 55, HORN_DRILL
+	dbw 41, STONE_EDGE
+	dbw 45, EARTHQUAKE
+	dbw 49, MEGAHORN
+	dbw 53, HORN_DRILL
 	db 0 ; no more level-up moves
 
 RhydonEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
-	dbw 7, FURY_ATTACK
-	dbw 10, ROCK_THROW
-	dbw 16, BULLDOZE
-	dbw 19, HORN_ATTACK
-	dbw 25, SCARY_FACE
-	dbw 28, STOMP
-	dbw 34, ROCK_BLAST
+	dbw 5, FURY_ATTACK
+	dbw 9, ROCK_THROW
+	dbw 13, BULLDOZE
+	dbw 17, HORN_ATTACK
+	dbw 21, SCARY_FACE
+	dbw 25, STOMP
+	dbw 29, ROCK_BLAST
+	dbw 33, DRILL_RUN
 	dbw 37, TAKE_DOWN
-	dbw 45, STONE_EDGE
-	dbw 50, EARTHQUAKE
-	dbw 57, MEGAHORN
+	dbw 41, STONE_EDGE
+	dbw 42, HAMMER_ARM
+	dbw 48, EARTHQUAKE
+	dbw 55, MEGAHORN
 	dbw 62, HORN_DRILL
 	db 0 ; no more level-up moves
 

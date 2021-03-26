@@ -39,6 +39,7 @@ ROMX $0b
 	"bankB"
 	"Map Blocks 5"
 ROMX $0c
+	"bankC"
 	"Tileset Data 4"
 ROMX $0d
 	"Effect Commands"

@@ -157,6 +157,12 @@ INCLUDE "engine/events/pokerus/pokerus.asm"
 INCLUDE "engine/battle/start_battle.asm"
 INCLUDE "engine/gfx/place_graphic.asm"
 
+
+SECTION "bankC", ROMX
+
+INCLUDE "data/pokemon/base_stats_new.asm"
+
+
 SECTION "Enemy Trainers", ROMX
 
 INCLUDE "engine/battle/ai/items.asm"
@@ -295,8 +301,6 @@ SECTION "bank21", ROMX
 INCLUDE "engine/printer/printer_serial.asm"
 INCLUDE "engine/printer/printer.asm"
 INCLUDE "gfx/battle_anims.asm"
-
-INCLUDE "data/pokemon/base_stats_new.asm"
 
 
 SECTION "bank22", ROMX

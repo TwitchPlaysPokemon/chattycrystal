@@ -17,66 +17,42 @@ TrainerTeacherColette:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext TeacherColetteAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext TeacherColetteAfterBattleText
 
 TrainerTeacherHillary:
 	trainer TEACHER, HILLARY, EVENT_BEAT_TEACHER_HILLARY, TeacherHillarySeenText, TeacherHillaryBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext TeacherHillaryAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext TeacherHillaryAfterBattleText
 
 TrainerSchoolboyKipp:
 	trainer SCHOOLBOY, KIPP, EVENT_BEAT_SCHOOLBOY_KIP, SchoolboyKippSeenText, SchoolboyKippBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SchoolboyKippAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SchoolboyKippAfterBattleText
 
 TrainerSchoolboyTommy:
 	trainer SCHOOLBOY, TOMMY, EVENT_BEAT_SCHOOLBOY_TOMMY, SchoolboyTommySeenText, SchoolboyTommyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SchoolboyTommyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SchoolboyTommyAfterBattleText
 
 TrainerSchoolboyJohnny:
 	trainer SCHOOLBOY, JOHNNY, EVENT_BEAT_SCHOOLBOY_JOHNNY, SchoolboyJohnnySeenText, SchoolboyJohnnyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SchoolboyJohnnyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SchoolboyJohnnyAfterBattleText
 
 TrainerSchoolboyBilly:
 	trainer SCHOOLBOY, BILLY, EVENT_BEAT_SCHOOLBOY_BILLY, SchoolboyBillySeenText, SchoolboyBillyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SchoolboyBillyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SchoolboyBillyAfterBattleText
 
 Route15Sign:
 	jumptext Route15SignText
@@ -96,7 +72,6 @@ TeacherColetteBeatenText:
 TeacherColetteAfterBattleText:
 	text "Before I became a"
 	line "teacher, I used to"
-
 	para "forget a lot of"
 	line "things."
 	done
@@ -104,10 +79,8 @@ TeacherColetteAfterBattleText:
 TeacherHillarySeenText:
 	text "On sunny days, I"
 	line "think that the"
-
 	para "kids would rather"
 	line "be playing in the"
-
 	para "schoolyard than"
 	line "studying in class."
 	done
@@ -136,7 +109,6 @@ SchoolboyKippBeatenText:
 SchoolboyKippAfterBattleText:
 	text "My mom worries so"
 	line "much about me, I"
-
 	para "have to phone her"
 	line "all the time."
 	done
@@ -159,8 +131,7 @@ SchoolboyTommyAfterBattleText:
 
 SchoolboyJohnnySeenText:
 	text "We're on a field"
-	line "trip to LAVENDER"
-
+	line "trip to VERMILION"
 	para "RADIO TOWER for"
 	line "social studies."
 	done
@@ -171,8 +142,8 @@ SchoolboyJohnnyBeatenText:
 	done
 
 SchoolboyJohnnyAfterBattleText:
-	text "I'm tired of walk-"
-	line "ing. I need to"
+	text "I'm tired of"
+	line "walking. I need to"
 	cont "take a break."
 	done
 

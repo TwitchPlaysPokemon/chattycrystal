@@ -3,22 +3,16 @@
 
 Route16Gate_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_DEFAULT
 
 	db 0 ; callbacks
-
-.DummyScene:
-	end
 
 Route16GateOfficerScript:
 	jumptextfaceplayer Route16GateOfficerText
 
 Route16GateBicycleCheck:
 	checkitem BICYCLE
-	iffalse .NoBicycle
-	end
-
-.NoBicycle:
+	iftrue GenericDummyScript
 	showemote EMOTE_SHOCK, ROUTE16GATE_OFFICER, 15
 	turnobject PLAYER, UP
 	opentext
@@ -43,7 +37,6 @@ Route16GateOfficerText:
 
 	para "It's a great sort"
 	line "of feeling that"
-
 	para "you can't get from"
 	line "a ship or train."
 	done
@@ -53,7 +46,6 @@ Route16GateCannotPassText:
 
 	para "You can't go out"
 	line "on the CYCLING"
-
 	para "ROAD without a"
 	line "BICYCLE."
 	done

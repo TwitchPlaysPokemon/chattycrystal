@@ -22,38 +22,25 @@ TrainerPokefanmCarter:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokefanmCarterAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokefanmCarterAfterBattleText
 
 TrainerBirdKeeperRoy:
 	trainer BIRD_KEEPER, ROY, EVENT_BEAT_BIRD_KEEPER_ROY, BirdKeeperRoySeenText, BirdKeeperRoyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BirdKeeperRoyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BirdKeeperRoyAfterBattleText
 
 TrainerPokefanmTrevor:
 	trainer POKEFANM, TREVOR, EVENT_BEAT_POKEFANM_TREVOR, PokefanmTrevorSeenText, PokefanmTrevorBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokefanmTrevorAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokefanmTrevorAfterBattleText
 
 PokefanmCarterSeenText:
 	text "Let me tell you,"
 	line "I had a hard time"
-
 	para "catching my prized"
 	line "#MON."
 	done
@@ -84,7 +71,6 @@ BirdKeeperRoyBeatenText:
 BirdKeeperRoyAfterBattleText:
 	text "You have #MON"
 	line "that know the HM"
-
 	para "move FLY, don't"
 	line "you? I envy you."
 	done
@@ -94,7 +80,6 @@ PokefanmTrevorSeenText:
 
 	para "#MON get more"
 	line "friendly if you"
-
 	para "train them in a"
 	line "place that they"
 	cont "remember."
@@ -108,7 +93,6 @@ PokefanmTrevorBeatenText:
 PokefanmTrevorAfterBattleText:
 	text "If only there were"
 	line "an easy way to"
-
 	para "identify where I"
 	line "got my #MON…"
 	done

@@ -3,22 +3,16 @@
 
 Route17Route18Gate_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_DEFAULT
 
 	db 0 ; callbacks
-
-.DummyScene:
-	end
 
 Route17Route18GateOfficerScript:
 	jumptextfaceplayer Route17Route18GateOfficerText
 
 Route17Route18GateBicycleCheck:
 	checkitem BICYCLE
-	iffalse .NoBicycle
-	end
-
-.NoBicycle:
+	iftrue GenericDummyScript
 	showemote EMOTE_SHOCK, ROUTE17ROUTE18GATE_OFFICER, 15
 	turnobject PLAYER, UP
 	opentext

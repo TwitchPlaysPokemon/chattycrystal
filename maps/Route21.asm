@@ -13,33 +13,21 @@ TrainerSwimmermSeth:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmermSethAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmermSethAfterBattleText
 
 TrainerSwimmerfNikki:
 	trainer SWIMMERF, NIKKI, EVENT_BEAT_SWIMMERF_NIKKI, SwimmerfNikkiSeenText, SwimmerfNikkiBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerfNikkiAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmerfNikkiAfterBattleText
 
 TrainerFisherArnold:
 	trainer FISHER, ARNOLD, EVENT_BEAT_FISHER_ARNOLD, FisherArnoldSeenText, FisherArnoldBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherArnoldAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FisherArnoldAfterBattleText
 
 SwimmermSethSeenText:
 	text "Land ho! Gotta"

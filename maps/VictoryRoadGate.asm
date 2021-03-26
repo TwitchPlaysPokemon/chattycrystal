@@ -61,7 +61,7 @@ VictoryRoadGateOfficerText:
 
 ZephyrBoulderBadgeCheckText:
 	text "Only trainers who"
-	line "who posses the"
+	line "who possess the"
 	para "ZEPHYRBADGE and"
 	line "the BOULDERBADGE"
 	cont "may pass."

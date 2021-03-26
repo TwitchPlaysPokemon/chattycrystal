@@ -29,76 +29,44 @@ TrainerSwimmerfDawn:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerfDawnAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmerfDawnAfterBattleText
 
 TrainerSwimmermHarold:
 	trainer SWIMMERM, HAROLD, EVENT_BEAT_SWIMMERM_HAROLD, SwimmermHaroldSeenText, SwimmermHaroldBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmermHaroldAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmermHaroldAfterBattleText
 
 TrainerSwimmermJerome:
 	trainer SWIMMERM, JEROME, EVENT_BEAT_SWIMMERM_JEROME, SwimmermJeromeSeenText, SwimmermJeromeBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmermJeromeAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmermJeromeAfterBattleText
 
 TrainerSwimmermTucker:
 	trainer SWIMMERM, TUCKER, EVENT_BEAT_SWIMMERM_TUCKER, SwimmermTuckerSeenText, SwimmermTuckerBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmermTuckerAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmermTuckerAfterBattleText
 
 Route19Fisher1Script:
-	faceplayer
-	opentext
 	checkevent EVENT_CINNABAR_ROCKS_CLEARED
 	iftrue .RocksCleared
-	writetext Route19Fisher1Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route19Fisher1Text
 
 .RocksCleared:
-	writetext Route19Fisher1Text_RocksCleared
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route19Fisher1Text_RocksCleared
 
 Route19Fisher2Script:
-	faceplayer
-	opentext
 	checkevent EVENT_CINNABAR_ROCKS_CLEARED
 	iftrue .RocksCleared
-	writetext Route19Fisher2Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route19Fisher2Text
 
 .RocksCleared:
-	writetext Route19Fisher2Text_RocksCleared
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route19Fisher2Text_RocksCleared
 
 Route19Sign:
 	jumptext Route19SignText
@@ -119,7 +87,6 @@ SwimmermHaroldBeatenText:
 SwimmermHaroldAfterBattleText:
 	text "At night, the sea"
 	line "turns black. It"
-
 	para "feels like it will"
 	line "swallow you up."
 	done
@@ -127,7 +94,6 @@ SwimmermHaroldAfterBattleText:
 SwimmermTuckerSeenText:
 	text "Pant, pant…"
 	line "Just… a little…"
-
 	para "farther… to…"
 	line "FUCHSIA…"
 	done
@@ -155,13 +121,11 @@ SwimmerfDawnBeatenText:
 SwimmerfDawnAfterBattleText:
 	text "It's a quick swim"
 	line "between FUCHSIA"
-
-	para "and SEAFOAM IS-"
-	line "LANDS…"
+	para "and SEAFOAM"
+	line "ISLANDS…"
 
 	para "Sheesh, some big"
 	line "man my boyfriend"
-
 	para "is! What a wimp!"
 	done
 
@@ -192,7 +156,6 @@ Route19Fisher1Text:
 
 	para "If you want to get"
 	line "to CINNABAR, you'd"
-
 	para "better go south"
 	line "from PALLET TOWN."
 	done

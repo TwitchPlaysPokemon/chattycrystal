@@ -18,33 +18,21 @@ TrainerSwimmerfNicole:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerfNicoleAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmerfNicoleAfterBattleText
 
 TrainerSwimmerfLori:
 	trainer SWIMMERF, LORI, EVENT_BEAT_SWIMMERF_LORI, SwimmerfLoriSeenText, SwimmerfLoriBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerfLoriAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmerfLoriAfterBattleText
 
 TrainerSwimmermCameron:
 	trainer SWIMMERM, CAMERON, EVENT_BEAT_SWIMMERM_CAMERON, SwimmermCameronSeenText, SwimmermCameronBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmermCameronAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmermCameronAfterBattleText
 
 CinnabarGymSign:
 	jumptext CinnabarGymSignText
@@ -69,7 +57,6 @@ SwimmerfNicoleAfterBattleText:
 SwimmerfLoriSeenText:
 	text "What an impressive"
 	line "collection of GYM"
-
 	para "BADGES. We should"
 	line "battle!"
 	done
@@ -85,9 +72,8 @@ SwimmerfLoriAfterBattleText:
 	done
 
 SwimmermCameronSeenText:
-	text "I guess it's im-"
-	line "possible to swim"
-
+	text "I guess it's"
+	line "impossible to swim"
 	para "all the way to"
 	line "JOHTO."
 	done
@@ -107,7 +93,7 @@ CinnabarGymSignText:
 	line "sign say?"
 
 	para "CINNABAR GYM"
-	line "LEADER: BLAINE"
+	line "LEADER: AAEFFFF"
 	done
 
 Route20_MapEvents:

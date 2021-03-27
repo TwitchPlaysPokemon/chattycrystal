@@ -256,9 +256,9 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
-	mon_cry CRY_TREECKO,    -$010,  $0b0 ; TREECKO
-	mon_cry CRY_TREECKO,    -$022,  $120 ; GROVYLE
-	mon_cry CRY_TREECKO,    -$0b7,  $200 ; SCEPTILE
+	mon_cry CRY_CHIKORITA,    -$010,  $0b0 ; TREECKO
+	mon_cry CRY_CHIKORITA,    -$022,  $120 ; GROVYLE
+	mon_cry CRY_CHIKORITA,    -$0b7,  $200 ; SCEPTILE
 	mon_cry CRY_HOOTHOOT,    $100,  $070 ; TORCHIC
 	mon_cry CRY_HOOTHOOT,    $0e9,  $0f4 ; COMBUSKEN
 	mon_cry CRY_TYPHLOSION,  $f43,  $100 ; BLAZIKEN
@@ -352,7 +352,6 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BRONZOR - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BRONZONG - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BONSLY - PLACEHOLDER
-ChatotCry::
 	mon_cry CRY_ENTEI,       $000,  $1a0 ; CHATOT - TODO: port chatot cry (not that important as it's played by the controller)
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CROAGUNK - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TOXICROAK - PLACEHOLDER

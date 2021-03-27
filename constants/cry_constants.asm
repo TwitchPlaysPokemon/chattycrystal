@@ -75,10 +75,9 @@
 	const CRY_UNUSED         ; 44
 
 ; gen 3
-	const CRY_TREECKO        ; 45
-	const CRY_TORCHIC        ; 46
-	const CRY_POOCHYENA      ; 47
-	const CRY_ZIGZAGOON      ; 48
-	const CRY_LOTAD          ; 49
-	const CRY_LOMBRE         ; 4a
-	const CRY_SWELLOW        ; 4b
+	const CRY_TORCHIC        ; 45
+	const CRY_POOCHYENA      ; 46
+	const CRY_ZIGZAGOON      ; 47
+	const CRY_LOTAD          ; 48
+	const CRY_LOMBRE         ; 49
+	const CRY_SWELLOW        ; 4a

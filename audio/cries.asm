@@ -2049,11 +2049,6 @@ Cry_Rattata_Ch8:
 	noise __,  9, $91, $49
 	endchannel
 
-Cry_Treecko:
-	musicheader 3, 5, Cry_Treecko_Ch5
-	musicheader 1, 6, Cry_Treecko_Ch6
-	musicheader 1, 8, Cry_Treecko_Ch8
-
 Cry_Torchic:
 	musicheader 3, 5, Cry_Torchic_Ch5
 	musicheader 1, 6, Cry_Torchic_Ch6
@@ -2082,22 +2077,6 @@ Cry_Swellow:
 	musicheader 3, 5, Cry_Swellow_Ch5
 	musicheader 1, 6, Cry_Swellow_Ch6
 	musicheader 1, 8, Cry_Swellow_Ch8
-
-Cry_Treecko_Ch5:
-	tone $0020
-Cry_Treecko_Ch6:
-	sound_duty 1, 0, 2, 0
-	sound __,  3, $c8, $0641
-	sound __,  3, $48, $0641
-	sound __,  7, $f8, $0790
-	sound __,  5, $f8, $078e
-	sound __,  5, $f1, $078b
-	endchannel
-
-Cry_Treecko_Ch8:
-	noise __,  5, $91, $10
-	noise __,  9, $94, $3
-	endchannel
 
 Cry_Torchic_Ch5:
 	tone $0020

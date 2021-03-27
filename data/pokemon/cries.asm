@@ -284,12 +284,12 @@ PokemonCries::
 	mon_cry CRY_TOGETIC,     $00b,  $04a ; WHISMUR
 	mon_cry CRY_SLOWKING,    $8df,  $10a ; LOUDRED
 	mon_cry CRY_TEDDIURSA,   $6dd,  $100 ; EXPLOUD
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MAKUHITA - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; HARIYAMA - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; AZURILL - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SKITTY - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DELCATTY - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SABLEYE - PLACEHOLDER
+	mon_cry CRY_MUK,         $02d,  $0a0 ; MAKUHITA
+	mon_cry CRY_MUK,         $e22,  $1d0 ; HARIYAMA
+	mon_cry CRY_MARILL,      $124,  $0D0 ; AZURILL
+	mon_cry CRY_GIRAFARIG,   $076,  $100 ; SKITTY
+	mon_cry CRY_GIRAFARIG,   $058,  $400 ; DELCATTY
+	mon_cry CRY_CATERPIE,    $ee3,  $100 ; SABLEYE
 	mon_cry CRY_GROWLITHE,   $080,  $0b0 ; ARON
 	mon_cry CRY_WEEDLE,      $040,  $090 ; LAIRON
 	mon_cry CRY_SLOWKING,    $207,  $1b2 ; AGGRON

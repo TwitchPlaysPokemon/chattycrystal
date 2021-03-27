@@ -11,13 +11,10 @@
 
 Route42_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene ; SCENE_ROUTE42_NOTHING
-	scene_script .DummyScene ; SCENE_ROUTE42_SUICUNE
+	scene_script GenericDummyScript ; SCENE_ROUTE42_NOTHING
+	scene_script GenericDummyScript ; SCENE_ROUTE42_SUICUNE
 
 	db 0 ; callbacks
-
-.DummyScene:
-	end
 
 Route42SuicuneScript:
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -69,7 +66,7 @@ TrainerFisherTully:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight3:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight3
@@ -116,80 +113,52 @@ TrainerFisherTully:
 	iffalse .NoRoom
 	clearflag ENGINE_TULLY_HAS_WATER_STONE
 	setevent EVENT_TULLY_GAVE_WATER_STONE
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedm
 
 .NoRoom:
-	sjump .PackFull
+	jumpstd packfullm
 
 .AskNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .Rematch:
 	jumpstd rematchm
-	end
 
 .Gift:
 	jumpstd giftm
-	end
-
-.PackFull:
-	jumpstd packfullm
-	end
 
 TrainerPokemaniacShane:
 	trainer POKEMANIAC, SHANE, EVENT_BEAT_POKEMANIAC_SHANE, PokemaniacShaneSeenText, PokemaniacShaneBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokemaniacShaneAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokemaniacShaneAfterBattleText
 
 TrainerHikerBenjamin:
 	trainer HIKER, BENJAMIN, EVENT_BEAT_HIKER_BENJAMIN, HikerBenjaminSeenText, HikerBenjaminBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext HikerBenjaminAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext HikerBenjaminAfterBattleText
 
-Route42Sign1:
-	jumptext Route42Sign1Text
+Route42Sign:
+	jumptext Route42SignText
 
-MtMortarSign1:
-	jumptext MtMortarSign1Text
-
-MtMortarSign2:
-	jumptext MtMortarSign2Text
-
-Route42Sign2:
-	jumptext Route42Sign2Text
+MtMortarSign:
+	jumptext MtMortarSignText
 
 Route42UltraBall:
 	itemball ULTRA_BALL
@@ -234,7 +203,6 @@ FisherTullyBeatenText:
 FisherTullyAfterBattleText:
 	text "I want to become"
 	line "the trainer CHAMP"
-
 	para "using the #MON"
 	line "I caught."
 
@@ -253,11 +221,10 @@ HikerBenjaminBeatenText:
 	done
 
 HikerBenjaminAfterBattleText:
-	text "Losing feels in-"
-	line "significant if you"
-
-	para "look up at the big"
-	line "sky!"
+	text "Losing feels"
+	line "insignificant if"
+	para "you look up at the"
+	line "big sky!"
 	done
 
 PokemaniacShaneSeenText:
@@ -285,32 +252,18 @@ PokemaniacShaneAfterBattleText:
 	line "it. Please?"
 	done
 
-Route42Sign1Text:
+Route42SignText:
 	text "ROUTE 42"
 
 	para "ECRUTEAK CITY -"
 	line "MAHOGANY TOWN"
 	done
 
-MtMortarSign1Text:
+MtMortarSignText:
 	text "MT.MORTAR"
 
 	para "WATERFALL CAVE"
 	line "INSIDE"
-	done
-
-MtMortarSign2Text:
-	text "MT.MORTAR"
-
-	para "WATERFALL CAVE"
-	line "INSIDE"
-	done
-
-Route42Sign2Text:
-	text "ROUTE 42"
-
-	para "ECRUTEAK CITY -"
-	line "MAHOGANY TOWN"
 	done
 
 Route42_MapEvents:
@@ -327,10 +280,10 @@ Route42_MapEvents:
 	coord_event 24, 14, SCENE_ROUTE42_SUICUNE, Route42SuicuneScript
 
 	db 5 ; bg events
-	bg_event  4, 10, BGEVENT_READ, Route42Sign1
-	bg_event  7,  5, BGEVENT_READ, MtMortarSign1
-	bg_event 45,  9, BGEVENT_READ, MtMortarSign2
-	bg_event 54,  8, BGEVENT_READ, Route42Sign2
+	bg_event  4, 10, BGEVENT_READ, Route42Sign
+	bg_event  7,  5, BGEVENT_READ, MtMortarSign
+	bg_event 45,  9, BGEVENT_READ, MtMortarSign
+	bg_event 54,  8, BGEVENT_READ, Route42Sign
 	bg_event 16, 11, BGEVENT_ITEM, Route42HiddenMaxPotion
 
 	db 9 ; object events

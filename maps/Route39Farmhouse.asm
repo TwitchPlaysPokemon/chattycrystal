@@ -106,7 +106,6 @@ FarmerMText_SickCow:
 
 	para "It'll give me lots"
 	line "o' milk if'n I"
-
 	para "feed it lots o'"
 	line "BERRIES, I reckon."
 	done
@@ -156,7 +155,6 @@ FarmerFText_InTrouble:
 
 	para "So if our own"
 	line "MILTANK won't give"
-
 	para "us any milk, we're"
 	line "in trouble."
 	done
@@ -164,7 +162,6 @@ FarmerFText_InTrouble:
 FarmerFText_HealedMiltank:
 	text "You fixed our"
 	line "MILTANK, hon. Now"
-
 	para "it gives MOOMOO"
 	line "MILK again."
 
@@ -183,7 +180,6 @@ FarmerFText_SnoreSpeech:
 
 	para "It's a rare move"
 	line "that only works"
-
 	para "while the #MON"
 	line "is asleep."
 

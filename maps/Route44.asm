@@ -51,7 +51,7 @@ TrainerBirdKeeperVance1:
 	readmem wVanceFightCount
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight2:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
@@ -82,15 +82,12 @@ TrainerBirdKeeperVance1:
 	checkevent EVENT_VANCE_CARBOS
 	iftrue .Carbos
 	checkevent EVENT_GOT_CARBOS_FROM_VANCE
-	iftrue .ReceivedCarbosBefore
+	iftrue GenericDummyScript
 	scall Route44RematchGiftM
 	verbosegiveitem CARBOS
 	iffalse VancePackFull
 	setevent EVENT_GOT_CARBOS_FROM_VANCE
 	sjump Route44NumberAcceptedM
-
-.ReceivedCarbosBefore:
-	end
 
 .Carbos:
 	opentext
@@ -100,63 +97,44 @@ TrainerBirdKeeperVance1:
 	iffalse VancePackFull
 	clearevent EVENT_VANCE_CARBOS
 	setevent EVENT_GOT_CARBOS_FROM_VANCE
-	sjump Route44NumberAcceptedM
+Route44NumberAcceptedM:
+	jumpstd numberacceptedm
 
 Route44AskNumber1M:
 	jumpstd asknumber1m
-	end
 
 Route44AskNumber2M:
 	jumpstd asknumber2m
-	end
 
 Route44RegisteredNumberM:
 	jumpstd registerednumberm
-	end
-
-Route44NumberAcceptedM:
-	jumpstd numberacceptedm
-	end
 
 Route44NumberDeclinedM:
 	jumpstd numberdeclinedm
-	end
 
 Route44PhoneFullM:
 	jumpstd phonefullm
-	end
 
 Route44RematchM:
 	jumpstd rematchm
-	end
 
 Route44GiftM:
 	jumpstd giftm
-	end
-
-Route44PackFullM:
-	jumpstd packfullm
-	end
 
 VancePackFull:
 	setevent EVENT_VANCE_CARBOS
+Route44PackFullM:
 	jumpstd packfullm
-	end
 
 Route44RematchGiftM:
 	jumpstd rematchgiftm
-	end
 
 TrainerPsychicPhil:
 	trainer PSYCHIC_T, PHIL, EVENT_BEAT_PSYCHIC_PHIL, PsychicPhilSeenText, PsychicPhilBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PsychicPhilAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PsychicPhilAfterBattleText
 
 TrainerFisherWilton1:
 	trainer FISHER, WILTON1, EVENT_BEAT_FISHER_WILTON, FisherWilton1SeenText, FisherWilton1BeatenText, 0, .Script
@@ -195,7 +173,7 @@ TrainerFisherWilton1:
 	readmem wWiltonFightCount
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight2:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
@@ -235,67 +213,48 @@ TrainerFisherWilton1:
 	iftrue .PokeBall
 .UltraBall:
 	verbosegiveitem ULTRA_BALL
-	iffalse .Route44PackFullM
+	iffalse Route44PackFullM
 	sjump .ItemReceived
 
 .GreatBall:
 	verbosegiveitem GREAT_BALL
-	iffalse .Route44PackFullM
+	iffalse Route44PackFullM
 	sjump .ItemReceived
 
 .PokeBall:
 	verbosegiveitem POKE_BALL
-	iffalse .Route44PackFullM
+	iffalse Route44PackFullM
 .ItemReceived:
 	clearflag ENGINE_WILTON_HAS_ITEM
 	sjump Route44NumberAcceptedM
-
-.Route44PackFullM:
-	sjump Route44PackFullM
 
 TrainerFisherEdgar:
 	trainer FISHER, EDGAR, EVENT_BEAT_FISHER_EDGAR, FisherEdgarSeenText, FisherEdgarBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherEdgarAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FisherEdgarAfterBattleText
 
 TrainerCooltrainerfCybil:
 	trainer COOLTRAINERF, CYBIL, EVENT_BEAT_COOLTRAINERF_CYBIL, CooltrainerfCybilSeenText, CooltrainerfCybilBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerfCybilAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfCybilAfterBattleText
 
 TrainerPokemaniacZach:
 	trainer POKEMANIAC, ZACH, EVENT_BEAT_POKEMANIAC_ZACH, PokemaniacZachSeenText, PokemaniacZachBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokemaniacZachAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokemaniacZachAfterBattleText
 
 TrainerCooltrainermAllen:
 	trainer COOLTRAINERM, ALLEN, EVENT_BEAT_COOLTRAINERM_ALLEN, CooltrainermAllenSeenText, CooltrainermAllenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermAllenAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermAllenAfterBattleText
 
 Route44Sign1:
 	jumptext Route44Sign1Text
@@ -379,7 +338,6 @@ BirdKeeperVance1BeatenText:
 BirdKeeperVanceLegendaryBirdsText:
 	text "ARTICUNO, ZAPDOS"
 	line "and MOLTRES are"
-
 	para "the three legend-"
 	line "ary bird #MON."
 
@@ -394,7 +352,6 @@ BirdKeeperVance2BeatenText:
 
 	para "Oh yeah, here you"
 	line "go. It's that gift"
-
 	para "I couldn't give"
 	line "you last time."
 	done
@@ -429,7 +386,6 @@ PokemaniacZachBeatenText:
 PokemaniacZachAfterBattleText:
 	text "If a #MON has"
 	line "different colors"
-
 	para "from usual, it's"
 	line "more valuable."
 
@@ -461,12 +417,11 @@ CooltrainermAllenAfterBattleText:
 
 	para "I wonder if"
 	line "ECRUTEAK GYM's"
-
 	para "aoooo is still in"
 	line "training?"
 
-	para "He really hammered"
-	line "me."
+	para "She really"
+	line "hammered me."
 	done
 
 CooltrainerfCybilSeenText:

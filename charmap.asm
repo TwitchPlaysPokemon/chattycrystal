@@ -22,7 +22,6 @@
 	charmap "@",          $50 ; string terminator
 	charmap "<PARA>",     $51
 	charmap "<PLAYER>",   $52 ; wPlayerName
-	charmap "<RIVAL>",    $53 ; wRivalName
 	charmap "#",          $54 ; "POKé"
 	charmap "<CONT>",     $55
 	charmap "<……>",       $56 ; "……"

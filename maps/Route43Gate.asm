@@ -8,16 +8,13 @@ ROUTE43GATE_TOLL EQU 1000
 Route43Gate_MapScripts:
 	db 2 ; scene scripts
 	scene_script .RocketShakedown ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .CheckIfRockets
 
 .RocketShakedown:
 	prioritysjump .RocketTakeover
-	end
-
-.DummyScene:
 	end
 
 .CheckIfRockets:
@@ -216,7 +213,6 @@ RocketText_MakingABundle:
 
 	para "Everyone wants to"
 	line "see what's going"
-
 	para "on up at LAKE OF"
 	line "RAGE."
 	done

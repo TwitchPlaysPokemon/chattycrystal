@@ -29,22 +29,14 @@ TrainerCamperSpencer:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CamperSpencerAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CamperSpencerAfterBattleText
 
 TrainerPokemaniacBen:
 	trainer POKEMANIAC, BEN, EVENT_BEAT_POKEMANIAC_BEN, PokemaniacBenSeenText, PokemaniacBenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokemaniacBenAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokemaniacBenAfterBattleText
 
 TrainerPokemaniacBrent:
 	trainer POKEMANIAC, BRENT1, EVENT_BEAT_POKEMANIAC_BRENT, PokemaniacBrentSeenText, PokemaniacBrentBeatenText, 0, .Script
@@ -73,7 +65,8 @@ TrainerPokemaniacBrent:
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
 	gettrainername STRING_BUFFER_3, POKEMANIAC, BRENT1
 	scall .RegisteredNumber
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedm
 
 .WantsBattle:
 	scall .Rematch
@@ -82,7 +75,7 @@ TrainerPokemaniacBrent:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight3:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight3
@@ -125,53 +118,35 @@ TrainerPokemaniacBrent:
 
 .AskNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .Rematch:
 	jumpstd rematchm
-	end
 
 TrainerPokemaniacRon:
 	trainer POKEMANIAC, RON, EVENT_BEAT_POKEMANIAC_RON, PokemaniacRonSeenText, PokemaniacRonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokemaniacRonAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokemaniacRonAfterBattleText
 
 TrainerFisherMarvin:
 	trainer FISHER, MARVIN, EVENT_BEAT_FISHER_MARVIN, FisherMarvinSeenText, FisherMarvinBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherMarvinAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FisherMarvinAfterBattleText
 
 TrainerPicnickerTiffany:
 	trainer PICNICKER, TIFFANY1, EVENT_BEAT_PICNICKER_TIFFANY, PicnickerTiffanySeenText, PicnickerTiffanyBeatenText, 0, .Script
@@ -213,7 +188,7 @@ TrainerPicnickerTiffany:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight3:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight3
@@ -260,10 +235,11 @@ TrainerPicnickerTiffany:
 	iffalse .NoRoom
 	clearflag ENGINE_TIFFANY_HAS_PINK_BOW
 	setevent EVENT_TIFFANY_GAVE_PINK_BOW
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedf
 
 .NoRoom:
-	sjump .PackFull
+	jumpstd packfullf
 
 .NoClefairy:
 	writetext PicnickerTiffanyClefairyText
@@ -273,45 +249,27 @@ TrainerPicnickerTiffany:
 
 .AskNumber1:
 	jumpstd asknumber1f
-	end
 
 .AskNumber2:
 	jumpstd asknumber2f
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedf
-	end
 
 .PhoneFull:
 	jumpstd phonefullf
-	end
 
 .Rematch:
 	jumpstd rematchf
-	end
 
 .Gift:
 	jumpstd giftf
-	end
 
-.PackFull:
-	jumpstd packfullf
-	end
-
-Route43Sign1:
-	jumptext Route43Sign1Text
-
-Route43Sign2:
-	jumptext Route43Sign2Text
+Route43Sign:
+	jumptext Route43SignText
 
 Route43TrainerTips:
 	jumptext Route43TrainerTipsText
@@ -327,7 +285,6 @@ PokemaniacBenSeenText:
 
 	para "That's why I"
 	line "started--and why"
-
 	para "I'll keep on col-"
 	line "lecting #MON!"
 	done
@@ -366,12 +323,12 @@ PokemaniacRonSeenText:
 	text "Would you get"
 	line "this?"
 
-	para "Some <RIVAL> guy"
-	line "made fun of my"
-	cont "#MON!"
+	para "Some weird red-"
+	line "haired guy made"
+	cont "fun of my #MON!"
 
-	para "Darn it! My #-"
-	line "MON's great!"
+	para "Darn it! My"
+	line "#MON's great!"
 	done
 
 PokemaniacRonBeatenText:
@@ -382,7 +339,6 @@ PokemaniacRonBeatenText:
 PokemaniacRonAfterBattleText:
 	text "It's okay for"
 	line "people to like"
-
 	para "different types"
 	line "of #MON."
 
@@ -409,7 +365,6 @@ FisherMarvinBeatenText:
 FisherMarvinAfterBattleText:
 	text "KURT's LURE BALL"
 	line "is the best for"
-
 	para "catching hooked"
 	line "#MON."
 
@@ -450,8 +405,8 @@ PicnickerTiffanyBeatenText:
 	done
 
 PicnickerTiffanyWantsPicnicText:
-	text "I'm having a pic-"
-	line "nic with #MON."
+	text "I'm having a picnic"
+	line "with #MON."
 
 	para "Won't you join us?"
 	done
@@ -462,14 +417,7 @@ PicnickerTiffanyClefairyText:
 	cont "adorable thing?"
 	done
 
-Route43Sign1Text:
-	text "ROUTE 43"
-
-	para "LAKE OF RAGE -"
-	line "MAHOGANY TOWN"
-	done
-
-Route43Sign2Text:
+Route43SignText:
 	text "ROUTE 43"
 
 	para "LAKE OF RAGE -"
@@ -481,19 +429,16 @@ Route43TrainerTipsText:
 
 	para "All #MON have"
 	line "pros and cons"
-
 	para "depending on their"
 	line "types."
 
 	para "If their types"
 	line "differ, a higher-"
-
 	para "level #MON may"
 	line "lose in battle."
 
 	para "Learn which types"
 	line "are strong and"
-
 	para "weak against your"
 	line "#MON's type."
 	done
@@ -511,8 +456,8 @@ Route43_MapEvents:
 	db 0 ; coord events
 
 	db 3 ; bg events
-	bg_event 13,  3, BGEVENT_READ, Route43Sign1
-	bg_event 11, 49, BGEVENT_READ, Route43Sign2
+	bg_event 13,  3, BGEVENT_READ, Route43Sign
+	bg_event 11, 49, BGEVENT_READ, Route43Sign
 	bg_event 16, 38, BGEVENT_READ, Route43TrainerTips
 
 	db 8 ; object events

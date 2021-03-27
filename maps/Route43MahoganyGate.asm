@@ -7,25 +7,16 @@ Route43MahoganyGate_MapScripts:
 	db 0 ; callbacks
 
 Route43MahoganyGateOfficer:
-	faceplayer
-	opentext
 	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
 	iftrue .RocketsCleared
-	writetext Route43MahoganyGateOfficerText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route43MahoganyGateOfficerText
 
 .RocketsCleared:
-	writetext Route43MahoganyGateOfficerRocketsClearedText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route43MahoganyGateOfficerRocketsClearedText
 
 Route43MahoganyGateOfficerText:
 	text "Only people headed"
 	line "up to LAKE OF RAGE"
-
 	para "have been through"
 	line "here lately."
 	done

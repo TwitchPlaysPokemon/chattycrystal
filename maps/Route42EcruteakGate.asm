@@ -4,35 +4,32 @@
 
 Route42EcruteakGate_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
 
-.DummyScene:
-	end
-
-Route42EvanUp:
-	applymovement ROUTE42ECRUTEAKGATE_EVAN, ROUTE42EVANMoveDown
-Route42EvanDown:
+Route42EcruteakGateEvanUp:
+	applymovement ROUTE42ECRUTEAKGATE_EVAN, Route42EcruteakGateEvanMoveDown
+Route42EcruteakGateEvanDown:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	showemote EMOTE_SHOCK, PLAYER, 15
-	applymovement ROUTE42ECRUTEAKGATE_EVAN, ROUTE42EVANMoveLeft
+	applymovement ROUTE42ECRUTEAKGATE_EVAN, Route42EcruteakGateEvanMoveLeft
 	opentext
-	writetext Route42EcruteakGateEvanText
+	writetext HostSilenceText
 	waitbutton
 	closetext
-	winlosstext Route42EcruteakGateEvanText, Route42EcruteakGateEvanText
+	winlosstext HostSilenceText, 0
 	loadtrainer AC_CHRIS, EVAN2
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext Route42EcruteakGateEvanText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	setscene SCENE_FINISHED
-	applymovement ROUTE42ECRUTEAKGATE_EVAN, ROUTE42EVANLeave
+	applymovement ROUTE42ECRUTEAKGATE_EVAN, Route42EcruteakGateEvanLeave
 	special FadeOutMusic
 	disappear ROUTE42ECRUTEAKGATE_EVAN
 	playmapmusic
@@ -41,18 +38,18 @@ Route42EvanDown:
 Route42EcruteakGateOfficerScript:
 	jumptextfaceplayer Route42EcruteakGateOfficerText
 
-ROUTE42EVANMoveDown:
+Route42EcruteakGateEvanMoveDown:
 	step DOWN
 	step_end
 
-ROUTE42EVANMoveLeft:
+Route42EcruteakGateEvanMoveLeft:
 	step LEFT
 	step LEFT
 	step LEFT
 	step LEFT
 	step_end
 
-ROUTE42EVANLeave:
+Route42EcruteakGateEvanLeave:
 	step RIGHT
 	step RIGHT
 	step RIGHT
@@ -69,10 +66,6 @@ Route42EcruteakGateOfficerText:
 	line "get lost in there."
 	done
 
-Route42EcruteakGateEvanText:
-	text "<...>"
-	done
-
 Route42EcruteakGate_MapEvents:
 	db 0, 0 ; filler
 
@@ -83,8 +76,8 @@ Route42EcruteakGate_MapEvents:
 	warp_event  9,  5, ROUTE_42, 2
 
 	db 2 ; coord events
-	coord_event 2, 4, SCENE_DEFAULT, Route42EvanDown
-	coord_event 2, 5, SCENE_DEFAULT, Route42EvanUp
+	coord_event 2, 4, SCENE_DEFAULT, Route42EcruteakGateEvanDown
+	coord_event 2, 5, SCENE_DEFAULT, Route42EcruteakGateEvanUp
 
 	db 0 ; bg events
 

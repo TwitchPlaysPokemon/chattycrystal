@@ -59,10 +59,11 @@ TrainerPokefanmDerek:
 	verbosegiveitem NUGGET
 	iffalse .NoRoom
 	clearflag ENGINE_DEREK_HAS_NUGGET
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedm
 
 .NoRoom:
-	sjump .PackFull
+	jumpstd packfullm
 
 .WantsPikachu:
 	writetext PokefanMDerekPikachuIsItText
@@ -72,76 +73,50 @@ TrainerPokefanmDerek:
 
 .AskNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .Gift:
 	jumpstd giftm
-	end
-
-.PackFull:
-	jumpstd packfullm
-	end
 
 TrainerPokefanfRuth:
 	trainer POKEFANF, RUTH, EVENT_BEAT_POKEFANF_RUTH, PokefanfRuthSeenText, PokefanfRuthBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokefanfRuthAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PokefanfRuthAfterBattleText
 
 TrainerSailorEugene:
 	trainer SAILOR, EUGENE, EVENT_BEAT_SAILOR_EUGENE, SailorEugeneSeenText, SailorEugeneBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SailorEugeneAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SailorEugeneAfterBattleText
 
 TrainerPsychicNorman:
 	trainer PSYCHIC_T, NORMAN, EVENT_BEAT_PSYCHIC_NORMAN, PsychicNormanSeenText, PsychicNormanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PsychicNormanAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PsychicNormanAfterBattleText
 
 TrainerPokefanfJaime:
-	faceplayer
-	opentext
 	checktime NITE
 	iffalse .NotNight
 	checkevent EVENT_BEAT_POKEFANF_JAIME
 	iftrue .Beaten
+	faceplayer
+	opentext
 	writetext PokefanfJaimeSeenText
 	waitbutton
 	closetext
@@ -154,16 +129,10 @@ TrainerPokefanfJaime:
 	end
 
 .Beaten:
-	writetext PokefanfJaimeAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PokefanfJaimeAfterBattleText
 
 .NotNight:
-	writetext PokefanfJaimeHopeItGetsDarkText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer PokefanfJaimeHopeItGetsDarkText
 
 Route39Sign:
 	jumptext Route39SignText
@@ -223,7 +192,6 @@ PokefanMDerekText_NotBragging:
 
 	para "We # FANS have"
 	line "a policy of not"
-
 	para "listening to other"
 	line "people brag!"
 	done
@@ -272,9 +240,9 @@ PsychicNormanAfterBattleText:
 	cont "abilities?"
 
 	para "People are like"
-	line "that too. Every-"
-	cont "one has different"
-	cont "potential."
+	line "that too. Everyone"
+	para "has different"
+	line "potential."
 	done
 
 PokefanfJaimeHopeItGetsDarkText:
@@ -301,13 +269,11 @@ PokefanfJaimeAfterBattleText:
 
 	para "I'm not sure why,"
 	line "but it seems to"
-
 	para "like it when I"
 	line "train here."
 
 	para "It seems to become"
 	line "friendlier by"
-
 	para "training here than"
 	line "anywhere else."
 	done

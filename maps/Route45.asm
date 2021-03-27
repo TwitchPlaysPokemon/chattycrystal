@@ -46,22 +46,6 @@ TrainerBlackbeltKenji:
 	scall Route45RegisteredNumberM
 	sjump Route45NumberAcceptedM
 
-.Registered:
-	readvar VAR_KENJI_BREAK
-	ifnotequal 1, Route45NumberAcceptedM
-	checktime MORN
-	iftrue .Morning
-	checktime NITE
-	iftrue .Night
-	checkevent EVENT_KENJI_ON_BREAK
-	iffalse Route45NumberAcceptedM
-	scall Route45GiftM
-	verbosegiveitem PP_UP
-	iffalse .NoRoom
-	clearevent EVENT_KENJI_ON_BREAK
-	special SampleKenjiBreakCountdown
-	sjump Route45NumberAcceptedM
-
 .Morning:
 	writetext BlackbeltKenjiMorningText
 	waitbutton
@@ -74,75 +58,65 @@ TrainerBlackbeltKenji:
 	closetext
 	end
 
-.NoRoom:
-	sjump Route45PackFullM
+.Registered:
+	readvar VAR_KENJI_BREAK
+	ifnotequal 1, Route45NumberAcceptedM
+	checktime MORN
+	iftrue .Morning
+	checktime NITE
+	iftrue .Night
+	checkevent EVENT_KENJI_ON_BREAK
+	iffalse Route45NumberAcceptedM
+	scall Route45GiftM
+	verbosegiveitem PP_UP
+	iffalse Route45PackFullM
+	clearevent EVENT_KENJI_ON_BREAK
+	special SampleKenjiBreakCountdown
+Route45NumberAcceptedM:
+	jumpstd numberacceptedm
 
 Route45AskNumber1M:
 	jumpstd asknumber1m
-	end
 
 Route45AskNumber2M:
 	jumpstd asknumber2m
-	end
 
 Route45RegisteredNumberM:
 	jumpstd registerednumberm
-	end
-
-Route45NumberAcceptedM:
-	jumpstd numberacceptedm
-	end
 
 Route45NumberDeclinedM:
 	jumpstd numberdeclinedm
-	end
 
 Route45PhoneFullM:
 	jumpstd phonefullm
-	end
 
 Route45RematchM:
 	jumpstd rematchm
-	end
 
 Route45GiftM:
 	jumpstd giftm
-	end
-
-Route45PackFullM:
-	jumpstd packfullm
-	end
 
 HikerParryHasIron:
 	setevent EVENT_PARRY_IRON
+Route45PackFullM:
 	jumpstd packfullm
-	end
 
 Route45RematchGiftM:
 	jumpstd rematchgiftm
-	end
 
 TrainerHikerErik:
 	trainer HIKER, ERIK, EVENT_BEAT_HIKER_ERIK, HikerErikSeenText, HikerErikBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext HikerErikAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext HikerErikAfterBattleText
 
 TrainerHikerMichael:
 	trainer HIKER, MICHAEL, EVENT_BEAT_HIKER_MICHAEL, HikerMichaelSeenText, HikerMichaelBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext HikerMichaelAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext HikerMichaelAfterBattleText
 
 TrainerHikerParry:
 	trainer HIKER, PARRY1, EVENT_BEAT_HIKER_PARRY, HikerParry3SeenText, HikerParry3BeatenText, 0, .Script
@@ -179,7 +153,7 @@ TrainerHikerParry:
 	readmem wParryFightCount
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight2:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
@@ -210,15 +184,12 @@ TrainerHikerParry:
 	checkevent EVENT_PARRY_IRON
 	iftrue .HasIron
 	checkevent EVENT_GOT_IRON_FROM_PARRY
-	iftrue .GotIron
+	iftrue GenericDummyScript
 	scall Route45RematchGiftM
 	verbosegiveitem IRON
 	iffalse HikerParryHasIron
 	setevent EVENT_GOT_IRON_FROM_PARRY
 	sjump Route45NumberAcceptedM
-
-.GotIron:
-	end
 
 .HasIron:
 	opentext
@@ -235,61 +206,28 @@ TrainerHikerTimothy:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext HikerTimothyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext HikerTimothyAfterBattleText
 
 TrainerCooltrainermRyan:
 	trainer COOLTRAINERM, RYAN, EVENT_BEAT_COOLTRAINERM_RYAN, CooltrainermRyanSeenText, CooltrainermRyanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermRyanAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermRyanAfterBattleText
 
 TrainerCooltrainerfKelly:
 	trainer COOLTRAINERF, KELLY, EVENT_BEAT_COOLTRAINERF_KELLY, CooltrainerfKellySeenText, CooltrainerfKellyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerfKellyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfKellyAfterBattleText
 
 TrainerCamperQuentin:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_CAMPER_QUENTIN
-	iftrue .Defeated
-	writetext CamperQuentinSeenText
-	waitbutton
-	closetext
-	winlosstext CamperQuentinBeatenText, 0
-	loadtrainer CAMPER, QUENTIN
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_CAMPER_QUENTIN
-	closetext
-	end
+	trainer CAMPER, QUENTIN, EVENT_BEAT_CAMPER_QUENTIN, CamperQuentinSeenText, CamperQuentinBeatenText, 0, .Script
 
-.Defeated:
-	writetext CamperQuentinAfterBattleText
-	waitbutton
-	closetext
-	end
-
-Route45DummyScript:
-	writetext Route45DummyText
-	waitbutton
-	closetext
-	end
+.Script:
+	endifjustbattled
+	jumptextfaceplayer CamperQuentinAfterBattleText
 
 Route45Sign:
 	jumptext Route45SignText
@@ -328,7 +266,6 @@ HikerErikBeatenText:
 HikerErikAfterBattleText:
 	text "I'll head back to"
 	line "BLACKTHORN's ICE"
-
 	para "PATH and train"
 	line "some more."
 	done
@@ -397,7 +334,6 @@ HikerTimothyBeatenText:
 HikerTimothyAfterBattleText:
 	text "The best thing to"
 	line "ever happen to me"
-
 	para "was discovering"
 	line "#MON."
 	done
@@ -410,7 +346,6 @@ HikerParryGivesIronText:
 
 	para "Oh, and take this"
 	line "--it's the gift"
-
 	para "you couldn't take"
 	line "when we last met."
 	done
@@ -445,7 +380,6 @@ BlackbeltKenjiMorningText:
 BlackbeltKenjiNightText:
 	text "We had plenty of"
 	line "rest at lunch, so"
-
 	para "now we're all"
 	line "ready to go again!"
 
@@ -455,8 +389,8 @@ BlackbeltKenjiNightText:
 
 CooltrainermRyanSeenText:
 	text "What are your"
-	line "thoughts on rais-"
-	cont "ing #MON?"
+	line "thoughts on"
+	cont "raising #MON?"
 	done
 
 CooltrainermRyanBeatenText:
@@ -465,9 +399,9 @@ CooltrainermRyanBeatenText:
 	done
 
 CooltrainermRyanAfterBattleText:
-	text "I see you're rais-"
-	line "ing your #MON"
-	cont "with care."
+	text "I see you're"
+	line "raising your"
+	cont "#MON with care."
 
 	para "The bond you build"
 	line "will save you in"
@@ -489,21 +423,12 @@ CooltrainerfKellyBeatenText:
 
 CooltrainerfKellyAfterBattleText:
 	text "I'm not in favor"
-	line "of overly power-"
-	cont "ful moves."
+	line "of overly powerful"
+	cont "moves."
 
 	para "I want to win, but"
 	line "I also don't want"
 	cont "to harm #MON."
-	done
-
-Route45DummyText:
-	text "I'm really, really"
-	line "tough!"
-
-	para "Is there anywhere"
-	line "I can prove how"
-	cont "tough I really am?"
 	done
 
 CamperQuentinSeenText:
@@ -554,4 +479,4 @@ Route45_MapEvents:
 	object_event  5, 66, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route45Revive, EVENT_ROUTE_45_REVIVE
 	object_event  6, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route45Elixir, EVENT_ROUTE_45_ELIXIR
 	object_event  7, 33, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route45MaxPotion, EVENT_ROUTE_45_MAX_POTION
-	object_event  4, 70, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrainerCamperQuentin, -1
+	object_event  4, 70, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 0, TrainerCamperQuentin, -1

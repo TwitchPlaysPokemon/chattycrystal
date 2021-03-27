@@ -16,11 +16,7 @@ TrainerCamperTed:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CamperTedAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CamperTedAfterBattleText
 
 TrainerPicnickerErin1:
 	trainer PICNICKER, ERIN1, EVENT_BEAT_PICNICKER_ERIN, PicnickerErin1SeenText, PicnickerErin1BeatenText, 0, .Script
@@ -57,7 +53,7 @@ TrainerPicnickerErin1:
 	readmem wErinFightCount
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight2:
 	checkevent EVENT_RESTORED_POWER_TO_KANTO
 	iftrue .LoadFight2
@@ -88,15 +84,12 @@ TrainerPicnickerErin1:
 	checkevent EVENT_ERIN_CALCIUM
 	iftrue .HasCalcium
 	checkevent EVENT_GOT_CALCIUM_FROM_ERIN
-	iftrue .GotCalciumAlready
+	iftrue GenericDummyScript
 	scall Route46RematchGiftF
 	verbosegiveitem CALCIUM
 	iffalse ErinNoRoomForCalcium
 	setevent EVENT_GOT_CALCIUM_FROM_ERIN
 	sjump Route46NumberAcceptedF
-
-.GotCalciumAlready:
-	end
 
 .HasCalcium:
 	opentext
@@ -106,44 +99,33 @@ TrainerPicnickerErin1:
 	iffalse ErinNoRoomForCalcium
 	clearevent EVENT_ERIN_CALCIUM
 	setevent EVENT_GOT_CALCIUM_FROM_ERIN
-	sjump Route46NumberAcceptedF
+Route46NumberAcceptedF:
+	jumpstd numberacceptedf
 
 Route46AskNumber1F:
 	jumpstd asknumber1f
-	end
 
 Route46AskNumber2F:
 	jumpstd asknumber2f
-	end
 
 Route46RegisteredNumberF:
 	jumpstd registerednumberf
-	end
-
-Route46NumberAcceptedF:
-	jumpstd numberacceptedf
-	end
 
 Route46NumberDeclinedF:
 	jumpstd numberdeclinedf
-	end
 
 Route46PhoneFullF:
 	jumpstd phonefullf
-	end
 
 Route46RematchF:
 	jumpstd rematchf
-	end
 
 ErinNoRoomForCalcium:
 	setevent EVENT_ERIN_CALCIUM
 	jumpstd packfullf
-	end
 
 Route46RematchGiftF:
 	jumpstd rematchgiftf
-	end
 
 TrainerHikerBailey:
 	trainer HIKER, BAILEY, EVENT_BEAT_HIKER_BAILEY, HikerBaileySeenText, HikerBaileyBeatenText, 0, .Script
@@ -151,7 +133,7 @@ TrainerHikerBailey:
 .Script:
 	endifjustbattled
 	opentext
-	writetext HikerBaileyAfterBattleText
+	jumptext HikerBaileyAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -186,8 +168,8 @@ HikerBaileyAfterBattleText:
 	done
 
 CamperTedSeenText:
-	text "I'm raising #-"
-	line "MON too!"
+	text "I'm raising"
+	line "#MON too!"
 
 	para "Will you battle"
 	line "with me?"
@@ -220,7 +202,6 @@ PicnickerErin1BeatenText:
 PicnickerErinAfterBattleText:
 	text "I've been to many"
 	line "GYMS, but the GYM"
-
 	para "in GOLDENROD is my"
 	line "favorite."
 
@@ -237,7 +218,6 @@ PicnickerErin2BeatenText:
 
 	para "Anyway, thanks for"
 	line "battling me again"
-
 	para "and again. Here's"
 	line "that present from"
 	cont "the other time."

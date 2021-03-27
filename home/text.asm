@@ -213,7 +213,6 @@ ENDM
 	dict "<PARA>",    Paragraph
 	dict "<MOM>",     PrintMomsName
 	dict "<PLAYER>",  PrintPlayerName
-	dict "<RIVAL>",   PrintRivalName
 	dict "<RED>",     PrintRedsName
 	dict "<GREEN>",   PrintGreensName
 	dict "#",         PlacePOKe
@@ -261,7 +260,6 @@ ENDM
 
 PrintMomsName:   print_name wMomsName
 PrintPlayerName: print_name wPlayerName
-PrintRivalName:  print_name wRivalName
 PrintRedsName:   print_name wRedsName
 PrintGreensName: print_name wGreensName
 

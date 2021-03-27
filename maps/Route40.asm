@@ -34,44 +34,28 @@ TrainerSwimmerfElaine:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerfElaineAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmerfElaineAfterBattleText
 
 TrainerSwimmerfPaula:
 	trainer SWIMMERF, PAULA, EVENT_BEAT_SWIMMERF_PAULA, SwimmerfPaulaSeenText, SwimmerfPaulaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmerfPaulaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmerfPaulaAfterBattleText
 
 TrainerSwimmermSimon:
 	trainer SWIMMERM, SIMON_S, EVENT_BEAT_SWIMMERM_SIMON, SwimmermSimonSeenText, SwimmermSimonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmermSimonAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmermSimonAfterBattleText
 
 TrainerSwimmermRandall:
 	trainer SWIMMERM, RANDALL, EVENT_BEAT_SWIMMERM_RANDALL, SwimmermRandallSeenText, SwimmermRandallBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SwimmermRandallAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SwimmermRandallAfterBattleText
 
 Route40Lass1Script:
 	jumptextfaceplayer Route40Lass1Text
@@ -130,31 +114,6 @@ Route40Rock:
 Route40HiddenHyperPotion:
 	hiddenitem HYPER_POTION, EVENT_ROUTE_40_HIDDEN_HYPER_POTION
 
-MovementData_0x1a621c:
-	step RIGHT
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
-	step_end
-
-MovementData_0x1a6224:
-	step UP
-	step UP
-	step UP
-	step UP
-	step UP
-	step_end
-
-MovementData_0x1a622a:
-	step UP
-	step UP
-	step UP
-	step UP
-	step_end
-
 SwimmermSimonSeenText:
 	text "You have to warm"
 	line "up before going"
@@ -204,9 +163,9 @@ SwimmerfElaineBeatenText:
 	done
 
 SwimmerfElaineAfterBattleText:
-	text "I'd say I'm a bet-"
-	line "ter swimmer than"
-	cont "you. Yeah!"
+	text "I'd say I'm a better"
+	line "swimmer than you."
+	cont "Yeah!"
 	done
 
 SwimmerfPaulaSeenText:
@@ -231,7 +190,6 @@ SwimmerfPaulaAfterBattleText:
 Route40Lass1Text:
 	text "Although you can't"
 	line "see it from here,"
-
 	para "CIANWOOD is across"
 	line "the sea."
 	done
@@ -246,7 +204,6 @@ Route40PokefanMText:
 Route40Lass2Text:
 	text "I came to OLIVINE"
 	line "by ship to see the"
-
 	para "sights and soak up"
 	line "the atmosphere."
 
@@ -261,13 +218,11 @@ Route40StandingYoungsterText:
 
 	para "I think a lot of"
 	line "tough trainers"
-
 	para "have gathered"
 	line "there already."
 
 	para "But since you have"
 	line "so many BADGES,"
-
 	para "you shouldn't do"
 	line "badly at all."
 	done
@@ -288,9 +243,8 @@ MonicaGivesGiftText:
 MonicaGaveGiftText:
 	text "MONICA: It's an"
 	line "item that raises"
-
-	para "the power of fly-"
-	line "ing-type moves."
+	para "the power of"
+	line "flying-type moves."
 
 	para "You should equip a"
 	line "bird #MON with"
@@ -298,11 +252,10 @@ MonicaGaveGiftText:
 	done
 
 MonicaMondayText:
-	text "MONICA: My broth-"
-	line "ers and sisters"
-
-	para "are all over the"
-	line "place."
+	text "MONICA: My"
+	line "brothers and"
+	para "sisters are all"
+	line "over the place."
 
 	para "See if you could"
 	line "find them all!"

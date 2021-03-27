@@ -67,6 +67,7 @@ Cries:
 	dba Cry_Aipom
 	dba Cry_Dunsparce
 	dba Cry_Donphan
+	dba Cry_Unused
 	dba Cry_Treecko
 	dba Cry_Torchic
 	dba Cry_Poochyena

@@ -274,16 +274,16 @@ PokemonCries::
 	mon_cry CRY_KRABBY,      $0d0,  $0fa ; LUDICOLO
 	mon_cry CRY_SPEAROW,     $06f,  $080 ; TAILLOW
 	mon_cry CRY_SPEAROW,     $020,  $090 ; SWELLOW
-	mon_cry CRY_FEAROW,      $000,  $100 ; WINGULL - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; PELIPPER - PLACEHOLDER
-	mon_cry CRY_NIDORAN_F,   $000,  $100 ; RALTS - PLACEHOLDER
-	mon_cry CRY_VILEPLUME,   $008,  $100 ; KIRLIA  - PLACEHOLDER
+	mon_cry CRY_SWELLOW,     $000,  $100 ; WINGULL
+	mon_cry CRY_MAGCARGO,    $f30,  $100 ; PELIPPER
+	mon_cry CRY_NIDORAN_F,   $000,  $100 ; RALTS
+	mon_cry CRY_VILEPLUME,   $008,  $100 ; KIRLIA
 	mon_cry CRY_VILEPLUME,   $f22,  $163 ; GARDEVOIR
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SURSKIT - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MASQUERAIN - PLACEHOLDER
-	mon_cry CRY_TOGETIC,     $03b,  $038 ; WHISMUR - TODO: adjust
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LOUDRED - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; EXPLOUD - PLACEHOLDER
+	mon_cry CRY_GROWLITHE,   $1bd,  $0f0 ; SURSKIT
+	mon_cry CRY_KRABBY,      $1b0,  $0c0 ; MASQUERAIN
+	mon_cry CRY_TOGETIC,     $00b,  $04a ; WHISMUR
+	mon_cry CRY_SLOWKING,    $8df,  $10a ; LOUDRED
+	mon_cry CRY_TEDDIURSA,   $6dd,  $100 ; EXPLOUD
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MAKUHITA - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; HARIYAMA - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; AZURILL - PLACEHOLDER

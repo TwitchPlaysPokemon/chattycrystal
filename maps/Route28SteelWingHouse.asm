@@ -4,12 +4,9 @@
 
 Route28SteelWingHouse_MapScripts:
 	db 1 ; scene scripts
-	scene_script .DummyScene
+	scene_script GenericDummyScript
 
 	db 0 ; callbacks
-
-.DummyScene:
-	end
 
 Celebrity:
 	faceplayer
@@ -24,6 +21,7 @@ Celebrity:
 .Done:
 	closetext
 	end
+
 .AlreadyGotItem:
 	writetext CelebrityText2
 	waitbutton
@@ -59,7 +57,6 @@ CelebrityText2:
 
 	para "Everywhere I go,"
 	line "people chase me."
-
 	para "I just want to be"
 	line "left alone…"
 	done

@@ -14,10 +14,7 @@ SandstormHouseWoman:
 	special GetFirstPokemonHappiness
 	writetext SandstormHouseWomanText1
 	buttonsound
-	ifgreater 150 - 1, .Loyal
-	sjump .Disloyal
-
-.Loyal:
+	ifless 150, .Disloyal
 	writetext SandstormHouseWomanLoyalText
 	buttonsound
 	verbosegiveitem TM_SANDSTORM
@@ -82,7 +79,6 @@ SandstormHouseSandstormDescription:
 SandstormHouseWomanDisloyalText:
 	text "If it doesn't come"
 	line "to trust you some"
-
 	para "more, it could be"
 	line "tough going."
 

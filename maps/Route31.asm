@@ -15,11 +15,9 @@ Route31_MapScripts:
 
 .CheckMomCall:
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
-	iffalse .DoMomCall
-	return
-
-.DoMomCall:
+	iftrue .return
 	specialphonecall SPECIALCALL_WORRIED
+.return
 	return
 
 TrainerBugCatcherWade1:
@@ -61,7 +59,7 @@ TrainerBugCatcherWade1:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -125,60 +123,47 @@ TrainerBugCatcherWade1:
 	iftrue .BitterBerry
 .Berry:
 	verbosegiveitem BERRY
-	iffalse .PackFull
-	sjump .Done
+	sjump .GaveItem
+
 .Psncureberry:
 	verbosegiveitem PSNCUREBERRY
-	iffalse .PackFull
-	sjump .Done
+	sjump .GaveItem
+
 .Przcureberry:
 	verbosegiveitem PRZCUREBERRY
-	iffalse .PackFull
-	sjump .Done
+	sjump .GaveItem
+
 .BitterBerry:
 	verbosegiveitem BITTER_BERRY
+.GaveItem
 	iffalse .PackFull
-.Done:
 	clearflag ENGINE_WADE_HAS_ITEM
-	sjump .AcceptedNumberSTD
+.AcceptedNumberSTD:
+	jumpstd numberacceptedm
+
 .PackFull:
-	sjump .PackFullSTD
+	jumpstd packfullm
 
 .AskPhoneNumberSTD:
 	jumpstd asknumber1m
-	end
 
 .AskAgainSTD:
 	jumpstd asknumber2m
-	end
 
 .RegisterNumberSTD:
 	jumpstd registerednumberm
-	end
-
-.AcceptedNumberSTD:
-	jumpstd numberacceptedm
-	end
 
 .DeclinedNumberSTD:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFullSTD:
 	jumpstd phonefullm
-	end
 
 .RematchSTD:
 	jumpstd rematchm
-	end
 
 .ItemSTD:
 	jumpstd giftm
-	end
-
-.PackFullSTD:
-	jumpstd packfullm
-	end
 
 Route31MailRecipientScript:
 	faceplayer
@@ -286,7 +271,6 @@ BugCatcherWade1BeatenText:
 BugCatcherWade1AfterText:
 	text "You can catch"
 	line "#MON even if"
-
 	para "you have six with"
 	line "you."
 
@@ -354,9 +338,8 @@ Text_Route31DescribeNightmare:
 
 	para "It's a wicked move"
 	line "that steadily cuts"
-
-	para "the HP of a sleep-"
-	line "ing enemy."
+	para "the HP of a"
+	line "sleeping enemy."
 
 	para "Ooooh…"
 	line "That's scary…"
@@ -386,7 +369,6 @@ Text_Route31DeclinedToHandOverMail:
 Text_Route31CantTakeLastMon:
 	text "If I take that"
 	line "#MON from you,"
-
 	para "what are you going"
 	line "to use in battle?"
 	done
@@ -398,7 +380,7 @@ Route31YoungsterText:
 
 	para "I'm going to raise"
 	line "it to take on"
-	cont "FALKNER."
+	cont "!12rtyhasz."
 
 	para "He's the leader of"
 	line "VIOLET CITY's GYM."

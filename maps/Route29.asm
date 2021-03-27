@@ -10,15 +10,11 @@
 
 Route29_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_ROUTE29_NOTHING
-	scene_script .DummyScene1 ; SCENE_ROUTE29_CATCH_TUTORIAL
+	scene_script GenericDummyScript ; SCENE_ROUTE29_NOTHING
+	scene_script GenericDummyScript ; SCENE_ROUTE29_CATCH_TUTORIAL
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .Tuscany
-
-.DummyScene0:
-.DummyScene1:
-	end
 
 .Tuscany:
 	checkflag ENGINE_ZEPHYRBADGE
@@ -144,23 +140,15 @@ Route29FisherScript:
 	jumptextfaceplayer Route29FisherText
 
 Route29CooltrainerMScript:
-	faceplayer
-	opentext
 	checktime DAY
 	iftrue .day_morn
 	checktime NITE
 	iftrue .nite
 .day_morn
-	writetext Route29CooltrainerMText_WaitingForNight
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route29CooltrainerMText_WaitingForNight
 
 .nite
-	writetext Route29CooltrainerMText_WaitingForMorning
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route29CooltrainerMText_WaitingForMorning
 
 TuscanyScript:
 	faceplayer
@@ -198,11 +186,8 @@ TuscanyNotTuesdayScript:
 	closetext
 	end
 
-Route29Sign1:
-	jumptext Route29Sign1Text
-
-Route29Sign2:
-	jumptext Route29Sign2Text
+Route29Sign:
+	jumptext Route29SignText
 
 Route29FruitTree:
 	fruittree FRUITTREE_ROUTE_29
@@ -240,7 +225,6 @@ DudeMovementData2b:
 CatchingTutorialBoxFullText:
 	text "#MON hide in"
 	line "the grass. Who"
-
 	para "knows when they'll"
 	line "pop out…"
 	done
@@ -248,7 +232,6 @@ CatchingTutorialBoxFullText:
 CatchingTutorialIntroText:
 	text "I've seen you a"
 	line "couple times. How"
-
 	para "many #MON have"
 	line "you caught?"
 
@@ -271,7 +254,6 @@ CatchingTutorialDeclinedText:
 
 	para "Anyway, if you"
 	line "want to catch"
-
 	para "#MON, you have"
 	line "to walk a lot."
 	done
@@ -288,7 +270,6 @@ Route29YoungsterText:
 
 	para "If they're weak"
 	line "and not ready for"
-
 	para "battle, keep out"
 	line "of the grass."
 	done
@@ -300,7 +281,6 @@ Route29TeacherText:
 
 	para "But you can go to"
 	line "NEW BARK without"
-
 	para "walking through"
 	line "the grass."
 	done
@@ -308,7 +288,6 @@ Route29TeacherText:
 Route29FisherText:
 	text "I wanted to take a"
 	line "break, so I saved"
-
 	para "to record my"
 	line "progress."
 	done
@@ -316,7 +295,6 @@ Route29FisherText:
 Route29CooltrainerMText_WaitingForNight:
 	text "I'm waiting for"
 	line "#MON that"
-
 	para "appear only at"
 	line "night."
 	done
@@ -324,16 +302,14 @@ Route29CooltrainerMText_WaitingForNight:
 Route29CooltrainerMText_WaitingForMorning:
 	text "I'm waiting for"
 	line "#MON that"
-
 	para "appear only in the"
 	line "morning."
 	done
 
 MeetTuscanyText:
-	text "TUSCANY: I do be-"
-	line "lieve that this is"
-
-	para "the first time"
+	text "TUSCANY: I do"
+	line "believe that this"
+	para "is the first time"
 	line "we've met?"
 
 	para "Please allow me to"
@@ -346,7 +322,6 @@ MeetTuscanyText:
 TuscanyGivesGiftText:
 	text "By way of intro-"
 	line "duction, please"
-
 	para "accept this gift,"
 	line "a PINK BOW."
 	done
@@ -381,14 +356,7 @@ TuscanyNotTuesdayText:
 	cont "is unfortunate…"
 	done
 
-Route29Sign1Text:
-	text "ROUTE 29"
-
-	para "CHERRYGROVE CITY -"
-	line "NEW BARK TOWN"
-	done
-
-Route29Sign2Text:
+Route29SignText:
 	text "ROUTE 29"
 
 	para "CHERRYGROVE CITY -"
@@ -406,8 +374,8 @@ Route29_MapEvents:
 	coord_event 53,  9, SCENE_ROUTE29_CATCH_TUTORIAL, Route29Tutorial2
 
 	db 2 ; bg events
-	bg_event 51,  7, BGEVENT_READ, Route29Sign1
-	bg_event  3,  5, BGEVENT_READ, Route29Sign2
+	bg_event 51,  7, BGEVENT_READ, Route29Sign
+	bg_event  3,  5, BGEVENT_READ, Route29Sign
 
 	db 8 ; object events
 	object_event 50, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1

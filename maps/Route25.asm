@@ -13,61 +13,50 @@
 
 Route25_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_ROUTE25_NOTHING
-	scene_script .DummyScene1 ; SCENE_ROUTE25_MISTYS_DATE
+	scene_script GenericDummyScript ; SCENE_ROUTE25_NOTHING
+	scene_script GenericDummyScript ; SCENE_ROUTE25_MISTYS_DATE
 
 	db 0 ; callbacks
 
-.DummyScene0:
-.DummyScene1:
-	end
-
 Route25MistyDate1Script:
-	showemote EMOTE_HEART, ROUTE25_MISTY, 15
-	pause 30
 	showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 10
 	turnobject ROUTE25_MISTY, DOWN
-	applymovement ROUTE25_COOLTRAINER_M1, MovementData_0x19efe8
+	applymovement ROUTE25_COOLTRAINER_M1, Route25_Movement_BoyfriendLeaves_Top
 	disappear ROUTE25_COOLTRAINER_M1
 	pause 15
 	playmusic MUSIC_BEAUTY_ENCOUNTER
 	turnobject ROUTE25_MISTY, UP
 	pause 10
-	applymovement ROUTE25_MISTY, MovementData_0x19efed
+	applymovement ROUTE25_MISTY, Route25_Movement_MistyApproachesPlayer_Top
 	opentext
-	writetext Route25MistyDateText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	turnobject PLAYER, DOWN
-	applymovement ROUTE25_MISTY, MovementData_0x19effa
-	turnobject PLAYER, LEFT
-	applymovement ROUTE25_MISTY, MovementData_0x19f000
-	disappear ROUTE25_MISTY
-	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
-	setscene SCENE_ROUTE25_NOTHING
-	special RestartMapMusic
-	end
+	applymovement ROUTE25_MISTY, Route25_Movement_MistyWalksAroundPlayer_Top
+	sjump Route25MistyDateContinue
 
 Route25MistyDate2Script:
 	showemote EMOTE_HEART, ROUTE25_MISTY, 15
 	pause 30
 	showemote EMOTE_SHOCK, ROUTE25_COOLTRAINER_M1, 10
 	turnobject ROUTE25_MISTY, DOWN
-	applymovement ROUTE25_COOLTRAINER_M1, MovementData_0x19efea
+	applymovement ROUTE25_COOLTRAINER_M1, Route25_Movement_BoyfriendLeaves_Bottom
 	disappear ROUTE25_COOLTRAINER_M1
 	pause 15
 	playmusic MUSIC_BEAUTY_ENCOUNTER
 	turnobject ROUTE25_MISTY, UP
 	pause 10
-	applymovement ROUTE25_MISTY, MovementData_0x19eff4
+	applymovement ROUTE25_MISTY, Route25_Movement_MistyApproachesPlayer_Bottom
 	opentext
-	writetext Route25MistyDateText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	turnobject PLAYER, UP
-	applymovement ROUTE25_MISTY, MovementData_0x19effd
+	applymovement ROUTE25_MISTY, Route25_Movement_MistyWalksAroundPlayer_Bottom
+Route25MistyDateContinue:
 	turnobject PLAYER, LEFT
-	applymovement ROUTE25_MISTY, MovementData_0x19f000
+	applymovement ROUTE25_MISTY, Route25_Movement_MistyLeaves
 	disappear ROUTE25_MISTY
 	clearevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	setscene SCENE_ROUTE25_NOTHING
@@ -79,77 +68,49 @@ TrainerSchoolboyDudley:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SchoolboyDudleyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SchoolboyDudleyAfterBattleText
 
 TrainerLassEllen:
 	trainer LASS, ELLEN, EVENT_BEAT_LASS_ELLEN, LassEllenSeenText, LassEllenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext LassEllenAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext LassEllenAfterBattleText
 
 TrainerSchoolboyJoe:
 	trainer SCHOOLBOY, JOE, EVENT_BEAT_SCHOOLBOY_JOE, SchoolboyJoeSeenText, SchoolboyJoeBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SchoolboyJoeAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SchoolboyJoeAfterBattleText
 
 TrainerLassLaura:
 	trainer LASS, LAURA, EVENT_BEAT_LASS_LAURA, LassLauraSeenText, LassLauraBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext LassLauraAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext LassLauraAfterBattleText
 
 TrainerCamperLloyd:
 	trainer CAMPER, LLOYD, EVENT_BEAT_CAMPER_LLOYD, CamperLloydSeenText, CamperLloydBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CamperLloydAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CamperLloydAfterBattleText
 
 TrainerLassShannon:
 	trainer LASS, SHANNON, EVENT_BEAT_LASS_SHANNON, LassShannonSeenText, LassShannonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext LassShannonAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext LassShannonAfterBattleText
 
 TrainerSupernerdPat:
 	trainer SUPER_NERD, PAT, EVENT_BEAT_SUPER_NERD_PAT, SupernerdPatSeenText, SupernerdPatBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext SupernerdPatAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SupernerdPatAfterBattleText
 
 TrainerCooltrainermKevin:
 	faceplayer
@@ -189,15 +150,15 @@ Route25Protein:
 Route25HiddenPotion:
 	hiddenitem POTION, EVENT_ROUTE_25_HIDDEN_POTION
 
-MovementData_0x19efea:
+Route25_Movement_BoyfriendLeaves_Bottom:
 	big_step DOWN
-MovementData_0x19efe8:
+Route25_Movement_BoyfriendLeaves_Top:
 	big_step DOWN
 	step_end
 
-MovementData_0x19efed:
+Route25_Movement_MistyApproachesPlayer_Top:
 	step UP
-MovementData_0x19eff4:
+Route25_Movement_MistyApproachesPlayer_Bottom:
 	step UP
 	step UP
 	step LEFT
@@ -205,57 +166,23 @@ MovementData_0x19eff4:
 	step LEFT
 	step_end
 
-MovementData_0x19effa:
+Route25_Movement_MistyWalksAroundPlayer_Top:
 	step DOWN
 	step LEFT
 	step_end
 
-MovementData_0x19effd:
+Route25_Movement_MistyWalksAroundPlayer_Bottom:
 	step UP
 	step LEFT
 	step_end
 
-MovementData_0x19f000:
+Route25_Movement_MistyLeaves:
 	step LEFT
 	step LEFT
 	step LEFT
 	step LEFT
 	step LEFT
 	step_end
-
-Route25MistyDateText:
-	text "MISTY: Aww! Why"
-	line "did you have to"
-
-	para "show up and bug us"
-	line "now?"
-
-	para "Do you know what"
-	line "they call people"
-	cont "like you?"
-
-	para "Pests! You heard"
-	line "me right, pest!"
-
-	para "…"
-
-	para "…Oh? Those BADGES"
-	line "you have… Are they"
-	cont "JOHTO GYM BADGES?"
-
-	para "If you have eight,"
-	line "you must be good."
-
-	para "OK, then. Come to"
-	line "CERULEAN GYM."
-
-	para "I'll be happy to"
-	line "take you on."
-
-	para "I'm MISTY, the"
-	line "GYM LEADER in"
-	cont "CERULEAN."
-	done
 
 SchoolboyDudleySeenText:
 	text "Beat the six of us"
@@ -271,6 +198,11 @@ SchoolboyDudleyBeatenText:
 	done
 
 SchoolboyDudleyAfterBattleText:
+LassEllenAfterBattleText:
+SchoolboyJoeAfterBattleText:
+LassLauraAfterBattleText:
+CamperLloydAfterBattleText:
+LassShannonAfterBattleText:
 	text "I did my best."
 	line "I have no regrets."
 	done
@@ -284,11 +216,6 @@ LassEllenBeatenText:
 	text "How could I lose?"
 	done
 
-LassEllenAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
-	done
-
 SchoolboyJoeSeenText:
 	text "Here's No. 3!"
 	line "I won't be easy."
@@ -296,11 +223,6 @@ SchoolboyJoeSeenText:
 
 SchoolboyJoeBeatenText:
 	text "Ow! Stomped flat!"
-	done
-
-SchoolboyJoeAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
 	done
 
 LassLauraSeenText:
@@ -312,11 +234,6 @@ LassLauraBeatenText:
 	text "I lost too…"
 	done
 
-LassLauraAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
-	done
-
 CamperLloydSeenText:
 	text "OK! I'm No. 5."
 	line "I'll stomp you!"
@@ -324,11 +241,6 @@ CamperLloydSeenText:
 
 CamperLloydBeatenText:
 	text "Whoa! Too much."
-	done
-
-CamperLloydAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
 	done
 
 LassShannonSeenText:
@@ -341,11 +253,6 @@ LassShannonBeatenText:
 	text "You're kidding."
 	done
 
-LassShannonAfterBattleText:
-	text "I did my best."
-	line "I have no regrets."
-	done
-
 SupernerdPatSeenText:
 	text "Mufufufu…"
 
@@ -355,7 +262,6 @@ SupernerdPatSeenText:
 
 	para "I waited here to"
 	line "beat you when you"
-
 	para "were tired out by"
 	line "all the battles."
 	done
@@ -373,7 +279,6 @@ SupernerdPatAfterBattleText:
 CooltrainermKevinNuggetText:
 	text "You took on one"
 	line "more battle than"
-
 	para "you expected, but"
 	line "you won anyway."
 
@@ -384,7 +289,6 @@ CooltrainermKevinNuggetText:
 CooltrainermKevinSeenText:
 	text "But after seeing"
 	line "how you battle, I"
-
 	para "want to see how"
 	line "I'll fare."
 
@@ -401,9 +305,9 @@ CooltrainermKevinAfterBattleText:
 	text "That was a great"
 	line "battle!"
 
-	para "You and your #-"
-	line "MON are truly out-"
-	cont "standing!"
+	para "You and your"
+	line "#MON are truly"
+	cont "outstanding!"
 	done
 
 BillsHouseSignText:

@@ -13,13 +13,10 @@
 
 Route30_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene  ; SCENE_DEFAULT
-	scene_script .DummyScene ; SCENE_ROUTE30_AFTER_UNOWN_HATCH
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_ROUTE30_AFTER_UNOWN_HATCH
 
 	db 0 ; callbacks
-
-.DummyScene
-	end
 
 YoungsterJoey_ImportantBattleScript:
 	waitsfx
@@ -131,15 +128,12 @@ TrainerYoungsterJoey:
 	checkevent EVENT_JOEY_HP_UP
 	iftrue .GiveHPUp
 	checkevent EVENT_GOT_HP_UP_FROM_JOEY
-	iftrue .done
+	iftrue GenericDummyScript
 	scall .RematchGift
 	verbosegiveitem HP_UP
 	iffalse .PackFull
 	setevent EVENT_GOT_HP_UP_FROM_JOEY
 	sjump .NumberAccepted
-
-.done
-	end
 
 .GiveHPUp:
 	opentext
@@ -149,91 +143,62 @@ TrainerYoungsterJoey:
 	iffalse .PackFull
 	clearevent EVENT_JOEY_HP_UP
 	setevent EVENT_GOT_HP_UP_FROM_JOEY
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedm
 
 .AskNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .RematchStd:
 	jumpstd rematchm
-	end
 
 .PackFull:
 	setevent EVENT_JOEY_HP_UP
 	jumpstd packfullm
-	end
 
 .RematchGift:
 	jumpstd rematchgiftm
-	end
 
 TrainerYoungsterMikey:
 	trainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, YoungsterMikeySeenText, YoungsterMikeyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext YoungsterMikeyAfterText
-	waitbutton
-	closetext
-	end
+	jumptext YoungsterMikeyAfterText
 
 TrainerBugCatcherDon:
 	trainer BUG_CATCHER, DON, EVENT_BEAT_BUG_CATCHER_DON, BugCatcherDonSeenText, BugCatcherDonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BugCatcherDonAfterText
-	waitbutton
-	closetext
-	end
+	jumptext BugCatcherDonAfterText
 
 Route30YoungsterScript:
-	faceplayer
-	opentext
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue .CompletedEggQuest
-	writetext Route30YoungsterText_DirectionsToMrPokemonsHouse
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route30YoungsterText_DirectionsToMrPokemonsHouse
 
 .CompletedEggQuest:
-	writetext Route30YoungsterText_EveryoneIsBattling
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route30YoungsterText_EveryoneIsBattling
 
 Route30HatchUnownEggScript:
 	checkevent EVENT_UNOWN_HATCHED
 	iftrue .set_flag
 	special HatchUnownEgg
 	checkevent EVENT_UNOWN_HATCHED
-	iftrue .set_flag
-	end
-
+	iffalse GenericDummyScript
 .set_flag
 	wildon
 	setscene SCENE_ROUTE30_AFTER_UNOWN_HATCH
@@ -314,7 +279,6 @@ YoungsterJoey1BeatenText:
 YoungsterJoey1AfterText:
 	text "Do I have to have"
 	line "more #MON in"
-
 	para "order to battle"
 	line "better?"
 

@@ -18,11 +18,7 @@ TrainerCooltrainermJake:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermJakeAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermJakeAfterBattleText
 
 TrainerCooltrainermGaven3:
 	trainer COOLTRAINERM, GAVEN1, EVENT_BEAT_COOLTRAINERM_GAVEN, CooltrainermGaven3SeenText, CooltrainermGaven3BeatenText, 0, .Script
@@ -51,14 +47,15 @@ TrainerCooltrainermGaven3:
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
 	gettrainername STRING_BUFFER_3, COOLTRAINERM, GAVEN1
 	scall .RegisteredNumber
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedm
 
 .WantsBattle:
 	scall .Rematch
 	winlosstext CooltrainermGaven3BeatenText, 0
 	readmem wGavenFightCount
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
@@ -79,42 +76,28 @@ TrainerCooltrainermGaven3:
 
 .AskNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .Rematch:
 	jumpstd rematchm
-	end
 
 TrainerCooltrainerfJoyce:
 	trainer COOLTRAINERF, JOYCE, EVENT_BEAT_COOLTRAINERF_JOYCE, CooltrainerfJoyceSeenText, CooltrainerfJoyceBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerfJoyceAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfJoyceAfterBattleText
 
 TrainerCooltrainerfBeth1:
 	trainer COOLTRAINERF, BETH1, EVENT_BEAT_COOLTRAINERF_BETH, CooltrainerfBeth1SeenText, CooltrainerfBeth1BeatenText, 0, .Script
@@ -143,14 +126,15 @@ TrainerCooltrainerfBeth1:
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
 	gettrainername STRING_BUFFER_3, COOLTRAINERF, BETH1
 	scall .RegisteredNumber
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedf
 
 .WantsBattle:
 	scall .Rematch
 	winlosstext CooltrainerfBeth1BeatenText, 0
 	readmem wBethFightCount
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
@@ -171,53 +155,35 @@ TrainerCooltrainerfBeth1:
 
 .AskNumber1:
 	jumpstd asknumber1f
-	end
 
 .AskNumber2:
 	jumpstd asknumber2f
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedf
-	end
 
 .PhoneFull:
 	jumpstd phonefullf
-	end
 
 .Rematch:
 	jumpstd rematchf
-	end
 
 TrainerPsychicRichard:
 	trainer PSYCHIC_T, RICHARD, EVENT_BEAT_PSYCHIC_RICHARD, PsychicRichardSeenText, PsychicRichardBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PsychicRichardAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PsychicRichardAfterBattleText
 
 TrainerFisherScott:
 	trainer FISHER, SCOTT, EVENT_BEAT_FISHER_SCOTT, FisherScottSeenText, FisherScottBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherScottAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FisherScottAfterBattleText
 
 Route26Sign:
 	jumptext Route26SignText
@@ -231,7 +197,6 @@ Route26MaxElixir:
 CooltrainermJakeSeenText:
 	text "I'm making my"
 	line "final preparations"
-
 	para "for the #MON"
 	line "LEAGUE."
 	done
@@ -250,7 +215,6 @@ CooltrainermJakeAfterBattleText:
 
 	para "I hear that the"
 	line "LEAGUE's ELITE"
-
 	para "FOUR are tougher"
 	line "than GYM LEADERS."
 	done
@@ -269,7 +233,6 @@ CooltrainermGaven3BeatenText:
 CooltrainermGavenAfterText:
 	text "To get to #MON"
 	line "LEAGUE, you have"
-
 	para "to get through"
 	line "VICTORY ROAD."
 
@@ -296,10 +259,9 @@ CooltrainerfJoyceBeatenText:
 	done
 
 CooltrainerfJoyceAfterBattleText:
-	text "I've defeated"
-	line "eight GYM LEADERS,"
-
-	para "so I was feeling"
+	text "I've defeated 16"
+	line "GYM LEADERS, so I"
+	para "was feeling"
 	line "confident."
 
 	para "I'll have to try"
@@ -307,8 +269,8 @@ CooltrainerfJoyceAfterBattleText:
 	done
 
 CooltrainerfBeth1SeenText:
-	text "I lost to a train-"
-	line "er named <RIVAL>."
+	text "I lost to a red-"
+	line "haired TRAINER."
 
 	para "He was really"
 	line "strong, but…"
@@ -327,9 +289,9 @@ CooltrainerfBeth1BeatenText:
 	done
 
 CooltrainerfBethAfterText:
-	text "#MON are in-"
-	line "valuable, lifelong"
-	cont "partners."
+	text "#MON are"
+	line "invaluable,"
+	cont "lifelong partners."
 	done
 
 PsychicRichardSeenText:
@@ -339,7 +301,6 @@ PsychicRichardSeenText:
 
 	para "But you're not"
 	line "satisfied by just"
-
 	para "collecting them,"
 	line "right?"
 	done
@@ -374,7 +335,6 @@ FisherScottBeatenText:
 FisherScottAfterBattleText:
 	text "Just like in fish-"
 	line "ing, it's all over"
-
 	para "in #MON if you"
 	line "give up."
 	done

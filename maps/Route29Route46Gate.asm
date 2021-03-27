@@ -29,7 +29,6 @@ Route29Route46GateYoungsterText:
 
 	para "If you want to"
 	line "catch them all,"
-
 	para "you have to look"
 	line "everywhere."
 	done

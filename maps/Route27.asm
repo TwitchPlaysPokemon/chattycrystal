@@ -11,27 +11,21 @@
 
 Route27_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 FirstStepIntoKantoLeftScene:
 	turnobject ROUTE27_FISHER, LEFT
 	showemote EMOTE_SHOCK, ROUTE27_FISHER, 15
-	applymovement ROUTE27_FISHER, MovementData_0x1a0a66
+	applymovement ROUTE27_FISHER, Route27TwoStepsLeftMovement
 	sjump FirstStepIntoKantoScene_Continue
 
 FirstStepIntoKantoRightScene:
 	turnobject ROUTE27_FISHER, LEFT
 	showemote EMOTE_SHOCK, ROUTE27_FISHER, 15
-	applymovement ROUTE27_FISHER, MovementData_0x1a0a69
+	applymovement ROUTE27_FISHER, Route27OneStepLeftMovement
 FirstStepIntoKantoScene_Continue:
 	turnobject PLAYER, RIGHT
 	opentext
@@ -51,11 +45,7 @@ TrainerPsychicGilbert:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PsychicGilbertAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PsychicGilbertAfterBattleText
 
 TrainerBirdKeeperJose2:
 	trainer BIRD_KEEPER, JOSE1, EVENT_BEAT_BIRD_KEEPER_JOSE2, BirdKeeperJose2SeenText, BirdKeeperJose2BeatenText, 0, .Script
@@ -93,7 +83,7 @@ TrainerBirdKeeperJose2:
 	winlosstext BirdKeeperJose2BeatenText, 0
 	readmem wJoseFightCount
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
@@ -115,70 +105,48 @@ TrainerBirdKeeperJose2:
 .HasStarPiece:
 	scall .Gift
 	verbosegiveitem STAR_PIECE
-	iffalse .NoRoom
+	iffalse .PackFull
 	clearflag ENGINE_JOSE_HAS_STAR_PIECE
-	sjump .NumberAccepted
-
-.NoRoom:
-	sjump .PackFull
-
-.AskNumber1:
-	jumpstd asknumber1m
-	end
-
-.AskNumber2:
-	jumpstd asknumber2m
-	end
-
-.RegisteredNumber:
-	jumpstd registerednumberm
-	end
-
 .NumberAccepted:
 	jumpstd numberacceptedm
-	end
-
-.NumberDeclined:
-	jumpstd numberdeclinedm
-	end
-
-.PhoneFull:
-	jumpstd phonefullm
-	end
-
-.Rematch:
-	jumpstd rematchm
-	end
-
-.Gift:
-	jumpstd giftm
-	end
 
 .PackFull:
 	jumpstd packfullm
-	end
+
+.AskNumber1:
+	jumpstd asknumber1m
+
+.AskNumber2:
+	jumpstd asknumber2m
+
+.RegisteredNumber:
+	jumpstd registerednumberm
+
+.NumberDeclined:
+	jumpstd numberdeclinedm
+
+.PhoneFull:
+	jumpstd phonefullm
+
+.Rematch:
+	jumpstd rematchm
+
+.Gift:
+	jumpstd giftm
 
 TrainerCooltrainermBlake:
 	trainer COOLTRAINERM, BLAKE, EVENT_BEAT_COOLTRAINERM_BLAKE, CooltrainermBlakeSeenText, CooltrainermBlakeBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermBlakeAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermBlakeAfterBattleText
 
 TrainerCooltrainermBrian:
 	trainer COOLTRAINERM, BRIAN, EVENT_BEAT_COOLTRAINERM_BRIAN, CooltrainermBrianSeenText, CooltrainermBrianBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainermBrianAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainermBrianAfterBattleText
 
 TrainerCooltrainerfReena:
 	trainer COOLTRAINERF, REENA1, EVENT_BEAT_COOLTRAINERF_REENA, CooltrainerfReenaSeenText, CooltrainerfReenaBeatenText, 0, .Script
@@ -207,14 +175,15 @@ TrainerCooltrainerfReena:
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
 	gettrainername STRING_BUFFER_3, COOLTRAINERF, REENA1
 	scall .RegisteredNumber
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedf
 
 .WantsBattle:
 	scall .Rematch
 	winlosstext CooltrainerfReenaBeatenText, 0
 	readmem wReenaFightCount
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight1
@@ -235,42 +204,28 @@ TrainerCooltrainerfReena:
 
 .AskNumber1:
 	jumpstd asknumber1f
-	end
 
 .AskNumber2:
 	jumpstd asknumber2f
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedf
-	end
 
 .PhoneFull:
 	jumpstd phonefullf
-	end
 
 .Rematch:
 	jumpstd rematchf
-	end
 
 TrainerCooltrainerfMegan:
 	trainer COOLTRAINERF, MEGAN, EVENT_BEAT_COOLTRAINERF_MEGAN, CooltrainerfMeganSeenText, CooltrainerfMeganBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CooltrainerfMeganAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfMeganAfterBattleText
 
 TohjoFallsSign:
 	jumptext TohjoFallsSignText
@@ -281,12 +236,9 @@ Route27TMSolarbeam:
 Route27RareCandy:
 	itemball RARE_CANDY
 
-MovementData_0x1a0a66:
+Route27TwoStepsLeftMovement:
 	step LEFT
-	step LEFT
-	step_end
-
-MovementData_0x1a0a69:
+Route27OneStepLeftMovement:
 	step LEFT
 	step_end
 
@@ -319,7 +271,6 @@ CooltrainermBlakeBeatenText:
 CooltrainermBlakeAfterBattleText:
 	text "If you prevail on"
 	line "this harsh trek,"
-
 	para "the truth will be"
 	line "revealed!"
 
@@ -346,7 +297,6 @@ CooltrainermBrianAfterBattleText:
 CooltrainerfReenaSeenText:
 	text "You shouldn't"
 	line "underestimate the"
-
 	para "wild #MON in"
 	line "these parts."
 	done
@@ -359,7 +309,6 @@ CooltrainerfReenaBeatenText:
 CooltrainerfReenaAfterBattleText:
 	text "You're just a kid,"
 	line "but you're not to"
-
 	para "be underestimated"
 	line "either."
 	done
@@ -429,9 +378,8 @@ BirdKeeperJose2BeatenText:
 BirdKeeperJose2AfterBattleText:
 	text "BIRD KEEPERS like"
 	line "me mimic bird"
-
-	para "whistles to com-"
-	line "mand #MON."
+	para "whistles to"
+	line "command #MON."
 	done
 
 TohjoFallsSignText:

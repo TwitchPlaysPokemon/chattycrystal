@@ -208,10 +208,7 @@ MahoganyTownRagecandybarSignText:
 MahoganyGymSignText:
 	text "MAHOGANY TOWN"
 	line "#MON GYM"
-	cont "LEADER: PRYCE"
-
-	para "The Teacher of"
-	line "Winter's Harshness"
+	cont "LEADER: Y"
 	done
 
 MahoganyTown_MapEvents:

@@ -261,17 +261,17 @@ PokemonCries::
 	mon_cry CRY_TREECKO,    -$0b7,  $200 ; SCEPTILE
 	mon_cry CRY_HOOTHOOT,    $100,  $070 ; TORCHIC
 	mon_cry CRY_HOOTHOOT,    $0e9,  $0f4 ; COMBUSKEN
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BLAZIKEN - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MUDKIP - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MARSHTOMP - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SWAMPERT - PLACEHOLDER
+	mon_cry CRY_TYPHLOSION,  $f43,  $100 ; BLAZIKEN
+	mon_cry CRY_SPEAROW,     $f58,  $060 ; MUDKIP
+	mon_cry CRY_ODDISH,      $0ea,  $0e0 ; MARSHTOMP
+	mon_cry CRY_GOLEM,       $dea,  $1c0 ; SWAMPERT
 	mon_cry CRY_MUK,         $115,  $0c0 ; POOCHYENA
 	mon_cry CRY_BLASTOISE,   $000,  $150 ; MIGHTYENA
 	mon_cry CRY_NIDORAN_M,  -$030,  $1b0 ; ZIGZAGOON
 	mon_cry CRY_BLASTOISE,   $2f0,  $100 ; LINOONE
 	mon_cry CRY_LOTAD,       $0df,  $084 ; LOTAD
 	mon_cry CRY_LOMBRE,      $028,  $140 ; LOMBRE
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LUDICOLO - PLACEHOLDER
+	mon_cry CRY_KRABBY,      $0d0,  $0fa ; LUDICOLO
 	mon_cry CRY_SPEAROW,     $06f,  $080 ; TAILLOW
 	mon_cry CRY_SPEAROW,     $020,  $090 ; SWELLOW
 	mon_cry CRY_SWELLOW,     $000,  $100 ; WINGULL

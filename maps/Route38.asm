@@ -17,22 +17,14 @@ TrainerBirdKeeperToby:
 
 .Script
 	endifjustbattled
-	opentext
-	writetext BirdKeeperTobyAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BirdKeeperTobyAfterBattleText
 
 TrainerSailorHarry:
 	trainer SAILOR, HARRY, EVENT_BEAT_SAILOR_HARRY, SailorHarrySeenText, SailorHarryBeatenText, 0, .Script
 
 .Script
 	endifjustbattled
-	opentext
-	writetext SailorHarryAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext SailorHarryAfterBattleText
 
 TrainerLassDana1:
 	trainer LASS, DANA1, EVENT_BEAT_LASS_DANA, LassDana1SeenText, LassDana1BeatenText, 0, .Script
@@ -49,7 +41,7 @@ TrainerLassDana1:
 	iftrue .NumberAccepted
 	checkevent EVENT_DANA_ASKED_FOR_PHONE_NUMBER
 	iftrue .SecondTimeAsking
-	writetext UnknownText_0x1a20ec
+	writetext TrainerLassDana1AskPhoneNumberText
 	buttonsound
 	setevent EVENT_DANA_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1F
@@ -73,7 +65,7 @@ TrainerLassDana1:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -131,46 +123,32 @@ TrainerLassDana1:
 	iffalse .NoRoomForThunderstone
 	clearflag ENGINE_DANA_HAS_THUNDERSTONE
 	setevent EVENT_DANA_GAVE_THUNDERSTONE
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedf
 
 .NoRoomForThunderstone:
-	sjump .PackFull
+	jumpstd packfullf
 
 .AskNumber1F:
 	jumpstd asknumber1f
-	end
 
 .AskNumber2F:
 	jumpstd asknumber2f
-	end
 
 .RegisteredPhoneNumber:
 	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
 
 .DeclinedPhoneNumber:
 	jumpstd numberdeclinedf
-	end
 
 .PhoneFull:
 	jumpstd phonefullf
-	end
 
 .Rematch:
 	jumpstd rematchf
-	end
 
 .Gift:
 	jumpstd giftf
-	end
-
-.PackFull:
-	jumpstd packfullf
-	end
 
 TrainerSchoolboyChad1:
 	trainer SCHOOLBOY, CHAD1, EVENT_BEAT_SCHOOLBOY_CHAD, SchoolboyChad1SeenText, SchoolboyChad1BeatenText, 0, .Script
@@ -185,7 +163,7 @@ TrainerSchoolboyChad1:
 	iftrue .HaveChadsNumber
 	checkevent EVENT_CHAD_ASKED_FOR_PHONE_NUMBER
 	iftrue .SecondTimeAsking
-	writetext UnknownText_0x1a200e
+	writetext TrainerSchoolboyChad1AskPhoneNumberText
 	buttonsound
 	setevent EVENT_CHAD_ASKED_FOR_PHONE_NUMBER
 	scall .AskPhoneNumber1
@@ -199,7 +177,8 @@ TrainerSchoolboyChad1:
 	ifequal PHONE_CONTACT_REFUSED, .SaidNo
 	gettrainername STRING_BUFFER_3, SCHOOLBOY, CHAD1
 	scall .RegisteredChad
-	sjump .HaveChadsNumber
+.HaveChadsNumber:
+	jumpstd numberacceptedm
 
 .ChadRematch:
 	scall .Rematch
@@ -209,7 +188,7 @@ TrainerSchoolboyChad1:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -263,53 +242,35 @@ TrainerSchoolboyChad1:
 
 .AskPhoneNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskPhoneNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredChad:
 	jumpstd registerednumberm
-	end
-
-.HaveChadsNumber:
-	jumpstd numberacceptedm
-	end
 
 .SaidNo:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .Rematch:
 	jumpstd rematchm
-	end
 
 TrainerBeautyValerie:
 	trainer BEAUTY, VALERIE, EVENT_BEAT_BEAUTY_VALERIE, BeautyValerieSeenText, BeautyValerieBeatenText, 0, .Script
 
 .Script
 	endifjustbattled
-	opentext
-	writetext BeautyValerieAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BeautyValerieAfterBattleText
 
 TrainerBeautyOlivia:
 	trainer BEAUTY, OLIVIA, EVENT_BEAT_BEAUTY_OLIVIA, BeautyOliviaSeenText, BeautyOliviaBeatenText, 0, .Script
 
 .Script
 	endifjustbattled
-	opentext
-	writetext BeautyOliviaAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BeautyOliviaAfterBattleText
 
 Route38Sign:
 	jumptext Route38SignText
@@ -334,7 +295,6 @@ BirdKeeperTobyBeatenText:
 BirdKeeperTobyAfterBattleText:
 	text "I plan to train in"
 	line "CIANWOOD CITY to"
-
 	para "teach my #MON"
 	line "how to FLY."
 	done
@@ -350,10 +310,9 @@ SchoolboyChad1BeatenText:
 	line "enough, I guess."
 	done
 
-UnknownText_0x1a200e:
+TrainerSchoolboyChad1AskPhoneNumberText:
 	text "I have to take so"
 	line "many tests, I"
-
 	para "don't have much"
 	line "time for #MON."
 
@@ -376,7 +335,7 @@ LassDana1BeatenText:
 	line "battle that way."
 	done
 
-UnknownText_0x1a20ec:
+TrainerLassDana1AskPhoneNumberText:
 	text "I know something"
 	line "good!"
 
@@ -407,7 +366,6 @@ BeautyValerieAfterBattleText:
 SailorHarrySeenText:
 	text "I've been over-"
 	line "seas, so I know"
-
 	para "about all sorts of"
 	line "#MON!"
 	done
@@ -418,9 +376,8 @@ SailorHarryBeatenText:
 	done
 
 SailorHarryAfterBattleText:
-	text "All kinds of peo-"
-	line "ple around the"
-
+	text "All kinds of"
+	line "people around the"
 	para "world live happily"
 	line "with #MON."
 	done
@@ -439,10 +396,8 @@ BeautyOliviaBeatenText:
 BeautyOliviaAfterBattleText:
 	text "MOOMOO MILK is"
 	line "good for beauty"
-
 	para "and health, but"
 	line "inconveniently,"
-
 	para "they only sell a"
 	line "bottle at a time."
 	done
@@ -461,9 +416,9 @@ Route38TrainerTipsText:
 	line "trying to evolve,"
 	cont "you can stop it."
 
-	para "Press the B But-"
-	line "ton during evolu-"
-	cont "tion."
+	para "Press the B"
+	line "Button during"
+	cont "evolution."
 
 	para "That startles the"
 	line "#MON and stops"

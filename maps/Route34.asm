@@ -53,14 +53,13 @@ DayCareManScript_Outside:
 	special DayCareManOutside
 	waitbutton
 	closetext
-	ifequal TRUE, .end_fail
+	ifequal TRUE, GenericDummyScript
 	clearflag ENGINE_DAY_CARE_MAN_HAS_EGG
 	readvar VAR_FACING
 	ifequal RIGHT, .walk_around_player
 	applymovement ROUTE34_GRAMPS, Route34MovementData_DayCareManWalksBackInside
 	playsound SFX_ENTER_DOOR
 	disappear ROUTE34_GRAMPS
-.end_fail
 	end
 
 .walk_around_player
@@ -110,7 +109,8 @@ TrainerCamperTodd1:
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
 	gettrainername STRING_BUFFER_3, CAMPER, TODD1
 	scall .RegisteredNumber
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedm
 
 .Rematch:
 	scall .RematchStd
@@ -120,7 +120,7 @@ TrainerCamperTodd1:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -180,31 +180,21 @@ TrainerCamperTodd1:
 
 .AskNumber:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .RematchStd:
 	jumpstd rematchm
-	end
 
 TrainerPicnickerGina1:
 	trainer PICNICKER, GINA1, EVENT_BEAT_PICNICKER_GINA, PicnickerGina1SeenText, PicnickerGina1BeatenText, 0, .Script
@@ -245,7 +235,7 @@ TrainerPicnickerGina1:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -303,54 +293,40 @@ TrainerPicnickerGina1:
 	iffalse .BagFull
 	clearflag ENGINE_GINA_HAS_LEAF_STONE
 	setevent EVENT_GINA_GAVE_LEAF_STONE
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedf
 
 .BagFull:
-	sjump .PackFull
+	jumpstd packfullf
 
 .AskNumber1:
 	jumpstd asknumber1f
-	end
 
 .AskNumber2:
 	jumpstd asknumber2f
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedf
-	end
 
 .PhoneFull:
 	jumpstd phonefullf
-	end
 
 .RematchStd:
 	jumpstd rematchf
-	end
 
 .Gift:
 	jumpstd giftf
-	end
-
-.PackFull:
-	jumpstd packfullf
-	end
 
 OfficerKeithScript:
-	faceplayer
-	opentext
 	checktime NITE
 	iffalse .NoFight
 	checkevent EVENT_BEAT_OFFICER_KEITH
 	iftrue .AfterScript
+	faceplayer
+	opentext
 	playmusic MUSIC_OFFICER_ENCOUNTER
 	writetext OfficerKeithSeenText
 	waitbutton
@@ -364,87 +340,55 @@ OfficerKeithScript:
 	end
 
 .AfterScript:
-	writetext OfficerKeithAfterText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer OfficerKeithAfterText
 
 .NoFight:
-	writetext OfficerKeithDaytimeText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer OfficerKeithDaytimeText
 
 TrainerYoungsterSamuel:
 	trainer YOUNGSTER, SAMUEL, EVENT_BEAT_YOUNGSTER_SAMUEL, YoungsterSamuelSeenText, YoungsterSamuelBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext YoungsterSamuelAfterText
-	waitbutton
-	closetext
-	end
+	jumptext YoungsterSamuelAfterText
 
 TrainerYoungsterIan:
 	trainer YOUNGSTER, IAN, EVENT_BEAT_YOUNGSTER_IAN, YoungsterIanSeenText, YoungsterIanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext YoungsterIanAfterText
-	waitbutton
-	closetext
-	end
+	jumptext YoungsterIanAfterText
 
 TrainerPokefanmBrandon:
 	trainer POKEFANM, BRANDON, EVENT_BEAT_POKEFANM_BRANDON, PokefanmBrandonSeenText, PokefanmBrandonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PokefanmBrandonAfterText
-	waitbutton
-	closetext
-	end
+	jumptext PokefanmBrandonAfterText
 
 TrainerCooltrainerfIrene:
 	trainer COOLTRAINERF, IRENE, EVENT_BEAT_COOLTRAINERF_IRENE, CooltrainerfIreneSeenText, CooltrainerfIreneBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
 	checkevent EVENT_GOT_SOFT_SAND_FROM_KATE
 	iftrue .GotSoftSand
-	writetext CooltrainerfIreneAfterText1
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfIreneAfterText1
 
 .GotSoftSand:
-	writetext CooltrainerfIreneAfterText2
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfIreneAfterText2
 
 TrainerCooltrainerfJenn:
 	trainer COOLTRAINERF, JENN, EVENT_BEAT_COOLTRAINERF_JENN, CooltrainerfJennSeenText, CooltrainerfJennBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
 	checkevent EVENT_GOT_SOFT_SAND_FROM_KATE
 	iftrue .GotSoftSand
-	writetext CooltrainerfJennAfterText1
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfJennAfterText1
 
 .GotSoftSand:
-	writetext CooltrainerfJennAfterText2
-	waitbutton
-	closetext
-	end
+	jumptext CooltrainerfJennAfterText2
 
 TrainerCooltrainerfKate:
 	trainer COOLTRAINERF, KATE, EVENT_BEAT_COOLTRAINERF_KATE, CooltrainerfKateSeenText, CooltrainerfKateBeatenText, 0, .Script
@@ -508,17 +452,6 @@ YoungsterSamuelBeatenText:
 	line "passing stranger!"
 	done
 
-YoungsterSamuelMobileText:
-	text "Have you been to"
-	line "GOLDENROD CITY?"
-
-	para "Weren't you amazed"
-	line "by how they've"
-
-	para "changed the"
-	line "#MON CENTER?"
-	done
-
 YoungsterSamuelAfterText:
 	text "I'm going to train"
 	line "even harder."
@@ -534,8 +467,8 @@ YoungsterIanSeenText:
 	done
 
 YoungsterIanBeatenText:
-	text "No! There are bet-"
-	line "ter trainers…"
+	text "No! There are"
+	line "better trainers…"
 	done
 
 YoungsterIanAfterText:
@@ -560,7 +493,6 @@ CamperTodd1BeatenText:
 CamperTodd1AfterText:
 	text "Maybe I should"
 	line "take one to a DAY-"
-
 	para "CARE. Or maybe use"
 	line "some items…"
 	done
@@ -605,7 +537,6 @@ OfficerKeithWinText:
 OfficerKeithAfterText:
 	text "Yep, I see nothing"
 	line "wrong today. You"
-
 	para "be good and stay"
 	line "out of trouble."
 	done
@@ -712,7 +643,6 @@ CooltrainerfKateAfterText:
 
 	para "We never expected"
 	line "anyone to find us"
-
 	para "here. You sure"
 	line "startled us."
 	done

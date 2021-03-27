@@ -28,33 +28,21 @@ TrainerTwinsAnnandanne1:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext TwinsAnnandanne1AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext TwinsAnnandanne1AfterBattleText
 
 TrainerTwinsAnnandanne2:
 	trainer TWINS, ANNANDANNE2, EVENT_BEAT_TWINS_ANN_AND_ANNE, TwinsAnnandanne2SeenText, TwinsAnnandanne2BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext TwinsAnnandanne2AfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext TwinsAnnandanne2AfterBattleText
 
 TrainerPsychicGreg:
 	trainer PSYCHIC_T, GREG, EVENT_BEAT_PSYCHIC_GREG, PsychicGregSeenText, PsychicGregBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PsychicGregAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PsychicGregAfterBattleText
 
 SunnyScript:
 	faceplayer
@@ -69,15 +57,8 @@ SunnyScript:
 	buttonsound
 	setevent EVENT_MET_SUNNY_OF_SUNDAY
 .MetSunny:
-	checkflag ENGINE_PLAYER_IS_FEMALE
-	iftrue .Kris
-	writetext SunnyGivesGiftText1
+	writetext SunnyGivesGiftText
 	buttonsound
-	sjump .next
-.Kris:
-	writetext SunnyGivesGiftText2
-	buttonsound
-.next
 	verbosegiveitem MAGNET
 	iffalse SunnyDoneScript
 	setevent EVENT_GOT_MAGNET_FROM_SUNNY
@@ -116,8 +97,8 @@ Route37HiddenEther:
 
 TwinsAnnandanne1SeenText:
 	text "ANN: ANNE and I"
-	line "are in this to-"
-	cont "gether!"
+	line "are in this"
+	cont "together!"
 	done
 
 TwinsAnnandanne1BeatenText:
@@ -128,15 +109,14 @@ TwinsAnnandanne1BeatenText:
 TwinsAnnandanne1AfterBattleText:
 	text "ANN: I can tell"
 	line "what my sister and"
-
 	para "my #MON are"
 	line "thinking."
 	done
 
 TwinsAnnandanne2SeenText:
 	text "ANNE: ANN and I"
-	line "are in this to-"
-	cont "gether!"
+	line "are in this"
+	cont "together!"
 	done
 
 TwinsAnnandanne2BeatenText:
@@ -179,13 +159,7 @@ MeetSunnyText:
 	cont "Sunday today!"
 	done
 
-SunnyGivesGiftText1:
-	text "I was told to give"
-	line "you this if I saw"
-	cont "you!"
-	done
-
-SunnyGivesGiftText2:
+SunnyGivesGiftText:
 	text "I was told to give"
 	line "you this if I saw"
 	cont "you!"
@@ -205,7 +179,6 @@ SunnyGaveGiftText:
 
 	para "A #MON that"
 	line "knows electric"
-
 	para "moves should hold"
 	line "it."
 
@@ -217,8 +190,8 @@ SunnyGaveGiftText:
 SunnySundayText:
 	text "SUNNY: My sisters"
 	line "and brothers are"
-	cont "MONICA, TUSCANY,"
-	cont "WESLEY, ARTHUR,"
+	para "MONICA, TUSCANY,"
+	line "WESLEY, ARTHUR,"
 	cont "FRIEDA and SANTOS."
 
 	para "They're all older"

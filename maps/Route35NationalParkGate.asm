@@ -3,8 +3,8 @@
 
 Route35NationalParkGate_MapScripts:
 	db 3 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_ROUTE35NATIONALPARKGATE_NOTHING
-	scene_script .DummyScene1 ; SCENE_ROUTE35NATIONALPARKGATE_UNUSED
+	scene_script GenericDummyScript ; SCENE_ROUTE35NATIONALPARKGATE_NOTHING
+	scene_script GenericDummyScript ; SCENE_ROUTE35NATIONALPARKGATE_UNUSED
 	scene_script .LeaveContestEarly ; SCENE_ROUTE35NATIONALPARKGATE_LEAVE_CONTEST_EARLY
 
 	db 1 ; callbacks
@@ -12,8 +12,6 @@ Route35NationalParkGate_MapScripts:
 
 .LeaveContestEarly:
 	prioritysjump .LeavingContestEarly
-.DummyScene0:
-.DummyScene1:
 	end
 
 .CheckIfContestRunning:
@@ -54,14 +52,13 @@ Route35NationalParkGate_MapScripts:
 
 Route35OfficerScriptContest:
 	scall NationalParkGate_StartContest
-	iffalse .end
+	iffalse GenericDummyScript
 	scall Route35NationalParkGate_EnterContest
 	playsound SFX_ENTER_DOOR
 	special FadeOutPalettes
 	waitsfx
 	special SelectRandomBugContestContestants
 	warpfacing UP, NATIONAL_PARK_BUG_CONTEST, 10, 47
-.end
 	end
 
 NationalParkGate_StartContest:
@@ -177,7 +174,6 @@ Route35NationalParkGateOfficer1AskToParticipateText:
 
 	para "Using one of your"
 	line "#MON, catch a"
-
 	para "bug #MON to be"
 	line "judged."
 
@@ -215,7 +211,6 @@ Route35NationalParkGateOfficer1ExplainsRulesText:
 
 	para "Go out and catch"
 	line "the strongest bug"
-
 	para "#MON you can"
 	line "find!"
 	done
@@ -230,7 +225,6 @@ Route35NationalParkGateOfficer1AskToUseFirstMonText:
 	line "@"
 	text_ram wStringBuffer3
 	text ", the"
-
 	para "first #MON in"
 	line "your party."
 
@@ -253,7 +247,6 @@ Route35NationalParkGatePlayersMonLeftWithHelperText:
 Route35NationalParkGateOfficer1ChooseMonAndComeBackText:
 	text "Please choose the"
 	line "#MON to be used"
-
 	para "in the Contest,"
 	line "then come see me."
 	done
@@ -267,13 +260,11 @@ Route35NationalParkGateOfficer1TakePartInFutureText:
 Route35NationalParkGateOfficer1FirstMonCantBattleText:
 	text "Uh-oh…"
 	line "The first #MON"
-
 	para "in your party"
 	line "can't battle."
 
 	para "Please switch it"
 	line "with the #MON"
-
 	para "you want to use,"
 	line "then come see me."
 	done
@@ -281,7 +272,6 @@ Route35NationalParkGateOfficer1FirstMonCantBattleText:
 Route35NationalParkGateOfficer1MakeRoomText:
 	text "Uh-oh…"
 	line "Both your party"
-
 	para "and your PC BOX"
 	line "are full."
 
@@ -291,7 +281,6 @@ Route35NationalParkGateOfficer1MakeRoomText:
 
 	para "Please make room"
 	line "in your party or"
-
 	para "your PC BOX, then"
 	line "come see me."
 	done
@@ -299,13 +288,11 @@ Route35NationalParkGateOfficer1MakeRoomText:
 Route35NationalParkGateOfficer1EggAsFirstMonText:
 	text "Uh-oh…"
 	line "You have an EGG as"
-
 	para "the first #MON"
 	line "in your party."
 
 	para "Please switch it"
 	line "with the #MON"
-
 	para "you want to use,"
 	line "then come see me."
 	done
@@ -323,7 +310,6 @@ Route35NationalParkGateOfficer1WantToFinishText:
 Route35NationalParkGateOfficer1WaitAtNorthGateText:
 	text "OK. Please wait at"
 	line "the North Gate for"
-
 	para "the announcement"
 	line "of the winners."
 	done
@@ -341,13 +327,10 @@ BugCatchingContestExplanationText:
 
 	para "Not only do you"
 	line "earn a prize just"
-
 	para "for participating,"
 	line "you also get to"
-
 	para "keep the bug"
 	line "#MON you may"
-
 	para "have at the end of"
 	line "the contest."
 	done

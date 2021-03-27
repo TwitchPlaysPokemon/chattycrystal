@@ -5,13 +5,10 @@
 
 Route35GoldenrodGate_MapScripts:
 	db 2 ; scene scripts
-	scene_script .dummy ; SCENE_DEFAULT
-	scene_script .dummy ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 0 ; callbacks
-
-.dummy
-	end
 
 RandyScript:
 	faceplayer
@@ -435,20 +432,12 @@ Route35GoldenrodGate_KenyaLock_MovementLeft:
 	step_end
 
 Route35GoldenrodGatePokefanFScript:
-	faceplayer
-	opentext
 	checkevent EVENT_FOUGHT_SUDOWOODO
 	iftrue .FoughtSudowoodo
-	writetext Route35GoldenrodGatePokefanFText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route35GoldenrodGatePokefanFText
 
 .FoughtSudowoodo
-	writetext Route35GoldenrodGatePokefanFText_FoughtSudowoodo
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route35GoldenrodGatePokefanFText_FoughtSudowoodo
 
 Route35GoldenrodGateFisherScript:
 	jumptextfaceplayer Route35GoldenrodGateFisherText
@@ -462,7 +451,6 @@ Route35GoldenrodGatePokefanFText:
 
 	para "I heard it became"
 	line "wild when someone"
-
 	para "watered it with a"
 	line "SQUIRTBOTTLE."
 	done
@@ -476,13 +464,11 @@ Route35GoldenrodGatePokefanFText_FoughtSudowoodo:
 Route35GoldenrodGateFisherText:
 	text "I wonder how many"
 	line "kinds of #MON"
-
 	para "there are in the"
 	line "world."
 
-	para "Three years ago,"
+	para "Some time ago,"
 	line "PROF.OAK said that"
-
 	para "there were 150"
 	line "different kinds."
 	done

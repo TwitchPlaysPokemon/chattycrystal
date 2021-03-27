@@ -27,7 +27,6 @@ Route36RuinsOfAlphGateGrampsText:
 
 	para "That may explain"
 	line "why fewer people"
-
 	para "are visiting the"
 	line "RUINS OF ALPH."
 	done

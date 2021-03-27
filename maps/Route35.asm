@@ -21,11 +21,7 @@ TrainerBirdKeeperBryan:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BirdKeeperBryanAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext BirdKeeperBryanAfterBattleText
 
 TrainerJugglerIrwin:
 	trainer JUGGLER, IRWIN1, EVENT_BEAT_JUGGLER_IRWIN, JugglerIrwin1SeenText, JugglerIrwin1BeatenText, 0, .Script
@@ -52,79 +48,54 @@ TrainerJugglerIrwin:
 	ifequal PHONE_CONTACT_REFUSED, Route35NumberDeclinedM
 	gettrainername STRING_BUFFER_3, JUGGLER, IRWIN1
 	scall Route35RegisteredNumberM
-	sjump Route35NumberAcceptedM
+Route35NumberAcceptedM:
+	jumpstd numberacceptedm
 
 Route35AskNumber1M:
 	jumpstd asknumber1m
-	end
 
 Route35AskNumber2M:
 	jumpstd asknumber2m
-	end
 
 Route35RegisteredNumberM:
 	jumpstd registerednumberm
-	end
-
-Route35NumberAcceptedM:
-	jumpstd numberacceptedm
-	end
 
 Route35NumberDeclinedM:
 	jumpstd numberdeclinedm
-	end
 
 Route35PhoneFullM:
 	jumpstd phonefullm
-	end
 
 Route35RematchM:
 	jumpstd rematchm
-	end
 
 TrainerCamperIvan:
 	trainer CAMPER, IVAN, EVENT_BEAT_CAMPER_IVAN, CamperIvanSeenText, CamperIvanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CamperIvanAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CamperIvanAfterBattleText
 
 TrainerCamperElliot:
 	trainer CAMPER, ELLIOT, EVENT_BEAT_CAMPER_ELLIOT, CamperElliotSeenText, CamperElliotBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CamperElliotAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext CamperElliotAfterBattleText
 
 TrainerPicnickerBrooke:
 	trainer PICNICKER, BROOKE, EVENT_BEAT_PICNICKER_BROOKE, PicnickerBrookeSeenText, PicnickerBrookeBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PicnickerBrookeAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PicnickerBrookeAfterBattleText
 
 TrainerPicnickerKim:
 	trainer PICNICKER, KIM, EVENT_BEAT_PICNICKER_KIM, PicnickerKimSeenText, PicnickerKimBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PicnickerKimAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PicnickerKimAfterBattleText
 
 TrainerBugCatcherArnie:
 	trainer BUG_CATCHER, ARNIE1, EVENT_BEAT_BUG_CATCHER_ARNIE, BugCatcherArnieSeenText, BugCatcherArnieBeatenText, 0, .Script
@@ -165,7 +136,7 @@ TrainerBugCatcherArnie:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -228,19 +199,15 @@ TrainerFirebreatherWalt:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FirebreatherWaltAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext FirebreatherWaltAfterBattleText
 
 TrainerOfficerDirk:
-	faceplayer
-	opentext
 	checktime NITE
 	iffalse .NotNight
 	checkevent EVENT_BEAT_OFFICER_DIRK
 	iftrue .AfterBattle
+	faceplayer
+	opentext
 	playmusic MUSIC_OFFICER_ENCOUNTER
 	writetext OfficerDirkSeenText
 	waitbutton
@@ -254,16 +221,10 @@ TrainerOfficerDirk:
 	end
 
 .AfterBattle:
-	writetext OfficerDirkAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer OfficerDirkAfterBattleText
 
 .NotNight:
-	writetext OfficerDirkPrettyToughText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer OfficerDirkPrettyToughText
 
 Route35Sign:
 	jumptext Route35SignText
@@ -277,7 +238,6 @@ Route35FruitTree:
 CamperIvanSeenText:
 	text "I've been getting"
 	line "#MON data off"
-
 	para "my radio. I think"
 	line "I'm good."
 	done
@@ -401,7 +361,6 @@ BugCatcherArnieBeatenText:
 BugCatcherArnieAfterBattleText:
 	text "My VENONAT won me"
 	line "the Bug-Catching"
-
 	para "Contest at the"
 	line "NATIONAL PARK."
 	done
@@ -452,8 +411,8 @@ OfficerDirkPrettyToughText:
 	text "Your #MON look"
 	line "pretty tough."
 
-	para "You could go any-"
-	line "where safely."
+	para "You could go"
+	line "anywhere safely."
 	done
 
 Route35SignText:

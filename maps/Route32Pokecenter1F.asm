@@ -12,10 +12,10 @@ Route32Pokecenter1FNurseScript:
 	jumpstd pokecenternurse
 
 Route32Pokecenter1FFishingGuruScript:
-	faceplayer
-	opentext
 	checkevent EVENT_GOT_OLD_ROD
 	iftrue .GotOldRod
+	faceplayer
+	opentext
 	writetext Route32Pokecenter1FFishingGuruText_Question
 	yesorno
 	iffalse .Refused
@@ -35,10 +35,7 @@ Route32Pokecenter1FFishingGuruScript:
 	end
 
 .GotOldRod:
-	writetext Route32Pokecenter1FFishingGuruText_After
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route32Pokecenter1FFishingGuruText_After
 
 Route32Pokecenter1FCooltrainerFScript:
 	jumptextfaceplayer Route32Pokecenter1FCooltrainerFText
@@ -68,7 +65,6 @@ Route32Pokecenter1FFishingGuruText_GiveOldRod:
 
 	para "If there's water,"
 	line "be it the sea or a"
-
 	para "stream, try out"
 	line "your ROD."
 	done

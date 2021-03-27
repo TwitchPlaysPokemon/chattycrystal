@@ -16,17 +16,12 @@
 
 Route32_MapScripts:
 	db 3 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_ROUTE32_OFFER_SLOWPOKETAIL
-	scene_script .DummyScene2 ; SCENE_ROUTE32_NOTHING
+	scene_script GenericDummyScript ; SCENE_DEFAULT
+	scene_script GenericDummyScript ; SCENE_ROUTE32_OFFER_SLOWPOKETAIL
+	scene_script GenericDummyScript ; SCENE_ROUTE32_NOTHING
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .Frieda
-
-.DummyScene0:
-.DummyScene1:
-.DummyScene2:
-	end
 
 .Frieda:
 	readvar VAR_WEEKDAY
@@ -129,22 +124,14 @@ TrainerCamperRoland:
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext CamperRolandAfterText
-	waitbutton
-	closetext
-	end
+	jumptext CamperRolandAfterText
 
 TrainerFisherJustin:
 	trainer FISHER, JUSTIN, EVENT_BEAT_FISHER_JUSTIN, FisherJustinSeenText, FisherJustinBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherJustinAfterText
-	waitbutton
-	closetext
-	end
+	jumptext FisherJustinAfterText
 
 TrainerFisherRalph1:
 	trainer FISHER, RALPH1, EVENT_BEAT_FISHER_RALPH, FisherRalph1SeenText, FisherRalph1BeatenText, 0, .Script
@@ -175,7 +162,8 @@ TrainerFisherRalph1:
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
 	gettrainername STRING_BUFFER_3, FISHER, RALPH1
 	scall .RegisteredNumber
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedm
 
 .Rematch:
 	scall .RematchStd
@@ -185,7 +173,7 @@ TrainerFisherRalph1:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -245,42 +233,28 @@ TrainerFisherRalph1:
 
 .AskNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .RematchStd:
 	jumpstd rematchm
-	end
 
 TrainerFisherHenry:
 	trainer FISHER, HENRY, EVENT_BEAT_FISHER_HENRY, FisherHenrySeenText, FisherHenryBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext FisherHenryAfterText
-	waitbutton
-	closetext
-	end
+	jumptext FisherHenryAfterText
 
 TrainerPicnickerLiz1:
 	trainer PICNICKER, LIZ1, EVENT_BEAT_PICNICKER_LIZ, PicnickerLiz1SeenText, PicnickerLiz1BeatenText, 0, .Script
@@ -309,7 +283,8 @@ TrainerPicnickerLiz1:
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
 	gettrainername STRING_BUFFER_3, PICNICKER, LIZ1
 	scall .RegisteredNumber
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedf
 
 .Rematch:
 	scall .RematchStd
@@ -319,7 +294,7 @@ TrainerPicnickerLiz1:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -373,64 +348,42 @@ TrainerPicnickerLiz1:
 
 .AskNumber1:
 	jumpstd asknumber1f
-	end
 
 .AskNumber2:
 	jumpstd asknumber2f
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberf
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedf
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedf
-	end
 
 .PhoneFull:
 	jumpstd phonefullf
-	end
 
 .RematchStd:
 	jumpstd rematchf
-	end
 
 TrainerYoungsterAlbert:
 	trainer YOUNGSTER, ALBERT, EVENT_BEAT_YOUNGSTER_ALBERT, YoungsterAlbertSeenText, YoungsterAlbertBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext YoungsterAlbertAfterText
-	waitbutton
-	closetext
-	end
+	jumptext YoungsterAlbertAfterText
 
 TrainerYoungsterGordon:
 	trainer YOUNGSTER, GORDON, EVENT_BEAT_YOUNGSTER_GORDON, YoungsterGordonSeenText, YoungsterGordonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext YoungsterGordonAfterText
-	waitbutton
-	closetext
-	end
+	jumptext YoungsterGordonAfterText
 
 TrainerBirdKeeperPeter:
 	trainer BIRD_KEEPER, PETER, EVENT_BEAT_BIRD_KEEPER_PETER, BirdKeeperPeterSeenText, BirdKeeperPeterBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext BirdKeeperPeterAfterText
-	waitbutton
-	closetext
-	end
+	jumptext BirdKeeperPeterAfterText
 
 FriedaScript:
 	faceplayer
@@ -513,13 +466,11 @@ Route32CooltrainerMText_WhatsTheHurry:
 Route32CooltrainerMText_AideIsWaiting:
 	text "<PLAYER>, right?"
 	line "Some guy wearing"
-
 	para "glasses was look-"
 	line "ing for you."
 
 	para "See for yourself."
 	line "He's waiting for"
-
 	para "you at the #MON"
 	line "CENTER."
 	done
@@ -529,8 +480,8 @@ Route32CooltrainerMText_VioletGym:
 	line "the #MON GYM?"
 
 	para "You can test your"
-	line "#MON and your-"
-	cont "self there."
+	line "#MON and"
+	cont "yourself there."
 
 	para "It's a rite of"
 	line "passage for all"
@@ -543,13 +494,11 @@ Route32CooltrainerMText_HaveThisSeed:
 
 	para "It must be from"
 	line "the training you"
-
 	para "gave them around"
 	line "VIOLET CITY."
 
 	para "The training at"
 	line "the GYM must have"
-
 	para "been especially"
 	line "helpful."
 
@@ -565,7 +514,6 @@ Route32CooltrainerMText_HaveThisSeed:
 Route32CooltrainerMText_ExperiencesShouldBeUseful:
 	text "Your experiences"
 	line "in VIOLET CITY"
-
 	para "should be useful"
 	line "for your journey."
 	done
@@ -573,7 +521,6 @@ Route32CooltrainerMText_ExperiencesShouldBeUseful:
 Text_MillionDollarSlowpokeTail:
 	text "How would you like"
 	line "to have this"
-
 	para "tasty, nutritious"
 	line "SLOWPOKETAIL?"
 
@@ -608,7 +555,6 @@ FisherJustinBeatenText:
 FisherJustinAfterText:
 	text "Calm, collected…"
 	line "The essence of"
-
 	para "fishing and #-"
 	line "MON is the same."
 	done
@@ -628,20 +574,18 @@ FisherRalph1BeatenText:
 	done
 
 FisherRalphAfterText:
-	text "Fishing is a life-"
-	line "long passion."
+	text "Fishing is a"
+	line "lifelong passion."
 
-	para "#MON are life-"
-	line "long friends!"
+	para "#MON are"
+	line "lifelong friends!"
 	done
 
 FisherRalphSwarmText:
 	text "One, two, three…"
 	line "Muahahaha, what a"
-
 	para "great haul!"
 	line "I'm done! Go ahead"
-
 	para "and catch as many"
 	line "as you can, kid!"
 	done
@@ -658,7 +602,6 @@ FisherHenryBeatenText:
 FisherHenryAfterText:
 	text "Freshly caught"
 	line "#MON are no"
-
 	para "match for properly"
 	line "raised ones."
 	done
@@ -763,7 +706,6 @@ BirdKeeperPeterAfterText:
 Text_RoarIntro:
 	text "WROOOOAR!"
 	line "PEOPLE RUN WHEN I"
-
 	para "ROAR! BUT YOU"
 	line "CAME LOOKING!"
 

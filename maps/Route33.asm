@@ -40,7 +40,8 @@ TrainerHikerAnthony:
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
 	gettrainername STRING_BUFFER_3, HIKER, ANTHONY2
 	scall .RegisteredNumber
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedm
 
 .Rematch:
 	scall .RematchStd
@@ -50,7 +51,7 @@ TrainerHikerAnthony:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -110,31 +111,21 @@ TrainerHikerAnthony:
 
 .AskNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .RematchStd:
 	jumpstd rematchm
-	end
 
 Route33Sign:
 	jumptext Route33SignText
@@ -145,7 +136,6 @@ Route33FruitTree:
 HikerAnthony2SeenText:
 	text "I came through the"
 	line "tunnel, but I"
-
 	para "still have plenty"
 	line "of energy left."
 	done
@@ -183,7 +173,6 @@ Route33LassText:
 
 	para "I got too tired to"
 	line "explore the whole"
-
 	para "thing, so I came"
 	line "outside."
 	done

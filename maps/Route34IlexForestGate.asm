@@ -24,27 +24,26 @@ Route34IlexForestGate_MapScripts:
 
 Route34IlexForestGateCelebiEvent:
 	checkevent EVENT_FOREST_IS_RESTLESS
-	iffalse .skip
+	iffalse GenericDummyScript
 	showemote EMOTE_SHOCK, ROUTE34ILEXFORESTGATE_TEACHER2, 20
 	turnobject ROUTE34ILEXFORESTGATE_TEACHER2, LEFT
 	turnobject PLAYER, RIGHT
 	follow PLAYER, ROUTE34ILEXFORESTGATE_TEACHER2
-	applymovement PLAYER, MovementData_0x62d97
+	applymovement PLAYER, Route34IlexForestGate_Movement_PushBack
 	stopfollow
 	turnobject PLAYER, DOWN
 	opentext
 	writetext Route34IlexForestGateTeacher_ForestIsRestless
 	waitbutton
 	closetext
-	applymovement ROUTE34ILEXFORESTGATE_TEACHER2, MovementData_0x62d9a
-.skip:
+	applymovement ROUTE34ILEXFORESTGATE_TEACHER2, Route34IlexForestGate_Movement_Return
 	end
 
 Route34IlexForestGateTeacherScript:
-	faceplayer
-	opentext
 	checkevent EVENT_FOREST_IS_RESTLESS
 	iftrue .ForestIsRestless
+	faceplayer
+	opentext
 	checkevent EVENT_GOT_TM12_SWEET_SCENT
 	iftrue .GotSweetScent
 	writetext Route34IlexForestGateTeacherText
@@ -60,10 +59,7 @@ Route34IlexForestGateTeacherScript:
 	end
 
 .ForestIsRestless:
-	writetext Route34IlexForestGateTeacher_ForestIsRestless
-	buttonsound
-	closetext
-	end
+	jumptextfaceplayer Route34IlexForestGateTeacher_ForestIsRestless
 
 Route34IlexForestGateButterfreeScript:
 	opentext
@@ -76,12 +72,12 @@ Route34IlexForestGateButterfreeScript:
 Route34IlexForestGateLassScript:
 	jumptextfaceplayer Route34IlexForestGateLassText
 
-MovementData_0x62d97:
+Route34IlexForestGate_Movement_PushBack:
 	step UP
 	step UP
 	step_end
 
-MovementData_0x62d9a:
+Route34IlexForestGate_Movement_Return:
 	step DOWN
 	step RIGHT
 	step_end
@@ -92,7 +88,6 @@ Route34IlexForestGateTeacherText:
 
 	para "It must be hard if"
 	line "#MON won't"
-
 	para "appear. Try using"
 	line "this TM."
 	done

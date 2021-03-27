@@ -11,17 +11,11 @@
 
 Route36_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_ROUTE36_NOTHING
-	scene_script .DummyScene1 ; SCENE_ROUTE36_SUICUNE
+	scene_script GenericDummyScript ; SCENE_ROUTE36_NOTHING
+	scene_script GenericDummyScript ; SCENE_ROUTE36_SUICUNE
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .ArthurCallback
-
-.DummyScene0:
-	end
-
-.DummyScene1:
-	end
 
 .ArthurCallback:
 	readvar VAR_WEEKDAY
@@ -50,7 +44,6 @@ Route36SuicuneScript:
 SudowoodoScript:
 	checkitem SQUIRTBOTTLE
 	iftrue .Fight
-
 	waitsfx
 	playsound SFX_SANDSTORM
 	applymovement ROUTE36_WEIRD_TREE, SudowoodoShakeMovement
@@ -60,8 +53,8 @@ SudowoodoScript:
 	opentext
 	writetext UseSquirtbottleText
 	yesorno
-	iffalse DidntUseSquirtbottleScript
 	closetext
+	iffalse GenericDummyScript
 WateredWeirdTreeScript:: ; export (for when you use Squirtbottle from pack)
 	opentext
 	writetext UsedSquirtbottleText
@@ -76,15 +69,11 @@ WateredWeirdTreeScript:: ; export (for when you use Squirtbottle from pack)
 	closetext
 	loadwildmon SUDOWOODO, 25
 	startbattle
+	reloadmapafterbattle
 	setevent EVENT_FOUGHT_SUDOWOODO
-	ifequal DRAW, DidntCatchSudowoodo
+	iftrue DidntCatchSudowoodo
 	disappear ROUTE36_WEIRD_TREE
 	variablesprite SPRITE_WEIRD_TREE, SPRITE_TWIN
-	reloadmapafterbattle
-	end
-
-DidntUseSquirtbottleScript:
-	closetext
 	end
 
 DidntCatchSudowoodo:
@@ -149,20 +138,12 @@ Route36RockSmashGuyScript:
 	end
 
 Route36LassScript:
-	faceplayer
-	opentext
 	checkevent EVENT_FOUGHT_SUDOWOODO
 	iftrue .ClearedSudowoodo
-	writetext Route36LassText
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route36LassText
 
 .ClearedSudowoodo:
-	writetext Route36LassText_ClearedSudowoodo
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer Route36LassText_ClearedSudowoodo
 
 TrainerSchoolboyAlan1:
 	trainer SCHOOLBOY, ALAN1, EVENT_BEAT_SCHOOLBOY_ALAN, SchoolboyAlan1SeenText, SchoolboyAlan1BeatenText, 0, .Script
@@ -179,7 +160,7 @@ TrainerSchoolboyAlan1:
 	iftrue .NumberAccepted
 	checkevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
 	iftrue .AskAgainForPhoneNumber
-	writetext UnknownText_0x1947aa
+	writetext TrainerSchoolboyAlan1AskPhoneNumberText
 	buttonsound
 	setevent EVENT_ALAN_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1
@@ -193,7 +174,8 @@ TrainerSchoolboyAlan1:
 	ifequal PHONE_CONTACT_REFUSED, .NumberDeclined
 	gettrainername STRING_BUFFER_3, SCHOOLBOY, ALAN1
 	scall .RegisteredNumber
-	sjump .NumberAccepted
+.NumberAccepted:
+	jumpstd numberacceptedm
 
 .ChooseRematch:
 	scall .Rematch
@@ -203,7 +185,7 @@ TrainerSchoolboyAlan1:
 	ifequal 3, .Fight3
 	ifequal 2, .Fight2
 	ifequal 1, .Fight1
-	ifequal 0, .LoadFight0
+	iffalse .LoadFight0
 .Fight4:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
@@ -264,54 +246,35 @@ TrainerSchoolboyAlan1:
 	sjump .NumberAccepted
 
 .BagFull:
-	sjump .PackFull
+	jumpstd packfullm
 
 .AskNumber1:
 	jumpstd asknumber1m
-	end
 
 .AskNumber2:
 	jumpstd asknumber2m
-	end
 
 .RegisteredNumber:
 	jumpstd registerednumberm
-	end
-
-.NumberAccepted:
-	jumpstd numberacceptedm
-	end
 
 .NumberDeclined:
 	jumpstd numberdeclinedm
-	end
 
 .PhoneFull:
 	jumpstd phonefullm
-	end
 
 .Rematch:
 	jumpstd rematchm
-	end
 
 .Gift:
 	jumpstd giftm
-	end
-
-.PackFull:
-	jumpstd packfullm
-	end
 
 TrainerPsychicMark:
 	trainer PSYCHIC_T, MARK, EVENT_BEAT_PSYCHIC_MARK, PsychicMarkSeenText, PsychicMarkBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	opentext
-	writetext PsychicMarkAfterBattleText
-	waitbutton
-	closetext
-	end
+	jumptext PsychicMarkAfterBattleText
 
 ArthurScript:
 	faceplayer
@@ -435,7 +398,6 @@ FloriaText1:
 
 	para "When I sprinkled"
 	line "water on that"
-
 	para "wiggly tree, it"
 	line "jumped right up!"
 
@@ -444,7 +406,6 @@ FloriaText1:
 
 	para "I bet it would be"
 	line "shocked out of its"
-
 	para "disguise if you"
 	line "soaked it!"
 
@@ -456,13 +417,11 @@ FloriaText1:
 FloriaText2:
 	text "When I told my sis"
 	line "about the jiggly"
-
 	para "tree, she said"
 	line "it's dangerous."
 
-	para "If I beat A,"
-	line "I wonder if she'll"
-
+	para "If I beat A, I"
+	line "wonder if she'll"
 	para "lend me her water"
 	line "bottle…"
 	done
@@ -472,7 +431,6 @@ RockSmashGuyText1:
 
 	para "I was going to"
 	line "snap that tree"
-
 	para "with my straight-"
 	line "arm punch."
 
@@ -489,36 +447,18 @@ RockSmashGuyText2:
 	cont "have this."
 	done
 
-UnknownText_0x19451a:
-	text "<PLAYER> received"
-	line "TM08."
-	done
-
 RockSmashGuyText3:
 	text "That happens to be"
 	line "ROCK SMASH."
 
 	para "You can shatter"
 	line "rocks with just a"
-
 	para "single well-aimed"
 	line "smack."
 
 	para "If any rocks are"
 	line "in your way, just"
 	cont "smash 'em up!"
-	done
-
-UnknownText_0x1945b8:
-	text "An odd tree is"
-	line "blocking the way"
-	cont "to GOLDENROD CITY."
-
-	para "I wanted to go see"
-	line "the huge #MON"
-
-	para "CENTER they just"
-	line "opened…"
 	done
 
 Route36LassText:
@@ -534,9 +474,9 @@ Route36LassText:
 	done
 
 Route36LassText_ClearedSudowoodo:
-	text "That odd tree dis-"
-	line "appeared without a"
-	cont "trace."
+	text "That odd tree"
+	line "disappeared"
+	cont "without a trace."
 
 	para "Oh! That tree was"
 	line "really a #MON?"
@@ -554,15 +494,14 @@ PsychicMarkBeatenText:
 PsychicMarkAfterBattleText:
 	text "I'd be strong if"
 	line "only I could tell"
-
 	para "what my opponent"
 	line "was thinking."
 	done
 
 SchoolboyAlan1SeenText:
-	text "Thanks to my stud-"
-	line "ies, I'm ready for"
-	cont "any #MON!"
+	text "Thanks to my"
+	line "studies, I'm ready"
+	cont "for any #MON!"
 	done
 
 SchoolboyAlan1BeatenText:
@@ -570,7 +509,7 @@ SchoolboyAlan1BeatenText:
 	line "error?"
 	done
 
-UnknownText_0x1947aa:
+TrainerSchoolboyAlan1AskPhoneNumberText:
 	text "Darn. I study five"
 	line "hours a day too."
 
@@ -595,7 +534,6 @@ ArthurGivesGiftText:
 ArthurGaveGiftText:
 	text "ARTHUR: A #MON"
 	line "that uses rock-"
-
 	para "type moves should"
 	line "hold on to that."
 
@@ -606,7 +544,6 @@ ArthurGaveGiftText:
 ArthurThursdayText:
 	text "ARTHUR: I'm ARTHUR"
 	line "of Thursday. I'm"
-
 	para "the second son out"
 	line "of seven children."
 	done
@@ -638,7 +575,6 @@ Route36TrainerTips1Text:
 
 	para "However, differ-"
 	line "ences will become"
-
 	para "pronounced as the"
 	line "#MON grow."
 	done
@@ -652,7 +588,6 @@ Route36TrainerTips2Text:
 
 	para "It is convenient"
 	line "for exploring"
-
 	para "caves and other"
 	line "landmarks."
 	done

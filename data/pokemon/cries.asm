@@ -260,7 +260,7 @@ PokemonCries::
 	mon_cry CRY_CHIKORITA,  -$022,  $120 ; GROVYLE
 	mon_cry CRY_CHIKORITA,  -$0b7,  $200 ; SCEPTILE
 	mon_cry CRY_HOOTHOOT,    $100,  $070 ; TORCHIC
-	mon_cry CRY_HOOTHOOT,    $0e9,  $0f4 ; COMBUSKEN
+	mon_cry CRY_HOOTHOOT,    $0b9,  $124 ; COMBUSKEN
 	mon_cry CRY_TYPHLOSION,  $f43,  $100 ; BLAZIKEN
 	mon_cry CRY_SPEAROW,     $f58,  $060 ; MUDKIP
 	mon_cry CRY_ODDISH,      $0ea,  $0e0 ; MARSHTOMP

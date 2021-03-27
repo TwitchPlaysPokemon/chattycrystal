@@ -73,10 +73,3 @@
 	const CRY_DUNSPARCE      ; 42
 	const CRY_DONPHAN        ; 43
 	const CRY_UNUSED         ; 44
-
-; gen 3
-	const CRY_POOCHYENA      ; 45
-	const CRY_ZIGZAGOON      ; 46
-	const CRY_LOTAD          ; 47
-	const CRY_LOMBRE         ; 48
-	const CRY_SWELLOW        ; 49

@@ -274,10 +274,10 @@ PokemonCries::
 	mon_cry CRY_KRABBY,      $0d0,  $0fa ; LUDICOLO
 	mon_cry CRY_SPEAROW,     $06f,  $080 ; TAILLOW
 	mon_cry CRY_SPEAROW,     $020,  $090 ; SWELLOW
-	mon_cry CRY_SWELLOW,     $000,  $100 ; WINGULL
+	mon_cry CRY_FEAROW,      $000,  $100 ; WINGULL - PLACEHOLDER
 	mon_cry CRY_MAGCARGO,    $f30,  $100 ; PELIPPER
-	mon_cry CRY_NIDORAN_F,   $000,  $100 ; RALTS
-	mon_cry CRY_VILEPLUME,   $008,  $100 ; KIRLIA
+	mon_cry CRY_NIDORAN_F,   $000,  $100 ; RALTS - PLACEHOLDER
+	mon_cry CRY_VILEPLUME,   $008,  $100 ; KIRLIA - PLACEHOLDER
 	mon_cry CRY_VILEPLUME,   $f22,  $163 ; GARDEVOIR
 	mon_cry CRY_GROWLITHE,   $1bd,  $0f0 ; SURSKIT
 	mon_cry CRY_KRABBY,      $1b0,  $0c0 ; MASQUERAIN

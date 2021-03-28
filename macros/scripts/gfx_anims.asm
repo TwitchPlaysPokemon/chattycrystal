@@ -12,7 +12,29 @@ endc
 	db x
 ENDM
 
-	enum_start $fc
+NUM_VALID_OAM_SETS EQU $fc
+
+battleframe: MACRO
+___set = \1
+___duration = \2 ; already one less than it should be
+___flags = 0
+	rept _NARG - 2
+		assert ((\3) == OAM_X_FLIP) || ((\3) == OAM_Y_FLIP)
+___flags = ___flags ^ (1 << (\3))
+	shift
+	endr
+	if ___set >= NUM_VALID_OAM_SETS
+___flags = ___flags | $80
+___set = ___set - NUM_VALID_OAM_SETS
+	endc
+	assert (___set >= 0) && (___set < NUM_VALID_OAM_SETS), "invalid OAM set"
+	rept ___duration >> 5
+		db ___set, $1f | ___flags
+	endr
+	db ___set, (___duration & $1f) | ___flags
+ENDM
+
+	enum_start NUM_VALID_OAM_SETS
 
 	enum delanim_command ; $fc
 delanim: MACRO

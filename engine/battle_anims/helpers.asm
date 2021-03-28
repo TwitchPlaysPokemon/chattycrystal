@@ -14,6 +14,11 @@ GetBattleAnimOAMPointer:
 	ld l, a
 	ld h, 0
 	ld de, BattleAnimOAMData
+	ld a, [wBattleAnimTempFrameOAMFlags]
+	add a, a
+	jr nc, .ok
+	ld de, BattleAnimOAMData + 4 * NUM_VALID_OAM_SETS
+.ok
 	add hl, hl
 	add hl, hl
 	add hl, de

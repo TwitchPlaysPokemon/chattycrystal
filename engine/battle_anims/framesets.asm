@@ -25,15 +25,14 @@ GetBattleAnimFrame:
 	push af
 	ld a, [hl]
 	push hl
-	and $ff ^ (Y_FLIP << 1 | X_FLIP << 1)
+	and $1f
 	ld hl, BATTLEANIMSTRUCT_DURATION
 	add hl, bc
 	ld [hl], a
 	pop hl
 .okay
 	ld a, [hl]
-	and Y_FLIP << 1 | X_FLIP << 1 ; The << 1 is compensated in the "frame" macro
-	srl a
+	and $e0
 	ld [wBattleAnimTempFrameOAMFlags], a
 	pop hl
 	ret
@@ -75,7 +74,7 @@ GetBattleAnimFrame:
 	ld hl, BATTLEANIMSTRUCT_FRAME
 	add hl, bc
 	ld l, [hl]
-	ld h, $0
+	ld h, 0
 	add hl, hl
 	add hl, de
 	ret

@@ -28,7 +28,35 @@ SilphCoRoof_MapScripts:
 	return
 
 MtBattleTrainer100:
-	trainer CAL, MT_BATTLE_100, EVENT_BEAT_MT_BATTLE_100, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleBeatBtlMaster
+	trainer CAL, MT_BATTLE_100, EVENT_BEAT_MT_BATTLE_100, .before_text, .defeat_text, 0, .script
+	
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	text "You beat every one"
+	line "of us! Good work!"
+
+	para "Your reward is up"
+	line "those stairs."
+
+	para "But once you take"
+	line "it, you'll have"
+	para "to beat us all"
+	line "over again to"
+	para "get another!"
+	done
 
 SilphCoRoofRaikou:
 	faceplayer
@@ -72,19 +100,30 @@ SilphCoRoofSuicune:
 	setval -1
 	writemem wRoamMon2MapGroup
 	writemem wRoamMon2MapNumber
-	sjump MtBattleGotReward
+MtBattleGotReward:
+	callasm .resetTrainers
+	warp SILPH_CO_1F, 2, 0 	; Warp to the 1F Elevator door
+	end
+
+.resetTrainers
+	ld b, NUM_SILPH_FLAGS / 8
+	assert !(EVENT_BEAT_MT_BATTLE_1 % 8)
+	ld hl, wEventFlags + EVENT_BEAT_MT_BATTLE_1 / 8
+	xor a
+.loop
+	ld [hli], a
+	dec b
+	jr nz, .loop
+	if NUM_SILPH_FLAGS % 8
+		ld a, [hl]
+		and $100 - (1 << (NUM_SILPH_FLAGS % 8))
+		ld [hl], a
+	endc
+	ret
 
 SilphCoRoofLegendaryText:
 	text "Awooo!"
 	done
-
-MtBattleBeatBtlMaster:
-	endifjustbattled
-	opentext
-	writetext MtBattleBeatBtlMasterText
-	waitbutton
-	closetext
-	end
 
 MtBattleMasterBall:
 	opentext
@@ -94,8 +133,8 @@ MtBattleMasterBall:
 	sjump MtBattleGotReward
 
 .BagFull
-	opentext
 	writetext MtBattleBagFullText
+	waitbutton
 	closetext
 	end
 
@@ -108,7 +147,6 @@ SilphCoBinoculars4:
 SilphCoBinoculars3Text:
 	text "Someone slapped"
 	line "TEAM SKULL logo"
-
 	para "stickers over the"
 	line "lenses."
 	done
@@ -119,22 +157,6 @@ SilphCoBinoculars4Text:
 	cont "the harbor."
 
 	para "What a fast ship!"
-	done
-
-MtBattleBeatBtlMasterText:
-	text "You beat every one"
-	line "of us! Good work!"
-
-	para "Your reward is up"
-	line "those stairs."
-
-	para "But once you take"
-	line "it, you'll have"
-
-	para "to beat us all"
-	line "over again to"
-
-	para "get another!"
 	done
 
 MtBattleBagFullText:

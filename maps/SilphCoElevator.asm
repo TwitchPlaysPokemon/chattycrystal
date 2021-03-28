@@ -4,7 +4,6 @@ SilphCoElevator_MapScripts:
 	db 0 ; callbacks
 
 SilphCoElevatorScript:
-
 	checkevent EVENT_BEAT_MT_BATTLE_99
 	iftrue .open11f
 	checkevent EVENT_BEAT_MT_BATTLE_90
@@ -32,12 +31,11 @@ SilphCoElevatorScript:
 	opentext
 	elevator wOTPartyMons
 	closetext
-	iffalse .Done
+	iffalse GenericDummyScript
 	pause 5
 	playsound SFX_ELEVATOR
 	earthquake 60
 	waitsfx
-.Done
 	end
 
 .open11f

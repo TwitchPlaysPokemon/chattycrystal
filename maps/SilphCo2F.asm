@@ -18,44 +18,231 @@ SilphCo2F_MapScripts:
 
 SilphCo2F_CheckForHeal:
 	checkevent EVENT_MT_BATTLE_HEALED_2F
-	iftrue .Done
+	iftrue GenericDummyScript
 	setevent EVENT_MT_BATTLE_HEALED_2F
 	turnobject SILPHCO2F_NURSE, RIGHT
 	turnobject PLAYER, LEFT
 	sjump MtBattleNurseHeal
 
-.Done
-	end
-
 MtBattleTrainer1:
-	trainer SUPER_NERD, MT_BATTLE_1, EVENT_BEAT_MT_BATTLE_1, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer SUPER_NERD, MT_BATTLE_1, EVENT_BEAT_MT_BATTLE_1, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	; PLACEHOLDER
+	text "<...>"
+	done
 
 MtBattleTrainer2:
-	trainer SWIMMERF, MT_BATTLE_2, EVENT_BEAT_MT_BATTLE_2, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer SWIMMERF, MT_BATTLE_2, EVENT_BEAT_MT_BATTLE_2, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	; PLACEHOLDER
+	text "<...>"
+	done
 
 MtBattleTrainer3:
-	trainer BIKER, MT_BATTLE_3, EVENT_BEAT_MT_BATTLE_3, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer BIKER, MT_BATTLE_3, EVENT_BEAT_MT_BATTLE_3, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	; PLACEHOLDER
+	text "<...>"
+	done
 
 MtBattleTrainer4:
-	trainer BEAUTY, MT_BATTLE_4, EVENT_BEAT_MT_BATTLE_4, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer BEAUTY, MT_BATTLE_4, EVENT_BEAT_MT_BATTLE_4, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	; PLACEHOLDER
+	text "<...>"
+	done
 
 MtBattleTrainer5:
-	trainer TEACHER, MT_BATTLE_5, EVENT_BEAT_MT_BATTLE_5, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer TEACHER, MT_BATTLE_5, EVENT_BEAT_MT_BATTLE_5, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	; PLACEHOLDER
+	text "<...>"
+	done
 
 MtBattleTrainer6:
-	trainer SAGE, MT_BATTLE_6, EVENT_BEAT_MT_BATTLE_6, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer SAGE, MT_BATTLE_6, EVENT_BEAT_MT_BATTLE_6, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	; PLACEHOLDER
+	text "<...>"
+	done
 
 MtBattleTrainer7:
-	trainer BOARDER, MT_BATTLE_7, EVENT_BEAT_MT_BATTLE_7, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer BOARDER, MT_BATTLE_7, EVENT_BEAT_MT_BATTLE_7, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	; PLACEHOLDER
+	text "<...>"
+	done
 
 MtBattleTrainer8:
-	trainer POKEFANF, MT_BATTLE_8, EVENT_BEAT_MT_BATTLE_8, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer POKEFANF, MT_BATTLE_8, EVENT_BEAT_MT_BATTLE_8, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	; PLACEHOLDER
+	text "<...>"
+	done
 
 MtBattleTrainer9:
-	trainer BLACKBELT_T, MT_BATTLE_9, EVENT_BEAT_MT_BATTLE_9, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer BLACKBELT_T, MT_BATTLE_9, EVENT_BEAT_MT_BATTLE_9, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	; PLACEHOLDER
+	text "<...>"
+	done
 
 MtBattleTrainer10:
-	trainer BIRD_KEEPER, MT_BATTLE_10, EVENT_BEAT_MT_BATTLE_10, MtBattleSeenText, MtBattleBeatenText, 0, MtBattleFinishBattle
+	trainer BIRD_KEEPER, MT_BATTLE_10, EVENT_BEAT_MT_BATTLE_10, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.defeat_text
+	; PLACEHOLDER
+	text "<...>"
+	done
+
+.after_text
+	; PLACEHOLDER
+	text "<...>"
+	done
 
 
 SilphCo2F_MapEvents:

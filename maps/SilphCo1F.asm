@@ -54,14 +54,6 @@ SilphCoOfficerText_GotUpGrade:
 	line "stores now!"
 	done
 
-MtBattleFinishBattle:
-	endifjustbattled
-	opentext
-	writetext MtBattleAfterBattleText
-	waitbutton
-	closetext
-	end
-
 MtBattleNurseHeal:
 	faceplayer
 	opentext
@@ -75,53 +67,8 @@ MtBattleNurseHeal:
 	pause 60
 	special FadeInQuickly
 	special RestartMapMusic
-	; fallthrough
-
 MtBattleNurseFinished:
-	faceplayer
-	opentext
-	writetext MtBattleAfterHealText
-	waitbutton
-	closetext
-	end
-
-MtBattleGotReward:
-	callasm .resetTrainers
-	warp SILPH_CO_1F, 2, 0 	; Warp to the 1F Elevator door
-	end
-
-.resetTrainers
-	ld b, NUM_SILPH_FLAGS / 8
-	assert !(EVENT_BEAT_MT_BATTLE_1 % 8)
-	ld hl, wEventFlags + EVENT_BEAT_MT_BATTLE_1 / 8
-	xor a
-.loop
-	ld [hli], a
-	dec b
-	jr nz, .loop
-	if NUM_SILPH_FLAGS % 8
-		ld a, [hl]
-		and $100 - (1 << (NUM_SILPH_FLAGS % 8))
-		ld [hl], a
-	endc
-	ret
-
-MtBattleSeenText:
-	text "Will you battle"
-	line "with me?"
-	done
-
-MtBattleBeatenText:
-	text "Zoinks!"
-	done
-
-MtBattleAfterBattleText:
-	text "I did my best but"
-	line "came up short."
-
-	para "No excuses--I"
-	line "admit I lost."
-	done
+	jumptextfaceplayer MtBattleAfterHealText
 
 MtBattleNurseText:
 	text "Here, let me heal"

@@ -381,6 +381,7 @@ MoveDescriptions1:
 	dw LeafBladeDescription
 	dw EnergyBallDescription
 	dw DrillRunDescription
+	dw HexDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -1486,3 +1487,7 @@ ThrashDescription:
 CurseDescription:
 	db   "Works differently"
 	next "for ghost-types.@"
+
+HexDescription:
+	db   "Hurts more against"
+	next "statused foes.@"

@@ -230,3 +230,4 @@ BattleCommandPointers:
 	effectfn BattleCommand_BeginButtonTally
 	effectfn BattleCommand_NonChattyHP
 	effectfn BattleCommand_ChattyAssist
+	effectfn BattleCommand_Hex

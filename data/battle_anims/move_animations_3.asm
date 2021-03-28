@@ -23,7 +23,9 @@ MoveAnimations3:
 	dw BattleAnim_LeafBlade
 	dw BattleAnim_EnergyBall
 	dw BattleAnim_DrillRun   ; 178
+	dw BattleAnim_Hex ; PLACEHOLDER
 
+BattleAnim_Hex:
 BattleAnim_CrystalBolt:
 	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_LIGHTNING
 	anim_sound 0, 0, SFX_ZAP_CANNON

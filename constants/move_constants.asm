@@ -382,6 +382,7 @@
 	const LEAF_BLADE   ; 176
 	const ENERGY_BALL  ; 177
 	const DRILL_RUN    ; 178
+	const HEX          ; 179
 
 NUM_ATTACKS EQU const_value + -1
 

@@ -145,6 +145,7 @@ AlphabeticalMoveList::
 	dw HEADBUTT
 	dw HEAL_BELL
 	dw HEAT_WAVE
+	dw HEX
 	dw HI_JUMP_KICK
 	dw HIDDEN_POWER
 	dw CHATTY_HP ; also HIDDEN POWER

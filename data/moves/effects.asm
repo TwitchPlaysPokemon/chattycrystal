@@ -2882,3 +2882,24 @@ ThunderFang:
 		flinchtarget
 	endif
 	endmove
+
+Hex:
+	checkobedience
+	usedmovetext
+	doturn
+	hex
+	critical
+	damagestats
+	damagecalc
+	stab
+	checkhit
+	damagevariation
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	kingsrock
+	endmove

@@ -200,3 +200,4 @@ MoveEffectsPointers:
 	dw BrickBreak
 	dw IceFang
 	dw ThunderFang
+	dw Hex

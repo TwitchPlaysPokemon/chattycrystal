@@ -230,6 +230,7 @@ ENDM
 	command beginbuttontally        ; df
 	command nonchattyhp             ; e0
 	command chattyassist            ; e1
+	command hex                     ; e2
 
 	enum_start $fe
 	command endturn                 ; fe

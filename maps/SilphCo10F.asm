@@ -54,18 +54,25 @@ MtBattleTrainer82:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Whenever and"
+	line "wherever it may"
+	para "be, I battle as if"
+	line "it were my last."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You're tough, you!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "A battle waged in"
+	line "earnest feels"
+	para "grand even when it"
+	line "ends in a loss."
+
+	para "Naturally, a win"
+	line "would feel much"
+	cont "better."
 	done
 
 MtBattleTrainer83:
@@ -76,18 +83,23 @@ MtBattleTrainer83:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hi, welcome. Want"
+	line "to know the secret"
+	para "behind attracting"
+	line "girls?"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "That's not what I"
+	line "wanted to teach"
+	cont "you!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I should have been"
+	line "teaching you the"
+	para "secret of"
+	line "battling. Wahahah!"
 	done
 
 MtBattleTrainer84:
@@ -120,18 +132,24 @@ MtBattleTrainer85:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I'm famous around"
+	line "these parts. Call"
+	para "me the Headband"
+	line "Dude!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Mwooooooh!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Drat! I was"
+	line "thinking about why"
+	para "I couldn't get"
+	line "anything to work."
+
+	para "I'd forgotten my"
+	line "headband!"
 	done
 
 MtBattleTrainer86:
@@ -142,18 +160,20 @@ MtBattleTrainer86:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "No light will"
+	line "illuminate your"
+	cont "path!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "My path turned"
+	line "dark!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Light your own way"
+	line "with your"
+	cont "brilliance!"
 	done
 
 MtBattleTrainer87:
@@ -164,18 +184,18 @@ MtBattleTrainer87:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Oh? You're here"
+	line "already?"
+	cont "L-O-V-E-L-Y!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You battle lovely,"
+	line "too!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You're so lovely!"
 	done
 
 MtBattleTrainer88:
@@ -230,20 +250,28 @@ MtBattleTrainer90:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hi, I'm NEBLEK. You"
+	line "must be the high-"
+	para "energy trainer I"
+	line "keep hearing"
+	cont "about."
+
+	text "So, how about"
+	line "showing me that"
+	para "high energy of"
+	line "yours?"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You really are"
+	line "bursting with"
+	cont "energy!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "What a fun battle"
+	line "that was!"
 	done
-
 
 SilphCo10F_MapEvents:
 	db 0, 0 ; filler

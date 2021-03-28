@@ -32,18 +32,26 @@ MtBattleTrainer51:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You've got to be"
+	line "good to reach 7F."
+
+	para "You should be"
+	line "proud of yourself."
+
+	para "I'll check how well"
+	line "you've raised your"
+	cont "#MON."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You've raised your"
+	line "#MON perfectly!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I'll have to raise"
+	line "my #MON some"
+	cont "more, too."
 	done
 
 MtBattleTrainer52:
@@ -54,18 +62,20 @@ MtBattleTrainer52:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Are you okay? It's"
+	line "okay if you want"
+	cont "to give up."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I give up!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You didn't even"
+	line "need to think"
+	para "about giving up,"
+	line "did you?"
 	done
 
 MtBattleTrainer53:
@@ -76,18 +86,24 @@ MtBattleTrainer53:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "My #MON and I"
+	line "have ample base"
+	para "stamina. We won't"
+	line "lose if we get"
+	para "into an extended"
+	line "battle."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "How'd we get whip-"
+	line "ped so quickly?"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "It's imperative"
+	line "that we train for"
+	para "high-speed"
+	line "battling next."
 	done
 
 MtBattleTrainer54:
@@ -98,18 +114,22 @@ MtBattleTrainer54:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Oh? Did you wish"
+	line "to battle? I won't"
+	para "rein in my"
+	line "#MON."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Oh, dear me<...>"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "How uncouth of you"
+	line "to not show the"
+	para "slightest regard"
+	line "to the fact that I"
+	cont "am a lady."
 	done
 
 MtBattleTrainer55:
@@ -120,18 +140,21 @@ MtBattleTrainer55:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Trainers who love"
+	line "their #MON"
+	para "should pump their"
+	line "physiques, too."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Nothing doing!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Maybe it isn't"
+	line "enough to get a"
+	para "pumped-up"
+	line "physique<...>"
 	done
 
 MtBattleTrainer56:
@@ -208,18 +231,28 @@ MtBattleTrainer59:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I might not look"
+	line "it, but I'm one for"
+	para "gaining real"
+	line "experience in"
+	cont "battle."
+
+	para "I toughened up my"
+	line "party through"
+	cont "fieldwork."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I guess we were"
+	line "lacking in field-"
+	cont "work still."
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "If we meet some-"
+	line "where, can I get"
+	para "you to help with"
+	line "my fieldwork?"
 	done
 
 MtBattleTrainer60:
@@ -230,20 +263,23 @@ MtBattleTrainer60:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Welcome! I'm"
+	line "GLYDIN. I'll be"
+	para "providing the"
+	line "finishing touch in"
+	cont "7F."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "That's magnificent!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "It makes sense."
+	line "After all, you"
+	para "were good enough"
+	line "to reach here."
 	done
-
 
 SilphCo7F_MapEvents:
 	db 0, 0 ; filler

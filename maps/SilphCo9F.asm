@@ -32,18 +32,25 @@ MtBattleTrainer71:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Oh, are you a new"
+	line "student? Welcome"
+	cont "to 9F!"
+
+	para "Let's begin with"
+	line "our battle lesson!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Lesson's over!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You're the type of"
+	line "student that gets"
+	para "better through"
+	line "real battling"
+	para "rather than from"
+	line "your studies."
 	done
 
 MtBattleTrainer72:
@@ -54,18 +61,21 @@ MtBattleTrainer72:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Wow. You beat my"
+	line "teacher LISOT."
+
+	para "That's pretty"
+	line "decent!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "That's pretty"
+	line "awesome!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You're doing great."
+	line "Keep it up!"
 	done
 
 MtBattleTrainer73:
@@ -76,18 +86,24 @@ MtBattleTrainer73:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Awesome, that's"
+	line "you! It's an"
+	para "accomplishment"
+	line "just getting here."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Whoa-ho-hoy!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Wow, oh wow, you"
+	line "really are"
+	para "awesome. Maybe"
+	line "you'll be able to"
+	para "keep things"
+	line "rolling all the"
+	cont "way to the end!"
 	done
 
 MtBattleTrainer74:
@@ -164,18 +180,22 @@ MtBattleTrainer77:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hi! I've heard"
+	line "rumors about how"
+	cont "strong you are."
+
+	para "Let's see if those"
+	line "rumors are true!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "D-Devastating!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "The rumors about"
+	line "you were true, it"
+	cont "seems."
 	done
 
 MtBattleTrainer78:
@@ -186,18 +206,25 @@ MtBattleTrainer78:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I constantly run"
+	line "simulations of"
+	cont "#MON battles."
+
+	para "I'll be perfect in"
+	line "a real battle!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You were perfect!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I can't figure it"
+	line "out. If things had"
+	para "gone exactly as"
+	line "per my simulation,"
+	para "things would have"
+	line "been perfect."
 	done
 
 MtBattleTrainer79:
@@ -230,20 +257,30 @@ MtBattleTrainer80:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hmm. You have a"
+	line "unique air about"
+	para "you that sets you"
+	line "apart from the"
+	para "challengers I've"
+	line "seen."
+
+	para "But, who cares?"
+	line "First, we battle!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hmm<...> I knew you"
+	line "were different!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
-	done
+	text "You battle"
+	line "differently, too."
 
+	para "Like, somehow,"
+	line "hmm<...> I can't find"
+	cont "the words for it!"
+	done
 
 SilphCo9F_MapEvents:
 	db 0, 0 ; filler

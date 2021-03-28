@@ -32,18 +32,20 @@ MtBattleTrainer41:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Welcome to 6F. It's"
+	line "so good of you to"
+	para "come so far for"
+	line "this."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Aaaahhh. I'm tired."
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "A hard battle is"
+	line "rough on my lower"
+	cont "back."
 	done
 
 MtBattleTrainer42:
@@ -54,18 +56,20 @@ MtBattleTrainer42:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Even more than"
+	line "eating or napping,"
+	cont "I love #MON!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Even though I"
+	line "lost, I still love"
+	cont "#MON!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You must love"
+	line "#MON too."
 	done
 
 MtBattleTrainer43:
@@ -76,18 +80,22 @@ MtBattleTrainer43:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Ba-ba-battle!"
+
+	para "Hubba, hubba,"
+	line "battle!"
+
+	para "We're here for a"
+	line "good time!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hey, hey!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "We had us a good"
+	line "time!"
 	done
 
 MtBattleTrainer44:
@@ -98,18 +106,23 @@ MtBattleTrainer44:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Oh, what a darling"
+	line "boy! I will teach"
+	para "you in a way even"
+	line "you will under-"
+	cont "stand!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "It's not very"
+	line "darling of you to"
+	cont "win."
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You should teach"
+	line "me nicely next"
+	cont "time."
 	done
 
 MtBattleTrainer45:
@@ -120,18 +133,19 @@ MtBattleTrainer45:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You're going to"
+	line "battle me? Really?"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Sigh<...>"
+	line "I lost<...>"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I like to battle,"
+	line "but I dislike"
+	cont "losing."
 	done
 
 MtBattleTrainer46:
@@ -142,18 +156,21 @@ MtBattleTrainer46:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I want to"
+	line "demonstrate some"
+	para "techniques I've"
+	line "learned."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "My techniques were"
+	line "worthless!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "There's something"
+	line "wrong. I don't get"
+	cont "how I lost."
 	done
 
 MtBattleTrainer47:
@@ -164,18 +181,20 @@ MtBattleTrainer47:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I'll show you the"
+	line "fruits of my daily"
+	cont "training!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Arrrgh! My trai-"
+	line "ning still fell"
+	cont "short!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Where did you do"
+	line "your training?"
 	done
 
 MtBattleTrainer48:
@@ -186,18 +205,24 @@ MtBattleTrainer48:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Going on a run"
+	line "with #MON is"
+	cont "exhilarating."
+
+	para "But for pure"
+	line "exhilaration, it"
+	para "doesn't measure up"
+	line "to battling!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Even losing is"
+	line "exhilarating!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Battling #MON's"
+	line "so exhilarating!"
 	done
 
 MtBattleTrainer49:
@@ -208,18 +233,18 @@ MtBattleTrainer49:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Now here comes a"
+	line "perky youngster!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I miss being"
+	line "young!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Share your youth"
+	line "with me!"
 	done
 
 MtBattleTrainer50:
@@ -230,20 +255,25 @@ MtBattleTrainer50:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "6F, the last floor"
+	line "in the bottom half"
+	para "of this building,"
+	line "ends here."
+
+	para "The closer is me,"
+	line "CRYAL."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Yeah, great job!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "With 7F starts the"
+	line "top half of this"
+	para "building. Keep"
+	line "your drive alive."
 	done
-
 
 SilphCo6F_MapEvents:
 	db 0, 0 ; filler

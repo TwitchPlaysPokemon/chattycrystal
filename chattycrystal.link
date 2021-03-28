@@ -86,7 +86,6 @@ ROMX $1d
 	"Map Scripts 8"
 ROMX $1e
 	"Map Scripts 9"
-	"Map Scripts Mt. Battle"
 ROMX $1f
 	"Map Scripts 10"
 ROMX $20
@@ -336,7 +335,7 @@ ROMX $7c
 	"Battle Tower Trainer Data"
 	"Pics 25"
 ROMX $7d
-	; empty
+	"Map Scripts Mt. Battle"
 ROMX $7e
 	; empty
 ROMX $7f

@@ -47,7 +47,7 @@ CHRIS EQU __enum__
 	trainervalue TAYLOR
 	trainervalue MT_BATTLE_18 ; DOIMO
 	trainervalue MT_BATTLE_29 ; WAGEL
-	trainervalue MT_BATTLE_31 ; HILDON
+	trainervalue MT_BATTLE_33 ; HILDON
 	trainervalue MT_BATTLE_51 ; DEMIT
 	trainervalue MT_BATTLE_59 ; NANOT
 	trainervalue MT_BATTLE_78 ; ORDO
@@ -712,7 +712,7 @@ CHRIS EQU __enum__
 	trainervalue GEORGIA
 	trainervalue JAIME
 	trainervalue MT_BATTLE_8  ; LADIN
-	trainervalue MT_BATTLE_33 ; SASON
+	trainervalue MT_BATTLE_31 ; SASON
 	trainervalue MT_BATTLE_60 ; GLYDIN
 	trainervalue MT_BATTLE_64 ; CEWAN
 	trainervalue MT_BATTLE_97 ; LISAN

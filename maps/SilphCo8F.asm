@@ -32,18 +32,27 @@ MtBattleTrainer61:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Oh, finally a"
+	line "challenger has"
+	para "reached these"
+	line "lofty heights!"
+
+	text "This is it, 8F!"
+	line "Let's see some"
+	cont "passion!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "The challenger is"
+	line "victorious!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "How far can this"
+	line "challenger go?"
+
+	para "I'll enjoy tracking"
+	line "your progress!"
 	done
 
 MtBattleTrainer62:
@@ -98,18 +107,18 @@ MtBattleTrainer64:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I<...> I<...> I love"
+	line "#MON!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I love #MON"
+	line "even though I"
+	cont "lost!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I love #MON!"
 	done
 
 MtBattleTrainer65:
@@ -120,18 +129,23 @@ MtBattleTrainer65:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hm! I sense"
+	line "formidable power"
+	cont "in you!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Just as I"
+	cont "anticipated!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Thanks to"
+	line "training, I gained"
+	para "the ability to"
+	line "identify skilled"
+	para "trainers with"
+	line "confidence."
 	done
 
 MtBattleTrainer66:
@@ -142,18 +156,20 @@ MtBattleTrainer66:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "No challenger's"
+	line "come this high in"
+	cont "a while."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Oh, you've got it,"
+	line "I'd say!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Thanks for showing"
+	line "me one amusing"
+	cont "battle."
 	done
 
 MtBattleTrainer67:
@@ -208,18 +224,19 @@ MtBattleTrainer69:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hohoh. I'm impres-"
+	line "sed that you've"
+	cont "made it this far."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hohoh."
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hohoh. You battle"
+	line "in an incredible"
+	cont "way."
 	done
 
 MtBattleTrainer70:
@@ -243,7 +260,6 @@ MtBattleTrainer70:
 	; PLACEHOLDER
 	text "<...>"
 	done
-
 
 SilphCo8F_MapEvents:
 	db 0, 0 ; filler

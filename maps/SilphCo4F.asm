@@ -32,18 +32,24 @@ MtBattleTrainer21:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hi, welcome to 4F!"
+	line "Are you ready to"
+	cont "go?"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Not too shabby!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "That was good. The"
+	line "battle overflowed"
+	para "with your youthful"
+	line "power."
+
+	para "There was a time"
+	line "like that for me a"
+	cont "long time ago."
 	done
 
 MtBattleTrainer22:
@@ -54,18 +60,23 @@ MtBattleTrainer22:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "It's about time! I'm"
+	line "going to give you"
+	cont "an all-out battle!"
+
+	para "Okay, hustle,"
+	line "hustle!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Bleah!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Even though I"
+	line "lost, I had lots"
+	para "of fun in our"
+	line "battle!"
 	done
 
 MtBattleTrainer23:
@@ -76,18 +87,24 @@ MtBattleTrainer23:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I'm all fired up"
+	line "and ready to rock!"
+
+	para "I'm playing this"
+	line "totally seriously!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "But I was serious!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I didn't do enough"
+	line "warm-up exercises;"
+	cont "that must be it."
+
+	para "Yup! I'm convinced"
+	line "of it!"
 	done
 
 MtBattleTrainer24:
@@ -98,18 +115,24 @@ MtBattleTrainer24:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "In our battle, I'll"
+	line "show you every-"
+	cont "thing that I've"
+	cont "ever learned."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I haven't learned"
+	line "a thing about"
+	cont "losing!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Grrr<...> This burns"
+	line "me up<...>"
+
+	para "I'll have to battle"
+	line "some more."
 	done
 
 MtBattleTrainer25:
@@ -120,18 +143,21 @@ MtBattleTrainer25:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "How are you"
+	line "enjoying this"
+	cont "battle facility?"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You seem to be"
+	line "enjoying yourself"
+	cont "all right!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Battles should be"
+	line "fun. That's"
+	cont "important!"
 	done
 
 MtBattleTrainer26:
@@ -142,18 +168,21 @@ MtBattleTrainer26:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Were you the"
+	line "student who wanted"
+	cont "a private lesson?"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "It's not much of a"
+	line "lesson if the"
+	cont "teacher loses!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Would you like to"
+	line "become a teacher"
+	cont "in my place?"
 	done
 
 MtBattleTrainer27:
@@ -164,18 +193,23 @@ MtBattleTrainer27:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Oh, now what have"
+	line "we here?"
+
+	para "Challenger, you're"
+	line "looking mighty"
+	cont "peppy!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Yep, peppy you"
+	line "are!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Keep your spirits"
+	line "peppy and plow"
+	cont "ahead!"
 	done
 
 MtBattleTrainer28:
@@ -186,18 +220,21 @@ MtBattleTrainer28:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I have never"
+	line "lifted anything"
+	para "heavier than a"
+	line "# BALL."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "How frightful!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Losing feels far"
+	line "heavier than a"
+	para "# BALL, wouldn't"
+	line "you say?"
 	done
 
 MtBattleTrainer29:
@@ -208,18 +245,25 @@ MtBattleTrainer29:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Behold my elegant"
+	line "battling! It is"
+	para "backed by thorough"
+	line "calculations!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "This didn't go"
+	line "according to my"
+	cont "calculations!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hmm<...> Weird."
+	line "According to my"
+	para "calculations, this"
+	line "should have"
+	para "happened, causing"
+	line "that to happen<...>"
 	done
 
 MtBattleTrainer30:
@@ -230,20 +274,26 @@ MtBattleTrainer30:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Anchoring 4F is"
+	line "me, LEVEN."
+
+	para "Go, go, go!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Oh, yeah! That was"
+	line "spectacular!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
-	done
+	text "You battle tremen-"
+	line "dously well. I'm"
+	para "looking forward to"
+	line "seeing how far you"
+	cont "can go."
 
+	para "Go on."
+	done
 
 SilphCo4F_MapEvents:
 	db 0, 0 ; filler

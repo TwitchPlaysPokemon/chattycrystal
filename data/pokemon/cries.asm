@@ -267,17 +267,17 @@ PokemonCries::
 	mon_cry CRY_GOLEM,       $dea,  $1c0 ; SWAMPERT
 	mon_cry CRY_MUK,         $115,  $0c0 ; POOCHYENA
 	mon_cry CRY_BLASTOISE,   $000,  $150 ; MIGHTYENA
-	mon_cry CRY_NIDORAN_M,  -$030,  $1b0 ; ZIGZAGOON
-	mon_cry CRY_BLASTOISE,   $2f0,  $100 ; LINOONE
-	mon_cry CRY_PIDGEY,      $0df,  $084 ; LOTAD
-	mon_cry CRY_PIDGEOTTO,   $028,  $140 ; LOMBRE
+	mon_cry CRY_NIDORAN_M,  -$030,  $1b0 ; ZIGZAGOON - PLACEHOLDER
+	mon_cry CRY_BLASTOISE,   $2f0,  $100 ; LINOONE - PLACEHOLDER
+	mon_cry CRY_PIDGEY,      $0df,  $084 ; LOTAD - PLACEHOLDER
+	mon_cry CRY_PIDGEOTTO,   $028,  $140 ; LOMBRE - PLACEHOLDER
 	mon_cry CRY_KRABBY,      $0d0,  $0fa ; LUDICOLO
 	mon_cry CRY_SPEAROW,     $06f,  $080 ; TAILLOW
 	mon_cry CRY_SPEAROW,     $020,  $090 ; SWELLOW
-	mon_cry CRY_FEAROW,      $000,  $100 ; WINGULL
+	mon_cry CRY_FEAROW,      $000,  $100 ; WINGULL - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; PELIPPER - PLACEHOLDER
-	mon_cry CRY_NIDORAN_F,   $000,  $100 ; RALTS
-	mon_cry CRY_VILEPLUME,   $008,  $100 ; KIRLIA
+	mon_cry CRY_NIDORAN_F,   $000,  $100 ; RALTS - PLACEHOLDER
+	mon_cry CRY_VILEPLUME,   $008,  $100 ; KIRLIA  - PLACEHOLDER
 	mon_cry CRY_VILEPLUME,   $f22,  $163 ; GARDEVOIR
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SURSKIT - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MASQUERAIN - PLACEHOLDER

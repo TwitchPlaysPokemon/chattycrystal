@@ -2172,29 +2172,38 @@ DucklettEvosAttacks:
 	dbbw EVOLVE_LEVEL, 35, SWANNA
 	db 0
 	dbw 1, WATER_GUN
+	dbw 6, GROWL
 	dbw 9, WING_ATTACK
 	dbw 13, WATER_PULSE
 	dbw 15, AERIAL_ACE
 	dbw 19, BUBBLEBEAM
+	dbw 21, CHARM
 	dbw 24, AQUA_RING
 	dbw 27, AIR_SLASH
 	dbw 30, ROOST
 	dbw 34, RAIN_DANCE
+	dbw 37, AGILITY
 	dbw 41, BRAVE_BIRD
+	dbw 46, HURRICANE
 	db 0 ; no more level-up  moves
 
 SwannaEvosAttacks:
 	db 0
 	dbw 1, WATER_GUN
+	dbw 1, GROWL
 	dbw 1, WING_ATTACK
+	dbw 9, WING_ATTACK
 	dbw 13, WATER_PULSE
 	dbw 15, AERIAL_ACE
 	dbw 19, BUBBLEBEAM
+	dbw 21, CHARM
 	dbw 24, AQUA_RING
 	dbw 27, AIR_SLASH
 	dbw 30, ROOST
 	dbw 34, RAIN_DANCE
+	dbw 40, AGILITY
 	dbw 47, BRAVE_BIRD
+	dbw 55, HURRICANE
 	db 0 ; no more level-up  moves
 
 TynamoEvosAttacks:
@@ -2216,14 +2225,17 @@ EelektrikEvosAttacks:
 	dbw 9, BIND
 	dbw 19, ACID
 	dbw 29, DISCHARGE
-	dbw 39, CRUNCH
-	dbw 44, THUNDERBOLT
-	dbw 49, ZAP_CANNON
-	dbw 54, THRASH
+	dbw 44, CRUNCH
+	dbw 49, THUNDERBOLT
+	dbw 54, WORK_UP
+	dbw 59, ACID_ARMOR
+	dbw 64, ZAP_CANNON
+	dbw 69, THRASH
 	db 0 ; no more level-up moves
 
 EelektrossEvosAttacks:
 	db 0
+	dbw 1, SLASH
 	dbw 1, HEADBUTT
 	dbw 1, ACID
 	dbw 1, DISCHARGE
@@ -2236,12 +2248,17 @@ LitwickEvosAttacks:
 	dbw 1, EMBER
 	dbw 1, ASTONISH
 	dbw 3, MINIMIZE
+	dbw 5, SMOG
 	dbw 7, FIRE_SPIN
 	dbw 10, CONFUSE_RAY
 	dbw 13, NIGHT_SHADE
 	dbw 16, WILL_O_WISP
 	dbw 20, FLAME_WHEEL
-	dbw 38, CURSE
+	dbw 24, SPITE
+	;dbw 28, HEX
+	dbw 33, MEMENTO
+	dbw 38, FLAMETHROWER
+	dbw 43, CURSE
 	dbw 49, SHADOW_BALL
 	dbw 55, PAIN_SPLIT
 	dbw 61, OVERHEAT
@@ -2253,12 +2270,17 @@ LampentEvosAttacks:
 	dbw 1, EMBER
 	dbw 1, ASTONISH
 	dbw 3, MINIMIZE
+	dbw 5, SMOG
 	dbw 7, FIRE_SPIN
 	dbw 10, CONFUSE_RAY
 	dbw 13, NIGHT_SHADE
 	dbw 16, WILL_O_WISP
 	dbw 20, FLAME_WHEEL
-	dbw 38, CURSE
+	dbw 24, SPITE
+	;dbw 28, HEX
+	dbw 33, MEMENTO
+	dbw 38, FLAMETHROWER
+	dbw 45, CURSE
 	dbw 53, SHADOW_BALL
 	dbw 61, PAIN_SPLIT
 	dbw 69, OVERHEAT
@@ -2269,6 +2291,7 @@ ChandelureEvosAttacks:
 	dbw 1, SMOG
 	dbw 1, CONFUSE_RAY
 	dbw 1, FLAME_WHEEL
+	;dbw 1, HEX
 	db 0 ; no more level-up  moves
 
 ClauncherEvosAttacks:
@@ -2276,34 +2299,42 @@ ClauncherEvosAttacks:
 	db 0
 	dbw 1, SPLASH
 	dbw 1, WATER_GUN
-	dbw 9, VICEGRIP
-	dbw 12, BUBBLE
-	dbw 16, FLAIL
-	dbw 20, BUBBLEBEAM
-	dbw 25, SWORDS_DANCE
-	dbw 30, CRABHAMMER
-	dbw 34, WATER_PULSE
-	dbw 43, AQUA_JET
-	dbw 48, MUDDY_WATER
+	dbw 5, VICEGRIP
+	dbw 9, BUBBLE
+	dbw 12, FLAIL
+	dbw 16, AQUA_JET
+	dbw 20, ROCK_THROW
+	dbw 23, BUBBLEBEAM
+	dbw 27, HONE_CLAWS
+	dbw 31, WATER_PULSE
+	dbw 34, SWORDS_DANCE
+	dbw 38, AURA_SPHERE
+	dbw 42, SLAM
+	dbw 45, MUDDY_WATER
+	dbw 49, CRABHAMMER
 	db 0 ; no more level-up moves
 
 ClawitzerEvosAttacks:
 	db 0
+	dbw 1, DARK_PULSE
 	dbw 1, DRAGON_PULSE
-	dbw 1, AURA_SPHERE
 	dbw 1, SPLASH
 	dbw 1, WATER_GUN
-	dbw 9, VICEGRIP
-	dbw 12, BUBBLE
-	dbw 16, FLAIL
-	dbw 20, BUBBLEBEAM
-	dbw 15, SWORDS_DANCE
-	dbw 30, CRABHAMMER
-	dbw 34, WATER_PULSE
-	dbw 47, AQUA_JET
-	dbw 53, MUDDY_WATER
-	dbw 63, DRAGON_PULSE
-	dbw 67, AURA_SPHERE
+	dbw 1, VICEGRIP
+	dbw 1, BUBBLE
+	dbw 5, VICEGRIP
+	dbw 9, BUBBLE
+	dbw 12, FLAIL
+	dbw 16, AQUA_JET
+	dbw 20, ROCK_THROW
+	dbw 23, BUBBLEBEAM
+	dbw 27, HONE_CLAWS
+	dbw 31, WATER_PULSE
+	dbw 34, SWORDS_DANCE
+	dbw 41, AURA_SPHERE
+	dbw 48, SLAM
+	dbw 54, MUDDY_WATER
+	dbw 61, CRABHAMMER
 	db 0 ; no more level-up moves
 
 HelioptileEvosAttacks:
@@ -2315,16 +2346,18 @@ HelioptileEvosAttacks:
 	dbw 11, CHARGE
 	dbw 13, MUD_SLAP
 	dbw 17, QUICK_ATTACK
-	dbw 22, SHOCK_WAVE
-	dbw 25, RAZOR_WIND
+	dbw 22, RAZOR_WIND
+	dbw 25, SHOCK_WAVE
 	dbw 31, THUNDER_WAVE
-	dbw 35, CHARGE_BEAM
 	dbw 40, BULLDOZE
+	dbw 35, CHARGE_BEAM
+	dbw 40, LIGHT_SCREEN
 	dbw 45, THUNDERBOLT
 	db 0 ; no more level-up moves
 
 HelioliskEvosAttacks:
 	db 0
+	dbw 1, LIGHT_SCREEN
 	dbw 1, RAZOR_WIND
 	dbw 1, QUICK_ATTACK
 	dbw 1, CHARGE
@@ -2372,64 +2405,75 @@ AurorusEvosAttacks:
 
 SylveonEvosAttacks:
 	db 0
-	dbw 1, TAIL_WHIP
 	dbw 1, TACKLE
-	dbw 5, SAND_ATTACK
-	dbw 13, QUICK_ATTACK
-	dbw 17, SWIFT
-	dbw 20, DRAININGKISS
-	dbw 33, LIGHT_SCREEN
-	dbw 37, MOONBLAST
-	dbw 41, MOONLIGHT ; replacement for Last Resort
-	dbw 45, PSYCH_UP
+	dbw 1, TAIL_WHIP
+	dbw 6, SAND_ATTACK
+	dbw 10, DRAININGKISS
+	dbw 14, QUICK_ATTACK
+	dbw 18, SWEET_KISS
+	dbw 23, SWIFT
+	dbw 27, DAZZLINGLEAM
+	dbw 33, PSYCH_UP
+	dbw 38, LIGHT_SCREEN
+	dbw 45, TRUMP_CARD
+	dbw 50, MOONBLAST
 	db 0 ; no more level-up moves
 
 GoomyEvosAttacks:
 	dbbw EVOLVE_LEVEL, 40, SLIGGOO
 	db 0
 	dbw 1, TACKLE
-	dbw 1, BUBBLE
-	dbw 5, ABSORB
-	dbw 9, PROTECT
-	dbw 13, BIDE
-	dbw 18, DRAGONBREATH
-	dbw 25, RAIN_DANCE
-	dbw 28, FLAIL
-	dbw 32, BODY_SLAM
-	dbw 38, MUDDY_WATER
-	dbw 42, DRAGON_PULSE
+	dbw 1, ABSORB
+	dbw 5, BUBBLE
+	dbw 9, DRAGONBREATH
+	dbw 14, BIDE
+	dbw 18, PROTECT
+	dbw 23, WATER_PULSE
+	dbw 27, RAIN_DANCE
+	dbw 32, DRAGON_PULSE
+	dbw 36, FLAIL
+	dbw 41, CURSE
+	dbw 45, BODY_SLAM
+	dbw 50, MUDDY_WATER
 	db 0 ; no more level-up moves
 
 SliggooEvosAttacks:
 	dbbw EVOLVE_LEVEL, 50, GOODRA
 	db 0
 	dbw 1, TACKLE
-	dbw 1, BUBBLE
 	dbw 1, ABSORB
-	dbw 9, PROTECT
-	dbw 13, BIDE
-	dbw 18, DRAGONBREATH
-	dbw 25, RAIN_DANCE
-	dbw 28, FLAIL
-	dbw 32, BODY_SLAM
-	dbw 38, MUDDY_WATER
-	dbw 47, DRAGON_PULSE
+	dbw 5, BUBBLE
+	dbw 9, DRAGONBREATH
+	dbw 14, BIDE
+	dbw 18, PROTECT
+	dbw 23, WATER_PULSE
+	dbw 27, RAIN_DANCE
+	dbw 32, DRAGON_PULSE
+	dbw 36, FLAIL
+	dbw 40, ACID
+	dbw 43, CURSE
+	dbw 49, BODY_SLAM
+	dbw 56, MUDDY_WATER
 	db 0 ; no more level-up moves
 
 GoodraEvosAttacks:
 	db 0
 	dbw 1, TACKLE
-	dbw 1, BUBBLE
 	dbw 1, ABSORB
-	dbw 1, PROTECT
-	dbw 13, BIDE
-	dbw 18, DRAGONBREATH
-	dbw 25, RAIN_DANCE
-	dbw 28, FLAIL
-	dbw 32, BODY_SLAM
-	dbw 38, MUDDY_WATER
-	dbw 47, DRAGON_PULSE
-	dbw 55, OUTRAGE
+	dbw 5, BUBBLE
+	dbw 9, DRAGONBREATH
+	dbw 14, BIDE
+	dbw 18, PROTECT
+	dbw 23, WATER_PULSE
+	dbw 27, RAIN_DANCE
+	dbw 32, DRAGON_PULSE
+	dbw 36, FLAIL
+	dbw 40, ACID
+	dbw 43, CURSE
+	dbw 49, BODY_SLAM
+	dbw 50, AQUA_TAIL
+	dbw 58, MUDDY_WATER
+	dbw 66, OUTRAGE
 	db 0 ; no more level-up moves
 
 CrabrawlerEvosAttacks:
@@ -2440,7 +2484,9 @@ CrabrawlerEvosAttacks:
 	dbw 9, LEER
 	dbw 13, PURSUIT
 	dbw 17, BUBBLEBEAM
+	dbw 22, WORK_UP
 	dbw 22, DIZZY_PUNCH
+	dbw 22, FEINT_ATTACK
 	dbw 25, REVERSAL
 	dbw 29, CRABHAMMER
 	dbw 33, IRON_DEFENSE
@@ -2450,32 +2496,42 @@ CrabrawlerEvosAttacks:
 
 CrabominableEvosAttacks:
 	db 0
-	dbw 1, ICE_HAMMER
+	dbw 1, ICE_PUNCH
 	dbw 1, BUBBLE
 	dbw 1, ROCK_SMASH
-	dbw 1, CLOSE_COMBAT
+	dbw 1, LEER
+	dbw 1, PURSUIT
+	dbw 37, ICE_HAMMER
+	dbw 49, CLOSE_COMBAT
 	db 0 ; no more level-up moves
 
 CutieflyEvosAttacks:
 	dbbw EVOLVE_LEVEL, 20, RIBOMBEE
 	db 0
 	dbw 1, ABSORB
+	dbw 4, GUST
 	dbw 7, STUN_SPORE
+	dbw 10, SWEET_SCENT
 	dbw 16, DRAININGKISS
-	dbw 21, SWEET_SCENT
+	dbw 21, WHIRLWIND
+	dbw 26, BUG_BUZZ
 	dbw 31, DAZZLINGLEAM
+	dbw 36, HEAL_BELL
 	dbw 41, QUIVER_DANCE
 	db 0 ; no more level-up moves
 
 RibombeeEvosAttacks:
 	db 0
 	dbw 1, ABSORB
-	dbw 1, POLLEN_PUFF
+	dbw 4, GUST
 	dbw 7, STUN_SPORE
+	dbw 10, SWEET_SCENT
 	dbw 16, DRAININGKISS
 	dbw 20, POLLEN_PUFF
-	dbw 21, SWEET_SCENT
+	dbw 21, WHIRLWIND
+	dbw 28, BUG_BUZZ
 	dbw 35, DAZZLINGLEAM
+	dbw 42, HEAL_BELL
 	dbw 49, QUIVER_DANCE
 	db 0 ; no more level-up moves
 

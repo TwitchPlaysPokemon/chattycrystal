@@ -294,11 +294,10 @@ ROMX $6e
 	"Cries"
 ROMX $6f
 	"Text 1"
-	"Text 2"
 ROMX $70
 	"Pic Animations 4"
 ROMX $71
-	"Text 3"
+	"Text 2"
 	"Tileset Data 14"
 	"Mobile Battle Tower"
 ROMX $72

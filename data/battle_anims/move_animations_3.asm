@@ -23,9 +23,8 @@ MoveAnimations3:
 	dw BattleAnim_LeafBlade
 	dw BattleAnim_EnergyBall
 	dw BattleAnim_DrillRun   ; 178
-	dw BattleAnim_Hex ; PLACEHOLDER
+	dw BattleAnim_Hex
 
-BattleAnim_Hex:
 BattleAnim_CrystalBolt:
 	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_LIGHTNING
 	anim_sound 0, 0, SFX_ZAP_CANNON
@@ -675,5 +674,40 @@ BattleAnim_DrillRun:
 	anim_wait 2
 	anim_loop 6, .loop
 	anim_clearobjs
+	anim_wait 16
+	anim_ret
+
+BattleAnim_Hex:
+	anim_2gfx ANIM_GFX_FIRE, ANIM_GFX_SPEED
+	anim_battlergfx_2row
+	anim_bgp $f8
+	anim_bgeffect ANIM_BG_BATTLEROBJ_1ROW, $0, $1, $0
+	anim_wait 8
+	anim_sound 6, 2, SFX_SLUDGE_BOMB
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
+	anim_wait 40
+	anim_bgp $1b
+	anim_sound 0, 0, SFX_SPITE
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_obj ANIM_OBJ_HEX_FLAME, 128, 54, $10
+	anim_obj ANIM_OBJ_HEX_FLAME, 144, 38, $90
+	anim_bgeffect ANIM_BG_1F, $55, $1, $0
+.loop
+	anim_obj ANIM_OBJ_HEX, 136, 72, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_HEX, 128, 72, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_HEX, 144, 72, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_HEX, 120, 72, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_HEX, 152, 72, $6
+	anim_wait 2
+	anim_obj ANIM_OBJ_HEX, 112, 72, $8
+	anim_wait 2
+	anim_obj ANIM_OBJ_HEX, 160, 72, $8
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_wait 8
 	anim_wait 16
 	anim_ret

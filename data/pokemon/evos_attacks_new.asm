@@ -2190,7 +2190,7 @@ DucklettEvosAttacks:
 	dbw 37, AGILITY
 	dbw 41, BRAVE_BIRD
 	dbw 46, HURRICANE
-	db 0 ; no more level-up  moves
+	db 0 ; no more level-up moves
 
 SwannaEvosAttacks:
 	db 0
@@ -2209,7 +2209,7 @@ SwannaEvosAttacks:
 	dbw 40, AGILITY
 	dbw 47, BRAVE_BIRD
 	dbw 55, HURRICANE
-	db 0 ; no more level-up  moves
+	db 0 ; no more level-up moves
 
 TynamoEvosAttacks:
 	dbbw EVOLVE_LEVEL, 39, EELEKTRIK
@@ -2267,7 +2267,7 @@ LitwickEvosAttacks:
 	dbw 49, SHADOW_BALL
 	dbw 55, PAIN_SPLIT
 	dbw 61, OVERHEAT
-	db 0 ; no more level-up  moves
+	db 0 ; no more level-up moves
 
 LampentEvosAttacks:
 	dbbw EVOLVE_ITEM, MOON_STONE, CHANDELURE
@@ -2289,15 +2289,15 @@ LampentEvosAttacks:
 	dbw 53, SHADOW_BALL
 	dbw 61, PAIN_SPLIT
 	dbw 69, OVERHEAT
-	db 0 ; no more level-up  moves
+	db 0 ; no more level-up moves
 
 ChandelureEvosAttacks:
 	db 0
 	dbw 1, SMOG
 	dbw 1, CONFUSE_RAY
 	dbw 1, FLAME_WHEEL
-	;dbw 1, HEX
-	db 0 ; no more level-up  moves
+	dbw 1, HEX
+	db 0 ; no more level-up moves
 
 ClauncherEvosAttacks:
 	dbbw EVOLVE_LEVEL, 37, CLAWITZER

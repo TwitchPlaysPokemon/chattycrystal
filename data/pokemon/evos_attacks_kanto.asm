@@ -2592,7 +2592,7 @@ KabutoEvosAttacks:
 	dbw 37, PROTECT
 	dbw 41, GIGA_DRAIN
 	dbw 46, METAL_SOUND
-	;dbw 50, STONE_EDGE
+	dbw 50, STONE_EDGE
 	db 0 ; no more level-up moves
 
 KabutopsEvosAttacks:
@@ -2613,7 +2613,7 @@ KabutopsEvosAttacks:
 	dbw 40, SLASH
 	dbw 48, GIGA_DRAIN
 	dbw 56, METAL_SOUND
-	;dbw 67, STONE_EDGE
+	dbw 67, STONE_EDGE
 	db 0 ; no more level-up moves
 
 AerodactylEvosAttacks:

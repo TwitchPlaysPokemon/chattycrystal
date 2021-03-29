@@ -17,52 +17,52 @@ EggMovePointers3::
 	dw LotadEggMoves
 	dw NoEggMoves3         ; Lombre
 	dw NoEggMoves3         ; Ludicolo
-	dw NoEggMoves3         ; PLACEHOLDER - Taillow
+	dw TaillowEggMoves
 	dw NoEggMoves3         ; Swellow
 	dw WingullEggMoves
 	dw NoEggMoves3         ; Pelipper
-	dw NoEggMoves3         ; PLACEHOLDER - Ralts
+	dw RaltsEggMoves
 	dw NoEggMoves3         ; Kirlia
 	dw NoEggMoves3         ; Gardevoir
-	dw NoEggMoves3         ; PLACEHOLDER - Surskit
+	dw SurskitEggMoves
 	dw NoEggMoves3         ; Masquerain
 	dw WhismurEggMoves
 	dw NoEggMoves3         ; Loudred
 	dw NoEggMoves3         ; Exploud
-	dw NoEggMoves3         ; PLACEHOLDER - Makuhita
+	dw MakuhitaEggMoves
 	dw NoEggMoves3         ; Hariyama
 	dw AzurillEggMoves
-	dw NoEggMoves3         ; PLACEHOLDER - Skitty
+	dw SkittyEggMoves
 	dw NoEggMoves3         ; Delcatty
-	dw NoEggMoves3         ; PLACEHOLDER - Sableye
-	dw NoEggMoves3         ; PLACEHOLDER - Aron
+	dw SableyeEggMoves
+	dw AronEggMoves
 	dw NoEggMoves3         ; Lairon
 	dw NoEggMoves3         ; Aggron
-	dw NoEggMoves3         ; PLACEHOLDER - Electrike
+	dw ElectrikeEggMoves
 	dw NoEggMoves3         ; Manectric
 	dw NoEggMoves3         ; Roselia
-	dw NoEggMoves3         ; PLACEHOLDER - Wailmer
+	dw WailmerEggMoves
 	dw NoEggMoves3         ; Wailord
-	dw NoEggMoves3         ; PLACEHOLDER - Trapinch
+	dw TrapinchEggMoves
 	dw NoEggMoves3         ; Vibrava
 	dw NoEggMoves3         ; Flygon
-	dw NoEggMoves3         ; PLACEHOLDER - Swablu
-	dw NoEggMoves3         ; Altaira
-	dw NoEggMoves3         ; PLACEHOLDER - Lileep
+	dw SwabluEggMoves
+	dw NoEggMoves3         ; Altaria
+	dw LileepEggMoves
 	dw NoEggMoves3         ; Cradily
-	dw NoEggMoves3         ; PLACEHOLDER - Feebas
+	dw FeebasEggMoves
 	dw NoEggMoves3         ; Milotic
-	dw NoEggMoves3         ; PLACEHOLDER - Duskull
+	dw DuskullEggMoves
 	dw NoEggMoves3         ; Dusclops
-	dw NoEggMoves3         ; PLACEHOLDER - Absol
-	dw NoEggMoves3         ; PLACEHOLDER - Snorunt
-	dw NoEggMoves3         ; PLACEHOLDER - Spheal
+	dw AbsolEggMoves
+	dw SnoruntEggMoves
+	dw SphealEggMoves
 	dw NoEggMoves3         ; Sealeo
 	dw NoEggMoves3         ; Walrein
-	dw NoEggMoves3         ; PLACEHOLDER - Bagon
+	dw BagonEggMoves
 	dw NoEggMoves3         ; Shelgon
 	dw NoEggMoves3         ; Salamence
-	dw NoEggMoves3         ; PLACEHOLDER - Beldum
+	dw NoEggMoves3         ; Beldum
 	dw NoEggMoves3         ; Metang
 	dw NoEggMoves3         ; Metagross
 	dw NoEggMoves3         ; Latios
@@ -84,7 +84,7 @@ EggMovePointers3::
 	dw NoEggMoves3         ; Luxray
 	dw NoEggMoves3         ; PLACEHOLDER - Budew
 	dw NoEggMoves3         ; Roserade
-	dw NoEggMoves3         ; PLACEHOLDER - Burmy
+	dw NoEggMoves3         ; Burmy
 	dw NoEggMoves3         ; Mothim
 	dw NoEggMoves3         ; PLACEHOLDER - Buizel
 	dw NoEggMoves3         ; Floatzel
@@ -94,7 +94,7 @@ EggMovePointers3::
 	dw NoEggMoves3         ; Lopunny
 	dw NoEggMoves3         ; PLACEHOLDER - Stunky
 	dw NoEggMoves3         ; Skuntank
-	dw NoEggMoves3         ; PLACEHOLDER - Bronzor
+	dw NoEggMoves3         ; Bronzor
 	dw NoEggMoves3         ; Bronzong
 	dw BonslyEggMoves
 	dw ChatotEggMoves
@@ -115,7 +115,7 @@ EggMovePointers3::
 	dw NoEggMoves3         ; Krookodile
 	dw NoEggMoves3         ; PLACEHOLDER - Ducklett
 	dw NoEggMoves3         ; Swanna
-	dw NoEggMoves3         ; PLACEHOLDER - Tynamo
+	dw NoEggMoves3         ; Tynamo
 	dw NoEggMoves3         ; Eelektrik
 	dw NoEggMoves3         ; Eelektross
 	dw NoEggMoves3         ; PLACEHOLDER - Litwick
@@ -155,30 +155,27 @@ EggMovePointers3::
 
 TreeckoEggMoves:
 	dw CRUNCH
-	dw DRAGONBREATH
-	dw ENDEAVOR
 	dw LEECH_SEED
+	dw RAZOR_WIND
+	dw SLASH
 	dw -1 ; end
 
 TorchicEggMoves:
 	dw COUNTER
-	dw CURSE
 	dw NIGHT_SLASH
-	dw PECK
-	dw ENDURE
 	dw REVERSAL
-	dw ROCK_SLIDE
-	dw SWAGGER
+	dw AGILITY
+	dw BATON_PASS
+	dw LOW_KICK
 	dw -1 ; end
 
 MudkipEggMoves:
-	dw CURSE
 	dw ICE_BALL
 	dw MIRROR_COAT
 	dw STOMP
 	dw BITE
 	dw COUNTER
-	dw MUD_SLAP
+	dw ANCIENTPOWER
 	dw -1 ; end
 
 PoochyenaEggMoves:
@@ -186,26 +183,82 @@ PoochyenaEggMoves:
 	dw COVET
 	dw LEER
 	dw POISON_FANG
-	dw HYPNOSIS
+	dw FIRE_FANG
+	dw SNATCH
 	dw -1 ; end
 
 ZigzagoonEggMoves:
 	dw CHARM
 	dw PURSUIT
-	dw SUBSTITUTE
 	dw TICKLE
-	dw THIEF
+	dw EXTREMESPEED
 	dw -1 ; end
 
 LotadEggMoves:
-	dw FLAIL
 	dw LEECH_SEED
 	dw RAZOR_LEAF
-	dw SWEET_SCENT
-	dw SYNTHESIS
 	dw WATER_GUN
 	dw COUNTER
 	dw TICKLE
+	dw TEETER_DANCE
+	dw -1 ; end
+
+BonslyEggMoves:
+	dw SELFDESTRUCT
+	dw SAND_TOMB
+	dw -1 ; end
+
+ChatotEggMoves:
+	dw AGILITY
+	dw ENCORE
+	dw NIGHT_SHADE
+	dw SUPERSONIC
+	dw AIR_CUTTER
+	dw -1 ; end
+
+TaillowEggMoves:
+	dw MIRROR_MOVE
+	dw PURSUIT
+	dw RAGE
+	dw SKY_ATTACK
+	dw ROOST
+	dw HURRICANE
+	dw -1 ; end
+	
+WingullEggMoves:
+	dw GUST
+	dw TAKE_DOWN
+	dw TWISTER
+	dw AQUA_RING
+	dw -1 ; end
+	
+RaltsEggMoves:
+	dw DESTINY_BOND
+	dw MEAN_LOOK
+	dw MEMENTO
+	dw ENCORE
+	dw SHADOW_SNEAK
+	dw -1 ; end
+
+SurskitEggMoves:
+	dw HYDRO_PUMP
+	dw MIND_READER
+	dw PSYBEAM
+	dw -1 ; end
+
+WhismurEggMoves:
+	dw EXTRASENSORY
+	dw TAKE_DOWN
+	dw HAMMER_ARM
+	dw SMOKESCREEN
+	dw -1 ; end
+	
+MakuhitaEggMoves:
+	dw COUNTER
+	dw CROSS_CHOP
+	dw FEINT_ATTACK
+	dw FORESIGHT
+	dw BULLET_PUNCH
 	dw -1 ; end
 
 AzurillEggMoves:
@@ -217,32 +270,106 @@ AzurillEggMoves:
 	dw PERISH_SONG
 	dw SUPERSONIC
 	dw FORESIGHT
-	dw -1 ; end
-
-BonslyEggMoves:
-	dw SELFDESTRUCT
-	dw -1 ; end
-
-ChatotEggMoves:
-	dw AGILITY
 	dw ENCORE
-	dw NASTY_PLOT
-	dw NIGHT_SHADE
-	dw SUPERSONIC
 	dw -1 ; end
-
-WingullEggMoves:
-	dw AGILITY
+	
+SkittyEggMoves:
+	dw BATON_PASS
+	dw MUD_BOMB
+	dw SUCKER_PUNCH
+	dw ZEN_HEADBUTT
+	dw -1 ; end
+	
+SableyeEggMoves:
+	dw RECOVER
+	dw SUCKER_PUNCH
+	dw -1 ; end
+	
+AronEggMoves:
+	dw BODY_SLAM
+	dw ENDEAVOR
+	dw STOMP
+	dw SCREECH
+	dw REVERSAL
+	dw -1 ; end
+		
+ElectrikeEggMoves:
+	dw CRUNCH
+	dw FIRE_FANG
+	dw ICE_FANG
+	dw SPARK
+	dw -1 ; end
+		
+WailmerEggMoves:
+	dw DOUBLE_EDGE
+	dw FISSURE
+	dw TICKLE
+	dw AQUA_RING
+	dw ZEN_HEADBUTT
+	dw -1 ; end
+	
+TrapinchEggMoves:
+	dw FOCUS_ENERGY
 	dw GUST
+	dw QUICK_ATTACK
+	dw -1 ; end	
+	
+SwabluEggMoves:
+	dw AGILITY
+	dw HAZE
+	dw PURSUIT
+	dw HYPER_VOICE
+	dw ROOST
+	dw -1 ; end
+		
+LileepEggMoves:
+	dw MIRROR_COAT
+	dw -1 ; end
+		
+FeebasEggMoves:
+	dw CONFUSE_RAY
+	dw HYPNOSIS
+	dw LIGHT_SCREEN
+	dw MIRROR_COAT
+	dw HAZE
 	dw MIST
-	dw TAKE_DOWN
+	dw -1 ; end
+		
+DuskullEggMoves:
+	dw DESTINY_BOND
+	dw MEMENTO
+	dw PAIN_SPLIT
+	dw HAZE
+	dw -1 ; end
+	
+AbsolEggMoves:
+	dw BATON_PASS
+	dw DOUBLE_EDGE
+	dw ASSURANCE
+	dw MEAN_LOOK
+	dw MEGAHORN
+	dw PLAY_ROUGH
+	dw -1 ; end
+		
+SnoruntEggMoves:
+	dw SPIKES
+	dw BIDE
+	dw DISABLE
+	dw HEX
 	dw -1 ; end
 
-WhismurEggMoves:
-	dw EXTRASENSORY
-	dw SNORE
-	dw SWAGGER
-	dw TAKE_DOWN
+SphealEggMoves:
+	dw AQUA_RING
+	dw WATER_PULSE
+	dw BELLY_DRUM
+	dw -1 ; end
+		
+BagonEggMoves:
+	dw DRAGON_DANCE
+	dw HYDRO_PUMP
+	dw FIRE_FANG
+	dw TWISTER
+	dw THRASH
 	dw -1 ; end
 
 OnixtretEggMoves:

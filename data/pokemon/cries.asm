@@ -256,10 +256,10 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
-    mon_cry CRY_DIGLETT,     $dee,  $0b9 ; TREECKO
-    mon_cry CRY_DIGLETT,     $cff,  $130 ; GROVYLE
-    mon_cry CRY_DIGLETT,     $bdf,  $090 ; SCEPTILE
-    mon_cry CRY_HOOTHOOT,    $0ff,  $0c8 ; TORCHIC
+	mon_cry CRY_DIGLETT,     $dee,  $0b9 ; TREECKO
+	mon_cry CRY_DIGLETT,     $cff,  $130 ; GROVYLE
+	mon_cry CRY_DIGLETT,     $bdf,  $090 ; SCEPTILE
+	mon_cry CRY_HOOTHOOT,    $0ff,  $0c8 ; TORCHIC
 	mon_cry CRY_HOOTHOOT,    $0b9,  $124 ; COMBUSKEN
 	mon_cry CRY_TYPHLOSION,  $f43,  $100 ; BLAZIKEN
 	mon_cry CRY_PSYDUCK,     $725,  $091 ; MUDKIP
@@ -267,10 +267,10 @@ PokemonCries::
 	mon_cry CRY_ODDISH,      $50d,  $1b2 ; SWAMPERT
 	mon_cry CRY_PIDGEY,      $52d,  $0f2 ; POOCHYENA
 	mon_cry CRY_BLASTOISE,   $000,  $150 ; MIGHTYENA
-    mon_cry CRY_WEEDLE,      $80b,  $081 ; ZIGZAGOON
-    mon_cry CRY_WEEDLE,      $609,  $1b1 ; LINOONE
-    mon_cry CRY_SUNFLORA,    $148,  $000 ; LOTAD - PLACEHOLDER
-    mon_cry CRY_FEAROW,      $680,  $090 ; LOMBRE
+	mon_cry CRY_WEEDLE,      $80b,  $081 ; ZIGZAGOON
+	mon_cry CRY_WEEDLE,      $609,  $1b1 ; LINOONE
+	mon_cry CRY_SUNFLORA,    $148,  $000 ; LOTAD - PLACEHOLDER
+	mon_cry CRY_FEAROW,      $680,  $090 ; LOMBRE
 	mon_cry CRY_KRABBY,      $0d0,  $0fa ; LUDICOLO
 	mon_cry CRY_SPEAROW,     $06f,  $080 ; TAILLOW
 	mon_cry CRY_SPEAROW,     $020,  $090 ; SWELLOW

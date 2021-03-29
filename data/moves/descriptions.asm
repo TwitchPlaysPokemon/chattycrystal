@@ -1013,6 +1013,10 @@ GrassKnotDescription:
 	db   "Hurts heavier foes"
 	next "more.@"
 
+HexDescription:
+	db   "Hurts more against"
+	next "statused foes.@"
+
 HoneClawsDescription:
 	db   "Increases ATTACK"
 	next "and accuracy.@"
@@ -1487,7 +1491,3 @@ ThrashDescription:
 CurseDescription:
 	db   "Works differently"
 	next "for ghost-types.@"
-
-HexDescription:
-	db   "Hurts more against"
-	next "statused foes.@"

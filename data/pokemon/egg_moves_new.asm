@@ -158,6 +158,7 @@ TreeckoEggMoves:
 	dw LEECH_SEED
 	dw RAZOR_WIND
 	dw SLASH
+	dw SYNTHESIS
 	dw -1 ; end
 
 TorchicEggMoves:
@@ -208,7 +209,6 @@ TaillowEggMoves:
 	dw PURSUIT
 	dw RAGE
 	dw SKY_ATTACK
-	dw ROOST
 	dw HURRICANE
 	dw -1 ; end
 	
@@ -306,7 +306,6 @@ SwabluEggMoves:
 	dw HAZE
 	dw PURSUIT
 	dw HYPER_VOICE
-	dw ROOST
 	dw -1 ; end
 		
 LileepEggMoves:
@@ -465,6 +464,7 @@ CroagunkEggMoves:
 		
 PansageEggMoves:
 	dw ASTONISH
+	dw SYNTHESIS
 	dw -1 ; end
 	
 DrilburEggMoves:
@@ -498,6 +498,7 @@ LitwickEggMoves:
 		
 ClauncherEggMoves:
 	dw AQUA_TAIL
+	dw FLASH_CANNON
 	dw -1 ; end
 	
 HelioptileEggMoves:
@@ -513,10 +514,12 @@ AmauraEggMoves:
 		
 GoomyEggMoves:
 	dw COUNTER
+	dw OUTRAGE
 	dw -1 ; end
 		
 CrabrawlerEggMoves:
 	dw AMNESIA
+	dw STONE_EDGE
 	dw -1 ; end
 		
 CutieflyEggMoves:

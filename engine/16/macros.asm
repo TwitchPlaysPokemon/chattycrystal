@@ -116,9 +116,10 @@ ___unroll = 8
 		ld a, [hli]
 		cp e
 		ld a, [hli]
-		db $20, 3 ;jr nz, <skip 3 bytes> - avoid labels to avoid running into bugs with \@
+		jr nz, :+
 		cp d
 		jr z, .found
+		:
 	endr
 	ld a, l
 	cp LOW(\1EntriesEnd)
@@ -351,13 +352,15 @@ ___conversion_bitmap_free_unused: MACRO
 	for ___iteration, 8
 		srl e
 		ld a, [hli]
-		db $30, 3 ;jr nc, <skip 3 bytes> - avoid labels to avoid running into bugs with \@
+		jr nc, :+
 		or [hl]
-		db $20, 4 ;jr nz, <skip 4 bytes>
+		jr nz, :++
+		:
 		xor a
 		ld [hld], a
 		ld [hl], a
 		dec b
+		:
 		set 0, l ;so hl points to the second byte of the entry regardless of whether it was cleared
 		if (\2_ENTRIES >= $80) && (___iteration == 6)
 			inc hl ;the only iteration with any chance of carry is this one
@@ -377,13 +380,15 @@ ___conversion_bitmap_free_unused: MACRO
 			; same loop as above
 			srl e
 			ld a, [hli]
-			db $30, 3 ;jr nc, <skip 3 bytes>
+			jr nc, :+
 			or [hl]
-			db $20, 4 ;jr nz, <skip 4 bytes>
+			jr nz, :++
+			:
 			xor a
 			ld [hld], a
 			ld [hl], a
 			dec b
+			:
 			if ___iteration < (\2_ENTRIES & 7) - 1
 				; no point incrementing the pointer if it is the last iteration
 				set 0, l

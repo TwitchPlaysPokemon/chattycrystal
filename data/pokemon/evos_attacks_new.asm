@@ -1148,10 +1148,11 @@ DuskullEvosAttacks:
 	dbw 25, WILL_O_WISP
 	dbw 30, CONFUSE_RAY
 	dbw 33, CURSE
-	dbw 38, SHADOW_BALL
-	dbw 41, MEAN_LOOK
-	dbw 46, DARK_PULSE
-	dbw 49, FUTURE_SIGHT
+	dbw 38, HEX
+	dbw 41, SHADOW_BALL
+	dbw 46, MEAN_LOOK
+	dbw 49, DARK_PULSE
+	dbw 54, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 DusclopsEvosAttacks:
@@ -1173,10 +1174,11 @@ DusclopsEvosAttacks:
 	dbw 30, CONFUSE_RAY
 	dbw 33, CURSE
 	dbw 37, SHADOW_PUNCH
-	dbw 40, SHADOW_BALL
-	dbw 45, MEAN_LOOK
-	dbw 52, DARK_PULSE
-	dbw 57, FUTURE_SIGHT
+	dbw 40, HEX
+	dbw 45, SHADOW_BALL
+	dbw 52, MEAN_LOOK
+	dbw 57, DARK_PULSE
+	dbw 64, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 AbsolEvosAttacks:
@@ -2009,8 +2011,11 @@ DusknoirEvosAttacks:
 
 FroslassEvosAttacks:
 	db 0
+	dbw 1, HEX
 	dbw 1, POWDER_SNOW
 	dbw 1, LEER
+	dbw 1, DOUBLE_TEAM
+	dbw 1, ICE_SHARD
 	dbw 6, DOUBLE_TEAM
 	dbw 10, ICE_SHARD
 	dbw 15, ICY_WIND
@@ -2255,7 +2260,7 @@ LitwickEvosAttacks:
 	dbw 16, WILL_O_WISP
 	dbw 20, FLAME_WHEEL
 	dbw 24, SPITE
-	;dbw 28, HEX
+	dbw 28, HEX
 	dbw 33, MEMENTO
 	dbw 38, FLAMETHROWER
 	dbw 43, CURSE
@@ -2277,7 +2282,7 @@ LampentEvosAttacks:
 	dbw 16, WILL_O_WISP
 	dbw 20, FLAME_WHEEL
 	dbw 24, SPITE
-	;dbw 28, HEX
+	dbw 28, HEX
 	dbw 33, MEMENTO
 	dbw 38, FLAMETHROWER
 	dbw 45, CURSE

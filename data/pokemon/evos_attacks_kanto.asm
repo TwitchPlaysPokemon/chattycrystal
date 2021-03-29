@@ -743,16 +743,18 @@ VulpixEvosAttacks:
 	dbw 1, TAIL_WHIP
 	dbw 5, DISABLE
 	dbw 9, QUICK_ATTACK
-	dbw 13, SPITE
-	dbw 17, FIRE_SPIN
-	dbw 21, CONFUSE_RAY
-	dbw 25, WILL_O_WISP
-	dbw 39, EXTRASENSORY
-	dbw 33, FLAMETHROWER
-	dbw 37, SAFEGUARD
-	dbw 41, FIRE_BLAST
-	dbw 45, MEMENTO
-	dbw 49, HEAT_WAVE
+	dbw 12, SPITE
+	dbw 16, FIRE_SPIN
+	dbw 20, CONFUSE_RAY
+	dbw 23, FEINT_ATTACK
+	dbw 27, WILL_O_WISP
+	dbw 31, HEX
+	dbw 34, FLAMETHROWER
+	dbw 38, EXTRASENSORY
+	dbw 42, SAFEGUARD
+	dbw 45, FIRE_BLAST
+	dbw 49, MEMENTO
+	dbw 53, HEAT_WAVE
 	db 0 ; no more level-up moves
 
 NinetalesEvosAttacks:
@@ -1344,15 +1346,16 @@ TentacoolEvosAttacks:
 	dbbw EVOLVE_LEVEL, 30, TENTACRUEL
 	db 0 ; no more evolutions
 	dbw 1, POISON_STING
-	dbw 6, SUPERSONIC
-	dbw 10, CONSTRICT
-	dbw 14, ACID
-	dbw 19, WATER_PULSE
-	dbw 23, WRAP
-	dbw 27, BUBBLEBEAM
-	dbw 32, POISON_JAB
-	dbw 36, ACID_ARMOR
-	dbw 40, SCREECH
+	dbw 5, SUPERSONIC
+	dbw 9, CONSTRICT
+	dbw 13, ACID
+	dbw 17, WATER_PULSE
+	dbw 21, WRAP
+	dbw 25, BUBBLEBEAM
+	dbw 29, POISON_JAB
+	dbw 33, ACID_ARMOR
+	dbw 37, SCREECH
+	dbw 41, HEX
 	dbw 45, HYDRO_PUMP
 	dbw 49, SLUDGE_BOMB
 	db 0 ; no more level-up moves
@@ -1360,17 +1363,17 @@ TentacoolEvosAttacks:
 TentacruelEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POISON_STING
-	dbw 6, SUPERSONIC
-	dbw 10, CONSTRICT
-	dbw 14, ACID
-	dbw 19, WATER_PULSE
-	dbw 23, WRAP
-	dbw 27, BUBBLEBEAM
-	dbw 33, POISON_JAB
-	dbw 39, ACID_ARMOR
-	dbw 45, SCREECH
-	dbw 51, HYDRO_PUMP
-	dbw 57, SLUDGE_BOMB
+	dbw 5, SUPERSONIC
+	dbw 9, CONSTRICT
+	dbw 13, ACID
+	dbw 17, WATER_PULSE
+	dbw 21, WRAP
+	dbw 25, BUBBLEBEAM
+	dbw 29, POISON_JAB
+	dbw 35, ACID_ARMOR
+	dbw 42, SCREECH
+	dbw 49, HYDRO_PUMP
+	dbw 56, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 GeodudeEvosAttacks:
@@ -1722,6 +1725,8 @@ GastlyEvosAttacks:
 	dbw 33, DREAM_EATER
 	dbw 36, DARK_PULSE
 	dbw 40, DESTINY_BOND
+	dbw 43, HEX
+	dbw 47, NIGHTMARE
 	db 0 ; no more level-up moves
 
 HaunterEvosAttacks:
@@ -1743,6 +1748,8 @@ HaunterEvosAttacks:
 	dbw 39, DREAM_EATER
 	dbw 44, DARK_PULSE
 	dbw 50, DESTINY_BOND
+	dbw 55, HEX
+	dbw 61, NIGHTMARE
 	db 0 ; no more level-up moves
 
 GengarEvosAttacks:
@@ -1762,6 +1769,8 @@ GengarEvosAttacks:
 	dbw 39, DREAM_EATER
 	dbw 44, DARK_PULSE
 	dbw 50, DESTINY_BOND
+	dbw 55, HEX
+	dbw 61, NIGHTMARE
 	db 0 ; no more level-up moves
 
 OnixEvosAttacks:

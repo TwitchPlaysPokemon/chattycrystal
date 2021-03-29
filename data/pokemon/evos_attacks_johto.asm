@@ -923,7 +923,7 @@ MisdreavusEvosAttacks:
 	dbw 10, ASTONISH
 	dbw 14, CONFUSE_RAY
 	dbw 19, MEAN_LOOK
-	dbw 23, SHADOW_SNEAK
+	dbw 23, HEX
 	dbw 28, PSYBEAM
 	dbw 32, PAIN_SPLIT
 	dbw 37, SUCKER_PUNCH

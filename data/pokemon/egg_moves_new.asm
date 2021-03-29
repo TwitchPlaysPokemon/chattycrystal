@@ -4,17 +4,17 @@ EggMovePointers3::
 	dw TreeckoEggMoves
 	dw NoEggMoves3         ; Grovyle
 	dw NoEggMoves3         ; Sceptile
-	dw NoEggMoves3         ; PLACEHOLDER - Torchic
+	dw TorchicEggMoves
 	dw NoEggMoves3         ; Combusken
 	dw NoEggMoves3         ; Blaziken
-	dw NoEggMoves3         ; PLACEHOLDER - Mudkip
+	dw MudkipEggMoves
 	dw NoEggMoves3         ; Marshtomp
 	dw NoEggMoves3         ; Swampert
 	dw PoochyenaEggMoves
 	dw NoEggMoves3         ; Mightyena
 	dw ZigzagoonEggMoves
 	dw NoEggMoves3         ; Linoone
-	dw NoEggMoves3         ; PLACEHOLDER - Lotad
+	dw LotadEggMoves
 	dw NoEggMoves3         ; Lombre
 	dw NoEggMoves3         ; Ludicolo
 	dw NoEggMoves3         ; PLACEHOLDER - Taillow
@@ -160,28 +160,25 @@ TreeckoEggMoves:
 	dw LEECH_SEED
 	dw -1 ; end
 
-AzurillEggMoves:
-	dw LIGHT_SCREEN
-	dw PRESENT
-	dw AMNESIA
-	dw FUTURE_SIGHT
-	dw BELLY_DRUM
-	dw PERISH_SONG
-	dw SUPERSONIC
-	dw FORESIGHT
+TorchicEggMoves:
+	dw COUNTER
+	dw CURSE
+	dw NIGHT_SLASH
+	dw PECK
+	dw ENDURE
+	dw REVERSAL
+	dw ROCK_SLIDE
+	dw SWAGGER
 	dw -1 ; end
 
-BonslyEggMoves:
-	dw SELFDESTRUCT
-	dw -1 ; end
-
-
-ChatotEggMoves:
-	dw AGILITY
-	dw ENCORE
-	dw NASTY_PLOT
-	dw NIGHT_SHADE
-	dw SUPERSONIC
+MudkipEggMoves:
+	dw CURSE
+	dw ICE_BALL
+	dw MIRROR_COAT
+	dw STOMP
+	dw BITE
+	dw COUNTER
+	dw MUD_SLAP
 	dw -1 ; end
 
 PoochyenaEggMoves:
@@ -198,6 +195,40 @@ ZigzagoonEggMoves:
 	dw SUBSTITUTE
 	dw TICKLE
 	dw THIEF
+	dw -1 ; end
+
+LotadEggMoves:
+	dw FLAIL
+	dw LEECH_SEED
+	dw RAZOR_LEAF
+	dw SWEET_SCENT
+	dw SYNTHESIS
+	dw WATER_GUN
+	dw COUNTER
+	dw TICKLE
+	dw -1 ; end
+
+AzurillEggMoves:
+	dw LIGHT_SCREEN
+	dw PRESENT
+	dw AMNESIA
+	dw FUTURE_SIGHT
+	dw BELLY_DRUM
+	dw PERISH_SONG
+	dw SUPERSONIC
+	dw FORESIGHT
+	dw -1 ; end
+
+BonslyEggMoves:
+	dw SELFDESTRUCT
+	dw -1 ; end
+
+ChatotEggMoves:
+	dw AGILITY
+	dw ENCORE
+	dw NASTY_PLOT
+	dw NIGHT_SHADE
+	dw SUPERSONIC
 	dw -1 ; end
 
 WingullEggMoves:

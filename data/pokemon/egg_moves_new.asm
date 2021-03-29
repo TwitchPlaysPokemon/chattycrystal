@@ -68,37 +68,37 @@ EggMovePointers3::
 	dw NoEggMoves3         ; Latios
 	dw NoEggMoves3         ; Kyogre
 	dw NoEggMoves3         ; Groudon
-	dw NoEggMoves3         ; PLACEHOLDER - Turtwig
+	dw TurtwigEggMoves
 	dw NoEggMoves3         ; Grotle
 	dw NoEggMoves3         ; Torterra
-	dw NoEggMoves3         ; PLACEHOLDER - Chimchar
+	dw ChimcharEggMoves
 	dw NoEggMoves3         ; Monferno
 	dw NoEggMoves3         ; Infernape
-	dw NoEggMoves3         ; PLACEHOLDER - Piplup
+	dw PiplupEggMoves
 	dw NoEggMoves3         ; Prinplup
 	dw NoEggMoves3         ; Empoleon
-	dw NoEggMoves3         ; PLACEHOLDER - Bidoof
+	dw BidoofEggMoves
 	dw NoEggMoves3         ; Bibarel
-	dw NoEggMoves3         ; PLACEHOLDER - Shinx
+	dw ShinxEggMoves
 	dw NoEggMoves3         ; Luxio
 	dw NoEggMoves3         ; Luxray
-	dw NoEggMoves3         ; PLACEHOLDER - Budew
+	dw BudewEggMoves
 	dw NoEggMoves3         ; Roserade
 	dw NoEggMoves3         ; Burmy
 	dw NoEggMoves3         ; Mothim
-	dw NoEggMoves3         ; PLACEHOLDER - Buizel
+	dw BuizelEggMoves
 	dw NoEggMoves3         ; Floatzel
-	dw NoEggMoves3         ; PLACEHOLDER - Shellos
+	dw ShellosEggMoves
 	dw NoEggMoves3         ; Gastrodon
-	dw NoEggMoves3         ; PLACEHOLDER - Buneary
+	dw BunearyEggMoves
 	dw NoEggMoves3         ; Lopunny
-	dw NoEggMoves3         ; PLACEHOLDER - Stunky
+	dw StunkyEggMoves
 	dw NoEggMoves3         ; Skuntank
 	dw NoEggMoves3         ; Bronzor
 	dw NoEggMoves3         ; Bronzong
 	dw BonslyEggMoves
 	dw ChatotEggMoves
-	dw NoEggMoves3         ; PLACEHOLDER - Croagunk
+	dw CroagunkEggMoves
 	dw NoEggMoves3         ; Toxicroak
 	dw NoEggMoves3         ; Leafon
 	dw NoEggMoves3         ; Glaceon
@@ -106,34 +106,34 @@ EggMovePointers3::
 	dw NoEggMoves3         ; Dusknoir
 	dw NoEggMoves3         ; Froslass
 	dw NoEggMoves3         ; Darkrai
-	dw NoEggMoves3         ; PLACEHOLDER - Pansage
+	dw PansageEggMoves
 	dw NoEggMoves3         ; Simisage
-	dw NoEggMoves3         ; PLACEHOLDER - Drilbur
+	dw DrilburEggMoves
 	dw NoEggMoves3         ; Excadrill
-	dw NoEggMoves3         ; PLACEHOLDER - Sandile
+	dw SandileEggMoves
 	dw NoEggMoves3         ; Krokorok
 	dw NoEggMoves3         ; Krookodile
-	dw NoEggMoves3         ; PLACEHOLDER - Ducklett
+	dw DucklettEggMoves
 	dw NoEggMoves3         ; Swanna
 	dw NoEggMoves3         ; Tynamo
 	dw NoEggMoves3         ; Eelektrik
 	dw NoEggMoves3         ; Eelektross
-	dw NoEggMoves3         ; PLACEHOLDER - Litwick
+	dw LitwickEggMoves
 	dw NoEggMoves3         ; Lampent
 	dw NoEggMoves3         ; Chandelure
-	dw NoEggMoves3         ; PLACEHOLDER - Clauncher
+	dw ClauncherEggMoves
 	dw NoEggMoves3         ; Clawitzer
-	dw NoEggMoves3         ; PLACEHOLDER - Helioptile
+	dw HelioptileEggMoves
 	dw NoEggMoves3         ; Heliolisk
-	dw NoEggMoves3         ; PLACEHOLDER - Amaura
+	dw AmauraEggMoves
 	dw NoEggMoves3         ; Aurorus
 	dw NoEggMoves3         ; Sylveon
-	dw NoEggMoves3         ; PLACEHOLDER - Goomy
+	dw GoomyEggMoves
 	dw NoEggMoves3         ; Sliggoo
 	dw NoEggMoves3         ; Goodra
-	dw NoEggMoves3         ; PLACEHOLDER - Crabrawler
+	dw CrabrawlerEggMoves
 	dw NoEggMoves3         ; Crabominable
-	dw NoEggMoves3         ; PLACEHOLDER - Cutiefly
+	dw CutieflyEggMoves
 	dw NoEggMoves3         ; Ribombee
 	; Fused Crystal mons
 	dw OnixtretEggMoves
@@ -201,19 +201,6 @@ LotadEggMoves:
 	dw COUNTER
 	dw TICKLE
 	dw TEETER_DANCE
-	dw -1 ; end
-
-BonslyEggMoves:
-	dw SELFDESTRUCT
-	dw SAND_TOMB
-	dw -1 ; end
-
-ChatotEggMoves:
-	dw AGILITY
-	dw ENCORE
-	dw NIGHT_SHADE
-	dw SUPERSONIC
-	dw AIR_CUTTER
 	dw -1 ; end
 
 TaillowEggMoves:
@@ -370,6 +357,172 @@ BagonEggMoves:
 	dw FIRE_FANG
 	dw TWISTER
 	dw THRASH
+	dw -1 ; end
+	
+TurtwigEggMoves:
+	dw AMNESIA
+	dw BODY_SLAM
+	dw GROWTH
+	dw EARTH_POWER
+	dw -1 ; end
+		
+ChimcharEggMoves:
+	dw ASSIST
+	dw BLAZE_KICK
+	dw COUNTER
+	dw FAKE_OUT
+	dw FOCUS_ENERGY
+	dw SUBMISSION
+	dw -1 ; end
+		
+PiplupEggMoves:
+	dw AGILITY
+	dw AQUA_RING
+	dw FLAIL
+	dw SUPERSONIC
+	dw POWER_TRIP
+	dw -1 ; end
+		
+BidoofEggMoves:
+	dw AQUA_TAIL
+	dw DOUBLE_EDGE
+	dw ODOR_SLEUTH
+	dw QUICK_ATTACK
+	dw SKULL_BASH
+	dw -1 ; end
+		
+ShinxEggMoves:
+	dw FIRE_FANG
+	dw HOWL
+	dw ICE_FANG
+	dw NIGHT_SLASH
+	dw DOUBLE_KICK
+	dw SHOCK_WAVE
+	dw -1 ; end
+		
+BudewEggMoves:
+	dw COTTON_SPORE
+	dw EXTRASENSORY
+	dw LEAF_STORM
+	dw SLEEP_POWDER
+	dw -1 ; end
+		
+BuizelEggMoves:
+	dw BATON_PASS
+	dw FURY_SWIPES
+	dw ODOR_SLEUTH
+	dw SLASH
+	dw AQUA_RING
+	dw AQUA_TAIL
+	dw -1 ; end
+		
+ShellosEggMoves:
+	dw AMNESIA
+	dw COUNTER
+	dw MEMENTO
+	dw MIRROR_COAT
+	dw ACID_ARMOR
+	dw -1 ; end
+		
+BunearyEggMoves:
+	dw ENCORE
+	dw FAKE_OUT
+	dw FLAIL
+	dw LOW_KICK
+	dw SWEET_KISS
+	dw -1 ; end
+		
+StunkyEggMoves:
+	dw ASTONISH
+	dw CRUNCH
+	dw HAZE
+	dw FOUL_PLAY
+	dw PLAY_ROUGH
+	dw PURSUIT
+	dw -1 ; end
+
+BonslyEggMoves:
+	dw SELFDESTRUCT
+	dw SAND_TOMB
+	dw -1 ; end
+
+ChatotEggMoves:
+	dw AGILITY
+	dw ENCORE
+	dw NIGHT_SHADE
+	dw SUPERSONIC
+	dw AIR_CUTTER
+	dw -1 ; end
+
+CroagunkEggMoves:
+	dw BULLET_PUNCH
+	dw COUNTER
+	dw CROSS_CHOP
+	dw FAKE_OUT
+	dw MEDITATE
+	dw WAKE_UP_SLAP
+	dw -1 ; end
+		
+PansageEggMoves:
+	dw ASTONISH
+	dw -1 ; end
+	
+DrilburEggMoves:
+	dw EARTH_POWER
+	dw SKULL_BASH
+	dw SUBMISSION
+	dw -1 ; end
+		
+SandileEggMoves:
+	dw COUNTER
+	dw FIRE_FANG
+	dw PURSUIT
+	dw THUNDER_FANG
+	dw POWER_TRIP
+	dw AQUA_TAIL
+	dw -1 ; end
+		
+DucklettEggMoves:
+	dw AIR_CUTTER
+	dw BRINE
+	dw GUST
+	dw MIRROR_MOVE
+	dw AQUA_JET
+	dw -1 ; end
+		
+LitwickEggMoves:
+	dw ACID
+	dw ACID_ARMOR
+	dw HAZE
+	dw -1 ; end
+		
+ClauncherEggMoves:
+	dw AQUA_TAIL
+	dw -1 ; end
+	
+HelioptileEggMoves:
+	dw AGILITY
+	dw GLARE
+	dw -1 ; end
+	
+AmauraEggMoves:
+	dw DISCHARGE
+	dw HAZE
+	dw MIRROR_COAT
+	dw -1 ; end
+		
+GoomyEggMoves:
+	dw COUNTER
+	dw -1 ; end
+		
+CrabrawlerEggMoves:
+	dw AMNESIA
+	dw -1 ; end
+		
+CutieflyEggMoves:
+	dw BATON_PASS
+	dw MOONBLAST
+	dw AIR_CUTTER
 	dw -1 ; end
 
 OnixtretEggMoves:

@@ -95,6 +95,7 @@ ROMX $20
 	"Pics 31"
 ROMX $21
 	"bank21"
+	"Pic Animations 6"
 ROMX $22
 	"bank22"
 ROMX $23
@@ -326,7 +327,6 @@ ROMX $78
 	"Pics 29"
 ROMX $79
 	"Enemy Trainer Parties 1"
-	"Pic Animations 6"
 ROMX $7a
 	"Pics 26"
 ROMX $7b

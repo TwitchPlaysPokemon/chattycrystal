@@ -1676,6 +1676,89 @@ GreenMayGroup:
 	db "M ---/'/'4@"
 
 	db -1 ; end
+	
+	next_list_item ; A_EMERALD_REMATCH
+	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 100
+	dw HARIYAMA
+	db BLACKBELT
+	dw BRICK_BREAK, STRENGTH, KNOCK_OFF, BELLY_DRUM
+	bigdw $0FFF
+	bigdw 432
+	bigdw 303
+	bigdw 172
+	bigdw 133
+	bigdw 95
+	bigdw 140
+	db "A♀Nllllc33@"
+
+	db 100
+	dw MIGHTYENA
+	db SPELL_TAG
+	dw STRENGTH, CRUNCH, SHADOW_BALL, DOUBLE_EDGE
+	bigdw $FFFF
+	bigdw 283
+	bigdw 240
+	bigdw 141
+	bigdw 170
+	bigdw 169
+	bigdw 171
+	db "MIGHTYENA@"
+
+	db 100
+	dw VILEPLUME
+	db POKE_BALL
+	dw SLUDGE_BOMB, MOONBLAST, GIGA_DRAIN, SLEEP_POWDER
+	bigdw $0FFF
+	bigdw 296
+	bigdw 212
+	bigdw 194
+	bigdw 127
+	bigdw 188
+	bigdw 203
+	db "VILEPLUME@"
+
+	db 100
+	dw GOLEM
+	db SOFT_SAND
+	dw EXPLOSION, DOUBLE_EDGE, EARTHQUAKE, ROCK_SLIDE
+	bigdw $0FFF
+	bigdw 323
+	bigdw 218
+	bigdw 315
+	bigdw 168
+	bigdw 138
+	bigdw 172
+	db " -5'''7''Y@"
+
+	db 100
+	dw TENTACRUEL
+	db MYSTIC_WATER
+	dw SURF, SLUDGE_BOMB, HIDDEN_POWER, TOXIC
+	bigdw $6FFF
+	bigdw 334
+	bigdw 169
+	bigdw 211
+	bigdw 256
+	bigdw 178
+	bigdw 270
+	db "GJKLFFZ@"
+
+	db 100
+	dw AZUMARILL
+	db HARD_STONE
+	dw ROLLOUT, SURF, STRENGTH, PLAY_ROUGH
+	bigdw $0FFF
+	bigdw 340
+	bigdw 292
+	bigdw 197
+	bigdw 171
+	bigdw 160
+	bigdw 181
+	db "M ---/'/'4@"
+
+	db -1 ; end
 
 	end_list_items
 
@@ -4300,6 +4383,88 @@ XYSerena2Group:
 	bigdw 123
 	db "8d b9 'bmp@"
 	db -1 ; end
+	
+	next_list_item ; ETR_REMATCH
+	db "Etr@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+
+	db 100
+	dw HELIOLISK
+	db MAGNET
+	dw SURF, HYPER_BEAM, GRASS_KNOT, THUNDERBOLT
+	bigdw $FFFF
+	bigdw 261
+	bigdw 167
+	bigdw 135
+	bigdw 266
+	bigdw 275
+	bigdw 232
+	db "Herrrdliop@"
+	
+	db 100
+	dw GOODRA
+	db POKE_DOLL
+	dw FLAMETHROWER, DRAGON_PULSE, THUNDERBOLT, EARTHQUAKE
+	bigdw $FFFF
+	bigdw 323
+	bigdw 263
+	bigdw 172
+	bigdw 205
+	bigdw 227
+	bigdw 340
+	db "R6@"
+	
+	db 100
+	dw DUCKLETT
+	db EVERSTONE
+	dw FLY, SURF, ROOST, BRAVE_BIRD
+	bigdw $0FFF
+	bigdw 267
+	bigdw 156
+	bigdw 210 ;baked in evolite
+	bigdw 126
+	bigdw 128
+	bigdw 250
+	db "dfuucck@"
+	
+	db 100
+	dw CLAWITZER
+	db KINGS_ROCK
+	dw WATER_PULSE, AURA_SPHERE, DRAGON_PULSE, DARK_PULSE
+	bigdw $0FFF
+	bigdw 288
+	bigdw 233
+	bigdw 201
+	bigdw 146
+	bigdw 247
+	bigdw 218
+	db "8d b9 'bmp@"
+	db -1 ; end
+
+	db 100
+	dw AURORUS
+	db HARD_STONE
+	dw CALM_MIND, ANCIENTPOWER, FREEZE_DRY, TRI_ATTACK
+	bigdw $FFFF
+	bigdw 392
+	bigdw 202
+	bigdw 177
+	bigdw 170
+	bigdw 269
+	bigdw 198
+	db "Amééépura2@"
+
+	db 100
+	dw MOTHIM
+	db SHARP_BEAK
+	dw BUG_BUZZ, AIR_SLASH, PSYCHIC_M, QUIVER_DANCE
+	bigdw $FFFF
+	bigdw 287
+	bigdw 230
+	bigdw 124
+	bigdw 167
+	bigdw 223
+	bigdw 127
+	db "Moth@"
 
 	end_list_items
 

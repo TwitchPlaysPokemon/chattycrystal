@@ -797,6 +797,7 @@ CHRIS EQU __enum__
 
 	trainerclass XY_SERENA2 ; 38
 	trainervalue ETR
+	trainervalue ETR_REMATCH
 
 	trainerclass SMUSUM_ELIO ; 39
 	trainervalue L_SUN
@@ -818,6 +819,7 @@ CHRIS EQU __enum__
 
 	trainerclass GREEN_MAY ; 3e
 	trainervalue A_EMERALD
+	trainervalue A_EMERALD_REMATCH
 
 	trainerclass BROWN ; 3f
 	trainervalue PAUL_B

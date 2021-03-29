@@ -108,7 +108,6 @@ ChikoritaEggMoves:
 	dw COUNTER
 	dw ANCIENTPOWER
 	dw FLAIL
-	dw SWORDS_DANCE
 	dw -1 ; end
 
 CyndaquilEggMoves:
@@ -126,7 +125,6 @@ TotodileEggMoves:
 	dw HYDRO_PUMP
 	dw ANCIENTPOWER
 	dw RAZOR_WIND
-	dw ROCK_SLIDE
 	dw -1 ; end
 
 SentretEggMoves:
@@ -202,11 +200,9 @@ NatuEggMoves:
 	dw DRILL_PECK
 	dw QUICK_ATTACK
 	dw FEINT_ATTACK
-	dw STEEL_WING
 	dw -1 ; end
 
 MareepEggMoves:
-	dw THUNDERBOLT
 	dw TAKE_DOWN
 	dw BODY_SLAM
 	dw SAFEGUARD
@@ -279,7 +275,6 @@ PinecoEggMoves:
 DunsparceEggMoves:
 	dw BIDE
 	dw ANCIENTPOWER
-	dw ROCK_SLIDE
 	dw BITE
 	dw RAGE
 	dw -1 ; end
@@ -310,7 +305,8 @@ QwilfishEggMoves:
 	dw -1 ; end
 
 ShuckleEggMoves:
-	dw SWEET_SCENT
+	dw SAND_TOMB
+	dw IRON_DEFENSE
 	dw -1 ; end
 
 HeracrossEggMoves:
@@ -338,18 +334,18 @@ TeddiursaEggMoves:
 
 SlugmaEggMoves:
 	dw ACID_ARMOR
+	dw MEMENTO
+	dw EARTH_POWER
 	dw -1 ; end
 
 SwinubEggMoves:
 	dw TAKE_DOWN
 	dw BITE
 	dw BODY_SLAM
-	dw ROCK_SLIDE
 	dw ANCIENTPOWER
 	dw -1 ; end
 
 CorsolaEggMoves:
-	dw ROCK_SLIDE
 	dw SAFEGUARD
 	dw SCREECH
 	dw MIST
@@ -420,6 +416,7 @@ TyrogueEggMoves:
 
 SmoochumEggMoves:
 	dw MEDITATE
+	dw FAKE_OUT
 	dw -1 ; end
 
 ElekidEggMoves:

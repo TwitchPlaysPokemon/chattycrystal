@@ -164,7 +164,6 @@ BulbasaurEggMoves:
 CharmanderEggMoves:
 	dw BELLY_DRUM
 	dw ANCIENTPOWER
-	dw ROCK_SLIDE
 	dw BITE
 	dw OUTRAGE
 	dw BEAT_UP
@@ -255,7 +254,6 @@ ZubatEggMoves:
 	dw -1 ; end
 
 OddishEggMoves:
-	dw SWORDS_DANCE
 	dw RAZOR_LEAF
 	dw FLAIL
 	dw SYNTHESIS
@@ -274,7 +272,6 @@ ParasEggMoves:
 VenonatEggMoves:
 	dw BATON_PASS
 	dw SCREECH
-	dw GIGA_DRAIN
 	dw -1 ; end
 
 DiglettEggMoves:
@@ -293,18 +290,15 @@ MeowthEggMoves:
 	dw -1 ; end
 
 PsyduckEggMoves:
-	dw ICE_BEAM
 	dw HYPNOSIS
 	dw PSYBEAM
 	dw FORESIGHT
 	dw LIGHT_SCREEN
 	dw FUTURE_SIGHT
-	dw PSYCHIC_M
 	dw CROSS_CHOP
 	dw -1 ; end
 
 MankeyEggMoves:
-	dw ROCK_SLIDE
 	dw FORESIGHT
 	dw MEDITATE
 	dw COUNTER
@@ -342,7 +336,6 @@ MachopEggMoves:
 	dw -1 ; end
 
 BellsproutEggMoves:
-	dw SWORDS_DANCE
 	dw ENCORE
 	dw REFLECT
 	dw SYNTHESIS
@@ -359,7 +352,7 @@ TentacoolEggMoves:
 
 GeodudeEggMoves:
 	dw MEGA_PUNCH
-	dw ROCK_SLIDE
+	dw HAMMER_ARM
 	dw -1 ; end
 
 PonytaEggMoves:
@@ -424,7 +417,7 @@ GastlyEggMoves:
 	dw -1 ; end
 
 OnixEggMoves:
-	dw ROCK_SLIDE
+	dw EXPLOSION
 	dw FLAIL
 	dw -1 ; end
 
@@ -434,7 +427,6 @@ DrowzeeEggMoves:
 	dw -1 ; end
 
 KrabbyEggMoves:
-	dw DIG
 	dw HAZE
 	dw AMNESIA
 	dw FLAIL
@@ -450,13 +442,11 @@ ExeggcuteEggMoves:
 	dw -1 ; end
 
 CuboneEggMoves:
-	dw ROCK_SLIDE
 	dw ANCIENTPOWER
 	dw BELLY_DRUM
 	dw SCREECH
 	dw SKULL_BASH
 	dw PERISH_SONG
-	dw SWORDS_DANCE
 	dw -1 ; end
 
 LickitungEggMoves:
@@ -476,7 +466,6 @@ KoffingEggMoves:
 RhyhornEggMoves:
 	dw CRUNCH
 	dw REVERSAL
-	dw ROCK_SLIDE
 	dw THRASH
 	dw PURSUIT
 	dw COUNTER
@@ -562,7 +551,6 @@ KabutoEggMoves:
 	dw BUBBLEBEAM
 	dw AURORA_BEAM
 	dw RAPID_SPIN
-	dw DIG
 	dw FLAIL
 	dw -1 ; end
 
@@ -574,6 +562,9 @@ AerodactylEggMoves:
 
 SnorlaxEggMoves:
 	dw LICK
+	dw ZEN_HEADBUTT
+	dw COUNTER
+	dw PURSUIT
 	dw -1 ; end
 
 DratiniEggMoves:
@@ -581,5 +572,6 @@ DratiniEggMoves:
 	dw MIST
 	dw HAZE
 	dw SUPERSONIC
+	dw EXTREMESPEED
 NoEggMoves1:
 	dw -1 ; end

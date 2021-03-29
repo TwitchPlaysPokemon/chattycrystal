@@ -2744,6 +2744,7 @@ DragonairEvosAttacks:
 
 DragoniteEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, EXTREMESPEED
 	dbw 1, FIRE_PUNCH
 	dbw 1, THUNDERPUNCH
 	dbw 1, ROOST

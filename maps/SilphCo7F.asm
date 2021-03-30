@@ -179,18 +179,20 @@ MtBattleTrainer57:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Despite the way I"
+	line "look, I've done way"
+	para "more training than"
+	line "you."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Why!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Does this mean I"
+	line "need more"
+	cont "training?"
 	done
 
 MtBattleTrainer58:

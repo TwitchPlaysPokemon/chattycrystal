@@ -31,31 +31,29 @@ MtBattleTrainer100:
 	trainer CAL, MT_BATTLE_100, EVENT_BEAT_MT_BATTLE_100, .before_text, .defeat_text, 0, .script
 	
 .script
-	endifjustbattled
-	jumptext .after_text
+	checkevent EVENT_MT_BATTLE_TALKED_WITH_FINAL_TRAINER
+	iffalse .first_message
+	jumptext .final_text
+
+.first_message
+	setevent EVENT_MT_BATTLE_TALKED_WITH_FINAL_TRAINER
+	farjumptext MtBattleTrainer100AfterText
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
-	done
+	text_far MtBattleTrainer100BeforeText
+	text_end
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Stupendous!"
 	done
 
-.after_text
-	text "You beat every one"
-	line "of us! Good work!"
+.final_text
+	text "Congratulations!"
+	line "But don't be"
+	cont "content with this."
 
-	para "Your reward is up"
-	line "those stairs."
-
-	para "But once you take"
-	line "it, you'll have"
-	para "to beat us all"
-	line "over again to"
-	para "get another!"
+	para "Don't neglect your"
+	line "training!"
 	done
 
 SilphCoRoofRaikou:
@@ -104,6 +102,8 @@ MtBattleGotReward:
 	callasm .resetTrainers
 	warp SILPH_CO_1F, 2, 0 	; Warp to the 1F Elevator door
 	end
+
+NUM_SILPH_FLAGS EQU 111
 
 .resetTrainers
 	ld b, NUM_SILPH_FLAGS / 8

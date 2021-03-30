@@ -1,5 +1,3 @@
-NUM_SILPH_FLAGS EQU 110
-
 	object_const_def ; object_event constants
 	const SILPHCO1F_RECEPTIONIST
 	const SILPHCO1F_OFFICER

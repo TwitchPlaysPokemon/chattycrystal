@@ -31,18 +31,18 @@ MtBattleTrainer91:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
-	done
+	text_far MtBattleTrainer91BeforeText
+	text_end
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "A worthy trainer"
+	line "you are!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "There are just"
+	line "nine trainers to"
+	cont "go. Don't falter!"
 	done
 
 MtBattleTrainer92:
@@ -53,18 +53,23 @@ MtBattleTrainer92:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "It's good to see"
+	line "you've climbed this"
+	para "far. But your"
+	line "climb stops here!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Your excellence"
+	line "shines!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Just eight"
+	line "trainers left."
+
+	para "Don't lose your"
+	line "focus."
 	done
 
 MtBattleTrainer93:
@@ -75,18 +80,20 @@ MtBattleTrainer93:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You're going to"
+	line "knock me out?"
+	cont "That's impossible!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Knocked down and"
+	line "out!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Hmm<...> I thought I"
+	line "was tougher than"
+	cont "you."
 	done
 
 MtBattleTrainer94:
@@ -97,18 +104,20 @@ MtBattleTrainer94:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
-	done
+	text_far MtBattleTrainer94BeforeText
+	text_end
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "It was I who fell!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Now, go on. There"
+	line "are only six"
+	cont "trainers left."
+
+	para "Throw your all"
+	line "into it!"
 	done
 
 MtBattleTrainer95:
@@ -119,18 +128,21 @@ MtBattleTrainer95:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You're now halfway"
+	line "through 11F."
+
+	para "Getting complacent"
+	line "now can ruin you!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Ooh, well done!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You're not bad at"
+	line "all! We had a good"
+	cont "battle. Thanks!"
 	done
 
 MtBattleTrainer96:
@@ -141,18 +153,24 @@ MtBattleTrainer96:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Woohoo! You came"
+	line "all the way here?"
+
+	para "Excellent,"
+	line "excellent!"
+
+	para "I'm getting fired"
+	line "up!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Burnt out!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I think you can go"
+	line "all the way to the"
+	cont "end!"
 	done
 
 MtBattleTrainer97:
@@ -160,21 +178,14 @@ MtBattleTrainer97:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer97AfterText
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
-	done
+	text_far MtBattleTrainer97BeforeText
+	text_end
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
-	done
-
-.after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Ho<...> Hohoho!"
 	done
 
 MtBattleTrainer98:
@@ -185,18 +196,17 @@ MtBattleTrainer98:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
-	done
+	text_far MtBattleTrainer98BeforeText
+	text_end
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Excellent!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Okay! There's just"
+	line "two trainers left."
+	cont "Hang tough!"
 	done
 
 MtBattleTrainer99:
@@ -207,18 +217,24 @@ MtBattleTrainer99:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You're awfully"
+	line "unlucky. I mean,"
+	para "you just had to"
+	line "run into me with"
+	para "only two trainers"
+	line "to go."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Urk!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Your skills appear"
+	line "to be real."
+
+	para "Just one trainer"
+	line "left upstairs. Go!"
 	done
 
 SilphCoTelescope1:

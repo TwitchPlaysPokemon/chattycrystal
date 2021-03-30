@@ -29,21 +29,16 @@ MtBattleTrainer81:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer81AfterText
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
-	done
+	text_far MtBattleTrainer81BeforeText
+	text_end
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
-	done
-
-.after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I'd love to read"
+	line "research papers"
+	cont "by you!"
 	done
 
 MtBattleTrainer82:
@@ -118,7 +113,7 @@ MtBattleTrainer85:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer85AfterText
 
 .before_text
 	text "I'm famous around"
@@ -129,16 +124,6 @@ MtBattleTrainer85:
 
 .defeat_text
 	text "Mwooooooh!"
-	done
-
-.after_text
-	text "Drat! I was"
-	line "thinking about why"
-	para "I couldn't get"
-	line "anything to work."
-
-	para "I'd forgotten my"
-	line "headband!"
 	done
 
 MtBattleTrainer86:
@@ -251,6 +236,9 @@ MtBattleTrainer90:
 .after_text
 	text "What a fun battle"
 	line "that was!"
+
+	para "There's only 11F"
+	line "to go now!"
 	done
 
 SilphCo10F_MapEvents:

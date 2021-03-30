@@ -85,18 +85,21 @@ MtBattleTrainer63:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Take a look at my"
+	line "red hot battling!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Did you get a good"
+	line "look at my red hot"
+	cont "battle?"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "If we had been"
+	line "measuring how hot"
+	para "we were in battle,"
+	line "I would have won."
 	done
 
 MtBattleTrainer64:
@@ -126,7 +129,7 @@ MtBattleTrainer65:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer65AfterText
 
 .before_text
 	text "Hm! I sense"
@@ -137,15 +140,6 @@ MtBattleTrainer65:
 .defeat_text
 	text "Just as I"
 	cont "anticipated!"
-	done
-
-.after_text
-	text "Thanks to"
-	line "training, I gained"
-	para "the ability to"
-	line "identify skilled"
-	para "trainers with"
-	line "confidence."
 	done
 
 MtBattleTrainer66:
@@ -247,18 +241,22 @@ MtBattleTrainer70:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "And now, 8F is"
+	line "done, save for me."
+
+	para "Bring everything"
+	line "you can bear."
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Gagagah! Gaoooh!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "It will be fun for"
+	line "me to see how much"
+	para "tougher you can"
+	line "become."
 	done
 
 SilphCo8F_MapEvents:

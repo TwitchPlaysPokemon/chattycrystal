@@ -125,6 +125,24 @@ MtBattleTrainer59BeforeText:
 	cont "fieldwork."
 	done
 
+MtBattleTrainer65AfterText:
+	text "Thanks to"
+	line "training, I gained"
+	para "the ability to"
+	line "identify skilled"
+	para "trainers with"
+	line "confidence."
+	done
+
+MtBattleTrainer71AfterText:
+	text "You're the type of"
+	line "student that gets"
+	para "better through"
+	line "real battling"
+	para "rather than from"
+	line "your studies."
+	done
+
 MtBattleTrainer73AfterText:
 	text "Wow, oh wow, you"
 	line "really are"
@@ -133,6 +151,15 @@ MtBattleTrainer73AfterText:
 	para "keep things"
 	line "rolling all the"
 	cont "way to the end!"
+	done
+
+MtBattleTrainer78AfterText:
+	text "I can't figure it"
+	line "out. If things had"
+	para "gone exactly as"
+	line "per my simulation,"
+	para "things would have"
+	line "been perfect."
 	done
 
 MtBattleTrainer80BeforeText:
@@ -147,6 +174,27 @@ MtBattleTrainer80BeforeText:
 	line "First, we battle!"
 	done
 
+MtBattleTrainer81BeforeText:
+	text "Welcome to 10F!"
+	line "I've written a"
+	para "research paper on"
+	line "#MON battles."
+
+	para "Would you care to"
+	line "read it?"
+	done
+
+MtBattleTrainer81AfterText:
+	text "I'll add my battle"
+	line "with you to my"
+	cont "research paper."
+
+	para "You can look"
+	line "forward to the"
+	para "completion of my"
+	line "research paper."
+	done
+
 MtBattleTrainer82AfterText:
 	text "A battle waged in"
 	line "earnest feels"
@@ -156,6 +204,16 @@ MtBattleTrainer82AfterText:
 	para "Naturally, a win"
 	line "would feel much"
 	cont "better."
+	done
+
+MtBattleTrainer85AfterText:
+	text "Drat! I was"
+	line "thinking about why"
+	para "I couldn't get"
+	line "anything to work."
+
+	para "I'd forgotten my"
+	line "headband!"
 	done
 
 MtBattleTrainer90BeforeText:
@@ -169,4 +227,94 @@ MtBattleTrainer90BeforeText:
 	line "showing me that"
 	para "high energy of"
 	line "yours?"
+	done
+
+MtBattleTrainer91BeforeText:
+	text "Well, well, well!"
+	line "You have finally"
+	para "marched your way"
+	line "up to 11F."
+
+	para "I, CRUIK, shall"
+	line "meet your"
+	cont "challenge!"
+	done
+
+MtBattleTrainer94BeforeText:
+	text "There are just"
+	line "seven to go,"
+	cont "including me."
+
+	para "Will you fall here"
+	line "or advance?"
+
+	para "En garde!"
+	done
+
+MtBattleTrainer97BeforeText:
+	text "Oh, I think it's"
+	line "stupendous that"
+	cont "you've come so far."
+
+	para "But that doesn't"
+	line "mean I will ease"
+	cont "up on you!"
+	done
+
+MtBattleTrainer97AfterText:
+	text "That was a most"
+	line "wonderful battle."
+
+	para "There remain but"
+	line "three trainers."
+
+	para "I wish you the"
+	line "best of luck."
+	done
+
+MtBattleTrainer98BeforeText:
+	text "Oh, my, my, my!"
+	line "You've won your way"
+	para "up through the"
+	line "ranks to be here!"
+
+	para "You're more"
+	line "excellent than my"
+	cont "pupils!"
+
+	para "Now, show me an"
+	line "excellent battle!"
+	done
+
+MtBattleTrainer100BeforeText:
+	text "Welcome! So good"
+	line "of you to come!"
+
+	text "I'm CAL, the final"
+	line "trainer of SILPH"
+	para "CO.'s new battle"
+	line "facility!"
+
+	para "Now, show me the"
+	line "results of your"
+	cont "training."
+
+	para "Don't hold anything"
+	line "back!"
+	done
+
+MtBattleTrainer100AfterText:
+	text "This is fantastic!"
+	line "I say fantastic!"
+	para "You had to be to"
+	line "defeat me!"
+
+	para "Your reward is up"
+	line "those stairs."
+
+	para "But once you take"
+	line "it, you'll have to"
+	para "beat all of us all"
+	line "over again to get"
+	cont "another one!"
 	done

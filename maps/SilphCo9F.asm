@@ -29,7 +29,7 @@ MtBattleTrainer71:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer71AfterText
 
 .before_text
 	text "Oh, are you a new"
@@ -42,15 +42,6 @@ MtBattleTrainer71:
 
 .defeat_text
 	text "Lesson's over!"
-	done
-
-.after_text
-	text "You're the type of"
-	line "student that gets"
-	para "better through"
-	line "real battling"
-	para "rather than from"
-	line "your studies."
 	done
 
 MtBattleTrainer72:
@@ -193,7 +184,7 @@ MtBattleTrainer78:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer78AfterText
 
 .before_text
 	text "I constantly run"
@@ -206,15 +197,6 @@ MtBattleTrainer78:
 
 .defeat_text
 	text "You were perfect!"
-	done
-
-.after_text
-	text "I can't figure it"
-	line "out. If things had"
-	para "gone exactly as"
-	line "per my simulation,"
-	para "things would have"
-	line "been perfect."
 	done
 
 MtBattleTrainer79:

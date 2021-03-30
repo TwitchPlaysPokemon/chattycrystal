@@ -1676,7 +1676,7 @@ GreenMayGroup:
 	db "M ---/'/'4@"
 
 	db -1 ; end
-	
+
 	next_list_item ; A_EMERALD_REMATCH
 	db "A@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
@@ -4383,7 +4383,7 @@ XYSerena2Group:
 	bigdw 123
 	db "8d b9 'bmp@"
 	db -1 ; end
-	
+
 	next_list_item ; ETR_REMATCH
 	db "Etr@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 
@@ -4399,7 +4399,7 @@ XYSerena2Group:
 	bigdw 275
 	bigdw 232
 	db "Herrrdliop@"
-	
+
 	db 100
 	dw GOODRA
 	db POKE_DOLL
@@ -4412,7 +4412,7 @@ XYSerena2Group:
 	bigdw 227
 	bigdw 340
 	db "R6@"
-	
+
 	db 100
 	dw DUCKLETT
 	db EVERSTONE
@@ -4425,7 +4425,7 @@ XYSerena2Group:
 	bigdw 128
 	bigdw 250
 	db "dfuucck@"
-	
+
 	db 100
 	dw CLAWITZER
 	db KINGS_ROCK

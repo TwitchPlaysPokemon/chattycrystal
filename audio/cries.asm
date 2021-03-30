@@ -1016,11 +1016,11 @@ Cry_Weepinbell:
 	musicheader 3, 5, Cry_Weepinbell_Ch5
 	musicheader 1, 6, Cry_Weepinbell_Ch6
 	musicheader 1, 8, Cry_Weepinbell_Ch8
-	
+
 Cry_Unused:
-	musicheader	3,5,Unused_Cry_Ch5
-	musicheader	1,6,Unused_Cry_Ch6
-	musicheader	1,8,Unused_Cry_Ch8
+	musicheader	3, 5, Unused_Cry_Ch5
+	musicheader	1, 6, Unused_Cry_Ch6
+	musicheader	1, 8, Unused_Cry_Ch8
 
 Unused_Cry_Ch5:
 	sound_duty 0, 0, 3, 3

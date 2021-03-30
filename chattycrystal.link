@@ -14,7 +14,6 @@ ROMX $03
 	"Pics 38"
 ROMX $04
 	"bank4"
-	"Formes"
 ROMX $05
 	"bank5"
 	"Map Blocks 6"
@@ -122,6 +121,7 @@ ROMX $2a
 ROMX $2b
 	"Map Blocks 2"
 	"Songs 10"
+	"Formes"
 ROMX $2c
 	"Map Blocks 3"
 	"Map Scripts 4"

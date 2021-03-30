@@ -13,8 +13,12 @@ MoveTutor:
 	call GetMoveName
 	call CopyName1
 	farcall ChooseMonToLearnTMHM
-	jr c, .cancel
-	jr .enter_loop
+	jr nc, .enter_loop
+.cancel
+	ld a, -1
+.set
+	ld [wScriptVar], a
+	jp CloseSubmenu
 
 .loop
 	farcall ChooseMonToLearnTMHM_NoRefresh
@@ -23,27 +27,18 @@ MoveTutor:
 	call CheckCanLearnMoveTutorMove
 	jr nc, .loop
 	xor a ; FALSE
-	ld [wScriptVar], a
-	jr .quit
-
-.cancel
-	ld a, -1
-	ld [wScriptVar], a
-.quit
-	call CloseSubmenu
-	ret
+	jr .set
 
 .GetMoveTutorMove:
 	ld a, [wScriptVar]
-	cp MOVETUTOR_FLAMETHROWER
-	ld hl, FLAMETHROWER
-	jr z, .ok
-	cp MOVETUTOR_THUNDERBOLT
-	ld hl, THUNDERBOLT
-	jr z, .ok
-	; MOVETUTOR_ICE_BEAM
-	ld hl, ICE_BEAM
-.ok
+	add a, a
+	add a, LOW(MoveTutorMoves - 2)
+	ld l, a
+	adc HIGH(MoveTutorMoves - 2)
+	sub l
+	ld h, a
+	ld a, BANK(MoveTutorMoves)
+	call GetFarHalfword
 	jp GetMoveIDFromIndex
 
 CheckCanLearnMoveTutorMove:
@@ -81,16 +76,13 @@ CheckCanLearnMoveTutorMove:
 
 	ld c, HAPPINESS_LEARNMOVE
 	callfar ChangeHappiness
-	jr .learned
+	call ExitMenu
+	scf
+	ret
 
 .didnt_learn
 	call ExitMenu
 	and a
-	ret
-
-.learned
-	call ExitMenu
-	scf
 	ret
 
 .MenuHeader:

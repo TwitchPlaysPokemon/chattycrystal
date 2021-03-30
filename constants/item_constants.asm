@@ -288,6 +288,24 @@ ENDM
 	add_mt FLAMETHROWER
 	add_mt THUNDERBOLT
 	add_mt ICE_BEAM
+	add_mt AERIAL_ACE
+	add_mt CALM_MIND
+	add_mt DARK_PULSE
+	add_mt DAZZLINGLEAM
+	add_mt DRAGON_PULSE
+	add_mt DRAIN_PUNCH
+	add_mt HEAT_WAVE
+	add_mt IRON_HEAD
+	add_mt KNOCK_OFF
+	add_mt NASTY_PLOT
+	add_mt POISON_JAB
+	add_mt ROCK_SLIDE
+	add_mt ROOST
+	add_mt SIGNAL_BEAM
+	add_mt SUPERPOWER
+	add_mt SWORDS_DANCE
+	add_mt THUNDER_WAVE
+	add_mt WILL_O_WISP
 NUM_TM_HM_TUTOR EQU __enum__ + -1
 
 USE_SCRIPT_VAR EQU $00

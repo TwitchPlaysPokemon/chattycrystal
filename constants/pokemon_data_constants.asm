@@ -23,7 +23,7 @@ BASE_TMHM        EQUS "(wBaseTMHM - wCurBaseData)"
 BASE_PADDING     EQUS "(wBasePadding - wCurBaseData)"
 BASE_DATA_SIZE   EQUS "(wCurBaseDataEnd - wCurBaseData)"
 
-BASE_PADDING_SIZE EQU 6
+BASE_PADDING_SIZE EQU 4
 
 ; gender ratio constants
 GENDER_F0      EQU $00

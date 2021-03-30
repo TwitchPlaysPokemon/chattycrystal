@@ -370,7 +370,6 @@ ChimcharEggMoves:
 	dw BLAZE_KICK
 	dw COUNTER
 	dw FAKE_OUT
-	dw FOCUS_ENERGY
 	dw SUBMISSION
 	dw -1 ; end
 
@@ -412,13 +411,11 @@ BuizelEggMoves:
 	dw ODOR_SLEUTH
 	dw SLASH
 	dw AQUA_RING
-	dw AQUA_TAIL
 	dw -1 ; end
 
 ShellosEggMoves:
 	dw AMNESIA
 	dw COUNTER
-	dw MEMENTO
 	dw MIRROR_COAT
 	dw ACID_ARMOR
 	dw -1 ; end
@@ -426,7 +423,6 @@ ShellosEggMoves:
 BunearyEggMoves:
 	dw ENCORE
 	dw FAKE_OUT
-	dw FLAIL
 	dw LOW_KICK
 	dw SWEET_KISS
 	dw -1 ; end

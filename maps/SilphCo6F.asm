@@ -205,15 +205,8 @@ MtBattleTrainer48:
 	jumptext .after_text
 
 .before_text
-	text "Going on a run"
-	line "with #MON is"
-	cont "exhilarating."
-
-	para "But for pure"
-	line "exhilaration, it"
-	para "doesn't measure up"
-	line "to battling!"
-	done
+	text_far MtBattleTrainer48BeforeText
+	text_end
 
 .defeat_text
 	text "Even losing is"
@@ -255,14 +248,8 @@ MtBattleTrainer50:
 	jumptext .after_text
 
 .before_text
-	text "6F, the last floor"
-	line "in the bottom half"
-	para "of this building,"
-	line "ends here."
-
-	para "The closer is me,"
-	line "CRYAL."
-	done
+	text_far MtBattleTrainer50BeforeText
+	text_end
 
 .defeat_text
 	text "Yeah, great job!"

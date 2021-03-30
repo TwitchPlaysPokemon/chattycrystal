@@ -29,34 +29,15 @@ MtBattleTrainer1:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer1AfterText
 
 .before_text
-	text "Welcome to SILPH"
-	line "CO.'s battle"
-	cont "facility!"
-
-	para "We want you and"
-	line "your #MON to go"
-	para "all out on"
-	line "training here!"
-
-	para "Let's begin!"
-	done
+	text_far MtBattleTrainer1BeforeText
+	text_end
 
 .defeat_text
 	text "You're a worthy"
 	line "challenger!"
-	done
-
-.after_text
-	text "My hat's off to"
-	line "you! But the road"
-	para "ahead is long and"
-	line "arduous."
-
-	para "Put all your"
-	line "effort into it!"
 	done
 
 MtBattleTrainer2:

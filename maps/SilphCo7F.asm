@@ -32,16 +32,8 @@ MtBattleTrainer51:
 	jumptext .after_text
 
 .before_text
-	text "You've got to be"
-	line "good to reach 7F."
-
-	para "You should be"
-	line "proud of yourself."
-
-	para "I'll check how well"
-	line "you've raised your"
-	cont "#MON."
-	done
+	text_far MtBattleTrainer51BeforeText
+	text_end
 
 .defeat_text
 	text "You've raised your"
@@ -231,16 +223,8 @@ MtBattleTrainer59:
 	jumptext .after_text
 
 .before_text
-	text "I might not look"
-	line "it, but I'm one for"
-	para "gaining real"
-	line "experience in"
-	cont "battle."
-
-	para "I toughened up my"
-	line "party through"
-	cont "fieldwork."
-	done
+	text_far MtBattleTrainer59BeforeText
+	text_end
 
 .defeat_text
 	text "I guess we were"

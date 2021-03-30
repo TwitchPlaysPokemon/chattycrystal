@@ -337,7 +337,7 @@ ROMX $7c
 ROMX $7d
 	"Map Scripts Mt. Battle"
 ROMX $7e
-	; empty
+	"Mt. Battle Additional Trainer Text"
 ROMX $7f
 	; empty
 WRAM0

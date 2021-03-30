@@ -82,15 +82,8 @@ MtBattleTrainer33:
 	jumptext .after_text
 
 .before_text
-	text "I need to get on"
-	line "with my next"
-	cont "research project."
-
-	para "Let's not waste any"
-	line "time and get this"
-	para "done and over"
-	line "with."
-	done
+	text_far MtBattleTrainer33BeforeText
+	text_end
 
 .defeat_text
 	text "I'm over and done"
@@ -235,15 +228,8 @@ MtBattleTrainer39:
 	jumptext .after_text
 
 .before_text
-	text "Listen up, young"
-	line "fellow. #MON"
-	cont "battling is about<...>"
-
-	para "One, guts. Two,"
-	line "guts. Three and"
-	para "four, guts. And"
-	line "five, guts!"
-	done
+	text_far MtBattleTrainer39BeforeText
+	text_end
 
 .defeat_text
 	text "It's all about"

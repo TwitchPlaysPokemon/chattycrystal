@@ -83,7 +83,7 @@ MtBattleTrainer73:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer73AfterText
 
 .before_text
 	text "Awesome, that's"
@@ -94,16 +94,6 @@ MtBattleTrainer73:
 
 .defeat_text
 	text "Whoa-ho-hoy!"
-	done
-
-.after_text
-	text "Wow, oh wow, you"
-	line "really are"
-	para "awesome. Maybe"
-	line "you'll be able to"
-	para "keep things"
-	line "rolling all the"
-	cont "way to the end!"
 	done
 
 MtBattleTrainer74:
@@ -257,16 +247,8 @@ MtBattleTrainer80:
 	jumptext .after_text
 
 .before_text
-	text "Hmm. You have a"
-	line "unique air about"
-	para "you that sets you"
-	line "apart from the"
-	para "challengers I've"
-	line "seen."
-
-	para "But, who cares?"
-	line "First, we battle!"
-	done
+	text_far MtBattleTrainer80BeforeText
+	text_end
 
 .defeat_text
 	text "Hmm<...> I knew you"

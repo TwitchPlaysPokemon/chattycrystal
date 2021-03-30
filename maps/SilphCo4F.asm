@@ -29,7 +29,7 @@ MtBattleTrainer21:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer21AfterText
 
 .before_text
 	text "Hi, welcome to 4F!"
@@ -39,17 +39,6 @@ MtBattleTrainer21:
 
 .defeat_text
 	text "Not too shabby!"
-	done
-
-.after_text
-	text "That was good. The"
-	line "battle overflowed"
-	para "with your youthful"
-	line "power."
-
-	para "There was a time"
-	line "like that for me a"
-	cont "long time ago."
 	done
 
 MtBattleTrainer22:
@@ -242,7 +231,7 @@ MtBattleTrainer29:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer29AfterText
 
 .before_text
 	text "Behold my elegant"
@@ -255,15 +244,6 @@ MtBattleTrainer29:
 	text "This didn't go"
 	line "according to my"
 	cont "calculations!"
-	done
-
-.after_text
-	text "Hmm<...> Weird."
-	line "According to my"
-	para "calculations, this"
-	line "should have"
-	para "happened, causing"
-	line "that to happen<...>"
 	done
 
 MtBattleTrainer30:

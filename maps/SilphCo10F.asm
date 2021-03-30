@@ -51,7 +51,7 @@ MtBattleTrainer82:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer82AfterText
 
 .before_text
 	text "Whenever and"
@@ -62,17 +62,6 @@ MtBattleTrainer82:
 
 .defeat_text
 	text "You're tough, you!"
-	done
-
-.after_text
-	text "A battle waged in"
-	line "earnest feels"
-	para "grand even when it"
-	line "ends in a loss."
-
-	para "Naturally, a win"
-	line "would feel much"
-	cont "better."
 	done
 
 MtBattleTrainer83:
@@ -250,17 +239,8 @@ MtBattleTrainer90:
 	jumptext .after_text
 
 .before_text
-	text "Hi, I'm NEBLEK. You"
-	line "must be the high-"
-	para "energy trainer I"
-	line "keep hearing"
-	cont "about."
-
-	text "So, how about"
-	line "showing me that"
-	para "high energy of"
-	line "yours?"
-	done
+	text_far MtBattleTrainer90BeforeText
+	text_end
 
 .defeat_text
 	text "You really are"

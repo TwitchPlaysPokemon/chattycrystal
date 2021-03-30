@@ -259,17 +259,8 @@ MtBattleTrainer20:
 	jumptext .after_text
 
 .before_text
-	text "Yeahooey! I'm"
-	line "ERBEN! The genius"
-	para "trainer at the end"
-	line "of 3F, that's me,"
-	cont "ERBEN!"
-
-	text "Okay, let's see if"
-	line "you can go on"
-	para "or not! Battle!"
-	line "Battle!"
-	done
+	text_far MtBattleTrainer20BeforeText
+	text_end
 
 .defeat_text
 	text "Gyaaaaah!"

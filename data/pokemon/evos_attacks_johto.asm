@@ -311,9 +311,10 @@ HoothootEvosAttacks:
 	dbw 28, TAKE_DOWN
 	dbw 33, REFLECT
 	dbw 37, AIR_SLASH
-	dbw 42, ROOST
-	dbw 46, MOONBLAST
-	dbw 51, DREAM_EATER
+	dbw 42, ZEN_HEADBUTT
+	dbw 46, ROOST
+	dbw 51, MOONBLAST
+	dbw 55, DREAM_EATER
 	db 0 ; no more level-up moves
 
 NoctowlEvosAttacks:
@@ -326,13 +327,14 @@ NoctowlEvosAttacks:
 	dbw 10, PECK
 	dbw 15, CONFUSION
 	dbw 19, ECHOED_VOICE
-	dbw 24, EXTRASENSORY
-	dbw 28, TAKE_DOWN
-	dbw 33, REFLECT
-	dbw 37, AIR_SLASH
-	dbw 42, ROOST
-	dbw 46, MOONBLAST
-	dbw 51, DREAM_EATER
+	dbw 25, EXTRASENSORY
+	dbw 30, TAKE_DOWN
+	dbw 36, REFLECT
+	dbw 41, AIR_SLASH
+	dbw 47, ZEN_HEADBUTT
+	dbw 52, ROOST
+	dbw 58, MOONBLAST
+	dbw 63, DREAM_EATER
 	db 0 ; no more level-up moves
 
 LedybaEvosAttacks:

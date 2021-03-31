@@ -1056,6 +1056,7 @@ SwabluEvosAttacks:
 
 AltariaEvosAttacks:
 	db 0
+	dbw 1, DRAGON_DANCE
 	dbw 1, PECK
 	dbw 1, GROWL
 	dbw 4, ASTONISH

@@ -225,6 +225,7 @@ RaltsEggMoves:
 	dw MEMENTO
 	dw ENCORE
 	dw SHADOW_SNEAK
+	dw SUBSTITUTE
 	dw -1 ; end
 
 SurskitEggMoves:

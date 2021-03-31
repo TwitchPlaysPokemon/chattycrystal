@@ -251,6 +251,7 @@ ZubatEggMoves:
 	dw FEINT_ATTACK
 	dw GUST
 	dw WHIRLWIND
+	dw BRAVE_BIRD
 	dw -1 ; end
 
 OddishEggMoves:
@@ -414,6 +415,7 @@ GastlyEggMoves:
 	dw PSYWAVE
 	dw PERISH_SONG
 	dw HAZE
+	dw SUBSTITUTE
 	dw -1 ; end
 
 OnixEggMoves:
@@ -558,6 +560,8 @@ AerodactylEggMoves:
 	dw WHIRLWIND
 	dw PURSUIT
 	dw FORESIGHT
+	dw DRAGON_DANCE
+	dw HURRICANE
 	dw -1 ; end
 
 SnorlaxEggMoves:

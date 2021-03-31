@@ -142,6 +142,7 @@ HoothootEggMoves:
 	dw WING_ATTACK
 	dw WHIRLWIND
 	dw SKY_ATTACK
+	dw DOUBLE_EDGE
 	dw -1 ; end
 
 LedybaEggMoves:
@@ -200,6 +201,8 @@ NatuEggMoves:
 	dw DRILL_PECK
 	dw QUICK_ATTACK
 	dw FEINT_ATTACK
+	dw AIR_SLASH
+	dw ZEN_HEADBUTT
 	dw -1 ; end
 
 MareepEggMoves:

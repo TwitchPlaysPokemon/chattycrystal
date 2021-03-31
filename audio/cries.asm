@@ -2048,3 +2048,32 @@ Cry_Rattata_Ch8:
 	noise __,  2, $a2, $39
 	noise __,  9, $91, $49
 	endchannel
+	
+Cry_Gastrodon: 
+	musicheader 3, 5, Cry_Gastrodon_Ch5
+	musicheader 1, 6, Cry_Gastrodon_Ch6
+	musicheader 1, 8, Cry_Gastrodon_Ch8
+	
+Cry_Gastrodon_Ch5:
+Cry_Gastrodon_branch:
+	sound __,  3, $f7, $0601
+	sound __,  3, $f7, $0701
+	loopchannel 8, Cry_Gastrodon_branch
+	endchannel
+
+Cry_Gastrodon_Ch6: 
+	sound __,  2, $f7, $ffff
+	sound __,  3, $f7, $0602
+	sound __,  3, $f7, $0702
+	loopchannel 8, Cry_Gastrodon_branch
+	endchannel ;is this neccersary? the above loop command should cause it to jump to Ch5.
+
+Cry_Gastrodon_Ch8: 
+Cry_Gastrodon_Ch8_branch: 
+	noise __,  2, $f8, $41
+	noise __,  3, $9c, $24
+	noise __,  1, $0, $0
+	noise __,  4, $59, $16
+	noise __,  3, $0, $0
+	loopchannel 3, Cry_Gastrodon_Ch8_branch
+	endchannel

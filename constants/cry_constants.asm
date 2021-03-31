@@ -73,3 +73,6 @@
 	const CRY_DUNSPARCE      ; 42
 	const CRY_DONPHAN        ; 43
 	const CRY_UNUSED         ; 44
+	
+; Gen 3+
+	const CRY_GASTRODON      ; 45

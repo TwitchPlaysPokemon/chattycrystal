@@ -32,15 +32,8 @@ MtBattleTrainer61:
 	jumptext .after_text
 
 .before_text
-	text "Oh, finally a"
-	line "challenger has"
-	para "reached these"
-	line "lofty heights!"
-
-	text "This is it, 8F!"
-	line "Let's see some"
-	cont "passion!"
-	done
+	text_far MtBattleTrainer61BeforeText
+	text_end
 
 .defeat_text
 	text "The challenger is"
@@ -63,18 +56,19 @@ MtBattleTrainer62:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Victory is"
+	line "elusive! But I"
+	cont "will prevail!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Victory eluded me<...>"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "A battle can end"
+	line "in a defeat. That's"
+	cont "why it's a battle."
 	done
 
 MtBattleTrainer63:
@@ -174,18 +168,22 @@ MtBattleTrainer67:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Do I look weak to"
+	line "you? You'll know"
+	para "better when we"
+	line "battle!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "That was boring!"
+	line "I want to battle"
+	cont "again!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I'll be stronger"
+	line "next time we"
+	cont "battle!"
 	done
 
 MtBattleTrainer68:
@@ -196,18 +194,20 @@ MtBattleTrainer68:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Huh? You'll battle"
+	line "with me?"
+	cont "Fantastic!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Oh, poor me. I"
+	line "need to get"
+	cont "better."
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "That was a"
+	line "fantastic battle!"
 	done
 
 MtBattleTrainer69:

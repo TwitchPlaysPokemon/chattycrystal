@@ -78,13 +78,8 @@ MtBattleTrainer53:
 	jumptext .after_text
 
 .before_text
-	text "My #MON and I"
-	line "have ample base"
-	para "stamina. We won't"
-	line "lose if we get"
-	para "into an extended"
-	line "battle."
-	done
+	text_far MtBattleTrainer53BeforeText
+	text_end
 
 .defeat_text
 	text "How'd we get whip-"
@@ -157,18 +152,23 @@ MtBattleTrainer56:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Ah, hello there."
+	line "Are you keeping up"
+	cont "with your studies?"
+
+	para "I'll test you in"
+	line "battle!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "That was"
+	line "outstanding!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You scored a"
+	line "perfect hundred"
+	cont "out of a hundred!"
 	done
 
 MtBattleTrainer57:
@@ -203,18 +203,17 @@ MtBattleTrainer58:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I'm not afraid to"
+	line "try!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Well, I tried."
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Always try your"
+	line "best!"
 	done
 
 MtBattleTrainer59:

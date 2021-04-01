@@ -95,18 +95,18 @@ MtBattleTrainer74:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Uryaaaah! Bring it"
+	line "on home!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Bah!"
+	line "Put down hard!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I'll crush you"
+	line "next time!"
 	done
 
 MtBattleTrainer75:
@@ -117,18 +117,20 @@ MtBattleTrainer75:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "I'm laying claim to"
+	line "victory!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Just today, I'll"
+	line "concede the match"
+	cont "to you."
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You better prepare"
+	line "for next time we"
+	cont "battle!"
 	done
 
 MtBattleTrainer76:
@@ -139,18 +141,22 @@ MtBattleTrainer76:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You? Battle with"
+	line "me? I feel sorry"
+	cont "for you."
+
+	para "Here we go!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You're so strong<...>"
+	line "My heart's"
+	cont "pounding."
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You should feel"
+	line "sorry for me!"
 	done
 
 MtBattleTrainer77:
@@ -207,18 +213,21 @@ MtBattleTrainer79:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You need to be"
+	line "taught just how"
+	para "scary a battle can"
+	line "be!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Your #MON are"
+	line "terrifying!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Maybe you should"
+	line "be teaching about"
+	cont "scary battles."
 	done
 
 MtBattleTrainer80:

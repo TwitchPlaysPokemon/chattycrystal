@@ -76,6 +76,7 @@ ROMX $18
 	"Pics 32"
 ROMX $19
 	"Crystal Phone Text"
+	"Mt. Battle Additional Trainer Text"
 ROMX $1a
 	"Map Scripts 5"
 ROMX $1b
@@ -337,7 +338,7 @@ ROMX $7c
 ROMX $7d
 	"Map Scripts Mt. Battle"
 ROMX $7e
-	"Mt. Battle Additional Trainer Text"
+	; empty
 ROMX $7f
 	; empty
 WRAM0

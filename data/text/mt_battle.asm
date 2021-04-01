@@ -25,6 +25,15 @@ MtBattleTrainer1AfterText:
 	line "effort into it!"
 	done
 
+MtBattleTrainer6AfterText:
+	text "I lost with"
+	line "nobility and"
+	para "honor! I am"
+	line "impressed by your"
+	para "skill beyond your"
+	line "youthful age!"
+	done
+
 MtBattleTrainer20BeforeText:
 	text "Yeahooey! I'm"
 	line "ERBEN! The genius"
@@ -113,6 +122,15 @@ MtBattleTrainer51BeforeText:
 	cont "#MON."
 	done
 
+MtBattleTrainer53BeforeText:
+	text "My #MON and I"
+	line "have ample base"
+	para "stamina. We won't"
+	line "lose if we get"
+	para "into an extended"
+	line "battle."
+	done
+
 MtBattleTrainer59BeforeText:
 	text "I might not look"
 	line "it, but I'm one for"
@@ -123,6 +141,17 @@ MtBattleTrainer59BeforeText:
 	para "I toughened up my"
 	line "party through"
 	cont "fieldwork."
+	done
+
+MtBattleTrainer61BeforeText:
+	text "Oh, finally a"
+	line "challenger has"
+	para "reached these"
+	line "lofty heights!"
+
+	text "This is it, 8F!"
+	line "Let's see some"
+	cont "passion!"
 	done
 
 MtBattleTrainer65AfterText:
@@ -214,6 +243,16 @@ MtBattleTrainer85AfterText:
 
 	para "I'd forgotten my"
 	line "headband!"
+	done
+
+MtBattleTrainer88BeforeText:
+	text "I'm the kind of guy"
+	line "who always strives"
+	para "for total victory"
+	line "in battle."
+
+	para "Victory shall be"
+	line "mine!"
 	done
 
 MtBattleTrainer90BeforeText:

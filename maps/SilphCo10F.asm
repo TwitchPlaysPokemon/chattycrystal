@@ -94,18 +94,17 @@ MtBattleTrainer84:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Let's tear through"
+	line "this battle!"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Phew<...>"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Your #MON"
+	line "skills are wicked!"
 	done
 
 MtBattleTrainer85:
@@ -180,18 +179,18 @@ MtBattleTrainer88:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
-	done
+	text_far MtBattleTrainer88BeforeText
+	text_end
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Urk! It's not"
+	line "right! I shouldn't"
+	cont "be losing here!"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Total victory was"
+	line "yours in the end<...>"
 	done
 
 MtBattleTrainer89:
@@ -202,18 +201,21 @@ MtBattleTrainer89:
 	jumptext .after_text
 
 .before_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Can you beat the"
+	line "#MON I've"
+	cont "raised?"
 	done
 
 .defeat_text
-	; PLACEHOLDER
-	text "<...>"
+	text "Uwaaaaaaah! My"
+	line "#MON! What have"
+	cont "you done?"
 	done
 
 .after_text
-	; PLACEHOLDER
-	text "<...>"
+	text "You've raised your"
+	line "#MON extremely"
+	cont "well!"
 	done
 
 MtBattleTrainer90:

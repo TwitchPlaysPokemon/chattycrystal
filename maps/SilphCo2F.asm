@@ -147,7 +147,7 @@ MtBattleTrainer6:
 
 .script
 	endifjustbattled
-	jumptext .after_text
+	farjumptext MtBattleTrainer6AfterText
 
 .before_text
 	text "Hi-yah! We shall"
@@ -161,15 +161,6 @@ MtBattleTrainer6:
 
 .defeat_text
 	text "Oof!"
-	done
-
-.after_text
-	text "I lost with"
-	line "nobility and"
-	para "honor! I am"
-	line "impressed by your"
-	para "skill beyond your"
-	line "youthful age!"
 	done
 
 MtBattleTrainer7:

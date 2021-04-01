@@ -311,18 +311,18 @@ PokemonCries::
 	mon_cry CRY_NATU,        $a5e,  $160 ; DUSCLOPS
 	mon_cry CRY_SPEAROW,     $795,  $0A7 ; ABSOL
 	mon_cry CRY_PSYDUCK,     $26f,  $0dd ; SNORUNT
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SPHEAL - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SEALEO - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; WALREIN - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BAGON - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SHELGON - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SALAMENCE - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BELDUM - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; METANG - PLACEHOLDER
-	mon_cry CRY_GOLEM,       $1A0,  $10A ; METAGROSS
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LATIOS - PLACEHOLDER
-	mon_cry CRY_RAIKOU,      $000,  $100 ; KYOGRE - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GROUDON - PLACEHOLDER
+	mon_cry CRY_SEEL,        $130,  $060 ; SPHEAL
+	mon_cry CRY_CLEFFA,      $e88,  $140 ; SEALEO
+	mon_cry CRY_WOOPER,      $e82,  $480 ; WALREIN
+	mon_cry CRY_NIDORAN_F,   $f26,  $0c0 ; BAGON
+	mon_cry CRY_NIDORAN_F,   $e15,  $200 ; SHELGON
+	mon_cry CRY_RAICHU,      $f1f,  $130 ; SALAMENCE
+	mon_cry CRY_CYNDAQUIL,   $40c,  $140 ; BELDUM
+	mon_cry CRY_SLOWKING,    $6af,  $17a ; METANG
+	mon_cry CRY_METAPOD,     $def,  $25a ; METAGROSS
+	mon_cry CRY_MAGCARGO,    $f1c,  $20a ; LATIOS
+	mon_cry CRY_METAPOD,     $689,  $20a ; KYOGRE
+	mon_cry CRY_TYPHLOSION,  $d18,  $18a ; GROUDON
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TURTWIG - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GROTLE - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TORTERRA - PLACEHOLDER
@@ -356,7 +356,7 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CROAGUNK - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TOXICROAK - PLACEHOLDER
 	mon_cry CRY_VENONAT,     $03d,  $160 ; LEAFEON
-	mon_cry CRY_TYPHLOSION,  $014,  $118 ; GLACEON
+	mon_cry CRY_METAPOD,     $fc6,  $1aa ; GLACEON
 	mon_cry CRY_SEEL,        $212,  $270 ; PORYGON_Z
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DUSKNOIR - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; FROSLASS - PLACEHOLDER

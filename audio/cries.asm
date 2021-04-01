@@ -1017,12 +1017,12 @@ Cry_Weepinbell:
 	musicheader 1, 6, Cry_Weepinbell_Ch6
 	musicheader 1, 8, Cry_Weepinbell_Ch8
 
-Cry_Unused:
-	musicheader 3, 5, Unused_Cry_Ch5
-	musicheader 1, 6, Unused_Cry_Ch6
-	musicheader 1, 8, Unused_Cry_Ch8
+Cry_Manectric:
+	musicheader 3, 5, Cry_Manectric_Ch5
+	musicheader 1, 6, Cry_Manectric_Ch6
+	musicheader 1, 8, Cry_Manectric_Ch8
 
-Unused_Cry_Ch5:
+Cry_Manectric_Ch5:
 	sound_duty 0, 0, 3, 3
 	sound __, 16, $e0, $0780
 	sound __, 16, $f0, $0784
@@ -1032,7 +1032,7 @@ Unused_Cry_Ch5:
 	sound __,  9, $71, $0784
 	endchannel
 
-Unused_Cry_Ch6:
+Cry_Manectric_Ch6:
 	sound_duty 1, 1, 0, 0
 	sound __, 16, $a0, $0741
 	sound __, 16, $b0, $0743
@@ -1042,7 +1042,7 @@ Unused_Cry_Ch6:
 	sound __,  9, $31, $0746
 	endchannel
 
-Unused_Cry_Ch8:
+Cry_Manectric_Ch8:
 	noise __,  3, $f2, $4c
 	noise __,  7, $e0, $3a
 	noise __, 16, $d0, $3a

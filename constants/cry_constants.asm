@@ -72,7 +72,7 @@
 	const CRY_AIPOM          ; 41
 	const CRY_DUNSPARCE      ; 42
 	const CRY_DONPHAN        ; 43
-	const CRY_UNUSED         ; 44
 
-; Gen 3+
+; gen 3+
+	const CRY_MANECTRIC      ; 44
 	const CRY_GASTRODON      ; 45

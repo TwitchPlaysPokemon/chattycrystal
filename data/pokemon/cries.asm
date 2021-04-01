@@ -294,7 +294,7 @@ PokemonCries::
 	mon_cry CRY_WEEDLE,      $040,  $090 ; LAIRON
 	mon_cry CRY_SLOWKING,    $207,  $1b2 ; AGGRON
 	mon_cry CRY_PICHU,       $f17,  $270 ; ELECTRIKE
-	mon_cry CRY_UNUSED,      $f27,  $080 ; MANECTRIC
+	mon_cry CRY_MANECTRIC,   $f27,  $080 ; MANECTRIC
 	mon_cry CRY_AIPOM,       $041,  $0ae ; ROSELIA
 	mon_cry CRY_TEDDIURSA,   $58e,  $0c8 ; WAILMER
 	mon_cry CRY_TEDDIURSA,   $5bf,  $188 ; WAILORD

@@ -67,5 +67,5 @@ Cries:
 	dba Cry_Aipom
 	dba Cry_Dunsparce
 	dba Cry_Donphan
-	dba Cry_Unused
+	dba Cry_Manectric
 	dba Cry_Gastrodon

@@ -1245,6 +1245,20 @@ BattleCommand_Stab:
 	call GetBattleVar
 	ld b, a
 	ld hl, TypeMatchups
+	cp CURSE_T
+	jr nz, .TypesLoop
+
+	; if the attacker type is CURSE_T, create a fake type matchups list like this:
+	; db CURSE_T, <defender type 1>, SUPER_EFFECTIVE
+	; db -1
+	ld hl, wFakeTypeMatchupBuffer + 3
+	ld a, -1
+	ld [hld], a
+	ld a, 20
+	ld [hld], a
+	ld a, d
+	ld [hld], a
+	ld [hl], b
 
 .TypesLoop:
 	ld a, [hli]

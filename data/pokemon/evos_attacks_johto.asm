@@ -900,6 +900,7 @@ MurkrowEvosAttacks:
 
 SlowkingEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, TRUMP_CARD
 	dbw 1, CURSE
 	dbw 1, TACKLE
 	dbw 4, GROWL

@@ -193,6 +193,7 @@ ZigzagoonEggMoves:
 	dw PURSUIT
 	dw TICKLE
 	dw EXTREMESPEED
+	dw TAIL_SLAP
 	dw -1 ; end
 
 LotadEggMoves:
@@ -412,6 +413,7 @@ BuizelEggMoves:
 	dw ODOR_SLEUTH
 	dw SLASH
 	dw AQUA_RING
+	dw TAIL_SLAP
 	dw -1 ; end
 
 ShellosEggMoves:
@@ -419,6 +421,7 @@ ShellosEggMoves:
 	dw COUNTER
 	dw MIRROR_COAT
 	dw ACID_ARMOR
+	dw TRUMP_CARD
 	dw -1 ; end
 
 BunearyEggMoves:
@@ -435,6 +438,7 @@ StunkyEggMoves:
 	dw FOUL_PLAY
 	dw PLAY_ROUGH
 	dw PURSUIT
+	dw TAIL_SLAP
 	dw -1 ; end
 
 BonslyEggMoves:

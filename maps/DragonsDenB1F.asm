@@ -106,6 +106,60 @@ DragonsDenB1FSilverScript:
 	special RestartMapMusic
 	end
 
+DragonsDenB1FMoveTutor:
+	faceplayer
+	opentext
+	writetext .introduction_text
+	yesorno
+	iffalse .rejected
+	setval MOVETUTOR_DRACO_METEOR
+	special MoveTutor
+	iftrue .rejected
+	writetext .taught_text
+	waitbutton
+	closetext
+	end
+
+.introduction_text
+	text "Welcome to our"
+	line "sacred training"
+	cont "place."
+
+	para "You've shown that"
+	line "you're worthy of"
+	para "using our secret"
+	line "dragon techniques."
+
+	para "I can teach your"
+	line "#MON a very"
+	para "strong move called"
+	line "DRACO METEOR."
+
+	para "What do you say?"
+	done
+
+.taught_text
+	text "I trust you will"
+	line "use it wisely."
+
+	para "Come again if you"
+	line "want me to teach"
+	para "another #MON"
+	line "the move."
+	done
+
+.rejected
+	writetext .rejected_text
+	waitbutton
+	closetext
+	end
+
+.rejected_text
+	text "That's fine. Come"
+	line "again if you"
+	cont "change your mind."
+	done
+
 DragonShrineSignpost:
 	jumptext DragonShrineSignpostText
 
@@ -255,7 +309,7 @@ DragonsDenB1F_MapEvents:
 	bg_event 21, 17, BGEVENT_ITEM, DragonsDenB1FHiddenMaxPotion
 	bg_event 31, 15, BGEVENT_ITEM, DragonsDenB1FHiddenMaxElixir
 
-	db 9 ; object events
+	db 10 ; object events
 	object_event 35, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FDragonFang, EVENT_DRAGONS_DEN_B1F_DRAGON_FANG
 	object_event 14, 30, SPRITE_NATE, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
 	object_event 20, 23, SPRITE_EVAN, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FSilverScript, EVENT_INITIALIZED_EVENTS
@@ -265,3 +319,4 @@ DragonsDenB1F_MapEvents:
 	object_event  4, 18, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsLeaandpia2, -1
 	object_event 30,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FCalcium, EVENT_DRAGONS_DEN_B1F_CALCIUM
 	object_event  5, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FMaxElixir, EVENT_DRAGONS_DEN_B1F_MAX_ELIXIR
+	object_event 12,  4, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FMoveTutor, EVENT_NOT_CHAMPION_YET

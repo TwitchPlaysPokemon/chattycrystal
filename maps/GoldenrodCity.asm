@@ -61,21 +61,21 @@ MoveTutorScript:
 
 .Flamethrower:
 	setval MOVETUTOR_FLAMETHROWER
-	writetext UnknownText_0x1991cf
+	writetext GenericTextStart
 	special MoveTutor
 	ifequal FALSE, .TeachMove
 	sjump .Incompatible
 
 .Thunderbolt:
 	setval MOVETUTOR_THUNDERBOLT
-	writetext UnknownText_0x1991cf
+	writetext GenericTextStart
 	special MoveTutor
 	ifequal FALSE, .TeachMove
 	sjump .Incompatible
 
 .IceBeam:
 	setval MOVETUTOR_ICE_BEAM
-	writetext UnknownText_0x1991cf
+	writetext GenericTextStart
 	special MoveTutor
 	ifequal FALSE, .TeachMove
 	sjump .Incompatible
@@ -466,10 +466,6 @@ GoldenrodCityMoveTutorBButText:
 GoldenrodCityMoveTutorYouDontHaveEnoughCoinsText:
 	text "…You don't have"
 	line "enough coins here…"
-	done
-
-UnknownText_0x1991cf:
-	text_start
 	done
 
 GoldenrodCity_MapEvents:

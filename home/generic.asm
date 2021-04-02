@@ -18,3 +18,7 @@ ActivateRockets_GoldenrodRockets:
 
 ActivateRockets_RadioTowerRockets:
 	jumpstd radiotowerrockets
+
+GenericTextStart::
+	text_start
+	done

@@ -31,6 +31,7 @@ HallOfFame_MapScripts:
 	setevent EVENT_TELEPORT_GUY
 	setevent EVENT_RIVAL_SPROUT_TOWER
 	clearevent EVENT_RED_IN_MT_SILVER
+	clearevent EVENT_NOT_CHAMPION_YET
 	farscall ResetUniqueMons
 	setmapscene SPROUT_TOWER_3F, SCENE_FINISHED
 	special HealParty

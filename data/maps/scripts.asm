@@ -167,7 +167,6 @@ INCLUDE "maps/CharcoalKiln.asm"
 INCLUDE "maps/KurtsHouse.asm"
 INCLUDE "maps/AzaleaGym.asm"
 INCLUDE "maps/DragonsDen1F.asm"
-INCLUDE "maps/DragonsDenB1F.asm"
 INCLUDE "maps/DragonShrine.asm"
 
 
@@ -240,6 +239,7 @@ INCLUDE "maps/OlivineMart.asm"
 INCLUDE "maps/Route38EcruteakGate.asm"
 INCLUDE "maps/Route39Barn.asm"
 INCLUDE "maps/Route39Farmhouse.asm"
+INCLUDE "maps/Route40BattleTowerGate.asm"
 INCLUDE "maps/ManiasHouse.asm"
 INCLUDE "maps/CianwoodGym.asm"
 INCLUDE "maps/CianwoodPokecenter1F.asm"
@@ -251,7 +251,6 @@ INCLUDE "maps/BattleTower1F.asm"
 INCLUDE "maps/BattleTowerBattleRoom.asm"
 INCLUDE "maps/BattleTowerElevator.asm"
 INCLUDE "maps/BattleTowerHallway.asm"
-INCLUDE "maps/Route40BattleTowerGate.asm"
 INCLUDE "maps/BattleTowerOutside.asm"
 
 
@@ -331,12 +330,13 @@ INCLUDE "maps/VioletKylesHouse.asm"
 
 SECTION "Map Scripts 16", ROMX
 
+INCLUDE "maps/Route10North.asm"
 INCLUDE "maps/Route31.asm"
 INCLUDE "maps/Route39.asm"
 INCLUDE "maps/Route40.asm"
 INCLUDE "maps/Route41.asm"
 INCLUDE "maps/SilverCaveOutside.asm"
-INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/DragonsDenB1F.asm"
 
 
 SECTION "Map Scripts 17", ROMX

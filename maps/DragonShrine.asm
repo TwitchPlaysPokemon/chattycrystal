@@ -254,20 +254,10 @@ DragonShrineElder1Script:
 	end
 
 DragonShrineElder2Script:
-	faceplayer
-	opentext
-	writetext DragonShrineElder2Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer DragonShrineElder2Text
 
 DragonShrineElder3Script:
-	faceplayer
-	opentext
-	writetext DragonShrineElder3Text
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer DragonShrineElder3Text
 
 DragonShrineQuestion1_MenuHeader:
 	db MENU_BACKUP_TILES ; flags
@@ -551,7 +541,7 @@ DragonShrineSilverIsInTrainingText:
 	cont "training here."
 
 	para "He is much like"
-	line "AAALK' when she"
+	line "AAALK' when he"
 	para "was younger. It is"
 	line "a little"
 	cont "worrisome…"

@@ -725,8 +725,6 @@ HariyamaEvosAttacks:
 	dbw 1, BRINE
 	dbw 1, TACKLE
 	dbw 1, FOCUS_ENERGY
-	dbw 1, SAND_ATTACK
-	dbw 1, ARM_THRUST
 	dbw 4, SAND_ATTACK
 	dbw 7, ARM_THRUST
 	dbw 11, FAKE_OUT

@@ -290,10 +290,14 @@ ENDM
 	add_mt ICE_BEAM
 	add_mt AERIAL_ACE
 	add_mt CALM_MIND
+	add_mt CRYSTAL_BOLT
 	add_mt DARK_PULSE
 	add_mt DAZZLINGLEAM
+	add_mt DRACO_METEOR
 	add_mt DRAGON_PULSE
 	add_mt DRAIN_PUNCH
+	add_mt ENERGY_BALL
+	add_mt FOCUS_BLAST
 	add_mt HEAT_WAVE
 	add_mt IRON_HEAD
 	add_mt KNOCK_OFF

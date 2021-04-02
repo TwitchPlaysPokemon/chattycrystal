@@ -3,11 +3,6 @@ MAP_NAME_SIGN_START EQU $60
 ReturnFromMapSetupScript::
 	xor a
 	ldh [hBGMapMode], a
-	farcall .inefficient_farcall ; this is a waste of 6 ROM bytes and 6 stack bytes
-	ret
-
-; should have just been a fallthrough
-.inefficient_farcall
 	ld a, [wMapGroup]
 	ld b, a
 	ld a, [wMapNumber]
@@ -81,9 +76,6 @@ ReturnFromMapSetupScript::
 	cp INDIGO_PLATEAU
 	ret z
 	cp POWER_PLANT
-	ret z
-	ld a, 1
-	and a
 	ret
 
 .CheckNationalParkGate:
@@ -110,7 +102,6 @@ PlaceMapNameSign::
 	call PlaceMapNameCenterAlign
 	farcall HDMATransfer_OnlyTopFourRows
 .skip2
-	ld a, $80
 	ld a, $70
 	ldh [rWY], a
 	ldh [hWY], a
@@ -128,16 +119,13 @@ LoadMapNameSignGFX:
 	ld de, MapEntryFrameGFX
 	ld hl, vTiles2 tile MAP_NAME_SIGN_START
 	lb bc, BANK(MapEntryFrameGFX), 14
-	call Get2bpp
-	ret
+	jp Get2bpp
 
 InitMapNameFrame:
 	hlcoord 0, 0
-	ld b, 2
-	ld c, 18
+	lb bc, 2, 18
 	call InitMapSignAttrMap
-	call PlaceMapNameFrame
-	ret
+	jp PlaceMapNameFrame
 
 PlaceMapNameCenterAlign:
 	ld a, [wCurLandmark]
@@ -147,13 +135,12 @@ PlaceMapNameCenterAlign:
 	ld a, SCREEN_WIDTH
 	sub c
 	srl a
-	ld b, $0
+	ld b, 0
 	ld c, a
 	hlcoord 0, 2
 	add hl, bc
 	ld de, wStringBuffer1
-	call PlaceString
-	ret
+	jp PlaceString
 
 .GetNameLength:
 	ld c, 0

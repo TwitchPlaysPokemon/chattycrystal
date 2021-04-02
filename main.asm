@@ -313,6 +313,7 @@ INCLUDE "engine/events/buena.asm"
 INCLUDE "engine/events/dratini.asm"
 INCLUDE "engine/events/battle_tower/rules.asm"
 INCLUDE "engine/events/field_moves.asm"
+INCLUDE "engine/events/checkforhiddenitems.asm"
 
 TownMapGFX:
 INCBIN "gfx/pokegear/town_map.2bpp.lz"
@@ -378,7 +379,6 @@ INCLUDE "data/phone/text/erin_overworld.asm"
 SECTION "bank2E", ROMX
 
 INCLUDE "engine/events/map_name_sign.asm"
-INCLUDE "engine/events/checkforhiddenitems.asm"
 INCLUDE "engine/events/treemons.asm"
 INCLUDE "engine/events/fishing_gfx.asm"
 INCLUDE "engine/pokegear/radio.asm"

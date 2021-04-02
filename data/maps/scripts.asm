@@ -304,8 +304,6 @@ INCLUDE "maps/CeruleanPokecenter1F.asm"
 INCLUDE "maps/CeruleanPokecenter2FBeta.asm"
 INCLUDE "maps/CeruleanGym.asm"
 INCLUDE "maps/CeruleanMart.asm"
-INCLUDE "maps/Route10Pokecenter1F.asm"
-INCLUDE "maps/Route10Pokecenter2FBeta.asm"
 INCLUDE "maps/PowerPlant.asm"
 INCLUDE "maps/BillsHouse.asm"
 INCLUDE "maps/FightingDojo.asm"
@@ -447,6 +445,8 @@ INCLUDE "maps/GoldenrodMoveRelearner.asm"
 
 SECTION "Map Scripts 21", ROMX
 
+INCLUDE "maps/Route10Pokecenter1F.asm"
+INCLUDE "maps/Route10Pokecenter2FBeta.asm"
 INCLUDE "maps/ViridianForest.asm"
 INCLUDE "maps/ViridianForestNorthGate.asm"
 INCLUDE "maps/ViridianForestSouthGate.asm"

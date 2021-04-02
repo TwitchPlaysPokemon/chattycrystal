@@ -253,6 +253,7 @@ ScriptCommandTable:
 	dw Script_checkspecialstorage        ; b4
 	dw Script_replacemove                ; b5
 	dw Script_checkevents                ; b6
+	dw Script_movetutor                  ; b7
 
 Script_callasm:
 ; script command 0xe
@@ -3205,3 +3206,54 @@ Script_checkevents:
 .done
 	ld [wScriptVar], a
 	ret
+
+Script_movetutor:
+; script command 0xb7
+; params: tutor index, tutor index, tutor index
+	call GetScriptByte
+	ld d, a
+	call GetScriptByte
+	ld c, a
+	call GetScriptByte
+	ld b, a
+	push bc
+	push de
+	farcall LoadMoveTutorMenuData
+	ld hl, .menu_header
+	call LoadMenuHeader
+	call UpdateSprites
+	call VerticalMenu
+	ld a, [wMenuCursorY]
+	jr nc, .got_option
+	ld a, 4 ; CANCEL
+.got_option
+	ld e, a
+	ld d, 0
+	ld hl, sp + 0
+	add hl, de
+	cp 4
+	ld a, [hl]
+	pop de
+	pop bc
+	push af
+	call CloseWindow
+	call UpdateSprites
+	pop af
+	jr z, .fail
+	ld [wScriptVar], a
+	ld hl, GenericTextStart
+	ld b, BANK(GenericTextStart) ; technically not necessary, but let's not break emulators
+	call MapTextbox
+	farcall MoveTutor
+	ret
+
+.fail
+	ld a, -1
+	ld [wScriptVar], a
+	ret
+
+.menu_header
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 2, 15, TEXTBOX_Y - 1
+	dw wStringBuffer3
+	db 1 ; default option

@@ -1,4 +1,4 @@
-MoveTutor:
+MoveTutor::
 	call FadeToMenu
 	call ClearBGPalettes
 	call ClearScreen
@@ -88,3 +88,38 @@ CheckCanLearnMoveTutorMove:
 .MenuHeader:
 	db MENU_BACKUP_TILES ; flags
 	menu_coords 0, 12, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
+
+LoadMoveTutorMenuData::
+	ld hl, wStringBuffer3
+	ld a, STATICMENU_CURSOR ; flags
+	ld [hli], a
+	ld a, 4 ; items
+	ld [hli], a
+	ld a, d
+	call .load_move
+	ld a, c
+	call .load_move
+	ld a, b
+	call .load_move
+	ld de, .cancel
+	jr .copy
+
+.cancel
+	db "CANCEL@"
+
+.load_move
+	push hl
+	add a, a
+	add a, LOW(MoveTutorMoves - 2)
+	ld l, a
+	adc HIGH(MoveTutorMoves - 2)
+	sub l
+	ld h, a
+	ld a, BANK(MoveTutorMoves)
+	call GetFarHalfword
+	call GetMoveIDFromIndex
+	ld [wNamedObjectIndexBuffer], a
+	call GetMoveName
+	pop hl
+.copy
+	jp CopyName2

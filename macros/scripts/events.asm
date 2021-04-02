@@ -1143,3 +1143,9 @@ checkevents: MACRO
 	dw \#
 	dw -1
 ENDM
+
+	enum movetutor_command ; $b7
+movetutor: MACRO
+	db movetutor_command
+	db MOVETUTOR_\1, MOVETUTOR_\2, MOVETUTOR_\3 ; tutor IDs
+ENDM

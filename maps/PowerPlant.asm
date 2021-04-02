@@ -73,7 +73,54 @@ PowerPlantOfficer2Script:
 	jumptextfaceplayer PowerPlantOfficer2ManagerHasBeenSadAndFuriousText
 
 .ReturnedMachinePart:
-	jumptextfaceplayer PowerPlantOfficer2ManagerHasBeenCheerfulText
+	faceplayer
+	opentext
+	writetext .teach_move_text
+	yesorno
+	iffalse .refused
+	writetext .what_move_text
+	movetutor FOCUS_BLAST, CRYSTAL_BOLT, ENERGY_BALL
+	iftrue .refused
+	writetext .finished_text
+	waitbutton
+	closetext
+	end
+
+.teach_move_text
+	text "Everyone's been a"
+	line "lot more cheerful"
+	para "recently. How can"
+	line "we thank you?"
+
+	para "I know! I'll teach"
+	line "your #MON a new"
+	para "strong move!"
+	line "What do you say?"
+	done
+
+.what_move_text
+	text "What move should I"
+	line "teach?"
+	done
+
+.finished_text
+	text "Come again if you"
+	line "want me to teach"
+	para "your #MON"
+	line "another move!"
+	done
+
+.refused
+	writetext .refused_text
+	waitbutton
+	closetext
+	end
+
+.refused_text
+	text "That's okay. Let me"
+	line "know if you change"
+	cont "your mind!"
+	done
 
 PowerPlantOfficer3Script:
 	jumptextfaceplayer PowerPlantOfficer3Text
@@ -241,13 +288,6 @@ PowerPlantOfficer2ManagerHasBeenSadAndFuriousText:
 	para "generator, he's"
 	line "been both sad and"
 	cont "furious…"
-	done
-
-PowerPlantOfficer2ManagerHasBeenCheerfulText:
-	text "Since the gener-"
-	line "ator's been fixed,"
-	para "the MANAGER has"
-	line "been cheerful."
 	done
 
 PowerPlantGymGuy4MagnetTrainConsumesElectricityText:

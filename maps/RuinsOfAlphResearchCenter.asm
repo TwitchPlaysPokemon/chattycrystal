@@ -60,6 +60,7 @@ RuinsOfAlphResearchCenterScientist3Script:
 	jumptextfaceplayer RuinsOfAlphResearchCenterScientist3Text
 
 .PrinterAvailable:
+	setevent EVENT_UNOWN_PRINTER_AVAILABLE
 	jumptextfaceplayer RuinsOfAlphResearchCenterScientist3_PrinterAvailable
 
 RuinsOfAlphResearchCenterScientist1Script:
@@ -95,8 +96,8 @@ RuinsOfAlphResearchCenterComputer:
 RuinsOfAlphResearchCenterPrinter:
 	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	iftrue .SkipChecking
-	readvar VAR_UNOWNCOUNT
-	ifequal NUM_UNOWN, .PrinterAvailable
+	checkevent EVENT_UNOWN_PRINTER_AVAILABLE
+	iftrue .PrinterAvailable
 .SkipChecking:
 	jumptext RuinsOfAlphResearchCenterPrinterText_DoesntWork
 

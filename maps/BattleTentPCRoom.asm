@@ -15,6 +15,9 @@ LeaguePCScript:
 	winlosstext .win_text, .lose_text
 	loadtrainer BATTLE_PC, MIRROR_PC
 	startbattle
+	iftrue .lost
+	setevent EVENT_DEFEATED_MIRROR_PC_AT_LEAST_ONCE
+.lost
 	reloadmap
 	special RestoreHeldItems
 	special HealParty

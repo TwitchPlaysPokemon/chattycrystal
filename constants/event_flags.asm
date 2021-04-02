@@ -596,9 +596,9 @@
 	const skip
 	const EVENT_REDS_HOUSE_2F_TM_ROCK_SMASH ; 250
 	const EVENT_MARINA_AVAILABLE
-	const skip
-	const skip
-	const skip
+	const EVENT_PRINTED_DIPLOMA_AT_LEAST_ONCE
+	const EVENT_UNOWN_PRINTER_AVAILABLE
+	const EVENT_DEFEATED_MIRROR_PC_AT_LEAST_ONCE
 	const skip
 	const skip
 	const skip

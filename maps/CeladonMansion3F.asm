@@ -44,6 +44,7 @@ GameFreakGraphicArtistScript:
 	writetext GameFreakGraphicArtistPrintDiplomaText
 	yesorno
 	iffalse .Refused
+	setevent EVENT_PRINTED_DIPLOMA_AT_LEAST_ONCE
 	special PrintDiploma
 	closetext
 	end
@@ -160,8 +161,8 @@ CeladonMansion3FGameProgramText:
 CeladonMansion3FReferenceMaterialText:
 	text "It's crammed with"
 	line "reference materi-"
-	cont "als. There's even"
-	cont "a # DOLL."
+	cont "als. There's even a"
+	cont "# DOLL."
 	done
 
 CeladonMansion3F_MapEvents:

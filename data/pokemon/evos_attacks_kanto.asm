@@ -1418,7 +1418,7 @@ GolemEvosAttacks:
 	dbw 1, TACKLE
 	dbw 4, DEFENSE_CURL
 	dbw 6, BIDE
-	dbw 10, ROLLOUT
+	dbw 10, STEAMROLLER
 	dbw 12, MAGNITUDE
 	dbw 16, ROCK_THROW
 	dbw 20, BULLDOZE

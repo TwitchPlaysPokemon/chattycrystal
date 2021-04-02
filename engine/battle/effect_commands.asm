@@ -1254,7 +1254,7 @@ BattleCommand_Stab:
 	ld hl, wFakeTypeMatchupBuffer + 3
 	ld a, -1
 	ld [hld], a
-	ld a, 20
+	ld a, SUPER_EFFECTIVE
 	ld [hld], a
 	ld a, d
 	ld [hld], a

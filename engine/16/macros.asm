@@ -127,8 +127,11 @@ ___unroll = 8
 	if \2_ENTRIES >= $80
 		bit 0, h
 		; if HIGH(\1EntriesEnd) is odd, we jump on z; otherwise, we jump on nz
-		; so we have to encode a "jr z/nz, .search_loop" instruction according to that value - jr z = $28, jr nz = $20
-		db 8 * (HIGH(\1EntriesEnd) & 1) + $20, .search_loop - (@ + 1)
+		; so we have to encode a "jr z/nz, .search_loop" instruction according to that value
+		; note that jr z = $28, jr nz = $20
+		; we use "ds 2, <jr_cc>, <off>" rather than "db <jr_cc>, <off>" so that @ is relative to the
+		; start of the declaration, just like with "jr <cc>, <label>"
+		ds 2, 8 * (HIGH(\1EntriesEnd) & 1) + $20, .search_loop - (@ + 2)
 	endc
 
 	; not found - we have to allocate the 16-bit ID on the table and return the new 8-bit ID for it

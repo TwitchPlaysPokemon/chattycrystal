@@ -109,7 +109,7 @@ ___unroll = 8
 	if \2_ENTRIES % ___unroll
 		; Duff's device, gbz80 edition
 		; note that the block inside the rept is 8 bytes long
-		db $18, 8 * (___unroll - (\2_ENTRIES % ___unroll)) ;jr <number of bytes skipped>
+		jr (@ + 2) + 8 * (___unroll - (\2_ENTRIES % ___unroll)) ;jr <number of bytes skipped>
 	endc
 .search_loop
 	rept ___unroll
@@ -128,8 +128,7 @@ ___unroll = 8
 		bit 0, h
 		; if HIGH(\1EntriesEnd) is odd, we jump on z; otherwise, we jump on nz
 		; so we have to encode a "jr z/nz, .search_loop" instruction according to that value - jr z = $28, jr nz = $20
-		db 8 * (HIGH(\1EntriesEnd) & 1) + $20
-		db .search_loop - (@ + 1)
+		db 8 * (HIGH(\1EntriesEnd) & 1) + $20, .search_loop - (@ + 1)
 	endc
 
 	; not found - we have to allocate the 16-bit ID on the table and return the new 8-bit ID for it
@@ -311,7 +310,7 @@ ___unroll = 8
 		ld [hl], ((\3) + ___unroll - 1) / ___unroll
 		if (\3) % ___unroll
 			; again, Duff's device - the body of the rept is 10 bytes long
-			db $18, 10 * (___unroll - ((\3) % ___unroll))
+			jr (@ + 2) + 10 * (___unroll - ((\3) % ___unroll))
 		endc
 .check_loop\@
 		rept ___unroll

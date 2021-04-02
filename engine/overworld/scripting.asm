@@ -252,6 +252,7 @@ ScriptCommandTable:
 	dw Script_withdrawspecial            ; b3
 	dw Script_checkspecialstorage        ; b4
 	dw Script_replacemove                ; b5
+	dw Script_checkevents                ; b6
 
 Script_callasm:
 ; script command 0xe
@@ -3132,5 +3133,75 @@ Script_replacemove:
 	farcall ReplaceMove
 	sbc a
 	inc a
+	ld [wScriptVar], a
+	ret
+
+Script_checkevents:
+; script command 0xb6
+; parameters: event flag, event flag, event flag, ..., -1
+; returns 0 if all events are set, or a random (1-based) ID of an unset event otherwise
+	lb bc, 0, 0
+.read_loop
+	call GetScriptByte
+	ld e, a
+	call GetScriptByte
+	ld d, a
+	and e
+	inc a
+	jr z, .done_reading
+	inc c
+	push bc
+	ld b, CHECK_FLAG
+	call EventFlagAction
+	ld a, c
+	pop bc
+	and a
+	jr nz, .read_loop
+	inc b
+	jr .read_loop
+
+.done_reading
+	ld a, b
+	and a
+	jr z, .done
+	cp 1
+	jr z, .ok
+	call RandomRange
+	inc a
+.ok
+	ld b, a
+
+	ld hl, wScriptPos
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld a, c
+	cpl
+	ld e, a
+	ld d, -1
+	add hl, de
+	add hl, de
+	ld c, 0
+.check_loop
+	inc c
+	push hl
+	ld a, [wScriptBank]
+	call GetFarHalfword
+	ld d, h
+	ld e, l
+	push bc
+	ld b, CHECK_FLAG
+	call EventFlagAction
+	ld a, c
+	pop bc
+	pop hl
+	inc hl
+	inc hl
+	and a
+	jr nz, .check_loop
+	dec b
+	jr nz, .check_loop
+	ld a, c
+.done
 	ld [wScriptVar], a
 	ret

@@ -776,6 +776,7 @@ WingullBackpic:      INCBIN "gfx/pokemon/wingull/back.2bpp.lz"
 ElectrikeBackpic:    INCBIN "gfx/pokemon/electrike/back.2bpp.lz"
 SphealFrontpic:      INCBIN "gfx/pokemon/spheal/front.animated.2bpp.lz"
 SnorlaxShoeFrontpic::   INCBIN "gfx/pokemon/snorlax-shoe/front.animated.2bpp.lz"
+HelioptileFrontpic:  INCBIN "gfx/pokemon/helioptile/front.animated.2bpp.lz"
 
 SECTION "Pics 24", ROMX
 
@@ -984,7 +985,6 @@ CharmanderFrontpic:  INCBIN "gfx/pokemon/charmander/front.animated.2bpp.lz"
 LampentFrontpic:     INCBIN "gfx/pokemon/lampent/front.animated.2bpp.lz"
 ClawitzerFrontpic:   INCBIN "gfx/pokemon/clawitzer/front.animated.2bpp.lz"
 ClawitzerBackpic:    INCBIN "gfx/pokemon/clawitzer/back.2bpp.lz"
-HelioptileFrontpic:  INCBIN "gfx/pokemon/helioptile/front.animated.2bpp.lz"
 HelioptileBackpic:   INCBIN "gfx/pokemon/helioptile/back.2bpp.lz"
 HelioliskFrontpic:   INCBIN "gfx/pokemon/heliolisk/front.animated.2bpp.lz"
 AmauraFrontpic:      INCBIN "gfx/pokemon/amaura/front.animated.2bpp.lz"

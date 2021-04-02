@@ -1135,3 +1135,11 @@ replacemove: MACRO
 	dw \1 ; original move
 	dw \2 ; new move
 ENDM
+
+	enum checkevents_command ; $b6
+checkevents: MACRO
+	assert _NARG < $100, "Too many events for checkevents!"
+	db checkevents_command
+	dw \#
+	dw -1
+ENDM

@@ -2095,15 +2095,15 @@ ChanseyEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
 	dbw 1, DEFENSE_CURL
-	dbw 7, TAIL_WHIP
-	dbw 10, DEFENSE_CURL
-	dbw 13, DOUBLESLAP
-	dbw 18, SING
-	dbw 23, MINIMIZE
-	dbw 28, EGG_BOMB
-	dbw 33, SOFTBOILED
-	dbw 40, LIGHT_SCREEN
-	dbw 47, DOUBLE_EDGE
+	dbw 12, DOUBLESLAP
+	dbw 17, SING
+	dbw 21, SECRET_POWER
+	dbw 26, TAKE_DOWN
+	dbw 30, MINIMIZE
+	dbw 35, EGG_BOMB
+	dbw 39, SOFTBOILED
+	dbw 44, LIGHT_SCREEN
+	dbw 48, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:

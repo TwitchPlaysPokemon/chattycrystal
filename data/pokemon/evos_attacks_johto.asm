@@ -301,18 +301,19 @@ HoothootEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 1, FORESIGHT
-	dbw 6, HYPNOSIS
-	dbw 10, PECK
-	dbw 15, CONFUSION
-	dbw 19, ECHOED_VOICE
-	dbw 24, EXTRASENSORY
-	dbw 28, TAKE_DOWN
-	dbw 33, REFLECT
-	dbw 37, AIR_SLASH
-	dbw 42, ZEN_HEADBUTT
-	dbw 46, ROOST
-	dbw 51, MOONBLAST
-	dbw 55, DREAM_EATER
+	dbw 5, HYPNOSIS
+	dbw 9, PECK
+	dbw 13, CONFUSION
+	dbw 17, ECHOED_VOICE
+	dbw 21, EXTRASENSORY
+	dbw 25, TAKE_DOWN
+	dbw 29, REFLECT
+	dbw 33, AIR_SLASH
+	dbw 37, SECRET_POWER
+	dbw 41, ZEN_HEADBUTT
+	dbw 45, ROOST
+	dbw 49, MOONBLAST
+	dbw 53, DREAM_EATER
 	db 0 ; no more level-up moves
 
 NoctowlEvosAttacks:
@@ -322,17 +323,18 @@ NoctowlEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, FORESIGHT
 	dbw 1, HYPNOSIS
-	dbw 10, PECK
-	dbw 15, CONFUSION
-	dbw 19, ECHOED_VOICE
-	dbw 25, EXTRASENSORY
-	dbw 30, TAKE_DOWN
-	dbw 36, REFLECT
-	dbw 41, AIR_SLASH
+	dbw 9, PECK
+	dbw 13, CONFUSION
+	dbw 17, ECHOED_VOICE
+	dbw 22, EXTRASENSORY
+	dbw 27, TAKE_DOWN
+	dbw 32, REFLECT
+	dbw 37, AIR_SLASH
+	dbw 42, SECRET_POWER
 	dbw 47, ZEN_HEADBUTT
 	dbw 52, ROOST
-	dbw 58, MOONBLAST
-	dbw 63, DREAM_EATER
+	dbw 57, MOONBLAST
+	dbw 62, DREAM_EATER
 	db 0 ; no more level-up moves
 
 LedybaEvosAttacks:
@@ -527,12 +529,13 @@ NatuEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, PECK
 	dbw 1, LEER
-	dbw 6, NIGHT_SHADE
-	dbw 10, TELEPORT
-	dbw 20, CONFUSE_RAY
-	dbw 30, PSYCHIC_M
-	dbw 40, DRILL_PECK
-	dbw 50, FUTURE_SIGHT
+	dbw 7, NIGHT_SHADE
+	dbw 14, TELEPORT
+	dbw 21, CONFUSE_RAY
+	dbw 28, PSYCHIC_M
+	dbw 35, SECRET_POWER
+	dbw 42, DRILL_PECK
+	dbw 49, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 XatuEvosAttacks:
@@ -540,11 +543,12 @@ XatuEvosAttacks:
 	dbw 1, PECK
 	dbw 1, LEER
 	dbw 1, NIGHT_SHADE
-	dbw 10, TELEPORT
-	dbw 20, CONFUSE_RAY
-	dbw 32, PSYCHIC_M
-	dbw 44, DRILL_PECK
-	dbw 56, FUTURE_SIGHT
+	dbw 14, TELEPORT
+	dbw 21, CONFUSE_RAY
+	dbw 30, PSYCHIC_M
+	dbw 39, SECRET_POWER
+	dbw 48, DRILL_PECK
+	dbw 57, FUTURE_SIGHT
 	db 0 ; no more level-up moves
 
 MareepEvosAttacks:
@@ -871,10 +875,10 @@ UmbreonEvosAttacks:
 	dbw 14, QUICK_ATTACK
 	dbw 18, CONFUSE_RAY
 	dbw 23, FEINT_ATTACK
-	dbw 27, MEAN_LOOK
+	dbw 27, SNATCH
 	dbw 33, MOONLIGHT
 	dbw 38, ASSURANCE
-	dbw 45, SCREECH
+	dbw 45, MEAN_LOOK
 	dbw 50, DARK_PULSE
 	db 0 ; no more level-up moves
 
@@ -891,7 +895,7 @@ MurkrowEvosAttacks:
 	dbw 35, FEINT_ATTACK
 	dbw 41, MEAN_LOOK
 	dbw 45, FOUL_PLAY
-	dbw 51, DRILL_PECK
+	dbw 51, SNATCH
 	dbw 55, SUCKER_PUNCH
 	db 0 ; no more level-up moves
 
@@ -969,26 +973,28 @@ PinecoEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, PROTECT
-	dbw 7, SELFDESTRUCT
+	dbw 8, SELFDESTRUCT
 	dbw 12, TAKE_DOWN
 	dbw 16, RAPID_SPIN
 	dbw 20, BIDE
-	dbw 26, SPIKES
-	dbw 31, PIN_MISSILE
+	dbw 24, SECRET_POWER
+	dbw 28, SPIKES
+	dbw 32, PIN_MISSILE
 	dbw 36, EXPLOSION
 	dbw 40, IRON_DEFENSE
-	dbw 45, DOUBLE_EDGE
+	dbw 44, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 ForretressEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, PROTECT
-	dbw 7, SELFDESTRUCT
+	dbw 8, SELFDESTRUCT
 	dbw 12, TAKE_DOWN
 	dbw 16, RAPID_SPIN
 	dbw 20, BIDE
-	dbw 26, SPIKES
+	dbw 24, SECRET_POWER
+	dbw 28, SPIKES
 	dbw 33, PIN_MISSILE
 	dbw 38, EXPLOSION
 	dbw 44, IRON_DEFENSE
@@ -1650,13 +1656,15 @@ BlisseyEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
 	dbw 1, DEFENSE_CURL
-	dbw 13, DOUBLESLAP
-	dbw 18, SING
-	dbw 23, MINIMIZE
-	dbw 28, EGG_BOMB
-	dbw 33, SOFTBOILED
-	dbw 40, LIGHT_SCREEN
-	dbw 47, DOUBLE_EDGE
+	dbw 12, DOUBLESLAP
+	dbw 17, SING
+	dbw 21, SECRET_POWER
+	dbw 26, TAKE_DOWN
+	dbw 30, MINIMIZE
+	dbw 35, EGG_BOMB
+	dbw 39, SOFTBOILED
+	dbw 44, LIGHT_SCREEN
+	dbw 48, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 RaikouEvosAttacks:

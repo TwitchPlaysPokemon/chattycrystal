@@ -298,13 +298,16 @@ ENDM
 	add_mt DRAIN_PUNCH
 	add_mt ENERGY_BALL
 	add_mt FOCUS_BLAST
+	add_mt GRASS_KNOT
 	add_mt HEAT_WAVE
 	add_mt IRON_HEAD
 	add_mt KNOCK_OFF
 	add_mt NASTY_PLOT
+	add_mt OVERHEAT
 	add_mt POISON_JAB
 	add_mt ROCK_SLIDE
 	add_mt ROOST
+	add_mt SCALD
 	add_mt SIGNAL_BEAM
 	add_mt SUPERPOWER
 	add_mt SWORDS_DANCE

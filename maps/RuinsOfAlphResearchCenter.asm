@@ -513,6 +513,9 @@ ScientistWithdrawUnown:
 	ifequal UNOWN_INFORMATION_FILE_COUNT_MAX, .no_new_data
 	addval 1
 	writemem wUnownInformationFilesCount
+	ifless UNOWN_INFORMATION_FILE_COUNT_MAX, .no_flag
+	setevent EVENT_UNLOCKED_ALL_UNOWN_RESEARCHER_FILES
+.no_flag
 	writetext .new_data_text
 	waitbutton
 .no_new_data

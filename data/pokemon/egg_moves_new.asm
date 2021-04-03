@@ -246,6 +246,7 @@ RaltsEggMoves:
 	dw MEAN_LOOK
 	dw MEMENTO
 	dw SHADOW_SNEAK
+	dw SUBSTITUTE
 	dw -1 ; end
 
 SurskitEggMoves:
@@ -276,9 +277,11 @@ MakuhitaEggMoves:
 	dw -1 ; end
 
 AzurillEggMoves:
+	dw BELLY_DRUM
 	dw BODY_SLAM
 	dw ENCORE
 	dw MUDDY_WATER
+	dw PERISH_SONG
 	dw SING
 	dw SLAM
 	dw TICKLE
@@ -540,6 +543,7 @@ PansageEggMoves:
 	dw ASTONISH
 	dw COVET
 	dw LOW_KICK
+	dw SYNTHESIS
 	dw TICKLE
 	dw -1 ; end
 
@@ -552,6 +556,7 @@ DrilburEggMoves:
 	dw -1 ; end
 
 SandileEggMoves:
+	dw AQUA_TAIL
 	dw BEAT_UP
 	dw COUNTER
 	dw DOUBLE_EDGE
@@ -581,6 +586,7 @@ LitwickEggMoves:
 ClauncherEggMoves:
 	dw AQUA_JET
 	dw CRABHAMMER
+	dw FLASH_CANNON
 	dw -1 ; end
 
 HelioptileEggMoves:
@@ -597,6 +603,7 @@ AmauraEggMoves:
 
 GoomyEggMoves:
 	dw COUNTER
+	dw OUTRAGE
 	dw -1 ; end
 
 CrabrawlerEggMoves:

@@ -177,7 +177,6 @@ IvysaurEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 1, LEECH_SEED
-	dbw 7, LEECH_SEED
 	dbw 10, VINE_WHIP
 	dbw 13, POISONPOWDER
 	dbw 13, SLEEP_POWDER
@@ -194,8 +193,6 @@ VenusaurEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 1, LEECH_SEED
-	dbw 1, VINE_WHIP
 	dbw 7, LEECH_SEED
 	dbw 10, VINE_WHIP
 	dbw 13, POISONPOWDER
@@ -233,7 +230,6 @@ CharmeleonEvosAttacks:
 	dbw 1, SCRATCH
 	dbw 1, GROWL
 	dbw 1, EMBER
-	dbw 7, EMBER
 	dbw 10, SMOKESCREEN
 	dbw 17, RAGE
 	dbw 21, SCARY_FACE
@@ -253,8 +249,6 @@ CharizardEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, EMBER
 	dbw 1, SMOKESCREEN
-	dbw 7, EMBER
-	dbw 10, SMOKESCREEN
 	dbw 17, RAGE
 	dbw 21, SCARY_FACE
 	dbw 28, FIRE_FANG
@@ -291,7 +285,6 @@ WartortleEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 4, TAIL_WHIP
-	dbw 1, BUBBLE
 	dbw 7, BUBBLE
 	dbw 10, WITHDRAW
 	dbw 13, WATER_GUN
@@ -310,7 +303,6 @@ BlastoiseEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 4, TAIL_WHIP
-	dbw 1, BUBBLE
 	dbw 7, BUBBLE
 	dbw 10, WITHDRAW
 	dbw 13, WATER_GUN
@@ -411,7 +403,6 @@ PidgeottoEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, SAND_ATTACK
 	dbw 1, GUST
-	dbw 9, GUST
 	dbw 13, QUICK_ATTACK
 	dbw 17, WHIRLWIND
 	dbw 22, TWISTER
@@ -430,8 +421,6 @@ PidgeotEvosAttacks:
 	dbw 1, SAND_ATTACK
 	dbw 1, GUST
 	dbw 1, QUICK_ATTACK
-	dbw 9, GUST
-	dbw 13, QUICK_ATTACK
 	dbw 17, WHIRLWIND
 	dbw 22, TWISTER
 	dbw 27, AGILITY
@@ -468,8 +457,6 @@ RaticateEvosAttacks:
 	dbw 1, TAIL_WHIP
 	dbw 1, QUICK_ATTACK
 	dbw 1, FOCUS_ENERGY
-	dbw 4, QUICK_ATTACK
-	dbw 7, FOCUS_ENERGY
 	dbw 10, BITE
 	dbw 13, PURSUIT
 	dbw 16, HYPER_FANG
@@ -542,8 +529,6 @@ ArbokEvosAttacks:
 	dbw 1, LEER
 	dbw 1, POISON_STING
 	dbw 1, BITE
-	dbw 7, POISON_STING
-	dbw 12, BITE
 	dbw 16, GLARE
 	dbw 21, SCREECH
 	dbw 22, CRUNCH
@@ -687,7 +672,7 @@ NidorinoEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, GROWL
 	dbw 1, POISON_STING
-	dbw 6, SCRATCH
+	dbw 6, PECK
 	dbw 10, FOCUS_ENERGY
 	dbw 14, DOUBLE_KICK
 	dbw 20, FURY_ATTACK
@@ -821,8 +806,6 @@ GolbatEvosAttacks:
 	dbw 1, SUPERSONIC
 	dbw 1, ASTONISH
 	dbw 1, BITE
-	dbw 8, ASTONISH
-	dbw 12, BITE
 	dbw 15, WING_ATTACK
 	dbw 19, CONFUSE_RAY
 	dbw 22, SWIFT
@@ -859,7 +842,6 @@ GloomEvosAttacks:
 	dbw 1, ABSORB
 	dbw 1, GROWTH
 	dbw 1, SWEET_SCENT
-	dbw 5, SWEET_SCENT
 	dbw 10, ACID
 	dbw 14, POISONPOWDER
 	dbw 15, STUN_SPORE
@@ -981,8 +963,6 @@ DugtrioEvosAttacks:
 	dbw 1, SAND_ATTACK
 	dbw 1, GROWL
 	dbw 1, ASTONISH
-	dbw 4, GROWL
-	dbw 7, ASTONISH
 	dbw 10, MUD_SLAP
 	dbw 13, MAGNITUDE
 	dbw 16, BULLDOZE
@@ -1060,8 +1040,6 @@ GolduckEvosAttacks:
 	dbw 1, TAIL_WHIP
 	dbw 1, WATER_GUN
 	dbw 1, CONFUSION
-	dbw 8, WATER_GUN
-	dbw 11, CONFUSION
 	dbw 15, FURY_SWIPES
 	dbw 18, WATER_PULSE
 	dbw 22, DISABLE
@@ -1171,7 +1149,6 @@ PoliwhirlEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
 	dbw 1, HYPNOSIS
-	dbw 7, HYPNOSIS
 	dbw 11, WATER_GUN
 	dbw 15, DOUBLESLAP
 	dbw 18, MUD_SHOT
@@ -1226,8 +1203,6 @@ AlakazamEvosAttacks:
 	dbw 1, TELEPORT
 	dbw 1, KINESIS
 	dbw 1, CONFUSION
-	dbw 16, KINESIS
-	dbw 16, CONFUSION
 	dbw 20, DISABLE
 	dbw 24, PSYBEAM
 	dbw 28, REFLECT
@@ -1338,8 +1313,8 @@ VictreebelEvosAttacks:
 	dbw 1, SLEEP_POWDER
 	dbw 1, SWEET_SCENT
 	dbw 1, RAZOR_LEAF
-	dbw 36, LEAF_STORM
-	dbw 48, LEAF_BLADE
+	dbw 36, LEAF_BLADE
+	dbw 48, LEAF_STORM
 	db 0 ; no more level-up moves
 
 TentacoolEvosAttacks:
@@ -1458,8 +1433,6 @@ RapidashEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
 	dbw 1, EMBER
-	dbw 4, TAIL_WHIP
-	dbw 10, EMBER
 	dbw 14, DOUBLE_KICK
 	dbw 19, FLAME_WHEEL
 	dbw 23, STOMP
@@ -1631,8 +1604,6 @@ DewgongEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, ICY_WIND
 	dbw 1, ENCORE
-	dbw 8, ICY_WIND
-	dbw 11, ENCORE
 	dbw 15, ICE_SHARD
 	dbw 18, REST
 	dbw 22, AQUA_RING
@@ -1828,8 +1799,6 @@ HypnoEvosAttacks:
 	dbw 1, HYPNOSIS
 	dbw 1, DISABLE
 	dbw 1, CONFUSION
-	dbw 5, DISABLE
-	dbw 8, CONFUSION
 	dbw 12, HEADBUTT
 	dbw 15, POISON_GAS
 	dbw 19, MEDITATE
@@ -1974,7 +1943,6 @@ MarowakEvosAttacks:
 	dbw 1, TAIL_WHIP
 	dbw 1, BONE_CLUB
 	dbw 1, HEADBUTT
-	dbw 13, HEADBUTT
 	dbw 17, LEER
 	dbw 21, FOCUS_ENERGY
 	dbw 25, BONE_RUSH
@@ -2103,8 +2071,6 @@ RhydonEvosAttacks:
 	dbw 1, TAIL_WHIP
 	dbw 1, FURY_ATTACK
 	dbw 1, ROCK_THROW
-	dbw 5, FURY_ATTACK
-	dbw 9, ROCK_THROW
 	dbw 13, BULLDOZE
 	dbw 17, HORN_ATTACK
 	dbw 21, SCARY_FACE
@@ -2570,8 +2536,8 @@ OmastarEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, CONSTRICT
 	dbw 1, WITHDRAW
-	dbw 7, BITE
-	dbw 10, WATER_GUN
+	dbw 1, BITE
+	dbw 1, WATER_GUN
 	dbw 16, ROLLOUT
 	dbw 19, LEER
 	dbw 25, MUD_SHOT
@@ -2609,8 +2575,6 @@ KabutopsEvosAttacks:
 	dbw 1, HARDEN
 	dbw 1, SCRATCH
 	dbw 1, SAND_ATTACK
-	dbw 5, SCRATCH
-	dbw 10, SAND_ATTACK
 	dbw 14, AQUA_JET
 	dbw 19, LEER
 	dbw 23, MUD_SHOT
@@ -2759,8 +2723,6 @@ DragoniteEvosAttacks:
 	dbw 1, LEER
 	dbw 1, TWISTER
 	dbw 1, THUNDER_WAVE
-	dbw 5, TWISTER
-	dbw 11, THUNDER_WAVE
 	dbw 15, DRAGON_RAGE
 	dbw 21, AGILITY
 	dbw 25, SLAM

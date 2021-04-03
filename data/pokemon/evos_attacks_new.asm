@@ -1485,7 +1485,7 @@ TorterraEvosAttacks:
 	dbw 34, EARTHQUAKE
 	dbw 39, SYNTHESIS
 	dbw 45, CRUNCH
-	dbw 51, GIGA_DRAIN
+	dbw 51, HORN_LEECH
 	dbw 57, LEAF_STORM
 	db 0 ; no more level-up moves
 

@@ -1532,9 +1532,9 @@ StantlerEvosAttacks:
 	dbw 28, CONFUSE_RAY
 	dbw 33, CALM_MIND
 	dbw 38, DISABLE
-	dbw 44, HORN_LEECH  ; non-canon, for fun
-	dbw 50, ZEN_HEADBUTT
-	dbw 56, JUMP_KICK
+	dbw 44, ZEN_HEADBUTT
+	dbw 50, JUMP_KICK
+	dbw 56, HORN_LEECH
 	db 0 ; no more level-up moves
 
 SmeargleEvosAttacks:

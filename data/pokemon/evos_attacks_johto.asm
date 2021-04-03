@@ -874,10 +874,10 @@ UmbreonEvosAttacks:
 	dbw 14, QUICK_ATTACK
 	dbw 18, CONFUSE_RAY
 	dbw 23, FEINT_ATTACK
-	dbw 27, MEAN_LOOK
+	dbw 27, SNATCH
 	dbw 33, MOONLIGHT
 	dbw 38, ASSURANCE
-	dbw 45, SCREECH
+	dbw 45, MEAN_LOOK
 	dbw 50, DARK_PULSE
 	db 0 ; no more level-up moves
 
@@ -894,7 +894,7 @@ MurkrowEvosAttacks:
 	dbw 35, FEINT_ATTACK
 	dbw 41, MEAN_LOOK
 	dbw 45, FOUL_PLAY
-	dbw 51, DRILL_PECK
+	dbw 51, SNATCH
 	dbw 55, SUCKER_PUNCH
 	db 0 ; no more level-up moves
 

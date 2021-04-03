@@ -1167,9 +1167,10 @@ HeracrossEvosAttacks:
 	dbw 1, LEER
 	dbw 1, FURY_ATTACK
 	dbw 1, ENDURE
+	dbw 5, HORN_ATTACK
 	dbw 10, AERIAL_ACE
 	dbw 15, COUNTER
-	dbw 21, HORN_ATTACK
+	dbw 21, HORN_LEECH ; non-canon, for fun
 	dbw 26, BRICK_BREAK
 	dbw 32, PIN_MISSILE
 	dbw 37, THRASH
@@ -1531,8 +1532,9 @@ StantlerEvosAttacks:
 	dbw 28, CONFUSE_RAY
 	dbw 33, CALM_MIND
 	dbw 38, DISABLE
-	dbw 44, ZEN_HEADBUTT
-	dbw 50, JUMP_KICK
+	dbw 44, HORN_LEECH  ; non-canon, for fun
+	dbw 50, ZEN_HEADBUTT
+	dbw 56, JUMP_KICK
 	db 0 ; no more level-up moves
 
 SmeargleEvosAttacks:

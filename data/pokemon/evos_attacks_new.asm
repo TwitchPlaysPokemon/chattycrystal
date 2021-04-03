@@ -2118,12 +2118,13 @@ PansageEvosAttacks:
 	dbw 19, BITE
 	dbw 22, RAZOR_LEAF
 	dbw 25, TAUNT
-	dbw 28, COVET
-	dbw 31, LOW_KICK
-	dbw 31, GRASS_KNOT
-	dbw 34, TICKLE
-	dbw 37, SWAGGER
-	dbw 40, CRUNCH
+	dbw 28, NEEDLE_ARM ; non-canon
+	dbw 31, COVET
+	dbw 34, LOW_KICK
+	dbw 34, GRASS_KNOT
+	dbw 37, TICKLE
+	dbw 40, SWAGGER
+	dbw 43, CRUNCH
 	db 0 ; no more level-up moves
 
 SimisageEvosAttacks:
@@ -2357,6 +2358,7 @@ ChandelureEvosAttacks:
 	dbw 1, CONFUSE_RAY
 	dbw 1, FLAME_WHEEL
 	dbw 1, HEX
+	dbw 100, BLUE_FLARE ; non-canon for fun, since we have it
 	db 0 ; no more level-up moves
 
 ClauncherEvosAttacks:

@@ -1386,12 +1386,13 @@ GeodudeEvosAttacks:
 	dbw 12, MAGNITUDE
 	dbw 16, ROCK_THROW
 	dbw 20, BULLDOZE
-	dbw 24, SELFDESTRUCT
-	dbw 28, ROCK_BLAST
+	dbw 22, SELFDESTRUCT
+	dbw 26, ROCK_CLIMB
+	dbw 30, ROCK_BLAST
 	dbw 32, EARTHQUAKE
 	dbw 36, EXPLOSION
-	dbw 40, DOUBLE_EDGE
-	dbw 44, STONE_EDGE
+	dbw 38, DOUBLE_EDGE
+	dbw 42, STONE_EDGE
 	db 0 ; no more level-up moves
 
 GravelerEvosAttacks:
@@ -1405,12 +1406,13 @@ GravelerEvosAttacks:
 	dbw 12, MAGNITUDE
 	dbw 16, ROCK_THROW
 	dbw 20, BULLDOZE
-	dbw 24, SELFDESTRUCT
-	dbw 30, ROCK_BLAST
-	dbw 36, EARTHQUAKE
-	dbw 42, EXPLOSION
-	dbw 48, DOUBLE_EDGE
-	dbw 54, STONE_EDGE
+	dbw 22, SELFDESTRUCT
+	dbw 28, ROCK_CLIMB
+	dbw 33, ROCK_BLAST
+	dbw 39, EARTHQUAKE
+	dbw 44, EXPLOSION
+	dbw 50, DOUBLE_EDGE
+	dbw 55, STONE_EDGE
 	db 0 ; no more level-up moves
 
 GolemEvosAttacks:
@@ -1422,12 +1424,13 @@ GolemEvosAttacks:
 	dbw 12, MAGNITUDE
 	dbw 16, ROCK_THROW
 	dbw 20, BULLDOZE
-	dbw 24, SELFDESTRUCT
-	dbw 30, ROCK_BLAST
-	dbw 36, EARTHQUAKE
-	dbw 42, EXPLOSION
-	dbw 48, DOUBLE_EDGE
-	dbw 54, STONE_EDGE
+	dbw 22, SELFDESTRUCT
+	dbw 28, ROCK_CLIMB
+	dbw 33, ROCK_BLAST
+	dbw 39, EARTHQUAKE
+	dbw 44, EXPLOSION
+	dbw 50, DOUBLE_EDGE
+	dbw 55, STONE_EDGE
 	db 0 ; no more level-up moves
 
 PonytaEvosAttacks:
@@ -1779,21 +1782,22 @@ OnixEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, HARDEN
-	dbw 4, BIND
-	dbw 7, CURSE
-	dbw 10, ROCK_THROW
+	dbw 1, BIND
+	dbw 4, CURSE
+	dbw 7, ROCK_THROW
+	dbw 10, RAGE
 	dbw 14, ROCK_TOMB
-	dbw 17, RAGE
-	dbw 21, SANDSTORM
-	dbw 24, SLAM
-	dbw 28, DRAGONBREATH
-	dbw 31, SCREECH
-	dbw 35, ROCK_SLIDE
-	dbw 38, SAND_TOMB
-	dbw 42, IRON_TAIL
-	dbw 45, DIG
+	dbw 17, SLAM
+	dbw 21, SCREECH
+	dbw 24, DRAGONBREATH
+	dbw 28, ROCK_CLIMB
+	dbw 31, ROCK_SLIDE
+	dbw 35, SAND_TOMB
+	dbw 38, IRON_TAIL
+	dbw 42, DIG
+	dbw 45, STONE_EDGE
 	dbw 49, DOUBLE_EDGE
-	dbw 52, STONE_EDGE
+	dbw 52, SANDSTORM
 	db 0 ; no more level-up moves
 
 DrowzeeEvosAttacks:
@@ -2094,8 +2098,11 @@ RhyhornEvosAttacks:
 
 RhydonEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, ROCK_CLIMB
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
+	dbw 1, FURY_ATTACK
+	dbw 1, ROCK_THROW
 	dbw 5, FURY_ATTACK
 	dbw 9, ROCK_THROW
 	dbw 13, BULLDOZE

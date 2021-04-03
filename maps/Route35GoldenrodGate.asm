@@ -284,7 +284,6 @@ RandyHoldKenya:
 	ifequal PARTY_LENGTH, .party_full
 	withdrawspecial SPECIALSTORAGE_CHATOT, CHATOT, GiftChatotOTName
 	iffalse .party_full
-	waitbutton
 	closetext
 	end
 

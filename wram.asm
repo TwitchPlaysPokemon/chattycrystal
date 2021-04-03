@@ -819,6 +819,12 @@ wMoveRelearnerCursor:: db ; c754
 wMoveRelearnerScroll:: db ; c755
 
 NEXTU ; c6d0
+wTextViewerCurrentLine:: db ; c6d0
+wTextViewerLineCount:: db ; c6d1
+wTextViewerLineTable:: dw ; c6d2
+wTextViewerFileName:: ds 13 ; c6d4
+
+NEXTU ; c6d0
 ; pokegear
 wPokegearPhoneLoadNameBuffer:: db ; c6d0
 wPokegearPhoneCursorPosition:: db ; c6d1
@@ -2767,7 +2773,7 @@ wCelebiEvent:: ; dbf3
 ; bit 2: forest is restless
 	db
 
-	ds 1
+wUnownInformationFilesCount:: db
 
 wBikeFlags:: ; dbf5
 ; bit 0: using strength

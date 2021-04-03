@@ -129,6 +129,7 @@ ROMX $2c
 	"Map Scripts 4"
 ROMX $2d
 	"Tileset Data 5"
+	"Text Files"
 ROMX $2e
 	"bank2E"
 	"Songs 7"

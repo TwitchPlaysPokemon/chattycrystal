@@ -257,6 +257,7 @@ print_name: MACRO
 ENDM
 
 PrintMomsName:   print_name wMomsName
+PlaceGenderedPlayerName:
 PrintPlayerName: print_name wPlayerName
 PrintRedsName:   print_name wRedsName
 PrintGreensName: print_name wGreensName
@@ -322,24 +323,8 @@ PlaceEnemysName::
 	ld de, wStringBuffer1
 	jr PlaceCommandCharacter
 
-
 PlaceEnemysNameRivalLinkBattle:
 	ld de, wOTClassName
-	jr PlaceCommandCharacter
-
-PlaceGenderedPlayerName::
-	push de
-	ld de, wPlayerName
-	call PlaceString
-	ld h, b
-	ld l, c
-	ld a, [wPlayerGender]
-	bit PLAYERGENDER_FEMALE_F, a
-	ld de, KunSuffixText
-	jr z, PlaceCommandCharacter
-	ld de, ChanSuffixText
-; fallthrough
-
 PlaceCommandCharacter::
 	call PlaceString
 	ld h, b
@@ -356,10 +341,8 @@ SixDotsCharText:: db "……@"
 EnemyText::       db "Enemy @"
 PlacePKMNText::   db "<PK><MN>@"
 PlacePOKEText::   db "<PO><KE>@"
-String_Space::    db " @"
-; These strings have been dummied out.
-KunSuffixText::   db "@"
-ChanSuffixText::  db "@"
+String_Space::    db " " ; falls through into the terminator below
+GenericDummyString:: db "@"
 
 NextLineChar::
 	pop hl

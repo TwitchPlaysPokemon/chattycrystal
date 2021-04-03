@@ -3096,7 +3096,7 @@ Script_withdrawspecial:
 	text_ram wStringBuffer2
 	text "!@"
 	sound_item
-	done
+	text_end
 
 Script_checkspecialstorage:
 ; script command 0xb4

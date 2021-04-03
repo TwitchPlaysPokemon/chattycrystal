@@ -83,6 +83,8 @@ RuinsOfAlphResearchCenterScientist1Script:
 	jumptextfaceplayer RuinsOfAlphResearchCenterScientist1Text_GotAllUnown
 
 RuinsOfAlphResearchCenterComputer:
+	readmem wUnownInformationFilesCount
+	iftrue .show_files
 	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	iftrue .SkipChecking
 	readvar VAR_UNOWNCOUNT
@@ -92,6 +94,70 @@ RuinsOfAlphResearchCenterComputer:
 
 .GotAllUnown:
 	jumptext RuinsOfAlphResearchCenterComputerText_GotAllUnown
+
+.show_files
+	opentext
+	writetext .which_file_text
+	ifgreater 1, .load2
+	loadmenu .header1
+	sjump .loaded
+
+.load2
+	ifgreater 2, .load3
+	loadmenu .header2
+	sjump .loaded
+
+.load3
+	loadmenu .header3
+.loaded
+	verticalmenu
+	closewindow
+	iffalse .done
+	callasm TextFileViewer
+.done
+	closetext
+	end
+
+.which_file_text
+	text "Open which file?"
+	done
+
+.header1
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 14, 4
+	dw .data1
+	db 1 ; default option
+
+.data1
+	db STATICMENU_CURSOR ; flags
+	db 1 ; items
+	db "UNOWN.TXT@"
+
+.header2
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 14, 6
+	dw .data2
+	db 1 ; default option
+
+.data2
+	db STATICMENU_CURSOR ; flags
+	db 2 ; items
+	db "UNOWN.TXT@"
+	db "HIDNPWR1.TXT@"
+
+.header3
+	db MENU_BACKUP_TILES ; flags
+	menu_coords 0, 0, 14, 10
+	dw .data3
+	db 1 ; default option
+
+.data3
+	db STATICMENU_CURSOR ; flags
+	db 4 ; items
+	db "UNOWN.TXT@"
+	db "HIDNPWR1.TXT@"
+	db "HIDNPWR2.TXT@"
+	db "BUTTONS.TXT@"
 
 RuinsOfAlphResearchCenterPrinter:
 	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
@@ -310,6 +376,7 @@ ScientistHoldUnown:
 	ifequal SPECIALDEPOSIT_WRONG_SPECIES, .wrong_mon
 	ifequal SPECIALDEPOSIT_WRONG_MOVES, .wrong_move
 	ifequal SPECIALDEPOSIT_EGG, .egg
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	writetext .deposited_text
 	waitbutton
 	closetext
@@ -440,7 +507,15 @@ ScientistWithdrawUnown:
 	ifequal PARTY_LENGTH, .party_full
 	withdrawspecial SPECIALSTORAGE_UNOWN, UNOWN, wPlayerName
 	iffalse .party_full
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .no_new_data
+	readmem wUnownInformationFilesCount
+	ifequal UNOWN_INFORMATION_FILE_COUNT_MAX, .no_new_data
+	addval 1
+	writemem wUnownInformationFilesCount
+	writetext .new_data_text
 	waitbutton
+.no_new_data
 	closetext
 	end
 
@@ -456,6 +531,16 @@ ScientistWithdrawUnown:
 
 	para "Do you want it"
 	line "back now?"
+	done
+
+.new_data_text
+	text "I just loaded our"
+	line "new discoveries"
+	para "into that PC over"
+	line "there."
+
+	para "Feel free to check"
+	line "it out!"
 	done
 
 .refused_withdraw

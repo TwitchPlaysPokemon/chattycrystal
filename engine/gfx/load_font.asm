@@ -23,8 +23,7 @@ _LoadStandardFont::
 	ld de, Font + 96 * LEN_1BPP_TILE
 	ld hl, vTiles1 tile $60
 	lb bc, BANK(Font), 32 ; "'" to "9"
-	call Get1bpp_2
-	ret
+	jp Get1bpp_2
 
 _LoadFontsExtra1::
 	ld de, FontsExtra_SolidBlackGFX
@@ -44,10 +43,8 @@ _LoadFontsExtra1::
 _LoadFontsExtra2::
 	ld de, FontsExtra2_UpArrowGFX
 	ld hl, vTiles2 tile "▲" ; $61
-	ld b, BANK(FontsExtra2_UpArrowGFX)
-	ld c, 1
-	call Get2bpp_2
-	ret
+	lb bc, BANK(FontsExtra2_UpArrowGFX), 1
+	jp Get1bpp_2
 
 _LoadFontsBattleExtra::
 	ld de, FontBattleExtra
@@ -70,8 +67,7 @@ LoadFrame:
 	ld hl, vTiles2 tile " " ; $7f
 	ld de, TextboxSpaceGFX
 	lb bc, BANK(TextboxSpaceGFX), 1
-	call Get1bpp_2
-	ret
+	jp Get1bpp_2
 
 LoadBattleFontsHPBar:
 	ld de, FontBattleExtra
@@ -83,7 +79,6 @@ LoadBattleFontsHPBar:
 	lb bc, BANK(FontBattleExtra), 3 ; "<DO>" to "『"
 	call Get2bpp_2
 	call LoadFrame
-
 LoadHPBar:
 	ld de, EnemyHPBarBorderGFX
 	ld hl, vTiles2 tile $6c
@@ -100,8 +95,7 @@ LoadHPBar:
 	ld de, MobilePhoneTilesGFX + 7 tiles ; mobile phone icon
 	ld hl, vTiles2 tile $5e
 	lb bc, BANK(MobilePhoneTilesGFX), 2
-	call Get2bpp_2
-	ret
+	jp Get2bpp_2
 
 StatsScreen_LoadFont:
 	call _LoadFontsBattleExtra
@@ -125,5 +119,4 @@ LoadStatsScreenPageTilesGFX:
 	ld de, StatsScreenPageTilesGFX
 	ld hl, vTiles2 tile $31
 	lb bc, BANK(StatsScreenPageTilesGFX), 17
-	call Get2bpp_2
-	ret
+	jp Get2bpp_2

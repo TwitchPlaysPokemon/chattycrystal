@@ -703,6 +703,11 @@ SECTION "Formes", ROMX
 INCLUDE "engine/pokemon/formes.asm"
 INCLUDE "data/pokemon/formes.asm"
 
+SECTION "Text Files", ROMX
+
+INCLUDE "engine/events/text_viewer.asm"
+INCLUDE "data/text/text_files.asm"
+
 ; own sections
 INCLUDE "data/battle_anims/move_animations.asm"
 INCLUDE "data/trainers/parties.asm"

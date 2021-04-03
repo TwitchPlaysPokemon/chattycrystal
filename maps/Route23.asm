@@ -298,31 +298,31 @@ Route23_MapEvents:
 	db 4 ; warp events
 	warp_event  7, 139, VICTORY_ROAD_GATE, 5
 	warp_event  8, 139, VICTORY_ROAD_GATE, 6
-	warp_event  4, 31, VICTORY_ROAD, 1
-	warp_event 14, 31, VICTORY_ROAD, 10
+	warp_event  4,  31, VICTORY_ROAD, 1
+	warp_event 14,  31, VICTORY_ROAD, 10
 
 	db 9 ; coord events
 	coord_event 14, 131, SCENE_DEFAULT, CascadeHiveBadgeCheckScript
-	coord_event 9, 123, SCENE_SHOWN_CASCADE, ThunderPlainBadgeCheckScript
-	coord_event 0, 115, SCENE_SHOWN_THUNDER, RainbowFogBadgeCheckScript
+	coord_event  9, 123, SCENE_SHOWN_CASCADE, ThunderPlainBadgeCheckScript
+	coord_event  0, 115, SCENE_SHOWN_THUNDER, RainbowFogBadgeCheckScript
 	coord_event 10, 115, SCENE_SHOWN_THUNDER, RainbowFogBadgeCheckScript
-	coord_event 5, 84, SCENE_SHOWN_RAINBOW, MarshGlacierBadgeCheckScript1
-	coord_event 6, 84, SCENE_SHOWN_RAINBOW, MarshGlacierBadgeCheckScript2
-	coord_event 12, 55, SCENE_SHOWN_MARSH, SoulStormBadgeCheckScript
-	coord_event 6, 44, SCENE_SHOWN_SOUL, VolcanoMineralBadgeCheckScript
-	coord_event 4, 32, SCENE_SHOWN_VOLCANO, EarthRisingBadgeCheckScript
+	coord_event  5,  84, SCENE_SHOWN_RAINBOW, MarshGlacierBadgeCheckScript1
+	coord_event  6,  84, SCENE_SHOWN_RAINBOW, MarshGlacierBadgeCheckScript2
+	coord_event 12,  55, SCENE_SHOWN_MARSH, SoulStormBadgeCheckScript
+	coord_event  6,  44, SCENE_SHOWN_SOUL, VolcanoMineralBadgeCheckScript
+	coord_event  4,  32, SCENE_SHOWN_VOLCANO, EarthRisingBadgeCheckScript
 
 	db 1 ; bg events
-	bg_event  3, 33, BGEVENT_READ, Route23Sign
+	bg_event  3,  33, BGEVENT_READ, Route23Sign
 
 	db 10 ; object events
-	object_event  15, 131, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
+	object_event 15, 131, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
 	object_event  8, 123, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
 	object_event  1, 115, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
-	object_event  11, 115, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
-	object_event  4, 84, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
-	object_event  7, 84, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
-	object_event  13, 55, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
-	object_event  7, 44, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
-	object_event  3, 32, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
-	object_event  5, 32, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
+	object_event 11, 115, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
+	object_event  4,  84, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
+	object_event  7,  84, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
+	object_event 13,  55, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
+	object_event  7,  44, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
+	object_event  3,  32, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1
+	object_event  5,  32, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BadgeCheckNPCScript, -1

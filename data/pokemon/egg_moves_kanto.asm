@@ -382,13 +382,13 @@ PoliwagEggMoves:
 	dw MIND_READER
 	dw MIST
 	dw MUD_SHOT
-	dw SPLASH
 	dw WATER_PULSE
 	dw -1 ; end
 
 AbraEggMoves:
 	dw BARRIER
 	dw ENCORE
+	dw LIGHT_SCREEN
 	dw -1 ; end
 
 MachopEggMoves:
@@ -403,6 +403,7 @@ MachopEggMoves:
 BellsproutEggMoves:
 	dw ENCORE
 	dw LEECH_LIFE
+	dw REFLECT
 	dw SYNTHESIS
 	dw TICKLE
 	dw -1 ; end
@@ -440,6 +441,7 @@ PonytaEggMoves:
 SlowpokeEggMoves:
 	dw BELLY_DRUM
 	dw FUTURE_SIGHT
+	dw SAFEGUARD
 	dw STOMP
 	dw ZEN_HEADBUTT
 	dw -1 ; end
@@ -507,11 +509,13 @@ GastlyEggMoves:
 	dw HAZE
 	dw PERISH_SONG
 	dw PSYWAVE
+	dw REFLECT
 	dw SCARY_FACE
 	dw SMOG
 	dw -1 ; end
 
 OnixEggMoves:
+	dw EXPLOSION
 	dw FLAIL
 	dw ROCK_CLIMB
 	dw ROCK_BLAST
@@ -520,6 +524,7 @@ OnixEggMoves:
 DrowzeeEggMoves:
 	dw ASSIST
 	dw BARRIER
+	dw LIGHT_SCREEN
 	dw PSYCHO_CUT
 	dw SECRET_POWER
 	dw -1 ; end
@@ -537,6 +542,7 @@ ExeggcuteEggMoves:
 	dw ANCIENTPOWER
 	dw LEAF_STORM
 	dw MOONLIGHT
+	dw LIGHT_SCREEN
 	dw SYNTHESIS
 	dw -1 ; end
 
@@ -618,7 +624,6 @@ HorseaEggMoves:
 	dw OCTAZOOKA
 	dw OUTRAGE
 	dw RAZOR_WIND
-	dw SPLASH
 	dw WATER_PULSE
 	dw -1 ; end
 

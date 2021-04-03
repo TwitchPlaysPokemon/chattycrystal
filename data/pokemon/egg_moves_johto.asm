@@ -208,7 +208,6 @@ CleffaEggMoves:
 	dw METRONOME
 	dw MIMIC
 	dw PRESENT
-	dw SPLASH
 	dw TICKLE
 	dw -1 ; end
 
@@ -253,6 +252,8 @@ HoppipEggMoves:
 	dw CONFUSION
 	dw DOUBLE_EDGE
 	dw ENCORE
+	dw PAY_DAY
+	dw REFLECT
 	dw -1 ; end
 
 AipomEggMoves:
@@ -381,6 +382,7 @@ QwilfishEggMoves:
 	dw -1 ; end
 
 ShuckleEggMoves:
+	dw IRON_DEFENSE
 	dw SAND_TOMB
 	dw -1 ; end
 
@@ -474,7 +476,6 @@ DelibirdEggMoves:
 	dw QUICK_ATTACK
 	dw RAPID_SPIN
 	dw SPIKES
-	dw SPLASH
 	dw -1 ; end
 
 MantineEggMoves:
@@ -483,7 +484,6 @@ MantineEggMoves:
 	dw HYDRO_PUMP
 	dw MIRROR_COAT
 	dw SLAM
-	dw SPLASH
 	dw TWISTER
 	dw WATER_SPOUT
 	dw -1 ; end

@@ -220,6 +220,7 @@ SpearowEggMoves:
 EkansEggMoves:
 	dw BEAT_UP
 	dw DISABLE
+	dw POISON_FANG
 	dw PURSUIT
 	dw SCARY_FACE
 	dw SLAM
@@ -245,6 +246,7 @@ NidoranFEggMoves:
 	dw COUNTER
 	dw DISABLE
 	dw FOCUS_ENERGY
+	dw POISON_FANG
 	dw PURSUIT
 	dw SKULL_BASH
 	dw SUPERSONIC

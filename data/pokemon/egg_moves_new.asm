@@ -550,7 +550,6 @@ PansageEggMoves:
 DrilburEggMoves:
 	dw EARTH_POWER
 	dw RAPID_SPIN
-	dw ROCK_CLIMB
 	dw SKULL_BASH
 	dw SUBMISSION
 	dw -1 ; end

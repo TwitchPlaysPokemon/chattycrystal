@@ -2004,9 +2004,10 @@ LickitungEvosAttacks:
 	dbw 25, DISABLE
 	dbw 29, SLAM
 	dbw 33, ROLLOUT
-	dbw 37, SCREECH
-	dbw 41, THRASH
-	dbw 45, AMNESIA
+	dbw 37, ROCK_CLIMB
+	dbw 41, SCREECH
+	dbw 45, THRASH
+	dbw 49, AMNESIA
 	db 0 ; no more level-up moves
 
 KoffingEvosAttacks:
@@ -2366,7 +2367,7 @@ TaurosEvosAttacks:
 	dbw 24, REST
 	dbw 30, ASSURANCE
 	dbw 34, WORK_UP
-	dbw 39, TAKE_DOWN
+	dbw 39, ROCK_CLIMB
 	dbw 45, ZEN_HEADBUTT
 	dbw 49, SWAGGER
 	dbw 54, THRASH

@@ -2092,9 +2092,10 @@ DrilburEvosAttacks:
 	dbw 29, ROCK_SLIDE
 	dbw 33, DRILL_RUN
 	dbw 36, SWORDS_DANCE
-	dbw 40, SANDSTORM
-	dbw 43, EARTHQUAKE
-	dbw 47, FISSURE
+	dbw 40, ROCK_CLIMB
+	dbw 43, SANDSTORM
+	dbw 47, EARTHQUAKE
+	dbw 50, FISSURE
 	db 0 ; no more level-up moves
 
 ExcadrillEvosAttacks:
@@ -2108,10 +2109,11 @@ ExcadrillEvosAttacks:
 	dbw 22, HONE_CLAWS
 	dbw 26, SLASH
 	dbw 29, ROCK_SLIDE
-	dbw 36, DRILL_RUN
-	dbw 42, SWORDS_DANCE
-	dbw 49, SANDSTORM
-	dbw 55, EARTHQUAKE
+	dbw 35, DRILL_RUN
+	dbw 40, SWORDS_DANCE
+	dbw 46, ROCK_CLIMB
+	dbw 51, SANDSTORM
+	dbw 57, EARTHQUAKE
 	dbw 62, FISSURE
 	db 0 ; no more level-up moves
 

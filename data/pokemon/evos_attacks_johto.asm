@@ -466,6 +466,7 @@ LanturnEvosAttacks:
 PichuEvosAttacks:
 	dbbw EVOLVE_HAPPINESS, TR_ANYTIME, PIKACHU
 	db 0 ; no more evolutions
+	dbw 1, VOLT_TACKLE
 	dbw 1, THUNDERSHOCK
 	dbw 1, CHARM
 	dbw 5, TAIL_WHIP

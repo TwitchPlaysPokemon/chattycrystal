@@ -179,8 +179,6 @@ GrovyleEvosAttacks:
 	dbw 1, LEER
 	dbw 1, ABSORB
 	dbw 1, QUICK_ATTACK
-	dbw 6, ABSORB
-	dbw 9, QUICK_ATTACK
 	dbw 13, MEGA_DRAIN
 	dbw 16, FURY_CUTTER
 	dbw 18, PURSUIT
@@ -200,8 +198,6 @@ SceptileEvosAttacks:
 	dbw 1, LEER
 	dbw 1, ABSORB
 	dbw 1, QUICK_ATTACK
-	dbw 6, ABSORB
-	dbw 9, QUICK_ATTACK
 	dbw 13, MEGA_DRAIN
 	dbw 16, FURY_CUTTER
 	dbw 18, PURSUIT
@@ -240,8 +236,6 @@ CombuskenEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, EMBER
 	dbw 1, SAND_ATTACK
-	dbw 6, EMBER
-	dbw 10, SAND_ATTACK
 	dbw 14, PECK
 	dbw 16, DOUBLE_KICK
 	dbw 20, FLAME_WHEEL
@@ -262,8 +256,6 @@ BlazikenEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, EMBER
 	dbw 1, SAND_ATTACK
-	dbw 6, EMBER
-	dbw 10, SAND_ATTACK
 	dbw 14, PECK
 	dbw 16, DOUBLE_KICK
 	dbw 20, FLAME_WHEEL
@@ -303,8 +295,6 @@ MarshtompEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, WATER_GUN
 	dbw 1, MUD_SLAP
-	dbw 6, WATER_GUN
-	dbw 9, MUD_SLAP
 	dbw 12, FORESIGHT
 	dbw 16, MUD_SHOT
 	dbw 18, BIDE
@@ -324,8 +314,6 @@ SwampertEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, WATER_GUN
 	dbw 1, MUD_SLAP
-	dbw 6, WATER_GUN
-	dbw 9, MUD_SLAP
 	dbw 12, FORESIGHT
 	dbw 16, MUD_SHOT
 	dbw 18, BIDE
@@ -368,8 +356,6 @@ MightyenaEvosAttacks:
 	dbw 1, HOWL
 	dbw 1, SAND_ATTACK
 	dbw 1, BITE
-	dbw 8, SAND_ATTACK
-	dbw 12, BITE
 	dbw 15, ODOR_SLEUTH
 	dbw 18, THIEF
 	dbw 20, ROAR
@@ -493,8 +479,8 @@ SwellowEvosAttacks:
 	db 0
 	dbw 1, PECK
 	dbw 1, GROWL
-	dbw 5, FOCUS_ENERGY
-	dbw 9, QUICK_ATTACK
+	dbw 1, FOCUS_ENERGY
+	dbw 1, QUICK_ATTACK
 	dbw 13, WING_ATTACK
 	dbw 17, DOUBLE_TEAM
 	dbw 21, AERIAL_ACE
@@ -530,8 +516,6 @@ PelipperEvosAttacks:
 	dbw 1, WATER_GUN
 	dbw 1, SUPERSONIC
 	dbw 1, WING_ATTACK
-	dbw 5, SUPERSONIC
-	dbw 8, WING_ATTACK
 	dbw 12, MIST
 	dbw 15, WATER_PULSE
 	dbw 19, QUICK_ATTACK
@@ -571,8 +555,6 @@ KirliaEvosAttacks:
 	dbw 1, CONFUSION
 	dbw 1, DOUBLE_TEAM
 	dbw 1, TELEPORT
-	dbw 8, DOUBLE_TEAM
-	dbw 11, TELEPORT
 	dbw 15, ECHOED_VOICE
 	dbw 18, PSYBEAM
 	dbw 22, DISABLE
@@ -591,8 +573,6 @@ GardevoirEvosAttacks:
 	dbw 1, CONFUSION
 	dbw 1, DOUBLE_TEAM
 	dbw 1, TELEPORT
-	dbw 8, DOUBLE_TEAM
-	dbw 11, TELEPORT
 	dbw 15, ECHOED_VOICE
 	dbw 18, PSYBEAM
 	dbw 22, DISABLE
@@ -627,8 +607,6 @@ MasquerainEvosAttacks:
 	dbw 1, QUICK_ATTACK
 	dbw 1, SWEET_SCENT
 	dbw 1, FORESIGHT
-	dbw 9, SWEET_SCENT
-	dbw 14, FORESIGHT
 	dbw 17, GUST
 	dbw 22, SCARY_FACE
 	dbw 22, AIR_CUTTER
@@ -663,7 +641,6 @@ LoudredEvosAttacks:
 	dbw 1, POUND
 	dbw 1, ECHOED_VOICE
 	dbw 1, ASTONISH
-	dbw 8, ASTONISH
 	dbw 12, HOWL
 	dbw 16, SCREECH
 	dbw 20, SUPERSONIC
@@ -685,8 +662,6 @@ ExploudEvosAttacks:
 	dbw 1, ECHOED_VOICE
 	dbw 1, ASTONISH
 	dbw 1, HOWL
-	dbw 8, ASTONISH
-	dbw 12, HOWL
 	dbw 16, SCREECH
 	dbw 20, SUPERSONIC
 	dbw 20, BITE
@@ -725,8 +700,8 @@ HariyamaEvosAttacks:
 	dbw 1, BRINE
 	dbw 1, TACKLE
 	dbw 1, FOCUS_ENERGY
-	dbw 4, SAND_ATTACK
-	dbw 7, ARM_THRUST
+	dbw 1, SAND_ATTACK
+	dbw 1, ARM_THRUST
 	dbw 11, FAKE_OUT
 	dbw 15, REVENGE
 	dbw 18, WHIRLWIND
@@ -830,8 +805,6 @@ LaironEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, HARDEN
 	dbw 1, MUD_SLAP
-	dbw 1, HEADBUTT
-	dbw 5, MUD_SLAP
 	dbw 8, HEADBUTT
 	dbw 12, METAL_CLAW
 	dbw 15, ROCK_TOMB
@@ -852,8 +825,6 @@ AggronEvosAttacks:
 	dbw 1, HARDEN
 	dbw 1, MUD_SLAP
 	dbw 1, HEADBUTT
-	dbw 5, MUD_SLAP
-	dbw 8, HEADBUTT
 	dbw 12, METAL_CLAW
 	dbw 15, ROCK_TOMB
 	dbw 19, PROTECT
@@ -892,7 +863,6 @@ ManectricEvosAttacks:
 	dbw 1, THUNDER_WAVE
 	dbw 1, LEER
 	dbw 1, HOWL
-	dbw 7, HOWL
 	dbw 10, QUICK_ATTACK
 	dbw 13, SHOCK_WAVE
 	dbw 16, ODOR_SLEUTH
@@ -948,8 +918,6 @@ WailordEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, WATER_GUN
 	dbw 1, ASTONISH
-	dbw 7, WATER_GUN
-	dbw 10, ASTONISH
 	dbw 13, MIST
 	dbw 16, WATER_PULSE
 	dbw 19, ROLLOUT
@@ -1057,7 +1025,7 @@ AltariaEvosAttacks:
 	dbw 1, DRAGON_DANCE
 	dbw 1, PECK
 	dbw 1, GROWL
-	dbw 4, ASTONISH
+	dbw 1, ASTONISH
 	dbw 7, SING
 	dbw 11, FURY_ATTACK
 	dbw 14, SAFEGUARD
@@ -1095,7 +1063,7 @@ CradilyEvosAttacks:
 	db 0
 	dbw 1, CONSTRICT
 	dbw 1, ASTONISH
-	dbw 5, ACID
+	dbw 1, ACID
 	dbw 10, CONFUSE_RAY
 	dbw 14, LEECH_SEED
 	dbw 19, ANCIENTPOWER
@@ -1164,7 +1132,6 @@ DusclopsEvosAttacks:
 	dbw 1, LEER
 	dbw 1, NIGHT_SHADE
 	dbw 1, DISABLE
-	dbw 6, DISABLE
 	dbw 9, ASTONISH
 	dbw 14, FORESIGHT
 	dbw 17, SHADOW_SNEAK
@@ -1302,8 +1269,6 @@ ShelgonEvosAttacks:
 	dbw 1, RAGE
 	dbw 1, EMBER
 	dbw 1, LEER
-	dbw 1, BITE
-	dbw 7, LEER
 	dbw 10, BITE
 	dbw 13, DRAGONBREATH
 	dbw 17, HEADBUTT
@@ -1327,8 +1292,6 @@ SalamenceEvosAttacks:
 	dbw 1, EMBER
 	dbw 1, LEER
 	dbw 1, BITE
-	dbw 7, LEER
-	dbw 10, BITE
 	dbw 13, DRAGONBREATH
 	dbw 17, HEADBUTT
 	dbw 21, FOCUS_ENERGY
@@ -1352,8 +1315,6 @@ MetangEvosAttacks:
 	dbbw EVOLVE_LEVEL, 45, METAGROSS
 	db 0
 	dbw 1, TAKE_DOWN
-	dbw 1, CONFUSION
-	dbw 1, METAL_CLAW
 	dbw 20, CONFUSION
 	dbw 20, METAL_CLAW
 	dbw 23, PURSUIT
@@ -1371,8 +1332,6 @@ MetangEvosAttacks:
 MetagrossEvosAttacks:
 	db 0
 	dbw 1, TAKE_DOWN
-	dbw 1, CONFUSION
-	dbw 1, METAL_CLAW
 	dbw 20, CONFUSION
 	dbw 20, METAL_CLAW
 	dbw 23, PURSUIT
@@ -1513,8 +1472,6 @@ MonfernoEvosAttacks:
 	dbw 1, SCRATCH
 	dbw 1, LEER
 	dbw 1, EMBER
-	dbw 1, TAUNT
-	dbw 7, EMBER
 	dbw 9, TAUNT
 	dbw 14, MACH_PUNCH
 	dbw 16, FURY_SWIPES
@@ -1534,8 +1491,6 @@ InfernapeEvosAttacks:
 	dbw 1, LEER
 	dbw 1, EMBER
 	dbw 1, TAUNT
-	dbw 7, EMBER
-	dbw 9, TAUNT
 	dbw 14, MACH_PUNCH
 	dbw 16, FURY_SWIPES
 	dbw 19, FLAME_WHEEL
@@ -1571,8 +1526,6 @@ PrinplupEvosAttacks:
 	dbw 1, POUND
 	dbw 1, GROWL
 	dbw 1, BUBBLE
-	dbw 4, GROWL
-	dbw 8, BUBBLE
 	dbw 12, PECK
 	dbw 15, BUBBLEBEAM
 	dbw 16, METAL_CLAW
@@ -1591,8 +1544,6 @@ EmpoleonEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, BUBBLE
 	dbw 1, PECK
-	dbw 8, BUBBLE
-	dbw 12, PECK
 	dbw 15, BUBBLEBEAM
 	dbw 16, METAL_CLAW
 	dbw 20, SWAGGER
@@ -1769,8 +1720,6 @@ FloatzelEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, QUICK_ATTACK
 	dbw 1, WATER_GUN
-	dbw 8, QUICK_ATTACK
-	dbw 12, WATER_GUN
 	dbw 16, PURSUIT
 	dbw 20, SWIFT
 	dbw 24, AQUA_JET
@@ -1804,8 +1753,8 @@ ShellosEvosAttacks:
 GastrodonEvosAttacks:
 	db 0
 	dbw 1, WATER_GUN
-	dbw 4, MUD_SLAP
-	dbw 8, HARDEN
+	dbw 1, MUD_SLAP
+	dbw 1, HARDEN
 	dbw 12, WATER_PULSE
 	dbw 15, MUD_BOMB
 	dbw 19, HIDDEN_POWER
@@ -1881,8 +1830,8 @@ StunkyEvosAttacks:
 SkuntankEvosAttacks:
 	db 0
 	dbw 1, SCRATCH
-	dbw 4, POISON_GAS
-	dbw 7, SMOKESCREEN
+	dbw 1, POISON_GAS
+	dbw 1, SMOKESCREEN
 	dbw 9, FURY_SWIPES
 	dbw 13, FOCUS_ENERGY
 	dbw 15, BITE
@@ -1924,8 +1873,6 @@ BronzongEvosAttacks:
 	dbw 1, CONFUSION
 	dbw 1, HYPNOSIS
 	dbw 1, CONFUSE_RAY
-	dbw 6, HYPNOSIS
-	dbw 11, CONFUSE_RAY
 	dbw 15, PSYWAVE
 	dbw 19, IRON_DEFENSE
 	dbw 21, FEINT_ATTACK
@@ -1995,8 +1942,6 @@ ToxicroakEvosAttacks:
 	dbw 1, MUD_SLAP
 	dbw 1, ASTONISH
 	dbw 1, TAUNT
-	dbw 8, ASTONISH
-	dbw 10, TAUNT
 	dbw 15, PURSUIT
 	dbw 17, FEINT_ATTACK
 	dbw 22, REVENGE
@@ -2076,8 +2021,6 @@ FroslassEvosAttacks:
 	dbw 1, LEER
 	dbw 1, DOUBLE_TEAM
 	dbw 1, ICE_SHARD
-	dbw 6, DOUBLE_TEAM
-	dbw 10, ICE_SHARD
 	dbw 15, ICY_WIND
 	dbw 19, ASTONISH
 	dbw 24, DRAININGKISS
@@ -2157,8 +2100,8 @@ DrilburEvosAttacks:
 ExcadrillEvosAttacks:
 	db 0
 	dbw 1, SCRATCH
-	dbw 5, RAPID_SPIN
-	dbw 8, MUD_SLAP
+	dbw 1, RAPID_SPIN
+	dbw 1, MUD_SLAP
 	dbw 12, FURY_SWIPES
 	dbw 15, METAL_CLAW
 	dbw 19, DIG
@@ -2197,7 +2140,7 @@ KrokorokEvosAttacks:
 	db 0
 	dbw 1, RAGE
 	dbw 1, LEER
-	dbw 4, SAND_ATTACK
+	dbw 1, SAND_ATTACK
 	dbw 7, BITE
 	dbw 10, HONE_CLAWS
 	dbw 13, SAND_TOMB
@@ -2219,7 +2162,6 @@ KrookodileEvosAttacks:
 	dbw 1, LEER
 	dbw 1, SAND_ATTACK
 	dbw 1, BITE
-	dbw 7, BITE
 	dbw 10, HONE_CLAWS
 	dbw 13, SAND_TOMB
 	dbw 19, ASSURANCE
@@ -2258,7 +2200,6 @@ SwannaEvosAttacks:
 	dbw 1, WATER_GUN
 	dbw 1, GROWL
 	dbw 1, WING_ATTACK
-	dbw 9, WING_ATTACK
 	dbw 13, WATER_PULSE
 	dbw 15, AERIAL_ACE
 	dbw 19, BUBBLEBEAM
@@ -2335,8 +2276,8 @@ LampentEvosAttacks:
 	db 0
 	dbw 1, EMBER
 	dbw 1, ASTONISH
-	dbw 3, MINIMIZE
-	dbw 5, SMOG
+	dbw 1, MINIMIZE
+	dbw 1, SMOG
 	dbw 7, FIRE_SPIN
 	dbw 10, CONFUSE_RAY
 	dbw 13, NIGHT_SHADE
@@ -2389,8 +2330,6 @@ ClawitzerEvosAttacks:
 	dbw 1, WATER_GUN
 	dbw 1, VICEGRIP
 	dbw 1, BUBBLE
-	dbw 5, VICEGRIP
-	dbw 9, BUBBLE
 	dbw 12, FLAIL
 	dbw 16, AQUA_JET
 	dbw 20, ROCK_THROW
@@ -2455,7 +2394,7 @@ AurorusEvosAttacks:
 	db 0
 	dbw 1, GROWL
 	dbw 1, POWDER_SNOW
-	dbw 5, THUNDER_WAVE
+	dbw 1, THUNDER_WAVE
 	dbw 10, ROCK_THROW
 	dbw 13, ICY_WIND
 	dbw 15, TAKE_DOWN
@@ -2509,7 +2448,7 @@ SliggooEvosAttacks:
 	db 0
 	dbw 1, TACKLE
 	dbw 1, ABSORB
-	dbw 5, BUBBLE
+	dbw 1, BUBBLE
 	dbw 9, DRAGONBREATH
 	dbw 14, BIDE
 	dbw 18, PROTECT
@@ -2527,8 +2466,8 @@ GoodraEvosAttacks:
 	db 0
 	dbw 1, TACKLE
 	dbw 1, ABSORB
-	dbw 5, BUBBLE
-	dbw 9, DRAGONBREATH
+	dbw 1, BUBBLE
+	dbw 1, DRAGONBREATH
 	dbw 14, BIDE
 	dbw 18, PROTECT
 	dbw 23, WATER_PULSE
@@ -2590,8 +2529,8 @@ CutieflyEvosAttacks:
 RibombeeEvosAttacks:
 	db 0
 	dbw 1, ABSORB
-	dbw 4, GUST
-	dbw 7, STUN_SPORE
+	dbw 1, GUST
+	dbw 1, STUN_SPORE
 	dbw 10, SWEET_SCENT
 	dbw 16, DRAININGKISS
 	dbw 20, POLLEN_PUFF

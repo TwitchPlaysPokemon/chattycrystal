@@ -125,7 +125,6 @@ BayleefEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 1, RAZOR_LEAF
-	dbw 8, RAZOR_LEAF
 	dbw 12, POISONPOWDER
 	dbw 15, SYNTHESIS
 	dbw 22, REFLECT
@@ -142,7 +141,7 @@ MeganiumEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 1, REFLECT
-	dbw 8, RAZOR_LEAF
+	dbw 1, RAZOR_LEAF
 	dbw 12, POISONPOWDER
 	dbw 15, SYNTHESIS
 	dbw 22, REFLECT
@@ -178,7 +177,7 @@ QuilavaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
-	dbw 6, SMOKESCREEN
+	dbw 1, SMOKESCREEN
 	dbw 11, EMBER
 	dbw 17, QUICK_ATTACK
 	dbw 22, DEFENSE_CURL
@@ -195,8 +194,8 @@ TyphlosionEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
-	dbw 6, SMOKESCREEN
-	dbw 11, EMBER
+	dbw 1, SMOKESCREEN
+	dbw 1, EMBER
 	dbw 17, QUICK_ATTACK
 	dbw 22, DEFENSE_CURL
 	dbw 28, FLAME_WHEEL
@@ -232,7 +231,7 @@ CroconawEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, LEER
-	dbw 6, RAGE
+	dbw 1, RAGE
 	dbw 10, WATER_GUN
 	dbw 14, BITE
 	dbw 20, SCARY_FACE
@@ -250,8 +249,8 @@ FeraligatrEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, LEER
-	dbw 6, RAGE
-	dbw 10, WATER_GUN
+	dbw 1, RAGE
+	dbw 1, WATER_GUN
 	dbw 14, BITE
 	dbw 20, SCARY_FACE
 	dbw 25, ICE_FANG
@@ -284,9 +283,8 @@ SentretEvosAttacks:
 FurretEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
+	dbw 1, FORESIGHT
 	dbw 1, DEFENSE_CURL
-	dbw 1, QUICK_ATTACK
-	dbw 5, DEFENSE_CURL
 	dbw 11, QUICK_ATTACK
 	dbw 17, FURY_SWIPES
 	dbw 24, SLAM
@@ -396,7 +394,7 @@ AriadosEvosAttacks:
 	dbw 1, POISON_STING
 	dbw 1, STRING_SHOT
 	dbw 1, CONSTRICT
-	dbw 5, LEECH_LIFE
+	dbw 1, LEECH_LIFE
 	dbw 10, SCARY_FACE
 	dbw 14, NIGHT_SHADE
 	dbw 19, SHADOW_SNEAK
@@ -417,8 +415,6 @@ CrobatEvosAttacks:
 	dbw 1, SUPERSONIC
 	dbw 1, ASTONISH
 	dbw 1, BITE
-	dbw 8, ASTONISH
-	dbw 12, BITE
 	dbw 15, WING_ATTACK
 	dbw 19, CONFUSE_RAY
 	dbw 22, SWIFT
@@ -453,8 +449,8 @@ LanturnEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
 	dbw 1, SUPERSONIC
-	dbw 6, THUNDER_WAVE
-	dbw 9, WATER_GUN
+	dbw 1, THUNDER_WAVE
+	dbw 1, WATER_GUN
 	dbw 14, CONFUSE_RAY
 	dbw 17, BUBBLEBEAM
 	dbw 22, SPARK
@@ -574,7 +570,7 @@ FlaaffyEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 5, THUNDER_WAVE
+	dbw 1, THUNDER_WAVE
 	dbw 8, THUNDERSHOCK
 	dbw 12, COTTON_SPORE
 	dbw 15, CHARGE
@@ -592,8 +588,8 @@ AmpharosEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
-	dbw 5, THUNDER_WAVE
-	dbw 8, THUNDERSHOCK
+	dbw 1, THUNDER_WAVE
+	dbw 1, THUNDERSHOCK
 	dbw 12, COTTON_SPORE
 	dbw 15, CHARGE
 	dbw 20, TAKE_DOWN
@@ -641,8 +637,8 @@ MarillEvosAttacks:
 AzumarillEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
-	dbw 3, BUBBLE
-	dbw 6, TAIL_WHIP
+	dbw 1, BUBBLE
+	dbw 1, TAIL_WHIP
 	dbw 10, WATER_GUN
 	dbw 13, DEFENSE_CURL
 	dbw 17, ROLLOUT
@@ -710,7 +706,7 @@ SkiploomEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ABSORB
 	dbw 1, SPLASH
-	dbw 4, SYNTHESIS
+	dbw 1, SYNTHESIS
 	dbw 7, TAIL_WHIP
 	dbw 10, TACKLE
 	dbw 12, POISONPOWDER
@@ -730,8 +726,8 @@ JumpluffEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ABSORB
 	dbw 1, SPLASH
-	dbw 4, SYNTHESIS
-	dbw 7, TAIL_WHIP
+	dbw 1, SYNTHESIS
+	dbw 1, TAIL_WHIP
 	dbw 10, TACKLE
 	dbw 12, POISONPOWDER
 	dbw 14, STUN_SPORE
@@ -784,7 +780,7 @@ SunfloraEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ABSORB
 	dbw 1, POUND
-	dbw 4, GROWTH
+	dbw 1, GROWTH
 	dbw 9, MEGA_DRAIN
 	dbw 13, LEECH_SEED
 	dbw 18, RAZOR_LEAF
@@ -837,7 +833,7 @@ QuagsireEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, WATER_GUN
 	dbw 1, TAIL_WHIP
-	dbw 7, MUD_SHOT
+	dbw 1, MUD_SHOT
 	dbw 12, MIST
 	dbw 12, HAZE
 	dbw 16, SLAM
@@ -903,8 +899,8 @@ SlowkingEvosAttacks:
 	dbw 1, TRUMP_CARD
 	dbw 1, CURSE
 	dbw 1, TACKLE
-	dbw 4, GROWL
-	dbw 8, WATER_GUN
+	dbw 1, GROWL
+	dbw 1, WATER_GUN
 	dbw 11, CONFUSION
 	dbw 15, DISABLE
 	dbw 18, HEADBUTT
@@ -1251,8 +1247,8 @@ SlugmaEvosAttacks:
 MagcargoEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SMOG
-	dbw 5, EMBER
-	dbw 9, ROCK_THROW
+	dbw 1, EMBER
+	dbw 1, ROCK_THROW
 	dbw 13, HARDEN
 	dbw 17, RECOVER
 	dbw 21, FLAME_WHEEL
@@ -1292,8 +1288,6 @@ PiloswineEvosAttacks:
 	dbw 1, ODOR_SLEUTH
 	dbw 1, POWDER_SNOW
 	dbw 1, MUD_SLAP
-	dbw 8, POWDER_SNOW
-	dbw 11, MUD_SLAP
 	dbw 14, ENDURE
 	dbw 18, MUD_BOMB
 	dbw 21, ICY_WIND
@@ -1350,8 +1344,6 @@ OctilleryEvosAttacks:
 	dbw 1, CONSTRICT
 	dbw 1, PSYBEAM
 	dbw 1, AURORA_BEAM
-	dbw 6, PSYBEAM
-	dbw 10, AURORA_BEAM
 	dbw 15, BUBBLEBEAM
 	dbw 19, LOCK_ON
 	dbw 25, OCTAZOOKA
@@ -1375,9 +1367,7 @@ MantineEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, BUBBLE
 	dbw 1, SUPERSONIC
-	dbw 5, BUBBLEBEAM
-	dbw 10, SUPERSONIC
-	dbw 14, BUBBLEBEAM
+	dbw 1, BUBBLEBEAM
 	dbw 19, CONFUSE_RAY
 	dbw 23, WING_ATTACK
 	dbw 28, HEADBUTT
@@ -1433,8 +1423,6 @@ HoundoomEvosAttacks:
 	dbw 1, EMBER
 	dbw 1, HOWL
 	dbw 1, SMOG
-	dbw 4, HOWL
-	dbw 8, SMOG
 	dbw 13, ROAR
 	dbw 16, BITE
 	dbw 20, ODOR_SLEUTH
@@ -1451,7 +1439,7 @@ KingdraEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BUBBLE
 	dbw 1, LEER
-	dbw 5, SMOKESCREEN
+	dbw 1, SMOKESCREEN
 	dbw 10, WATER_GUN
 	dbw 14, TWISTER
 	dbw 19, FOCUS_ENERGY
@@ -1661,8 +1649,6 @@ BlisseyEvosAttacks:
 	dbw 1, GROWL
 	dbw 1, TAIL_WHIP
 	dbw 1, DEFENSE_CURL
-	dbw 7, TAIL_WHIP
-	dbw 10, DEFENSE_CURL
 	dbw 13, DOUBLESLAP
 	dbw 18, SING
 	dbw 23, MINIMIZE
@@ -1748,7 +1734,7 @@ PupitarEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BITE
 	dbw 1, LEER
-	dbw 6, SANDSTORM
+	dbw 1, SANDSTORM
 	dbw 11, SCREECH
 	dbw 17, ROCK_SLIDE
 	dbw 22, SCARY_FACE
@@ -1765,8 +1751,8 @@ TyranitarEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, BITE
 	dbw 1, LEER
-	dbw 6, SANDSTORM
-	dbw 11, SCREECH
+	dbw 1, SANDSTORM
+	dbw 1, SCREECH
 	dbw 17, ROCK_SLIDE
 	dbw 22, SCARY_FACE
 	dbw 27, THRASH

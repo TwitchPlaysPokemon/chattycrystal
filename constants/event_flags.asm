@@ -411,12 +411,12 @@
 	const EVENT_SAFARI_ZONE_NORTH_FAST_BALL
 	const EVENT_SAFARI_ZONE_WEST_REVIVAL_HERB
 	const EVENT_SAFARI_ZONE_WEST_HYPER_BEAM ; 198
-	const skip
-	const skip
-	const skip
-	const skip
-	const skip
-	const skip
+	const EVENT_BATTLE_TENT_TUTOR_1_READY
+	const EVENT_BATTLE_TENT_TUTOR_2_READY
+	const EVENT_BATTLE_TENT_TUTOR_3_READY
+	const EVENT_BATTLE_TENT_TUTOR_4_READY
+	const EVENT_BATTLE_TENT_TUTOR_5_READY
+	const EVENT_BATTLE_TENT_TUTOR_6_READY
 	const skip
 	const skip ; 1a0
 	const skip

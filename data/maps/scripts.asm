@@ -111,7 +111,6 @@ INCLUDE "maps/PokemonTower5F.asm"
 INCLUDE "maps/PokemonTower6F.asm"
 INCLUDE "maps/PokemonTower7F.asm"
 INCLUDE "maps/BattleTentRuins.asm"
-INCLUDE "maps/BattleTentBattleRoom.asm"
 INCLUDE "maps/BattleTentGenerator.asm"
 INCLUDE "maps/BattleTentPCRoom.asm"
 INCLUDE "maps/MtSilverRuins.asm"
@@ -391,6 +390,7 @@ INCLUDE "maps/CherrygroveEvolutionSpeechHouse.asm"
 INCLUDE "maps/Route30BerryHouse.asm"
 INCLUDE "maps/MrPokemonsHouse.asm"
 INCLUDE "maps/Route31VioletGate.asm"
+INCLUDE "maps/BattleTentBattleRoom.asm"
 
 
 SECTION "Map Scripts 19", ROMX

@@ -357,7 +357,7 @@ GetTrainerName::
 	ld [hl], c
 	ld hl, wChattyTrainerID
 	ld [hl], b
-AissCollectClassAndID::
+ChattyTrainerClassIDLoaded::
 	ld a, c
 	cp CAL
 	jr nz, .not_cal2
@@ -420,9 +420,8 @@ CopyTrainerName:
 	and a
 	jr z, SkipChattyTrainerInjection
 	xor a
+ChattyTrainerInjectionPoint:: ;place name of ID wOtherTrainerID in wStringBuffer1, ending with a @
 	ld [wScriptActive], a
-AissInjectTrainerNameHere:: ;place name of ID wOtherTrainerID in wStringBuffer1, ending with a @
-	nop
 SkipChattyTrainerInjection:
 	pop de
 	ret

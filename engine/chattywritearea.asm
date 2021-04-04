@@ -20,7 +20,7 @@ HandleChattyText::
 	xor a
 	ld [wScriptActive], a
 	pop hl
-AissInjectTextHere::
+ChattyInjectionPoint::
 	; When execution reaches this point, place a text block WITHOUT A START CHARACTER in ChattyText,
 	; including any line or cont characters; end with a done character. Set wScriptActive when done.
 	call PlaceString

@@ -75,10 +75,10 @@ pub fn start_endpoints() {
     BIZHAWK.remove_callback("chatot_cry").ok();
 
     BIZHAWK.on_memory_execute_if("text_inject", 
-                                 SYM["AissInjectTextHere"].bus_addr, 
+                                 SYM["ChattyInjectionPoint"].bus_addr, 
                                  0x02, 
                                  SYM["hROMBank"].bus_addr, 
-                                 SYM["AissInjectTextHere"].bank, 
+                                 SYM["ChattyInjectionPoint"].bank, 
                                  &format!("http://localhost:{}/text_inject", SETTINGS.port)).ok();
 
     BIZHAWK.on_memory_execute_if("chatter", 
@@ -89,10 +89,10 @@ pub fn start_endpoints() {
                                  &format!("http://localhost:{}/chatter", SETTINGS.port)).ok();
 
     BIZHAWK.on_memory_execute_if("chatter_move_name", 
-                                 SYM["AissLoadMoveNameHere"].bus_addr, 
+                                 SYM["ChattyChatterReady"].bus_addr, 
                                  0x02, 
                                  SYM["hROMBank"].bus_addr, 
-                                 SYM["AissLoadMoveNameHere"].bank, 
+                                 SYM["ChattyChatterReady"].bank, 
                                  &format!("http://localhost:{}/chatter_move_name", SETTINGS.port)).ok();
 
     BIZHAWK.on_memory_execute_if("hidden_power", 
@@ -103,17 +103,17 @@ pub fn start_endpoints() {
                                  &format!("http://localhost:{}/hidden_power", SETTINGS.port)).ok();
 
     BIZHAWK.on_memory_execute_if("get_trainer_name", 
-                                 SYM["AissCollectClassAndID"].bus_addr, 
+                                 SYM["ChattyTrainerClassIDLoaded"].bus_addr, 
                                  0x02, 
                                  SYM["hROMBank"].bus_addr, 
-                                 SYM["AissCollectClassAndID"].bank, 
+                                 SYM["ChattyTrainerClassIDLoaded"].bank, 
                                  &format!("http://localhost:{}/get_trainer_name", SETTINGS.port)).ok();
 
     BIZHAWK.on_memory_execute_if("inject_trainer_name", 
-                                 SYM["AissInjectTrainerNameHere"].bus_addr, 
+                                 SYM["ChattyTrainerInjectionPoint"].bus_addr, 
                                  0x02, 
                                  SYM["hROMBank"].bus_addr, 
-                                 SYM["AissInjectTrainerNameHere"].bank, 
+                                 SYM["ChattyTrainerInjectionPoint"].bank, 
                                  &format!("http://localhost:{}/inject_trainer_name", SETTINGS.port)).ok();
 
     BIZHAWK.on_memory_read_if("chatot_cry", 

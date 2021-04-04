@@ -5597,7 +5597,7 @@ BattleCommand_Chatter:
 	call GetBattleVarAddr
 	ld [hl], b
 	call UpdateMoveData
-AissLoadMoveNameHere::
+ChattyChatterReady::
 	jp ResetTurn
 
 BattleCommand_CheckCharge:

@@ -493,6 +493,7 @@ ENDM
 	map_const TRICK_HOUSE_PUZZLE_4,                         8, 11 ; 22
 	map_const TRICK_HOUSE_PUZZLE_5,                         8, 11 ; 23
 	map_const TRICK_HOUSE_PUZZLE_6,                         8, 11 ; 24
+	map_const VIRIDIAN_MOVE_TUTOR_HOUSE,                    4,  4 ; 25
 
 	newgroup                                                      ; 24
 

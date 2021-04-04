@@ -174,6 +174,7 @@ SECTION "Map Scripts 9", ROMX
 INCLUDE "maps/Route34.asm"
 INCLUDE "maps/ElmsLab.asm"
 INCLUDE "maps/ElmsHouse.asm"
+INCLUDE "maps/ViridianMoveTutorHouse.asm"
 
 
 SECTION "Map Scripts 10", ROMX

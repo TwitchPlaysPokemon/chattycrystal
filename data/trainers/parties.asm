@@ -91,6 +91,89 @@ GSCKrisGroup:
 	db "YZZZQQQC@"
 
 	db -1 ; end
+	
+	next_list_item ; KKKB
+	db "KKKB@",  TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	
+	db 100
+	dw LUDICOLO
+	db LEFTOVERS
+	dw GIGA_DRAIN, ICE_BEAM, SURF, RAIN_DANCE
+	bigdw $8ade
+	bigdw 337
+	bigdw 224
+	bigdw 228
+	bigdw 234
+	bigdw 276
+	bigdw 196
+	db "XXHI@"
+
+	db 100
+	dw CHATOT
+	db FOCUS_BAND
+	dw CHATTER, FLY, SING, ROOST
+	bigdw $893c
+	bigdw 337
+	bigdw 214
+	bigdw 176
+	bigdw 256
+	bigdw 276
+	bigdw 176
+	db "KENYA@"
+
+	db 100
+	dw UNOWN
+	db BRIGHTPOWDER
+	dw CHATTY_HP, NO_MOVE, NO_MOVE, NO_MOVE
+	bigdw $DFFF
+	bigdw 299
+	bigdw 238
+	bigdw 194
+	bigdw 194
+	bigdw 242
+	bigdw 194
+	db "PPPPss@"
+
+	db 100
+	dw GOODRA
+	db LEFTOVERS
+	dw DRAGON_PULSE, OUTRAGE, SLUDGE_BOMB, EARTHQUAKE
+	bigdw $1fb9
+	bigdw 383
+	bigdw 270
+	bigdw 238
+	bigdw 250
+	bigdw 306
+	bigdw 386
+	db "YPG@"
+
+	db 100
+	dw SKUNTANK
+	db LEFTOVERS
+	dw STRENGTH, ROCK_SMASH, SLUDGE_BOMB, TOXIC
+	bigdw $155e
+	bigdw 407
+	bigdw 256
+	bigdw 212
+	bigdw 246
+	bigdw 238
+	bigdw 218
+	db "ZZZZZ @"
+
+	db 100
+	dw TORTERRA
+	db LEFTOVERS
+	dw EARTHQUAKE, DIZZY_PUNCH, CURSE, REST
+	bigdw $faaa
+	bigdw 379
+	bigdw 316
+	bigdw 298
+	bigdw 200
+	bigdw 238
+	bigdw 258
+	db "VVVVVV@"
+
+	db -1 ; end
 
 	end_list_items
 
@@ -4550,6 +4633,88 @@ PCyanGroup:
 	db "YYYYXOOOOO@"
 	db -1 ; end
 
+	next_list_item ; CYAN_REMATCH
+	db "Cyan@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	
+	db 100
+	dw NINETALES
+	db KINGS_ROCK
+	dw IRON_HEAD, EARTH_POWER, TRI_ATTACK, FLAMETHROWER
+	bigdw $01BB
+	bigdw 333
+	bigdw 220
+	bigdw 220
+	bigdw 290
+	bigdw 252
+	bigdw 290
+	db "FFFEEEF@"
+	
+	db 100
+	dw AMPHAROS
+	db KINGS_ROCK
+	dw FLARE_BLITZ, FLASH, THUNDERBOLT, NO_MOVE ;SHADOW_CLAW
+	bigdw $B0EA
+	bigdw 369
+	bigdw 240
+	bigdw 218
+	bigdw 206
+	bigdw 318
+	bigdw 268
+	db "Ampharos@"
+	
+	db 100
+	dw TYRANITAR
+	db BLACKGLASSES
+	dw CRUNCH, ROCK_SLIDE, DRAGON_CLAW, ROCK_SMASH
+	bigdw $4727
+	bigdw 383
+	bigdw 344
+	bigdw 302
+	bigdw 194
+	bigdw 272
+	bigdw 282
+	db "I!C@"
+	
+	db 100
+	dw GARDEVOIR
+	db WATER_STONE
+	dw AURA_SPHERE, SIGNAL_BEAM, TRI_ATTACK, PSYCHIC_M
+	bigdw $FB61
+	bigdw 335
+	bigdw 228
+	bigdw 220
+	bigdw 240
+	bigdw 320
+	bigdw 300
+	db "IMmMMLLIR@"
+
+	db 100
+	dw AZUMARILL
+	db LEFTOVERS
+	dw SURF, ICE_BEAM, STRENGTH, POWER_GEM
+	bigdw $7aaa
+	bigdw 389
+	bigdw 364
+	bigdw 248
+	bigdw 188
+	bigdw 188
+	bigdw 248
+	db "YYYYXOOOOO@"
+	db -1 ; end
+	
+	db 100
+	dw LOPUNNY
+	db POLKADOT_BOW
+	dw RETURN, POWER_GEM, CUT, METRONOME
+	bigdw $BA26
+	bigdw 319
+	bigdw 242
+	bigdw 256
+	bigdw 282
+	bigdw 184
+	bigdw 268
+	db "EEEE@"
+	
 	end_list_items
 
 BrendanKantoLeaderGroup:
@@ -5635,6 +5800,28 @@ BirdKeeperGroup:
 	dw SALAMENCE
 	db LEFTOVERS
 	db -1 ; end
+	
+	next_list_item ; BIRD_KEEPER (22)
+	db "ADAM@", TRAINERTYPE_MOVES
+	db 59
+	dw WEEZING
+	dw HEAT_WAVE, SLUDGE_BOMB, HAZE, WILL_O_WISP
+	db 59
+	dw NOCTOWL
+	dw DOUBLE_EDGE, AERIAL_ACE, HEAT_WAVE, HYPNOSIS
+	db 59
+	dw VENOMOTH
+	dw ROOST, QUIVER_DANCE, ENERGY_BALL, BATON_PASS
+	db 60
+	dw CROBAT
+	dw ROOST, HEAT_WAVE, BRAVE_BIRD, POISON_FANG
+	db 60
+	dw SKARMORY
+	dw AERIAL_ACE, ROOST, TOXIC, PROTECT
+	db 61
+	dw CHARIZARD
+	dw AERIAL_ACE, ROOST, HEAT_WAVE, FOCUS_BLAST
+	db -1 ; end
 
 	end_list_items
 
@@ -6440,6 +6627,28 @@ CooltrainerFGroup:
 	dw AGGRON
 	db 85
 	dw MANECTRIC
+	db -1 ; end
+	
+	next_list_item ; COOLTRAINERF (27)
+	db "GLORIA@", TRAINERTYPE_MOVES
+	db 59
+	dw MANECTRIC
+	dw THUNDER_WAVE, ROAR, OVERHEAT, THUNDERBOLT
+	db 59
+	dw XATU
+	dw THUNDER_WAVE, CONFUSE_RAY, AIR_SLASH, ZEN_HEADBUTT
+	db 59
+	dw KINGDRA
+	dw DRAGON_PULSE, IRON_HEAD, HYDRO_PUMP, DRAGON_DANCE
+	db 60
+	dw AGGRON
+	dw THUNDER_WAVE, IRON_HEAD, ROCK_SLIDE, REVERSAL
+	db 60
+	dw STEELIX
+	dw DRAGON_PULSE, IRON_HEAD, EARTHQUAKE, EXPLOSION
+	db 61
+	dw DRAGONITE
+	dw DRAGON_PULSE, IRON_HEAD, THUNDER_WAVE, ROOST
 	db -1 ; end
 
 	end_list_items
@@ -8976,6 +9185,28 @@ HikerGroup:
 	dw LAIRON
 	db METAL_COAT
 	db -1 ; end
+	
+	next_list_item ; HIKER (26)
+	db "DARRELL@", TRAINERTYPE_MOVES
+	db 59
+	dw HITMONLEE
+	dw SUPERPOWER, POISON_JAB, ROCK_SLIDE, MACH_PUNCH
+	db 59
+	dw POLIWRATH
+	dw SUPERPOWER, HAZE, SURF, HYPNOSIS
+	db 59
+	dw MOTHIM
+	dw SIGNAL_BEAM, AIR_SLASH, REST, SLEEP_TALK
+	db 60
+	dw NIDOQUEEN
+	dw SUPERPOWER, POISON_JAB, EARTHQUAKE, DISABLE
+	db 60
+	dw NIDOKING
+	dw SUPERPOWER, POISON_JAB, EARTHQUAKE, HORN_DRILL
+	db 61
+	dw LUXRAY
+	dw SIGNAL_BEAM, SUPERPOWER, THUNDERBOLT, SWAGGER
+	db -1 ; end
 
 	end_list_items
 
@@ -9204,6 +9435,28 @@ BurglarGroup:
 	db "SIMON@", TRAINERTYPE_NORMAL
 	db 73
 	dw NINETALES
+	db -1 ; end
+	
+	next_list_item ; BURGLAR (7)
+	db "JENSEN@", TRAINERTYPE_MOVES
+	db 59
+	dw TYRANITAR
+	dw DARK_PULSE, THUNDER_WAVE, ROCK_SLIDE, ATTRACT
+	db 59
+	dw MR__MIME
+	dw DAZZLINGLEAM, NASTY_PLOT, BATON_PASS, REFLECT
+	db 59
+	dw PORYGON_Z
+	dw NASTY_PLOT, ICE_BEAM, THUNDERBOLT, RECOVER
+	db 60
+	dw HOUNDOOM
+	dw DARK_PULSE, NASTY_PLOT, FLAMETHROWER, THUNDER_FANG
+	db 60
+	dw ALAKAZAM
+	dw DAZZLINGLEAM, PSYCHIC_M, NASTY_PLOT, FIRE_PUNCH
+	db 61
+	dw GENGAR
+	dw DAZZLINGLEAM, DARK_PULSE, NASTY_PLOT, SUBSTITUTE
 	db -1 ; end
 
 	end_list_items
@@ -9650,6 +9903,28 @@ BlackbeltGroup:
 	dw HARIYAMA
 	db 76
 	dw MACHAMP
+	db -1 ; end
+	
+	next_list_item ; BLACKBELT_T (17)
+	db "RHETT@", TRAINERTYPE_MOVES
+	db 59
+	dw KANGASKHAN
+	dw DRAIN_PUNCH, CURSE, RETURN, ROCK_SLIDE
+	db 59
+	dw AERODACTYL
+	dw ROCK_SLIDE, DRAGON_DANCE, WING_ATTACK, EARTHQUAKE
+	db 59
+	dw VILEPLUME
+	dw DRAIN_PUNCH, SWORDS_DANCE, SLUDGE_BOMB, SLEEP_POWDER
+	db 60
+	dw HITMONCHAN
+	dw ROCK_SLIDE, DRAIN_PUNCH, BULLET_PUNCH, AGILITY
+	db 60
+	dw EXCADRILL
+	dw ROCK_SLIDE, EARTHQUAKE, SWORDS_DANCE, RAPID_SPIN
+	db 61
+	dw TOXICROAK
+	dw DRAIN_PUNCH, ROCK_SLIDE, SWORDS_DANCE, SLUDGE_BOMB
 	db -1 ; end
 
 	end_list_items
@@ -10899,6 +11174,28 @@ MediumGroup:
 	db "PHOEBE@", TRAINERTYPE_NORMAL
 	db 82
 	dw SABLEYE
+	db -1 ; end
+	
+	next_list_item ; MEDIUM (16)
+	db "HOLLY@", TRAINERTYPE_MOVES
+	db 59
+	dw SNEASEL
+	dw KNOCK_OFF, CALM_MIND, SURF, ICE_SHARD
+	db 59
+	dw CORSOLA
+	dw SURF, ICE_BEAM, CALM_MIND, RECOVER
+	db 59
+	dw CHANDELURE
+	dw FLAMETHROWER, CALM_MIND, WILL_O_WISP, ENERGY_BALL
+	db 60
+	dw ABSOL
+	dw KNOCK_OFF, CALM_MIND, SUPERPOWER, SUCKER_PUNCH
+	db 60
+	dw DUSKNOIR
+	dw WILL_O_WISP, CALM_MIND, PAIN_SPLIT, ICE_BEAM
+	db 61
+	dw GARDEVOIR
+	dw MOONBLAST, KNOCK_OFF, WILL_O_WISP, CALM_MIND
 	db -1 ; end
 
 	end_list_items

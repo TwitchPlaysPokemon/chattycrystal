@@ -122,6 +122,7 @@ CHRIS EQU __enum__
 	trainervalue VANCE3
 	trainervalue MT_BATTLE_10 ; ELION
 	trainervalue MT_BATTLE_61 ; BENIT
+	trainervalue ADAM
 
 	trainerclass LASS ; 6
 	trainervalue CARRIE
@@ -202,6 +203,7 @@ CHRIS EQU __enum__
 	trainervalue CORA
 	trainervalue CATHY
 	trainervalue KEIRA
+	trainervalue GLORIA
 
 	trainerclass BEAUTY ; 9
 	trainervalue VICTORIA
@@ -475,6 +477,7 @@ CHRIS EQU __enum__
 	trainervalue MT_BATTLE_30 ; LEVEN
 	trainervalue MT_BATTLE_53 ; CRAG
 	trainervalue MT_BATTLE_84 ; WILER
+	trainervalue DARRELL
 
 	trainerclass BIKER ; 17
 	trainervalue BIKER_BENNY
@@ -498,6 +501,7 @@ CHRIS EQU __enum__
 	trainervalue JAC
 	trainervalue DUSTY
 	trainervalue SIMON_B
+	trainervalue JENSEN
 
 	trainerclass FIREBREATHER ; 19
 	trainervalue OTIS
@@ -538,6 +542,7 @@ CHRIS EQU __enum__
 	trainervalue MT_BATTLE_74 ; CHIOD
 	trainervalue MT_BATTLE_96 ; ELDOR
 	trainervalue YUGI
+	trainervalue RHETT
 
 	trainerclass PSYCHIC_T ; 1c
 	trainervalue NATHAN
@@ -647,6 +652,7 @@ CHRIS EQU __enum__
 	trainervalue MT_BATTLE_65 ; PERSTIN
 	trainervalue MT_BATTLE_94 ; DESOR
 	trainervalue PHOEBE
+	trainervalue HOLLY
 
 	trainerclass BOARDER ; 21
 	trainervalue RONALD
@@ -760,6 +766,7 @@ CHRIS EQU __enum__
 
 	trainerclass GSC_KRIS ; 2e
 	trainervalue EWWYPPP
+	trainervalue KKKB
 
 	trainerclass AC_CHRIS ; 2f
 	trainervalue EVAN1
@@ -812,6 +819,7 @@ CHRIS EQU __enum__
 
 	trainerclass P_CYAN ; 3c
 	trainervalue CYAN
+	trainervalue CYAN_REMATCH
 
 	trainerclass RED_LARRY ; 3d
 	trainervalue LARRY_R1

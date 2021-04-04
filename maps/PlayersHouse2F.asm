@@ -34,6 +34,11 @@ BigDollScript:
 	describedecoration DECODESC_BIG_DOLL
 
 GameConsoleScript:
+	checkevent EVENT_LEGITIMATE_VIRTUAL_BOY
+	iffalse .no_virtual_boy
+	readmem wDecoConsole
+	ifequal DECO_VIRTUAL_BOY, VirtualBoyScript
+.no_virtual_boy
 	describedecoration DECODESC_CONSOLE
 
 PlayersHousePosterScript:
@@ -85,6 +90,39 @@ PlayersHousePCScript:
 .Warp:
 	warp NONE, 0, 0
 	end
+
+VirtualBoyScript:
+	opentext
+	readmem hCGB
+	ifgreater 1, .on
+	writetext .virtual_boy_text
+	yesorno
+	closetext
+	iffalse GenericDummyScript
+	callasm FadeToBlack
+	pause 5
+	callasm FadeInRedMode
+	end
+
+.on
+	writetext .turn_off_text
+	yesorno
+	closetext
+	iffalse GenericDummyScript
+	callasm FadeOutRedMode
+	pause 5
+	callasm FadeFromBlack
+	end
+
+.virtual_boy_text
+	text "It's a VIRTUAL BOY!"
+	line "Turn it on?"
+	done
+
+.turn_off_text
+	text "Turn off the"
+	line "VIRTUAL BOY?"
+	done
 
 PlayersRadioText1:
 	text "PROF.OAK'S #MON"

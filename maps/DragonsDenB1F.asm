@@ -107,6 +107,8 @@ DragonsDenB1FSilverScript:
 	end
 
 DragonsDenB1FMoveTutor:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .not_champion
 	faceplayer
 	opentext
 	writetext .introduction_text
@@ -158,6 +160,24 @@ DragonsDenB1FMoveTutor:
 	text "That's fine. Come"
 	line "again if you"
 	cont "change your mind."
+	done
+
+.not_champion
+	jumptextfaceplayer .not_champion_text
+
+.not_champion_text
+	text "Welcome to our"
+	line "sacred training"
+	cont "place."
+
+	para "I can teach your"
+	line "#MON a strong"
+	cont "dragon move<...>"
+
+	para "But you're not"
+	line "worthy of using"
+	para "our secret dragon"
+	line "techniques yet."
 	done
 
 DragonShrineSignpost:
@@ -319,4 +339,4 @@ DragonsDenB1F_MapEvents:
 	object_event  4, 18, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerTwinsLeaandpia2, -1
 	object_event 30,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FCalcium, EVENT_DRAGONS_DEN_B1F_CALCIUM
 	object_event  5, 20, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, DragonsDenB1FMaxElixir, EVENT_DRAGONS_DEN_B1F_MAX_ELIXIR
-	object_event 12,  4, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FMoveTutor, EVENT_NOT_CHAMPION_YET
+	object_event 12,  4, SPRITE_ELDER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DragonsDenB1FMoveTutor, -1

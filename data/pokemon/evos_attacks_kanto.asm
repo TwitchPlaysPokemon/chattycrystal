@@ -376,8 +376,9 @@ BeedrillEvosAttacks:
 	dbw 28, PIN_MISSILE
 	dbw 32, POISON_JAB
 	dbw 35, AGILITY
-	dbw 39, OUTRAGE
+	dbw 39, ATTACK_ORDER ; non-canon
 	dbw 42, ENDEAVOR
+	dbw 45, OUTRAGE
 	db 0 ; no more level-up moves
 
 PidgeyEvosAttacks:
@@ -894,6 +895,7 @@ ParasectEvosAttacks:
 	dbw 37, GROWTH
 	dbw 44, GIGA_DRAIN
 	dbw 51, X_SCISSOR
+	dbw 60, ATTACK_ORDER ; non-canon
 	db 0 ; no more level-up moves
 
 VenonatEvosAttacks:
@@ -985,6 +987,7 @@ MeowthEvosAttacks:
 	dbw 1, GROWL
 	dbw 6, BITE
 	dbw 9, FAKE_OUT
+	dbw 11, ASSIST
 	dbw 14, FURY_SWIPES
 	dbw 17, SCREECH
 	dbw 22, FEINT_ATTACK
@@ -1003,6 +1006,7 @@ PersianEvosAttacks:
 	dbw 1, GROWL
 	dbw 6, BITE
 	dbw 9, FAKE_OUT
+	dbw 11, ASSIST
 	dbw 14, FURY_SWIPES
 	dbw 17, SCREECH
 	dbw 22, FEINT_ATTACK

@@ -379,6 +379,7 @@ ZigzagoonEvosAttacks:
 	dbw 12, HEADBUTT
 	dbw 15, ODOR_SLEUTH
 	dbw 19, PIN_MISSILE
+	dbw 20, TAIL_SLAP
 	dbw 22, COVET
 	dbw 26, TAKE_DOWN
 	dbw 29, REST
@@ -396,6 +397,7 @@ LinooneEvosAttacks:
 	dbw 12, HEADBUTT
 	dbw 15, ODOR_SLEUTH
 	dbw 19, FURY_SWIPES
+	dbw 22, TAIL_SLAP
 	dbw 25, COVET
 	dbw 29, SLASH
 	dbw 35, REST

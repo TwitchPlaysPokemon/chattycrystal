@@ -204,7 +204,6 @@ ZigzagoonEggMoves:
 	dw PURSUIT
 	dw ROCK_CLIMB
 	dw TICKLE
-	dw TAIL_SLAP
 	dw -1 ; end
 
 LotadEggMoves:

@@ -408,6 +408,7 @@ AriadosEvosAttacks:
 	dbw 46, PIN_MISSILE
 	dbw 52, PSYCHIC_M
 	dbw 57, POISON_JAB
+	dbw 63, ATTACK_ORDER ; non-canon
 	db 0 ; no more level-up moves
 
 CrobatEvosAttacks:

@@ -326,7 +326,6 @@ DiglettEggMoves:
 
 MeowthEggMoves:
 	dw AMNESIA
-	dw ASSIST
 	dw CHARM
 	dw FLAIL
 	dw FOUL_PLAY

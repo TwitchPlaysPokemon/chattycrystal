@@ -308,6 +308,7 @@ ENDM
 	add_mt ROCK_SLIDE
 	add_mt ROOST
 	add_mt SCALD
+	add_mt SHADOW_CLAW
 	add_mt SIGNAL_BEAM
 	add_mt SUPERPOWER
 	add_mt SWORDS_DANCE

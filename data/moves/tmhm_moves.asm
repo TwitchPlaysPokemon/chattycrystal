@@ -83,6 +83,7 @@ MoveTutorMoves:
 	dw ROCK_SLIDE
 	dw ROOST
 	dw SCALD
+	dw SHADOW_CLAW
 	dw SIGNAL_BEAM
 	dw SUPERPOWER
 	dw SWORDS_DANCE

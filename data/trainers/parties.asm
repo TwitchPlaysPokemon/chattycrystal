@@ -91,10 +91,10 @@ GSCKrisGroup:
 	db "YZZZQQQC@"
 
 	db -1 ; end
-	
+
 	next_list_item ; KKKB
 	db "KKKB@",  TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 100
 	dw LUDICOLO
 	db LEFTOVERS
@@ -4635,7 +4635,7 @@ PCyanGroup:
 
 	next_list_item ; CYAN_REMATCH
 	db "Cyan@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
-	
+
 	db 100
 	dw NINETALES
 	db KINGS_ROCK
@@ -4648,7 +4648,7 @@ PCyanGroup:
 	bigdw 252
 	bigdw 290
 	db "FFFEEEF@"
-	
+
 	db 100
 	dw AMPHAROS
 	db KINGS_ROCK
@@ -4661,7 +4661,7 @@ PCyanGroup:
 	bigdw 318
 	bigdw 268
 	db "Ampharos@"
-	
+
 	db 100
 	dw TYRANITAR
 	db BLACKGLASSES
@@ -4674,7 +4674,7 @@ PCyanGroup:
 	bigdw 272
 	bigdw 282
 	db "I!C@"
-	
+
 	db 100
 	dw GARDEVOIR
 	db WATER_STONE
@@ -4701,7 +4701,7 @@ PCyanGroup:
 	bigdw 248
 	db "YYYYXOOOOO@"
 	db -1 ; end
-	
+
 	db 100
 	dw LOPUNNY
 	db POLKADOT_BOW
@@ -4714,7 +4714,7 @@ PCyanGroup:
 	bigdw 184
 	bigdw 268
 	db "EEEE@"
-	
+
 	end_list_items
 
 BrendanKantoLeaderGroup:
@@ -5800,7 +5800,7 @@ BirdKeeperGroup:
 	dw SALAMENCE
 	db LEFTOVERS
 	db -1 ; end
-	
+
 	next_list_item ; BIRD_KEEPER (22)
 	db "ADAM@", TRAINERTYPE_MOVES
 	db 59
@@ -6628,7 +6628,7 @@ CooltrainerFGroup:
 	db 85
 	dw MANECTRIC
 	db -1 ; end
-	
+
 	next_list_item ; COOLTRAINERF (27)
 	db "GLORIA@", TRAINERTYPE_MOVES
 	db 59
@@ -9185,7 +9185,7 @@ HikerGroup:
 	dw LAIRON
 	db METAL_COAT
 	db -1 ; end
-	
+
 	next_list_item ; HIKER (26)
 	db "DARRELL@", TRAINERTYPE_MOVES
 	db 59
@@ -9436,7 +9436,7 @@ BurglarGroup:
 	db 73
 	dw NINETALES
 	db -1 ; end
-	
+
 	next_list_item ; BURGLAR (7)
 	db "JENSEN@", TRAINERTYPE_MOVES
 	db 59
@@ -9904,7 +9904,7 @@ BlackbeltGroup:
 	db 76
 	dw MACHAMP
 	db -1 ; end
-	
+
 	next_list_item ; BLACKBELT_T (17)
 	db "RHETT@", TRAINERTYPE_MOVES
 	db 59
@@ -11175,7 +11175,7 @@ MediumGroup:
 	db 82
 	dw SABLEYE
 	db -1 ; end
-	
+
 	next_list_item ; MEDIUM (16)
 	db "HOLLY@", TRAINERTYPE_MOVES
 	db 59

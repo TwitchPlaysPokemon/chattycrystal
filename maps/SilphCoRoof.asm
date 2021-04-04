@@ -29,7 +29,7 @@ SilphCoRoof_MapScripts:
 
 MtBattleTrainer100:
 	trainer CAL, MT_BATTLE_100, EVENT_BEAT_MT_BATTLE_100, .before_text, .defeat_text, 0, .script
-	
+
 .script
 	checkevent EVENT_MT_BATTLE_TALKED_WITH_FINAL_TRAINER
 	iffalse .first_message

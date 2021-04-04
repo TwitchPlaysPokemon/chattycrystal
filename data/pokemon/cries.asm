@@ -256,9 +256,9 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,  $000,  $100 ; LUGIA
 	mon_cry CRY_AIPOM,       $000,  $180 ; HO_OH
 	mon_cry CRY_ENTEI,       $14a,  $111 ; CELEBI
-	mon_cry CRY_DIGLETT,     $dee,  $0b9 ; TREECKO
-	mon_cry CRY_DIGLETT,     $cff,  $130 ; GROVYLE
-	mon_cry CRY_DIGLETT,     $bdf,  $090 ; SCEPTILE
+	mon_cry CRY_KRABBY,      $0bf,  $0b0 ; TREECKO
+	mon_cry CRY_VENONAT,     $edb,  $170 ; GROVYLE
+	mon_cry CRY_VENONAT,     $f0b,  $200 ; SCEPTILE
 	mon_cry CRY_HOOTHOOT,    $0ff,  $0c8 ; TORCHIC
 	mon_cry CRY_HOOTHOOT,    $0b9,  $124 ; COMBUSKEN
 	mon_cry CRY_TYPHLOSION,  $f43,  $100 ; BLAZIKEN
@@ -323,12 +323,12 @@ PokemonCries::
 	mon_cry CRY_MAGCARGO,    $f1c,  $20a ; LATIOS
 	mon_cry CRY_METAPOD,     $689,  $20a ; KYOGRE
 	mon_cry CRY_TYPHLOSION,  $d18,  $18a ; GROUDON
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TURTWIG - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GROTLE - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TORTERRA - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CHIMCHAR - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; MONFERNO - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; INFERNAPE - PLACEHOLDER
+	mon_cry CRY_TOGETIC,     $d00,  $050 ; TURTWIG
+	mon_cry CRY_MARILL,      $eec,  $180 ; GROTLE
+	mon_cry CRY_ENTEI,       $eee,  $480 ; TORTERRA
+	mon_cry CRY_CLEFAIRY,    $06a,  $200 ; CHIMCHAR
+	mon_cry CRY_PIDGEOTTO,   $fef,  $200 ; MONFERNO
+	mon_cry CRY_PIDGEOTTO,   $ef6,  $300 ; INFERNAPE
 	mon_cry CRY_PSYDUCK,     $240,  $0f0 ; PIPLUP
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; PRINPLUP - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; EMPOLEON - PLACEHOLDER

@@ -17,6 +17,7 @@ CriticalHitMoves:
 	dw SKY_ATTACK
 	dw SLASH
 	dw STONE_EDGE
+	dw SHADOW_CLAW
 	dw -1
 
 MetronomeExcepts:

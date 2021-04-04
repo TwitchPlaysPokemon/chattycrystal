@@ -376,3 +376,4 @@ MoveNames::
 	db "ENERGY BALL@"
 	db "DRILL RUN@"
 	db "HEX@"
+	db "SHADOW CLAW@"

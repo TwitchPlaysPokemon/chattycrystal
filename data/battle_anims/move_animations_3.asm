@@ -24,6 +24,7 @@ MoveAnimations3:
 	dw BattleAnim_EnergyBall
 	dw BattleAnim_DrillRun   ; 178
 	dw BattleAnim_Hex
+	dw BattleAnim_ShadowClaw
 
 BattleAnim_CrystalBolt:
 	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_LIGHTNING
@@ -258,7 +259,7 @@ BattleAnim_Memento:
 
 BattleAnim_PoisonJab:
 	anim_3gfx ANIM_GFX_HORN, ANIM_GFX_HIT, ANIM_GFX_POISON
-	anim_obp0 $7c
+	anim_obp0 $ef
 	anim_bgeffect ANIM_BG_1F, $55, $1, $0
 .loop
 	anim_sound 0, 1, SFX_HORN_ATTACK
@@ -711,4 +712,21 @@ BattleAnim_Hex:
 	anim_loop 3, .loop
 	anim_wait 8
 	anim_wait 16
+	anim_ret
+
+BattleAnim_ShadowClaw:
+	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_SPEED
+	anim_obp0 $ef
+	anim_bgeffect ANIM_BG_1F, $14, $2, $0
+	anim_bgeffect ANIM_BG_BLACK_HUES, $0, $8, $0
+	anim_sound 0, 1, SFX_CUT
+	anim_obj ANIM_OBJ_37, 144, 48, $0
+	anim_obj ANIM_OBJ_37, 140, 44, $0
+	anim_obj ANIM_OBJ_37, 136, 40, $0
+	anim_wait 4
+	anim_obj ANIM_OBJ_RED_STAR, 136, 56, $5c
+	anim_obj ANIM_OBJ_RED_STAR, 136, 56, $e8
+	anim_obj ANIM_OBJ_RED_STAR, 136, 56, $d0
+	anim_obj ANIM_OBJ_RED_STAR, 136, 56, $50
+	anim_wait 32
 	anim_ret

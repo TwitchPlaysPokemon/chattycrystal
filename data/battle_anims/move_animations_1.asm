@@ -4299,7 +4299,7 @@ BattleAnim_FireFang:
 BattleAnim_ShadowSneak:
 	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_ANGELS
 	anim_bgp $f8
-	anim_obp0 $fc
+	anim_obp0 $ef
 	anim_sound 6, 2, SFX_WHIRLWIND
 	anim_obj ANIM_OBJ_DESTINY_BOND, 44, 120, $2
 	anim_wait 48

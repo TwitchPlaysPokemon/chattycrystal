@@ -395,3 +395,4 @@ Moves1:
 	move EFFECT_SP_DEF_DOWN_HIT,      90, GRASS,    100, 10,  10 ;ENERGY_BALL
 	move EFFECT_NORMAL_HIT,           80, GROUND,    95, 10,   0 ;DRILL_RUN
 	move EFFECT_HEX,                  65, GHOST,    100, 10,   0 ;HEX
+	move EFFECT_NORMAL_HIT,           70, GHOST,    100, 15,   0 ;SHADOW_CLAW

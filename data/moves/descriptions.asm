@@ -382,6 +382,7 @@ MoveDescriptions1:
 	dw EnergyBallDescription
 	dw DrillRunDescription
 	dw HexDescription
+	dw ShadowClawDescription
 
 ChatterDescription:
 InvalidMoveDescription:
@@ -971,6 +972,7 @@ LeafBladeDescription:
 NightSlashDescription:
 PsychoCutDescription:
 RazorLeafDescription:
+ShadowClawDescription:
 SlashDescription:
 StoneEdgeDescription:
 	db   "Has a high criti-"

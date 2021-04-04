@@ -104,7 +104,7 @@ _PlayerDecorationMenu:
 	ld a, [hli]
 	ld d, a
 	or e
-	jr z, .done
+	ret z
 	push hl
 	call _de_
 	pop hl
@@ -116,8 +116,6 @@ _PlayerDecorationMenu:
 .next
 	inc hl
 	jr .loop
-.done
-	ret
 
 .dw
 	dwb FindOwnedBeds, 0 ; bed
@@ -141,7 +139,7 @@ CheckAllDecorationFlags:
 .loop
 	ld a, [hli]
 	cp -1
-	jr z, .done
+	ret z
 	push hl
 	push af
 	ld b, CHECK_FLAG
@@ -153,9 +151,6 @@ CheckAllDecorationFlags:
 	call nz, AppendDecoIndex
 	pop hl
 	jr .loop
-
-.done
-	ret
 
 AppendDecoIndex:
 	ld hl, wd002
@@ -491,16 +486,13 @@ GetDecoName:
 	ret
 
 .NameFunctions:
-	dw .invalid
+	dw GenericDummyFunction
 	dw .plant
 	dw .bed
 	dw .carpet
 	dw .poster
 	dw .doll
 	dw .bigdoll
-
-.invalid
-	ret
 
 .plant
 	ld a, e
@@ -936,15 +928,12 @@ SetAllDecorationFlags:
 .loop
 	ld a, [hli]
 	cp -1
-	jr z, .done
+	ret z
 	push hl
 	ld b, SET_FLAG
 	call DecorationFlagAction
 	pop hl
 	jr .loop
-
-.done
-	ret
 
 INCLUDE "data/decorations/decorations.asm"
 
@@ -967,13 +956,12 @@ DecorationDesc_Poster:
 	ld hl, DecorationDesc_PosterPointers
 	ld de, 3
 	call IsInArray
+	ld b, BANK(DecorationDesc_TownMapPoster)
 	jr c, .nope
-	ld de, DecorationDesc_NullPoster
-	ld b, BANK(DecorationDesc_NullPoster)
+	ld de, GenericDummyScript
 	ret
 
 .nope
-	ld b, BANK(DecorationDesc_TownMapPoster)
 	inc hl
 	ld a, [hli]
 	ld d, [hl]
@@ -1023,9 +1011,6 @@ DecorationDesc_JigglypuffPoster:
 	; It's a poster of a cute JIGGLYPUFF.
 	text_far _LookJigglypuffPosterText
 	text_end
-
-DecorationDesc_NullPoster:
-	end
 
 DecorationDesc_LeftOrnament:
 	ld a, [wDecoLeftOrnament]

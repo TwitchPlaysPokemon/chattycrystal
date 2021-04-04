@@ -771,12 +771,13 @@ SableyeEvosAttacks:
 	dbw 22, FEINT_ATTACK
 	dbw 25, FAKE_OUT
 	dbw 28, KNOCK_OFF
-	dbw 31, CONFUSE_RAY
-	dbw 34, ZEN_HEADBUTT
-	dbw 37, POWER_GEM
-	dbw 40, SHADOW_BALL
-	dbw 43, FOUL_PLAY
-	dbw 46, MEAN_LOOK
+	dbw 31, SHADOW_CLAW
+	dbw 34, CONFUSE_RAY
+	dbw 37, ZEN_HEADBUTT
+	dbw 40, POWER_GEM
+	dbw 43, SHADOW_BALL
+	dbw 46, FOUL_PLAY
+	dbw 49, MEAN_LOOK
 	db 0 ; no more level-up moves
 
 AronEvosAttacks:

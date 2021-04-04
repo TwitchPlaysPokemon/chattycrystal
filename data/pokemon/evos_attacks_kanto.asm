@@ -244,6 +244,7 @@ CharmeleonEvosAttacks:
 CharizardEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, DRAGON_CLAW
+	dbw 1, SHADOW_CLAW
 	dbw 1, AIR_SLASH
 	dbw 1, SCRATCH
 	dbw 1, GROWL

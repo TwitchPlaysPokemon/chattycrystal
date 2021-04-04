@@ -125,7 +125,7 @@ GSCKrisGroup:
 	dw UNOWN
 	db BRIGHTPOWDER
 	dw CHATTY_HP, NO_MOVE, NO_MOVE, NO_MOVE
-	bigdw $DFFF
+	bigdw $dfff
 	bigdw 299
 	bigdw 238
 	bigdw 194
@@ -4640,7 +4640,7 @@ PCyanGroup:
 	dw NINETALES
 	db KINGS_ROCK
 	dw IRON_HEAD, EARTH_POWER, TRI_ATTACK, FLAMETHROWER
-	bigdw $01BB
+	bigdw $01bb
 	bigdw 333
 	bigdw 220
 	bigdw 220
@@ -4652,8 +4652,8 @@ PCyanGroup:
 	db 100
 	dw AMPHAROS
 	db KINGS_ROCK
-	dw FLARE_BLITZ, FLASH, THUNDERBOLT, NO_MOVE ;SHADOW_CLAW
-	bigdw $B0EA
+	dw FLARE_BLITZ, FLASH, THUNDERBOLT, NO_MOVE ;TODO: add SHADOW_CLAW
+	bigdw $b0ea
 	bigdw 369
 	bigdw 240
 	bigdw 218
@@ -4679,7 +4679,7 @@ PCyanGroup:
 	dw GARDEVOIR
 	db WATER_STONE
 	dw AURA_SPHERE, SIGNAL_BEAM, TRI_ATTACK, PSYCHIC_M
-	bigdw $FB61
+	bigdw $fb61
 	bigdw 335
 	bigdw 228
 	bigdw 220
@@ -4706,7 +4706,7 @@ PCyanGroup:
 	dw LOPUNNY
 	db POLKADOT_BOW
 	dw RETURN, POWER_GEM, CUT, METRONOME
-	bigdw $BA26
+	bigdw $ba26
 	bigdw 319
 	bigdw 242
 	bigdw 256

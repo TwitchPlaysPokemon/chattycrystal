@@ -31,6 +31,14 @@ CalcLevel:
 	ret
 
 CalcExpAtLevel:
+	xor a
+	ldh [hProduct], a
+	ldh [hProduct + 1], a
+	ldh [hProduct + 2], a
+	ldh [hProduct + 3], a
+	ld a, d
+	cp 2
+	ret c
 ; (a/b)*n**3 + c*n**2 + d*n - e
 	ld a, [wBaseGrowthRate]
 	add a

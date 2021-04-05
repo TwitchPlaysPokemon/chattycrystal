@@ -416,6 +416,7 @@
 	map_attributes EcruteakMart, ECRUTEAK_MART, $00, 0
 	map_attributes EcruteakGym, ECRUTEAK_GYM, $00, 0
 	map_attributes EcruteakItemfinderHouse, ECRUTEAK_ITEMFINDER_HOUSE, $00, 0
+	map_attributes EcruteakShadowClawTutorHouse, ECRUTEAK_SHADOW_CLAW_TUTOR_HOUSE, $00, 0
 	map_attributes BlackthornGym1F, BLACKTHORN_GYM_1F, $00, 0
 	map_attributes BlackthornGym2F, BLACKTHORN_GYM_2F, $00, 0
 	map_attributes BlackthornDragonSpeechHouse, BLACKTHORN_DRAGON_SPEECH_HOUSE, $00, 0
@@ -624,7 +625,7 @@
 	map_attributes TrickHousePuzzle4, TRICK_HOUSE_PUZZLE_4, $00, 0
 	map_attributes TrickHousePuzzle5, TRICK_HOUSE_PUZZLE_5, $00, 0
 	map_attributes TrickHousePuzzle6, TRICK_HOUSE_PUZZLE_6, $00, 0
-	map_attributes ViridianMoveTutorHouse, VIRIDIAN_NICKNAME_SPEECH_HOUSE, $00, 0
+	map_attributes ViridianMoveTutorHouse, VIRIDIAN_MOVE_TUTOR_HOUSE, $00, 0
 	map_attributes ElmsLab, ELMS_LAB, $00, 0
 	map_attributes PlayersHouse1F, PLAYERS_HOUSE_1F, $00, 0
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0

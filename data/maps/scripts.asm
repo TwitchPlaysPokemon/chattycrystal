@@ -252,6 +252,7 @@ INCLUDE "maps/BattleTowerBattleRoom.asm"
 INCLUDE "maps/BattleTowerElevator.asm"
 INCLUDE "maps/BattleTowerHallway.asm"
 INCLUDE "maps/BattleTowerOutside.asm"
+INCLUDE "maps/EcruteakShadowClawTutorHouse.asm"
 
 
 SECTION "Map Scripts 13", ROMX

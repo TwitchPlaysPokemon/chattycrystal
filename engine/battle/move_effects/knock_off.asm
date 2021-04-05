@@ -36,23 +36,18 @@ BattleCommand_KnockOff:
 
 CheckKnockOff:
 ; Returns z if we can knock off the opponent
+
 	; Does opponent have an item in first place?
 	farcall GetOpponentItem
 	ld a, [hl]
-.ret
 	and a
 	jr z, .ret_nz
-	ret z
 
 	; Ignore Mail
 	ld d, a
 	farcall ItemIsMail
-	ld a, 0
-	jr c, .ret_nz
-
 	; Check if we've already knocked the item off.
-	call IsOpponentItemUsable
-	ret
+	jp nc, IsOpponentItemUsable
 
 .ret_nz
 	or 1

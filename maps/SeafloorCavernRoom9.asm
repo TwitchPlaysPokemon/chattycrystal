@@ -43,6 +43,7 @@ Marina:
 	chattyon
 	clearevent EVENT_MARINA_AVAILABLE
 	setevent EVENT_MARINA_DEFEATED
+	clearevent EVENT_POKEMON_LEAGUE_NO_REMATCH
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear SEAFLOOR_CAVERN_ROOM9_MARINA

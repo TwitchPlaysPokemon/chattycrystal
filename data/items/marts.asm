@@ -39,6 +39,7 @@ Marts:
 	dw MartEventTMs
 	dw MartSingleTMs1
 	dw MartSingleTMs2
+	dw MartSpecialLeagueItems
 .End
 
 MartCherrygrove:
@@ -110,7 +111,7 @@ MartGoldenrod2F1:
 	db -1 ; end
 
 MartGoldenrod2F2:
-	db 8 ; # items
+	db 9 ; # items
 	db POKE_BALL
 	db GREAT_BALL
 	db ESCAPE_ROPE
@@ -118,6 +119,7 @@ MartGoldenrod2F2:
 	db REVIVE
 	db FULL_HEAL
 	db POKE_DOLL
+	db BRIGHTPOWDER
 	db FLOWER_MAIL
 	db -1 ; end
 
@@ -493,6 +495,17 @@ MartSingleTMs2:
 	db TM_PSYCH_UP
 	db TM_NIGHTMARE
 	db TM_SOLARBEAM
+	db -1 ; end
+
+MartSpecialLeagueItems:
+	db 7 ; # items
+	db GOLD_BERRY
+	db ETHER
+	db MAX_ETHER
+	db ELIXIR
+	db MAX_ELIXIR
+	db MAX_REVIVE
+	db SACRED_ASH
 	db -1 ; end
 
 DefaultMart:

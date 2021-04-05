@@ -92,6 +92,12 @@ IndigoPlateauPokecenter1FClerkScript:
 	closetext
 	end
 
+IndigoPlateauPokecenter1FSpecialClerkScript:
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_SPECIAL_LEAGUE_ITEMS
+	closetext
+	end
+
 IndigoPlateauPokecenter1FCooltrainerMScript:
 	jumptextfaceplayer IndigoPlateauPokecenter1FCooltrainerMText
 
@@ -213,6 +219,7 @@ IndigoPlateauPokecenter1F_MapEvents:
 	db 6 ; object events
 	object_event  3,  7, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FNurseScript, -1
 	object_event 11,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FClerkScript, -1
+	object_event 12,  7, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FSpecialClerkScript, EVENT_POKEMON_LEAGUE_NO_REMATCH
 	object_event 11, 11, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauPokecenter1FCooltrainerMScript, -1
 	object_event 16,  9, SPRITE_EVAN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INITIALIZED_EVENTS
 	object_event  1,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, TeleportGuyScript, -1

@@ -154,18 +154,18 @@ ENDM
 	map_const POKEMON_MANSION_B1F,                         15, 14 ; 97
 	map_const ROCKET_HIDEOUT_B1F,                          11, 14 ; 98
 	map_const ROCKET_HIDEOUT_B2F,                          15, 11 ; 99
-	map_const ROCKET_HIDEOUT_B3F,                          11, 12 ; 100
-	map_const ROCKET_HIDEOUT_B4F,                          11, 12 ; 101
-	map_const ROCKET_HIDEOUT_ELEVATOR,                      3,  3 ; 102
-	map_const POKEMON_TOWER_1F,                             9,  9 ; 103
-	map_const POKEMON_TOWER_2F,                             9,  9 ; 104
-	map_const POKEMON_TOWER_3F,                             9,  9 ; 105
-	map_const POKEMON_TOWER_4F,                             9,  9 ; 106
-	map_const POKEMON_TOWER_5F,                             9,  9 ; 107
-	map_const POKEMON_TOWER_6F,                             9,  9 ; 108
-	map_const POKEMON_TOWER_7F,                             9,  9 ; 109
-	map_const MT_SILVER_RUINS,                             16, 24 ; 110
-	map_const MT_SILVER_RUINS_B1F,                         16, 16 ; 111
+	map_const ROCKET_HIDEOUT_B3F,                          11, 12 ;100
+	map_const ROCKET_HIDEOUT_B4F,                          11, 12 ;101
+	map_const ROCKET_HIDEOUT_ELEVATOR,                      3,  3 ;102
+	map_const POKEMON_TOWER_1F,                             9,  9 ;103
+	map_const POKEMON_TOWER_2F,                             9,  9 ;104
+	map_const POKEMON_TOWER_3F,                             9,  9 ;105
+	map_const POKEMON_TOWER_4F,                             9,  9 ;106
+	map_const POKEMON_TOWER_5F,                             9,  9 ;107
+	map_const POKEMON_TOWER_6F,                             9,  9 ;108
+	map_const POKEMON_TOWER_7F,                             9,  9 ;109
+	map_const MT_SILVER_RUINS,                             16, 24 ;110
+	map_const MT_SILVER_RUINS_B1F,                         16, 16 ;111
 
 	newgroup                                                      ;  4
 
@@ -323,11 +323,11 @@ ENDM
 	map_const BLUES_HOUSE,                                  4,  4 ;  5
 	map_const OAKS_LAB,                                     5,  6 ;  6
 	map_const SEAFLOOR_CAVERN_ENTRANCE,                    10, 10 ;  7
-	map_const SEAFLOOR_CAVERN_ROOM1,                       10, 10 ;  8
-	map_const SEAFLOOR_CAVERN_ROOM4,                        9, 10 ;  9
-	map_const SEAFLOOR_CAVERN_ROOM5,                       10, 11 ; 10
-	map_const SEAFLOOR_CAVERN_ROOM8,                        5,  7 ; 11
-	map_const SEAFLOOR_CAVERN_ROOM9,                       13, 23 ; 12
+	map_const SEAFLOOR_CAVERN_ROOM_1,                      10, 10 ;  8
+	map_const SEAFLOOR_CAVERN_ROOM_4,                       9, 10 ;  9
+	map_const SEAFLOOR_CAVERN_ROOM_5,                      10, 11 ; 10
+	map_const SEAFLOOR_CAVERN_ROOM_8,                       5,  7 ; 11
+	map_const SEAFLOOR_CAVERN_ROOM_9,                      10,  6 ; 12
 
 	newgroup                                                      ; 14
 
@@ -366,7 +366,7 @@ ENDM
 	map_const KARENS_ROOM,                                  5,  9 ;  6
 	map_const LANCES_ROOM,                                  5, 12 ;  7
 	map_const HALL_OF_FAME,                                 5,  7 ;  8
-	map_const INDIGO_PLATEAU_OUTSIDE, 10, 10 ;9
+	map_const INDIGO_PLATEAU_OUTSIDE,                      10, 10 ;  9
 
 	newgroup                                                      ; 17
 

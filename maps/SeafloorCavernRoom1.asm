@@ -8,8 +8,8 @@ SeafloorCavernRoom1_MapEvents:
 
 	db 3 ; warp events
 	warp_event  4, 16, SEAFLOOR_CAVERN_ENTRANCE, 1
-	warp_event 16, 12, SEAFLOOR_CAVERN_ROOM5, 1
-	warp_event  5,  2, SEAFLOOR_CAVERN_ROOM4, 4
+	warp_event 16, 12, SEAFLOOR_CAVERN_ROOM_5, 1
+	warp_event  5,  2, SEAFLOOR_CAVERN_ROOM_4, 4
 
 	db 0 ; coord events
 

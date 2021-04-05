@@ -505,11 +505,11 @@
 	map_attributes BluesHouse, BLUES_HOUSE, $00, 0
 	map_attributes OaksLab, OAKS_LAB, $00, 0
 	map_attributes SeafloorCavernEntrance, SEAFLOOR_CAVERN_ENTRANCE, $09, 0
-	map_attributes SeafloorCavernRoom1, SEAFLOOR_CAVERN_ROOM1, $09, 0
-	map_attributes SeafloorCavernRoom4, SEAFLOOR_CAVERN_ROOM4, $09, 0
-	map_attributes SeafloorCavernRoom5, SEAFLOOR_CAVERN_ROOM5, $09, 0
-	map_attributes SeafloorCavernRoom8, SEAFLOOR_CAVERN_ROOM8, $09, 0
-	map_attributes SeafloorCavernRoom9, SEAFLOOR_CAVERN_ROOM9, $09, 0
+	map_attributes SeafloorCavernRoom1, SEAFLOOR_CAVERN_ROOM_1, $09, 0
+	map_attributes SeafloorCavernRoom4, SEAFLOOR_CAVERN_ROOM_4, $09, 0
+	map_attributes SeafloorCavernRoom5, SEAFLOOR_CAVERN_ROOM_5, $09, 0
+	map_attributes SeafloorCavernRoom8, SEAFLOOR_CAVERN_ROOM_8, $09, 0
+	map_attributes SeafloorCavernRoom9, SEAFLOOR_CAVERN_ROOM_9, $09, 0
 	map_attributes PewterNidoranSpeechHouse, PEWTER_NIDORAN_SPEECH_HOUSE, $00, 0
 	map_attributes PewterGym, PEWTER_GYM, $00, 0
 	map_attributes PewterMart, PEWTER_MART, $00, 0

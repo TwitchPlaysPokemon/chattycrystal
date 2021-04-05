@@ -1,5 +1,5 @@
 	object_const_def ; object_event constants
-	const SEAFLOOR_CAVERN_ROOM9_MARINA
+	const SEAFLOOR_CAVERN_ROOM_9_MARINA
 
 SeafloorCavernRoom9_MapScripts:
 	db 0 ; scene scripts
@@ -46,7 +46,7 @@ Marina:
 	clearevent EVENT_POKEMON_LEAGUE_NO_REMATCH
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
-	disappear SEAFLOOR_CAVERN_ROOM9_MARINA
+	disappear SEAFLOOR_CAVERN_ROOM_9_MARINA
 	pause 15
 	special FadeInQuickly
 	pause 30
@@ -111,7 +111,7 @@ SeafloorCavernRoom9_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  5, 4, SEAFLOOR_CAVERN_ROOM8, 2
+	warp_event  5, 4, SEAFLOOR_CAVERN_ROOM_8, 2
 
 	db 0 ; coord events
 

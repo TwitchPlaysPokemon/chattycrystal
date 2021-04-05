@@ -24,7 +24,7 @@ SeafloorCavernEntrance_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  9,  1, SEAFLOOR_CAVERN_ROOM1, 1
+	warp_event  9,  1, SEAFLOOR_CAVERN_ROOM_1, 1
 
 	db 1 ; coord events
 	coord_event  3, 13, SCENE_ALWAYS, SeafloorCavernEntrance_Leave

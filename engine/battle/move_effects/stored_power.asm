@@ -28,10 +28,10 @@ BattleCommand_Stored_Power:
 	; ...and double twice to end up with 20 * counter. This might overflow, so halve defense if it does
 	rept 2
 		add a, a
-		jr nc, .ok\@
+		jr nc, :+
 		rra
 		srl c
-.ok\@
+:
 	endr
 	ld d, a
 

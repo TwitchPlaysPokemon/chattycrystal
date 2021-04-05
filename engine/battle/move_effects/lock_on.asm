@@ -1,7 +1,7 @@
 BattleCommand_LockOn:
 ; lockon
 
-	call CheckSubstituteOpp
+	farcall CheckSubstituteOpp
 	jr nz, .fail
 
 	ld a, [wAttackMissed]

@@ -113,19 +113,19 @@ JohtoWaterWildMons:
 	map_id ROUTE_30
 	db 2 percent ; encounter rate
 	dbw 30, POLIWAG
-	dbw 25, POLIWAG
+	dbw 25, SHELLOS
 	dbw 30, POLIWHIRL
 
 	map_id ROUTE_31
 	db 2 percent ; encounter rate
 	dbw 30, POLIWAG
-	dbw 25, POLIWAG
+	dbw 25, SHELLOS
 	dbw 30, POLIWHIRL
 
 	map_id ROUTE_32
 	db 6 percent ; encounter rate
 	dbw 25, TENTACOOL
-	dbw 30, QUAGSIRE
+	dbw 30, SHELLOS
 	dbw 30, TENTACRUEL
 
 	map_id ROUTE_34
@@ -155,7 +155,7 @@ JohtoWaterWildMons:
 	map_id ROUTE_42
 	db 4 percent ; encounter rate
 	dbw 43, GOLDEEN
-	dbw 38, GOLDEEN
+	dbw 38, SHELLOS
 	dbw 43, SEAKING
 
 	map_id ROUTE_43

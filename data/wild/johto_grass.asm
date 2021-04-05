@@ -1277,7 +1277,7 @@ JohtoGrassWildMons:
 	dbw 9, EKANS
 	dbw 12, BELLSPROUT
 	dbw 11, LOTAD
-	dbw 10, MUDKIP
+	dbw 10, SHELLOS
 	dbw 12, PIDGEY
 	dbw 12, HOPPIP
 	dbw 12, HOPPIP
@@ -1287,10 +1287,10 @@ JohtoGrassWildMons:
 	dbw 11, LOTAD
 	dbw 10, MUDKIP
 	dbw 12, PIDGEY
-	dbw 12, HOPPIP
-	dbw 12, HOPPIP
+	dbw 12, MAREEP
+	dbw 12, MAREEP
 	; nite
-	dbw 9, WOOPER
+	dbw 9, SHELLOS
 	dbw 12, BELLSPROUT
 	dbw 11, ZUBAT
 	dbw 10, MUDKIP
@@ -1521,7 +1521,7 @@ JohtoGrassWildMons:
 	dbw 44, CROAGUNK
 	dbw 44, FARFETCH_D
 	dbw 45, TOTODILE
-	dbw 43, FURRET
+	dbw 43, FLAAFFY
 	dbw 45, GIRAFARIG
 	dbw 45, FURRET
 	; day
@@ -1529,7 +1529,7 @@ JohtoGrassWildMons:
 	dbw 44, CROAGUNK
 	dbw 44, FARFETCH_D
 	dbw 45, TOTODILE
-	dbw 43, FURRET
+	dbw 43, FLAAFFY
 	dbw 45, GIRAFARIG
 	dbw 45, FURRET
 	; nite

@@ -1,0 +1,6 @@
+// base ROMs
+baserom.gbc=Pokémon Crystal v1.0
+baserom11.gbc=Pokémon Crystal v1.1
+
+// generated ROM
+chattycrystal.gbc=TPP Chatty Crystal

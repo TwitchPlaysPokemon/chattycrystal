@@ -14,6 +14,10 @@ bank_ends.txt
 *.gbc
 *.gb
 
+# patches
+*.bsp
+*.ips
+
 # for any of the poor souls with save game files in their working directory
 *.sgm
 *.sav

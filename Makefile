@@ -38,15 +38,18 @@ RGBLINK ?= $(RGBDS)rgblink
 .PRECIOUS:
 .SECONDARY:
 
-all: chattycrystal.gbc
+all: $(roms)
+
+patch: $(roms:.gbc=.bsp)
 
 clean: tidy
 	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" \) -delete
 	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 
 tidy:
-	rm -f $(roms) $(crystal_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
-	#$(MAKE) clean -C tools/
+	rm -f $(roms) $(crystal_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) $(roms:.gbc=.bsp)
+	$(MAKE) clean -C tools/
+	$(MAKE) clean -C bspbuild/
 
 tools:
 	$(MAKE) -C tools/
@@ -74,13 +77,25 @@ endif
 
 
 chattycrystal.gbc: $(crystal_obj) chattycrystal.link
-	$(RGBLINK) -n chattycrystal.sym -m chattycrystal.map -l chattycrystal.link -o $@ $(crystal_obj)
-	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t CHATTY_CRY $@
+	$(RGBLINK) -p 0xff -n chattycrystal.sym -m chattycrystal.map -l chattycrystal.link -o $@ $(crystal_obj)
+	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0xff -r 3 -t CHATTY_CRY $@
 	tools/sort_symfile.sh chattycrystal.sym
 	tools/bankends chattycrystal.map > bank_ends.txt
 
 %.lz: %
 	tools/lzcomp -- $< $@
+
+%.bsp: %.gbc baserom.gbc baserom11.gbc bspbuild/bspbuild titles.txt
+	bspbuild/bspbuild -m ips -s baserom.gbc baserom11.gbc -m xor-rle -t $< -f 0x4000 -pb 0xff --check-fragment-swap --titles titles.txt -o $@
+
+bspbuild/bspbuild:
+	$(MAKE) -C bspbuild/
+
+baserom.gbc:
+	[ `sha1sum -b $@ | cut -c 1-40` = f4cd194bdee0d04ca4eac29e09b8e4e9d818c133 ]
+
+baserom11.gbc:
+	[ `sha1sum -b $@ | cut -c 1-40` = f2f52230b536214ef7c9924f483392993e226cfb ]
 
 
 ### Pokemon pic animation rules

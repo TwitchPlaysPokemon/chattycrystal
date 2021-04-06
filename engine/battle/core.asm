@@ -6275,7 +6275,7 @@ LoadEnemyMon:
 ; These are the DVs we'll use if we're actually in a trainer battle
 	ld a, [wBattleMode]
 	dec a
-	jr nz, .UpdateDVs
+	jp nz, .UpdateDVs
 
 ; Wild DVs
 ; Here's where the fun starts
@@ -6340,7 +6340,41 @@ LoadEnemyMon:
 
 	ld a, [wForceWildForme]
 	and a
+	jr nz, .force_forme
+	ld a, [wEnemyMonSpecies]
+	call GetPokemonIndexFromID
+	assert GASTRODON == (SHELLOS + 1)
+	assert HIGH(SHELLOS) == 1
+	assert HIGH(GASTRODON) == 1
+	dec h
+	jr nz, .UpdateDVs
+	ld a, l
+	sub LOW(SHELLOS)
+	jr z, .choose_west_east
+	dec a
+	jr nz, .UpdateDVs
+
+.choose_west_east
+	call IsInJohto
+	xor b
+	xor c
+	ld l, a
+	swap a
+	xor l
+	ld l, a
+	rrca
+	rrca
+	xor l
+	ld l, a
+	rrca
+	xor l
+	and 1
 	jr z, .UpdateDVs
+	xor c
+	ld c, a
+	jr .UpdateDVs
+
+.force_forme
 	push bc
 	ld hl, sp + 0
 	predef GetCurrentForme
@@ -6434,7 +6468,7 @@ LoadEnemyMon:
 
 ; No reason to keep going if length > 1536 mm (i.e. if HIGH(length) > 6 feet)
 	ld a, [wMagikarpLength]
-	cp HIGH(1536) ; should be "cp 5", since 1536 mm = 5'0", but HIGH(1536) = 6
+	cp 5
 	jr nz, .CheckMagikarpArea
 
 ; 5% chance of skipping both size checks
@@ -6443,8 +6477,8 @@ LoadEnemyMon:
 	jr c, .CheckMagikarpArea
 ; Try again if length >= 1616 mm (i.e. if LOW(length) >= 4 inches)
 	ld a, [wMagikarpLength + 1]
-	cp LOW(1616) ; should be "cp 4", since 1616 mm = 5'4", but LOW(1616) = 80
-	jr nc, .GenerateDVs
+	cp 4
+	jp nc, .GenerateDVs
 
 ; 20% chance of skipping this check
 	call Random
@@ -6452,36 +6486,23 @@ LoadEnemyMon:
 	jr c, .CheckMagikarpArea
 ; Try again if length >= 1600 mm (i.e. if LOW(length) >= 3 inches)
 	ld a, [wMagikarpLength + 1]
-	cp LOW(1600) ; should be "cp 3", since 1600 mm = 5'3", but LOW(1600) = 64
+	cp 3
 	jp nc, .GenerateDVs
 
 .CheckMagikarpArea:
-; The "jr z" checks are supposed to be "jr nz".
-
-; Instead, all maps in GROUP_LAKE_OF_RAGE (Mahogany area)
-; and Routes 20 and 44 are treated as Lake of Rage.
-
-; This also means Lake of Rage Magikarp can be smaller than ones
-; caught elsewhere rather than the other way around.
-
-; Intended behavior enforces a minimum size at Lake of Rage.
-; The real behavior prevents a minimum size in the Lake of Rage area.
-
-; Moreover, due to the check not being translated to feet+inches, all Magikarp
-; smaller than 4'0" may be caught by the filter, a lot more than intended.
 	ld a, [wMapGroup]
 	cp GROUP_LAKE_OF_RAGE
-	jr z, .Happiness
+	jr nz, .Happiness
 	ld a, [wMapNumber]
 	cp MAP_LAKE_OF_RAGE
-	jr z, .Happiness
+	jr nz, .Happiness
 ; 40% chance of not flooring
 	call Random
-	cp 40 percent - 2
+	cp 40 percent
 	jr c, .Happiness
 ; Try again if length < 1024 mm (i.e. if HIGH(length) < 3 feet)
 	ld a, [wMagikarpLength]
-	cp HIGH(1024) ; should be "cp 3", since 1024 mm = 3'4", but HIGH(1024) = 4
+	cp 3
 	jp c, .GenerateDVs ; try again
 
 ; Finally done with DVs

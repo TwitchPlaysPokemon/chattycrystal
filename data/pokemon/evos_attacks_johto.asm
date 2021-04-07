@@ -1171,10 +1171,9 @@ HeracrossEvosAttacks:
 	dbw 1, LEER
 	dbw 1, FURY_ATTACK
 	dbw 1, ENDURE
-	dbw 5, HORN_ATTACK
 	dbw 10, AERIAL_ACE
 	dbw 15, COUNTER
-	dbw 21, HORN_LEECH ; non-canon, for fun
+	dbw 21, HORN_ATTACK
 	dbw 26, BRICK_BREAK
 	dbw 32, PIN_MISSILE
 	dbw 37, THRASH

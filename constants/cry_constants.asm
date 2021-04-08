@@ -76,3 +76,4 @@
 ; gen 3+
 	const CRY_MANECTRIC      ; 44
 	const CRY_GASTRODON      ; 45
+	const CRY_CHATOT         ; 46

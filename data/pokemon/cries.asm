@@ -331,7 +331,7 @@ PokemonCries::
 	mon_cry CRY_PIDGEOTTO,   $ef6,  $300 ; INFERNAPE
 	mon_cry CRY_PSYDUCK,     $240,  $0f0 ; PIPLUP
 	mon_cry CRY_RAICHU,     -$006,  $0b0 ; PRINPLUP
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; EMPOLEON - PLACEHOLDER
+	mon_cry CRY_BLASTOISE,   $093,  $15a ; EMPOLEON
 	mon_cry CRY_MARILL,      $030,  $190 ; BIDOOF
 	mon_cry CRY_RAIKOU,      $030,  $150 ; BIBAREL
 	mon_cry CRY_RATTATA,     $065,  $270 ; SHINX
@@ -352,7 +352,7 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BRONZOR - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BRONZONG - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BONSLY - PLACEHOLDER
-	mon_cry CRY_ENTEI,       $000,  $1a0 ; CHATOT - TODO: port chatot cry (not that important as it's played by the controller)
+	mon_cry CRY_CHATOT,      $002,  $120 ; CHATOT
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CROAGUNK - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TOXICROAK - PLACEHOLDER
 	mon_cry CRY_VENONAT,     $03d,  $160 ; LEAFEON

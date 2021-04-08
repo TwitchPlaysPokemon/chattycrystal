@@ -2077,3 +2077,26 @@ Cry_Gastrodon_Ch8_branch:
 	noise __,  3, $0, $0
 	loopchannel 3, Cry_Gastrodon_Ch8_branch
 	endchannel
+
+Cry_Chatot:
+	musicheader 3, 5, Cry_Chatot_Ch5
+	musicheader 1, 6, Cry_Chatot_Ch6
+	musicheader 1, 8, Cry_Chatot_Ch8
+
+Cry_Chatot_Ch5:
+	sound_duty 3, 2, 1, 0
+	sound __,  5, $d3, $0740
+	sound __, 10, $c6, $0720
+	sound __,  1, $00, $0000
+	sound __, 16, $e5, $0760
+	endchannel
+
+Cry_Chatot_Ch6:
+	sound_duty 1, 0, 0, 2
+	sound __,  2, $c3, $0701
+	sound __,  3, $c3, $0708
+	sound __, 10, $a6, $06f1
+	sound __,  1, $00, $0000
+	sound __, 16, $d7, $0741
+Cry_Chatot_Ch8:
+	endchannel

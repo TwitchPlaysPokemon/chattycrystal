@@ -1398,14 +1398,14 @@ MusicCommands:
 	dw MusicEE ; unused
 	dw Music_StereoPanning ; stereo panning
 	dw Music_SFXToggleNoise ; sfx noise sampling
-	dw MusicF1 ; nothing
-	dw MusicF2 ; nothing
-	dw MusicF3 ; nothing
-	dw MusicF4 ; nothing
-	dw MusicF5 ; nothing
-	dw MusicF6 ; nothing
-	dw MusicF7 ; nothing
-	dw MusicF8 ; nothing
+	dw GenericDummyFunction
+	dw GenericDummyFunction
+	dw GenericDummyFunction
+	dw GenericDummyFunction
+	dw GenericDummyFunction
+	dw GenericDummyFunction
+	dw GenericDummyFunction
+	dw GenericDummyFunction
 	dw MusicF9 ; unused
 	dw Music_SetCondition ; setcondition
 	dw Music_JumpIf ; jumpif
@@ -1413,16 +1413,6 @@ MusicCommands:
 	dw Music_LoopChannel ; loop
 	dw Music_CallChannel ; call
 	dw Music_EndChannel ; return
-
-MusicF1:
-MusicF2:
-MusicF3:
-MusicF4:
-MusicF5:
-MusicF6:
-MusicF7:
-MusicF8:
-	ret
 
 Music_EndChannel:
 ; called when $ff is encountered w/ subroutine flag set
@@ -1495,11 +1485,11 @@ Music_JumpChannel:
 
 Music_LoopChannel:
 ; loops xx - 1 times
-; 	00: infinite
+;   00: infinite
 ; params: 3
-;	xx ll hh
-;		xx : loop count
-;   	ll hh : pointer
+;   xx ll hh
+;     xx : loop count
+;     ll hh : pointer
 
 	; get loop count
 	call GetMusicByte
@@ -1558,7 +1548,7 @@ Music_SetCondition:
 ; set condition for a jump
 ; used with FB
 ; params: 1
-;	xx ; condition
+;   xx ; condition
 
 	; set condition
 	call GetMusicByte
@@ -1571,8 +1561,8 @@ Music_JumpIf:
 ; conditional jump
 ; used with FA
 ; params: 3
-; 	xx: condition
-;	ll hh: pointer
+;   xx: condition
+;   ll hh: pointer
 
 ; check condition
 	; a = condition
@@ -1618,7 +1608,7 @@ MusicEE:
 ; checks a byte in ram corresponding to the current channel
 ; doesn't seem to be set by any commands
 ; params: 2
-;		ll hh ; pointer
+;   ll hh ; pointer
 
 ; if ????, jump
 	; get channel
@@ -1688,11 +1678,11 @@ MusicE2:
 Music_Vibrato:
 ; vibrato
 ; params: 2
-;	1: [xx]
-	; delay in frames
-;	2: [yz]
-	; y: extent
-	; z: rate (# frames per cycle)
+;   1: [xx]
+;     delay in frames
+;   2: [yz]
+;     y: extent
+;     z: rate (# frames per cycle)
 
 	; set vibrato flag?
 	ld hl, CHANNEL_FLAGS2
@@ -1847,8 +1837,8 @@ Music_ToggleNoise:
 ; toggle music noise sampling
 ; can't be used as a straight toggle since the param is not read from on->off
 ; params:
-; 	noise on: 1
-; 	noise off: 0
+;   noise on: 1
+;   noise off: 0
 	; check if noise sampling is on
 	ld hl, CHANNEL_FLAGS1
 	add hl, bc
@@ -1868,8 +1858,8 @@ Music_ToggleNoise:
 Music_SFXToggleNoise:
 ; toggle sfx noise sampling
 ; params:
-;	on: 1
-; 	off: 0
+;   on: 1
+;   off: 0
 	; check if noise sampling is on
 	ld hl, CHANNEL_FLAGS1
 	add hl, bc
@@ -1888,7 +1878,7 @@ Music_SFXToggleNoise:
 
 Music_NoteType:
 ; note length
-;	# frames per 16th note
+;   # frames per 16th note
 ; intensity: see Music_Intensity
 ; params: 2
 	; note length
@@ -1929,7 +1919,7 @@ Music_DutyCycle:
 Music_Intensity:
 ; intensity
 ; params: 1
-;	hi: pressure
+;   hi: pressure
 ;   lo: velocity
 	call GetMusicByte
 	ld hl, CHANNEL_INTENSITY
@@ -1940,7 +1930,7 @@ Music_Intensity:
 Music_Tempo:
 ; global tempo
 ; params: 2
-;	de: tempo
+;   de: tempo
 	call GetMusicByte
 	ld d, a
 	call GetMusicByte
@@ -1999,7 +1989,7 @@ Music_Panning:
 Music_Volume:
 ; set volume
 ; params: 1
-;	see Volume
+;   see Volume
 	; read param even if it's not used
 	call GetMusicByte
 	; is the song fading?
@@ -2089,7 +2079,7 @@ Music_RestartChannel:
 Music_NewSong:
 ; new song
 ; params: 2
-;	de: song id
+;   de: song id
 	call GetMusicByte
 	ld e, a
 	call GetMusicByte
@@ -2134,10 +2124,10 @@ GetMusicByte:
 GetFrequency:
 ; generate frequency
 ; input:
-; 	d: octave
-;	e: pitch
+;   d: octave
+;   e: pitch
 ; output:
-; 	de: frequency
+;   de: frequency
 
 ; get octave
 	; get starting octave
@@ -2354,8 +2344,7 @@ _PlayMusic::
 	ld [wNoiseSampleAddress + 1], a
 	ld [wNoiseSampleDelay], a
 	ld [wMusicNoiseSampleSet], a
-	call MusicOn
-	ret
+	jp MusicOn
 
 _PlayCry::
 ; Play cry de using parameters:

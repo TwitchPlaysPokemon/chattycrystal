@@ -330,7 +330,7 @@ PokemonCries::
 	mon_cry CRY_PIDGEOTTO,   $fef,  $200 ; MONFERNO
 	mon_cry CRY_PIDGEOTTO,   $ef6,  $300 ; INFERNAPE
 	mon_cry CRY_PSYDUCK,     $240,  $0f0 ; PIPLUP
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; PRINPLUP - PLACEHOLDER
+	mon_cry CRY_RAICHU,     -$006,  $0b0 ; PRINPLUP
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; EMPOLEON - PLACEHOLDER
 	mon_cry CRY_MARILL,      $030,  $190 ; BIDOOF
 	mon_cry CRY_RAIKOU,      $030,  $150 ; BIBAREL

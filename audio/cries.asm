@@ -2100,3 +2100,33 @@ Cry_Chatot_Ch6:
 	sound __, 16, $d7, $0741
 Cry_Chatot_Ch8:
 	endchannel
+
+Cry_Amaura:
+	musicheader 2, 5, Cry_Amaura_Ch5
+	musicheader 1, 6, Cry_Amaura_Ch6
+
+Cry_Amaura_Ch5:
+	dutycycle 1
+	sound __,  5, $68, $075c
+	sound __,  3, $e8, $0764
+	sound __,  3, $e8, $076b
+	sound __,  3, $e8, $0770
+	sound __,  4, $f4, $076b
+	sound __,  5, $79, $075d
+	sound __,  7, $e8, $0782
+	sound __,  7, $e8, $0780
+	sound __,  7, $f1, $077e
+	endchannel
+
+Cry_Amaura_Ch6:
+	sound_duty 1, 0, 0, 1
+	sound __,  5, $68, $0758
+	sound __,  3, $e8, $0760
+	sound __,  3, $e8, $0767
+	sound __,  3, $e8, $076c
+	sound __,  4, $f4, $0767
+	sound __,  5, $79, $0759
+	sound __,  7, $e8, $077e
+	sound __,  7, $e8, $077c
+	sound __,  7, $f1, $077a
+	endchannel

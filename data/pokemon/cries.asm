@@ -286,7 +286,7 @@ PokemonCries::
 	mon_cry CRY_TEDDIURSA,   $6dd,  $100 ; EXPLOUD
 	mon_cry CRY_MUK,         $02d,  $0a0 ; MAKUHITA
 	mon_cry CRY_MUK,         $e22,  $1d0 ; HARIYAMA
-	mon_cry CRY_MARILL,      $124,  $0D0 ; AZURILL
+	mon_cry CRY_MARILL,      $124,  $0d0 ; AZURILL
 	mon_cry CRY_GIRAFARIG,   $076,  $100 ; SKITTY
 	mon_cry CRY_GIRAFARIG,   $058,  $400 ; DELCATTY
 	mon_cry CRY_CATERPIE,    $ee3,  $100 ; SABLEYE
@@ -309,7 +309,7 @@ PokemonCries::
 	mon_cry CRY_SQUIRTLE,    $084,  $23c ; MILOTIC
 	mon_cry CRY_CYNDAQUIL,   $10e,  $050 ; DUSKULL
 	mon_cry CRY_NATU,        $a5e,  $160 ; DUSCLOPS
-	mon_cry CRY_SPEAROW,     $795,  $0A7 ; ABSOL
+	mon_cry CRY_SPEAROW,     $795,  $0a7 ; ABSOL
 	mon_cry CRY_PSYDUCK,     $26f,  $0dd ; SNORUNT
 	mon_cry CRY_SEEL,        $130,  $060 ; SPHEAL
 	mon_cry CRY_CLEFFA,      $e88,  $140 ; SEALEO
@@ -380,7 +380,7 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CLAWITZER - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; HELIOPTILE - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; HELIOLISK - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; AMAURA - PLACEHOLDER
+	mon_cry CRY_AMAURA,     -$002,  $13d ; AMAURA
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; AURORUS - PLACEHOLDER
 	mon_cry CRY_VENONAT,     $0b0,  $16f ; SYLVEON
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GOOMY - PLACEHOLDER
@@ -388,8 +388,8 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GOODRA - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CRABRAWLER - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CRABOMINABLE - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CUTIEFLY - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; RIBOMBEE - PLACEHOLDER
+	mon_cry CRY_PICHU,      -$03e,  $0fc ; CUTIEFLY
+	mon_cry CRY_PICHU,      -$029,  $3a0 ; RIBOMBEE
 	mon_cry CRY_EKANS,       $0ff,  $140 ; ONIXTRET
 	mon_cry CRY_CHIKORITA,  -$010,  $0b0 ; CHIQUIRTLE
 	mon_cry CRY_CHIKORITA,  -$022,  $120 ; BAYTORTLE

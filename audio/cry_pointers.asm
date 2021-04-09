@@ -70,3 +70,4 @@ Cries:
 	dba Cry_Manectric
 	dba Cry_Gastrodon
 	dba Cry_Chatot
+	dba Cry_Amaura

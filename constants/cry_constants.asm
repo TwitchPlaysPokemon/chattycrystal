@@ -77,3 +77,4 @@
 	const CRY_MANECTRIC      ; 44
 	const CRY_GASTRODON      ; 45
 	const CRY_CHATOT         ; 46
+	const CRY_AMAURA         ; 47

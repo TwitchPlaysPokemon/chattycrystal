@@ -40,3 +40,4 @@ IconPointers:
 	dw SudowoodoIcon
 	dw BigmonIcon
 	dw PhanceroIcon
+	dw FusionIcon

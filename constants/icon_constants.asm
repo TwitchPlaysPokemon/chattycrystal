@@ -40,6 +40,7 @@
 	const ICON_SUDOWOODO
 	const ICON_BIGMON
 	const ICON_PHANCERO
+	const ICON_FUSION
 
 ; LoadMenuMonIcon.Jumptable indexes (see engine/gfx/mon_icons.asm)
 	const_def

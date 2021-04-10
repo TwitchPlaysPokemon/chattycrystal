@@ -349,8 +349,8 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LOPUNNY - PLACEHOLDER
 	mon_cry CRY_SLOWPOKE,   -$016,  $1c4 ; STUNKY
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SKUNTANK - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BRONZOR - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BRONZONG - PLACEHOLDER
+	mon_cry CRY_EKANS,       $101,  $086 ; BRONZOR
+	mon_cry CRY_EKANS,       $12a,  $170 ; BRONZONG
 	mon_cry CRY_SLOWPOKE,    $03c,  $15a ; BONSLY
 	mon_cry CRY_CHATOT,      $002,  $120 ; CHATOT
 	mon_cry CRY_DIGLETT,    -$133,  $125 ; CROAGUNK
@@ -370,9 +370,9 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; KROOKODILE - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DUCKLETT - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SWANNA - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TYNAMO - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; EELEKTRIK - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; EELEKTROSS - PLACEHOLDER
+	mon_cry CRY_SENTRET,     $03a,  $2a8 ; TYNAMO
+	mon_cry CRY_LAPRAS,     -$159,  $145 ; EELEKTRIK
+	mon_cry CRY_BLASTOISE,   $06f,  $148 ; EELEKTROSS
 	mon_cry CRY_WOOPER,      $030,  $0d0 ; LITWICK
 	mon_cry CRY_CLEFAIRY,   -$02e,  $1dd ; LAMPENT
 	mon_cry CRY_ENTEI,       $078,  $4c0 ; CHANDELURE

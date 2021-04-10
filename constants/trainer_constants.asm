@@ -861,6 +861,7 @@ CHRIS EQU __enum__
 
 	trainerclass NATE_ELITE_4 ; 47
 	trainervalue R_BLACK22
+	trainervalue R_BLACK23
 
 	trainerclass POKEMON_PROF ; 48
 

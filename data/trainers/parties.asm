@@ -4383,6 +4383,88 @@ NateElite4Group:
 	bigdw 102
 	db "L GGG HGMY@"
 	db -1 ; end
+	
+	next_list_item ; R_BLACK23
+	db "♀♀R@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	db 100
+	dw DARKRAI
+	db POISON_BARB
+	dw PSYCHIC_M, DARK_PULSE, NASTY_PLOT, DARK_VOID
+	bigdw $FFFF
+	bigdw 268
+	bigdw 244
+	bigdw 224
+	bigdw 297
+	bigdw 316
+	bigdw 211
+	db "<DX><DX>w@"
+	
+	db 100
+	dw KROOKODILE
+	db LEFTOVERS
+	dw ROCK_SLIDE, DRAGON_CLAW, CRUNCH, EARTHQUAKE
+	bigdw $0FFF
+	bigdw 344
+	bigdw 286
+	bigdw 175
+	bigdw 216
+	bigdw 177
+	bigdw 171
+	db "L GGG HGMY@"
+	
+	db 100
+	dw PORYGON_Z
+	db POLKADOT_BOW
+	dw TRI_ATTACK, ICE_BEAM, DISCHARGE, SHADOW_BALL
+	bigdw $FAAA
+	bigdw 306
+	bigdw 213
+	bigdw 162
+	bigdw 214
+	bigdw 336
+	bigdw 194
+	db "APSEPIEMG@"
+	
+	db 100
+	dw DUSKNOIR
+	db LITEBLUEMAIL
+	dw SUCKER_PUNCH, EARTHQUAKE, WILL_O_WISP, STRENGTH
+	bigdw $FFFF
+	bigdw 239
+	bigdw 237
+	bigdw 294
+	bigdw 123
+	bigdw 180
+	bigdw 297
+	db "lierO 6@"
+	
+	db 100
+	dw MILOTIC
+	db LEFTOVERS
+	dw SURF, ICE_BEAM, TOXIC, RECOVER
+	bigdw $FFFF
+	bigdw 314
+	bigdw 185
+	bigdw 190
+	bigdw 234
+	bigdw 260
+	bigdw 278
+	db "TRSNNEAESK@"
+	
+	db 100
+	dw EELEKTROSS
+	db MAGNET
+	dw CRUNCH, THUNDERBOLT, DRAIN_PUNCH, FLAMETHROWER
+	bigdw $FFFF
+	bigdw 315
+	bigdw 276
+	bigdw 213
+	bigdw 130
+	bigdw 257
+	bigdw 203
+	db "pe@"
+
+	db -1 ; end
 
 	end_list_items
 

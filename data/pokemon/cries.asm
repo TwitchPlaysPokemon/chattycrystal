@@ -342,7 +342,7 @@ PokemonCries::
 	mon_cry CRY_CHATOT,      $03c,  $128 ; BURMY
 	mon_cry CRY_NIDOQUEEN,  -$05c,  $0d8 ; MOTHIM
 	mon_cry CRY_BLASTOISE,   $203,  $0c4 ; BUIZEL
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; FLOATZEL - PLACEHOLDER
+	mon_cry CRY_PIDGEOTTO,  -$0ca,  $240 ; FLOATZEL
 	mon_cry CRY_WEEDLE,      $0ff,  $0aa ; SHELLOS
 	mon_cry CRY_GASTRODON,   $830,  $050 ; GASTRODON
 	mon_cry CRY_BUNEARY,    -$012,  $09a ; BUNEARY
@@ -353,7 +353,7 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BRONZONG - PLACEHOLDER
 	mon_cry CRY_SLOWPOKE,    $03c,  $15a ; BONSLY
 	mon_cry CRY_CHATOT,      $002,  $120 ; CHATOT
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CROAGUNK - PLACEHOLDER
+	mon_cry CRY_DIGLETT,    -$133,  $125 ; CROAGUNK
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TOXICROAK - PLACEHOLDER
 	mon_cry CRY_VENONAT,     $03d,  $160 ; LEAFEON
 	mon_cry CRY_METAPOD,     $fc6,  $1aa ; GLACEON

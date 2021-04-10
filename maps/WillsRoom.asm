@@ -46,7 +46,14 @@ WillScript_Battle:
 	waitbutton
 	closetext
 	winlosstext HostSilenceText, 0
+	checkevent EVENT_MARINA_DEFEATED
+	iftrue .rematch
 	loadtrainer XY_SERENA2, ETR
+	sjump .loaded
+
+.rematch
+	loadtrainer XY_SERENA2, ETR_REMATCH
+.loaded
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_WILL

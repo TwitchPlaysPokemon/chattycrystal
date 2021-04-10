@@ -46,7 +46,14 @@ KogaScript_Battle:
 	waitbutton
 	closetext
 	winlosstext HostSilenceText, 0
+	checkevent EVENT_MARINA_DEFEATED
+	iftrue .rematch
 	loadtrainer NATE_ELITE_4, R_BLACK22
+	sjump .loaded
+
+.rematch
+	loadtrainer NATE_ELITE_4, R_BLACK23
+.loaded
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KOGA

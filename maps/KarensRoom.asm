@@ -46,7 +46,14 @@ KarenScript_Battle:
 	waitbutton
 	closetext
 	winlosstext HostSilenceText, 0
+	checkevent EVENT_MARINA_DEFEATED
+	iftrue .rematch
 	loadtrainer GREEN_MAY, A_EMERALD
+	sjump .loaded
+
+.rematch
+	loadtrainer GREEN_MAY, A_EMERALD_REMATCH
+.loaded
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_KAREN

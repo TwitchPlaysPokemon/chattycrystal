@@ -30,6 +30,10 @@ HallOfFame_MapScripts:
 	setevent EVENT_BEAT_ELITE_FOUR
 	setevent EVENT_RIVAL_SPROUT_TOWER
 	clearevent EVENT_RED_IN_MT_SILVER
+	checkevent EVENT_MARINA_DEFEATED
+	iffalse .no_rematch
+	setevent EVENT_BEAT_ELITE_FOUR_REMATCH
+.no_rematch
 	farscall ResetUniqueMons
 	setmapscene SPROUT_TOWER_3F, SCENE_FINISHED
 	special HealParty

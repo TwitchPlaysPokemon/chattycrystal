@@ -33,18 +33,12 @@ BurnedTower1F_MapScripts:
 	turnobject BURNEDTOWER1F_EUSINE, DOWN
 	showemote EMOTE_SHOCK, BURNEDTOWER1F_EUSINE, 15
 	applymovement BURNEDTOWER1F_EUSINE, BurnedTower1FEusineMovement
-	opentext
-	writetext HostSilenceText
-	waitbutton
-	closetext
+	scall BurnedTower1F_DoHostSilenceText
 	winlosstext HostSilenceText, HostSilenceText
 	loadtrainer CY_ROBORED, X_CHATTYYELLOW1
 	startbattle
 	reloadmapafterbattle
-	opentext
-	writetext HostSilenceText
-	waitbutton
-	closetext
+	scall BurnedTower1F_DoHostSilenceText
 	moveobject BURNEDTOWER1F_EUSINE, 9, 14
 	setscene SCENE_BURNEDTOWER1F_RIVAL_BATTLE
 	end
@@ -58,10 +52,7 @@ BurnedTowerRivalBattleScript:
 	applymovement PLAYER, BurnedTowerMovement_PlayerWalksToSilver
 	applymovement BURNEDTOWER1F_SILVER, BurnedTowerMovement_SilverWalksToPlayer
 	playmusic MUSIC_RIVAL_ENCOUNTER
-	opentext
-	writetext HostSilenceText
-	waitbutton
-	closetext
+	scall BurnedTower1F_DoHostSilenceText
 	winlosstext HostSilenceText, HostSilenceText
 	setlasttalked BURNEDTOWER1F_SILVER
 	loadtrainer BABA, BABA2
@@ -69,10 +60,7 @@ BurnedTowerRivalBattleScript:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext HostSilenceText
-	waitbutton
-	closetext
+	scall BurnedTower1F_DoHostSilenceText
 	setscene SCENE_BURNEDTOWER1F_NOTHING
 	setevent EVENT_RIVAL_BURNED_TOWER
 	special FadeOutMusic
@@ -87,20 +75,17 @@ BurnedTowerRivalBattleScript:
 	applymovement PLAYER, BurnedTower1FMovement_PlayerStartsToFall
 	playsound SFX_KINESIS
 	showemote EMOTE_SHOCK, BURNEDTOWER1F_SILVER, 20
-	opentext
-	writetext HostSilenceText
-	waitbutton
-	closetext
+	scall BurnedTower1F_DoHostSilenceText
 	setevent EVENT_HOLE_IN_BURNED_TOWER
 	pause 15
 	warpcheck
 	end
 
 BurnedTower1FEusineScript:
-	jumptextfaceplayer HostSilenceText
-
 BurnedTower1FMortyScript:
-	jumptextfaceplayer HostSilenceText
+	faceplayer
+BurnedTower1F_DoHostSilenceText:
+	jumptext HostSilenceText
 
 BurnedTower1FRock:
 	jumpstd smashrock

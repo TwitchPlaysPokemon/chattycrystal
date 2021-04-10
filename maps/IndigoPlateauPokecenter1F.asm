@@ -60,10 +60,7 @@ PlateauRivalBattle2:
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	turnobject PLAYER, LEFT
 PlateauRivalBattleCommon:
-	opentext
-	writetext HostSilenceText
-	waitbutton
-	closetext
+	scall .do_host_text
 	winlosstext HostSilenceText, HostSilenceText
 	setlasttalked INDIGOPLATEAUPOKECENTER1F_SILVER
 	loadtrainer AC_CHRIS, EVAN5
@@ -71,10 +68,7 @@ PlateauRivalBattleCommon:
 	dontrestartmapmusic
 	reloadmapafterbattle
 	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext HostSilenceText
-	waitbutton
-	closetext
+	scall .do_host_text
 	turnobject PLAYER, DOWN
 	applymovement INDIGOPLATEAUPOKECENTER1F_SILVER, PlateauRivalLeavesMovement
 	disappear INDIGOPLATEAUPOKECENTER1F_SILVER
@@ -82,6 +76,9 @@ PlateauRivalBattleCommon:
 	playmapmusic
 	setflag EVENT_BEAT_RIVAL_IN_INDIGO
 	end
+
+.do_host_text
+	jumptext HostSilenceText
 
 IndigoPlateauPokecenter1FNurseScript:
 	jumpstd pokecenternurse
@@ -99,7 +96,12 @@ IndigoPlateauPokecenter1FSpecialClerkScript:
 	end
 
 IndigoPlateauPokecenter1FCooltrainerMScript:
+	checkevent EVENT_MARINA_DEFEATED
+	iftrue .rematch
 	jumptextfaceplayer IndigoPlateauPokecenter1FCooltrainerMText
+
+.rematch
+	jumptextfaceplayer IndigoPlateauPokecenter1FCooltrainerMRematchText
 
 TeleportGuyScript:
 	faceplayer
@@ -166,6 +168,13 @@ IndigoPlateauPokecenter1FCooltrainerMText:
 	line "them all. If you"
 	para "lose, you have to"
 	line "start all over!"
+	done
+
+IndigoPlateauPokecenter1FCooltrainerMRematchText:
+	text "The ELITE FOUR is"
+	line "now stronger than"
+	para "ever. Are you"
+	line "ready for them?"
 	done
 
 TeleportGuyText1:

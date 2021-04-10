@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
-	const BRUNOSROOM_BRUNO
+	const BRUNOSROOM_PAUL
+	const BRUNOSROOM_KKKB
 
 BrunosRoom_MapScripts:
 	db 2 ; scene scripts
@@ -35,6 +36,9 @@ BrunosRoom_MapScripts:
 	setscene SCENE_FINISHED
 	setevent EVENT_BRUNOS_ROOM_ENTRANCE_CLOSED
 	waitsfx
+	checkevent EVENT_MARINA_DEFEATED
+	iffalse GenericDummyScript
+	appear BRUNOSROOM_KKKB
 	end
 
 BrunoScript_Battle:
@@ -46,7 +50,14 @@ BrunoScript_Battle:
 	waitbutton
 	closetext
 	winlosstext HostSilenceText, 0
+	checkevent EVENT_MARINA_DEFEATED
+	iftrue .rematch
 	loadtrainer BROWN, PAUL_B
+	sjump .loaded
+
+.rematch
+	loadtrainer GSC_KRIS, KKKB
+.loaded
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_ELITE_4_BRUNO
@@ -88,5 +99,6 @@ BrunosRoom_MapEvents:
 
 	db 0 ; bg events
 
-	db 1 ; object events
-	object_event  5,  7, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BrunoScript_Battle, -1
+	db 2 ; object events
+	object_event  5,  7, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BrunoScript_Battle, EVENT_MARINA_DEFEATED
+	object_event  5,  7, SPRITE_KRIS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BrunoScript_Battle, EVENT_INITIALIZED_EVENTS

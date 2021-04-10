@@ -54,7 +54,14 @@ LancesRoomLanceScript:
 	closetext
 	winlosstext HostSilenceText, 0
 	setlasttalked LANCESROOM_LANCE
+	checkevent EVENT_MARINA_DEFEATED
+	iftrue .rematch
 	loadtrainer P_CYAN, CYAN
+	sjump .loaded
+
+.rematch
+	loadtrainer P_CYAN, CYAN_REMATCH
+.loaded
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle

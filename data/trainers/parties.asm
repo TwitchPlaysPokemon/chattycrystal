@@ -678,7 +678,7 @@ FCChrisGroup:
 	bigdw 125
 	bigdw 109
 	bigdw 99
-	db "T  SS@"
+	db "T  SS     @"
 
 	db -1 ;end
 
@@ -1691,7 +1691,7 @@ GreenMayGroup:
 	bigdw 106
 	bigdw 76
 	bigdw 111
-	db "A♀Nllllc33@"
+	db "A♀NIIIIc33@"
 
 	db 50
 	dw MIGHTYENA
@@ -1743,7 +1743,7 @@ GreenMayGroup:
 	bigdw 205
 	bigdw 143
 	bigdw 217
-	db "GJKLFFZ@"
+	db "GJKLFFZ @"
 
 	db 100
 	dw AZUMARILL
@@ -1774,7 +1774,7 @@ GreenMayGroup:
 	bigdw 133
 	bigdw 95
 	bigdw 140
-	db "A♀Nllllc33@"
+	db "A♀NIIIIc33@"
 
 	db 100
 	dw MIGHTYENA
@@ -1826,7 +1826,7 @@ GreenMayGroup:
 	bigdw 256
 	bigdw 178
 	bigdw 270
-	db "GJKLFFZ@"
+	db "GJKLFFZ @"
 
 	db 100
 	dw AZUMARILL
@@ -2320,7 +2320,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 9
 	bigdw 8
 	bigdw 8
-	db "OXXOZZ-:@"
+	db "OXXOZZ -:@"
 
 	db 6
 	dw WOOPER
@@ -2388,7 +2388,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 9
 	bigdw 10
 	bigdw 10
-	db "OXXOZZ-:@"
+	db "OXXOZZ -:@"
 
 	db 21
 	dw EEVEE
@@ -2510,7 +2510,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 22
 	bigdw 20
 	bigdw 20
-	db "KT@"
+	db "KT @"
 
 	next_list_item
 	db "AJDNNW@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME ; AJDNNW4
@@ -2539,7 +2539,7 @@ GSCHGSSChrisRivalGroup:
 	bigdw 54
 	bigdw 83
 	bigdw 93
-	db "AAJRR RRR@"
+	db "AAJRR  RRR@"
 
 	db 78
 	dw FERALIGATR

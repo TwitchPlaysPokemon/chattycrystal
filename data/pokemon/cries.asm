@@ -346,20 +346,20 @@ PokemonCries::
 	mon_cry CRY_WEEDLE,      $0ff,  $0aa ; SHELLOS
 	mon_cry CRY_GASTRODON,   $830,  $050 ; GASTRODON
 	mon_cry CRY_BUNEARY,    -$012,  $09a ; BUNEARY
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LOPUNNY - PLACEHOLDER
+	mon_cry CRY_VULPIX,     -$00f,  $0a9 ; LOPUNNY
 	mon_cry CRY_SLOWPOKE,   -$016,  $1c4 ; STUNKY
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SKUNTANK - PLACEHOLDER
+	mon_cry CRY_BLASTOISE,   $0bc,  $0cd ; SKUNTANK
 	mon_cry CRY_EKANS,       $101,  $086 ; BRONZOR
 	mon_cry CRY_EKANS,       $12a,  $170 ; BRONZONG
 	mon_cry CRY_SLOWPOKE,    $03c,  $15a ; BONSLY
 	mon_cry CRY_CHATOT,      $002,  $120 ; CHATOT
 	mon_cry CRY_DIGLETT,    -$133,  $125 ; CROAGUNK
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; TOXICROAK - PLACEHOLDER
+	mon_cry CRY_SLOWKING,    $002,  $2c6 ; TOXICROAK
 	mon_cry CRY_VENONAT,     $03d,  $160 ; LEAFEON
 	mon_cry CRY_METAPOD,     $fc6,  $1aa ; GLACEON
 	mon_cry CRY_SEEL,        $212,  $270 ; PORYGON_Z
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DUSKNOIR - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; FROSLASS - PLACEHOLDER
+	mon_cry CRY_MAGCARGO,   -$01a,  $2e2 ; DUSKNOIR
+	mon_cry CRY_BLASTOISE,   $12b,  $0eb ; FROSLASS
 	mon_cry CRY_RAICHU,     -$1f8,  $0e8 ; DARKRAI
 	mon_cry CRY_PSYDUCK,     $16b,  $09c ; PANSAGE
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SIMISAGE - PLACEHOLDER

@@ -362,7 +362,7 @@ PokemonCries::
 	mon_cry CRY_BLASTOISE,   $12b,  $0eb ; FROSLASS
 	mon_cry CRY_RAICHU,     -$1f8,  $0e8 ; DARKRAI
 	mon_cry CRY_PSYDUCK,     $16b,  $09c ; PANSAGE
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SIMISAGE - PLACEHOLDER
+	mon_cry CRY_NIDORAN_M,  -$013,  $0d5 ; SIMISAGE
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DRILBUR - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; EXCADRILL - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SANDILE - PLACEHOLDER

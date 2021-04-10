@@ -71,3 +71,4 @@ Cries:
 	dba Cry_Gastrodon
 	dba Cry_Chatot
 	dba Cry_Amaura
+	dba Cry_Buneary

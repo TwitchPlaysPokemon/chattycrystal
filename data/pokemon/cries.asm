@@ -338,14 +338,14 @@ PokemonCries::
 	mon_cry CRY_PIDGEOTTO,   $010,  $180 ; LUXIO
 	mon_cry CRY_RAICHU,     -$038,  $0c8 ; LUXRAY
 	mon_cry CRY_VENONAT,     $00e,  $0be ; BUDEW
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; ROSERADE - PLACEHOLDER
+	mon_cry CRY_PICHU,      -$047,  $266 ; ROSERADE
 	mon_cry CRY_CHATOT,      $03c,  $128 ; BURMY
 	mon_cry CRY_NIDOQUEEN,  -$05c,  $0d8 ; MOTHIM
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BUIZEL - PLACEHOLDER
+	mon_cry CRY_BLASTOISE,   $203,  $0c4 ; BUIZEL
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; FLOATZEL - PLACEHOLDER
 	mon_cry CRY_WEEDLE,      $0ff,  $0aa ; SHELLOS
 	mon_cry CRY_GASTRODON,   $830,  $050 ; GASTRODON
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; BUNEARY - PLACEHOLDER
+	mon_cry CRY_BUNEARY,    -$012,  $09a ; BUNEARY
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; LOPUNNY - PLACEHOLDER
 	mon_cry CRY_SLOWPOKE,   -$016,  $1c4 ; STUNKY
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SKUNTANK - PLACEHOLDER

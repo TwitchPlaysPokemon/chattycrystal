@@ -2130,3 +2130,41 @@ Cry_Amaura_Ch6:
 	sound __,  7, $e8, $077c
 	sound __,  7, $f1, $077a
 	endchannel
+
+Cry_Buneary:
+	musicheader 2, 5, Cry_Buneary_Ch5
+	musicheader 1, 6, Cry_Buneary_Ch6
+
+Cry_Buneary_Ch5:
+	sound_duty 0, 0, 2, 2
+.loop
+	sound __,  4, $f2, $0740
+	sound __,  3, $c4, $073c
+	sound __,  2, $a4, $0737
+	sound __,  2, $84, $0732
+	sound __,  2, $54, $072d
+	loopchannel 3, .loop
+	sound_duty 0, 0, 1, 1
+	sound __, 12, $d8, $0720
+	sound __, 16, $d8, $0770
+	sound __,  1, $e8, $0765
+	sound __,  1, $e8, $075a
+	sound __, 16, $e5, $0750
+	endchannel
+
+Cry_Buneary_Ch6:
+	sound_duty 2, 2, 0, 0
+.loop
+	sound __,  4, $f2, $0744
+	sound __,  3, $c4, $0740
+	sound __,  2, $a4, $073b
+	sound __,  2, $84, $0736
+	sound __,  2, $54, $0731
+	loopchannel 3, .loop
+	sound_duty 0, 0, 0, 0
+	sound __, 12, $e8, $071c
+	sound __, 16, $e8, $076c
+	sound __,  1, $f8, $0763
+	sound __,  1, $f8, $0759
+	sound __, 16, $f5, $0750
+	endchannel

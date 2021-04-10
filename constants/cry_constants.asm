@@ -78,3 +78,4 @@
 	const CRY_GASTRODON      ; 45
 	const CRY_CHATOT         ; 46
 	const CRY_AMAURA         ; 47
+	const CRY_BUNEARY        ; 48

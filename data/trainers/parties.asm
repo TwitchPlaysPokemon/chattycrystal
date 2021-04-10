@@ -1515,7 +1515,7 @@ GlazedGroup:
 	bigdw 20
 	bigdw 18
 	bigdw 21
-	db "HA@"
+	db "HA        @"
 	db -1 ; end
 
 	end_list_items
@@ -3627,7 +3627,7 @@ CYRoboredGroup:
 	bigdw 80
 	bigdw 68
 	bigdw 68
-	db "IAS@"
+	db "IAS       @"
 
 	db 30
 	dw JIGGLYPUFF
@@ -4080,7 +4080,7 @@ NuzlockeGroup:
 	bigdw 49
 	bigdw 29
 	bigdw 20
-	db "Wingull@"
+	db "Hhhhhhhhku@"
 
 	db 17
 	dw COMBUSKEN
@@ -4132,7 +4132,7 @@ NuzlockeGroup:
 	bigdw 36
 	bigdw 18
 	bigdw 16
-	db "Tailow@"
+	db "Taillow@"
 
 	db 11
 	dw ARON
@@ -4164,6 +4164,7 @@ NuzlockeGroup:
 	bigdw 111
 	bigdw 66
 	db "b  syro .g@"
+
 	db 49
 	dw BLAZIKEN
 	db RAGECANDYBAR
@@ -4284,6 +4285,7 @@ NuzlockeGroup:
 	bigdw 123
 	bigdw 73
 	db "b  syro .g@"
+
 	db 27
 	dw DUSKULL
 	db NO_ITEM
@@ -4604,7 +4606,7 @@ PCyanGroup:
 	bigdw 136
 	bigdw 183
 	bigdw 171
-	db "IMmMMLLIR@"
+	db "lMmMMLLIR@"
 
 	db 76
 	dw TYRANITAR
@@ -4686,7 +4688,7 @@ PCyanGroup:
 	bigdw 240
 	bigdw 320
 	bigdw 300
-	db "IMmMMLLIR@"
+	db "lMmMMLLIR@"
 
 	db 100
 	dw AZUMARILL

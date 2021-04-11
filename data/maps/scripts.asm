@@ -17,6 +17,7 @@ INCLUDE "maps/GoldenrodDeptStore6F.asm"
 INCLUDE "maps/GoldenrodDeptStoreElevator.asm"
 INCLUDE "maps/GoldenrodDeptStoreRoof.asm"
 INCLUDE "maps/GoldenrodGameCorner.asm"
+INCLUDE "maps/RadioTower1F.asm"
 
 
 SECTION "Map Scripts 2", ROMX
@@ -51,9 +52,6 @@ SECTION "Map Scripts 3", ROMX
 
 INCLUDE "maps/NationalPark.asm"
 INCLUDE "maps/NationalParkBugContest.asm"
-INCLUDE "maps/RadioTower1F.asm"
-INCLUDE "maps/RadioTower2F.asm"
-INCLUDE "maps/RadioTower3F.asm"
 INCLUDE "maps/RadioTower4F.asm"
 
 
@@ -443,6 +441,7 @@ INCLUDE "maps/Route25.asm"
 INCLUDE "maps/Route13.asm"
 INCLUDE "maps/Route12.asm"
 INCLUDE "maps/GoldenrodMoveRelearner.asm"
+INCLUDE "maps/RadioTower3F.asm"
 
 
 SECTION "Map Scripts 21", ROMX
@@ -514,6 +513,12 @@ INCLUDE "maps/RockTunnelB1F.asm"
 INCLUDE "maps/VictoryRoad.asm"
 INCLUDE "maps/UndergroundPath.asm"
 INCLUDE "maps/DiglettsCave.asm"
+
+
+SECTION "Map Scripts 24", ROMX
+
+INCLUDE "maps/RadioTower2F.asm"
+
 
 
 ; The following sections contain groups of related maps. Don't split them and don't add unrelated maps to them.

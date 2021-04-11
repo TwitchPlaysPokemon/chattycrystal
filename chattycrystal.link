@@ -70,7 +70,8 @@ ROMX $15
 ROMX $16
 	"Map Scripts 2"
 ROMX $17
-	"Map Scripts 3"
+	"Enemy Trainer Parties 1"
+	"Map Scripts 24"
 ROMX $18
 	"Events"
 	"Pics 32"
@@ -149,6 +150,7 @@ ROMX $34
 	"Battle Tower"
 ROMX $35
 	"Pic Animations 2"
+	"Map Scripts 3"
 ROMX $36
 	"Font Inversed"
 	"Pic Animations 3"
@@ -300,7 +302,8 @@ ROMX $6e
 ROMX $6f
 	"Text 1"
 ROMX $70
-	"Pic Animations 4"
+	"Tileset Data 8"
+	"Pics 29"
 ROMX $71
 	"Text 2"
 	"Tileset Data 14"
@@ -328,10 +331,9 @@ ROMX $77
 	"bank77"
 	"Tileset Data 7"
 ROMX $78
-	"Tileset Data 8"
-	"Pics 29"
+	"Pic Animations 4"
 ROMX $79
-	"Enemy Trainer Parties 1"
+	; empty
 ROMX $7a
 	; empty
 ROMX $7b

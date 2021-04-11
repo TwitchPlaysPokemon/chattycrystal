@@ -60,6 +60,8 @@ AchievementChecker_EliteFourTrack:
 	iffalse .never_reached_league
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iffalse .not_champion
+	checkevent EVENT_BEAT_MT_SILVER
+	iffalse .no_silver
 	checkevent EVENT_MARINA_DEFEATED
 	iffalse .check_bed
 	jumptext .rematch_ready_text
@@ -69,6 +71,9 @@ AchievementChecker_EliteFourTrack:
 
 .not_champion
 	jumptext .not_champion_text
+
+.no_silver
+	jumptext .no_silver_text
 
 .check_bed
 	jumptext .check_bed_text
@@ -98,6 +103,24 @@ AchievementChecker_EliteFourTrack:
 	para "beat them and"
 	line "become the next"
 	cont "CHAMPION!"
+	done
+
+.no_silver_text
+	text "There's a route"
+	line "that goes west"
+	para "from VIRIDIAN CITY"
+	line "and all the way"
+	cont "back into JOHTO."
+
+	para "That route leads"
+	line "to an isolated"
+	para "place in JOHTO"
+	line "called MT.SILVER."
+
+	para "Have you checked"
+	line "it out? The caves"
+	para "there are a great"
+	line "place to train."
 	done
 
 .check_bed_text

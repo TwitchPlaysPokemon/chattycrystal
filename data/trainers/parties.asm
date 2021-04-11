@@ -4605,7 +4605,6 @@ XYSerena2Group:
 	bigdw 247
 	bigdw 218
 	db "8d b9 'bmp@"
-	db -1 ; end
 
 	db 100
 	dw AURORUS
@@ -4632,6 +4631,7 @@ XYSerena2Group:
 	bigdw 223
 	bigdw 127
 	db "Moth@"
+	db -1 ; end
 
 	end_list_items
 

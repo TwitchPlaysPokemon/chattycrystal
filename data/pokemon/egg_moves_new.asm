@@ -290,6 +290,7 @@ SkittyEggMoves:
 	dw BATON_PASS
 	dw FAKE_OUT
 	dw MUD_BOMB
+	dw PAY_DAY
 	dw SUCKER_PUNCH
 	dw TICKLE
 	dw ZEN_HEADBUTT

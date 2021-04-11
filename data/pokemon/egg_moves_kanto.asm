@@ -371,6 +371,7 @@ GrowlitheEggMoves:
 	dw FLARE_BLITZ
 	dw HOWL
 	dw MORNING_SUN
+	dw PLAY_ROUGH
 	dw THRASH
 	dw -1 ; end
 
@@ -424,7 +425,6 @@ TentacoolEggMoves:
 GeodudeEggMoves:
 	dw FLAIL
 	dw HAMMER_ARM
-	dw MEGA_PUNCH
 	dw ROCK_CLIMB
 	dw -1 ; end
 

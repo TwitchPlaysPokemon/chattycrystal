@@ -450,6 +450,7 @@ ChinchouEvosAttacks:
 
 LanturnEvosAttacks:
 	db 0 ; no more evolutions
+	dbw 1, SHOCK_WAVE
 	dbw 1, BUBBLE
 	dbw 1, SUPERSONIC
 	dbw 1, THUNDER_WAVE

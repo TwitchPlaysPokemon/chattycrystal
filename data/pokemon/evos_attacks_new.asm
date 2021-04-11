@@ -1980,11 +1980,11 @@ GlaceonEvosAttacks:
 	dbw 6, SAND_ATTACK
 	dbw 10, RAZOR_LEAF
 	dbw 14, QUICK_ATTACK
-	dbw 18, ICY_WIND
-	dbw 23, BITE
-	dbw 27, ICE_FANG
-	dbw 33, ICE_SHARD
-	dbw 38, BARRIER
+	dbw 18, BITE
+	dbw 23, ICE_FANG
+	dbw 27, ICE_SHARD
+	dbw 33, BARRIER
+	dbw 38, FREEZE_DRY
 	dbw 45, MIRROR_COAT
 	dbw 50, BLIZZARD
 	db 0 ; no more level-up moves

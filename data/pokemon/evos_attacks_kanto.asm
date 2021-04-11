@@ -2356,9 +2356,10 @@ PinsirEvosAttacks:
 	dbw 29, X_SCISSOR
 	dbw 33, SUBMISSION
 	dbw 37, SWORDS_DANCE
-	dbw 41, THRASH
+	dbw 41, ROCK_CLIMB
 	dbw 45, SUPERPOWER
-	dbw 49, GUILLOTINE
+	dbw 49, THRASH
+	dbw 53, GUILLOTINE
 	db 0 ; no more level-up moves
 
 TaurosEvosAttacks:

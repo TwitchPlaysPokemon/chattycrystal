@@ -377,6 +377,7 @@ QwilfishEggMoves:
 	dw BUBBLEBEAM
 	dw FLAIL
 	dw HAZE
+	dw SHOCK_WAVE
 	dw SUPERSONIC
 	dw WATER_PULSE
 	dw -1 ; end

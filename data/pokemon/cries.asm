@@ -383,9 +383,9 @@ PokemonCries::
 	mon_cry CRY_AMAURA,     -$002,  $13d ; AMAURA
 	mon_cry CRY_BLASTOISE,   $103,  $0ea ; AURORUS
 	mon_cry CRY_VENONAT,     $0b0,  $16f ; SYLVEON
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GOOMY - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SLIGGOO - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GOODRA - PLACEHOLDER
+	mon_cry CRY_GOOMY,       $0b4,  $0ea ; GOOMY
+	mon_cry CRY_CHATOT,     -$01a,  $2e6 ; SLIGGOO
+	mon_cry CRY_VULPIX,     -$107,  $0ca ; GOODRA
 	mon_cry CRY_CRABRAWLER, -$349,  $0ab ; CRABRAWLER
 	mon_cry CRY_KRABBY,     -$009,  $170 ; CRABOMINABLE
 	mon_cry CRY_PICHU,      -$03e,  $0fc ; CUTIEFLY

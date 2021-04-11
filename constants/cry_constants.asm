@@ -80,3 +80,4 @@
 	const CRY_AMAURA         ; 47
 	const CRY_BUNEARY        ; 48
 	const CRY_CRABRAWLER     ; 49
+	const CRY_GOOMY          ; 4a

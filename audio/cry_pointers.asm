@@ -73,3 +73,4 @@ Cries:
 	dba Cry_Amaura
 	dba Cry_Buneary
 	dba Cry_Crabrawler
+	dba Cry_Goomy

@@ -376,8 +376,8 @@ PokemonCries::
 	mon_cry CRY_WOOPER,      $030,  $0d0 ; LITWICK
 	mon_cry CRY_CLEFAIRY,   -$02e,  $1dd ; LAMPENT
 	mon_cry CRY_ENTEI,       $078,  $4c0 ; CHANDELURE
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CLAUNCHER - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CLAWITZER - PLACEHOLDER
+	mon_cry CRY_KRABBY,      $035,  $0ac ; CLAUNCHER
+	mon_cry CRY_SQUIRTLE,   -$026,  $097 ; CLAWITZER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; HELIOPTILE - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; HELIOLISK - PLACEHOLDER
 	mon_cry CRY_AMAURA,     -$002,  $13d ; AMAURA

@@ -6,8 +6,7 @@ _2DMenu_::
 	call Draw2DMenu
 	call UpdateSprites
 	call ApplyTilemap
-	call Get2DMenuSelection
-	ret
+	jp Get2DMenuSelection
 
 _InterpretBattleMenu::
 	ld hl, CopyMenuData
@@ -18,8 +17,7 @@ _InterpretBattleMenu::
 	farcall MobileTextBorder
 	call UpdateSprites
 	call ApplyTilemap
-	call Get2DMenuSelection
-	ret
+	jp Get2DMenuSelection
 
 _InterpretMobileMenu::
 	ld hl, CopyMenuData
@@ -59,8 +57,7 @@ Draw2DMenu:
 	xor a
 	ldh [hBGMapMode], a
 	call MenuBox
-	call Place2DMenuItemStrings
-	ret
+	jp Place2DMenuItemStrings
 
 Get2DMenuSelection:
 	call Init2DMenuCursorPosition
@@ -72,7 +69,7 @@ Mobile_GetMenuSelection:
 	jr z, .skip
 	call GetMenuJoypad
 	bit SELECT_F, a
-	jr nz, .quit1
+	jr nz, .quit
 
 .skip
 	ld a, [wMenuDataFlags]
@@ -80,7 +77,7 @@ Mobile_GetMenuSelection:
 	jr nz, .skip2
 	call GetMenuJoypad
 	bit B_BUTTON_F, a
-	jr nz, .quit2
+	jr nz, .quit
 
 .skip2
 	ld a, [w2DMenuNumCols]
@@ -95,11 +92,7 @@ Mobile_GetMenuSelection:
 	and a
 	ret
 
-.quit1
-	scf
-	ret
-
-.quit2
+.quit
 	scf
 	ret
 
@@ -277,19 +270,17 @@ MenuJoypadLoop:
 	call Move2DMenuCursor
 	call .BGMap_OAM
 	call Do2DMenuRTCJoypad
-	jr nc, .done
+	ret nc
 	call _2DMenuInterpretJoypad
-	jr c, .done
+	ret c
 	ld a, [w2DMenuFlags1]
 	bit 7, a
-	jr nz, .done
+	ret nz
 	call GetMenuJoypad
 	ld b, a
 	ld a, [wMenuJoypadFilter]
 	and b
 	jr z, .loop
-
-.done
 	ret
 
 .BGMap_OAM:
@@ -370,12 +361,12 @@ _2DMenuInterpretJoypad:
 	bit 5, a
 	jr nz, .wrap_around_down
 	bit 3, a
-	jp nz, .set_bit_7
+	jr nz, .set_bit_7
 	xor a
 	ret
 
 .wrap_around_down
-	ld [hl], $1
+	ld [hl], 1
 	xor a
 	ret
 
@@ -393,7 +384,7 @@ _2DMenuInterpretJoypad:
 	bit 5, a
 	jr nz, .wrap_around_up
 	bit 2, a
-	jp nz, .set_bit_7
+	jr nz, .set_bit_7
 	xor a
 	ret
 
@@ -417,7 +408,7 @@ _2DMenuInterpretJoypad:
 	bit 4, a
 	jr nz, .wrap_around_left
 	bit 1, a
-	jp nz, .set_bit_7
+	jr nz, .set_bit_7
 	xor a
 	ret
 
@@ -441,12 +432,12 @@ _2DMenuInterpretJoypad:
 	bit 4, a
 	jr nz, .wrap_around_right
 	bit 0, a
-	jp nz, .set_bit_7
+	jr nz, .set_bit_7
 	xor a
 	ret
 
 .wrap_around_right
-	ld [hl], $1
+	ld [hl], 1
 	xor a
 	ret
 
@@ -568,7 +559,6 @@ _PushWindow::
 
 .done
 	pop hl
-	call .ret ; empty function
 	ld a, h
 	ld [de], a
 	dec de
@@ -590,7 +580,6 @@ _PushWindow::
 	call GetMenuBoxDims
 	inc b
 	inc c
-	call .ret ; empty function
 
 .row
 	push bc
@@ -612,8 +601,6 @@ _PushWindow::
 
 	ret
 
-.ret
-	ret
 
 _ExitMenu::
 	xor a

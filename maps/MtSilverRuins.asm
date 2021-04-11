@@ -103,28 +103,27 @@ MtSilverRuinsAzureRight:
 MtSilverRuinsAzureLeft:
 	applymovement PLAYER, MtSilverRuinsStepRightMovement
 MtSilverRuinsAzureMiddle:
-	; TODO: add text for Azure
 	special FadeOutMusic
 	applymovement PLAYER, MtSilverRuinsFaceDown
 	appear MTSILVERRUINSB1F_AZURE
 	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsUpApproachMovement
 	opentext
-	writetext HostSilenceText
+	writetext .introduction_text
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsAzureMovesToArena
 	applymovement PLAYER, MtSilverRuinsPlayerMovesToArena
 	opentext
-	writetext HostSilenceText
+	writetext .before_battle_text
 	waitbutton
 	closetext
-	winlosstext HostSilenceText, HostSilenceText
+	winlosstext .battle_won_text, 0
 	loadtrainer AZURE, AZURE1
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
 	opentext
-	writetext HostSilenceText
+	writetext .after_battle_text
 	waitbutton
 	closetext
 	checkcaught PHANCERO
@@ -133,13 +132,68 @@ MtSilverRuinsAzureMiddle:
 	playsound SFX_POTION
 	waitsfx
 	opentext
-	writetext HostSilenceText
+	writetext .final_challenge_text
 	waitbutton
 	closetext
 	applymovement MTSILVERRUINSB1F_AZURE, MtSilverRuinsWarpOutMovement
 	disappear MTSILVERRUINSB1F_AZURE
 	setscene SCENE_BEAT_AZURE
 	end
+
+.introduction_text
+	text "Congratulations,"
+	line "<PLAYER>! You made"
+	cont "it to the end!"
+
+	para "I was waiting for"
+	line "you after hearing"
+	para "from the rest that"
+	line "you were strong."
+
+	para "Come on, let's have"
+	line "a battle!"
+	done
+
+.before_battle_text
+	text "I want to see by"
+	line "myself how strong"
+	para "you are. Don't hold"
+	line "back!"
+	done
+
+.battle_won_text
+	text "As strong as the"
+	line "others said!"
+	done
+
+.after_battle_text
+	text "Now you have beat"
+	line "us all. You've"
+	para "definitely become"
+	line "an excellent trai-"
+	cont "ner, <PLAYER>."
+
+	para "Keep up the good"
+	line "work until you"
+	para "become the best"
+	line "trainer in the"
+	cont "world!"
+	done
+
+.final_challenge_text
+	text "But there is still"
+	line "a challenger"
+	para "awaiting you. This"
+	line "time, not another"
+	para "trainer, but a"
+	line "#MON."
+
+	para "I've healed your"
+	line "#MON so you'll"
+	para "be in your best"
+	line "condition. Do your"
+	cont "best!"
+	done
 
 PhanceroFliesDown:
 	disappear MTSILVERRUINSB1F_PHANCERO_STATUE

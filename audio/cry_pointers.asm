@@ -74,3 +74,4 @@ Cries:
 	dba Cry_Buneary
 	dba Cry_Crabrawler
 	dba Cry_Goomy
+	dba Cry_Heliolisk

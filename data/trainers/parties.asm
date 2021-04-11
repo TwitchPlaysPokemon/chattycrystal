@@ -5022,7 +5022,7 @@ PKMNTrainerGroup:
 	db -1 ; end
 
 	next_list_item ; CAL (4)
-	db "CAL@", TRAINERTYPE_ITEM_MOVES
+	db "CAL@", TRAINERTYPE_MOVES | TRAINERTYPE_ITEM
 	db 100
 	dw GARDEVOIR
 	db BRIGHTPOWDER
@@ -6167,7 +6167,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (7)
-	db "GAVEN@", TRAINERTYPE_ITEM_MOVES
+	db "GAVEN@", TRAINERTYPE_MOVES | TRAINERTYPE_ITEM
 	db 78
 	dw VICTREEBEL
 	db NO_ITEM
@@ -6337,7 +6337,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (23)
-	db "CRYAL@", TRAINERTYPE_ITEM_MOVES
+	db "CRYAL@", TRAINERTYPE_MOVES | TRAINERTYPE_ITEM
 	db 78
 	dw BAYLEEF
 	db LEFTOVERS
@@ -6533,7 +6533,7 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (12)
-	db "BETH@", TRAINERTYPE_ITEM_MOVES
+	db "BETH@", TRAINERTYPE_MOVES | TRAINERTYPE_ITEM
 	db 80
 	dw RAPIDASH
 	db FOCUS_BAND
@@ -6583,7 +6583,7 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (18)
-	db "REENA@", TRAINERTYPE_ITEM_MOVES
+	db "REENA@", TRAINERTYPE_MOVES | TRAINERTYPE_ITEM
 	db 78
 	dw STARMIE
 	db NO_ITEM
@@ -8605,7 +8605,7 @@ SailorGroup:
 	db -1 ; end
 
 	next_list_item ; SAILOR (14)
-	db "VARIO@", TRAINERTYPE_ITEM_MOVES
+	db "VARIO@", TRAINERTYPE_MOVES | TRAINERTYPE_ITEM
 	db 86
 	dw VAPOREON
 	db MIRACLEBERRY
@@ -8766,7 +8766,7 @@ SuperNerdGroup:
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (16)
-	db "SLEWIS@", TRAINERTYPE_ITEM_MOVES
+	db "SLEWIS@", TRAINERTYPE_MOVES | TRAINERTYPE_ITEM
 	db 74
 	dw KADABRA
 	db BRIGHTPOWDER
@@ -8963,7 +8963,7 @@ GuitaristGroup:
 	db -1 ; end
 
 	next_list_item ; GUITARIST (8)
-	db "NEBLEK@", TRAINERTYPE_ITEM_MOVES
+	db "NEBLEK@", TRAINERTYPE_MOVES | TRAINERTYPE_ITEM
 	db 94
 	dw STARMIE
 	db MIRACLEBERRY
@@ -10569,7 +10569,7 @@ PokefanFGroup:
 	db -1 ; end
 
 	next_list_item ; POKEFANF (9)
-	db "GLYDIN@", TRAINERTYPE_ITEM_MOVES
+	db "GLYDIN@", TRAINERTYPE_MOVES | TRAINERTYPE_ITEM
 	db 82
 	dw SNEASEL
 	db SCOPE_LENS
@@ -11798,7 +11798,7 @@ KimonoGirlGroup:
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (9)
-	db "DESSA@", TRAINERTYPE_ITEM_MOVES
+	db "DESSA@", TRAINERTYPE_MOVES | TRAINERTYPE_ITEM
 	db 90
 	dw GROUDON
 	db KINGS_ROCK

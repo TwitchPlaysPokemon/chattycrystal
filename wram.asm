@@ -2221,7 +2221,7 @@ ENDU ; d1f7
 wOtherTrainerType:: db ; d1f7
 wTrainerGroupBank:: db ; d1f8
 
-	ds 1
+wTrainerLevelOffset:: db ; d1f9
 
 wLinkBattleRNs:: ds 10 ; d1fa
 
@@ -2760,7 +2760,14 @@ wParryFightCount::   db
 wErinFightCount::    db
 ; da0e
 
-	ds 100
+	ds 94
+
+wBattleTentTutorTrainer1LevelOffset:: db ; da6c
+wBattleTentTutorTrainer2LevelOffset:: db ; da6d
+wBattleTentTutorTrainer3LevelOffset:: db ; da6e
+wBattleTentTutorTrainer4LevelOffset:: db ; da6f
+wBattleTentTutorTrainer5LevelOffset:: db ; da70
+wBattleTentTutorTrainer6LevelOffset:: db ; da71
 
 wEventFlags:: flag_array NUM_EVENTS ; da72
 ; db6c

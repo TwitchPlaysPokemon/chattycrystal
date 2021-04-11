@@ -32,6 +32,10 @@ BattleTentTutor1Script:
 	special HealParty
 	iftrue BattleTentTutor_BetterLuckNextTime
 	setevent EVENT_BATTLE_TENT_TUTOR_1_READY
+	readmem wBattleTentTutorTrainer1LevelOffset
+	ifequal MAX_LEVEL, .ready
+	addval 1
+	writemem wBattleTentTutorTrainer1LevelOffset
 .ready
 	opentext
 	writetext BattleTentTutor_WhatMoveText
@@ -97,6 +101,10 @@ BattleTentTutor2Script:
 	special HealParty
 	iftrue BattleTentTutor_BetterLuckNextTime
 	setevent EVENT_BATTLE_TENT_TUTOR_2_READY
+	readmem wBattleTentTutorTrainer2LevelOffset
+	ifequal MAX_LEVEL, .ready
+	addval 1
+	writemem wBattleTentTutorTrainer2LevelOffset
 .ready
 	opentext
 	writetext BattleTentTutor_WhatMoveText
@@ -165,6 +173,10 @@ BattleTentTutor3Script:
 	special HealParty
 	iftrue BattleTentTutor_BetterLuckNextTime
 	setevent EVENT_BATTLE_TENT_TUTOR_3_READY
+	readmem wBattleTentTutorTrainer3LevelOffset
+	ifequal MAX_LEVEL, .ready
+	addval 1
+	writemem wBattleTentTutorTrainer3LevelOffset
 .ready
 	opentext
 	writetext BattleTentTutor_WhatMoveText
@@ -233,6 +245,10 @@ BattleTentTutor4Script:
 	special HealParty
 	iftrue BattleTentTutor_BetterLuckNextTime
 	setevent EVENT_BATTLE_TENT_TUTOR_4_READY
+	readmem wBattleTentTutorTrainer4LevelOffset
+	ifequal MAX_LEVEL, .ready
+	addval 1
+	writemem wBattleTentTutorTrainer4LevelOffset
 .ready
 	opentext
 	writetext BattleTentTutor_WhatMoveText
@@ -297,6 +313,10 @@ BattleTentTutor5Script:
 	special HealParty
 	iftrue BattleTentTutor_BetterLuckNextTime
 	setevent EVENT_BATTLE_TENT_TUTOR_5_READY
+	readmem wBattleTentTutorTrainer5LevelOffset
+	ifequal MAX_LEVEL, .ready
+	addval 1
+	writemem wBattleTentTutorTrainer5LevelOffset
 .ready
 	opentext
 	writetext BattleTentTutor_WhatMoveText
@@ -365,6 +385,10 @@ BattleTentTutor6Script:
 	special HealParty
 	iftrue BattleTentTutor_BetterLuckNextTime
 	setevent EVENT_BATTLE_TENT_TUTOR_6_READY
+	readmem wBattleTentTutorTrainer6LevelOffset
+	ifequal MAX_LEVEL, .ready
+	addval 1
+	writemem wBattleTentTutorTrainer6LevelOffset
 .ready
 	opentext
 	writetext BattleTentTutor_WhatMoveText

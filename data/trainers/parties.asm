@@ -5886,7 +5886,9 @@ BirdKeeperGroup:
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (22)
-	db "ADAM@", TRAINERTYPE_MOVES
+	db "ADAM@", TRAINERTYPE_MOVES | TRAINERTYPE_LEVEL_OFFSET
+	dw wBattleTentTutorTrainer2LevelOffset
+
 	db 59
 	dw WEEZING
 	dw HEAT_WAVE, SLUDGE_BOMB, HAZE, WILL_O_WISP
@@ -6714,7 +6716,9 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (27)
-	db "GLORIA@", TRAINERTYPE_MOVES
+	db "GLORIA@", TRAINERTYPE_MOVES | TRAINERTYPE_LEVEL_OFFSET
+	dw wBattleTentTutorTrainer3LevelOffset
+
 	db 59
 	dw MANECTRIC
 	dw THUNDER_WAVE, ROAR, OVERHEAT, THUNDERBOLT
@@ -9271,7 +9275,9 @@ HikerGroup:
 	db -1 ; end
 
 	next_list_item ; HIKER (26)
-	db "DARRELL@", TRAINERTYPE_MOVES
+	db "DARRELL@", TRAINERTYPE_MOVES | TRAINERTYPE_LEVEL_OFFSET
+	dw wBattleTentTutorTrainer1LevelOffset
+
 	db 59
 	dw HITMONLEE
 	dw SUPERPOWER, POISON_JAB, ROCK_SLIDE, MACH_PUNCH
@@ -9522,7 +9528,9 @@ BurglarGroup:
 	db -1 ; end
 
 	next_list_item ; BURGLAR (7)
-	db "JENSEN@", TRAINERTYPE_MOVES
+	db "JENSEN@", TRAINERTYPE_MOVES | TRAINERTYPE_LEVEL_OFFSET
+	dw wBattleTentTutorTrainer5LevelOffset
+
 	db 59
 	dw TYRANITAR
 	dw DARK_PULSE, THUNDER_WAVE, ROCK_SLIDE, ATTRACT
@@ -9990,7 +9998,9 @@ BlackbeltGroup:
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (17)
-	db "RHETT@", TRAINERTYPE_MOVES
+	db "RHETT@", TRAINERTYPE_MOVES | TRAINERTYPE_LEVEL_OFFSET
+	dw wBattleTentTutorTrainer4LevelOffset
+
 	db 59
 	dw KANGASKHAN
 	dw DRAIN_PUNCH, CURSE, RETURN, ROCK_SLIDE
@@ -11261,7 +11271,9 @@ MediumGroup:
 	db -1 ; end
 
 	next_list_item ; MEDIUM (16)
-	db "HOLLY@", TRAINERTYPE_MOVES
+	db "HOLLY@", TRAINERTYPE_MOVES | TRAINERTYPE_LEVEL_OFFSET
+	dw wBattleTentTutorTrainer6LevelOffset
+
 	db 59
 	dw SNEASEL
 	dw KNOCK_OFF, CALM_MIND, SURF, ICE_SHARD

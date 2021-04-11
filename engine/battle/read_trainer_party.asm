@@ -84,8 +84,8 @@ ReadTrainerPartyPieces:
 	ld h, d
 	ld l, e
 	ld a, [wOtherTrainerType]
-	add a, a
-	jr nc, .loop
+	bit TRAINERTYPE_SPECIAL_F, a
+	jr z, .not_special
 	call GetNextTrainerDataByte
 	ld c, a
 	call GetNextTrainerDataByte
@@ -119,11 +119,31 @@ ReadTrainerPartyPieces:
 	ld [wCurPartyLevel], a
 	ret
 
+.not_special
+	ld bc, wTrainerLevelOffset
+	and TRAINERTYPE_LEVEL_OFFSET
+	ld [bc], a ; 0 if clear, don't care if set
+	jr z, .loop
+	call GetNextTrainerDataByte
+	ld e, a
+	call GetNextTrainerDataByte
+	ld d, a
+	ld a, [de]
+	ld [bc], a
 .loop
 	call GetNextTrainerDataByte
-	cp $ff
+	ld b, a
+	inc a
 	ret z
 
+	ld a, [wTrainerLevelOffset]
+	add a, b
+	jr c, .fix_level
+	cp MAX_LEVEL + 1
+	jr c, .level_OK
+.fix_level
+	ld a, MAX_LEVEL
+.level_OK
 	ld [wCurPartyLevel], a
 	call GetNextTrainerDataByte
 	push hl

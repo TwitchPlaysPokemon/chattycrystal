@@ -63,7 +63,7 @@ TrainerClassNames::
 	db "ROCKET@" ;RED_LARRY
 	db "ELITE 4@" ;GREEN_MAY
 	db "ELITE 4@" ;BROWN
-	db "@" ; BABA
+	db "ENMY@" ; BABA
 	db "TF's Head@" ; URF
 	db "LEADER@" ; BRENDAN_JOHTO_LEADER
 	db "RIVAL@" ; GSCHGSS_CHRIS_RIVAL

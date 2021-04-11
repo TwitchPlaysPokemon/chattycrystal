@@ -2234,3 +2234,46 @@ Cry_Goomy_Ch8_branch:
 	noise __, 10, $47, $9c
 	noise __, 10, $37, $6c
 	endchannel
+
+Cry_Heliolisk:
+	musicheader 3, 5, Cry_Heliolisk_Ch5
+	musicheader 1, 6, Cry_Heliolisk_Ch6
+	musicheader 1, 8, Cry_Heliolisk_Ch8
+
+Cry_Heliolisk_Ch5:
+	dutycycle 0
+	sound __,  8, $c6, $0720
+	sound __,  3, $00, $0000
+	sound __,  8, $c6, $0700
+	sound __,  3, $00, $0000
+	sound __,  4, $c7, $0740
+	sound __,  2, $00, $0000
+	sound __,  8, $c6, $0720
+	sound __,  4, $00, $0000
+	sound __, 16, $c4, $0700
+	sound __, 16, $c4, $0760
+	sound __,  4, $c6, $0750
+	endchannel
+
+Cry_Heliolisk_Ch6:
+	dutycycle 1
+	sound __,  8, $b6, $071a
+	sound __,  3, $00, $0000
+	sound __,  8, $b6, $06fa
+	sound __,  3, $00, $0000
+	sound __,  4, $b7, $073c
+	sound __,  2, $00, $0000
+	sound __,  8, $c6, $071c
+	sound __,  4, $00, $0000
+	sound __, 16, $b4, $0700
+	sound __, 16, $b4, $0760
+	sound __,  4, $c6, $0750
+	endchannel
+
+Cry_Heliolisk_Ch8:
+	noise __,  8, $00, $00
+	loopchannel 5, Cry_Heliolisk_Ch8
+	noise __, 16, $94, $60
+	noise __, 16, $94, $68
+	noise __,  4, $96, $64
+	endchannel

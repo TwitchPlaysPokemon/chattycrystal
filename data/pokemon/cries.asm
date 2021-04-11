@@ -379,7 +379,7 @@ PokemonCries::
 	mon_cry CRY_KRABBY,      $035,  $0ac ; CLAUNCHER
 	mon_cry CRY_SQUIRTLE,   -$026,  $097 ; CLAWITZER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; HELIOPTILE - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; HELIOLISK - PLACEHOLDER
+	mon_cry CRY_HELIOLISK,  -$005,  $0f8 ; HELIOLISK
 	mon_cry CRY_AMAURA,     -$002,  $13d ; AMAURA
 	mon_cry CRY_BLASTOISE,   $103,  $0ea ; AURORUS
 	mon_cry CRY_VENONAT,     $0b0,  $16f ; SYLVEON

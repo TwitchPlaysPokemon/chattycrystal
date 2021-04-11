@@ -2196,39 +2196,39 @@ Cry_Goomy:
 
 Cry_Goomy_Ch5:
 	sound_duty 3, 3, 0, 0
-	sound __, 9, $f2, 1150
-	sound __, 1, $00, 1
-	sound __, 9, $f2, 1300
-	sound __, 1, $00, 1
-	sound __, 9, $f2, 1350
-	sound __, 1, $00, 1
+	sound __,  9, $f2, $047e
+	sound __,  1, $00, $0000
+	sound __,  9, $f2, $0514
+	sound __,  1, $00, $0000
+	sound __,  9, $f2, $0546
+	sound __,  1, $00, $0000
 	sound_duty 3, 0, 3, 0
-	sound __, 6, $83, 1570
+	sound __,  6, $83, $0622
 	endchannel
 
 Cry_Goomy_Ch6:
 	sound_duty 1, 3, 0, 2
-	sound __, 10, $57, 1300
-	sound __, 1, $07, 300
-	sound __, 10, $57, 1500
-	sound __, 1, $07, 300
-	sound __, 10, $57, 1600
-	sound __, 1, $07, 300
-	sound __, 16, $d5, 1646
-	sound __, 1, $d5, 1646
+	sound __, 10, $57, $0514
+	sound __,  1, $07, $012c
+	sound __, 10, $57, $05dc
+	sound __,  1, $07, $012c
+	sound __, 10, $57, $0640
+	sound __,  1, $07, $012c
+	sound __, 16, $d5, $066e
+	sound __,  1, $d5, $066e
 	sound_duty 3, 2, 0, 0
-	sound __, 3, $76, 1500
-	sound __, 1, $00, 1
-	sound __, 3, $76, 1400
-	sound __, 1, $00, 1
-	sound __, 3, $74, 1300
+	sound __,  3, $76, $05dc
+	sound __,  1, $00, $0000
+	sound __,  3, $76, $0578
+	sound __,  1, $00, $0000
+	sound __,  3, $74, $0514
 	endchannel
 
 Cry_Goomy_Ch8:
-	noise __, 2, $01, $00
+	noise __,  2, $01, $00
 Cry_Goomy_Ch8_branch:
-	noise __, 4, $13, $5c
-	noise __, 6, $00, $00
+	noise __,  4, $13, $5c
+	noise __,  6, $00, $00
 	loopchannel 3, Cry_Goomy_Ch8_branch
 	noise __, 10, $47, $6c
 	noise __, 10, $47, $9c

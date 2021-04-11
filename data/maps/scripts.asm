@@ -151,7 +151,6 @@ INCLUDE "maps/Route16Gate.asm"
 INCLUDE "maps/Route17Route18Gate.asm"
 INCLUDE "maps/Route26HealHouse.asm"
 INCLUDE "maps/Route27SandstormHouse.asm"
-INCLUDE "maps/Route29Route46Gate.asm"
 
 
 SECTION "Map Scripts 8", ROMX
@@ -325,6 +324,7 @@ INCLUDE "maps/EarlsPokemonAcademy.asm"
 INCLUDE "maps/VioletNicknameSpeechHouse.asm"
 INCLUDE "maps/VioletPokecenter1F.asm"
 INCLUDE "maps/VioletKylesHouse.asm"
+INCLUDE "maps/Route29Route46Gate.asm"
 
 
 SECTION "Map Scripts 16", ROMX

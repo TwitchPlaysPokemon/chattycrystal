@@ -595,6 +595,11 @@ SECTION "UpdateBattleHUDs", ROMX
 INCLUDE "engine/battle/update_battle_huds.asm"
 
 
+SECTION "bank69", ROMX
+
+INCLUDE "engine/events/achievement_checker.asm"
+
+
 SECTION "Phone Text 2", ROMX
 
 INCLUDE "data/text/std_text.asm"
@@ -707,6 +712,7 @@ SECTION "Text Files", ROMX
 
 INCLUDE "engine/events/text_viewer.asm"
 INCLUDE "data/text/text_files.asm"
+
 
 ; own sections
 INCLUDE "data/battle_anims/move_animations.asm"

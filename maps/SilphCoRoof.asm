@@ -37,6 +37,7 @@ MtBattleTrainer100:
 
 .first_message
 	setevent EVENT_MT_BATTLE_TALKED_WITH_FINAL_TRAINER
+	setevent EVENT_CLEARED_MT_BATTLE_AT_LEAST_ONCE
 	farjumptext MtBattleTrainer100AfterText
 
 .before_text

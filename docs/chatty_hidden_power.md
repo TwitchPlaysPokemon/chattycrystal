@@ -54,7 +54,7 @@ are any D-Pad direections, the move will be Dragon-type. All other combinations 
 directions are assigned unique types; since there are 16 such combinations and 16 types to assign (not counting
 Normal, which cannot be a Hidden Power type, and Dragon, which is already assigned to the D-Pad only combinations),
 every possible type is covered by exactly one button combination. The full list of button combinations can be seen in
-game or [in the source](data/moves/chatty_hidden_power_type.asm).
+game or [in the source](../data/moves/chatty_hidden_power_type.asm).
 
 ## Link battles and enemy trainers
 

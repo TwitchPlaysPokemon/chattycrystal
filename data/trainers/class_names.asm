@@ -63,8 +63,8 @@ TrainerClassNames::
 	db "ROCKET@" ;RED_LARRY
 	db "ELITE 4@" ;GREEN_MAY
 	db "ELITE 4@" ;BROWN
-	db "@" ; BABA TODO find VC name for rival
-	db "@" ; URF TODO find LS name for gym leader
+	db "@" ; BABA
+	db "TF's Head@" ; URF
 	db "LEADER@" ; BRENDAN_JOHTO_LEADER
 	db "RIVAL@" ; GSCHGSS_CHRIS_RIVAL
 	db "LEADER@" ; RED_JOHTO_LEADER

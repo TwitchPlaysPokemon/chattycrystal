@@ -368,8 +368,8 @@ PokemonCries::
 	mon_cry CRY_PIDGEOTTO,  -$099,  $0f3 ; SANDILE
 	mon_cry CRY_LAPRAS,     -$1d8,  $15d ; KROKOROK
 	mon_cry CRY_LAPRAS,     -$209,  $1ca ; KROOKODILE
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DUCKLETT - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SWANNA - PLACEHOLDER
+	mon_cry CRY_LEDYBA,     -$0cd,  $0ec ; DUCKLETT
+	mon_cry CRY_TEDDIURSA,  -$022,  $0ca ; SWANNA
 	mon_cry CRY_SENTRET,     $03a,  $2a8 ; TYNAMO
 	mon_cry CRY_LAPRAS,     -$159,  $145 ; EELEKTRIK
 	mon_cry CRY_BLASTOISE,   $06f,  $148 ; EELEKTROSS

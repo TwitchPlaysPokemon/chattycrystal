@@ -2970,13 +2970,12 @@ Script_givedecoration:
 	pop bc
 	ld de, wStringBuffer1
 	farcall GetDecorationName_c_de
-	ld hl, wScriptTextBank
-	ld a, BANK(@)
-	ld [hli], a
-	ld a, LOW(.text)
-	ld [hli], a
-	ld [hl], HIGH(.text)
-	jp JumpText
+	call OpenText
+	ld hl, .text
+	ld b, BANK(.text)
+	call MapTextbox
+	call WaitButton
+	jp Script_closetext
 
 .text
 	text "<PLAYER> received"

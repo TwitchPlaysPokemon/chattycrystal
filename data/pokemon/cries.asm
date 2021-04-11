@@ -365,9 +365,9 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,  -$013,  $0d5 ; SIMISAGE
 	mon_cry CRY_TEDDIURSA,  -$018,  $0b3 ; DRILBUR
 	mon_cry CRY_NIDOQUEEN,  -$108,  $14d ; EXCADRILL
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SANDILE - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; KROKOROK - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; KROOKODILE - PLACEHOLDER
+	mon_cry CRY_PIDGEOTTO,  -$099,  $0f3 ; SANDILE
+	mon_cry CRY_LAPRAS,     -$1d8,  $15d ; KROKOROK
+	mon_cry CRY_LAPRAS,     -$209,  $1ca ; KROOKODILE
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; DUCKLETT - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SWANNA - PLACEHOLDER
 	mon_cry CRY_SENTRET,     $03a,  $2a8 ; TYNAMO

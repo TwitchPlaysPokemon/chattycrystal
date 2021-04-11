@@ -99,7 +99,7 @@ GSCKrisGroup:
 	dw LUDICOLO
 	db LEFTOVERS
 	dw GIGA_DRAIN, ICE_BEAM, SURF, RAIN_DANCE
-	bigdw $8ade
+	bigdw $8ADE
 	bigdw 337
 	bigdw 224
 	bigdw 228
@@ -112,7 +112,7 @@ GSCKrisGroup:
 	dw CHATOT
 	db FOCUS_BAND
 	dw CHATTER, FLY, SING, ROOST
-	bigdw $893c
+	bigdw $893C
 	bigdw 337
 	bigdw 214
 	bigdw 176
@@ -125,7 +125,7 @@ GSCKrisGroup:
 	dw UNOWN
 	db BRIGHTPOWDER
 	dw CHATTY_HP, NO_MOVE, NO_MOVE, NO_MOVE
-	bigdw $dfff
+	bigdw $DFFF
 	bigdw 299
 	bigdw 238
 	bigdw 194
@@ -138,7 +138,7 @@ GSCKrisGroup:
 	dw GOODRA
 	db LEFTOVERS
 	dw DRAGON_PULSE, OUTRAGE, SLUDGE_BOMB, EARTHQUAKE
-	bigdw $1fb9
+	bigdw $1FB9
 	bigdw 383
 	bigdw 270
 	bigdw 238
@@ -151,7 +151,7 @@ GSCKrisGroup:
 	dw SKUNTANK
 	db LEFTOVERS
 	dw STRENGTH, ROCK_SMASH, SLUDGE_BOMB, TOXIC
-	bigdw $155e
+	bigdw $155E
 	bigdw 407
 	bigdw 256
 	bigdw 212
@@ -164,7 +164,7 @@ GSCKrisGroup:
 	dw TORTERRA
 	db LEFTOVERS
 	dw EARTHQUAKE, DIZZY_PUNCH, CURSE, REST
-	bigdw $faaa
+	bigdw $FAAA
 	bigdw 379
 	bigdw 316
 	bigdw 298
@@ -680,7 +680,7 @@ FCChrisGroup:
 	bigdw 99
 	db "T  SS     @"
 
-	db -1 ;end
+	db -1 ; end
 
 	end_list_items
 
@@ -4724,7 +4724,7 @@ PCyanGroup:
 	dw NINETALES
 	db KINGS_ROCK
 	dw IRON_HEAD, EARTH_POWER, TRI_ATTACK, FLAMETHROWER
-	bigdw $01bb
+	bigdw $01BB
 	bigdw 333
 	bigdw 220
 	bigdw 220
@@ -4737,7 +4737,7 @@ PCyanGroup:
 	dw AMPHAROS
 	db KINGS_ROCK
 	dw FLARE_BLITZ, FLASH, THUNDERBOLT, SHADOW_CLAW
-	bigdw $b0ea
+	bigdw $B0EA
 	bigdw 369
 	bigdw 240
 	bigdw 218
@@ -4763,7 +4763,7 @@ PCyanGroup:
 	dw GARDEVOIR
 	db WATER_STONE
 	dw AURA_SPHERE, SIGNAL_BEAM, TRI_ATTACK, PSYCHIC_M
-	bigdw $fb61
+	bigdw $FB61
 	bigdw 335
 	bigdw 228
 	bigdw 220
@@ -4776,7 +4776,7 @@ PCyanGroup:
 	dw AZUMARILL
 	db LEFTOVERS
 	dw SURF, ICE_BEAM, STRENGTH, POWER_GEM
-	bigdw $7aaa
+	bigdw $7AAA
 	bigdw 389
 	bigdw 364
 	bigdw 248
@@ -4784,13 +4784,12 @@ PCyanGroup:
 	bigdw 188
 	bigdw 248
 	db "YYYYXOOOOO@"
-	db -1 ; end
 
 	db 100
 	dw LOPUNNY
 	db POLKADOT_BOW
 	dw RETURN, POWER_GEM, CUT, METRONOME
-	bigdw $ba26
+	bigdw $BA26
 	bigdw 319
 	bigdw 242
 	bigdw 256
@@ -4798,6 +4797,7 @@ PCyanGroup:
 	bigdw 184
 	bigdw 268
 	db "EEEE@"
+	db -1 ; end
 
 	end_list_items
 
@@ -7316,7 +7316,7 @@ SkierGroup:
 	db "CADY@", TRAINERTYPE_NORMAL
 	db 90
 	dw DELIBIRD
-	db -1 ; en
+	db -1 ; end
 
 	next_list_item ; SKIER (4)
 	db "KIMERY@", TRAINERTYPE_ITEM

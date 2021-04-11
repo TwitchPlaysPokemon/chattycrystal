@@ -107,6 +107,8 @@ MainMenu_GetWhichMenu:
 
 MainMenuJoypadLoop:
 	call SetUpMenu
+	xor a
+	ld [wTempLoopCounter], a
 .loop
 	call MainMenu_PrintCurrentTimeAndDay
 	ld a, [w2DMenuFlags1]
@@ -117,7 +119,26 @@ MainMenuJoypadLoop:
 	cp B_BUTTON
 	jr z, .b_button
 	cp A_BUTTON
-	jr nz, .loop
+	jr z, .a_button
+	ldh a, [hJoypadDown]
+	and SELECT
+	assert SELECT == 4
+	rrca
+	rrca
+	ld b, a
+	ld a, [wTempLoopCounter]
+	ld c, a
+	and 1
+	xor b
+	jr z, .loop
+	ld a, c
+	inc a
+	cp 13
+	jr nc, .show_build_string
+	ld [wTempLoopCounter], a
+	jr .loop
+
+.a_button
 	call PlayClickSFX
 	and a
 	ret
@@ -125,6 +146,15 @@ MainMenuJoypadLoop:
 .b_button
 	scf
 	ret
+
+.show_build_string
+	ld de, .build_string
+	hlcoord 1, 12
+	call PlaceString
+	jr .loop
+
+.build_string
+	db "{BUILD_LABEL}@"
 
 MainMenu_PrintCurrentTimeAndDay:
 	ld a, [wSaveFileExists]

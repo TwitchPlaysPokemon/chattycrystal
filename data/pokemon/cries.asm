@@ -386,8 +386,8 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GOOMY - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; SLIGGOO - PLACEHOLDER
 	mon_cry CRY_NIDORAN_M,   $000,  $100 ; GOODRA - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CRABRAWLER - PLACEHOLDER
-	mon_cry CRY_NIDORAN_M,   $000,  $100 ; CRABOMINABLE - PLACEHOLDER
+	mon_cry CRY_CRABRAWLER, -$349,  $0ab ; CRABRAWLER
+	mon_cry CRY_KRABBY,     -$009,  $170 ; CRABOMINABLE
 	mon_cry CRY_PICHU,      -$03e,  $0fc ; CUTIEFLY
 	mon_cry CRY_PICHU,      -$029,  $3a0 ; RIBOMBEE
 	mon_cry CRY_EKANS,       $0ff,  $140 ; ONIXTRET

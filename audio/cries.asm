@@ -2168,3 +2168,23 @@ Cry_Buneary_Ch6:
 	sound __,  1, $f8, $0759
 	sound __, 16, $f5, $0750
 	endchannel
+
+Cry_Crabrawler:
+	musicheader 2, 5, Cry_Crabrawler_Ch5
+	musicheader 1, 6, Cry_Crabrawler_Ch6
+
+Cry_Crabrawler_Ch5:
+	sound_duty 0, 0, 0, 0
+	sound __,  2, $f1, $0798
+	sound __,  8, $f4, $072f
+	sound __,  8, $00, $0000
+	sound C_,  1, $f4, $07a9
+	endchannel
+
+Cry_Crabrawler_Ch6:
+	sound_duty 0, 0, 0, 0
+	sound __,  2, $f1, $0796
+	sound __,  8, $f4, $072d
+	sound __,  8, $00, $0000
+	sound C_,  1, $f4, $07a7
+	endchannel

@@ -365,7 +365,6 @@ sprite_anim_struct: MACRO
 ENDM
 
 battle_anim_struct: MACRO
-; Placeholder until we can figure out what it all means
 \1Index::              db
 \1Field01::            ds 1
 \1Field02::            ds 1

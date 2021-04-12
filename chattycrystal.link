@@ -37,6 +37,7 @@ ROMX $0a
 ROMX $0b
 	"bankB"
 	"Map Blocks 5"
+	"Tileset Data 15"
 ROMX $0c
 	"bankC"
 	"Tileset Data 4"

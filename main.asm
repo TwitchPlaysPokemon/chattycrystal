@@ -74,9 +74,6 @@ INCLUDE "engine/events/reset_unique_mons.asm"
 INCLUDE "engine/math/get_square_root.asm"
 INCLUDE "engine/pokemon/add_mobile_mon.asm"
 
-TheEndGFX::
-INCBIN "gfx/credits/theend.2bpp"
-
 
 SECTION "bank5", ROMX
 
@@ -308,9 +305,6 @@ INCLUDE "engine/events/battle_tower/rules.asm"
 INCLUDE "engine/events/field_moves.asm"
 INCLUDE "engine/events/checkforhiddenitems.asm"
 
-TownMapGFX:
-INCBIN "gfx/pokegear/town_map.2bpp.lz"
-
 
 SECTION "bank23", ROMX
 
@@ -449,13 +443,6 @@ INCLUDE "gfx/pokemon/kanto_frames.asm"
 INCLUDE "gfx/pokemon/unown_bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/unown_bitmasks.asm"
 
-
-SECTION "Font Inversed", ROMX
-
-FontInversed:
-INCBIN "gfx/font/font_inversed.1bpp"
-
-
 SECTION "Pic Animations 3", ROMX
 
 INCLUDE "gfx/pokemon/johto_frames.asm"
@@ -493,14 +480,6 @@ INCLUDE "engine/events/halloffame.asm"
 
 SECTION "bank39", ROMX
 
-CopyrightGFX::
-INCBIN "gfx/splash/copyright.2bpp"
-
-CopyrightTPPGFX::
-INCBIN "gfx/splash/copyright_tpp.2bpp"
-
-CopyrightTPPGFXEnd::
-
 INCLUDE "engine/menus/options_menu.asm"
 INCLUDE "engine/movie/crystal_intro.asm"
 INCLUDE "data/moves/moves.asm"
@@ -533,12 +512,6 @@ INCLUDE "engine/events/move_relearner.asm"
 SECTION "Move Animation Framesets", ROMX
 
 INCLUDE "engine/battle_anims/framesets.asm"
-
-
-SECTION "Intro Logo", ROMX
-
-IntroLogoGFX:
-INCBIN "gfx/intro/logo.2bpp.lz"
 
 
 SECTION "Title", ROMX

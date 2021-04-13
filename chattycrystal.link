@@ -14,6 +14,7 @@ ROMX $03
 	"Pics 38"
 ROMX $04
 	"bank4"
+	"The End GFX"
 	"Shrink Pics"
 ROMX $05
 	"bank5"
@@ -102,6 +103,7 @@ ROMX $21
 	"Pic Animations 6"
 ROMX $22
 	"bank22"
+	"Town Map GFX"
 ROMX $23
 	"bank23"
 	"Map Blocks 7"
@@ -163,6 +165,7 @@ ROMX $38
 	"bank38"
 ROMX $39
 	"bank39"
+	"Copyright GFX"
 ROMX $3a
 	"Songs 1"
 ROMX $3b

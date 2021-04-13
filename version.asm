@@ -2,7 +2,7 @@ VERSION_MAJOR EQU 1
 VERSION_MINOR EQU 0
 
 ; set to a non-zero value to mark the build as a release
-RELEASE_NUMBER EQU 1
+RELEASE_NUMBER EQU 2
 
 GAME_TITLE EQUS "TwitchPlaysPokemon's Chatty Crystal"
 

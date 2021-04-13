@@ -276,7 +276,7 @@ TilesetHoOhWordRoomColl:
 TilesetKabutoWordRoomColl:
 TilesetOmanyteWordRoomColl:
 TilesetAerodactylWordRoomColl:
-INCLUDE "data/tilesets/beta_word_room_collision.asm"
+INCLUDE "data/tilesets/ho_oh_word_room_collision.asm"
 
 
 SECTION "Tileset Data 7", ROMX

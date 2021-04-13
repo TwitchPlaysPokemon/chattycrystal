@@ -917,7 +917,6 @@ InfernapeFrontpic:   INCBIN "gfx/pokemon/infernape/front.animated.2bpp.lz"
 InfernapeBackpic:    INCBIN "gfx/pokemon/infernape/back.2bpp.lz"
 PiplupFrontpic:      INCBIN "gfx/pokemon/piplup/front.animated.2bpp.lz"
 PrinplupFrontpic:    INCBIN "gfx/pokemon/prinplup/front.animated.2bpp.lz"
-PrinplupBackpic:     INCBIN "gfx/pokemon/prinplup/back.2bpp.lz"
 EmpoleonBackpic:     INCBIN "gfx/pokemon/empoleon/back.2bpp.lz"
 EmpoleonFrontpic:    INCBIN "gfx/pokemon/empoleon/front.animated.2bpp.lz"
 BidoofFrontpic:      INCBIN "gfx/pokemon/bidoof/front.animated.2bpp.lz"
@@ -1058,6 +1057,7 @@ MisdreavusFrontpic:  INCBIN "gfx/pokemon/misdreavus/front.animated.2bpp.lz"
 CelebiFrontpic:      INCBIN "gfx/pokemon/celebi/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
 MudkipBackpic:       INCBIN "gfx/pokemon/mudkip/back.2bpp.lz"
+PrinplupBackpic:     INCBIN "gfx/pokemon/prinplup/back.2bpp.lz"
 
 SECTION "Pics 38", ROMX
 

@@ -212,7 +212,7 @@ MrPokemonsHouse_OakText2:
 	line "be enough."
 
 	para "The #MON is"
-	line "completly normal."
+	line "completely normal."
 
 	para "While ELM had"
 	line "told me to keep a"

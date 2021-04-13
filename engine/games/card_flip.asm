@@ -370,6 +370,7 @@ GetCoordsOfChosenCard:
 .BottomCard:
 	hlcoord 2, 6
 	bcpixel 8, 3
+	ret
 
 PlaceCardFaceDown:
 	xor a

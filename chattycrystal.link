@@ -66,6 +66,7 @@ ROMX $13
 	"Map Scripts 6"
 ROMX $14
 	"bank14"
+	"G/S Egg Pic"
 	"Map Scripts 21"
 ROMX $15
 	"Map Scripts 1"
@@ -249,6 +250,7 @@ ROMX $5a
 	"Pics 19"
 ROMX $5b
 	"bank5B"
+	"Miscellaneous Back Pics"
 	"Pics 20"
 ROMX $5c
 	"Mobile 5C"
@@ -334,6 +336,7 @@ ROMX $76
 	"Audio"
 ROMX $77
 	"bank77"
+	"Miscellaneous GFX"
 	"Tileset Data 7"
 ROMX $78
 	"Pic Animations 4"

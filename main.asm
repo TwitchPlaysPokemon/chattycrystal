@@ -253,10 +253,6 @@ INCLUDE "engine/pokemon/move_mon_wo_mail.asm"
 INCLUDE "data/pokemon/names.asm"
 INCLUDE "data/pokemon/base_stats.asm"
 
-UnknownEggPic::
-; Another egg pic. This is shifted up a few pixels.
-INCBIN "gfx/unknown/unknown_egg.2bpp.lz"
-
 
 SECTION "Crystal Phone Text", ROMX
 
@@ -530,12 +526,6 @@ INCLUDE "engine/link/link_trade.asm"
 INCLUDE "engine/link/link.asm"
 INCLUDE "engine/battle/link_result.asm"
 
-ChrisBackpic:
-INCBIN "gfx/player/chris_back.2bpp.lz"
-
-DudeBackpic:
-INCBIN "gfx/battle/dude.2bpp.lz"
-
 
 SECTION "Crystal Phone Text 2", ROMX
 
@@ -642,12 +632,6 @@ INCLUDE "engine/events/catch_tutorial_input.asm"
 INCLUDE "engine/pokegear/townmap_convertlinebreakcharacters.asm"
 INCLUDE "data/moves/bootleg_names.asm"
 INCLUDE "engine/pokemon/european_mail.asm"
-
-PokegearGFX:
-INCBIN "gfx/pokegear/pokegear.2bpp.lz"
-
-UnownFont:
-INCBIN "gfx/font/unown_font.2bpp"
 
 
 SECTION "Battle Tower Text", ROMX

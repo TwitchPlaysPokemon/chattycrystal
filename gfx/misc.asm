@@ -13,6 +13,13 @@ Shrink2Pic:
 INCBIN "gfx/new_game/shrink2.2bpp.lz"
 
 
+SECTION "G/S Egg Pic", ROMX
+
+UnknownEggPic::
+; Another egg pic. This is shifted up a few pixels.
+INCBIN "gfx/unknown/unknown_egg.2bpp.lz"
+
+
 SECTION "Town Map GFX", ROMX
 
 TownMapGFX:
@@ -40,3 +47,21 @@ SECTION "Intro Logo", ROMX
 
 IntroLogoGFX:
 INCBIN "gfx/intro/logo.2bpp.lz"
+
+
+SECTION "Miscellaneous Back Pics", ROMX
+
+ChrisBackpic:
+INCBIN "gfx/player/chris_back.2bpp.lz"
+
+DudeBackpic:
+INCBIN "gfx/battle/dude.2bpp.lz"
+
+
+SECTION "Miscellaneous GFX", ROMX
+
+PokegearGFX:
+INCBIN "gfx/pokegear/pokegear.2bpp.lz"
+
+UnownFont:
+INCBIN "gfx/font/unown_font.2bpp"

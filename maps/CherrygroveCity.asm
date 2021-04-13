@@ -126,6 +126,10 @@ CherrygroveBabaSceneNorth:
 	setscene SCENE_CHERRYGROVECITY_NOTHING
 	special HealParty
 	playmapmusic
+	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
+	iffalse GenericDummyScript
+	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
+	setevent EVENT_ROUTE_30_BATTLE
 	end
 
 CherrygroveTeacherScript:

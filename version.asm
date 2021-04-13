@@ -25,7 +25,7 @@ endc
 if DEF(PRINTNAME)
 	print "{GAME_TITLE} "
 	if RELEASE_NUMBER
-		print "(v{d:VERSION_MAJOR}.{02d:VERSION_MINOR}, release {d:RELEASE_NUMBER} \n"
+		print "(v{d:VERSION_MAJOR}.{02d:VERSION_MINOR}, release {d:RELEASE_NUMBER})\n"
 	else
 		print "(custom build)\n"
 	endc

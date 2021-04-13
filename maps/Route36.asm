@@ -71,14 +71,9 @@ WateredWeirdTreeScript:: ; export (for when you use Squirtbottle from pack)
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_FOUGHT_SUDOWOODO
-	iftrue DidntCatchSudowoodo
-	disappear ROUTE36_WEIRD_TREE
-	variablesprite SPRITE_WEIRD_TREE, SPRITE_TWIN
-	end
-
-DidntCatchSudowoodo:
-	reloadmapafterbattle
+	iffalse .no_flee_movement
 	applymovement ROUTE36_WEIRD_TREE, WeirdTreeMovement_Flee
+.no_flee_movement
 	disappear ROUTE36_WEIRD_TREE
 	variablesprite SPRITE_WEIRD_TREE, SPRITE_TWIN
 	special LoadUsedSpritesGFX

@@ -237,15 +237,6 @@ INCLUDE "engine/movie/gbc_only.asm"
 INCLUDE "engine/events/poke_seer.asm"
 
 
-SECTION "Shrink Pics", ROMX
-
-Shrink1Pic:
-INCBIN "gfx/new_game/shrink1.2bpp.lz"
-
-Shrink2Pic:
-INCBIN "gfx/new_game/shrink2.2bpp.lz"
-
-
 SECTION "bank14", ROMX
 
 INCLUDE "engine/pokemon/party_menu.asm"
@@ -701,14 +692,17 @@ SECTION "Crystal Events", ROMX
 INCLUDE "engine/events/battle_tower/load_trainer.asm"
 INCLUDE "engine/events/odd_egg.asm"
 
+
 SECTION "16-bit ID stuff", ROMX
 
 INCLUDE "engine/16/table_functions.asm"
+
 
 SECTION "Formes", ROMX
 
 INCLUDE "engine/pokemon/formes.asm"
 INCLUDE "data/pokemon/formes.asm"
+
 
 SECTION "Text Files", ROMX
 
@@ -720,6 +714,7 @@ INCLUDE "data/text/text_files.asm"
 INCLUDE "data/battle_anims/move_animations.asm"
 INCLUDE "data/trainers/parties.asm"
 INCLUDE "engine/battle/effect_command_files.asm"
+INCLUDE "gfx/misc.asm"
 INCLUDE "gfx/tilesets.asm"
 INCLUDE "mobile/mobile_battle_tower.asm"
 INCLUDE "mobile/mobile_40.asm"

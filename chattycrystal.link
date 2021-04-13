@@ -14,6 +14,8 @@ ROMX $03
 	"Pics 38"
 ROMX $04
 	"bank4"
+	"The End GFX"
+	"Shrink Pics"
 ROMX $05
 	"bank5"
 	"Map Blocks 6"
@@ -37,6 +39,7 @@ ROMX $0a
 ROMX $0b
 	"bankB"
 	"Map Blocks 5"
+	"Tileset Data 15"
 ROMX $0c
 	"bankC"
 	"Tileset Data 4"
@@ -63,6 +66,7 @@ ROMX $13
 	"Map Scripts 6"
 ROMX $14
 	"bank14"
+	"G/S Egg Pic"
 	"Map Scripts 21"
 ROMX $15
 	"Map Scripts 1"
@@ -100,6 +104,7 @@ ROMX $21
 	"Pic Animations 6"
 ROMX $22
 	"bank22"
+	"Town Map GFX"
 ROMX $23
 	"bank23"
 	"Map Blocks 7"
@@ -161,6 +166,7 @@ ROMX $38
 	"bank38"
 ROMX $39
 	"bank39"
+	"Copyright GFX"
 ROMX $3a
 	"Songs 1"
 ROMX $3b
@@ -244,6 +250,7 @@ ROMX $5a
 	"Pics 19"
 ROMX $5b
 	"bank5B"
+	"Miscellaneous Back Pics"
 	"Pics 20"
 ROMX $5c
 	"Mobile 5C"
@@ -329,6 +336,7 @@ ROMX $76
 	"Audio"
 ROMX $77
 	"bank77"
+	"Miscellaneous GFX"
 	"Tileset Data 7"
 ROMX $78
 	"Pic Animations 4"

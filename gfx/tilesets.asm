@@ -276,17 +276,12 @@ TilesetHoOhWordRoomColl:
 TilesetKabutoWordRoomColl:
 TilesetOmanyteWordRoomColl:
 TilesetAerodactylWordRoomColl:
-INCLUDE "data/tilesets/beta_word_room_collision.asm"
+INCLUDE "data/tilesets/ho_oh_word_room_collision.asm"
 
 
 SECTION "Tileset Data 7", ROMX
 
 TilesetRuinsOfAlphGFX:
-TilesetBetaWordRoomGFX:
-TilesetHoOhWordRoomGFX:
-TilesetKabutoWordRoomGFX:
-TilesetOmanyteWordRoomGFX:
-TilesetAerodactylWordRoomGFX:
 INCBIN "gfx/tilesets/ruins_of_alph.2bpp.lz"
 
 TilesetRuinsOfAlphMeta:
@@ -391,3 +386,13 @@ TilesetPkmnMansionMeta:
 
 TilesetPkmnMansionColl:
 	INCLUDE "data/tilesets/pkmn_mansion_collision.asm"
+
+
+SECTION "Tileset Data 15", ROMX
+
+TilesetBetaWordRoomGFX:
+TilesetHoOhWordRoomGFX:
+TilesetKabutoWordRoomGFX:
+TilesetOmanyteWordRoomGFX:
+TilesetAerodactylWordRoomGFX:
+INCBIN "gfx/tilesets/aerodactyl_word_room.2bpp.lz"

@@ -65,11 +65,6 @@ TilesetParkPalMap:
 INCLUDE "gfx/tilesets/park_palette_map.asm"
 
 TilesetRuinsOfAlphPalMap:
-TilesetBetaWordRoomPalMap:
-TilesetHoOhWordRoomPalMap:
-TilesetKabutoWordRoomPalMap:
-TilesetOmanyteWordRoomPalMap:
-TilesetAerodactylWordRoomPalMap:
 INCLUDE "gfx/tilesets/ruins_of_alph_palette_map.asm"
 
 TilesetRadioTowerPalMap:
@@ -119,3 +114,10 @@ INCLUDE "gfx/tilesets/pkmn_mansion_palette_map.asm"
 
 TilesetCemeteryPalMap:
 INCLUDE "gfx/tilesets/cemetery_palette_map.asm"
+
+TilesetBetaWordRoomPalMap:
+TilesetHoOhWordRoomPalMap:
+TilesetKabutoWordRoomPalMap:
+TilesetOmanyteWordRoomPalMap:
+TilesetAerodactylWordRoomPalMap:
+INCLUDE "gfx/tilesets/ho_oh_word_room_palette_map.asm"

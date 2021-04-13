@@ -16,12 +16,12 @@ RuinsOfAlphOmanyteChamber_MapScripts:
 .HiddenDoors:
 	checkevent EVENT_WALL_OPENED_IN_OMANYTE_CHAMBER
 	iftrue .WallOpen
-	changeblock 4, 0, $2e ; closed wall
+	changeblock 4, 0, $41 ; closed wall
 .WallOpen:
 	checkevent EVENT_SOLVED_OMANYTE_PUZZLE
 	iftrue .return
-	changeblock 2, 2, $01 ; left floor
-	changeblock 4, 2, $02 ; right floor
+	changeblock 2, 2, $44 ; left floor
+	changeblock 4, 2, $45 ; right floor
 .return
 	return
 
@@ -31,7 +31,7 @@ RuinsOfAlphOmanyteChamber_MapScripts:
 	showemote EMOTE_SHOCK, PLAYER, 20
 	pause 30
 	playsound SFX_STRENGTH
-	changeblock 4, 0, $30 ; open wall
+	changeblock 4, 0, $42 ; open wall
 	reloadmappart
 	earthquake 50
 	setscene SCENE_FINISHED
@@ -53,8 +53,8 @@ RuinsOfAlphOmanyteChamberPuzzle:
 	setmapscene RUINS_OF_ALPH_INNER_CHAMBER, SCENE_RUINSOFALPHINNERCHAMBER_STRANGE_PRESENCE
 	earthquake 30
 	showemote EMOTE_SHOCK, PLAYER, 15
-	changeblock 2, 2, $18 ; left hole
-	changeblock 4, 2, $19 ; right hole
+	changeblock 2, 2, $46 ; left hole
+	changeblock 4, 2, $47 ; right hole
 	reloadmappart
 	playsound SFX_STRENGTH
 	earthquake 80

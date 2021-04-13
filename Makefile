@@ -85,8 +85,9 @@ chattycrystal.gbc: $(crystal_obj) chattycrystal.link
 %.lz: %
 	tools/lzcomp -- $< $@
 
-%.bsp: %.gbc baserom.gbc baserom11.gbc bspbuild/bspbuild titles.txt
-	bspbuild/bspbuild -m ips -s baserom.gbc baserom11.gbc -m xor-rle -t $< -f 0x4000 -pb 0xff --check-fragment-swap --titles titles.txt -o $@
+%.bsp: %.gbc baserom.gbc baserom11.gbc bspbuild/bspbuild titles.txt version.asm
+	bspbuild/bspbuild -m ips -s baserom.gbc baserom11.gbc -m xor-rle -t $< -f 0x4000 -pb 0xff --check-fragment-swap --titles titles.txt -o $@ \
+		--opening-banner "`$(RGBASM) -DPRINTNAME version.asm`"
 
 bspbuild/bspbuild:
 	$(MAKE) -C bspbuild/

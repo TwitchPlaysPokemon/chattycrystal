@@ -74,9 +74,6 @@ INCLUDE "engine/events/reset_unique_mons.asm"
 INCLUDE "engine/math/get_square_root.asm"
 INCLUDE "engine/pokemon/add_mobile_mon.asm"
 
-TheEndGFX::
-INCBIN "gfx/credits/theend.2bpp"
-
 
 SECTION "bank5", ROMX
 
@@ -217,13 +214,6 @@ INCLUDE "engine/events/checksave.asm"
 INCLUDE "data/maps/scenes.asm"
 INCLUDE "engine/overworld/load_map_part.asm"
 INCLUDE "engine/phone/phonering_copytilemapatonce.asm"
-
-Shrink1Pic:
-INCBIN "gfx/new_game/shrink1.2bpp.lz"
-
-Shrink2Pic:
-INCBIN "gfx/new_game/shrink2.2bpp.lz"
-
 INCLUDE "engine/link/link_2.asm"
 INCLUDE "engine/rtc/reset_password.asm"
 INCLUDE "engine/menus/delete_save.asm"
@@ -262,10 +252,6 @@ INCLUDE "engine/gfx/load_pics.asm"
 INCLUDE "engine/pokemon/move_mon_wo_mail.asm"
 INCLUDE "data/pokemon/names.asm"
 INCLUDE "data/pokemon/base_stats.asm"
-
-UnknownEggPic::
-; Another egg pic. This is shifted up a few pixels.
-INCBIN "gfx/unknown/unknown_egg.2bpp.lz"
 
 
 SECTION "Crystal Phone Text", ROMX
@@ -314,9 +300,6 @@ INCLUDE "engine/events/dratini.asm"
 INCLUDE "engine/events/battle_tower/rules.asm"
 INCLUDE "engine/events/field_moves.asm"
 INCLUDE "engine/events/checkforhiddenitems.asm"
-
-TownMapGFX:
-INCBIN "gfx/pokegear/town_map.2bpp.lz"
 
 
 SECTION "bank23", ROMX
@@ -456,13 +439,6 @@ INCLUDE "gfx/pokemon/kanto_frames.asm"
 INCLUDE "gfx/pokemon/unown_bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/unown_bitmasks.asm"
 
-
-SECTION "Font Inversed", ROMX
-
-FontInversed:
-INCBIN "gfx/font/font_inversed.1bpp"
-
-
 SECTION "Pic Animations 3", ROMX
 
 INCLUDE "gfx/pokemon/johto_frames.asm"
@@ -500,14 +476,6 @@ INCLUDE "engine/events/halloffame.asm"
 
 SECTION "bank39", ROMX
 
-CopyrightGFX::
-INCBIN "gfx/splash/copyright.2bpp"
-
-CopyrightTPPGFX::
-INCBIN "gfx/splash/copyright_tpp.2bpp"
-
-CopyrightTPPGFXEnd::
-
 INCLUDE "engine/menus/options_menu.asm"
 INCLUDE "engine/movie/crystal_intro.asm"
 INCLUDE "data/moves/moves.asm"
@@ -542,12 +510,6 @@ SECTION "Move Animation Framesets", ROMX
 INCLUDE "engine/battle_anims/framesets.asm"
 
 
-SECTION "Intro Logo", ROMX
-
-IntroLogoGFX:
-INCBIN "gfx/intro/logo.2bpp.lz"
-
-
 SECTION "Title", ROMX
 
 INCLUDE "engine/movie/title.asm"
@@ -563,12 +525,6 @@ SECTION "bank5B", ROMX
 INCLUDE "engine/link/link_trade.asm"
 INCLUDE "engine/link/link.asm"
 INCLUDE "engine/battle/link_result.asm"
-
-ChrisBackpic:
-INCBIN "gfx/player/chris_back.2bpp.lz"
-
-DudeBackpic:
-INCBIN "gfx/battle/dude.2bpp.lz"
 
 
 SECTION "Crystal Phone Text 2", ROMX
@@ -677,12 +633,6 @@ INCLUDE "engine/pokegear/townmap_convertlinebreakcharacters.asm"
 INCLUDE "data/moves/bootleg_names.asm"
 INCLUDE "engine/pokemon/european_mail.asm"
 
-PokegearGFX:
-INCBIN "gfx/pokegear/pokegear.2bpp.lz"
-
-UnownFont:
-INCBIN "gfx/font/unown_font.2bpp"
-
 
 SECTION "Battle Tower Text", ROMX
 
@@ -699,14 +649,17 @@ SECTION "Crystal Events", ROMX
 INCLUDE "engine/events/battle_tower/load_trainer.asm"
 INCLUDE "engine/events/odd_egg.asm"
 
+
 SECTION "16-bit ID stuff", ROMX
 
 INCLUDE "engine/16/table_functions.asm"
+
 
 SECTION "Formes", ROMX
 
 INCLUDE "engine/pokemon/formes.asm"
 INCLUDE "data/pokemon/formes.asm"
+
 
 SECTION "Text Files", ROMX
 
@@ -718,6 +671,7 @@ INCLUDE "data/text/text_files.asm"
 INCLUDE "data/battle_anims/move_animations.asm"
 INCLUDE "data/trainers/parties.asm"
 INCLUDE "engine/battle/effect_command_files.asm"
+INCLUDE "gfx/misc.asm"
 INCLUDE "gfx/tilesets.asm"
 INCLUDE "mobile/mobile_battle_tower.asm"
 INCLUDE "mobile/mobile_40.asm"

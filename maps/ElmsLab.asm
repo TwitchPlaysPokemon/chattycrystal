@@ -93,6 +93,7 @@ ElmCheckEverstone:
 	checkevent EVENT_TOLD_ELM_ABOUT_UNOWN_OVER_THE_PHONE
 	iffalse ElmCheckUnownEgg
 	loadmonindex 1, UNOWN
+	special FindPartyMonThatSpeciesYourTrainerID
 	iftrue ShowElmUnownScript
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue ElmDescribesMrPokemonScript
@@ -193,9 +194,13 @@ ElmGiveEverstoneScript:
 	setevent EVENT_GOT_EVERSTONE_FROM_ELM
 	setflag ENGINE_MAIN_MENU_MOBILE_CHOICES
 	setmapscene ROUTE_29, SCENE_ROUTE29_CATCH_TUTORIAL
+	setscene SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
+	checkmapscene MR_POKEMONS_HOUSE
+	iffalse GenericDummyScript
+	checkmapscene CHERRYGROVE_CITY
+	iftrue GenericDummyScript
 	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
 	setevent EVENT_ROUTE_30_BATTLE
-	setscene SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
 	end
 
 ElmScript_CallYou:

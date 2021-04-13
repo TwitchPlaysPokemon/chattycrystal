@@ -4,6 +4,8 @@ VERSION_MINOR EQU 0
 ; set to a non-zero value to mark the build as a release
 RELEASE_NUMBER EQU 1
 
+GAME_TITLE EQUS "TwitchPlaysPokemon's Chatty Crystal"
+
 ; do not change anything below this line
 
 if RELEASE_NUMBER
@@ -18,4 +20,13 @@ ___build_minute EQU __UTC_MINUTE__
 ___build_second EQU __UTC_SECOND__
 
 BUILD_LABEL EQUS "{04d:___build_year}-{02d:___build_month}-{02d:___build_day} {02d:___build_hour}:{02d:___build_minute}:{02d:___build_second}"
+endc
+
+if DEF(PRINTNAME)
+	print "{GAME_TITLE} "
+	if RELEASE_NUMBER
+		print "(v{d:VERSION_MAJOR}.{02d:VERSION_MINOR}, release {d:RELEASE_NUMBER})\n"
+	else
+		print "(custom build)\n"
+	endc
 endc

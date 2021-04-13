@@ -305,7 +305,6 @@ ROMX $6f
 	"Text 1"
 ROMX $70
 	"Tileset Data 8"
-	"Pics 29"
 ROMX $71
 	"Text 2"
 	"Tileset Data 14"
@@ -335,7 +334,7 @@ ROMX $77
 ROMX $78
 	"Pic Animations 4"
 ROMX $79
-	; empty
+	"Pics 29"
 ROMX $7a
 	; empty
 ROMX $7b

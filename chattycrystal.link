@@ -14,6 +14,7 @@ ROMX $03
 	"Pics 38"
 ROMX $04
 	"bank4"
+	"Shrink Pics"
 ROMX $05
 	"bank5"
 	"Map Blocks 6"

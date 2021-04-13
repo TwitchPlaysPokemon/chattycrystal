@@ -217,13 +217,6 @@ INCLUDE "engine/events/checksave.asm"
 INCLUDE "data/maps/scenes.asm"
 INCLUDE "engine/overworld/load_map_part.asm"
 INCLUDE "engine/phone/phonering_copytilemapatonce.asm"
-
-Shrink1Pic:
-INCBIN "gfx/new_game/shrink1.2bpp.lz"
-
-Shrink2Pic:
-INCBIN "gfx/new_game/shrink2.2bpp.lz"
-
 INCLUDE "engine/link/link_2.asm"
 INCLUDE "engine/rtc/reset_password.asm"
 INCLUDE "engine/menus/delete_save.asm"
@@ -242,6 +235,15 @@ INCLUDE "engine/events/battle_tower/get_trainer_class.asm"
 INCLUDE "engine/battle/sliding_intro.asm"
 INCLUDE "engine/movie/gbc_only.asm"
 INCLUDE "engine/events/poke_seer.asm"
+
+
+SECTION "Shrink Pics", ROMX
+
+Shrink1Pic:
+INCBIN "gfx/new_game/shrink1.2bpp.lz"
+
+Shrink2Pic:
+INCBIN "gfx/new_game/shrink2.2bpp.lz"
 
 
 SECTION "bank14", ROMX

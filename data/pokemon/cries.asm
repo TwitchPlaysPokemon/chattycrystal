@@ -329,7 +329,7 @@ PokemonCries::
 	mon_cry CRY_CLEFAIRY,    $06a,  $200 ; CHIMCHAR
 	mon_cry CRY_PIDGEOTTO,   $fef,  $200 ; MONFERNO
 	mon_cry CRY_PIDGEOTTO,   $ef6,  $300 ; INFERNAPE
-	mon_cry CRY_PSYDUCK,     $240,  $0f0 ; PIPLUP
+	mon_cry CRY_PSYDUCK,     $250,  $0a0 ; PIPLUP 
 	mon_cry CRY_RAICHU,     -$006,  $0b0 ; PRINPLUP
 	mon_cry CRY_BLASTOISE,   $093,  $15a ; EMPOLEON
 	mon_cry CRY_MARILL,      $030,  $190 ; BIDOOF
@@ -339,9 +339,9 @@ PokemonCries::
 	mon_cry CRY_RAICHU,     -$038,  $0c8 ; LUXRAY
 	mon_cry CRY_VENONAT,     $00e,  $0be ; BUDEW
 	mon_cry CRY_PICHU,      -$047,  $266 ; ROSERADE
-	mon_cry CRY_CHATOT,      $03c,  $128 ; BURMY
+	mon_cry CRY_CHATOT,      $f0c,  $0d8 ; BURMY
 	mon_cry CRY_NIDOQUEEN,  -$05c,  $0d8 ; MOTHIM
-	mon_cry CRY_BLASTOISE,   $203,  $0c4 ; BUIZEL
+	mon_cry CRY_BLASTOISE,   $1d9,  $0b4 ; BUIZEL
 	mon_cry CRY_PIDGEOTTO,  -$0ca,  $240 ; FLOATZEL
 	mon_cry CRY_WEEDLE,      $0ff,  $0aa ; SHELLOS
 	mon_cry CRY_GASTRODON,   $830,  $050 ; GASTRODON

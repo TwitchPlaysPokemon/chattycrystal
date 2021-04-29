@@ -329,7 +329,7 @@ PokemonCries::
 	mon_cry CRY_CLEFAIRY,    $06a,  $200 ; CHIMCHAR
 	mon_cry CRY_PIDGEOTTO,   $fef,  $200 ; MONFERNO
 	mon_cry CRY_PIDGEOTTO,   $ef6,  $300 ; INFERNAPE
-	mon_cry CRY_PSYDUCK,     $250,  $0a0 ; PIPLUP 
+	mon_cry CRY_PSYDUCK,     $250,  $0a0 ; PIPLUP
 	mon_cry CRY_RAICHU,     -$006,  $0b0 ; PRINPLUP
 	mon_cry CRY_BLASTOISE,   $093,  $15a ; EMPOLEON
 	mon_cry CRY_MARILL,      $030,  $190 ; BIDOOF

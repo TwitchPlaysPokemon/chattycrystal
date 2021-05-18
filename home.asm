@@ -9,6 +9,8 @@ Start::
 	nop
 	jp _Start
 
+	ds $50 - (@ - Start), 0
+
 
 SECTION "Home", ROM0
 

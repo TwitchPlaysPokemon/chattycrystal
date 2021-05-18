@@ -271,7 +271,7 @@ KimonoGirlReaSeenText:
 	line "dancing itself is"
 	cont "also training."
 
-	text "Would you like to"
+	para "Would you like to"
 	line "battle?"
 	done
 

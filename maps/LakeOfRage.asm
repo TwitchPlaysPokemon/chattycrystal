@@ -17,20 +17,24 @@ LakeOfRage_MapScripts:
 
 	db 2 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-	callback MAPCALLBACK_OBJECTS, .Wesley
+	callback MAPCALLBACK_OBJECTS, .Objects
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
 	return
 
-.Wesley:
-	readvar VAR_WEEKDAY
-	ifequal WEDNESDAY, .WesleyAppears
+.Objects:
 	disappear LAKEOFRAGE_WESLEY
-	return
-
-.WesleyAppears:
+	readvar VAR_WEEKDAY
+	ifnotequal WEDNESDAY, .skip
 	appear LAKEOFRAGE_WESLEY
+.skip
+	checkevent EVENT_DECIDED_TO_HELP_LANCE
+	iftrue .return
+	checkevent EVENT_LAKE_OF_RAGE_RED_GYARADOS
+	iffalse .return
+	appear LAKEOFRAGE_LANCE
+.return
 	return
 
 LakeOfRageLanceScript:

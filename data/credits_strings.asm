@@ -121,10 +121,12 @@ CreditsStrings:
 	dw .SoupPotato
 	dw .RomTester
 	dw .Monstarules
+	dw .Myrattata
 	dw .ChatIntegration
 	dw .Aissurtievos
 	dw .DataCollection
 	dw .Ravendwyr
+	dw .Bexxxxxxx
 	dw .RunManager
 	dw .M4UsedRollout
 	dw .FutureSushi
@@ -265,10 +267,12 @@ CreditsStrings:
 .SoupPotato:          db "    SoupPotato@"
 .RomTester:           db "    ROM TESTER@"
 .Monstarules:         db "    Monstarules@"
+.Myrattata:           db "     Myrattata@"
 .ChatIntegration:     db "  CHAT INTEGRATION@"
 .Aissurtievos:        db "    Aissurtievos@"
 .DataCollection:      db "  DATA COLLECTION@"
 .Ravendwyr:           db "     Ravendwyr@"
+.Bexxxxxxx:           db "     Bexxxxxxx@"
 .RunManager:          db "    RUN MANAGER@"
 .M4UsedRollout:       db "  m4_used_rollout@"
 .FutureSushi:         db "    futuresushi@"

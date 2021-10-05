@@ -157,7 +157,7 @@ EcruteakPokecenter1FCooltrainerFText:
 	line "LEADER, is soooo"
 	cont "cool."
 
-	para "His #MON are"
+	para "Her #MON are"
 	line "really tough too."
 	done
 

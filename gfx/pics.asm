@@ -266,11 +266,11 @@ AlakazamBackpic:     INCBIN "gfx/pokemon/alakazam/back.2bpp.lz"
 AipomFrontpic:       INCBIN "gfx/pokemon/aipom/front.animated.2bpp.lz"
 AbraFrontpic:        INCBIN "gfx/pokemon/abra/front.animated.2bpp.lz"
 HitmontopBackpic:    INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
-CloysterBackpic:     INCBIN "gfx/pokemon/cloyster/back.2bpp.lz"
 HoothootFrontpic:    INCBIN "gfx/pokemon/hoothoot/front.animated.2bpp.lz"
 UnownFBackpic:       INCBIN "gfx/pokemon/unown_f/back.2bpp.lz"
 PelipperBackpic:     INCBIN "gfx/pokemon/pelipper/back.2bpp.lz"
 TynamoFrontpic:      INCBIN "gfx/pokemon/tynamo/front.animated.2bpp.lz"
+NinetalesBackpic:    INCBIN "gfx/pokemon/ninetales/back.2bpp.lz"
 
 SECTION "Pics 11", ROMX
 
@@ -294,7 +294,7 @@ ShellderFrontpic:    INCBIN "gfx/pokemon/shellder/front.animated.2bpp.lz"
 TentacoolFrontpic:   INCBIN "gfx/pokemon/tentacool/front.animated.2bpp.lz"
 CleffaFrontpic:      INCBIN "gfx/pokemon/cleffa/front.animated.2bpp.lz"
 GyaradosBackpic:     INCBIN "gfx/pokemon/gyarados/back.2bpp.lz"
-NinetalesBackpic:    INCBIN "gfx/pokemon/ninetales/back.2bpp.lz"
+CloysterBackpic:     INCBIN "gfx/pokemon/cloyster/back.2bpp.lz"
 YanmaBackpic:        INCBIN "gfx/pokemon/yanma/back.2bpp.lz"
 PinsirBackpic:       INCBIN "gfx/pokemon/pinsir/back.2bpp.lz"
 LassPic:             INCBIN "gfx/trainers/lass.2bpp.lz"
@@ -1006,7 +1006,6 @@ BaytortleBackpic:    INCBIN "gfx/pokemon/baytortle/back.2bpp.lz"
 ChiquirtleFrontpic:  INCBIN "gfx/pokemon/chiquirtle/front.animated.2bpp.lz"
 ChiquirtleBackpic:   INCBIN "gfx/pokemon/chiquirtle/back.2bpp.lz"
 HootduoFrontpic:     INCBIN "gfx/pokemon/hootduo/front.animated.2bpp.lz"
-HootduoBackpic:      INCBIN "gfx/pokemon/hootduo/back.2bpp.lz"
 HopporitaFrontpic:   INCBIN "gfx/pokemon/hopporita/front.animated.2bpp.lz"
 HopporitaBackpic:    INCBIN "gfx/pokemon/hopporita/back.2bpp.lz"
 OnixtretFrontpic:    INCBIN "gfx/pokemon/onixtret/front.animated.2bpp.lz"
@@ -1017,6 +1016,7 @@ JumpluffBackpic:     INCBIN "gfx/pokemon/jumpluff/back.2bpp.lz"
 TeddiursaBackpic:    INCBIN "gfx/pokemon/teddiursa/back.2bpp.lz"
 GastlyBackpic:       INCBIN "gfx/pokemon/gastly/back.2bpp.lz"
 StunkyBackpic:       INCBIN "gfx/pokemon/stunky/back.2bpp.lz"
+PrinplupBackpic:     INCBIN "gfx/pokemon/prinplup/back.2bpp.lz"
 
 SECTION "Pics 34", ROMX
 
@@ -1057,7 +1057,7 @@ MisdreavusFrontpic:  INCBIN "gfx/pokemon/misdreavus/front.animated.2bpp.lz"
 CelebiFrontpic:      INCBIN "gfx/pokemon/celebi/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
 MudkipBackpic:       INCBIN "gfx/pokemon/mudkip/back.2bpp.lz"
-PrinplupBackpic:     INCBIN "gfx/pokemon/prinplup/back.2bpp.lz"
+HootduoBackpic:      INCBIN "gfx/pokemon/hootduo/back.2bpp.lz"
 
 SECTION "Pics 38", ROMX
 

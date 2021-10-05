@@ -331,6 +331,7 @@ CreditsScript:
 
 	db CREDIT_SOUND_EFFECTS, 1
 	db          MONSTARULES, 2
+	db            MYRATTATA, 3
 
 	db CREDITS_WAIT, 8
 
@@ -360,6 +361,7 @@ CreditsScript:
 
 	db      DATA_COLLECTION, 1
 	db            RAVENDWYR, 2
+	db            BEXXXXXXX, 3
 
 	db CREDITS_WAIT, 9
 

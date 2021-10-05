@@ -334,6 +334,12 @@ BattleText_YouAreTaunted:
 	line "attacking moves!"
 	prompt
 
+TauntPreventsMoveText:
+	text "But TAUNT prevents"
+	line "that move from"
+	cont "being used!"
+	prompt
+
 BattleText_MonHasNoMovesLeft:
 	text_ram wBattleMonNick
 	text_start

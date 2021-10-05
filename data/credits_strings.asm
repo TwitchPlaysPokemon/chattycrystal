@@ -267,7 +267,7 @@ CreditsStrings:
 .SoupPotato:          db "    SoupPotato@"
 .RomTester:           db "    ROM TESTER@"
 .Monstarules:         db "    Monstarules@"
-.Myrattata:           db "     Myrattata@"
+.Myrattata:           db "     myRattata@"
 .ChatIntegration:     db "  CHAT INTEGRATION@"
 .Aissurtievos:        db "    Aissurtievos@"
 .DataCollection:      db "  DATA COLLECTION@"

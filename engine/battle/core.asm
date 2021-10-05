@@ -1309,28 +1309,17 @@ SwitchTurnCore:
 	ret
 
 HandleTaunt:
-	ldh a, [hSerialConnectionStatus]
-	cp USING_EXTERNAL_CLOCK
-	jr z, .DoEnemyFirst
 	call SetPlayerTurn
-	call .do_it
-	call SetEnemyTurn
-	jp .do_it
-
-.DoEnemyFirst:
-	call SetEnemyTurn
-	call .do_it
-	call SetPlayerTurn
-.do_it
-	ldh a, [hBattleTurn]
-	and a
 	ld hl, wPlayerTauntCount
+	call .handle
+	call SetEnemyTurn
+	ld hl, wEnemyTauntCount
+.handle
 	ld a, [hl]
 	and a
 	ret z
 	dec [hl]
 	ret nz
-
 	ld hl, NoLongerTauntedText
 	jp StdBattleTextbox
 

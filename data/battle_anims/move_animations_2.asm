@@ -334,6 +334,7 @@ BattleAnim_DazzlingGleam:
 BattleAnim_Nuzzle:
 	anim_1gfx ANIM_GFX_LIGHTNING
 	anim_call BattleAnim_TargetObj_2Row
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_sound 0, 0, SFX_ZAP_CANNON
 	anim_obj ANIM_OBJ_31, 44, 88, $0
 	anim_wait 16

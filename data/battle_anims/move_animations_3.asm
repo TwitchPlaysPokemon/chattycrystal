@@ -35,6 +35,7 @@ BattleAnim_CrystalBolt:
 	anim_loop 10, .loop
 	anim_wait 16
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $6, $20
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_sound 0, 1, SFX_THUNDER
 	anim_bgeffect ANIM_BG_1F, $28, $2, $0
 .loop2
@@ -449,6 +450,7 @@ BattleAnim_ThunderFang:
 	anim_bgeffect ANIM_BG_1F, $14, $2, $0
 	anim_wait 4
 	anim_clearobjs
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2
 	anim_sound 0, 1, SFX_THUNDER
 	anim_obj ANIM_OBJ_2F, 152, 68, $0

@@ -29,3 +29,20 @@ BattleCommand_Taunt:
 	farcall PrintButItFailed
 	farcall EndMoveEffect
 	ret
+
+CheckTauntPreventsCurrentMove:
+	ldh a, [hBattleTurn]
+	and a
+	ld a, [wPlayerTauntCount]
+	jr z, .check
+	ld a, [wEnemyTauntCount]
+.check
+	and a
+	ret z
+	ld a, BATTLE_VARS_MOVE_ANIM
+	call GetBattleVar
+	ld l, a
+	ld a, MOVE_POWER
+	call GetMoveAttribute
+	sub 1
+	ret

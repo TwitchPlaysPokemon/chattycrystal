@@ -909,6 +909,16 @@ BattleCommand_DoTurn:
 	and 1 << SUBSTATUS_IN_LOOP | 1 << SUBSTATUS_RAMPAGE | 1 << SUBSTATUS_BIDE
 	ret nz
 
+	push hl
+	farcall CheckTauntPreventsCurrentMove
+	pop hl
+	jr nc, .not_taunted
+	call BattleCommand_MoveDelay
+	ld hl, TauntPreventsMoveText
+	call StdBattleTextbox
+	jp EndMoveEffect
+.not_taunted
+
 	call .consume_pp
 	ld a, b
 	and a
@@ -983,8 +993,7 @@ BattleCommand_DoTurn:
 
 .mimic
 	ld hl, wWildMonPP
-	call .consume_pp
-	ret
+	jr .consume_pp
 
 .out_of_pp
 	call BattleCommand_MoveDelay
@@ -1402,7 +1411,6 @@ InterpretTypeMatchup:
 	db EFFECT_CRYSTAL_BOLT, GROUND, EFFECTIVE ; neutral hit
 	db -1
 
-
 BattleCheckTypeMatchup:
 	ld hl, wEnemyMonType1
 	ldh a, [hBattleTurn]
@@ -1582,18 +1590,14 @@ BattleCommand_CheckHit:
 
 	call BattleRandom
 	cp b
-	jr nc, .Miss
-	ret
+	ret c
 
 .Miss:
 ; Keep the damage value intact if we're using (Hi) Jump Kick.
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_JUMP_KICK
-	jr z, .Missed
-	call ResetDamage
-
-.Missed:
+	call nz, ResetDamage
 	ld a, 1
 	ld [wAttackMissed], a
 	ret
@@ -2085,28 +2089,26 @@ BattleCommand_ApplyDamage:
 	jr z, .focus_band
 
 	call BattleCommand_FalseSwipe
-	ld b, 0
-	jr nc, .damage
-	ld b, 1
+	sbc a
+	inc a
 	jr .damage
 
 .focus_band
 	call GetOpponentItem
 	ld a, b
 	cp HELD_FOCUS_BAND
-	ld b, 0
+	ld a, 0
 	jr nz, .damage
 
 	call BattleRandom
 	cp c
 	jr nc, .damage
 	call BattleCommand_FalseSwipe
-	ld b, 0
-	jr nc, .damage
-	ld b, 2
+	sbc a
+	adc 1
 
 .damage
-	push bc
+	push af
 	call .update_damage_taken
 	ld c, FALSE
 	ldh a, [hBattleTurn]
@@ -2119,22 +2121,20 @@ BattleCommand_ApplyDamage:
 	call DoPlayerDamage
 
 .done_damage
-	pop bc
-	ld a, b
+	pop af
 	and a
 	ret z
 
 	dec a
-	jr nz, .focus_band_text
 	ld hl, EnduredText
-	jp StdBattleTextbox
+	jr z, .std_text_box
 
-.focus_band_text
 	call GetOpponentItem
 	ld a, [hl]
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName
 	ld hl, HungOnText
+.std_text_box
 	jp StdBattleTextbox
 
 .update_damage_taken

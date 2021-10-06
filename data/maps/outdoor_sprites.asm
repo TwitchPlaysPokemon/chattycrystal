@@ -83,7 +83,8 @@ VermilionGroupSprites:
 	db SPRITE_YOUNGSTER
 	db SPRITE_TEACHER
 	db SPRITE_SUPER_NERD
-	; 5 of max 9 walking sprites
+	db SPRITE_FISHER
+	; 6 of max 9 walking sprites
 	db SPRITE_BIG_SNORLAX
 	db SPRITE_MACHOP
 	db SPRITE_POKE_BALL

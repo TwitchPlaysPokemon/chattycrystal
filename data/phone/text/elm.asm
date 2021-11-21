@@ -45,21 +45,22 @@ ElmPhoneEggHatchedText:
 	line "Wow! What kind of"
 	cont "#MON is it?"
 
-	para "<......>"
+	para "<...><...>"
 
 	para "Wow, that's a rare"
-	line "#MON, you should"
-	cont "show Mr.#MON."
+	line "#MON! You"
+	para "should show it to"
+	line "MR.#MON."
 	done
 
 ElmPhoneEggHatched2Text:
 	text "Hello, <PLAY_G>?"
-	line "How is your "
+	line "How is your"
 	cont "#MON?"
 
-	para "Remember to"
-	line "vist Mr.#MON"
-	cont "for me."
+	para "Remember to visit"
+	line "MR.#MON for"
+	cont "me."
 	done
 
 ElmPhoneDiscovery1Text:

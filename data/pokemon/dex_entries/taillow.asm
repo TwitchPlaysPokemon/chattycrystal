@@ -3,7 +3,7 @@
 
 	db   "When it gets cold,"
 	next "they migrate,"
-	next "flying over 300 KM"
+	next "flying over 300 km"
 
 	page "a day. It hunts"
 	next "for tasty prey.@"

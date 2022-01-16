@@ -200,7 +200,7 @@ KantoGrassWildMons:
 	dbw 67, BUTTERFREE
 	dbw 67, LEDIAN
 	dbw 64, PIKACHU
-	dbw 64, SUDOWOODO
+	dbw 64, PIKACHU
 	; day
 	dbw 63, BIBAREL
 	dbw 63, PIDGEOT
@@ -208,7 +208,7 @@ KantoGrassWildMons:
 	dbw 67, BUTTERFREE
 	dbw 67, PIDGEOTTO
 	dbw 64, PIKACHU
-	dbw 64, SUDOWOODO
+	dbw 64, PIKACHU
 	; nite
 	dbw 63, NOCTOWL
 	dbw 63, ARIADOS

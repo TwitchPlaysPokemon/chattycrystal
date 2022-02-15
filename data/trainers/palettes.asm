@@ -81,3 +81,7 @@ INCBIN "gfx/trainers/oak.gbcpal", middle_colors ;POKEMON_PROF
 INCBIN "gfx/trainers/battle-pc.gbcpal", middle_colors ;BATTLE_PC
 INCBIN "gfx/trainers/wooper.gbcpal", middle_colors ;WOOPER_T
 KrisPalette: INCBIN "gfx/trainers/falkner.gbcpal", middle_colors ;BLUE_MAY
+INCBIN "gfx/trainers/lucas.gbcpal", middle_colors ;PT_LUCAS_BT
+INCBIN "gfx/trainers/michael.gbcpal", middle_colors ;XD_MICHAEL_BT
+INCBIN "gfx/trainers/greenmay.gbcpal", middle_colors ;GREEN_MAY_BT
+INCBIN "gfx/trainers/falkner.gbcpal", middle_colors ;BLUE_MAY_BT

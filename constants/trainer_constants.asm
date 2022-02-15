@@ -882,6 +882,6 @@ KRIS EQU __enum__
 	
 	trainerclass GREEN_MAY_BT ; 4e
 	
-	trainerclass BLUE_MAY_BT : 4f
+	trainerclass BLUE_MAY_BT ; 4f
 	
 NUM_TRAINER_CLASSES EQU __enum__

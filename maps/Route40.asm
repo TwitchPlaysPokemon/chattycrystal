@@ -216,15 +216,10 @@ Route40StandingYoungsterText:
 	text "Have you gone to"
 	line "the BATTLE TOWER?"
 
-	para "I think a lot of"
-	line "tough trainers"
-	para "have gathered"
-	line "there already."
-
-	para "But since you have"
-	line "so many BADGES,"
-	para "you shouldn't do"
-	line "badly at all."
+	para "Apparently some"
+	line "TRAINERS from"
+	para "far away are"
+	line "competing there."
 	done
 
 MeetMonicaText:

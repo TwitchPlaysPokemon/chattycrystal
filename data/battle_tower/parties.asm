@@ -5620,83 +5620,83 @@ BattleTowerMons10:
 	bigdw 214 ; SDef
 	db "OMUSUTA-@@@"
 
-	dw GOLEM
-	db BRIGHTPOWDER
-	dw EXPLOSION, EARTHQUAKE, ROCK_SLIDE, FIRE_BLAST
+	dw METAGROSS
+	db METAL_COAT
+	dw METEOR_MASH, ZEN_HEADBUTT, EARTHQUAKE, FLY
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 7, 4, 4, 6 ; DVs
-	db 5, 10, 10, 5 ; PP
+	bigdw 5041
+	bigdw 13225
+	bigdw 15876
+	bigdw 10201
+	bigdw 9216
+	dn 7, 1, 13, 8 ; DVs
+	db 10, 15, 10, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 329 ; HP
-	bigdw 329 ; Max HP
-	bigdw 282 ; Atk
-	bigdw 316 ; Def
-	bigdw 146 ; Spd
-	bigdw 170 ; SAtk
-	bigdw 190 ; SDef
-	db "GORO-NIya@@"
-
-	dw HITMONCHAN
-	db FOCUS_BAND
-	dw COUNTER, FIRE_PUNCH, THUNDERPUNCH, ICE_PUNCH
-
-	dw 0 ; OT ID
-	dt 1000000 ; Exp
-	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 6, 7, 7, 6 ; DVs
-	db 20, 15, 15, 15 ; PP
-	db 0 ; Happiness
-	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
-	db 0, 0 ; Status
-	bigdw 265 ; HP
-	bigdw 265 ; Max HP
-	bigdw 270 ; Atk
-	bigdw 220 ; Def
-	bigdw 214 ; Spd
-	bigdw 130 ; SAtk
-	bigdw 280 ; SDef
-	db "EBIWARA-@@@"
-
-	dw LANTURN
-	db QUICK_CLAW
-	dw SURF, RAIN_DANCE, ZAP_CANNON, CONFUSE_RAY
-
-	dw 0 ; OT ID
-	dt 1000000 ; Exp
-	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 7, 6, 5, 7 ; DVs
-	db 15, 5, 5, 10 ; PP
-	db 0 ; Happiness
-	db 0, 0, 0 ; Pokerus, Caught data
-	db 100 ; Level
-	db 0, 0 ; Status
-	bigdw 425 ; HP
-	bigdw 425 ; Max HP
-	bigdw 178 ; Atk
-	bigdw 176 ; Def
-	bigdw 192 ; Spd
-	bigdw 214 ; SAtk
+	bigdw 299 ; HP
+	bigdw 299 ; Max HP
+	bigdw 301 ; Atk
+	bigdw 283 ; Def
+	bigdw 186 ; Spd
+	bigdw 223 ; SAtk
 	bigdw 214 ; SDef
-	db "RANTA-N@@@@"
+	db "GPWWERZ!:@@"
+
+	dw INFERNAPE
+	db BLACK_BELT
+	dw CLOSE_COMBAT, FIRE_PUNCH, EARTHQUAKE, THUNDERPUNCH
+
+	dw 0 ; OT ID
+	dt 1000000 ; Exp
+	; Stat exp
+	bigdw 0 ;min HP for Life Orb
+	bigdw 65535 ;Max for Life Orb and Nature
+	bigdw 5041
+	bigdw 12100
+	bigdw 44321 ;+25k for Life Orb
+	dn 14, 14, 4, 12 ; DVs
+	db 5, 15, 10, 15 ; PP
+	db 0 ; Happiness
+	db 0, 0, 0 ; Pokerus, Caught data
+	db 100 ; Level
+	db 0, 0 ; Status
+	bigdw 249 ; HP
+	bigdw 249 ; Max HP
+	bigdw 289 ; Atk
+	bigdw 184 ; Def
+	bigdw 244 ; Spd
+	bigdw 274 ; SAtk
+	bigdw 212 ; SDef
+	db "MONKE@@@@@@"
+
+	dw MAGCARGO
+	db LEFTOVERS
+	dw FLAMETHROWER, POWER_GEM, IRON_DEFENSE, RECOVER
+
+	dw 0 ; OT ID
+	dt 1000000 ; Exp
+	; Stat exp
+	bigdw 54766 ;boosted by 50k to better represent solid rock
+	bigdw 13083
+	bigdw 65535 ;Renegade Platinum Buffs 
+	bigdw 17000
+	bigdw 58000 ;Renegade Platinum Buffs
+	dn 7, 15, 15, 7 ; DVs
+	db 15, 20, 15, 10 ; PP
+	db 0 ; Happiness
+	db 0, 0, 0 ; Pokerus, Caught data
+	db 100 ; Level
+	db 0, 0 ; Status
+	bigdw 257 ; HP
+	bigdw 257 ; Max HP
+	bigdw 147 ; Atk
+	bigdw 338 ; Def
+	bigdw 127 ; Spd
+	bigdw 239 ; SAtk
+	bigdw 239 ; SDef
+	db "oouooobbc@@"

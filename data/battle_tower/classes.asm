@@ -3,62 +3,8 @@ BattleTowerTrainers:
 ; Instead, the sixth character in the trainer's name is used.
 ; See BattleTowerText in engine/events/battle_tower/trainer_text.asm.
 	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-; The following can only be sampled in Crystal 1.1.
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "Kr@@@@@@@@", PT_LUCAS
+	db "ACCPPQ@@@@", GREEN_MAY
+	db "ABBBCC@@@@", XD_MICHAEL
 	db "Kr@@@@@@@@", PT_LUCAS
 	db "Kr@@@@@@@@", PT_LUCAS
 	db "Kr@@@@@@@@", PT_LUCAS

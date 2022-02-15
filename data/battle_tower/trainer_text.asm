@@ -1,479 +1,479 @@
 BattleTowerText_0x1ec000:
-	text "………"
+	text "..."
 	done
 
 BattleTowerText_0x1ec03b:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec060:
-	text "………"
+	text "..."
 	done
 
 BattleTowerText_0x1ec080:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec0a3:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec0c4:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec0e1:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec108:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec12a:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec14d:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec16f:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec190:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec1ae:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec1d0:
-	text "………"
+	text "..."
 	done
 	
 UnknownText_0x1ec1f4:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec216:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec238:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec259:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec27b:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec2a0:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec2c0:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec2d9:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec2fe:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec320:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec33f:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec36c:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec389:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec3ad:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec3c5:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec3e5:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec402:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec411:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec41f:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec42e:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec461:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec4a0:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec4d6:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec4f5:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec512:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec532:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec54b:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec565:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec580:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec59d:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec5b5:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec5d3:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec5ee:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec60d:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec631:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec651:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec68f:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec6b1:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec6d0:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec708:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec720:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec73e:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec75b:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec77f:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec798:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec7bb:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec7d8:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec818:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec837:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec858:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec876:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec898:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec8b1:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec8d5:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec8f0:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec911:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec928:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec949:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec969:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec986:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec99b:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec9bd:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec9d9:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ec9f7:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1eca0a:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1eca2a:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1eca47:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1eca64:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1eca82:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1eca9d:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecabf:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecade:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecafa:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecb19:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecb37:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecb55:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecb70:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecb92:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecbb6:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecbd9:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecbf3:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecc15:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecc39:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecc55:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecc75:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecc92:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecca7:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1eccc1:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1eccd7:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1eccef:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecd0e:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecd2b:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecd4d:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecd6b:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecd8d:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecdaf:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecdcf:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecded:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ece0d:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ece2a:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ece4b:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ece70:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ece8a:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecea8:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecec9:
-	text "………"
+	text "..."
 	done
 
 UnknownText_0x1ecee8:
-	text "………"
+	text "..."
 	done

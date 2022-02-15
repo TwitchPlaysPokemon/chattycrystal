@@ -76,3 +76,7 @@ TrainerClassDVs:
 	dn 15, 13, 13, 14 ; BATTLE_PC
 	dn 15, 15, 15, 15 ; WOOPER_T
 	dn 15, 15, 15, 15 ; BLUE_MAY
+	dn 15, 15, 15, 15 ; PT_LUCAS_BT
+	dn 15, 15, 15, 15 ; XD_MICHAEL_BT
+	dn 15, 15, 15, 15 ; GREEN_MAY_BT
+	dn 15, 15, 15, 15 ; BLUE_MAY_BT

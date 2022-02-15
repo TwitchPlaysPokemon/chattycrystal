@@ -5152,13 +5152,13 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 299 ; HP
-	bigdw 299 ; Max HP
-	bigdw 301 ; Atk
-	bigdw 283 ; Def
-	bigdw 186 ; Spd
-	bigdw 223 ; SAtk
-	bigdw 214 ; SDef
+	bigdw 300 ; HP
+	bigdw 300 ; Max HP
+	bigdw 320 ; Atk +20 for expert Belt
+	bigdw 284 ; Def
+	bigdw 203 ; Spd
+	bigdw 191 ; SAtk
+	bigdw 200 ; SDef
 	db "GPWWERZ!:@@"
 
 	dw INFERNAPE
@@ -5168,24 +5168,24 @@ BattleTowerMons10:
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
-	bigdw 0 ;min HP for Life Orb
-	bigdw 65535 ;Max for Life Orb and Nature
+	bigdw 0 
+	bigdw 65535 
 	bigdw 5041
 	bigdw 12100
-	bigdw 44321 ;+25k for Life Orb
+	bigdw 44321 
 	dn 14, 14, 4, 12 ; DVs
 	db 5, 15, 10, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 249 ; HP
-	bigdw 249 ; Max HP
-	bigdw 289 ; Atk
-	bigdw 184 ; Def
-	bigdw 244 ; Spd
-	bigdw 274 ; SAtk
-	bigdw 212 ; SDef
+	bigdw 237 ; HP
+	bigdw 237 ; Max HP -50 for Life Orb
+	bigdw 316 ; Atk +50 for Life Orb
+	bigdw 165 ; Def
+	bigdw 246 ; Spd
+	bigdw 293 ; SAtk +50 for Life Orb
+	bigdw 155 ; SDef
 	db "MONKE@@@@@@"
 
 	dw MAGCARGO
@@ -5206,18 +5206,18 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 257 ; HP
-	bigdw 257 ; Max HP
+	bigdw 307 ; HP 
+	bigdw 307 ; Max HP +50 for Solid Rock
 	bigdw 147 ; Atk
 	bigdw 363 ; Def
 	bigdw 127 ; Spd
-	bigdw 239 ; SAtk
-	bigdw 239 ; SDef
+	bigdw 244 ; SAtk
+	bigdw 233 ; SDef
 	db "oouooobbc@@"
 	
-	dw JOLTEON
-	db BRIGHTPOWDER
-	dw THUNDERBOLT, ROAR, THUNDER_WAVE, IRON_TAIL
+	dw AMPHAROS
+	db NO_ITEM
+	dw THUNDER_WAVE, THUNDER, BODY_SLAM, LIGHT_SCREEN
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5228,23 +5228,23 @@ BattleTowerMons10:
 	bigdw 30000
 	bigdw 50000
 	dn 15, 13, 15, 14 ; DVs
-	db 15, 20, 20, 15 ; PP
+	db 20, 10, 15, 30 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 220 ; Atk
-	bigdw 206 ; Def
-	bigdw 8 ; Spd
-	bigdw 308 ; SAtk
-	bigdw 278 ; SDef
-	db "SANDA-SU@@@"
+	bigdw 317 ; HP
+	bigdw 317 ; Max HP
+	bigdw 183 ; Atk
+	bigdw 189 ; Def
+	bigdw 167 ; Spd
+	bigdw 270 ; SAtk
+	bigdw 221 ; SDef
+	db "AAAAAAAAAA@"
 
-	dw TAUROS
-	db KINGS_ROCK
-	dw HYPER_BEAM, EARTHQUAKE, IRON_TAIL, THUNDERBOLT
+	dw WALREIN
+	db ULTRA_BALL
+	dw BLIZZARD, SHEER_COLD, HAIL, WATER_GUN
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5260,14 +5260,14 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 290 ; Atk
-	bigdw 276 ; Def
-	bigdw 8 ; Spd
-	bigdw 170 ; SAtk
-	bigdw 230 ; SDef
-	db "KENTAROSU@@"
+	bigdw 358 ; HP
+	bigdw 358 ; Max HP
+	bigdw 194 ; Atk
+	bigdw 256 ; Def
+	bigdw 168 ; Spd
+	bigdw 226 ; SAtk
+	bigdw 223 ; SDef
+	db "//z  ppp @@"
 
 	dw ARCANINE
 	db LEFTOVERS

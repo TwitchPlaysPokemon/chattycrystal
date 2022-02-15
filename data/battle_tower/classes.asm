@@ -5,7 +5,7 @@ BattleTowerTrainers:
 	db "Kr@@@@@@@@", PT_LUCAS
 	db "ACCPPQ@@@@", GREEN_MAY
 	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
+	db "..hnv@@@@@", BLUE_MAY
 	db "ACCPPQ@@@@", GREEN_MAY
 	db "ABBBCC@@@@", XD_MICHAEL
 	db "Kr@@@@@@@@", PT_LUCAS
@@ -24,51 +24,51 @@ BattleTowerTrainers:
 	db "ACCPPQ@@@@", GREEN_MAY
 	db "ABBBCC@@@@", XD_MICHAEL
 ; The following can only be sampled in Crystal 1.1.
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "Kr@@@@@@@@", PT_LUCAS
-	db "ACCPPQ@@@@", GREEN_MAY
-	db "Kr@@@@@@@@", PT_LUCAS
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY
+	db "..hnv@@@@@", BLUE_MAY

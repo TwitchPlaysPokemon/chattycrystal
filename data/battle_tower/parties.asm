@@ -5209,7 +5209,7 @@ BattleTowerMons10:
 	bigdw 257 ; HP
 	bigdw 257 ; Max HP
 	bigdw 147 ; Atk
-	bigdw 338 ; Def
+	bigdw 363 ; Def
 	bigdw 127 ; Spd
 	bigdw 239 ; SAtk
 	bigdw 239 ; SDef
@@ -5233,11 +5233,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 323 ; HP
-	bigdw 323 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 220 ; Atk
 	bigdw 206 ; Def
-	bigdw 338 ; Spd
+	bigdw 8 ; Spd
 	bigdw 308 ; SAtk
 	bigdw 278 ; SDef
 	db "SANDA-SU@@@"
@@ -5260,11 +5260,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 341 ; HP
-	bigdw 341 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 290 ; Atk
 	bigdw 276 ; Def
-	bigdw 308 ; Spd
+	bigdw 8 ; Spd
 	bigdw 170 ; SAtk
 	bigdw 230 ; SDef
 	db "KENTAROSU@@"
@@ -5287,11 +5287,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 374 ; HP
-	bigdw 374 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 306 ; Atk
 	bigdw 246 ; Def
-	bigdw 281 ; Spd
+	bigdw 8 ; Spd
 	bigdw 290 ; SAtk
 	bigdw 250 ; SDef
 	db "UINDEi@@@@@"
@@ -5314,13 +5314,13 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 343 ; HP
-	bigdw 343 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 258 ; Atk
 	bigdw 247 ; Def
-	bigdw 289 ; Spd
+	bigdw 8 ; Spd
 	bigdw 311 ; SAtk
-	bigdw 263 ; SDef
+	bigdw 28 ; SDef
 	db "RIZA-DON@@@"
 
 	dw ELECTRODE
@@ -5341,11 +5341,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 309 ; HP
-	bigdw 309 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 190 ; Atk
 	bigdw 222 ; Def
-	bigdw 366 ; Spd
+	bigdw 8 ; Spd
 	bigdw 248 ; SAtk
 	bigdw 248 ; SDef
 	db "MARUMAIN@@@"
@@ -5368,11 +5368,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 404 ; HP
-	bigdw 404 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 350 ; Atk
 	bigdw 329 ; Def
-	bigdw 168 ; Spd
+	bigdw 8 ; Spd
 	bigdw 178 ; SAtk
 	bigdw 178 ; SDef
 	db "SAIDON@@@@@"
@@ -5395,11 +5395,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 343 ; HP
-	bigdw 343 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 260 ; Atk
 	bigdw 489 ; Def
-	bigdw 152 ; Spd
+	bigdw 8 ; Spd
 	bigdw 198 ; SAtk
 	bigdw 218 ; SDef
 	db "HAGANE-RU@@"
@@ -5422,11 +5422,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 324 ; HP
-	bigdw 324 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 270 ; Atk
 	bigdw 216 ; Def
-	bigdw 287 ; Spd
+	bigdw 8 ; Spd
 	bigdw 212 ; SAtk
 	bigdw 212 ; SDef
 	db "ONIDORIRU@@"
@@ -5449,11 +5449,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 309 ; HP
-	bigdw 309 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 202 ; Atk
 	bigdw 209 ; Def
-	bigdw 258 ; Spd
+	bigdw 8 ; Spd
 	bigdw 263 ; SAtk
 	bigdw 263 ; SDef
 	db "MUUMA@@@@@@"
@@ -5476,11 +5476,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 301 ; HP
-	bigdw 301 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 280 ; Atk
 	bigdw 195 ; Def
-	bigdw 316 ; Spd
+	bigdw 8 ; Spd
 	bigdw 160 ; SAtk
 	bigdw 240 ; SDef
 	db "NIyu-RA@@@@"
@@ -5503,11 +5503,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 333 ; HP
-	bigdw 333 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 350 ; Atk
 	bigdw 282 ; Def
-	bigdw 220 ; Spd
+	bigdw 8 ; Spd
 	bigdw 196 ; SAtk
 	bigdw 246 ; SDef
 	db "HAtuSAMU@@@"
@@ -5530,11 +5530,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 703 ; HP
-	bigdw 703 ; Max HP
-	bigdw 101 ; Atk
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
+	bigdw 8 ; Atk
 	bigdw 106 ; Def
-	bigdw 188 ; Spd
+	bigdw 8 ; Spd
 	bigdw 226 ; SAtk
 	bigdw 346 ; SDef
 	db "HAPINASU@@@"
@@ -5557,12 +5557,12 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 387 ; HP
-	bigdw 387 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 290 ; Atk
 	bigdw 248 ; Def
-	bigdw 190 ; Spd
-	bigdw 194 ; SAtk
+	bigdw 8 ; Spd
+	bigdw 8 ; SAtk
 	bigdw 194 ; SDef
 	db "INOMU-@@@@@"
 
@@ -5584,11 +5584,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 375 ; HP
-	bigdw 375 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 280 ; Atk
 	bigdw 258 ; Def
-	bigdw 200 ; Spd
+	bigdw 8 ; Spd
 	bigdw 338 ; SAtk
 	bigdw 218 ; SDef
 	db "NAtuSI-@@@@"
@@ -5611,11 +5611,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 331 ; HP
-	bigdw 331 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 210 ; Atk
 	bigdw 332 ; Def
-	bigdw 198 ; Spd
+	bigdw 8 ; Spd
 	bigdw 304 ; SAtk
 	bigdw 214 ; SDef
 	db "OMUSUTA-@@@"
@@ -5638,11 +5638,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 329 ; HP
-	bigdw 329 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 282 ; Atk
 	bigdw 316 ; Def
-	bigdw 146 ; Spd
+	bigdw 8 ; Spd
 	bigdw 170 ; SAtk
 	bigdw 190 ; SDef
 	db "GORO-NIya@@"
@@ -5665,11 +5665,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 265 ; HP
-	bigdw 265 ; Max HP
+	bigdw 8 ; HP
+	bigdw 8 ; Max HP
 	bigdw 270 ; Atk
 	bigdw 220 ; Def
-	bigdw 214 ; Spd
+	bigdw 8 ; Spd
 	bigdw 130 ; SAtk
 	bigdw 280 ; SDef
 	db "EBIWARA-@@@"
@@ -5692,11 +5692,11 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 425 ; HP
+	bigdw 8 ; HP
 	bigdw 425 ; Max HP
 	bigdw 178 ; Atk
 	bigdw 176 ; Def
-	bigdw 192 ; Spd
+	bigdw 8 ; Spd
 	bigdw 214 ; SAtk
 	bigdw 214 ; SDef
 	db "RANTA-N@@@@"

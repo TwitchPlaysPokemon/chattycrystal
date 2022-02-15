@@ -5269,9 +5269,9 @@ BattleTowerMons10:
 	bigdw 223 ; SDef
 	db "//z  ppp @@"
 
-	dw ARCANINE
-	db LEFTOVERS
-	dw FLAMETHROWER, EXTREMESPEED, IRON_TAIL, HYPER_BEAM
+	dw AMPHAROS
+	db NO_ITEM
+	dw THUNDERBOLT, THUNDER, ROCK_SMASH, STRENGTH
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5282,23 +5282,23 @@ BattleTowerMons10:
 	bigdw 55000
 	bigdw 50000
 	dn 13, 13, 14, 15 ; DVs
-	db 15, 5, 15, 5 ; PP
+	db 15, 10, 15, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 306 ; Atk
-	bigdw 246 ; Def
-	bigdw 8 ; Spd
-	bigdw 290 ; SAtk
-	bigdw 250 ; SDef
-	db "UINDEi@@@@@"
+	bigdw 315 ; HP
+	bigdw 315 ; Max HP
+	bigdw 271 ; Atk
+	bigdw 234 ; Def
+	bigdw 144 ; Spd
+	bigdw 383 ; SAtk Mega Ampharos
+	bigdw 256 ; SDef
+	db "Ampharos@@@"
 
-	dw CHARIZARD
-	db SCOPE_LENS
-	dw FLAMETHROWER, EARTHQUAKE, SLASH, FLY
+	dw MANTINE
+	db POKE_BALL
+	dw SURF, DIVE, ICE_BEAM, WATERFALL
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5314,18 +5314,18 @@ BattleTowerMons10:
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 258 ; Atk
-	bigdw 247 ; Def
-	bigdw 8 ; Spd
-	bigdw 311 ; SAtk
-	bigdw 28 ; SDef
-	db "RIZA-DON@@@"
+	bigdw 274 ; HP
+	bigdw 274 ; Max HP
+	bigdw 135 ; Atk
+	bigdw 202 ; Def
+	bigdw 188 ; Spd
+	bigdw 191 ; SAtk
+	bigdw 307 ; SDef
+	db "UU NNNHKXX@"
 
-	dw ELECTRODE
-	db BRIGHTPOWDER
-	dw THUNDER_WAVE, THUNDERBOLT, EXPLOSION, MIRROR_COAT
+	dw CHANDELURE
+	db NO_ITEM
+	dw SMOG, CONFUSE_RAY, HIDDEN_POWER, HEX
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5335,20 +5335,20 @@ BattleTowerMons10:
 	bigdw 50000
 	bigdw 45000
 	bigdw 45000
-	dn 15, 11, 14, 15 ; DVs
-	db 20, 15, 5, 20 ; PP
+	dn 14, 12, 14, 15 ; DVs
+	db 20, 10, 15, 10 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 190 ; Atk
-	bigdw 222 ; Def
-	bigdw 8 ; Spd
-	bigdw 248 ; SAtk
-	bigdw 248 ; SDef
-	db "MARUMAIN@@@"
+	bigdw 232 ; HP
+	bigdw 232 ; Max HP
+	bigdw 150 ; Atk
+	bigdw 174 ; Def
+	bigdw 170 ; Spd
+	bigdw 302 ; SAtk
+	bigdw 170 ; SDef
+	db "BHIICCBBBB@"
 
 	dw RHYDON
 	db MIRACLEBERRY

@@ -22,10 +22,10 @@ Route40BattleTowerGateRockerText:
 	text "Are you going to"
 	line "the BATTLE TOWER?"
 
-	para "This is a secret,"
-	line "but if you win a"
-	para "whole lot, you can"
-	line "win special gifts."
+	para "There is a big"
+	line "event on, for"
+	para "those wanting a"
+	line "challenge."
 	done
 
 Route40BattleTowerGateTwinText:

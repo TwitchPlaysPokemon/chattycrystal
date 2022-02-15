@@ -876,4 +876,11 @@ KRIS EQU __enum__
 	trainerclass BLUE_MAY ; 4b
 	trainervalue MARINA
 
+	trainerclass PT_LUCAS_BT ; 4c
+	
+	trainerclass XD_MICHAEL_BT ; 4d
+	
+	trainerclass GREEN_MAY_BT ; 4e
+	
+	trainerclass BLUE_MAY_BT : 4f
 NUM_TRAINER_CLASSES EQU __enum__

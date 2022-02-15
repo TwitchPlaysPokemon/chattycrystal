@@ -532,8 +532,8 @@ Text_BattleTowerYoungster:
 Text_BattleTowerCooltrainerF:
 	text "Some sort of big"
 	line "event is in the"
-	para "level 100 BATTLE"
-	line "ROOM!"
+	para "level 100 "
+	line "BATTLE ROOM!"
 	done
 
 Text_BattleTowerGranny:

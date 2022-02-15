@@ -71,5 +71,4 @@ BattleTowerTrainers:
 	db "ABBBCC@@@@", XD_MICHAEL
 	db "Kr@@@@@@@@", PT_LUCAS
 	db "ACCPPQ@@@@", GREEN_MAY
-	db "ABBBCC@@@@", XD_MICHAEL
-	db "WONG@@@@@@", FIREBREATHER
+	db "Kr@@@@@@@@", PT_LUCAS

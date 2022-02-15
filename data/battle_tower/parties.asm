@@ -5350,9 +5350,9 @@ BattleTowerMons10:
 	bigdw 170 ; SDef
 	db "BHIICCBBBB@"
 
-	dw RHYDON
-	db MIRACLEBERRY
-	dw SURF, EARTHQUAKE, HYPER_BEAM, ROCK_SLIDE
+	dw LINOONE
+	db SURF_MAIL
+	dw STRENGTH, ROCK_SMASH, AIR_CUTTER, SURF
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5363,23 +5363,23 @@ BattleTowerMons10:
 	bigdw 50000
 	bigdw 45000
 	dn 15, 13, 14, 15 ; DVs
-	db 15, 10, 5, 10 ; PP
+	db 15, 15, 20, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 350 ; Atk
-	bigdw 329 ; Def
-	bigdw 8 ; Spd
-	bigdw 178 ; SAtk
-	bigdw 178 ; SDef
-	db "SAIDON@@@@@"
+	bigdw 281 ; HP
+	bigdw 281 ; Max HP
+	bigdw 177 ; Atk
+	bigdw 146 ; Def
+	bigdw 273 ; Spd
+	bigdw 156 ; SAtk
+	bigdw 156 ; SDef
+	db " T@@@@@@@@@"
 
-	dw STEELIX
-	db LEFTOVERS
-	dw EARTHQUAKE, HYPER_BEAM, SWAGGER, CRUNCH
+	dw EMPOLEON
+	db MORPH_MAIL
+	dw DIVE, DRILL_PECK, ICE_FANG, WATERFALL
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5390,19 +5390,19 @@ BattleTowerMons10:
 	bigdw 60000
 	bigdw 50000
 	dn 15, 13, 13, 14 ; DVs
-	db 10, 5, 15, 15 ; PP
+	db 15, 20, 10, 10 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 260 ; Atk
-	bigdw 489 ; Def
-	bigdw 8 ; Spd
-	bigdw 198 ; SAtk
-	bigdw 218 ; SDef
-	db "HAGANE-RU@@"
+	bigdw 309 ; HP
+	bigdw 309 ; Max HP
+	bigdw 236 ; Atk
+	bigdw 213 ; Def
+	bigdw 167 ; Spd
+	bigdw 245 ; SAtk
+	bigdw 240 ; SDef
+	db "xq''@@@@@@@"
 
 	dw FEAROW
 	db KINGS_ROCK

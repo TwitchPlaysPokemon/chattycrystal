@@ -524,17 +524,16 @@ Text_MayNotEnterABattleRoomUnderL70:
 	done
 
 Text_BattleTowerYoungster:
-	text "Destroyed by the"
-	line "first opponent in"
-	para "no time at all…"
-	line "I'm no good…"
+	text "A bunch of new"
+	line "TRAINERS came in."
+	para "I can't win…"
 	done
 
 Text_BattleTowerCooltrainerF:
-	text "There are lots of"
-	line "BATTLE ROOMS, but"
-	para "I'm going to win"
-	line "them all!"
+	text "Some sort of big"
+	line "event is in the"
+	para "level 100 BATTLE"
+	line "ROOM!"
 	done
 
 Text_BattleTowerGranny:
@@ -555,8 +554,8 @@ Text_BattleTowerBugCatcher:
 	para "using just bug"
 	line "#MON."
 
-	para "Don't let there be"
-	line "any fire #MON…"
+	para "This event isn't"
+	line "helping me any."
 	done
 
 BattleTower1F_MapEvents:

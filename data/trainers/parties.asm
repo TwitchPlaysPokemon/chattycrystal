@@ -3365,6 +3365,94 @@ RedGroup:
 	bigdw 231
 	db "RRQPO:<PK><PK><PK><PK>@"
 	db -1 ; end
+	
+	next_list_item ; AAAAAAA_RACE
+	db "AAAAAAA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+        ; Mon 1
+	db 46 ; level
+	dw JOLTEON ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw PSYCHIC, THUNDERBOLT, NIGHT_SHADE, METRONOME ; Moves
+	bigdw $0175 ;DVs
+	bigdw 129 ; HP
+	bigdw 73 ; Attack
+	bigdw 69 ; Defense
+	bigdw 138 ; Speed
+	bigdw 118 ; Special Attack
+	bigdw 118 ; Special Defense
+	db "AVIRAGHS@" ; Nickname
+	
+	; Mon 2
+	db 34 ; level
+	dw FEAROW ; Species
+	db BERRY ; Held item (gen 2 trade)
+	dw FLY, DRILL_PECK, LEER, FURY_ATTACK ; Moves
+	bigdw $572C ;DVs
+	bigdw 101 ; HP
+	bigdw 75 ; Attack
+	bigdw 59 ; Defense
+	bigdw 80 ; Speed
+	bigdw 60 ; Special Attack
+	bigdw 60 ; Special Defense
+	db "Birb@" ; Nickname
+	
+	; Mon 3
+	db 30 ; level
+	dw HITMONLEE ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw DOUBLE_KICK, MEDITATE, STRENGTH, NO_MOVE ; Moves
+	bigdw $A4FF ;DVs
+	bigdw 72 ; HP
+	bigdw 83 ; Attack
+	bigdw 40 ; Defense
+	bigdw 66 ; Speed
+	bigdw 35 ; Special Attack
+	bigdw 35 ; Special Defense
+	db "JK@" ; Nickname
+	
+	; Mon 4
+	db 56 ; level
+	dw BLASTOISE ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw SURF, BITE, ICE_BEAM, DIG ; Moves
+	bigdw $BC72 ;DVs
+	bigdw 182 ; HP
+	bigdw 129 ; Attack
+	bigdw 148 ; Defense
+	bigdw 118 ; Speed
+	bigdw 119 ; Special Attack
+	bigdw 119 ; Special Defense
+	db "NN@" ; Nickname
+	
+	; Mon 5
+	db 49 ; level
+	dw DUGTRIO ; Species
+	db GOLD_BERRY ; Held item (gen 2 trade)
+	dw EARTHQUAKE, SAND_ATTACK, SCRATCH, DIG ; Moves
+	bigdw $BC1C ;DVs
+	bigdw 113 ; HP
+	bigdw 105 ; Attack
+	bigdw 77 ; Defense
+	bigdw 133 ; Speed
+	bigdw 95 ; Special Attack
+	bigdw 95 ; Special Defense
+	db "Amy@" ; Nickname
+	
+	; Mon 6
+	db 72 ; level
+	dw MEWTWO ; Species
+	db BRIGHTPOWDER ; Held item (gen 2 trade)
+	dw FLY, TOXIC, LEER, GROWL ; Moves
+	bigdw $50AC ;DVs
+	bigdw 252 ; HP
+	bigdw 177 ; Attack
+	bigdw 140 ; Defense
+	bigdw 213 ; Speed
+	bigdw 251 ; Special Attack
+	bigdw 251 ; Special Defense
+	db "Weird Cat@" ; Nickname
+	
+	db -1 ; end
 
 	end_list_items
 
@@ -11923,4 +12011,184 @@ BlueMayGroup:
 	BDLucasBTGroup:
 	Wooper2BTGroup:
 	BlueRedGroup:
+	next_list_item ; B
+	db "AAAA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+	; Mon 1
+	db 84 ; level
+	dw NIDOKING ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw EARTHQUAKE, HORN_DRILL, SURF, ICE_BEAM ; Moves
+	bigdw $BFC8 ;DVs
+	bigdw 207 ; HP
+	bigdw 154 ; Attack
+	bigdw 140 ; Defense
+	bigdw 148 ; Speed
+	bigdw 128 ; Special Attack
+	bigdw 128 ; Special Defense
+	db "HA@" ; Nickname
+	
+	; Mon 2
+	db 30 ; level
+	dw HITMONCHAN ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw DOUBLE_EDGE, AGILITY, COMET_PUNCH, NO_MOVE ; Moves
+	bigdw $64F9 ;DVs
+	bigdw 72 ; HP
+	bigdw 72 ; Attack
+	bigdw 55 ; Defense
+	bigdw 60 ; Speed
+	bigdw C2 ; Special Attack
+	bigdw C2 ; Special Defense
+	db "FIST!@" ; Nickname
+	
+	; Mon 3
+	db 33 ; level
+	dw VENUSAUR ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw CUT, VINE_WHIP, LEECH_SEED, RAZOR_LEAF ; Moves
+	bigdw $4BF1 ;DVs
+	bigdw 143 ; HP
+	bigdw 102 ; Attack
+	bigdw 107 ; Defense
+	bigdw 101 ; Speed
+	bigdw 112 ; Special Attack
+	bigdw 112 ; Special Defense
+	db "VENUSAUR@" ; Nickname
+	
+	; Mon 4
+	db 34 ; level
+	dw GYARADOS ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw DRAGON_RAGE, BLIZZARD, STRENGTH, SURF ; Moves
+	bigdw $BB75 ;DVs
+	bigdw 123 ; HP
+	bigdw 102 ; Attack
+	bigdw 71 ; Defense
+	bigdw 69 ; Speed
+	bigdw 81 ; Special Attack
+	bigdw 81 ; Special Defense
+	db "FEESH@" ; Nickname
+	
+	; Mon 5
+	db 21 ; level
+	dw PIDGEOTTO ; Species
+	db BERRY ; Held item (gen 2 trade)
+	dw FLY, SAND_ATTACK, QUICK_ATTACK, GUST ; Moves
+	bigdw $7E45 ;DVs
+	bigdw 62 ; HP
+	bigdw 34 ; Attack
+	bigdw 35 ; Defense
+	bigdw 37 ; Speed
+	bigdw 29 ; Special Attack
+	bigdw 29 ; Special Defense
+	db "CAPONE@" ; Nickname
+	
+	; Mon 6
+	db 55 ; level
+	dw JOLTEON ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw THUNDER, PIN_MISSILE, TACKLE, QUICK_ATTACK ; Moves
+	bigdw $7DEB ;DVs
+	bigdw 162 ; HP
+	bigdw 96 ; Attack
+	bigdw 97 ; Defense
+	bigdw 174 ; Speed
+	bigdw 150 ; Special Attack
+	bigdw 150 ; Special Defense
+	db "SPARK@" ; Nickname
+	
+	db -1 ; end
+	
+	
+	end_list_items
+	
 	GreenRedGroup:
+	next_list_item ; B
+	db "B@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
+        ; Mon 1
+	db 10 ; level
+	dw SPEAROW ; Species
+	db BERRY ; Held item (gen 2 trade)
+	dw FLY, TOXIC, LEER, GROWL ; Moves
+	bigdw $527C ;DVs
+	bigdw 30 ; HP
+	bigdw 18 ; Attack
+	bigdw 11 ; Defense
+	bigdw 21 ; Speed
+	bigdw 13 ; Special Attack
+	bigdw 13 ; Special Defense
+	db "UaabB" ; Nickname
+	
+	; Mon 2
+	db 14 ; level
+	dw MEOWTH ; Species
+	db BERRY ; Held item (gen 2 trade)
+	dw SCRATCH, BITE, GROWL, NO_MOVE ; Moves
+	bigdw $884D ;DVs
+	bigdw 35 ; HP
+	bigdw 20 ; Attack
+	bigdw 17 ; Defense
+	bigdw 31 ; Speed
+	bigdw 20 ; Special Attack
+	bigdw 20 ; Special Defense
+	db "AAAAII@" ; Nickname
+	
+	; Mon 3
+	db 47 ; level
+	dw VENUSAUR ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw RAZOR_LEAF, CUT, LEECH_SEED, POISONPOWDER ; Moves
+	bigdw $8C82 ;DVs
+	bigdw 143 ; HP
+	bigdw 102 ; Attack
+	bigdw 107 ; Defense
+	bigdw 101 ; Speed
+	bigdw 112 ; Special Attack
+	bigdw 112 ; Special Defense
+	db "ABAAABBBBK@" ; Nickname
+	
+	; Mon 4
+	db 15 ; level
+	dw LAPRAS ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw SURF, BLIZZARD, WATER_GUN, STRENGTH ; Moves
+	bigdw $9563 ;DVs
+	bigdw 67 ; HP
+	bigdw 33 ; Attack
+	bigdw 30 ; Defense
+	bigdw 24 ; Speed
+	bigdw 34 ; Special Attack
+	bigdw 34 ; Special Defense
+	db "BB@" ; Nickname
+	
+	; Mon 5
+	db 50 ; level
+	dw DUGTRIO ; Species
+	db GOLD_BERRY ; Held item (gen 2 trade)
+	dw EARTHQUAKE, DIG, SLASH, SAND_ATTACK ; Moves
+	bigdw $EE93 ;DVs
+	bigdw 108 ; HP
+	bigdw 110 ; Attack
+	bigdw 79 ; Defense
+	bigdw 145 ; Speed
+	bigdw 89 ; Special Attack
+	bigdw 89 ; Special Defense
+	db "B!♂@" ; Nickname
+	
+	; Mon 6
+	db 84 ; level
+	dw GENGAR ; Species
+	db BITTER_BERRY ; Held item (gen 2 trade)
+	dw PSYCHIC, THUNDERBOLT, NIGHT_SHADE, METRONOME ; Moves
+	bigdw $9BDF ;DVs
+	bigdw 246 ; HP
+	bigdw 147 ; Attack
+	bigdw 152 ; Defense
+	bigdw 238 ; Speed
+	bigdw 275 ; Special Attack
+	bigdw 275 ; Special Defense
+	db "HECTOR@" ; Nickname
+	
+	db -1 ; end
+
+	end_list_items

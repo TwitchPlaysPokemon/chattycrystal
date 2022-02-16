@@ -11914,3 +11914,13 @@ BlueMayGroup:
 	db -1 ; end
 
 	end_list_items
+	
+	PTLucasBTGroup:
+	XDMichaelBTGroup:
+	GreenMayBTGroup:
+	BlueMayBTGroup:
+	BlueBrendanBTGroup:
+	BDLucasBTGroup:
+	Wooper2BTGroup:
+	BlueRedGroup:
+	GreenRedGroup:

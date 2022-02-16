@@ -7,68 +7,68 @@ BattleTowerTrainers:
 	db "ABBBCC@@@@", XD_MICHAEL_BT
 	db "..hnv@@@@@", BLUE_MAY_BT
 	db "ACCPPQ@@@@", GREEN_MAY_BT
-	db "ABBBCC@@@@", XD_MICHAEL_BT
+	db "AGGGNNV@@@", BLUE_BRENDAN_BT
+	db "a;;;/]]]][", BD_LUCAS_BT
+	db "WOOPER@@@@", WOOPER2_BT
 	db "Kr@@@@@@@@", PT_LUCAS_BT
 	db "ACCPPQ@@@@", GREEN_MAY_BT
 	db "ABBBCC@@@@", XD_MICHAEL_BT
+	db "..hnv@@@@@", BLUE_MAY_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
+	db "AGGGNNV@@@", BLUE_BRENDAN_BT
+	db "a;;;/]]]][", BD_LUCAS_BT
+	db "WOOPER@@@@", WOOPER2_BT
 	db "Kr@@@@@@@@", PT_LUCAS_BT
 	db "ACCPPQ@@@@", GREEN_MAY_BT
 	db "ABBBCC@@@@", XD_MICHAEL_BT
-	db "Kr@@@@@@@@", PT_LUCAS_BT
+	db "..hnv@@@@@", BLUE_MAY_BT
 	db "ACCPPQ@@@@", GREEN_MAY_BT
-	db "ABBBCC@@@@", XD_MICHAEL_BT
-	db "Kr@@@@@@@@", PT_LUCAS_BT
-	db "ACCPPQ@@@@", GREEN_MAY_BT
-	db "ABBBCC@@@@", XD_MICHAEL_BT
-	db "Kr@@@@@@@@", PT_LUCAS_BT
-	db "ACCPPQ@@@@", GREEN_MAY_BT
-	db "ABBBCC@@@@", XD_MICHAEL_BT
 ; The following can only be sampled in Crystal 1.1.
 	db "AGGGNNV@@@", BLUE_BRENDAN_BT
+	db "a;;;/]]]][", BD_LUCAS_BT
+	db "WOOPER@@@@", WOOPER2_BT
+	db "Kr@@@@@@@@", PT_LUCAS_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
+	db "ABBBCC@@@@", XD_MICHAEL_BT
+	db "..hnv@@@@@", BLUE_MAY_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
 	db "AGGGNNV@@@", BLUE_BRENDAN_BT
+	db "a;;;/]]]][", BD_LUCAS_BT
+	db "WOOPER@@@@", WOOPER2_BT
+	db "Kr@@@@@@@@", PT_LUCAS_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
+	db "ABBBCC@@@@", XD_MICHAEL_BT
+	db "..hnv@@@@@", BLUE_MAY_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
 	db "AGGGNNV@@@", BLUE_BRENDAN_BT
+	db "a;;;/]]]][", BD_LUCAS_BT
+	db "WOOPER@@@@", WOOPER2_BT
+	db "Kr@@@@@@@@", PT_LUCAS_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
+	db "ABBBCC@@@@", XD_MICHAEL_BT
+	db "..hnv@@@@@", BLUE_MAY_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
 	db "AGGGNNV@@@", BLUE_BRENDAN_BT
+	db "a;;;/]]]][", BD_LUCAS_BT
+	db "WOOPER@@@@", WOOPER2_BT
+	db "Kr@@@@@@@@", PT_LUCAS_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
+	db "ABBBCC@@@@", XD_MICHAEL_BT
+	db "..hnv@@@@@", BLUE_MAY_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
 	db "AGGGNNV@@@", BLUE_BRENDAN_BT
+	db "a;;;/]]]][", BD_LUCAS_BT
+	db "WOOPER@@@@", WOOPER2_BT
+	db "Kr@@@@@@@@", PT_LUCAS_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
+	db "ABBBCC@@@@", XD_MICHAEL_BT
+	db "..hnv@@@@@", BLUE_MAY_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
 	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
-	db "AGGGNNV@@@", BLUE_BRENDAN_BT
+	db "a;;;/]]]][", BD_LUCAS_BT
+	db "WOOPER@@@@", WOOPER2_BT
+	db "Kr@@@@@@@@", PT_LUCAS_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT
+	db "ABBBCC@@@@", XD_MICHAEL_BT
+	db "..hnv@@@@@", BLUE_MAY_BT
+	db "ACCPPQ@@@@", GREEN_MAY_BT

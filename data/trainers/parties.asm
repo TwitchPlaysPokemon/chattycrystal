@@ -12037,8 +12037,8 @@ BlueMayGroup:
 	bigdw 72 ; Attack
 	bigdw 55 ; Defense
 	bigdw 60 ; Speed
-	bigdw C2 ; Special Attack
-	bigdw C2 ; Special Defense
+	bigdw 32 ; Special Attack
+	bigdw 32 ; Special Defense
 	db "FIST!@" ; Nickname
 	
 	; Mon 3

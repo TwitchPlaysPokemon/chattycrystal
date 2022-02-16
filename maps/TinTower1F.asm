@@ -159,7 +159,17 @@ TinTower1F_MapScripts:
 	moveobject TINTOWER1F_SAGE3, 11, 13
 	turnobject PLAYER, RIGHT
 	opentext
-	writetext TinTowerEusineSuicuneText
+	writetext HostSilenceText
+	waitbutton
+	closetext
+	winlosstext HostSilenceText, 0
+	loadtrainer CY_ROBORED, X_CHATTYYELLOW3
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	playmusic MUSIC_MYSTICALMAN_ENCOUNTER
+	opentext
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement TINTOWER1F_EUSINE, TinTower1F_Movement_EusineDown

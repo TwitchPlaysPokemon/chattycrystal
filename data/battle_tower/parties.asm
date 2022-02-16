@@ -5404,9 +5404,9 @@ BattleTowerMons10:
 	bigdw 240 ; SDef
 	db "xq''@@@@@@@"
 
-	dw FEAROW
-	db KINGS_ROCK
-	dw DRILL_PECK, STEEL_WING, HYPER_BEAM, MUD_SLAP
+	dw DELCATTY
+	db NO_ITEM
+	dw RETURN, PLAY_ROUGH, FLASH, DIG
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5417,23 +5417,23 @@ BattleTowerMons10:
 	bigdw 55000
 	bigdw 50000
 	dn 15, 13, 12, 15 ; DVs
-	db 20, 25, 5, 10 ; PP
-	db 100 ; Happiness
+	db 20, 10, 10, 15 ; PP
+	db 255 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 270 ; Atk
-	bigdw 216 ; Def
-	bigdw 8 ; Spd
-	bigdw 212 ; SAtk
-	bigdw 212 ; SDef
-	db "ONIDORIRU@@"
+	bigdw 328 ; HP
+	bigdw 328 ; Max HP
+	bigdw 182 ; Atk
+	bigdw 181 ; Def
+	bigdw 247 ; Spd
+	bigdw 221 ; SAtk
+	bigdw 162 ; SDef
+	db "AT@@@@@@@@@"
 
-	dw MISDREAVUS
-	db FOCUS_BAND
-	dw PERISH_SONG, MEAN_LOOK, PAIN_SPLIT, SHADOW_BALL
+	dw SUNFLORA
+	db NO_ITEM
+	dw GIGA_DRAIN, SLUDGE_BOMB, ENDEAVOR, SOLARBEAM
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5443,8 +5443,8 @@ BattleTowerMons10:
 	bigdw 55000
 	bigdw 50000
 	bigdw 55000
-	dn 11, 13, 14, 15 ; DVs
-	db 5, 5, 20, 15 ; PP
+	dn 15, 10, 10, 10 ; DVs
+	db 16, 10, 20, 10 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
@@ -5456,11 +5456,11 @@ BattleTowerMons10:
 	bigdw 8 ; Spd
 	bigdw 263 ; SAtk
 	bigdw 263 ; SDef
-	db "MUUMA@@@@@@"
+	db "NUTSACC@@@@"
 
-	dw SNEASEL
-	db SCOPE_LENS
-	dw SLASH, BLIZZARD, DREAM_EATER, FEINT_ATTACK
+	dw PELIPPER
+	db NO_ITEM
+	dw THIEF, FLY, HURRICANE, SURF
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5471,23 +5471,23 @@ BattleTowerMons10:
 	bigdw 45000
 	bigdw 50000
 	dn 15, 13, 14, 15 ; DVs
-	db 20, 5, 15, 20 ; PP
+	db 10, 15, 10, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 280 ; Atk
-	bigdw 195 ; Def
-	bigdw 8 ; Spd
-	bigdw 160 ; SAtk
-	bigdw 240 ; SDef
-	db "NIyu-RA@@@@"
+	bigdw 321 ; HP
+	bigdw 321 ; Max HP
+	bigdw 135 ; Atk
+	bigdw 231 ; Def
+	bigdw 150 ; Spd
+	bigdw 239 ; SAtk
+	bigdw 182 ; SDef
+	db "Blue Balls@"
 
-	dw SCIZOR
-	db QUICK_CLAW
-	dw STEEL_WING, HYPER_BEAM, SLASH, TOXIC
+	dw RAPIDASH
+	db NO_ITEM
+	dw BODY_SLAM, FLARE_BLITZ, DOUBLE_KICK, FIRE_BLAST
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5498,19 +5498,19 @@ BattleTowerMons10:
 	bigdw 50000
 	bigdw 45000
 	dn 15, 11, 15, 14 ; DVs
-	db 25, 5, 20, 10 ; PP
+	db 15, 15, 30, 5 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 350 ; Atk
-	bigdw 282 ; Def
-	bigdw 8 ; Spd
-	bigdw 196 ; SAtk
-	bigdw 246 ; SDef
-	db "HAtuSAMU@@@"
+	bigdw 288 ; HP
+	bigdw 288 ; Max HP
+	bigdw 316 ; Atk
+	bigdw 175 ; Def
+	bigdw 327 ; Spd
+	bigdw 191 ; SAtk
+	bigdw 192 ; SDef
+	db "bogaRun@@@@"
 
 	dw BLISSEY
 	db LEFTOVERS

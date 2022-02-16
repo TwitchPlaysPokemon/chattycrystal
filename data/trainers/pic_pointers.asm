@@ -81,3 +81,4 @@ TrainerPicPointers::
 	dba MichaelPic
 	dba GreenMayPic
 	dba URFPic
+	dba BrendanPic

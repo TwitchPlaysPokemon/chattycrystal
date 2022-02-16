@@ -892,7 +892,9 @@ KRIS EQU __enum__
 	trainerclass WOOPER2_BT ; 52
 	
 	trainerclass BLUE_RED ; 53
+	trainervalue AAAA
 
 	trainerclass GREEN_RED ; 54
+	trainervalue B
 	
 NUM_TRAINER_CLASSES EQU __enum__

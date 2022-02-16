@@ -82,3 +82,7 @@ TrainerPicPointers::
 	dba GreenMayPic
 	dba URFPic
 	dba BrendanPic
+	dba LucasPic
+	dba WooperTPic
+	dba RedPic
+	dba Redpic

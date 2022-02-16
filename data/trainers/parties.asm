@@ -12103,7 +12103,7 @@ BlueMayGroup:
 	end_list_items
 	
 	GreenRedGroup:
-	next_list_item ; B
+	next_list_item ; B_RACE
 	db "B@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
         ; Mon 1
 	db 10 ; level

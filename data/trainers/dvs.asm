@@ -80,3 +80,8 @@ TrainerClassDVs:
 	dn 15, 15, 15, 15 ; XD_MICHAEL_BT
 	dn 15, 15, 15, 15 ; GREEN_MAY_BT
 	dn 15, 15, 15, 15 ; BLUE_MAY_BT
+	dn 15, 13, 13, 14 ; BLUE_BRENDAN_BT
+	dn 15, 13, 13, 14 ; BD_LUCAS_BT
+	dn 15, 13, 13, 14 ; WOOPER2_BT
+	dn 15, 13, 13, 14 ; BLUE_RED
+	dn 15, 13, 13, 14 ; GREEN_RED

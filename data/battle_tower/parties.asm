@@ -5620,9 +5620,9 @@ BattleTowerMons10:
 	bigdw 161 ; SDef
 	db "Toxicroak@@"
 
-	dw GOLEM
-	db BRIGHTPOWDER
-	dw EXPLOSION, EARTHQUAKE, ROCK_SLIDE, FIRE_BLAST
+	dw QUAGSIRE
+	db HARD_STONE
+	dw AMNESIA, YAWN, EARTHQUAKE, RAIN_DANCE
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5633,24 +5633,23 @@ BattleTowerMons10:
 	bigdw 30000
 	bigdw 30000
 	dn 7, 4, 4, 6 ; DVs
-	db 5, 10, 10, 5 ; PP
+	db 20, 10, 10, 5 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 282 ; Atk
-	bigdw 316 ; Def
-	bigdw 8 ; Spd
-	bigdw 170 ; SAtk
-	bigdw 190 ; SDef
-	db "GORO-NIya@@"
+	bigdw 250 ; HP
+	bigdw 250 ; Max HP
+	bigdw 204 ; Atk
+	bigdw 201 ; Def
+	bigdw 92 ; Spd
+	bigdw 154 ; SAtk
+	bigdw 139 ; SDef
+	db "WOOPER@@@@@"
 
-	dw HITMONCHAN
-	db FOCUS_BAND
-	dw COUNTER, FIRE_PUNCH, THUNDERPUNCH, ICE_PUNCH
-
+	dw SANDSLASH
+	db NO_ITEM
+	dw POISON_STING, SLASH, SWIFT, FURY_SWIPES
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp
@@ -5660,23 +5659,23 @@ BattleTowerMons10:
 	bigdw 30000
 	bigdw 30000
 	dn 6, 7, 7, 6 ; DVs
-	db 20, 15, 15, 15 ; PP
+	db 35, 20, 20, 15 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 270 ; Atk
-	bigdw 220 ; Def
-	bigdw 8 ; Spd
-	bigdw 130 ; SAtk
-	bigdw 280 ; SDef
-	db "EBIWARA-@@@"
+	bigdw 286 ; HP
+	bigdw 286 ; Max HP
+	bigdw 223 ; Atk
+	bigdw 281 ; Def
+	bigdw 145 ; Spd
+	bigdw 118 ; SAtk
+	bigdw 139 ; SDef
+	db "SANS@@@@@@@"
 
-	dw LANTURN
-	db QUICK_CLAW
-	dw SURF, RAIN_DANCE, ZAP_CANNON, CONFUSE_RAY
+	dw DELIBIRD
+	db NO_ITEM
+	dw PRESENT, NO_MOVE, NO_MOVE, NO_MOVE
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5687,16 +5686,16 @@ BattleTowerMons10:
 	bigdw 30000
 	bigdw 30000
 	dn 7, 6, 5, 7 ; DVs
-	db 15, 5, 5, 10 ; PP
+	db 15, 0, 0, 0 ; PP
 	db 0 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 425 ; Max HP
-	bigdw 178 ; Atk
-	bigdw 176 ; Def
-	bigdw 8 ; Spd
-	bigdw 214 ; SAtk
-	bigdw 214 ; SDef
-	db "RANTA-N@@@@"
+	bigdw 213 ; HP
+	bigdw 213 ; Max HP
+	bigdw 119 ; Atk
+	bigdw 138 ; Def
+	bigdw 140 ; Spd
+	bigdw 156 ; SAtk
+	bigdw 106 ; SDef
+	db "bqyy@@@@@@@"

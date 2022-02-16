@@ -74,7 +74,6 @@ ROMX $16
 	"Map Scripts 2"
 ROMX $17
 	"Enemy Trainer Parties 1"
-	"Map Scripts 24"
 ROMX $18
 	"Events"
 	"Pics 32"
@@ -341,6 +340,7 @@ ROMX $78
 	"Pic Animations 4"
 ROMX $79
 	"Enemy Trainer Parties 2"
+	"Map Scripts 24"
 ROMX $7a
 	; empty
 ROMX $7b

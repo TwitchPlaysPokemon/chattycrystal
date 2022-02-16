@@ -11915,6 +11915,8 @@ BlueMayGroup:
 
 	end_list_items
 	
+	SECTION "Enemy Trainer Parties 5", ROMX
+	
 	PTLucasBTGroup:
 	XDMichaelBTGroup:
 	GreenMayBTGroup:

@@ -77,3 +77,12 @@ TrainerGroups:
 	dba BattlePCGroup
 	dba WooperTGroup
 	dba BlueMayGroup
+	dba PTLucasBTGroup
+	dba XDMichaelBTGroup
+	dba GreenMayBTGroup
+	dba BlueMayBTGroup
+	dba BlueBrendanBTGroup
+	dba BDLucasBTGroup
+	dba Wooper2BTGroup
+	dba BlueRedGroup
+	dba GreenRedGroup

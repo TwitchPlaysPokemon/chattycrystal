@@ -5564,7 +5564,7 @@ BattleTowerMons10:
 	bigdw 270 ; Spd
 	bigdw 260 ; SAtk +15 for Metronome
 	bigdw 178 ; SDef
-	db "$$puuuuyyn@"
+	db "¥¥puuuuyyn@"
 
 	dw PIKACHU
 	db NO_ITEM
@@ -5591,7 +5591,7 @@ BattleTowerMons10:
 	bigdw 257 ; Spd
 	bigdw 131 ; SAtk
 	bigdw 140 ; SDef
-	db "$$$$$$$$xS@"
+	db "¥¥¥¥¥¥¥¥xS@"
 
 	dw TOXICROAK
 	db BLACKGLASSES

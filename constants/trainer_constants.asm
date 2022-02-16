@@ -730,6 +730,7 @@ CHRIS EQU __enum__
 	trainervalue RED_GAUNTLETRED
 	trainervalue RED_RED2
 	trainervalue AIIIAAB2
+	trainervalue AAAAAAA_RACE
 
 	trainerclass OFFICER ; 27
 	trainervalue KEITH
@@ -885,5 +886,15 @@ KRIS EQU __enum__
 	trainerclass BLUE_MAY_BT ; 4f
 	
 	trainerclass BLUE_BRENDAN_BT ; 50
+	
+	trainerclass BD_LUCAS_BT ; 51
+	
+	trainerclass WOOPER2_BT ; 52
+	
+	trainerclass BLUE_RED ; 53
+	trainervalue AAAA
+	
+	trainerclass GREEN_RED ; 54
+	trainervalue B
 	
 NUM_TRAINER_CLASSES EQU __enum__

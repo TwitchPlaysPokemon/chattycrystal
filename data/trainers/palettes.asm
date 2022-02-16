@@ -86,3 +86,7 @@ INCBIN "gfx/trainers/michael.gbcpal", middle_colors ;XD_MICHAEL_BT
 INCBIN "gfx/trainers/greenmay.gbcpal", middle_colors ;GREEN_MAY_BT
 INCBIN "gfx/trainers/falkner.gbcpal", middle_colors ;BLUE_MAY_BT
 INCBIN "gfx/trainers/boarder.gbcpal", middle_colors ;BLUE_BRENDAN_BT
+INCBIN "gfx/trainers/bruno.gbcpal", middle_colors ;BD_LUCAS_BT
+INCBIN "gfx/trainers/wooper.gbcpal", middle_colors ;WOOPER2_BT
+INCBIN "gfx/trainers/falkner.gbcpal", middle_colors ;BLUE_RED
+INCBIN "gfx/trainers/larry.gbcpal", middle_colors ;GREEN_RED

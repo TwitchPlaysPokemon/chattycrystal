@@ -5512,9 +5512,9 @@ BattleTowerMons10:
 	bigdw 192 ; SDef
 	db "bogaRun@@@@"
 
-	dw BLISSEY
-	db LEFTOVERS
-	dw THUNDERBOLT, BLIZZARD, FIRE_BLAST, SOFTBOILED
+	dw GARDEVOIR
+	db TWISTEDSPOON
+	dw DAZZLINGLEAM, PSYCHIC, THUNDERBOLT, FOCUS_BLAST
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5525,23 +5525,23 @@ BattleTowerMons10:
 	bigdw 30000
 	bigdw 30000
 	dn 13, 13, 15, 14 ; DVs
-	db 15, 5, 5, 10 ; PP
+	db 10, 10, 15, 5 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 8 ; Atk
-	bigdw 106 ; Def
-	bigdw 8 ; Spd
-	bigdw 226 ; SAtk
-	bigdw 346 ; SDef
-	db "HAPINASU@@@"
+	bigdw 275 ; HP
+	bigdw 275 ; Max HP
+	bigdw 181 ; Atk
+	bigdw 181 ; Def
+	bigdw 220 ; Spd
+	bigdw 246 ; SAtk
+	bigdw 261 ; SDef
+	db "Gardevoir@@"
 
-	dw PILOSWINE
-	db MINT_BERRY
-	dw REST, BLIZZARD, HYPER_BEAM, EARTHQUAKE
+	dw HOUNDOOM
+	db NO_ITEM
+	dw FLAMETHROWER, FIRE_BLAST, BEAT_UP, ROAR
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5552,23 +5552,23 @@ BattleTowerMons10:
 	bigdw 50000
 	bigdw 50000
 	dn 15, 14, 15, 7 ; DVs
-	db 10, 5, 5, 10 ; PP
+	db 15, 5, 10, 20 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 290 ; Atk
-	bigdw 248 ; Def
-	bigdw 8 ; Spd
-	bigdw 8 ; SAtk
-	bigdw 194 ; SDef
-	db "INOMU-@@@@@"
+	bigdw 300 ; HP
+	bigdw 300 ; Max HP
+	bigdw 275 ; Atk +15 for Metronome
+	bigdw 156 ; Def
+	bigdw 270 ; Spd
+	bigdw 260 ; SAtk +15 for Metronome
+	bigdw 178 ; SDef
+	db "$$puuuuyyn@"
 
-	dw EXEGGUTOR
-	db QUICK_CLAW
-	dw PSYCHIC_M, TOXIC, EXPLOSION, GIGA_DRAIN
+	dw PIKACHU
+	db NO_ITEM
+	dw THIEF, SURF, DIG, THUNDERBOLT
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5579,23 +5579,23 @@ BattleTowerMons10:
 	bigdw 50000
 	bigdw 50000
 	dn 15, 14, 15, 14 ; DVs
-	db 10, 10, 5, 5 ; PP
+	db 25, 15, 10, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 280 ; Atk
-	bigdw 258 ; Def
-	bigdw 8 ; Spd
-	bigdw 338 ; SAtk
-	bigdw 218 ; SDef
-	db "NAtuSI-@@@@"
+	bigdw 198 ; HP
+	bigdw 198 ; Max HP
+	bigdw 179 ; Atk
+	bigdw 116 ; Def
+	bigdw 257 ; Spd
+	bigdw 131 ; SAtk
+	bigdw 140 ; SDef
+	db "$$$$$$$$xS@"
 
-	dw OMASTAR
-	db LEFTOVERS
-	dw SURF, ANCIENTPOWER, BLIZZARD, TOXIC
+	dw TOXICROAK
+	db BLACKGLASSES
+	dw DRAIN_PUNCH, SLUDGE_BOMB, SUCKER_PUNCH, ROCK_SMASH
 
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5606,19 +5606,19 @@ BattleTowerMons10:
 	bigdw 50000
 	bigdw 50000
 	dn 15, 11, 14, 7 ; DVs
-	db 15, 5, 5, 10 ; PP
+	db 10, 10, 5, 15 ; PP
 	db 100 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
 	db 100 ; Level
 	db 0, 0 ; Status
-	bigdw 8 ; HP
-	bigdw 8 ; Max HP
-	bigdw 210 ; Atk
-	bigdw 332 ; Def
-	bigdw 8 ; Spd
-	bigdw 304 ; SAtk
-	bigdw 214 ; SDef
-	db "OMUSUTA-@@@"
+	bigdw 315 ; HP
+	bigdw 315 ; Max HP
+	bigdw 295 ; Atk
+	bigdw 170 ; Def
+	bigdw 223 ; Spd
+	bigdw 218 ; SAtk
+	bigdw 161 ; SDef
+	db "Toxicroak@@"
 
 	dw GOLEM
 	db BRIGHTPOWDER

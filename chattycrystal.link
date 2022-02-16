@@ -39,7 +39,6 @@ ROMX $0a
 ROMX $0b
 	"bankB"
 	"Map Blocks 5"
-	"Tileset Data 15"
 ROMX $0c
 	"bankC"
 	"Tileset Data 4"
@@ -290,6 +289,7 @@ ROMX $67
 ROMX $68
 	"Battle Tower Text"
 	"Pics 28"
+	"Tileset Data 15"
 ROMX $69
 	"Map Scripts 22"
 	"bank69"

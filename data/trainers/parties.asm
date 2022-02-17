@@ -3442,7 +3442,7 @@ RedGroup:
 	db 72 ; level
 	dw MEWTWO ; Species
 	db BRIGHTPOWDER ; Held item (gen 2 trade)
-	dw FLY, TOXIC, LEER, GROWL ; Moves
+	dw SWIFT, PSYCHIC, BARRIER, RECOVER ; Moves
 	bigdw $50AC ;DVs
 	bigdw 252 ; HP
 	bigdw 177 ; Attack
@@ -12014,7 +12014,7 @@ BlueMayGroup:
 	next_list_item ; B
 	db "AAAA@", TRAINERTYPE_ITEM | TRAINERTYPE_MOVES | TRAINERTYPE_DVS | TRAINERTYPE_STATS | TRAINERTYPE_NICKNAME
 	; Mon 1
-	db 84 ; level
+	db 62 ; level
 	dw NIDOKING ; Species
 	db BITTER_BERRY ; Held item (gen 2 trade)
 	dw EARTHQUAKE, HORN_DRILL, SURF, ICE_BEAM ; Moves
@@ -12117,7 +12117,7 @@ BlueMayGroup:
 	bigdw 21 ; Speed
 	bigdw 13 ; Special Attack
 	bigdw 13 ; Special Defense
-	db "UaabB" ; Nickname
+	db "UaabB@" ; Nickname
 	
 	; Mon 2
 	db 14 ; level

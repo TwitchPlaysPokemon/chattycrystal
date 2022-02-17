@@ -13,7 +13,7 @@
 TinTower1F_MapScripts:
 	db 2 ; scene scripts
 	scene_script .FaceSuicune ; SCENE_DEFAULT
-	scene_script .FaceSuicune ; SCENE_FINISHED
+	scene_script GenericDummyScript ; SCENE_FINISHED
 
 	db 3 ; callbacks
 	callback MAPCALLBACK_OBJECTS, .NPCsCallback

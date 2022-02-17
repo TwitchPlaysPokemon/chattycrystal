@@ -53,4 +53,6 @@ SpecialBattleMusicTrainers:
 	dbw RED,                  MUSIC_CHAMPION_BATTLE
 	dbw RBY_GREEN,            MUSIC_CHAMPION_BATTLE
 	dbw BLUE_MAY,             MUSIC_HOENN_RIVAL_BATTLE
+	dbw BLUE_RED,             MUSIC_CHAMPION_BATTLE
+	dbw GREEN_RED,            MUSIC_CHAMPION_BATTLE
 	db -1

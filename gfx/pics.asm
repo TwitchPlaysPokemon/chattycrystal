@@ -173,6 +173,7 @@ DragonairFrontpic:   INCBIN "gfx/pokemon/dragonair/front.animated.2bpp.lz"
 ForretressFrontpic:  INCBIN "gfx/pokemon/forretress/front.animated.2bpp.lz"
 KangaskhanBackpic:   INCBIN "gfx/pokemon/kangaskhan/back.2bpp.lz"
 SkarmoryBackpic:     INCBIN "gfx/pokemon/skarmory/back.2bpp.lz"
+CrabominableBackpic: INCBIN "gfx/pokemon/crabominable/back.2bpp.lz"
 
 SECTION "Pics 8", ROMX
 
@@ -980,6 +981,7 @@ CutieflyBackpic:     INCBIN "gfx/pokemon/cutiefly/back.2bpp.lz"
 SECTION "Pics 32", ROMX
 
 CharmanderFrontpic:  INCBIN "gfx/pokemon/charmander/front.animated.2bpp.lz"
+YanmaFrontpic:       INCBIN "gfx/pokemon/yanma/front.animated.2bpp.lz"
 LampentFrontpic:     INCBIN "gfx/pokemon/lampent/front.animated.2bpp.lz"
 ClawitzerFrontpic:   INCBIN "gfx/pokemon/clawitzer/front.animated.2bpp.lz"
 ClawitzerBackpic:    INCBIN "gfx/pokemon/clawitzer/back.2bpp.lz"
@@ -990,7 +992,6 @@ AmauraBackpic:       INCBIN "gfx/pokemon/amaura/back.2bpp.lz"
 AurorusFrontpic:     INCBIN "gfx/pokemon/aurorus/front.animated.2bpp.lz"
 SliggooFrontpic:     INCBIN "gfx/pokemon/sliggoo/front.animated.2bpp.lz"
 CrabrawlerBackpic:   INCBIN "gfx/pokemon/crabrawler/back.2bpp.lz"
-CrabominableBackpic: INCBIN "gfx/pokemon/crabominable/back.2bpp.lz"
 SkuntankFrontpic:    INCBIN "gfx/pokemon/skuntank/front.animated.2bpp.lz"
 
 SECTION "Pics 33", ROMX
@@ -1065,6 +1066,3 @@ DucklettBackpic:     INCBIN "gfx/pokemon/ducklett/back.2bpp.lz"
 RibombeeBackpic:     INCBIN "gfx/pokemon/ribombee/back.2bpp.lz"
 SkuntankBackpic:     INCBIN "gfx/pokemon/skuntank/back.2bpp.lz"
 EelektrossBackpic:   INCBIN "gfx/pokemon/eelektross/back.2bpp.lz"
-
-SECTION "Pics 39", ROMX
-YanmaFrontpic:       INCBIN "gfx/pokemon/yanma/front.animated.2bpp.lz"

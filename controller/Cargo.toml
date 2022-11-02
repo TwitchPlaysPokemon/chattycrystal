@@ -17,7 +17,7 @@ serde = { version = "1", features = ["derive"] }
 serde-hjson = "*"
 serde_json = "*"
 toml = "0.5"
-rocket = "0.4.0"
+rocket = "0.4.7"
 regex = "1"
 chrono = "0.4.19"
 parking_lot = "0.11"

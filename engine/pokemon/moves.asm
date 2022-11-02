@@ -67,7 +67,7 @@ ReplaceMove::
 	jr z, .ok
 	ld bc, MOVE_PP - 1
 	add hl, bc
-	ld a, [hl]
+	call GetFarByte
 .ok
 	ld hl, MON_PP - MON_MOVES
 	assert MON_PP > MON_MOVES ; so the addition already clears carry

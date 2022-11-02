@@ -20,7 +20,7 @@ AnimateMon_HOF:
 	ld de, ANIM_MON_HOF
 	jp AnimateFrontpic
 
-pokeanim: MACRO
+MACRO pokeanim
 rept _NARG
 ; Workaround for a bug where macro args can't come after the start of a symbol
 if !DEF(\1_POKEANIM)
@@ -107,7 +107,7 @@ SetUpPokeAnim:
 	ret
 
 PokeAnim_SetupCommands:
-setup_command: MACRO
+MACRO setup_command
 \1_: dw \1
 ENDM
 	setup_command PokeAnim_Finish
@@ -564,7 +564,7 @@ PokeAnim_CopyBitmaskToBuffer:
 
 .Sizes: db 4, 5, 7
 
-poke_anim_box: MACRO
+MACRO poke_anim_box
 for y, 7, 7 * (\1 + 1), 7
 for x, 7 - \1, 7
 	db x + y

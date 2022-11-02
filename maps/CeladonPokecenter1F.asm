@@ -74,7 +74,7 @@ CeladonPokecenter1FPharmacistText:
 	line "GAME CORNER."
 
 	para "Oh, wait. That was"
-	line "three years ago<....>"
+	line "three years ago<...>"
 	cont "Or was it?"
 	done
 

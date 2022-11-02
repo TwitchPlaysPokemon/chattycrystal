@@ -95,7 +95,7 @@ RotateUnownFrontpic:
 	jr nz, .loop_count
 	ret
 
-gbprinterrect: MACRO
+MACRO gbprinterrect
 for y, \1
 for x, \1 * (\2 - 1), (\1 - \2) * \2 - \1, -\2
 	dw wGameboyPrinterRAM tile (x + y)

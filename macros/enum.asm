@@ -1,6 +1,6 @@
 ; Enumerate variables
 
-enum_start: MACRO
+MACRO enum_start
 if _NARG >= 1
 __enum__ = \1
 else
@@ -13,20 +13,20 @@ __enumdir__ = +1
 endc
 ENDM
 
-enum: MACRO
+MACRO enum
 if STRCMP("\1", "skip")
 \1 EQU __enum__
 endc
 __enum__ = __enum__ + __enumdir__
 ENDM
 
-enum_set: MACRO
+MACRO enum_set
 __enum__ = \1
 ENDM
 
 ; Enumerate constants
 
-const_def: MACRO
+MACRO const_def
 if _NARG >= 1
 const_value = \1
 else
@@ -34,21 +34,21 @@ const_value = 0
 endc
 ENDM
 
-const: MACRO
+MACRO const
 if STRCMP("\1", "skip")
 \1 EQU const_value
 endc
 const_value = const_value + 1
 ENDM
 
-shift_const: MACRO
+MACRO shift_const
 \1 EQU (1 << const_value)
 const_value = const_value + 1
 ENDM
 
 ; Enumerate strings
 
-define: MACRO
+MACRO define
 if !DEF(\1)
 \1 EQUS \2
 endc

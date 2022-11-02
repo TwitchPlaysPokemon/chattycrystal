@@ -200,7 +200,7 @@
 	const ITEM_C3      ; c0
 	const ITEM_FA      ; c1
 
-add_tm: MACRO
+MACRO add_tm
 if !DEF(TM01)
 TM01 EQU const_value
 	enum_start 1
@@ -263,7 +263,7 @@ ENDM
 	add_tm NIGHTMARE    ; f3
 NUM_TMS EQU const_value - TM01
 
-add_hm: MACRO
+MACRO add_hm
 if !DEF(HM01)
 HM01 EQU const_value
 endc
@@ -281,7 +281,7 @@ ENDM
 	add_hm WATERFALL    ; fa
 NUM_HMS EQU const_value - HM01
 
-add_mt: MACRO
+MACRO add_mt
 	enum \1_TMNUM
 ENDM
 

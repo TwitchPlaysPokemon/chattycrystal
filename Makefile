@@ -55,7 +55,7 @@ tools:
 	$(MAKE) -C tools/
 
 
-$(crystal_obj): RGBASMFLAGS = -Weverything -Wno-shift
+$(crystal_obj): RGBASMFLAGS = -h -Weverything -Wno-shift
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.
@@ -113,12 +113,12 @@ gfx/pokemon/%/frames.asm: gfx/pokemon/%/front.animated.tilemap gfx/pokemon/%/fro
 
 ### Misc file-specific graphics rules
 
-gfx/pokemon/%/back.2bpp: rgbgfx += -h
+gfx/pokemon/%/back.2bpp: rgbgfx += -Z
 
-gfx/trainers/%.2bpp: rgbgfx += -h
+gfx/trainers/%.2bpp: rgbgfx += -Z
 
-gfx/new_game/shrink1.2bpp: rgbgfx += -h
-gfx/new_game/shrink2.2bpp: rgbgfx += -h
+gfx/new_game/shrink1.2bpp: rgbgfx += -Z
+gfx/new_game/shrink2.2bpp: rgbgfx += -Z
 
 gfx/mail/dragonite.1bpp: tools/gfx += --remove-whitespace
 gfx/mail/large_note.1bpp: tools/gfx += --remove-whitespace
@@ -129,7 +129,7 @@ gfx/mail/litebluemail_border.1bpp: tools/gfx += --remove-whitespace
 gfx/pokedex/pokedex.2bpp: tools/gfx += --trim-whitespace
 gfx/pokedex/sgb.2bpp: tools/gfx += --trim-whitespace
 gfx/pokedex/slowpoke.2bpp: tools/gfx += --trim-whitespace
-gfx/pokedex/question_mark.2bpp: rgbgfx += -h
+gfx/pokedex/question_mark.2bpp: rgbgfx += -Z
 
 gfx/pokegear/pokegear.2bpp: rgbgfx += -x2
 gfx/pokegear/pokegear_sprites.2bpp: tools/gfx += --trim-whitespace
@@ -167,19 +167,19 @@ gfx/battle_anims/rocks.2bpp: tools/gfx += --remove-whitespace
 gfx/battle_anims/skyattack.2bpp: tools/gfx += --remove-whitespace
 gfx/battle_anims/status.2bpp: tools/gfx += --remove-whitespace
 
-gfx/player/chris.2bpp: rgbgfx += -h
-gfx/player/chris_back.2bpp: rgbgfx += -h
-gfx/player/kris.2bpp: rgbgfx += -h
-gfx/player/kris_back.2bpp: rgbgfx += -h
+gfx/player/chris.2bpp: rgbgfx += -Z
+gfx/player/chris_back.2bpp: rgbgfx += -Z
+gfx/player/kris.2bpp: rgbgfx += -Z
+gfx/player/kris_back.2bpp: rgbgfx += -Z
 
-gfx/trainer_card/chris_card.2bpp: rgbgfx += -h
-gfx/trainer_card/kris_card.2bpp: rgbgfx += -h
+gfx/trainer_card/chris_card.2bpp: rgbgfx += -Z
+gfx/trainer_card/kris_card.2bpp: rgbgfx += -Z
 gfx/trainer_card/leaders.2bpp: tools/gfx += --trim-whitespace
 
 gfx/overworld/chris_fish.2bpp: tools/gfx += --trim-whitespace
 gfx/overworld/kris_fish.2bpp: tools/gfx += --trim-whitespace
 
-gfx/battle/dude.2bpp: rgbgfx += -h
+gfx/battle/dude.2bpp: rgbgfx += -Z
 
 gfx/font/unused_bold_font.1bpp: tools/gfx += --trim-whitespace
 
@@ -192,7 +192,7 @@ gfx/mobile/mobile_adapter.2bpp: tools/gfx += --trim-whitespace
 gfx/mobile/mobile_splash.2bpp: tools/gfx += --remove-duplicates --remove-xflip
 gfx/mobile/pichu_animated.2bpp: tools/gfx += --trim-whitespace
 
-gfx/unknown/unknown_egg.2bpp: rgbgfx += -h
+gfx/unknown/unknown_egg.2bpp: rgbgfx += -Z
 
 
 ### Catch-all graphics rules

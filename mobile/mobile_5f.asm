@@ -2582,7 +2582,7 @@ Function17e349:
 	call CloseSRAM
 	ret
 
-inc_crash_check_pointer_farcall: MACRO
+MACRO inc_crash_check_pointer_farcall
 	call IncCrashCheckPointer
 	call HlToCrashCheckPointer ; redundant
 	ldh a, [rSVBK]

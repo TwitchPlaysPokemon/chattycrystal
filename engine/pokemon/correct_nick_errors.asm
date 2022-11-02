@@ -44,16 +44,3 @@ CorrectNickErrors::
 	pop de
 	pop bc
 	ret
-
-.textcommands
-; table defining which characters are actually text commands
-; format:
-	;      ≥           <
-	db "<NULL>",   "ガ"
-	db "<PLAY_G>", "<JP_18>" + 1
-	db "<NI>",     "<NO>"    + 1
-	db "<ROUTE>",  "<GREEN>" + 1
-	db "<ENEMY>",  "<ENEMY>" + 1
-	db "<MOM>",    "<TM>"    + 1
-	db "<ROCKET>", "┘"       + 1
-	db -1 ; end

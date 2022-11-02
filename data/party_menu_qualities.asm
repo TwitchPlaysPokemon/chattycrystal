@@ -11,7 +11,7 @@
 	const PARTYMENUQUALITY_MOBILE_SELECTION
 	const PARTYMENUQUALITY_BATTLE_TOWER
 
-partymenuqualities: MACRO
+MACRO partymenuqualities
 rept _NARG
 	db PARTYMENUQUALITY_\1
 	shift

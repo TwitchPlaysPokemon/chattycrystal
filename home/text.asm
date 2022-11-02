@@ -181,7 +181,7 @@ NextChar::
 
 CheckDict::
 
-dict: MACRO
+MACRO dict
 if \1 == 0
 	and a
 else
@@ -250,7 +250,7 @@ MobileScriptChar::
 	farcall RunMobileScript
 	jp PlaceNextChar
 
-print_name: MACRO
+MACRO print_name
 	push de
 	ld de, \1
 	jp PlaceCommandCharacter

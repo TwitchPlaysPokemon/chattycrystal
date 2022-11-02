@@ -1,4 +1,4 @@
-effectfn: MACRO
+MACRO effectfn
 	assert (BANK(\1) == BANK(DoMove)) || (BANK(\1) == BANK("Effect Commands Extra")) || !BANK(\1)
 	dw (BANK(\1) == BANK("Effect Commands Extra")) << 15 | (\1)
 ENDM

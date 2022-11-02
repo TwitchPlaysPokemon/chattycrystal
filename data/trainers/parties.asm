@@ -1,4 +1,4 @@
-specialtrainer: MACRO
+MACRO specialtrainer
 	if _NARG > 1
 		db TRAINERTYPE_SPECIAL | (\2)
 	else

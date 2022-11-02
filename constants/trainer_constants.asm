@@ -1,9 +1,9 @@
-trainerclass: MACRO
+MACRO trainerclass
 	enum \1
 const_value = 1
 ENDM
 
-trainervalue: MACRO
+MACRO trainervalue
 	const \1
 \1_TRAINER_GROUP EQU __enum__ - 1
 ENDM

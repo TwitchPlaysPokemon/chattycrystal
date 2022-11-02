@@ -1,4 +1,4 @@
-___wram_conversion_table: MACRO
+MACRO ___wram_conversion_table
 	; in:
 	; 1: name of the table; will be prefixed to all definitions
 	; 2: table size, in entries
@@ -53,7 +53,7 @@ endc
 
 ENDM
 
-wram_conversion_table: MACRO
+MACRO wram_conversion_table
 	; uses constants to invoke the macro above
 	; in: WRAM prefix, constant prefix
 if \2_MINIMUM_RESERVED_INDEX > $FF

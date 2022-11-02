@@ -26,7 +26,7 @@ TrainerGruntM31:
 	done
 
 .after_text
-	text "Blast it<....> You're"
+	text "Blast it<...> You're"
 	line "dissing TEAM"
 	cont "ROCKET, aren't you?"
 	done

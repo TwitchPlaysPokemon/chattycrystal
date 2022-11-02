@@ -1,7 +1,7 @@
 ; Some functions are defined as macros so they can be reused for multiple 16-bit tables
 ; (they are not parameterized due to performance constraints; loads and non-evicting stores should be as fast as possible)
 
-___conversion_table_load: MACRO
+MACRO ___conversion_table_load
 	; macro arguments: WRAM prefix, constant prefix
 	; in: a: 8-bit index
 	; out: hl: 16-bit index; a: clobbered
@@ -39,7 +39,7 @@ ___conversion_table_load: MACRO
 	ret
 ENDM
 
-___conversion_table_store: MACRO
+MACRO ___conversion_table_store
 	; macro arguments: WRAM prefix, constant prefix
 	; in: hl: 16-bit index
 	; out: a: 8-bit index; hl: clobbered
@@ -273,7 +273,7 @@ ___unroll = 8
 	; all other registers are free/clobbers; this code will be called as a function when needed
 ENDM
 
-___conversion_bitmap_initialize: MACRO
+MACRO ___conversion_bitmap_initialize
 	; macro arguments: WRAM prefix, constant prefix, bit setting function (must preserve de; may be a local label)
 	; falls through; clobbers all registers (make sure to push de before invoking!)
 	xor a
@@ -298,7 +298,7 @@ ___unroll = 4
 	jr nz, .initialization_locked_loop
 ENDM
 
-___conversion_bitmap_check_structs: MACRO
+MACRO ___conversion_bitmap_check_structs
 	; macro arguments: struct pointer, struct length, struct count, bit setting function
 	; may clobber anything; falls through
 ___unroll = 8
@@ -330,7 +330,7 @@ ___unroll = 8
 	endc
 ENDM
 
-___conversion_bitmap_check_values: MACRO
+MACRO ___conversion_bitmap_check_values
 	; macro arguments: bit setting function, address, address, address...
 	for ___addr, 1, _NARG
 		shift ___addr
@@ -340,7 +340,7 @@ ___conversion_bitmap_check_values: MACRO
 	endr
 ENDM
 
-___conversion_bitmap_free_unused: MACRO
+MACRO ___conversion_bitmap_free_unused
 	; macro arguments: WRAM prefix, constant prefix
 	ld bc, \2_ENTRIES >> 3
 	ld de, wConversionTableBitmap
@@ -404,7 +404,7 @@ ___conversion_bitmap_free_unused: MACRO
 	ld [\1UsedSlots], a
 ENDM
 
-___conversion_bitmap_set: MACRO
+MACRO ___conversion_bitmap_set
 	; macro argument: constant prefix
 	; in: a: index - sets the corresponding bit in wConversionTableBitmap if the index is in range
 	dec a
@@ -441,7 +441,7 @@ ___conversion_bitmap_set: MACRO
 	ret
 ENDM
 
-___conversion_table_lock_ID: MACRO
+MACRO ___conversion_table_lock_ID
 	; macro arguments: WRAM prefix, constant prefix
 	; in: h = 8-bit index or zero (to clear), l = position
 	; out: a = original h, hl = clobbered, carry = set if error

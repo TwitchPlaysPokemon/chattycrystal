@@ -4,64 +4,64 @@ percent EQUS "* $ff / 100"
 
 ; Constant data (db, dw, dl) macros
 
-dwb: MACRO
+MACRO dwb
 	dw \1
 	db \2
 ENDM
 
-dbw: MACRO
+MACRO dbw
 	db \1
 	dw \2
 ENDM
 
-dbbw: MACRO
+MACRO dbbw
 	db \1, \2
 	dw \3
 ENDM
 
-dbbbw: MACRO
+MACRO dbbbw
 	db \1, \2, \3
 	dw \4
 ENDM
 
-dbww: MACRO
+MACRO dbww
 	db \1
 	dw \2, \3
 ENDM
 
-dbwww: MACRO
+MACRO dbwww
 	db \1
 	dw \2, \3, \4
 ENDM
 
-dbwbb: MACRO
+MACRO dbwbb
 	db \1
 	dw \2
 	db \3, \4
 ENDM
 
-dbwbw: MACRO
+MACRO dbwbw
 	db \1
 	dw \2
 	db \3
 	dw \4
 ENDM
 
-dn: MACRO ; nybbles
+MACRO dn ; nybbles
 rept _NARG / 2
 	db ((\1) << 4) | (\2)
 	shift 2
 endr
 ENDM
 
-dc: MACRO ; "crumbs"
+MACRO dc ; "crumbs"
 rept _NARG / 4
 	db ((\1) << 6) | ((\2) << 4) | ((\3) << 2) | (\4)
 	shift 4
 endr
 ENDM
 
-dx: MACRO
+MACRO dx
 x = 8 * ((\1) - 1)
 rept \1
 	db ((\2) >> x) & $ff
@@ -69,33 +69,33 @@ x = x - 8
 endr
 ENDM
 
-dt: MACRO ; three-byte (big-endian)
+MACRO dt ; three-byte (big-endian)
 	dx 3, \1
 ENDM
 
-dd: MACRO ; four-byte (big-endian)
+MACRO dd ; four-byte (big-endian)
 	dx 4, \1
 ENDM
 
-bigdw: MACRO ; big-endian word
+MACRO bigdw ; big-endian word
 	dx 2, \1 ; db HIGH(\1), LOW(\1)
 ENDM
 
-dba: MACRO ; dbw bank, address
+MACRO dba ; dbw bank, address
 rept _NARG
 	dbw BANK(\1), \1
 	shift
 endr
 ENDM
 
-dab: MACRO ; dwb address, bank
+MACRO dab ; dwb address, bank
 rept _NARG
 	dwb \1, BANK(\1)
 	shift
 endr
 ENDM
 
-dbpixel: MACRO
+MACRO dbpixel
 if _NARG >= 4
 ; x tile, x pxl, y tile, y pxl
 	db \1 * 8 + \3, \2 * 8 + \4
@@ -105,25 +105,25 @@ else
 endc
 ENDM
 
-dsprite: MACRO
+MACRO dsprite
 ; y tile, y pxl, x tile, x pxl, vtile offset, attributes
 	db (\1 * 8) % $100 + \2, (\3 * 8) % $100 + \4, \5, \6
 ENDM
 
-menu_coords: MACRO
+MACRO menu_coords
 ; x1, y1, x2, y2
 	db \2, \1 ; start coords
 	db \4, \3 ; end coords
 ENDM
 
-bcd: MACRO
+MACRO bcd
 rept _NARG
 	dn ((\1) % 100) / 10, (\1) % 10
 	shift
 endr
 ENDM
 
-sine_table: MACRO
+MACRO sine_table
 ; \1 samples of sin(x) from x=0 to x<32768 (pi radians)
 x = 0
 rept \1

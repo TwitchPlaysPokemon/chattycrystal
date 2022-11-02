@@ -1,4 +1,4 @@
-tmhm: MACRO
+MACRO tmhm
 ; initialize bytes to 0
 for n, (NUM_TM_HM_TUTOR + 7) / 8
 _tm{d:n} = 0

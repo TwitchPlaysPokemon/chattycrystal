@@ -1,4 +1,4 @@
-unownword: MACRO
+MACRO unownword
 for x, 1, STRLEN(\1) + 1
 	db STRSUB(\1, x, 1) - $40
 endr

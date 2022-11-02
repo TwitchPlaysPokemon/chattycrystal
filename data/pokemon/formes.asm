@@ -1,4 +1,4 @@
-forme: MACRO
+MACRO forme
 	dba \1 ; frontpic
 	dba \2 ; backpic
 	assert BANK(PokemonPalettes) == BANK(\3)

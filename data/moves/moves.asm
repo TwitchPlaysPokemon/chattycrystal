@@ -1,6 +1,6 @@
 ; Characteristics of each move.
 
-move: MACRO
+MACRO move
 	; the animation byte will be filled when the move is loaded
 	assert ((\5) == 1) || (((\5) <= 40) && !((\5) % 5)), "Invalid PP count"
 	db \1 ; effect

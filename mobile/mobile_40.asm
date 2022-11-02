@@ -1663,15 +1663,8 @@ Function100ae7:
 	ld [wcd2b], a
 	ret
 
-
-	pushc
-	setcharmap ascii
-
 Unknown_100b0a:
-	db "tetsuji", 0
-
-	popc
-
+	db $74, $65, $74, $73, $75, $6a, $69, 0 ;"tetsuji"
 
 Function100b12:
 	call Function100dd8
@@ -3522,27 +3515,23 @@ Function101826:
 	ld [wcd2b], a
 	ret
 
-
-	pushc
-	setcharmap ascii
-
 Unknown_10186f:
 	db .end - @
-	db $19, $73, $09, $13, "trade_crystal"
-.end	db 0
+	db $19, $73, $09, $13
+	db $74, $72, $61, $64, $65, $5f, $63, $72, $79, $73, $74, $61, $6c ;"trade_crystal"
+.end: db 0
 
 Unknown_101882:
 	db .end - @
-	db $19, $67, $10, $01, "free__crystal"
-.end	db 0
+	db $19, $67, $10, $01
+	db $66, $72, $65, $65, $5f, $5f, $63, $72, $79, $73, $74, $61, $6c ;"free__crystal"
+.end: db 0
 
 Unknown_101895:
 	db .end - @
-	db $19, $67, $10, $01, "limit_crystal"
-.end	db 0
-
-	popc
-
+	db $19, $67, $10, $01
+	db $6c, $69, $6d, $69, $74, $5f, $63, $72, $79, $73, $74, $61, $6c ;"limit_crystal"
+.end: db 0
 
 Function1018a8:
 	ld hl, wccb5

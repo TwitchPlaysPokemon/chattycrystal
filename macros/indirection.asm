@@ -5,7 +5,7 @@
 ;   (repeat as many times as necessary)
 ;   indirect_table_end
 
-indirect_table: MACRO
+MACRO indirect_table
 	; arguments: entry size, initial index (0 or 1)
 	assert !DEF(___current_indirect_size), "indirect table error: there's already an active indirect table"
 	assert (\1) > 0, "indirect table error: the entry size must be positive"
@@ -17,7 +17,7 @@ indirect_table: MACRO
 	dw (\1) | ((\2) << 15)
 ENDM
 
-indirect_entries: MACRO
+MACRO indirect_entries
 	; arguments: next max index, far label (omit for zero/no data), far bank (if different from label)
 	assert DEF(___current_indirect_size), "indirect table error: there's no active indirect table"
 	assert (\1) >= ___current_indirect_index, "indirect table error: attempted to move backwards"
@@ -43,7 +43,7 @@ indirect_entries: MACRO
 	endr
 ENDM
 
-indirect_table_end: MACRO
+MACRO indirect_table_end
 	; no arguments
 	assert DEF(___current_indirect_size), "indirect table error: there's no active indirect table"
 	purge ___current_indirect_size

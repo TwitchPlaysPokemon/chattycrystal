@@ -132,11 +132,7 @@ TrainerHikerBailey:
 
 .Script:
 	endifjustbattled
-	opentext
 	jumptext HikerBaileyAfterBattleText
-	waitbutton
-	closetext
-	end
 
 Route46Sign:
 	jumptext Route46SignText

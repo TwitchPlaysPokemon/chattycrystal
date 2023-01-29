@@ -332,7 +332,7 @@ PokemaniacRonSeenText:
 	done
 
 PokemaniacRonBeatenText:
-	text "My NIDOKING did"
+	text "My TOXICROAK did"
 	line "pretty right on!"
 	done
 

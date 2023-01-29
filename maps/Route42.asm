@@ -236,8 +236,10 @@ PokemaniacShaneSeenText:
 	done
 
 PokemaniacShaneBeatenText:
-	text "I should have used"
-	line "my MOON STONE…"
+	text "I shouldn't have"
+	line "assumed my MOON"
+	para "STONE would be"
+	line "enough…"
 	done
 
 PokemaniacShaneAfterBattleText:

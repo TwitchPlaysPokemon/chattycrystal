@@ -73,7 +73,7 @@ TrainerSageMasa:
 	jumptext SageMasaAfterBattleText
 
 TrainerSageKoji:
-	trainer CY_ROBORED, X_CHATTYYELLOW3, EVENT_BEAT_SAGE_KOJI, SageKojiSeenText, SageKojiBeatenText, 0, .Script
+	trainer CY_ROBORED, X_CHATTYYELLOW3, EVENT_BEAT_SAGE_KOJI, HostSilenceText, HostSilenceText, 0, .Script
 
 .Script:
 	checkevent EVENT_KOJI_ALLOWS_YOU_PASSAGE_TO_TIN_TOWER
@@ -81,9 +81,9 @@ TrainerSageKoji:
 	pause 10
 	showemote EMOTE_SHOCK, WISETRIOSROOM_SAGE6, 20
 	opentext
-	writetext SageKojiAfterBattleQuestionText
+	writetext HostSilenceText
 	buttonsound
-	writetext SageKojiAfterBattleSpeechText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement WISETRIOSROOM_SAGE6, WiseTriosRoom_Movement_WalkBack
@@ -93,7 +93,7 @@ TrainerSageKoji:
 	end
 
 .KojiAllowsPassage:
-	jumptext SageKojiAfterBattleFinalText
+	jumptext HostSilenceText
 
 WiseTriosRoom_Movement_PushPlayerAway:
 	step LEFT
@@ -247,52 +247,6 @@ SageMasaAfterBattleText:
 	para "And that is how"
 	line "the BURNED TOWER"
 	cont "came to be."
-	done
-
-SageKojiSeenText:
-	text "Let me see your"
-	line "power!"
-	done
-
-SageKojiBeatenText:
-	text "Too strong!"
-	line "Why?"
-	done
-
-SageKojiAfterBattleQuestionText:
-	text "You… Are you the"
-	line "trainer who is"
-	para "awaited by the"
-	line "legendary #MON?"
-	done
-
-SageKojiAfterBattleSpeechText:
-	text "I see…"
-
-	para "We, the WISE TRIO,"
-	line "have been given"
-	para "the responsibility"
-	line "of protecting the"
-	para "legendary #MON."
-	line "We are to allow"
-	para "passage only to"
-	line "those people who"
-	para "possess the power"
-	line "and soul of truth."
-
-	para "Please, do go on"
-	line "and enter the TIN"
-	cont "TOWER ahead."
-
-	para "ENTEI will put you"
-	line "to the test."
-	done
-
-SageKojiAfterBattleFinalText:
-	text "Please, do go on."
-
-	para "ENTEI will put you"
-	line "to the test."
 	done
 
 WiseTriosRoom_MapEvents:

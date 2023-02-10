@@ -103,8 +103,9 @@ MoveDeletion:
 	text_end
 
 .UndeletableText:
-	text_far _Text_CantForgetThatMove
-	text_end
+	text "That move can't be"
+	line "forgotten."
+	done
 
 .check_deletable
 	ld a, [wMenuCursorY]

@@ -67,8 +67,7 @@ CooltrainermCodySeenText:
 	done
 
 CooltrainermCodyBeatenText:
-	text "Rats! If only I"
-	line "had a dragon!"
+	text "But I do!"
 	done
 
 CooltrainermCodyAfterBattleText:

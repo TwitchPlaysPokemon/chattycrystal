@@ -41,7 +41,7 @@ MtBattleTrainer20BeforeText:
 	line "of 3F, that's me,"
 	cont "ERBEN!"
 
-	text "Okay, let's see if"
+	para "Okay, let's see if"
 	line "you can go on"
 	para "or not! Battle!"
 	line "Battle!"

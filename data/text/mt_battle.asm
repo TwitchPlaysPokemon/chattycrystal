@@ -67,7 +67,7 @@ MtBattleTrainer29AfterText:
 	line "that to happen<...>"
 	done
 
-MtBattleTrainer33BeforeText:
+MtBattleTrainer35BeforeText:
 	text "I need to get on"
 	line "with my next"
 	cont "research project."

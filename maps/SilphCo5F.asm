@@ -75,81 +75,7 @@ MtBattleTrainer32:
 	done
 
 MtBattleTrainer33:
-	trainer SCIENTIST, MT_BATTLE_33, EVENT_BEAT_MT_BATTLE_33, .before_text, .defeat_text, 0, .script
-
-.script
-	endifjustbattled
-	jumptext .after_text
-
-.before_text
-	text_far MtBattleTrainer33BeforeText
-	text_end
-
-.defeat_text
-	text "I'm over and done"
-	line "with!"
-	done
-
-.after_text
-	text "Well, well. It's"
-	line "time for me to get"
-	para "on with my next"
-	line "research project."
-	done
-
-MtBattleTrainer34:
-	trainer SCHOOLBOY, MT_BATTLE_34, EVENT_BEAT_MT_BATTLE_34, .before_text, .defeat_text, 0, .script
-
-.script
-	endifjustbattled
-	jumptext .after_text
-
-.before_text
-	text "I'm not very inter-"
-	line "ested in training."
-
-	para "I'm strong without"
-	line "any training, you"
-	cont "see."
-	done
-
-.defeat_text
-	text "I really am"
-	line "strong!"
-	done
-
-.after_text
-	text "I'm telling on you"
-	line "to my papa!"
-	done
-
-MtBattleTrainer35:
-	trainer SWIMMERM, MT_BATTLE_35, EVENT_BEAT_MT_BATTLE_35, .before_text, .defeat_text, 0, .script
-
-.script
-	endifjustbattled
-	jumptext .after_text
-
-.before_text
-	text "Your complexion's"
-	line "not good. You"
-	para "should work out"
-	line "with me and shed a"
-	cont "little sweat!"
-	done
-
-.defeat_text
-	text "I'm dripping with"
-	line "perspiration!"
-	done
-
-.after_text
-	text "Whew! I worked up"
-	line "a great sweat!"
-	done
-
-MtBattleTrainer36:
-	trainer SWIMMERF, MT_BATTLE_36, EVENT_BEAT_MT_BATTLE_36, .before_text, .defeat_text, 0, .script
+	trainer SWIMMERF, MT_BATTLE_33, EVENT_BEAT_MT_BATTLE_33, .before_text, .defeat_text, 0, .script
 
 .script
 	endifjustbattled
@@ -169,8 +95,8 @@ MtBattleTrainer36:
 	line "training!"
 	done
 
-MtBattleTrainer37:
-	trainer COOLTRAINERM, MT_BATTLE_37, EVENT_BEAT_MT_BATTLE_37, .before_text, .defeat_text, 0, .script
+MtBattleTrainer34:
+	trainer COOLTRAINERM, MT_BATTLE_34, EVENT_BEAT_MT_BATTLE_34, .before_text, .defeat_text, 0, .script
 
 .script
 	endifjustbattled
@@ -194,6 +120,80 @@ MtBattleTrainer37:
 	text "I may redo my"
 	line "studies at the"
 	cont "SCHOOL."
+	done
+
+MtBattleTrainer35:
+	trainer SCIENTIST, MT_BATTLE_35, EVENT_BEAT_MT_BATTLE_35, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	text_far MtBattleTrainer35BeforeText
+	text_end
+
+.defeat_text
+	text "I'm over and done"
+	line "with!"
+	done
+
+.after_text
+	text "Well, well. It's"
+	line "time for me to get"
+	para "on with my next"
+	line "research project."
+	done
+
+MtBattleTrainer36:
+	trainer SWIMMERM, MT_BATTLE_36, EVENT_BEAT_MT_BATTLE_36, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	text "Your complexion's"
+	line "not good. You"
+	para "should work out"
+	line "with me and shed a"
+	cont "little sweat!"
+	done
+
+.defeat_text
+	text "I'm dripping with"
+	line "perspiration!"
+	done
+
+.after_text
+	text "Whew! I worked up"
+	line "a great sweat!"
+	done
+
+MtBattleTrainer37:
+	trainer SCHOOLBOY, MT_BATTLE_37, EVENT_BEAT_MT_BATTLE_37, .before_text, .defeat_text, 0, .script
+
+.script
+	endifjustbattled
+	jumptext .after_text
+
+.before_text
+	text "I'm not very inter-"
+	line "ested in training."
+
+	para "I'm strong without"
+	line "any training, you"
+	cont "see."
+	done
+
+.defeat_text
+	text "I really am"
+	line "strong!"
+	done
+
+.after_text
+	text "I'm telling on you"
+	line "to my papa!"
 	done
 
 MtBattleTrainer38:
@@ -286,13 +286,13 @@ SilphCo5F_MapEvents:
 
 	db 11 ; object events
 	object_event 18,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtBattleNurseFinished, -1
-	object_event 20, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, MtBattleTrainer33, -1
-	object_event 15,  2, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, MtBattleTrainer32, -1
 	object_event 17,  2, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, MtBattleTrainer31, -1
-	object_event 10, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, MtBattleTrainer34, -1
-	object_event 17, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, MtBattleTrainer35, -1
-	object_event  9,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, MtBattleTrainer36, -1
-	object_event 15,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, MtBattleTrainer37, -1
+	object_event 15,  2, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, MtBattleTrainer32, -1
+	object_event  9,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 2, MtBattleTrainer33, -1
+	object_event 15,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, MtBattleTrainer34, -1
+	object_event 20, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, MtBattleTrainer35, -1
+	object_event 17, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, MtBattleTrainer36, -1
+	object_event 10, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, MtBattleTrainer37, -1
 	object_event  8, 12, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, MtBattleTrainer38, -1
 	object_event  5, 10, SPRITE_BIKER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, MtBattleTrainer39, -1
 	object_event  1,  8, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 4, MtBattleTrainer40, -1

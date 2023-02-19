@@ -6,5 +6,4 @@
 	next "when their steel"
 
 	page "bodies collide,"
-	next "sparks fly."
-	next "@"
+	next "sparks fly.@"

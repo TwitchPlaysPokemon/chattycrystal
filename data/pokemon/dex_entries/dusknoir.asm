@@ -6,5 +6,4 @@
 	next "its pliant body"
 
 	page "and guide them"
-	next "home."
-	next "@"
+	next "home.@"

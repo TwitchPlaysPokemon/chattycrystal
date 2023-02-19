@@ -6,5 +6,4 @@
 	next "burns the spirit,"
 
 	page "leaving the body"
-	next "behind."
-	next "@"
+	next "behind.@"

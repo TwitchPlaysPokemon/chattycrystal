@@ -6,5 +6,4 @@
 	next "a leap."
 
 	page "Its fiery punches"
-	next "scorch its foes."
-	next "@"
+	next "scorch its foes.@"

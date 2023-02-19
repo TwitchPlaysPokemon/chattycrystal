@@ -3,7 +3,6 @@
 
 	db   "It circles the sky"
 	next "in search of prey."
-	next ""
 
 	page "When it spots one,"
 	next "it dives steeply"

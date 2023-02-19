@@ -5,6 +5,6 @@
 	next "a brighter blue"
 	next "pattern on its"
 
-	page "face means its"
-	next "rank in its pack"
-	next "is higher.@"
+	page "face mean its rank"
+	next "in its pack is"
+	next "higher.@"

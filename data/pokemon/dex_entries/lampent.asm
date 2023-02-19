@@ -6,5 +6,4 @@
 	next "death and steals"
 
 	page "the spirit from"
-	next "the body."
-	next "@"
+	next "the body.@"

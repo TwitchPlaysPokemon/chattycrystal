@@ -6,5 +6,4 @@
 	next "hard shell to"
 
 	page "accumulate enough"
-	next "power to evolve."
-	next "@"
+	next "power to evolve.@"

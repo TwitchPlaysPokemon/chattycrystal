@@ -6,5 +6,4 @@
 	next "magma ever since"
 
 	page "it fiercely fought"
-	next "KYOGRE long ago."
-	next "@"
+	next "KYOGRE long ago.@"

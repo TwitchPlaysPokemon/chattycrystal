@@ -3,7 +3,7 @@
 
 	db   "LUXRAY's ability to"
 	next "see through"
-	next "objects come in"
+	next "objects comes in"
 
 	page "handy when it's"
 	next "scouting for"

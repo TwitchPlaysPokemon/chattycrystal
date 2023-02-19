@@ -5,6 +5,6 @@
 	next "courses through"
 	next "the tips of its"
 
-	page "sharp claws. A"
-	next "scratch causes"
+	page "sharp claws."
+	next "A scratch causes"
 	next "foes to faint.@"

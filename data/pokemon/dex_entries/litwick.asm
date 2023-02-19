@@ -1,10 +1,10 @@
 	db "CANDLE@" ; species name
 	dw 100, 68 ; height, weight
 
-	db   "Litwick shines a"
+	db   "LITWICK shines a"
 	next "light that absorbs"
 	next "the life energy of"
 
-	page "people and #MON"
-	next "which becomes the"
-	next "fuel that it burns.@"
+	page "people and"
+	next "#MON, becoming"
+	next "the fuel it burns.@"

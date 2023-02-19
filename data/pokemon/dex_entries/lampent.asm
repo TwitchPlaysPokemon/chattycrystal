@@ -5,6 +5,6 @@
 	next "the moment of"
 	next "death and steals"
 
-	page "spirit from the"
-	next "body."
+	page "the spirit from"
+	next "the body."
 	next "@"

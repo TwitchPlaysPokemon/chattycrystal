@@ -77,7 +77,15 @@ TrainerBurglarJac:
 	text "The switches here"
 	line "open and close"
 	para "alternating sets"
-	line "of doors."
+	line "of doors…"
+
+	para "But they don't"
+	line "seem to work"
+	cont "anymore."
+
+	para "Maybe they broke"
+	line "when the volcano"
+	cont "erupted?"
 	done
 
 PokemonMansion2FRareCandy:

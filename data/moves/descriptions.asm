@@ -828,7 +828,7 @@ PerishSongDescription:
 
 CrystalBoltDescription:
 	db   "Can damage ground-"
-	next "type foes."
+	next "type foes.@"
 
 SwaggerDescription:
 	db   "Causes confusion"

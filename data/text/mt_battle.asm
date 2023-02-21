@@ -149,7 +149,7 @@ MtBattleTrainer61BeforeText:
 	para "reached these"
 	line "lofty heights!"
 
-	text "This is it, 8F!"
+	para "This is it, 8F!"
 	line "Let's see some"
 	cont "passion!"
 	done

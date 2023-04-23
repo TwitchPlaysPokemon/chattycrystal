@@ -159,7 +159,7 @@ TinTower1F_MapScripts:
 	moveobject TINTOWER1F_SAGE3, 11, 13
 	turnobject PLAYER, RIGHT
 	opentext
-	writetext TinTowerEusineSuicuneText
+	writetext HostSilenceText
 	waitbutton
 	closetext
 	applymovement TINTOWER1F_EUSINE, TinTower1F_Movement_EusineDown
@@ -229,7 +229,7 @@ TinTower1FSage6Script:
 	jumptextfaceplayer TinTower1FSage6Text2
 
 TinTowerEusine:
-	jumptextfaceplayer TinTowerEusineHoOhText
+	jumptextfaceplayer HostSilenceText
 
 TinTowerPlayerMovement1:
 	slow_step UP
@@ -310,10 +310,6 @@ TinTower1F_Movement_Sage3:
 	step RIGHT
 	step UP
 	step_end
-
-TinTowerEusineSuicuneText:
-	text "<...>"
-	done
 
 TinTower1FSage1Text:
 	text "According to"
@@ -398,26 +394,6 @@ TinTower1FSage6Text1:
 	para "Free your mind"
 	line "from uncertainty,"
 	cont "and advance."
-	done
-
-TinTowerEusineHoOhText:
-	text "I knew it."
-
-	para "I knew you'd get"
-	line "to see the #MON"
-	para "of rainbow colors,"
-	line "<PLAYER>."
-
-	para "It happened just"
-	line "as I envisioned."
-
-	para "My research isn't"
-	line "bad, I might say."
-
-	para "I'm going to keep"
-	line "studying #MON"
-	para "to become a famous"
-	line "#MANIAC!"
 	done
 
 TinTower1FSage4Text2:

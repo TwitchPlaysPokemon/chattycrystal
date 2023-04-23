@@ -113,7 +113,6 @@ TrickHouseExit_TrickMaster:
 
 TrickHouseExit_Finished_6:
 	writetext .after_puzzle_text
-	waitbutton
 	closetext
 	pause 5
 	scall .face_away

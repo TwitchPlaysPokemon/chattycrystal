@@ -10,7 +10,7 @@ BattleAnimFrameData:
 	dw .Frameset_07 ; BATTLEANIMFRAMESET_07
 	dw .Frameset_08 ; BATTLEANIMFRAMESET_08
 	dw .Frameset_09 ; BATTLEANIMFRAMESET_09
-	dw .Frameset_0a ; BATTLEANIMFRAMESET_0A
+	dw .Frameset_0a ; BATTLEANIMFRAMESET_0A ; Unused
 	dw .Frameset_0b ; BATTLEANIMFRAMESET_0B
 	dw .Frameset_0c ; BATTLEANIMFRAMESET_0C
 	dw .Frameset_0d ; BATTLEANIMFRAMESET_0D
@@ -297,8 +297,7 @@ BattleAnimFrameData:
 	battleframe BATTLEANIMOAMSET_0B,  7, OAM_X_FLIP
 	dorestart
 
-.Frameset_0a:
-	battleframe BATTLEANIMOAMSET_0C,  8
+.Frameset_0a: ; Unused
 	endanim
 
 .Frameset_0b:

@@ -6,5 +6,4 @@
 	next "tip over trucks."
 
 	page "It stamps its feet"
-	next "to power up."
-	next "@"
+	next "to power up.@"

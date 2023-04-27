@@ -6,5 +6,5 @@
 	next "springwater are"
 
 	page "said to reveal"
-	next "rare coloration when"
-	next "they bloom.@"
+	next "rare coloration"
+	next "when they bloom.@"

@@ -498,15 +498,15 @@ DragonShrineTakeThisDratiniText:
 	para "I have something"
 	line "for you."
 
-	para "Take this DRATINI"
-	line "as proof that I"
-	para "have recognized"
-	line "your worth."
+	para "Take this GOOMY as"
+	line "proof that I have"
+	para "recognized your"
+	line "worth."
 	done
 
 DragonShrinePlayerReceivedDratiniText:
 	text "<PLAYER> received"
-	line "DRATINI!"
+	line "GOOMY!"
 	done
 
 DragonShrinePartyFullText:

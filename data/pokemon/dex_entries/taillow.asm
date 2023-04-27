@@ -2,8 +2,9 @@
 	dw 100, 051 ; height, weight
 
 	db   "When it gets cold,"
-	next "they migrate,"
-	next "flying over 300 km"
+	next "it migrates,"
+	next "flying over 200"
 
-	page "a day. It hunts"
-	next "for tasty prey.@"
+	page "miles a day. It"
+	next "hunts for tasty"
+	next "prey.@"

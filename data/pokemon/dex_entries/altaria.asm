@@ -6,5 +6,4 @@
 	next "it is in flight."
 
 	page "It hums with its"
-	next "soprano voice."
-	next "@"
+	next "soprano voice.@"

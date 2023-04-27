@@ -168,7 +168,7 @@ OakYesKantoBadgesText:
 
 	para "If you get that"
 	line "far, I'll have a"
-	line "gift for you."
+	cont "gift for you."
 
 	para "Keep trying hard,"
 	line "<PLAYER>!"

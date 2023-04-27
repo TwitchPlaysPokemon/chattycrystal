@@ -6,5 +6,4 @@
 	next "shelter from cold."
 
 	page "When it's hot, its"
-	next "cloak is thinner."
-	next "@"
+	next "cloak is thinner.@"

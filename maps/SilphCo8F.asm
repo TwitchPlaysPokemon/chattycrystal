@@ -133,7 +133,7 @@ MtBattleTrainer65:
 
 .defeat_text
 	text "Just as I"
-	cont "anticipated!"
+	line "anticipated!"
 	done
 
 MtBattleTrainer66:

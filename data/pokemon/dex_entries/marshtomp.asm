@@ -6,5 +6,4 @@
 	next "even in mud."
 
 	page "It burrows into"
-	next "dirt to sleep."
-	next "@"
+	next "dirt to sleep.@"

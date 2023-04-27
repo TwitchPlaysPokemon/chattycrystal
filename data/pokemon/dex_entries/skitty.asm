@@ -6,5 +6,4 @@
 	next "tail."
 
 	page "It's difficult to"
-	next "earn its trust."
-	next "@"
+	next "earn its trust.@"

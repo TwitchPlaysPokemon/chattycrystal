@@ -3,7 +3,6 @@
 
 	db   "It protects its"
 	next "young in its beak."
-	next ""
 
 	page "It bobs on the"
 	next "waves to rest its"

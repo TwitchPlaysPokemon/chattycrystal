@@ -6,5 +6,4 @@
 	next "it stimulates its"
 
 	page "muscles to improve"
-	next "its reaction time."
-	next "@"
+	next "its reaction time.@"

@@ -65,7 +65,7 @@ ZephyrBoulderBadgeCheckText:
 	para "ZEPHYRBADGE and"
 	line "the BOULDERBADGE"
 	cont "may pass."
-	done
+	prompt
 
 NoZephyrBoulderBadgeText:
 	text "You don't those"

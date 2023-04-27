@@ -85,9 +85,9 @@ CamperJerryAfterBattleText:
 	line "from JOHTO!"
 
 	para "EWWYPPP is tough."
-	line "He'll punish you"
+	line "She'll punish you"
 	para "if you don't take"
-	line "him seriously."
+	line "her seriously."
 	done
 
 PewterGymGuyText:

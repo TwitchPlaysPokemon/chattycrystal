@@ -79,6 +79,7 @@ TrainerGruntM32:
 	text "How can you not"
 	line "see the beauty of"
 	cont "our evil?"
+	done
 
 .defeat_text
 	text "Ayaya!"

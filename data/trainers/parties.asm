@@ -6439,7 +6439,7 @@ CooltrainerFGroup:
 	dw FLAREON
 	db 32
 	dw VAPOREON
-	db 22
+	db 32
 	dw JOLTEON
 	db 32
 	dw ESPEON

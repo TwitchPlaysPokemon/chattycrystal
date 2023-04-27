@@ -179,7 +179,7 @@ CascadeHiveBadgeCheckText:
 	para "CASCADEBADGE and"
 	line "the HIVEBADGE may"
 	cont "pass."
-	done
+	prompt
 
 HaveCascadeHiveBadgeText:
 	text "Oh! You have the"
@@ -196,7 +196,7 @@ ThunderPlainBadgeCheckText:
 	para "THUNDERBADGE and"
 	line "the PLAINBADGE may"
 	cont "pass."
-	done
+	prompt
 
 HaveThunderPlainBadgeText:
 	text "Oh! You have the"
@@ -213,7 +213,7 @@ RainbowFogBadgeCheckText:
 	para "RAINBOWBADGE and"
 	line "the FOGBADGE may"
 	cont "pass."
-	done
+	prompt
 
 HaveRainbowFogBadgeText:
 	text "Oh! You have the"
@@ -230,7 +230,7 @@ MarshGlacierBadgeCheckText:
 	para "MARSHBADGE and the"
 	line "GLACIERBADGE may"
 	cont "pass."
-	done
+	prompt
 
 HaveMarshGlacierBadgeText:
 	text "Oh! You have the"
@@ -247,7 +247,7 @@ SoulStormBadgeCheckText:
 	para "SOULBADGE and the"
 	line "STORMBADGE may"
 	cont "pass."
-	done
+	prompt
 
 HaveSoulStormBadgeText:
 	text "Oh! You have the"
@@ -264,7 +264,7 @@ VolcanoMineralBadgeCheckText:
 	para "VOLCANOBADGE and"
 	line "the MINERALBADGE"
 	cont "may pass."
-	done
+	prompt
 
 HaveVolcanoMineralBadgeText:
 	text "Oh! You have the"
@@ -281,7 +281,7 @@ EarthRisingBadgeCheckText:
 	para "EARTHBADGE and the"
 	line "RISINGBADGE may"
 	cont "pass."
-	done
+	prompt
 
 HaveEarthRisingBadgeText:
 	text "Oh! You have the"

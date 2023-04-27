@@ -3,8 +3,7 @@
 
 	db   "If it hears upbeat"
 	next "music, it begins"
-	next "moving in rhytm."
+	next "moving in rhythm."
 
 	page "This allows it to"
-	next "amplify its power."
-	next "@"
+	next "amplify its power.@"

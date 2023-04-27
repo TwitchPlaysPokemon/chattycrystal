@@ -6,5 +6,4 @@
 	next "fly freely in any"
 
 	page "direction--to and"
-	next "fro and sideways."
-	next "@"
+	next "fro and sideways.@"

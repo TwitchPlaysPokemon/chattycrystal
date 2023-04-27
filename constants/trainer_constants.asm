@@ -47,7 +47,7 @@ CHRIS EQU __enum__
 	trainervalue TAYLOR
 	trainervalue MT_BATTLE_18 ; DOIMO
 	trainervalue MT_BATTLE_29 ; WAGEL
-	trainervalue MT_BATTLE_33 ; HILDON
+	trainervalue MT_BATTLE_35 ; HILDON
 	trainervalue MT_BATTLE_51 ; DEMIT
 	trainervalue MT_BATTLE_59 ; NANOT
 	trainervalue MT_BATTLE_78 ; ORDO
@@ -97,7 +97,7 @@ CHRIS EQU __enum__
 	trainervalue ALAN5
 	trainervalue CHAD4
 	trainervalue CHAD5
-	trainervalue MT_BATTLE_34 ; ROEX
+	trainervalue MT_BATTLE_37 ; ROEX
 	trainervalue THEODORE
 	trainervalue PAULO
 
@@ -169,7 +169,7 @@ CHRIS EQU __enum__
 	trainervalue DARIN
 	trainervalue YUJI
 	trainervalue MT_BATTLE_19 ; HEBEL
-	trainervalue MT_BATTLE_37 ; MORIL
+	trainervalue MT_BATTLE_34 ; MORIL
 	trainervalue MT_BATTLE_50 ; CRYAL
 	trainervalue MT_BATTLE_66 ; DAZON
 	trainervalue MT_BATTLE_91 ; CRUIK
@@ -376,7 +376,7 @@ CHRIS EQU __enum__
 	trainervalue JAMES
 	trainervalue LEWIS
 	trainervalue PARKER
-	trainervalue MT_BATTLE_35 ; DERON
+	trainervalue MT_BATTLE_36 ; DERON
 	trainervalue MT_BATTLE_55 ; GULOR
 	trainervalue MT_BATTLE_85 ; MENZON
 
@@ -402,7 +402,7 @@ CHRIS EQU __enum__
 	trainervalue BRIANA
 	trainervalue MT_BATTLE_2  ; SANO
 	trainervalue MT_BATTLE_22 ; KIMBER
-	trainervalue MT_BATTLE_36 ; TIANA
+	trainervalue MT_BATTLE_33 ; TIANA
 
 	trainerclass SAILOR ; 13
 	trainervalue EUGENE

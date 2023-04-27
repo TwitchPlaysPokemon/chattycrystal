@@ -41,7 +41,7 @@ MtBattleTrainer20BeforeText:
 	line "of 3F, that's me,"
 	cont "ERBEN!"
 
-	text "Okay, let's see if"
+	para "Okay, let's see if"
 	line "you can go on"
 	para "or not! Battle!"
 	line "Battle!"
@@ -67,7 +67,7 @@ MtBattleTrainer29AfterText:
 	line "that to happen<...>"
 	done
 
-MtBattleTrainer33BeforeText:
+MtBattleTrainer35BeforeText:
 	text "I need to get on"
 	line "with my next"
 	cont "research project."
@@ -149,7 +149,7 @@ MtBattleTrainer61BeforeText:
 	para "reached these"
 	line "lofty heights!"
 
-	text "This is it, 8F!"
+	para "This is it, 8F!"
 	line "Let's see some"
 	cont "passion!"
 	done

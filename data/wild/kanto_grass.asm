@@ -1331,25 +1331,25 @@ KantoGrassWildMons:
 	dbw 65, WALREIN
 	dbw 66, CRABOMINABLE
 	dbw 66, DEWGONG
-	dbw 66, AMAURA
+	dbw 66, AURORUS
 	dbw 67, SNORUNT
-	dbw 62, AURORUS
+	dbw 62, AERODACTYL
 	dbw 63, FROSLASS
 	; day
 	dbw 65, WALREIN
 	dbw 66, CRABOMINABLE
 	dbw 66, DEWGONG
-	dbw 66, AMAURA
+	dbw 66, AURORUS
 	dbw 67, SNORUNT
-	dbw 62, AURORUS
+	dbw 62, AERODACTYL
 	dbw 63, FROSLASS
 	; nite
 	dbw 65, WALREIN
 	dbw 66, CRABOMINABLE
 	dbw 66, DEWGONG
-	dbw 66, AMAURA
+	dbw 66, AURORUS
 	dbw 67, SNORUNT
-	dbw 62, AURORUS
+	dbw 62, AERODACTYL
 	dbw 63, FROSLASS
 
 	map_id ROUTE_23

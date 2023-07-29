@@ -262,7 +262,7 @@ MtBattleTrainer90BeforeText:
 	line "keep hearing"
 	cont "about."
 
-	text "So, how about"
+	para "So, how about"
 	line "showing me that"
 	para "high energy of"
 	line "yours?"

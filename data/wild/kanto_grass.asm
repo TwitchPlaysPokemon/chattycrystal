@@ -416,14 +416,14 @@ KantoGrassWildMons:
 	dbw 61, LUXIO
 	dbw 61, TYNAMO
 	dbw 62, ELECTABUZZ
-	dbw 62, ELECTABUZZ
+	dbw 62, JOLTEON
 	; day
 	dbw 61, SHINX
 	dbw 63, HELIOPTILE
 	dbw 61, BRONZONG
 	dbw 61, HELIOPTILE
 	dbw 61, TYNAMO
-	dbw 64, ELECTABUZZ
+	dbw 64, JOLTEON
 	dbw 64, ELECTABUZZ
 	; nite
 	dbw 61, TYNAMO
@@ -432,7 +432,7 @@ KantoGrassWildMons:
 	dbw 61, TYNAMO
 	dbw 61, TYNAMO
 	dbw 62, ELECTABUZZ
-	dbw 62, ELECTABUZZ
+	dbw 62, JOLTEON
 
 	map_id ROUTE_11
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -632,7 +632,7 @@ KantoGrassWildMons:
 	dbw 35, PIPLUP
 	dbw 30, BULBASAUR
 	dbw 28, MR__MIME
-	dbw 28, MR__MIME
+	dbw 28, VAPOREON
 	; day
 	dbw 30, TANGELA
 	dbw 25, RATTATA
@@ -640,15 +640,15 @@ KantoGrassWildMons:
 	dbw 35, PIPLUP
 	dbw 28, CHARMANDER
 	dbw 30, MR__MIME
-	dbw 30, MR__MIME
+	dbw 30, VAPOREON
 	; nite
 	dbw 30, TANGELA
 	dbw 25, RATTATA
 	dbw 20, RATICATE
 	dbw 35, PIPLUP
 	dbw 30, SQUIRTLE
-	dbw 28, TANGELA
-	dbw 28, TANGELA
+	dbw 28, VAPOREON
+	dbw 28, MR__MIME
 
 	map_id ROUTE_22
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1144,7 +1144,7 @@ KantoGrassWildMons:
 	dbw 66, MAGCARGO
 	dbw 66, MUK
 	dbw 67, MAGMAR
-	dbw 62, COMBUSKEN
+	dbw 62, FLAREON
 	dbw 63, COMBUSKEN
 	; day
 	dbw 65, VULPIX
@@ -1153,7 +1153,7 @@ KantoGrassWildMons:
 	dbw 66, MUK
 	dbw 67, MAGMAR
 	dbw 62, COMBUSKEN
-	dbw 63, COMBUSKEN
+	dbw 63, FLAREON
 	; nite
 	dbw 65, HOUNDOUR
 	dbw 66, WEEZING
@@ -1161,7 +1161,7 @@ KantoGrassWildMons:
 	dbw 66, MUK
 	dbw 67, MAGMAR
 	dbw 62, LAMPENT
-	dbw 63, LAMPENT
+	dbw 63, FLAREON
 
 	map_id POKEMON_MANSION_2F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -1331,25 +1331,25 @@ KantoGrassWildMons:
 	dbw 65, WALREIN
 	dbw 66, CRABOMINABLE
 	dbw 66, DEWGONG
-	dbw 66, AMAURA
+	dbw 66, AURORUS
 	dbw 67, SNORUNT
-	dbw 62, AURORUS
+	dbw 62, AERODACTYL
 	dbw 63, FROSLASS
 	; day
 	dbw 65, WALREIN
 	dbw 66, CRABOMINABLE
 	dbw 66, DEWGONG
-	dbw 66, AMAURA
+	dbw 66, AURORUS
 	dbw 67, SNORUNT
-	dbw 62, AURORUS
+	dbw 62, AERODACTYL
 	dbw 63, FROSLASS
 	; nite
 	dbw 65, WALREIN
 	dbw 66, CRABOMINABLE
 	dbw 66, DEWGONG
-	dbw 66, AMAURA
+	dbw 66, AURORUS
 	dbw 67, SNORUNT
-	dbw 62, AURORUS
+	dbw 62, AERODACTYL
 	dbw 63, FROSLASS
 
 	map_id ROUTE_23

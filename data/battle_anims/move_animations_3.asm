@@ -629,7 +629,7 @@ BattleAnim_LeafBlade:
 BattleAnim_EnergyBall:
 	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_CHARGE
 	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB_CENTER, 44, 88, $0
+	anim_obj ANIM_OBJ_ABSORB_CENTER, 44, 88, $0
 	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $30
 	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $31
 	anim_obj ANIM_OBJ_ENERGY_BALL_1, 44, 88, $32

@@ -425,18 +425,18 @@ BattleBGEffect_BattlerObj_1Row:
 	push bc
 	call BGEffect_CheckBattleTurn
 	jr nz, .player_side
-	ld a, LOW(ANIM_OBJ_ENEMYFEET_1ROW)
+	ld a, LOW(ANIM_OBJ_PLAYERFEETFOLLOW)
 	ld [wBattleObjectTempID], a
-	assert !HIGH(ANIM_OBJ_ENEMYFEET_1ROW)
+	assert !HIGH(ANIM_OBJ_PLAYERFEETFOLLOW)
 	xor a
 	ld [wBattleObjectTempID + 1], a
 	ld a, 16 * TILE_WIDTH + 4
 	jr .okay
 
 .player_side
-	ld a, LOW(ANIM_OBJ_PLAYERHEAD_1ROW)
+	ld a, LOW(ANIM_OBJ_ENEMYFEETFOLLOW)
 	ld [wBattleObjectTempID], a
-	assert !HIGH(ANIM_OBJ_PLAYERHEAD_1ROW)
+	assert !HIGH(ANIM_OBJ_ENEMYFEETFOLLOW)
 	xor a
 	ld [wBattleObjectTempID + 1], a
 	ld a, 6 * TILE_WIDTH
@@ -498,18 +498,18 @@ BattleBGEffect_BattlerObj_2Row:
 	push bc
 	call BGEffect_CheckBattleTurn
 	jr nz, .player_side
-	ld a, LOW(ANIM_OBJ_ENEMYFEET_2ROW)
+	ld a, LOW(ANIM_OBJ_PLAYERHEADFOLLOW)
 	ld [wBattleObjectTempID], a
-	assert !HIGH(ANIM_OBJ_ENEMYFEET_2ROW)
+	assert !HIGH(ANIM_OBJ_PLAYERHEADFOLLOW)
 	xor a
 	ld [wBattleObjectTempID + 1], a
 	ld a, 16 * TILE_WIDTH + 4
 	jr .okay
 
 .player_side
-	ld a, LOW(ANIM_OBJ_PLAYERHEAD_2ROW)
+	ld a, LOW(ANIM_OBJ_ENEMYHEADFOLLOW)
 	ld [wBattleObjectTempID], a
-	assert !HIGH(ANIM_OBJ_PLAYERHEAD_2ROW)
+	assert !HIGH(ANIM_OBJ_ENEMYHEADFOLLOW)
 	xor a
 	ld [wBattleObjectTempID + 1], a
 	ld a, 6 * TILE_WIDTH

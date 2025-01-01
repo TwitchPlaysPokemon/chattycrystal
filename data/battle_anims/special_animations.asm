@@ -49,7 +49,7 @@ BattleAnim_Snatched:
 BattleAnim_HeldItemTrigger:
 	anim_1gfx ANIM_GFX_BUBBLE
 	anim_sound 0, 0, SFX_FULL_HEAL
-	anim_bgeffect ANIM_BG_18, $0, $1, $40
+	anim_bgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING, $0, $1, $40
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $30
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $31
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $32
@@ -59,7 +59,7 @@ BattleAnim_HeldItemTrigger:
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $36
 	anim_obj ANIM_OBJ_RECOVER, 44, 88, $37
 	anim_wait 64
-	anim_incbgeffect ANIM_BG_18
+	anim_incbgeffect ANIM_BG_FADE_MON_TO_LIGHT_REPEATING
 	anim_ret
 
 BattleAnim_ThrowPokeBall:
@@ -85,7 +85,7 @@ BattleAnim_ThrowPokeBall:
 	anim_sound 6, 2, SFX_THROW_BALL
 	anim_obj ANIM_OBJ_POKE_BALL_BLOCKED, 64, 92, $20
 	anim_wait 20
-	anim_obj ANIM_OBJ_01, 112, 40, $0
+	anim_obj ANIM_OBJ_HIT_YFIX, 112, 40, $0
 	anim_wait 32
 	anim_ret
 
@@ -177,9 +177,9 @@ BattleAnim_SendOutMon:
 	anim_if_param_equal 1, .Shiny
 	anim_1gfx ANIM_GFX_SMOKE
 	anim_call .TargetObj_1Row
-	anim_bgeffect ANIM_BG_2B, $0, $1, $0
+	anim_bgeffect ANIM_BG_BETA_SEND_OUT_MON2, $0, $1, $0
 	anim_sound 0, 0, SFX_BALL_POOF
-	anim_obj ANIM_OBJ_1B, 48, 96, $0
+	anim_obj ANIM_OBJ_BETA_BALL_POOF, 48, 96, $0
 	anim_bgeffect ANIM_BG_ENTER_MON, $0, $1, $0
 	anim_wait 132
 	anim_jump BattleAnim_ShowMon_0
@@ -187,7 +187,7 @@ BattleAnim_SendOutMon:
 .Shiny:
 	anim_1gfx ANIM_GFX_SPEED
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
-	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 	anim_sound 0, 0, SFX_SHINE
 	anim_obj ANIM_OBJ_SHINY, 48, 96, $0
 	anim_wait 4
@@ -298,7 +298,7 @@ BattleAnim_Frz:
 
 BattleAnim_Par:
 	anim_1gfx ANIM_GFX_STATUS
-	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 	anim_sound 0, 0, SFX_THUNDERSHOCK
 	anim_obj ANIM_OBJ_PARALYZED, 20, 88, $42
 	anim_obj ANIM_OBJ_PARALYZED, 76, 88, $c2
@@ -378,23 +378,23 @@ BattleAnim_PlayerStatDown:
 	anim_ret
 
 BattleAnim_PlayerDamage:
-	anim_bgeffect ANIM_BG_20, $20, $2, $20
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_Y, $20, $2, $20
 	anim_wait 40
 	anim_ret
 
 BattleAnim_Wobble:
-	anim_bgeffect ANIM_BG_35, $0, $0, $0
+	anim_bgeffect ANIM_BG_WOBBLE_SCREEN, $0, $0, $0
 	anim_wait 40
 	anim_ret
 
 BattleAnim_Shake:
-	anim_bgeffect ANIM_BG_1F, $20, $2, $40
+	anim_bgeffect ANIM_BG_SHAKE_SCREEN_X, $20, $2, $40
 	anim_wait 40
 	anim_ret
 
 BattleAnim_HitConfusion:
 	anim_1gfx ANIM_GFX_HIT
 	anim_sound 0, 0, SFX_POUND
-	anim_obj ANIM_OBJ_04, 44, 96, $0
+	anim_obj ANIM_OBJ_HIT_BIG, 44, 96, $0
 	anim_wait 16
 	anim_ret

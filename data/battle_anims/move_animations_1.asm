@@ -902,7 +902,7 @@ BattleAnim_Solarbeam:
 	; charge turn
 	anim_1gfx ANIM_GFX_CHARGE
 	anim_sound 0, 0, SFX_CHARGE
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB_CENTER, 48, 84, $0
+	anim_obj ANIM_OBJ_ABSORB_CENTER, 48, 84, $0
 	anim_obj ANIM_OBJ_SOLAR_BEAM_CHARGE, 48, 84, $0
 	anim_obj ANIM_OBJ_SOLAR_BEAM_CHARGE, 48, 84, $8
 	anim_obj ANIM_OBJ_SOLAR_BEAM_CHARGE, 48, 84, $10
@@ -1350,16 +1350,16 @@ BattleAnim_Taunt:
 
 BattleAnim_Absorb:
 	anim_1gfx ANIM_GFX_CHARGE
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB_CENTER, 44, 88, $0
+	anim_obj ANIM_OBJ_ABSORB_CENTER, 44, 88, $0
 .loop
 	anim_sound 6, 3, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB, 128, 48, $2
+	anim_obj ANIM_OBJ_ABSORB, 128, 48, $2
 	anim_wait 6
 	anim_sound 6, 3, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB, 136, 64, $3
+	anim_obj ANIM_OBJ_ABSORB, 136, 64, $3
 	anim_wait 6
 	anim_sound 6, 3, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB, 136, 32, $4
+	anim_obj ANIM_OBJ_ABSORB, 136, 32, $4
 	anim_wait 6
 	anim_loop 5, .loop
 	anim_wait 32
@@ -1372,13 +1372,13 @@ BattleAnim_MegaDrain:
 	anim_setvar $0
 .loop
 	anim_sound 6, 3, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB, 128, 48, $2
+	anim_obj ANIM_OBJ_ABSORB, 128, 48, $2
 	anim_wait 6
 	anim_sound 6, 3, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB, 136, 64, $3
+	anim_obj ANIM_OBJ_ABSORB, 136, 64, $3
 	anim_wait 6
 	anim_sound 6, 3, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB, 136, 32, $4
+	anim_obj ANIM_OBJ_ABSORB, 136, 32, $4
 	anim_wait 6
 	anim_incvar
 	anim_if_var_equal $7, .done
@@ -1386,7 +1386,7 @@ BattleAnim_MegaDrain:
 	anim_jump .loop
 
 .spawn
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB_CENTER, 44, 88, $0
+	anim_obj ANIM_OBJ_ABSORB_CENTER, 44, 88, $0
 	anim_jump .loop
 
 .done
@@ -2774,6 +2774,7 @@ BattleAnim_LowKick:
 
 BattleAnim_WingAttack:
 	anim_1gfx ANIM_GFX_HIT
+.hit
 	anim_sound 0, 1, SFX_WING_ATTACK
 	anim_obj ANIM_OBJ_HIT_YFIX, 148, 56, $0
 	anim_obj ANIM_OBJ_HIT_YFIX, 116, 56, $0
@@ -5414,18 +5415,18 @@ BattleAnim_GigaDrain:
 	anim_setvar $0
 	anim_sound 6, 3, SFX_GIGA_DRAIN
 .loop
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB, 128, 48, $2
+	anim_obj ANIM_OBJ_ABSORB, 128, 48, $2
 	anim_wait 3
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB, 136, 64, $3
+	anim_obj ANIM_OBJ_ABSORB, 136, 64, $3
 	anim_wait 4
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB, 136, 32, $4
+	anim_obj ANIM_OBJ_ABSORB, 136, 32, $4
 	anim_wait 3
 	anim_incvar
 	anim_if_var_equal $d, .done
 	anim_if_var_equal $4, .spawn
 	anim_jump .loop
 .spawn
-	anim_obj ANIM_OBJ_BELLY_DRUM_NOTESORB_CENTER, 44, 88, $0
+	anim_obj ANIM_OBJ_ABSORB_CENTER, 44, 88, $0
 	anim_jump .loop
 .done
 	anim_wait 32
@@ -5585,19 +5586,7 @@ BattleAnim_SteelWing:
 	anim_call BattleAnim_ShowMon_0
 	anim_1gfx ANIM_GFX_HIT
 	anim_resetobp0
-	anim_sound 0, 1, SFX_WING_ATTACK
-	anim_obj ANIM_OBJ_HIT_YFIX, 148, 56, $0
-	anim_obj ANIM_OBJ_HIT_YFIX, 116, 56, $0
-	anim_wait 6
-	anim_sound 0, 1, SFX_WING_ATTACK
-	anim_obj ANIM_OBJ_HIT_YFIX, 144, 56, $0
-	anim_obj ANIM_OBJ_HIT_YFIX, 120, 56, $0
-	anim_wait 6
-	anim_sound 0, 1, SFX_WING_ATTACK
-	anim_obj ANIM_OBJ_HIT_YFIX, 140, 56, $0
-	anim_obj ANIM_OBJ_HIT_YFIX, 124, 56, $0
-	anim_wait 16
-	anim_ret
+	anim_jump BattleAnim_WingAttack.hit
 
 BattleAnim_MeanLook:
 	anim_1gfx ANIM_GFX_PSYCHIC
@@ -6343,7 +6332,7 @@ BattleAnim_FakeOut:
 	anim_obj ANIM_OBJ_ENCORE_HAND, 136, 46, $e0
 	anim_obj ANIM_OBJ_ENCORE_HAND, 136, 46, $40
 	anim_wait 16
-	anim_sound 0, 0, SFX_DOUBLE_SLAP
+	anim_sound 0, 0, SFX_DOUBLESLAP
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2
 	anim_clearobjs
 	anim_obj ANIM_OBJ_HIT_YFIX, 136, 46, $0
@@ -6380,13 +6369,13 @@ BattleAnimSub_EyeBeams:
 
 BattleAnimSub_WarpAway:
 	anim_sound 0, 0, SFX_WARP_TO
-	anim_obj ANIM_OBJ_44, 44, 108, $0
-	anim_obj ANIM_OBJ_44, 44, 100, $0
-	anim_obj ANIM_OBJ_44, 44, 92, $0
-	anim_obj ANIM_OBJ_44, 44, 84, $0
-	anim_obj ANIM_OBJ_44, 44, 76, $0
-	anim_obj ANIM_OBJ_44, 44, 68, $0
-	anim_obj ANIM_OBJ_44, 44, 60, $0
+	anim_obj ANIM_OBJ_WARP, 44, 108, $0
+	anim_obj ANIM_OBJ_WARP, 44, 100, $0
+	anim_obj ANIM_OBJ_WARP, 44, 92, $0
+	anim_obj ANIM_OBJ_WARP, 44, 84, $0
+	anim_obj ANIM_OBJ_WARP, 44, 76, $0
+	anim_obj ANIM_OBJ_WARP, 44, 68, $0
+	anim_obj ANIM_OBJ_WARP, 44, 60, $0
 	anim_ret
 
 BattleAnimSub_Beam:

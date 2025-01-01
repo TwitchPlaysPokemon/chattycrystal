@@ -631,7 +631,7 @@ JohtoGrassWildMons:
 	dbw 67, SABLEYE
 	dbw 66, RATICATE
 	dbw 64, MACHOP
-	dbw 66, ESPEON
+	dbw 66, GEODUDE
 	dbw 66, GOLBAT
 	; day
 	dbw 67, GRAVELER
@@ -639,7 +639,7 @@ JohtoGrassWildMons:
 	dbw 67, SABLEYE
 	dbw 66, RATICATE
 	dbw 64, MACHOP
-	dbw 66, ESPEON
+	dbw 66, GEODUDE
 	dbw 66, GOLBAT
 	; nite
 	dbw 67, GRAVELER
@@ -647,8 +647,8 @@ JohtoGrassWildMons:
 	dbw 66, RATICATE
 	dbw 66, GOLBAT
 	dbw 64, MARILL
-	dbw 68, UMBREON
-	dbw 68, UMBREON
+	dbw 68, GEODUDE
+	dbw 68, GOLBAT
 
 	map_id MOUNT_MORTAR_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

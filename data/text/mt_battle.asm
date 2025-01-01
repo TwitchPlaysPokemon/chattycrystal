@@ -262,7 +262,7 @@ MtBattleTrainer90BeforeText:
 	line "keep hearing"
 	cont "about."
 
-	para "So, how about"
+	text "So, how about"
 	line "showing me that"
 	para "high energy of"
 	line "yours?"
@@ -329,7 +329,7 @@ MtBattleTrainer100BeforeText:
 	text "Welcome! So good"
 	line "of you to come!"
 
-	para "I'm CAL, the final"
+	text "I'm CAL, the final"
 	line "trainer of SILPH"
 	para "CO.'s new battle"
 	line "facility!"
